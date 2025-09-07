@@ -16,10 +16,7 @@
 // Run the fixer;
 const fixer = new BatchSyntaxFixer();
 fixer.run().catch(console.error);
-;
-=======;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7ef8;
->>>>>>> 22585ea456adf6ad6cf7b3256318e997f8ac668b;
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

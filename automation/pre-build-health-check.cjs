@@ -1,8 +1,4 @@
 
-
-
-
-
 #!/usr/bin/env node;
 
 const fs = require("fs");
@@ -27,8 +23,6 @@ const missing = required.filter(p => !fileExists(p))
 console.log("[pre-build-health-check] OK");"
 process.exit(0);
 
-
-
 #!/usr/bin/env node
 
 
@@ -42,77 +36,4 @@ try {
 	console.log('[pre-build-health-check] OK');
 
 }
-
-
-
-
-
-
-
-
-
-
-
-#!/usr/bin/env node
-
-// Minimal pre-build health check to unblock CI builds.
-// Extensible: add real checks as needed.
-origin/chore/resolve-conflicts-1756215853
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/main
-origin/automation-improvements-final
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-origin/chore/fix-build-nav-links
-  // TODO: Implement
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

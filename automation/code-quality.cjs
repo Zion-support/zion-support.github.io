@@ -144,39 +144,6 @@ main
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
 
-
-
-
-
-
-
-      console.log(`Average lines per file: ${avgLinesPerFile}`);
-      console.log(`Total files analyzed: ${totalFiles}`);
-    },
-  },
-      
-      
-      
-      
-
-
-
-
-
-
-      console.log(`Total files analyzed: ${totalFiles}`);
-
-
-
-
-
-
-
-
-
-
-
-
     }},
   {
     "name": Import/Export Analysis,
@@ -208,25 +175,6 @@ main
   },
         
         
-
-        
-        
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-        
-        
-main
-
-
-
-
-
-
-        
-        
-
 
       }
     }},
@@ -275,22 +223,6 @@ main
   },
         
 
-        
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-        
-main
-
-
-
-
-
-
-        
-
-
       }
     }},
 ]
@@ -310,6 +242,15 @@ main
 let successCount = 0;
 let totalCount = qualityChecks.length;
 for (const check of qualityChecks) {
+  try {
+    
+    check.action();
+    
+    successCount++;
+  } catch (error) {
+    
+  }
+}
 
 // Generate quality report
   // TODO: Implement
@@ -386,31 +327,6 @@ if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });"
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #!/usr/bin/env node;
 const fs = require('fs')

@@ -1,34 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 =======
-
-
-
-
-
-
-
-#!/usr/bin/env node
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-
-console.log('🔧 Fixing remaining syntax errors...');
-
-<<<<<<< HEAD
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
-=======
-// Function to fix hover syntax errors
-function fixHoverSyntax(filePath) {
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
-
-
-#!/usr/bin/env node
-
-console.log('🔧 Fixing remaining syntax errors...');
 
 // Function to fix hover syntax errors
 function fixHoverSyntax(filePath) {
@@ -87,16 +63,6 @@ function fixSyntaxErrors(filePath) {  try {
     
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content);
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.log(`✅ Fixed: ${filePath}`);
-=======
-
-
-
-
-
-
 
       console.log(`✅ Fixed syntax errors in ${filePath}`);
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
@@ -186,40 +152,7 @@ function fixAllFiles() {
   scanDirectory(dir);
   return files;
 }
-=======
-)
-}`
-  if($2) {
-      fs.writeFileSync(filePath, content)
-      console.log(`✅ Fixed: ${filePath}`);      return true
-    return false
-  } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`)
-    return false
-// Function to find all service page files
-function findServicePages(dir) {
-  const files = []
-  function scanDirectory(currentDir) {
-    try {
-      const items = fs.readdirSync(currentDir)
-  for($2) {
-        const fullPath = path.join(currentDir, item)
-        let stat
-        try {
-          stat = fs.statSync(fullPath)
-        } catch (error) {
-          continue
-        if (stat.isDirectory()) {
-          scanDirectory(fullPath)
-        } else if (stat.isFile() && item === 'page.tsx') {
-          files.push(fullPath)
-        }      }
-    } catch (error) {
-      // Skip directories that can't be read
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 
-  scanDirectory(dir)
-  return files
 // Main execution
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -274,24 +207,6 @@ main().catch(console.error);
 } catch (error) {
   console.error('❌ Error:', error.message);
   process.exit(1);
-}
 
 }
 
-}}
-
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
-fixedCount++
-  // Also fix the research page
-  const researchPage = '/workspace/app/research/page.tsx'
-  if (fs.existsSync(researchPage)) {
-    if (fixSyntaxErrors(researchPage)) {
-      fixedCount++
-  console.log(`\n✅ Fixed ${fixedCount} files`)
-  console.log('\n🎉 Syntax error resolution completed!')
-main().catch(console.error)
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

@@ -1,243 +1,28 @@
 {
-  "timestamp": "2025-09-07T09:16:03.878Z",
-  "totalDuration": "84830ms",
-  "summary": {
-    "totalSuites": 6,
-    "successfulSuites": 6,
-    "failedSuites": 0,
-    "successRate": "100.00%"
+
+  "timestamp": "2025-09-05T15:05:30.907Z",
+  "totalDuration": "86s",
+  "results": {
+    "dependencyFix": {
+      "success": true,
+      "duration": 79551,
+
+      "errors": []
+    },
+    "typescriptFix": {
+      "success": false,
+
+      "errors": [
+        "Command failed: node automation/typescript-fixer.cjs"
+      ]
+
+    },
+    "healthCheck": {
+
+    }
   },
-  "suites": [
-    {
-      "name": "Comprehensive Automation Suite",
-      "success": true,
-      "duration": 45680,
-      "error": null
-    },
-    {
-      "name": "Performance Optimization Suite",
-      "success": true,
-      "duration": 27466,
-      "error": null
-    },
-    {
-      "name": "Security Enhancement Suite",
-      "success": true,
-      "duration": 4885,
-      "error": null
-    },
-    {
-      "name": "SEO Optimization Suite",
-      "success": true,
-      "duration": 32,
-      "error": null
-    },
-    {
-      "name": "Accessibility Enhancement Suite",
-      "success": true,
-      "duration": 3288,
-      "error": null
-    },
-    {
-      "name": "Final Automation Suite",
-      "success": true,
-      "duration": 3476,
-      "error": null
-    }
-  ],
-  "reports": [
-    {
-      "file": "automation-report.json",
-      "data": {
-        "timestamp": "2025-09-07T08:59:48.559Z",
-        "duration": "3s",
-        "results": {
-          "tests": {
-            "passed": 0,
-            "failed": 2,
-            "errors": [
-              "Command failed: npm test -- --passWithNoTests\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nSyntaxError: Identifier 'nextConfig' has already been declared\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n",
-              "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-            ]
-          },
-          "builds": {
-            "success": false,
-            "errors": [
-              "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error\n\n> Build error occurred\n[SyntaxError: Identifier 'nextConfig' has already been declared]\n"
-            ]
-          },
-          "linting": {
-            "success": false,
-            "errors": [
-              "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nReferenceError: module is not defined in ES module scope\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/eslint.config.js?mtime=1757235555085:1:1\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async loadFlatConfigFile (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:303:21)\n    at async calculateConfigArray (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:382:28)\n    at async FlatESLint.lintFiles (/workspace/node_modules/eslint/lib/eslint/flat-eslint.js:762:25)\n    at async Object.execute (/workspace/node_modules/eslint/lib/cli.js:421:23)\n    at async main (/workspace/node_modules/eslint/bin/eslint.js:152:22)\n"
-            ]
-          },
-          "security": {
-            "issues": [],
-            "fixed": 0
-          },
-          "improvements": [
-            "Created performance monitoring script"
-          ]
-        },
-        "summary": {
-          "testsPassed": 0,
-          "testsFailed": 2,
-          "buildSuccess": false,
-          "lintingSuccess": false,
-          "securityIssuesFixed": 0,
-          "improvementsCreated": 1
-        }
-      }
-    },
-    {
-      "file": "performance-optimization-report.json",
-      "data": {
-        "timestamp": "2025-09-07T09:15:52.192Z",
-        "totalDuration": "27441ms",
-        "optimizations": [
-          "Image optimization setup completed",
-          "Bundle optimization analysis completed",
-          "Caching configuration created",
-          "Database optimization recommendations created",
-          "API optimization recommendations created"
-        ],
-        "metrics": {
-          "totalOptimizations": 5,
-          "errors": 0,
-          "successRate": "100.00%"
-        },
-        "recommendations": [
-          "Implement image optimization with Sharp",
-          "Enable bundle analysis and code splitting",
-          "Configure proper caching headers",
-          "Optimize database queries and indexes",
-          "Implement API rate limiting and compression",
-          "Monitor performance metrics regularly"
-        ]
-      }
-    },
-    {
-      "file": "security-enhancement-report.json",
-      "data": {
-        "timestamp": "2025-09-07T09:15:57.078Z",
-        "totalDuration": "4837ms",
-        "securityChecks": [
-          "NPM security audit completed",
-          "Dependency security check completed"
-        ],
-        "vulnerabilities": [],
-        "fixes": [
-          "Security vulnerabilities fixed",
-          "Security headers configuration created",
-          "Security configuration created"
-        ],
-        "errors": [
-          {
-            "command": "npm outdated",
-            "description": "Checking for outdated packages",
-            "error": "Command failed: npm outdated\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-          }
-        ],
-        "metrics": {
-          "totalChecks": 2,
-          "totalFixes": 3,
-          "totalErrors": 1,
-          "securityScore": 80
-        },
-        "recommendations": [
-          "Regularly update dependencies",
-          "Implement Content Security Policy",
-          "Use HTTPS in production",
-          "Enable rate limiting",
-          "Implement proper authentication",
-          "Regular security audits",
-          "Monitor for vulnerabilities",
-          "Use security headers"
-        ]
-      }
-    },
-    {
-      "file": "seo-optimization-report.json",
-      "data": {
-        "timestamp": "2025-09-07T09:15:57.109Z",
-        "totalDuration": "2ms",
-        "optimizations": [
-          "Robots.txt generated",
-          "Structured data created"
-        ],
-        "metaTags": [
-          "Meta tags configuration created"
-        ],
-        "sitemaps": [
-          "Sitemap generated"
-        ],
-        "errors": [],
-        "metrics": {
-          "totalOptimizations": 2,
-          "totalMetaTags": 1,
-          "totalSitemaps": 1,
-          "totalErrors": 0,
-          "seoScore": 100
-        },
-        "recommendations": [
-          "Implement proper meta tags for all pages",
-          "Create and submit sitemap to Google Search Console",
-          "Optimize page loading speed",
-          "Use structured data markup",
-          "Implement proper heading hierarchy",
-          "Optimize images with alt tags",
-          "Create high-quality content regularly",
-          "Build quality backlinks",
-          "Monitor search performance",
-          "Implement local SEO if applicable"
-        ]
-      }
-    },
-    {
-      "file": "accessibility-enhancement-report.json",
-      "data": {
-        "timestamp": "2025-09-07T09:16:00.397Z",
-        "totalDuration": "3266ms",
-        "enhancements": [
-          "axe-core installed for accessibility testing",
-          "jest-axe installed for accessibility testing",
-          "Accessibility configuration created",
-          "Accessibility guidelines created"
-        ],
-        "checks": [],
-        "fixes": [],
-        "errors": [],
-        "metrics": {
-          "totalEnhancements": 4,
-          "totalChecks": 0,
-          "totalFixes": 0,
-          "totalErrors": 0,
-          "accessibilityScore": 100
-        },
-        "recommendations": [
-          "Implement semantic HTML structure",
-          "Add proper alt text to all images",
-          "Ensure keyboard navigation works",
-          "Test with screen readers",
-          "Maintain proper color contrast",
-          "Use ARIA labels appropriately",
-          "Test with different assistive technologies",
-          "Follow WCAG 2.1 AA guidelines",
-          "Regular accessibility audits",
-          "User testing with disabled users"
-        ]
-      }
-    }
-  ],
-  "recommendations": [
-    "All automation suites have been executed",
-    "Review individual reports for detailed insights",
-    "Address any failed suites before deployment",
-    "Monitor performance metrics regularly",
-    "Keep security configurations up to date",
-    "Maintain SEO optimizations",
-    "Ensure accessibility compliance",
-    "Schedule regular automation runs"
-  ]
+  "summary": {
+    "totalPhases": 6,
+
+  }
 }

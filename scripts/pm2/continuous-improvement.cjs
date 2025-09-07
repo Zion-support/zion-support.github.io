@@ -1,8 +1,5 @@
 
 
-
-
-
 #!/usr/bin/env node;
 
 /**
@@ -54,11 +51,10 @@ process.on('SIGINT, () => {}
   log('Continuous Improvement Process terminated');
 
 // Run the main function;
-
+main().catch(error => {})
+  log(`Continuous Improvement Process "failed": ${error.message}`);
+  process.exit(1);
+}
 
 });
-
-
-
-
 

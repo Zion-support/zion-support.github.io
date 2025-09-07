@@ -49,7 +49,10 @@
   // Fix common syntax errors;
   fixSyntaxErrors(content) {
     let fixed = content;
+    
+    // Fix merge conflicts by keeping the HEAD version
 
+    // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
     fixed = fixed.replace(/;\s*"/g, ';\n  "');
     fixed = fixed.replace(/:\s*"/g, ':\n  "');
@@ -440,39 +443,6 @@ if (require.main === module) {
       process.exit(1);
   }
 }
-
-
-
-  fixFile(filePath) {
-  // TODO: Implement
-
-      let originalContent = content;
-
-      // Fix common syntax errors;
-      const fixes = [
-        // Remove extra semicolons after braces;
-
-        // Fix merge conflict markers;
-        { pattern: /^
-        // Fix malformed object literals;
-
-          content = content.replace(fix.pattern, fix.replacement)
-        } else {
-  // TODO: Implement
-      })
-
-      // Additional specific fixes for common patterns;
-      content = this.fixSpecificPatterns(content)
-
-      if (content !== originalContent) {
-
-
-  fixSpecificPatterns(content) {
-    // Fix specific malformed patterns;
-    const specificFixes = [
-      // Fix ecosystem.config.cjs structure;
-      {]
-
 
 #!/usr/bin/env node;
     specificFixes.forEach(fix => {)

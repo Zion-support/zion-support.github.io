@@ -1,0 +1,2 @@
+
+export default AIEmotionalIntelligencePlatform2029;

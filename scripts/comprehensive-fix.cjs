@@ -7,11 +7,8 @@ function fixFile(filePath) {
       console.log(`⚠️  File not found: ${filePath})
       return false
     // Remove all merge conflict markers
-    content = content.replace(/
 
-    content = content.replace(/
-
-    content = content.replace(/
+    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
     
     // Fix common syntax issues
     content = content.replace(/md: text-2xl/g, 'md:text-2xl');

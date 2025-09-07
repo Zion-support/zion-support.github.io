@@ -1,21 +1,3 @@
-main
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-=======
-
-
 
 #!/usr/bin/env node;
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb

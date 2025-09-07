@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-
-    this.log(`Total improvements: ${this.improvements.length}`);
-    this.log(`Total errors: ${this.errors.length}`);
-
-    this.log('\\n🎉 App improvements completed!');
-  }
-}
-
-
 
 #!/usr/bin/env node;
 const fs = require('fs')

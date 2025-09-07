@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 
 #!/usr/bin/env node;
 =======

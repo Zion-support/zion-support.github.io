@@ -1,15 +1,15 @@
 const fs = require('fs');
 const path = require('path');
-;
-function fixMergeConflicts(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, 'utf8');
-;
-    // Check if file has merge conflict markers;
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {;
-      console.log(`Fixing merge conflicts "in": ${filePath}`);
-;
-      // Remove merge conflict markers and keep the content after =======;
+
+function fixMergeConflicts(filePath) {
+  try {
+
+    // Check if file has merge conflict markers
+    if (
+
+    ) {
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
+
       const lines = content.split('\n');
       let fixedLines = [];
       let inConflict = false;
@@ -17,19 +17,12 @@ function fixMergeConflicts(filePath) {;
 ;
       for (let i = 0; i < lines.length; i++) {;
         const line = lines[i];
-;
-        if (line.includes('<<<<<<< HEAD')) {;
+
           inConflict = true;
           keepContent = false;
           continue;
         }
-;
-        if (line.includes('=======')) {;
-          keepContent = true;
-          continue;
-        }
-;
-        if (line.includes('>>>>>>>')) {;
+
           inConflict = false;
           keepContent = false;
           continue;

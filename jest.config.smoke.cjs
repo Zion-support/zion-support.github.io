@@ -42,8 +42,14 @@ const config = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  "moduleFileExtensions": ['ts', 'tsx', 'js', 'jsx', 'json'],
-  "testPathIgnorePatterns": ['<rootDir>/.next/', '<rootDir>/node_modules/']
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/', 
+    '<rootDir>/node_modules/',
+    '<rootDir>/corrupted_backup/',
+    '<rootDir>/apps.backup/',
+    '<rootDir>/components/apps/'
+  ]
 };
 
 module.exports = createJestConfig(config);

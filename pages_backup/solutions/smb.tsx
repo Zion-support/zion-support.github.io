@@ -1,12 +1,17 @@
+
+
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
+
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {
   const smbServices = [;
@@ -42,6 +47,7 @@ export default function SMBSolutionsPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -79,6 +85,7 @@ const smbServices = [
 ];
 
 export default function SMBSolutionsPage() {
+
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
@@ -202,6 +209,7 @@ export default function SMBSolutionsPage() {;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -214,6 +222,7 @@ export default function SMBSolutionsPage() {;
             </motion.div>;
           </div>;
         </section>;
+
               className="text-center"
             >"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">SMB Solutions</h1>"
@@ -224,6 +233,7 @@ export default function SMBSolutionsPage() {;
             </motion.div>
           </div>
         </section>
+
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";

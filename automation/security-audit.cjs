@@ -56,14 +56,6 @@ main
           foundEnvFiles++;
       });
 
-
-
-
-
-
-
-
-
     }},
   {
     "name": API Security Check,
@@ -114,23 +106,6 @@ main
         );
         
 
-        
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-        
-main
-
-
-
-
-
-
-        
-
-
-
       }
     }},
   {
@@ -153,25 +128,6 @@ main
     },
   },
         
-
-        
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-        pages.forEach(page => {)
-
-            cspFound++;
-
-
-
-
-
-
-
-
-
-
-
-
 
       }
     }},
@@ -239,6 +195,15 @@ main
 let successCount = 0;
 let totalCount = securityChecks.length;
 for (const check of securityChecks) {
+  try {
+    
+    check.action();
+    
+    successCount++;
+  } catch (error) {
+    
+  }
+}
 
 // Generate security report
   // TODO: Implement
@@ -315,31 +280,6 @@ if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });"
 const reportFile = path.join(reportsDir, `security-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #!/usr/bin/env node;
 const fs = require('fs')

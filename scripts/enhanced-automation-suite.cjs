@@ -1,9 +1,3 @@
-main
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
 
 #!/usr/bin/env node;
 

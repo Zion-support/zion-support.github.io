@@ -20,17 +20,9 @@ main
 function removeMergeConflictMarkers(content) {
   return content
 
-
-
-.replace(/[a-f0-9]+/g, '')
     .replace(/
     .replace(/
-    .replace(/
-
-
-
-
-    .replace(/
+    .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
 
 
@@ -82,6 +74,7 @@ function processFile(filePath) {
 
     let modified = false;
 
+    // Check for merge conflict markers
 
             files.push(fullPath);
 

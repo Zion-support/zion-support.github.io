@@ -377,7 +377,6 @@ main
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
 
-
     return statusReport;
   } catch (error) {
     console.error('❌ Error checking automation "status": ', error.message);
@@ -455,6 +454,7 @@ module.exports = checkAutomationStatus;
       process.exit(1);
 
 module.exports = { checkAutomationStatus };
+
 #!/usr/bin/env node;
 
 

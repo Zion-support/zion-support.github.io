@@ -1,16 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import Head from 'next/head'
-interface Review {
-  id: string
-  userId: string
-  userName: string
-  rating: number
-  comment: string
-  status: 'pending' | 'approved' | 'rejected'
-  createdAt: string
-  projectId?: string
-  projectName?: string
-}
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
 
 const mockReviews: Review[] = [
   {
@@ -80,122 +69,11 @@ const AdminReviewsPage: React.FC = () => {
       case 'pending': return 'bg-yellow-100 text-yellow-800'
       default: return 'bg-gray-100 text-gray-800'
     }
-  }
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <span
-        key={i}
-        className={`text-lg ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
-      >
-        ★
-      </span>
-    ))
-  }
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto py-8">
-        <h1 className="text-2xl font-bold mb-6">Page</h1>
-        <div className="bg-white rounded-lg shadow p-6">
-          <p className="text-gray-600">Content coming soon.</p>
+  };
+
         </div>
 
-        {/* Filters */}
-        <div className="bg-white rounded-lg shadow p-6 mb-6">
-          <div className="flex gap-4">
-            <button
-              onClick={() => setFilter('all')}
-              className={`px-4 py-2 rounded ${
-                filter === 'all' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
-              }`}
-            >
-              All Reviews
-            </button>
-            <button
-              onClick={() => setFilter('pending')}
-              className={`px-4 py-2 rounded ${
-                filter === 'pending' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
-              }`}
-            >
-              Pending ({pendingReviews.length})
-            </button>
-            <button
-              onClick={() => setFilter('approved')}
-              className={`px-4 py-2 rounded ${
-                filter === 'approved' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
-              }`}
-            >
-              Approved ({approvedReviews.length})
-            </button>
-            <button
-              onClick={() => setFilter('rejected')}
-              className={`px-4 py-2 rounded ${
-                filter === 'rejected' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
-              }`}
-            >
-              Rejected ({rejectedReviews.length})
-            </button>
-          </div>
-        </div>
+  );
+};
 
-        {/* Reviews List */}
-        {loading ? (
-          <div className="text-center py-8">Loading reviews...</div>
-        ) : filteredReviews.length === 0 ? (
-          <div className="text-center py-8 text-gray-500">
-            No reviews found matching your criteria.
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {filteredReviews.map((review) => (
-              <div key={review.id} className="bg-white rounded-lg shadow p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-semibold text-lg">{review.userName}</h3>
-                      <div className="flex items-center">
-                        {renderStars(review.rating)}
-                      </div>
-                      <span className={`px-2 py-1 rounded text-xs font-semibold ${getStatusColor(review.status)}`}>
-                        {review.status}
-                      </span>
-                    </div>
-                    
-                    {review.projectName && (
-                      <p className="text-sm text-gray-600 mb-2">
-                        Project: {review.projectName}
-                      </p>
-                    )}
-                    
-                    <p className="text-gray-700 mb-3">{review.comment}</p>
-                    
-                    <p className="text-xs text-gray-500">
-                      Submitted: {new Date(review.createdAt).toLocaleString()}
-                    </p>
-                  </div>
-                  
-                  {review.status === 'pending' && (
-                    <div className="flex gap-2 ml-4">
-                      <button
-                        onClick={() => handleStatusChange(review.id, 'approved')}
-                        className="px-3 py-1 bg-green-600 text-white rounded text-sm hover:bg-green-700"
-                      >
-                        Approve
-                      </button>
-                      <button
-                        onClick={() => handleStatusChange(review.id, 'rejected')}
-                        className="px-3 py-1 bg-red-600 text-white rounded text-sm hover:bg-red-700"
-                      >
-                        Reject
-                      </button>
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
-    </>
-  )
-}
-export default AdminReviewsPage
+export default AdminReviewsPage;

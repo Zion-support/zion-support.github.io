@@ -25,24 +25,9 @@ class ComprehensiveSyntaxFixer {
     console.log(`${prefix} [${timestamp}] ${message}`);
   }
 
-  async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`, 'PROGRESS');
-    try {
-      const result = execSync(command, {
-        cwd: this.projectRoot,
-        stdio: 'pipe',
-        encoding: 'utf8',
-        ...options,
-      });
-      this.log(`${description} completed successfully`, 'SUCCESS');
-      return { success: true, output: result };
-    } catch (error) {
-      this.log(`${description} failed: ${error.message}`, 'ERROR');
-      return {
-        success: false,
-        error: error.message,
-        output: error.stdout || error.stderr,
-      };
+    // Fix merge conflict markers
+    if (content.includes('
+      modified = true;
     }
   }
 

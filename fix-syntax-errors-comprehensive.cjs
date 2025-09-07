@@ -17,18 +17,38 @@ function fixSyntaxErrors(filePath) {;
     content = content.replace(/\\\]/g, ']');
     content = content.replace(/\\\(/g, '(');
     content = content.replace(/\\\)/g, ')');
-;
-    // Fix missing semicolons at end of statements;
+
+    // Fix malformed CSS in JSX
+    content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
+    
+    // Fix malformed function declarations
+    content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
+    
+    // Fix malformed return statements in functions
+    content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
+
+    // Fix missing semicolons
+
+    // Fix missing semicolons at end of statements
+
     content = content.replace(/([^;}])\s*$/gm, '$1;');
-;
-    // Fix missing commas in objects;
-    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$"1": $2,}');
-;
-    // Fix missing closing braces;
+
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
+
+    // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
-;
-    if (openBraces > closeBraces) {;
+
+    fixed = fixed.replace(
+        /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
+        'return this.props.children;\n  }\n}\n\nexport default'
+    );
+    
+    return fixed;
+});
+
+    if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
       content += '\n' + '}'.repeat(missingBraces);
       modified = true;
@@ -37,8 +57,8 @@ function fixSyntaxErrors(filePath) {;
     // Fix missing closing parentheses;
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
-;
-    if (openParens > closeParens) {;
+
+    if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
       content += ')'.repeat(missingParens);
       modified = true;
@@ -93,8 +113,8 @@ function fixSyntaxErrors(filePath) {;
     return false;
   }
 }
-;
-function processDirectory(dirPath) {;
+
+function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
 ;
@@ -115,3 +135,4 @@ function processDirectory(dirPath) {;
 console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
+

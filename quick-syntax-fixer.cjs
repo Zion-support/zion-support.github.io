@@ -19,19 +19,22 @@ class QuickSyntaxFixer {;
       }
 ;
       const originalContent = fs.readFileSync(filePath, 'utf8');
-      let content = originalContent;
-        // Remove merge conflict markers;
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> .*/g, '');
-        .replace(/^>>>>>>>.*$/gm, '');
-        // Fix module.exports;
-        .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {');
-        // Fix constructor;
-        .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {');
-        // Fix empty lines with semicolons;
-        .replace(/^\s*;\s*$/gm, '');
-        // Fix multiple semicolons;
-        .replace(/;+/g, ';');
-        // Fix semicolons before commas;
+      const content = originalContent
+        // Remove merge conflict markers
+
+        // Fix module.exports
+        .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
+
+        // Fix constructor
+        .replace(/constructor\s*\(\s*\)\s*{;/g, 'constructor() {')
+
+        // Fix empty lines with semicolons
+        .replace(/^\s*;\s*$/gm, '')
+
+        // Fix multiple semicolons
+        .replace(/;+/g, ';')
+
+        // Fix semicolons before commas
         .replace(/;\s*,/g, ',');
 ;
       if (content !== originalContent) {;
@@ -80,5 +83,14 @@ if (require.main === module) {;
   const fixer = new QuickSyntaxFixer();
   fixer.run().catch(console.error);
 }
-;
+
 module.exports = QuickSyntaxFixer;
+
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+      let content = fs.readFileSync(filePath, 'utf8')
+        .replace(/(\w+):\s*([^,]+),/g, '$"1"
+        .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
+        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
+

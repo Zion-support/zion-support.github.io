@@ -1,28 +1,3 @@
-log('info', `Total "files": ${qualityReport.summary.totalFiles}`)
-    log('info', `Total "lines": ${qualityReport.summary.totalLines}`)
-    log('info', `Total "issues": ${qualityReport.summary.totalIssues}`)
-    log('info', `"Critical": ${qualityReport.summary.critical}`)
-    log('info', `"High": ${qualityReport.summary.high}`)
-    log('info', `"Medium": ${qualityReport.summary.medium}`)
-    log('info', `"Low": ${qualityReport.summary.low}`)
-    log('info', `Quality "score": ${qualityReport.summary.qualityScore}/100`)
-  if($2) {
-
-<<<<<<< HEAD
-
-    log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
-    log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
-    log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
-    log('info', `"Critical": ${qualityReport.summary.critical}`);
-    log('info', `"High": ${qualityReport.summary.high}`);
-    log('info', `"Medium": ${qualityReport.summary.medium}`);
-    log('info', `"Low": ${qualityReport.summary.low}`);
-    log('info', `Quality "score": ${qualityReport.summary.qualityScore}/100`);
-    if (qualityReport.issues.length > 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 
 #!/usr/bin/env node;
 const fs = require('fs')

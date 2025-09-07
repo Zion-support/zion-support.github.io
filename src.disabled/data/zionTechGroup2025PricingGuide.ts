@@ -1,4 +1,6 @@
+
 export: interface PricingTier {
+
 "export": interface PricingTier {
    name: string;
    price: string;
@@ -20,6 +22,7 @@ export: interface PricingTier {
    averageMarketPrice: string;
    ourPrice: string;
    savings: string;
+
    valueProposition: strin,g} features: string[] benefits: string[] useCases: string[] contactInfo: { mobile: string: email: string: address: string: website: string} } export: const zionTechGroup2025PricingGuide: ServicePricing[] = [ { id,:
   ai-autonomous-business-manager', title: 'AI: Autonomous Business Manage,r, description: ';
   Fully: autonomous AI system that manages business operations, decision-making, and strategic planning.', category: 'AI: Solution,s, pricingTiers: [ { name,: ';

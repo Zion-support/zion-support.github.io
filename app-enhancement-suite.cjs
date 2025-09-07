@@ -30,26 +30,19 @@ class AppEnhancementSuite {;
 ;
   createSecurityEnhancements() {;
     this.log('🔒 Creating Security Enhancements');
-;
-    // Create security headers configuration;
-    const securityConfig = {;
-      "headers": {;
-        'X-Content-Type-Options': 'nosniff',
-        'X-Frame-Options': 'DENY',
-        'X-XSS-Protection': '1; mode=block',
-        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
-        'Content-Security-Policy': "default-src 'self'; script-src 'self' 'unsafe-inline'";
-      },
-      "validation": {;
-        "inputSanitization": true,
-        "sqlInjectionProtection": true,
-        "xssProtection": true;
-      }
-    };
-;
-    fs.writeFileSync(;
-      path.join(this.projectRoot, 'security-config.json'),
-      JSON.stringify(securityConfig, null, 2);
+
+    // Create security headers configuration
+    const securityConfig = {
+      headers: {
+        'X-Content-Type-Options': 'nosniff';
+        'X-Frame-Options': 'DENY';
+        'X-XSS-Protection': '1; mode=block';
+        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains';
+        'Content-Security-Policy':
+
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'security-config.json');
+      JSON.stringify(securityConfig, null, 2)
     );
 ;
     this.enhancements.push('Security configuration created');
@@ -141,11 +134,20 @@ class AppEnhancementSuite {;
     this.createPerformanceOptimizations();
     this.createSecurityEnhancements();
     this.createMonitoringScripts();
-;
-    const report = {;
-      "timestamp": new Date().toISOString(),
-      "enhancements": this.enhancements,
-      "status": 'completed';
+
+    const report = {
+
+    const securityHeaders = {}
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1; mode=block',
+      'Strict-Transport-Security': 'max-age=31536000; includeSubDomains',
+      'Content-Security-Policy': "default-src 'self''
+
+      timestamp: new Date().toISOString();
+      enhancements: this.enhancements;
+      status: 'completed';
+
     };
 ;
     // Write enhancement report;

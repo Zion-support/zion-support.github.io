@@ -1,24 +1,4 @@
-main
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-=======
-
-
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node;
 =======
 ///usr/bin/env node

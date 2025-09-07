@@ -1,35 +1,4 @@
-///usr/bin/env node
 
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-console.log('🔧 Smart Code Fixer')
-///usr/bin/env node
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-#!/usr/bin/env node
-
-
-
-
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-console.log('🔧 Smart Code Fixer');
-=======
-
-
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 #!/usr/bin/env node
 
 const fs = require('fs');

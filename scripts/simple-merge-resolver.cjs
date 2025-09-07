@@ -1,13 +1,5 @@
-<<<<<<< HEAD
 
 
-
-
-
-
-
-=======
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 // Fix the specific syntax errors we identified
 const files = [
   'components/Footer.tsx',
@@ -19,11 +11,6 @@ const files = [
   'pages/index.tsx'
 <<<<<<< HEAD
 ];
-
-
-
-
-
 
 files.forEach(file => {
   try {
@@ -117,20 +104,9 @@ files.forEach(file => {
   } catch (error) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
-}
-});
-
 
 }
 });
-
-
-
-}
-});
-}
-});
-
 
 console.log('✅ Syntax fixes completed!');
 console.log('🎉 Ready for merge process!');
@@ -207,24 +183,6 @@ const util = require('util')
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
-<<<<<<< HEAD
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-
-
 
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-
-
-
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-
-=======
-cursor/fix-lint-push-and-merge-to-main-f3c1
-cursor/fix-lint-push-and-merge-to-main-f3c1
-cursor/fix-lint-push-and-merge-to-main-f3c1
-cursor/fix-lint-push-and-merge-to-main-f3c1
-cursor/fix-lint-push-and-merge-to-main-f3c1
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

@@ -38,10 +38,7 @@ export function useIntersectionObserver({
     const hasIOSupport = !!window.IntersectionObserver;
     if (!hasIOSupport || frozen || !node) return;
     const observerParams = { threshold, root, rootMargin };
-    const currentObserver = new IntersectionObserver(
-      updateEntry,
-      observerParams
-    );
+
     observer.current = currentObserver;
     currentObserver.observe(node);
     return () => {
@@ -62,8 +59,4 @@ export function useIntersectionObserver({
     if (node) {
       observer.current?.observe(node);
     }
-    prevNode.current = node;
-  }, [node]);
 
-  return [setNode, entry] as const
-}
