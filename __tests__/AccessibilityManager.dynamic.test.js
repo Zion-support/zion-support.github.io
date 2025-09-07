@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AccessibilityManagerdynamic from '../components/AccessibilityManager.dynamic';
+>>>>>>> origin/main
 describe('AccessibilityManagerdynamic', () => {
   test('renders without crashing', () => {
     render(<AccessibilityManagerdynamic />);
@@ -24,6 +31,7 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Accessib
   test('applies correct styling', () => {
     render(<AccessibilityManagerdynamic />);
   });
+<<<<<<< HEAD
 });
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityManagerdynamic from "./components/AccessibilityManager.dynamic"; describe("AccessibilityManagerdynamic",() => { test("renders without crashing",() => { render(<AccessibilityManagerdynamic />); expect( screen.getByTestId("accessibilitymanager.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityManagerdynamic />)}); test("handles user interactions",() => { render(<AccessibilityManagerdynamic />)}); test("applies correct styling",() => { render(<AccessibilityManagerdynamic />)})});''"
 
@@ -61,3 +69,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Accessib
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+});
+>>>>>>> origin/main

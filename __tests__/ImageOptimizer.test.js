@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import ImageOptimizer from '../components/ImageOptimizer" describe('ImageOptimizer',() => {' test('renders without crashing',() => {' render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ImageOptimizer / / />) }) test('handles user interactions',() => {' render(<ImageOptimizer / / />) }) test('applies correct styling',() => {' render(<ImageOptimizer / / />) }) })
 
 <<<<<<< HEAD
@@ -38,3 +39,28 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import _React from 'react"  import '@testing-library/jest-dom import ImageOptimizer from '../components/ImageOptimizer" describe('ImageOptimizer',() => {' test('renders without crashing',() => {' render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ImageOptimizer / / />) }) test('handles user interactions',() => {' render(<ImageOptimizer / / />) }) test('applies correct styling',() => {' render(<ImageOptimizer / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import ImageOptimizer from '../components/ImageOptimizer" describe('ImageOptimizer',() => {' test('renders without crashing',() => {' render(<ImageOptimizer / / />) expect(screen.getByTestId("imageoptimizer")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ImageOptimizer / / />) }) test('handles user interactions',() => {' render(<ImageOptimizer / / />) }) test('applies correct styling',() => {' render(<ImageOptimizer / / />) }) })
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ImageOptimizer from '../components/ImageOptimizer';
+
+describe('ImageOptimizer', () => {
+  test('renders without crashing', () => {
+    render(<ImageOptimizer />);
+    expect(screen.getByTestId('imageoptimizer')).toBeInTheDocument();
+  });
+  test('displays correct content', () => {
+    render(<ImageOptimizer />);
+    // Add specific content tests based on component
+  });
+  test('handles user interactions', () => {
+    render(<ImageOptimizer />);
+    // Add interaction tests based on component functionality
+  });
+  test('applies correct styling', () => {
+    render(<ImageOptimizer />);
+    // Add styling tests if needed
+  });
+});
+>>>>>>> origin/main

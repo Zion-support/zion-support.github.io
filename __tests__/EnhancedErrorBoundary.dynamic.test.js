@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 describe('EnhancedErrorBoundarydynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedErrorBoundarydynamic />);
@@ -5,6 +6,17 @@ describe('EnhancedErrorBoundarydynamic', () => {
       screen.getByTestId('enhancederrorboundary.dynamic')
     ).toBeInTheDocument();
 
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary';
+
+describe('EnhancedErrorBoundary', () => {
+  test('renders without crashing', () => {
+    render(<EnhancedErrorBoundary />);
+    expect(screen.getByTestId('enhancederrorboundary')).toBeInTheDocument();
+>>>>>>> origin/main
   });
 
 });
@@ -16,15 +28,19 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
 });
 });
   test('displays correct content', () => {
-    render(<EnhancedErrorBoundarydynamic />);
+    render(<EnhancedErrorBoundary />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<EnhancedErrorBoundarydynamic />);
+    render(<EnhancedErrorBoundary />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<EnhancedErrorBoundarydynamic />);
+    render(<EnhancedErrorBoundary />);
+    // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedErrorBoundarydynamic from "./components/EnhancedErrorBoundary.dynamic"; describe("EnhancedErrorBoundarydynamic",() => { test("renders without crashing",() => { render(<EnhancedErrorBoundarydynamic />); expect( screen.getByTestId("enhancederrorboundary.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedErrorBoundarydynamic />)}); test("handles user interactions",() => { render(<EnhancedErrorBoundarydynamic />)}); test("applies correct styling",() => { render(<EnhancedErrorBoundarydynamic />)})});''"
 
 ursor/add-new-services-and-deploy-updates-0462
@@ -61,3 +77,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/main

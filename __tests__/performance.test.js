@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 });'
 });'
 });'
@@ -599,32 +600,27 @@ describe('performance', () => {
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+=======
+>>>>>>> origin/main
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
-  test('page load performance', async ({ page }) => {
+  test('page loads within acceptable time', async ({ page }) => {
     const startTime = Date.now();
     await page.goto('/');
-    await page.waitForLoadState('networkidle');
     const loadTime = Date.now() - startTime;
-    // Page should load within 3 seconds
     expect(loadTime).toBeLessThan(3000);
   });
 
-  test('lighthouse performance audit', async ({ page }) => {
+  test('bundle size is reasonable', async ({ page }) => {
     await page.goto('/');
-    // Run lighthouse audit
-    const lighthouse = await page.evaluate(() => {
-      return new Promise((resolve) => {
-        if (typeof window.lighthouse !== 'undefined') {
-          window.lighthouse(window.location.href, {
-            output: 'json'
-          }).then(resolve);
-        } else {
-          resolve({ error: 'Lighthouse not available' });
-        }
-      });
+    const metrics = await page.evaluate(() => {
+      return {
+        jsHeapSizeLimit: performance.memory?.jsHeapSizeLimit || 0,
+        usedJSHeapSize: performance.memory?.usedJSHeapSize || 0
+      };
     });
+<<<<<<< HEAD
 
     // Check performance score
 
@@ -797,3 +793,8 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 >>>>>>> main
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+    expect(metrics.usedJSHeapSize).toBeLessThan(50000000);
+  });
+});
+>>>>>>> origin/main

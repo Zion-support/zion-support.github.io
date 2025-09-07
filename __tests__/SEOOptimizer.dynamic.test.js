@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});
 
@@ -118,15 +119,23 @@ describe('SEOOptimizerdynamic'
   test('handles user interactions'
   test('applies correct styling'
 
+=======
+>>>>>>> origin/main
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+<<<<<<< HEAD
 import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic';
 
 describe('SEOOptimizerdynamic', () => {
+=======
+import SEOOptimizer from '../components/SEOOptimizer';
+
+describe('SEOOptimizer', () => {
+>>>>>>> origin/main
   test('renders without crashing', () => {
-    render(<SEOOptimizerdynamic />);
-    expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument();
+    render(<SEOOptimizer />);
+    expect(screen.getByTestId('seooptimizer')).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -147,15 +156,19 @@ describe('SEOOptimizerdynamic', () => {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   test('displays correct content', () => {
-    render(<SEOOptimizerdynamic />);
+    render(<SEOOptimizer />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<SEOOptimizerdynamic />);
+    render(<SEOOptimizer />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<SEOOptimizerdynamic />);
+    render(<SEOOptimizer />);
+    // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 
     expect(screen.getByTestId('seooptimizer.dynamic'
   test('displays correct content'
@@ -170,3 +183,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptim
 
 import _React from 'react';  import '@testing-library/jest-dom'; import SEOOptimizerdynamic from '../components/SEOOptimizer.dynamic'; describe('SEOOptimizerdynamic',() => { test('renders without crashing',() => { render(<SEOOptimizerdynamic />); expect(screen.getByTestId('seooptimizer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SEOOptimizerdynamic />)}); test('handles user interactions',() => { render(<SEOOptimizerdynamic />)}); test('applies correct styling',() => { render(<SEOOptimizerdynamic />)})});
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/main

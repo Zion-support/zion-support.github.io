@@ -1,8 +1,20 @@
+<<<<<<< HEAD
 describe('EnhancedFooterdynamic', () => {
   test('renders without crashing', () => {
     render(<EnhancedFooterdynamic />);
     expect(screen.getByTestId('enhancedfooter.dynamic')).toBeInTheDocument();
 
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import EnhancedFooter from '../components/EnhancedFooter';
+
+describe('EnhancedFooter', () => {
+  test('renders without crashing', () => {
+    render(<EnhancedFooter />);
+    expect(screen.getByTestId('enhancedfooter')).toBeInTheDocument();
+>>>>>>> origin/main
   });
 
 });
@@ -14,15 +26,19 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
 });
 });
   test('displays correct content', () => {
-    render(<EnhancedFooterdynamic />);
+    render(<EnhancedFooter />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<EnhancedFooterdynamic />);
+    render(<EnhancedFooter />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<EnhancedFooterdynamic />);
+    render(<EnhancedFooter />);
+    // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedFooterdynamic from "./components/EnhancedFooter.dynamic"; describe("EnhancedFooterdynamic",() => { test("renders without crashing",() => { render(<EnhancedFooterdynamic />); expect(screen.getByTestId("enhancedfooter.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedFooterdynamic />)}); test("handles user interactions",() => { render(<EnhancedFooterdynamic />)}); test("applies correct styling",() => { render(<EnhancedFooterdynamic />)})});''"
 
 ursor/add-new-services-and-deploy-updates-0462
@@ -59,3 +75,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Enhanced
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/main

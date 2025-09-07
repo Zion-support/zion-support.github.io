@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 describe('ContactFormEnhanceddynamic', () => {
   test('renders without crashing', () => {
     render(<ContactFormEnhanceddynamic />);
@@ -5,6 +6,17 @@ describe('ContactFormEnhanceddynamic', () => {
       screen.getByTestId('contactformenhanced.dynamic')
     ).toBeInTheDocument();
 
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ContactFormEnhanced from '../components/ContactFormEnhanced';
+
+describe('ContactFormEnhanced', () => {
+  test('renders without crashing', () => {
+    render(<ContactFormEnhanced />);
+    expect(screen.getByTestId('contactformenhanced')).toBeInTheDocument();
+>>>>>>> origin/main
   });
 
 });
@@ -16,15 +28,19 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ContactF
 });
 });
   test('displays correct content', () => {
-    render(<ContactFormEnhanceddynamic />);
+    render(<ContactFormEnhanced />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<ContactFormEnhanceddynamic />);
+    render(<ContactFormEnhanced />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<ContactFormEnhanceddynamic />);
+    render(<ContactFormEnhanced />);
+    // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ContactFormEnhanceddynamic from "./components/ContactFormEnhanced.dynamic"; describe("ContactFormEnhanceddynamic",() => { test("renders without crashing",() => { render(<ContactFormEnhanceddynamic />); expect( screen.getByTestId("contactformenhanced.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<ContactFormEnhanceddynamic />)}); test("handles user interactions",() => { render(<ContactFormEnhanceddynamic />)}); test("applies correct styling",() => { render(<ContactFormEnhanceddynamic />)})});''"
 
 ursor/add-new-services-and-deploy-updates-0462
@@ -61,3 +77,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ContactF
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/main

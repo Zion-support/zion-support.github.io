@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 
 describe('Trust Score User API', () => {
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 })'';'
@@ -97,3 +98,9 @@ const { describe,it,expect } from "vitest"; describe('Trust Score User API', () 
 
 });''
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+>>>>>>> origin/main

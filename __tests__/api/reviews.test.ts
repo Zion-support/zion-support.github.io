@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 import type { NextApiRequest, NextApiResponse } from 'next
@@ -1237,3 +1238,48 @@ import { createMocks,RequestMethod } from 'node-mocks-http' import type { NextAp
   it('should return an empty array if no reviews found (200)',async () => { (prismaMock.productReview.findMany as jest.Mock).mockResolvedValue([]) const { req,res } = createMocks({ method: 'GET' as RequestMethod query: { productId: 'prodNonExistent' } }) await productReviewsHandler( req as NextApiRequest,res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse> ) expect(res._getStatusCode()).toBe(200) expect(res._getJSONData()).toEqual([]) });
 
   it('should fail if productId is missing (400)',async () => { const { req,res } = createMocks({ method: 'GET' as RequestMethod query: {} }) await productReviewsHandler( req as NextApiRequest,res as NextApiResponse<GetReviewsSuccessResponse | ErrorResponse> ) expect(res._getStatusCode()).toBe(400) expect(res._getJSONData()).toEqual({ error: 'productId is required in the URL path and must be a string.' }) }) }) })
+=======
+import { createMocks, RequestMethod } from 'node-mocks-http';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import reviewsHandler from '@/pages/api/reviews';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+
+jest.mock('@prisma/client');
+jest.mock('@/integrations/supabase/client');
+
+describe('/api/reviews API Endpoint', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  describe('GET /api/reviews', () => {
+    it('should return reviews with pagination', async () => {
+      const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
+        method: 'GET' as RequestMethod,
+        query: { page: '1', limit: '10' }
+      });
+
+      await reviewsHandler(req, res);
+
+      expect(res._getStatusCode()).toBe(200);
+    });
+  });
+
+  describe('POST /api/reviews', () => {
+    it('should create a new review', async () => {
+      const { req, res } = createMocks<NextApiRequest, NextApiResponse>({
+        method: 'POST' as RequestMethod,
+        body: {
+          productId: '1',
+          rating: 5,
+          comment: 'Great product!'
+        }
+      });
+
+      await reviewsHandler(req, res);
+
+      expect(res._getStatusCode()).toBe(201);
+    });
+  });
+});
+>>>>>>> origin/main

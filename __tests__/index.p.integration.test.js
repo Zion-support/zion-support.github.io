@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import indexp from '../pages/index.p'; describe('index.p Integration Tests',() => { test('page renders correctly',() => { render(<indexp />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('navigation works',() => { render(<indexp />)}); test('page content is accessible',() => { render(<indexp />)}); test('page loads with correct data',() => { render(<indexp />)})});
 import _React from 'react'; import { render,screen } from '@testing-library/react'; import '@testing-library/jest-dom'; import indexp from '../pages/index.p'; describe('index.p Integration Tests',() => { test('page renders correctly',() => { render(<indexp />); expect(screen.getByRole('main')).toBeInTheDocument()}); test('navigation works',() => { render(<indexp />)}); test('page content is accessible',() => { render(<indexp />)}); test('page loads with correct data',() => { render(<indexp />)})});
 
@@ -103,14 +104,32 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   test('navigation works', () => {
     render(<indexp />);
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import IndexIntegration from '../components/index.p.integration';
+
+describe('IndexIntegration', () => {
+  test('renders without crashing', () => {
+    render(<IndexIntegration />);
+    expect(screen.getByTestId('index-integration')).toBeInTheDocument();
   });
-  test('page content is accessible', () => {
-    render(<indexp />);
+  test('displays correct content', () => {
+    render(<IndexIntegration />);
+    // Add specific content tests based on component
+>>>>>>> origin/main
   });
-  test('page loads with correct data', () => {
-    render(<indexp />);
+  test('handles user interactions', () => {
+    render(<IndexIntegration />);
+    // Add interaction tests based on component functionality
+  });
+  test('applies correct styling', () => {
+    render(<IndexIntegration />);
+    // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe("index.p Integration Tests",() => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data",() => { render(<indexp />)})});''"
 
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data"
@@ -129,3 +148,5 @@ ursor/integrate-build-improve-and-re-verify-8f7d,
 =======
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import indexp from "./pages/index.p"; describe('index.p Integration Tests', () => { test("page renders correctly",() => { render(<indexp />); expect(screen.getByRole("main")).toBeInTheDocument()}); test("navigation works",() => { render(<indexp />)}); test("page content is accessible",() => { render(<indexp />)}); test("page loads with correct data"
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/main

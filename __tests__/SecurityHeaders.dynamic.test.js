@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic'; describe('SecurityHeadersdynamic',() => { test('renders without crashing',() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityHeadersdynamic />)}); test('handles user interactions',() => { render(<SecurityHeadersdynamic />)}); test('applies correct styling',() => { render(<SecurityHeadersdynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic'; describe('SecurityHeadersdynamic',() => { test('renders without crashing',() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityHeadersdynamic />)}); test('handles user interactions',() => { render(<SecurityHeadersdynamic />)}); test('applies correct styling',() => { render(<SecurityHeadersdynamic />)})});
 
@@ -118,15 +119,23 @@ describe('SecurityHeadersdynamic'
   test('handles user interactions'
   test('applies correct styling'
 
+=======
+>>>>>>> origin/main
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+<<<<<<< HEAD
 import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic';
 
 describe('SecurityHeadersdynamic', () => {
+=======
+import SecurityHeaders from '../components/SecurityHeaders';
+
+describe('SecurityHeaders', () => {
+>>>>>>> origin/main
   test('renders without crashing', () => {
-    render(<SecurityHeadersdynamic />);
-    expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument();
+    render(<SecurityHeaders />);
+    expect(screen.getByTestId('securityheaders')).toBeInTheDocument();
   });
 
   test('displays correct content', () => {
@@ -147,15 +156,19 @@ describe('SecurityHeadersdynamic', () => {
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
   test('displays correct content', () => {
-    render(<SecurityHeadersdynamic />);
+    render(<SecurityHeaders />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<SecurityHeadersdynamic />);
+    render(<SecurityHeaders />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<SecurityHeadersdynamic />);
+    render(<SecurityHeaders />);
+    // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 
     expect(screen.getByTestId('securityheaders.dynamic'
   test('displays correct content'
@@ -170,3 +183,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Security
 
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityHeadersdynamic from '../components/SecurityHeaders.dynamic'; describe('SecurityHeadersdynamic',() => { test('renders without crashing',() => { render(<SecurityHeadersdynamic />); expect(screen.getByTestId('securityheaders.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityHeadersdynamic />)}); test('handles user interactions',() => { render(<SecurityHeadersdynamic />)}); test('applies correct styling',() => { render(<SecurityHeadersdynamic />)})});
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> origin/main

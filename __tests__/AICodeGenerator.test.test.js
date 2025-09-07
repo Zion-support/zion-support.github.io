@@ -43,6 +43,7 @@ import AICodeGeneratortest from '../components/AICodeGenerator.test';'
 
 =======
 import React from 'react';
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -87,6 +88,8 @@ import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';
 
 import React from 'react';
+=======
+>>>>>>> origin/main
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';

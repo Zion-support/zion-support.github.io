@@ -43,6 +43,7 @@ import AIChatbotSystemtest from '../components/AIChatbotSystem.test';'
 
 =======
 import React from 'react';
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
 >>>>>>> origin/chore/fix-lint-and-merge
@@ -87,6 +88,8 @@ import '@testing-library/jest-dom';
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
 
 import React from 'react';
+=======
+>>>>>>> origin/main
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test';

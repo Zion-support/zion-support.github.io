@@ -1,8 +1,20 @@
+<<<<<<< HEAD
 describe('ContactFormdynamic', () => {
   test('renders without crashing', () => {
     render(<ContactFormdynamic />);
     expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument();
 
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ContactForm from '../components/ContactForm';
+
+describe('ContactForm', () => {
+  test('renders without crashing', () => {
+    render(<ContactForm />);
+    expect(screen.getByTestId('contactform')).toBeInTheDocument();
+>>>>>>> origin/main
   });
 
 });
@@ -14,15 +26,19 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ContactF
 });
 });
   test('displays correct content', () => {
-    render(<ContactFormdynamic />);
+    render(<ContactForm />);
+    // Add specific content tests based on component
   });
   test('handles user interactions', () => {
-    render(<ContactFormdynamic />);
+    render(<ContactForm />);
+    // Add interaction tests based on component functionality
   });
   test('applies correct styling', () => {
-    render(<ContactFormdynamic />);
+    render(<ContactForm />);
+    // Add styling tests if needed
   });
 });
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ContactFormdynamic from "./components/ContactForm.dynamic"; describe("ContactFormdynamic",() => { test("renders without crashing",() => { render(<ContactFormdynamic />); expect(screen.getByTestId("contactform.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ContactFormdynamic />)}); test("handles user interactions",() => { render(<ContactFormdynamic />)}); test("applies correct styling",() => { render(<ContactFormdynamic />)})});''"
 
 ursor/add-new-services-and-deploy-updates-0462
@@ -59,3 +75,5 @@ import _React from 'react';  import '@testing-library/jest-dom'; import ContactF
   });
 });
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+=======
+>>>>>>> origin/main
