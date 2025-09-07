@@ -1,72 +1,583 @@
+export interface Project {
+  id: string;
+  title: string,
+  description: string;
+  status: 'planning' | 'active' | 'completed' | 'cancelled';
+  clientId: string;
+  talentId?: string;
+  budget: number;
+
 import fs from 'fs';
+
 import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
 import {
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+
   Project,
   Milestone,
   MilestoneStatus,
   isMilestoneStatus
-} from '../types/milestones';
-import { CurrentUser } from './auth';
-export interface Milestone {
+main
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+export interface Project {
   id: string;
   title: string;
-  description?: string;
-  dueDate: string;
-  amountUsd: number;
-  status: 'pending' | 'completed' | 'cancelled';
-  attachments?: any[];
+  description: string;
+  status: 'planning' | 'active' | 'completed' | 'cancelled';
+  clientId: string;
+  talentId?: string;
+  budget: number;
+  deadline: string;
+import fs from 'fs';
+import path from 'path';
+import { NextApiRequest, NextApiResponse } from 'next';
+import {
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+
+export interface Milestone {;
+
+  Project,
+  Milestone,
+  MilestoneStatus,
+  isMilestoneStatus,;
+<<<<<<< HEAD
+} from '../types/milestones';'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+
+// Project management utilities
+
+import { v4 as uuidv4 } from 'uuid';
+
+export interface Project {};
+  id: string;
+  title: string;
+  summary: string;
+  clientId: string;
+  talentSlug: string;
+  startDateIso: string;'
+  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED' | 'PAUSED';
+  timeline: Array<{}
+    id: string;
+    title: string;
+    amount: number;
+    dueDate?: string;'
+    status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE';
+  }>;
+  documents: Array<{}
+    id: string;
+    name: string;
+    url: string;
+    uploadedAtIso: string;
+  }>;
+  notes: Array<{}
+    id: string;
+    content: string;
+    authorId: string;
+    createdAtIso: string;
+  }>;
+
   createdAt: string;
   updatedAt: string;
 }
-// Mock storage
-const projects: Project[] = [];
-export function getProjectById(id: string): Project | null {
-  return projects.find(p => p.id === id) |null;
+
+export interface CreateProjectPayload {
+  title: string;
+  description: string;
+  budget: number;
+  deadline: string;
+  clientId: string;
+}
+
+export interface UpdateProjectPayload {
+  documents: Array<{,
+  id: string;
+    name: string;,
+  url: string;
+    uploadedAtIso: string;
+  notes: Array<{,
+    content: string;,
+  authorId: string;
+    createdAtIso: string;
+  createdAt: string;,
+  updatedAt: string;
+
+  // TODO: Implement
+  title: string;,
+  description: string;
+
+  // TODO: Implement
+pr-12325
+  title?: string;
+  description?: string;
+  status?: Project['status'];
+  budget?: number;
+  deadline?: string;
+}
+
+export async function getProjects(): Promise<Project[]> {
+<<<<<<< HEAD
+  }
+    }
+    "method": 'GET','
+    "credentials": 'include''
+=======
+  const res = await fetch('/api/projects', {
+    method: 'GET',
+    credentials: 'include'
+>>>>>>> origin/chore/fix-lint-and-merge
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+export async function updateProject(projectId: string, payload: UpdateProjectPayload): Promise<Project> {
+  const res = await fetch(`/api/projects/${projectId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    credentials: 'include',
+    body: JSON.stringify(payload)
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+  return res.json();
+}
+
+<<<<<<< HEAD
+export async function deleteProject("projectId": string): Promise<void> {
+  }
+    "method": 'DELETE','
+    "credentials": 'include''
+=======
+export async function deleteProject(projectId: string): Promise<void> {
+  const res = await fetch(`/api/projects/${projectId}`, {
+    method: 'DELETE',
+    credentials: 'include'
+>>>>>>> origin/chore/fix-lint-and-merge
+  });
+  
+  if (!res.ok) throw new Error(await res.text());
+}
+
+export interface Milestone {
+
+  id: string;
+  title: string;
+  description?: string;
+  due_date: string;
+  amount_usd: number;'
+  status: 'pending' | 'completed' | 'cancelled';
+  attachments?: any[];
+  created_at: string;
+  updated_at: string;
+}
+
 }
 export function getAllProjects(): Project[] {
+
+}
+export function getAllProjects(): Project[] {};
+export function getProjectById(id: string): Project | null {;
+  return projects.find(p => p.id === id) || null;
+}
+
+export function getAllProjects(): Project[] {;
+
   return projects;
 }
+
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
-    ...project
-    id: `project_${Date.now()}`
-    createdAt: new Date().toISOString()
+
+    ...project,
+    id: `project_${Date && Date.now()}`,
+    createdAt: new Date().toISOString(),
+
     updatedAt: new Date().toISOString()
-  }
+
+  };
+  projects && projects.push(newProject);
+
+  return newProject;
+}
+
+    ...project,
+    id: `project_${Date.now()}`,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()
+
+  };
+
   projects.push(newProject);
   return newProject;
 }
-export function updateProject(id: string, updates: Partial<Project>): Project | null {
+
+export function updateProject(id: string, updates: Partial<Project>): Project | null {;
+
   const project = projects.find(p => p.id === id);
+
   if (!project) return null;
+
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
+
+  const project = projects && projects.find(p => p && p.id === id);
+  if (!project) return null,
+  
+  Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() });
+
   return project;
 }
+
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
-    ...milestone
-    id: `milestone_${Date.now()}`
-    status: 'pending'
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+    ...milestone,
+    id: `milestone_${Date.now()}`,
+    status: 'pending',
+    createdAt: new Date().toISOString(),
+
+    updatedAt: new Date().toISOString();
+
   };
-  
+
+  }
+
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
+
+  project && project.milestones[idx] = next;
+  project && project.updatedAt = now;
+  saveProject(project);
+  return next;  
+  project && project.milestones.push(newMilestone);
+  project && project.updatedAt = new Date().toISOString();
+
   return newMilestone;
 }
-export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
+
+export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
+
   const milestone = project.milestones.find(m => m.id === milestoneId);
   if (!milestone) return null;
+
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
+
+  const milestone = project && project.milestones.find(m => m && m.id === milestoneId);
+
+  if (!milestone) return null,
+  
+  Object && Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
+  project && project.updatedAt = new Date().toISOString();
+
   return milestone;
 }
-export function deleteMilestone(project: Project, milestoneId: string): boolean {
+
+export function deleteMilestone(project: Project, milestoneId: string): boolean {;
+
   const index = project.milestones.findIndex(m => m.id === milestoneId);
   if (index === -1) return false;
+
   project.milestones.splice(index, 1);
   project.updatedAt = new Date().toISOString();
+
+  const index = project && project.milestones.findIndex(m => m && m.id === milestoneId);
+
+  if (index === -1) return false,
+  
+  project && project.milestones.splice(index, 1);
+  project && project.updatedAt = new Date().toISOString();
+
+// Mock storage;
+const projects: Project[] = [];
+
+;
+
+;
+export function isClient(project: Project, user: CurrentUser): boolean {;
+  return user.role === 'admin' || user.userId === project.participants.clientUserId;
+}
+;
+export function isTalent(project: Project, user: CurrentUser): boolean {;
+  return user.role === 'admin' || user.userId === project.participants.talentUserId;
+}
+
+;
+<<<<<<< HEAD
+  return milestone;
+}
+export function delete_milestone ("project": Project, "milestone_id": string): boolean {
+  }
+  const index = project.milestones.find_index (m => { return m.id === milestone_id); }
+  // Check condition,
+if (return false) {
+  $2
+}
+  project.milestones.splice (index, 1);
+  project.updated_at = new Date ().toISOString ();
+;
   return true;
 }
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
+
+
+
+
+
+
+
+
+
+const DATA_FILE = path.join(process.cwd(), 'data', 'projects.json');
+
+type DbShape = { projects: Project[] };
+
+function readDb(): DbShape {
+  const raw = fs.readFileSync(DATA_FILE, 'utf8');
+  return JSON.parse(raw) as DbShape;
+
+function writeDb(db: DbShape) {
+  fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2), 'utf8');
+
+export function getProject(projectId: string): Project | null {
+  const db = readDb();
+  return db.projects.find(p => p.id === projectId) || null;
+
+export function saveProject(updated: Project): void {
+  const idx = db.projects.findIndex(p => p.id === updated.id);
+  if (idx === -1) {
+    db.projects.push(updated);
+  } else {
+    db.projects[idx] = updated;
+  }
+  writeDb(db);
+
+export function assertParticipantOrAdmin(
+  project: Project,
+  user: CurrentUser
+): boolean {
+  if (user.role === 'admin') return true;
+  return user.userId === clientUserId || user.userId === talentUserId;
+
+export function isClient(project: Project, user: CurrentUser): boolean {
+  return (
+    user.role === 'admin' || user.userId === project.participants.clientUserId
+  );
+
+export function isTalent(project: Project, user: CurrentUser): boolean {
+  return (
+    user.role === 'admin' || user.userId === project.participants.talentUserId
+  );
+
+export function generateId(prefix: string = 'id'): string {
+=======
+export function generateId(prefix: string = 'id'): string {;
+>>>>>>> origin/chore/fix-lint-and-merge
+  const rand = Math.random().toString(36).slice(2, 8);
+  const time = Date.now().toString(36);
+  return `${prefix}_${time}_${rand}`;
+}
+
+;
+export function addMilestone(;
+  project: Project;
+  payload: Omit<Milestone 'id' | 'createdAt' | 'updatedAt' | 'status'> & { status?: MilestoneStatus }
+): Milestone {;
+  const now = new Date().toISOString();
+  const m: Milestone = {;
+    id: generateId('ms');
+    title: payload.title;
+    description: payload.description;
+    dueDate: payload.dueDate;
+    amountUsd: payload.amountUsd;
+    status: payload.status && isMilestoneStatus(payload.status) ? payload.status : 'Pending';
+    attachments: payload.attachments || [];
+    createdAt: now;
+    updatedAt: now};
+  project.milestones.push(m);
+  project.updatedAt = now;
+  saveProject(project);
+  return m;
+}
+
+origin/cursor/automate-test-improve-and-merge-code-20a4
+
+import fs from 'fs';
+import path from 'path';
+import { NextApiRequest, NextApiResponse } from 'next';
+import { Project, Milestone, MilestoneStatus, isMilestoneStatus } from '../types/milestones';
+import { CurrentUser } from './auth';
+const DATA_FILE = path.join(process.cwd(), 'dataprojects.json');
+type DbShape = { projects: Project[] };
+function readDb(): DbShape {;
+  const raw = fs.readFileSync(DATA_FILE, 'utf8');
+  return JSON.parse(raw) as DbShape;
+}
+;
+function writeDb(db: DbShape) {;
+  fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2), 'utf8');
+}
+;
+export function getProject(projectId: string): Project | null {;
+  const db = readDb();
+  return db.projects.find((p) => p.id === projectId) || null;
+}
+;
+export function saveProject(updated: Project): void {;
+  const db = readDb();
+  const idx = db.projects.findIndex((p) => p.id === updated.id);
+  if (idx === -1) {;
+    db.projects.push(updated);
+  } else {;
+    db.projects[idx] = updated;
+  }
+  writeDb(db);
+}
+;
+export function assertParticipantOrAdmin(;
+  project: Project;
+  user: CurrentUser;
+): boolean {;
+  if (user.role === 'admin') return true;
+  const { clientUserId, talentUserId } = project.participants;
+  return user.userId === clientUserId || user.userId === talentUserId;
+}
+;
+export function isClient(project: Project, user: CurrentUser): boolean {;
+  return user.role === 'admin' || user.userId === project.participants.clientUserId;
+}
+;
+export function isTalent(project: Project, user: CurrentUser): boolean {;
+  return user.role === 'admin' || user.userId === project.participants.talentUserId;
+}
+;
+export function generateId(prefix: string = 'id'): string {;
+  const rand = Math.random().toString(36).slice(2, 8);
+  const time = Date.now().toString(36);
+  return `${prefix}_${time}_${rand}`;
+}
+;
+export function addMilestone(;
+  project: Project;
+  payload: Omit<Milestone 'id' | 'createdAt' | 'updatedAt' | 'status'> & { status?: MilestoneStatus }
+): Milestone {;
+  const now = new Date().toISOString();
+  const m: Milestone = {;
+    id: generateId('ms');
+    title: payload.title;
+    description: payload.description;
+    dueDate: payload.dueDate;
+    amountUsd: payload.amountUsd;
+    status: payload.status && isMilestoneStatus(payload.status) ? payload.status : 'Pending';
+    attachments: payload.attachments || [];
+    createdAt: now;
+    updatedAt: now};
+  project.milestones.push(m);
+  project.updatedAt = now;
+  saveProject(project);
+  return m;
+}
+;
+export function updateMilestone(;
+  project: Project;
+  milestoneId: string;
+  update: Partial<Milestone>;
+): Milestone | null {;
+  const idx = project.milestones.findIndex((m) => m.id === milestoneId);
+  if (idx === -1) return null;
+  const now = new Date().toISOString();
+  const next: Milestone = { ...project.milestones[idx], ...update, updatedAt: now };
+  project.milestones[idx] = next;
+  project.updatedAt = now;
+  saveProject(project);
+  return next;
+
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return newMilestone;
+}
+
+<<<<<<< HEAD
+export function addMilestone(
+  project: Project,
+  payload: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt' | 'status'> & { status?: MilestoneStatus }
+): Milestone {
+  const now = new Date().toISOString($2);
+    id: generateId($2);
+    title: payload.title,
+    description: payload.description,
+    dueDate: payload.dueDate,
+    amountUsd: payload.amountUsd,
+    status: payload.status && isMilestoneStatus(payload.status) ? payload.status : 'Pending',
+    attachments: payload.attachments || [],
+    createdAt: now,
+    updatedAt: now},
+  project.milestones.push($2);
+  project.updatedAt = $2;
+  saveProject($2);
+  return m
+}
+
+export function updateMilestone(
+  project: Project,
+  milestoneId: string,
+  update: Partial<Milestone>
+): Milestone | null {
+
+
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+
+
+
+
+  const idx = $2;
+  if (idx = $2;
+  const next: Milestone = { ...project.milestones[idx], ...update, updatedAt: now},
+  project.milestones[idx] = next,
+  project.updatedAt = $2;
+  saveProject($2);
+  return next
+}
+=======
+export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
+  if (!project.milestones) return null;
+  
+  const milestone = project.milestones.find(m => m.id === milestoneId);
+  if (!milestone) return null;
+  
+  Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
+  project.updatedAt = new Date().toISOString();
+
+origin/cursor/automate-test-improve-and-merge-code-382a
+origin/cursor/expand-services-advertise-and-build-project-c28b
+  return milestone;
+}
+
+export function deleteMilestone(project: Project, milestoneId: string): boolean {
+  if (!project.milestones) return false;
+  
+  const index = project.milestones.findIndex(m => m.id === milestoneId);
+  if (index === -1) return false;
+  
+  project.milestones.splice(index, 1);
+  project.updatedAt = new Date().toISOString();
+>>>>>>> origin/chore/fix-lint-and-merge

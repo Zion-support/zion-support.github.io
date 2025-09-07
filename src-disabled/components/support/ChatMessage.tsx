@@ -1,28 +1,7 @@
-:src/components/support/ChatMessage.tsx
-import React, { useMemo } from "react",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { cn } from "@/lib/utils";
-import { format } from "date-fns";
-// Use the wrapper hook so TypeScript properly infers the return type
-// from the ThemeProvider context
 import { useTheme } from "@/hooks/useTheme";
 
   message: string;
   isUser: boolean;
-:src/components/support/ChatMessage.tsx
-  timestamp: Date
-export const ChatMessage: React.FC<ChatMessageProps> = ({
-
-  message
-  isUser
-  timestamp
-}: ChatMessageProps) => {
-  const { theme } = useTheme()
-  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
-  // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
-  const sanitizedHtml = useMemo<{ __html: string }>(
-    () => ({ __html: formatMessageWithLinks(message) }),    [message]
-  )
 
   return (
     <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>;
@@ -49,7 +28,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
         )}
 
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
-:src/components/support/ChatMessage.tsx
       </Avatar>
 
           'max-w-[80%] rounded-lg px-4 py-2 text-sm',
@@ -62,19 +40,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 
         )}
       >
-:src/components/support/ChatMessage.tsx
-        <div dangerouslySetInnerHTML={sanitizedHtml} />
-        <div
-          className={cn(
-            'text-xs mt-1'
-            isUser
-              ? 'text-white/70'
-              : theme === 'dark'
-                ? 'text-gray-300'
-                : 'text-gray-500'
-          )}
-        >
-          {format(timestamp, 'h:mm a')}
 
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
@@ -99,8 +64,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       </div>
     </div>
   )
-:src/components/support/ChatMessage.tsx
-}
 
 },
 
@@ -114,30 +77,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
-:src/components/support/ChatMessage.tsx
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;')
-function formatMessageWithLinks(message: string): string {
-  // First, escape any HTML so that user input cannot break out of the intended
-  // markup.
-  const safeText = escapeHtml(message)
-  // Replace URLs
-  const urlRegex = /(https?:\/\/[^\s]+)/g
-  let formattedMessage = safeText.replace(
-    urlRegex
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
-  )
-  // Replace help-center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g
-  formattedMessage = formattedMessage.replace(
-    helpCenterRegex
-    '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
-  )
-  return formattedMessage; return formattedMessage
-}
 
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
@@ -153,7 +92,6 @@ function formatMessageWithLinks(message: string): string {
 
   // Replace URLs
   const urlRegex = /(https?:\/\/[^\s]+)/g,
-  let formattedMessage = safeText.replace(
     urlRegex,
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
   ),
@@ -243,9 +181,6 @@ function escapeHtml(unsafe: string): string {;
     .replace(/'/g, "&#039,");
 }
 ;
-:src/components/support/ChatMessage.tsx
-}
-}
 
 function formatMessageWithLinks(message: string): string {;
   // First, escape any HTML so that user input cannot break out of the intended;

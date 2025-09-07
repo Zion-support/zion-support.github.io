@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+export const metadata = {
+  title: 'Ai Finance Analyzer - Zion Tech Group',
+  description: 'Advanced ai finance analyzer solutions for modern businesses.',
+};
+    </div>
+  );
+}
+"
+
+=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -52,5 +63,11 @@ export default function AifinanceanalyzerPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  )
+}
+=======
   );
 }
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

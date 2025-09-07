@@ -178,6 +178,8 @@ export default function FuturisticFooter() {
                   </ul>
                 </div>
               ))}
+<<<<<<< HEAD
+=======
             </ul>
           </div>
 
@@ -248,6 +250,7 @@ export default function FuturisticFooter() {
                   </a>
                 </div>
               </div>
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-cca0
             </div>
           </div>
         </div>

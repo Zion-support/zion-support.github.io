@@ -17,12 +17,14 @@ const coverPreview = useMemo ( () => {
 }</div> </section> </div>) 
 }
 =======
-import React, { useMemo, useState } from 'react'
-import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2  } from 'lucide-react'
-import { buildPrintableHtml  } from '../../utils/export/buildHtml'
-import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes'
-import { defaultChapters } from '../../utils/book/defaultOutline'
-const initialProject: BookProject
+
+import React, { useMemo, useState } from 'react';
+import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2  } from 'lucide-react';
+import { buildPrintableHtml  } from '../../utils/export/buildHtml';
+import type { BookProject, BookChapter, VisualAsset } from '../../utils/book/bookTypes';
+import { defaultChapters } from '../../utils/book/defaultOutline';
+const initialProject: BookProject;
+
                   setProject({ ...project, visuals: { ...project.visuals, quoteCallouts } })
                 }}
                 placeholder="Attribution"
@@ -34,5 +36,5 @@ const initialProject: BookProject
       </section>
     </div>
   )
-}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+};
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -49,8 +49,6 @@ function generateInnovationListing(index: number): ProductListing {
       icon: <Code className="w-6 h-6" />
     }
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
-  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
-  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
   const reviewCount = Math.floor(Math.random() * 50) + 10,
 
   return {
@@ -311,7 +309,6 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
   const seoTitle = category.title
     ? `${category.title} | Zion Marketplace`
     : 'Category | Zion Marketplace',
-  const seoDescription =
     category.description || 'Explore listings in this category.',
 
         setCategory(currentCategory)

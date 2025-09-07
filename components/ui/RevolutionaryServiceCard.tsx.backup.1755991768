@@ -29,7 +29,9 @@ interface RevolutionaryServiceCardProps {
     competitors: string[];
     marketSize: string;
     growthRate: string;
+=======
     variant: string;
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-71e4
     contactInfo: {
       mobile: string;
       email: string;
@@ -43,6 +45,7 @@ interface RevolutionaryServiceCardProps {
     rating: number;
     reviews: number;
   };
+<<<<<<< HEAD
   variant?: 'default' | 'holographic' | 'quantum' | 'neural' | 'cyberpunk';
 }
 

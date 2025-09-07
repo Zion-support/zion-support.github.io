@@ -241,7 +241,6 @@ const getCategoryIcon = (
 
 const getCategoryName = (
    ;
-  const category = categories.find(cat => cat.id === categoryId);
     return category ? category.name : 'Unknown') => {
   return $3;}
 }

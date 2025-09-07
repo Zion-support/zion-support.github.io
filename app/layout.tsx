@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+>>>>>>> origin/chore/fix-lint-and-merge
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
     images: [
@@ -30,11 +31,12 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Zion Tech Group - AI and Technology Solutions',
+        alt: 'Zion Tech Group - Enterprise AI & IT Solutions',
       },
     ],
     locale: 'en_US',
     type: 'website',
+>>>>>>> origin/chore/fix-lint-and-merge
   },
   twitter: {
     card: 'summary_large_image',
@@ -42,6 +44,8 @@ export const metadata: Metadata = {
     description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
     images: ['/og-image.jpg'],
   },
+<<<<<<< HEAD
+=======
   verification: {
     google: 'your-google-verification-code',
   },
@@ -58,6 +62,7 @@ export const metadata: Metadata = {
   },
   themeColor: '#000000',
 };
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 
 export default function RootLayout({
   children,

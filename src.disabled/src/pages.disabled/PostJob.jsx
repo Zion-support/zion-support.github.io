@@ -23,5 +23,35 @@ export default function PostJob({ }: PostJobProps) {
     <div>
       <h1>PostJob</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+
+}
+
+:src.disabled/src/pages.disabled/PostJob.jsx
+}
+
+:src.pages.disabled/PostJob.jsx
+
+:src.pages.disabled/PostJob.jsx
+
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/PostJob.jsx
+
+}
+
+}
+
+:src.pages.disabled/PostJob.jsx
+}
+}
+}
+}
+}
+
+}
+>

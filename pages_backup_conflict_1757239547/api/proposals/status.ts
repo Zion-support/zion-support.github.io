@@ -19,8 +19,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(500).json({ error: error?.message |'Failed to update status' })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { updateProposalMeta } from '../../../utils/data/proposals';
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });

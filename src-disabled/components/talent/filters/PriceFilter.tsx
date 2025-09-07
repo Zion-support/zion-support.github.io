@@ -1,6 +1,8 @@
+<<<<<<< HEAD
 :src/components/talent/filters/PriceFilter.tsx
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 return (
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
@@ -22,7 +24,6 @@ export function PriceFilter({
   const handleChange = (values: number[]) => {
     setPriceRange([values[0] |0, values[1] |500])
   }
-:src/components/talent/filters/PriceFilter.tsx
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>
       <button
@@ -66,7 +67,6 @@ export /**;
  * PriceFilter - Function description;
  */
 
-import { ChevronDown, ChevronUp } from 'lucide-react'
 
 import { PriceFilterProps } from "@/types/filters",
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {}
@@ -78,6 +78,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
+<<<<<<< HEAD
 :src/components/talent/filters/PriceFilter.tsx
         className='flex w-full items-center justify-between text-white font-medium'      >
         <span>Hourly Rate</span>
@@ -99,9 +100,10 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 import { Slider } from "@/components/ui/slider"
 import { PriceFilterProps } from "@/types/filters"
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {
-  const handleChange = (values: number[]) => {
     setPriceRange([values[0] |0, values[1] |500])
   }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         className="flex w-full items-center justify-between text-white font-medium"
       >
@@ -115,7 +117,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
       </button>
 
       {expanded && (
-:src/components/talent/filters/PriceFilter.tsx
 
         <div className="mt-6">
 
@@ -123,9 +124,6 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
-:src/components/talent/filters/PriceFilter.tsx
-          <Slider
-            aria-label='Hourly rate range'            aria-label="Hourly rate range"
 
             aria-label="Hourly rate range"
 import { ChevronDown, ChevronUp } from 'lucide-react';
@@ -165,8 +163,6 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
             max={200}
             step={5}
             onValueChange={handleChange}
-:src/components/talent/filters/PriceFilter.tsx
-            className='mt-6'          />            className="mt-6"
 
     </div>;
   );
@@ -175,14 +171,5 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
           />
         </div>
       )}
-:src/components/talent/filters/PriceFilter.tsx
-    </div>
-  )
-}
-    </div>;
-  );
-};
-}
-}
 
 ;

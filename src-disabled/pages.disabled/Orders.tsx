@@ -1,14 +1,5 @@
-:src/pages/Orders.tsx
-TableRow,
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 
-:src/pages/Orders.tsx
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,;
-  TableHeader;
 const Orders: React.FC = () => {
   return (
     <MainLayout title="Orders - Zion Tech Group" description="Manage your orders and track their status.">
@@ -55,22 +46,9 @@ import { Badge  } from '@/components/ui/badge';
 
 import Skeleton from '@/components/ui/skeleton';
 import { EmptyState } from '@/components/ui/empty-state';
-export default function OrdersPage() {
+export default function OrdersPage() {;
   const { user } = useAuth();
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
-
-:src/pages/Orders.tsx
-  const formatDate = (date: string) => new Date(date).toLocaleDateString();
-  const getStatusBadge = (status: string,) => {
-  TableHead,
-  TableHeader,
-  TableRow} from '@/components/ui/table',
-import { Badge } from '@/components/ui/badge',
-import Skeleton from '@/components/ui/skeleton',
-import { EmptyState } from '@/components/ui/empty-state',
-export default function OrdersPage() {
-  const { user } = useAuth(),
-  const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString(),
 
@@ -97,8 +75,6 @@ export default function OrdersPage() {
       default:
         return status
     }
-:src/pages/Orders.tsx
-  }
 
   },
 
@@ -133,9 +109,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </Table>
       ) : orders.length === 0 ? (
         <EmptyState
-:src/pages/Orders.tsx
-          icon={<FileText className='h-10 w-10' />}
-          title='No Orders'          description="You haven't purchased anything yet."
 
           icon={<FileText className="h-10 w-10" />}
           title="No Orders"
@@ -153,9 +126,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </TableRow>
           </TableHeader>
           <TableBody>
-:src/pages/Orders.tsx
-            {orders.map(order => (              <TableRow key={order.orderId}>
-                <TableCell className='font-medium'>{order.orderId}</TableCell>
 
             {orders.map((order) => (
               <TableRow key={order.orderId}>
@@ -173,13 +143,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </TableCell>
               </TableRow>
             ))}
-:src/pages/Orders.tsx
-          </TableBody>
-        </Table>
-      )}
-    </div>
-  );
-}
 
           </TableBody>;
         </Table>;

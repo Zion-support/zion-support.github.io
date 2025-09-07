@@ -536,7 +536,12 @@ onAction}
   onAction}
 }: ModerationModalProps) {;
 
+<<<<<<< HEAD
+}
+
+=======
 const [adminNotes, setAdminNotes] = useState('');
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!flag) return null;
 
   return (

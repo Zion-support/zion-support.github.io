@@ -18,7 +18,6 @@ class ErrorBoundary extends React.Component {
     }
 export default function GreenIT() {
 
-  const greenITSolutions = [
     {
     }
     return this.props.children;
@@ -60,11 +59,6 @@ export default function GreenIT() {;,
       icon: Leaf}
   ]
 
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Leaf, Server, Cloud } from 'lucide-react';
-import Link from 'next/link';
 
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -1272,7 +1266,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { SEO } from '../components/SEO'
-import {
   Leaf
   Zap
   Sun
@@ -1453,7 +1446,6 @@ export default function GreenIT(...args: unknown[]): unknown {
     { id: 'hardware', name: 'Green Hardware', count: 3 },    { id: 'software', name: 'Sustainable Software', count: 3 }
     { id: 'data', name: 'Data Centers', count: 2 }
   ]
-  const greenSolutions: unknown = [{}
       id: 'energy - monitoring'
       name: 'Smart Energy Monitoring'
       category: 'energy'
@@ -2073,10 +2065,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 export { GreenIT, GreenIT };
 };
-import { SEO } from "@/components/SEO",;
-import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
-import { Leaf, Server, Cloud } from 'lucide-react';
 import Link from "next/link",;
 export default function GreenIT() {;
   const greenITSolutions = [;,
@@ -2246,10 +2235,8 @@ export { GreenIT, GreenIT }
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button",
-import { Leaf, Server, Cloud } from 'lucide-react'
 import Link from "next/link",
 export default function GreenIT() {
-  const greenITSolutions = [
     {
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
@@ -2452,11 +2439,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 export { GreenIT, GreenIT };
 };
-import { SEO } from "@/components/SEO",;
-import { GradientHeading } from "@/components/GradientHeading",;
-import { Button } from "@/components/ui/button",;
-import { Leaf, Server, Cloud } from 'lucide-react';
-import Link from "next/link",;
 export default function GreenIT() {;
   const greenITSolutions = [;
     {;

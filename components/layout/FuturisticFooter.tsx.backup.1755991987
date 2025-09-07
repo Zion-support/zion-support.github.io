@@ -245,6 +245,7 @@ export default function FuturisticFooter() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Scroll to top button */}
       <motion.button
@@ -255,6 +256,8 @@ export default function FuturisticFooter() {
       >
         <ArrowUp className="w-6 h-6" />
       </motion.button>
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-e94e
     </footer>
   );
 }

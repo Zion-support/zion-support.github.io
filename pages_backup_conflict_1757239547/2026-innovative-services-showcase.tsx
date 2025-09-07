@@ -32,7 +32,6 @@ import {
   Phone
   Mail;
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import {
   Search,
   Star,
   Users,
@@ -52,8 +51,6 @@ import {
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
-import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length }
     { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount }

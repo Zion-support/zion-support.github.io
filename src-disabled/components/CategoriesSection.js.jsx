@@ -48,11 +48,9 @@ const itemVariants = { hidden: { y: 30, opacity: 0,}
 };
 }
 
-const itemVariants = { hidden: { y: 30, opacity: 0,}
 }, visible: { y: 0, opacity: 1, transition: { duration: 0.6,' ease: 'easeOut' } },
 }
 ;
-  const cardVariants = { hidden: { scale: 0.95, opacity: 0,}
 }, visible: { scale: 1, opacity: 1, transition: { duration: 0.4, ' ease: 'easeOut' } },
 }';
   return (<section className='py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden' /> {}' <div className='absolute inset-0 opacity-5' />' <div className='absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full' /></div>' <div className='absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full' /></div>' <div className='absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full' /></div> </div> ' <div className='container mx-auto px-4 relative z-10' />' {showTitle && (<motion.div className='text-center mb-16' initial = { { opacity: 0, y: 20 ,}

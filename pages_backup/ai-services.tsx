@@ -1388,7 +1388,6 @@ const contactInfo = {
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
-const aiServices = [
   {
     id: 1,
     title: 'AI-Powered Business Intelligence',

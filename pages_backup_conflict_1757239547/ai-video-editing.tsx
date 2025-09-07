@@ -7,7 +7,6 @@ export default function AIVideoEditingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'))
   if (!service) return null
 export default function AIVideoEditingPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'))
   if (!service) return null,
   return (
     <Layout>

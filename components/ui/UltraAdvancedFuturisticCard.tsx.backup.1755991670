@@ -471,6 +471,8 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
           </div>
         )}
       </motion.div>
+<<<<<<< HEAD
+=======
 
       {/* External Glow */}
       <motion.div
@@ -489,6 +491,7 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
           ease: "easeInOut"
         }}
       />
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-1ea4
     </motion.div>
   );
 };

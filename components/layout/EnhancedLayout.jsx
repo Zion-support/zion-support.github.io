@@ -1,9 +1,9 @@
 <<<<<<< HEAD
-<EnhancedNavigation /> <main className="flex-1" > {
-  children 
-}</main> <EnhancedFooter /> </div>) 
-}
-export default EnhancedLayout
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main
 =======
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -11,13 +11,18 @@ import EnhancedFooter from './EnhancedFooter';
 
 const EnhancedLayout = ({ children }) => {
   return (
-
+    <div>
+      <main>
         {children}
       </main>
       <EnhancedFooter />
     </div>
-
   );
-}
+};
+
+EnhancedLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 export default EnhancedLayout;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/chore/fix-lint-and-merge

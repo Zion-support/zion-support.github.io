@@ -1,6 +1,22 @@
+origin/automation-improvements-final
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+main
+
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
+
+origin/main
+
+main
+
+origin/main
+
 export function securityMiddleware(request) {
   const response = NextResponse.next();
   
@@ -149,17 +165,14 @@ export function securityMiddleware(request) {
       'max-age=31536000; includeSubDomains; preload'
     );
   }
-  return response;// Security headers middleware
-export function securityHeaders(req, res, next) {
-  Object.entries({
-    'X-Content-Type-Options': 'nosniff'
-    'X-Frame-Options': 'DENY'
-    'X-XSS-Protection': '1; mode=block'
-    'Referrer-Policy': 'strict-origin-when-cross-origin'
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
-  }).forEach(([key, value]) => {
-    res.setHeader(key, value);
-  });
-  next();
+  
+  return response;
 }
+
+origin/main
+
+origin/main
+main
+origin/main
+main
+origin/cursor/automate-test-improve-and-merge-code-2533

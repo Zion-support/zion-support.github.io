@@ -1,4 +1,5 @@
 module.exports = {
+<<<<<<< HEAD
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
@@ -67,7 +68,7 @@ module.exports = {
     '"eslint": recommended',
     '@typescript-eslint/recommended',
   ],
-:.eslintrc.cjs
+:.eslintrc.cjs,
   rules: {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
@@ -81,6 +82,15 @@ module.exports = {
   "parser": '@typescript-eslint/parser',
   "plugins": ['@typescript-eslint'],
   "rules": {
+=======
+  extends: [
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint'],
+  rules: {
+>>>>>>> origin/chore/fix-lint-and-merge
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     'react-hooks/exhaustive-deps': 'warn',
@@ -92,19 +102,19 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+<<<<<<< HEAD
     es6: true,
     dom: true
   },
   globals: {
     KeyboardEvent: 'readonly',
-    HTMLElement: 'readonly',
-    HTMLButtonElement: 'readonly',
-    HTMLAnchorElement: 'readonly',
-    MutationObserver: 'readonly',
-    RequestInit: 'readonly',
-    AbortController: 'readonly',
-    fs: 'readonly',
-    CodeQualityChecker: 'readonly'
+=======
+    es6: true
+  },
+  globals: {
+    KeyboardEvent: 'readonly',
+    MouseEvent: 'readonly',
+    Event: 'readonly'
   },
   ignorePatterns: [
     'node_modules/',
@@ -127,7 +137,29 @@ module.exports = {
     'app-improvement-*.cjs',
     'analyze-*.cjs',
     'code-quality-*.js',
-    'components',
+    'components/*.dynamic.jsx',
+    'components/Accessibility*.tsx',
+    'components/Accessibility*.jsx',
+    'components/AdvancedAIAssistant.tsx',
+    'components/AdvancedDataVisualization.tsx',
+    'components/AdvancedNotificationCenter.tsx',
+    'components/Analytics.tsx',
+    'components/AnalyticsManager.tsx',
+    'components/AnalyticsTracker.tsx',
+    'components/ContactForm.tsx',
+    'api/create-payment-intent.js',
+    'api/newsletter/subscribe.js',
+    'api/quotes.js',
+    'api/shipping-rates.js',
+    'api/wallet.js',
+    'automation/comprehensive-app-improver.cjs',
+    'automation/dependency-fixer.cjs',
+    'automation/deployment-automator.cjs',
+    'automation/master-automation-orchestrator.cjs',
+    'automation/performance-optimizer.js',
+    'automation/typescript-fixer.cjs',
+    '*.report.json',
+    'temp_*/',
     'test_build/',
     'tests.disabled/',
     'pages.disabled/',
@@ -157,6 +189,7 @@ module.exports = {
     'security-reports/',
     'pages.__backup/',
     'pages-disabled/',
-    'pages.disabled_auto/'
-  ]
+    'pages.disabled_auto/',
+  ],
 };
+>>>>>>> origin/chore/fix-lint-and-merge

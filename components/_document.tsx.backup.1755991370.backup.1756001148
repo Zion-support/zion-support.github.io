@@ -18,5 +18,8 @@ export default class MyDocument extends Document {
     );
   }
 }
+<<<<<<< HEAD
+=======
 
 export default MyDocument;
+>>>>>>> origin/cursor/build-real-time-salary-benchmarking-tool-dea9

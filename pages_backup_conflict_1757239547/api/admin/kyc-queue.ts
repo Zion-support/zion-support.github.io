@@ -82,8 +82,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const profiles = load();
       res.json({ profiles });
     } else if (req.method === 'POST') {
-      const { id, status } = req.body;
-      const profiles = load();
       if (profiles[id]) {
         profiles[id].status = status;
         save(profiles);

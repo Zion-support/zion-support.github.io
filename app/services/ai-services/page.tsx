@@ -1,11 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { Brain, MessageSquare, Eye, BarChart3, Zap, Shield, CheckCircle, ArrowRight, Star, Users, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI Services | Zion Tech Group',
-  description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
-  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'
+  description: 'Comprehensive AI services including machine learning, natural language processing, computer vision, and AI consulting to transform your business.',
+  keywords: 'AI services, machine learning, NLP, computer vision, AI consulting, artificial intelligence'
 };
 
 export default function AiservicesPage() {

@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Cybersecurity | Zion Tech Group',
+  description: 'Professional cybersecurity services for your business needs.',
+  keywords: 'cybersecurity, services, business, technology'
+}
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Cybersecurity
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional cybersecurity services for your business needs.
+=======
+<<<<<<< HEAD
+export const metadata = {
+  title: 'Cybersecurity Solutions | Zion Tech Group',
+  description: 'Advanced cybersecurity solutions for data protection.',
+  keywords: 'cybersecurity, services, business, technology'
+}
+=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';

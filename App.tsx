@@ -1,4 +1,96 @@
 <<<<<<< HEAD
+import React from 'react';'
+const services = [;
+    {
+      }
+      "title": 'AI Solutions','
+      "description": 'Cutting-edge artificial intelligence solutions for your business needs. From machine learning to natural language processing.','
+      "icon": '🤖','
+      "features": ['Machine Learning', 'NLP', 'Computer Vision', 'Predictive Analytics']},'
+    {
+      }
+      "title": 'IT Services','
+      "description": 'Comprehensive IT services and infrastructure management. Keep your systems running smoothly and securely.','
+      "icon": '💻','
+      "features": ['System Administration', 'Network Security', 'Cloud Migration', '24/7 Support']},'
+    {
+      }
+      "title": 'Cloud Solutions','
+      "description": 'Scalable cloud infrastructure and migration services. Modernize your infrastructure with our cloud expertise.','
+      "icon": '☁️','
+      "features": ['AWS/Azure/GCP', 'DevOps', 'Containerization', 'Auto-scaling']},'
+    {
+      title: 'Blockchain',
+      description: 'Revolutionary blockchain technology solutions. Build secure, transparent, and decentralized applications.',
+      icon: '⛓️',
+      features: ['Smart Contracts', 'DeFi', 'NFTs', 'Web3 Development'],
+    },
+  ];
+
+function App() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <ParticleBackground />
+      <ScrollToTop />
+      <Header />
+      <main className="container mx-auto px-4 py-8">"
+        <div className="text-center mb-12">"
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">"
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">"
+            Leading the future of technology with AI, blockchain, and innovative solutions
+          </p>
+          <div className="flex justify-center space-x-4">"
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg "hover":bg-blue-700 transition-colors">"
+              Get Started
+            </button>
+            <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg "hover":bg-blue-50 transition-colors">"
+              Learn More
+            </button>
+          </div>
+        </div>
+        <div className="grid "md":grid-cols-2 "lg":grid-cols-3 gap-8 mb-12">"
+          <div className="bg-white p-6 rounded-lg shadow-lg">"
+            <div className="text-4xl mb-4">🤖</div>"
+            <h3 className="text-xl font-semibold mb-2">AI Solutions</h3>"
+            <p className="text-gray-600">"
+              Cutting-edge artificial intelligence solutions for your business needs.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">"
+            <div className="text-4xl mb-4">🔗</div>"
+            <h3 className="text-xl font-semibold mb-2">Blockchain</h3>"
+            <p className="text-gray-600">"
+              Secure, decentralized solutions powered by blockchain technology.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">"
+            <div className="text-4xl mb-4">☁️</div>"
+            <h3 className="text-xl font-semibold mb-2">Cloud Services</h3>"
+            <p className="text-gray-600">"
+              Scalable cloud infrastructure and deployment solutions.
+            </p>
+          </div>
+        </div>
+        <div className="text-center">"
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">"
+            Why Choose Zion Tech Group?
+          </h2>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
+            We combine cutting-edge technology with deep industry expertise to deliver,
+solutions that drive real business value. Our team of experts is dedicated,
+to helping you succeed in the digital age.
+          </p>
+        </div>
+      </main>
+      <Footer />
+    </div>
+export default function App(): React.JSX.Element {
+}
+return (;
+=======
+<<<<<<< HEAD
 // import React from 'react';
 
 const services = [
@@ -42,6 +134,7 @@ const services = [
 
 export default function App() {
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <main>
       <h1>Welcome to Zion Tech Group</h1>
       <p>Leading the future of technology with AI, blockchain, and innovative solutions</p>
@@ -61,27 +154,17 @@ export default function App() {
     </main>
 =======
 import React, { JSX } from 'react';
-
-export default function App(): JSX.Element {
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './src/components/Header';
-import Footer from './src/components/Footer';
-import HomePage from './src/pages/Home';
-import AboutPage from './src/pages/About';
-import ContactPage from './src/pages/Contact';
-import ServicesPage from './src/pages/Services';
-import PricingPage from './src/pages/Pricing';
-
-export default function App() {
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { AccessibilityProvider } from './components/AccessibilityProvider';
+import SEOHead from './components/SEOHead';
+import Analytics from './components/Analytics';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default function App(): JSX.Element {
   return (
-<<<<<<< HEAD
-    <main>
-      <h1>Hello App</h1>
-    </main>
-=======
     <AccessibilityProvider>
       <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <SEOHead 
@@ -99,40 +182,43 @@ export default function App(): JSX.Element {
           <section className="py-20 px-4 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 animate-pulse" />
             <div className="relative z-10 max-w-6xl mx-auto">
-              <motion.h1 
+              <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent"
               >
-                Zion Tech Group
-              </motion.h1>
-              <motion.p 
+                <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h1>
+              </motion.div>
+              <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-2xl md:text-3xl text-slate-300 mb-8"
               >
-                Innovative Micro SaaS, AI Services & IT Solutions
-              </motion.p>
-              <motion.p 
+                <p className="text-2xl md:text-3xl text-slate-300 mb-8">
+                  Innovative Micro SaaS, AI Services & IT Solutions
+                </p>
+              </motion.div>
+              <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-lg text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed"
               >
-                Transform your business with our cutting-edge technology solutions. 
-                From AI-powered automation to cloud infrastructure, we deliver 
-                enterprise-grade solutions that drive growth and innovation.
-              </motion.p>
+                <p className="text-lg text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed">
+                  Transform your business with our cutting-edge technology solutions. 
+                  From AI-powered automation to cloud infrastructure, we deliver 
+                  enterprise-grade solutions that drive growth and innovation.
+                </p>
+              </motion.div>
               
               <motion.div 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4"
               >
-                <a 
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Link 
                   href="/contact" 
                   className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
                 >
@@ -140,8 +226,8 @@ export default function App(): JSX.Element {
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/services" 
                   className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
                 >
@@ -149,7 +235,8 @@ export default function App(): JSX.Element {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
                   Explore Services
-                </a>
+                </Link>
+                </div>
               </motion.div>
             </div>
           </section>
@@ -161,8 +248,8 @@ export default function App(): JSX.Element {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
               >
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 {[
                   { number: "67+", label: "Services" },
                   { number: "500+", label: "Clients" },
@@ -176,6 +263,7 @@ export default function App(): JSX.Element {
                     <div className="text-slate-300">{stat.label}</div>
                   </div>
                 ))}
+                </div>
               </motion.div>
             </div>
           </section>
@@ -187,14 +275,15 @@ export default function App(): JSX.Element {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center mb-16"
               >
+                <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
                   Our Services
                 </h2>
                 <p className="text-xl text-slate-400 max-w-3xl mx-auto">
                   Comprehensive technology solutions designed to accelerate your business growth
                 </p>
+                </div>
               </motion.div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -235,11 +324,12 @@ export default function App(): JSX.Element {
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105"
                   >
+                    <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:scale-105">
                     <div className="text-4xl mb-4">{service.icon}</div>
                     <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                     <p className="text-slate-400">{service.description}</p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -262,7 +352,7 @@ export default function App(): JSX.Element {
                   how our innovative solutions can drive your business forward.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                  <a 
+                  <Link 
                     href="/contact" 
                     className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
                   >
@@ -270,7 +360,7 @@ export default function App(): JSX.Element {
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </a>
+                  </Link>
                   <a 
                     href="tel:+13024640950" 
                     className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
@@ -290,6 +380,5 @@ export default function App(): JSX.Element {
       </div>
     </AccessibilityProvider>
 >>>>>>> main
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   );
 }

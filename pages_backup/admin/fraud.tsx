@@ -52,7 +52,6 @@ const res = await fetch('/api/fraud/admin/list', {
       setLoading(false);
 
     });
-    const json = await res.json();
     if (res.ok) fetchItems();
     else alert(json.error || 'Action failed');
   };

@@ -7,24 +7,6 @@ const stockVariant =;
   );
 }
 
-:src/components/ProductCard.tsx
-  const stockStatus = null;
-    product.stock === undefined
-      : 'In stock'
-  const stockVariant = null;
-    product.stock === undefined
-  const productTitle = product.title
-  const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null
-  const imageAltText = productTitle
-  const isMobile = useMediaQuery('(max-width: 768px)')
-  const isTablet = useMediaQuery('(max-width: 1200px)')
-  const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw'
-
-  )
-}
-  )
-}
-export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyDisabled;
     product.stock === undefined;
 
       ? 'success';
@@ -129,30 +111,30 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
               src={imageUrl}
               alt={imageAltText}
               style={{ objectFit: 'cover' }}
-              onError={e => handleImageError(e)}
+              onError={(e) => handleImageError(e)}
               priority={false}
             />
           ) : (
-            <div className='w-full h-full bg-gray-200 flex items-center justify-center'>
-              <span className='text-gray-500'>No Image</span>
+            <div className="w-full h-full bg-gray-200 flex items-center justify-center">
+              <span className="text-gray-500">No Image</span>
             </div>
           )}
           {active && (
-            <div className='absolute top-2 left-2 p-1 rounded-full bg-background/70'>
-              <Heart className='text-red-500 fill-red-500' />
+            <div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">
+              <Heart className="text-red-500 fill-red-500" />
             </div>
           )}
         </div>
-        <h3 className='font-semibold mb-1'>{productTitle}</h3>
+        <h3 className="font-semibold mb-1">{productTitle}</h3>
       </Link>
       {product.price != null && (
-        <p className='text-sm text-muted-foreground'>
+        <p className="text-sm text-muted-foreground">
           {product.currency}
           {product.price}
-        </p>
+        </p>;
       )}
-      <div className='mt-2 flex gap-2'>
-        <Button size='sm' className='flex-1' onClick={addToCart}>
+      <div className="mt-2 flex gap-2">
+        <Button size="sm" className="flex-1" onClick={addToCart}>
           Add to Cart
         </Button>
         {onBuy && (
@@ -160,10 +142,10 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  onClick={e => {
-                    e.stopPropagation();
+                  onClick={(e) => {
+                    e.stopPropagation(),
                     if (onBuy) {
-                      setIsRedirecting(true);
+                      setIsRedirecting(true),
                       onBuy()
                         .catch(() => {
                           // Error is handled by parent, but we still need to reset loading locally
@@ -197,12 +179,6 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
               )}
             </Tooltip>;
           </TooltipProvider>;
-:src/components/ProductCard.tsx
-        )}
-      </div>
-    </div>
-  )
-}
         )});
 }
 

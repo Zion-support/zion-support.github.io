@@ -78,17 +78,18 @@ const solutions = [{ id: 'ai-ml',
   icon: <Lock className='w-5 h-5'/>, projects: 45,}
 } ] const [selectedSolution, setSelectedSolution] =;
   useState(null);
+<<<<<<< HEAD
+=======
   const [hoveredSolution, setHoveredSolution] = useState(null);
   const containerVariants = { hidden: { opacity: 0,}
+>>>>>>> origin/chore/fix-lint-and-merge
 }, visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 },
 };
 }
 
-const itemVariants = { hidden: { y: 30, opacity: 0,}
 }, visible: { y: 0, opacity: 1, transition: { duration: 0.6,' ease: 'easeOut' } },
 }
 ;
-  const cardVariants = { hidden: { scale: 0.95, opacity: 0,}
 }, visible: { scale: 1, opacity: 1, transition: { duration: 0.4, ' ease: 'easeOut' } },
 }';
   return (<section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden' /> {}' <div className='absolute inset-0 opacity-5' />' <div className='absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full' /></div>' <div className='absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full' /></div>' <div className='absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full' /></div> </div> ' <div className='container mx-auto px-4 relative z-10' /> {}' <motion.div className='text-center mb-20' initial = { { opacity: 0, y: 20 ,}

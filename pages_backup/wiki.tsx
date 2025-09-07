@@ -104,14 +104,12 @@ import {
   buildMarkdownFromWiki,
   buildWikitextFromWiki,
 
-import {
   generateZionWiki
   buildMarkdownFromWiki
   buildWikitextFromWiki
   operatorPrompt
   slugify} from '../utils/data/zionContent'
 function CopyButton({ text, label }: { text: string, label: string }) {
-  const [copied, setCopied] = useState(false)
   return (
     <button
       onClick={async () => {
@@ -119,7 +117,6 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
 
-import React, { useMemo, useState } from 'react';
 import { generateZionWiki;
   buildMarkdownFromWiki;
   buildWikitextFromWiki;
@@ -132,11 +129,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {
       onClick;
 origin/cursor/automate-test-improve-and-merge-code-2533
 export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), [])
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
 
-import React, { useMemo, useState } from 'react';
 
 import {;
   generateZionWiki,;

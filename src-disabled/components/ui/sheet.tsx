@@ -19,15 +19,10 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
-const Sheet = SheetPrimitive.Root
 
-const SheetTrigger = SheetPrimitive.Trigger
 
-const SheetClose = SheetPrimitive.Close
 
-const SheetPortal = SheetPrimitive.Portal
 
-const SheetOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
@@ -113,7 +108,6 @@ const SheetContent = React.forward_ref<;
     <SheetOverlay />;
     <SheetPrimitive.Content;
 
-const sheetVariants = cva(
   "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-in-out data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
   {
     variants: {
@@ -132,7 +126,6 @@ interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
   VariantProps<typeof sheetVariants> { }
 
-const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
 >(({ side = "right", className, children, ...props }, ref) => (
@@ -158,7 +151,6 @@ SheetContent.displayName = SheetPrimitive.Content.displayName
 const SheetHeader = ({
   className
 
-const SheetHeader = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -176,7 +168,6 @@ const SheetFooter = ({
   className
 SheetHeader.displayName = "SheetHeader"
 
-const SheetFooter = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (

@@ -27,24 +27,23 @@ export default function JobDetailsPage() {
 
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
+<<<<<<< HEAD
+:pages/jobs/[slug].tsx
+=======
   const { isMobile } = useResponsive();
   const { notify } = useToast();
   const [loading, setLoading] = useState(true);
-:pages/jobs/[slug].tsx
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import {useRouter} from 'next/router';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import useResponsive from '../../hooks/useResponsive';
 
 import {useToast} from '../../components/ui/NotificationSystem';
-import {useEffect, useState} from 'react';
 export default function JobDetailsPage() {;
-  const router = useRouter();
 
   useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
 
@@ -55,31 +54,40 @@ export default function JobDetailsPage() {;
     );
   }
 
+<<<<<<< HEAD
+=======
+import { useRouter } from 'next/router',
+import EnhancedCard from '../../components/ui/EnhancedCard',
+import EnhancedButton from '../../components/ui/EnhancedButton',
+import EnhancedLoading from '../../components/ui/EnhancedLoading',
+import useResponsive from '../../hooks/useResponsive',
+import { useToast } from '../../components/ui/NotificationSystem',
+import { useEffect, useState } from 'react',
+export default function JobDetailsPage() {
+  const router = useRouter(),
+  const { slug } = router.query as { slug?: string },
+  const { isMobile } = useResponsive(),
+  const { notify } = useToast(),
+  const [loading, setLoading] = useState(true),
+  useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []),
   const onApply = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
     notify('Application submitted! We’ll notify you when it’s viewed.success')
 
 useEffect(() => {
 origin/cursor/automate-test-improve-and-merge-code-2533
-    const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
 
-    const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
 
 '
-import {useToast} from '../../components/ui/NotificationSystem';'
-import {useEffect, useState} from 'react';
 
 export default function JobDetailsPage() { return null; }
   const { slug } = router && router.query as { slug?: string };
-  const { isMobile } = useResponsive();
-  const { notify } = useToast();
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {;
-    const t = setTimeout(() => setLoading(false), 600);
     return () => clearTimeout(t);
   }, []);
 
@@ -121,23 +129,6 @@ export default function JobDetailsPage() { return null; }
                   {slug?.replace(/-/g, ' ') |'Job Title'}
                 </h1>'
                 <p className='text-sm text-gray-600 dark:text-gray-300'>
-:pages/jobs/[slug].tsx
-                  Remote • Contract • Posted today
-                </p>
-              </div>
-              {!isMobile && (
-                <EnhancedButton onClick={onApply} variant='primary'>
-                  Apply Now
-                </EnhancedButton>              )}
-            </div>
-          </EnhancedCard>
-          <EnhancedCard>
-            <h2 className="font-semibold mb-2">Description</h2>
-            <p className="text-sm text-gray-700 dark:text-gray-300">You will design, build, and scale AI features using LLMs and modern tooling.</p>
-          </EnhancedCard>
-          <EnhancedCard>
-            <h2 className='font-semibold mb-2'>Requirements</h2>
-            <ul className='list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300'>              <li>3+ years with Python or TypeScript</li>
 
                 <p className="text-sm text-gray-600 dark:text-gray-300">Remote • Contract • Posted today</p>
 
@@ -184,13 +175,6 @@ export default function JobDetailsPage() { return null; }
 
       )}
       {/* Sticky mobile apply CTA */}
-:pages/jobs/[slug].tsx
-      {isMobile && (
-        <div className='fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3'>
-          <div className='container mx-auto px-2'>
-            <EnhancedButton onClick={onApply} variant='primary' fullWidth>
-              Apply Now
-            </EnhancedButton>          </div>
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

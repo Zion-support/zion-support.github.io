@@ -1,43 +1,78 @@
+<<<<<<< HEAD
 
 #!/usr/bin/env node;
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+#!/usr/bin/env node;
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 const { spawn } = require('child_process');
-const fs = require('fs');
+const fs = require(fs');
 const path = require('path');
 class DependencyMonitor {}
   constructor() {}
     this.isRunning = false;
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     this.interval = 600000; // 10 minutes;
 
     this.isRunning = true;
+<<<<<<< HEAD
+<<<<<<< HEAD
     // Initial dependency check;
     await this.runDependencyCheck();
+=======
+    
     // Initial dependency check;
     await this.runDependencyCheck();
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+    // Initial dependency check;
+    await this.runDependencyCheck();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
 
     
+
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
     
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -45,19 +80,53 @@ class DependencyMonitor {}
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    console.log(Dependency Monitor started successfully')}
+  async runDependencyCheck() {}
+    try {}
+      console.log('Running dependency check...);
+
+=======
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
     try {}
       console.log('Running dependency check...');
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Check for outdated packages;
+<<<<<<< HEAD
+
+
+      let output = ;';;
+      let errorOutput = ;;';
+      child.stdout.on('data, (data) => {}
+        output += data.toString()}
+
+
+      let output = ;;';
+      let errorOutput = ;';;
+      child.stdout.on(data', (data) => {}
+=======
       const child = spawn('npm', ['outdated'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();"
       };);
+<<<<<<< HEAD
+<<<<<<< HEAD
       let output = ;';';
       let errorOutput = ;';';
       child.stdout.on('data', (data) => {}
@@ -67,19 +136,29 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 
+=======
+
+=======
+"
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let output = ;';';
       let errorOutput = ;';';
       child.stdout.on('data', (data) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
         output += data.toString()}
 });
 
-      child.stderr.on('data', (data) => {}
+      child.stderr.on('data, (data) => {}
         errorOutput += data.toString()}
-});
+
 
 <<<<<<< HEAD
-
-<<<<<<< HEAD
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+      child.on(close', (code) => {}
+=======
 
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -87,51 +166,72 @@ class DependencyMonitor {}
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       child.on('close', (code) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
         if ( {})
 
-          console.log('Dependency check passed ✓')) {}
+          console.log('Dependency check passed ✓)) {}
      {}
-          console.log('Dependency check passed ✓')}} else {}
-          console.log('Dependency check found outdated packages ✗');
-          console.log('"Output": ', output);
+<<<<<<< HEAD
+          console.log(Dependency check passed ✓')}} else {}
+          console.log('Dependency check found outdated packages ✗);
 
           
+          // Log outdated packages but dont auto-update;
+          this.logOutdatedPackages(output)}
+      })} catch (error) {}
+      console.error('Error running dependency check: ', error.message)}
+
+  }
+=======
+          console.log('Dependency check passed ✓')}} else {}
+          console.log('Dependency check found outdated packages ✗');
+<<<<<<< HEAD
+          console.log('"Output": ', output);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+          
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+          
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           // Log outdated packages but don't auto-update;
           this.logOutdatedPackages(output)};
       })} catch (error) {}
       console.error('Error running dependency "check": ', error.message)};
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   };
+>>>>>>> origin/chore/fix-lint-and-merge
   logOutdatedPackages(output) {}
-    const lines = output.split('\n';);
+    const lines = output.split(\n;);
     const outdatedPackages = lines.filter(line => )
+<<<<<<< HEAD
+      line.includes('→') && !line.includes(Package););
+
+
+    
+
+=======
       line.includes('→') && !line.includes('Package');
    ;);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
     
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
     
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
     
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -139,22 +239,44 @@ class DependencyMonitor {}
 
 
 <<<<<<< HEAD
->>>>>>> 61d39dd026fe5549161165ead85b131541010508
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge
     if ( {})
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       console.log('Outdated packages "found": ')) {}
-      console.log('Outdated packages found:')};
+      console.log(Outdated packages found:)}
       outdatedPackages.forEach(pkg => {})
-        console.log(`  ${pkg}`)})};
+        console.log(`  ${pkg}`)})}
   async checkPackageIntegrity() {}
       console.log('Checking package integrity...');
+<<<<<<< HEAD
 
       
+
+        "cwd": process.cwd();
+      });
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       const child = spawn('npm', ['ls'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
       };);
+<<<<<<< HEAD
       let output = ;';';
       let errorOutput = ;';';
       child.stdout.on('data', (data) => {}
@@ -164,7 +286,6 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 
-<<<<<<< HEAD
 =======
 
       let output = ;';';
@@ -173,6 +294,7 @@ class DependencyMonitor {}
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
+>>>>>>> origin/chore/fix-lint-and-merge
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
@@ -180,68 +302,131 @@ class DependencyMonitor {}
 
 
 <<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
 =======
 >>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
 =======
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      child.on(close, (code) => {}
+        if ( {})
+      const child = spawn('npm', [ls], {})
+=======
       child.on('close', (code) => {}
         if ( {})
+=======
       const child = spawn('npm', ['ls'], {})
+>>>>>>> origin/chore/fix-lint-and-merge
 
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           console.log('Package integrity check passed ✓')) {}
-          console.log('Package integrity check passed ✓')}} else {}
+          console.log(Package integrity check passed ✓)}} else {}
           console.log('Package integrity issues found ✗');
-          console.log('"Errors": ', errorOutput)};
-      console.error('Error checking package "integrity": ', error.message)};
+          console.log(Errors: , errorOutput)}
+      console.error('Error checking package "integrity": ', error.message)}
   stop() {}
-    console.log('Stopping Dependency Monitor...');
-    this.isRunning = false;
+<<<<<<< HEAD
+    console.log(Stopping Dependency Monitor...);
+
     if ( {})
+      clearInterval(this.intervalId)}
+=======
+    console.log('Stopping Dependency Monitor...');
+<<<<<<< HEAD
+    this.isRunning = false;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    if ( {})
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       clearInterval(this.intervalId)};
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log('Dependency Monitor stopped')) {}
-    console.log('Dependency Monitor stopped')}};
+    console.log(Dependency Monitor stopped)}}
 
 // Start the monitor if run directly;
   const monitor = new DependencyMonitor) {}
   const monitor = new DependencyMonitor}(;);
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
     monitor.stop();
     process.exit(0)}
 });
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+  
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   process.on('SIGTERM', () => {}
     monitor.stop();
     process.exit(0)}
 });
-  monitor.start().catch(console.error)};
+<<<<<<< HEAD
+module.exports = DependencyMonitor;
+  
+  monitor.start().catch(console.error)}
 
+
+module.exports = DependencyMonitor;
+
+=======
+=======
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+<<<<<<< HEAD
+  monitor.start().catch(console.error)};
+<<<<<<< HEAD
+
+=======
+module.exports = DependencyMonitor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
   
   monitor.start().catch(console.error)};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = DependencyMonitor;
 <<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
-=======
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = DependencyMonitor;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
-=======
-module.exports = DependencyMonitor;
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   // Handle graceful shutdown;
 
-  monitor.start().catch(console.error)};
+  monitor.start().catch(console.error)}
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

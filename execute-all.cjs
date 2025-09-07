@@ -1,25 +1,24 @@
-
+#!/usr/bin/env node
 const { execSync } = require('child_process');
 
 class ExecuteAllScripts {
   constructor() {
     this.projectRoot = process.cwd();
-    this.scripts = [
-      'comprehensive-automation-suite.cjs',
-      'automation-runner.cjs',
-      'comprehensive-app-improvement-suite.cjs',
-      'final-automation-suite.cjs'
-    ];
+<<<<<<< HEAD
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   async run() {
     console.log('🚀 Executing all automation scripts...');
     const scripts = [
       'comprehensive-automation-suite.cjs',
       'final-automation-suite-fixed.cjs',
-      'master-automation-orchestrator.cjs'
+      'ultimate-automation-orchestrator.cjs'
     ];
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 
     for (const script of scripts) {
       try {
@@ -29,7 +28,76 @@ class ExecuteAllScripts {
       } catch (error) {
         console.log(`❌ ${script} failed: ${error.message}`);
       }
+    }
+  }
+}
+<<<<<<< HEAD
+;
+async function runAll() {;
+  console.log('🎯 Executing all automation scripts...');
+;
+  const results = [];
+  for (const script of scripts) {;
+    const success = await runScript(script);
+    results.push({ script, success });
+  }
+;
+  const successful = results.filter(r => r.success).length;
+  const total = results.length;
+;
+  console.log(`\n🎉 Execution completed!`);
+  console.log(`📊 "Results": ${successful}/${total} scripts successful`);
+;
+  if (successful < total) {;
+    console.log('\n⚠️ Failed "scripts": ');
+    results.filter(r => !r.success).forEach(r => {;
+      console.log(`  - ${r.script}`);
+    });
+  }
+;
+  console.log('\n📋 Next "steps": ');
+  console.log('1. Check the generated reports');
+  console.log('2. Review any error messages');
+  console.log('3. "Run": git add . && git commit -m ""feat": Comprehensive automation improvements"');
+  console.log('4. "Run": git push origin main');
+}
 =======
+  }
+
+>>>>>>> origin/chore/fix-lint-and-merge
+  async run() {
+    console.log('🚀 Executing all automation scripts...');
+    const scripts = ['comprehensive-automation-suite.cjs', 'final-automation-suite-fixed.cjs', 'ultimate-automation-orchestrator.cjs'];
+
+    for (const script of scripts) {
+      try {
+        console.log(`Running: ${script}`);
+        execSync(`node ${script}`, { stdio: 'inherit', cwd: this.projectRoot });
+        console.log(`✅ ${script} completed`);
+      } catch (error) {
+        console.log(`❌ ${script} failed: ${error.message}`);
+      }
+    }
+  }
+}
+
+const executor = new ExecuteAllScripts();
+<<<<<<< HEAD
+executor.run().catch(console.error);
+;
+runAll().catch(console.error);
+=======
+class ExecuteAllScripts {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.scripts = [
+      'comprehensive-automation-suite.cjs',
+      'automation-runner.cjs',
+      'comprehensive-improvements.cjs',
+      'final-automation-suite.cjs'
+    ];
+  }
+
   async runScript(scriptPath) {
     console.log(`\n📝 Running: ${scriptPath}`);
     try {
@@ -39,62 +107,9 @@ class ExecuteAllScripts {
     } catch (error) {
       console.log(`❌ Failed: ${scriptPath} - ${error.message}`);
       return false;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
     }
   }
 
-<<<<<<< HEAD
-const scripts = [
-  'git-resolution.cjs',
-  'comprehensive-improvements.cjs',
-  'final-automation-orchestrator.cjs',
-  'final-automation-suite.cjs'
-];
-
-async function runScript(scriptPath) {
-  console.log(`\n📝 Running: ${scriptPath}`);
-  try {
-    require(`./${scriptPath}`);
-    console.log(`✅ Completed: ${scriptPath}`);
-    return true;
-  } catch (error) {
-    console.log(`❌ Failed: ${scriptPath} - ${error.message}`);
-    return false;
-  }
-}
-
-async function runAll() {
-  console.log('🎯 Executing all automation scripts...');
-  const results = [];
-  for (const script of scripts) {
-    const success = await runScript(script);
-    results.push({ script, success });
-  }
-
-  const successful = results.filter(r => r.success).length;
-  const total = results.length;
-
-  console.log(`\n🎉 Execution completed!`);
-  console.log(`📊 Results: ${successful}/${total} scripts successful`);
-
-  if (successful < total) {
-    console.log('\n⚠️ Failed scripts:');
-    results
-      .filter(r => !r.success)
-      .forEach(r => {
-        console.log(`  - ${r.script}`);
-      });
-  }
-
-  console.log('\n📋 Next steps:');
-  console.log('1. Check the generated reports');
-  console.log('2. Review any error messages');
-  console.log('3. Run: git add . && git commit -m "feat: Comprehensive automation improvements"');
-  console.log('4. Run: git push origin main');
-}
-
-runAll().catch(console.error);
-=======
   async run() {
     console.log('🎯 Executing all automation scripts...');
 
@@ -134,4 +149,15 @@ if (require.main === module) {
 }
 
 module.exports = ExecuteAllScripts;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
+
+const executor = new ExecuteAllScripts();
+executor.run().catch(console.error);
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+executor.run().catch(console.error);
+>>>>>>> origin/chore/fix-lint-and-merge

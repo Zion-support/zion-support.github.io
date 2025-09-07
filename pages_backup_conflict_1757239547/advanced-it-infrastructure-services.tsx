@@ -153,13 +153,11 @@ const testimonials = [
     rating: 5
     avatar: '👩‍🔒'
   },];
-const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-const heroStats = [
   { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },
   { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },
   { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },
@@ -169,7 +167,6 @@ const heroStats = [
   }
 }
 ],
-const serviceCategories = [
   {
     title: 'Quantum Cloud Computing',
     description: 'Next-generation cloud infrastructure with quantum processing capabilities',
@@ -215,7 +212,6 @@ const serviceCategories = [
   },
 ];
 
-const heroFeatures = [
   {
     title: 'Quantum Computing',
     description:
@@ -246,7 +242,6 @@ const heroFeatures = [
   },
 ];
 
-const testimonials = [
   {
     name: 'Dr. Jennifer Martinez',
     role: 'CTO, QuantumTech Industries',
@@ -280,8 +275,6 @@ const testimonials = [
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
@@ -291,7 +284,6 @@ import {;
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,;
   Wifi, Building, Cpu as CpuIcon;
 } from 'lucide-react',;
-import Layout from '../components/layout/Layout';
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
 const contactInfo = {;
   mobile: '+1 302 464 0950';

@@ -54,10 +54,10 @@ jobs:
             fi
 
             echo "Health analysis completed";
-          } >> "$GITHUB_STEP_SUMMARY"
+
   workflow-optimization:
           } >> "$GITHUB_STEP_SUMMARY"  workflow-optimization:
-          } >> "$GITHUB_STEP_SUMMARY"  workflow-optimization:
+
     name: Workflow Optimization
     runs-on: ubuntu-latest
     timeout-minutes: 20
@@ -84,10 +84,9 @@ jobs:
           ## Current Status
           - Total workflows: $(find .github/workflows -name "*.yml" | wc -l)
           - High frequency workflows: $(grep -r "cron.*\*/[0-9]" .github/workflows/ | wc -l)
-          - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml 2>/dev/null | wc -l)
 
           - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml 2>/dev/null | wc -l)
-          - Workflows without error handling: $(grep -L "continue-on-error\|if: always()" .github/workflows/*.yml 2>/dev/null | wc -l)
+
           ## Recommendations
 
           ### 1. Schedule Optimization
@@ -96,11 +95,8 @@ jobs:
           - Implement staggered scheduling to avoid resource conflicts
 
           ### 2. Error Handling
-          - Add `continue-on-error: true` to non-critical steps
-          - Use `if: always()` for cleanup and reporting steps
+
           - Implement proper retry mechanisms for flaky operations
-          - Add `continue-on-error: true` to non-critical steps
-          - Use `if: always()` for cleanup and reporting steps          - Implement proper retry mechanisms for flaky operations
           - Add `continue-on-error: true` to non-critical steps
           - Use `if: always()` for cleanup and reporting steps          - Implement proper retry mechanisms for flaky operations
 
@@ -166,10 +162,10 @@ jobs:
             echo "- Afternoon: Security scans and dependency updates";
             echo "- Evening: Maintenance and optimization";
             echo "- Night: Light monitoring and cleanup";
-          } >> "$GITHUB_STEP_SUMMARY"
+
   workflow-summary:
           } >> "$GITHUB_STEP_SUMMARY"  workflow-summary:
-          } >> "$GITHUB_STEP_SUMMARY"  workflow-summary:
+
     name: Workflow Summary
     runs-on: ubuntu-latest
     needs:
@@ -204,5 +200,6 @@ jobs:
             echo "2. Implement suggested improvements";
             echo "3. Monitor workflow performance";
             echo "4. Schedule next review";
+
           } >> "$GITHUB_STEP_SUMMARY"
           } >> "$GITHUB_STEP_SUMMARY"

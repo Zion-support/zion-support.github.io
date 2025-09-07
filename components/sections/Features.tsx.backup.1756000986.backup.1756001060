@@ -1,7 +1,9 @@
 import React from 'react';
 import Card from '../ui/Card';
 import { ArrowRight } from 'lucide-react';
+=======
             </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-e549:components/sections/Features.tsx
           ))}
         </div>
 

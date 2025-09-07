@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export const metadata = {
+=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -53,4 +56,57 @@ export default function AicontentgenerationPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+
 }
+          color: "#1f2937",
+
+          marginBottom: 8,
+        }}
+      >
+        {name}
+      </h4>
+      <div;
+        style={{"
+          color: "#111827",
+
+          fontWeight: 800,
+          fontSize: 24,
+          marginBottom: 16,
+        }}
+      >
+        {price}
+      </div>"
+      <ul style={{ paddingLeft: 18, color: "#4b5563", marginBottom: 20 }}>
+        {features.map((f) => ("
+          <li key={f} style={{ listStyle: "disc", marginBottom: 6 }}>
+
+            {f}
+          </li>
+        ))}
+      </ul>
+      <a"
+        href="mailto:kleber@ziontechgroup.com?subject=AI Content Generation Services Inquiry"
+        style={{"
+          display: "inline-block","
+          width: "100%","
+          textAlign: "center","
+          padding: "12px 16px","
+          backgroundColor: "#3b82f6","
+          color: "white","
+          textDecoration: "none",
+
+          borderRadius: 8,
+          fontWeight: 600,
+        }}
+      >
+        Get Started;
+      </a>
+    </div>
+  );
+}
+"
+
+=======
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

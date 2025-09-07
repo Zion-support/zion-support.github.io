@@ -54,11 +54,17 @@ import { real2026Q4ExpansionsV2 } from '../../data/real-2026-q4-expansions-v2';
 import { real2036ServiceExpansions } from '../../data/real-2036-service-expansions';
 import { real2026Q4ExpansionsV3 } from '../../data/real-2026-q4-expansions-v3';
 import { real2036InnovativeServices } from '../../data/real-2036-innovative-services';
+<<<<<<< HEAD
 import { real2036ITServices } from '../../data/real-2036-it-services';
 import { real2036AIServices } from '../../data/real-2036-ai-services';
-:pages/services/index.tsx.backup.1755991530
+=======
+<<<<<<< HEAD
 import { real2036ITServices } from '../../data/real-2036-it-services';
 import { real2036AIServices } from '../../data/real-2036-ai-services';
+=======
+import { real2036SpecializedServices } from '../../data/real-2036-specialized-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 // Define a common service interface
 interface Service {
@@ -197,11 +203,17 @@ export default function ServicesIndexPage() {
       real2026Q4ExpansionsV2 as unknown[],
       real2026Q4ExpansionsV3 as unknown[],
       real2036InnovativeServices as unknown[],
+<<<<<<< HEAD
       real2036ITServices as unknown[],
       real2036AIServices as unknown[]
-:pages/services/index.tsx.backup.1755991530
+=======
+<<<<<<< HEAD
       real2036ITServices as unknown[],
       real2036AIServices as unknown[]
+=======
+      real2036SpecializedServices as unknown[]
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917e
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     )
           .concat(innovative2025MicroSaasServices as unknown[])
     .concat(innovative2025ITEnterpriseBatch as unknown[]);

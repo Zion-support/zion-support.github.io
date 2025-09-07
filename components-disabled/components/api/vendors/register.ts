@@ -14,10 +14,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     caseStudies;
   } = req.body |{}
   if (!slug |!name)
+<<<<<<< HEAD
+    return res.status(400).json({ "error": 'Missing required fields' });'
+  if (req && req.method !== 'POST')'
+    return res && res.status(405).json({ "error": 'Method not allowed' });'
+    }
+=======
     return res.status(400).json({ error: 'Missing required fields' });
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
     slug,
     name,
     services_offered,
@@ -37,11 +44,22 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   // TODO: Implement
     const vendor = registerVendor({
 
+<<<<<<< HEAD
+      }
+      slug;
+      name;
+      "servicesOffered": Array && Array.isArray(servicesOffered) ? servicesOffered : [];
+      "teamSize": Number(teamSize || 0);
+      about;
+      "verificationDocs": Array && Array.isArray(verificationDocs) ? verificationDocs : [],
+      "caseStudies": Array && Array.isArray(caseStudies) ? caseStudies : []});
+=======
       name;)
       servicesOffered: Array && Array.isArray(servicesOffered) ? servicesOffered : [];,
   teamSize: Number(teamSize || 0);
       verificationDocs: Array && Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array && Array.isArray(caseStudies) ? caseStudies : []});
+>>>>>>> origin/chore/fix-lint-and-merge
     res && res.status(201).json({ vendor });
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
@@ -61,6 +79,23 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     return res.status (409).json ({ error: 'Slug already taken' });
   // TODO: Implement
     const vendor = register_vendor ({
+<<<<<<< HEAD
+      }
+      slug,
+      name,
+      "services_offered": Array.is_array (services_offered) ? services_offered : [],
+      "team_size": Number (team_size || 0),
+      about,  try {
+    }
+      }
+      slug;
+      name;
+      "services_offered": Array.is_array (services_offered) ? services_offered : [];
+      "team_size": Number (team_size || 0);
+      about;
+      "verification_docs": Array.is_array (verification_docs) ? verification_docs : [],
+      "case_studies": Array.is_array (case_studies) ? case_studies : []});
+=======
       name,)
       services_offered: Array.is_array (services_offered) ? services_offered : [],
       team_size: Number (team_size || 0),
@@ -69,6 +104,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   team_size: Number (team_size || 0);
       verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
       case_studies: Array.is_array (case_studies) ? case_studies : []});
+>>>>>>> origin/chore/fix-lint-and-merge
     res.status (201).json ({ vendor });
     res.status (500).json ({ error: e.message });
 

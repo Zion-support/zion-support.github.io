@@ -1,34 +1,40 @@
-import React from 'react'
+import React from 'react';
 interface FeatureCardProps {
-  icon: string | React.ReactNode
-  title: string
-  description: string
-  color?: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'indigo'
+icon: string | React.ReactNode;
+  title: string;
+  description: string;}
+  color?: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'indigo';}
+}
 export default function FeatureCard({
   icon,
   title,
-  description,
-  color = 'blue'
+  description}
+  color = 'blue'}
 }: FeatureCardProps) {
+
   const colorClasses = {
-    blue: 'bg-blue-500',
-    purple: 'bg-purple-500',
-    green: 'bg-green-500',
-    red: 'bg-red-500',
-    yellow: 'bg-yellow-500',
-    indigo: 'bg-indigo-500'
-  }
+    blue: 'bg-blue-50 text-blue-600 border-blue-200',
+  purple: 'bg-purple-50 text-purple-600 border-purple-200',
+    green: 'bg-green-50 text-green-600 border-green-200',
+  red: 'bg-red-50 text-red-600 border-red-200',
+    yellow: 'bg-yellow-50 text-yellow-600 border-yellow-200',
+
+    indigo: 'bg-indigo-50 text-indigo-600 border-indigo-200'
+  };
+
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-      <div className={`w-12 h-12 ${colorClasses[color]} rounded-lg flex items-center justify-center mb-4`}>
-        {typeof icon === 'string' ? (
-          <span className="text-white text-xl">{icon}</span>
+    <div className=\"bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow\"    />
+      <div className={`w-12 h-12 rounded-lg ${colorClasses[color]} flex items-center justify-center mb-4`}    />"
+        {typeof icon === 'string' ? (}
+          <span className=\"text-2xl\"    />{icon}</span>
         ) : (
-          icon
+          icon;
         )}
       </div>
-      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className=\"text-xl font-semibold text-gray-900 mb-3\"    />{title}</h3>
+      <p className=\"text-gray-600 leading-relaxed\"    />{description}</p>
     </div>
+
   );
 }
+

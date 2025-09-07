@@ -6,10 +6,20 @@ export default function handler(
   req: "NextApiRequest",
   res: NextApiResponse,
 ): Promise<any>;
+import type { NextApiRequest, NextApiResponse } from 'next';
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+
+export default function handler(req: NextApiRequest,res: NextApiResponse;
+): Promise<any    />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ): Promise<void>;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+<<<<<<< HEAD
+=======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

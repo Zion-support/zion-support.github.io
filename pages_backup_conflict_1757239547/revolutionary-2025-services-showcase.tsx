@@ -16,8 +16,6 @@ import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infra
 const allServices = null;
 import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search, Filter, Star, Users, TrendingUp
   DollarSign, Clock, CheckCircle, ArrowRight
@@ -29,7 +27,6 @@ import {
 } from 'lucide-react'
 // Import the new revolutionary services
 import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices]
 const contactInfo = {
   mobile: '+1 302 464 0950'

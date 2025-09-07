@@ -96,12 +96,10 @@ function ReviewCard() {
   const [report_reason, setReportReason] = useState ('');,
   const [is_reporting, setIsReporting] = useState (false);,
   const [isReportDialogOpen, setIsReportDialogOpen] = useState (false);
-  const handle_report = async () => {
     if () return) {
   $2
 }
     setIsReporting (true);
-    const success = await on_report (review.id, report_reason);
     setIsReporting (false);
     // Check condition
 if ( {) {
@@ -644,9 +642,6 @@ return (<div className="border rounded - lg p - 4 bg - card"> <div className="fl
 }"}
 }}}
                   {review.reviewer_profile?.display_name ? 
-import { useState } from "react",;
-import { formatDistanceToNow } from "date-fns",;
-import { Star, Flag, User } from 'lucide-react';
 import { Review } from "@/types/reviews",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Button } from "@/components/ui/button",;
@@ -859,7 +854,6 @@ export /**
 function ReviewCard() {"
   const [report_reason, setReportReason] = useState ();
   const [is_reporting, setIsReporting] = useState (false);
-  const [isReportDialogOpen, setIsReportDialogOpen] = useState (false);
     // Check condition;
       setReportReason ();
       setIsReportDialogOpen (false);

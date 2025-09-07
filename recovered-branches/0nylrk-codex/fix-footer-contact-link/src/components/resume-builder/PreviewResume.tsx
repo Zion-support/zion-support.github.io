@@ -1,19 +1,35 @@
-import { Resume } from "@/types/resume";
-import {
-  PreviewHeader
-  ResumeBasicInfoSection
-  WorkExperienceSection
-  EducationSection
-  SkillsSection
-  CertificationsSection
-} from "./preview";
+import {Resume} from '@/types/resume';
+import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
+
+import { Resume } from '@/types/resume',;
+import {;
+  PreviewHeader,;
+  ResumeBasicInfoSection,;
+  WorkExperienceSection,;
+  EducationSection,;
+  SkillsSection,;
+  CertificationsSection;
+} from './preview',;
+interface PreviewResumeProps {;
+<<<<<<< HEAD
+  }
+  "resume": Resume;
+  "onBack": () => void;import { Resume } from "@/types/resume";"
+  }
+=======
+  resume: Resume;
+
+  onBack: () => void;import { Resume } from "@/types/resume";
 
 interface PreviewResumeProps {
   resume: Resume;
-  onBack: () => void
+  onBack: () => void;
 }
+
 import { Resume } from "@/types/resume";
+
 import {
+>>>>>>> origin/chore/fix-lint-and-merge
   PreviewHeader,
   ResumeBasicInfoSection,
   WorkExperienceSection,
@@ -22,17 +38,24 @@ import {
   CertificationsSection,
 } from "./preview";
 
+  CertificationsSection,"
+} from "./preview";"
 interface PreviewResumeProps {
-  resume: Resume;
+  // TODO: Implement
+}
+  resume: Resume;,
   onBack: () => void;
+}
+
 }
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
+
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
 
-      {/* Resume Preview */}
+      {/* Resume Preview */}"
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
         <WorkExperienceSection workExperience={resume.work_experience} />
@@ -40,6 +63,3 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
         <SkillsSection skills={resume.skills} />
         <CertificationsSection certifications={resume.certifications} />
       </div>
-    </div>
-  );
-}

@@ -31,11 +31,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ usage: [] });
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '../../../../../utils/data/enterpriseStore';
 export default function handler(req, res) {
   try {
-  const { companyId } = req.query;
   if (!companyId || typeof companyId !== 'string') {;
     return res.status(400).json({ error: 'companyId required' });
     } catch (error) {
@@ -51,7 +49,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  const company = store.getCompanyById(companyId);
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     } catch (error) {
     console.error("Error:", error);
@@ -84,7 +81,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-    const ok = store.setUsageLimits(companyId, monthlyJobPosts, budgetCapUsd);
     return res.status(ok ? 200 : 404).json(ok ? { success: true } : { error: 'company_not_found' });
     } catch (error) {
     console.error("Error:", error);

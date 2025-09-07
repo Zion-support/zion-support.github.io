@@ -35,17 +35,11 @@ function buildIpfsClient() {
   });
 }
 async function generatePdfFromMarkdown(markdown: string, title: string) {
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
-import crypto from 'crypto';
 import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals';
 import { create as createIpfsClient } from 'ipfs-http-client';
 import { ethers } from 'ethers';
-import fs from 'fs';
-import path from 'path';
 function buildIpfsClient() {
-  const projectId = process.env.IPFS_PROJECT_ID;
-  const projectSecret = process.env.IPFS_PROJECT_SECRET;
   const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0';
   if (!projectId || !projectSecret) return null;
   const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');

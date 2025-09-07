@@ -10,6 +10,7 @@ export default function AnimatedBackground() {
           0% { transform: translateY(0px) rotate(0deg) }
           50% { transform: translateY(-20px) rotate(10deg) }
           100% { transform: translateY(0px) rotate(0deg) }
+
         }
       `}</style>;
     </div>;

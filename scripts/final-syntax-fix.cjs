@@ -1,18 +1,239 @@
-const fs = require("fs");"const path = require("path");"console.log(" Final syntax fix.");const filesToFix = [" "/workspace/pages/services.tsx"," "/workspace/pages/talent.tsx"];let totalFixes = 0;filesToFix.forEach(filePath => { if (fs.existsSync(filePath)) {" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix all possible line break issues in className attributes content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, (match, part1, part2) => {" return `className="${part1.trim()} ${part2.trim()}"`; }); / Fix missing closing quotes" content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, (match, part1, part2) => {"` return `className="${part1.trim()} ${part2.trim()}">`; }); / Fix any remaining unterminated strings" content = content.replace(/className="([^"]*)\n\s*([^"]*)\s*>/g, (match, part1, part2) => {"` return `className="${part1.trim()} ${part2.trim()}">`; }); / Fix specific patterns that are causing issues"" content = content.replace(/>\s*<div className="([^"]*)\n\s*([^"]*)"/g, ">\n <div className="$1 $2"");"" content = content.replace(/>\s*<h2 className="([^"]*)\n\s*([^"]*)"/g, ">\n <h2 className="$1 $2""); / Fix missing closing quotes in various tags"" content = content.replace(/<h1 className="([^"]*)\n\s*([^"]*)\s*>/g, "<h1 className="$1 $2">");"" content = content.replace(/<h2 className="([^"]*)\n\s*([^"]*)\s*>/g, "<h2 className="$1 $2">");"" content = content.replace(/<p className="([^"]*)\n\s*([^"]*)\s*>/g, "<p className="$1 $2">");"" content = content.replace(/<div className="([^"]*)\n\s*([^"]*)\s*>/g, "<div className="$1 $2">"); / Fix any remaining syntax issues" content = content.replace(/\s+\n\s*>/g, ">");" content = content.replace(/>\s*</g, ">\n <"); " if (content !== fs.readFileSync(filePath, "utf8")) { fs.writeFileSync(filePath, content);"` console.log(` Fixed: ${path.relative("/workspace", filePath)}`); totalFixes++; modified = true; } }});`console.log(`\n Summary:`);`console.log(` Files processed: ${filesToFix.length}`);`console.log(` Files fixed: ${totalFixes}`);"console.log(" Final syntax fix completed!");'"`'"`
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+
+<<<<<<< HEAD
+console.log('🔧 Final Syntax Fix);
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+
+<<<<<<< HEAD
+=======
 console.log('🔧 Final Syntax Fix');
-console.log('====');
+console.log('==================');
+>>>>>>> origin/chore/fix-lint-and-merge
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+#!/usr/bin/env node
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+const fs = require(fs');
+const path = require('path');
+<<<<<<< HEAD
+console.log(🔧 Final Syntax Fix');
+console.log('==================);
+=======
+console.log('🔧 Final Syntax Fix');
+<<<<<<< HEAD
+<<<<<<< HEAD
+console.log('==================');
+>>>>>>> origin/chore/fix-lint-and-merge
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+<<<<<<< HEAD
+console.log(
+
+
+
+
+console.log('
+=======
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+console.log('
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge
+// Function to fix specific syntax errors
+function fixSpecificErrors(content) {
+  return content
+    // Fix JSX closing tags
+<<<<<<< HEAD
+    .replace(/<\$1>/g, '>)
+    .replace(/<\/\$1>/g, >')
+    .replace(/<\$1/g, '<)
+    .replace(/<\/\$1/g, </')
+=======
+    .replace(/<\$1>/g, '>')
+    .replace(/<\/\$1>/g, '>')
+    .replace(/<\$1/g, '<')
+    .replace(/<\/\$1/g, '</')
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    // Fix object literal syntax
+<<<<<<< HEAD
+    .replace(/\{\s*$/gm, '{)
+    .replace(/\[\s*$/gm, [')
+    .replace(/\(\s*$/gm, '()
+=======
+    .replace(/\{\s*$/gm, '{')
+    .replace(/\[\s*$/gm, '[')
+    .replace(/\(\s*$/gm, '(')
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    // Fix semicolons in wrong places
+<<<<<<< HEAD
+    .replace(/;\s*$/gm, ')
+    .replace(/;\s*}/g, '})
+    .replace(/;\s*]/g, ]')
+    .replace(/;\s*\)/g, '))
+=======
+    .replace(/;\s*$/gm, '')
+    .replace(/;\s*}/g, '}')
+    .replace(/;\s*]/g, ']')
+    .replace(/;\s*\)/g, ')')
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    // Fix array and object syntax
+<<<<<<< HEAD
+    .replace(/\[\s*\{\s*$/gm, [{')
+    .replace(/\{\s*\[\s*$/gm, '{[)
+    .replace(/\}\s*\]\s*$/gm, }]')
+    .replace(/\]\s*\}\s*$/gm, ']})
+=======
+    .replace(/\[\s*\{\s*$/gm, '[{')
+    .replace(/\{\s*\[\s*$/gm, '{[')
+    .replace(/\}\s*\]\s*$/gm, '}]')
+    .replace(/\]\s*\}\s*$/gm, ']}')
+<<<<<<< HEAD
+    // Fix empty objects and arrays
+    .replace(/\{\s*\}/g, '{}')
+    .replace(/\[\s*\]/g, '[]')
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+    
+    // Fix empty objects and arrays
+    .replace(/\{\s*\}/g, {}')
+    .replace(/\[\s*\]/g, '[])
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    // Fix trailing commas
+<<<<<<< HEAD
+    .replace(/,\s*}/g, }')
+    .replace(/,\s*]/g, '])
+    .replace(/,\s*\)/g, )')
+=======
+    .replace(/,\s*}/g, '}')
+    .replace(/,\s*]/g, ']')
+    .replace(/,\s*\)/g, ')')
+<<<<<<< HEAD
+    // Clean up extra semicolons
+    .replace(/;;+/g, ';')
+    .replace(/;\s*;/g, ';')
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+    
+    // Clean up extra semicolons
+    .replace(/;+/g, ';)
+    .replace(/;\s*;/g, ;')
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    // Clean up whitespace
+<<<<<<< HEAD
+    .replace(/\n\s*\n\s*\n/g, '\n\n)
+    .replace(/\s+$/gm, ');
+=======
+    .replace(/\n\s*\n\s*\n/g, '\n\n')
+    .replace(/\s+$/gm, '');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+
+  return content;
+    // Fix JSX closing tags;
+
+    .replace(/\s+$/gm, );
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+}
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+// Files to fix
+=======
+// Files to fix;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+const filesToFix = [
+
+];
+<<<<<<< HEAD
+let totalFixed = 0;
+
+=======
+
+let totalFixed = 0;
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+<<<<<<< HEAD
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+for (const file of filesToFix) {
   try {
   // TODO: Implement
     if (!fs.existsSync(file)) {
-      console.log(`⚠️  File not found: ${file}`);
+      console.log(`⚠️  File not found: ${file});
       continue;
-    }
-    let content = fs.readFileSync(file, 'utf8');
+
     const originalContent = content;
+<<<<<<< HEAD
+<<<<<<< HEAD
     content = fixSpecificErrors(content);
+=======
+    
+    content = fixSpecificErrors(content);
+    
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     if (content !== originalContent) {
       fs.writeFileSync(file, content);
       console.log(`✅ Fixed ${file}`);
@@ -22,5 +243,50 @@ console.log('====');
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
 }
+<<<<<<< HEAD
+console.log(🎉 Final syntax fix completed!');
+
 console.log(`\n✅ Fixed ${totalFixed} files`);
+
+console.log('🎉 Final syntax fix completed!);
+
+console.log(🎉 Final syntax fix completed!');
 console.log('🎉 Final syntax fix completed!');
+
+=======
+<<<<<<< HEAD
+console.log(`\n✅ Fixed ${totalFixed} files`);
+<<<<<<< HEAD
+
+=======
+console.log('🎉 Final syntax fix completed!');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+
+console.log(`\n✅ Fixed ${totalFixed} files`);
+
+<<<<<<< HEAD
+console.log('🎉 Final syntax fix completed!');
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+console.log('🎉 Final syntax fix completed!');
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+<<<<<<< HEAD
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+    content = fixSpecificErrors(content);
+    if (content !== originalContent) {
+
+console.log(`\n✅ Fixed ${totalFixed} files`);
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

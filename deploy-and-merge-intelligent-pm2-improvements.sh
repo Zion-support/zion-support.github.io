@@ -1,9 +1,29 @@
 #!/bin/bash
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 # Deploy and Merge Intelligent PM2 Improvements Script
 # This script commits all PM2 automation improvements and merges them with the main branch
 # Deploy and Merge Intelligent PM2 Improvements Script
 # This script commits all PM2 automation improvements and merges them with the main branch
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Deploy and Merge Intelligent PM2 Improvements Script
+# This script commits all PM2 automation improvements and merges them with the main branch
+=======
+# Deploy and Merge Intelligent PM2 Improvements
+# This script deploys the enhanced PM2 system and merges changes to the main branch
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 # Deploy and Merge Intelligent PM2 Improvements
 # This script deploys the enhanced PM2 system and merges changes to the main branch
 # Deploy and Merge Intelligent PM2 Improvements
@@ -14,6 +34,11 @@
 
 # Deploy and Merge Intelligent PM2 Improvements
 # This script deploys the enhanced PM2 system and merges changes to the main branch
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 set -e
 
@@ -24,8 +49,22 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
 NC='\033[0m' # No Color
 
+<<<<<<< HEAD
+=======
+NC='\033[0m' # No Color
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 # Configuration
 PROJECT_ROOT="/workspace"
 BRANCH_NAME="enhanced-pm2-intelligent-automation-$(date +%Y%m%d-%H%M%S)"
@@ -371,7 +410,16 @@ show_final_status() {
     echo "  pm2 web                     - Web interface"
     echo "  ./health-check.sh           - Health check"
     echo "  ./maintenance.sh            - Maintenance"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 BOLD='\033[1m'
 NC='\033[0m' # No Color
 
@@ -813,7 +861,20 @@ validate_deployment() {
     fi
     
     success "Deployment validation passed"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 NC='\033[0m' # No Color
 
 # Configuration
@@ -1161,12 +1222,36 @@ show_final_status() {
     echo "  pm2 web                     - Web interface"
     echo "  ./health-check.sh           - Health check"
     echo "  ./maintenance.sh            - Maintenance"
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 main
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 }
 
 # Main execution
 main() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
     print_header "Deploying Enhanced PM2 System"
     
     # Pre-flight checks
@@ -1194,6 +1279,15 @@ main() {
     show_final_status
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
     print_header "Deploying Enhanced PM2 System"
     
     # Pre-flight checks
@@ -1221,6 +1315,7 @@ main() {
     show_final_status
 }
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     banner "🚀 Deploy and Merge Intelligent PM2 Improvements"
     banner ""
     echo
@@ -1290,6 +1385,20 @@ main() {
 # Trap to handle script interruption
 trap 'echo -e "\n${RED}Script interrupted. Current state preserved.${NC}"; exit 1' INT TERM
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     print_header "Deploying Enhanced PM2 System"
     
     # Pre-flight checks
@@ -1317,7 +1426,22 @@ trap 'echo -e "\n${RED}Script interrupted. Current state preserved.${NC}"; exit 
     show_final_status
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> main
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 main
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 # Run main function
 main "$@"

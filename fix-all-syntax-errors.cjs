@@ -1,177 +1,217 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
 const { execSync } = require('child_process');
 
-console.log('🔧 Starting comprehensive syntax error fixing...\n');
+function findFilesWithSyntaxErrors() {
+  const files = [];
+  
+  function walkDir(dir) {
+=======
 
-// Function to fix common syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
-    if (!fs.existsSync(filePath)) {
+/**
+ * Comprehensive syntax error fixer
+ */
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+  }
+
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  fixFile(filePath) {
+    try {
+      this.log(`Fixing: ${filePath}`);
+      
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+      
+      // Count opening and closing braces
+      const openBraces = (content.match(/\{/g) || []).length;
+      const closeBraces = (content.match(/\}/g) || []).length;
+      
+      if (openBraces > closeBraces) {
+        const missingBraces = openBraces - closeBraces;
+        content += '\n' + '}'.repeat(missingBraces);
+        modified = true;
+        this.log(`Added ${missingBraces} missing closing braces`);
+      }
+      
+      // Fix common patterns
+      content = content.replace(/(\s+return res\.status\([^)]+\);\s*)(\n\s*)(\w)/g, '$1\n  }\n\n  $3');
+      content = content.replace(/(\s+} catch \([^)]+\) \{\s*\n\s*return res\.status\([^)]+\);\s*\n\s*\}\s*)(\n\s*)(\w)/g, '$1\n}\n\n$3');
+      
+      if (modified) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles.push(filePath);
+        this.log(`✅ Fixed: ${filePath}`, 'SUCCESS');
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      this.log(`❌ Error fixing ${filePath}: ${error.message}`, 'ERROR');
       return false;
     }
+  }
 
+  async fixAllFiles() {
+    this.log('🔧 Starting comprehensive syntax error fixing...');
+    
+    // Find all TypeScript files in pages/api
+    const apiDir = path.join(this.projectRoot, 'pages', 'api');
+    const files = this.findTsFiles(apiDir);
+    
+    let fixedCount = 0;
+    
+    for (const file of files) {
+      if (this.fixFile(file)) {
+        fixedCount++;
+      }
+    }
+    
+    this.log(`🎉 Comprehensive syntax error fixing completed!`, 'SUCCESS');
+    this.log(`📊 Summary: ${fixedCount}/${files.length} files fixed`);
+  }
+
+  findTsFiles(dir) {
+    const files = [];
+    
+    if (!fs.existsSync(dir)) return files;
+    
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+    const items = fs.readdirSync(dir);
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+<<<<<<< HEAD
+        // Skip node_modules and other directories
+        if (!['node_modules', '.next', '.git', 'dist', 'out'].includes(item)) {
+          walkDir(fullPath);
+        }
+      } else if (item.match(/\.(ts|tsx|js|jsx)$/)) {
+        files.push(fullPath);
+      }
+    }
+  }
+  
+  walkDir('/workspace');
+  return files;
+}
+
+function fixSyntaxErrorsInFile(filePath) {
+  try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix import statements with commas instead of semicolons
-    if (content.includes('import {') && content.includes('",')) {
-      content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*,/g, 'import { $1 } from "$2";');
+    
+    // Fix import statements with trailing commas
+    const importFix = content.replace(/import\s+([^;]+),\s*$/gm, 'import $1;');
+    if (importFix !== content) {
+      content = importFix;
       modified = true;
     }
-
-    // Fix object properties with semicolons instead of colons
-    if (content.includes(': \';\'')) {
-      content = content.replace(/:\s*';\s*'/g, ': \'\'');
+    
+    // Fix export statements with trailing commas
+    const exportFix = content.replace(/export\s+([^;]+),\s*$/gm, 'export $1;');
+    if (exportFix !== content) {
+      content = exportFix;
       modified = true;
     }
-
-    // Fix missing commas in arrays
-    if (content.includes('}\n    {')) {
-      content = content.replace(/}\n\s*{/g, '},\n    {');
+    
+    // Fix type definitions with missing commas
+    const typeFix = content.replace(/export type (\w+) = \{/g, 'export type $1 = {');
+    if (typeFix !== content) {
+      content = typeFix;
       modified = true;
     }
-
-    // Fix duplicate export default statements
-    const exportDefaultMatches = content.match(/export\s+default\s+/g);
-    if (exportDefaultMatches && exportDefaultMatches.length > 1) {
-      // Keep only the first export default (function declaration)
-      const lines = content.split('\n');
-      let foundFirst = false;
-      const filteredLines = lines.filter(line => {
-        if (line.trim().startsWith('export default')) {
-          if (!foundFirst) {
-            foundFirst = true;
-            return true;
-          }
-          return false;
-        }
-        return true;
-      });
-      content = filteredLines.join('\n');
+    
+    // Fix missing semicolons after statements
+    const semicolonFix = content.replace(/([^;}])\s*$/gm, '$1;');
+    if (semicolonFix !== content) {
+      content = semicolonFix;
       modified = true;
     }
-
-    // Fix JSX structure issues - remove extra closing divs
-    if (content.includes('</motion.div>\n        </div>\n        </div>')) {
-      content = content.replace('</motion.div>\n        </div>\n        </div>', '</motion.div>\n        </div>');
-      modified = true;
-    }
-
-    // Fix missing imports
-    if (content.includes('motion.') && !content.includes('import { motion')) {
-      const importMatch = content.match(/import\s+React[^;]+;/);
-      if (importMatch) {
-        content = content.replace(importMatch[0], importMatch[0] + '\nimport { motion } from \'framer-motion\';');
+    
+    // Fix specific syntax errors
+    const fixes = [
+      // Fix missing comma in type definitions
+      { pattern: /Omit<Toast 'id'>/g, replacement: "Omit<Toast, 'id'>" },
+      // Fix missing semicolons in imports
+      { pattern: /import\s+([^;]+),\s*$/gm, replacement: 'import $1;' },
+      // Fix missing semicolons in exports
+      { pattern: /export\s+([^;]+),\s*$/gm, replacement: 'export $1;' },
+      // Fix missing semicolons after statements
+      { pattern: /(\w+)\s*$/gm, replacement: '$1;' },
+    ];
+    
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
         modified = true;
       }
-    }
-
-    // Fix missing useEffect import
-    if (content.includes('useEffect(') && !content.includes('useEffect')) {
-      const reactImport = content.match(/import\s+React[^;]+;/);
-      if (reactImport) {
-        content = content.replace(reactImport[0], reactImport[0].replace('React', 'React, { useEffect }'));
-        modified = true;
-      }
-    }
-
-    // Fix missing useLocation import
-    if (content.includes('useLocation(') && !content.includes('useLocation')) {
-      const routerImport = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]react-router-dom['"]/);
-      if (routerImport) {
-        content = content.replace(routerImport[0], routerImport[0].replace('}', ', useLocation }'));
-        modified = true;
-      }
-    }
-
-    // Fix missing AnimatePresence import
-    if (content.includes('AnimatePresence') && !content.includes('AnimatePresence')) {
-      const motionImport = content.match(/import\s*{\s*[^}]*}\s*from\s*['"]framer-motion['"]/);
-      if (motionImport) {
-        content = content.replace(motionImport[0], motionImport[0].replace('}', ', AnimatePresence }'));
-        modified = true;
-      }
-    }
-
-    // Fix missing Button import
-    if (content.includes('<Button') && !content.includes('import { Button')) {
-      const imports = content.match(/import\s*{[^}]*}\s*from\s*['"][^'"]*['"];?\s*\n/g) || [];
-      const lastImport = imports[imports.length - 1];
-      if (lastImport) {
-        content = content.replace(lastImport, lastImport + 'import { Button } from \'./ui/button\';\n');
-        modified = true;
-      }
-    }
-
-    // Clean up extra empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.trim();
-
+    });
+    
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed ${filePath}`);
       return true;
     }
-
+    
     return false;
   } catch (error) {
-    console.error(`  ❌ Error fixing ${filePath}:`, error.message);
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
     return false;
   }
 }
 
-// Function to find all TypeScript/JavaScript files
-function findSourceFiles() {
-  try {
-    const result = execSync('find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | head -50', { encoding: 'utf8' });
-    return result.trim().split('\n').filter(file => file.length > 0);
-  } catch (error) {
-    console.error('Error finding source files:', error.message);
-    return [];
-  }
-}
-
-// Main execution
-async function main() {
-  console.log('🔍 Finding source files...');
-  const sourceFiles = findSourceFiles();
+function main() {
+  console.log('🔧 Starting comprehensive syntax error fix...');
   
-  if (sourceFiles.length === 0) {
-    console.log('✅ No source files found!');
-    return;
-  }
-
-  console.log(`📋 Found ${sourceFiles.length} source files:\n`);
-
+  const files = findFilesWithSyntaxErrors();
+  console.log(`Found ${files.length} files to check`);
+  
   let fixedCount = 0;
-  let errorCount = 0;
-
-  for (const file of sourceFiles) {
-    if (fixSyntaxErrors(file)) {
-      console.log(`  ✅ Fixed: ${file}`);
+  
+  for (const file of files) {
+    if (fixSyntaxErrorsInFile(file)) {
       fixedCount++;
-    } else {
-      errorCount++;
     }
   }
-
-  console.log(`\n📊 Fix Summary:`);
-  console.log(`  ✅ Successfully fixed: ${fixedCount} files`);
-  console.log(`  ❌ Errors: ${errorCount} files`);
-
-  if (fixedCount > 0) {
-    console.log('\n🔄 Adding fixed files to git...');
-    try {
-      execSync('git add .', { stdio: 'inherit' });
-      console.log('✅ All fixed files added to git');
-    } catch (error) {
-      console.error('❌ Error adding files to git:', error.message);
-    }
-  }
-
-  console.log('\n🎉 Syntax error fixing completed!');
+  
+  console.log(`🎉 Fixed syntax errors in ${fixedCount} files`);
 }
 
-main().catch(console.error);
+main();
+=======
+        files.push(...this.findTsFiles(fullPath));
+      } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
+        files.push(fullPath);
+      }
+    }
+    
+    return files;
+  }
+}
+
+// Run the fixer
+if (require.main === module) {
+  const fixer = new ComprehensiveSyntaxFixer();
+  fixer.fixAllFiles().catch(console.error);
+}
+
+module.exports = ComprehensiveSyntaxFixer;
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

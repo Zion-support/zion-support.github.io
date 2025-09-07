@@ -196,7 +196,6 @@ const integrations = [
   },
 ];
 
-const useCases = [
   {
     title: 'Content Marketing Optimization',
     description:
@@ -227,7 +226,6 @@ const useCases = [
   },
 ];
 
-const integrations = [
   'WordPress',
   'Shopify',
   'HubSpot',
@@ -246,14 +244,12 @@ const integrations = [
 ];
 }
 
-import { motion } from 'framer-motion';
 import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
   Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award,;
   Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code,;
   ShoppingCart;
 } from 'lucide-react',;
-import Layout from '../components/layout/Layout';
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -371,7 +367,6 @@ const useCases = [;
   }
 }
 ],
-const integrations = [
   'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
 ],
 export default function AIContentIntelligencePlatform() {

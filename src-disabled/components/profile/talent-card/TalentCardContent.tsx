@@ -31,7 +31,6 @@ export function TalentCardContent(): any ({;
   timezone,;
   skills,;
 }: TalentCardContentProps) {;
-  const [isHovering, setIsHovering] = useState(false);
 
   return (
 
@@ -96,7 +95,6 @@ export function TalentCardContent(): any ({;
         <p className="text-zion-slate mb-4">
 
 import React, { useState } from 'react';
-import { MapPin } from 'lucide-react';
 import { TalentCardSkills } from './TalentCardSkills';
 import React, { useState } from './react';
 import { TalentCardSkills  } from './TalentCardSkills';

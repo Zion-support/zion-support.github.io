@@ -38,7 +38,6 @@ import {;
   Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,;
   Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart;
 } from 'lucide-react',;
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 const contactInfo = {;
   mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -58,12 +57,10 @@ export default function ComprehensiveServicesShowcase2025(req, res) {
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
   Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search;
   Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart
  } from 'lucide-react';
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 const contactInfo = null;
 export default function ComprehensiveServicesShowcase2025() {
 
@@ -127,7 +124,6 @@ break;
     return categoryData ? categoryData.icon : Globe;
   }
   const getCategoryColor = (category: string) => {
-    const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
     );
 
@@ -193,13 +189,11 @@ break;
     return '$800+'
   },
   const getCategoryIcon = (category: string) => {}
-    const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),
     return categoryData ? categoryData.icon : Globe;
   },
   const getCategoryColor = (category: string) => {}
-    const categoryData = categories.find(cat =>
       category.toLowerCase().includes(cat.id.toLowerCase())
     ),'
     return categoryData ? categoryData.color : 'from-gray-500 to-gray-600'
@@ -825,13 +819,10 @@ break;
           priceMatch = price > 800;
           break;}
 
-import { motion, AnimatePresence } from 'framer-motion';
-import {;
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
   Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,;
   Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart;'
 } from 'lucide-react',;'
-import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
 const contactInfo = {;'
   mobile: '+1 302 464 0950';'
   email: 'kleber@ziontechgroup.com';'
@@ -846,18 +837,9 @@ const pricingRanges = [;'
   'All PricesUnder $300$300 - $500$500 - $800$800+';
 ];
 
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
   // Filter services based on selections;
-  const filteredServices = comprehensiveRealServices2025.filter(service => {;'
-    const categoryMatch = selectedCategory === 'All Services' || service.category.includes(selectedCategory);
-    let priceMatch = true;'
     if (selectedPriceRange !== 'All Prices') {;'
-      const price = parseInt(service.price.replace('$', '')),;
       switch (selectedPriceRange) {;'
         case 'Under $300':;
           priceMatch = price < 300;
@@ -882,13 +864,11 @@ const pricingRanges = [;'
   }
 }
 ;
-    const searchMatch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                        service.category.toLowerCase().includes(searchQuery.toLowerCase());
     return categoryMatch && priceMatch && searchMatch;
   });
   // Sort services;
-  const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;'
       case 'name':;
         return a.name.localeCompare(b.name);'
@@ -906,7 +886,6 @@ const pricingRanges = [;'
 }
   }),
 
-  const getPriceRange = (price: string) => {
     const numPrice = parseInt(price.replace('$', '')),
     if (numPrice < 300) return 'Under $300',
     if (numPrice <= 500) return '$300 - $500',

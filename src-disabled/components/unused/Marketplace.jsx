@@ -158,7 +158,6 @@ const getCategoryName = (;) => {
 }
 }
 
-const getCategoryName = (;) => {
   return $3;}
 }
   const category = categories.find(cat => cat.id === categoryId) return category ? category.name : 'Unknown'}';

@@ -1,12 +1,18 @@
-export interface TalentProfile {
-  id: string;
+id: string;
   user_id: string;
   full_name: string;
+  // TODO: Implement
+}
+  id: string;,
+  user_id: string;
+  full_name: string;,
+pr-12325
   professional_title: string;
   profile_picture_url?: string;
   bio?: string;
   summary?: string;
   location?: string;
+
   skills?: string[];
   hourly_rate?: number;
   years_experience?: number;
@@ -17,20 +23,9 @@ export interface TalentProfile {
   is_verified?: boolean;
   key_projects?: {
 
-    title: string
-
-    description: string
-  }[]
-}
-export interface TalentProfileFilters {
   search?: string;
-  skills?: string[],
-  availabilities?: string[],
-  regions?: string[],
-  priceRange?: [number, number],
-  experienceRange?: [number, number]
-}
-export interface HireRequest {
+  skills?: string[];
+
   id: string;
   clientId: string;
   talentId: string;
@@ -52,7 +47,7 @@ export interface HireRequest {
   status: 'pending' | 'accepted' | 'rejected' | 'completed'
 
   createdAt: string
-}
+
   id: string,;
   user_id: string,;
   full_name: string,;
@@ -71,29 +66,28 @@ export interface HireRequest {
   is_verified?: boolean,;
   key_projects?: {;
     title: string,;
+
+    title: string,
+
     description: string;
+
   }[];
 }
-;
-export interface TalentProfileFilters {;
-  search?: string,;
-  skills?: string[],;
-  availabilities?: string[],;
-  regions?: string[],;
-  priceRange?: [number, number],;
+export interface TalentProfileFilters {};
+  search?: string;
+
+  availabilities?: string[];
+  regions?: string[];
+  priceRange?: [number, number];
   experienceRange?: [number, number];
 }
-;
-export interface HireRequest {;
-  id: string,;
-  clientId: string,;
-  talentId: string,;
-  projectTitle: string,;
-  projectDescription: string,;
-  budget: {;
-    min: number,;
-    max: number,;
-    currency: string;
+
+  id: string;
+
+  client_id: string;
+  talent_id: string;,
+  project_title: string;
+
   },;
   timeline: {;
     startDate: string,;
@@ -102,5 +96,15 @@ export interface HireRequest {;
   },;
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
+
+  }
+
+    startDate: string;
+    endDate?: string;
+    estimatedDuration?: string;
+  };
+  status: "pending" | "accepted" | "rejected" | "completed";
+  createdAt: string;
 }
-;
+
+export interface TalentProfile {;

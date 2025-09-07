@@ -220,7 +220,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           alt={listing.author.name}
                           className='object - cover';
                           on_error={e => {
-                            const target = e.target as HTMLImageElement;
                             target.src =;
                               'https://ui - avatars.com / api/?name=' +;
                               encodeURIComponent (listing.author.name);                          }}

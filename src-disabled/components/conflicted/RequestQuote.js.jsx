@@ -89,7 +89,6 @@ const [formData, setFormData] = useState({}
     urgency: 'medium,
 })';';
 
-const [submissionStatus, setSubmissionStatus] = useState('idle');
   const projectTypes = [];
     {}
 '';

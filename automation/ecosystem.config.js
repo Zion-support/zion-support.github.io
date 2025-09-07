@@ -30,7 +30,7 @@ module.exports = {
       listen_timeout: 8000,
       source_map_support: false,
       node_args: '--max-old-space-size=1024'
-
+    }
   ],
 
   deploy: {
@@ -40,8 +40,9 @@ module.exports = {
       ref: 'origin/main',
   repo: 'https://github.com/Zion-Holdings/zion.app.git',
       path: '/var/www/zion.app',
-      "pre-deploy-local": "",
-      "post-deploy": "npm install && pm2 reload ecosystem.config.js --env production",}
-      "pre-setup": ""}
-
-}
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',}
+      'pre-setup': ''}
+    }
+  }
+};

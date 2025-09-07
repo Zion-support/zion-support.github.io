@@ -1,11 +1,21 @@
 <<<<<<< HEAD
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-export interface ModerationAction {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+export type ContentType = $2;
+export type ModerationStatus = $2;
+export type AiScores = {
+  toxicity: number, // 0-1
+  nsfw: number, // 0-1
+  scam: number, // 0-1
+},
+
+export interface ModerationResult  {"id": string;
+  }
+  "content": string;
+  "status": 'approved' | 'rejected' | 'pending';'
+  reason?: string;moderatedBy?: string;
+  "moderatedAt": Date;
+  "flagId": string;
+  "action": ModerationStatus;
+  adminNotes?: string;
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 export type AiScores = {;
   toxicity: number, // 0-1;
@@ -13,11 +23,7 @@ export type AiScores = {;
   scam: number, // 0-1;
 };
 export type FlaggedContent = {;
-=======
-export interface ModerationResult {};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
   id: string;
-<<<<<<< HEAD
   contentType: ContentType;
   contentId: string;
   userId: string;
@@ -31,8 +37,102 @@ export interface ModerationResult {};
   updatedAt: string;
   adminNotes?: string;
 };
-=======
+export interface ModerationResult {
+  id: string;
+export interface ModerationResult {
+  id: string;
+  content: string;
+  status: 'approved' | 'rejected' | 'pending';
+  reason?: string;
+  moderatedBy?: string;
+  moderatedAt: Date;;
+  moderatedAt: Date;
+export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+export interface ModerationAction {
 
+export interface ModerationAction {;
+export interface ModerationResult {
+  id: string;
+  content: string;
+  status: 'approved | rejected' | 'pending;
+  reason?: string;
+  moderatedBy?: string;
+
+  moderatedAt: Date;
+export type ModerationStatus = pending' | 'approved | removed' | 'warned | banned';
+export interface ModerationAction {
+
+export interface ModerationAction {
+
+
+
+
+
+
+  id: string;
+  type: "approve" | "remove" | "warn" | "ban";
+  targetId: string;
+  targetType: "post" | "comment" | "user";
+  adminId: string;
+  reason?: string;
+  createdAt: string;export type ModerationStatus  = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';export interface ModerationAction  {id: string;
+}
+export interface ModerationFlag {
+
+;
+}
+export interface ModerationAction {
+  id: string;
+  type: "approve" | "remove" | "warn" | "ban";
+  targetId: string;
+  targetType: "post" | "comment" | "user";
+  adminId: string;
+  id: string;
+
+  adminId: string;
+  reason?: string;
+
+
+;
+}
+export interface ModerationAction {
+
+  reason?: string;
+  "createdAt": string;
+  "created_at": string;
+}
+}
+export interface ModerationFlag  {export interface ModerationFlag  {id: string;
+}
+export interface ModerationFlag {
+
+export interface ModerationFlag {;
+  id: string;
+  type: "spam" | "inappropriate" | "harassment" | "other";
+  content: string;
+  reporterId: string;
+  targetId: string;
+  targetType: "post" | "comment" | "user";
+  type: spam" | "inappropriate | harassment" | "other;
+  content: string;
+  reporterId: string;
+  targetId: string;
+  targetType: post" | "comment | user";
+  status: ModerationStatus;
+  createdAt: string;
+  updatedAt: string;
+  adminNotes?: string;
+}}
+export interface ModerationFlag  {}
+export interface ModerationFlag {}export interface ModerationRule  {id: string;
+}
+=======
+id: string;
+
+  id: string;
+
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 export interface ModerationResult {
   id: string;
@@ -62,10 +162,13 @@ export interface ModerationResult {
 =======
 >>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
 >>>>>>> main
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
   content: string;
   status: 'approved' | 'rejected' | 'pending';
   reason?: string;
   moderatedBy?: string;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -85,7 +188,6 @@ export interface ModerationAction {;
 
 
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   id: string;
 <<<<<<< HEAD
   type: "approve" | "remove" | "warn" | "ban";
@@ -99,23 +201,16 @@ export interface ModerationAction {;
   adminId: string;
   reason?: string;
   createdAt: string;
-<<<<<<< HEAD
-}
-export interface ModerationFlag {
-=======
 
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
 
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 
 ;
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-  moderatedAt: Date;
-;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+
 export interface ModerationAction {
   id: string;
 <<<<<<< HEAD
@@ -125,25 +220,18 @@ export interface ModerationAction {
   targetType: "post" | "comment" | "user";
   adminId: string;
   reason?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  createdAt: string;}
-=======
-  createdAt: string;
-=======
-created_at: string,
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
+}
 
-}
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
-  createdAt: string;
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 }
 export interface ModerationFlag {
+<<<<<<< HEAD
+}
+
+export interface ModerationRule {};
+  id: string;
+=======
 
 export interface ModerationFlag {;
   id: string;
@@ -157,6 +245,11 @@ export interface ModerationFlag {;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
+<<<<<<< HEAD
+
+export interface ModerationRule {};
+  id: string;
+=======
 <<<<<<< HEAD
 }
 =======
@@ -175,14 +268,19 @@ export interface ModerationFlag {
 export interface ModerationRule {};
   id: string;
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
   name: string;
   pattern: string;
   action: 'approve' | 'reject' | 'flag';
   severity: 'low' | 'medium' | 'high';
+<<<<<<< HEAD
+}type: 'spam' | 'inappropriate' | 'harassment' | 'other';
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
   type: 'approve' | 'remove' | 'warn' | 'ban';
   target_id: string;
   target_type: 'post' | 'comment' | 'user';
@@ -190,14 +288,16 @@ export interface ModerationRule {};
   reason?: string;
   created_at: string,
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+
+}
+>>>>>>> origin/chore/fix-lint-and-merge
 export interface ModerationFlag {
 
 export interface ModerationFlag {;
@@ -207,23 +307,42 @@ export interface ModerationFlag {;
   reporter_id: string;
   target_id: string;
   target_type: 'post' | 'comment' | 'user';
-  status: ModerationStatus;
 <<<<<<< HEAD
-<<<<<<< HEAD
+  status: ModerationStatus;ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
+export type FlaggedContent = $2;
+  contentType: ContentType,
+  contentId: string,
+  userId: string,
+  userEmail: string,
+  reason: string,
+  status: ModerationStatus,
+  snippet: string, // small preview of content
+  metadata?: Record<string, any>,
+  aiScores: AiScores,
+  createdAt: string,
+  updatedAt: string,
+  adminNotes?: string
+},
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
-=======
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  status: ModerationStatus;
+
+>>>>>>> origin/chore/fix-lint-and-merge
   created_at: string;
   updated_at: string;
   admin_notes?: string,
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 export type ContentType = 'listing' | 'message' | 'cv' | 'job',;
 export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned',;
 ;
@@ -252,7 +371,6 @@ export type FlaggedContent = {;
 export interface ModerationFlag {
 
 export interface ModerationFlag {;
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   id: string;
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
@@ -265,6 +383,17 @@ export interface ModerationFlag {;
   adminNotes?: string
 <<<<<<< HEAD
 }
+ursor/fix-syntax-push-and-merge-to-main-7db5
+}
+
+
+}
+export interface ModerationFlag {
+
+}
+export interface ModerationFlag {
+}
+
 =======
 ursor/fix-syntax-push-and-merge-to-main-7db5
 >>>>>>> main
@@ -274,21 +403,13 @@ ursor/fix-syntax-push-and-merge-to-main-7db5
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 
 }
-export interface ModerationFlag {
-=======
-=======
-
-}
-export interface ModerationFlag {
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-}
-
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export interface ModerationFlag {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
 <<<<<<< HEAD
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
@@ -298,30 +419,15 @@ export interface ModerationFlag {;
   target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
 
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
   name: string;
   pattern: string;'
   action: 'approve' | 'reject' | 'flag';'
+<<<<<<< HEAD
   severity: 'low' | 'medium' | 'high';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-f3c8
-=======
-=======
   type: 'spam' | 'inappropriate' | 'harassment' | 'other';
   content: string;
   reporter_id: string;
@@ -330,23 +436,55 @@ export interface ModerationFlag {;
   status: ModerationStatus;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> 64929ba0aca90db53d3fc12fa49c90c7c2110f3c
-=======
 }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
-=======
 }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
+
+export interface ModerationRule {}
+  id: string;
+
+}
+}
+export interface ModerationFlag {
+
+export interface ModerationFlag {
+  id: string;
+  type: 'spam | inappropriate' | 'harassment | other';
+  content: string;
+  reporter_id: string;
+  target_id: string;
+  target_type: 'post | comment' | 'user;
+
+
+
+}
+  created_at: string;
+  updated_at: string;
+  admin_notes?: string}
+
+}
+
+
+}
+export interface ModerationFlag {
+
+}
+export interface ModerationFlag {
+}
+
+
+export interface ModerationFlag {
+
+  id: string;
+
+  name: string;
+  pattern: string;
+  action: 'approve' | reject | 'flag';
+  severity: low' | 'medium | high';
+
+}
+}
+}'
 
 
 
@@ -360,5 +498,6 @@ export interface ModerationResult {
   id: string;
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+  severity: 'low' | 'medium' | 'high';
+>>>>>>> origin/chore/fix-lint-and-merge

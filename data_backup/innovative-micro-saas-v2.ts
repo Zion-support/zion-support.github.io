@@ -106,31 +106,6 @@ export type InnovativeMicroSaasV2 = {
   title: string;
   description: string;
   price?: string};
-}
-
-export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string};
-}
-
-export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string};
-}
-
-export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string};
-}
-
-export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string};
-}
-
-export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
-export type InnovativeMicroSaasV2 = {
-  "id": string;
-  title: string;
-  description: string;
-  price?: string};
 export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
 
 ursor/add-new-services-and-deploy-updates-0462

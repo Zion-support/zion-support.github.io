@@ -27,13 +27,10 @@ export default function AdminDisputesDashboard() {
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
   const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
-    const [k, v] = part.trim().split('=');
     if (k) acc[k] = decodeURIComponent(v || '');
     return acc;
   }, {} as Record<string, string>),;
-  let role = 'guest';
   try {
-    const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest';
   } catch {  } catch (error) {
     console.error("Error:", error);

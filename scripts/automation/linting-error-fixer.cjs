@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -26,23 +37,31 @@ const path = require("path")
   "rules": {@typescript-""eslint/no-unused-vars""": "warn",@typescript-""eslint/no-explicit-any""": "warn",""react/react-in-jsx-scope""": "off",""react/prop-types""": "off",no-console": "warn",no-unused-vars": "warn",prefer-const": "warn",no-var": "error"}
   "ignorePatterns": ["node_modules/", ".next/", "out/", "dist/", "automation/"]};"
       "
+>>>>>>> origin/chore/fix-lint-and-merge
       await fs.writeFile(eslintPath, fixedConfig")
       await fs.writeFile(eslintPath, fixedConfig")
-await this.log(" ESLint configuration fixed")
-  "type": "eslint-config-fix"
-        "file": ".eslintrc.js"
+await this.log( ESLint configuration fixed)
+  "type": eslint-config-fix
+        "file": .eslintrc.js
         "timestamp"
-  type: "eslint-config-fix"
-        "file": ".eslintrc.js"
-        "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing ESLint "config"`})
+  type: eslint-config-fix
+        "file": .eslintrc.js
+        "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing ESLint config`})
   await this.log(" Auto-fixing linting issues...")
+<<<<<<< HEAD
+
+=======
     const fixResult = await this.runCommand("npm run lint -- --fix", { "silent"})
   await this.log(" ESLint auto-fix completed")
   "type": "eslint-auto-fix"
         "action": "npm run lint -- --fix"
+>>>>>>> origin/chore/fix-lint-and-merge
         "timestamp"
-  await this.log("⚠  ESLint auto-fix had issues")
+  await this.log(⚠  ESLint auto-fix had issues)
   await this.log(" Fixing common linting issues...")
+<<<<<<< HEAD
+
+=======
     const jsFiles = require("glob").sync("src/**/*.{js,jsx,ts,tsx}", { "cwd"})
   const filePath = path.join(this.projectRoot, ")
         let content = await fs.readFile(filePath", "utf8")
@@ -50,15 +69,28 @@ await this.log(" ESLint configuration fixed")
         const unusedVarPattern = /const\s+(\w+)\s*=\s*([^]+);\s*\/\/\s*"unused/g"
         if (content.includes("console.log("")
   content = content.replace(/console\.log\(/g, "// console.log("")
+>>>>>>> origin/chore/fix-lint-and-merge
         if (content.includes("var ")
-  content = content.replace(/var\s+(\w+)/g, "const $1"
-  "type": "linting-fix"
+  content = content.replace(/var\s+(\w+)/g, const $1
+  "type": linting-fix
             "file"
-            "timestamp"
+            timestamp
       } catch (error) {  await this.log( Error fixing ${file  }: ${error.message}"")
-  await this.log(" Starting Linting Error Fixer")
-  "type": "linting-fix"
+  await this.log( Starting Linting Error Fixer)
+  "type": linting-fix
             "file"
+<<<<<<< HEAD
+            timestamp
+  "type": linting-fix
+            "file": file,
+            timestamp": new Date().toISOString()")}
+});)})} catch (error) {await this.log( Error fixing ${file}: ${error.message}"")
+
+
+  await this.log()
+
+  await this.log()
+=======
             "timestamp"
   "type": "linting-fix"
             "file": file,"
@@ -67,25 +99,23 @@ await this.log(" ESLint configuration fixed")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
   await this.log(")
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   await this.log(")
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   await this.log(")
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -93,6 +123,3 @@ await this.log(" ESLint configuration fixed")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

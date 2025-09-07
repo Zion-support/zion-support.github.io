@@ -102,7 +102,6 @@ export const getBadgeMeta = (key: BadgeKey) =>
 
   | 'monetized';
 
-import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
 
 export type BadgeKey =
   | "first_listing"

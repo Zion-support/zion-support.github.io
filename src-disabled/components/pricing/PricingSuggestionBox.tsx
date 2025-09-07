@@ -318,7 +318,6 @@ import {}
 } from '@/components / ui / tooltip';'
 import { Card, CardContent } from '@/components / ui / card';'
 import { Badge } from '@/components / ui / badge';'
-import { Loader2, Info, ThumbsUp } from 'lucide-react';'
 import { PricingSuggestion } from '@/services / pricingSuggestionService';
 interface PricingSuggestionBoxProps {}
   suggestion: PricingSuggestion | null;

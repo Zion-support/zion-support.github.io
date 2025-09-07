@@ -4,14 +4,15 @@ function runNode(relPath, args = []) {
 
   const abs = path.resolve(__dirname, '..', '..', relPath);
   const res = spawnSync('node', [abs, ...args], {
-    stdio: 'pipe'
-    encoding: 'utf8'
+    stdio: 'pipe,
+  encoding: 'utf8)
   });
   return {
-    status: res.status |0
-    stdout: res.stdout |''
-    stderr: res.stderr |''
-  }
+  // TODO: Implement
+}
+    status: res.status |0;,
+  stdout: res.stdout |
+    stderr: res.stderr |
 
 exports.handler = async () => {
   const logs = [];
@@ -19,30 +20,7 @@ exports.handler = async () => {
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
     if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
+    if (stderr) logs.push(stderr);`;
     logs.push(`exit=${status}`);
-    return status
-  }
+    return status;
   logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs'));
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-
-  return { statusCode: 200, body: logs.join('\n') }
-};function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '....', relPath)
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
-  return { status: res.status |0, stdout: res.stdout |'', stderr: res.stderr |'' }
-}
-exports.handler = async () => {
-  const logs = []
-  function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`)
-    const { status, stdout, stderr } = fn()
-    if (stdout) logs.push(stdout)
-    if (stderr) logs.push(stderr)
-    logs.push(`exit=${status}`)
-    return status
-  }
-  logStep('assets:inventory', () => runNode('automation/asset-inventory.cjs'))
-  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
-  return { statusCode: 200, body: logs.join('\n') }
-}

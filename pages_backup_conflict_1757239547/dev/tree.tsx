@@ -39,7 +39,6 @@ export default function DevTreePage() {
     fetchTree(adminToken);  }
   const onDeploy = async (p: string) => {
     try {
-      const resp = await fetch('/api/dev/source-map', {
         method: 'POST'
         headers: {
           'Content-Type': 'application/json'
@@ -48,7 +47,6 @@ export default function DevTreePage() {
         body: JSON.stringify({ path: p })
       });
       if (!resp.ok) {
-        const j = await resp.json().catch(() => ({}));
         throw new Error(j.error |`HTTP ${resp.status}`);
       }
       await fetchTree(adminToken);

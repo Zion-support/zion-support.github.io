@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronUp } from 'lucide-react';
-
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {
@@ -12,6 +10,8 @@ const ScrollToTop: React.FC = () => {
         setIsVisible(false);
       }
     };
+<<<<<<< HEAD
+=======
 
     window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility);
@@ -37,6 +37,6 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   );
+>>>>>>> origin/chore/fix-lint-and-merge
 };
-
 export default ScrollToTop;

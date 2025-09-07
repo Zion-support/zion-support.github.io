@@ -11,7 +11,6 @@ export default function LearnMarketplace() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     async function load() {
-  const [loading, setLoading] = useState(true);
   useEffect(() => {;
     async function load() {;
       setLoading(true);

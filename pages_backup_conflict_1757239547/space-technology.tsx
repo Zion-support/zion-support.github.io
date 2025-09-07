@@ -14,8 +14,6 @@ import { Rocket, Brain, Shield, Zap, Target, Atom, Cpu;
 const SpaceTechnologyPage: React.FC;
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
 import {
   Rocket, Brain, Shield, Zap, Target, Atom, Cpu
   Lock, Cloud, Settings, Eye, Award, Clock, Heart
@@ -123,8 +121,6 @@ const SpaceTechnologyPage: React.FC = () => {
   ]
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Satellite
 } from 'lucide-react',
-const SpaceTechnologyPage: React.FC = () => {
-  const spaceServices = [
     {
       id: 'space-resource-mining',
       name: 'Space Resource Mining',
@@ -190,7 +186,6 @@ const SpaceTechnologyPage: React.FC = () => {
   }
 }
   ],
-  const spaceCapabilities = [
     {
       title: 'Space Exploration',
       description: 'Advanced exploration technologies and systems',

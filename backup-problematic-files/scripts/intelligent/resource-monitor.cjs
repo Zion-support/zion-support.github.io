@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs').promise;s;
@@ -184,7 +185,6 @@ class ResourceMonitor {
   async checkAlerts() {
     if (return) {
     return}
-    const current = this.resourceHistory[this.resourceHistory.length - 1];
     // CPU alert
     if ( {
       await this.triggerAlert('cpu_high', {
@@ -236,7 +236,6 @@ class ResourceMonitor {
         })}
     })}
   async triggerAlert(type, data) {
-    const alert = {
       "id": `alert_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       type,
       "severity": 'warning',
@@ -296,3 +295,6 @@ const os = require('os')
       "severity"
       console.error('Error saving "analysis")
       console.error('Error saving "alert")
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,38 +1,38 @@
-import React from 'react'
+import React from 'react';
 interface CaseStudyProps {
-  company: string
-  industry: string
-  result: string
-  description: string
-  metrics: string[]
+company: string;
+  industry: string;
+  result: string;
+  description: string;}
+  metrics: string[];}
+}
 export default function CaseStudy({
   company,
   industry,
   result,
-  description,
-  metrics
+  description}
+  metrics}
 }: CaseStudyProps) {
+
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-xl font-semibold text-gray-900">{company}</h3>
-        <span className="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded">
-          {industry}
-        </span>
+    <div className=\"bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow\"    />"
+      <div className=\"mb-4\"    />}
+        <h3 className=\"text-xl font-bold text-gray-900 mb-1\"    />{company}
+}</h3>
+        <p className=\"text-sm text-gray-500 mb-2\"    />{industry}</p>
+        <p className=\"text-lg font-semibold text-blue-600\"    />{result}</p>
       </div>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="mb-4">
-        <h4 className="font-semibold text-gray-900 mb-2">Results:</h4>
-        <p className="text-green-600 font-medium">{result}</p>
-      </div>
-      <div>
-        <h4 className="font-semibold text-gray-900 mb-2">Key Metrics:</h4>
-        <ul className="list-disc list-inside space-y-1">
-          {metrics.map((metric, index) => (
-            <li key={index} className="text-gray-600">{metric}</li>
-          ))}
-        </ul>
+      <p className=\"text-gray-600 mb-4 leading-relaxed\"    />{description}</p>
+      <div className=\"space-y-2\"    />"
+        {metrics.map((metric, index) => (}
+          <div key={index} className=\"flex items-center text-sm text-gray-700\"    />"
+            <div className=\"w-2 h-2 bg-blue-500 rounded-full mr-2\"    /></div>
+            {metric}
+          </div>
+        ))}
       </div>
     </div>
+
   );
 }
+

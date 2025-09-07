@@ -11,7 +11,6 @@ interface GeneratedContent {
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 <Badge
@@ -24,7 +23,6 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 
 interface GeneratedContent {
@@ -84,8 +82,6 @@ interface GeneratedContentDisplayProps {;
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight } from 'lucide-react';
-import {
   Card,
   CardContent,
   CardFooter,
@@ -93,11 +89,6 @@ import {
   CardTitle,;
 } from '@/components/ui/card';
 
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight } from 'lucide-react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 interface GeneratedContent {
   description: string;
   tags: string[];
@@ -174,11 +165,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li key={index}>{point}</li>
             ))}
 
-import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Badge } from '@/components / ui / badge';
-import { ArrowRight } from 'lucide-react';
-import {
   Card,
   CardContent,
   CardFooter,

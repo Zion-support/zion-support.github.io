@@ -131,8 +131,10 @@ interface AccessibilitySettings {
 
   // Announce to screen reader
   const announceToScreenReader = useCallback((message: string) => {
+=======
     // setAnnouncements(prev => [...prev, message]); // This line was removed
     
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     // Create live region for screen readers
     if (!announcementRef.current) {
       const liveRegion = document.createElement('div');
@@ -149,6 +151,7 @@ interface AccessibilitySettings {
     
     // Remove announcement after a delay
     setTimeout(() => {
+<<<<<<< HEAD
       // Cleanup
     }, 5000);
   }, []);

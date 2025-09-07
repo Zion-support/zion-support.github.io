@@ -1,14 +1,4 @@
-:pages/sso-in-a-box.tsx
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Lock, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function SsoInABoxPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/sso-in-a-box'))
-  if (!service) return null
-export default function SsoInABoxPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/sso-in-a-box'))
   if (!service) return null,
 
 import React from 'react',;
@@ -25,14 +15,8 @@ import Layout from '../components/layout/Layout'
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
 
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Lock, Star } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
 
 export default function SsoInABoxPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/sso-in-a-box'))
   if (!service) return null,
 
 import {
@@ -44,9 +28,7 @@ import {
   Lock,
   Star,;
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function SsoInABoxPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
@@ -75,8 +57,6 @@ export default function SsoInABoxPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => ("
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-fuchsia-400 mt-0.5"><Check /><span>{feat}</span></li>
-:pages/sso-in-a-box.tsx
-                ))}
 
               </ul>
             </div>"
@@ -88,12 +68,6 @@ export default function SsoInABoxPage() {
                 </div>"
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
-:pages/sso-in-a-box.tsx
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Enable SSO<ArrowRight /></a>
-              <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400 hover:text-white"><Phone /><a href={`tel:${service.contactInfo.mobile.replace(/[^+\\d]/g, '')}`} >{service.contactInfo.mobile}</a></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400 hover:text-white"><Mail /><a href={`mailto:${service.contactInfo.email}`} >{service.contactInfo.email}</a></div>
-                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs hover:text-white"><MapPin /><a href={`https://maps.google.com/?q=${encodeURIComponent(service.contactInfo.address)}`} target="_blank" rel="noopener noreferrer" >{service.contactInfo.address}</a></div>
 
 "
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Enable SSO<ArrowRight /></Link>"
@@ -110,8 +84,6 @@ export default function SsoInABoxPage() {
     </Layout>
 
 }
-:pages/sso-in-a-box.tsx
-;
 
   } catch (error) {"
     console.error("Error:", error);"

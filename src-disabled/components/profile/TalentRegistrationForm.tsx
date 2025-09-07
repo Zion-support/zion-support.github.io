@@ -118,7 +118,6 @@ if ( {) {}
   },
 
   // Handle removing skill tags;
-  const handleRemoveSkill = (skill: string) => {}
     setSkillTags(skillTags.filter((s) => s !== skill))
   },
 
@@ -167,7 +166,6 @@ export function TalentRegistrationForm() { return null; }
     }
   },;
   // Handle avatar upload;
-  const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
     const file = e.target.files?.[0],;
     if (file) {;
       const reader = new FileReader(),;
@@ -179,7 +177,6 @@ export function TalentRegistrationForm() { return null; }
   },
 
   // Generate enhanced profile with AI;
-  const generateEnhancedProfile = async () => {}
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {}
       toast({"
@@ -256,7 +253,6 @@ import {;
   FormLabel,;
   FormMessage,;'
 } from '@/components/ui/form';
-import {;
   Card,;
   CardContent,;
   CardDescription,;
@@ -264,7 +260,6 @@ import {;
   CardHeader,;
   CardTitle,;'
 } from '@/components/ui/card';
-import {;
   X,;
   Sparkles,;
   Upload,;
@@ -329,7 +324,6 @@ enhancedProfile: z && z.boolean () .default (true) ;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
 
   // Initialize form with default values;
-  const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentProfileSchema) as any,;
     defaultValues: {;'
       name: user?.displayName || '',;'
@@ -353,7 +347,6 @@ enhancedProfile: z && z.boolean () .default (true) ;
   };
 
   // Handle removing skill tags;
-  const handleRemoveSkill = (skill: string) => {;
     setSkillTags(skillTags && skillTags.filter(s => s !== skill))
 };
 
@@ -376,7 +369,6 @@ enhancedProfile: z && z.boolean () .default (true) ;
   };
 
   // Generate enhanced profile with AI;
-  const generateEnhancedProfile = async () => {;
     const formData = form && form.getValues();
     if (!formData && formData.bio || formData && formData.bio.length < 20) {;
 
@@ -685,7 +677,6 @@ if ( {) {}
       }, 1500);
       // Here would be the actual code to save the profile to Supabase;
       /*;
-      const { error } = await supabase;'
         .from ('talent_profiles');
 
           user_id: user.id,
@@ -759,7 +750,6 @@ const talentProfileSchema = null;
       }, 1500),;
       // Here would be the actual code to save the profile to Supabase;
       /*;
-      const { error } = await supabase;'
         .from('talent_profiles');
         .insert({;
           user_id: user.id,;
@@ -825,8 +815,6 @@ const talentProfileSchema = null;
       setIsSubmitting(false)
 ;
       // Get user email for notification;
-      const { data: userData } = await supabase.auth.getUser(),;
-      const userEmail = (userData as any).user?.email,;
       // Create the talent profile;
       // In a real implementation, this would save to Supabase;
       setTimeout(() => {;
@@ -840,7 +828,6 @@ const talentProfileSchema = null;
       }, 1500),;
       // Here would be the actual code to save the profile to Supabase;
       /*;
-      const { error } = await supabase;'
         .from('talent_profiles');
         .insert({;
           user_id: user.id,;

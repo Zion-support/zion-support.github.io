@@ -1,86 +1,51 @@
+
+
 <<<<<<< HEAD
-<<<<<<< HEAD
+import React, { useEffect } from 'react';'
+import type { GetStaticProps } from 'next';'
+import content from '../../../data/docs/content.json';'
 
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-import React, { useEffect } from 'react';
-  return {
-    props: {
-      docs: content as DocsContent,
-    },;
-  };};import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
-import content from '../../../data/docs/content.json';
-export type Section = {
-  id: string,
-  title: string,;
-  html?: string;
-  code?: { language?: string, content: string }[]
-};
-
-type DocsContent = {
-  title: string,
-  sections: Section[]
-};
-
-type PageProps = {
-  docs: DocsContent
-};
-
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
-  return {
-    props: {
-      docs: content as DocsContent
-    }
-  };};import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
-import content from '../../../data/docs/content.json';
-export type Section = {
-  id: string
-  title: string
-  html?: string;
-  code?: { language?: string, content: string }[]
-}
-type DocsContent = {
-  title: string
-  sections: Section[]
-}
-type PageProps = {
-  docs: DocsContent
-}
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
-  return {
-    props: {
-      docs: content as DocsContent}}
-export default function PrintDocs({ docs }: PageProps) {
-  useEffect(() => {;
-    const id = setTimeout(() => window.print(), 500);
-    return () => clearTimeout(id);
+export type Section = any;
   }, []);
-  return (
-<<<<<<< HEAD
-    <div className='p-8 max-w-4xl mx-auto' />;
+return (;
+    <div className='p-8 max-w-4xl mx-auto'>;'
 
       <h1 className='text-3xl font-bold mb-6' />{docs && docs.title}</h1>;
       <div className='space-y-8' />;
         {docs && docs.sections.map(s => (<section key={s && s.id} />;
             <h2 className='text-2xl font-semibold mb-2' />{s && s.title}</h2>;
             {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} /
-=======
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
   props: {
   docs: content as DocsContent 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
+import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content.json';
+}
+import React, { useEffect } from react';
+import type { GetStaticProps } from 'next;
+import content from ../../../data/docs/content.json';
+=======
+import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content.json';
+
+>>>>>>> origin/chore/fix-lint-and-merge
+export type Section = any;
+  }, []);
+<<<<<<< HEAD
+  return ('
+    <div className=p-8 max-w-4xl mx-auto>;'
+      <h1 className='text-3xl font-bold mb-6>{docs && docs.title}</h1>;
+      <div className='space-y-8'>;
+        {docs && docs.sections.map(s => (;
+          <section key={s && s.id}>;
+            <h2 className=text-2xl font-semibold mb-2'>{s && s.title}</h2>;
+            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} />}
             {s && s.code &&;
 
-              s && s.code.map((c, i) = /> (;}
-                <pre;}
-key = {i}
-
-=======
     <div className='p-8 max-w-4xl mx-auto'>
       <h1 className='text-3xl font-bold mb-6'>{docs.title}</h1>
       <div className='space-y-8'>
@@ -92,9 +57,27 @@ key = {i}
               s.code.map((c, i) => (
                 <pre
                   key={i}
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
                   className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'
                 >
+=======
+  return (
+    <div className='p-8 max-w-4xl mx-auto'    />;
+
+      <h1 className='text-3xl font-bold mb-6'    />{docs && docs.title}</h1>;
+      <div className='space-y-8'    />;
+        {docs && docs.sections.map(s => (<section key={s && s.id}    />;
+            <h2 className='text-2xl font-semibold mb-2'    />{s && s.title}</h2>;
+            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} /
+}
+            {s && s.code &&;
+
+              s && s.code.map((c, i) =    /> (;}
+                <pre;}
+key = {i}
+
+                  className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'
+                    />
+>>>>>>> origin/chore/fix-lint-and-merge
                   {c.content}
                 </pre>
               ))}          </section>  }, []);
@@ -109,59 +92,142 @@ key = {i}
             {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
             {s.code && s.code.map((c, i) => (
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
+              ))}
+ ;
+<<<<<<< HEAD
+return (;
+    <div className="p-8 max-w-4xl mx-auto">;"
+
             ))}
-<<<<<<< HEAD
 }
+export default /**;
+ * PrintDocs - Function description;
+ */
+function PrintDocs() {}
+  useEffect (() => {}
+    const id = set_timeout (() => window.print (), 500);
+    return () => clear_timeout (id);
+  }, []);
+;
+  return ('
+    <div className='p - 8 max - w-4xl mx - auto'>;'
+      <h1 className='text - 3xl font - bold mb - 6'>{docs.title}</h1>;'
+      <div className='space - y-8'>;
+        {docs.sections.map (string => (
+          <section key={s.id}>;'
+            <h2 className='text - 2xl font - semibold mb - 2'>{s.title}</h2>;
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
+            {s.code &&;
+              s.code.map ((c, i) => (
+                <pre;
+                  key={i}'
+                  className='mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap';
+                >;
+                  {c.content}
+                </pre>))}          </section>  }, []);
+;
+  return ("
+    <div className="p - 8 max - w-4xl mx - auto">;"
+      <h1 className="text - 3xl font - bold mb - 6">{docs.title}</h1>;"
+      <div className="space - y-8">;
+        {docs.sections.map ((s) => (
+          <section key={s.id}>;"
+            <h2 className="text - 2xl font - semibold mb - 2">{s.title}</h2>;
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
+            {s.code && s.code.map ((c, i) => ("
+              <pre key={i} className="mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap">{c.content}</pre>))}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+  return (
+    <div className=\"p-8 max-w-4xl mx-auto\"    />;
+"
+      <h1 className=\"text-3xl font-bold mb-6\"    />{docs && docs.title}</h1>;"
+      <div className=\"space-y-8\"    />;
+        {docs && docs.sections.map((s) => (<section key={s && s.id}    />;"
+            <h2 className=\"text-2xl font-semibold mb-2\"    />{s && s.title}</h2>;
+            {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} /
+}"
 <<<<<<< HEAD
+            {s && s.code && s && s.code.map((c, i) = /> (<pre key={i} className=\"mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap\" />{c && c.content}</pre>;
+=======
+            {s && s.code && s && s.code.map((c, i) =    /> (<pre key={i} className=\"mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap\"    />{c && c.content}</pre>;
+>>>>>>> origin/chore/fix-lint-and-merge
+            ))}
+}
 
 export default /**;
  * PrintDocs - Function description;
  */;
 function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.print (), 500)return () => clear_timeout (id)}, [];
-  return (<div className='p - 8 max - w-4xl mx - auto' />;
-      <h1 className='text - 3xl font - bold mb - 6' />{docs.title}</h1>;
-      <div className='space - y-8' />;
-        {docs.sections.map (string => (<section key={s.id} />;
-            <h2 className='text - 2xl font - semibold mb - 2' />{s.title}</h2>;
+  return (<div className='p - 8 max - w-4xl mx - auto'    />;
+      <h1 className='text - 3xl font - bold mb - 6'    />{docs.title}</h1>;
+      <div className='space - y-8'    />;
+        {docs.sections.map (string => (<section key={s.id}    />;
+            <h2 className='text - 2xl font - semibold mb - 2'    />{s.title}</h2>;
             {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} /
 }
             {s.code &&;}
-              s.code.map ((c, i) = /> (<pre;}
+              s.code.map ((c, i) =    /> (<pre;}
                   key = {i}
-                  className='mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap' />
+                  className='mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap'    />
 
                   {c.content}
                 </pre>))}          </section>  }, [];"
+<<<<<<< HEAD
   return (<div className=\"p - 8 max - w-4xl mx - auto\" />;"
       <h1 className=\"text - 3xl font - bold mb - 6\" />{docs.title}</h1>;"
       <div className=\"space - y-8\" />;
         {docs.sections.map ((s) => (<section key={s.id} />;"
             <h2 className=\"text - 2xl font - semibold mb - 2\" />{s.title}</h2>;
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} /
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html ;}} /
 }"
             {s.code && s.code.map ((c, i) = /> (<pre key={i} className=\"mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap\" />{c.content}</pre>))}
+=======
+  return (<div className=\"p - 8 max - w-4xl mx - auto\"    />;"
+      <h1 className=\"text - 3xl font - bold mb - 6\"    />{docs.title}</h1>;"
+      <div className=\"space - y-8\"    />;
+        {docs.sections.map ((s) => (<section key={s.id}    />;"
+            <h2 className=\"text - 2xl font - semibold mb - 2\"    />{s.title}</h2>;
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} /
+}"
+            {s.code && s.code.map ((c, i) =    /> (<pre key={i} className=\"mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap\"    />{c.content}</pre>))}
+>>>>>>> origin/chore/fix-lint-and-merge
           </section>))}
       </div>;
     </div>)))}
           </section>;
-=======
+<<<<<<< HEAD
           </section>
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         ))}
 
+<<<<<<< HEAD
+  );
+}
+
+
+
+      </div>;
+    </div>;
+  )})}
       </div>
     </div>
-);
+  )
 }
-<<<<<<< HEAD
+
+"
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 "
 =======
+      </div>
+    </div>
+
+  );
 }
-) ) 
-}</section>) ) 
-}</div> </div>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge

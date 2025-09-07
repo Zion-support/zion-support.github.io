@@ -1,136 +1,448 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
-import React, { useState } from 'react';
-type Props = any;
 type Props = {
   onSubmit: (payload: {
+export default function MilestoneForm(): any ({ onSubmit }: Props) {
+
+import React, { useState } from 'react';
+
+type Props = any;
+<<<<<<< HEAD
+type Props = {
+  onSubmit: (payload: {
+export default function MilestoneForm(): any ({ onSubmit }: Props) {;
+type Props = {
+  onSubmit: (payload: {
+import React, { useState } from 'react';
+type Props = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+    title: string;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     title: string;
     description?: string;
     dueDate: string;
     amountUsd: number;
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+
+<<<<<<< HEAD
+  }) => Promise<void /> | void;
 }
 export default function MilestoneForm({ onSubmit }: Props) {
+  const [title, setTitle] = useState($2);
+  const [description, setDescription] = useState($2);
+  const [dueDate, setDueDate] = useState($2);
+  const [amountUsd, setAmountUsd] = useState<string>('),
+  const [error, setError] = useState<string | null>(null),
+  const [loading, setLoading] = useState($2);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault($2);
+    setError($2);
+    const parsedAmount = Number($2);
+    if (!title || !dueDate || !amountUsd || Number.isNaN(parsedAmount)) {
+      setError($2);
+      return
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+  }) => Promise<void> | void;
+};
+
+export default function MilestoneForm({ onSubmit }: Props) {
+origin/cursor/automate-test-improve-and-merge-code-2533
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
   const [amountUsd, setAmountUsd] = useState<string>('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    const parsedAmount = Number(amountUsd)
-    if (!title |!dueDate |!amountUsd |Number.isNaN(parsedAmount)) {
-      setError('Please provide Title, Due Date and a valid Amount.');
-      return;
     }
-    setLoading(true);
-    try {
-      await onSubmit({
-        title
-        description: description |undefined
-        dueDate
-        amountUsd: parsedAmount
-      });
-      setTitle('');
-      setDescription('');
-      setDueDate('');
-      setAmountUsd('');
-    } catch (err: any) {
-      setError(err?.message |'Failed to create milestone');
-    } finally {
+  }
+  };
       setLoading(false);    }
   }
-  return (
-    <form onSubmit={handleSubmit} className='space-y-4'>
-      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
-    setLoading(true);
-    try {
-      await onSubmit({ title, description: description |undefined, dueDate, amountUsd: parsedAmount })
-      setTitle('');
-      setDescription('');
-      setDueDate('');
-      setAmountUsd('')
-    } catch (err: any) {
-      setError(err?.message |'Failed to create milestone')
-    } finally {
-      setLoading(false)
-    }
-  }
-
   return ('
     <form onSubmit={handleSubmit} className='space-y-4'>;'
       {error && <div className='text-red-600 text-sm'>{error}</div>}    }
-    setLoading(true)
+    setLoading(true);
+    }
+  }
 '
-          placeholder='Phase 1 – Backend Setup'          required
-        />
-      </div>
-      <div>
+          placeholder='Phase 1 – Backend Setup'          required;
+        />;
+      </div>;
+      <div>;
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e && e.target.value)}'
         <label className='block text - sm font - medium'>Description</label>      <div>;"
-        <label className="block text - sm font - medium" html_for="input - Title">Title</label>
+        <label className="block text - sm font - medium" html_for="input - Title">Title</label>;
         <input;"
-          className="mt - 1 w - full rounded border px - 3 py - 2"
+          className="mt - 1 w - full rounded border px - 3 py - 2";
           value={title}
           on_change={(e) => set_title (e.target.value)}"
-          placeholder="Phase 1 – Backend Setup"
-          required
-        />
-      </div>
+          placeholder="Phase 1 – Backend Setup";
+          required;
+        />;
+      </div>;
       <div>;'
-        <label className='block text - sm font - medium'>Description</label>
+        <label className='block text - sm font - medium'>Description</label>;
         <textarea;'
-          className='mt - 1 w - full rounded border px - 3 py - 2'
+          className='mt - 1 w - full rounded border px - 3 py - 2';
           value={description}
           on_change={e => set_description (e.target.value)}'
-          placeholder='Describe deliverables...'
+          placeholder='Describe deliverables...';
           rows={3}"
             type="number"
             min={0}"
             step="0 && 0.01""
             className="mt-1 w-full rounded border px-3 py-2"
             value={amountUsd}"
+            placeholder="3000";
+            required;
+          />;
+        </div>;
+      </div>;'
+        {loading ? 'Adding...' : 'Add Milestone'}
+
+      </button>;
+    </form>;
+  );
+
+  );
+
+}
+}
+  );
+}
+      <button;'
+        type='submit';'"
+        className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";"
+        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50";
+        disabled={loading}
+      >;'
+        {loading ? 'Adding...' : 'Add Milestone'}
+      </button>;
+    </form>);
+}
+  const handleSubmit = async (e: React.FormEvent) => {
+=======
+  }) => Promise<void    /> | void;
+};
+
+
+export default function MilestoneForm({ onSubmit }: Props) {
+  const [title, setTitle] = useState('');
+
+const [description, setDescription] = useState('');
+
+const [dueDate, setDueDate] = useState('');
+
+const [amountUsd, setAmountUsd] = useState<string    />('');
+
+const [error, setError] = useState<string | null>(null);
+
+const [loading, setLoading] = useState(false);
+
+const handleSubmit = async (e: React.FormEvent) => {
+>>>>>>> origin/chore/fix-lint-and-merge
+    e.preventDefault();
+    setError(null);
+
+const parsedAmount = Number(amountUsd)
+    if (!title |!dueDate |!amountUsd |Number.isNaN(parsedAmount)) {
+<<<<<<< HEAD
+      }
+      setError('Please provide Title, Due Date and a valid Amount.');'
+return;
+=======
+      setError('Please provide Title, Due Date and a valid Amount.');}
+return;}
+>>>>>>> origin/chore/fix-lint-and-merge
+    }
+    setLoading(true);
+    try {
+<<<<<<< HEAD
+      await onSubmit($2);
+      setTitle($2);
+      setDescription($2);
+      setDueDate($2);
+      setAmountUsd('')
+    } catch (err: any) {
+      setError(err?.message || 'Failed to create milestone')
+    } finally {
+
+;
+}export default function MilestoneForm(): any ({ onSubmit }: Props) {type Props = {onSubmit: (payload: {import React, { useState } from 'react';
+type Props = any;title: string;
+    description?: string;
+    dueDate: string;
+    amountUsd: number;}) => Promise<void> | void;}onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void;
+  }) => Promise<void> | void;}onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void;
+  }) => Promise<void> | void;
+}export default function MilestoneForm() {const [title, setTitle] = useState('')const [description, setDescription] = useState('')const [dueDate, setDueDate] = useState('')const [amountUsd, setAmountUsd] = useState<string>('')const [error, setError] = useState<string | null>(null)const [loading, setLoading]  = useState(false)}
+  }
+  }setLoading(false)}
+  }
+  return (<form onSubmit={handleSubmit} className='space-y-4'>;
+      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
+    setLoading(true)}
+  }placeholder='Phase 1 – Backend Setup'          required;
+        />;
+      </div>;
+      <div>;
+          className="mt-1 w-full rounded border px-3 py-2";
+    }
+  }
+  };
+      setLoading(false);    }
+  }
+  return (
+    <form onSubmit={handleSubmit} className='space-y-4'>;
+      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
+    setLoading(true);
+    }
+  }
+
+          placeholder='Phase 1 – Backend Setup'          required;
+        />;
+      </div>;
+      <div>;
+          className="mt-1 w-full rounded border px-3 py-2"
+          value={description}
+          onChange={(e) => setDescription(e && e.target.value)}
+        <label className='block text - sm font - medium'>Description</label>      <div>;
+        <label className="block text - sm font - medium" html_for="input - Title">Title</label>;
+        <input;
+          className="mt - 1 w - full rounded border px - 3 py - 2";
+          value={title}
+          on_change={(e) => set_title (e.target.value)}
+          placeholder="Phase 1 – Backend Setup";
+          required;
+        />;
+      </div>;
+      <div>;
+        <label className='block text - sm font - medium'>Description</label>;
+        <textarea;
+          className='mt - 1 w - full rounded border px - 3 py - 2';
+          value={description}
+          on_change={e => set_description (e.target.value)}
+          placeholder='Describe deliverables...';
+          rows={3}
+            type="number"
+            min={0}
+            step="0 && 0.01"
+            className="mt-1 w-full rounded border px-3 py-2"
+            value={amountUsd}
+            placeholder="3000";
+            required;
+          />;
+        </div>;
+      </div>;
+        {loading ? 'Adding...' : 'Add Milestone'}
+
+      </button>;
+    </form>;
+  );
+
+  );
+
+}
+}
+  );
+}
+      <button;
+        type='submit';
+        className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
+        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50";
+        disabled={loading}
+      >;
+        {loading ? 'Adding...' : 'Add Milestone'}
+      </button>;
+    </form>)}const handleSubmit = async (e: React.FormEvent) => {e.preventDefault()setError(null)const parsedAmount = Number(amountUsd)if (!title |!dueDate |!amountUsd |Number.isNaN(parsedAmount)) {setError('Please provide Title, Due Date and a valid Amount.')return;
+    }
+    setLoading(true)try {await onSubmit({title;
+        description: description |undefined;
+        dueDate;
+        amountUsd: parsedAmount;
+      })setTitle('')setDescription('')setDueDate('')setAmountUsd('')} catch (err: any) {setError(err?.message |'Failed to create milestone')} finally {setLoading(false)}
+  }
+  return (<form onSubmit={handleSubmit} className='space-y-4'>;
+      {error && <div className='text-red-600 text-sm'>{error}</div>}
+      <div>;
+        <label className='block text-sm font-medium'>Title</label>;
+        <input;
+          className='mt-1 w-full rounded border px-3 py-2';
+          value={title}
+          onChange={e => setTitle(e.target.value)}
+          placeholder='Phase 1 – Backend Setup';
+          required;
+        />;
+      </div>;
+      <div>;
+
+=======
+      await onSubmit({
+        title;
+description: description |undefined;
+dueDate,
+amountUsd: parsedAmount}
+     ,}
+});
+      setTitle('');
+      setDescription('');
+      setDueDate('');
+      setAmountUsd('');
+    } catch (e) {
+      setError(err?.message |'Failed to create milestone');}
+    } finally {
+      setLoading(false);}
+}
+    }
+    setLoading(true)try {await onSubmit({title;
+        description: description |undefined;
+        dueDate;}
+        amountUsd: parsedAmount;}
+      })setTitle('')setDescription('')setDueDate('')setAmountUsd('')} catch (err: any) {setError(err?.message |'Failed to create milestone')} finally {setLoading(false)}
+  }
+  return (<form onSubmit={handleSubmi,}
+} className='space-y-4'    />;
+      {error && <div className='text-red-600 text-sm'    />{error}</div>}
+      <div    />;
+        <label className='block text-sm font-medium'    />Title</label>;
+        <input;
+          className='mt-1 w-full rounded border px-3 py-2';
+          value={title}
+          onChange={e =    /> setTitle(e.target.value)}
+          placeholder='Phase 1 – Backend Setup';
+          required;
+        />;
+      </div>;
+      <div    />;
+<label className='block text-sm font-medium'    />Description</label>;
+>>>>>>> origin/chore/fix-lint-and-merge
+        <textarea;
+          className='mt-1 w-full rounded border px-3 py-2';
+          value={description}
+<<<<<<< HEAD
+
+          rows={3}
+        />;
+      </div>;
+      <div className='grid grid-cols-1 "md":grid-cols-2 gap-4'>;'
+        <div>;
+
+=======
+          onChange={e =    /> setDescription(e.target.value)}
+          placeholder='Describe deliverables...';
+          rows={3}
+        />;
+      </div>;
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'    />;
+        <div    />;
+          <label className='block text-sm font-medium'    />Due Date</label>;
+          <input;
+            type='date';
+            className='mt-1 w-full rounded border px-3 py-2';
+>>>>>>> origin/chore/fix-lint-and-merge
+            value={dueDate}
+            onChange={e =    /> setDueDate(e.target.value)}
+            required;
+          />;
+        </div>;
+        <div    />;
+<label className='block text-sm font-medium'    />Amount (USD)</label>;
+          <input;
+<<<<<<< HEAD
+
+=======
+            type='number';
+            min={0}
+            step='0.01';
+            className='mt-1 w-full rounded border px-3 py-2';
+>>>>>>> origin/chore/fix-lint-and-merge
+            value={amountUsd}
+            onChange={e =    /> setAmountUsd(e.target.value)}
+            placeholder='3000';
+            required;
+          />;
+        </div>;
+      </div>;
+      <button;
+type='submit';
+        className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50';
+        disabled={loading}
+<<<<<<< HEAD
+      >;
+        {loading ? 'Adding...' : 'Add Milestone'}
+      </button>;
+    </form>;
+  )}
+    </form>);
+}
+  )}
+      setLoading(false)
+    }
+  },
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      {error && <div className=text-red-600 text-sm>{error}</div>}
+      <div>
+        <label className="block text-sm font-medium">Title</label>
+        <input
+          className=mt-1 w-full rounded border px-3 py-2
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          placeholder="Phase 1 – Backend Setup"
+          required
+        />
+      </div>
+      <div>
+        <label className=block text-sm font-medium>Description</label>
+        <textarea
+          className="mt-1 w-full rounded border px-3 py-2"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          placeholder=Describe deliverables...
+          rows={3}
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label className=block text-sm font-medium>Due Date</label>
+          <input
+            type="date"
+            className=mt-1 w-full rounded border px-3 py-2
+            value={dueDate}
+            onChange={(e) => setDueDate(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium">Amount (USD)</label>
+          <input
+            type=number
+            min={0}
+            step="0.01"
+            className=mt-1 w-full rounded border px-3 py-2
+            value={amountUsd}
+            onChange={(e) => setAmountUsd(e.target.value)}
             placeholder="3000"
             required
           />
         </div>
-      </div>;'
-        {loading ? 'Adding...' : 'Add Milestone'}
-
-const [description, setDescription] = useState('')
-const [dueDate, setDueDate] = useState('')
-  )
-      <button;'
-        type='submit';'"
-        className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";"
-        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50"
+      </div>
+      <button
+        type=submit
+        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
         disabled={loading}
-      >;'
-        {loading ? 'Adding...' : 'Add Milestone'}
-      </button>
-    </form>)
+      >
+        {loading ? Adding... : 'Add Milestone'}
+=======
+          />;
         {loading ? 'Adding...' : 'Add Milestone'}
 
+>>>>>>> origin/chore/fix-lint-and-merge
       </button>
     </form>
-);
+  );
 }
-}
-<<<<<<< HEAD
 
-=======
-<div> <label className="block text-sm font-medium" >Title</label> <input required /> </div> <div> <label className="block text-sm font-medium" >Description</label> <textarea /> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> <label className="block text-sm font-medium" >Due Date</label> <input required /> </div> <div> <label className="block text-sm font-medium" >Amount (USD) </label> <input required /> </div> </div> <button > {
-  loading ? 'Adding...' : 'Add Milestone' 
-}</button> </form>) 
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

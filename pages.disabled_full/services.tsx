@@ -37,7 +37,6 @@ import {
   Smartphone;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-}
 
 export default function Services() {;
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
@@ -1494,15 +1493,12 @@ export default function Services() {;
 							<Link
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
-								aria-label='Back to homepage'
-							>
-								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>
-							</Link>
-						</div>
-					</div>
-				</div>
-			</section>
-		</PageTransition>
-		</Layout>
-	);
-}
+
+								aria-label='Back to homepage'>;
+								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
+							</Link>;
+
+						</div>;
+					</div>;
+				</div>;
+			</section>;

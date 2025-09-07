@@ -1,6 +1,5 @@
 const ImageOptimizer = dynamic(() => import("./ImageOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ImageOptimizer' ,'
 
-const ImageOptimizer = dynamic(() => import("./ImageOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ImageOptimizer' ,'
 </p>'
 </p>'
 </p>'
@@ -31,7 +30,6 @@ const ImageOptimizer = dynamic(() => import(\"./ImageOptimizer\"),{'; \"loading\
 </p>';
 </p>';
 ;
-const ImageOptimizer = dynamic(() => import(\"./ImageOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ImageOptimizer' ,';
 </p>';
 </p>';
 </p>';
@@ -53,7 +51,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ursor/integrate-build-improve-and-re-verify-8f7d;
 </p>';
-const ImageOptimizer = dynamic(() => import(\"./ImageOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ImageOptimizer' ,';
 </p>';
 </p>';
 </p>';
@@ -62,7 +59,6 @@ const ImageOptimizer = dynamic(() => import(\"./ImageOptimizer\"),{'; \"loading\
 </p>';
 </p>';
 </p>';
-const ImageOptimizer = dynamic(() => import(\"./ImageOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ImageOptimizer' ,';
 </p>'</p>';
 const ImageOptimizer = dynamic(() => import(\"./ImageOptimizer\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default ImageOptimizer' ,'
 </p>'
@@ -89,7 +85,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 </p>'
 
 </p>'
-const ImageOptimizer = dynamic(() => import("./ImageOptimizer"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default ImageOptimizer' ,'
 </p>'
 </p>'
 </p>'

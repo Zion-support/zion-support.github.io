@@ -1,10 +1,13 @@
-
+#!/usr/bin/env node
 const { execSync } = require('child_process');
 const fs = require('fs');
 
 class ComprehensiveAutomationSuite {
   constructor() {
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     this.startTime = new Date();
     this.results = {
       dependencyFix: { success: false, duration: 0, errors: [], warnings: [] },
@@ -121,7 +124,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async improveCodeQuality() {
-    const startTime = Date.now();
     this.log('\n🔍 IMPROVING CODE QUALITY');
 
     try {
@@ -163,7 +165,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async performSecurityAudit() {
-    const startTime = Date.now();
     this.log('\n🔒 PERFORMING SECURITY AUDIT');
 
     try {
@@ -196,7 +197,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async optimizeBuild() {
-    const startTime = Date.now();
     this.log('\n🏗️ OPTIMIZING BUILD');
 
     try {
@@ -235,7 +235,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async optimizeSEO() {
-    const startTime = Date.now();
     this.log('\n🔍 OPTIMIZING SEO');
 
     try {
@@ -271,7 +270,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async improveAccessibility() {
-    const startTime = Date.now();
     this.log('\n♿ IMPROVING ACCESSIBILITY');
 
     try {
@@ -306,7 +304,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async optimizePerformance() {
-    const startTime = Date.now();
     this.log('\n⚡ OPTIMIZING PERFORMANCE');
 
     try {
@@ -339,7 +336,6 @@ class ComprehensiveAutomationSuite {
   }
 
   async deployChanges() {
-    const startTime = Date.now();
     this.log('\n🚀 DEPLOYING CHANGES');
 
     try {
@@ -434,34 +430,31 @@ class ComprehensiveAutomationSuite {
     }
 
     return recommendations;
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
-
 
   async run() {
     console.log('🚀 Running Comprehensive Automation Suite...');
-    
-    try {
-      await this.fixDependencies();
-      await this.improveCodeQuality();
-      await this.performSecurityAudit();
-      await this.optimizeBuild();
-      await this.optimizeSEO();
-      await this.improveAccessibility();
-      await this.optimizePerformance();
-      await this.deployChanges();
-      this.generateDetailedReport();
-    } catch (error) {
-      this.log(`Automation suite failed: ${error.message}`, 'ERROR');
-      process.exit(1);
+    const commands = [
+      { cmd: 'npm install', desc: 'Install dependencies' },
+      { cmd: 'npm run lint:fix', desc: 'Fix linting issues' },
+      { cmd: 'npm run build', desc: 'Build project' },
+      { cmd: 'npm test -- --passWithNoTests', desc: 'Run tests' }
+    ];
+
+    for (const { cmd, desc } of commands) {
+      try {
+        console.log(`Running: ${desc}`);
+        execSync(cmd, { stdio: 'inherit', cwd: this.projectRoot });
+        console.log(`✅ ${desc} completed`);
+      } catch (error) {
+        console.log(`❌ ${desc} failed: ${error.message}`);
+      }
     }
   }
 }
 
-// Run the automation suite
-if (require.main === module) {
-  const suite = new ComprehensiveAutomationSuite();
-  suite.run().catch(console.error);
-}
-
-module.exports = ComprehensiveAutomationSuite;
-
+const suite = new ComprehensiveAutomationSuite();
+suite.run().catch(console.error);

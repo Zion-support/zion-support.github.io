@@ -1,21 +1,175 @@
 <<<<<<< HEAD
+import React from 'react';
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+=======
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
+>>>>>>> origin/chore/fix-lint-and-merge
+    super(props);
+    this.state = { hasError: false ;};
+  }
+
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+
+import React from './react';
+import SEO from "../components / SEO";
+import { Check, ExternalLink  } from './lucide-react';
+export default /**
+ * ApiPerformanceTestingPage - Function description
+ */
+function ApiPerformanceTestingPage() {
+  const features = [;
+    "k6 / Gatling - compatible test runner",
+    "SLO - aware latency reports",
+
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+
+<<<<<<< HEAD
 </div>) ) 
 }</div> </a> <a href="https://gatling.io/open-source/" target="blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300" > <ExternalLink className="w-4 h-4" /> Gatling OSS </a> </div> </section> </main> </>) 
 }
+export default function ApiPerformanceTestingPage() {
+
+  const features = [
+    "k6/Gatling-compatible test runner
+    SLO-aware latency reports"
+    "Regression baselines per endpoint
+    CI checks and PR annotations"
+    "Synthetic traffic for staging
+  ];
+
+
+
+export default function ApiPerformanceTestingPage() {
+
+
+
+export default function ApiPerformanceTestingPage() {
 =======
-import React from 'react',
+export default function ApiPerformanceTestingPage() {;
+  const features = [;
+    "k6/Gatling-compatible test runner",;
+    "SLO-aware latency reports",;
+    "Regression baselines per endpoint",;
+    "CI checks and PR annotations",;
+    "Synthetic traffic for staging",;
+  ];
+import React from 'react';
+
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
+import React from "react";
+import SEO from "../components/SEO";
+import { Check, ExternalLink } from "lucide-react";
+
 export default function ApiPerformanceTestingPage() {
-	const features = null;
+
+  ];
+  return (
+
+export default function ApiPerformanceTestingPage() {}
+  const features = ["
+    "k6/Gatling-compatible test runner","
+    "SLO-aware latency reports",
+
+    "Regression baselines per endpoint",
+    "CI checks and PR annotations",
+    "Synthetic traffic for staging",
+
+  ];
+;
+  return (
+    <>;
+      <SEO;"
+        title="API Performance Testing";"
+        description="Load, latency and regression testing - as - a-service with CI and SLOs.";
+      />;"
+      <main id="main" className="container mx - auto px - 4 py - 24">;"
+        <section className="max - w-5xl mx - auto">;"
+          <h1 className="text - 4xl font - extrabold tracking - tight">;
+            API Performance Testing;
+          </h1>;"
+          <p className="mt - 4 text - lg text - gray - 300">;
+            Ship with confidence using automated performance tests and;
+            guardrails integrated into your pipeline.;
+          </p>;"
+          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">;
+            {features.map ((f) => (
+              <div;
+                key={f}"
+                className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10";
+              >;"
+                <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;"
+                <p className="text - gray - 200">{f}</p>;
+              </div>))}
+          </div>;"
+          <div className="mt - 8 flex flex - wrap items - center gap - 4">;
+            <a;"
+              href="/contact";"
+              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200";
+            >;
+              Start from $129 / mo;
+            </a>;
+            <a;"
+              href="/market - pricing";"
+              className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10";
+            >;
+              Market Pricing;
+            </a>;
+            <a;"
+              href="https://grafana.com / docs / k6/";"
+              target="_blank";"
+              rel="noreferrer";"
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
+            >;"
+              <ExternalLink className="w - 4 h - 4" /> k6 Docs;
+            </a>;
+            <a;"
+              href="https://gatling.io / open - source/";"
+              target="_blank";"
+              rel="noreferrer";"
+              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300";
+            >;"
+              <ExternalLink className="w - 4 h - 4" /> Gatling OSS;
+
+  return (
+  return (
+  return (
+
+    </>);
+}
+
+    </>);
+}
+
+	const features = ['
+>>>>>>> origin/chore/fix-lint-and-merge
+		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+	];
+
 	return (
+<<<<<<< HEAD
 		<>
-			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
-			<main id="main" className="container mx-auto px-4 py-24">
-				<section className="max-w-5xl mx-auto">
-					<h1 className="text-4xl font-extrabold tracking-tight">API Performance Testing</h1>
-					<p className="mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>
-					<div className="mt-8 grid sm:grid-cols-2 gap-6">
+			<SEO title=API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs. />
+			<main id=main" className="container mx-auto px-4 py-24>
+				<section className=max-w-5xl mx-auto">
+					<h1 className="text-4xl font-extrabold tracking-tight>API Performance Testing</h1>
+					<p className=mt-4 text-lg text-gray-300">Ship with confidence using automated performance tests and guardrails integrated into your pipeline.</p>
+					<div className="mt-8 grid sm:grid-cols-2 gap-6>
 						{features.map((f) => (
 							<div key={f} className="flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10">
 								<Check className="w-5 h-5 text-cyan-400 mt-1" />
@@ -23,111 +177,15 @@ export default function ApiPerformanceTestingPage() {
 							</div>
 						))}
 					</div>
-					<div className="mt-8 flex flex-wrap items-center gap-4">
-						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $129/mo</a>
-						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>
-						<a href="https://grafana.com/docs/k6/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
-							<ExternalLink className="w-4 h-4" /> k6 Docs
+					<div className=mt-8 flex flex-wrap items-center gap-4">
+						<a href="/contact className=px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $129/mo</a>
+						<a href="/market-pricing className=px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>
+						<a href="https://grafana.com/docs/k6/ target=_blank" rel="noreferrer className=inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
+							<ExternalLink className="w-4 h-4 /> k6 Docs
 							</a>
 						<a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">
 							<ExternalLink className="w-4 h-4" /> Gatling OSS
-							</a>
-					</div>
-				</section>
-			</main>
-		</>
-	)
-}
-export default function ApiPerformanceTestingPage() {
-
-  const features = [
-    "k6/Gatling-compatible test runner"
-    "SLO-aware latency reports"
-    "Regression baselines per endpoint"
-    "CI checks and PR annotations"
-    "Synthetic traffic for staging"
-  ];
-  return (
-export default function ApiPerformanceTestingPage() {
-  const features = [
-    "k6/Gatling-compatible test runner",
-    "SLO-aware latency reports",
-    "Regression baselines per endpoint",
-    "CI checks and PR annotations",
-    "Synthetic traffic for staging",
-  ]
-import React from 'react'
-import SEO from '../components/SEO'
-import { Check, ExternalLink } from 'lucide-react'
-import React from "react"
-import SEO from "../components/SEO"
-import { Check, ExternalLink } from "lucide-react"
-export default function ApiPerformanceTestingPage() {
-
-return (
-  return (
-    <>
-      <SEO;"
-        title="API Performance Testing";"
-        description="Load, latency and regression testing - as - a-service with CI and SLOs."
-      />;"
-      <main id="main" className="container mx - auto px - 4 py - 24">;"
-        <section className="max - w-5xl mx - auto">;"
-          <h1 className="text - 4xl font - extrabold tracking - tight">
-            API Performance Testing
-          </h1>;"
-          <p className="mt - 4 text - lg text - gray - 300">
-            Ship with confidence using automated performance tests and
-            guardrails integrated into your pipeline.
-          </p>;"
-          <div className="mt - 8 grid sm:grid - cols - 2 gap - 6">
-            {features.map ((f) => (
-              <div
-                key={f}"
-                className="flex items - start space - x-3 p - 4 rounded - xl bg - white / 5 border border - white / 10"
-              >;"
-                <Check className="w - 5 h - 5 text - cyan - 400 mt - 1" />;"
-                <p className="text - gray - 200">{f}</p>
-              </div>))}
-          </div>;"
-          <div className="mt - 8 flex flex - wrap items - center gap - 4">
-            <a;"
-              href="/contact";"
-              className="px - 5 py - 3 rounded - lg bg - white text - black font - semibold hover:bg - gray - 200"
-            >
-              Start from $129 / mo
-            </a>
-            <a;"
-              href="/market - pricing";"
-              className="px - 5 py - 3 rounded - lg border border - white / 20 text - white hover:bg - white / 10"
-            >
-              Market Pricing
-            </a>
-            <a;"
-              href="https://grafana.com / docs / k6/";"
-              target="_blank";"
-              rel="noreferrer";"
-              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300"
-            >;"
-              <ExternalLink className="w - 4 h - 4" /> k6 Docs
-            </a>
-            <a;"
-              href="https://gatling.io / open - source/";"
-              target="_blank";"
-              rel="noreferrer";"
-              className="inline - flex items - center gap - 2 text - cyan - 400 hover:text - cyan - 300"
-            >;"
-              <ExternalLink className="w - 4 h - 4" /> Gatling OSS
-  return (
-  return (
-  return (
-
-    </>)
-    </>)
-	const features = ['
-		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
-	]
-	return (
+=======
 		<>"
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />"
 			<main id="main" className="container mx-auto px-4 py-24">"
@@ -147,24 +205,41 @@ return (
 						<a href="/contact" className="px-5 py-3 rounded-lg bg-white text-black font-semibold hover: bg-gray-200">Start from $129/mo</a>"
 						<a href="/market-pricing" className="px-5 py-3 rounded-lg border border-white/20 text-white hover:bg-white/10">Market Pricing</a>"
 						<a href="https://grafana.com/docs/k6/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">"
-							<ExternalLink className="w-4 h-4" /> k6 Docs
+							<ExternalLink className="w-4 h-4" /> k6 Docs;
 							</a>"
 <a href="https://gatling.io/open-source/" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300">"
-							<ExternalLink className="w-4 h-4" /> Gatling OSS
+							<ExternalLink className="w-4 h-4" /> Gatling OSS;
+>>>>>>> origin/chore/fix-lint-and-merge
 							</a>
 					</div>
 				</section>
 			</main>
 		</>
-)
+<<<<<<< HEAD
+	)
+}
+
+
+
+
+            </a>;
+          </div>;
+        </section>;
+      </main>;
+
+=======
+);
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+
 origin/cursor/automate-test-improve-and-merge-code-2533
 
             >
-              Start from $129/mo
+              Start from $129/mo;
             </a>
 
             >
-              Market Pricing
+              Market Pricing;
             </a>
 
             </a>
@@ -172,7 +247,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </main>
     </>
-  )
+  );
+
             </a>
           </div>
         </section>
@@ -180,4 +256,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </>
   );
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+
+            </a>;
+          </div>;
+        </section>;
+<<<<<<< HEAD
+      </main>;
+    </>;
+  )}</a>;
+          </div>;
+        </section>;
+      </main>;
+
+
+
+
+
+=======
+      </main>;
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -30,7 +30,6 @@ type StepKey = typeof STEPS[number]['key'];
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
-const STEPS = [
   { key: 'profile', label: 'Profile completed' },
   { key: 'skills', label: 'Skills added' },
   { key: 'availability', label: 'Availability set' },
@@ -43,7 +42,6 @@ export default function TalentDashboard() {
 
   useEffect(() => {
     try {
-      const raw = window.localStorage.getItem('onboarding.talent');
 
       if (raw) setCompleted(JSON.parse(raw))
     } catch {}
@@ -51,7 +49,6 @@ export default function TalentDashboard() {
   }, []);
   useEffect(() => {
 
-import { useEffect, useState } from 'react';
 
 const STEPS = [;'
   { key: 'profile', label: 'Profile completed' },;'
@@ -218,8 +215,6 @@ try {
 }'
 import EnhancedCard from '../../components / ui / EnhancedCard';'
 import EnhancedButton from '../../components / ui / EnhancedButton';'
-import {useEffect, useState} from 'react';
-const STEPS = [;'
   { key: 'profile', label: 'Profile completed' },'
   { key: 'skills', label: 'Skills added' },'
   { key: 'availability', label: 'Availability set' },'

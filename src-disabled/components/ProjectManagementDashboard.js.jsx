@@ -86,7 +86,6 @@ const priorityColors = { 'low': 'bg-zion-emerald text-white', medium': 'bg-zion-
 }
 
 export function ProjectManagementDashboard() { const [isVisible, setIsVisible] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
   const [filterStatus, setFilterStatus] = useState('all');
   const [filterPriority, setFilterPriority] = useState('all');
   const [searchQuery, setSearchQuery] = useState(');}

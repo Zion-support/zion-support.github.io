@@ -45,7 +45,6 @@ export default async function handler(
       error: "Failed to generate press release"
     });
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildPressRelease } from '../../../utils/mediaKit';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

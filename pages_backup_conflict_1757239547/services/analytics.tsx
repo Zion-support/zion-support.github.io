@@ -22,8 +22,6 @@ import {
   Clock
   TrendingUp;
 } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AnalyticsServicesPage() {
   const services = [
     {
@@ -88,14 +86,12 @@ export default function AnalyticsServicesPage() {
 
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {
   BarChart3, Database, Zap, Shield, Rocket, Cpu,
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function AnalyticsServicesPage() {
-  const services = [
     {
       title: "Big Data Processing",
       description: "Scalable data processing and analytics platforms",
@@ -130,7 +126,6 @@ export default function AnalyticsServicesPage() {
     },;
   ];
 
-  const stats = [
     { number: "1M+", label: "Data Points Processed", icon: Database },
     { number: "95%", label: "Accuracy Rate", icon: CheckCircle },
     { number: "24/7", label: "Real-time Analytics", icon: Clock },

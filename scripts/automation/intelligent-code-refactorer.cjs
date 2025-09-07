@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -14,14 +25,26 @@ const fs = require("fs")
 const path = require("path")
 console.log("" Starting Intelligent Code Refactorer...")
 // Get automation interval from environment variable ("default")
+>>>>>>> origin/chore/fix-lint-and-merge
 console.log(" Starting Intelligent Code Refactorer...")
+// Get automation interval from environment variable (default)
       "appliedRefactorings"
-      "codeQualityScore"
+      codeQualityScore
       "complexityReduction"
-      "refactoringPatterns"
-    this.reportDir = path.join(process.cwd(), "refactoring-reports"
-  fs.mkdirSync(this.reportDir, { "recursive"})
+      refactoringPatterns
+console.log("" Starting Intelligent Code Refactorer...)
+// Get automation interval from environment variable (default")
+console.log(" Starting Intelligent Code Refactorer...)
+      appliedRefactorings"
+      "codeQualityScore
+      complexityReduction"
+      "refactoringPatterns
+    this.reportDir = path.join(process.cwd(), refactoring-reports"
+  fs.mkdirSync(this.reportDir, { "recursive})
   console.log(` Running intelligent code refactoring at ${new Date().toISOString()}
+<<<<<<< HEAD
+
+=======
       console.log(`" Intelligent code refactoring completed successfully"`)
   console.error(" Intelligent code refactoring "failed": ")
   console.log(" Analyzing code patterns...")
@@ -53,31 +76,34 @@ console.log(" Starting Intelligent Code Refactorer...")
   "type": "extract_method"
         "priority": "high"
         "description": "Long functions detected - consider extracting methods"
+>>>>>>> origin/chore/fix-lint-and-merge
         "files"
-        "action": "Break down long functions into smaller, focused methods"
-  "type": "extract_common"
-        "priority": "high"
-        "description": Duplicate code detected - consider extracting common functionality"
+        action: "Create utility functions or custom hooks for common patterns"
+  type: "simplify_conditionals"
+        priority: "medium"
+        description: "Complex conditionals detected - consider simplifying"
+        files
+        "action": Use early returns, guard clauses, or extract boolean methods
+  "type": extract_constants
+        "priority": low
+        "description": Magic numbers detected - consider extracting constants
         "files"
-        "action": "Create utility functions or custom hooks for common patterns"
-  "type": "simplify_conditionals"
-        "priority": "medium"
-        "description": "Complex conditionals detected - consider simplifying"
-        "files"
-        "action": "Use early returns, guard clauses, or extract boolean methods"
-  "type": "extract_constants"
-        "priority": "low"
-        "description": "Magic numbers detected - consider extracting constants"
-        "files"
-        "action": "Define named constants for better code readability"
-  "type": "standardize_naming"
-        "priority": "medium"
-        "description": "Inconsistent naming detected - consider standardizing"
-        "files"
-        "action": "Follow consistent naming conventions throughout the codebase"
+        action: "Define named constants for better code readability"
+  type: "standardize_naming"
+        priority: "medium"
+        description: "Inconsistent naming detected - consider standardizing"
+        files
+        "action": Follow consistent naming conventions throughout the codebase
   console.log(" Applying automatic refactorings...")
-      this.refactoringMetrics.refactoringPatterns.get("patterns")
+      this.refactoringMetrics.refactoringPatterns.get(patterns)
   console.log("� Extracting magic numbers...")
+<<<<<<< HEAD
+
+          "file"
+          timestamp
+          "description"
+
+=======
   const filePath = path.join(process.cwd(), "src"
         let content = fs.readFileSync(filePath, "utf8")
   content = constantDeclaration + "\n"
@@ -111,50 +137,54 @@ console.log(" Starting Intelligent Code Refactorer...")
         let content = fs.readFileSync(filePath, "utf8")
   if (conditional.type === "nested_if")
   "type": "
+>>>>>>> origin/chore/fix-lint-and-merge
           "file"
-          "timestamp"
+          timestamp
           "description"
-  "type": "simplify_conditionals"
-          "file"
+  type: "simplify_conditionals"
+          file
           "timestamp"
-          "description"
+          description
 // console.log(` Simplified code in ${pattern.file}``)
   console.log(⚠ Failed to simplify code in ${pattern.file}:")
-console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
+console.log(` Simplified code in ${pattern.file}");)} catch (error) {`}
         console.log(⚠ Failed to simplify code in ${pattern.file}:",")
-          error.message"
-        "
-  console.log("" Generating refactoring suggestions...")
-      this.refactoringMetrics.refactoringPatterns.get("patterns")
-  "type": "code_review"
-        "priority": "high"
-        "description": "High number of refactoring opportunities detected"
-        "action": "Schedule a comprehensive code review session"
-  "type": "component_decomposition"
-        "priority": "medium"
-        "description": "Large components detected - consider decomposition"
-        "action": "Break down large components into smaller, focused components"
-// console.log("" Calculating quality improvements...")
-  console.log("" Calculating quality improvements...")
-      this.refactoringMetrics.refactoringPatterns.get("patterns")
-// console.log( Code quality "score": ${this.refactoringMetrics.codeQualityScore}")
+          error.message
+        
+  console.log("" Generating refactoring suggestions...)
+      this.refactoringMetrics.refactoringPatterns.get(patterns")
+  "type: code_review"
+        "priority: high"
+        "description: High number of refactoring opportunities detected"
+        "action: Schedule a comprehensive code review session"
+  "type: component_decomposition"
+        "priority: medium"
+        "description: Large components detected - consider decomposition"
+        "action: Break down large components into smaller, focused components"
+// console.log(" Calculating quality improvements...)
+  console.log("" Calculating quality improvements...)
+      this.refactoringMetrics.refactoringPatterns.get(patterns")
+// console.log( Code quality "score: ${this.refactoringMetrics.codeQualityScore})
     console.log(")
-      this.refactoringMetrics.refactoringPatterns.get("patterns")
-    console.log( Code quality "score": ${this.refactoringMetrics.codeQualityScore}")
-       Complexity "reduction"
+      this.refactoringMetrics.refactoringPatterns.get("patterns)
+    console.log( Code quality score": ${this.refactoringMetrics.codeQualityScore}")
+       Complexity reduction
   console.log(` Generating refactoring report...``)
   "timestamp"
-      "summary"
-  totalFilesAnalyzed: this.findFiles(path.join(process.cwd(), "src"), [".ts"", ".tsx", ".js"", ".jsx", ""]
-        "refactoringSuggestions"
+      summary
+  totalFilesAnalyzed: this.findFiles(path.join(process.cwd(), "src"), [.ts", ".tsx, .js"", .jsx, ""]
+        refactoringSuggestions
         "appliedRefactorings"
-        "codeQualityScore"
+        codeQualityScore
         "complexityReduction"
-      "metrics"
+      metrics
       "suggestions"
-      "applied"
+      applied
       this.reportDir,refactoring-${Date.now()}.json"
       "
+<<<<<<< HEAD
+
+=======
   // Skip directories that can"
   // Skip directories that can"
     const lines = content.split("\n")
@@ -206,11 +236,24 @@ console.log(` Simplified code in ${pattern.file}");")} catch (error) {"`}
               "suggested"
               "line"
     const prefix = contextWords[0] ? contextWords[0].toUpperCase() : "
+>>>>>>> origin/chore/fix-lint-and-merge
   isConsistentNaming(name")
   isConsistentNaming(name")
-      /if\s*\(([^)]+)\)\s*{\s*if\s*\(([^)]+)\)/g,if ($1 && $2)"}
-    "
+      /if\s*\(([^)]+)\)\s*{\s*if\s*\(([^)]+)\)/g,if ($1 && $2)}
+    
 process.on("SIGINT")
+<<<<<<< HEAD
+  console.log( Intelligent code refactorer running. Next refactoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes)
+process.on(SIGINT")
+  console.log("� Received SIGINT, shutting down gracefully...)
+process.on(SIGTERM")
+  console.log("� Received SIGTERM, shutting down gracefully...)
+
+
+  console.error( Failed to start intelligent code "refactorer")
+
+  console.error( Failed to start intelligent code refactorer")
+=======
   console.log( Intelligent code refactorer running. Next refactoring in ${AUTOMATION_INTERVAL / 1000 / 60} minutes")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
@@ -219,25 +262,23 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
   console.error(" Failed to start intelligent code "refactorer")
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Failed to start intelligent code "refactorer")
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error(" Failed to start intelligent code "refactorer")
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -245,6 +286,3 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

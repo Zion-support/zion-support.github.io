@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages/services-2024.tsx
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
@@ -27,7 +28,9 @@ import {
   CheckCircle
   Zap
   Sparkles;} from 'lucide-react';
+=======
 import {
+>>>>>>> origin/chore/fix-lint-and-merge
   Search,
   Filter,
   Star,
@@ -41,10 +44,6 @@ import {
   Cloud,
   ArrowRight,
   CheckCircle,
-:pages/services-2024.tsx
-  Zap,
-  Sparkles,;
-} from 'lucide-react';
   Zap,;
   Sparkles,;} from 'lucide-react';
 
@@ -54,24 +53,13 @@ import {;
   ArrowRight, CheckCircle, Zap, Sparkles;
 } from 'lucide-react',;
 
-import React, { useState, useMemo } from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, Users, TrendingUp;
   Brain, Atom, Cpu, Shield, Database, Cloud;
   ArrowRight, CheckCircle, Zap, Sparkles
  } from 'lucide-react';
-import { realMicroSaasServices2024  } from '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024  } from '../data/2024-innovative-it-services';
-import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
-import Link from 'next/link';
-const Services2024Page: React.FC;
 
 import { realMicroSaasServices2024 } from '../data/2024-real-micro-saas-services';
 import { innovativeITServices2024 } from '../data/2024-innovative-it-services';
-import UltraFuturisticBackground2034 from '../components/backgrounds/UltraFuturisticBackground2034';
 
-import Link from 'next/link';
 
   // Combine all services;
   const allServices = [;
@@ -135,7 +123,6 @@ import Link from 'next/link';
 
     // Sort services
     filtered.sort((a, b) => {
-let aValue: any, bValue: any;
       switch (sortBy) {
         case 'price':
           aValue = parseFloat(a.price.replace(/[^0-9.]/g, ''));
@@ -236,8 +223,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
-:pages/services-2024.tsx
-    return 'from-gray-500 to-slate-500';  }
 
 const Services2024Page: React.FC = () => {;
   const [searchQuery, setSearchQuery] = useState('');
@@ -247,7 +232,6 @@ const Services2024Page: React.FC = () => {;
   // Combine all services;
   const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],;
   // Filter and sort services;
-  const filteredServices = useMemo(() => {;
     const filtered = allServices.filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -315,7 +299,6 @@ const Services2024Page: React.FC = () => {;
 }
   ],
 
-  const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
     if (variant.includes('it')) return Cpu,
@@ -326,7 +309,6 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('customer')) return CheckCircle,
     return Sparkles
   },
-  const getVariantColor = (variant: string) => {
     if (variant.includes('ai')) return 'from-blue-500 to-cyan-500',
     if (variant.includes('security')) return 'from-red-500 to-pink-500',
     if (variant.includes('it')) return 'from-green-500 to-emerald-500',
@@ -335,40 +317,11 @@ const Services2024Page: React.FC = () => {;
     if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500',
     if (variant.includes('project')) return 'from-teal-500 to-cyan-500',
     if (variant.includes('customer')) return 'from-pink-500 to-rose-500',
-:pages/services-2024.tsx
-    return 'from-gray-500 to-slate-500'
-  },
-  return (
-    <>
-      <Head>
-        <title>2024 Revolutionary Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
-      </Head>
-      <UltraFuturisticBackground2034 intensity={0.8} theme='quantum' />
-      <div className='relative z-10 min-h-screen'>
-        {/* Hero Section */}
-        <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-7xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
 
-const Services2024Page: React.FC = () => {;
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'customers'>('name');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
   // Combine all services;
-  const allServices = [...realMicroSaasServices2024, ...innovativeITServices2024],;
   // Filter and sort services;
-  const filteredServices = useMemo(() => {;
-    const filtered = allServices.filter(service => {;
-      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                            service.features.some(feature => feature.toLowerCase().includes(searchQuery.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' ||;
                              (selectedCategory === 'ai' && service.variant.includes('ai')) ||;
                              (selectedCategory === 'quantum' && service.variant.includes('security')) ||;
                              (selectedCategory === 'it' && service.variant.includes('it')) ||;
@@ -381,7 +334,6 @@ const Services2024Page: React.FC = () => {;
     });
     // Sort services;
     filtered.sort((a, b) => {;
-      let aValue: any, bValue: any,;
       switch (sortBy) {;
         case 'price':;
           aValue = parseFloat(a.price.replace(/[^0-9.]/g, '')),;
@@ -415,7 +367,6 @@ const Services2024Page: React.FC = () => {;
     });
     return filtered;
   }, [allServices, searchQuery, selectedCategory, sortBy, sortOrder]),;
-  const categories = [;
     { id: 'all', name: 'All Services', icon: Sparkles, count: allServices.length },;
     { id: 'ai', name: 'AI & ML', icon: Brain, count: allServices.filter(s => s.variant.includes('ai')).length },;
     { id: 'quantum', name: 'Quantum & Security', icon: Shield, count: allServices.filter(s => s.variant.includes('security')).length },;
@@ -431,7 +382,6 @@ const Services2024Page: React.FC = () => {;
 }
   ],
 
-  const getVariantIcon = (variant: string) => {
     if (variant.includes('ai')) return Brain,
     if (variant.includes('security')) return Shield,
     if (variant.includes('it')) return Cpu,
@@ -516,7 +466,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-:pages/services-2024.tsx
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
 
@@ -544,19 +493,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <br />"
                 <span className="text-white">Solutions</span>
               </h1>
-:pages/services-2024.tsx
-              <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'>
-                Experience the next generation of AI, quantum security, and
-                enterprise IT solutions. Transform your business with our
-                revolutionary 2024 service portfolio.
-              </p>
-              {/* Stats */}
-              <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16'>
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-cyan-400 mb-2'>
-                    {allServices.length}
-                  </div>
-                  <div className='text-gray-400'>Revolutionary Services</div>
 
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
                 Experience the next generation of AI, quantum security, and enterprise IT solutions. 
@@ -585,12 +521,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </div>
                   <div className='text-gray-400'>Happy Customers</div>
                 </div>
-:pages/services-2024.tsx
-                <div className='text-center'>
-                  <div className='text-3xl font-bold text-green-400 mb-2'>
-                    1000+
-                  </div>
-                  <div className='text-gray-400'>Happy Customers</div>                </div>
 
               </div>
             </motion.div>
@@ -606,13 +536,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <div className='lg:col-span-2'>
                   <div className='relative'>
                     <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
-:pages/services-2024.tsx
-                    <input
-                      type='text'
-                      placeholder='Search services by name, features, or description...'
-                      value={searchQuery}
-                      onChange={e => setSearchQuery(e.target.value)}
-                      className='w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'                    />
 
                     <input
                       type="text"
@@ -666,7 +589,6 @@ onChange={e => setSelectedCategory(e.target.value)}
                 {/* Sort */}
 
                 <div className='flex space-x-2'>
-:pages/services-2024.tsx
                 {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -743,9 +665,6 @@ if ( {) {}
             </div>
           </div>
         </section>
-:pages/services-2024.tsx
-        {/* Services Grid */}
-        <section className='px-4 sm:px-6 lg:px-8 mb-20'>
 
                   </button>;
                 </div>;
@@ -788,8 +707,6 @@ if ( {) {}
                 </p>
               </div>
             ) : (
-:pages/services-2024.tsx
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>                {filteredServices.map((service, index) => (
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {filteredServices.map((service, index) => (
                   <motion.div
@@ -812,7 +729,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
 
                             }
                           )}
-:pages/services-2024.tsx
                         </div>;
 '
                         <div className='text - right'>;'
@@ -874,11 +790,6 @@ transition={{ duration: 0.6, delay: index * 0.1 }}
                           <div className='text-sm text-gray-400'>per month</div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                         </div>
-                        <div className='text-right'>
-                          <div className='text-2xl font-bold text-cyan-400'>
-                            {service.price}
-                          </div>
-                          <div className='text-sm text-gray-400'>per month</div>                        </div>
                       </div>
                       {/* Service Info */}
 <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200'>
@@ -953,15 +864,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                                 </span>
                               </div>
                             ))}
-:pages/services-2024.tsx
-                          {service.features.length > 3 && (
-                            <div className='text-sm text-cyan-400'>                              +{service.features.length - 3} more features
-                            </div>
-                          ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                           {service.features.length > 3 && (
                             <div className='text-sm text-cyan-400'>
                               +{service.features.length - 3} more features
@@ -977,9 +879,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                             <span className='text-sm font-semibold text-white'>
 
                               {service.rating}
-:pages/services-2024.tsx
-                            </span>
-                          </div>
                             </span>;
                           </div>;'
                           <div className='text - xs text - gray - 400'>Rating</div>;
@@ -1006,17 +905,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>"
                           <div className="text-xs text-gray-400">Launched</div>
                         </div>
-:pages/services-2024.tsx
 
                         <div className='text-center'>
                           <div className='text-sm font-semibold text-white mb-1'>
                             {service.launchDate}
                           </div>
-:pages/services-2024.tsx
-                          <div className='text-xs text-gray-400'>Launched</div>                        </div>
-                      </div>
-                      {/* CTA */}
-                      <div className='flex items-center justify-between'>
                           <div className='text-xs text-gray-400'>Launched</div>
                         </div>
                       </div>
@@ -1028,29 +921,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span className="font-medium">Learn More</span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
-:pages/services-2024.tsx
-                        <div className='text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded'>
-                          {service.variant
-                            .replace('-futuristic', '')
-                            .replace('-', ' ')}                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            )}
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className='px-4 sm:px-6 lg:px-8 mb-20'>
-          <div className='max-w-4xl mx-auto text-center'>            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'
-            >
-              <h2 className='text-4xl font-bold text-white mb-6'>
 
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1199,9 +1069,6 @@ viewport={{ once: true }}
                 </Link>
                 <Link"
                   href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">
-:pages/services-2024.tsx
-                  <span>View Pricing Plans</span>
-                  <ArrowRight className='w-4 h-4' />                </Link>
 
                   <ArrowRight className="w-4 h-4" />
 
@@ -1217,10 +1084,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </section>
       </div>
     </>
-:pages/services-2024.tsx
-  )
-}
-export default Services2024Page;
 
 '
                   className='flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold'>;

@@ -22,7 +22,6 @@ function escapeHtml(str: string) {
   const base64 = Buffer.from(html, 'utf-8').toString('base64'),
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });

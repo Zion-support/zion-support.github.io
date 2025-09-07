@@ -1,154 +1,154 @@
+<<<<<<< HEAD
 :src/components/SocialShareSection.tsx
-import { Button } from './ui/button'
-import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
-import { toast } from "./ui/use-toast";
-import { useTranslation } from 'react-i18next';
+import { Button } from './ui/button
+import { Twitter, Facebook, Linkedin, Link } from lucide-react'
+import { toast } from "./ui/use-toast;
+import { useTranslation } from 'react-i18next;
 export function SocialShareSection() {
   const { t } = useTranslation();
   // Current URL is not available during SSR, guard with typeof check
 
   const shareUrl =
-    typeof window !== 'undefined'
+    typeof window !== undefined'
       ? encodeURIComponent(window.location.href)
-      : ''
+      : '
   const shareText = encodeURIComponent(
-    'Check out Zion - The Future of AI & Tech Marketplace'
+    Check out Zion - The Future of AI & Tech Marketplace'
   )
   // Social sharing functions
   const shareToTwitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`
-      '_blank'
+      '_blank
     )
   }
   const shareToFacebook = () => {
     window.open(
       `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`
-      '_blank'
+      _blank'
     )
   }
   const shareToLinkedIn = () => {
     window.open(
       `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`
-      '_blank'
+      '_blank
     )
   }
   const copyLinkToClipboard = () => {
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => {        toast({
-          title: 'Link Copied!'
-          description: 'The link has been copied to your clipboard'
+          title: Link Copied!'
+          description: 'The link has been copied to your clipboard
         })
       })
       .catch(() => {
         toast({
-          title: t('errors.failed_to_copy')
-          description: 'Please try again or copy the URL manually'
-          variant: 'destructive'
+          title: t(errors.failed_to_copy')
+          description: 'Please try again or copy the URL manually
+          variant: destructive'
         })
       })
   }
   const shareLinks = [
     {
-      name: 'Twitter'
-      icon: <Twitter className='h-5 w-5' aria-hidden='true' />
-      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80'
+      name: 'Twitter
+      icon: <Twitter className=h-5 w-5' aria-hidden='true />
+      color: bg-[#1DA1F2] hover:bg-[#1DA1F2]/80'
       onClick: shareToTwitter
     }
     {
-      name: 'Facebook'
-      icon: <Facebook className='h-5 w-5' aria-hidden='true' />
-      color: 'bg-[#4267B2] hover:bg-[#4267B2]/80'
+      name: 'Facebook
+      icon: <Facebook className=h-5 w-5' aria-hidden='true />
+      color: bg-[#4267B2] hover:bg-[#4267B2]/80'
       onClick: shareToFacebook
     }
     {
-      name: 'LinkedIn'
-      icon: <Linkedin className='h-5 w-5' aria-hidden='true' />
-      color: 'bg-[#0077B5] hover:bg-[#0077B5]/80'
+      name: 'LinkedIn
+      icon: <Linkedin className=h-5 w-5' aria-hidden='true />
+      color: bg-[#0077B5] hover:bg-[#0077B5]/80'
       onClick: shareToLinkedIn
     }
     {
-      name: 'Copy Link'
-      icon: <Link className='h-5 w-5' aria-hidden='true' />
-      color: 'bg-zion-blue-dark hover:bg-zion-blue-dark/80'
+      name: 'Copy Link
+      icon: <Link className=h-5 w-5' aria-hidden='true />
+      color: bg-zion-blue-dark hover:bg-zion-blue-dark/80'
       onClick: copyLinkToClipboard
     }
   ]
       })
       .catch(() => {
         toast({
-          title: t('errors.failed_to_copy'),
-          description: 'Please try again or copy the URL manually',
-          variant: 'destructive',
-        })
+          title: t('errors.failed_to_copy),
+          description: Please try again or copy the URL manually',
+          variant: 'destructive})
       })
   }
-          description: "Please try again or copy the URL manually",
-          variant: "destructive"
+          description: Please try again or copy the URL manually",
+          variant: "destructive
         })
       })
   },
 
-  const shareLinks = [
+=======
 const shareLinks = [
+>>>>>>> origin/chore/fix-lint-and-merge
     {
-      name: "Twitter",
-      icon: <Twitter className="h-5 w-5" aria-hidden="true" />, 
-      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80",
+      name: Twitter",
+      icon: <Twitter className="h-5 w-5 aria-hidden=true" />, 
+      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80,
       onClick: shareToTwitter
     },
     {
-      name: "Facebook",
-      icon: <Facebook className="h-5 w-5" aria-hidden="true" />,
-      color: "bg-[#4267B2] hover:bg-[#4267B2]/80",
+      name: Facebook",
+      icon: <Facebook className="h-5 w-5 aria-hidden=true" />,
+      color: "bg-[#4267B2] hover:bg-[#4267B2]/80,
       onClick: shareToFacebook
     },
     {
-      name: "LinkedIn",
-      icon: <Linkedin className="h-5 w-5" aria-hidden="true" />,
-      color: "bg-[#0077B5] hover:bg-[#0077B5]/80",
+      name: LinkedIn",
+      icon: <Linkedin className="h-5 w-5 aria-hidden=true" />,
+      color: "bg-[#0077B5] hover:bg-[#0077B5]/80,
       onClick: shareToLinkedIn
     },
     {
-      name: "Copy Link",
-      icon: <Link className="h-5 w-5" aria-hidden="true" />,
-      color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",
+      name: Copy Link",
+      icon: <Link className="h-5 w-5 aria-hidden=true" />,
+      color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80,
       onClick: copyLinkToClipboard
     }],
 
-import { Button } from './ui/button';
-import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
-import { toast } from './ui/use-toast';
-import { useTranslation } from 'react-i18next';
+import { Button } from ./ui/button';
+import { Twitter, Facebook, Linkedin, Link } from 'lucide-react;
+import { toast } from ./ui/use-toast';
 export function SocialShareSection() {
-  const { t } = useTranslation();
   // Current URL is not available during SSR, guard with typeof check
   const shareUrl = null;
 
   return (
 return (
 
-    <section className="py-12 bg-zion-blue">
+    <section className=py-12 bg-zion-blue">
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8>
+        <div className=max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
           <div>
-            <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>
-            <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
+            <h3 className="text-xl font-bold text-white mb-2>Share Zion with Your Network</h3>
+            <p className=text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
+<<<<<<< HEAD
 :src/components/SocialShareSection.tsx
-          <div className='flex flex-wrap gap-3'>
+          <div className=flex flex-wrap gap-3'>
             {shareLinks.map((link, index) => (              <Button
-                key = {index,}
+                key = {index}
                 className={`${link.color} text-white`}
-                size='sm'
+                size='sm
                 onClick={link.onClick}
                 aria-label={link.name}
                 title={link.name}              >
                 {link.icon}
-                <span className='sr-only'>{link.name}</span>
-                <span aria-hidden='true'>{link.name}</span>
+                <span className=sr-only'>{link.name}</span>
+                <span aria-hidden='true>{link.name}</span>
               </Button>
             ))}
           </div>
@@ -157,62 +157,75 @@ return (
     </section>
   )
   navigator.clipboard.writeText (window.location.href) .then ( () => {
+  toast ({}) .catch ( () => {
   toast ({
-}) .catch ( () => {
-  toast ({
-  title: t ('errors.failed to copy')
+  title: t (errors.failed to copy')
 })
 }
 }</div> </div> </div> </section>)
 }'"
 }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-};
+}
 }</div> </div> </div> </section>) ;
-}'"
-};
+}
+}
 
-          <div className="flex flex-wrap gap-3">
+          <div className=flex flex-wrap gap-3">
             {shareLinks.map((link, index) => (
               <Button
                 key={index}
                 className={`${link.color} text-white`}
-                size="sm"
-import { Button } from "./ui/button",;
-import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
-import { toast } from "./ui/use-toast",;
-import { useTranslation } from 'react-i18next',;
-export function SocialShareSection() {;
-  const { t } = useTranslation(),;
+                size="sm
+import { Button } from ./ui/button",
+import { Twitter, Facebook, Linkedin, Link } from lucide-react';
+import { toast } from "./ui/use-toast,
+import { useTranslation } from 'react-i18next,
+export function SocialShareSection() {
+  const { t } = useTranslation(),
   // Current URL is not available during SSR, guard with typeof check;
-  const shareUrl = typeof window !== 'undefined';
+  const shareUrl = typeof window !== undefined';
     ? encodeURIComponent(window.location.href);
-    : '',;
-  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace"),;
+    : ',
+  const shareText = encodeURIComponent(Check out Zion - The Future of AI & Tech Marketplace"),
   // Social sharing functions;
-  const shareToTwitter = () => {;
-    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank");
-  },;
-  const shareToFacebook = () => {;
-    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank");
-  },;
-  const shareToLinkedIn = () => {;
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank");
-  },;
-  const copyLinkToClipboard = () => {;
+    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank);
+  },
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, _blank");
+  },
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank);
+  },
     navigator.clipboard.writeText(window.location.href);
-      .then(() => {;
-        toast({;
-          title: "Link Copied!",,
-  description: "The link has been copied to your clipboard"});
+      .then(() => {
+        toast({
+          title: Link Copied!",,
+  description: "The link has been copied to your clipboard});
       });
-      .catch(() => {;
-        toast({;
-          title: t('errors.failed_to_copy'),,
-  description: "Please try again or copy the URL manually",;
-          variant: "destructive";
+      .catch(() => {
+        toast({
+          title: t(errors.failed_to_copy'),,
+  description: Please try again or copy the URL manually",
+          variant: "destructive;
         });
       });
+<<<<<<< HEAD
+  },
+  const shareLinks = [;
+    {name: Twitter",icon: <Twitter className="h-5 w-5 aria-hidden=true" />,color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80,onClick: shareToTwitter;
+    },{name: Facebook",icon: <Facebook className="h-5 w-5 aria-hidden=true" />,color: "bg-[#4267B2] hover:bg-[#4267B2]/80,onClick: shareToFacebook;
+    },{name: LinkedIn",icon: <Linkedin className="h-5 w-5 aria-hidden=true" />,color: "bg-[#0077B5] hover:bg-[#0077B5]/80,onClick: shareToLinkedIn;
+    },{name: Copy Link",icon: <Link className="h-5 w-5 aria-hidden=true" />,color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80,onClick: copyLinkToClipboard;
+    }],import { Button  } from './ui/button;
+import { Twitter, Facebook, Linkedin, Link  } from lucide-react';
+import { toast  } from './ui/use-toast;
+import { useTranslation  } from react-i18next';
+export function SocialShareSection() {const { t } = useTranslation()// Current URL is not available during SSR, guard with typeof check;
+  const shareUrl  = null;return (return (<section className=py-12 bg-zion-blue">;
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8>;
+        <div className=max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
+=======
   },;
   const shareLinks = [;
     {;
@@ -243,23 +256,24 @@ export function SocialShareSection() {;
     <section className="py-12 bg-zion-blue">;
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
+>>>>>>> origin/chore/fix-lint-and-merge
 
-            <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>;
-            <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;
+            <h3 className="text-xl font-bold text-white mb-2>Share Zion with Your Network</h3>;
+            <p className=text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>;
           </div>;
-          <div className="flex flex-wrap gap-3">;
+          <div className="flex flex-wrap gap-3>;
             {shareLinks.map((link, index) => (;
               <Button;
                 key={index}
                 className={`${link.color} text-white`}
-                size="sm";
+                size=sm";
                 onClick={link.onClick}
                 aria-label={link.name}
                 title={link.name}
               >;
                 {link.icon}
-                <span className="sr-only">{link.name}</span>
-                <span aria-hidden="true">{link.name}</span>
+                <span className="sr-only>{link.name}</span>
+                <span aria-hidden=true">{link.name}</span>
               </Button>
             ))}
           </div>;
@@ -268,85 +282,106 @@ export function SocialShareSection() {;
     </section>;
   );
 
-  navigator && navigator.clipboard.writeText (window && window.location.href) .then ( () => {;
-  toast ({;
-
-}) .catch ( () => {;
-  toast ({;
-  title: t ('errors && errors.failed to copy');
+  navigator && navigator.clipboard.writeText (window && window.location.href) .then ( () => {
+  toast ({}) .catch ( () => {
+  toast ({
+  title: t ('errors && errors.failed to copy);
 });
-};
+}
 }</div> </div> </div> </section>) ;
-}'";
+}";
 }
 
 }</div> </div> </div> </section>)
-}'"
+}'
 }
 
-      name: 'Twitter',
-      icon: <Twitter className='h - 5 w - 5' aria - hidden='true' />,
-      color: 'bg-[#1DA1F2] hover:bg-[#1DA1F2]/80',
-      on_click: shareToTwitter,
-    },
+      name: 'Twitter,
+      icon: <Twitter className=h - 5 w - 5' aria - hidden='true />,
+      color: bg-[#1DA1F2] hover:bg-[#1DA1F2]/80',
+      on_click: shareToTwitter},
     {
-      name: 'Facebook',
-      icon: <Facebook className='h - 5 w - 5' aria - hidden='true' />,
-      color: 'bg-[#4267B2] hover:bg-[#4267B2]/80',
-      on_click: shareToFacebook,
-    },
+      name: 'Facebook,
+      icon: <Facebook className=h - 5 w - 5' aria - hidden='true />,
+      color: bg-[#4267B2] hover:bg-[#4267B2]/80',
+      on_click: shareToFacebook},
     {
-      name: 'LinkedIn',
-      icon: <Linkedin className='h - 5 w - 5' aria - hidden='true' />,
-      color: 'bg-[#0077B5] hover:bg-[#0077B5]/80',
-      on_click: shareToLinkedIn,
-    },
+      name: 'LinkedIn,
+      icon: <Linkedin className=h - 5 w - 5' aria - hidden='true />,
+      color: bg-[#0077B5] hover:bg-[#0077B5]/80',
+      on_click: shareToLinkedIn},
     {
-      name: 'Copy Link',
-      icon: <Link className='h - 5 w - 5' aria - hidden='true' />,
-      color: 'bg - zion - blue - dark hover:bg - zion - blue - dark / 80',
-      on_click: copyLinkToClipboard,
-    },
-  ];
+      name: 'Copy Link,
+      icon: <Link className=h - 5 w - 5' aria - hidden='true />,
+      color: bg - zion - blue - dark hover:bg - zion - blue - dark / 80',
+      on_click: copyLinkToClipboard}];
   return (
-    <section className='py - 12 bg - zion - blue'>;
-      <div className='container mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-        <div className='max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6'>;
+    <section className='py - 12 bg - zion - blue>;
+      <div className=container mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+        <div className='max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6>;
 
           <div>;
+<<<<<<< HEAD
+            <h3 className=text - xl font - bold text - white mb - 2'>;Share Zion with Your Network;
+=======
 
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
 
               Share Zion with Your Network;
 
             </h3>;
-            <p className='text - zion - slate - light'>;
+            <p className='text - zion - slate - light>;
               Help others discover the future of AI & tech marketplace;
             </p>;
           </div>;
-
-          <div className='flex flex - wrap gap - 3'>;
+<<<<<<< HEAD
+          </div>;<div className=flex flex-wrap gap-3'>;
+            {shareLinks && shareLinks.map((link, index) => (              <Button;
+                key = {index}
+                className={`${link && link.color} text-white`}
+                size='sm;
+                onClick={link && link.onClick}
+                aria-label={link && link.name}
+                title={link && link.name}>;
+                {link && link.icon}
+                <span className=sr-only'>{link && link.name}</span>;
+                <span aria-hidden='true>{link && link.name}</span>;
+              </Button>;
+            ))}<div className=flex flex - wrap gap - 3'>;
             {share_links.map ((link, index) => (              <Button;
-                key = {index, }
+                key = {index }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+
+          <div className='flex flex - wrap gap - 3>;
+            {share_links.map ((link, index) => (              <Button;
+                key = {index}
                 className={`${link.color} text - white`}
-                size='sm';
+                size=sm';
                 on_click={link.on_click}
                 aria - label={link.name}
                 title={link.name}              >;
                 {link.icon}
-                <span className='sr - only'>{link.name}</span>;
-                <span aria - hidden='true'>{link.name}</span>;
+                <span className='sr - only>{link.name}</span>;
+                <span aria - hidden=true'>{link.name}</span>;
               </Button>))}
           </div>;
         </div>;
       </div>;
     </section>);
   navigator.clipboard.write_text (window.location.href) .then ( () => {
+  toast ({}) .catch ( () => {
   toast ({
-}) .catch ( () => {
-  toast ({
-  title: t ('errors.failed to copy');
+  title: t ('errors.failed to copy);
 });
 }
 }</div> </div> </div> </section>)
+<<<<<<< HEAD
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
+    </section>)navigator.clipboard.write_text (window.location.href) .then ( () => {toast ({}) .catch ( () => {toast ({title: t ('errors.failed to copy')})}}</div> </div> </div> </section>)}'";
+}}</div> </div> </div> </section>)}'";
+=======
 }'"
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -13,7 +13,6 @@ export default async function handler(
   const data = null;
   res.status(200).json(data)
 }
-  const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
 

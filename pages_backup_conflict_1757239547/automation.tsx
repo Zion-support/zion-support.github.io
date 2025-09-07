@@ -44,7 +44,6 @@ export default function AutomationPage() {
     'Real-time monitoring'
     'Custom integration support',  ];
 export default function AutomationPage() {
-  const features = [
     {
       icon: <Workflow className="w-8 h-8 text-white" />,
       title: 'Workflow Automation',
@@ -67,7 +66,6 @@ export default function AutomationPage() {
     },;
   ];
 
-  const benefits = [
     'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
   ],
   return (

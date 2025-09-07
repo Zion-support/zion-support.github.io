@@ -14,12 +14,15 @@ const Header: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+=======
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navigation = [
+<<<<<<< HEAD
     { name: 'Home', href: '/' },
     { 
       name: 'Services', 

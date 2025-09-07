@@ -1,17 +1,53 @@
-const js = require('@eslint/js');
-const tseslint = require('@typescript-eslint/eslint-plugin');
-const tsparser = require('@typescript-eslint/parser');
+const js = require('@eslint/js);
+const tseslint = require(@typescript-eslint/eslint-plugin');
+const tsparser = require('@typescript-eslint/parser);
 
 module.exports = [
   {
     ignores: [
 <<<<<<< HEAD
+
+      node_modules/**/*',
+      '.next/**/*,
+      out/**/*',
+      'dist/**/*,
+      build/**/*',
+      'automation/**/*,
+      scripts/**/*',
+      '*.cjs,
+      *.mjs',
+
+      '!jest.config.*,
+      !next.config.*',
+      '!tailwind.config.*,
+      !postcss.config.*',
+=======
+      'node_modules/**/*,app-optimizer.js,zion-os/**/*,apps.backup/**/*,zion-website/**/*,automation/**/*,advanced-automation-improvements.cjs,analyze_links.cjs,app-enhancement-suite.cjs]
+>>>>>>> main
+
+    ]},
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
       'node_modules/**/*',
       'app-optimizer.js',
       'zion-os/**/*',
       'apps.backup/**/*',
       'zion-website/**/*',
       'automation/**/*',
+<<<<<<< HEAD
+      'pages-disabled/**/*',
+      'pages.disabled/**/*',
+      'components.disabled/**/*',
+      'api.disabled/**/*',
+      'api-disabled/**/*',
+      'backup/**/*',
+      'advanced-automation-improvements.cjs',
+      'analyze_links.cjs',
+      'app-enhancement-suite.cjs'
+=======
       'advanced-automation-improvements.cjs',
       'analyze_links.cjs',
       'app-enhancement-suite.cjs',
@@ -67,11 +103,13 @@ module.exports = [
 =======
       'node_modules/**/*,app-optimizer.js,zion-os/**/*,apps.backup/**/*,zion-website/**/*,automation/**/*,advanced-automation-improvements.cjs,analyze_links.cjs,app-enhancement-suite.cjs,]
 >>>>>>> main
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
     ],
   },
+>>>>>>> origin/chore/fix-lint-and-merge
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx}'],
+    files: [**/*.{js,jsx}],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -81,20 +119,25 @@ module.exports = [
         }
       },
       globals: {
-        window: 'readonly',
+        window: readonly,
         document: 'readonly',
-        console: 'readonly',
+        console: readonly,
         process: 'readonly',
-        Buffer: 'readonly',
+        Buffer: readonly,
         global: 'readonly',
-        __dirname: 'readonly',
+        __dirname: readonly,
         __filename: 'readonly',
-        module: 'readonly',
+        module: readonly,
         require: 'readonly',
-        exports: 'readonly',
-      },
-    },
+        exports: readonly}},
     rules: {
+<<<<<<< HEAD
+      "no-unused-vars: off",
+      "no-console: off",
+      "prefer-const: warn",
+      "no-var: warn",
+      "no-undef: off"
+=======
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
@@ -121,6 +164,7 @@ module.exports = [
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   },
   {
@@ -128,38 +172,44 @@ module.exports = [
     languageOptions: {
       parser: tsparser,
       ecmaVersion: 2022,
-      sourceType: 'module',
+      sourceType: module,
       parserOptions: {
         ecmaFeatures: {
+<<<<<<< HEAD
+          jsx: true}},
+=======
           jsx: true
         }
       },
+>>>>>>> origin/chore/fix-lint-and-merge
       globals: {
         window: 'readonly',
-        document: 'readonly',
+        document: readonly,
         console: 'readonly',
-        process: 'readonly',
+        process: readonly,
         Buffer: 'readonly',
-        global: 'readonly',
+        global: readonly,
         __dirname: 'readonly',
-        __filename: 'readonly',
+        __filename: readonly,
         module: 'readonly',
-        require: 'readonly',
+        require: readonly,
         exports: 'readonly',
+<<<<<<< HEAD
+        React: readonly}},
+=======
       },
     },
+>>>>>>> origin/chore/fix-lint-and-merge
     plugins: {
-      '@typescript-eslint': tseslint,
-    },
+      '@typescript-eslint': tseslint},
     rules: {
-      'no-unused-vars': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn',
-    }
+      no-unused-vars: 'off',
+      @typescript-eslint/no-unused-vars: 'warn',
+      no-console: 'warn',
+      prefer-const: 'warn'}
   },
   {
-    files: ['**/*.test.{js,jsx,ts,tsx}', '**/*.spec.{js,jsx,ts,tsx}'],
+    files: [**/*.test.{js,jsx,ts,tsx}, '**/*.spec.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: tsparser,
       ecmaVersion: 2022,
@@ -170,6 +220,9 @@ module.exports = [
         }
       },
       globals: {
+<<<<<<< HEAD
+        describe: readonly,
+=======
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
@@ -182,13 +235,17 @@ module.exports = [
         require: 'readonly',
         exports: 'readonly',
         describe: 'readonly',
+>>>>>>> origin/chore/fix-lint-and-merge
         it: 'readonly',
-        test: 'readonly',
+        test: readonly,
         expect: 'readonly',
-        beforeEach: 'readonly',
+        beforeEach: readonly,
         afterEach: 'readonly',
-        beforeAll: 'readonly',
+        beforeAll: readonly,
         afterAll: 'readonly',
+<<<<<<< HEAD
+        jest: 'readonly'}}}
+=======
         jest: 'readonly',
       },
     },
@@ -202,4 +259,5 @@ module.exports = [
       'prefer-const': 'warn',
     }
   }
+>>>>>>> origin/chore/fix-lint-and-merge
 ];

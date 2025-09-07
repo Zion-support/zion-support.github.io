@@ -63,7 +63,6 @@ export default function Reports(req, res) {}
     </div>);
 }
 
-import Link from 'next/link';
 export default function Reports() {
   return (
     <div className='space-y-6'>

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+export default function ServicePage() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>Page</h1>
+      <p>Learn about our page services.</p>
+    </main>
+=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -52,5 +60,6 @@ export default function AicontentwriterPage() {
         </div>
       </div>
     </div>
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
   );
 }

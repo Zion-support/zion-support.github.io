@@ -18,7 +18,6 @@ const initialPosts = [{ id: 1, author: 'Anna Zhou',
   time: '50m ago', title: 'Quick tip: How to rank your Zion listing higher',}
   body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.'}] export const CommunityDiscussion = ( const [posts, setPosts] =;
   useState(initialPosts);
-  const [showNew, setShowNew] = useState(false);
   const [newTitle, setNewTitle] = useState(');
   const [newBody, setNewBody] = useState(');
   const handleAddPost = () => { if(!newTitle.trim() || !newBody.trim()) return setPosts([{ id: Date.now(), author: 'You',

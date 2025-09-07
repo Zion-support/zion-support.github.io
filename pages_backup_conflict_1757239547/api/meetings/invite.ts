@@ -32,7 +32,6 @@ export default async function handler(
     console.error(e);
     return res.status(500).json({ ok: false, error: "Failed to send invite" });
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;

@@ -40,7 +40,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
-  const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
     txId: string,
     token: string,
     amount: number,
@@ -64,7 +63,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
   const version = nextVersionFor(state, txId),
-  const event = {
     eventId: uuidv4(),
     type: "token_transfer" as const,
     payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() },

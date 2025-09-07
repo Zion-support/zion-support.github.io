@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -55,18 +66,26 @@ const { execSync } = require("child_process")
   this.log("Fixing ""import/export"" errors...")
     const sourceFiles = this.findFiles(["**/*.ts"", "**/*.tsx", "**/*.js"", "**/*.jsx", "")]
   let content = fs.readFileSync(file, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
         content = content.replace(/import\s+([^]+)$/gm, "import $1;"
-        content = content.replace(/export\s+([^]+)$/gm, "export $1;"
+        content = content.replace(/export\s+([^]+)$/gm, export $1;
   fs.writeFileSync(file, content, "utf8")
+<<<<<<< HEAD
+
+=======
           this.errorsFixed++;this.log("Fixed ""import/export")
   this.log("Fixing variable declaration errors...")
     const sourceFiles = this.findFiles(["**/*.ts"", "**/*.tsx", "**/*.js"", "**/*.jsx", "")]
   let content = fs.readFileSync(file, "utf8")
         // Fix missing ""const/let/var""
         content = content.replace(/^(\s*)(\w+)\s*=\s*\[/gm, "$1const $2 = ["]
+>>>>>>> origin/chore/fix-lint-and-merge
         content = content.replace(/^(\s*)(\w+)\s*=\s*([^]+)$/gm, "$1$2 = $3;"
-  fs.writeFileSync(file, content, "utf8")
+  fs.writeFileSync(file, content, utf8)
           !item.startsWith(".")
+<<<<<<< HEAD
+
+=======
           item !== "node_modules"
     fixed = fixed.replace(/console\.log\("([^"]*)\"\);/g, "console.log("$1");"
     fixed = fixed.replace(/console\.log\("([^"]*)"\);/g, console.log("$1");"
@@ -93,12 +112,23 @@ const { execSync } = require("child_process")
         this.log("Running checks again after fixes...")
   this.log("All errors have been automatically fixed!")
   this.log("Some errors remain after automatic fixes")
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log(")
-      );this.log(`"Duration"`)
+      );this.log(`Duration`)
       return report} catch (error) {  this.log(`Error Fixer "failed"`})
-      "type": "error-fixer"
-      "results"
+      type: "error-fixer"
+      results
         "totalErrors"
+<<<<<<< HEAD
+
+  this.log(" Starting Error Fixer Automation")
+
+
+
+      this.log()
+
+      this.log()
+=======
         "success"
     const reportFile = path.join(this.reportsDir, `error-fixer-report-${timestamp.replace(/[:.]/g, "-"`})
     this.log(` Report "generated"`)
@@ -106,20 +136,14 @@ const { execSync } = require("child_process")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
       this.log(")
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       this.log(")
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
@@ -129,10 +153,13 @@ const { execSync } = require("child_process")
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+        if (content.includes("<Helmet>) && !content.includes(<>")"
+
+  content = content.replace(/<Helmet>/g, <>\n        <Helmet>")"
+
+
+<<<<<<< HEAD
 =======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
-        if (content.includes("<Helmet>") && !content.includes("<>")"
-"
-  content = content.replace(/<Helmet>/g, "<>\n        <Helmet>")"
-
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -22,8 +22,6 @@ import {
   Clock
   TrendingUp;
 } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
 export default function PortfolioPage() {
   const projects = [
     {
@@ -152,14 +150,12 @@ export default function PortfolioPage() {
 
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {
   Rocket, Brain, Atom, Shield, Cloud, BarChart3,
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 export default function PortfolioPage() {
-  const projects = [
     {
       title: "AI-Powered Financial Analytics Platform",
       description: "Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling",
@@ -228,7 +224,6 @@ export default function PortfolioPage() {
     },;
   ];
 
-  const stats = [
     { number: "500+", label: "Projects Delivered", icon: Rocket },
     { number: "50+", label: "Enterprise Clients", icon: Users },
     { number: "99.9%", label: "Client Satisfaction", icon: Star },

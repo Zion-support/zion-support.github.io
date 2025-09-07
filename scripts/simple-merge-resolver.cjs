@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+
 
 
 
@@ -6,7 +12,16 @@
 
 
 // Fix the specific syntax errors we identified
+<<<<<<< HEAD
+<<<<<<< HEAD
 const files = [
+=======
+// Fix the specific syntax errors we identified,
+  const files = [
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+const files = [;
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
   'components/Footer.tsx',
   'components/Header.tsx',
   'pages/about.tsx',
@@ -14,7 +29,12 @@ const files = [
   'pages/blog.tsx',
   'pages/contact.tsx',
   'pages/index.tsx'
-];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
+
+
 
 
 
@@ -24,87 +44,74 @@ const files = [
 files.forEach(file => {
   try {
     if (fs.existsSync(file)) {
-      let content = fs.readFileSync(file, 'utf8');
+      let content = fs.readFileSync(file, utf8');
       let modified = false;
-      
-      
+
       // Fix hover syntax
-      if (content.includes('"hover":')) {
-        content = content.replace(/"hover":\s*/g, 'hover:');
+      if (content.includes('"hover:)) {
+        content = content.replace(/hover":\s*/g, hover:');
         modified = true;
       }
-      
-      
+
       // Fix focus syntax
-      if (content.includes('"focus":')) {
-        content = content.replace(/"focus":\s*/g, 'focus:');
+      if (content.includes('"focus:)) {
+        content = content.replace(/focus":\s*/g, focus:');
         modified = true;
       }
-      
-      
+
       // Fix group-hover syntax
-      if (content.includes('"group-hover":')) {
-        content = content.replace(/"group-hover":\s*/g, 'group-hover:');
+      if (content.includes('"group-hover:)) {
+        content = content.replace(/group-hover":\s*/g, group-hover:');
         modified = true;
       }
-      
-      
+
       // Fix responsive breakpoints
-      if (content.includes('"sm":')) {
-        content = content.replace(/"sm":\s*/g, 'sm:');
+      if (content.includes('"sm:)) {
+        content = content.replace(/sm":\s*/g, sm:');
         modified = true;
       }
-      
-      
-      if (content.includes('"md":')) {
-        content = content.replace(/"md":\s*/g, 'md:');
+
+      if (content.includes('"md:)) {
+        content = content.replace(/md":\s*/g, md:');
         modified = true;
       }
-      
-      
-      if (content.includes('"lg":')) {
-        content = content.replace(/"lg":\s*/g, 'lg:');
+
+      if (content.includes('"lg:)) {
+        content = content.replace(/lg":\s*/g, lg:');
         modified = true;
       }
-      
-      
-      if (content.includes('"xl":')) {
-        content = content.replace(/"xl":\s*/g, 'xl:');
+
+      if (content.includes('"xl:)) {
+        content = content.replace(/xl":\s*/g, xl:');
         modified = true;
       }
-      
-      
+
       // Fix animation properties
-      if (content.includes('"y":')) {
-        content = content.replace(/"y":\s*/g, 'y:');
+      if (content.includes('"y:)) {
+        content = content.replace(/y":\s*/g, y:');
         modified = true;
       }
-      
-      
-      if (content.includes('"opacity":')) {
-        content = content.replace(/"opacity":\s*/g, 'opacity:');
+
+      if (content.includes('"opacity:)) {
+        content = content.replace(/opacity":\s*/g, opacity:');
         modified = true;
       }
-      
-      
-      if (content.includes('"duration":')) {
-        content = content.replace(/"duration":\s*/g, 'duration:');
+
+      if (content.includes('"duration:)) {
+        content = content.replace(/duration":\s*/g, duration:');
         modified = true;
       }
-      
-      
-      if (content.includes('"delay":')) {
-        content = content.replace(/"delay":\s*/g, 'delay:');
+
+      if (content.includes('"delay:)) {
+        content = content.replace(/delay":\s*/g, delay:');
         modified = true;
       }
-      
-      
-      if (content.includes('"once":')) {
-        content = content.replace(/"once":\s*/g, 'once:');
+
+      if (content.includes('"once:)) {
+        content = content.replace(/once":\s*/g, once:');
         modified = true;
       }
-      
-      
+
       if (modified) {
         fs.writeFileSync(file, content);
         console.log(`✅ Fixed ${file}`);
@@ -120,28 +127,102 @@ files.forEach(file => {
 }
 });
 
-
-
 }
 });
 }
 });
 
 
-console.log('✅ Syntax fixes completed!');
-console.log('🎉 Ready for merge process!');
+console.log('✅ Syntax fixes completed!);
+console.log(🎉 Ready for merge process!');
 #!/usr/bin/env node;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+]
+files.forEach(file => {
+  try {
+    if (fs.existsSync(file)) {
+      let content = fs.readFileSync(file, 'utf8')
+      let modified = false
+      // Fix hover syntax
+      if (content.includes('"hover":')) {
+        content = content.replace(/"hover":\s*/g, 'hover:')
+        modified = true
+      // Fix focus syntax
+      if (content.includes('"focus":')) {
+        content = content.replace(/"focus":\s*/g, 'focus:')
+        modified = true
+      // Fix group-hover syntax
+      if (content.includes('"group-hover":')) {
+        content = content.replace(/"group-hover":\s*/g, 'group-hover:')
+        modified = true
+      // Fix responsive breakpoints
+      if (content.includes('"sm":')) {
+        content = content.replace(/"sm":\s*/g, 'sm:')
+        modified = true
+      if (content.includes('"md":')) {
+        content = content.replace(/"md":\s*/g, 'md:')
+        modified = true
+      if (content.includes('"lg":')) {
+        content = content.replace(/"lg":\s*/g, 'lg:')
+        modified = true
+      if (content.includes('"xl":')) {
+        content = content.replace(/"xl":\s*/g, 'xl:')
+        modified = true
+      // Fix animation properties
+      if (content.includes('"y":')) {
+        content = content.replace(/"y":\s*/g, 'y:')
+        modified = true
+      if (content.includes('"opacity":')) {
+        content = content.replace(/"opacity":\s*/g, 'opacity:')
+        modified = true
+      if (content.includes('"duration":')) {
+        content = content.replace(/"duration":\s*/g, 'duration:')
+        modified = true
+      if (content.includes('"delay":')) {
+        content = content.replace(/"delay":\s*/g, 'delay:')
+        modified = true
+      if (content.includes('"once":')) {
+        content = content.replace(/"once":\s*/g, 'once:')
+        modified = true
+  if($2) {
+        fs.writeFileSync(file, content)
+        console.log(`✅ Fixed ${file}`)
+  } catch (error) {
+    console.log(`❌ Error fixing ${file}: ${error.message}`)
+})
+})
+})
+})
+console.log('✅ Syntax fixes completed!')
+console.log('🎉 Ready for merge process!')
+///usr/bin/env node
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 const fs = require('fs')
 const path = require('path')
 const { exec } = require('child_process')
 const util = require('util')
+=======
+const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
+const util = require('util');
+>>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
     this.projectRoot = path.join(__dirname, '..')
   async log(message, level = 'INFO')
       const { stdout } = await execAsync('git diff --name-only --diff-filter=U')
-      return stdout.trim().split('\n')
+return stdout.trim().split('\n');
       await this.log(`Error finding conflicted "files"`)
       await this.log(`Encountered ${this.errors.length} "errors"`)
     console.log('You can now commit the changes "with": git add . && git commit -m "Resolve merge conflicts")
+<<<<<<< HEAD
+=======
+
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
 
@@ -155,3 +236,14 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 
+
+<<<<<<< HEAD
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

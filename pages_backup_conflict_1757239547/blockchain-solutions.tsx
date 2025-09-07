@@ -1,3 +1,7 @@
+<<<<<<<< HEAD:temp_conflicts/pages/blockchain-solutions.jsx
+
+import Head from 'next/head';
+const BlockchainSolutions = () => {
 import type { NextPage } from 'next';
 import Head from 'next/head';
 const BlockchainSolutions: NextPage;
@@ -6,7 +10,7 @@ const BlockchainSolutions: NextPage = () => {
     <div>
       <Head>
         <title>BlockchainSolutions - Zion Tech Solutions</title>
-        <meta name='description' content='BlockchainSolutions page' />
+        <meta name='description content=BlockchainSolutions page' />
       </Head>
 
       <main>
@@ -15,5 +19,9 @@ const BlockchainSolutions: NextPage = () => {
       </main>
     </div>
   )
+<<<<<<<< HEAD:temp_conflicts/pages/blockchain-solutions.jsx
+},
+
+export default BlockchainSolutions,
 }
 export default BlockchainSolutions;

@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -7,14 +18,24 @@ const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
     this.logFile = path.join(this.projectRoot, "automation/logs/quick-error-checker.log")
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log(")
-    await fs.appendFile(this.logFile, logMessage + "\n")
+    await fs.appendFile(this.logFile, logMessage + \n)
   "cwd"
-        "encoding": "utf8"
-        "stdio": options.silent ? "pipe" : "inherit"
-      return { "success": true, "output"}
-  return { "success": false, "output"}
+        encoding: "utf8"
+        stdio: options.silent ? "pipe" : inherit
+      return { "success": true, output}
+  return { "success": false, output}
   await this.log(" Quick syntax check...")
+<<<<<<< HEAD
+
+  type: "eslint-config-fix"
+
+
+          file: "
+
+          "file: 
+=======
     const jsFiles = ["""automation/browser-error-fixer.js"""", """scripts/automation/""*.cjs", """scripts/automation/""*.js"]
     const jsFiles = [""automation/browser-error-fixer.js"", ""scripts/automation/"*.cjs", ""scripts/automation/"*.js"]
     "
@@ -70,25 +91,23 @@ const path = require("path")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
           "file": "
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
           "file": "
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
           "file": "
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -96,6 +115,3 @@ const path = require("path")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

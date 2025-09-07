@@ -23,5 +23,35 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
     <div>
       <h1>PortfolioBuilder</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
+
+}
+
+:src.disabled/src/pages.disabled/PortfolioBuilder.jsx
+}
+
+:src.pages.disabled/PortfolioBuilder.jsx
+
+:src.pages.disabled/PortfolioBuilder.jsx
+
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/PortfolioBuilder.jsx
+
+}
+
+}
+
+:src.pages.disabled/PortfolioBuilder.jsx
+}
+}
+}
+}
+}
+
+}
+>

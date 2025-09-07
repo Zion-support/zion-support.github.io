@@ -157,6 +157,14 @@ if (isOpen) {document.body.style.overflow = 'hidden';}
       {isOpen && (<>;) => {
   return $3;}
 }
+<<<<<<< HEAD
+import React, { useState } from 'react';'
+import { motion, AnimatePresence } from 'framer-motion';'
+import { X, Building2, ChevronDown, ChevronRight } from 'lucide-react';'
+import { useRouter } from 'next/router';'
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   X,
   ChevronDown,
   ChevronRight,
@@ -394,9 +402,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen;, onClose }) => {
 
         <>
 
+<<<<<<< HEAD
+    { "name": 'Free Consultation', "href": '/consultation','
+=======
 const quickLinks = [
     { name: 'Free Consultation';,}
   href: '/consultation';,}
+>>>>>>> origin/chore/fix-lint-and-merge
 },
 
     { name: 'Get Quote';,}
@@ -413,12 +425,26 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps /> = ({ isOpen;, onClose    }) => {
 
+<<<<<<< HEAD
+const "Sidebar": React.FC<SidebarProps> = ({ isOpen, onClose    }) => {
+
+
+
+  }
+
+
+
+
+    'Services': ['
+        { "name": 'AI Services', "href": '/ai-services','
+=======
   const [openDropdowns, setOpenDropdowns] = useState<string[] />([]);
 
 const navigation = {
     'Services': [
         { name: 'AI Services';,}
   href: '/ai-services';,}
+>>>>>>> origin/chore/fix-lint-and-merge
 },
 
         { name: 'IT Services';,}
@@ -457,9 +483,13 @@ const navigation = {
  ,
 };
 
+<<<<<<< HEAD
+      { "name": 'About Us', "href": '/about','
+=======
 const quickLinks = [
       { name: 'About Us';,}
   href: '/about';,}
+>>>>>>> origin/chore/fix-lint-and-merge
 },
 
       { name: 'Contact';,}
@@ -935,6 +965,13 @@ const Sidebar: React.FC < SidebarProps /> = ({ is_open;, on_close    }) => {
 const [open_dropdowns, setOpenDropdowns]  = useState < string[]>([])const handleDropdownToggle = (title: string) =>: any {setOpenDropdowns (prev =>;}
       prev.includes (title)? prev.filter (item = > item !== title): [...prev, title])}
 ;
+<<<<<<< HEAD
+      { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
+},{ "name": 'Mobile Development', "href": '/services / mobile - development', "icon": Smartphone,'
+},{ "name": 'Cloud Solutions', "href": '/services / cloud - solutions', "icon": Cloud,'
+},{ "name": 'Cybersecurity', "href": '/services / cybersecurity', "icon": Shield,'
+},{ "name": 'Performance Optimization', "href": '/services / performance', "icon": Zap,'
+=======
   const navigation = {'Services': [;
       { name: 'Web Development';,}
   href: '/services / web - development';, icon: Code;,}
@@ -946,6 +983,7 @@ const [open_dropdowns, setOpenDropdowns]  = useState < string[]>([])const handle
   href: '/services / cybersecurity';, icon: Shield;,}
 },{ name: 'Performance Optimization';,}
   href: '/services / performance';, icon: Zap;,}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
     ],'Solutions': [;
       { name: 'Enterprise Solutions';,}
@@ -1078,9 +1116,13 @@ export default Sidebar;ursor/expand-services-advertise-and-build-project-c52f;
   X,ChevronDown,Home,Users,Briefcase,Phone,Mail,MapPin,Building2,User,LogOut,Search;
 } from 'lucide-react';
 
+<<<<<<< HEAD
+      { "name": 'AI Services', "href": '/ai-services','
+=======
 const navigation = {'Services': [;
       { name: 'AI Services';,}
   href: '/ai-services';,}
+>>>>>>> origin/chore/fix-lint-and-merge
 },
   { name: 'IT Services';,}
   href: '/it-services';,}
@@ -1251,7 +1293,12 @@ href = \"/contact\"
                     className=\"inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors\";
 }
 
+<<<<<<< HEAD
+
+
+=======
 const Sidebar: React.FC < SidebarProps /> = ({ is_open;, on_close    }) => {
+>>>>>>> origin/chore/fix-lint-and-merge
 
  ;
   const [open_dropdowns, setOpenDropdowns] = useState < string[]>([]);
@@ -1264,10 +1311,15 @@ const handleDropdownToggle = (title: string) =>: any {
         : [...prev, title])}
 };
 
+<<<<<<< HEAD
+    'Services': [;'
+      { "name": 'Web Development', "href": '/services / web - development', "icon": Code,'
+=======
 const navigation = {
     'Services': [;
       { name: 'Web Development';,}
   href: '/services / web - development';, icon: Code;,}
+>>>>>>> origin/chore/fix-lint-and-merge
 },
       { name: 'Mobile Development';,}
   href: '/services / mobile - development';, icon: Smartphone;,}
@@ -1316,9 +1368,13 @@ const navigation = {
 }
 ;
 
+<<<<<<< HEAD
+    { "name": 'About Us', "href": '/about','
+=======
 const quick_links = [
     { name: 'About Us';,}
   href: '/about';,}
+>>>>>>> origin/chore/fix-lint-and-merge
 },
 
       { name: 'Our Team';,}
@@ -1432,6 +1488,10 @@ const quick_links = [
 export default Sidebar;
 ;
   X, 
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   X, 
   ChevronDown, 
   Home, 
@@ -1446,10 +1506,15 @@ export default Sidebar;
   Search}
 } from 'lucide-react';
 
+<<<<<<< HEAD
+  'Services': ['
+      { "name": 'AI Services', "href": '/ai-services','
+=======
 const navigation = {
   'Services': [
       { name: 'AI Services';,}
   href: '/ai-services';,}
+>>>>>>> origin/chore/fix-lint-and-merge
 },
 
       { name: 'IT Services';,}

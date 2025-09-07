@@ -1,6 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
-import { Calendar, User, ArrowRight, Tag } from 'lucide-react'
+import React from 'react';
+import Link from 'next/link';
+import { Calendar, User, ArrowRight, Tag } from 'lucide-react';
+
 export default function BlogPage() {
   const blogPosts = [
     {
@@ -64,6 +65,7 @@ export default function BlogPage() {
       image: "/api/placeholder/600/400"
     }
   ];
+
   const categories = [
     "All",
     "AI & Machine Learning",
@@ -72,7 +74,8 @@ export default function BlogPage() {
     "Software Development",
     "Data Analytics",
     "Infrastructure"
-  ]
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -121,7 +124,7 @@ export default function BlogPage() {
                     <div className="text-sm opacity-90">Zion Tech</div>
                   </div>
                 </div>
-
+                
                 <div className="p-6">
                   <div className="flex items-center gap-4 mb-4">
                     <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
@@ -129,15 +132,15 @@ export default function BlogPage() {
                     </span>
                     <span className="text-gray-500 text-sm">{post.readTime}</span>
                   </div>
-
+                  
                   <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                     {post.title}
                   </h2>
-
+                  
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
-
+                  
                   <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                     <div className="flex items-center">
                       <User className="h-4 w-4 mr-1" />
@@ -148,8 +151,8 @@ export default function BlogPage() {
                       {new Date(post.date).toLocaleDateString()}
                     </div>
                   </div>
-
-                  <Link
+                  
+                  <Link 
                     href={`/blog/${post.id}`}
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
                   >
@@ -173,7 +176,7 @@ export default function BlogPage() {
             <p className="text-xl text-blue-100 mb-8">
               Subscribe to our newsletter for the latest technology insights and updates.
             </p>
-
+            
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
@@ -195,7 +198,7 @@ export default function BlogPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
               Popular Topics
             </h2>
-
+            
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {categories.slice(1).map((category) => (
                 <div key={category} className="text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors cursor-pointer">

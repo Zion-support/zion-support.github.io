@@ -50,12 +50,20 @@ import { real2031ITServicesAdditions } from '../../data/real-2031-it-services-ad
 import { real2031AIServicesAdditions } from '../../data/real-2031-ai-services-additions';
 import { real2030Q2Additions } from '../../data/real-2030-q2-additions';
 import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
-:pages/services/[slug].tsx.backup.1755991614
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 import { aiAutonomousEcosystemServices2029 } from '../../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../../data/2029-practical-business-solutions';
 import { real2032AdditionalServices } from '../../data/real-2032-additional-services';
-:pages/services/[slug].tsx.backup.1755991614
+<<<<<<< HEAD
+=======
+=======
+import { real2032ServiceAdditions } from '../../data/real-2032-service-additions';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d088
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 type Service = typeof enhancedRealMicroSaasServices[number] | {
   id: string;
@@ -149,14 +157,22 @@ function getAllServices(): Service[] {
 		.concat(real2031MicroSaasAdditions as unknown as Service[])
 		.concat(real2031ITServicesAdditions as unknown as Service[])
 		.concat(real2031AIServicesAdditions as unknown as Service[])
-:pages/services/[slug].tsx.backup.1755991614
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 		.concat(real2027Q3Additions as unknown as Service[])
 		// 2029 showcase/pricing arrays to ensure matching /services/* pages are generated
 		.concat(aiAutonomousEcosystemServices2029 as unknown as Service[])
 		.concat(emergingTechBreakthroughServices2029 as unknown as Service[])
 		.concat(practicalBusinessSolutionServices2029 as unknown as Service[])
 		.concat(real2032AdditionalServices as unknown as Service[]);
-:pages/services/[slug].tsx.backup.1755991614
+<<<<<<< HEAD
+=======
+=======
+		.concat(real2032ServiceAdditions as unknown as Service[]);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d088
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 }
 
 function toSlug(value: string): string {
@@ -238,7 +254,15 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
 	return (
+<<<<<<< HEAD
 		<UltraFuturisticBackground variant="holographic" intensity="high">
+=======
+<<<<<<<< HEAD:components/services/[slug].tsx.backup.1755992080.backup.1756001157
+		<UltraFuturisticBackground variant="quantum" intensity={1.5}>
+========
+		<UltraFuturisticBackground variant="holographic" intensity="high">
+>>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:pages/services/[slug].tsx.backup.1755991614
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />

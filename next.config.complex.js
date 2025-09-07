@@ -1,49 +1,36 @@
+/** @type {import ('next').NextConfig} */;
+const next_config = {}
+  reactStrictMode: true,
+  compress: true,
+  poweredByHeader: false,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },'
+  page_extensions: ['tsxtsjsxjs'],
+
 /** @type {import('next').NextConfig} */;
-const nextConfig = {reactStrictMode: true;
-  compress: true;
-  poweredByHeader: false;
-  eslint: { ignoreDuringBuilds: true }
-  typescript: { ignoreBuildErrors: true }
-  pageExtensions: ['tsxtsjsxjs'];
-  // Image optimization;
-  images: {domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"];
-    formats: ['image/webpimage/avif'];
-  }
-  // Output configuration;
-  output: 'standalone';
-  // Trailing slash;
-  trailingSlash: false;
-  // Base path;
-  basePath: '';
-  // Asset prefix;
-  assetPrefix: '';
-  // Generate ETags;
-  generateEtags: true;
-  // Dist directory;
-  distDir: '.next';
-}
-module.exports = nextConfig;
+
+/** @type {import('next').NextConfig} */;
+const nextConfig = {;
+
+const nextConfig = {;
+  reactStrictMode: true;
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
-  typescript: { ignoreBuildErrors: true },;
+  typescript: { ignoreBuildErrors: true },;'
   pageExtensions: ['tsxtsjsxjs'],;
+
   // Image optimization;
-  images: {;
-    domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],;
-    formats: ['image/webpimage/avif'];
-  },;
-  // Output configuration;
-  output: 'standalone',;
+
+    formats: ['image / webpimage / avif'];
+  },
+  // Output configuration;'
+  output: 'standalone',
   // Trailing slash;
-  trailingSlash: false,;
-  // Base path;
-  basePath: '',;
-  // Asset prefix;
-  assetPrefix: '',;
+  trailing_slash: false,
+
   // Generate ETags;
-  generateEtags: true,;
-  // Dist directory;
-  distDir: '.next';
-},;
-module.exports = nextConfig,;
+  generate_etags: true,

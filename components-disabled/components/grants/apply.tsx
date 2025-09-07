@@ -12,6 +12,26 @@ const categories: GrantCategory[] = [
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
 
+<<<<<<< HEAD
+}
+
+import { useState  } from 'react';'
+
+  'Ecosystem Tools''
+  'Talent Development''
+  'Regional Expansion''
+  'Research Grants''
+];const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']'
+export default function ApplyGrantPage() {
+}
+  'Ecosystem Tools',;'
+  'Talent Development',;'
+  'Regional Expansion',;'
+  'Research Grants',;'
+];const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;'
+export default function ApplyGrantPage() {;
+  }
+=======
 import { useState  } from 'react';
   'Ecosystem Tools
   'Talent Development
@@ -25,6 +45,7 @@ const categories: GrantCategory[] = [;
   'Regional Expansion',;
   'Research Grants',;']
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
+>>>>>>> origin/chore/fix-lint-and-merge
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState();
@@ -38,11 +59,35 @@ const categories: GrantCategory[] = [;
 </string>
   const [sector, setSector] = useState<string>();
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
+
+import EnhancedLayout from '../../components / layout / EnhancedLayout';'
+import {use_router} from 'next / router';'
+import type { GrantCategory } from '../../types / grants';'
+;
+  'Ecosystem Tools','
+  'Talent Development','
+  'Regional Expansion','
+  'Research Grants','
+];const "categories": GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],'
+export default /**
+ * ApplyGrantPage - Function description
+ */
+function ApplyGrantPage() {
+  }
+  const router = use_router ();
+  const [program, set_program] = useState<'grant' | 'incubator'>('grant');'
+  const [project_name, setProjectName] = useState ('');'
+  const [team_info, setTeamInfo] = useState ('');'
+  const [proposal_summary, setProposalSummary] = useState ('');'
+  const [timeline, set_timeline] = useState ('');'
+=======
   const [program, set_program] = useState<'grant' | 'incubator'>('grant');
   const [project_name, setProjectName] = useState ();
   const [team_info, setTeamInfo] = useState ();
   const [proposal_summary, setProposalSummary] = useState ();
   const [timeline, set_timeline] = useState ();
+>>>>>>> origin/chore/fix-lint-and-merge
   const [budget_amount, setBudgetAmount] = useState < number>(0);
   const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(')
     'USDC');  const [supporting_links, setSupportingLinks] = useState < string>();  const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
@@ -138,6 +183,15 @@ const categories: GrantCategory[] = [;
           region;
 
           submit})});
+<<<<<<< HEAD
+      if (!resp && resp.ok) throw new Error(data?.error || 'Failed');'
+      router && router.push(`/grants/${data && data.id}`);`    } catch ("e": any) {;
+      }
+      setError(e && e.message);
+    } finally {;
+      }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       setLoading(false);
 
           <textarea;
@@ -176,6 +230,102 @@ const categories: GrantCategory[] = [;
           <label className="text-sm">Program;"
 </label>"
             <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>"
+<<<<<<< HEAD
+
+  const _save = async ("_submit": boolean) => {
+    }
+    try {
+      }
+      setLoading(true),
+      setError(null),
+      const resp = await fetch('/api/grants', {'
+        }
+        "method": 'POST','
+        "headers": { 'Content-Type': 'application/json' },'
+        "body": JSON.stringify({
+          }
+          program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          "budgetAmount": Number(budgetAmount || 0),
+          budgetCurrency,
+          "supportingLinks": supportingLinks
+            .split('\n');'
+            .map((s) => s.trim())
+            .filter(Boolean),
+          pitchDeckUrl,
+          region,
+          "sector": (sector as any) || undefined,
+          submit})}),
+      const data = await resp.json();
+      if (!resp.ok) throw new Error(data?.error || 'Failed'),'
+    }
+    try {
+      }
+      setLoading(true);
+      setError(null);
+        }
+        "method": 'POST''
+        "headers": { 'Content-Type': 'application/json' }'
+        "body": JSON.stringify({
+          }
+          program,
+projectName
+          teamInfo,
+proposalSummary
+          timeline,
+"budgetAmount": Number(budgetAmount |0);
+          budgetCurrency,
+"supportingLinks": supportingLinks
+            .split('\n');'
+            .map(s => { return s.trim())
+            .filter(Boolean); }
+          pitchDeckUrl,
+region
+          "sector": (sector as any) |undefined,
+submit
+        })
+      });
+      if (!resp.ok) throw new Error(data?.error |'Failed');'
+      router.push(`/grants/${data.id}`);`    } catch ("e": any) {
+      }
+      setError(e.message);
+    } finally {
+      }
+      setLoading(false);    }          "budgetAmount": Number(budgetAmount |0);
+          budgetCurrency;
+          "supportingLinks": supportingLinks
+            .split('\n');'
+            .map((s) => s.trim())
+            .filter(Boolean);
+          pitchDeckUrl;
+          region;
+          "sector": (sector as any) |undefined,
+submit})});
+      if (!resp.ok) throw new Error(data?.error |'Failed');'
+      router.push(`/grants/${data.id}`);`
+    } catch ("e": any) {
+      }
+      setError(e.message);
+    } finally {
+      }
+      setLoading(false);
+  };
+
+return (;
+    <EnhancedLayout>
+      <h1 className='text-2xl font-semibold mb-4'>'
+        Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}'
+      </h1>
+      <div className='grid gap-4 max-w-3xl'>'
+        <div className='grid "md":grid-cols-2 gap-3'>'
+          <label className='text-sm'>'
+            Program
+            <select,
+className='mt-1 w-full border rounded p-2''
+=======
 </select>
 "
       <h1 className='text-2xl font-semibold mb-4'>
@@ -184,6 +334,7 @@ const categories: GrantCategory[] = [;
         <div className='grid md:grid-cols-2 gap-3'>
           <label className='text-sm'>
             <select;
+>>>>>>> origin/chore/fix-lint-and-merge
               value={program}
               onChange={e => setProgram(e.target.value as any)}
               <option value='grant'>Grant</option>

@@ -14,18 +14,8 @@ import { useState } from 'react';'
 import EnhancedButton from '../../components/ui/EnhancedButton';'
 const steps = ['AccountProfilePreferencesPreview'];
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import { useState } from "react";
-import EnhancedButton from "../../components/ui/EnhancedButton";
 
-const steps = ["Account", "Profile", "Preferences", "Preview"];
 '
-import type { NextPage } from 'next';'
-import Head from 'next/head';'
-import { useState } from 'react';'
-import EnhancedButton from '../../components/ui/EnhancedButton';'
-const steps = ['AccountProfilePreferencesPreview'];
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -51,15 +41,10 @@ import type { NextPage } from 'next','
 import Head from 'next/head','
 import { useState } from 'react','
 import EnhancedButton from '../../components/ui/EnhancedButton','
-const steps = ['AccountProfilePreferencesPreview'],
 
-  const [step, setStep] = useState(0),
-  const next = () => setStep((s) => Math.min(s + 1, steps.length - 1)),
-  const prev = () => setStep((s) => Math.max(s - 1, 0)),
 
 const steps = ['Account', 'Profile', 'Preferences', 'Preview'];
 
-const Onboarding: NextPage = () => {
   const [step, setStep] = useState(0);
 
 const next = () => setStep(s => Math.min(s + 1, steps.length - 1));

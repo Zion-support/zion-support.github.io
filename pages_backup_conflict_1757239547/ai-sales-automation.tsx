@@ -7,7 +7,6 @@ export default function AISalesAutomationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))
   if (!service) return null
 export default function AISalesAutomationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-sales-automation'))
   if (!service) return null,
   return (
     <Layout>

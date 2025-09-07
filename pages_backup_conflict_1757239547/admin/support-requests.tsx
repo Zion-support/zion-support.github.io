@@ -4,7 +4,6 @@ import { readJson } from '../../utils/fsDb';
 export const getServerSideProps: GetServerSideProps;
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = readJson<any[]>('support/requests.json', [])
   return { props: { initialRequests: requests } }

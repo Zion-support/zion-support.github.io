@@ -1,4 +1,42 @@
+<<<<<<< HEAD
 
+#!/usr/bin/env node;
+
+
+const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')];
+=======
+const fs = require('fs')
+const path = require(path')
+const { execSync } = require('child_process')
+    this.testDir = path.join(this.projectRoot, __tests__')
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports)
+      let content = fs.readFileSync(filePath, utf8')
+      const unterminatedStringRegex = /import\s+.*?from\s+['"]([^]*?)[']
+          return match.replace(/[']\s*["]$/, ')
+      const missingQuoteRegex = /import\s+.*?from\s+['"]([^)]
+        if (!match.endsWith('') && !match.endsWith()
+          return match + '
+      const jsxIssues = [{ pattern": /render\(<([^>]+)>\s*\)/g, "replacement}
+        { pattern": /expect\(screen\.getByTestId\('([^]+)\)\)\.toBeInTheDocument\(\)/g, "replacement: 'expect(screen.getByTestId($1"})
+
+
+      const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^)]
+
+      const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^')]
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      const componentImportRegex = /import\s+(\w+)\s+from\s+["]([^'')]
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -16,25 +54,19 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
       const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')]
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
       const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')]
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
       const componentImportRegex = /import\s+(\w+)\s+from\s+['"]([^'')]
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -42,6 +74,11 @@ const { execSync } = require('child_process')
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+<<<<<<< HEAD
 =======
 
 >>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

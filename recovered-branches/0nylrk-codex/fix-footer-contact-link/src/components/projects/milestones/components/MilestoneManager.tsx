@@ -1,48 +1,13 @@
-import React from 'react';
-import { MilestonesList  } from '../MilestonesList';
-import { PaymentSummary  } from '../PaymentSummary';
-import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
-import { toast } from "sonner";
-interface MilestoneManagerProps {
-  projectId: string;
-  milestones: Milestone[];
-  activities: Record<string, MilestoneActivity[]>,
-  isLoading: boolean;
-  isClient: boolean;
-  isTalent: boolean;
-  paymentTerms?: string;
-  isSubmitting: boolean;
-  onCreateMilestone: (data: any) => Promise<Milestone | null>;
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
-  onDeleteMilestone: (id: string) => Promise<boolean>;
-  onUploadDeliverable: (id: string, file: File) => Promise<any>;
-  projectId: string
-  milestones: Milestone[]
-  activities: Record<string, MilestoneActivity[]>;
-  isLoading: boolean
-  isClient: boolean
-  isTalent: boolean
-  paymentTerms?: string;
-  isSubmitting: boolean
-  onCreateMilestone: (data: any) => Promise<Milestone | null>
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
-  onDeleteMilestone: (id: string) => Promise<boolean>
-  onUploadDeliverable: (id: string, file: File) => Promise<any>
+<<<<<<< HEAD
 
-interface MilestoneManagerProps {
-  projectId: string,
-  milestones: Milestone[],
-  activities: Record<string MilestoneActivity[]>,
-  isLoading: boolean,
-  isClient: boolean,
-  isTalent: boolean,
   paymentTerms?: string,
-  isSubmitting: boolean,
-  onCreateMilestone: (data: any) => Promise<Milestone | null>,
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
-  onDeleteMilestone: (id: string) => Promise<boolean>,
-  onUploadDeliverable: (id: string, file: File) => Promise<any>,
-  refetch: () => Promise<void>
+  "isSubmitting": boolean,
+  "onCreateMilestone": ("data": any) => Promise<Milestone | null>,
+  "onUpdateStatus": ("id": string, "status": MilestoneStatus, comment?: string) => Promise<boolean>,
+  "onDeleteMilestone": ("id": string) => Promise<boolean>,
+  "onUploadDeliverable": ("id": string, "file": File) => Promise<any>,
+  "refetch": () => Promise<void>
+}  projectId;
 }
 export function MilestoneManager({
   projectId;
@@ -58,6 +23,7 @@ export function MilestoneManager({
   onDeleteMilestone;
   onUploadDeliverable;
 export function MilestoneManager({
+  }
   projectId,
   milestones,
   activities,
@@ -69,39 +35,138 @@ export function MilestoneManager({
   onCreateMilestone,
   onUpdateStatus,
   onDeleteMilestone,
-  onUploadDeliverable,
+
+    }
+  }
+  return (;
+
+=======
+projectId: string
+
+  milestones: Milestone[]
+  activities: Record<string, MilestoneActivity[]>;
+  isLoading: boolean;
+  isClient: boolean;
+  isTalent: boolean;
+  paymentTerms?: string;
+  isSubmitting: boolean;
+  onCreateMilestone: (data: any) => Promise<Milestone | null>
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>;
+  onDeleteMilestone: (id: string) => Promise<boolean>
+  onUploadDeliverable: (id: string, file: File) => Promise<any>
+
+import React from 'react',
+import { MilestonesList } from '../MilestonesList',
+import { PaymentSummary } from '../PaymentSummary',
+import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
+import { toast } from "sonner",
+
+interface MilestoneManagerProps {
+
+  projectId: string,
+  milestones: Milestone[],
+  activities: Record<string MilestoneActivity[]>,
+  isLoading: boolean,
+  isClient: boolean,
+  isTalent: boolean,
+  paymentTerms?: string,
+  isSubmitting: boolean,
+  onCreateMilestone: (data: any) => Promise<Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
+  onDeleteMilestone: (id: string) => Promise<boolean>,
+  onUploadDeliverable: (id: string, file: File) => Promise<any>,
+
+  refetch: () => Promise<void>
+}
+;
+
+  projectId;
+
   refetch
 }: MilestoneManagerProps) {
 
   const handleMilestoneApproved = async (milestoneId: string) => {
     try {
-      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
-      toast.success("Milestone approved"),
-      await refetch()
-    } catch (error) {
-      console.error("Error approving milestone:", error),
-      toast.error("Failed to approve milestone")
-    }
-  }
-  const handleMilestoneRejected = async (milestoneId: string) => {
-    try {
-      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
-      toast.success("Milestone rejected"),
-      await refetch()
-    } catch (error) {
-      console.error("Error rejecting milestone:", error),
-      toast.error("Failed to reject milestone")
+
+  refetch;
+}: MilestoneManagerProps) {}
+  const handleMilestoneApproved = async (milestoneId: string) => {}
+    try {}
+"
+      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus);"
+      toast && toast.success("Milestone approved");
+      await refetch();
+    } catch (error) {;"
+      console && console.error("Error approving milestone:", error);"
+      toast && toast.error("Failed to approve milestone");
+    }"
+      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus);"
+      toast && toast.success("Milestone rejected");
+      await refetch();
+    } catch (error) {;"
+      console && console.error("Error rejecting milestone:", error);"
+
+      toast && toast.error("Failed to reject milestone");
     }
   }
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+  project_id: string,
+  milestones: Milestone[],
+  activities: Record < string, MilestoneActivity[]>;
+  is_loading: boolean,
+  is_client: boolean,
+  is_talent: boolean,
+  payment_terms?: string;
+  is_submitting: boolean,
+  onCreateMilestone: (data: any) => Promise < Milestone | null>,
+  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise < boolean>;
+  onDeleteMilestone: (id: string) => Promise < boolean>,
+  onUploadDeliverable: (id: string, file: File) => Promise < any>,
+  refetch: () => Promise < void>;
+}
+
+      toast.error ("Failed to approve milestone");
+    }
+  }
+;
+
+      toast.error ("Failed to reject milestone");
+    }
+  }
+;
+
+      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),
+
+      toast.success("Milestone approved"),
+      await refetch()
+    } catch (error) {"
+      console.error("Error approving milestone:", error),"
+      toast.error("Failed to approve milestone")
+    }
+
+  const handleMilestoneRejected = async (milestoneId: string) => {
+    try {
+      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),
+
+      toast.success("Milestone rejected"),
+      await refetch()
+    } catch (error) {"
+      console.error("Error rejecting milestone:", error),"
+      toast.error("Failed to reject milestone")
+    }
+
+  return ("
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">"
       <div className="lg:col-span-2">
-        <MilestonesList
+
 import React from 'react',;
+
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
+
 import { toast } from "sonner",;
 interface MilestoneManagerProps {;
   projectId: string,;
@@ -119,45 +184,107 @@ interface MilestoneManagerProps {;
   refetch: () => Promise<void>;
 }
 ;
-export function MilestoneManager({;
-  projectId,;
-  milestones,;
-  activities,;
-  isLoading,;
-  isClient,;
-  isTalent,;
-  paymentTerms,;
-  isSubmitting,;
-  onCreateMilestone,;
-  onUpdateStatus,;
-  onDeleteMilestone,;
-  onUploadDeliverable,;
-  refetch;
-}: MilestoneManagerProps) {;
-  const handleMilestoneApproved = async (milestoneId: string) => {;
-    try {;
-      await onUpdateStatus(milestoneId, "completed" as MilestoneStatus),;
-      toast.success("Milestone approved"),;
-      await refetch();
-    } catch (error) {;
-      console.error("Error approving milestone:", error),;
+export function MilestoneManager() { return null; }
+    } catch (error) {;"
+      console.error("Error approving milestone:", error),;"
       toast.error("Failed to approve milestone");
     }
   },;
   const handleMilestoneRejected = async (milestoneId: string) => {;
-    try {;
-      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),;
+    try {;"
+      await onUpdateStatus(milestoneId, "rejected" as MilestoneStatus),;"
       toast.success("Milestone rejected"),;
       await refetch();
-    } catch (error) {;
-      console.error("Error rejecting milestone:", error);
+    } catch (error) {;"
+      console.error("Error rejecting milestone:", error);"
       toast.error("Failed to reject milestone");
     }
   };
-  return (;
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
+  return (;"
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;"
       <div className="lg:col-span-2">;
+>>>>>>> origin/chore/fix-lint-and-merge
         <MilestonesList;
+
+          milestones={milestones}
+
+          activities={activities}
+          is_loading={is_loading}
+          is_client={is_client}
+
+          onCreateMilestone={onCreateMilestone}
+          onUpdateStatus={onUpdateStatus}
+          onDeleteMilestone={onDeleteMilestone}
+
+        />;
+      </div>;
+      <div>;
+        <PaymentSummary;
+          milestones={milestones} 
+
+          paymentTerms={paymentTerms}
+
+          is_submitting={is_submitting}
+          on_approve={is_client ? handleMilestoneApproved : undefined}
+          on_reject={is_client ? handleMilestoneRejected : undefined}
+        />;
+      </div>;
+      <div>;
+<<<<<<< HEAD
+        <PaymentSummary;
+          milestones={milestones}
+          payment_terms={payment_terms} />;
+      </div>;
+    </div>);
+
+paymentTerms?: string;
+"isSubmitting": boolean;
+"onCreateMilestone": ("data": any) => Promise<Milestone | null>;
+"onUpdateStatus": ("id": string, "status": MilestoneStatus, comment?: string) => Promise<boolean>;
+"onDeleteMilestone": ("id": string) => Promise<boolean>;
+"onUploadDeliverable": ("id": string, "file": File) => Promise<any>;
+"refetch": () => Promise<void>
+}projectId, milestones, activities, isLoading, isClient, isTalent, paymentTerms, isSubmitting, onCreateMilestone, onUpdateStatus, onDeleteMilestone, onUploadDeliverable, refetch
+}: MilestoneManagerProps) {
+
+}activities= {
+  }
+  activities
+}isLoading= {
+  }
+  isLoading
+}isClient= {
+  }
+  isClient
+}onCreateMilestone= {
+  }
+  onCreateMilestone
+}onUpdateStatus= {
+  }
+  onUpdateStatus
+}onDeleteMilestone= {
+  }
+  onDeleteMilestone
+}onUploadDeliverable= {
+  }
+  onUploadDeliverable
+}isSubmitting= {
+  }
+  isSubmitting
+}onApprove= {
+  }
+  isClient ? handleMilestoneApproved : undefined
+}onReject= {
+  }
+  isClient ? handleMilestoneRejected : undefined
+} /> </div> <div> <PaymentSummary milestones= {
+  }
+  milestones
+}paymentTerms= {
+  }
+  paymentTerms
+} /> </div> </div>)
+}
           milestones={milestones}
           activities={activities}
           isLoading={isLoading}
@@ -165,18 +292,32 @@ export function MilestoneManager({;
           onCreateMilestone={onCreateMilestone}
           onUpdateStatus={onUpdateStatus}
           onDeleteMilestone={onDeleteMilestone}
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
           onUploadDeliverable={onUploadDeliverable}
-          isSubmitting={isSubmitting}
-          onApprove={isClient ? handleMilestoneApproved : undefined}
-          onReject={isClient ? handleMilestoneRejected : undefined}
-        />
-      </div>
-      <div>
-        <PaymentSummary
-          milestones={milestones}
+
+        />;
+</MilestonesList>
+      </div>;
+      <div>;
+</div>
+        <PaymentSummary;
+          milestones={milestones} 
           paymentTerms={paymentTerms}
-        />
-      </div>
-    </div>
-  )
-}
+
+        />;
+</PaymentSummary>
+      </div>;
+    </div>;
+
+      </div>;
+      <div>;
+</div>
+
+        <PaymentSummary;
+          milestones={milestones}
+          payment_terms={payment_terms}
+        />;
+      </div>;
+    </div>);

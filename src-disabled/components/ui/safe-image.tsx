@@ -49,7 +49,6 @@ interface SafeImageProps {;
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { ImageIcon } from 'lucide-react';
 
 interface SafeImageProps {
   src: string
@@ -89,9 +88,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     )
   });        aria-label={alt}
 'use client',;
-import Image from 'next/image',;
-import { useState } from 'react',;
-import { ImageIcon } from 'lucide-react';
 
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
 

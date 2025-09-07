@@ -345,6 +345,8 @@ interface UltraAdvancedQuantumBackgroundProps {
       <div className="relative z-20">
         {children}
       </div>
+<<<<<<< HEAD
+=======
 
       {/* Floating geometric elements */}
       <div className="absolute inset-0 pointer-events-none z-5">
@@ -390,6 +392,7 @@ interface UltraAdvancedQuantumBackgroundProps {
           }}
         />
       </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
     </div>
   );
 };

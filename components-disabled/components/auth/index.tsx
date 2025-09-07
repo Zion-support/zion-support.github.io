@@ -12,8 +12,12 @@
 
   );
 
+<<<<<<< HEAD
+  );
+=======
 import React from 'react';
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function AuthIndexPage() {
   return (
 

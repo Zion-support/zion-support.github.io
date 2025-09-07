@@ -184,6 +184,7 @@ export default function HomePage() {
     itSolutions: comprehensiveITSolutions.length + enterpriseITServices.length + comprehensiveIT2026Services.length,
     microSaas: enhancedRealMicroSaasServices.length + innovativeMicroSaasServices.length,
     revolutionaryServices: revolutionary2025Services.length + nextGenInnovations2025.length + revolutionary2026Services.length
+=======
   // Combine all services for display
   const allServices = [
     ...enhancedRealMicroSaasServices.slice(0, 8),

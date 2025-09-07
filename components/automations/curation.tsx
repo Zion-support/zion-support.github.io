@@ -1,47 +1,127 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
+import React from \"react\,
+import fs from \"fs\";
+import path from \path\";
 
 
-import React from \"react\","
-import fs from \"fs\";"
-import path from \"path\";
-
-=======
-import React from "react",
-import fs from "fs";
-import path from "path";
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+type Experiment = {
+class ErrorBoundary extends React.Component {
+  constructor(props) {
 type Experiment = any;
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
 
-type Experiment = {
-  title: string;
+type Experiment = any;
+import React from react';
+=======
+
+
+import React from \"react\","
+import fs from \'fs\';"
+import path from \'path\';
+
+type Experiment = any;
+import React from 'react';
+import fs from 'fs';
+>>>>>>> origin/chore/fix-lint-and-merge
+
+import path from 'path';
+
+type Experiment = any;import React from 'react';
+
+type Experiment = {title: string;
 hypothesis?: string;
-metric?: string;
-effort?: number;
-impact?: number
+metric?: string;}
+effort?: number;impact?: number;}
 }
+<<<<<<< HEAD
+import React from "react;
+import fs from fs";
+import path from "path;
+type Experiment = $2;
+  hypothesis?: string,
+  metric?: string,
+  effort?: number,
+  impact?: number
+},
+
 type Props = {
-  updatedAt: string | null
+
+
+  "updatedAt": string | null;
+"items": Experiment[]
+=======
+
+type Props = {
+
+  updatedAt: string | null;}
+items: Experiment[]}
+>>>>>>> origin/chore/fix-lint-and-merge
+};
+
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+<main className = 'mx-auto max-w-4xl px-4 py-12'    />
+      <h1 className='text-2xl font-bold text-gray-900'    />
+        AI Curated Growth Experiments}
+      </h1>}
+        <p className='mt-2 text-sm text-gray-600'    />Last updated: {updatedAt}</p>
+      ) : (
+<<<<<<< HEAD
+        <p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>
+      )}
+type Props = {
+  updated_at: string | null;
+type Props = {updated_at: string | null;
 items: Experiment[] }
-export default function CurationPage(): any ({ updatedAt, items }: Props) {
   return (type Experiment = {
   title: string
+  title: string
+import React from "react";
+import fs from "fs";
+import path from "path";
+type Experiment = {
+  title: string,
+
+  title: string,;
+
   hypothesis?: string;
   metric?: string;
   effort?: number;
-  impact?: number
+type Props = {updated_at: string | null;
+items: Experiment[] }
+  return (type Experiment = {title: string;
+  title: string;
+type Experiment = {title: string,title: string,hypothesis?: string;
+  metric?: string;
+  effort?: number;impact?: number;
+}type Props = {updatedAt: string | null;
+items: Experiment[] }export default function CurationPage(): any ({ updatedAt, items }: Props) {return (type Experiment = {title: string,hypothesis?: string;
+  metric?: string;
+  effort?: number;
+  impact?: number;
+}type Props = {updatedAt: string | null,items: Experiment[];
+}updatedAt: string | null;
+items: Experiment[];
+}export default function CurationPage() {return (<main className='mx-auto max-w-4xl px-4 py-12'>;
+      <h1 className='text-2xl font-bold text-gray-900'>;
+        AI Curated Growth Experiments;
+      </h1>;
+        <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>;
+      ) : (<p className='mt-2 text-sm text-gray-600'>;
+=======
+        <p className='mt-2 text-sm text-gray-600'    />
+>>>>>>> origin/chore/fix-lint-and-merge
+          No curated output yet. It will appear here automatically after the;
+next run.
+        </p>
+      
 }
-type Props = {
-  updatedAt: string | null,
-  items: Experiment[]
-}
-      <div className='mt-6 space-y-4'>
-        {items.map((exp, idx) => (
-          <div
-            key={idx}'
+      <div className='mt-6 space-y-4'    />
+        {items.map((exp, idx) => (}
+          <div;}
+key={idx}
             className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'
               />
             <div className='text-base font-semibold text-gray-900'    />
@@ -52,68 +132,150 @@ type Props = {
                 {exp.hypothesis && (}
                   <div    />}
                     <span className='font-medium'    />Hypothesis: </span>{' '}
+<<<<<<< HEAD
                     {exp.hypothesis}
                   </div>
                 )}
                 {exp.metric && (}
                   <div    />}
                     <span className='font-medium'    />Metric:</span> {exp.metric}
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {}
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {}
+    if (this.state.hasError) {}
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React from "react",
+import fs from "fs";
+import path from "path";
+type Experiment = any;
+origin/cursor/automate-test-improve-and-merge-code-2533
+import React from 'react';
+import fs from 'fs';
+import path from 'path';
+
+type Experiment = {;
+  title: string;
+hypothesis?: string;
+metric?: string;
+effort?: number;
+
+impact?: number;
+}
+type Props = {}
+  updated_at: string | null;
+items: Experiment[] }
+  return (type Experiment = {}
+  title: string;
+  title: string;
+import React from "react";"
+import fs from "fs";"
+import path from "path";
+type Experiment = {}
+  title: string,
+
+  title: string,;
+
+  hypothesis?: string;
+  metric?: string;
+  effort?: number;
+
+impact?: number 
+};
+type Props = {;
+  updatedAt: string | null;
+items: Experiment[] };
+export default function CurationPage(): any ({ updatedAt, items }: Props) {;
+  return (type Experiment = {;
+  title: string,;
+  hypothesis?: string;
+  metric?: string;
+  effort?: number;
+  impact?: number
+};
+
+type Props = {;
+  updatedAt: string | null,;
+  items: Experiment[]
+};
+
+  updatedAt: string | null;
+items: Experiment[]
+};
+
+export default function CurationPage({ updatedAt, items }: Props) {
+  return (
+<main className='mx-auto max-w-4xl px-4 py-12'>
+      <h1 className='text-2xl font-bold text-gray-900'>
+        AI Curated Growth Experiments
+      </h1>
+        <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>
+      ) : (
+        <p className='mt-2 text-sm text-gray-600'>
+          No curated output yet. It will appear here automatically after the
+          next run.
+        </p>
+      )}
+origin/cursor/automate-test-improve-and-merge-code-2533
+      <div className='mt-6 space-y-4'>
+        {items.map((exp, idx) => (
+          <div;
+            key={idx}'
+            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'
+          >'
+            <div className='text-base font-semibold text-gray-900'>
+              {exp.title}
+            </div>
+            {(exp.hypothesis |exp.metric) && ('
+              <div className='mt-2 text-sm text-gray-700'>
+                {exp.hypothesis && (
+                  <div>
+                    <span className='font-medium'>"Hypothesis": </span>{' '}'
+                    {exp.hypothesis}
+                  </div>
+                )}
+                {exp.metric && (
+                  <div>'
+                    <span className='font-medium'>Metric:</span> {exp.metric}
+=======
+                    {exp.hypothesis}
+                  </div>
+                )}
+                {exp.metric && (}
+                  <div    />}
+                    <span className='font-medium'    />Metric:</span> {exp.metric}
+>>>>>>> origin/chore/fix-lint-and-merge
                   </div>
                 )}
               </div>
             )}
-<<<<<<< HEAD
             {(exp.effort |exp.impact) && (}
+<<<<<<< HEAD
               <div className='mt-2 text-xs text-gray-500' />}
+=======
+              <div className='mt-2 text-xs text-gray-500'    />}
+>>>>>>> origin/chore/fix-lint-and-merge
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? ' · ' : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : nul
-=======
-type Experiment = {
-  title: string
-hypothesis?: string
-metric?: string
-effort?: number
-impact?: number 
-}
-type Props = {
-  updatedAt: string | null
-items: Experiment[] 
-}
-export default function CurationPage ({
-  updatedAt, items 
-}: Props) {
-  return (<main className="mx-auto max-w-4xl px-4 py-12" > <h1 className="text-2xl font-bold text-gray-900" >AI Curated Growth Experiments</h1> updatedAt ? (<p className="mt-2 text-sm text-gray-600" >Last updated: {
-  updatedAt 
-}</p>) : (<p className="mt-2 text-sm text-gray-600" >No curated output yet. It will appear here automatically after the next run.</p>) 
-}</div>) 
-}</div>) ) 
-}Nothing to show yet. </div>) 
-}</div> </main>) 
-}return {
-  props: {
-  updatedAt: parsed.updatedAt || null
-items: parsed.items || [] 
-}
-revalidate: 300 
-}
-}catch {
-  return {
-  props: {
-  updatedAt: null
-items: [] 
-}
-revalidate: 300 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
 }
   return (
  ;
   return (
+<<<<<<< HEAD
     <main className='mx-auto max-w-4xl px-4 py-12' />;
-=======
             {(exp.effort |exp.impact) && ('
               <div className='mt-2 text-xs text-gray-500'>
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
   return (
@@ -132,62 +294,525 @@ revalidate: 300
       )}<div className='mt-6 space-y-4'    />
         {items.map((exp, idx) => (<div;}
             key={idx}
+            className=rounded-xl border border-gray-200 bg-white p-5 shadow-sm';
+          >;
+            <div className='text-base font-semibold text-gray-900>;
+              {exp.title}
+            </div>;
+            {(exp.hypothesis |exp.metric) && (<div className=mt-2 text-sm text-gray-700'>;
+                {exp.hypothesis && (<div>;
+                    <span className='font-medium>Hypothesis:</span>{ '}
+                    {exp.hypothesis}
+                  </div>;
+                )}
+                {exp.metric && (<div>;
+                    <span className='font-medium>Metric:</span> {exp.metric}
+=======
+    <main className='mx-auto max-w-4xl px-4 py-12'    />;
+
+      <h1 className='text-2xl font-bold text-gray-900'    />;
+        AI Curated Growth Experiments;
+      </h1>;
+        <p className='mt-2 text-sm text-gray-600'    />Last updated: {updatedA}
+}</p>;
+      ) : (<p className='mt-2 text-sm text-gray-600'    />;
+          No curated output yet. It will appear here automatically after the;
+          next run.;
+        </p>;
+      )}<div className='mt-6 space-y-4'    />;
+        {items.map((exp, idx) => (<div;}
+            key={idx}
             className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'    />
 
-            <div className='text-base font-semibold text-gray-900'    />
+            <div className='text-base font-semibold text-gray-900'    />;
               {exp.title}
-            </div>
+            </div>;
             {(exp.hypothesis |exp.metric) && (<div className='mt-2 text-sm text-gray-700'    />;}
                 {exp.hypothesis && (<div    />;}
                     <span className='font-medium'    />Hypothesis: </span>{' '}
                     {exp.hypothesi}
-
-                  </div>
+}
+                  </div>;
                 )}
                 {exp.metric && (<div    />;}
                     <span className='font-medium'    />Metric: </span> {exp.metri}
-
-                  </div>
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+                  </div>;
                 )}
-              </div>
+              </div>;
             )}
             {(exp.effort |exp.impact) && (<div className='mt-2 text-xs text-gray-500'    />;}
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? ' · ' : null}
                 {exp.impact ? `Impact: ${exp.impact}/5` : nul
-
-  return (return (<main className='mx-auto max-w-4xl px-4 py-12'    />
-      <h1 className='text-2xl font-bold text-gray-900'    />
-        AI Curated Growth Experiments
-      </h1>
+}
+  return (return (<main className='mx-auto max-w-4xl px-4 py-12'    />;
+      <h1 className='text-2xl font-bold text-gray-900'    />;
+        AI Curated Growth Experiments;
+      </h1>;
+<<<<<<< HEAD
+        <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>;
+      ) : (<p className='mt-2 text-sm text-gray-600'>;
+            {(exp.effort |exp.impact) && ('
+              <div className='mt-2 text-xs text-gray-500'>
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}
+                {exp.effort && exp.impact ? ' · ' : null}
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+  return (
+  return ('
+    <main className='mx-auto max-w-4xl px-4 py-12'>;'
+      <h1 className='text-2xl font-bold text-gray-900'>;
+        AI Curated Growth Experiments;
+      </h1>;'
+        <p className='mt-2 text-sm text-gray-600'>Last updated: {updatedAt}</p>;
+      ) : (;'
+        <p className='mt-2 text-sm text-gray-600'>;
+=======
         <p className='mt-2 text-sm text-gray-600'    />Last updated: {updatedA}
-}</p>
-      ) : (<p className='mt-2 text-sm text-gray-600'    />
-          No curated output yet. It will appear here automatically after the
-          next run.
-        </p>
+}</p>;
+      ) : (<p className='mt-2 text-sm text-gray-600'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
+          No curated output yet. It will appear here automatically after the;
+          next run.;
+        </p>;
       )}
-      <div className='mt-6 space-y-4'>
-        {items.map((exp, idx) => (
-          <div
+            key={idx}
+            className='rounded - xl border border - gray - 200 bg - white p - 5 shadow - sm'>
+
+            <div className='text - base font - semibold text - gray - 900'    />;
+              {exp.title}
+            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'>;
+            <div className='text-base font-semibold text-gray-900'    />;
+              {exp && exp.title}
+            </div>;
+            {(exp && exp.hypothesis || exp && exp.metric) && (<div className='mt-2 text-sm text-gray-700'    />;}
+                {exp && exp.hypothesis && (<div    />;<span className='font-medium'    />Hypothesis: </span>{' '}
+                    {exp && exp.hypothesi}
+}
+                  </div>;
+                )}
+<<<<<<< HEAD
+                {exp && exp.metric && (<div>;
+                    <span className='font-medium'>Metric:</span> {exp && exp.metric}
+=======
+                {exp && exp.metric && (<div    />;}
+                    <span className='font-medium'    />Metric: </span> {exp && exp.metri}
+}
+>>>>>>> origin/chore/fix-lint-and-merge
+                  </div>;
+                )}
+              </div>;
+            )}
+            )}
+          </div>;
+<<<<<<< HEAD
+        ))}
+        {!items && items.length && (<div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">;
+=======
+        ))}"
+        {!items && items.length && (<div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'    />            Nothing to show yet.          <div className=\"rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
+            Nothing to show yet.;
+          </div>;
+"
+export default function CurationPage() {return (<main className=\"mx-auto max-w-4xl px-4 py-12\"    />;"
+      <h1 className=\"text-2xl font-bold text-gray-900\"    />AI Curated Growth Experiments</h1>;}"
+      {updatedAt ? (<p className=\"mt-2 text-sm text-gray-600\"    />Last updated: {updatedA}
+}</p>;"
+      ) : (<p className=\"mt-2 text-sm text-gray-600\"    />No curated output yet. It will appear here automatically after the next run.</p>;
+      )}"
+      <div className=\"mt-6 space-y-4\"    />;"
+        {items.map((exp, idx) => (<div key={idx} className=\"rounded-xl border border-gray-200 bg-white p-5 shadow-sm\"    />;"
+            <div className=\"text-base font-semibold text-gray-900\"    />{exp.title}</div>;"
+            {(exp.hypothesis || exp.metric) && (<div className=\"mt-2 text-sm text-gray-700\"    />;}"
+                {exp.hypothesis && <div    /><span className=\"font-medium\"    />Hypothesis: </span> {exp.hypothesis}</div>}"
+                {exp.metric && <div    /><span className=\"font-medium\"    />Metric:</span> {exp.metric}</div
+}
+              </div>;
+            )}"
+            {(exp.effort || exp.impact) && (<div className=\"mt-2 text-xs text-gray-500\"    />;}
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}"
+                {exp.effort && exp.impact ? \" · \" : null}
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+                {exp.impact ? `Impact: ${exp.impact}/5` : nul
+}</div>;
+            )}
+          </div>;
+        ))}
+
+        {!items.length && (
+
+<div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'    />
+            Nothing to show yet.}
+}
+        )}
+      </div>
+    </main>
+  );
+
+export async function getStaticProps() {
+<<<<<<< HEAD
+  try {
+    const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json"),
+    const raw = fs.readFileSync($2);
+    const parsed = JSON.parse($2);
     return {
       props: {
-        updatedAt: null,}
-export async function getStaticProps() { return null; }
+        updatedAt: parsed.updatedAt || null,
+        items: parsed.items || []},
+      revalidate: 300}
+        {!items && items.length && (;'"
+          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.          <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">;
+            Nothing to show yet.;
+          </div>;
+export default function CurationPage({ updatedAt, items }: Props) {}
+  return ("
+    <main className="mx-auto max-w-4xl px-4 py-12">"
+      <h1 className="text-2xl font-bold text-gray-900">AI Curated Growth Experiments</h1>
+      {updatedAt ? ("
+        <p className="mt-2 text-sm text-gray-600">Last updated: {updatedAt}</p>
+      ) : ("
+        <p className="mt-2 text-sm text-gray-600">No curated output yet. It will appear here automatically after the next run.</p>
+      )}"
+      <div className="mt-6 space-y-4">
+        {items.map((exp, idx) => ("
+          <div key={idx} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">"
+            <div className="text-base font-semibold text-gray-900">{exp.title}</div>
+            {(exp.hypothesis || exp.metric) && ("
+              <div className="mt-2 text-sm text-gray-700">"
+                {exp.hypothesis && <div><span className="font-medium">Hypothesis:</span> {exp.hypothesis}</div>}"
+                {exp.metric && <div><span className="font-medium">Metric:</span> {exp.metric}</div>}
+              </div>
+            )}
+            {(exp.effort || exp.impact) && ("
+              <div className="mt-2 text-xs text-gray-500">`
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}"
+                {exp.effort && exp.impact ? " · " : null}`
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}`
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+
+}
+
+const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");"
+
+const raw = fs.readFileSync(filePath, "utf8");"
+=======
+  try {;
+"
+const filePath = path.join(process.cwd(), \"data\", \"ai-curation\", \"growth-experiments.json\");
+"
+const raw = fs.readFileSync(filePath, \"utf8\");
+>>>>>>> origin/chore/fix-lint-and-merge
+
+    const parsed = JSON.parse(raw);
+    );
+
+const raw = fs.readFileSync(filePath, 'utf8');
+
+const parsed = JSON.parse(raw);
+    return {
+      props: {
+<<<<<<< HEAD
+            </div>;
+            {(exp.hypothesis || exp.metric) && ('
+              <div className='mt - 2 text - sm text - gray - 700'>;
+                {exp.hypothesis && (
+                  <div>;'
+                    <span className='font - medium'>Hypothesis:</span>{' '}
+                    {exp.hypothesis}
+                  </div>)}
+                {exp.metric && (
+                  <div>;'
+                    <span className='font - medium'>Metric:</span> {exp.metric}
+                  </div>)}
+              </div>)}
+            {(exp.effort || exp.impact) && ('
+              <div className='mt - 2 text - xs text - gray - 500'>;`
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}'"`
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}`
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+              </div>)}
+          </div>))}
+        {!items.length && (
+          <div className='rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600'>            Nothing to show yet.          <div className="rounded - xl border border - gray - 200 bg - white p - 6 text - center text-gray-600">;
+            Nothing to show yet.;
+          </div>)}
+      </div>;
+    </main>);
+;
+export async /**;
+ * getStaticProps - Function description;
+ */
+function getStaticProps() {}
+  try {}
+    const file_path = path.join (
+      process.cwd (),'
+      'data','
+      'ai - curation','
+      'growth - experiments.json');'
+    const raw = fs.readFileSync (file_path, 'utf8');    const parsed = JSON.parse (raw);
+    return {}
+      props: {}
+        updated_at: parsed.updated_at || null,
+        items: parsed.items || [],
       },
       revalidate: 300,
-};        items: parsed && parsed.items || []},
+    return {}
+      props: {}
+        updated_at: null, }
+export async /**;
+ * getStaticProps - Function description;
+ */
+function getStaticProps() {}
+  try {"
+    const file_path = path.join (process.cwd (), "data", "ai - curation", "growth - experiments.json");"
+    const raw = fs.readFileSync (file_path, "utf8");
+    return {}
+      props: {}
+        updated_at: parsed.updated_at || null,
+        items: parsed.items || [],
+      },
+      revalidate: 300,
+    }        items: parsed.items || []},
+      revalidate: 300}
+  } catch {}
+    return {}
+      props: {}
+export async function getStaticProps() { return null; }
+      },;
+      revalidate: 300,
+};  } catch {;
+    return {;
+      props: {;
+        updatedAt: null,}
+export async function getStaticProps() { return null; }
+      },;
+      revalidate: 300,
+};        items: parsed && parsed.items || []},;
+      revalidate: 300}
+  } catch {;
+    return {;
+      props: {;
+        updatedAt: null,;
+        items: [],;
+      },;
+      revalidate: 300,
+};
+  }        items: []},;
+        updatedAt: null;
+        items: []
+      }
+      "props": {
+
+
+        "updatedAt": parsed.updatedAt || null,
+"items": parsed.items || []
+=======
+
+        updatedAt: parsed.updatedAt || null}
+items: parsed.items || []}
+>>>>>>> origin/chore/fix-lint-and-merge
+      },
+      revalidate: 300
+    };
+  } catch {
+    return {
+      props: {
+<<<<<<< HEAD
+        updatedAt: null,
+            </div>;
+            {(exp.hypothesis || exp.metric) && (
+              <div className='mt - 2 text - sm text - gray - 700'>;
+                {exp.hypothesis && (
+                  <div>;
+                    <span className='font - medium'>Hypothesis:</span>{' '}
+                    {exp.hypothesis}
+                  </div>)}
+                {exp.metric && (
+                  <div>;
+                    <span className='font - medium'>Metric:</span> {exp.metric}
+                  </div>)}
+              </div>)}
+            {(exp.effort || exp.impact) && (
+              <div className='mt - 2 text - xs text - gray - 500'>;
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+              </div>)}
+          </div>))}
+        {!items.length && (
+          <div className='rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600'>            Nothing to show yet.          <div className="rounded - xl border border - gray - 200 bg - white p - 6 text - center text-gray-600">;
+            Nothing to show yet.;
+          </div>)}
+      </div>;
+    </main>);
+;
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+  try {
+    const file_path = path.join (
+      process.cwd (),
+      'data',
+      'ai - curation',
+      'growth - experiments.json');
+    const raw = fs.readFileSync (file_path, 'utf8');    const parsed = JSON.parse (raw);
+    return {
+      props: {
+        updated_at: parsed.updated_at || null,
+        items: parsed.items || [],
+      },
+      revalidate: 300,
+    return {
+      props: {
+        updated_at: null, }
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+  try {
+    const file_path = path.join (process.cwd (), "data", "ai - curation", "growth - experiments.json");
+    const raw = fs.readFileSync (file_path, "utf8");
+    return {
+      props: {
+        updated_at: parsed.updated_at || null,
+        items: parsed.items || [],
+      },
+      revalidate: 300,
+    }        items: parsed.items || []},
       revalidate: 300}
   } catch {
     return {
       props: {
+
+export async function getStaticProps() {;
+  try {;
+    const filePath = path && path.join(;
+      process && process.cwd(),;
+      'data',;
+      'ai-curation',;
+      'growth-experiments && experiments.json';
+    );
+    const raw = fs && fs.readFileSync(filePath, 'utf8');    const parsed = JSON && JSON.parse(raw);
+    return {;
+      props: {;
+        updatedAt: parsed && parsed.updatedAt || null,;
+        items: parsed && parsed.items || [],;
+      },;
+      revalidate: 300,
+};  } catch {;
+    return {;
+      props: {;
+        updatedAt: null,}
+export async function getStaticProps() {;
+  try {;
+    const filePath = path && path.join(process && process.cwd(), "data", "ai-curation", "growth-experiments && experiments.json");
+    const raw = fs && fs.readFileSync(filePath, "utf8");
+    return {;
+      props: {;
+        updatedAt: parsed && parsed.updatedAt || null,;
+        items: parsed && parsed.items || [],;
+      },;
+      revalidate: 300,
+};        items: parsed && parsed.items || []},;
+      revalidate: 300}
+  } catch {;
+    return {;
+      props: {;
+        updatedAt: null,;
+        items: [],;
+      },;
+      revalidate: 300,
+};
+  }        items: []},;
         updatedAt: null
         items: []
       }
-      revalidate: 300
+      "props": {
+        }
+        "updatedAt": null,
+"items": []
+      },
+      revalidate: 300,
+    };
+  }        items: []},
+        updated_at: null,
+        items: [],
+      },
+      revalidate: 300,
     }
   }        items: []}
-
+=======
+        updatedAt: null}
+items: []}
+      },
+      revalidate: 300
+    };
+  }
       revalidate: 300}
 }
+>>>>>>> origin/chore/fix-lint-and-merge
+
+        updatedAt: null,
+        items: [],
+      },
+      revalidate: 300,
+    };
+  }        items: []},
+      revalidate: 300}
 }
+        {!items.length && (<div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.;
+<div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>;
+            Nothing to show yet.;
+        )}
+      </div>;
+    </main>;
+  )export async function getStaticProps() {try {const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json")const raw  = fs.readFileSync(filePath, "utf8")const parsed = JSON.parse(raw))const raw = fs.readFileSync(filePath, 'utf8')const parsed = JSON.parse(raw)return {props: {</div>;
+            {(exp.hypothesis || exp.metric) && (<div className='mt - 2 text - sm text - gray - 700'>;
+                {exp.hypothesis && (<div>;
+                    <span className='font - medium'>Hypothesis:</span>{' '}
+                    {exp.hypothesis}
+                  </div>)}
+                {exp.metric && (<div>;
+                    <span className='font - medium'>Metric:</span> {exp.metric}
+                  </div>)}
+              </div>)}
+            {(exp.effort || exp.impact) && (<div className='mt - 2 text - xs text - gray - 500'>;
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+              </div>)}
+          </div>))}
+        {!items.length && (<div className='rounded - xl border border - gray - 200 bg - white p - 6 text - center text - gray - 600'>            Nothing to show yet.          <div className="rounded - xl border border - gray - 200 bg - white p - 6 text - center text-gray-600">;
+            Nothing to show yet.;
+          </div>)}
+      </div>;
+    </main>)export async /**;
+ * getStaticProps - Function description;
+ */;
+function getStaticProps() {try {const file_path = path.join (process.cwd (),'data','ai - curation','growth - experiments.json')const raw = fs.readFileSync (file_path, 'utf8')const parsed = JSON.parse (raw)return {props: {updated_at: parsed.updated_at || null,items: parsed.items || [],},revalidate: 300,return {props: {updated_at: null, }
+export async /**;
+ * getStaticProps - Function description;
+ */;
+function getStaticProps() {try {const file_path = path.join (process.cwd (), "data", "ai - curation", "growth - experiments.json")const raw = fs.readFileSync (file_path, "utf8")return {props: {updated_at: parsed.updated_at || null,items: parsed.items || [],},revalidate: 300,}        items: parsed.items || []},revalidate: 300}
+  } catch {return {props: {export async function getStaticProps() {try {const filePath = path && path.join(process && process.cwd(),'data','ai-curation','growth-experiments && experiments.json';
+    )const raw = fs && fs.readFileSync(filePath, 'utf8')const parsed = JSON && JSON.parse(raw)return {props: {updatedAt: parsed && parsed.updatedAt || null,items: parsed && parsed.items || [],},revalidate: 300,}} catch {return {props: {updatedAt: null,}
+export async function getStaticProps() {try {const filePath = path && path.join(process && process.cwd(), "data", "ai-curation", "growth-experiments && experiments.json")const raw = fs && fs.readFileSync(filePath, "utf8")return {props: {updatedAt: parsed && parsed.updatedAt || null,items: parsed && parsed.items || [],},revalidate: 300,}items: parsed && parsed.items || []},revalidate: 300}
+  } catch {return {props: {updatedAt: null,items: [],},revalidate: 300,}}        items: []},updatedAt: null;
+        items: [];
+      }
+      revalidate: 300;
+    }
+  }        items: []}updatedAt: null,items: [],},revalidate: 300,}}        items: []},updated_at: null,items: [],},revalidate: 300,}
+  }        items: []}updatedAt: null,items: [],},revalidate: 300,}}        items: []},updatedAt: parsed.updatedAt || null,items: parsed.items || [],},revalidate: 300,}} catch {return {props: {updatedAt: null,items: [],},revalidate: 300,}}revalidate: 300}
+}
+        items: []},
+      revalidate: 300}
+  }
+}
+<<<<<<< HEAD
+=======
+}"
+>>>>>>> origin/chore/fix-lint-and-merge

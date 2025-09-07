@@ -8,11 +8,18 @@ const DataPipelineEngineeringChat: NextPage = () => ;
 
 ;
 
+<<<<<<< HEAD
+  return (<div>;
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
+=======
 const DataPipelineEngineeringChat: NextPage = () => ;
   return (<div />;
 import type { NextPage } from \"next\";
 import Head from \"next/head\";
 import Link from \"next/link\";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const DataPipelineEngineeringChat: NextPage = () => {;
   return (
@@ -92,6 +99,14 @@ name=\"description\"}
 
 export default DataPipelineEngineeringChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+=======
 const DataPipelineEngineeringChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -99,6 +114,7 @@ const DataPipelineEngineeringChat: NextPage = () => ;
         <title />DataPipelineEngineeringChat - Zion Tech Solutions</title>;
         <title />DataPipelineEngineeringChat - Zion Tech Solutions</title>;
         <title />DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
@@ -107,7 +123,11 @@ ursor/fix-website-loading-errors-and-merge-6662;
 export default DataPipelineEngineeringChat;
 
 
+<<<<<<< HEAD
+const "DataPipelineEngineeringChat": NextPage = () => {
+=======
 const DataPipelineEngineeringChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -120,6 +140,14 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+}
+return (;
+    <div>;
+      <Head>;
+        <title > DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+=======
 const DataPipelineEngineeringChat: NextPage = () => ;
   return (<div />;
 const DataPipelineEngineeringChat: NextPage = () => {
@@ -127,6 +155,7 @@ const DataPipelineEngineeringChat: NextPage = () => {
     <div />;
       <Head />;
         <title  /> DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";}
           content=\"DataPipelineEngineeringChat service\";}
@@ -154,10 +183,16 @@ export default DataPipelineEngineeringChat;<div />;
     </div>;
   )},export default DataPipelineEngineeringChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+=======
 const DataPipelineEngineeringChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />DataPipelineEngineeringChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";
           content=\"DataPipelineEngineeringChat service\";
@@ -181,7 +216,10 @@ export default DataPipelineEngineeringChat;<title />DataPipelineEngineeringChat 
 
 ;
 export default DataPipelineEngineeringChat;
+<<<<<<< HEAD
+=======
 const DataPipelineEngineeringChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -203,7 +241,10 @@ name=\"description\"}
 
 export default DataPipelineEngineeringChat;
 export default DataPipelineEngineeringChat;
+<<<<<<< HEAD
+=======
 const DataPipelineEngineeringChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -228,7 +269,10 @@ export default DataPipelineEngineeringChat;
         <title />DataPipelineEngineeringChat - Zion Tech Solutions</title>
         <title />DataPipelineEngineeringChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const DataPipelineEngineeringChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />

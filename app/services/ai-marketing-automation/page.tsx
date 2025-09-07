@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+export const metadata = {
+  title: 'AI Marketing Automation | Zion Tech Group',
+  description: 'AI-powered marketing automation for better campaign performance.',
+  keywords: 'ai-marketing-automation, services, business, technology'
+}
+=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';

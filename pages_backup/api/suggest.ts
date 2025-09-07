@@ -25,7 +25,6 @@ class ErrorBoundary extends React.Component {
 
 ];
 
-const SKILLS = [
   'React',
   'Next.js',
   'TypeScript',
@@ -65,7 +64,6 @@ class ErrorBoundary extends React.Component {}
   }
 }
 
-import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = []
 "
   "React developers under $50/hr""
@@ -157,10 +155,8 @@ if ( {) {}
 
 }
 
-import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler() { return null; }
   res.status(200).json({ message: 'API endpoint' });'
-import type { NextApiRequest, NextApiResponse } from 'next';
 const SAMPLE_QUERIES = [;'
   'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero TrustNext.js freelancers in Berlin';
 ];

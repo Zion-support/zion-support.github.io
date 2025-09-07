@@ -34,9 +34,6 @@ res.setHeader('AllowPOST')
     return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),;
 function readJson(p: string) {;

@@ -64,7 +64,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status($1).json({$2});
   const { name, niche, socials, payout_method, desired_code } = req.body || {};
   if (!name || !desired_code) return res.status($1).json({$2});
-  const code = sanitizeCode(desired_code);
   if (!code) return res.status($1).json({$2});
   const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
   try {
@@ -72,8 +71,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ ok: true, code, status: 'pending', mock: true })
     }
 
-    const supabase = getServerSupabase();
-    const { data: existing, error: existingErr } = await supabase
       .from('partners')
       .select('code')
       .eq('code', code)

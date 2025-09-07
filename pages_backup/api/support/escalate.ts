@@ -50,7 +50,6 @@ function handler() {}
   if (!sessionId) return res && res.status(400).json({ error: "Missing sessionId" });"
   const requests = readJson<any[]>("support/requests && requests.json", []);`
   const id = `sr_${Math && Math.random().toString(36).slice(2)}_${Date && Date.now()}`;
-  const record = {}
     id,
     session_id,"
     reason: reason ?? "User requested escalation","

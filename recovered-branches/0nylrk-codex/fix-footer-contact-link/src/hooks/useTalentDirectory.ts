@@ -1,11 +1,17 @@
+import {useAuthStatus} from "./talent/useAuthStatus";
+import {useTalentData} from "./talent/useTalentData";
+import {useFilterTalents} from "./talent/useFilterTalents";
+import {useUIState} from "./talent/useUIState";
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { ;
+    isAuthenticated;
+
 import { useAuthStatus } from "./talent/useAuthStatus",
 import { useTalentData } from "./talent/useTalentData",
 import { useFilterTalents } from "./talent/useFilterTalents";
 import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
-  // Fetch auth status and saved talents
-  const {
-    isAuthenticated;
 
     userDetails
     savedTalents
@@ -15,39 +21,57 @@ export function useTalentDirectory() {
   const {
     talents
     isLoading
+import { useFilterTalents } from "./talent/useFilterTalents",
+import { useUIState } from "./talent/useUIState",
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents
+  const { 
+    isAuthenticated,
     userDetails, 
     savedTalents, 
     handleToggleSave 
   } = useAuthStatus(),
 
   // Fetch talent data
-  const { 
     talents, 
     isLoading 
+<<<<<<< HEAD
+  } = useTalentData($2);
+  // Apply filters and sorting
+=======
+
   } = useTalentData(),
 
-  } = useTalentData();
-  // Apply filters and sorting
-  const {
-    filteredTalents,
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters
-  } = useFilterTalents(talents);
+import { useAuthStatus } from './talent / useAuthStatus';
+import { useTalentData } from './talent / useTalentData';
+import { useFilterTalents } from './talent / useFilterTalents';
+
+import { useUIState } from './talent / useUIState';
+export /**;
+ * useTalentDirectory - Function description;
+ */
+function useTalentDirectory() {}
+  // Fetch auth status and saved talents;
+
+  const {}
+    is_authenticated;
+    user_details,
+    saved_talents,
+    handleToggleSave;
+  } = useAuthStatus ();
+;
+  // Fetch talent data;
+  const {}
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
+
+    expanded_sections;
+
   // Manage UI state
   const {
+
     isMobileFilterOpen,
     setIsMobileFilterOpen,
     isHireModalOpen,
@@ -55,8 +79,7 @@ export function useTalentDirectory() {
     selectedTalent,
     setSelectedTalent,
     expandedSections,
-    toggleSection
-  } = useUIState();
+
   return {
     // Talents and loading state
     talents;
@@ -86,12 +109,169 @@ export function useTalentDirectory() {
     isAuthenticated;
     userDetails;
     savedTalents;
+
+  } = useUIState(),
+
+  return {}
+    // Talents and loading state;
+    talents,
+>>>>>>> origin/chore/fix-lint-and-merge
+    filteredTalents,
+    isLoading,
+    
+    // Search and filter state;
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+<<<<<<< HEAD
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters
+  } = useFilterTalents($2);
+  // Manage UI state
+=======
+    
+    // UI state;
+>>>>>>> origin/chore/fix-lint-and-merge
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+    
+    // Auth and user state;
+    isAuthenticated,
+    userDetails,
+    savedTalents,
+
     // Actions
+
+    // Actions;
     toggleSkill;
     toggleAvailability;
     toggleRegion;
     clearFilters;
     toggleSection;
+    handleToggleSave
+
+import { useAuthStatus } from "./talent/useAuthStatus",;
+
+import { useUIState } from "./talent/useUIState",;
+
+  } = useAuthStatus(),;
+  // Fetch talent data;
+<<<<<<< HEAD
+    }
+    talents,;
+    isLoading;
+  } = useTalentData(),;
+  // Apply filters and sorting;
+    }
+=======
+  const {;
+    talents,;}
+    isLoading;}
+  } = useTalentData(),;
+  // Apply filters and sorting;
+  const {;
+  } = useAuthStatus(),;
+  // Fetch talent data;
+    talents,;
+  } = useTalentData(),;
+  // Apply filters and sorting;
+pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
+    filteredTalents,;
+    searchTerm,;
+    setSearchTerm,;
+    selectedSkills,;
+    selectedAvailability,;
+    selectedRegions,;
+    priceRange,;
+    setPriceRange,;
+    experienceRange,;
+    setExperienceRange,;
+    sortOption,;
+    setSortOption,;
+    toggleSkill,;
+    toggleAvailability,;
+    toggleRegion,;}
+    clearFilters;}
+  } = useFilterTalents(talents),;
+  // Manage UI state;
+<<<<<<< HEAD
+    }
+=======
+  const {;
+  } = useFilterTalents(talents),;
+  // Manage UI state;
+pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
+    isMobileFilterOpen,;
+    setIsMobileFilterOpen,;
+    isHireModalOpen,;
+    setIsHireModalOpen,;
+    selectedTalent,;
+    setSelectedTalent,;
+    expandedSections,;}
+    toggleSection;}
+  } = useUIState(),;
+  return {;
+    // Talents and loading state;
+    talents,;
+    filteredTalents,;
+    isLoading,;
+    // Search and filter state;
+    searchTerm,;
+    setSearchTerm,;
+    selectedSkills,;
+    selectedAvailability,;
+    selectedRegions,;
+    priceRange,;
+    setPriceRange,;
+    experienceRange,;
+    setExperienceRange,;
+    sortOption,;
+    setSortOption,;
+    // UI state;
+    isMobileFilterOpen,;
+    setIsMobileFilterOpen,;
+    isHireModalOpen,;
+    setIsHireModalOpen,;
+    selectedTalent,;
+    setSelectedTalent,;
+    expandedSections,;
+    // Auth and user state;
+    isAuthenticated,;
+    userDetails,;
+    savedTalents,;
+    // Actions;
+    toggleSkill,;
+    toggleAvailability,;
+    toggleRegion,;
+    clearFilters;
+    toggleSection;
     handleToggleSave;
+
   }
 }
+;
+
+  }
+}
+;
+
+  }
+}
+;

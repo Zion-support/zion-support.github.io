@@ -33,7 +33,6 @@ export interface Benefit {
   title: string,
   description: string,
   icon?: React.ReactNode
-import React from 'react';
 export interface Benefit {
   title: string;,
   description: string;,

@@ -2,6 +2,7 @@ export type DesignMapSection = {_id: string
   title: string
   description?: string
   items: { id: string, title: string, description?: string }[]
+
 }
 
 export type DesignMap = {_route: string
@@ -117,17 +118,12 @@ export function getZionDesignMap(): DesignMap {_return {
 }
 
 export type TokenSet = {
-  colors: Record<string string>
-  typography: {
-    fontSizes: Record<string string>
+
   }
 }
 
 export async function buildTokenSet(): Promise<TokenSet> {
   // Dynamically import Tailwind config for color extraction
-  const tailwindConfig = require('../tailwind.config.js')
-  const extendedColors = tailwindConfig?.theme?.extend?.colors || {}
-  const colors: Record<string string> = {}
 
   function flattenColors(_prefix: string, _obj: unknown) {_Object.entries(obj || {}).forEach(_([key, _value]) => {_const _newKey = prefix ? `${prefix}.${_key}` : key
       if (typeof value === 'string') {_colors[newKey] = value} else if (typeof value === 'object') {_flattenColors(newKey, _value)}
@@ -143,7 +139,6 @@ export async function buildTokenSet(): Promise<TokenSet> {
 
 export type UIKitKind = 'tailwind' | 'chakra' | 'react'
 
-export function buildUIKit(kind: UIKitKind): Record<string string> {
   if (kind === 'tailwind') {
     return {
       'README.md': '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.components/Button.tsx': "export function Button({ children }: { children: React.ReactNode }) { return <button className=\"px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90\">{children}</button> }",
@@ -164,5 +159,5 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {_
     const _res = await fetch(`${base.replace(/\/$/, _'')}/api/design-tokens`)
     if (!res.ok) return null
     return (await res.json()) as Partial<TokenSet>
-  } catch {_return null}
+
 }

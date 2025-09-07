@@ -26,7 +26,6 @@ export default async function handler(
   }
   res.status(405).json({ error: "Method not allowed" });
 }
-  const store = getFraudStore();
   if (req.method === 'GET') {
     const userId = (req.query.userId as string) || '';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -47,7 +46,6 @@ export default async function handler(
   if (req.method === 'GET') {
     const { userId, optOut } = req.body || {};
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-    const updated = await store.setPrivacySettings(userId, optOut);
     return res.status(200).json(updated);
     } catch (error) {
     console.error("Error:", error);

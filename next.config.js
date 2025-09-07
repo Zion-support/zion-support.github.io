@@ -1,3 +1,200 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import bundleAnalyzer from '@next/bundle-analyzer';
+
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+const nextConfig = {
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: true,
+<<<<<<< HEAD
+  reactStrictMode: true,
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
+  trailingSlash: true,
+  images: {
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ziontechgroup.com',
+      },
+    ],
+  },
+=======
+  
+  // Disable linting during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Disable type checking during build
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  
+  // Webpack configuration to handle TypeScript and JSX
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Handle TypeScript files
+    config.module.rules.push({
+      test: /\.tsx?$/,
+      use: [
+        {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true,
+            compilerOptions: {
+              jsx: 'preserve',
+            },
+          },
+        },
+      ],
+    });
+    
+    return config;
+  },
+  
+  // Image optimization
+  images: {
+    domains: ['localhost'],
+    formats: ['image/webp', 'image/avif'],
+  },
+  
+  // Security headers
+=======
+
+const nextConfig = {
+  // Security configurations
+  poweredByHeader: false,
+  compress: true,
+  
+  // Headers for security
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-94b9
+>>>>>>> origin/chore/fix-lint-and-merge
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Frame-Options',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
+            value: 'DENY',
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'Referrer-Policy',
+<<<<<<< HEAD
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains',
+=======
+            value: 'origin-when-cross-origin',
+>>>>>>> origin/chore/fix-lint-and-merge
+          },
+        ],
+      },
+    ];
+  },
+<<<<<<< HEAD
+=======
+  
+  // Redirects
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
+  
+  
+  // Experimental features
+  experimental: {
+    optimizeCss: true,
+  },
+  
+  // Output configuration
+  output: 'standalone',
+  
+  // Trailing slash
+  trailingSlash: false,
+  
+  // Environment variables
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+  },
+};
+
+export default withBundleAnalyzer(nextConfig);
+=======
+            value: 'DENY'
+          },
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload'
+          }
+        ]
+      }
+    ];
+  },
+  
+  // Environment variables
+  env: {
+    NODE_ENV: 'production',
+    NEXT_TELEMETRY_DISABLED: '1'
+  }
+};
+
+module.exports = nextConfig;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-94b9
+=======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -10,49 +207,18 @@ const nextConfig = {
   typescript: { 
     ignoreBuildErrors: true 
   },
+  // Remove invalid/legacy experimental flags for Next 15
+  // Ensure standard Next.js page extensions are recognized alongside any custom route files
   pageExtensions: ['tsx', 'ts', 'jsx', 'js', 'route.tsx', 'route.ts'],
-  trailingSlash: true,
-  
-  // Performance optimizations
-  experimental: {
-    scrollRestoration: true,
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
-  },
-  
-  // Image optimization
   images: {
     domains: ["localhost", "ziontechgroup.com", "images.unsplash.com", "via.placeholder.com"],
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
     unoptimized: true
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production'
-  },
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
@@ -82,48 +248,6 @@ const nextConfig = {
       tls: false
     };
 
-    // Development watch options
-    if (dev) {
-      config.watchOptions = {
-        ignored: [
-          '**/node_modules/**',
-          '**/.git/**',
-          '**/pages_backup*/**',
-          '**/pages.*/**',
-          '**/pages-*/**',
-          '**/pages_disabled*/**',
-          '**/pages.disabled*/**',
-          '**/pages.broken*/**',
-          '**/pages.corrupted*/**',
-          '**/pages.old*/**',
-          '**/pages._*/**',
-          '**/pages.__*/**',
-          '**/backup-pages/**',
-          '**/src.pages.disabled/**',
-          '**/lib_backup*/**',
-          '**/src_backup*/**',
-          '**/corrupted-files-backup*/**',
-          '**/performance-reports*/**',
-          '**/log-analysis-reports*/**',
-          '**/link-reports*/**',
-          '**/lint-target*/**',
-          '**/monitoring*/**',
-          '**/pm2-automation*/**',
-          '**/automation/logs*/**',
-          '**/automation/backup*/**',
-          '**/performance-*.json',
-          '**/performance-*.js',
-          '**/performance-*.cjs',
-          '**/performance-*.sh',
-          '**/performance-*.html',
-          '**/performance-*.md',
-          '**/performance-*.txt'
-        ],
-        poll: 1000,
-        aggregateTimeout: 300
-      }
-    }
-
     return config;
   },
   onDemandEntries: {
@@ -132,6 +256,8 @@ const nextConfig = {
     // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2
   }
+>>>>>>> origin/chore/fix-lint-and-merge
 };
 
 export default nextConfig;
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834

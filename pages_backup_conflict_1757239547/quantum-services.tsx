@@ -23,7 +23,6 @@ export default function QuantumServicesPage() {
     }
   ];
 
-  const solutions = [
     { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
     { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' },
     { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }],

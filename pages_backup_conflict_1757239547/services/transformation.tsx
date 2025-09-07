@@ -22,8 +22,6 @@ import {
   TrendingUp
   Globe;
 } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
 export default function DigitalTransformationPage() {
   const services = [
     {
@@ -90,14 +88,12 @@ export default function DigitalTransformationPage() {
 
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {
   Rocket, Zap, Shield, Cpu, Database, Users,
   ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function DigitalTransformationPage() {
-  const services = [
     {
       title: "Digital Strategy & Roadmap",
       description: "Comprehensive digital transformation strategy and implementation planning",
@@ -132,7 +128,6 @@ export default function DigitalTransformationPage() {
     },;
   ];
 
-  const stats = [
     { number: "500+", label: "Transformations Completed", icon: Rocket },
     { number: "40%", label: "Average Cost Reduction", icon: TrendingUp },
     { number: "300%", label: "ROI Improvement", icon: Star },

@@ -36,7 +36,6 @@ export default function TalentDashboard() {
   const toggle = (key: StepKey) =>
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 
-import { useEffect, useState } from 'react';
 const STEPS = [;
   { key: 'profile', label: 'Profile completed' },;
   { key: 'skills', label: 'Skills added' },;
@@ -48,7 +47,6 @@ export default function TalentDashboard(req, res) {
   const [completed, setCompleted] = useState<Record<StepKey boolean>>({ profile: false, skills: false, availability: false, match: false }),;
   useEffect(() => {;
     try {
-      const raw = window.localStorage.getItem('onboarding.talent');
       if (raw) setCompleted(JSON.parse(raw));
     } catch {  } catch (error) {
     console.error("Error:", error);

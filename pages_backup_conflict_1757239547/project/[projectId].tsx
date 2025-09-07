@@ -4,8 +4,6 @@ import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage() {
   const router = null;
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage() {
   const router = useRouter()
   const { projectId } = router.query as { projectId?: string }
@@ -26,7 +24,6 @@ export default function ProjectPage() {
   const [loading, setLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
   const [note, setNote] = useState(""),
-  const headers = {
     "x-demo-user-role": "client",
     "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
@@ -63,7 +60,6 @@ export default function ProjectPage() {
       method: "PATCH"
       headers: { "Content-Type": "application/json", ...headers }
       body: JSON.stringify({ id: projectId, action: "add_note", content: note })})
-    const json = await res.json()
     if (json.ok) {
       setProject(json.project)
       setNote("")
@@ -71,11 +67,9 @@ export default function ProjectPage() {
     }
   }
   async function markCompleted() {
-    const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH"
       headers: { "Content-Type": "application/json", ...headers }
       body: JSON.stringify({ id: projectId, action: "mark_completed" })})
-    const json = await res.json()
   }
 }
     } catch (error) {
@@ -84,7 +78,6 @@ export default function ProjectPage() {
   }
 }
   async function markCompleted() {
-    const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
       body: JSON.stringify({ id: projectId, action: "mark_completed" })}),

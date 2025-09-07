@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+export const metadata = {
+=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -52,5 +55,9 @@ export default function AicontentgeneratorPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  )
+=======
   );
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 }

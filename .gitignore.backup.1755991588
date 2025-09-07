@@ -54,5 +54,6 @@ automation/logs/autonomous-system.log .next/
 # Allow committing workspace VSCode config
 !/.vscode
 !/.vscode/extensions.json
+
 !/.vscode/settings.json
 !/.vscode/settings.json

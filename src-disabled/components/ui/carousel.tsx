@@ -56,8 +56,6 @@ type CarouselContextProps = {carouselRef: ReturnType<typeof useEmblaCarousel />[
   orientation: \"horizontal\" | \"vertical\";}
 } & Omit<CarouselProps \"orientation\" />;
 
-const CarouselContext = React.createContext<CarouselContextProps | null />(null)function useCarousel(): CarouselContextProps ;
-  const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {throw new Error(\"useCarousel must be used within a <Carousel />\")}return context as CarouselContextProps;
 }
 

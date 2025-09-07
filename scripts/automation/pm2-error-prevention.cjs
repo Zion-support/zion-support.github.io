@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
@@ -11,31 +22,35 @@ const { execSync } = require("child_process")
   console.log(" Starting PM2 Error Prevention Automation...")
   "name": "error-prevention"
       "script": """scripts/automation/pm2-error-prevention.cjs"""
+>>>>>>> origin/chore/fix-lint-and-merge
       "instances"
-      "autorestart"
+      autorestart
       "watch"
-      "max_memory_restart": "1G"
-      "env"
+      max_memory_restart: "1G"
+      env
   NODE_ENV: "development"
-        "PM2_ERROR_PREVENTION": "true"
-  "name": "error-prevention"
-      "script": ""scripts/automation/pm2-error-prevention.cjs""
+        PM2_ERROR_PREVENTION: "true"
+  name: "error-prevention"
+      script: ""scripts/automation/pm2-error-prevention.cjs
       "instances"
-      "autorestart"
+      autorestart
       "watch"
-      "max_memory_restart": "1G"
-      "env"
+      max_memory_restart: "1G"
+      env
   NODE_ENV: "development"
-        "PM2_ERROR_PREVENTION": "true"
-      this.projectRoot,ecosystem-error-prevention.config.cjs"
-// console.log("" PM2 ecosystem configuration created")
-    console.log(" PM2 ecosystem configuration created")
-  console.error(" Error in prevention "loop": ")
-  console.error(" Error in prevention "loop": ")
-  console.log("" Running error prevention checks...")
-    // Check "1"
-// console.log("" Prevention checks completed")
+        PM2_ERROR_PREVENTION: "true"
+      this.projectRoot,ecosystem-error-prevention.config.cjs
+// console.log(" PM2 ecosystem configuration created")
+    console.log( PM2 ecosystem configuration created)
+  console.error(" Error in prevention "loop: )
+  console.error(" Error in prevention "loop: )
+  console.log("" Running error prevention checks...)
+    // Check 1"
+// console.log(" Prevention checks completed)
     console.log(" Prevention checks completed")
+<<<<<<< HEAD
+
+=======
   const result = execSync("npm run type-check")
   "cwd"
         "encoding": "utf8"
@@ -79,78 +94,86 @@ const { execSync } = require("child_process")
       const unusedImportCount = (result.match(/"unused/g")
       if (unusedImportCount > 0) {console.log(⚠  Found ${unusedImportCount} unused imports")
 // console.log(" No unused imports found")
+>>>>>>> origin/chore/fix-lint-and-merge
       console.log(")
-// console.log(" No unused imports found")
+// console.log( No unused imports found)
       console.log("⚠  Linting check failed, may indicate issues")
-  console.log(" Auto-fixing TypeScript errors...")
-      execSync("node ""scripts/automation/comprehensive-error-fixer.cjs""")
-  "cwd"
-        "stdio": "inherit"
+  console.log( Auto-fixing TypeScript errors...)
+      execSync("node "scripts/automation/comprehensive-error-fixer.cjs"")
+  cwd
+        "stdio": inherit
       console.log(" TypeScript errors auto-fixed")
-  console.error(" Failed to auto-fix TypeScript "errors": ")
-  console.error(" Failed to auto-fix TypeScript "errors": ")
-  console.log(" Auto-fixing import issues...")
-      execSync("node ""scripts/automation/fix-imports.cjs""")
-  "cwd"
-        "stdio": "inherit"
+  console.error( Failed to auto-fix TypeScript errors": ")
+  console.error( Failed to auto-fix TypeScript errors": ")
+  console.log( Auto-fixing import issues...)
       execSync("node "scripts/automation/fix-imports.cjs"")
+  cwd
+        "stdio": inherit
+      execSync("node "scripts/automation/fix-imports.cjs)
   "cwd"
-        "stdio": "inherit"
-      console.log(" Import issues auto-fixed")
-  console.error(" Failed to auto-fix import "issues": ")
-  console.error(" Failed to auto-fix import "issues": ")
+        stdio: "inherit"
+      console.log( Import issues auto-fixed)
+  console.error(" Failed to auto-fix import "issues: )
+  console.error(" Failed to auto-fix import "issues: )
   console.log(" Auto-fixing syntax issues...")
-      execSync("node ""scripts/automation/fix-syntax.cjs""")
+      execSync(node "scripts/automation/fix-syntax.cjs")
   "cwd"
-        "stdio": "inherit"
-      execSync("node "scripts/automation/fix-syntax.cjs"")
-  "cwd"
-        "stdio": "inherit"
+        stdio: "inherit"
+      execSync(node scripts/automation/fix-syntax.cjs"")
+  cwd
+        "stdio": inherit
       console.log(" Syntax issues auto-fixed")
-  console.error(" Failed to auto-fix syntax "issues": ")
-  console.error(" Failed to auto-fix syntax "issues": ")
-  console.log(" Auto-fixing unused imports...")
+  console.error( Failed to auto-fix syntax issues": ")
+  console.error( Failed to auto-fix syntax issues": ")
+  console.log( Auto-fixing unused imports...)
       execSync("npm run lint -- --fix")
-  "cwd"
-        "stdio": "inherit"
+  cwd
+        "stdio": inherit
       execSync("npm run lint -- --fix")
-  "cwd"
-        "stdio": "inherit"
+  cwd
+        "stdio": inherit
       console.log(" Unused imports auto-fixed")
-  console.error(" Failed to auto-fix unused "imports": ")
-  console.error(" Failed to auto-fix unused "imports": ")
-          !item.startsWith(".")
+  console.error( Failed to auto-fix unused imports": ")
+  console.error( Failed to auto-fix unused imports": ")
+          !item.startsWith(.)
           item !== "node_modules"
-  scanDirectory(fullPath)} else if (item.endsWith(".tsx") || item.endsWith(".ts")
-    scanDirectory(path.join(this.projectRoot, "src")
+  scanDirectory(fullPath)} else if (item.endsWith(.tsx) || item.endsWith(".ts")
+    scanDirectory(path.join(this.projectRoot, src)
 // console.log(" PM2 Error Prevention started")
-  console.log("� PM2 Error Prevention stopped")
+  console.log(� PM2 Error Prevention stopped)
   console.log("� PM2 Error Prevention restarted")
-process.on("SIGINT")
+process.on(SIGINT)
   console.log("� Received SIGINT, shutting down gracefully...")
+<<<<<<< HEAD
+process.on(SIGTERM)
+
+=======
 process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> origin/chore/fix-lint-and-merge
 
+=======
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
+
+  console.log(� Received SIGTERM, shutting down gracefully...)
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.log("� Received SIGTERM, shutting down gracefully...")
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -158,6 +181,3 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

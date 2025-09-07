@@ -1,31 +1,153 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class ComprehensiveTestAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();
 
     dirs.forEach(dir => {})
       const dirPath = path.join(this.projectRoot, dir;);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if () {}
-        fs.mkdirSync(dirPath, { "recursive": true })};"
-    })};"
-  log(message, level = 'INFO') {}
+        fs.mkdirSync(dirPath, { "recursive: true })}
+    })}"
+  log(message, level = INFO') {}
     const timestamp = new Date().toISOString() {}
     ) {}
 
     const timestamp = new Date().toISOString(})
 });
+<<<<<<< HEAD
+
+    console.log(logMessage);
+    try {}
+
+        "stdio: 'pipe,
+        timeout": 120000;
+      }
+});
+      this.results.tests.push({ "type: unit-tests', status": 'passed }
+});
+      this.log(Unit tests passed');
+      return { "status: 'passed }} catch(error) {}
+      this.results.tests.push({ type": unit-tests', "status: 'failed, error": error.message }
+});
+      this.log(`Unit tests "failed: ${error.message}`, ERROR');
+      return { status": 'failed, "error: error.message }}
+  }
+  async runTypeChecking() {}
+    this.log(Running TypeScript type checking...');
+    try {}
+      execSync('npx tsc --noEmit, {})
+
+        stdio": pipe',
+        "timeout: 60000;
+      }
+});
+      this.results.tests.push({ type": 'type-checking, "status: passed' }
+});
+      this.log('Type checking passed);
+      return { status": passed' }} catch(error) {}
+      this.results.tests.push({ "type: 'type-checking, status": failed', "error: error.message }
+});
+      this.log(`Type checking failed": ${error.message}`, 'ERROR);
+      return { "status: failed', error": error.message }}
+  }
+  async runLinting() {}
+    this.log('Running ESLint...);
+    try {}
+      execSync(npx eslint . --max-warnings 0', {})
+
+        "stdio: 'pipe,
+        timeout": 60000;
+      }
+});
+      this.results.tests.push({ "type: linting', status": 'passed }
+});
+      this.log(Linting passed');
+      return { "status: 'passed }} catch(error) {}
+      this.results.tests.push({ type": linting', "status: 'failed, error": error.message }
+});
+      this.log(`Linting "failed: ${error.message}`, ERROR');
+      return { status": 'failed, "error: error.message }}
+  }
+  async runBuildTest() {}
+    this.log(Running build test...');
+    try {}
+      execSync('npm run build, {})
+
+        stdio": pipe',
+        "timeout: 300000;
+      }
+});
+      this.results.tests.push({ type": 'build-test, "status: passed' }
+});
+      this.log('Build test passed);
+      return { status": passed' }} catch(error) {}
+      this.results.tests.push({ "type: 'build-test, status": failed', "error: error.message }
+});
+      this.log(`Build test failed": ${error.message}`, 'ERROR);
+      return { "status: failed', error": error.message }}
+  }
+  async runPerformanceTests() {}
+    this.log('Running performance tests...);
+    const performanceResults = ;{}
+
+
+        "encoding": 'utf8',
+        "stdio": 'pipe',
+        "timeout": 300000;
+=======
+        "encoding: utf8',
+        stdio": 'pipe,
+        "timeout: 300000;
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
+      });
+
+=======
     const logMessage = `[${timestamp}] [${level}] ${message};;`
     console.log(logMessage);
     try {}
+<<<<<<< HEAD
       fs.appendFileSync(this.logFile, logMessage + '\n')} catch(error) {}
       console.error('Failed to write to log "file": ', error.message)};
   };
@@ -33,7 +155,11 @@ class ComprehensiveTestAutomation {}
     this.log('Running unit tests...');
     try {}
       execSync('npm test -- --coverage --watchAll=false', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "stdio": 'pipe',
         "timeout": 120000;
       }
@@ -51,7 +177,11 @@ class ComprehensiveTestAutomation {}
     this.log('Running TypeScript type checking...');
     try {}
       execSync('npx tsc --noEmit', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -69,7 +199,11 @@ class ComprehensiveTestAutomation {}
     this.log('Running ESLint...');
     try {}
       execSync('npx eslint . --max-warnings 0', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "stdio": 'pipe',
         "timeout": 60000;
       }
@@ -87,7 +221,11 @@ class ComprehensiveTestAutomation {}
     this.log('Running build test...');
     try {}
       execSync('npm run build', { })
+<<<<<<< HEAD
         "cwd": this.projectRoot,
+=======
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "stdio": 'pipe',
         "timeout": 300000;
       }
@@ -104,26 +242,51 @@ class ComprehensiveTestAutomation {}
   async runPerformanceTests() {}
     this.log('Running performance tests...');
     const performanceResults = ;{};
+<<<<<<< HEAD
     try {}
       // Check bundle size;
       const buildOutput = execSync('npm run build', { })
         "cwd": this.projectRoot,
+=======
+
+    try {}
+      // Check bundle size;
+      const buildOutput = execSync('npm run build', { })
+        "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         "encoding": 'utf8',
         "stdio": 'pipe',
         "timeout": 300000;
+=======
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       };);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Extract bundle size information;
       const bundleSizeMatch = buildOutput.match(/First Load JS shared by all\s+(\d+\.?\d*)\s+kB;/;);
       if ( {})
         performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])) {}
      {}
-        performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])};"`;
-        this.log(`Bundle "size": ${performanceResults.bundleSize} kB`)};"
+        performanceResults.bundleSize = parseFloat(bundleSizeMatch[1])}`;
+        this.log(`Bundle "size": ${performanceResults.bundleSize} kB`)}
       // Check for large pages;
       const pageSizeMatches = buildOutput.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB/;g;);
         performanceResults.pageSizes = pageSizeMatches.map(match => {})
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB) {}
+<<<<<<< HEAD
+
+    try {}
+      // Check for alt text in images;
+      const pagesDir = path.join(this.projectRoot, pages';);
+      const componentsDir = path.join(this.projectRoot, 'components;);
+          const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);
+          return { "page": parts[1], size: parseFloat(parts[2]) }})}"
+=======
+<<<<<<< HEAD
      {}
         performanceResults.pageSizes = pageSizeMatches.map(match => {})
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);
@@ -141,118 +304,206 @@ class ComprehensiveTestAutomation {}
   async runAccessibilityTests() {}
     this.log('Running accessibility tests...');
     const accessibilityResults = ;{};
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       // Check for alt text in images;
       const pagesDir = path.join(this.projectRoot, 'pages';);
       const componentsDir = path.join(this.projectRoot, 'components';);
+=======
           const parts = match.match(/(\w+)\s+\([^)]+\)\s+(\d+\.?\d*)\s+kB}/;);"
           return { "page": parts[1], "size": parseFloat(parts[2]) }})};"
+>>>>>>> origin/chore/fix-lint-and-merge
       this.results.performance = performanceResults;"
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       let totalImages = ;0;
       let imagesWithAlt = ;0;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       [pagesDir, componentsDir].forEach(dir => {})
           const files = this.findReactFiles(dir) {}
           const files = this.findReactFiles(dir})
 
             const images = content.match(/<img[^>]*>/g) || [];
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
             totalImages += images.length;
             const altTexts = content.match(/alt\s*=\s*["'][^"']*["']/g) || [];
             imagesWithAlt += altTexts.length})};
       }
 });
+<<<<<<< HEAD
       accessibilityResults.totalImages = totalImages;
       accessibilityResults.imagesWithAlt = imagesWithAlt;
       accessibilityResults.altTextCoverage = totalImages > 0 ? Math.round((imagesWithAlt / totalImages) * 100) : 100;
+=======
+
+      accessibilityResults.totalImages = totalImages;
+      accessibilityResults.imagesWithAlt = imagesWithAlt;
+      accessibilityResults.altTextCoverage = totalImages > 0 ? Math.round((imagesWithAlt / totalImages) * 100) : 100;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Check for heading structure;
       let headingStructure = [];
       [pagesDir, componentsDir].forEach(dir => {})
         if () {}
-          const files = this.findReactFiles(dir) {}
     ) {}
           const files = this.findReactFiles(dir}
 });
           files.forEach(file => {})
-            const content = fs.readFileSync(file, 'utf8';);
+            const content = fs.readFileSync(file, utf8';);
             const headings = content.match(/<h[1-6][^>]*>/g) || [];
-            headingStructure.push(...headings)})};
+            headingStructure.push(...headings)})}
       }
 });
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
       accessibilityResults.headingStructure = headingStructure;
+=======
+
+      accessibilityResults.headingStructure = headingStructure;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       this.results.accessibility = accessibilityResults;
-      this.results.tests.push({ "type": 'accessibility-tests', "status": 'passed' }
+      this.results.tests.push({ type: 'accessibility-tests, "status": passed' }
 });
-      this.log(`Accessibility tests completed - Alt text "coverage": ${accessibilityResults.altTextCoverage}%`);
-      return { "status": 'passed', "results": accessibilityResults }} catch(error) {}
-      this.results.tests.push({ "type": 'accessibility-tests', "status": 'failed', "error": error.message }
+      this.log(`Accessibility tests completed - Alt text coverage: ${accessibilityResults.altTextCoverage}%`);
+      return { "status": 'passed, results: accessibilityResults }} catch(error) {}
+      this.results.tests.push({ "type": accessibility-tests', status: 'failed, "error": error.message }
 });
-      this.log(`Accessibility tests "failed": ${error.message}`, 'ERROR');
-      return { "status": 'failed', "error": error.message }};
-  };
+      this.log(`Accessibility tests failed: ${error.message}`, ERROR');
+      return { "status": 'failed, error: error.message }}
+  }
   async runSecurityTests() {}
+<<<<<<< HEAD
+    this.log(Running security tests...');
+    const securityResults = ;{}
+
+    try {}
+      // Run npm audit;
+      try {}
+        execSync('npm audit --audit-level=moderate, {})
+
+          "stdio": pipe',
+          timeout: 60000;
+=======
     this.log('Running security tests...');
     const securityResults = ;{};
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     try {}
       // Run npm audit;
       try {}
         execSync('npm audit --audit-level=moderate', { })
+<<<<<<< HEAD
           "cwd": this.projectRoot,
+=======
+          "cwd": this.projectRoot, 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
           "stdio": 'pipe',
           "timeout": 60000;
+>>>>>>> origin/chore/fix-lint-and-merge
         }
 });
-        securityResults.auditStatus = 'clean';
-        this.log('Security audit passed')} catch(auditError) {}
-        securityResults.auditStatus = 'issues-found';
-        this.log('Security audit found issues', 'WARN')};
+        securityResults.auditStatus = 'clean;
+        this.log(Security audit passed')} catch(auditError) {}
+        securityResults.auditStatus = 'issues-found;
+        this.log(Security audit found issues', 'WARN)}
       // Check for security headers in next.config.js;
-      const nextConfigPath = path.join(this.projectRoot, 'next.config.js';);
+      const nextConfigPath = path.join(this.projectRoot, next.config.js';);
       if () {}
         const nextConfig = fs.readFileSync(nextConfigPath, 'utf8') {}
     ) {}
-        const nextConfig = fs.readFileSync(nextConfigPath, 'utf8'}
+        const nextConfig = fs.readFileSync(nextConfigPath, utf8'}
 });
-        securityResults.hasSecurityHeaders = nextConfig.includes('securityHeaders')};
+        securityResults.hasSecurityHeaders = nextConfig.includes('securityHeaders)}
       this.results.security = securityResults;
-      this.results.tests.push({ "type": 'security-tests', "status": 'passed' }
+      this.results.tests.push({ "type": security-tests', status: 'passed }
 });
-      this.log('Security tests completed');
-      return { "status": 'passed', "results": securityResults }} catch(error) {}
-      this.results.tests.push({ "type": 'security-tests', "status": 'failed', "error": error.message }
+      this.log(Security tests completed');
+      return { "status": 'passed, results: securityResults }} catch(error) {}
+      this.results.tests.push({ "type": security-tests', status: 'failed, "error": error.message }
 });
-      this.log(`Security tests "failed": ${error.message}`, 'ERROR');
-      return { "status": 'failed', "error": error.message }};
-  };
+      this.log(`Security tests failed: ${error.message}`, ERROR');
+      return { "status": 'failed, error: error.message }}
+  }
   findReactFiles(dir) {}
     const files = [];
     const items = fs.readdirSync(dir;);
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     items.forEach(item => {})
       const fullPath = path.join(dir, item;);
       const stat = fs.statSync(fullPath;);
+=======
+    
+    items.forEach(item => {})
+      const fullPath = path.join(dir, item;);
+      const stat = fs.statSync(fullPath;);
+      
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if () {}
-        files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
-        files.push(fullPath)};
+        files.push(...this.findReactFiles(fullPath))} else if (item.endsWith(.tsx') || item.endsWith('.jsx) || item.endsWith(.ts') || item.endsWith('.js)) {}
+        files.push(fullPath)}
     })) {}
     ) {}
-        files.push(...this.findReactFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.js')) {}
-        files.push(fullPath)};
-    })};
-    return files};
+        files.push(...this.findReactFiles(fullPath))} else if (item.endsWith(.tsx') || item.endsWith('.jsx) || item.endsWith(.ts') || item.endsWith('.js)) {}
+        files.push(fullPath)}
+    })}
+    return files}
   generateSummary() {}
     const totalTests = this.results.tests.lengt;h;
-    const passedTests = this.results.tests.filter(test => test.status === 'passed').lengt;h;
-    const failedTests = this.results.tests.filter(test => test.status === 'failed').lengt;h;
+    const passedTests = this.results.tests.filter(test => test.status === passed').lengt;h;
+    const failedTests = this.results.tests.filter(test => test.status === 'failed).lengt;h;
     const successRate = totalTests > 0 ? Math.round((passedTests / totalTests) * 100) :;0;
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     this.results.summary = {}
       totalTests,
       passedTests,
       failedTests,
       successRate,
       "timestamp": new Date().toISOString();
+<<<<<<< HEAD
+    }
+
+    this.log(`Test Summary: ${passedTests}/${totalTests} tests passed (${successRate}%)`)}
+=======
     };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     this.log(`Test "Summary": ${passedTests}/${totalTests} tests passed (${successRate}%)`)};
+>>>>>>> origin/chore/fix-lint-and-merge
   async run() {}
-    this.log('Starting Comprehensive Test Automation...');
+    this.log(Starting Comprehensive Test Automation...');
     try {}
       await this.runTypeChecking();
       await this.runLinting();
@@ -260,24 +511,47 @@ class ComprehensiveTestAutomation {}
       await this.runPerformanceTests();
       await this.runAccessibilityTests();
       await this.runSecurityTests();
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
       this.generateSummary();
+=======
+
+      this.generateSummary();
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Save results;
-      const reportFile = path.join(this.projectRoot, 'test-results', 'comprehensive-test-report.json';);
+      const reportFile = path.join(this.projectRoot, 'test-results, comprehensive-test-report.json';);
       fs.writeFileSync(reportFile, JSON.stringify(this.results, null, 2));
       this.log(`Test report saved to ${reportFile}`);
+<<<<<<< HEAD
+
+      this.log('Comprehensive Test Automation completed successfully!);
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       this.log('Comprehensive Test Automation completed successfully!');
+>>>>>>> origin/chore/fix-lint-and-merge
       return this.results} catch(error) {}
-      this.log(`Comprehensive Test Automation "failed": ${error.message}`, 'ERROR');
-      throw error};
-  };
-};
+      this.log(`Comprehensive Test Automation "failed": ${error.message}`, ERROR');
+      throw error}
+  }
+}
 if ( {})
   const testAutomation = new ComprehensiveTestAutomation) {}
      {}
   const testAutomation = new ComprehensiveTestAutomation}(;);
+<<<<<<< HEAD
+  testAutomation.run().catch(console.error)}
+
+=======
+
+=======
   testAutomation.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -287,9 +561,7 @@ module.exports = ComprehensiveTestAutomation;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = ComprehensiveTestAutomation;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -298,12 +570,14 @@ module.exports = ComprehensiveTestAutomation;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+
+module.exports = ComprehensiveTestAutomation;
 =======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-
-module.exports = ComprehensiveTestAutomation;
-
-module.exports = ComprehensiveTestAutomation;
 </img>
+<<<<<<< HEAD
+=======
             const headings = content.match(/<h[1-6][^>]*>/g) || [];
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

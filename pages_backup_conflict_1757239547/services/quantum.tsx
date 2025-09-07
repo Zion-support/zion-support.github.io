@@ -22,8 +22,6 @@ import {
   Clock
   TrendingUp;
 } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
 export default function QuantumServicesPage() {
   const services = [
     {
@@ -90,14 +88,12 @@ export default function QuantumServicesPage() {
 
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import {
   Atom, Cpu, Shield, Rocket, Zap, Database,
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function QuantumServicesPage() {
-  const services = [
     {
       title: "Quantum Algorithm Development",
       description: "Custom quantum algorithms designed for specific business problems",
@@ -132,7 +128,6 @@ export default function QuantumServicesPage() {
     },;
   ];
 
-  const stats = [
     { number: "100+", label: "Quantum Algorithms", icon: Atom },
     { number: "99.99%", label: "Security Guarantee", icon: Shield },
     { number: "10x", label: "Performance Boost", icon: TrendingUp },

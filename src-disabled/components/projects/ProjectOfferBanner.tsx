@@ -202,15 +202,12 @@ const handleViewOffer = (project_id:,  string) =>: any {,
     </div>;
   );
 }, [projects, isLoading]);
-const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;,
   e && e.stopPropagation ();
 setDismissed (prev => {;
-  const updated = new Set (prev);
 updated && updated.add (projectId);
 return updated;
 }) ;
 };
-const handleViewOffer = (projectId:,  string) => {;,
   router && router.push (`/project/$ {;`
   projectId ;
 }`) ;`
@@ -239,19 +236,10 @@ if () ) {) {
 }
 ;
 
-import { useEffect, useState } from "react";
 import { useRouter  } from 'next/router';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Bell, Calendar, X } from 'lucide-react'
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { useProjects } from "@/hooks/useProjects",;
-import { Project } from "@/types/projects",;
 export function ProjectOfferBanner() {
-  const router = useRouter(),
-  const { projects, isLoading } = useProjects(),
-  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),
-  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),
   useEffect(() => {
   const router = null;
 
@@ -341,7 +329,6 @@ export function ProjectOfferBanner() {
 const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {
   e.stop_propagation ();
 set_dismissed (prev => {
-  const updated = new Set (prev);
 updated.add (project_id);
 return updated;
 });
@@ -357,7 +344,6 @@ const handleViewOffer = (project_id: string) =>: any {
 const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;
   e && e.stopPropagation ();
 setDismissed (prev => {;
-  const updated = new Set (prev);
 updated && updated.add (projectId);
     </div>
   );
@@ -366,7 +352,6 @@ updated && updated.add (projectId);
 const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
   e.stopPropagation ();
 setDismissed (prev => {;
-  const updated = new Set (prev);
 updated.add (projectId);
 origin/cursor/automate-test-improve-and-merge-code-2533
 return updated;

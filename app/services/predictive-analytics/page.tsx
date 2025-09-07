@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+export const metadata = {
+  title: 'Predictive Analytics | Zion Tech Group',
+  description: 'Forecast the future with AI-powered predictive analytics. Make data-driven decisions with accurate predictions and trend analysis.',
+=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -54,3 +59,123 @@ export default function PredictiveanalyticsPage() {
     </div>
   );
 }
+
+function Pricing() {}
+  return ("
+    <div className="mt-16">"
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Pricing Plans;
+      </h2>"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan"
+          name="Starter""
+          price="$3,999/mo"
+          features={["
+            "Basic forecasting models","
+            "Up to 1M data points","
+            "Standard support","
+            "Cloud deployment",
+          ]}
+        />
+        <Plan"
+          name="Professional""
+          price="$9,999/mo"
+          features={["
+            "Advanced ML models","
+            "Up to 10M data points","
+            "Custom model development","
+            "Priority support","
+          ]}
+        />
+        <Plan
+          name="Professional"
+          price="$9,999/mo"
+          features={[
+            'Advanced ML models',
+            'Up to 10M data points',
+            'Custom model development',
+            'Priority support',
+            'API access',
+          ]}
+          popular={true}
+        />
+            "API access",
+          ]}
+          popular={true}
+        />
+        <Plan"
+          name="Enterprise""
+          price="$24,999/mo"
+          features={["
+            "Unlimited data points","
+            "Custom model development","
+            "On-premise deployment","
+            "Dedicated support","
+            "White-label solution",
+
+          ]}
+        />
+      </div>
+    </div>
+  );
+}
+
+function Plan({}
+  name,
+  price,
+  features,
+  popular = false,
+}: {}
+  name: string;
+  price: string;
+  features: string[];
+  popular?: boolean;
+}) {}
+  return (
+    <div"
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-violet-500 ring-2 ring-violet-200" : "border-gray-200"}`}
+    >
+      {popular && ("
+        <div className="bg-violet-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular;
+        </div>
+      )}"
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>"
+      <div className="text-3xl font-bold text-violet-600 mb-4">{price}</div>"
+      <ul className="space-y-2 text-gray-600 mb-6">
+        {features.map((f) => ("
+          <li key={f} className="flex items-center">"
+            <span className="text-green-500 mr-2">✓</span> {f}
+          </li>
+        ))}
+      </ul>
+
+      <a"
+        href="tel:+13024640950"`
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
+          popular"
+            ? "bg-violet-600 text-white hover:bg-violet-700""
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"`
+        }`}
+      >
+        Get Started;
+      </a>
+
+    </div>
+  );
+}
+"`
+        }`}
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+
+=======
+    </div>
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

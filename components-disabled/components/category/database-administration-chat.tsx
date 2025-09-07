@@ -8,11 +8,18 @@ const DatabaseAdministrationChat: NextPage = () => ;
 
 ;
 
+<<<<<<< HEAD
+  return (<div>;
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
+=======
 const DatabaseAdministrationChat: NextPage = () => ;
   return (<div />;
 import type { NextPage } from \"next\";
 import Head from \"next/head\";
 import Link from \"next/link\";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const DatabaseAdministrationChat: NextPage = () => {;
   return (
@@ -92,6 +99,14 @@ name=\"description\"}
 
 export default DatabaseAdministrationChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>DatabaseAdministrationChat - Zion Tech Solutions</title>;
+        <title>DatabaseAdministrationChat - Zion Tech Solutions</title>;
+        <title>DatabaseAdministrationChat - Zion Tech Solutions</title>;
+        <title>DatabaseAdministrationChat - Zion Tech Solutions</title>;
+=======
 const DatabaseAdministrationChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -99,6 +114,7 @@ const DatabaseAdministrationChat: NextPage = () => ;
         <title />DatabaseAdministrationChat - Zion Tech Solutions</title>;
         <title />DatabaseAdministrationChat - Zion Tech Solutions</title>;
         <title />DatabaseAdministrationChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
@@ -107,7 +123,11 @@ ursor/fix-website-loading-errors-and-merge-6662;
 export default DatabaseAdministrationChat;
 
 
+<<<<<<< HEAD
+const "DatabaseAdministrationChat": NextPage = () => {
+=======
 const DatabaseAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -120,6 +140,14 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+}
+return (;
+    <div>;
+      <Head>;
+        <title > DatabaseAdministrationChat - Zion Tech Solutions</title>;
+=======
 const DatabaseAdministrationChat: NextPage = () => ;
   return (<div />;
 const DatabaseAdministrationChat: NextPage = () => {
@@ -127,6 +155,7 @@ const DatabaseAdministrationChat: NextPage = () => {
     <div />;
       <Head />;
         <title  /> DatabaseAdministrationChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";}
           content=\"DatabaseAdministrationChat blog post\";}
@@ -154,10 +183,16 @@ export default DatabaseAdministrationChat;<div />;
     </div>;
   )},export default DatabaseAdministrationChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>DatabaseAdministrationChat - Zion Tech Solutions</title>;
+=======
 const DatabaseAdministrationChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />DatabaseAdministrationChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";
           content=\"DatabaseAdministrationChat blog post\";
@@ -181,7 +216,10 @@ export default DatabaseAdministrationChat;<title />DatabaseAdministrationChat - 
 
 ;
 export default DatabaseAdministrationChat;
+<<<<<<< HEAD
+=======
 const DatabaseAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -203,7 +241,10 @@ name=\"description\"}
 
 export default DatabaseAdministrationChat;
 export default DatabaseAdministrationChat;
+<<<<<<< HEAD
+=======
 const DatabaseAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -228,7 +269,10 @@ export default DatabaseAdministrationChat;
         <title />DatabaseAdministrationChat - Zion Tech Solutions</title>
         <title />DatabaseAdministrationChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const DatabaseAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />

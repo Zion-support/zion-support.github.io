@@ -32,5 +32,16 @@ export default function ScrollToTop({ }: ScrollToTopProps) {
     <div>
       <h1>ScrollToTop</h1>
       <p>This component is currently under development.</p>
-    </div>
+
   );
+
+}
+
+:src.disabled/components/ScrollToTop.jsx
+}
+}
+
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/ScrollToTop.jsx

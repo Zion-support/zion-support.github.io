@@ -27,6 +27,12 @@ import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
 
+<<<<<<< HEAD
+import React from "react",
+import { Button } from "@/components/ui/button",
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 interface EmptyFraudStateProps {
   hasFilters: boolean,
   onResetFilters: () => void
@@ -56,9 +62,6 @@ interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from 'lucide-react'
 
 interface EmptyFraudStateProps {
   hasFilters: boolean,
@@ -90,9 +93,17 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
       {hasFilters && (;
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
       )}
+<<<<<<< HEAD
+    </div>;
+  )}
+'";
+import { Button } from '@/components/ui/button';
+import React from "react",import { Button } from "@/components/ui/button",interface EmptyFraudStateProps  {hasFilters: boolean;
+=======
 
 interface EmptyFraudStateProps {
   has_filters: boolean,
+>>>>>>> origin/chore/fix-lint-and-merge
   onResetFilters: () => void;
 }
 export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({

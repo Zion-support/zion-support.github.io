@@ -12,8 +12,6 @@ import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFoo
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
 const contactInfo = null;
 import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
 import {
   Brain, Rocket, Target, Cpu, Globe, Eye
   ChevronRight, Star, TrendingUp, Zap, Shield
@@ -22,8 +20,6 @@ import {
 } from 'lucide-react'
 import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
-import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
-import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -38,7 +34,6 @@ import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackg
 import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',;
 import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',;
 import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',;
-const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',

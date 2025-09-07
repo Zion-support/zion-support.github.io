@@ -7,9 +7,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 import OpenAI from 'openai';
 
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { ensureAdminFromApi } from '../../../../utils/auth',;
-import OpenAI from 'openai',;
 
     if (req.method === 'POST') {
       const { slide } = req.body;

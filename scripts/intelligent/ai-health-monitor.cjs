@@ -1,8 +1,22 @@
-///usr/bin/env node
+<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/ai-health-monitor.cjs
+
+
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/ai-health-monitor.cjs
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/ai-health-monitor.cjs
+#!/usr/bin/env node;
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/ai-health-monitor.cjs
 
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/scripts/intelligent/ai-health-monitor.cjs
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/ai-health-monitor.cjs
 const os = require('os')
 // console.log('🤖 AI Health Monitor starting...')
     console.log(' AI Health Monitor started successfully')
@@ -57,3 +71,11 @@ const os = require('os')
       console.error('Error saving "analysis")
       console.error('Error saving "alert")
         console.log('🧠 AI Analysis "completed")
+<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/ai-health-monitor.cjs
+=======
+<<<<<<< HEAD:scripts/intelligent/ai-health-monitor.cjs
+        console.error('Error in AI "analysis")
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
+=======
+        console.error('Error in AI "analysis")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/intelligent/ai-health-monitor.cjs

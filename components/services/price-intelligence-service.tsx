@@ -1,26 +1,26 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<Head /> <title />Services • Price-intelligence-service - Placeholder</title> <meta name=\"robots\" content=\"noindex\" /> </Head> <main /> <h1 />PriceIntelligenceService</h1> <p />Service details coming soon...</p> <a href=\"/services\"  />Back to Services</a> </main> </div>
+<Head> <title />Services • Price-intelligence-service - Placeholder</title> <meta name=\"robots\ content=\noindex\" /> </Head> <main /> <h1 />PriceIntelligenceService</h1> <p />Service details coming soon...</p> <a href=\"/services\  />Back to Services</a> </main> </div>
 
 "
-=======
-<Head> <title>Services • Price-intelligence-service - Placeholder</title> <meta name="robots" content="noindex" /> </Head> <main> <h1>PriceIntelligenceService</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-43ef
-=======
   return (
-    <main className="min - h-screen p - 8">
+    <main className="min-h-screen p-8">
       <Head>
-        <title > Services • Price - intelligence - service - Placeholder</title>;"
+        <title>Services • Price-intelligence-service - Placeholder</title>
         <meta name="robots" content="noindex" />
       </Head>
+      
       <main>
-        <h1 > PriceIntelligenceService</h1>
-        <p > Service details coming soon...</p>;"
+        <h1>PriceIntelligenceService</h1>
+        <p>Service details coming soon...</p>
         <a href="/services">Back to Services</a>
       </main>
-    </div>;
-  );
+    </div>
+  )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+
+
+<Head><title>Services • Price-intelligence-service - Placeholder</title> <meta name=\"robots\" content=\"noindex\"    /> </Head> <main    /> <h1    />PriceIntelligenceService</h1> <p    />Service details coming soon...</p> <a href=\"/services\"     />Back to Services</a> </main> </div>
+
+"
+>>>>>>> origin/chore/fix-lint-and-merge

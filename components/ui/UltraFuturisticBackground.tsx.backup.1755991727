@@ -368,6 +368,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   );
 };
 
+<<<<<<< HEAD
 const getBackgroundGradient = (variant: string) => {
   switch (variant) {
     case 'quantum':
@@ -402,4 +403,6 @@ const getOverlayGradient = (variant: string) => {
   }
 };
 
+=======
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-49d4
 export default UltraFuturisticBackground;

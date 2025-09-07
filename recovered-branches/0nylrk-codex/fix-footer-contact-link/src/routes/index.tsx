@@ -1,3 +1,47 @@
+import AuthRoutes from "./AuthRoutes";
+import DashboardRoutes from "./DashboardRoutes";
+import MarketplaceRoutes from "./MarketplaceRoutes";
+import TalentRoutes from "./TalentRoutes";
+import AdminRoutes from "./AdminRoutes";
+import MobileAppRoutes from "./MobileAppRoutes";
+import ContentRoutes from "./ContentRoutes";
+import ErrorRoutes from "./ErrorRoutes";
+import EnterpriseRoutes from "./EnterpriseRoutes";
+
+import CommunityRoutes from "./CommunityRoutes";
+
+import DeveloperRoutes from "./DeveloperRoutes";
+import AuthRoutes from "./AuthRoutes";""
+import DashboardRoutes from "./DashboardRoutes";""
+import MarketplaceRoutes from "./MarketplaceRoutes";""
+import TalentRoutes from "./TalentRoutes";""
+import AdminRoutes from "./AdminRoutes";""
+import MobileAppRoutes from "./MobileAppRoutes";""
+import ContentRoutes from "./ContentRoutes";""
+import ErrorRoutes from "./ErrorRoutes";""
+import EnterpriseRoutes from "./EnterpriseRoutes";""
+import CommunityRoutes from "./CommunityRoutes";""
+import DeveloperRoutes from "./DeveloperRoutes";"
+pr-12325
+export {;
+  AuthRoutes;
+  DashboardRoutes;
+  MarketplaceRoutes;
+  TalentRoutes;
+  AdminRoutes;
+  MobileAppRoutes;
+  ContentRoutes;
+  ErrorRoutes;
+  EnterpriseRoutes;
+  CommunityRoutes;
+
+  DeveloperRoutes;
+}
+;
+DeveloperRoutes;
+}
+;
+
 import AuthRoutes from "./AuthRoutes",
 import DashboardRoutes from "./DashboardRoutes",
 import MarketplaceRoutes from "./MarketplaceRoutes",
@@ -7,9 +51,16 @@ import MobileAppRoutes from "./MobileAppRoutes",
 import ContentRoutes from "./ContentRoutes",
 import ErrorRoutes from "./ErrorRoutes",
 import EnterpriseRoutes from "./EnterpriseRoutes",
-import CommunityRoutes from "./CommunityRoutes";
-import DeveloperRoutes from "./DeveloperRoutes";
+<<<<<<< HEAD
+=======
+
+  DeveloperRoutes;
+}
+;
+
+>>>>>>> origin/chore/fix-lint-and-merge
 export {
+
   AuthRoutes,
   DashboardRoutes,
   MarketplaceRoutes,
@@ -18,9 +69,14 @@ export {
   MobileAppRoutes,
   ContentRoutes,
   ErrorRoutes,
-  EnterpriseRoutes,
-  CommunityRoutes,
-  DeveloperRoutes
+
+},
+  DeveloperRoutes;
+};
+  DeveloperRoutes;
+}
+;
+
 }
 },
 import AuthRoutes from "./AuthRoutes",;
@@ -33,8 +89,22 @@ import ContentRoutes from "./ContentRoutes",;
 import ErrorRoutes from "./ErrorRoutes",;
 import EnterpriseRoutes from "./EnterpriseRoutes",;
 import CommunityRoutes from "./CommunityRoutes",;
+
 import DeveloperRoutes from "./DeveloperRoutes",;
+;
 export {;
+},"
+import AuthRoutes from "./AuthRoutes",;""
+import DashboardRoutes from "./DashboardRoutes",;""
+import MarketplaceRoutes from "./MarketplaceRoutes",;""
+import TalentRoutes from "./TalentRoutes",;""
+import AdminRoutes from "./AdminRoutes",;""
+import MobileAppRoutes from "./MobileAppRoutes",;""
+import ContentRoutes from "./ContentRoutes",;""
+import ErrorRoutes from "./ErrorRoutes",;""
+import EnterpriseRoutes from "./EnterpriseRoutes",;""
+import CommunityRoutes from "./CommunityRoutes",;""
+import DeveloperRoutes from "./DeveloperRoutes",;"
   AuthRoutes,;
   DashboardRoutes,;
   MarketplaceRoutes,;
@@ -44,8 +114,20 @@ export {;
   ContentRoutes,;
   ErrorRoutes,;
   EnterpriseRoutes,;
-  CommunityRoutes;
-  DeveloperRoutes;
-};
 
 export default Index;
+
+  CommunityRoutes,;
+},; export {
+  AuthRoutes;
+DashboardRoutes;
+MarketplaceRoutes;
+TalentRoutes;
+AdminRoutes;
+MobileAppRoutes;
+ContentRoutes;
+ErrorRoutes;
+EnterpriseRoutes;
+CommunityRoutes;
+DeveloperRoutes 
+};

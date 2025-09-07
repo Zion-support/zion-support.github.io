@@ -6,17 +6,19 @@ import EndpointDetail from './EndpointDetail';
 import v1 from '../../data/api-docs/v1';
 import { ApiDocsSpec, EndpointSpec, Visibility } from '../../data/api-docs/types';
 export default function ApiDocsPage() {
-  const spec: ApiDocsSpec = v1, // could switch by version later
+  const spec: ApiDocsSpec = v1, // could switch by version later;
   const [selectedVersion, setSelectedVersion] = useState<string>(spec.defaultVersion)
+</string>
   const [visibility, setVisibility] = useState<Visibility | 'all'>('all')
-  const allEndpoints: EndpointSpec[] = useMemo(() => spec.sections.flatMap((s) => s.endpoints), [spec])
-  const firstEndpoint = useMemo(() => allEndpoints.find((e) => e.versions.includes(selectedVersion)), [allEndpoints, selectedVersion])
+
   const [activeEndpointId, setActiveEndpointId] = useState<string | undefined>(firstEndpoint?.id)
   const activeEndpoint = allEndpoints.find((e) => e.id === activeEndpointId) |firstEndpoint
   return (
     <div className="min - h-screen bg - high - contrast - primary text - high - contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>;
+    <div className="min - h-screen bg - high - contrast - primary text - high - contrast grid grid - cols - 1" style={{ gridTemplateColumns: '18rem 1fr' }}>;
+</div>
+pr-12325
       <Sidebar;
-
 import {
   ApiDocsSpec,
   EndpointSpec,
@@ -47,7 +49,7 @@ export default function ApiDocsPage() {
   
     >
       <Sidebar
-
+origin/cursor/automate-test-improve-and-merge-code-2533:components/docs/ApiDocsPage.tsx
         spec={spec}
         activeEndpointId={active_endpoint?.id}
         onSelectEndpoint={setActiveEndpointId}
@@ -104,7 +106,29 @@ onChangeVersion={v => {
 
         <section className='mt-8'>
           <div className='text-lg font-semibold mb-2'>Changelog</div>
+        onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined) }}
+
+      <main className="p-6 space-y-6">"
+</main>"
+        <header className="flex items-center justify-between">"
+</header>
+          <div>
+</div>"
+            <div className="text-2xl font-bold">Zion OS API Documentation</div>""
+            <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>"
+          <div className="flex gap-2">"
+            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/openapi" target="_blank" rel="noreferrer">OpenAPI</a>""
+            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/postman" target="_blank" rel="noreferrer">Postman</a>""
+            <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="_blank" rel="noreferrer">GraphQL</a>"
+          <EndpointDetail endpoint={activeEndpoint} />
+"
+          <div className="text-sm text-high-contrast-muted">Select an endpoint from the sidebar</div>""
+        <section className="mt-8">"
+</section>"
+          <div className="text-lg font-semibold mb-2">Changelog</div>"
+pr-12325
           <ChangelogWidget />
+
         </section>
       </main>
     </div>
@@ -124,7 +148,6 @@ function ChangelogWidget() {
 :backup-problematic-files/components/docs/ApiDocsPage.tsx
     setMessage('')
     await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) })
-
 
     setMessage('');
 await fetch('/api/docs/changelog', {
@@ -162,7 +185,7 @@ await fetch('/api/docs/changelog', {
       />
     </div>
   );
-
+origin/cursor/automate-test-improve-and-merge-code-2533:components/docs/ApiDocsPage.tsx
     setMessage('Saved')
   }
   return (
@@ -176,3 +199,10 @@ await fetch('/api/docs/changelog', {
     </div>
   )
 }
+    <div className="space-y-2">"
+        <button onClick={load} className="px-3 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">Load</button>""
+        <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>""
+        {message && <span className="text-xs text-high-contrast-muted">{message}</span>}"
+      <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />"
+</textarea>
+pr-12325

@@ -11,17 +11,6 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
-:pages/proposals/new.tsx
-const NewProposal: NextPage;
-const NewProposal: NextPage = () => {
-  const [jobBrief, setJobBrief] = useState('')
-  const [resumeSummary, setResumeSummary] = useState('')
-  const [relevantExperience, setRelevantExperience] = useState('')
-  const [coverLetter, setCoverLetter] = useState('')
-  const operatorToken = process.env.NEXT_PUBLIC_OPERATOR_TOKEN
-  const pitchPrompt = useMemo(() => (
-    `Write a persuasive proposal for a freelance cloud architect applying to this job. Focus on reliability, previous projects, and delivery.\n\nJob Brief:\n${jobBrief |'(Not provided)'}\n\nTalent Resume Summary:\n${resumeSummary |'(Not provided)'}\n\nRelevant Experience:\n${relevantExperience |'(Not provided)'}\n\nReturn markdown only.`
-  ), [jobBrief, relevantExperience, resumeSummary])
 
   return (
     <div>
@@ -46,10 +35,6 @@ const NewProposal: NextPage = () => {
         <AIAssistant"
           buttonLabel="Generate Pitch Based on Profile & Job""
           title="Generate Proposal"
-:pages/proposals/new.tsx
-          defaultPrompt={pitchPrompt}
-          onAccept={setCoverLetter}
-          authorizationToken={operatorToken}
 
           defaultPrompt={pitchPrompt  } catch (error) {
     console.error("Error:", error);
@@ -76,8 +61,6 @@ const NewProposal: NextPage = () => {
       <textarea value={coverLetter} onChange={e => setCoverLetter(e.target.value)} rows={14} className="mt-2 w-full rounded-md border p-3" />
     </div>
   )
-:pages/proposals/new.tsx
-}
 
           buttonLabel='Generate Pitch Based on Profile & Job'
           title='Generate Proposal'

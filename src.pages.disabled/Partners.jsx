@@ -26,7 +26,6 @@ pr-12325
   }
 }
 import React from 'react';
-
 interface PartnersProps {
   // Add props here as needed
 
@@ -39,3 +38,28 @@ export default function Partners({ }: PartnersProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+}
+
+:src.pages.disabled/Partners.jsx
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+:src.pages.disabled/Partners.jsx
+}
+}
+}
+}
+}
+
+}
+
+:src.pages.disabled/Partners.jsx
+}
+}
+}
+}
+}

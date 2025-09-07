@@ -1,4 +1,4 @@
-export interface MarketTrend {
+export interface MarketTrend {;
   id: string;
   keyword: string;
   searchVolume: number;
@@ -11,9 +11,7 @@ export interface MarketTrend {
   market_opportunity: 'high' | 'medium' | 'low',
   timestamp: Date;
 
-  timestamp: Date
-}
-export interface CompetitorAnalysis {
+export interface MarketTrend {};
   id: string;
   keyword: string;
 
@@ -79,7 +77,7 @@ export interface MarketSegment {
   solutions: string[];
 
 }
-export interface MarketReport {
+
   id: string;
   title: string;
   industry: string;
@@ -106,22 +104,16 @@ export interface MarketResearchRequest {
   custom_metrics?: string[];
 
 }
-export interface MarketResearchResponse {
+
   success: boolean;
   data: {}
     trends?: MarketTrend[];
     competitors?: CompetitorAnalysis[];
+'
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {}
+    this && this.apiKey = apiKey,
 
-    segments?: MarketSegment[]
-    report?: MarketReport
-  }
-  insights: string[];
-  recommendations: string[];
-  nextSteps: string[]
-
-  estimatedROI: number
-}
-export class AIMarketResearchService {
+export class AIMarketResearchService {;
   private apiKey: string;
 
   private baseUrl: string
@@ -202,6 +194,127 @@ export interface MarketResearchResponse {
       if (!response && response.ok) {}`
         throw new Error(`HTTP error! status: ${response && response.status}`)
       }
+<<<<<<< HEAD
+      console && console.error('Error analyzing market "trends":', error);'
+  }
+  async analyzeCompetitors("request": MarketResearchRequest): Promise<CompetitorAnalysis[]> {try {return data && data.competitors || [];
+    } catch (error) {console && console.error('Error analyzing "competitors":', error)throw error;'
+    }
+  }
+  async segmentMarket("request": MarketResearchRequest): Promise<MarketSegment[]> {try {const response = await fetch(`${this && this.baseUrl}/api/market-research/segments`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'}"body": JSON && JSON.stringify(request)})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()} catch (error) {console && console.error('Error analyzing "competitors":', error)throw error;'    }
+  }
+  async segmentMarket("request": MarketResearchRequest): Promise<MarketSegment[]> {try {return data && data.segments || [];
+    } catch (error) {console && console.error('Error segmenting "market":', error)throw error;'
+    }
+  }
+  async generateComprehensiveReport("request": MarketResearchRequest): Promise<MarketReport> {try {} catch (error) {console && console.error('Error generating comprehensive "report":', error)return data && data.report;'
+    } catch (error) {console && console.error('Error generating comprehensive "report":', error)const response = await fetch(`${this.baseUrl}/api/market-research/comprehensive`, {if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}`      const data = await response && response.json()return data && data.trends || [];
+    } catch (error) {console && console.error('Error analyzing market "trends":', error)}'
+  async analyzeMarketTrends("request": MarketResearchRequest): Promise<MarketTrend[]> {try {const response = await fetch(`${this.baseUrl}/api/market-research/trends`, {"method": 'POST';'        }
+        "headers": {'Authorization': `Bearer ${this.apiKey}`;`          'Content-Type': 'application/json'}'
+        "body": JSON.stringify(request)})if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}`      const data = await response.json()return data.report;
+    } catch (error) {console.error('Error generating comprehensive "report":', error)try {const response = await fetch(`${this && this.baseUrl}/api/market-research/comprehensive`, {return data.trends |[];`    } catch (error) {console.error('Error analyzing market "trends":', error)throw error;'
+    }
+  }
+  async analyzeCompetitors("request": MarketResearchRequest): Promise<CompetitorAnalysis[]> {try {const response = await fetch(`${this && this.baseUrl}/api/market-research/competitors`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'}"body": JSON && JSON.stringify(request)})} catch (error) {console && console.error('Error segmenting "market":', error)throw error;'
+    }
+  }
+  async generateComprehensiveReport("request": MarketResearchRequest): Promise<MarketReport> {try {} catch (error) {console && console.error('Error generating comprehensive "report":', error)throw error;'
+    }
+  }
+  async getRealTimeInsights("keyword": string): Promise<MarketTrend[]> {try {if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.trends || [];`    } catch (error) {'Authorization': `Bearer ${this && this.apiKey}`}})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}`      const data = await response && response.json()return data && data.trends || [];
+    } catch (error) {console && console.error('Error getting real-time "insights":', error)const response = await fetch(`${this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {"headers": {'Authorization': `Bearer ${this.apiKey}`}})"body": JSON && JSON.stringify(request)})} catch (error) {console && console.error('Error analyzing market "trends":', error)throw error;'    }
+  }
+  async analyzeCompetitors("request": MarketResearchRequest): Promise<CompetitorAnalysis[]> {try {const response = await fetch(`${this && this.baseUrl}/api/market-research/competitors`, {} catch (error) {console && console.error('Error analyzing "competitors":', error)const response = await fetch(`${this.baseUrl}/api/market-research/competitors`, {"method": 'POST';'        }
+        "headers": {'Authorization': `Bearer ${this.apiKey}`;`          'Content-Type': 'application/json'}'
+        "body": JSON.stringify(request)})if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}`      const data = await response.json()return data.trends |[];
+    } catch (error) {console.error('Error getting real-time "insights":', error)} catch (error) {console && console.error('Error getting real-time "insights":', error)console && console.error('Error generating comprehensive "report":', error)throw error;'
+    }
+  }
+  async getRealTimeInsights("keyword": string): Promise<MarketTrend[]> {try {const response = await fetch(`${this && this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {"headers": {'Authorization': `Bearer ${this && this.apiKey}`}})return data.competitors |[];`    } catch (error) {console.error('Error analyzing "competitors":', error)"method": 'POST',"headers": {'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'}"body": JSON && JSON.stringify(request)})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.trends || [];`    } catch (error) {return data && data.competitors || [];
+      }
+      return data && data.segments || [];
+    } catch (error) {console && console.error('Error segmenting "market":', error)const response = await fetch(`${this.baseUrl}/api/market-research/segments`, {"method": 'POST';'        }
+        "headers": {'Authorization': `Bearer ${this.apiKey}`;`          'Content-Type': 'application/json'}'
+        "body": JSON.stringify(request)})if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}`      const data = await response.json()return data.segments |[];
+    } catch (error) {console.error('Error segmenting "market":', error)"method": 'POST',"headers": {'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'}"body": JSON && JSON.stringify(request)})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.segments || []    } catch (error) {console && console.error('Error getting real-time "insights":', error)throw error;'    }
+  }
+  async exportReport("reportId": string, "format": 'pdf' | 'csv' | 'excel'): Promise<string> {try {const response = await fetch(`${this && this.baseUrl}/api/market-research/export/${reportId}`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'}"body": JSON && JSON.stringify({ format })})if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.downloadUrl;`    } catch (error) {console && console.error('Error exporting "report":', error)} catch (error) {console && console.error('Error exporting "report":', error)throw error;'
+    }
+  }
+  async scheduleReport("request": MarketResearchRequest, "schedule": 'daily' | 'weekly' | 'monthly'): Promise<string> {try {const response = await fetch(`${this && this.baseUrl}/api/market-research/schedule`, {"method": 'POST',"headers": {'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'}"body": JSON && JSON.stringify({ ...request, schedule })})if (!response && response.ok) {console && console.error('Error exporting "report":', error)if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}const data = await response && response.json()return data && data.scheduleId;`      if (!response && response.ok) {throw new Error(`HTTP error! "status": ${response && response.status}`)}`      const data = await response && response.json()return data && data.scheduleId;
+    } catch (error) {console && console.error('Error scheduling "report":', error)const response = await fetch(`${this.baseUrl}/api/market-research/schedule`, {return data && data.downloadUrl;`    } catch (error) {console && console.error('Error exporting "report":', error)const response = await fetch(`${this.baseUrl}/api/market-research/export/${reportId}`, {"method": 'POST';'        }
+        "headers": {'Authorization': `Bearer ${this.apiKey}`;`          'Content-Type': 'application/json'}'
+        "body": JSON.stringify({ ...request, schedule })})"body": JSON.stringify({ format })})if (!response.ok) {throw new Error(`HTTP error! "status": ${response.status}`)}`      const data = await response.json()return data.scheduleId;
+    } catch (error) {console.error('Error scheduling "report":', error)} catch (error) {console && console.error('Error scheduling "report":', error)} catch (error) {console && console.error('Error scheduling "report":', error)throw error;'
+    }
+  }
+}
+export const aiMarketResearchService  = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key')return data.downloadUrl;'
+    } catch (error) {console.error('Error exporting "report":', error)throw error;'
+  }
+  async analyzeCompetitors("request": MarketResearchRequest): Promise<CompetitorAnalysis[]> {
+    }
+    try {
+      }
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/competitors`, {`        }
+        "method": 'POST','
+        "headers": {
+          'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'};'
+        "body": JSON && JSON.stringify(request)});
+      if (!response && response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
+return data && data.trends || [];
+    } catch (error) {
+      }
+      console && console.error('Error analyzing market "trends":', error);'
+throw error;
+    }
+  }
+  async analyzeCompetitors("request": MarketResearchRequest): Promise<CompetitorAnalysis[]> {
+    }
+    try {
+      }
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/competitors`, {`}
+return data && data.competitors || [];
+    } catch (error) {
+      }
+      console && console.error('Error analyzing "competitors":', error);'
+      const response = await fetch(`${this.baseUrl}/api/market-research/competitors`, {`        }
+        "method": 'POST''
+        "headers": {
+          'Authorization': `Bearer ${this.apiKey}`;`          'Content-Type': 'application/json'}'
+        "body": JSON.stringify(request)});
+      if (!response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response.status}`);`      }
+      const data = await response.json();
+return data.competitors |[];
+    } catch (error) {
+      }
+      console.error('Error analyzing "competitors":', error);'
+throw error;
+    }
+  }
+  async segmentMarket("request": MarketResearchRequest): Promise<MarketSegment[]> {
+    }
+    try {
+      }
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/segments`, {`        }
+        "method": 'POST','
+        "headers": {
+          'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'};'
+        "body": JSON && JSON.stringify(request)});
+      if (!response && response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
+return data && data.competitors || [];
+    } catch (error) {
+      }
+      console && console.error('Error analyzing "competitors":', error);'
+throw error;
+=======
 
       const data = await response && response.json();
 
@@ -217,46 +330,187 @@ export interface MarketResearchResponse {
 
       console && console.error('Error getting real-time insights:', error);
       throw error
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
   async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/market-research/export/${reportId}`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify({ format })});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/export/${reportId}`, {
+
+        method: 'POST',
+        headers: {'`
+          'Authorization': `Bearer ${this && this.apiKey}`;'
+          'Content-Type': 'application/json'};
+        body: JSON && JSON.stringify({ format })});
+
+      if (!response && response.ok) {}`
+        throw new Error(`HTTP error! status: ${response && response.status}`)
       }
-      const data = await response.json();
-      return data.downloadUrl
+<<<<<<< HEAD
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/segments`, {`}
+return data && data.segments || [];
     } catch (error) {
-      console.error('Error exporting report:', error);
-      throw error
+      }
+      console && console.error('Error segmenting "market":', error);'
+      const response = await fetch(`${this.baseUrl}/api/market-research/segments`, {`        }
+        "method": 'POST''
+        "headers": {
+          'Authorization': `Bearer ${this.apiKey}`;`          'Content-Type': 'application/json'}'
+        "body": JSON.stringify(request)});
+      if (!response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response.status}`);`      }
+return data.segments |[];
+    } catch (error) {
+      }
+      console.error('Error segmenting "market":', error);'
+throw error;
     }
   }
-  async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {
+  async generateComprehensiveReport("request": MarketResearchRequest): Promise<MarketReport> {
+    }
     try {
-      const response = await fetch(`${this.baseUrl}/api/market-research/schedule`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'}
-        body: JSON.stringify({ ...request, schedule })});
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
       }
-      const data = await response.json();
-      return data.scheduleId
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/comprehensive`, {`        }
+        "method": 'POST','
+        "headers": {
+          'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'};'
+        "body": JSON && JSON.stringify(request)});
+      if (!response && response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
+return data && data.segments || [];
     } catch (error) {
-      console.error('Error scheduling report:', error);
-      throw error
+      }
+      console && console.error('Error segmenting "market":', error);'
+throw error;
+    }
+  }
+  async generateComprehensiveReport("request": MarketResearchRequest): Promise<MarketReport> {
+    }
+    try {} catch (error) {
+      }
+      console && console.error('Error generating comprehensive "report":', error);'
+throw error;
+    }
+  }
+  async getRealTimeInsights("keyword": string): Promise<MarketTrend[]> {
+    }
+    try {
+      }
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/realtime?keyword=${encodeURIComponent(keyword)}`, {`        }
+        "headers": {
+          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
+return data && data.trends || [];
+    } catch (error) {
+      }
+      console && console.error('Error getting real-time "insights":', error);'
+    } catch (error) {
+      }
+      console && console.error('Error getting real-time "insights":', error);'
+      console && console.error('Error generating comprehensive "report":', error);'
+throw error;
+    }
+  }
+  async getRealTimeInsights("keyword": string): Promise<MarketTrend[]> {
+    }
+    try {
+      }
+        "headers": {
+          'Authorization': `Bearer ${this && this.apiKey}`}});`      if (!response && response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
+return data && data.trends || [];
+    } catch (error) {
+      }
+      console && console.error('Error getting real-time "insights":', error);'
+throw error;
+    }
+  }
+  async exportReport("reportId": string, "format": 'pdf' | 'csv' | 'excel'): Promise<string> {'
+    }
+    try {
+      }
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/export/${reportId}`, {`        }
+        "method": 'POST','
+        "headers": {
+          'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'};'
+        "body": JSON && JSON.stringify({ format })});
+      if (!response && response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
+return data && data.downloadUrl;
+    } catch (error) {
+      }
+      console && console.error('Error exporting "report":', error);'
+      if (!response && response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
+return data && data.downloadUrl;
+    } catch (error) {
+      }
+      console && console.error('Error exporting "report":', error);'
+      const response = await fetch(`${this.baseUrl}/api/market-research/export/${reportId}`, {`        }
+        "method": 'POST''
+        "headers": {
+          'Authorization': `Bearer ${this.apiKey}`;`          'Content-Type': 'application/json'}'
+        "body": JSON.stringify({ format })});
+      if (!response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response.status}`);`      }
+return data.downloadUrl;
+    } catch (error) {
+      }
+      console.error('Error exporting "report":', error);'
+    } catch (error) {
+      }
+      console && console.error('Error exporting "report":', error);'
+throw error;
+    }
+  }
+  async scheduleReport("request": MarketResearchRequest, "schedule": 'daily' | 'weekly' | 'monthly'): Promise<string> {'
+    }
+    try {
+      }
+      const response = await fetch(`${this && this.baseUrl}/api/market-research/schedule`, {`        }
+        "method": 'POST','
+        "headers": {
+          'Authorization': `Bearer ${this && this.apiKey}`;`          'Content-Type': 'application/json'};'
+        "body": JSON && JSON.stringify({ ...request, schedule })});
+      if (!response && response.ok) {
+}
+throw new Error(`HTTP error! "status": ${response && response.status}`);`      }
+return data && data.scheduleId;
+    } catch (error) {
+      }
+      console && console.error('Error scheduling "report":', error);'
+    } catch (error) {
+      }
+      console && console.error('Error scheduling "report":', error);'
+    } catch (error) {
+      }
+      console && console.error('Error scheduling "report":', error);'
+throw error;
     }
   }
 }
-export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
+export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');'
+export const aiMarketResearchService = new AIMarketResearchService(process && process.env.MARKET_RESEARCH_API_KEY || 'demo-key');'
+  "id": string,;
+  "keyword": string,;
+  "searchVolume": number,;
+  "trendDirection": 'rising' | 'falling' | 'stable',;'
+  "growthRate": number,;
+  "relatedKeywords": string[],;
+  "marketOpportunity": 'high' | 'medium' | 'low',;'
+  "timestamp": Date;
+=======
+
+      const data = await response && response.json();
+
   id: string,;
   keyword: string,;
   searchVolume: number,;'
@@ -265,6 +519,7 @@ export const aiMarketResearchService = new AIMarketResearchService(process.env.M
   relatedKeywords: string[],;'
   marketOpportunity: 'high' | 'medium' | 'low',;
   timestamp: Date;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 ;
 export interface CompetitorAnalysis {;
@@ -349,7 +604,21 @@ export const aiMarketResearchService = new AIMarketResearchService(process && pr
 
         throw new Error (`HTTP error! status: ${response.status}`);
       }
+<<<<<<< HEAD
+      const response = await fetch (`${this.base_url}/api / market - research / competitors`, {`        }
+        "method": 'POST','
+        "headers": {
+          'Authorization': `Bearer ${this.api_key}`;`          'Content - Type': 'application / json'}'
+        "body": JSON.stringify (request)});
+;
+      // Check condition,
+if ( {) {
+  $2
+}
+        throw new Error (`HTTP error! "status": ${response.status}`);`      }
+=======
       const data = await response.json ();
+>>>>>>> origin/chore/fix-lint-and-merge
       return data.competitors || [];
 
       console.error ('Error analyzing competitors:', error);
@@ -359,7 +628,21 @@ export const aiMarketResearchService = new AIMarketResearchService(process && pr
 
         throw new Error (`HTTP error! status: ${response.status}`);
       }
+<<<<<<< HEAD
+      const response = await fetch (`${this.base_url}/api / market - research / segments`, {`        }
+        "method": 'POST','
+        "headers": {
+          'Authorization': `Bearer ${this.api_key}`;`          'Content - Type': 'application / json'}'
+        "body": JSON.stringify (request)});
+;
+      // Check condition,
+if ( {) {
+  $2
+}
+        throw new Error (`HTTP error! "status": ${response.status}`);`      }
+=======
       const data = await response.json ();
+>>>>>>> origin/chore/fix-lint-and-merge
       return data.segments || [];
 
       console.error ('Error segmenting market:', error);
@@ -369,7 +652,21 @@ export const aiMarketResearchService = new AIMarketResearchService(process && pr
 
         throw new Error (`HTTP error! status: ${response.status}`);
       }
+<<<<<<< HEAD
+      const response = await fetch (`${this.base_url}/api / market - research / comprehensive`, {`        }
+        "method": 'POST','
+        "headers": {
+          'Authorization': `Bearer ${this.api_key}`;`          'Content - Type': 'application / json'}'
+        "body": JSON.stringify (request)});
+;
+      // Check condition,
+if ( {) {
+  $2
+}
+        throw new Error (`HTTP error! "status": ${response.status}`);`      }
+=======
       const data = await response.json ();
+>>>>>>> origin/chore/fix-lint-and-merge
       return data.report;
 
       console.error ('Error generating comprehensive report:', error);
@@ -379,17 +676,72 @@ export const aiMarketResearchService = new AIMarketResearchService(process && pr
 
         throw new Error (`HTTP error! status: ${response.status}`);
       }
+<<<<<<< HEAD
+      const response = await fetch (`${this.base_url}/api / market - research / realtime?keyword=${encodeURIComponent (keyword)}`, {`        }
+        "headers": {
+          'Authorization': `Bearer ${this.api_key}`}});`;
+      // Check condition,
+if ( {) {
+  $2
+}
+        throw new Error (`HTTP error! "status": ${response.status}`);`      }
+=======
       const data = await response.json ();
+>>>>>>> origin/chore/fix-lint-and-merge
       return data.trends || [];
 
         throw new Error (`HTTP error! status: ${response.status}`);
       }
+<<<<<<< HEAD
+      console.error ('Error getting real - time "insights":', error);'
+      throw error;
+    }
+  }
+  async export_report ("report_id": string, "format": 'pdf' | 'csv' | 'excel'): Promise < string> {'
+    }
+    try {
+      }
+      const response = await fetch (`${this.base_url}/api / market - research / export/${report_id}`, {`        }
+        "method": 'POST','
+        "headers": {
+          'Authorization': `Bearer ${this.api_key}`;`          'Content - Type': 'application / json'}'
+        "body": JSON.stringify ({ format })});
+;
+      // Check condition,
+if ( {) {
+  $2
+}
+        throw new Error (`HTTP error! "status": ${response.status}`);`      }
+=======
       const data = await response.json ();
+>>>>>>> origin/chore/fix-lint-and-merge
       return data.download_url;
 
         throw new Error (`HTTP error! status: ${response.status}`);
       }
+<<<<<<< HEAD
+      console.error ('Error exporting "report":', error);'
+      throw error;
+    }
+  }
+  async schedule_report ("request": MarketResearchRequest, "schedule": 'daily' | 'weekly' | 'monthly'): Promise < string> {'
+    }
+    try {
+      }
+      const response = await fetch (`${this.base_url}/api / market - research / schedule`, {`        }
+        "method": 'POST','
+        "headers": {
+          'Authorization': `Bearer ${this.api_key}`;`          'Content - Type': 'application / json'}'
+        "body": JSON.stringify ({ ...request, schedule })});
+;
+      // Check condition,
+if ( {) {
+  $2
+}
+        throw new Error (`HTTP error! "status": ${response.status}`);`      }
+=======
       const data = await response.json ();
+>>>>>>> origin/chore/fix-lint-and-merge
       return data.schedule_id;
 
       console.error ('Error scheduling report:', error);

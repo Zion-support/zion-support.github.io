@@ -263,8 +263,10 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
       }
+=======
 
       // Horizontal lines
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       for (let y = 0; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
@@ -273,6 +275,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
       }
     };
 
+<<<<<<< HEAD
     const drawQuantumFieldLines = (ctx: CanvasRenderingContext2D) => {
       ctx.strokeStyle = '#00ffff40';
       ctx.lineWidth = 1;

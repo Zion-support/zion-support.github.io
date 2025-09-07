@@ -14,12 +14,15 @@ export default function EnhancedNavigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+=======
 
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d26
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const services = [
+<<<<<<< HEAD
     { name: 'All Services', href: '/micro-saas', icon: Globe, description: 'Complete collection of innovative services' },
     { name: 'AI Business Intelligence', href: '/micro-saas', icon: Brain, description: 'AI-powered analytics and insights' },
     { name: 'Quantum Cybersecurity', href: '/micro-saas', icon: Shield, description: 'Quantum-resistant security solutions' },

@@ -1,4 +1,8 @@
-#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) ,"}),"}) ,"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"}) return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) ,"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach(match => {,"}),"}) const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"}) return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach(match => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => comp.trim()),"}),"}) const packageName = match[2],"}),"}) if (!groupedImports.has(packageName)) {,"}),"}) groupedImports.set(packageName,new Set()),"}),"}) }"}),"}) components.forEach(comp => groupedImports.get(packageName).add(comp)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) groupedImports.forEach((components,packageName) => {,"}),"}) optimizedImports += `import { ${Array.from(components).join(',,"}),"}) ')} } from '@radix-ui/${packageName}"}),"}) ';\n`,"}),"}) }),"}),"}) ,"}),"}) return content.replace(radixPattern,'').replace(/^/,optimizedImports),"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) removeUnusedImports(content) {,"}),"}) const lines = content.split(,"}),"}) '\n'),"}),"}) const usedIdentifiers = new Set(),"}),"}) ,"}),"}) lines.forEach(line => {,"}),"}) if (!line.trim().startsWith(,"}),"}) 'import')) {,"}),"}) const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g),"}),"}) if (matches) {,"}),"}) matches.forEach(match => usedIdentifiers.add(match)),"}),"}) }"}),"}) }"}),"}) }),"}),"}) ,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const optimizer = new ImportOptimizer(),"}),"}) optimizer.optimizeImports().catch(console.error),"}),"}) ,"}),"}) const __dirname = path.dirname(__filename); class ImportOptimizer {; constructor() {; this.projectRoot = process.cwd(); this.optimizedFiles = []; this.totalOptimizations = 0} async optimizeImports() {;  const directories = [';pages',';components',';src']; for (const dir of directories) {]; for (const dir of directories) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) {; await this.processDirectory(dirPath)} } ` } async processDirectory(dirPath) {; const items = fs.readdirSync(dirPath); for (const item of items) {; const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if (stat.isDirectory()) {; await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {; await this.optimizeFile(itemPath)} } } isJavaScriptFile(filePath) {; const ext = path.extname(filePath); return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; async: optimizeFile(filePath) { try { const content = fs.readFileSync(filePath 'utf8')';; let: optimizedContent = content; let: optimizations = 0; optimizedContent: = this.optimizeLucideImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.optimizeFramerMotionImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.optimizeRadixImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.removeUnusedImports(optimizedContent); if: (optimizedContent !== content) optimizations++; if: (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')';; this.optimizedFiles.push(filePath); this.totalOptimizations: += optimizations; in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/g: const matches = [...content.matchAll(lucidePattern)]';; if: (matches.length > 1) { const allIcons = new Set(); matches.forEach(match: => { const icons = match[1].split( ',').map(icon => icon.trim())';; icons.forEach(icon: => allIcons.add(icon))}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; return: content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; return: content} optimizeFramerMotionImports(content) { return: content.replace( /import\s*{\s*motion\s*}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion } from 'framer-motion';;;\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/g: const matches = [...content.matchAll(radixPattern)];"; if: (matches.length > 1) { const groupedImports = new Map(); matches.forEach(match: => { const components = match[1].split( ',').map(comp => comp.trim())';; const packageName = match[2]; if: (!groupedImports.has(packageName)) { groupedImports.set(packageName,new Set())} components.forEach(comp => groupedImports.get(packageName).add(comp))}) let optimizedImports = '';'; groupedImports.forEach((components,packageName) => {'; optimizedImports: += `import { ${Array.from(components).join(','';)} } from: '@radix-ui/${packageName}'';;\n`}) return: content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; return: content} removeUnusedImports(content) { const lines = content.split( '\n')';; const usedIdentifiers = new Set(); lines.forEach(line: => { if (!line.trim().startsWith( 'import')) {'; const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if: (matches) { '.tsx'].includes(ext)} async optimizeFile(filePath) {; try {; const content = fs.readFileSync(filePath,optimizedContent = this.optimizeLucideImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeFramerMotionImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeRadixImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.removeUnusedImports(optimizedContent); if (optimizedContent !== content) optimizations++; if (optimizations > 0) {; fs.writeFileSync(filePath,optimizedContent,';utf8'); this.optimizedFiles.push(filePath); this.totalOptimizations += optimizations; in ${path.relative(this.projectRoot,filePath)}` )} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g; const matches = [...content.matchAll(lucidePattern)]; console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) {; const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[;` '']lucide-react[''];?\s*/g const matches = [...content.matchAll(lucidePattern)]; if (matches.length > 1) { const allIcons = new Set(); matches.forEach(match => { const icons = match[1].split(',',).map(icon => icon.trim()); icons.forEach(icon => allIcons.add(icon));) const optimizedImport = `import { ${Array.from(allIcons).join(` ',')} } from';lucide-react';\n`;` return content.replace(lucidePattern,'';).replace(/^/,optimizedImport) } 'lucide-react';\n`; return content.replace(lucidePattern,).replace(/^/,optimizedImport) } return content} optimizeFramerMotionImports(content) {; return content.replace(' /import\s*{\s*motion\s*}\s*from\s*['']framer-motion[';'];?\s*/g 'import { motion } from 'framer-motion;;\n')} optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[']@radix-ui\/([^']+)['"];?\s*/g const matches = [...content.matchAll(radixPattern)]; if (matches.length > 1) {; const groupedImports = new Map(); matches.forEach(match => {; const components = match[1].split(',').map(comp => comp.trim()); optimizedImports += `import { ${Array.from(components).join(',')} } from '@radix-ui/${packageName} ';\n`})` return content.replace(radixPattern,'').replace(/^/,optimizedImports)} const packageName = match[2]; if (!groupedImports.has(packageName)) {; groupedImports.set(packageName,new Set())} components.forEach(comp => groupedImports.get(packageName).add(comp))}); let optimizedImports = ''; groupedImports.forEach((components,packageName) => {; optimizedImports += `import { ${Array.from(components).join(',';)} } from '@radix-ui/${packageName} ';\n`}); return content.replace(radixPattern,').replace(/^/,optimizedImports)} return content} removeUnusedImports(content) {; const lines = content.split(','\n'); const usedIdentifiers = new Set(); lines.forEach(line => { if (!line.trim().startsWith(' 'import')) { const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if (matches) { matches.forEach(match => usedIdentifiers.add(match)); const lines = content.split(;)';\n')';; const usedIdentifiers = new Set()';; lines.forEach(line => {;); if (!line.trim().startsWith(;)';import')) {'; const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if (matches) {; matches.forEach(match => usedIdentifiers.add(match))} } }); return lines .filter(line => { if (line.trim().startsWith('import')) { const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/); if (importMatch) { const importedItems = importMatch[1] .split(',') .map(item => item.trim()); const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item) ); return hasUsedItems} } return true}) .join('\n')} const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item)); return hasUsedItems} } return true}).join(','\n') } } const optimizer = new ImportOptimizer(); optimizer.optimizeImports().catch(console.error);
+ursor/fix-syntax-push-and-merge-to-main-40de
+#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) ,"}),"}) ,"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"}) return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) ,"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach(match => {,"}),"}) const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"}) return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach(match => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => comp.trim()),"}),"}) const packageName = match[2],"}),"}) if (!groupedImports.has(packageName)) {,"}),"}) groupedImports.set(packageName,new Set()),"}),"}) }"}),"}) components.forEach(comp => groupedImports.get(packageName).add(comp)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) groupedImports.forEach((components,packageName) => {,"}),"}) optimizedImports += `import { ${Array.from(components).join(',,"}),"}) ')} } from '@radix-ui/${packageName}"}),"}) ';\n`,"}),"}) }),"}),"}) ,"}),"}) return content.replace(radixPattern,'').replace(/^/,optimizedImports),"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) removeUnusedImports(content) {,"}),"}) const lines = content.split(,"}),"}) '\n'),"}),"}) const usedIdentifiers = new Set(),"}),"}) ,"}),"}) lines.forEach(line => {,"}),"}) if (!line.trim().startsWith(,"}),"}) 'import')) {,"}),"}) const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g),"}),"}) if (matches) {,"}),"}) matches.forEach(match => usedIdentifiers.add(match)),"}),"}) }"}),"}) }"}),"}) }),"}),"}) ,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const optimizer = new ImportOptimizer(),"}),"}) optimizer.optimizeImports().catch(console.error),"}),"}) ,"}),"}) const __dirname = path.dirname(__filename); class ImportOptimizer {; constructor() {; this.projectRoot = process.cwd(); this.optimizedFiles = []; this.totalOptimizations = 0} async optimizeImports() {;  const directories = [';pages',';components',';src']; for (const dir of directories) {]; for (const dir of directories) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) {; await this.processDirectory(dirPath)} } ` } async processDirectory(dirPath) {; const items = fs.readdirSync(dirPath); for (const item of items) {; const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if (stat.isDirectory()) {; await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {; await this.optimizeFile(itemPath)} } } isJavaScriptFile(filePath) {; const ext = path.extname(filePath); return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; async: optimizeFile(filePath) { try { const content = fs.readFileSync(filePath 'utf8')'; let: optimizedContent = content; let: optimizations = 0; optimizedContent: = this.optimizeLucideImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.optimizeFramerMotionImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.optimizeRadixImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.removeUnusedImports(optimizedContent); if: (optimizedContent !== content) optimizations++; if: (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')'; this.optimizedFiles.push(filePath); this.totalOptimizations: += optimizations; in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/g: const matches = [...content.matchAll(lucidePattern)]'; if: (matches.length > 1) { const allIcons = new Set(); matches.forEach(match: => { const icons = match[1].split( ',').map(icon => icon.trim())'; icons.forEach(icon: => allIcons.add(icon))}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; return: content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; return: content} optimizeFramerMotionImports(content) { return: content.replace( /import\s*{\s*motion\s*}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion } from 'framer-motion';\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/g: const matches = [...content.matchAll(radixPattern)];"; if: (matches.length > 1) { const groupedImports = new Map(); matches.forEach(match: => { const components = match[1].split( ',').map(comp => comp.trim())'; const packageName = match[2]; if: (!groupedImports.has(packageName)) { groupedImports.set(packageName,new Set())} components.forEach(comp => groupedImports.get(packageName).add(comp))}) let optimizedImports = '';'; groupedImports.forEach((components,packageName) => {'; optimizedImports: += `import { ${Array.from(components).join(','';)} } from: '@radix-ui/${packageName}'';\n`}) return: content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; return: content} removeUnusedImports(content) { const lines = content.split( '\n')'; const usedIdentifiers = new Set(); lines.forEach(line: => { if (!line.trim().startsWith( 'import')) {'; const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if: (matches) { '.tsx'].includes(ext)} async optimizeFile(filePath) {; try {; const content = fs.readFileSync(filePath,optimizedContent = this.optimizeLucideImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeFramerMotionImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeRadixImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.removeUnusedImports(optimizedContent); if (optimizedContent !== content) optimizations++; if (optimizations > 0) {; fs.writeFileSync(filePath,optimizedContent,';utf8'); this.optimizedFiles.push(filePath); this.totalOptimizations += optimizations; in ${path.relative(this.projectRoot,filePath)}` )} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g; const matches = [...content.matchAll(lucidePattern)]; console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) {; const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[;` '']lucide-react[''];?\s*/g const matches = [...content.matchAll(lucidePattern)]; if (matches.length > 1) { const allIcons = new Set(); matches.forEach(match => { const icons = match[1].split(',',).map(icon => icon.trim()); icons.forEach(icon => allIcons.add(icon));) const optimizedImport = `import { ${Array.from(allIcons).join(` ',')} } from';lucide-react';\n`;` return content.replace(lucidePattern,'';).replace(/^/,optimizedImport) } 'lucide-react';\n`; return content.replace(lucidePattern,).replace(/^/,optimizedImport) } return content} optimizeFramerMotionImports(content) {; return content.replace(' /import\s*{\s*motion\s*}\s*from\s*['']framer-motion[';'];?\s*/g 'import { motion } from 'framer-motion;\n')} optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[']@radix-ui\/([^']+)['"];?\s*/g const matches = [...content.matchAll(radixPattern)]; if (matches.length > 1) {; const groupedImports = new Map(); matches.forEach(match => {; const components = match[1].split(',').map(comp => comp.trim()); optimizedImports += `import { ${Array.from(components).join(',')} } from '@radix-ui/${packageName} ';\n`})` return content.replace(radixPattern,'').replace(/^/,optimizedImports)} const packageName = match[2]; if (!groupedImports.has(packageName)) {; groupedImports.set(packageName,new Set())} components.forEach(comp => groupedImports.get(packageName).add(comp))}); let optimizedImports = ''; groupedImports.forEach((components,packageName) => {; optimizedImports += `import { ${Array.from(components).join(',';)} } from '@radix-ui/${packageName} ';\n`}); return content.replace(radixPattern,').replace(/^/,optimizedImports)} return content} removeUnusedImports(content) {; const lines = content.split(','\n'); const usedIdentifiers = new Set(); lines.forEach(line => { if (!line.trim().startsWith(' 'import')) { const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if (matches) { matches.forEach(match => usedIdentifiers.add(match)); const lines = content.split(;)';\n')'; const usedIdentifiers = new Set()'; lines.forEach(line => {;); if (!line.trim().startsWith(;)';import')) {'; const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if (matches) {; matches.forEach(match => usedIdentifiers.add(match))} } }); return lines .filter(line => { if (line.trim().startsWith('import')) { const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/); if (importMatch) { const importedItems = importMatch[1] .split(',') .map(item => item.trim()); const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item) ); return hasUsedItems} } return true}) .join('\n')} const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item)); return hasUsedItems} } return true}).join(','\n') } } const optimizer = new ImportOptimizer(); optimizer.optimizeImports().catch(console.error);
+#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) ),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) ,"}),"}) ,"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) ),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"}) return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) ,"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach(match => {,"}),"}) const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"}) return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach(match => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => comp.trim()),"}),"}) const packageName = match[2],"}),"}) if (!groupedImports.has(packageName)) {,"}),"}) groupedImports.set(packageName,new Set()),"}),"}) }"}),"}) components.forEach(comp => groupedImports.get(packageName).add(comp)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) groupedImports.forEach((components,packageName) => {,"}),"}) optimizedImports += `import { ${Array.from(components).join(',,"}),"}) ')} } from '@radix-ui/${packageName}"}),"}) ';\n`,"}),"}) }),"}),"}) ,"}),"}) return content.replace(radixPattern,'').replace(/^/,optimizedImports),"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) removeUnusedImports(content) {,"}),"}) const lines = content.split(,"}),"}) '\n'),"}),"}) const usedIdentifiers = new Set(),"}),"}) ,"}),"}) lines.forEach(line => {,"}),"}) if (!line.trim().startsWith(,"}),"}) 'import')) {,"}),"}) const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g),"}),"}) if (matches) {,"}),"}) matches.forEach(match => usedIdentifiers.add(match)),"}),"}) }"}),"}) }"}),"}) }),"}),"}) ,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const optimizer = new ImportOptimizer(),"}),"}) optimizer.optimizeImports().catch(console.error),"}),"}) ,"}),"}) const __dirname = path.dirname(__filename); class ImportOptimizer {; constructor() {; this.projectRoot = process.cwd(); this.optimizedFiles = []; this.totalOptimizations = 0} async optimizeImports() {;  const directories = [';pages',';components',';src'];  } ` } async processDirectory(dirPath) {; const items = fs.readdirSync(dirPath);  else if (this.isJavaScriptFile(item)) {; await this.optimizeFile(itemPath)} } } isJavaScriptFile(filePath) {; const ext = path.extname(filePath); return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; async: optimizeFile(filePath) { try { const content = fs.readFileSync(filePath 'utf8')'; let: optimizedContent = content; let: optimizations = 0; optimizedContent: = this.optimizeLucideImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.optimizeFramerMotionImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.optimizeRadixImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.removeUnusedImports(optimizedContent); if: (optimizedContent !== content) optimizations++; if: (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')'; this.optimizedFiles.push(filePath); this.totalOptimizations: += optimizations; in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/g: const matches = [...content.matchAll(lucidePattern)]'; if: (matches.length > 1) { const allIcons = new Set(); matches.forEach(match: => { const icons = match[1].split( ',').map(icon => icon.trim())'; icons.forEach(icon: => allIcons.add(icon))}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; return: content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; return: content} optimizeFramerMotionImports(content) { return: content.replace( /import\s*{\s*motion\s*}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion } from 'framer-motion';\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/g: const matches = [...content.matchAll(radixPattern)];"; if: (matches.length > 1) { const groupedImports = new Map(); matches.forEach(match: => { const components = match[1].split( ',').map(comp => comp.trim())'; const packageName = match[2]; if: (!groupedImports.has(packageName)) { groupedImports.set(packageName,new Set())} components.forEach(comp => groupedImports.get(packageName).add(comp))}) let optimizedImports = '';'; groupedImports.forEach((components,packageName) => {'; optimizedImports: += `import { ${Array.from(components).join(','';)} } from: '@radix-ui/${packageName}'';\n`}) return: content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; return: content} removeUnusedImports(content) { const lines = content.split( '\n')'; const usedIdentifiers = new Set(); lines.forEach(line: => { if (!line.trim().startsWith( 'import')) {'; const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if: (matches) { '.tsx'].includes(ext)} async optimizeFile(filePath) {; try {; const content = fs.readFileSync(filePath,optimizedContent = this.optimizeLucideImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeFramerMotionImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeRadixImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.removeUnusedImports(optimizedContent); if (optimizedContent !== content) optimizations++; if (optimizations > 0) {; fs.writeFileSync(filePath,optimizedContent,';utf8'); this.optimizedFiles.push(filePath); this.totalOptimizations += optimizations; in ${path.relative(this.projectRoot,filePath)}` )} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g; const matches = [...content.matchAll(lucidePattern)]; console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) {; const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[;` '']lucide-react[''];?\s*/g const matches = [...content.matchAll(lucidePattern)]; if (matches.length > 1) { const allIcons = new Set(); matches.forEach(match => { const icons = match[1].split(',',).map(icon => icon.trim()); icons.forEach(icon => allIcons.add(icon));) const optimizedImport = `import { ${Array.from(allIcons).join(` ',')} } from';lucide-react';\n`;` return content.replace(lucidePattern,'';).replace(/^/,optimizedImport) } 'lucide-react';\n`; return content.replace(lucidePattern,).replace(/^/,optimizedImport) } return content} optimizeFramerMotionImports(content) {; return content.replace(' /import\s*{\s*motion\s*}\s*from\s*['']framer-motion[';'];?\s*/g 'import { motion } from 'framer-motion;\n')} optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[']@radix-ui\/([^']+)['"];?\s*/g const matches = [...content.matchAll(radixPattern)]; if (matches.length > 1) {; const groupedImports = new Map(); matches.forEach(match => {; const components = match[1].split(',').map(comp => comp.trim()); optimizedImports += `import { ${Array.from(components).join(',')} } from '@radix-ui/${packageName} ';\n`})` return content.replace(radixPattern,'').replace(/^/,optimizedImports)} const packageName = match[2]; if (!groupedImports.has(packageName)) {; groupedImports.set(packageName,new Set())} components.forEach(comp => groupedImports.get(packageName).add(comp))}); let optimizedImports = ''; groupedImports.forEach((components,packageName) => {; optimizedImports += `import { ${Array.from(components).join(',';)} } from '@radix-ui/${packageName} ';\n`}); return content.replace(radixPattern,').replace(/^/,optimizedImports)} return content} removeUnusedImports(content) {; const lines = content.split(','\n'); const usedIdentifiers = new Set(); lines.forEach(line => { if (!line.trim().startsWith(' 'import')) { const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if (matches) { matches.forEach(match => usedIdentifiers.add(match)); const lines = content.split(;)';\n')'; const usedIdentifiers = new Set()'; lines.forEach(line => {;); if (!line.trim().startsWith(;)';import')) {'; const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if (matches) {; matches.forEach(match => usedIdentifiers.add(match))} } }); return lines .filter(line => { if (line.trim().startsWith('import')) { const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/); if (importMatch) { const importedItems = importMatch[1] .split(',') .map(item => item.trim()); const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item) ); return hasUsedItems} } return true}) .join('\n')} const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item)); return hasUsedItems} } return true}).join(','\n') } } const optimizer = new ImportOptimizer(); optimizer.optimizeImports().catch(console.error);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 #!/usr/bin/env node,"}),"})
 /**,"}),"})
  * Import Optimizer,"}),"})
@@ -15,8 +19,7 @@ const __filename = fileURLToPath(import.meta.url),"}),"})
 const __dirname = path.dirname(__filename),"}),"})
 ,"}),"})
 class ImportOptimizer {,"}),"})
-class AutoGeneratedClass {
-  constructor($2) {,"}),"})
+  constructor() {,"}),"})
     this.projectRoot = process.cwd(),"}),"})
     this.optimizedFiles = [],"}),"})
     this.totalOptimizations = 0,"}),"})
@@ -24,7 +27,13 @@ class AutoGeneratedClass {
 ,"}),"})
   async optimizeImports() {,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
+
+    ),"})
+
     for (const dir of directories) {,"}),"})
+    ),"})
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
       const dirPath = path.join(this.projectRoot, dir),"}),"})
       if (fs.existsSync(dirPath)) {,"}),"})
         await this.processDirectory(dirPath),"}),"})
@@ -38,7 +47,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
   async processDirectory(dirPath) {,"}),"})
     const items = fs.readdirSync(dirPath),"}),"})
 ,"}),"})
-    for (const item of items) {,"}),"})
+
       const itemPath = path.join(dirPath, item),"}),"})
       const stat = fs.statSync(itemPath),"}),"})
 ,"}),"})
@@ -50,7 +59,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
-  isJavaScriptFile($2) {,"}),"})
+  isJavaScriptFile(filePath) {,"}),"})
     const ext = path.extname(filePath),"}),"})
     return [,"}),"})
   '.js',,"}),"})
@@ -82,7 +91,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       optimizedContent = this.removeUnusedImports(optimizedContent),"}),"})
       if (optimizedContent !== content) optimizations++,"}),"})
 ,"}),"})
-  if($2) {,"}),"})
+      if (optimizations > 0) {,"}),"})
         fs.writeFileSync(filePath, optimizedContent,,"}),"})
   'utf8'),"}),"})
         this.optimizedFiles.push(filePath),"}),"})
@@ -96,12 +105,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     }"}),"})
   }"}),"})
 ,"}),"})
-  optimizeLucideImports($2) {,"}),"})
+  optimizeLucideImports(content) {,"}),"})
     // Convert individual icon imports to single import,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     const matches = [...content.matchAll(lucidePattern)],"}),"})
 ,"}),"})
-  if($2) {,"}),"})
+    if (matches.length > 1) {,"}),"})
       const allIcons = new Set(),"}),"})
       matches.forEach(match => {,"}),"})
         const icons = match[1].split(,"}),"})
@@ -114,18 +123,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     return content,"}),"})
   }"}),"})
 ,"}),"})
-  optimizeFramerMotionImports($2) {,"}),"})
+  optimizeFramerMotionImports(content) {,"}),"})
     // Optimize framer-motion imports,"}),"})
     return content.replace(,"}),"})
 
-      /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"})
+      /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"});
+  '"];?\s*/g,,"}),"})
+      "import { motion } from 'framer-motion,"}),"});
+
   '"];?\s*/g,,"}),"})
       "import { motion } from 'framer-motion,"}),"})
+      /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"});
   '"];?\s*/g,,"}),"})
-      "import { motion } from 'framer-motion,"}),"})
-      /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"})
-  '"];?\s*/g,,"}),"})
-      "import { motion } from 'framer-motion,"}),"})
+      "import { motion } from 'framer-motion,"}),"});
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
   ';\n","}),"})
@@ -133,12 +143,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     ),"}),"})
   }"}),"})
 ,"}),"})
-  optimizeRadixImports($2) {,"}),"})
+  optimizeRadixImports(content) {,"}),"})
     // Group Radix UI imports,"}),"})
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     const matches = [...content.matchAll(radixPattern)],"}),"})
 ,"}),"})
-  if($2) {,"}),"})
+    if (matches.length > 1) {,"}),"})
       const groupedImports = new Map(),"}),"})
       matches.forEach(match => {,"}),"})
         const components = match[1].split(,"}),"})
@@ -153,9 +163,23 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       groupedImports.forEach((components, packageName) => {,"}),"})
         optimizedImports += `import { ${Array.from(components).join(',,"}),"})
 
+  ')} } from '@radix-ui/${packageName}"}),"});
+
+<<<<<<< HEAD
+const optimizer = new ImportOptimizer()optimizer.optimizeImports().catch(console.error)#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) ),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) ,"}),"}) ,"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) ),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"});"
+  return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) ,"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach((match) => {,"}),"});"  const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"});"
+  return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach((match) => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => { return comp.trim()),"}),"}); }"
+  const directories = [';pages',';components',';src'];  } ` } async processDirectory(dirPath) {const items = fs.readdirSync(dirPath)else if (this.isJavaScriptFile(item)) {await this.optimizeFile(itemPath)} } } isJavaScriptFile(filePath) ;`  const ext = path.extname(filePath;
+  return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; "async": optimizeFile(filePath) { try { const content  = fs.readFileSync(filePath 'utf8')';"let": optimizedContent = content; "let": optimizations = 0; "optimizedContent": = this.optimizeLucideImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeFramerMotionImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeRadixImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.removeUnusedImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "if": (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')';this.optimizedFiles.push(filePath)this."totalOptimizations": += optimizations; in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/"g": const matches  = [...content.matchAll(lucidePattern)]';"if": (matches.length > 1) { const allIcons = new Set()matches.forEach("match": => {;'  }
+}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; "return": content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; "return": content} optimizeFramerMotionImports(content) { "return": content.replace( /import\s*{\s*motion\s,'}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion  } from 'framer-motion';\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/"g": const matches = [...content.matchAll(radixPattern)];"; "if": (matches.length > 1) { const groupedImports = new Map()matches.forEach("match": => {;"
+  }
+
+}'';\n`}) "return": content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; "return": conten,'} removeUnusedImports(content) { const lines  = content.split( '\n')';'
+=======
   ')} } from '@radix-ui/${packageName}"}),"})
-  ')} } from '@radix-ui/${packageName}"}),"})
-  ')} } from '@radix-ui/${packageName}"}),"})
+  ')} } from '@radix-ui/${packageName}"}),"});
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
   ';\n`,"}),"})
       }),"}),"})
 ,"}),"})
@@ -165,7 +189,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
     return content,"}),"})
   }"}),"})
 ,"}),"})
-  removeUnusedImports($2) {,"}),"})
+  removeUnusedImports(content) {,"}),"})
     // Simple unused import removal (basic implementation),"}),"})
     const lines = content.split(,"}),"})
   '\n'),"}),"})
@@ -176,7 +200,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
       if (!line.trim().startsWith(,"}),"})
   'import')) {,"}),"})
         const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g),"}),"})
-  if($2) {,"}),"})
+        if (matches) {,"}),"})
           matches.forEach(match => usedIdentifiers.add(match)),"}),"})
         }"}),"})
       }"}),"})
@@ -189,144 +213,605 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})
 ,"}),"})
 // Run the optimizer,"}),"})
 const optimizer = new ImportOptimizer(),"}),"})
+>>>>>>> origin/chore/fix-lint-and-merge
 
 optimizer.optimizeImports().catch(console.error),"}),"})
 
+<<<<<<< HEAD
+=======
+,"}),"});
+>>>>>>> origin/chore/fix-lint-and-merge
+
 ,"}),"})
-,"}),"})
-,"}),"})
+,"}),"});
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+<<<<<<< HEAD
+} async optimizeFile(filePath) {try ;
+  }
+
+
+}
+
+const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g)if (matches) {matches.forEach(match => usedIdentifiers.add(match))} } })return lines .filter((line) => { if (line.trim().startsWith('import')) { const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/)if (importMatch) { const importedItems = importMatch[1] .split(',') .map(item => { return item.trim())const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item) )return hasUsedItems} }; }'
+  return true}) .join('\n';'
+}
+
+const hasUsedItems = importedItems.some(item => { return usedIdentifiers.has(item))return hasUsedItems} }; }
+  return true}).join(','\n') } }'
+;
+  const optimizer = new ImportOptimizer()optimizer.optimizeImports().catch(console.error)origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+#!/usr/bin/env node,"}),"})/**,"}),"})* Import Optimizer,"}),"})* Optimizes import statements to reduce bundle size,"}),"})*/,"}),"})import fs from,"}),"})'fs',"}),"})import path from,"}),"})'path',"}),"})import { fileURLToPath } from,"}),"})'url',"}),"}),"}),"})const __filename = fileURLToPath(import.meta.url),"}),"})const __dirname = path.dirname(__filename),"}),"}),"}),"})class ImportOptimizer {,"}),"})constructor() {,"}),"})this.projectRoot = process.cwd(),"}),"})this.optimizedFiles = [],"}),"})this.totalOptimizations = 0,"}),"})}"}),"}),"}),"})async optimizeImports() {,"}),"})ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})),"})for ;"
+  const dir of directories) {,"}),"})),"})origin/cursor/integrate-build-improve-and-re-verify-c7b5;"
+
+const dirPath = path.join(this.projectRoot, dir),"}),"})if (fs.existsSync(dirPath)) {,"}),"})await this.processDirectory(dirPath),"}),"})}"}),"})}"}),"}),"}),"})console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"})console.log(`📊 Total "optimizations": ${this.totalOptimizations}`),"}),"})}"}),"}),"}),"})async processDirectory(dirPath) {,"}),"})const items = fs.readdirSync(dirPath),"}),"}),"}),"})),"})for ;"  const item of items) {,"}),"})),"})origin/cursor/integrate-build-improve-and-re-verify-c7b5;"
+
+const itemPath = path.join(dirPath, item),"}),"})const stat = fs.statSync(itemPath),"}),"}),"}),"})if (stat.isDirectory()) {,"}),"})await this.processDirectory(itemPath),"}),"})} else if (this.isJavaScriptFile(item)) {,"}),"})await this.optimizeFile(itemPath),"}),"})}"}),"})}"}),"})}"}),"}),"}),"})isJavaScriptFile(filePath) {,"}),"})const ext = path.extname(filePath),"}),"};"
+  return [,"}),"})'.js',,"}),"})'.jsx',,"}),"})'.ts',,"}),"})'.tsx'].includes(ext),"}),"})}"}),"}),"}),"})async optimizeFile(filePath) {,"}),"})try {,"}),"})const content = fs.readFileSync(filePath,,"}),"})'utf8'),"}),"})let optimizedContent = content,"}),"})let optimizations = 0,"}),"}),"}),"})// Optimize Lucide React imports,"}),"})optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"})if (optimizedContent !== content) optimizations++,"}),"}),"}),"})// Optimize Framer Motion imports,"}),"})optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"})if (optimizedContent !== content) optimizations++,"}),"}),"}),"})// Optimize Radix UI imports,"}),"})optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"})if (optimizedContent !== content) optimizations++,"}),"}),"}),"})// Remove unused imports,"}),"})optimizedContent = this.removeUnusedImports(optimizedContent),"}),"})if (optimizedContent !== content) optimizations++,"}),"}),"}),"})if (optimizations > 0) {,"}),"})fs.writeFileSync(filePath, optimizedContent,,"}),"})'utf8'),"}),"})this.optimizedFiles.push(filePath),"}),"})this.totalOptimizations += optimizations,"}),"})console.log(,"}),"})`⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot, filePath)}`,"}),"})),"}),"})}"}),"})} catch (error) {,"}),"})console.error(`❌ Error optimizing file ${filePath}:`, error.message),"}),"})}"}),"})}"}),"}),"}),"})optimizeLucideImports(content) {,"}),"})// Convert individual icon imports to single import,"}),"})ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})const matches = [...content.matchAll(lucidePattern)],"}),"}),"}),"})if (matches.length > 1) {,"}),"})const allIcons = new Set(),"}),"})matches.forEach((match) => {,"}),"};"  const icons = match[1].split(,"}),"})', ').map(icon => icon.trim()),"}),"})icons.forEach(icon => allIcons.add(icon)),"}),"})}),"}),"})ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})}"}),"}),"}),"})return content,"}),"})}"}),"}),"}),"})optimizeFramerMotionImports(content) {,"}),"})// Optimize framer-motion imports,"}),"};"
+  return content.replace(,"}),"})/import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"})'"];?\s*/g,,"}),"})"import { motion } from 'framer-motion,"}),"})/import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"})'"];?\s*/g,,"}),"})"import { motion } from 'framer-motion,"}),"})/import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"})'"];?\s*/g,,"}),"})"import { motion } from 'framer-motion,"}),"})origin/cursor/integrate-build-improve-and-re-verify-c7b5;"
+  ';\n","}),"})),"}),"})}"}),"}),"}),"})optimizeRadixImports(content) {,"}),"})// Group Radix UI imports,"}),"})ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})const matches = [...content.matchAll(radixPattern)],"}),"}),"}),"})if (matches.length > 1) {,"}),"})const groupedImports = new Map(),"}),"})matches.forEach((match) => {,"}),"})const components = match[1].split(,"}),"})', ').map(comp => { return comp.trim()),"}),"}; }"
+  const packageName = match[2],"}),"})if (!groupedImports.has(packageName)) {,"}),"})groupedImports.set(packageName, new Set()),"}),"})}"}),"})components.forEach(comp => groupedImports.get(packageName).add(comp)),"}),"})}),"}),"})ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})groupedImports.forEach((components, packageName) => {,"}),"})optimizedImports += `import { ${Array.from(components).join(',,"}),"})')} } from '@radix-ui/${packageName}"}),"})')} } from '@radix-ui/${packageName}"}),"})')} } from '@radix-ui/${packageName}"}),"})origin/cursor/integrate-build-improve-and-re-verify-c7b5;"
+  ';\n`,"}),"})}),"}),"}),"}),"})return content.replace(radixPattern, '').replace(/^/, optimizedImports),"}),"})}"}),"}),"}),"})return content,"}),"})}"}),"}),"}),"})removeUnusedImports(content) {,"}),"})// Simple unused import removal (basic implementation),"}),"})const lines = content.split(,"}),"})'\n'),"}),"})const usedIdentifiers = new Set(),"}),"}),"}),"})// Find all used identifiers,"}),"})lines.forEach((line) => {,"}),"})if (!line.trim().startsWith(,"}),"})'import')) {,"}),"})const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g),"}),"})if (matches) {,"}),"})matches.forEach(match => { return usedIdentifiers.add(match)),"}),"})}"}),"})}"}),"})}),"}),"}),"}),"})// Remove unused imports (simplified),"}),"})ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})}"}),"})}"}),"}),"}),"})// Run the optimizer,"}),"}; }"  const optimizer = new ImportOptimizer(),"}),"})optimizer.optimizeImports().catch(console.error),"}),"}),"}),"}),"}),"}),"}),"})origin/cursor/integrate-build-improve-and-re-verify-c7b5;"
+
+const __dirname = path.dirname(__filename)class ImportOptimizer {constructor() {this.projectRoot = process.cwd()this.optimizedFiles = [];
+    }
+=======
 const __dirname = path.dirname(__filename);
 class ImportOptimizer {;
   constructor() {;
     this.projectRoot = process.cwd();
     this.optimizedFiles = [];
+>>>>>>> origin/chore/fix-lint-and-merge
     this.totalOptimizations = 0}
-  for($2) {
-      const dirPath = path.join(this.projectRoot, dir)
-      if (fs.existsSync(dirPath)) {
+
+    for (const dir of directories) {
+      const dirPath = path.join(this.projectRoot, dir);
+      if (fs.existsSync(dirPath)) {;
         await this.processDirectory(dirPath)}
+
     }
+
     console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`);"
     console.log("📊 Total "optimizations": ${this.totalOptimizations}")}
+    }`;
+    console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`);"""
+    console.log("📊 Total "optimizations": ${this.totalOptimizations}")}"
   async processDirectory(dirPath) {;
     const items = fs.readdirSync(dirPath);
+
+     else if (this.isJavaScriptFile(item)) {;
+
     for (const item of items) {;
       const itemPath = path.join(dirPath, item);
       const stat = fs.statSync(itemPath);
       if (stat.isDirectory()) {;
         await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {;
+     else if (this.isJavaScriptFile(item)) {;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
         await this.optimizeFile(itemPath)}
-  isJavaScriptFile($2) {
-  'utf8')'
+    }
+  isJavaScriptFile(filePath) {;
+
+  'utf8')';
       let: optimizedContent = content;,
-  let: optimizations = 0
+  let: optimizations = 0;
       // Optimize: Lucide React imports;,
-  optimizedContent: = this.optimizeLucideImports(optimizedContent)
-      if: (optimizedContent !== content) optimizations++
+  optimizedContent: = this.optimizeLucideImports(optimizedContent);
+      if: (optimizedContent !== content) optimizations++;
+
         icons.forEach("icon": => allIcons.add(icon))})
 
       const optimizedImport = "import { ${Array.from(allIcons).join(
-      const optimizedImport = "import { ${Array.from(allIcons).join(
+      const optimizedImport = "import { ${Array.from(allIcons).join(;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
   ', ')} } from';';lucide-react';\n";
       "return": content.replace(lucidePattern, '';';).replace(/^/, optimizedImport)    }';
+
     "return": content}
 
-  'import')) {'
-        const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g)
+  'import')) {';
+        const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g);
         if: (matches) {'
   '.tsx'].includes(ext)}
-  async optimizeFile(filePath) {
-    try {
+  async optimizeFile(filePath) {;
+    try {;
       const content = fs.readFileSync(filePath,
       // Optimize Lucide React imports;)
-      optimizedContent = this.optimizeLucideImports(optimizedContent)
-      if (optimizedContent !== content) optimizations++
-      // Optimize Framer Motion imports
-      optimizedContent = this.optimizeFramerMotionImports(optimizedContent)
-      // Optimize Radix UI imports
-      optimizedContent = this.optimizeRadixImports(optimizedContent)
-      // Remove unused imports
-      optimizedContent = this.removeUnusedImports(optimizedContent)
-        fs.writeFileSync(filePath, optimizedContent, ';utf8')
-        this.totalOptimizations += optimizations
-  optimizeLucideImports($2) {
+      optimizedContent = this.optimizeLucideImports(optimizedContent);
+      if (optimizedContent !== content) optimizations++;
+      // Optimize Framer Motion imports;
+      optimizedContent = this.optimizeFramerMotionImports(optimizedContent);
+      // Optimize Radix UI imports;
+      optimizedContent = this.optimizeRadixImports(optimizedContent);
+      // Remove unused imports;
+      optimizedContent = this.removeUnusedImports(optimizedContent);
+
+        fs.writeFileSync(filePath, optimizedContent, ';utf8');
+        this.totalOptimizations += optimizations;
+
+  optimizeLucideImports(content) {
     // Convert individual icon imports to single import
 
     const lucidePattern =
-    const lucidePattern =
+    const lucidePattern =;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
       /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g;
+
     const matches = [...content.matchAll(lucidePattern)];
+
       console.error("❌ Error optimizing file ${filePath}:", error.message)}
-  optimizeLucideImports($2) {
-      ').map(icon => icon.trim())
+  }
+  optimizeLucideImports(content) {;
+
+      ').map(icon => icon.trim());
         icons.forEach(icon => allIcons.add(icon));)
 
+      const optimizedImport = `import { ${Array.from(allIcons).join(`;
+
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g;"
+=======
       const optimizedImport = `import { ${Array.from(allIcons).join(`
-      const optimizedImport = `import { ${Array.from(allIcons).join(`
-      const optimizedImport = `import { ${Array.from(allIcons).join(`
+      const optimizedImport = `import { ${Array.from(allIcons).join(`;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/chore/fix-lint-and-merge
 
   ', ')} } from';lucide-react';\n";"
       return content.replace(lucidePattern, '';).replace(/^/, optimizedImport)    }
 
-  'lucide-react';\n"
-`
-      const optimizedImport = `import { ${Array.from(allIcons).join(`
+  'lucide-react';\n";
+`;
+      const optimizedImport = `import { ${Array.from(allIcons).join(`;
 )
   ', ')} } from';lucide-react';\n";"""
       return content.replace(lucidePattern, ;).replace(/^/, optimizedImport)    }
   'lucide-react';\n";"
       return content.replace(lucidePattern).replace(/^/, optimizedImport)    }
     return content}
-  optimizeFramerMotionImports($2) {
-        optimizedImports += "import { ${Array.from(components).join(',
+<<<<<<< HEAD
+  optimizeFramerMotionImports(content) {// Optimize framer-motion imports;
+    }
+    return content.replace(';'
+      /import\s*{\s*motion\s*}\s*from\s*['']framer-motion[';'];?\s*/g;'
+      'import { motion }  from 'framer-motion;\n')}'
+  optimizeRadixImports(content) {// Group Radix UI imports;
 
-      ')} } from '@radix-ui/${packageName}
-      ')} } from '@radix-ui/${packageName}
-  ';\n"})"
+}
 
-      return content.replace(radixPattern, '').replace(/^/, optimizedImports)}
-        const packageName = match[2]
-        optimizedImports += "import { ${Array.from(components).join(',')
-      ')} } from '@radix-ui/${packageName}
-  ';\n"})"""
-      return content.replace(radixPattern, ).replace(/^/, optimizedImports)}
-        if (!groupedImports.has(packageName)) {
-      let optimizedImports = '';      groupedImports.forEach((components, packageName) => {
-        optimizedImports += `import { ${Array.from(components).join(', ';)} } from '@radix-ui/${packageName}
-  ';\n`});
-      return content.replace(radixPattern, ').replace(/^/, optimizedImports)}
-  removeUnusedImports($2) {
-      '\n')
-    // Find all used identifiers
-          matches.forEach(match => usedIdentifiers.add(match))
-    // Simple unused import removal (basic implementation);'
-    const lines = content.split(;)';\n')';    const usedIdentifiers = new Set()';    // Find all used identifiers;'
-    lines.forEach(line => {;);      if (!line.trim().startsWith(;)';import')) {';        const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g)
-  if($2) {
-          matches.forEach(match => usedIdentifiers.add(match))}
-    })
-    // Remove unused imports (simplified)
-    return lines
-          const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/)
-  if($2) {}
-            const importedItems = importMatch[1]'
-              .split(', ')
-              .map(item => item.trim())
-            const hasUsedItems = importedItems.some(item =>)
-              usedIdentifiers.has(item)
-            )
-            return hasUsedItems}
-        }
-        return true})
-      .join('\n')}
-          const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item));
-          return hasUsedItems}
+const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[']@radix-ui\/([^']+)['"];?\s*/g    const matches = [...content.matchAll(radixPattern)];"
+    if (matches.length > 1) {const groupedImports = new Map()matches.forEach(match => { return  ; }
+  }
+  const components = match[1].split(', ').map(comp => comp.trim())optimizedImports += "import { ${Array.from(components).join(',')} } from '@radix-ui/${packageName}')} } from '@radix-ui/${packageName}'
+      ')} } from '@radix-ui/${packageName}origin/cursor/integrate-build-improve-and-re-verify-c7b5;'
+  ';\n"})";"
+      return content.replace(radixPattern, '').replace(/^/, optimizedImports)}'
+
+        if (!groupedImports.has(packageName)) {groupedImports.set(packageName, new Set())}
+        components.forEach(comp => { return groupedImports.get(packageName).add(comp))})let optimizedImports = ''; }      groupedImports.forEach((components, packageName) => {optimizedImports += `import { ${Array.from(components).join(', ';)} } from '@radix-ui/${packageName}';optimizedImports += `import { ${Array.from(components).join(', ';)} } from '@radix-ui/${packageName}'        optimizedImports += `import { ${Array.from(components).join(', ';)} } from '@radix-ui/${packageName}';'
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+  ';\n`})return content.replace(radixPattern, ').replace(/^/, optimizedImports)}'    return content}
+  removeUnusedImports(content) {// Simple unused import removal (basic implementation)const lines = content.split(','\n';'
+  }
+  const usedIdentifiers = new Set()// Find all used identifiers;
+    lines.forEach((line) => {if (!line.trim().startsWith(';'
+  'import')) {const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g)if (matches) {matches.forEach(match => { return usedIdentifiers.add(match))// Simple unused import removal (basic implementation; }'
+  }
+
+const usedIdentifiers = new Set()';    // Find all used identifiers;'
+    lines.forEach((line) => {)if (!line.trim().startsWith()';import')) {';'
+
+}
+
+const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g)if (matches) {matches.forEach(match => { return usedIdentifiers.add(match))}
       }
-      return true}).join(',
-      '\n')  }
+    })// Remove unused imports (simplified; }
+  return lines;
+      .filter(line = > {if (line.trim().startsWith('import')) {const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/)if (importMatch) ;'
+  const importedItems = importMatch[1];
+              .split(', ').map(item = > item.trim();'
+  const hasUsedItems = importedItems.some(item =>;
+              usedIdentifiers.has(item))return hasUsedItems}
+        }
+        return true}).join('\n')}'
+
+const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item))return hasUsedItems}
+      }
+      return true}).join(','\n')  }#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"}) console.log(`📊 Total "optimizations": ${this.totalOptimization,`}`),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"});"
+  return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) console.log(,"}),"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach((match) => {,"}),"});"  const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"});"
+  return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach((match) => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => { return comp.trim()),"}),"}); }"
+  const packageName = match[2],"}),"}) if (!groupedImports.has(packageName)) {,"}),"}) groupedImports.set(packageName,new Set()),"}),"}) }"}),"}) components.forEach(comp => groupedImports.get(packageName).add(comp)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) groupedImports.forEach((components,packageName) => {,"}),"}) optimizedImports += `import { ${Array.from(components).join(',,"}),"}) ')} } from '@radix-ui/${packageName}"}),"}) ';\n`,"}),"}) }),"}),"}) ,"}),"}) return content.replace(radixPattern,'').replace(/^/,optimizedImports),"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) removeUnusedImports(content) {,"}),"}) const lines = content.split(,"}),"}) '\n'),"}),"}) const usedIdentifiers = new Set(),"}),"}) ,"}),"}) lines.forEach((line) => {,"}),"}) if (!line.trim().startsWith(,"}),"}) 'import')) {,"}),"}) const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g),"}),"}) if (matches) {,"}),"}) matches.forEach(match => { return usedIdentifiers.add(match)),"}),"}) }"}),"}) }"}),"}) }),"}),"}) ,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const optimizer = new ImportOptimizer(),"}),"}) optimizer.optimizeImports().catch(console.error),"}),"}) ,"}),"}); }"  const __dirname = path.dirname(__filename)class ImportOptimizer {constructor() {this.projectRoot = process.cwd()this.optimizedFiles = []; this.totalOptimizations = 0} async optimizeImports() {console.log(';⚡ Optimizing imports to reduce bundle size...')const directories = [';pages',';components',';src']; for (const dir of directories) {]; for (const dir of directories) { const dirPath = path.join(this.projectRoot,dir)if (fs.existsSync(dirPath)) {await this.processDirectory(dirPath)} } console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`)` console.log(`📊 Total "optimizations": ${this.totalOptimizations}`,`} async processDirectory(dirPath) {const items = fs.readdirSync(dirPath)for (const item of items) {const itemPath = path.join(dirPath,item)const stat = fs.statSync(itemPath)if (stat.isDirectory()) {await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {await this.optimizeFile(itemPath)} } } isJavaScriptFile(filePath) ;
+  const ext = path.extname(filePath;
+  return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; "async": optimizeFile(filePath) { try { const content  = fs.readFileSync(filePath 'utf8')';"let": optimizedContent = content; "let": optimizations = 0; "optimizedContent": = this.optimizeLucideImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeFramerMotionImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeRadixImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.removeUnusedImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "if": (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')';this.optimizedFiles.push(filePath)this."totalOptimizations": += optimizations; console.log( `⚡ "Optimized": ${optimization,`} import(s) in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/"g": const matches  = [...content.matchAll(lucidePattern)]';"if": (matches.length > 1) { const allIcons = new Set()matches.forEach("match": => {;'  }
+}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; "return": content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; "return": content} optimizeFramerMotionImports(content) { "return": content.replace( /import\s*{\s*motion\s,'}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion  } from 'framer-motion';\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/"g": const matches = [...content.matchAll(radixPattern)];"; "if": (matches.length > 1) { const groupedImports = new Map()matches.forEach("match": => {;"
+  }
+
+}'';\n`}) "return": content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; "return": conten,'} removeUnusedImports(content) { const lines  = content.split( '\n')';'
+
+}
+
+
+}
+
+} async optimizeFile(filePath) {try ;
+  }
+  const content = fs.readFileSync(filePath,optimizedContent = this.optimizeLucideImports(optimizedContent)if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeFramerMotionImports(optimizedContent)if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeRadixImports(optimizedContent)if (optimizedContent !== content) optimizations++; optimizedContent = this.removeUnusedImports(optimizedContent)if (optimizedContent !== content) optimizations++; if (optimizations > 0) {fs.writeFileSync(filePath,optimizedContent,';utf8')this.optimizedFiles.push(filePath)this.totalOptimizations += optimizations; console.log( `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}` )} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g;"
+
+
+}
+
+
+  return true}).join(','\n') };'
+}
+
+const optimizer = new ImportOptimizer()optimizer.optimizeImports().catch(console.error)}
+return true}).join(',;'
+      '\n')  }'
+
+#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"}) console.log(`📊 Total "optimizations": ${this.totalOptimization,`}`),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"});"
+  return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) console.log(,"}),"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach((match) => {,"}),"});"  const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"});"
+  return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach((match) => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => { return comp.trim()),"}),"}); }"
+  const packageName = match[2],"}),"}) if (!groupedImports.has(packageName)) {,"}),"}) groupedImports.set(packageName,new Set()),"}),"}) }"}),"}) components.forEach(comp => groupedImports.get(packageName).add(comp)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) groupedImports.forEach((components,packageName) => {,"}),"}) optimizedImports += `import { ${Array.from(components).join(',,"}),"}) ')} } from '@radix-ui/${packageName}"}),"}) ';\n`,"}),"}) }),"}),"}) ,"}),"}) return content.replace(radixPattern,'').replace(/^/,optimizedImports),"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) removeUnusedImports(content) {,"}),"}) const lines = content.split(,"}),"}) '\n'),"}),"}) const usedIdentifiers = new Set(),"}),"}) ,"}),"}) lines.forEach((line) => {,"}),"}) if (!line.trim().startsWith(,"}),"}) 'import')) {,"}),"}) const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g),"}),"}) if (matches) {,"}),"}) matches.forEach(match => { return usedIdentifiers.add(match)),"}),"}) }"}),"}) }"}),"}) }),"}),"}) ,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const optimizer = new ImportOptimizer(),"}),"}) optimizer.optimizeImports().catch(console.error),"}),"}) ,"}),"}); }"  const __dirname = path.dirname(__filename); class ImportOptimizer {; constructor() {; this.projectRoot = process.cwd(); this.optimizedFiles = []; this.totalOptimizations = 0} async optimizeImports() {; console.log(';⚡ Optimizing imports to reduce bundle size...');'
+
+}
+
+const directories = [';pages',';components',';src']; for (const dir of directories) {]; for (const dir of directories) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) {; await this.processDirectory(dirPath)} } console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`);` console.log(`📊 Total "optimizations": ${this.totalOptimizations}`,`} async processDirectory(dirPath) {;
+
+}
+
+const items = fs.readdirSync(dirPath); for (const item of items) {;
+
+}
+
+const itemPath = path.join(dirPath,item);
+
+const stat = fs.statSync(itemPath); if (stat.isDirectory()) {; await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {; await this.optimizeFile(itemPath)} } } isJavaScriptFile(filePath) {;
+
+}
+
+const ext = path.extname(filePath); return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; "async": optimizeFile(filePath) { try { const content = fs.readFileSync(filePath 'utf8')';; "let": optimizedContent = content; "let": optimizations = 0; "optimizedContent": = this.optimizeLucideImports(optimizedContent); "if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeFramerMotionImports(optimizedContent); "if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeRadixImports(optimizedContent); "if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.removeUnusedImports(optimizedContent); "if": (optimizedContent !== content) optimizations++; "if": (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')';; this.optimizedFiles.push(filePath); this."totalOptimizations": += optimizations; console.log( `⚡ "Optimized": ${optimization,`} import(s) in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/"g": const matches = [...content.matchAll(lucidePattern)]';; "if": (matches.length > 1) { const allIcons = new Set(); matches.forEach("match": => { const icons = match[1].split( ',').map(icon => { return icon.trim())'; }; icons.forEach("icon": => allIcons.add(icon),'}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; "return": content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; "return": content} optimizeFramerMotionImports(content) { "return": content.replace( /import\s*{\s*motion\s,'}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion } from 'framer-motion';;;\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/"g": const matches = [...content.matchAll(radixPattern)];"; "if": (matches.length > 1) { const groupedImports = new Map(); matches.forEach("match": => { const components = match[1].split( ',').map(comp => { return comp.trim())'; };'
+
+}
+
+}'';;\n`}) "return": content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; "return": conten,'} removeUnusedImports(content) { const lines = content.split( '\n')';;'
+
+}
+
+const usedIdentifiers = new Set(); lines.forEach("line": => { if (!line.trim().startsWith( 'import')) {';'
+
+}
+
+const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); "if": (matches) { '.tsx'].includes(ext,'
+} async optimizeFile(filePath) {; try {;
+
+}
+
+const content = fs.readFileSync(filePath,optimizedContent = this.optimizeLucideImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeFramerMotionImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeRadixImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.removeUnusedImports(optimizedContent); if (optimizedContent !== content) optimizations++; if (optimizations > 0) {; fs.writeFileSync(filePath,optimizedContent,';utf8'); this.optimizedFiles.push(filePath); this.totalOptimizations += optimizations; console.log( `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}` )} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g;"
+const matches = [...content.matchAll(lucidePattern)]; console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) {;`
+}
+
+const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[;` '']lucide-react[''];?\s*/g const matches = [...content.matchAll(lucidePattern)]; if (matches.length > 1) { const allIcons = new Set(); matches.forEach(match = > {;'
+  }
+  const icons = match[1].split(',',).map(icon => { return icon.trim()); } icons.forEach(icon => { return allIcons.add(icon)); }) const optimizedImport = `import { ${Array.from(allIcons).join(` ',')} } from';lucide-react';\n`;` return content.replace(lucidePattern,'';).replace(/^/,optimizedImport) } 'lucide-react';\n`; return content.replace(lucidePattern,).replace(/^/,optimizedImport) } return content} optimizeFramerMotionImports(content) {; return content.replace(' /import\s*{\s*motion\s*}\s*from\s*['']framer-motion[';'];?\s*/g 'import { motion } from 'framer-motion;;\n')} optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[']@radix-ui\/([^']+)['"];?\s*/g const matches = [...content.matchAll(radixPattern)]; if (matches.length > 1) {;"
+}
+
+const groupedImports = new Map(); matches.forEach((match) => {;
+
+}
+
+const components = match[1].split(',').map(comp => { return comp.trim()); } optimizedImports += `import { ${Array.from(components).join(',')} } from '@radix-ui/${packageName} ';\n`})` return content.replace(radixPattern,'').replace(/^/,optimizedImports)}'
+const packageName = match[2]; if (!groupedImports.has(packageName)) {; groupedImports.set(packageName,new Set())} components.forEach(comp => { return groupedImports.get(packageName).add(comp))}); } let optimizedImports = ''; groupedImports.forEach((components,packageName) => {; optimizedImports += `import { ${Array.from(components).join(',';)} } from '@radix-ui/${packageName} ';\n`}); return content.replace(radixPattern,').replace(/^/,optimizedImports)} return content} removeUnusedImports(content) {;'
+}
+
+const lines = content.split(','\n');'
+
+const usedIdentifiers = new Set(); lines.forEach(line = > { if (!line.trim().startsWith(' 'import')) {;'
+  }
+  const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if (matches) { matches.forEach(match => { return usedIdentifiers.add(match)); }
+
+}
+
+const lines = content.split(;)';\n')';;'
+
+const usedIdentifiers = new Set()';; lines.forEach((line) => {;); if (!line.trim().startsWith(;)';import')) {';'
+
+}
+
+const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if (matches) {; matches.forEach(match => { return usedIdentifiers.add(match))} } }); } return lines .filter(line = > { if (line.trim().startsWith('import')) {;'
+  }
+  const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/); if (importMatch) { const importedItems = importMatch[1] .split(',') .map(item => { return item.trim()); }'
+
+}
+
+const hasUsedItems = importedItems.some(item => { return usedIdentifiers.has(item) ); } return hasUsedItems} } return true}) .join('\n')}'
+
+const hasUsedItems = importedItems.some(item => { return usedIdentifiers.has(item)); } return hasUsedItems} } return true}).join(','\n') } }'
+
+const optimizer = new ImportOptimizer(); optimizer.optimizeImports().catch(console.error);
+
 }
 // Run the optimizer;
 const optimizer = new ImportOptimizer();
 optimizer.optimizeImports().catch(console.error);
+#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"}) console.log(`📊 Total "optimizations": ${this.totalOptimization,`}`),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"});"
+  return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) console.log(,"}),"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach((match) => {,"}),"});"  const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"});"
+  return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach((match) => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => { return comp.trim()),"}),"}); }"
+
+}
+
+
+}
+
+
+}
+
+
+
+}
+
+
+}
+
+}'';;\n`}) "return": content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; "return": conten,'} removeUnusedImports(content) { const lines = content.split( '\n')';;'
+
+}
+
+
+}
+
+} async optimizeFile(filePath) {; try {;
+
+}
+
+}
+
+  }
+}
+
+
+}
+
+}
+
+
+  }
+
+}
+
+
+
+}
+
+  }
+
+}
+
+
+
+#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"}) console.log(`📊 Total "optimizations": ${this.totalOptimization,`}`),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"});"
+  return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) console.log(,"}),"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach((match) => {,"}),"});"  const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"});"
+  return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach((match) => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => { return comp.trim()),"}),"}); }"
+
+}
+
+
+}
+
+
+}
+
+
+
+}
+
+
+}
+
+}'';;\n`}) "return": content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; "return": conten,'} removeUnusedImports(content) { const lines = content.split( '\n')';;'
+
+}
+
+
+}
+
+} async optimizeFile(filePath) {; try {;
+
+}
+
+}
+
+  }
+}
+
+
+}
+
+}
+
+
+  }
+
+}
+
+
+
+}
+
+  }
+
+}
+
+
+
+ursor/add-new-services-and-deploy-updates-0462,
+ursor/fix-syntax-push-and-merge-to-main-40de
+
 #!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"}) console.log(`📊 Total optimizations: ${this.totalOptimizations}`),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"}) return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) console.log(,"}),"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach(match => {,"}),"}) const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"}) return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach(match => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => comp.trim()),"}),"}) const packageName = match[2],"}),"}) if (!groupedImports.has(packageName)) {,"}),"}) groupedImports.set(packageName,new Set()),"}),"}) }"}),"}) components.forEach(comp => groupedImports.get(packageName).add(comp)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) groupedImports.forEach((components,packageName) => {,"}),"}) optimizedImports += `import { ${Array.from(components).join(',,"}),"}) ')} } from '@radix-ui/${packageName}"}),"}) ';\n`,"}),"}) }),"}),"}) ,"}),"}) return content.replace(radixPattern,'').replace(/^/,optimizedImports),"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) removeUnusedImports(content) {,"}),"}) const lines = content.split(,"}),"}) '\n'),"}),"}) const usedIdentifiers = new Set(),"}),"}) ,"}),"}) lines.forEach(line => {,"}),"}) if (!line.trim().startsWith(,"}),"}) 'import')) {,"}),"}) const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g),"}),"}) if (matches) {,"}),"}) matches.forEach(match => usedIdentifiers.add(match)),"}),"}) }"}),"}) }"}),"}) }),"}),"}) ,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const optimizer = new ImportOptimizer(),"}),"}) optimizer.optimizeImports().catch(console.error),"}),"}) ,"}),"}) const __dirname = path.dirname(__filename); class ImportOptimizer {; constructor() {; this.projectRoot = process.cwd(); this.optimizedFiles = []; this.totalOptimizations = 0} async optimizeImports() {; console.log(';⚡ Optimizing imports to reduce bundle size...'); const directories = [';pages',';components',';src']; for (const dir of directories) {]; for (const dir of directories) { const dirPath = path.join(this.projectRoot,dir); if (fs.existsSync(dirPath)) {; await this.processDirectory(dirPath)} } console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`);` console.log(`📊 Total optimizations: ${this.totalOptimizations}`)} async processDirectory(dirPath) {; const items = fs.readdirSync(dirPath); for (const item of items) {; const itemPath = path.join(dirPath,item); const stat = fs.statSync(itemPath); if (stat.isDirectory()) {; await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {; await this.optimizeFile(itemPath)} } } isJavaScriptFile(filePath) {; const ext = path.extname(filePath); return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; async: optimizeFile(filePath) { try { const content = fs.readFileSync(filePath 'utf8')';; let: optimizedContent = content; let: optimizations = 0; optimizedContent: = this.optimizeLucideImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.optimizeFramerMotionImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.optimizeRadixImports(optimizedContent); if: (optimizedContent !== content) optimizations++; optimizedContent: = this.removeUnusedImports(optimizedContent); if: (optimizedContent !== content) optimizations++; if: (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')';; this.optimizedFiles.push(filePath); this.totalOptimizations: += optimizations; console.log( `⚡ Optimized: ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/g: const matches = [...content.matchAll(lucidePattern)]';; if: (matches.length > 1) { const allIcons = new Set(); matches.forEach(match: => { const icons = match[1].split( ',').map(icon => icon.trim())';; icons.forEach(icon: => allIcons.add(icon))}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; return: content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; return: content} optimizeFramerMotionImports(content) { return: content.replace( /import\s*{\s*motion\s*}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion } from 'framer-motion';;;\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/g: const matches = [...content.matchAll(radixPattern)];"; if: (matches.length > 1) { const groupedImports = new Map(); matches.forEach(match: => { const components = match[1].split( ',').map(comp => comp.trim())';; const packageName = match[2]; if: (!groupedImports.has(packageName)) { groupedImports.set(packageName,new Set())} components.forEach(comp => groupedImports.get(packageName).add(comp))}) let optimizedImports = '';'; groupedImports.forEach((components,packageName) => {'; optimizedImports: += `import { ${Array.from(components).join(','';)} } from: '@radix-ui/${packageName}'';;\n`}) return: content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; return: content} removeUnusedImports(content) { const lines = content.split( '\n')';; const usedIdentifiers = new Set(); lines.forEach(line: => { if (!line.trim().startsWith( 'import')) {'; const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if: (matches) { '.tsx'].includes(ext)} async optimizeFile(filePath) {; try {; const content = fs.readFileSync(filePath,optimizedContent = this.optimizeLucideImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeFramerMotionImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.optimizeRadixImports(optimizedContent); if (optimizedContent !== content) optimizations++; optimizedContent = this.removeUnusedImports(optimizedContent); if (optimizedContent !== content) optimizations++; if (optimizations > 0) {; fs.writeFileSync(filePath,optimizedContent,';utf8'); this.optimizedFiles.push(filePath); this.totalOptimizations += optimizations; console.log( `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}` )} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?\s*/g; const matches = [...content.matchAll(lucidePattern)]; console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) {; const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[;` '']lucide-react[''];?\s*/g const matches = [...content.matchAll(lucidePattern)]; if (matches.length > 1) { const allIcons = new Set(); matches.forEach(match => { const icons = match[1].split(',',).map(icon => icon.trim()); icons.forEach(icon => allIcons.add(icon));) const optimizedImport = `import { ${Array.from(allIcons).join(` ',')} } from';lucide-react';\n`;` return content.replace(lucidePattern,'';).replace(/^/,optimizedImport) } 'lucide-react';\n`; return content.replace(lucidePattern,).replace(/^/,optimizedImport) } return content} optimizeFramerMotionImports(content) {; return content.replace(' /import\s*{\s*motion\s*}\s*from\s*['']framer-motion[';'];?\s*/g 'import { motion } from 'framer-motion;;\n')} optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[']@radix-ui\/([^']+)['"];?\s*/g const matches = [...content.matchAll(radixPattern)]; if (matches.length > 1) {; const groupedImports = new Map(); matches.forEach(match => {; const components = match[1].split(',').map(comp => comp.trim()); optimizedImports += `import { ${Array.from(components).join(',')} } from '@radix-ui/${packageName} ';\n`})` return content.replace(radixPattern,'').replace(/^/,optimizedImports)} const packageName = match[2]; if (!groupedImports.has(packageName)) {; groupedImports.set(packageName,new Set())} components.forEach(comp => groupedImports.get(packageName).add(comp))}); let optimizedImports = ''; groupedImports.forEach((components,packageName) => {; optimizedImports += `import { ${Array.from(components).join(',';)} } from '@radix-ui/${packageName} ';\n`}); return content.replace(radixPattern,').replace(/^/,optimizedImports)} return content} removeUnusedImports(content) {; const lines = content.split(','\n'); const usedIdentifiers = new Set(); lines.forEach(line => { if (!line.trim().startsWith(' 'import')) { const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if (matches) { matches.forEach(match => usedIdentifiers.add(match)); const lines = content.split(;)';\n')';; const usedIdentifiers = new Set()';; lines.forEach(line => {;); if (!line.trim().startsWith(;)';import')) {'; const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g); if (matches) {; matches.forEach(match => usedIdentifiers.add(match))} } }); return lines .filter(line => { if (line.trim().startsWith('import')) { const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/); if (importMatch) { const importedItems = importMatch[1] .split(',') .map(item => item.trim()); const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item) ); return hasUsedItems} } return true}) .join('\n')} const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item)); return hasUsedItems} } return true}).join(','\n') } } const optimizer = new ImportOptimizer(); optimizer.optimizeImports().catch(console.error);
+
+const optimizer = new ImportOptimizer()optimizer.optimizeImports().catch(console.error)#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) for (const dir of directories) {,"}),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"}) console.log(`📊 Total "optimizations": ${this.totalOptimization,`}`),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) for (const item of items) {,"}),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"});"
+  return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) console.log(,"}),"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach((match) => {,"}),"});"  const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"});"
+  return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach((match) => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => { return comp.trim()),"}),"}); }"
+  return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; "async": optimizeFile(filePath) { try { const content  = fs.readFileSync(filePath 'utf8')';"let": optimizedContent = content; "let": optimizations = 0; "optimizedContent": = this.optimizeLucideImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeFramerMotionImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeRadixImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.removeUnusedImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "if": (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')';this.optimizedFiles.push(filePath)this."totalOptimizations": += optimizations; console.log( `⚡ "Optimized": ${optimization,`} import(s) in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/"g": const matches  = [...content.matchAll(lucidePattern)]';"if": (matches.length > 1) { const allIcons = new Set()matches.forEach("match": => {;'  }
+}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; "return": content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; "return": content} optimizeFramerMotionImports(content) { "return": content.replace( /import\s*{\s*motion\s,'}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion  } from 'framer-motion';\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/"g": const matches = [...content.matchAll(radixPattern)];"; "if": (matches.length > 1) { const groupedImports = new Map()matches.forEach("match": => {;"
+  }
+
+}'';\n`}) "return": content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; "return": conten,'} removeUnusedImports(content) { const lines  = content.split( '\n')';'
+
+}
+
+
+}
+
+} async optimizeFile(filePath) {try ;
+  }
+
+
+}
+
+
+  return true}).join(','\n') };'
+}
+
+  return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) console.log(,"}),"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach((match) => {,"}),"});"  const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"});"
+  return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach((match) => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => { return comp.trim()),"}),"}); }"
+  return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; "async": optimizeFile(filePath) { try { const content  = fs.readFileSync(filePath 'utf8')';"let": optimizedContent = content; "let": optimizations = 0; "optimizedContent": = this.optimizeLucideImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeFramerMotionImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeRadixImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.removeUnusedImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "if": (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')';this.optimizedFiles.push(filePath)this."totalOptimizations": += optimizations; console.log( `⚡ "Optimized": ${optimization,`} import(s) in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/"g": const matches  = [...content.matchAll(lucidePattern)]';"if": (matches.length > 1) { const allIcons = new Set()matches.forEach("match": => {;'  }
+}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; "return": content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; "return": content} optimizeFramerMotionImports(content) { "return": content.replace( /import\s*{\s*motion\s,'}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion  } from 'framer-motion';\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/"g": const matches = [...content.matchAll(radixPattern)];"; "if": (matches.length > 1) { const groupedImports = new Map()matches.forEach("match": => {;"
+  }
+
+}'';\n`}) "return": content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; "return": conten,'} removeUnusedImports(content) { const lines  = content.split( '\n')';'
+
+}
+
+
+}
+
+} async optimizeFile(filePath) {try ;
+  }
+
+
+}
+
+  return true}) .join('\n';'
+}
+
+  return true}).join(','\n') } }'
+;
+  const optimizer = new ImportOptimizer()optimizer.optimizeImports().catch(console.error)ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+// Run the optimizer;
+
+const optimizer = new ImportOptimizer()optimizer.optimizeImports().catch(console.error)#!/usr/bin/env node,"}),"}) ,"}),"}) import fs from,"}),"}) 'fs',"}),"}) import path from,"}),"}) 'path',"}),"}) import { fileURLToPath } from,"}),"}) 'url',"}),"}) ,"}),"}) const __filename = fileURLToPath(import.meta.url),"}),"}) const __dirname = path.dirname(__filename),"}),"}) ,"}),"}) class ImportOptimizer {,"}),"}) constructor() {,"}),"}) this.projectRoot = process.cwd(),"}),"}) this.optimizedFiles = [],"}),"}) this.totalOptimizations = 0,"}),"}) }"}),"}) ,"}),"}) async optimizeImports() {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) ),"}) const dirPath = path.join(this.projectRoot,dir),"}),"}) if (fs.existsSync(dirPath)) {,"}),"}) await this.processDirectory(dirPath),"}),"}) }"}),"}) }"}),"}) ,"}),"}) console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`),"}),"}) console.log(`📊 Total "optimizations": ${this.totalOptimization,`}`),"}),"}) }"}),"}) ,"}),"}) async processDirectory(dirPath) {,"}),"}) const items = fs.readdirSync(dirPath),"}),"}) ,"}),"}) ),"}) const itemPath = path.join(dirPath,item),"}),"}) const stat = fs.statSync(itemPath),"}),"}) ,"}),"}) if (stat.isDirectory()) {,"}),"}) await this.processDirectory(itemPath),"}),"}) } else if (this.isJavaScriptFile(item)) {,"}),"}) await this.optimizeFile(itemPath),"}),"}) }"}),"}) }"}),"}) }"}),"}) ,"}),"}) isJavaScriptFile(filePath) {,"}),"}) const ext = path.extname(filePath),"}),"});"
+  return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) console.log(,"}),"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach((match) => {,"}),"});"  const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"});"
+  return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach((match) => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => { return comp.trim()),"}),"}); }"
+  const packageName = match[2],"}),"}) if (!groupedImports.has(packageName)) {,"}),"}) groupedImports.set(packageName,new Set()),"}),"}) }"}),"}) components.forEach(comp => groupedImports.get(packageName).add(comp)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) groupedImports.forEach((components,packageName) => {,"}),"}) optimizedImports += `import { ${Array.from(components).join(',,"}),"}) ')} } from '@radix-ui/${packageName}"}),"}) ';\n`,"}),"}) }),"}),"}) ,"}),"}) return content.replace(radixPattern,'').replace(/^/,optimizedImports),"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) removeUnusedImports(content) {,"}),"}) const lines = content.split(,"}),"}) '\n'),"}),"}) const usedIdentifiers = new Set(),"}),"}) ,"}),"}) lines.forEach((line) => {,"}),"}) if (!line.trim().startsWith(,"}),"}) 'import')) {,"}),"}) const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g),"}),"}) if (matches) {,"}),"}) matches.forEach(match => { return usedIdentifiers.add(match)),"}),"}) }"}),"}) }"}),"}) }),"}),"}) ,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) }"}),"}) ,"}),"}) const optimizer = new ImportOptimizer(),"}),"}) optimizer.optimizeImports().catch(console.error),"}),"}) ,"}),"}); }"  const __dirname = path.dirname(__filename)class ImportOptimizer {constructor() {this.projectRoot = process.cwd()this.optimizedFiles = []; this.totalOptimizations = 0} async optimizeImports() {console.log(';⚡ Optimizing imports to reduce bundle size...')const directories = [';pages',';components',';src'];  } console.log(`✅ Optimized imports in ${this.optimizedFiles.length} files`)` console.log(`📊 Total "optimizations": ${this.totalOptimizations}`)} async processDirectory(dirPath) {const items = fs.readdirSync(dirPath)else if (this.isJavaScriptFile(item)) {await this.optimizeFile(itemPath)} },`} isJavaScriptFile(filePath) ;
+  return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; "async": optimizeFile(filePath) { try { const content  = fs.readFileSync(filePath 'utf8')';"let": optimizedContent = content; "let": optimizations = 0; "optimizedContent": = this.optimizeLucideImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeFramerMotionImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeRadixImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.removeUnusedImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "if": (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')';this.optimizedFiles.push(filePath)this."totalOptimizations": += optimizations; console.log( `⚡ "Optimized": ${optimization,`} import(s) in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/"g": const matches  = [...content.matchAll(lucidePattern)]';"if": (matches.length > 1) { const allIcons = new Set()matches.forEach("match": => {;'  }
+}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; "return": content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; "return": content} optimizeFramerMotionImports(content) { "return": content.replace( /import\s*{\s*motion\s,'}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion  } from 'framer-motion';\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/"g": const matches = [...content.matchAll(radixPattern)];"; "if": (matches.length > 1) { const groupedImports = new Map()matches.forEach("match": => {;"
+  }
+
+}'';\n`}) "return": content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; "return": conten,'} removeUnusedImports(content) { const lines  = content.split( '\n')';'
+
+}
+
+
+}
+
+} async optimizeFile(filePath) {try ;
+  }
+
+
+}
+
+
+  return true}).join(','\n') };'
+}
+
+  return [,"}),"}) '.js',,"}),"}) '.jsx',,"}),"}) '.ts',,"}),"}) '.tsx'].includes(ext),"}),"}) }"}),"}) ,"}),"}) async optimizeFile(filePath) {,"}),"}) try {,"}),"}) const content = fs.readFileSync(filePath,,"}),"}) 'utf8'),"}),"}) let optimizedContent = content,"}),"}) let optimizations = 0,"}),"}) ,"}),"}) optimizedContent = this.optimizeLucideImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeFramerMotionImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.optimizeRadixImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) optimizedContent = this.removeUnusedImports(optimizedContent),"}),"}) if (optimizedContent !== content) optimizations++,"}),"}) ,"}),"}) if (optimizations > 0) {,"}),"}) fs.writeFileSync(filePath,optimizedContent,,"}),"}) 'utf8'),"}),"}) this.optimizedFiles.push(filePath),"}),"}) this.totalOptimizations += optimizations,"}),"}) console.log(,"}),"}) `⚡ Optimized ${optimizations} import(s) in ${path.relative(this.projectRoot,filePath)}`,"}),"}) ),"}),"}) }"}),"}) } catch (error) {,"}),"}) console.error(`❌ Error optimizing file ${filePath}:`,error.message),"}),"}) }"}),"}) }"}),"}) ,"}),"}) optimizeLucideImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(lucidePattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const allIcons = new Set(),"}),"}) matches.forEach((match) => {,"}),"});"  const icons = match[1].split(,"}),"}) ',').map(icon => icon.trim()),"}),"}) icons.forEach(icon => allIcons.add(icon)),"}),"}) }),"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) }"}),"}) ,"}),"}) return content,"}),"}) }"}),"}) ,"}),"}) optimizeFramerMotionImports(content) {,"}),"});"
+  return content.replace(,"}),"}) /import\s*{\s*motion\s*}\s*from\s*['"]framer-motion[,"}),"}) '"];?\s*/g,,"}),"}) "import { motion } from 'framer-motion,"}),"}) ';\n","}),"}) ),"}),"}) }"}),"}) ,"}),"}) optimizeRadixImports(content) {,"}),"}) ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}) const matches = [...content.matchAll(radixPattern)],"}),"}) ,"}),"}) if (matches.length > 1) {,"}),"}) const groupedImports = new Map(),"}),"}) matches.forEach((match) => {,"}),"}) const components = match[1].split(,"}),"}) ',').map(comp => { return comp.trim()),"}),"}); }"
+  return [';.js','';.jsx','';.ts','';.tsx'].includes(ext)}'; "async": optimizeFile(filePath) { try { const content  = fs.readFileSync(filePath 'utf8')';"let": optimizedContent = content; "let": optimizations = 0; "optimizedContent": = this.optimizeLucideImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeFramerMotionImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.optimizeRadixImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "optimizedContent": = this.removeUnusedImports(optimizedContent)"if": (optimizedContent !== content) optimizations++; "if": (optimizations > 0) { fs.writeFileSync(filePath,optimizedContent 'utf8')';this.optimizedFiles.push(filePath)this."totalOptimizations": += optimizations; console.log( `⚡ "Optimized": ${optimization,`} import(s) in ${path.relative(this.projectRoot,filePath)}`)} } catch (error) { console.error(`❌ Error optimizing file ${filePath}:`,error.message)} } optimizeLucideImports(content) { const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[';']lucide-react[''];?\s*/"g": const matches  = [...content.matchAll(lucidePattern)]';"if": (matches.length > 1) { const allIcons = new Set()matches.forEach("match": => {;'  }
+}) const optimizedImport = `import { ${Array.from(allIcons).join( ',')} } from';';lucide-react';\n`; "return": content.replace(lucidePattern,'';';).replace(/^/,optimizedImport) }'; "return": content} optimizeFramerMotionImports(content) { "return": content.replace( /import\s*{\s*motion\s,'}\s*from\s*['']framer-motion[';';'];?\s*/g,'';import { motion  } from 'framer-motion';\n')}'; optimizeRadixImports(content) { const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^';';']+)['"];?\s*/"g": const matches = [...content.matchAll(radixPattern)];"; "if": (matches.length > 1) { const groupedImports = new Map()matches.forEach("match": => {;"
+  }
+
+}'';\n`}) "return": content.replace(radixPattern,'').replace(/^/,optimizedImports)}'; "return": conten,'} removeUnusedImports(content) { const lines  = content.split( '\n')';'
+
+}
+
+
+}
+
+} async optimizeFile(filePath) {try ;
+  }
+const packageName = match[2]; if (!groupedImports.has(packageName)) {groupedImports.set(packageName,new Set())} components.forEach(comp => { return groupedImports.get(packageName).add(comp))})let optimizedImports = ''; } groupedImports.forEach((components,packageName) => {optimizedImports += `import { ${Array.from(components).join(',';)} } from '@radix-ui/${packageName} ';\n`})return content.replace(radixPattern,').replace(/^/,optimizedImports)} return content} removeUnusedImports(content) {const lines = content.split(','\n')const usedIdentifiers = new Set()lines.forEach((line) => { if (!line.trim().startsWith(' 'import')) { const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g)if (matches) { matches.forEach(match => { return usedIdentifiers.add(match); }'
+  }
+
+
+}
+
+  return true}) .join('\n';'
+}
+
+  return true}).join(','\n') } }'
+;
+  const optimizer = new ImportOptimizer()optimizer.optimizeImports().catch(console.error)
+=======
+  optimizeFramerMotionImports(content) {;
+
+        optimizedImports += "import { ${Array.from(components).join(',
+
+      ')} } from '@radix-ui/${packageName}
+      ')} } from '@radix-ui/${packageName};
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+  ';\n"})"
+
+      return content.replace(radixPattern, '').replace(/^/, optimizedImports)}
+        const packageName = match[2];
+        optimizedImports += "import { ${Array.from(components).join(',')
+      ')} } from '@radix-ui/${packageName};
+  ';\n"})"""
+      return content.replace(radixPattern, ).replace(/^/, optimizedImports)}
+        if (!groupedImports.has(packageName)) {;
+
+      let optimizedImports = '';      groupedImports.forEach((components, packageName) => {;
+
+        optimizedImports += `import { ${Array.from(components).join(', ';)} } from '@radix-ui/${packageName}
+        optimizedImports += `import { ${Array.from(components).join(', ';)} } from '@radix-ui/${packageName}';
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+  ';\n`});
+
+      return content.replace(radixPattern, ').replace(/^/, optimizedImports)}
+  removeUnusedImports(content) {;
+
+      '\n');
+    // Find all used identifiers;
+
+          matches.forEach(match => usedIdentifiers.add(match));
+    // Simple unused import removal (basic implementation);'
+    const lines = content.split(;)';\n')';    const usedIdentifiers = new Set()';    // Find all used identifiers;'
+    lines.forEach(line => {;);      if (!line.trim().startsWith(;)';import')) {';        const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g);
+        if (matches) {;
+          matches.forEach(match => usedIdentifiers.add(match))}
+    });
+    // Remove unused imports (simplified)
+    return lines;
+
+          const importMatch = line.match(/import\s*{\s*([^}]+)\s*}\s*from/);
+          if (importMatch) {}
+            const importedItems = importMatch[1]'
+              .split(', ')
+              .map(item => item.trim());
+            const hasUsedItems = importedItems.some(item =>)
+              usedIdentifiers.has(item)
+            );
+            return hasUsedItems}
+
+      .join('\n')}
+          const hasUsedItems = importedItems.some(item => usedIdentifiers.has(item));
+          return hasUsedItems}
+      }'
+      return true}).join(','
+      '\n')  }
+>>>>>>> origin/chore/fix-lint-and-merge

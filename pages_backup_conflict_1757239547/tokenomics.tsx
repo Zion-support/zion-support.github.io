@@ -134,11 +134,8 @@ const { url } = await res.json();
     { label: 'Liquidity & Market Making', percent: 10 },;
     { label: 'Advisors & Partnerships', percent: 5 }]),;
   const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),;
-  const [jurisdiction, setJurisdiction] = useState<string>('US');
   const [operatorPrompt, setOperatorPrompt] = useState<string>(defaultOperatorPrompt);
   const totalPercent = useMemo(() => distribution.reduce((acc, d) => acc + (Number(d.percent) || 0), 0), [distribution]),;
-  const [generatedMarkdown, setGeneratedMarkdown] = useState<string>('');
-  const [isGenerating, setIsGenerating] = useState<boolean>(false);
   const [activeSection, setActiveSection] = useState<string>('Executive Summary');
   const previewMarkdown = useMemo(() => {;
     return generatedMarkdown || buildLocalMarkdown({;
@@ -168,7 +165,6 @@ const { url } = await res.json();
           operatorPrompt,;
           legalReview})}),;
       if (!res.ok) throw new Error('Failed to generate');
-      const data = await res.json();
       setGeneratedMarkdown(data.markdown || '');
     } catch (error) {
       console.error(e);
@@ -190,7 +186,6 @@ const { url } = await res.json();
     if (ext === 'md') {;
       const blob = new Blob([previewMarkdown], { type: 'text/markdown,charset=utf-8' });
       const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
       a.href = url;
       a.download = `${tokenName.toLowerCase().replace(/\s+/g, '-')}-whitepaper.md`,;
       document.body.appendChild(a);
@@ -210,7 +205,6 @@ const { url } = await res.json();
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-      const { url } = await res.json();
       window.open(url, '_blank');
       } catch (error) {
     console.error("Error:", error);
@@ -250,7 +244,6 @@ const { url } = await res.json();
     }
 }
 
-const { url } = await res.json();
     await navigator.clipboard.writeText(url);
     alert('Shareable link copied to clipboard');
     } catch (error) {
@@ -508,7 +501,6 @@ function MarkdownPreview({
       {content |markdown}
     </pre>
   );
-  const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
     const map: Record<string, string> = {},
     sections.forEach((s, i) => {
@@ -530,7 +522,6 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
     const map: Record<string, string> = {};
     sections.forEach((s, i) => {;
       if (i === 0) return, // first is H1;
-      const [titleLine, ...rest] = s.split('\n');
       map[titleLine.trim()] = rest.join('\n');
     }),;
     return map;

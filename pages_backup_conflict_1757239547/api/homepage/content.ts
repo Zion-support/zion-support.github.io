@@ -85,7 +85,6 @@ export default async function handler(
         // fall back to remote
       }
     }
-    const remote = await fetchFromGitHub();
     if (remote) return res.status(200).json(remote);
     return res.status(200).json(null);
  

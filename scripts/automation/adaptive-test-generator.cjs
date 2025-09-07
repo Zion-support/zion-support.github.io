@@ -1,4 +1,15 @@
+<<<<<<< HEAD
 
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -14,14 +25,26 @@ const fs = require("fs")
 const path = require("path")
 console.log(""🧪 Starting Adaptive Test Generator...")
 // Get automation interval from environment variable ("default")
+>>>>>>> origin/chore/fix-lint-and-merge
 console.log("🧪 Starting Adaptive Test Generator...")
+// Get automation interval from environment variable (default)
       "testCoverage"
-      "untestedFiles"
+      untestedFiles
       "testSuggestions"
-      "testPatterns"
-    this.reportDir = path.join(process.cwd(), "test-generation-reports"
-  fs.mkdirSync(this.reportDir, { "recursive"})
+      testPatterns
+console.log(""🧪 Starting Adaptive Test Generator...)
+// Get automation interval from environment variable (default")
+console.log("🧪 Starting Adaptive Test Generator...)
+      testCoverage"
+      "untestedFiles
+      testSuggestions"
+      "testPatterns
+    this.reportDir = path.join(process.cwd(), test-generation-reports"
+  fs.mkdirSync(this.reportDir, { "recursive})
   console.log(`🧪 Running adaptive test generation at ${new Date().toISOString()}
+<<<<<<< HEAD
+
+=======
       console.log(`" Adaptive test generation completed successfully"`)
   console.error(" Adaptive test generation "failed": ")
   console.log(" Analyzing codebase structure...")
@@ -71,29 +94,33 @@ console.log("🧪 Starting Adaptive Test Generator...")
   console.log(" Identifying untested components...")
     const structure = this.testMetrics.testPatterns.get("structure")
     this.testMetrics.untestedFiles = ["...untestedComponents.map(comp => ({ "type": "component"", "...comp }))", "...untestedUtilities.map(util => ({ "type": "utility"", "...util }))", "...untestedHooks.map(hook => ({ "type": "hook"", "...hook }))", "...untestedServices.map(service => ({ "type": "service"", "...service }))", ""]
+>>>>>>> origin/chore/fix-lint-and-merge
 // console.log( Found ${this.testMetrics.untestedFiles.length} untested files")
-  console.log("⚛ Generating component tests...")
+  console.log(⚛ Generating component tests...)
       file => file.type === "component"
-  "type": "
-            "path"
-            "component"
-            "timestamp"
-  "type": "component"
-            "path"
-            "component"
-            "timestamp"
-// console.log( Generated test for "component")
-  console.log(⚠ Failed to generate test for ${component.name  }:")
+  type: "
+            "path
+            component"
+            "timestamp
+  type": "component
+            path"
+            "component
+            timestamp"
+// console.log( Generated test for "component)
+  console.log(⚠ Failed to generate test for ${component.name  }:)
   console.log(" Generating utility tests...")
-      file => file.type === "utility"
+      file => file.type === utility
   console.log(" Generating utility tests...")
-      file => file.type === "utility"
-  "type": "utility"
+      file => file.type === utility
+  "type": utility
             "path"
-            "utility"
+            utility
             "timestamp": new Date().toISOString()}
-});console.log( Generated test for "utility")
+});console.log( Generated test for utility)
   console.log("� Generating integration tests...")
+<<<<<<< HEAD
+
+=======
     const integrationTests = ["]
   "name": "App Navigation"", ""description": "Test navigation between main app routes"", ""content": this.generateIntegrationTest("navigation")", "}", "
   "name": "Form Submission"", ""description": "Test form submission flows"", ""content": this.generateIntegrationTest("form")", "}", "
@@ -117,11 +144,15 @@ console.log("🧪 Starting Adaptive Test Generator...")
   console.log("" Analyzing test patterns...")
     const existingTests = this.findFiles(process.cwd(), [".test.ts", ".test.tsx", ".spec.ts", ".spec.tsx", "]
   "totalTests"
+>>>>>>> origin/chore/fix-lint-and-merge
       "testTypes"
-        "integration"
+        integration
         "e2e"
-      "frameworks"
+      frameworks
         "vitest"
+<<<<<<< HEAD
+
+=======
         "cypress"
 // console.log("" Analyzing test patterns...")
     console.log(" Analyzing test patterns...")
@@ -173,25 +204,29 @@ console.log("🧪 Starting Adaptive Test Generator...")
         "title": "Missing E2E Tests"
         "description": "No end-to-end tests found"
         "action": "Consider adding E2E tests for critical user journeys"
+>>>>>>> origin/chore/fix-lint-and-merge
       .filter(file => file.type === "component")
-  "priority": "high"
-        "category": `priority
-        "title": "
-        "description": Components: ${criticalComponents.map(c => c.name).join(", "})
-        "action": `Generate tests for these critical components first
-  console.log(" Generating test generation report..."")
+  priority: "high"
+        category: `priority
+        "title": 
+        description": Components: ${criticalComponents.map(c => c.name).join(", })
+        action": `Generate tests for these critical components first
+  console.log(" Generating test generation report...)
   "timestamp"
-      "summary"
+      summary
   totalFilesAnalyzed: this.testMetrics.testPatterns.get("structure")
-              this.testMetrics.testPatterns.get("structure")
+              this.testMetrics.testPatterns.get(structure)
         "untestedFiles"
-        "generatedTests"
+        generatedTests
         "testCoverage"
-      "metrics"
+      metrics
       "suggestions"
-      this.reportDir,test-generation-${Date.now()}.json"
-      "test-generation-report.json"
+      this.reportDir,test-generation-${Date.now()}.json
+      test-generation-report.json"
 console.log(")
+<<<<<<< HEAD
+
+=======
   // Skip directories that can"
   // Skip directories that can"
   const testExtensions = [".test.ts", ".test.tsx", ".spec.ts", ".spec.tsx"]
@@ -204,19 +239,40 @@ console.log(")
     return match ? match[1] : "UnknownType"
     return match ? match[1] : "UnknownService"
   generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react"""
+>>>>>>> origin/chore/fix-lint-and-merge
 import { describe, it, expect } from "
-import ${component.name} from `./${path.basename(component.path, path.extname(component.path"))}"
+import ${component.name} from `./${path.basename(component.path, path.extname(component.path))}
   it("renders without crashing")
-  generateComponentTest(component) {return import { render, screen  } from "@testing-";library/react""
-import { describe, it, expect  } from "vitest"}"
+  generateComponentTest(component) {return import { render, screen  } from @testing-;library/react""
+import { describe, it, expect  } from vitest}"
 "
-  generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react""";"
-import { describe, it, expect  } from "vitest";"
+  generateComponentTest(component) {return import { render, screen  } from @testing-;"library/react";"
+import { describe, it, expect  } from "vitest;
 import ${component.name} from "./${path.basename(component.path, path.extname(component.path`))}
-describe("${component.name}")
-  it("renders without crashing")
+describe("${component.name})
+  it(renders without crashing")
     expect(screen.getByRole(`main``)
   it(")
+<<<<<<< HEAD
+
+  expect(screen.getByText("test data")).toBeInTheDocument()})})}
+});
+  console.log(🧪 Starting adaptive test generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals")
+process.on("SIGINT)
+  console.log(� Received SIGINT, shutting down gracefully...")
+process.on("SIGTERM)
+  console.log(� Received SIGTERM, shutting down gracefully...")
+
+
+  console.error(" Failed to start adaptive test generator)
+
+  console.error(" Failed to start adaptive test "generator)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error( Failed to start adaptive test "generator")
+
+=======
   return `import { describe, it, expect } from "vitest"
   it("should handle normal input")
     const result = ${utility.name}("test input")
@@ -268,25 +324,19 @@ process.on("SIGTERM")
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
 
+=======
   console.error(" Failed to start adaptive test "generator")
-<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
   console.error(" Failed to start adaptive test "generator")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error(" Failed to start adaptive test "generator")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
@@ -294,6 +344,3 @@ process.on("SIGTERM")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
-=======
-
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2

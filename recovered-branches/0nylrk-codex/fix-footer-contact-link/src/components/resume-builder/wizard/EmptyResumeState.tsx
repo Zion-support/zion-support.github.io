@@ -1,12 +1,3 @@
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { FilePlus } from "lucide-react";
-import { EmptyResumeProps } from "./types";
-
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FilePlus } from "lucide-react";
-import { EmptyResumeProps } from "./types";
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
   return (
     <Card className="w-full max-w-2xl mx-auto">
@@ -17,11 +8,33 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
             Create a professional resume to showcase your skills and experience
           </p>
           <Button onClick={onCreateClick} className="gap-2">
+
             <FilePlus className="h-4 w-4" />
-            Create Resume
+            Create Resume;
           </Button>
         </div>
       </CardContent>
     </Card>
+
   );
+
+  )
+},"
+import { Card, CardContent } from "@/components/ui/card",;"
+import { Button } from "@/components/ui/button",;"
+import { FilePlus } from "lucide-react",;"
+import { EmptyResumeProps } from "./types",;
+
+};            Create Resume;
+
+            Create Resume;
+
+          </Button>;
+        </div>;
+      </CardContent>;
+
+    </Card>);
 }
+;
+
+'"

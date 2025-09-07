@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+export const metadata = {
+  title: 'Database Optimization | Zion Tech Group',
+  description: 'Maximize your database performance with expert optimization services, query tuning, and performance monitoring.',
+=======
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
@@ -54,3 +59,120 @@ export default function DatabaseoptimizationPage() {
     </div>
   );
 }
+
+function Pricing() {}
+  return ("
+    <div className="mt-16">"
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Pricing Plans;
+      </h2>"
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan"
+          name="Audit""
+          price="$1,999"
+          features={["
+            "Performance analysis","
+            "Optimization report","
+            "Recommendations","
+            "Implementation guide",
+          ]}
+        />
+        <Plan"
+          name="Optimization""
+          price="$4,999"
+          features={["
+            "Query tuning","
+            "Index optimization","
+            "Schema improvements","
+          ]}
+        />
+        <Plan
+          name="Optimization"
+          price="$4,999"
+          features={[
+            'Query tuning',
+            'Index optimization',
+            'Schema improvements',
+            '2 weeks support',
+          ]}
+          popular={true}
+        />
+            "2 weeks support",
+          ]}
+          popular={true}
+        />
+        <Plan"
+          name="Managed""
+          price="$2,999/mo"
+          features={["
+            "Continuous monitoring","
+            "Regular optimization","
+            "24/7 support","
+            "Performance reports",
+
+          ]}
+        />
+      </div>
+    </div>
+  );
+}
+
+function Plan({}
+  name,
+  price,
+  features,
+  popular = false,
+}: {}
+  name: string;
+  price: string;
+  features: string[];
+  popular?: boolean;
+}) {}
+  return (
+    <div"
+      className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? "border-lime-500 ring-2 ring-lime-200" : "border-gray-200"}`}
+    >
+      {popular && ("
+        <div className="bg-lime-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+          Most Popular;
+        </div>
+      )}"
+      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>"
+      <div className="text-3xl font-bold text-lime-600 mb-4">{price}</div>"
+      <ul className="space-y-2 text-gray-600 mb-6">
+        {features.map((f) => ("
+          <li key={f} className="flex items-center">"
+            <span className="text-green-500 mr-2">✓</span> {f}
+          </li>
+        ))}
+      </ul>
+
+      <a"
+        href="tel:+13024640950"`
+        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${}
+          popular"
+            ? "bg-lime-600 text-white hover:bg-lime-700""
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"`
+        }`}
+      >
+        Get Started;
+      </a>
+
+    </div>
+  );
+}
+"`
+        }`}
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
+
+=======
+    </div>
+  );
+}
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

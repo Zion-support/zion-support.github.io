@@ -23,6 +23,7 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   {
+=======
     name: 'Micro SAAS Services',
     href: '/services',
     icon: <Rocket className="w-5 h-5" />,
@@ -175,6 +176,7 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     name: 'AI & Consciousness',
     href: '/services#ai-consciousness',
     icon: <Brain className="w-5 h-5" />,
@@ -182,6 +184,7 @@ const navigationItems: NavigationItem[] = [
     badge: 'New',
     color: 'from-cyan-500 to-blue-500',
     children: [
+<<<<<<< HEAD
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029', description: 'Emotional intelligence and self-awareness', badge: 'Revolutionary' },
       { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion', description: 'Quantum-AI hybrid computing', badge: 'Cutting-Edge' },
       { name: 'Autonomous AI Ecosystem', href: '/autonomous-ai-ecosystem', description: 'Self-managing AI systems', badge: 'Innovative' },

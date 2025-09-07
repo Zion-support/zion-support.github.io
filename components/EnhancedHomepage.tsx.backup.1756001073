@@ -34,6 +34,7 @@ import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-
 import { innovativeAIAutonomousServices2025 } from '../data/2025-innovative-ai-autonomous-services';
 import { innovative2025ITInfrastructureServices } from '../data/2025-innovative-it-infrastructure-services';
 import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
 
 const EnhancedHomepage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -82,6 +83,7 @@ const EnhancedHomepage: React.FC = () => {
     ...innovativeAIAutonomousServices2025
     ...innovative2025ITInfrastructureServices,
     ...innovative2025AIAutonomousServices
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fce6
   ];
 
   // Filter services by category

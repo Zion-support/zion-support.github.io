@@ -221,10 +221,13 @@ const EnhancedServiceShowcase: React.FC<ServiceShowcaseProps> = ({
                     <span>{service.customers?.toLocaleString() || 'N/A'}</span>
                   </div>
                 </div>
+<<<<<<< HEAD
               </div>
             </motion.div>
           ))}
         </motion.div>
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-2d5c
 
                 {/* Features */}
                 <div className="mb-6">

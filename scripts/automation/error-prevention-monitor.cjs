@@ -1,4 +1,22 @@
+<<<<<<< HEAD
 
+#!/"usr/bin/env" node;
+#!/usr/bin/env node
+const fs = require("fs);
+const path = require(path");
+const { execSync } = require("child_process);
+
+console.log('🛡️ Starting error prevention monitor...);
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -7,10 +25,19 @@ const { execSync } = require("child_process");
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 console.log('🛡️ Starting error prevention monitor...');
+=======
 #!/usr/bin/env node;"
+>>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class ErrorPreventionMonitor {
   // TODO: Implement
 }
@@ -53,79 +80,77 @@ class ErrorPreventionMonitor {
   // TODO: Implement
 
                 corruptedFiles.push(filePath)}
-          } catch (error) {
-      })} catch (error) {
+          } catch (error) {})} catch (error) {
       // Directory access error;
     }      return false}
-;
   async fixUnsafeCode(line) {
   let fixedLine = line;
     // Replace eval with safer alternatives;
 
-  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}"
-    // Replace innerHTML with textContent where possible;"
-    if (line.includes(".innerHTML =")) {"
-  fixedLine = line.replace(;)"
+  fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, "JSON.parse($1)")}
+    // Replace innerHTML with textContent where possible;
+    if (line.includes(".innerHTML =")) {
+  fixedLine = line.replace(;)
         /\.innerHTML\s*=\s*([^]+)/g,.textContent = $1";"
-    // Replace eval with safer alternatives;"
+    // Replace eval with safer alternatives;
 
-    // Replace innerHTML with textContent where possible;"
+    // Replace innerHTML with textContent where possible;
       )}
     return fixedLine}
   async fixMemoryLeak(line) {
     // Add cleanup for event listeners;"
-    if (line.includes("addEventListener")) {"
+    if (line.includes("addEventListener)) {
 
   async fixAsyncError(line) {
     // Add error handling for promises;"
 
   async fixTypeIssue(line) {
     // Replace any with more specific types;"
-    if (line.includes(": any")) {
-  fixedLine = line.replace(/: any/g, ": unknown");"
-    // Replace any with more specific types;"
+    if (line.includes(: any)) {
+  fixedLine = line.replace(/: any/g, ": unknown");
+    // Replace any with more specific types;
 
-  fixedLine = line.replace(/: "any/g", ": unknown")}"
+  fixedLine = line.replace(/: "any/g", : unknown)}"
 ;"
-    if (line.includes("as any")) {
-  fixedLine = line.replace(/as "any/g", "as unknown")}"
+    if (line.includes(as any)) {
+  fixedLine = line.replace(/as "any/g", as unknown)}"
   async generateReport(fixResults) {"
-  this.log("📊 Generating error prevention monitoring report...");"
+  this.log(📊 Generating error prevention monitoring report...);"
     const report = {"
-  "timestamp": new Date().toISOString(),
-      "summary": {"
-  totalIssues: fixResults.totalIssues,"
+  timestamp: new Date().toISOString(),
+      "summary": {
+  totalIssues: fixResults.totalIssues,
         "fixedIssues": fixResults.fixedCount,
-        "preventionRate": fixResults.totalIssues > 0;"
+        preventionRate: fixResults.totalIssues > 0;"
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(;
                 2;)
               );
             : 100},"
-      "fixResults": fixResults.results,
-      "recommendations": ["Review applied fixes to ensure they meet your requirements, "Consider adding more specific type annotations", "Implement proper error handling for async operations, "Regularly review code for potential security issues", ]}"
+      fixResults: fixResults.results,
+      "recommendations": [Review applied fixes to ensure they meet your requirements, Consider adding more specific type annotations", "Implement proper error handling for async operations, Regularly review code for potential security issues]}"
     const reportFile = path.join(;"
-      this.reportsPath,error-prevention-monitor-report.json";")
+      this.reportsPath,error-prevention-monitor-report.json;)
 
     return report}
   async run() {"
-  this.log("🚀 Starting Error Prevention Monitor...");"
+  this.log("🚀 Starting Error Prevention Monitor...);
   // TODO: Implement
   // Scan for potential errors;
       const potentialErrors = await this.scanForPotentialErrors();
       if (potentialErrors.length === 0) {"
-  this.log("🎉 No potential errors detected!");
-        return { "success": true, "issues": [], "fixed": 0 }"
+  this.log("🎉 No potential errors detected!);
+        return { success": true, "issues: [], fixed": 0 }"
       // Apply preventive fixes;
       const fixResults = await this.applyPreventiveFixes(potentialErrors);
       // Generate report;
-      const report = await this.generateReport(fixResults);"`;
-      this.log("🎉 Error Prevention Monitor completed!");this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);"
+      const report = await this.generateReport(fixResults);`;
+      this.log(🎉 Error Prevention Monitor completed!");this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);"
       return {
   // TODO: Implement
-}"
-  "success": fixResults.fixedCount > 0,
-        "issues": potentialErrors,
-        "fixed": fixResults.fixedCount,"
+}
+  success": fixResults.fixedCount > 0,
+        "issues: potentialErrors,
+        fixed": fixResults.fixedCount,"
         report,
   // TODO: Implement
   // Scan for potential errors;
@@ -134,52 +159,98 @@ class ErrorPreventionMonitor {
       // Generate report;
 
       throw error}
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 }
   triggerAutoFix() {
     this.log('Triggering auto-fix process...');
     try {
+<<<<<<< HEAD
       execSync('bash start-simple-error-prevention.sh', {
         "cwd": this.projectRoot,
         "stdio": 'pipe'
+=======
+      execSync('bash start-simple-error-prevention.sh', { 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       });
-      this.log('Auto-fix process completed')} catch (error) {
-      this.log(`Auto-fix process "failed": ${error.message}`)}
+      this.log(Auto-fix process completed')} catch (error) {
+      this.log(`Auto-fix process failed: ${error.message}`)}
   }
   checkBuildStatus() {
     try {
+<<<<<<< HEAD
+      this.log('Checking build status...);
+
+=======
       this.log('Checking build status...');
+<<<<<<< HEAD
       execSync('yarn build', {
         "cwd": this.projectRoot,
         "stdio": 'pipe'
+=======
+      execSync('yarn build', { 
+        "cwd": this.projectRoot, 
+        "stdio": 'pipe' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       });
-      this.log('Build check passed')} catch (error) {
+      this.log(Build check passed')} catch (error) {
       this.log(`Build check "failed": ${error.message}`);
       this.triggerAutoFix()}
   }
-    this.reportsDir = path.join(this.projectRoot, 'error-reports');
-    this.logsDir = path.join(this.projectRoot, 'automation/logs');
+    this.reportsDir = path.join(this.projectRoot, 'error-reports);
+    this.logsDir = path.join(this.projectRoot, automation/logs');
     this.checkInterval = parseInt(process.env.PREVENTION_CHECK_INTERVAL) || 600000; // 10 minutes
-    this.preventiveActionsEnabled = process.env.PREVENTIVE_ACTIONS_ENABLED === 'true';
+    this.preventiveActionsEnabled = process.env.PREVENTIVE_ACTIONS_ENABLED === 'true;
     // Ensure directories exist
     [this.reportsDir, this.logsDir].forEach(dir => {
+<<<<<<< HEAD
+  triggerAutoFix() {
+=======
+=======
   triggerAutoFix() {"
+>>>>>>> origin/chore/fix-lint-and-merge
 
   checkBuildStatus() {
   // TODO: Implement
 
     // Ensure directories exist;
     [this.reportsDir, this.logsDir].forEach(dir => {)
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (!fs.existsSync(dir)) {
-        fs.mkdirSync(dir, { "recursive": true })}"
+        fs.mkdirSync(dir, { recursive": true })}"
     this.preventionHistory = [];
-    this.riskFactors = new Map()}"
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+    this.riskFactors = new Map()}
+  log(message, level = INFO') {
 
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async checkFileSizeIssues() {
-    this.log('Checking for file size issues...', 'INFO');
+    this.log('Checking for file size issues..., INFO');
+=======
+    this.riskFactors = new Map()}"
+  log(message, level = 'INFO') {
+<<<<<<< HEAD
+    const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+    console.log(`[${timestamp}] [${level}] ${message}`)}
+  async checkFileSizeIssues() {
+    this.log('Checking for file size issues...', 'INFO');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const largeFiles = [];
     const maxSize = 1024 * 1024; // 1MB;
   // TODO: Implement
@@ -189,15 +260,15 @@ class ErrorPreventionMonitor {
         if (stats.size > maxSize) {
           largeFiles.push({
             file,
-            "size": stats.size,")"
-            "sizeMB": (stats.size / (1024 * 1024)).toFixed(2)"
+            size": stats.size,")
+            sizeMB": (stats.size / (1024 * 1024)).toFixed(2)"
           })}
 
     const circularDeps = [];
   // TODO: Implement
 
       if (output.trim()) {
-        const lines = output.split('\n').filter(line => line.trim());
+        const lines = output.split('\n).filter(line => line.trim());
         for (const line of lines) {
           circularDeps.push({)
 
@@ -217,13 +288,17 @@ class ErrorPreventionMonitor {
     const vulnerabilities = [];
   // TODO: Implement
 
-            "recommendation": vuln.recommendation;")
+            recommendation: vuln.recommendation;")
       return vulnerabilities} catch (error) {
       // npm audit returns non-zero exit code when vulnerabilities are found;
   // TODO: Implement
               vulnerabilities.push({"
 
     const performanceIssues = [];
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
     try {
       // Check for large bundle size indicators
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
@@ -240,13 +315,20 @@ class ErrorPreventionMonitor {
       }
       // Check for multiple CSS frameworks
       const cssFrameworks = ['bootstrap', 'tailwindcss', 'bulma', 'foundation'];
+<<<<<<< HEAD
       const foundFrameworks = cssFrameworks.filter(framework =>
+=======
+      const foundFrameworks = cssFrameworks.filter(framework => 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
         packageJson.dependencies && packageJson.dependencies[framework]
       );
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   // TODO: Implement
 
       const foundFrameworks = cssFrameworks.filter(framework => 
         packageJson.dependencies && packageJson.dependencies[framework])
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (foundFrameworks.length > 1) {
 
     const qualityIssues = [];
@@ -263,28 +345,40 @@ class ErrorPreventionMonitor {
         const filePath = path.join(dir, file);
           walkDir(filePath)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
           sourceFiles.push(filePath)}
-    };
+    }
     walkDir(srcDir);
   findTodoComments() {
     const todos = [];
 
-      const lines = content.split('\n');
+      const lines = content.split(\n');
       for (let i = 0; i < lines.length; i++) {
-        if (lines[i].includes('TODO') || lines[i].includes('FIXME')) {
+        if (lines[i].includes('TODO) || lines[i].includes(FIXME')) {
           todos.push({
 
-            "line": i + 1,")"
-            "comment": lines[i].trim()"
+            line: i + 1,")"
+            comment: lines[i].trim()"
     return todos}
   findConsoleStatements() {
     const consoleStatements = [];
     for (const file of files) {"
 
-            "statement": lines[i].trim()"
+            statement: lines[i].trim()"
     return consoleStatements}
   findHardcodedValues() {
     const hardcodedValues = [];
+<<<<<<< HEAD
+    for (const file of files) {
+      const content = fs.readFileSync(file, 'utf8');
+      const lines = content.split('\n');
+      for (let i = 0; i < lines.length; i++) {
+        // Look for hardcoded URLs, API keys, etc.
+const hardcodedPatterns = [/https?:\/\/[^\s'"]+/g,;
+          /api_key\s*[:=]\s*['"][^'"]+['"]/g,
+          /password\s*[:=]\s*['"][^'"]+['"]/g,
+          /secret\s*[:=]\s*['"][^'"]+['"]/g
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
         ];
         for (const pattern of hardcodedPatterns) {
           const matches = lines[i].match(pattern);
@@ -300,7 +394,7 @@ class ErrorPreventionMonitor {
           actionsTaken.push(action)}
 
         return await this.flagTodosForReview(issue);
-      "default": return null}"
+      default: return null}"
   async removeUnusedDependency(issue) {
   // TODO: Implement
 
@@ -311,7 +405,7 @@ class ErrorPreventionMonitor {
   async removeConsoleStatements(issue) {
   // TODO: Implement
 
-    content += `Total TODOs "found": ${todos.length}\n\n`;"
+    content += `Total TODOs "found: ${todos.length}\n\n`;
     for (const todo of todos) {`;
       content += `## ${todo.file}:${todo.line}\n`;`;
       content += `${todo.comment}\n\n`}
@@ -335,11 +429,11 @@ class ErrorPreventionMonitor {
       ]);
 
           largeFiles: largeFiles.length,"
-          "circularDeps": circularDeps.length,
-          "unusedDeps": unusedDeps.length,
-          "vulnerabilities": vulnerabilities.length,
-          "performanceIssues": performanceIssues.length,
-          "qualityIssues": qualityIssues.length;"
+          "circularDeps: circularDeps.length,
+          unusedDeps": unusedDeps.length,
+          "vulnerabilities: vulnerabilities.length,
+          performanceIssues": performanceIssues.length,
+          "qualityIssues: qualityIssues.length;
       // Save report;`;
       const reportPath = path.join(this.reportsDir, `prevention-report-${Date.now()}.json`);
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -364,16 +458,21 @@ if (require.main === module) {
   // Handle graceful shutdown;"
 
     process.exit(0)});
-  process.on('SIGTERM', () => {
+  process.on('SIGTERM, () => {
   // Start monitor;
 
     process.exit(1)})}
   run() {
-    this.log('Error Prevention Monitor started');
+    this.log(Error Prevention Monitor started');
     // Run initial health check;
     this.checkProjectHealth();
     // Schedule periodic health checks;
     setInterval(() => {
+<<<<<<< HEAD
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
       this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes
     this.log('Monitoring active - health checks every 15 minutes')}
 }
@@ -382,33 +481,35 @@ const monitor = new ErrorPreventionMonitor();
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> origin/chore/fix-lint-and-merge
 
+=======
 monitor.run();
 <<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
-=======
-
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> origin/chore/fix-lint-and-merge
 monitor.run();
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 monitor.run();
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
       this.checkProjectHealth()}, 15 * 60 * 1000); // Every 15 minutes;
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 // Start the monitor;
 
 `;
 
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508

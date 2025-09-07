@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+
+import React from "react";
+import Image from "next/image";
+interface OptimizedImageProps {
+  sr: c: string,
+  al: string,
+  widt: number,
+  heigh: number,
+  className?: string,
+  priority?: boolean,
 import React from 'react'
 import Image from 'next/image'
 interface OptimizedImageProps {
@@ -14,24 +24,25 @@ interface OptimizedImageProps {
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
-  width,
-  height,
-  className = '',
+  width = 800,
+  height = 600,
+  className = ",
   priority = false,
   quality = 75,
 }) => {
 =======
-import React from "react"
-import Image from "next/image"
+import React from "react";
+import Image from "next/image";
 interface OptimizedImageProps {
 
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
-  quality?: number
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  quality?: number;
+
 'use client'
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
@@ -55,14 +66,14 @@ interface OptimizedImageProps {
   onLoad?: () => void
   onError?: () => void
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
+}
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 }) => {
 
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
-    <Image
+    <Image;
       src={src}
       alt={alt}
       width={width}
@@ -71,16 +82,33 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       priority={priority}
 <<<<<<< HEAD
       quality={quality}
-    />
-  )
-}
-export default OptimizedImage
+      placeholder=blur"
 =======
       quality={quality}"
       placeholder="blur""
+>>>>>>> origin/chore/fix-lint-and-merge
       blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
     />
-  )
-}
+  );
+};
 export default OptimizedImage;
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+<<<<<<< HEAD
+
+
+return (
+    <Image,
+  src={src}
+      alt={alt}
+      width={width}
+      height={height}
+=======
+  src, alt,
+  width, height,
+  className = '', priority = false,
+  quality = 75, placeholder = 'empty',
+  blurDataURL, sizes,
+  fill = false, style,
+  onClick, onLoad,
+  onError
+}) => {
+>>>>>>> origin/chore/fix-lint-and-merge

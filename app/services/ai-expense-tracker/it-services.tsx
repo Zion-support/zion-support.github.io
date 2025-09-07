@@ -464,6 +464,8 @@ export default function ITServicesPage() {
                     <div className="text-sm text-gray-600">
                       <strong>Target Users:</strong> {service.targetUsers}
                     </div>
+<<<<<<< HEAD
+=======
                   </div>
                   </motion.div>
                 );
@@ -699,6 +701,7 @@ export default function ITServicesPage() {
       category: 'High-Performance Computing'
     }
   ];
+>>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
 
                   <div className="flex flex-col sm:flex-row gap-2">
                     <Link

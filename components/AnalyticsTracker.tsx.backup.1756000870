@@ -32,6 +32,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         });
       }
 
+=======
       // Google Tag Manager
       if ((window as any).dataLayer) {
         (window as any).dataLayer.push({
@@ -43,6 +44,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         });
       }
 
+>>>>>>> origin/cursor/website-audit-and-enhancement-bb45
       // Custom analytics
       if (process.env.NODE_ENV === 'development') {
         console.log('Page View:', { 
@@ -52,6 +54,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         });
       }
     }
+<<<<<<< HEAD
   }, []);
 
   // Helper function to track events

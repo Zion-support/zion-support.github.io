@@ -35,6 +35,71 @@ const mockUser: User = {id: '1',email, name: 'John Doe',}
   return mockUser;
   }
 
+<<<<<<< HEAD
+    checkAuth();
+  }, []);
+
+  const login = async (email: string, password: string) => {
+    // In a real app, you would make an API call to your backend
+    const mockUser: User = {
+      id: '1',
+      email,
+      name: 'John Doe',
+      role: 'user',
+      userType: 'creator',
+    };
+
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
+
+    localStorage.setItem('authToken', 'dummy-token');
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    return mockUser;
+  };
+
+  const logout = () => {
+    setAuthState({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
+    });
+    localStorage.removeItem('zion_user');
+    localStorage.removeItem('authToken');
+  };
+
+  const register = async (email: string, password: string, name: string) => {
+    // Implement actual registration logic here
+      id: '1',
+      email,
+      name,
+      role: 'user',
+    };
+
+    setAuthState({
+      user: mockUser,
+      isAuthenticated: true,
+      isLoading: false,
+    });
+
+    localStorage.setItem('zion_user', JSON.stringify(mockUser));
+    localStorage.setItem('authToken', 'dummy-token');
+    return mockUser;
+  };
+
+  return {
+    user: authState.user,
+    loading: authState.isLoading,
+    login,
+    logout,
+    register,
+    isAuthenticated: authState.isAuthenticated,
+    isLoading: authState.isLoading,
+    isAdmin: authState.user?.role === 'admin',
+  };
+=======
 const logout = (setAuthState({user: null, isAuthenticated: false,isLoading: false ) => {
   return $3;}
 })localStorage.removeItem('zion_user')localStorage.removeItem('authToken',
@@ -71,4 +136,5 @@ import { useState, useEffect } from \"react\"; interface User { id: string email
 }); localStorage.setItem(\"zion_user\", JSON.stringify(mockUser));\" localStorage.setItem(\"authToken\", \"dummy-token\"); return mockUser\";,
 }; return { user: authState.user, loading: authState.isLoading, login, logout, register, isAuthenticated: authState.isAuthenticated, isLoading: authState.isLoading, \" isAdmin authState.user?.role = == \"admin;,}
 };\";,
+>>>>>>> origin/chore/fix-lint-and-merge
 }

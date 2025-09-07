@@ -42,11 +42,6 @@ import {
   Database,
   Sprout;
 } from 'lucide-react';
-import React from 'react';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import {
   ArrowRight
   Building2
   Rocket
@@ -171,11 +166,6 @@ export default function MicroSaasPage() {
                   View Demo
                 </Link>
 </Link>
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
   Cloud
   Zap
   BarChart3
@@ -235,7 +225,6 @@ export default function MicroSaaS() {
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     site: 'https://ziontechgroup.com',  }
-  const categories = [
     { id: 'all', name: 'All Products', count: 150 }
     { id: 'ai', name: 'AI-Powered', count: 45 }
     { id: 'analytics', name: 'Analytics', count: 30 }

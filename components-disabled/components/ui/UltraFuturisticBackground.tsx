@@ -55,6 +55,10 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       <div className="relative z-10">"
     </div>"`;
 
+<<<<<<< HEAD
+export default function UltraFuturisticBackground() {
+  }
+=======
 export default function UltraFuturisticBackground({ 
   children, 
   variant = 'quantum', 
@@ -62,6 +66,7 @@ export default function UltraFuturisticBackground({
   className = ''}
 }: UltraFuturisticBackgroundProps) {
   const getBackgroundClasses = (
+>>>>>>> origin/chore/fix-lint-and-merge
    ;
   const baseClasses = 'min-h-screen relative overflow-hidden';
     
@@ -106,7 +111,11 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({
   enableQuantumEffects = true,
   enableNeonEffects = true,
   enableSpaceTime = true,
+<<<<<<< HEAD
+variant = 'quantum',;'
+=======
   variant = 'quantum',
+>>>>>>> origin/chore/fix-lint-and-merge
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;}
   className?: string;}
@@ -116,11 +125,23 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps /> = ({
   className = ''}
    }) => {
 
+<<<<<<< HEAD
+
+
+  }
+
+
+
+=======
   const getBackgroundClasses = (
+>>>>>>> origin/chore/fix-lint-and-merge
    ;
   const baseClasses = 'relative overflow-hidden';
     
+<<<<<<< HEAD
+=======
     const baseClasses = 'relative overflow-hidden';
+>>>>>>> origin/chore/fix-lint-and-merge
     switch (variant) {
       case 'quantum':) => {
   return $3;}

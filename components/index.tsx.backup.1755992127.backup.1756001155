@@ -186,6 +186,7 @@ export default function HomePage() {
 
         {/* Enhanced Hero Section 2026 */}
         <UltraAdvancedHero2026V2 />
+=======
     <UltraFuturisticBackground2029>
       <Head>
         <title>Zion Tech Group - 2029 Revolutionary Technology Services | AI, Quantum Computing, Space Tech</title>
@@ -309,6 +310,7 @@ export default function HomePage() {
                 </button>
               </Link>
             </motion.div>
+<<<<<<< HEAD
 
             {/* Contact Information */}
             <motion.div
@@ -330,6 +332,8 @@ export default function HomePage() {
                 <span className="text-sm">{contactInfo.address}</span>
               </div>
             </motion.div>
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-29c7
           </div>
 
           {/* Scroll Indicator */}
