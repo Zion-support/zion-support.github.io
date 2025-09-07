@@ -1,3 +1,9 @@
-import React from 'react';
-interface Getting-startedProps  {className?: string;}
+
+import React from 'react';'
+interface Getting-startedProps {
+  // TODO: Implement
 }
+  className?: string;
+}
+'
+

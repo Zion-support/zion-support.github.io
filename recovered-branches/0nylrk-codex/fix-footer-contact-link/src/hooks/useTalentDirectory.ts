@@ -1,16 +1,86 @@
-import { useAuthStatus } from \"./talent/useAuthStatus\",
-import { useTalentData } from \"./talent/useTalentData\",
-import { useFilterTalents } from \"./talent/useFilterTalents\";
-import { useUIState } from \"./talent/useUIState\";
-export function useTalentDirectory() {}
-  // Fetch auth status and saved talents  } = useUIState(),
-  return {
-    // Talents and loading state;
-talents,
+
+
+import { useAuthStatus } from "./talent/useAuthStatus",""
+import { useTalentData } from "./talent/useTalentData",""
+import { useFilterTalents } from "./talent/useFilterTalents";""
+import { useUIState } from "./talent/useUIState";"
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents;
+  const {
+  // TODO: Implement
+}
+    isAuthenticated;
+
+    userDetails;
+    savedTalents;
+    handleToggleSave;
+  } = useAuthStatus();
+  // Fetch talent data;
+  const {
+  // TODO: Implement
+}
+    talents;
+    isLoading;"
+import { useFilterTalents } from "./talent/useFilterTalents",""
+import { useUIState } from "./talent/useUIState","
+export function useTalentDirectory() {
+  // Fetch auth status and saved talents;
+  const {
+  // TODO: Implement
+}
+    isAuthenticated,
+    userDetails, 
+    savedTalents, 
+    handleToggleSave;
+  } = useAuthStatus(),
+
+  // Fetch talent data;
+  const {
+  // TODO: Implement
+}
+    talents, 
+    isLoading;
+  } = useTalentData(),"
+import { useAuthStatus } from './talent / useAuthStatus';''
+import { useTalentData } from './talent / useTalentData';''
+import { useFilterTalents } from './talent / useFilterTalents';''
+import { useUIState } from './talent / useUIState';'
+export /**
+ * useTalentDirectory - Function description;
+ */
+function useTalentDirectory() {
+  // Fetch auth status and saved talents;
+
+  const {
+  // TODO: Implement
+}
+    is_authenticated;
+    user_details,
+    saved_talents,
+    handleToggleSave;
+  } = useAuthStatus ();
+;
+  // Fetch talent data;
+  const {
+  // TODO: Implement
+}
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
+
+    expanded_sections;
+
+
+
+
+  } = useTalentData();
+  // Apply filters and sorting;
+  const {
+  // TODO: Implement
+}
     filteredTalents,
-    isLoading,
-    // Search and filter state;
-searchTerm,
+    searchTerm,
     setSearchTerm,
     selectedSkills,
     selectedAvailability,
@@ -21,29 +91,81 @@ searchTerm,
     setExperienceRange,
     sortOption,
     setSortOption,
-    // UI state;
-isMobileFilterOpen,
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters;
+  } = useFilterTalents(talents),
+
+
+  // Manage UI state;
+  const {
+  // TODO: Implement
+}
+    isMobileFilterOpen,
     setIsMobileFilterOpen,
     isHireModalOpen,
     setIsHireModalOpen,
     selectedTalent,
     setSelectedTalent,
     expandedSections,
+    toggleSection;
+  } = useUIState(),
+
+  return {
+  // TODO: Implement
+}
+    // Talents and loading state;
+    talents,
+    filteredTalents,
+    isLoading,
+    
+    // Search and filter state;
+    searchTerm,
+
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+
+    
+    // UI state;
+    isMobileFilterOpen,
+
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+
+    
     // Auth and user state;
-isAuthenticated,
+    isAuthenticated,
     userDetails,
     savedTalents,
+    
+
+
     // Actions;
-toggleSkill;
+    toggleSkill;
     toggleAvailability;
     toggleRegion;
     clearFilters;
-    toggleSection;}
-    handleToggleSave;}
-expanded_sections;import { useAuthStatus } from \"./talent/useAuthStatus\";
-import { useTalentData } from \"./talent/useTalentData\";
-import { useFilterTalents } from \"./talent/useFilterTalents\",;
-import { useUIState } from \"./talent/useUIState\",;
+    toggleSection;
+    handleToggleSave;
+    expanded_sections;'
+import { useAuthStatus } from "./talent/useAuthStatus",;""
+import { useTalentData } from "./talent/useTalentData",;""
+import { useFilterTalents } from "./talent/useFilterTalents",;""
+import { useUIState } from "./talent/useUIState",;"
+
 export function useTalentDirectory() {;
   // Fetch auth status and saved talents;
   const {;
@@ -144,4 +266,9 @@ export function useTalentDirectory() {;
   }
 }  }
 }
+
+  }
 }
+;
+"
+

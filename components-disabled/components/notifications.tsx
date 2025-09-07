@@ -1,53 +1,31 @@
 
 class ErrorBoundary extends React.Component {
-  constructor(props) {}
-    super(props);}
+
+  // TODO: Implement
+}
+  constructor(props) {
+    super(props);
+
     this.state = { hasError: false };
 
   static getDerivedStateFromError(error) {}
     return { hasError: true };
 
   componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-
+    console.error('Error caught by boundary:', error, errorInfo);'
   render() {
     if (this.state.hasError) {
-      return <div />Something went wrong.</div>;
 
-import React from 'react';
-
+      return <div>Something went wrong.</div>;
   return <NotificationCenter />;
-
-import dynamic from 'next / dynamic';
-;
-const NotificationCenter = dynamic (
-  () => import ('../components / notifications / NotificationCenter'),
-  {
-    ssr: false;
-);
-export default function NotificationsPage() {
-const NotificationCenter = dynamic(;
-  () => import('../components/notifications/NotificationCenter'),;
-  {;
-    ssr: false,;
-
-);
-export default function NotificationsPage() {;}
-  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;}
-  ssr: false}),;
-export default function NotificationsPage() {;
+</NotificationCenter>'
+  return <NotificationCenter />;const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {;'
+</NotificationCenter>
   return <NotificationCenter />;
+</NotificationCenter>'
+  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {'
+</NotificationCenter>
+  return <NotificationCenter />;
+</NotificationCenter>
+'
 
-;
-export default /**
- * NotificationsPage - Function description;
- */
-function NotificationsPage() {}
-  return <NotificationCenter />;const NotificationCenter = dynamic (() => import ('../components / notifications / NotificationCenter'), {}
-  ssr: false}),
-export default /**
- * NotificationsPage - Function description;
- */
-function NotificationsPage() {
-  return <NotificationCenter />;}
-}

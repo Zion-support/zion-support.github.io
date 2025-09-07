@@ -1,73 +1,83 @@
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
+
 #!/usr/bin/env node;
 /**
  * PM2 Test Automation Service;
  * Runs automated tests and reports results;
  */
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+
+
+const { execSync } = require('child_process');''
+const fs = require('fs');''
+const path = require('path');'
+
 class TestAutomation {}
-  constructor() {}
-    this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';
-    this.coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;
-    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';
-    this.parallelTests = process.env.PARALLEL_TESTS === 'true';
-    this.logFile = path.join(__dirname, '../../logs/pm2/test-automation.log');
+  constructor() {}'
+    this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';'
+    this.coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;'
+    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';''
+    this.parallelTests = process.env.PARALLEL_TESTS === 'true';''
+    this.logFile = path.join(__dirname, '../../logs/pm2/test-automation.log');'
     this.ensureLogDir();
   };
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
-      fs.mkdirSync(logDir, { recursive: true }
+      fs.mkdirSync(logDir, { recursive: true })
 });
     };
   };
   log(message) {}
     const timestamp = new Date().toISOString();
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
+
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   };
   async runTests() {}
-    try {}
-      this.log('Starting test automation...');
-      // Check if test script exists in package.json;
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-      const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];
-      if (!testScript) {}
-        this.log('No test script found in package.json');
-        return { success: false, message: 'No test script configured' };
+
+    try {}'
+      this.log('Starting test automation...');'
+      // Check if test script exists in package.json;'
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));''
+      const testScript = packageJson.scripts?.test || packageJson.scripts?.['test:smoke'];'
+      if (!testScript) {}'
+        this.log('No test script found in package.json');''
+        return { success: false, message: 'No test script configured' };'
+
       };
       // Run tests;
       const testCommand = this.parallelTests ? `${testScript} --run` : testScript;
       this.log(`Running tests: ${testCommand}`);
-      const result = execSync(testCommand, { })
-        encoding: 'utf8',
-        stdio: 'pipe',
+
+
+      const result = execSync(testCommand, { })'
+        encoding: 'utf8',''
+        stdio: 'pipe','
         cwd: process.cwd();
       }
 });
-      this.log('Tests completed successfully');
+'
+      this.log('Tests completed successfully');'
+
       this.log(`Test output: ${result}`);
       return { success: true, output: result };
     } catch (error) {}
       this.log(`Test execution failed: ${error.message}`);
-      if (this.autoRetryFailed) {}
-        this.log('Retrying failed tests...');
-        try {}
-          const retryResult = execSync('npm test', { })
-            encoding: 'utf8',
-            stdio: 'pipe',
+
+      
+      if (this.autoRetryFailed) {}'
+        this.log('Retrying failed tests...');'
+        try {}'
+          const retryResult = execSync('npm test', { })''
+            encoding: 'utf8',''
+            stdio: 'pipe','
+
             cwd: process.cwd();
           }
-});
-          this.log('Retry successful');
+});'
+          this.log('Retry successful');'
           return { success: true, output: retryResult, retried: true };
         } catch (retryError) {}
           this.log(`Retry also failed: ${retryError.message}`);
@@ -78,13 +88,15 @@ class TestAutomation {}
     };
   };
   async checkCoverage() {}
-    try {}
-      this.log('Checking test coverage...');
-      // Try to run coverage command;
-      const coverageCommand = 'npm run test:coverage || npm run coverage || npx jest --coverage';
-      const result = execSync(coverageCommand, { })
-        encoding: 'utf8',
-        stdio: 'pipe',
+
+    try {}'
+      this.log('Checking test coverage...');'
+      // Try to run coverage command;'
+      const coverageCommand = 'npm run test:coverage || npm run coverage || npx jest --coverage';'
+      const result = execSync(coverageCommand, { })'
+        encoding: 'utf8',''
+        stdio: 'pipe','
+
         cwd: process.cwd();
       }
 });
@@ -115,7 +127,10 @@ class TestAutomation {}
         parallelTests: this.parallelTests;
       };
     };
-    const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');
+
+'
+    const reportFile = path.join(__dirname, '../../logs/pm2/test-automation-report.json');'
+
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Test report generated: ${reportFile}`);
     return report;
@@ -124,13 +139,16 @@ class TestAutomation {}
     this.log(`${this.processName} started`);
     try {}
       const report = await this.generateReport();
-      if (report.testResults.success) {}
-        this.log('Test automation completed successfully');
-      } else {}
-        this.log('Test automation completed with errors');
+
+      
+      if (report.testResults.success) {}'
+        this.log('Test automation completed successfully');'
+      } else {}'
+        this.log('Test automation completed with errors');'
+
       };
-      if (report.coverage.belowThreshold) {}
-        this.log('WARNING: Test coverage below threshold');
+      if (report.coverage.belowThreshold) {}'
+        this.log('WARNING: Test coverage below threshold');'
       };
     } catch (error) {}
       this.log(`Test automation error: ${error.message}`);
@@ -142,8 +160,8 @@ if (require.main === module) {}
   const testAutomation = new TestAutomation();
   testAutomation.start().catch(console.error);
 };
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
+
 module.exports = TestAutomation;module.exports = TestAutomation;
 module.exports = TestAutomation;module.exports = TestAutomation;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+
+

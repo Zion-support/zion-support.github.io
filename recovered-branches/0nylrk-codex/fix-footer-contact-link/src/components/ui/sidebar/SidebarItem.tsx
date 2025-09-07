@@ -1,23 +1,47 @@
-import React from \"react\",
-import { cn } from \"@/lib/utils\",
+
+
+
+
+import React from "react",""
+import { cn } from "@/lib/utils","
+
   className?: string;
   children?: React && React.ReactNode;
   active?: boolean;
 }
+
+
+
+export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
+
+  return (
+    <div;"
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md"""
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",""
+import React from "react",""
+import { cn } from "@/lib/utils",""
+import React from "react";""
+import { cn } from "@/lib/utils";""
+import React from "react",""
+import { cn } from "@/lib/utils",""
+import {cn} from "@/lib/utils";""
+import React from "react",""
+import { cn } from "@/lib/utils","
+interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
+</div>
+    <div;)
 export function SidebarItem(): any ({ className, children, active, ...props }: SidebarItemProps) {;
   return (
     <div;
-        \"flex items-center px-3 py-2 text-sm font-medium rounded-md\"
-        active ? \"bg-primary/10 text-primary\" : \"text-muted-foreground hover: bg-accent hover:text-accent-foreground\",}
-        className}
+      className={cn("
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md"""
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground","
+        className;)
       )}
-      {...props} />;
-      {children}
+      {...props}>;
+</div>
     </div>;
-  );
-}
-import React from './react';
-import { cn } from '@/lib / utils';
+
 interface SidebarItemProps extends React.HTMLAttributes < HTMLDivElement> {
   class_name?: string;
   children?: React.ReactNode;}
@@ -29,57 +53,57 @@ export /**
 function SidebarItem() {
   return (
     <div;
-      className={cn (
-        \"flex items - center px - 3 py - 2 text - sm font - medium rounded - md\";}
-        active ? \"bg - primary / 10 text - primary\" : \"text - muted - foreground hover: bg - accent hover:text - accent - foreground\",}
+
+      className={cn ("
+        "flex items - center px - 3 py - 2 text - sm font - medium rounded - md";""
+        active ? "bg - primary / 10 text - primary" : "text - muted - foreground hover: bg - accent hover:text - accent - foreground",")
         class_name)}
       {...props}
-     />;
-      {children}
+    >;
+</div>
     </div>);
-}
-        \"flex items-center px-3 py-2 text-sm font-medium rounded-md\";
-        active ? \"bg-primary/10 text-primary\" : \"text-muted-foreground hover: bg-accent hover:text-accent-foreground\",
-        className;
-className={cn(
-        \"flex items-center px-3 py-2 text-sm font-medium rounded-md\";
-        active ? \"bg-primary/10 text-primary\" : \"text-muted-foreground hover: bg-accent hover:text-accent-foreground\"
-        className;
-        \"flex items-center px-3 py-2 text-sm font-medium rounded-md\",
-        active ? \"bg-primary/10 text-primary\" : \"text-muted-foreground hover:bg-accent hover:text-accent-foreground\",
-        className;}
-import React from \"react\";}
-import { cn } from \"@/lib/utils\";
-interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement /> {;
-  className?: string,;
-  children?: React.ReactNode,;}
-  active?: boolean;}
-}
-;
-export function SidebarItem({ className, children, active, ...props }: SidebarItemProps) {;
-  return (;
+interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
+</HTMLDivElement>
     <div;
-      className={cn(;
-        \"flex items-center px-3 py-2 text-sm font-medium rounded-md\";
-        active ? \"bg-primary/10 text-primary\" : \"text-muted-foreground hover:bg-accent hover:text-accent-foreground\";
-        className;}
-import React from \"react\",}
-import { cn } from \"@/lib/utils\",
-import {cn} from \"@/lib/utils\";
-interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement /> {;
-  className?: string;
-  children?: React && React.ReactNode;}
-  active?: boolean;}
-}
-  return (
-    <div;
-className={cn(}
-        className}
+      className={cn(;"
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md",;""
+        active ? "bg-primary/10 text-primary" :"text-muted-foreground hover:bg-accent hover:text-accent-foreground",;"
+        className;)
       )}
-      {...props} />;
-      {children}
-import React from './react';
-import { cn } from '@/lib / utils';
+      {...props}
+    >;
+</div>
+    </div>;
+ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
+</HTMLDivElement>
+  return (<div className= {)
+  cn () 
+}{
+  ...props;
+}> {
+</div>
+}</div>) 
+interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
+</HTMLDivElement>
+    <div;
+      className={cn(;"
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";""
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground";"
+        className;
+
+"
+import React from "react",""
+import { cn } from "@/lib/utils",""
+import {cn} from "@/lib/utils";"
+interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+</div>
+    <div;
+      className={cn(
+        className;)
+      )}
+      {...props}>;
+</div>
+
 interface SidebarItemProps extends React.HTMLAttributes < HTMLDivElement> {
   class_name?: string;
   children?: React.ReactNode;}
@@ -91,13 +115,13 @@ export /**
 function SidebarItem() {
   return (
     <div;
-      className={cn (
-        \"flex items - center px - 3 py - 2 text - sm font - medium rounded - md\";}
-        active ? \"bg - primary / 10 text - primary\" : \"text - muted - foreground hover: bg - accent hover:text - accent - foreground\",}
+
+      className={cn ("
+        "flex items - center px - 3 py - 2 text - sm font - medium rounded - md";""
+        active ? "bg - primary / 10 text - primary" : "text - muted - foreground hover: bg - accent hover:text - accent - foreground",")
         class_name)}
       {...props}
-     />;
-      {children}
-    </div>);
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
+    >;
+</div>
+    </div>);"
+

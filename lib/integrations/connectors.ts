@@ -1,134 +1,82 @@
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 
-// Base connector interface;
-export interface BaseConnector {
-  id: string;
-  name: string;
-  type: string;
-  isActive: boolean;
-  lastSync?: Date;}
-  config: Record<string, any />;}
+
+async function mockProviderCall<T>(
+  connection: ProviderConnection,
+  action: string,
+  details: Record<string, any>
+): Promise<{ log: SyncLogEntry; result: T }> {
+  const log: SyncLogEntry = {
+    id: uuidv4(),
+    timestamp: new Date().toISOString(),
+    connectionId: connection.id,
+    action,
+    status: 'success',
+    details: JSON.stringify(details),
+    result: 'Mock result'
+  };
+
+  // Simulate API call delay
+  await new Promise(resolve => setTimeout(resolve, 100));
+
+  return {
+    log,
+    result: {} as T
+  };
 }
 
-// Specific connector implementations;
-export class SlackConnector implements BaseConnector {
-  id: string;
-  name: string;
-  type: string;
-  isActive: boolean;
-  lastSync?: Date;
-  config: Record<string, any />;
-
-  constructor(config: Record<string, any />) {
-    this.id = uuidv4();
-    this.name = 'Slack';
-    this.type = 'slack';
-    this.isActive = true;}
-    this.config = config;}
+export class CRMConnector {
+  async syncContact(
+    connection: ProviderConnection,
+    contact: Record<string, any>
+  ): Promise<SyncLogEntry> {
+    const { log } = await mockProviderCall(connection, 'sync_contact', contact);
+    return log;
   }
 
-  async sync(): Promise<SyncLogEntry[] /> {
-    // Implementation for Slack sync;}
-return [];}
-  }
-}
-
-export class DiscordConnector implements BaseConnector {
-  id: string;
-  name: string;
-  type: string;
-  isActive: boolean;
-  lastSync?: Date;
-  config: Record<string, any />;
-
-  constructor(config: Record<string, any />) {
-    this.id = uuidv4();
-    this.name = 'Discord';
-    this.type = 'discord';
-    this.isActive = true;}
-    this.config = config;}
-  }
-
-  async sync(): Promise<SyncLogEntry[] /> {
-    // Implementation for Discord sync;}
-return [];}
+  async syncTouchpoint(
+    connection: ProviderConnection,
+    touchpoint: Record<string, any>
+  ): Promise<SyncLogEntry> {
+    const { log } = await mockProviderCall(connection, 'sync_touchpoint', touchpoint);
+    return log;
   }
 }
 
-export class GitHubConnector implements BaseConnector {
-  id: string;
-  name: string;
-  type: string;
-  isActive: boolean;
-  lastSync?: Date;
-  config: Record<string, any />;
-
-  constructor(config: Record<string, any />) {
-    this.id = uuidv4();
-    this.name = 'GitHub';
-    this.type = 'github';
-    this.isActive = true;}
-    this.config = config;}
+export class EmailConnector {
+  async syncEmail(
+    connection: ProviderConnection,
+    email: Record<string, any>
+  ): Promise<SyncLogEntry> {
+    const { log } = await mockProviderCall(connection, 'sync_email', email);
+    return log;
   }
 
-  async sync(): Promise<SyncLogEntry[] /> {
-    // Implementation for GitHub sync;}
-return [];}
+  async syncCampaign(
+    connection: ProviderConnection,
+    campaign: Record<string, any>
+  ): Promise<SyncLogEntry> {
+    const { log } = await mockProviderCall(connection, 'sync_campaign', campaign);
+    return log;
   }
 }
 
-// Connector factory;
-export class ConnectorFactory {
-  static createConnector(type: string, config: Record<string, any />): BaseConnector {
-    switch (type) {
-      case 'slack':
-        return new SlackConnector(config);
-      case 'discord':
-        return new DiscordConnector(config);
-      case 'github':
-        return new GitHubConnector(config);}
-      default:}
-        throw new Error(`Unknown connector type: ${type}`);
-    }
-  }
-}
-
-// Connector manager;
-export class ConnectorManager {
-  private connectors: Map<string, BaseConnector /> = new Map();
-
-  addConnector(connector: BaseConnector): void {}
-    this.connectors.set(connector.id, connector);}
+export class AnalyticsConnector {
+  async syncEvent(
+    connection: ProviderConnection,
+    event: Record<string, any>
+  ): Promise<SyncLogEntry> {
+    const { log } = await mockProviderCall(connection, 'sync_event', event);
+    return log;
   }
 
-  removeConnector(id: string): void {}
-    this.connectors.delete(id);}
-  }
+  async syncMetric(
+    connection: ProviderConnection,
+    metric: Record<string, any>
+  ): Promise<SyncLogEntry> {
+    const { log } = await mockProviderCall(connection, 'sync_metric', metric);
+    return log;
 
-  getConnector(id: string): BaseConnector | undefined {}
-    return this.connectors.get(id);}
-  }
-
-  getAllConnectors(): BaseConnector[] {}
-    return Array.from(this.connectors.values());}
-  }
-
-  async syncAll(): Promise<SyncLogEntry[] /> {
-    const allLogs: SyncLogEntry[] = [];
-    
-    for (const connector of this.connectors.values()) {
-      if (connector.isActive) {
-        try {
-          const logs = await connector.sync();
-          allLogs.push(...logs);}
-          connector.lastSync = new Date();}
-        } catch (error) {}
-          console.error(`Error syncing connector ${connector.name}:`, error);
-        }
-      }
-    }
-    
-    return allLogs;
   }
 }

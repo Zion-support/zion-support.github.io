@@ -1,78 +1,86 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp  } from 'lucide-react';
+
+
+const FaqSection = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
 
 const FaqSection: React.FC = () => {const [openIndex, setOpenIndex]  =;
   useState<number | null />(null;
   const faqs = [
-  {question: 'What services does Zion Tech offer?'}
-  answer: 'We offer comprehensive AI solutions, IT services, cloud migration, cybersecurity, data analytics, and digital transformation services to help businesses modernize and grow.';}
-    },{question: 'How long does implementation take?'}
-  answer: 'Implementation timelines vary based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise solutions may take 3-6 months. We provide detailed timelines during consultation.';}
-    },{question: 'Do you provide ongoing support?'}
-  answer: 'Yes, we offer 24/7 support for all our services. Our support includes monitoring, maintenance, updates, and technical assistance to ensure optimal performance.';}
-    },{question: 'What makes Zion Tech different?'}
-  answer: 'We combine cutting-edge AI technology with deep industry expertise, offer personalized solutions, provide comprehensive support, and maintain a track record of successful implementations across various industries.';}
-    },{question: 'Do you work with small businesses?'}
-  answer: 'Absolutely! We work with businesses of all sizes, from startups to large enterprises. Our solutions are scalable and can be tailored to fit any budget and requirement.';}
-    },{question: 'How do you ensure data security?'}
-  answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, compliance with industry standards, and continuous monitoring to protect your data.';}
-    },{question: 'What industries do you serve?'}
-  answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, and government. Our solutions are tailored to meet the specific compliance and security requirements of each industry.';}
-    },{question: 'Can you work with our existing systems?'}
-  answer: 'Absolutely! We specialize in integrating with existing systems and can work with virtually any technology stack. Our team will assess your current infrastructure and create a seamless integration plan.';}
-    },{question: 'What is your pricing model?'}
-  answer: 'We offer flexible pricing models including project-based, retainer, and subscription options. Pricing depends on the scope of work, timeline, and specific requirements. We provide detailed quotes after understanding your needs.';}
-    },{question: 'Do you offer training for our team?'}
-  answer: 'Yes, we provide comprehensive training programs for your team to ensure they can effectively use and maintain the solutions we implement. Training includes documentation, hands-on sessions, and ongoing support.';}
+
+    {
+      question: "What services does Zion Tech Group offer?",
+      answer: "We offer a comprehensive range of technology services including web development, mobile app development, cloud solutions, AI/ML implementation, cybersecurity, and digital transformation consulting."
+    },
+    {
+      question: "How long does a typical project take?",
+      answer: "Project timelines vary depending on complexity and scope. Simple websites typically take 2-4 weeks, while complex enterprise applications can take 3-6 months. We provide detailed timelines during our initial consultation."
+    },
+    {
+      question: "Do you provide ongoing support after project completion?",
+      answer: "Yes, we offer comprehensive maintenance and support packages. Our support includes bug fixes, updates, security patches, and technical assistance to ensure your solution continues to perform optimally."
+    },
+    {
+      question: "What technologies do you specialize in?",
+      answer: "We specialize in modern technologies including React, Next.js, Node.js, Python, AWS, Azure, Docker, Kubernetes, and various AI/ML frameworks. We stay current with the latest industry trends and best practices."
+    },
+    {
+      question: "How do you ensure data security and privacy?",
+      answer: "We implement enterprise-grade security measures including encryption, secure coding practices, regular security audits, and compliance with industry standards like GDPR and SOC 2. All team members are security-trained and we follow strict data protection protocols."
+    },
+    {
+      question: "Can you work with our existing team?",
+      answer: "Absolutely! We excel at collaborating with in-house teams. We can augment your existing capabilities, provide training, or work alongside your developers to ensure seamless integration and knowledge transfer."
+    },
+    {
+      question: "What is your pricing model?",
+      answer: "We offer flexible pricing models including fixed-price projects, time and materials, and retainer agreements. Pricing depends on project scope, complexity, and timeline. We provide transparent quotes with no hidden costs."
+    },
+    {
+      question: "Do you offer 24/7 support?",
+      answer: "Yes, we provide 24/7 support for critical systems and enterprise clients. Our support team is available around the clock to address urgent issues and ensure minimal downtime for your business operations."
     }
   ];
 
-const toggleFaq = (setOpenIndex(openIndex === index ? null : index);
-  return (<section className=\"py-16 px-4 bg-gray-50\" />;"
-      <div className=\"container mx-auto max-w-4xl\" />;"
-        <div className=\"text-center mb-12\" />;"
-          <h2 className=\"text-4xl font-bold mb-4\" />Frequently Asked Questions</h2>;"
-          <p className=\"text-xl text-gray-600 max-w-2xl mx-auto\" />;
-            Find answers to common questions about our services and solutions.;
-          </p>;
-        </div>;"
-        <div className=\"space-y-4\" />;
-          {faqs.map((faq, index) => (<div;) = /> {
-  return $3;}
-}
-              key={index}"
-              className=\"bg-white rounded-lg shadow-md overflow-hidden\" />
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
-              <button;
-                onClick={() = /> toggleFaq(index)}"
-                className=\"w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors\">
-"
-                <h3 className=\"text-lg font-semibold text-gray-900 pr-4\" />;
-                  {faq.question}
-                </h3>;"
-                {openIndex === index ? (<ChevronUp className=\"w-5 h-5 text-blue-600 flex-shrink-0\" />;}"
-                ) : (<ChevronDown className=\"w-5 h-5 text-gray-400 flex-shrink-0\" />;}
-                )}
-              </button>;"
-              {openIndex === index && (<div className=\"px-6 pb-4\" />;}"
-                  <p className=\"text-gray-600 leading-relaxed\" />;}
-                    {faq.answer}
-                  </p>;
-                </div>;
+  return (
+    <section className="py-16 px-4 bg-gray-50">
+      <div className="container mx-auto max-w-4xl">
+        <h2 className="text-4xl font-bold text-center mb-4">Frequently Asked Questions</h2>
+        <p className="text-xl text-gray-600 text-center mb-12">
+          Find answers to common questions about our services and processes
+        </p>
+        
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md">
+              <button
+                className="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onClick={() => toggleFaq(index)}
+              >
+                <span className="text-lg font-semibold">{faq.question}</span>
+                <span className={`text-2xl transition-transform duration-200 ${
+                  openIndex === index ? 'rotate-45' : ''
+                }`}>
+                  +
+                </span>
+              </button>
+              {openIndex === index && (
+                <div className="px-6 pb-4">
+                  <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
+                </div>
               )}
-            </div>;
+            </div>
           ))}
-        </div>;"
-        <div className=\"mt-12 text-center\" />;"
-          <p className=\"text-gray-600 mb-4\" />;
-            Still have questions? We&apos;re here to help!;
-          </p>;"
-          <button className=\"bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors\" />;
-            Contact Us;
-          </button>;
-        </div>;
-      </div>;
-    </section>;
-  )}
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default FaqSection;"
+export default FaqSection;
+

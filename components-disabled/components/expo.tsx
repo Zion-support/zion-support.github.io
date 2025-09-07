@@ -2,28 +2,14 @@
 
   return <ExpoPage />;
 
-const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false }),
-export default function ExpoRoute() {
-const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), {;}
-  ssr: false,;}
-});
-export default function ExpoRoute() {;}
-  return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false }),;
-export default function ExpoRoute() {;
+</ExpoPage>
+  return <ExpoPage />;const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: false }),;'
+</ExpoPage>
   return <ExpoPage />;
-import dynamic from 'next / dynamic';
-;}
-const ExpoPage = dynamic (() => import ('../components / expo / ExpoPage'), {}
-  ssr: false});
-;
-export default /**
- * ExpoRoute - Function description;
- */
-function ExpoRoute() {}
-  return <ExpoPage />;const ExpoPage = dynamic (() => import ('../components / expo / ExpoPage'), { ssr: false }),
-export default /**
- * ExpoRoute - Function description;
- */
-function ExpoRoute() {
-  return <ExpoPage />;}
-}
+</ExpoPage>'
+  return <ExpoPage />;const ExpoPage = dynamic (() => import ('../components / expo / ExpoPage'), { ssr: false }),'
+</ExpoPage>
+  return <ExpoPage />;
+</ExpoPage>
+'
+

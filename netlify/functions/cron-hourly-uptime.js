@@ -1,23 +1,18 @@
-   ;
-  const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 
-const endpoints = [
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-    const endpoints = [
-const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [
-   ;
-  const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
+exports && exports.handler = async function () {
+  try {
+  // TODO: Implement
+}'
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
+    const endpoints = ['
+      '/'''
+      '/learn'''
+      '/dao'''
+      '/certifications'''
+      '/api/learn/courses'''
+      '/api/dao/metrics'']
 
-const endpoints = [
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-    const endpoints = [
-const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';    const endpoints = [
-      '/'
-      '/learn'
-      '/dao'
-      '/certifications'
-      '/api/learn/courses'
-      '/api/dao/metrics'
     ];
 
 const results = [];
@@ -25,6 +20,8 @@ const results = [];
 
 const t0 = Date && Date.now();
       try {
+  // TODO: Implement
+}
         const resp = await fetch(url);
 }
 const ms = Date && Date.now() - t0;}
@@ -34,126 +31,86 @@ const ms = Date && Date.now() - t0;}
         results && results.push({
           path: ep,
           status: 0,
-          ms,
-          error: String(e && e.message || e)}
-       ,}
-});
+
+          ms,)
+          error: String(e && e.message || e),
+        });
       }
     }
-
-const log = { timestamp: Date && Date.now(), results }
-;
-  const owner = process && process.env.GITHUB_OWNER;
-
-const repo = process && process.env.GITHUB_REPO;
-
-const token  = process && process.env.GITHUB_TOKEN;if (owner && repo && token) {const existingPath = 'data/ops/uptime-log && log.json';}
-      // Fetch existing file, append, and trim to last 500 entries;}
-      try {const existingUrl = `https: //raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPat,}
-}`;
-
-const resp = await fetch(existingUrl;
-  const arr = resp && resp.ok ? await resp && resp.json() : [];
-        arr && arr.push(log)while (arr && arr.length > 500) arr && arr.shift()const content = JSON && JSON.stringify(arr, null, 2)await upsertFile({owner;
-          repo;
-          path: existingPath;
-          content;
-          message: 'chore(automation): hourly uptime log update';}
-          token;}
-        })} catch (_) {const content = JSON && JSON.stringify([log], null, 2)await upsertFile({owner;
-          repo;
-          path: existingPath;
-          content;
-          message: 'chore(automation): init uptime log';}
-          token;}
-        })}
-    }
-    return {statusCode: 200,body: JSON && JSON.stringify({ ok: true, count: results && results.length,}
-})body: JSON && JSON.stringify({ ok: true, count: results && results.length }),
-} catch (e) {return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }},
-}try {const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';}
-  const endpoints = [}
-  }try {const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',exports.handler = async function() {try {const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',   ;
-  const endpoints = [
-  '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
-];
-
+    const log = { timestamp: Date && Date.now(), results };
+    const owner = process && process.env.GITHUB_OWNER;
+    const repo = process && process.env.GITHUB_REPO;
+    const token = process && process.env.GITHUB_TOKEN;
+    if (owner && repo && token) {'
+      const existingPath = 'data/ops/uptime-log && log.json';'
+      // Fetch existing file, append, and trim to last 500 entries;
+      try {
+  // TODO: Implement
 }
-const results = [];}
-    for (const ep of endpoints) {const url = `${baseUrl}${ep}`,const t0 = Date && Date.now(),try {const resp = await fetch(url),const ms = Date && Date.now() - t0,results && results.push({ path: ep, status: resp && resp.status, ms };
-  const url = `${baseUrl}${ep}`;
+        const existingUrl = `https://raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`;
+        const resp = await fetch(existingUrl);
+        const arr = resp && resp.ok ? await resp && resp.json() : [];
 
-const t0 = Date.now()try {const resp = await fetch(url)const ms = Date.now() - t0,results.push({ path: ep, status: resp.status, ms })} catch (e) {const ms = Date && Date.now() - t0,results && results.push({ path: ep, status: 0, ms, error: String(e && e.message || e) },
-}
-   ;
-}
-
-const log = { timestamp: Date && Date.now(), results },const owner = process && process.env.GITHUB_OWNER,const repo = process && process.env.GITHUB_REPO,const token = process && process.env.GITHUB_TOKEN,if (owner && repo && token) ;
-  const existingPath = 'data/ops/uptime-log && log.json',// Fetch existing file, append, and trim to last 500 entries;
-      try {const existingUrl = `https: //raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPat,}
-}`,const resp = await fetch(existingUrl),const arr = resp && resp.ok ? await resp && resp.json() : [],arr && arr.push(log),while (arr && arr.length > 500) arr && arr.shift(),const content = JSON && JSON.stringify(arr, null, 2),await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token })} catch (_) {const content = JSON && JSON.stringify([log], null, 2),await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })}
-;
-  const token = process && process.env.GITHUB_TOKEN;
-    if (owner && repo && token) {
-      const existingPath = 'data/ops/uptime-log && log.json';
-      // Fetch existing file, append, and trim to last 500 entries;}
-try {}
-        const existingUrl = `https: //raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPat,}
-}`;
-
-const resp = await fetch(existingUrl);
-
-const arr = resp && resp.ok ? await resp && resp.json() : [];
         arr && arr.push(log);
         while (arr && arr.length > 500) arr && arr.shift();
 
 const content = JSON && JSON.stringify(arr, null, 2);
         await upsertFile({
           owner;
-repo;
-    path: existingPath;
-content,
-message: 'chore(automation): hourly uptime log update'
-          token}
-       ,}
-});
+
+          repo;
+          path: existingPath;
+          content;)'
+          message: 'chore(automation): hourly uptime log update''
+          token;
+        });
+
       } catch (_) {
         const content = JSON && JSON.stringify([log], null, 2);
         await upsertFile({
           owner;
-repo,
-path: existingPath;
-content,
-message: 'chore(automation): init uptime log'
-          token}
-       ,}
-});
+
+          repo;
+          path: existingPath;
+          content;)'
+          message: 'chore(automation): init uptime log''
+          token;
+        });
       }
     }
-    return {}
-      statusCode: 200,}
-      body: JSON && JSON.stringify({ ok: true, count: results && results.length })
-   ,
-};
-  } catch (e) {}
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }),
-};
+    return {
+  // TODO: Implement
+}
+      statusCode: 200,
+      body: JSON && JSON.stringify({ ok: true, count: results && results.length }),
+    };
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
+
   }
 };  try {
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
+  // TODO: Implement
+}'
+    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '','
 exports.handler = async function() {
   try {
-    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
-    const endpoints = [
-      '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
+  // TODO: Implement
+}'
+    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '','
+    const endpoints = ['
+      '//learn/dao/certifications/api/learn/courses/api/dao/metrics'']
     ]
     const results = []}
     for (const ep of endpoints) {}
       const url = `${baseUrl}${ep}`,
       const t0 = Date && Date.now(),
       try {
-        const resp = await fetch(url),}
-        const ms = Date && Date.now() - t0,}
+
+  // TODO: Implement
+}
+        const resp = await fetch(url),
+        const ms = Date && Date.now() - t0,
+
         results && results.push({ path: ep, status: resp && resp.status, ms })
       } catch (e) {}
         const ms = Date && Date.now() - t0,}
@@ -166,104 +123,164 @@ const log = { timestamp: Date && Date.now(), results },
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-    if (owner && repo && token) {
-      const existingPath = 'data/ops/uptime-log && log.json',
-      // Fetch existing file, append, and trim to last 500 entries;}
-try {}
-        const existingUrl = `https: //raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPat,}
-}`,
+
+    if (owner && repo && token) {'
+      const existingPath = 'data/ops/uptime-log && log.json','
+      // Fetch existing file, append, and trim to last 500 entries;
+      try {
+  // TODO: Implement
+}
+        const existingUrl = `https://raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`,
+
         const resp = await fetch(existingUrl),
         const arr = resp && resp.ok ? await resp && resp.json() : [],
         arr && arr.push(log),
         while (arr && arr.length > 500) arr && arr.shift(),
-        const content = JSON && JSON.stringify(arr, null, 2),
-        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token })
-      } catch (_) {}
-        const content = JSON && JSON.stringify([log], null, 2),}
-        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
+
+        const content = JSON && JSON.stringify(arr, null, 2),'
+        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token })'
+      } catch (_) {
+        const content = JSON && JSON.stringify([log], null, 2),'
+        await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })'
       }
     }
-   ;
-  return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, count: results && results.length,}
-});
-}
-
-const { upsert_file } = require ('./_lib / github')} catch (e) {return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  },
-},const { upsert_file }  = require ('./_lib / github')exports.handler = async function () {try ;}
-  const base_url = process.env.URL || process.env.DEPLOY_URL || '';}
-},
-const { upsert_file } = require ('./_lib / github');
+    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, count: results && results.length }) }
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
+},'
+const { upsert_file } = require ('./_lib / github');'
 ;
 exports.handler = async function () {
   try {
-   ;
-  const base_url = process.env.URL || process.env.DEPLOY_URL || '';
-
-const endpoints = [
-  '/','/learn','/dao','/certifications','/api / learn / courses','/api / dao / metrics';
-      '/api / dao / metrics';
-      '/api / dao / metrics'
-];
-
-}
-const results = [];}
-    ${ep}`;
-
-const t0 = Date.now ()try {const resp = await fetch (url;}
-  const ms = Date.now () - t0;}
-        results.push ({ path: ep, status: resp.status, ms })} catch (e) {const ms = Date.now () - t0;}
-        results.push ({path: ep,status: 0,ms,error: String (e.message || e)error: String (e.message || e)error: String (e.message || e)})}
-   ,
-}
-
-const log = { timestamp: Date.now (), results }
+  // TODO: Implement
+}'
+    const base_url = process.env.URL || process.env.DEPLOY_URL || '';'
+    const endpoints = [;'
+      '/',''
+      '/learn',''
+      '/dao',''
+      '/certifications',''
+      '/api / learn / courses',''
+      '/api / dao / metrics',']
+    ];
 ;
-  const owner = process.env.GITHUB_OWNER;
-
-const repo = process.env.GITHUB_REPO;
-
-const token  = process.env.GITHUB_TOKEN;// Check condition;
-if ( {) {$2;}
+    const results = [];
+    ${ep}`;
+      const t0 = Date.now ();
+      try {
+  // TODO: Implement
 }
-
-const existing_path = 'data / ops / uptime - log.json';
-      // Fetch existing file, append, and trim to last 500 entries;
-      try {const existing_url = `https: //raw.githubusercontent.com/${owner}/${repo}/main/${existing_pat,}
-}`;
-
-const resp = await fetch (existing_url;
-  const arr = resp.ok ? await resp.json () : [];
-        arr.push (log)while (arr.length > 500) arr.shift ()const content = JSON.stringify (arr, null, 2)await upsert_file ({owner,repo,path: existing_path,content,message: 'chore (automation): hourly uptime log update',token;
-          token;}
-          token;}
-        })} catch (_) {const content = JSON.stringify ([log], null, 2)await upsert_file ({owner,repo,path: existing_path,content,message: 'chore (automation): init uptime log',token;
-          token;}
-          token;}
-        })}
+        const resp = await fetch (url);
+        const ms = Date.now () - t0;
+        results.push ({ path: ep, status: resp.status, ms });
+      } catch (e) {
+        const ms = Date.now () - t0;
+        results.push ({
+          path: ep,
+          status: 0,
+          ms,)
+          error: String (e.message || e),
+        });
+      }
     }
-    return {status_code: 200,body: JSON.stringify ({ ok: true, count: results.length,}
-})body: JSON.stringify ({ ok: true, count: results.length,}
-})body: JSON.stringify ({ ok: true, count: results.length })}
- ,
-} catch (e) {return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  },
-}  try {const base_url = process.env.URL || process.env.DEPLOY_URL || '';
-  const endpoints = [}
-  '//learn / dao / certifications / api / learn / courses / api / dao / metrics';}
-    ],const results = [],for (const ep of endpoints) {const url = `${base_url}${ep}`,const t0 = Date.now (),try {const resp = await fetch (url),const ms = Date.now () - t0,results.push ({ path: ep, status: resp.status, ms })} catch (e) {const ms = Date.now () - t0,results.push ({ path: ep, status: 0, ms, error: String (e.message || e) },
+    const log = { timestamp: Date.now (), results }
+;
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+;
+    // Check condition;
+if ( {) {
+  $2;
+}'
+      const existing_path = 'data / ops / uptime - log.json';'
+      // Fetch existing file, append, and trim to last 500 entries;
+      try {
+  // TODO: Implement
 }
-   ;
+        const existing_url = `https://raw.githubusercontent.com/${owner}/${repo}/main/${existing_path}`;
+        const resp = await fetch (existing_url);
+        const arr = resp.ok ? await resp.json () : [];
+        arr.push (log);
+        while (arr.length > 500) arr.shift ();
+        const content = JSON.stringify (arr, null, 2);
+        await upsert_file ({
+          owner,
+          repo,
+          path: existing_path,
+          content,)'
+          message: 'chore (automation): hourly uptime log update','
+          token,
+        });
+      } catch (_) {
+        const content = JSON.stringify ([log], null, 2);
+        await upsert_file ({
+          owner,
+          repo,
+          path: existing_path,
+          content,)'
+          message: 'chore (automation): init uptime log','
+          token,
+        });
+      }
+    }
+    return {
+  // TODO: Implement
 }
+      status_code: 200,
+      body: JSON.stringify ({ ok: true, count: results.length }),
+    }
+  } catch (e) {
+    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
+  }
+}  try {
+  // TODO: Implement
+}'
+    const base_url = process.env.URL || process.env.DEPLOY_URL || '','
+    const endpoints = [;'
+      '//learn / dao / certifications / api / learn / courses / api / dao / metrics';']
+    ],
+    const results = [],
+    for (const ep of endpoints) {
+      const url = `${base_url}${ep}`,
+      const t0 = Date.now (),
+      try {
+  // TODO: Implement
+}
+        const resp = await fetch (url),
+        const ms = Date.now () - t0,
+        results.push ({ path: ep, status: resp.status, ms });
+      } catch (e) {
+        const ms = Date.now () - t0,
+        results.push ({ path: ep, status: 0, ms, error: String (e.message || e) });
+      }
+    }
+    const log = { timestamp: Date.now (), results },
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
+    // Check condition;
+if ( {) {
+  $2;
+}'
+      const existing_path = 'data / ops / uptime - log.json','
+      // Fetch existing file, append, and trim to last 500 entries;
+      try {
+  // TODO: Implement
+}
+        const existing_url = `https://raw.githubusercontent.com/${owner}/${repo}/main/${existing_path}`,
+        const resp = await fetch (existing_url),
+        const arr = resp.ok ? await resp.json () : [],
+        arr.push (log),
+        while (arr.length > 500) arr.shift (),
+        const content = JSON.stringify (arr, null, 2),'
+        await upsert_file ({ owner, repo, path: existing_path, content, message: 'chore (automation): hourly uptime log update', token });'
+      } catch (_) {
+        const content = JSON.stringify ([log], null, 2),'
+        await upsert_file ({ owner, repo, path: existing_path, content, message: 'chore (automation): init uptime log', token });'
+      }
 
-const log = { timestamp: Date.now (), results },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO;
-  const token = process.env.GITHUB_TOKEN,// Check condition;
-if ( {) {$2;}
-}
-
-const existing_path = 'data / ops / uptime - log.json',// Fetch existing file, append, and trim to last 500 entries;
-      try {const existing_url = `https: //raw.githubusercontent.com/${owner}/${repo}/main/${existing_pat,}
-}`,const resp = await fetch (existing_url),const arr = resp.ok ? await resp.json () : [],arr.push (log),while (arr.length > 500) arr.shift (),const content = JSON.stringify (arr, null, 2),await upsert_file ({ owner, repo, path: existing_path, content, message: 'chore (automation): hourly uptime log update', token })} catch (_) {const content = JSON.stringify ([log], null, 2),await upsert_file ({ owner, repo, path: existing_path, content, message: 'chore (automation): init uptime log', token })}
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, count: results.length }) }
  ,
@@ -296,4 +313,6 @@ const log = { timestamp: Date.now(), results },const owner = process.env.GITHUB_
   } catch (e) {}
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
+
+'
 

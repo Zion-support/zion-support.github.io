@@ -4,20 +4,30 @@
  * Checks SEO and accessibility compliance
  */
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
-class SEOAccessibility {
-  constructor() {
-    this.processName = process.env.PM2_PROCESS_NAME || 'seo-accessibility';
-    this.checkSEO = process.env.CHECK_SEO === 'true';
-    this.checkAccessibility = process.env.CHECK_ACCESSIBILITY === 'true';
-    this.checkPerformance = process.env.CHECK_PERFORMANCE === 'true';
-    this.lighthouseAudit = process.env.LIGHTHOUSE_AUDIT === 'true';
-    this.logFile = path.join(__dirname, '../../logs/pm2/seo-accessibility.log');
+const { execSync } = require('child_process');''
+const fs = require('fs');''
+const path = require('path');'
+class SEOAccessibility {}
+  constructor() {}'
+    this.processName = process.env.PM2_PROCESS_NAME || 'seo-accessibility';''
+    this.checkSEO = process.env.CHECK_SEO === 'true';''
+    this.checkAccessibility = process.env.CHECK_ACCESSIBILITY === 'true';''
+    this.checkPerformance = process.env.CHECK_PERFORMANCE === 'true';''
+    this.lighthouseAudit = process.env.LIGHTHOUSE_AUDIT === 'true';''
+    this.logFile = path.join(__dirname, '../../logs/pm2/seo-accessibility.log');'
     this.ensureLogDir();
-  }
+  };
+  ensureLogDir() {}
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {}
+      fs.mkdirSync(logDir, { recursive: true })
+});
+    };
+  };
+  log(message) {}
+    const timestamp = new Date().toISOString();
+
 
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
@@ -31,22 +41,22 @@ class SEOAccessibility {
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
-  }
 
-  async checkSEO() {
-    if (!this.checkSEO) {
-      this.log('SEO checking disabled');
+  };
+  async checkSEO() {}
+    if (!this.checkSEO) {}'
+      this.log('SEO checking disabled');'
       return { checked: false };
-    }
-    
-    try {
-      this.log('Checking SEO compliance...');
+    };
+    try {}'
+      this.log('Checking SEO compliance...');'
       const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
       
-      for (const file of htmlFiles) {
-        try {
-          const content = fs.readFileSync(file, 'utf8');
+      for (const file of htmlFiles) {}
+        try {}'
+          const content = fs.readFileSync(file, 'utf8');'
+
           const issues = this.analyzeSEO(content, file);
           seoIssues.push(...issues);
         } catch (err) {
@@ -75,21 +85,24 @@ class SEOAccessibility {
         for (const file of files) {
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
-          if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-            scanDir(filePath);
-          } else if (stat.isFile() && (file.endsWith('.html') || file.endsWith('.htm'))) {
+
+          '
+          if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}'
+            scanDir(filePath);'
+          } else if (stat.isFile() && (file.endsWith('.html') || file.endsWith('.htm'))) {}'
             htmlFiles.push(filePath);
-          }
-        }
-      } catch (err) {
-        // Skip directories that can't be read
-      }
+          };
+        };
+      } catch (err) {}'
+        // Skip directories that can't be read;'
+      };
     };
-    
-    // Scan common directories
-    const scanDirs = ['public', 'dist', 'out', 'build', 'pages'];
-    for (const dir of scanDirs) {
-      if (fs.existsSync(dir)) {
+
+    // Scan common directories;'
+    const scanDirs = ['public', 'dist', 'out', 'build', 'pages'];'
+    for (const dir of scanDirs) {}
+      if (fs.existsSync(dir)) {}
+
         scanDir(dir);
       }
     }
@@ -100,187 +113,28 @@ class SEOAccessibility {
   analyzeSEO(content, filePath) {
     const issues = [];
     
-    // Check for title tag
-    if (!content.includes('<title>')) {
-      issues.push({
-        file: filePath,
-        type: 'missing_title',
-        severity: 'high',
-        message: 'Missing <title> tag'
-      });
-    }
-    
-    // Check for meta description
-    if (!content.includes('name="description"')) {
-      issues.push({
-        file: filePath,
-        type: 'missing_meta_description',
-        severity: 'high',
-        message: 'Missing meta description'
-      });
-    }
-    
-    // Check for h1 tag
-    if (!content.includes('<h1>')) {
-      issues.push({
-        file: filePath,
-        type: 'missing_h1',
-        severity: 'medium',
-        message: 'Missing <h1> tag'
-      });
-    }
-    
-    // Check for alt attributes on images
+
+    // Check for title tag;'
+    if (!content.includes('<title>')) {}'
+</title>'
+        message: 'Missing <title> tag''
+</title>'
+    if (!content.includes('<h1>')) {}'
+</h1>'
+        message: 'Missing <h1> tag''
+</h1>
     const imgTags = content.match(/<img[^>]*>/g) || [];
-    for (const imgTag of imgTags) {
-      if (!imgTag.includes('alt=')) {
-        issues.push({
-          file: filePath,
-          type: 'missing_alt_text',
-          severity: 'medium',
-          message: 'Image missing alt attribute'
-        });
-      }
-    }
-    
-    // Check for lang attribute
-    if (!content.includes('lang=')) {
-      issues.push({
-        file: filePath,
-        type: 'missing_lang',
-        severity: 'medium',
-        message: 'Missing lang attribute on html tag'
-      });
-    }
-    
-    // Check for viewport meta tag
-    if (!content.includes('name="viewport"')) {
-      issues.push({
-        file: filePath,
-        type: 'missing_viewport',
-        severity: 'high',
-        message: 'Missing viewport meta tag'
-      });
-    }
-    
-    return issues;
-  }
-
-  async checkAccessibility() {
-    if (!this.checkAccessibility) {
-      this.log('Accessibility checking disabled');
-      return { checked: false };
-    }
-    
-    try {
-      this.log('Checking accessibility compliance...');
-      const a11yIssues = [];
-      const htmlFiles = this.findHTMLFiles();
-      
-      for (const file of htmlFiles) {
-        try {
-          const content = fs.readFileSync(file, 'utf8');
-          const issues = this.analyzeAccessibility(content, file);
-          a11yIssues.push(...issues);
-        } catch (err) {
-          this.log(`Error reading ${file}: ${err.message}`);
-        }
-      }
-      
-      this.log(`Found ${a11yIssues.length} accessibility issues`);
-      return {
-        checked: true,
-        issues: a11yIssues,
-        totalIssues: a11yIssues.length,
-        filesChecked: htmlFiles.length
-      };
-    } catch (error) {
-      this.log(`Accessibility check failed: ${error.message}`);
-      return { checked: false, error: error.message };
-    }
-  }
-
-  analyzeAccessibility(content, filePath) {
-    const issues = [];
-    
-    // Check for proper heading hierarchy
+</img>
     const headings = content.match(/<h[1-6][^>]*>/g) || [];
-    let lastLevel = 0;
-    for (const heading of headings) {
+</h>
       const level = parseInt(heading.match(/<h(\d)/)[1]);
-      if (level > lastLevel + 1) {
-        issues.push({
-          file: filePath,
-          type: 'heading_hierarchy',
-          severity: 'medium',
-          message: `Heading level ${level} follows level ${lastLevel} (skipped levels)`
-        });
-      }
-      lastLevel = level;
-    }
-    
-    // Check for form labels
+      if (level > lastLevel + 1) {}
+</h>
     const inputTags = content.match(/<input[^>]*>/g) || [];
-    for (const inputTag of inputTags) {
-      if (inputTag.includes('type=') && !inputTag.includes('type="hidden"')) {
-        if (!inputTag.includes('aria-label') && !inputTag.includes('aria-labelledby')) {
-          // Check if there's a label element nearby (simplified)
-          const hasLabel = content.includes('</label>');
-          if (!hasLabel) {
-            issues.push({
-              file: filePath,
-              type: 'missing_form_label',
-              severity: 'high',
-              message: 'Form input missing label or aria-label'
-            });
-          }
-        }
-      }
-    }
-    
-    return issues;
-  }
+</input>'
+          const hasLabel = content.includes('</label>');'
+    const interactiveElements = content.match(/<button|<a|<input|<select|<textarea/g) || [];
+    const tabIndexElements = content.match(/tabindex/g) || [];
+    if (interactiveElements.length > 0 && tabIndexElements.length === 0) {}
+</button>'
 
-  async generateReport() {
-    const report = {
-      timestamp: new Date().toISOString(),
-      processName: this.processName,
-      seo: await this.checkSEO(),
-      accessibility: await this.checkAccessibility(),
-      environment: {
-        NODE_ENV: process.env.NODE_ENV,
-        checkSEO: this.checkSEO,
-        checkAccessibility: this.checkAccessibility
-      }
-    };
-    
-    const reportFile = path.join(__dirname, '../../logs/pm2/seo-accessibility-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`SEO & Accessibility report generated: ${reportFile}`);
-    return report;
-  }
-
-  async start() {
-    this.log(`${this.processName} started`);
-    try {
-      const report = await this.generateReport();
-      const totalIssues = (report.seo.totalIssues || 0) + (report.accessibility.totalIssues || 0);
-      
-      if (totalIssues === 0) {
-        this.log('SEO & Accessibility check completed - no issues found');
-      } else {
-        this.log(`SEO & Accessibility check completed - found ${totalIssues} issues`);
-      }
-    } catch (error) {
-      this.log(`SEO & Accessibility check error: ${error.message}`);
-    }
-  }
-}
-
-// Start the service
-if (require.main === module) {
-  const seoAccessibility = new SEOAccessibility();
-  seoAccessibility.start().catch(console.error);
-}
-
-module.exports = SEOAccessibility;

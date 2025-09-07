@@ -1,11 +1,12 @@
-const { upsertFile } = require('./_lib/github')const fs = require('fs')const path = require('path')async function getLatest() {try {const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`)if (!resp.ok) return null;
-    const json  = await resp.json()return json.version |null;
-  } catch (_) {return null;}
-const { upsertFile } = require('./_lib/github');
-const fs = require('fs');
-const path = require('path');
-async function getLatest(pkg) {}
-  try {}
+
+const { upsertFile } = require('./_lib/github');''
+const fs = require('fs');''
+const path = require('path');'
+async function getLatest(pkg) {
+  try {
+  // TODO: Implement
+}
+
     const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`);
     if (!resp.ok) return null;
     const json = await resp.json();
@@ -13,7 +14,18 @@ async function getLatest(pkg) {}
   } catch (_) {}
     return null;}
   }
-exports.handler = async function () {try {const pkgPath = path.join(process.cwd(), 'package.json')const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))const deps = {...(pkg.dependencies |{})...(pkg.devDependencies |{})}
+
+exports.handler = async function () {
+  try {
+  // TODO: Implement
+}'
+    const pkgPath = path.join(process.cwd(), 'package.json');''
+    const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));'
+    const deps = {
+      ...(pkg.dependencies |{})
+      ...(pkg.devDependencies |{})
+    }
+
     const entries = [];
     for (const [name, current] of Object.entries(deps)) {const latest = await getLatest(name)if (!latest) continue;
       entries.push({name;
@@ -26,9 +38,11 @@ exports.handler = async function () {try {const pkgPath = path.join(process.cwd(
       if (!latest) continue;
       entries.push({
         name;
-current,
-latest;}
-    outOfDate: current.replace(/^[^0-9]*/, '') !== latest}
+
+        current;
+        latest;)'
+        outOfDate: current.replace(/^[^0-9]*/, '') !== latest;'
+
       });
     }
     const report = { updatedAt: Date.now(), entries }
@@ -56,35 +70,44 @@ latest;}
     if (owner && repo && token) {
       await upsertFile({
         owner;
-repo,
-path: \"path\",
-    content: JSON.stringify(report, null, 2)
-        message: 'chore(automation): weekly dependency insights'}
-        token}
+
+        repo;'
+        path: 'data/reports/deps/weekly-dependencies.json'',)
+  content: JSON.stringify(report, null, 2)'
+        message: 'chore(automation): weekly dependency insights''
+        token;
       });
     }
-    return {}
-      statusCode: 200;}
-body: JSON.stringify({ ok: true, count: entries.length })
+    return {
+  // TODO: Implement
+}
+      statusCode: 200;,
+  body: JSON.stringify({ ok: true, count: entries.length })
+
     }
   } catch (e) {}
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-};async function getLatest(pkg) {}
-  try {}
+
+};async function getLatest(pkg) {
+  try {
+  // TODO: Implement
+}
     const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`)
     if (!resp.ok) return null;
-const json = await resp.json()
+    const json = await resp.json()
     return json.version |null;
-  } catch (_) {}
-    return null}
+  } catch (_) {
+    return null;
   }
 }
-    if (owner && repo && token) {}
-      await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json',}
-  content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
+
+    if (owner && repo && token) {'
+      await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })'
+
     }
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
   } catch (e) {}
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+'

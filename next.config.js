@@ -5,58 +5,11 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig = {
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: true,
-  
-  // Disable linting during build
+
+  reactStrictMode: true,
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  
-  // Disable type checking during build
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  
-  // Image optimization
-  images: {
-    domains: ['localhost'],
-    formats: ['image/webp', 'image/avif'],
-  },
-  
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
-  
-  // Redirects
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
+
   },
   
   // Webpack configuration
@@ -80,6 +33,20 @@ const nextConfig = {
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
+  images: {
+    domains: ['localhost', 'ziontechgroup.com'],
+    unoptimized: true,
+  },
+  trailingSlash: true,
+  output: 'export',
+  distDir: 'dist',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ziontechgroup-site' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/ziontechgroup-site' : '',
+  experimental: {
+    optimizeCss: true,
+  },
 };
 
-export default withBundleAnalyzer(nextConfig);
+
+export default nextConfig;
+

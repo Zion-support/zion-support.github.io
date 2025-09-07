@@ -1,109 +1,97 @@
-import React from \"react\";
+
+import React from "react";"
+
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,}
-  CardTitle,;}
-} from \"@/components/ui/card\";
-import { AnalyticsChart } from \"@/components/analytics/AnalyticsChart\";
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';  CardTitle,;
-} from \"@/components/ui/card\";
-import { AnalyticsChart } from \"@/components/analytics/AnalyticsChart\";
-import { AnalyticsChart } from \"@/components/analytics/AnalyticsChart\";
-interface ConversionAnalysisProps {
-  data: Array<Record<string, any />>;
-  timeRange: string;}
-  onTimeRangeChange: (range: string) => void}
+  // TODO: Implement
 }
-export function ConversionAnalysisChart({
-  data;
-timeRange,}
-onTimeRangeChange}
-}: ConversionAnalysisProps) {
-  const dataKeys =
-    data && data.length > 0;
-      ? Object.keys(data[0]).filter((key) => key !== \"date\")
-      : [];
-export function ConversionAnalysisChart(): any ({;
-  data,;
-  timeRange,;}
-  onTimeRangeChange,;}
-}: ConversionAnalysisProps) {;
-  const dataKeys =;
-    data && data.length > 0;
-      ? Object && Object.keys(data[0]).filter((key) => key !== \"date\");
-import React from './react';
-import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,}
-  CardTitle,}
-} from '@/components / ui / card';
-import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';
-  const dataKeys = data && data.length > 0;
-    ? Object.keys(data[0]).filter(key => key !== 'date')
-    : [],
-  return (
-    <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />
-      <CardHeader />
-        <CardTitle className=\"text-white text-lg\" />Conversion Analysis</CardTitle>
-        <CardDescription className=\"text-zion-slate-light\" />Track different conversion types</CardDescription>
-      </CardHeader>
-      <CardContent />
-        <AnalyticsChart;
-title=\"\"
-          data={data |[]}
-          dataKeys={dataKeys}
-          type=\"bar\"
+
+  CardHeader,
+  CardTitle,;
+"
+} from "@/components/ui/card";""
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";"
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+"
+} from "@/components/ui/card";""
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";"
+interface ConversionAnalysisProps {;
+  data: Array<Record<string, any>>;
+</Record>
+  data: Array<Record<string, any>>;
+</Record>
+  data: Array < Record < string, any>>;
+  time_range: string;,
+  onTimeRangeChange: (range: string) => void;
+}
+
+
+
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
-  const dataKeys = data && data.length  /> 0;
-    ? Object.keys(data[0]).filter(key => key !== 'date')
+  const dataKeys = data && data.length > 0;"
+    ? Object.keys(data[0]).filter(key => key !== 'date')'
+
     : [],
   return (
-      <CardHeader />;
-        <CardTitle className=\"text - white text-lg\" />;
-          Conversion Analysis;
-        </CardTitle>;
-        <CardDescription className=\"text - zion - slate-light\" />;
-          Track different conversion types;
+
+'
+    <Card className="bg - zion - blue - dark border - zion - blue - light">;"
+</Card>
+      <CardHeader>;
+</CardHeader>"
+        <CardTitle className="text - white text - lg">;"
+</CardTitle>
+        </CardTitle>;"
+        <CardDescription className="text - zion - slate - light">;"
+</CardDescription>
         </CardDescription>;
       </CardHeader>;
-      <CardContent />;}
-import React from \"react\";}
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from \"@/components/ui/card\";
-import { AnalyticsChart } from \"@/components/analytics/AnalyticsChart\",;
-interface ConversionAnalysisProps {;
-  data: Array<Record<string any />>,;
-  timeRange: string,;}
-  onTimeRangeChange: (range: string) => void;}
-}
-;
-export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {;
-  const dataKeys = data && data.length > 0;
-    ? Object.keys(data[0]).filter(key => key !== 'date');
-    : [];
-  return (;
-    <Card className=\"bg-zion-blue-dark border-zion-blue-light\" />;
-      <CardHeader />;
-        <CardTitle className=\"text-white text-lg\" />Conversion Analysis</CardTitle>;
-        <CardDescription className=\"text-zion-slate-light\" />Track different conversion types</CardDescription>;
+      <CardContent>;
+</CardContent>
+  data: Array<Record<string any>>,;
+</Record>"
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;"
+</Card>
+      <CardHeader>;
+</CardHeader>"
+        <CardTitle className="text-white text-lg">Conversion Analysis</CardTitle>;""
+        <CardDescription className="text-zion-slate-light">Track different conversion types</CardDescription>;"
       </CardHeader>;
-      <CardContent />;
-        <AnalyticsChart;}
-          title=\"\";}
+      <CardContent>;
+</CardContent>
+        <AnalyticsChart;"
+          title="";"
           data={data || []}
-          dataKeys={dataKeys}
-          type=\"bar\"
+          dataKeys={dataKeys}"
+          type="bar""
+
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
         />;
+</AnalyticsChart>
       </CardContent>;
+
     </Card>;
+        <AnalyticsChart;"
+          title="";"
+          data={data || []}
+          data_keys={data_keys}"
+          type="bar";"
+          time_range={time_range}
+          onTimeRangeChange={onTimeRangeChange}
+        />;
+</AnalyticsChart>
+      </CardContent>;)
+    </Card>);
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+</CardContent>"
+

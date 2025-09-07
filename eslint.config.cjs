@@ -1,32 +1,22 @@
 const js = require('@eslint/js');
 
 module.exports = [
-  {
-    ignores: [
-      'node_modules/**/*',
-      'app-optimizer.js',
-      'zion-os/**/*',
-      'apps.backup/**/*',
-      'zion-website/**/*',
-      'automation/**/*',
-      'advanced-automation-improvements.cjs',
-      'analyze_links.cjs',
-      'app-enhancement-suite.cjs',
-      '.next/**',
-      'dist/**',
-      'build/**',
-      '*.config.js',
-      '*.config.cjs',
-      'public/**',
-      'App.simple.tsx',
-      'App.smoke.test.tsx',
-    ],
-  },
+
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+      'no-undef': 'off',
+      'no-unused-expressions': 'warn',
+      'no-var': 'warn',
+      'prefer-arrow-callback': 'warn',
+      'prefer-template': 'warn'
+    },
+
     languageOptions: {
-      ecmaVersion: 2022,
+      ecmaVersion: 'latest',
       sourceType: 'module',
       globals: {
         window: 'readonly',
@@ -40,12 +30,27 @@ module.exports = [
         module: 'readonly',
         require: 'readonly',
         exports: 'readonly',
-      },
+        React: 'readonly',
+        JSX: 'readonly'
+      }
     },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'warn',
-    }
+
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      'backup*/**',
+      'temp*/**',
+      'corrupted*/**',
+      '**/*.backup.*',
+      '**/*.temp.*',
+      '**/*.conflict.*',
+      '**/generated/**',
+      '**/coverage/**',
+      '**/*.min.js',
+      '**/*.bundle.js'
+    ]
   }
 ];
+

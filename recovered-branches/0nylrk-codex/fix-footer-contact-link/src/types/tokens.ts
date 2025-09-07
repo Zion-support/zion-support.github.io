@@ -1,20 +1,25 @@
 export interface Wallet {
-  user_id: string;
-  balance: number;}
-    updated_at: string}
+
+  // TODO: Implement
 }
-export type TransactionType = 'earn' | 'burn';
-  balance: number,  updated_at: string;
+  user_id: string;,
+  balance: number;
+  updated_at: string;
 }
-export type TransactionType = \"earn\" | \"burn\";
+
+export type TransactionType = "earn" | "burn";"
+
 export interface TokenTransaction {
-  id: string;
+  // TODO: Implement
+}
+  id: string;,
   user_id: string;
-  amount: number;
+  amount: number;,
   transaction_type: TransactionType;
-  user_id: string,;
-  balance: number,;}
-  updated_at: string;}
+
+  reason: string | null;,
+  created_at: string;
+
 }
 ;
 export type TransactionType = 'earn' | 'burn',;
@@ -25,4 +30,7 @@ export interface TokenTransaction {;
   transaction_type: TransactionType,;  created_at: string;}
 }
 ;
+
 }
+"
+

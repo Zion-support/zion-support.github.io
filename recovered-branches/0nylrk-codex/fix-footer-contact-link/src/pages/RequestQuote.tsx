@@ -1,36 +1,29 @@
-import { Header } from \"@/components/Header\",
-import { Footer } from \"@/components/Footer\";
-import { QuoteRequestForm } from \"@/components/QuoteRequestForm\";
-import { Footer } from \"@/components/Footer\",
-import { QuoteRequestForm } from \"@/components/QuoteRequestForm\",export default function RequestQuote() {
+
+import { Header } from "@/components/Header";""
+import { Footer } from "@/components/Footer";""
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";"
+export default function RequestQuote() {
   return (
     <>
       <Header />
-      <div className=\"min-h-screen bg-zion-blue\" />
+</Header>"
+      <div className="min-h-screen bg-zion-blue">"
+</div>
+
         <QuoteRequestForm />
+</QuoteRequestForm>
       </div>
       <Footer />
-    </>}
-  )}
-import {Header} from \"@/components/Header\";
-import {Footer} from \"@/components/Footer\";
-import {QuoteRequestForm} from \"@/components/QuoteRequestForm\";
-import { Header } from \"@/components/Header\";
-import { Footer } from \"@/components/Footer\";
-import { QuoteRequestForm } from \"@/components/QuoteRequestForm\";
-export default function RequestQuote() {;
-  return (
-    <>;
-      <Header />;
-      <div className=\"min-h-screen bg-zion-blue\" />;
-        <QuoteRequestForm />;
-      </div>;
-      <Footer />;}
-    </>;  );}
-}
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { QuoteRequestForm } from '@/components / QuoteRequestForm';
+
+</Footer>
+    </>)
+  );
+  );
+}"
+import { Header } from '@/components / Header';''
+import { Footer } from '@/components / Footer';''
+import { QuoteRequestForm } from '@/components / QuoteRequestForm';'
+
 export default /**
  * RequestQuote - Function description;
  */
@@ -38,9 +31,25 @@ function RequestQuote() {
   return (
     <>;
       <Header />;
-      <div className=\"min - h-screen bg - zion-blue\" />;
+
+</Header>'
+      <div className="min - h-screen bg - zion - blue">;"
+</div>
+
         <QuoteRequestForm />;
+</QuoteRequestForm>
       </div>;
-      <Footer />;}
-    </>);}
+
+      <Footer />;
+</Footer>)
+    </>);
 }
+
+;
+
+
+  ),;
+}  () {"
+  return (min-h-screen bg-zion-blue" > <QuoteRequestForm /> </div> <Footer /> </>"
+</QuoteRequestForm>)"
+

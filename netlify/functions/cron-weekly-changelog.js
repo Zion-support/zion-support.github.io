@@ -95,17 +95,19 @@ ursor/fix-website-loading-errors-and-merge-6662;
 }
 exports.handler = async function () {
   try {
-   ;
-  const owner = process.env.GITHUB_OWNER;
 
-const repo = process.env.GITHUB_REPO;
+  // TODO: Implement
+}
+    const owner = process.env.GITHUB_OWNER;
+    const repo = process.env.GITHUB_REPO;
+    const token = process.env.GITHUB_TOKEN;
+      return {
+  // TODO: Implement
+}
+        statusCode: 200,
+        body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' }),'
+      };
 
-const token = process.env.GITHUB_TOKEN;
-      return {}
-        statusCode: 200,}
-        body: JSON && JSON.stringify({ ok: true, skipped: 'Missing GitHub envs' })
-     ,
-};
     }
 
 const commits = await fetchJson(commitsUrl, token);
@@ -118,10 +120,11 @@ const byAuthor = {}
 
   } catch (e) {}
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  },
-}
-    await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json',}
-  content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
+
+  }
+}'
+    await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),'
+
     return { status_code: 200, body: JSON.stringify ({ ok: true, commits: commits.length }) }
  ,
 } catch (e) {}
@@ -131,3 +134,4 @@ const byAuthor = {}
 
 
 
+'

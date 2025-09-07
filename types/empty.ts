@@ -1,4 +1,4 @@
 
 // Empty TypeScript file;
+export {};
 
-export {}

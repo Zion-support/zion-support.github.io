@@ -9,29 +9,33 @@ interface CardProps {
 }
 }
 
-const Card: React.FC<CardProps /> = ({ children,
-  title,
-  description,
-  className = ''}
-  onClick}
-   }) => {
 
-
-
-
- ;
-  return (}
-    <div;}
-className={`bg-white rounded-lg shadow-md p-6 hover: shadow-lg transition-shadow duration-300 ${className}`}
-
+const Card: React.FC<CardProps> = ({ 
+  children, 
+  title, 
+  description, 
+  className = '', 
+  onClick 
+}) => {
+  return (
+    <motion.div
+      className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer ${className}`}
       onClick={onClick}
-     />
-      {title && <h3 className=\"text-xl font-semibold mb-3 text-gray-900\" />{title}</h3>}"
-      {description && <p className=\"text-gray-600 mb-4\" />{description}</p>}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      {title && (
+        <h3 className="text-xl font-semibold mb-3 text-white">{title}</h3>
+      )}
+      {description && (
+        <p className="text-gray-300 mb-4">{description}</p>
+      )}
+
       {children}
     </div>
   );
 };
 
 
-export default Card;"
+export default Card;
+

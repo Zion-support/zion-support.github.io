@@ -3,94 +3,68 @@ import { IntegrationProviderMeta } from './types';
 export const PROVIDERS: IntegrationProviderMeta[] = [
   {
     id: 'salesforce',
-  name: 'Salesforce',
+
+    name: 'Salesforce',
     category: 'crm',
-  description: 'Enterprise CRM platform',
+    description: 'Enterprise CRM',
     icon: 'salesforce',
-  isActive: true,
-    configSchema: {
-      type: 'object',}
-  properties: {}
-        apiKey: { type: 'string' },
-        instanceUrl: { type: 'string' }
-      },
-      required: ['apiKey', 'instanceUrl']
-    }
+    oauthScopes: ['api', 'refresh_token']
   },
   {
     id: 'hubspot',
-  name: 'HubSpot',
+    name: 'HubSpot',
     category: 'crm',
-  description: 'Inbound marketing and sales platform',
+    description: 'Marketing & Sales CRM',
     icon: 'hubspot',
-  isActive: true,
-    configSchema: {
-      type: 'object',}
-  properties: {}
-        apiKey: { type: 'string' },
-        portalId: { type: 'string' }
-      },
-      required: ['apiKey', 'portalId']
-    }
+    oauthScopes: ['contacts', 'content']
   },
   {
-    id: 'slack',
-  name: 'Slack',
-    category: 'communication',
-  description: 'Team communication platform',
-    icon: 'slack',
-  isActive: true,
-    configSchema: {
-      type: 'object',}
-  properties: {}
-        token: { type: 'string' },
-        channel: { type: 'string' }
-      },
-      required: ['token', 'channel']
-    }
+    id: 'pipedrive',
+    name: 'PipeDrive',
+    category: 'crm',
+    description: 'Sales pipeline CRM',
+    icon: 'pipedrive',
+    oauthScopes: ['read', 'write']
   },
   {
-    id: 'discord',
-  name: 'Discord',
-    category: 'communication',
-  description: 'Voice and text communication platform',
-    icon: 'discord',
-  isActive: true,
-    configSchema: {
-      type: 'object',}
-  properties: {}
-        token: { type: 'string' },
-        channelId: { type: 'string' }
-      },
-      required: ['token', 'channelId']
-    }
+    id: 'greenhouse',
+    name: 'Greenhouse',
+    category: 'ats',
+    description: 'Applicant Tracking System',
+    icon: 'greenhouse',
+    oauthScopes: ['candidates', 'jobs']
   },
   {
-    id: 'github',
-  name: 'GitHub',
-    category: 'development',
-  description: 'Code repository and collaboration platform',
-    icon: 'github',
-  isActive: true,
-    configSchema: {
-      type: 'object',}
-  properties: {}
-        token: { type: 'string' },
-        repository: { type: 'string' }
-      },
-      required: ['token', 'repository']
-    }
+    id: 'lever',
+    name: 'Lever',
+    category: 'ats',
+    description: 'Modern ATS platform',
+    icon: 'lever',
+    oauthScopes: ['read', 'write']
+  },
+  {
+    id: 'workable',
+    name: 'Workable',
+    category: 'ats',
+    description: 'Recruiting software',
+    icon: 'workable',
+    oauthScopes: ['candidates', 'jobs']
+  },
+  {
+    id: 'bamboohr',
+    name: 'BambooHR',
+    category: 'ats',
+    description: 'HR management system',
+    icon: 'bamboohr',
+    oauthScopes: ['employees', 'time_off']
   }
 ];
 
-export function getProviderById(id: string): IntegrationProviderMeta | undefined {}
-  return PROVIDERS.find(provider => provider.id === id);}
+export function getProviderById(id: string): IntegrationProviderMeta | undefined {
+  return PROVIDERS.find(provider => provider.id === id);
 }
 
-export function getProvidersByCategory(category: string): IntegrationProviderMeta[] {}
-  return PROVIDERS.filter(provider => provider.category === category);}
-}
+export function getProvidersByCategory(category: string): IntegrationProviderMeta[] {
+  return PROVIDERS.filter(provider => provider.category === category);
 
-export function getActiveProviders(): IntegrationProviderMeta[] {}
-  return PROVIDERS.filter(provider => provider.isActive);}
 }

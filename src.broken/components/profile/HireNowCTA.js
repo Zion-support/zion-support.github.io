@@ -1,191 +1,103 @@
 
-;
-import React, { useState } from 'react';
-:src/components/profile/HireNowCTA.jsx;
-import React, {useState} from 'react';
-import { Button } from '../ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
-import { Input } from '../ui/Input';
-import { Textarea } from '../ui/Textarea';
-import { DollarSign, MessageSquare } from 'lucide-react';
-export function HireNowCTA() {const [isFormOpen\", setIsFormOpen] = useState(false)const [formData, setFormData] = useState({\"projectDescription\": '',\"budget\": '',\"startDate\": '',\"message\": '';}
-    })const handleSubmit = (e.preventDefault()if (onHire) {onHire(formData)\") => {
-  return $3;}
-}
-        // Reset form and close;
-        setFormData({\"projectDescription\": '',\"budget\": '',\"startDate\": '',\"message\": ''})setIsFormOpen(false)}const handleChange = (setFormData(prev => ({...prev\",[e.target.name]: \"e.target.value;) => {
-  return $3;}
-}
-        \"}))}return (<Card className=\"bg-zion-blue-light border-zion-blue-lighter\" />;
-      <CardHeader />;
-        <CardTitle className=\"text-white flex items-center gap-2\" />;
-          <MessageSquare className=\"h-5 w-5 text-zion-cyan\" />;
-          Hire {talentName}
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent />;
-        {!isFormOpen ? (<div className=\"space-y-4\" />;
-            {hourlyRate && (<div className=\"flex items-center gap-2 text-zion-slate-light\" />;}
-                <DollarSign className=\"h-4 w-4\" />;}
-                <span />Starting at ${hourlyRate}/hour</span>;
-              </div>)}
-            <p className=\"text-zion-slate-light text-sm\" />;
-              Ready to start your project? Send a message to discuss details and get started.;
-            </p>;
-            <Button onClick={() = /> setIsFormOpen(true)} className=\"w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark \"hover\": \"from-zion-purple-light \"hover\":to-zion-purple\">;
-              Start Project Discussion;
-            </Button>;
-          </div>) : (<form onSubmit={handleSubmit\"} className=\"space-y-4\" />;
-            <div />;
-              <label htmlFor=\"projectDescription\" className=\"block text-sm font-medium text-white mb-2\" />;
-                Project Description;
-              </label>;
-              <Textarea id=\"projectDescription\" name=\"projectDescription\" value={formData.projectDescription} onChange={handleChange} placeholder=\"Describe your project requirements...\" className=\"bg-zion-blue border-zion-blue-light text-white \"placeholder\": \"text-zion-slate-light \"focus\":border-zion-cyan\" required />;
-            </div>;
-            <div className=\"grid grid-cols-2 gap-4\" />;
-              <div />;
-                <label htmlFor=\"budget\" className=\"block text-sm font-medium text-white mb-2\" />;
-                  Budget Range;
-                </label>;
-                <Input id=\"budget\" name=\"budget\" value={formData.budget\"} onChange={handleChange} placeholder=\"e.g., $1000-5000\" className=\"bg-zion-blue border-zion-blue-light text-white \"placeholder\": \"text-zion-slate-light \"focus\":border-zion-cyan\" required  />;
-              </div>;
-              <div />;
-                <label htmlFor=\"startDate\" className=\"block text-sm font-medium text-white mb-2\" />;
-                  Start Date;
-                </label>;
-                <Input id=\"startDate\" name=\"startDate\" type=\"date\" value={formData.startDate\"} onChange={handleChange} className=\"bg-zion-blue border-zion-blue-light text-white \"focus\": \"border-zion-cyan\" required  />;
-              </div>;
-            </div>;
-            <div />;
-              <label htmlFor=\"message\" className=\"block text-sm font-medium text-white mb-2\" />;
-                Additional Message;
-              </label>;
-              <Textarea id=\"message\" name=\"message\" value={formData.message\"} onChange={handleChange} placeholder=\"Any additional details or questions...\" className=\"bg-zion-blue border-zion-blue-light text-white \"placeholder\": \"text-zion-slate-light \"focus\":border-zion-cyan\" rows={3\"} />;
-            </div>;
-            <div className=\"flex gap-3\" />;
-              <Button type=\"submit\" className=\"flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark \"hover\": \"from-zion-purple-light \"hover\":to-zion-purple\" />;
-                Send Message;
-              </Button>;
-              <Button type=\"button\" variant=\"outline\" onClick={() = /> setIsFormOpen(false)\"} className=\"border-zion-blue-light text-zion-slate-light \"hover\": \"bg-zion-blue-light \"hover\":text-white\">;
-                Cancel;
-              </Button>;
-            </div>;
-          </form>)\"}
-      </CardContent>;
-    </Card>)}export default HireNowCTA;import React, { useState } from 'react';
-export function HireNowCTA() {const [isFormOpen, setIsFormOpen] = useState(false)const [formData, setFormData] = useState({projectDescription: '',
-  budget: '',startDate: '',
-  message: '';}
-        e.preventDefault():src/components/profile/HireNowCTA.jsx;}
-    }
-    )const handleSubmit = () => {
-  return $3;}
-})const handleSubmit = (        e.preventDefault()if (onHire) {onHire(formData)) => {
-  return $3;}
-}
-        // Reset form and close;
-        setFormData({projectDescription: '',
-  budget: '',startDate: '',const handleChange = (setFormData(prev => ({...prev,[e.target.name]: e.target.value;) => {
-  return $3;}
-}
-        }))}:src/components/profile/HireNowCTA.jsx;
-            message: ''}
-    )setIsFormOpen(false)}message: '';
-        })setIsFormOpen(false)}const handleChange = (setFormData(prev => ({...prev,[e.target.name]: e.target.value;) => {
-  return $3;}
-}
-        }))}return (<Card className=\"bg-zion-blue-light border-zion-blue-lighter\" />;
-      <CardHeader />;
-        <CardTitle className=\"text-white flex items-center gap-2\" />;
-          <MessageSquare className=\"h-5 w-5 text-zion-cyan\"/>;
+import React, { useState } from 'react';'
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
     const [isFormOpen, setIsFormOpen] = useState(false);
-    const [formData, setFormData] = useState({
-        projectDescription: '',
-  budget: '',
-        startDate: '',
-  message: ''
+    const [formData, setFormData] = useState({'
+        projectDescription: '',''
+        budget: '',''
+        startDate: '',''
+        message: ''')
+
         e.preventDefault();
         if (onHire) {}
             onHire(formData);}
         }
         // Reset form and close;
-setFormData({
-            projectDescription: '',
-  budget: '',
-            startDate: '',
 
-:src/components/profile/HireNowCTA.jsx;) => {
-  return $3;}
-}
-    message: ''}
-    );
-        setIsFormOpen(false)};
-            message: ''
-        });
-        setIsFormOpen(false)
-};    const handleChange = (
-
-setFormData(prev => ({
+        setFormData({'
+            projectDescription: '',''
+            budget: '',''
+            startDate: '',')
+    const handleChange = (e) => {
+        setFormData(prev => ({
             ...prev,
-            [e.target.name]: e.target.value) => {
-  return $3;}
-}
+            [e.target.name]: e.target.value;)
         }));
-    };
-    return (<Card className=\"bg-zion-blue-light border-zion-blue-lighter\" />
-      <CardHeader />
-        <CardTitle className=\"text-white flex items-center gap-2\" />
-          <MessageSquare className=\"h-5 w-5 text-zion-cyan\"/>
-          Hire {talentName}
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent />;
-        {!isFormOpen ? (<div className=\"space-y-4\" />;
-            {hourlyRate && (<div className=\"flex items-center gap-2 text-zion-slate-light\" />;}
-                <DollarSign className=\"h-4 w-4\"/>;}
-                <span />Starting at ${hourlyRate}/hour</span>;
-              </div>)}
+    };'
+    return (<Card className="bg-zion-blue-light border-zion-blue-lighter">"
+</Card>
+      <CardHeader>
+</CardHeader>"
+        <CardTitle className="text-white flex items-center gap-2">"
+</CardTitle>"
+          <MessageSquare className="h-5 w-5 text-zion-cyan"/>"
+</MessageSquare>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+</CardContent>"
+        {!isFormOpen ? (<div className="space-y-4">"
+</div>"
+            {hourlyRate && (<div className="flex items-center gap-2 text-zion-slate-light">"
+</div>"
+                <DollarSign className="h-4 w-4"/>"
+</DollarSign>
+                <span>Starting at ${hourlyRate}/hour</span>)
+              </div>)}"
+            <p className="text-zion-slate-light text-sm">"
+</p>
+            </p>"
+            <Button onClick={() => setIsFormOpen(true)} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">"
+</Button>
+            </Button>"
+          </div>) : (<form onSubmit={handleSubmit} className="space-y-4">"
+</form>
+            <div>
+</div>"
+              <label htmlFor="projectDescription" className="block text-sm font-medium text-white mb-2">"
+</label>
+              </label>"
+              <Textarea id="projectDescription" name="projectDescription" value={formData.projectDescription} onChange={handleChange} placeholder="Describe your project requirements..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>"
+</Textarea>
+            </div>
+"
+            <div className="grid grid-cols-2 gap-4">"
+</div>
+              <div>
+</div>"
+                <label htmlFor="budget" className="block text-sm font-medium text-white mb-2">"
+</label>
+                </label>"
+                <Input id="budget" name="budget" value={formData.budget} onChange={handleChange} placeholder="e.g., $1000-5000" className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" required/>"
+</Input>
+              </div>
 
-            <p className=\"text-zion-slate-light text-sm\" />
-              Ready to start your project? Send a message to discuss details and get started.
-            </p>
-            <Button onClick={() = /> setIsFormOpen(true)} className=\"w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple\">
-              Start Project Discussion;
-            </Button>
-          </div>) : (<form onSubmit={handleSubmit} className=\"space-y-4\" />
-            <div />
-              <label htmlFor=\"projectDescription\" className=\"block text-sm font-medium text-white mb-2\" />
-                Project Description;
-              </label>
-              <Textarea id=\"projectDescription\" name=\"projectDescription\" value={formData.projectDescription} onChange={handleChange} placeholder=\"Describe your project requirements...\" className=\"bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan\" required/>
-            </div>
-            <div className=\"grid grid-cols-2 gap-4\" />
-              <div />
-                <label htmlFor=\"budget\" className=\"block text-sm font-medium text-white mb-2\" />
-                  Budget Range;
-                </label>
-                <Input id=\"budget\" name=\"budget\" value={formData.budget} onChange={handleChange} placeholder=\"e.g., $1000-5000\" className=\"bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan\" required/>
-              </div>
-              <div />
-                <label htmlFor=\"startDate\" className=\"block text-sm font-medium text-white mb-2\" />
-                  Start Date;
-                </label>
-                <Input id=\"startDate\" name=\"startDate\" type=\"date\" value={formData.startDate} onChange={handleChange} className=\"bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan\" required/>
+              <div>
+</div>"
+                <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">"
+</label>
+                </label>"
+                <Input id="startDate" name="startDate" type="date" value={formData.startDate} onChange={handleChange} className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan" required/>"
+</Input>
               </div>
             </div>
-            <div />
-              <label htmlFor=\"message\" className=\"block text-sm font-medium text-white mb-2\" />
-                Additional Message;
-              </label>
-              <Textarea id=\"message\" name=\"message\" value={formData.message} onChange={handleChange} placeholder=\"Any additional details or questions...\" className=\"bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan\" rows={3}/>
+
+            <div>
+</div>"
+              <label htmlFor="message" className="block text-sm font-medium text-white mb-2">"
+</label>
+              </label>"
+              <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Any additional details or questions..." className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan" rows={3}/>"
+</Textarea>
             </div>
-            <div className=\"flex gap-3\" />
-              <Button type=\"submit\" className=\"flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple\" />
-                Send Message;
-              </Button>
-              <Button type=\"button\" variant=\"outline\" onClick={() = /> setIsFormOpen(false)} className=\"border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white\">
-                Cancel;
+"
+            <div className="flex gap-3">"
+</div>"
+              <Button type="submit" className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">"
+</Button>
+              </Button>)"
+              <Button type="button" variant="outline" onClick={() => setIsFormOpen(false)} className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">"
+</Button>
               </Button>
             </div>
 
@@ -194,6 +106,6 @@ setFormData(prev => ({
     </Card>)}}
 }
       </CardContent>
-    </Card>);
 
-}
+    </Card>);"
+

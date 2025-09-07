@@ -1,21 +1,10 @@
-import React from 'react';
-const AIAutonomousLearning = (return (<div className={className || '') = /> {
-  return $3;}
-} />;
-      <h1 />AIAutonomousLearning</h1>;
-      <p />This component is under development.</p>;
-    </div>;
-  )}
 
-const AIAutonomousLearning = (
-  return () => {
-  return $3;}
-}
-    <div className={className || ''} />
-      <h1 />AIAutonomousLearning</h1>
-      <p />This component is under development.</p>
-    </div>
-  )
-}
-}
+import React from 'react';'
+const AIAutonomousLearning = ({ className }) => {
+  return ('
+    <div className={className || ''}>'
+</div>
+      <h1>AIAutonomousLearning</h1>
+      <p>This component is under development.</p>
+    </div>)'
 

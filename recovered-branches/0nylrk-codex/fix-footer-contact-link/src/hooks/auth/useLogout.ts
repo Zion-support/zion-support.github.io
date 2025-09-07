@@ -1,22 +1,27 @@
-import { supabase } from \"@/integrations/supabase/client\",
-import { cleanupAuthState } from \"@/utils/authUtils\";
-import type { UserProfile } from \"@/types/auth\";
-import { cleanupAuthState } from \"@/utils/authUtils\",
-import type { UserProfile } from \"@/types/auth\",export const useLogout = (setUser: (user: UserProfile | null) => void) => {
+
+import { supabase } from "@/integrations/supabase/client";""
+import { cleanupAuthState } from "@/utils/authUtils";""
+import type { UserProfile } from "@/types/auth";"
+export const useLogout = (setUser: (user: UserProfile | null) => void) => {
   const logout = async () => {
     try {
+  // TODO: Implement
+}
       // Clean up existing auth state;
-cleanupAuthState(),}
-      // Sign out;}
-      await supabase.auth.signOut({ scope: 'global' });
-      // Sign out;
-await supabase.auth.signOut({ scope: 'global' });
-      await supabase.auth.signOut({ scope: 'global' }),
-      await supabase && supabase.auth.signOut({ scope: 'global' });
+      (cleanupAuthState(),
+        // Sign out;"
+        await supabase.auth.signOut({ scope: "global" }));"
       // Update state;
-setUser(null)
-    } catch (error) {}
-      console && console.error(\"Error during logout:\", error)}
+      setUser(null);
+    } catch (error) {"
+      console.error("Error during logout:", error);"
+    }
+  };
+
+  return { logout };
+};
+
+
     }
   }
   return { logout }
@@ -66,7 +71,6 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
   };
   return { logout }
 };
-  return { logout }
-}
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
+
+"
+

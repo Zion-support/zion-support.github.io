@@ -1,31 +1,57 @@
-interface Event  {type: string;}
-  target: EventTarget | null;}
+
+interface Event {
+  // TODO: Implement
+}
+  type: string;,
+  target: EventTarget | null;
 }
 type EventListener = (event: Event) => void;
-interface EventTarget  {addEventListener (type: string, listener: EventListener): void;}
-  removeEventListener (type: string, listener: EventListener): void;}
+interface EventTarget {
+  // TODO: Implement
 }
-interface MessageEventSource  {post_message (message: any, target_origin: string): void;}
+  addEventListener (type: string, listener: EventListener): void;
+  removeEventListener (type: string, listener: EventListener): void;
 }
-interface MessagePort  {post_message (message: any): void;
-  start (): void;}
-  close (): void;}
+interface MessageEventSource {
+  // TODO: Implement
 }
-  data: T;
+  post_message (message: any, target_origin: string): void;
+}
+interface MessagePort {
+  // TODO: Implement
+}
+  post_message (message: any): void;
+  start (): void;
+  close (): void;
+
+}
+  data: T;,
   origin: string;
-  lastEventId: string;
+  lastEventId: string;,
   source: MessageEventSource | null;
   ports: ReadonlyArray < MessagePort>;
 }
-interface MessageChannelHandlerProps  {on_message?: (message: unknown) => void;}
-  on_error?: (error: Error) => void;}
+
+interface MessageChannelHandlerProps {
+  // TODO: Implement
 }
-      try {// Check condition;}
-if ( {) {$2;}
+  on_message?: (message: unknown) => void;
+  on_error?: (error: Error) => void;
 }
-          on_message (event.data)}
-      } catch (error) {// Check condition;}
-if ( {) {$2;}
+      try {
+  // TODO: Implement
+}
+        // Check condition;
+if ( {) {
+  $2;
+}
+          on_message (event.data);
+        }
+      } catch (error) {
+        // Check condition;
+if ( {) {
+  $2;
+
 }
           on_error (error as Error)}
       }
