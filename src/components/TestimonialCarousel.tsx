@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {
   Carousel;
@@ -87,3 +88,5 @@ export function TestimonialCarousel() {
     </section>
   )
 }
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-6d57

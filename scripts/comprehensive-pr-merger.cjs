@@ -1,31 +1,13 @@
-
 #!/usr/bin/env node;
-
-
-
-
-
-
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log('� Comprehensive PR Merger & Conflict Resolver')
-
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN ||
   throw new Error('GITHUB_TOKEN is required. Set GITHUB_TOKEN (or GH_TOKEN) in your environment.
-const REPO_OWNER = 'Zion-Holding;s
-const REPO_NAME = 'zion.app
-async function githubApiCall(endpoint, method = 'GET')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    console.error(' Comprehensive PR merger "failed")"
-cursor/fix-lint-push-and-merge-to-main-f3c1;
-"`;
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+const REPO_OWNER = 'Zion-Holding;s,
+  const REPO_NAME = 'zion.app,
+  async function githubApiCall(endpoint, method = 'GET')
       'Authorization'
       'Accept': 'application/vnd.github.v3+json'
       'Content-Type': 'application/json'
@@ -44,12 +26,3 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     console.log('\n Final "Report")
     console.error(' Comprehensive PR merger "failed")
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
-=======
-console.error(' Comprehensive PR merger "failed")"
-cursor/fix-lint-push-and-merge-to-main-f3c1
-"`
->>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58

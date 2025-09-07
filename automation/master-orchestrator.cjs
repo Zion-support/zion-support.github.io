@@ -10,9 +10,8 @@ class MasterAutomationOrchestrator {
   constructor() {
     this.logFile = path.join(
       __dirname,
-
-
-
+      'logs',
+      'master-orchestrator.log'
     );
     this.ensureLogDir();
   }
@@ -130,9 +129,8 @@ class MasterAutomationOrchestrator {
 
     const reportPath = path.join(
       __dirname,
-
-
-
+      'reports',
+      'master-automation-report.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);

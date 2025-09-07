@@ -15,6 +15,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       (!userEmail || f.userEmail.toLowerCase().includes(userEmail.toLowerCase())) &&
       (!contentType || f.contentType === contentType)
     )
-    return res.status(200).json({ flags: filtered })
+    return res.status(200).json({ flags: filtered });
   }
+  
+  return res.status(405).json({ error: 'Method not allowed' });
+}
 
