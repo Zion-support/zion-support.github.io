@@ -289,7 +289,6 @@ export function SocialShareSection() {const { t } = useTranslation()// Current U
             <p className='text - zion - slate - light>;
               Help others discover the future of AI & tech marketplace;
             </p>;
-<<<<<<< HEAD:src_backup/components/SocialShareSection.tsx
           </div>;
           </div>;<div className=flex flex-wrap gap-3'>;
             {shareLinks && shareLinks.map((link, index) => (              <Button;

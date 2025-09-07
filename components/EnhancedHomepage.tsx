@@ -1,11 +1,53 @@
 
+;
 
+;
+//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation'
+import EnhancedServiceCard from './ui/EnhancedServiceCard'
+import PerformanceMonitor from './PerformanceMonitor'
+import UltraFuturisticBackground from './ui/UltraFuturisticBackground'
+//Import service data window.addEventListener ('mousemove', handleMouseMove)
+//Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas
+...revolutionary2044ITServices
+...revolutionary2044AIServices
+...realEnterpriseMicroSaas2025
+...innovativeITServicesExpansion2025V3
+...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices
+...innovative2025AIAutonomousServices ]
+//Filter services by category //Animation variants const containerVariants = {
+  hidden: {
+  opacity: 0 
+}
+visible: {
+  opacity: 1, transition: {
+  duration: 0.8, staggerChildren: 0.1 
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+  ArrowUpRight;
+  } from 'lucide-react';'
+import Head from 'next/head',// Import our enhanced components;'
+import EnhancedNavigation from './layout/EnhancedNavigation',import EnhancedServiceCard from './ui/EnhancedServiceCard',import PerformanceMonitor from './PerformanceMonitor',//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';'
+import EnhancedServiceCard from './ui/EnhancedServiceCard';'
+import PerformanceMonitor from './PerformanceMonitor';'
+import UltraFuturisticBackground from './ui/UltraFuturisticBackground';'
+//Import service data window && window.addEventListener ('mousemove', handleMouseMove)//Import our enhanced components import EnhancedNavigation from './layout / EnhancedNavigation';'
+import EnhancedServiceCard from './ui / EnhancedServiceCard';'
+import UltraFuturisticBackground from './ui / UltraFuturisticBackground';'
 //Combine all revolutionary services const allRevolutionaryServices = [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
 ...revolutionary2044AIServices;
 ...realEnterpriseMicroSaas2025;
 ...innovativeITServicesExpansion2025V3;
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
+...innovative2025AIAutonomousServices ];opacity: 0;
+import React from 'react';
+interface EnhancedHomepageProps  {className?: string;
+}const "EnhancedHomepage": React.FC<EnhancedHomepageProps> = ({ className }) => {return (<div className={className || ''}>;'
+
+interface EnhancedHomepageProps {
+  }
+  className?: string;
 
 }
 }
@@ -13,7 +55,77 @@
 }
 }
 
-      clearInterval(interval)clearTimeout(performanceTimer)window && window.removeEventListener('mousemove, handleMouseMove)}
+
+return (<div className={className || ',;'
+}>;
+      <h1>EnhancedHomepage</h1>;
+      <p>This component is under development.</p>;
+    </div>;
+  )}visible: {opacity: 1, transition: {duration: 0.8, staggerChildren: 0.1;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+return (<> <Head> <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title> </Head> {
+  /* Enhanced Navigation */ 
+}<EnhancedNavigation /> > Zion Tech Group </motion.h1> <motion.p > Pioneering the Future of Technology with Revolutionary AI Consciousness, Quantum Computing, and Autonomous Solutions </motion.p> {
+  /* CTA Buttons */ 
+}<motion.div > <Link href="/services" > <motion.button > Explore Services <ArrowRight className="inline-block ml-2 w-5 h-5" /> </motion.button> </a> <Link href="/quote" > <motion.button > Get Quote <ArrowUpRight className="inline-block ml-2 w-5 h-5" /> </motion.button> </a> </motion.div> {
+  /* Contact Information */ 
+}<motion.div > <div className="flex items-center space-x-2" > <Phone className="w-4 h-4 text-cyan-400" /> <span>+1 302 464 0950</span> </div> <div className="flex items-center space-x-2" > <Mail className="w-4 h-4 text-cyan-400" /> <span>kleber@ziontechgroup.com</span> </div> <div className="flex items-center space-x-2" > <MapPin className="w-4 h-4 text-cyan-400" /> <span>364 E Main St STE 1008 Middletown DE 19709</span> </div> </motion.div> </div> {
+  /* Floating Elements */ 
+}<motion.div > <Atom className="w-8 h-8" /> </motion.div> <motion.div > <Brain className="w-6 h-6" /> </motion.div> <motion.div > <Rocket className="w-7 h-7" /> </motion.div> </motion.section> {
+  /* Category Filter */ 
+}<motion.section > <div className="max-w-6xl mx-auto" > <motion.h2 > Explore Our Revolutionary Services </motion.h2> <motion.div > {
+  categories.map ( (category) => (<motion.button key= {
+  category.id 
+}onClick= {
+  () => handleCategoryChange (category.id) 
+}className= {
+  `px-6 py-3 rounded-xl font-medium transition-all duration-300 transform hover:scale-105 $ {
+  selectedCategory === category.id ? 'bg-gradient-to-r ' + category.color + 'text-white shadow-2xl' : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-600' 
+}` 
+}whileHover= {
+  {
+  scale: 1.05 
+}
+}whileTap= {
+  {
+  scale: 0.95 
+}
+}> </motion.button>) ) 
+}</motion.div> </div> </motion.section> {
+  /* Services Grid */ 
+}<motion.section > <div className="max-w-7xl mx-auto" > <motion.div > {
+  getFilteredServices () .slice (0, 12) .map ( (service, index) => (<EnhancedServiceCard key= {
+  service.id 
+}
+}</motion.div> {
+  getFilteredServices () .length > 12 && (<motion.div className="text-center mt-12" variants= {
+  itemVariants 
+}> <Link href="/services" > <motion.button > View All Services <ArrowRight className="inline-block ml-2 w-5 h-5" /> </motion.button> </a> </motion.div>) 
+}</div> </motion.section> {
+  /* Featured Service Showcase */ 
+}<motion.section > <div className="max-w-6xl mx-auto" > <motion.h2 > Featured Revolutionary Services </motion.h2> <motion.div > <AnimatePresence mode="wait" > <motion.div </span>) ) 
+}</div> <Link href= {
+  `/services/$ {
+  (featuredServices[currentServiceIndex] as any) ?.slug || featuredServices[currentServiceIndex]?.id 
+}` 
+}> <motion.button > Learn More <ArrowRight className="inline-block ml-2 w-4 h-4" /> </motion.button> </a> </div> <div className="relative" > <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center" > <div className="text-center" > <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4" > <Rocket className="w-8 h-8 text-white" /> </div> <p className="text-cyan-400 font-medium" >Revolutionary Technology</p> </div> </div> </div> </motion.div> </AnimatePresence> </motion.div> </div> </motion.section> {
+  /* Call to Action */ 
+}<motion.section > <div className="max-w-4xl mx-auto text-center" > <motion.h2 > Ready to Transform Your Business? </motion.h2> <motion.p > Join the future of technology with Zion Tech Group's revolutionary solutions. Get started today and experience the power of AI consciousness and quantum computing. </motion.p> <motion.div > <Link href="/quote" > <motion.button > Get Started Today <ArrowRight className="inline-block ml-2 w-5 h-5" /> </motion.button> </a> <Link href="/contact" > <motion.button > Contact Us <Phone className="inline-block ml-2 w-5 h-5" /> </motion.button> </a> </motion.div> </div> </motion.section> </UltraFuturisticBackground> {
+  /* Performance Monitor */ 
+}<AnimatePresence> {
+  showPerformanceMonitor && (<PerformanceMonitor />) 
+}</AnimatePresence> </>) 
+}
+export default EnhancedHomepage
+      clearInterval(interval)clearTimeout(performanceTimer)window && window.removeEventListener('mousemove', handleMouseMove)}
   }, [])//Filter services by category //Animation variants const container_variants = {hidden: {opacity: 0;
 }
 visible: {opacity: 1, transition: {duration: 0.8, stagger_children: 0.1;
@@ -32,7 +144,6 @@ const EnhancedHomepage: React.FC = () => {const [is_visible, setIsVisible] = use
     const interval = set_interval (() => {setCurrentServiceIndex ((prev) => (prev + 1) % 6)}, 6000)// Track mouse movement for parallax effects;
     const handleMouseMove = (e: MouseEvent) =>: any {setMousePosition ({ coordinate_x: e.client_x, coordinate_y: e.client_y })}// Show performance monitor after 5 seconds;
     const performance_timer = set_timeout (() => {setShowPerformanceMonitor (true)}, 5000)window.addEventListener ('mousemove, handleMouseMove)return () => {clear_interval (interval)clear_timeout (performance_timer)window.removeEventListener (mousemove', handleMouseMove)}
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
   }, [])// Combine all revolutionary services;
   const allRevolutionaryServices = [;
     ...revolutionary2044AdvancedMicroSaas;
@@ -106,6 +217,166 @@ const performance_timer = set_timeout (() => {setShowPerformanceMonitor (true)},
                   isNew={Math.random() > 0.8}
                   rating={4.0 + Math.random() * 1.0}
                   reviewCount={Math.floor(Math.random() * 100) + 10}
+                  estimatedDelivery="2-4 weeks";"
+                  technologies={['AICloudSecurityAutomation']}'
+                />;
+              ))}
+                className="text-center mt-12";"
+                variants={itemVariants}
+              >
+                <Link href="/services">
+                  <motion.button
+                    className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    View All Services
+                    <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                  </motion.button>
+                </Link>
+              </motion.div>
+            )}
+          </div>
+        </motion.section>
 
->>>>>>> origin/main
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+        {/* Featured Service Showcase */}
+        <motion.section 
+          className="py-16 px-4 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <div className="max-w-6xl mx-auto">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
+              variants={itemVariants}
+const EnhancedHomepage: React.FC;
+const EnhancedHomepage: React.FC;
+            >
+              Featured Revolutionary Services
+            </motion.h2>
+            
+            <motion.div 
+              className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
+              variants={itemVariants}
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentServiceIndex}
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.5 }}
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+                >
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      {featuredServices[currentServiceIndex]?.name}
+                    </h3>
+                    
+                    <p className="text-gray-300 mb-6 leading-relaxed">
+                      {featuredServices[currentServiceIndex]?.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-4 mb-6">
+                      {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
+                        <span key = $2;
+export default EnhancedHomepage,
+                        <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+                      <motion.button
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        Learn More
+                        <ArrowRight className="inline-block ml-2 w-4 h-4" />
+                      </motion.button>
+                    </Link>
+                  </div>
+                  
+                  <div className="relative">
+                    <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl border border-cyan-500/30 flex items-center justify-center">
+                      <div className="text-center">
+                        <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                          <Rocket className="w-8 h-8 text-white" />
+                        </div>
+                        <p className="text-cyan-400 font-medium">Revolutionary Technology</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
+          </div>
+        </motion.section>
+
+        {/* Call to Action */}
+        <motion.section 
+          className="py-16 px-4 lg:px-8"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2 
+              className="text-3xl md:text-4xl font-bold text-white mb-6"
+              variants={itemVariants}
+            >
+              Ready to Transform Your Business?
+            </motion.h2>
+            
+            <motion.p 
+              className="text-xl text-gray-300 mb-8"
+              variants={itemVariants}
+            >
+              Join the future of technology with Zion Tech Group's revolutionary solutions. 
+              Get started today and experience the power of AI consciousness and quantum computing.
+            </motion.p>
+            
+            <motion.div 
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              variants={itemVariants}
+            >
+              <Link href="/quote">
+                <motion.button
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Get Started Today
+                  <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                </motion.button>
+              </Link>
+              
+              <Link href="/contact">
+                <motion.button
+                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Contact Us
+                  <Phone className="inline-block ml-2 w-5 h-5" />
+                </motion.button>
+              </Link>
+            </motion.div>
+          </div>
+        </motion.section>
+      </UltraFuturisticBackground>
+
+      {/* Performance Monitor */}
+      <AnimatePresence>
+        {showPerformanceMonitor && (
+          <PerformanceMonitor />
+        )}
+      </AnimatePresence>
+    </>
+  )
+};
+
+export default EnhancedHomepage;

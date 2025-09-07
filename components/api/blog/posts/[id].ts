@@ -7,23 +7,36 @@ const posts = readPosts();
 
 });
 
-const updated = { ...posts[idx], ...req.body, id }
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+const updated = { ...posts[idx], ...req.body, id };
     posts[idx] = updated;
     writePosts(posts);
     return res.status(200).json(updated);
 
-
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       posts[idx] = updated;
       writePosts(posts);
       return res.status(200).json(updated);
     }
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_posts, write_posts  } from '@/utils / data / blog_store';
+import { require_admin  } from '@/utils / api / auth';
+;
+export default /**
+ * handler - Function description;
+ */
+function handler() {
+  }
+  const { id } = req.query;
+  if (
+    return res.status (400).json ({ "error": "Invalid id" })) {"
+  $2
+  if ("
+    return res.status (400).json ({ error: "Invalid id" })) {}
+  $2;
+}
 
-
+  return res.status(405).end();
+'
+  if (req.method === 'PUT') {}
 }
 
 "

@@ -3,10 +3,11 @@
     console && console.error('❌ Error fixing accessibility && accessibility.tsx:, error && error.message);
     return false;
   }
+    if (!content && content.includes('export default')) {
+      content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n}';
+    }
 
-=======
     if (!content && content.includes(export default')) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       content += '\n\nexport default function API() {\n  return (\n    <div>\n      <h1>API Documentation</h1>\n    </div>\n  );\n};
     }
 console && console.log(🔧 Fixing all syntax errors...')// Fix accessibility && accessibility.tsx;

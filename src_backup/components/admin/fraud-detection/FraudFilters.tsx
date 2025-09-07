@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudFilters.tsx
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudFilters.tsx
 resetFilters: () => void
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
@@ -31,7 +29,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({  searchQuery
   setSeverityFilter
   contentTypeFilter
   setContentTypeFilter
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudFilters.tsx
 
 import React from 'react;
 
@@ -61,7 +58,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({searchQuery;
   setSeverityFilter;
   contentTypeFilter;
   setContentTypeFilter;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudFilters.tsx
   resetFilters}) => {  return (
 
     <div className="flex flex-col md: flex-row gap-4 mb-6>
@@ -177,8 +173,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           className=pl-10;
         />;
       </div>;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudFilters.tsx
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudFilters.tsx
 
 
 
@@ -209,8 +203,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
           <SelectItem value="dangerous>Dangerous</SelectItem>;
         </SelectContent>;
       </Select>;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudFilters.tsx
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudFilters.tsx
 
 
 
@@ -296,7 +288,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({}
         </SelectContent>;
 
       </Button>;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudFilters.tsx
     </div>);
 }"
 '},
@@ -330,7 +321,6 @@ interface FraudFiltersProps  {searchQuery: string;
   setContentTypeFilter: (value: string | null) => void;
   resetFilters: () => void;
 }
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudFilters.tsx
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
   );
 }

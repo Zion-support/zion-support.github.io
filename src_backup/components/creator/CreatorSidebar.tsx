@@ -1,4 +1,8 @@
-
+  Sidebar;
+  SidebarContent;
+  SidebarGroup;
+  SidebarMenuItem;
+origin/cursor/automate-test-improve-and-merge-code-2533
   // SidebarMenu, // Removed
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
@@ -14,10 +18,9 @@
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
-} from @/components/ui/sidebar"
+} from "@/components/ui/sidebar"
 
-
-} from "@/components/ui/sidebar;
+} from "@/components/ui/sidebar";
 
 
 
@@ -25,6 +28,11 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
+
+        <SidebarGroup title="Dashboard">
+          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
+            <span>Home</span>
+
 
           </SidebarMenuItem>
           <SidebarMenuItem href=/messaging" icon={<Mail size={16} />}>
@@ -46,10 +54,9 @@ export function AppSidebar() {
           <SidebarMenuItem href=/profile" icon={<Users size={16} />}>
             <span>Profile</span>
           </SidebarMenuItem>
-          <SidebarMenuItem href="/settings icon={<Settings size={16} />}>
-
-<SidebarGroup title=Dashboard'>
-          <SidebarMenuItem href='/creator-dashboard icon={<Home size={16} />}>
+          <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
+<SidebarGroup title='Dashboard'>
+          <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
             <span>Home</span>
           </SidebarMenuItem>
           <SidebarMenuItem href=/messaging' icon={<Mail size={16} />}>
@@ -71,15 +78,20 @@ export function AppSidebar() {
           <SidebarMenuItem href=/profile' icon={<Users size={16} />}>
             <span>Profile</span>
           </SidebarMenuItem>
-          <SidebarMenuItem href='/settings icon={<Settings size={16} />}>
-
+          <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>
+origin/cursor/automate-test-improve-and-merge-code-2533
             <span>Settings</span>
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-
+}
+  );
+}
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarMenuItem,
   // SidebarMenu, // Removed;
-=======
 
 } from lucide-react'; import { Sidebar;
   SidebarContent;
@@ -225,7 +237,6 @@ export function AppSidebar() {return (<Sidebar>;
   )}
   )}
   Sidebar,SidebarContent,SidebarGroup,SidebarMenuItem,// SidebarMenu, // Removed;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/creator/CreatorSidebar.tsx
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
   // SidebarGroupContent, // Not needed;
@@ -295,22 +306,15 @@ function AppSidebar() {return (<Sidebar>;
           </SidebarMenuItem>;
         </SidebarGroup>;
       </SidebarContent>;
+    </Sidebar>);
 
-=======
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </Sidebar>
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </Sidebar>)}</Sidebar>;
   )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/creator/CreatorSidebar.tsx
-=======
 
     </Sidebar>
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/creator/CreatorSidebar.tsx

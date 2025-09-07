@@ -1,2 +1,2 @@
-
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+import React from \'react\'; import Head from \'next/head\'; export default function FutureOfWork() {}; return null} }
+import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}; return null} }

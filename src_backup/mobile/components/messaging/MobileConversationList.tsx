@@ -1,7 +1,4 @@
-
 export function MobileConversationList({
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/messaging/MobileConversationList.tsx
 
 export function MobileConversationList() {return (<div className='space-y-4>;
       <div className=px-4 mb-2'>;
@@ -85,20 +82,23 @@ function MobileConversationList() {return (<div className='space - y-4>;
             Projects;
           </Badge>;
         </div>;
+      </div>;
 
-import { Card } from @/components/ui/card';
-import { Badge } from '@/components/ui/badge;
-import { Avatar, AvatarFallback, AvatarImage } from @/components/ui/avatar';
-import { Search } from 'lucide-react;
-import { Input } from @/components/ui/input';
-import { cn } from '@/lib/utils;
+              'px-4',
+              activeConversation === conversation && conversation.id && 'bg-primary/5'
+
+import React from 'react';
+import { Card } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+import { cn } from '@/lib/utils';
 
 interface Conversation {
   id: string;
-=======
-      </div>;px-4',activeConversation === conversation && conversation.id && 'bg-primary/5;
+      </div>;'px-4',activeConversation === conversation && conversation.id && 'bg-primary/5';
 interface Conversation  {id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/messaging/MobileConversationList.tsx
   name: string;
   avatar?: string;
   lastMessage: string;
@@ -107,12 +107,35 @@ interface Conversation  {id: string;
   isTyping?: boolean;
 }interface MobileConversationListProps  {conversations: Conversation[];
   activeConversation?: string;
+  onSelectConversation: (id: string) => void
+export function MobileConversationList({
+  conversations;
+  activeConversation;
+  onSelectConversation
+}: MobileConversationListProps) {
+  return (
+    <div className;
+              activeConversation === conversation.id && "bg-primary/5"
+origin/cursor/automate-test-improve-and-merge-code-2533
+            )}
+            onClick={() => onSelectConversation(conversation.id)}          >
+            <div className='flex items-center gap-3 py-3 cursor-pointer'>
+              <Avatar>
 
+                <AvatarImage
+                  src={conversation.avatar}
+                  alt={conversation.name}
+                />
+origin/cursor/automate-test-improve-and-merge-code-2533
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
-
+<div className='flex-1 min-w-0'>
+                <div className='flex justify-between items-baseline'>
+                  <h3 className='font-medium truncate'>{conversation.name}</h3>
+                  <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>
+origin/cursor/automate-test-improve-and-merge-code-2533
                   </span>
                 </div>
                 
@@ -126,7 +149,8 @@ interface Conversation  {id: string;
 
                   </p>
                   {conversation.unreadCount > 0 && (
-
+                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>
+origin/cursor/automate-test-improve-and-merge-code-2533
                       {conversation.unreadCount}
                     </Badge>;
 
@@ -135,7 +159,7 @@ interface Conversation  {id: string;
                 </div>
               </div>
             </div>
-
+<div className='border-t border-border ml-12'></div>
           </div>
         ))}
       </div>
@@ -143,7 +167,6 @@ interface Conversation  {id: string;
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   onSelectConversation: (id: string) => void;
 export function MobileConversationList() {return (<div className;
               activeConversation === conversation.id && "bg-primary/5;
@@ -244,4 +267,12 @@ export function MobileConversationList() {return (<div className;
             <div className=border - t border - border ml - 12'></div>          </div>            <div className="border - t border - border ml - 12"></div>;
           </div>))}
       </div>;
-
+    </div>)}<div className='border-t border-border ml-12'></div>;
+          </div>;
+        ))}
+      </div>;
+    </div>;
+  )}
+    </div>);
+}
+;

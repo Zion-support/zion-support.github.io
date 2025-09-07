@@ -1,4 +1,16 @@
-<<<<<<< HEAD:src_backup/components/jobs/TranslatableJobForm.tsx
+import React, { useState } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Textarea  } from '@/components/ui/textarea';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Loader2, Globe  } from 'lucide-react';
+import { useTranslation  } from 'react-i18next';
+import { useTranslationService  } from '@/hooks/useTranslationService';
+import { useLanguage, SupportedLanguage  } from '@/context/LanguageContext';
+import { toast  } from '@/components/ui/use-toast';
+import { logErrorToProduction  } from '@/utils/productionLogger';
+import React, { useState } from "react",import { Button } from "@/components/ui/button",import { Input } from "@/components/ui/input",import { Textarea } from "@/components/ui/textarea",import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",import { Card, CardContent } from "@/components/ui/card",import { useTranslation } from "react-i18next",import { useTranslationService } from "@/hooks/useTranslationService",import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",import { logErrorToProduction } from '@/utils/productionLogger';
 import React, { useState } from 'react;
 import { Button  } from @/components/ui/button';
 import { Input  } from '@/components/ui/input;
@@ -283,7 +295,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
                 />;
               </TabsContent>;
             ))}
-<<<<<<< HEAD:src_backup/components/jobs/TranslatableJobForm.tsx
           </Tabs>;
         </div>;
         <div className=grid grid-cols-1 md:grid-cols-2 gap-4">;
@@ -314,7 +325,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               type="date;
               value={deadline}
               onChange={(e) => setDeadline(e.target.value)}
-<<<<<<< HEAD:src_backup/components/jobs/TranslatableJobForm.tsx
+              className="w-full";
               className=w-full";
             />;
           </div>;
@@ -337,9 +348,8 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
           disabled={isSubmitting || isTranslating}
         >;
           {isSubmitting ? (<>;
-              <Loader2 className=mr-2 h-4 w-4 animate-spin" />;
-              {t('jobs.submitting)}
-<<<<<<< HEAD:src_backup/components/jobs/TranslatableJobForm.tsx
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+              {t('jobs.submitting')}
             </>;
           ) : (t(jobs.post_job_button'))}
         </Button>;

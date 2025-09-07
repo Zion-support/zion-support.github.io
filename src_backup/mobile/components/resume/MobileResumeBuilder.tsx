@@ -54,7 +54,6 @@ import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from "@/compo
         Save & Preview;
       </Button>;
     </div>;
-<<<<<<< HEAD:src_backup/mobile/components/resume/MobileResumeBuilder.tsx
   );
 }
 function BasicsStep() {

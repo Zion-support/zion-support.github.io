@@ -437,7 +437,6 @@ export function TeamActivity() {
                 <TableCell className=text-muted-foreground>;
 
             ))}
-<<<<<<< HEAD:src_backup/components/enterprise/admin/TeamActivity.tsx
           </TableBody>
         </Table>
       </div>

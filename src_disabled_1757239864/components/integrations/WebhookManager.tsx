@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 webhooks,
     loading,
 
@@ -65,8 +62,6 @@ export function WebhookManager() {
     if (newWebhook && newWebhook.eventTypes.includes(newWebhook && newWebhook.selectedEvent)) {
       toast && toast.error('This event is already added);
       return;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 
 import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks,
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from @/components/ui/select";
@@ -117,11 +112,10 @@ export function WebhookManager() {const {webhooks;
     eventTypes: [] as WebhookEventType[];
     secret: ';
   })const eventOptions: { value: WebhookEventType; label: string }[] = [;
-    { value: new_application', label: 'New Application Received }
-    { value: quote_received', label: 'Quote Request Received }
-    { value: milestone_approved', label: 'Milestone Approved }
-    { value: talent_hired', label: 'Talent Hired }
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+    { value: 'new_application', label: 'New Application Received' }
+    { value: 'quote_received', label: 'Quote Request Received' }
+    { value: 'milestone_approved', label: 'Milestone Approved' }
+    { value: 'talent_hired', label: 'Talent Hired' }
   ]
   useEffect(() => {
     fetchWebhooks()
@@ -130,7 +124,6 @@ export function WebhookManager() {const {webhooks;
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error(This event is already added')
       return
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
 
@@ -164,7 +157,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <CardTitle > Create Webhook</CardTitle>;<CardDescription>Define webhooks to notify external systems when events occur in;
             Zion.;
           </CardDescription>;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
         </CardHeader>;
 
     testResult,
@@ -185,7 +177,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     // Reset form
     setNewWebhook({
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+      name: ''
+      url: ''
+      selectedEvent: '' as WebhookEventType
       name: '
       url: '
       selectedEvent: ' as WebhookEventType
@@ -205,7 +199,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       selectedEvent: " as WebhookEventType,
       eventTypes: [],
 
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 
   return (
     <div className=space-y-8">
@@ -267,8 +260,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="space-y-2>
               <Label htmlFor=webhook-url">URL</Label>
               <Input 
-                id="webhook-url 
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+                id="webhook-url" 
+                placeholder="https://example.com/webhook"
+import React, { useEffect, useState } from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { PlusCircle, Save, Trash } from 'lucide-react';
+import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { toast } from "sonner",;
+export function WebhookManager() {;
+  const {;
+    webhooks,;
+    loading,;
+    error,;
+    testResult,;
+    fetchWebhooks,;
+    createWebhook,;
+    toggleWebhook,;
+    deleteWebhook,;
                 placeholder=https://example.com/webhook"
 import React, { useEffect, useState } from "react,
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from @/components/ui/card",
@@ -430,9 +443,7 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
                   key={event}onRemove={() => handleRemoveEvent(event)}
                 >;{eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
               ))}
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 
 
 
@@ -482,7 +493,6 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
                       {option.label}
                     </SelectItem>;
                   ))}
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
                 </SelectContent>;
               </Select>;
               <Button type='button onClick={handleAddEvent} variant=outline'>;
@@ -705,8 +715,7 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
                           {webhook && webhook.is_active ? Active' : 'Inactive}
                         </span>;
                       </div>;
-                      <div className=flex-shrink-0'>;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+                      <div className='flex-shrink-0'>;
                         <Button;
                           variant='outline;
                           size=sm';
@@ -816,8 +825,7 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
                   </div>;
                 </CardContent>;onClick={() => deleteWebhook(webhook && webhook.id)}
                   >;
-                    <Trash className=h-4 w-4 mr-2' /> Delete;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+                    <Trash className='h-4 w-4 mr-2' /> Delete;
                   </Button>;<Select;
                   </Button>;
 
@@ -849,7 +857,9 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
                       {webhook.event_types.map ((event: WebhookEventType) => (                        <SelectItem key={event} value={event}>;
                           Test{ '}
                           {event_options.find (e => e.value === event)?.label ||;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+                            event}<Label className="text-sm">Events</Label>;
+                      <div className="flex flex-wrap gap-2 mt-1">;
+                        {webhook.event_types.map((event: WebhookEventType) => (<ClickableBadge key={event} variant="secondary">;
                             event}<Label className=text-sm">Events</Label>;
                       <div className="flex flex-wrap gap-2 mt-1>;
                         {webhook.event_types.map((event: WebhookEventType) => (<ClickableBadge key={event} variant=secondary">;
@@ -866,7 +876,7 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
                     </div>;
                     <div className=text-xs text-muted-foreground">;
                       {webhook.last_triggered_at;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+                        ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`;: 'Never triggered'}
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`;: 'Never triggered}
                     </div>;
                   </div>;
@@ -893,7 +903,6 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
                   
                   <Select
                     onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
                   >;
                     <SelectTrigger className=w-[180px]">;
                       <SelectValue placeholder="Test webhook />;
@@ -921,7 +930,6 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
                     <SelectTrigger className="w-[180px]>;
                       <SelectValue placeholder=Test webhook" />;
                     </SelectTrigger>;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
                     <SelectContent>;
 
         {testResult && (
@@ -930,12 +938,10 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
               <CardTitle className=text-lg">Webhook Test Result</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className='space-y-2>
-                <div className=flex justify-between'>
-                  <span className='font-medium>Status:</span>
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+              <div className='space-y-2'>
+                <div className='flex justify-between'>
+                  <span className='font-medium'>Status:</span>
 
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 
         {testResult && (;
           <Card className=mt-4 border-blue-200'>;
@@ -944,11 +950,9 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
               <CardTitle className=text-lg'>Webhook Test Result</CardTitle>;
             </CardHeader>;
             <CardContent>;
-              <div className='space-y-2>;
-                <div className=flex justify-between'>;
-                  <span className='font-medium>Status:</span>;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+              <div className='space-y-2'>;
+                <div className='flex justify-between'>;
+                  <span className='font-medium'>Status:</span>;
 
                   <span
                     className={
@@ -973,9 +977,7 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
                   <span className=font-medium">Response:</span>;
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto>;
 
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 
 ;
         {testResult && (;
@@ -1009,8 +1011,8 @@ import React, { useEffect, useState } from "react,import { Card, CardContent, Ca
                   </span>;
                 </div>;
                 <div>;
-                  <span className=font-medium">Response:</span>;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+                  <span className="font-medium">Response:</span>;
+                  <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto>;
 
 
@@ -1035,7 +1037,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }setNewWebhook ({
   ...newWebhook;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
 }
 }newWebhook.url;
@@ -1071,7 +1072,7 @@ newWebhook && newWebhook.secret || undefined)";
 //Reset form return (<div className=space-y-8> <Card> <CardHeader> <CardTitle>Create Webhook</CardTitle> <CardDescription> Define webhooks to notify external systems when events occur in Zion. </CardDescription> </CardHeader> <CardContent className="space-y-4"> <div className=grid grid-cols-1 md:grid-cols-2 gap-4> <div className="space-y-2"> <Label htmlFor= webhook-name>Webhook Name</Label> <Input /> </div> </div> <div className="space-y-2"> <Label>Events</Label> <div className=flex flex-wrap gap-2 mb-2> {newWebhook && newWebhook.eventTypes.map (event => (<ClickableBadgekey= {event;
 }onRemove= {() => handleRemoveEvent (event)}> {eventOptions && eventOptions.find (e => e && e.value === event) ?.label || event ;
 }</ClickableBadge>) ) ";
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+}</div> <div className="flex space-x-2"> <Selectvalue= {newWebhook && newWebhook.selectedEvent;
 }</div> <div className="flex space-x-2> <Selectvalue= {newWebhook && newWebhook.selectedEvent;
 }onValueChange= {eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
 }}newWebhook.url;
@@ -1079,8 +1080,8 @@ newWebhook.eventTypes;
 newWebhook.secret || undefined);
 //Reset form return (<div className="space-y-8"> <Card> <CardHeader> <CardTitle>Create Webhook</CardTitle> <CardDescription> Define webhooks to notify external systems when events occur in Zion. </CardDescription> </CardHeader> <CardContent className=space-y-4> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <div className=space-y-2> <Label htmlFor=" webhook-name">Webhook Name</Label> <Input /> </div> </div> <div className=space-y-2> <Label>Events</Label> <div className="flex flex-wrap gap-2 mb-2"> {newWebhook.eventTypes.map (event => (<ClickableBadge key= {event ;
 }onRemove= {() => handleRemoveEvent (event)}> {eventOptions.find (e => e.value === event) ?.label || event ;
-}</ClickableBadge>) ) ;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+}</ClickableBadge>) ) ";
+}</div> <div className="flex space-x-2"> <Select value= {;
 }</div> <div className=flex space-x-2"> <Select value= {
   newWebhook.selectedEvent ;
 }onValueChange= {
@@ -1090,9 +1091,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }onValueChange= {
   (value) => setNewWebhook ({
   ...newWebhook, selectedEvent: value as WebhookEventType ;
-}) ;
-}> <SelectTrigger className="w-full"> <SelectValue placeholder= Select event/> </SelectTrigger> <SelectContent> {
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+}) ";
+}> <SelectTrigger className="w-full"> <SelectValue placeholder=" Select event"/> </SelectTrigger> <SelectContent> {;
+  eventOptions.map (option => (<SelectItem key= {;
   eventOptions.map (option => (<SelectItem key= {
   option.value ;
 }value= {
@@ -1135,14 +1136,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   webhook && webhook.url ";
 }</CardDescription> </div> <div className=flex items-center> <div className="mr-2 flex items-center"> <divclassName= {
   `h-2 w-2 rounded-full mr-2 $ {
-  webhook && webhook.is active ? bg-green-500' : 'bg-gray-400 
-}` 
-}></div> <span className=text-sm"> {;
-  webhook && webhook.is active ? 'Active' : Inactive ";
-}</span> </div> <div className=flex-shrink-0> <Button > {';
-  webhook && webhook.is active ? 'Disable : Enable' ";
-}</Button> </div> </div> </div> </CardHeader> <CardContent className="py-2> <div className=flex flex-col space-y-2"> <div> <Label className="text-sm>Events</Label> </ClickableBadge>) ) ;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+  webhook && webhook.is active ? 'bg-green-500' : 'bg-gray-400' 
+}` "
+}></div> <span className="text-sm"> {';
+  webhook && webhook.is active ? 'Active' : 'Inactive' ";
+}</span> </div> <div className="flex-shrink-0"> <Button > {';
+  webhook && webhook.is active ? 'Disable' : 'Enable' ";
+}</Button> </div> </div> </div> </CardHeader> <CardContent className="py-2"> <div className="flex flex-col space-y-2"> <div> <Label className="text-sm">Events</Label> </ClickableBadge>) ) ";
 }</div> </div> <div className="text-xs text-muted-foreground"> {webhook && webhook.last triggered at ? `Last triggered: $ {new Date (webhook && webhook.last triggered at) .toLocaleString () ';
 }` : Never triggered ;
 }</div> </div> </CardContent> <CardFooter className=flex justify-between pt-2"> <Button > <Trash className="h-4 w-4 mr-2/> Delete </Button> <SelectonValueChange= {(value) => handleTestWebhook (webhook && webhook.id, value as WebhookEventType) ;eventOptions.map (option => (<SelectItem key= {option.value ;
@@ -1158,13 +1158,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</CardDescription> </div> <div className=flex items-center"> <div className="mr-2 flex items-center> <div className= {`h-2 w-2 rounded-full mr-2 $ {webhook.is active ? 'bg-green-500' : bg-gray-400 ;
 }` ;
 }></div> <span className="text-sm"> {';
-  webhook.is active ? 'Active : Inactive' ;
-}</span> </div> <div className=flex-shrink-0"> <Button > {';
-  webhook.is active ? Disable : 'Enable' ";
-}</Button> </div> </div> </div> </CardHeader> <CardContent className=py-2> <div className="flex flex-col space-y-2"> <div> <Label className=text-sm>Events</Label> </ClickableBadge>) ) ";
-}</div> </div> <div className="text-xs text-muted-foreground> {webhook.last triggered at ? `Last triggered: $ {new Date (webhook.last triggered at) .toLocaleString () ;
-}` : Never triggered' ;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+  webhook.is active ? 'Active' : 'Inactive' ";
+}</span> </div> <div className="flex-shrink-0"> <Button > {';
+  webhook.is active ? 'Disable' : 'Enable' ";
+}</Button> </div> </div> </div> </CardHeader> <CardContent className="py-2"> <div className="flex flex-col space-y-2"> <div> <Label className="text-sm">Events</Label> </ClickableBadge>) ) ";
+}</div> </div> <div className="text-xs text-muted-foreground"> {webhook.last triggered at ? `Last triggered: $ {new Date (webhook.last triggered at) .toLocaleString () ';
+}` : 'Never triggered' ";
+}</div> </div> </CardContent> <CardFooter className="flex justify-between pt-2"> <Button > <Trash className="h-4 w-4 mr-2"/> Delete </Button> <Select onValueChange= {;
 }</div> </div> </CardContent> <CardFooter className="flex justify-between pt-2"> <Button > <Trash className=h-4 w-4 mr-2/> Delete </Button> <Select onValueChange= {
   (value) => handleTestWebhook (webhook.id, value as WebhookEventType) ";
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1178,7 +1178,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</SelectContent> </Select> </CardFooter> </Card>) ) ;
 }</div>) ;
 }{";
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 
 }newWebhook.url
 newWebhook.eventTypes
@@ -1332,7 +1331,6 @@ newWebhook.secret |undefined);
       </div>;
     </div>)}setNewWebhook ({...new_webhook;
 event_types: [...new_webhook.event_types, new_webhook.selected_event];
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 }
 
   testResult && (<Card className=mt-4 border-blue-200> <CardHeader> <CardTitle className="text-lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className=space-y-2> <div className="flex justify-between"> <span className=font-medium>Status:</span> <spanclassName= {'
@@ -1353,14 +1351,15 @@ event_types: [...new_webhook.event_types, new_webhook.selected_event];
 }testResult && (<Card className="mt-4 border-blue-200"> <CardHeader> <CardTitle className=text-lg>Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space-y-2"> <div className=flex justify-between> <span className="font-medium">Status:</span> <span className= {;
   testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : text-red-600 ;
 }> {testResult.status ;
-}{testResult.statusText ;
-}</span> </div> <div> <span className=font-medium">Response:</span> <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto> {';
-  testResult.responseBody || '<empty> ;
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
+}{testResult.statusText ";
+}</span> </div> <div> <span className="font-medium">Response:</span> <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto"> {';
+  testResult.responseBody || '<empty>' ;
+}</pre> </div> </div> </CardContent> </Card>) ;
+}</div> </div>) ;
+}'"
 }</pre> </div> </div> </CardContent> </Card>) ;
 }</div> </div>) ;
 }
-<<<<<<< HEAD:src_backup/components/integrations/WebhookManager.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }</pre> </div> </div> </CardContent> </Card>)}</div> </div>)}'";
                     {testResult.responseBody || '<empty>'}

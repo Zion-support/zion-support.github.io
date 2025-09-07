@@ -1,6 +1,5 @@
-
-import React from 'react;
-import MainLayout from ../components/layout/MainLayout';
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
   return (
@@ -20,9 +19,6 @@ const Page = () => {
 
 export default Page;
 
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 origin/automation-improvements-final
 
 
@@ -925,7 +921,4 @@ origin/automation-improvements-final
 
     </>
 );
-
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

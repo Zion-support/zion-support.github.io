@@ -1,12 +1,19 @@
 
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
+;
+ursor/automate-test-improve-and-merge-code-646c;
+import React from 'react';
+import { ScrollArea  } from '@/components/ui/scroll-area';
+import Skeleton from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { NotificationItem } from './NotificationItem';
+import { Notification } from '@/context/notifications';
+import { EmptyState } from '@/components/ui/empty-state';
+import { Bell } from 'lucide-react';
+
+
 
 ;
 ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/notifications/NotificationList.tsx
 import React from 'react;
 import { ScrollArea  } from @/components/ui/scroll-area';
 import Skeleton from '@/components/ui/skeleton;
@@ -14,14 +21,7 @@ import Skeleton from '@/components/ui/skeleton;
 
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/notifications/NotificationList.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 
@@ -30,7 +30,16 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import React from 'react';
+import { ScrollArea } from '@/components/ui/scroll-area';
+import Skeleton from '@/components/ui/skeleton';
+import { Button } from '@/components/ui/button';
+import { Bell } from 'lucide-react';
+
+main
+
+interface NotificationListProps {
+  loading: boolean;
 import React from react';
 import { ScrollArea } from '@/components/ui/scroll-area;
 import Skeleton from @/components/ui/skeleton';
@@ -114,13 +123,12 @@ main
               </div>;
             </div>;
           ))}
-
-
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/notifications/NotificationList.tsx
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+        </div>
+      </ScrollArea>
+    </div>
+  );
+};
+import { NotificationItem } from './NotificationItem';
 import { NotificationItem } from ./NotificationItem;
 import { Notification } from '@/context/notifications';
 import { EmptyState } from @/components/ui/empty-state;
@@ -128,7 +136,35 @@ import { Bell } from 'lucide-react'
 interface NotificationListProps {
 
 
-
+onRetry
+},) => {
+} import React from 'react';
+import { ScrollArea } from '@/components/ui/ scroll - area';
+import Skeleton from '@/components/ui/ skeleton';
+import { Button } from '@/components/ui/ button';
+import { NotificationItem } from './NotificationItem';
+import { Notification } from '@/context / notifications';
+import { EmptyState } from '@/components/ui/ empty - state';
+import { Bell } from 'lucide-react';
+interface NotificationListProps {
+  loading: boolean,
+  error: string | null,
+  notifications: Notification[],
+  onMarkAsRead: (id: string, ) => Promise < void>,
+  on_dismiss: (id: string, ) => Promise < void>,
+  on_retry: () => void;
+}
+export const NotificationList: React.FC < NotificationListProps> = ({
+  loading;
+        </div>;
+      </ScrollArea>;
+    </div>;
+  )}ursor/automate-test-improve-and-merge-code-646c;
+interface NotificationListProps {}import React from 'react';
+interface NotificationListProps {}import React from 'react';
+interface NotificationListProps {}import React from 'react';
+interface NotificationListProps  {loading: boolean,error: string | null,notifications: Notification[],onMarkAsRead: (id: string,) => Promise<void>,onDismiss: (id: string,) => Promise<void>,onRetry: () => void;
+}export const NotificationList: React.FC<NotificationListProps> = ({loading;
   error;
   notifications;
   onMarkAsRead;
@@ -233,21 +269,17 @@ export const NotificationList: React.FC<NotificationListProps> = ({onDismiss,onR
           />;
         )))}
     </ScrollArea>;
+  );
+};
+
+import { NotificationItem } from './NotificationItem';
+import { Notification } from '@/context/notifications';
+import { EmptyState } from '@/components/ui/empty-state';
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/notifications/NotificationList.tsx
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Bell } from 'lucide-react';
 
 interface NotificationListProps {
-=======
   )}interface NotificationListProps  {loading: boolean;
   error: string | null;
   notifications: Notification[];
@@ -292,7 +324,6 @@ interface NotificationListProps {
     </ScrollArea>;
   )}ursor/integrate-build-improve-and-re-verify-9d47;
 ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/notifications/NotificationList.tsx
   loading: boolean;
   error: string | null;
   notifications: Notification[];
@@ -301,16 +332,69 @@ ursor/automate-test-improve-and-merge-code-646c;
   onRetry: () => void;
 }
 
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
-=======
-=======
+export const NotificationList: React.FC<NotificationListProps> = ({
+  loading,
+  error,
+  notifications,
+  onMarkAsRead,
+  onDismiss,
+  onRetry
+}) => {
+  if (loading) {
+    return (
+      <div className="space-y-3">
+        {[...Array(5)].map((_, i) => (
+          <div key={i} className="flex items-start space-x-3 p-3">
+            <Skeleton className="h-8 w-8 rounded-full" />
+            <div className="flex-1 space-y-2">
+              <Skeleton className="h-4 w-3/4" />
+              <Skeleton className="h-3 w-1/2" />
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center py-8">
+        <div className="text-red-500 mb-4">
+          <Bell className="h-12 w-12 mx-auto mb-2" />
+          <p className="text-sm">Failed to load notifications</p>
+        </div>
+        <Button onClick={onRetry} variant="outline" size="sm">
+          Try Again
+        </Button>
+      </div>
+    );
+  }
+
+  if (notifications.length === 0) {
+    return (
+      <EmptyState
+        icon={Bell}
+        title="No notifications"
+        description="You're all caught up! Check back later for updates."
+      />
+    );
+  }
+
+  return (
+    <ScrollArea className="h-96">
+      <div className="space-y-1">
+        {notifications.map((notification) => (
+          <NotificationItem
+            key={notification.id}
+            notification={notification}
+            onMarkAsRead={onMarkAsRead}
+            onDismiss={onDismiss}
+          />
+        ))}
+      </div>
+    </ScrollArea>
+  );
+};
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -319,7 +403,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   loading: boolean;
   error: string | null;
   notifications: Notification[];
@@ -328,10 +411,5 @@ main
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
-
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export const NotificationList: React.FC<NotificationListProps> = ({
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/notifications/NotificationList.tsx

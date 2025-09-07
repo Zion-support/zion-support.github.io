@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-{"version":1,"files":["../webpack-runtime.js","../../../pages/_app.tsx"]}
-=======
-{"version":1,"files":["../../../node_modules/next/dist/pages/_app.js","../../../node_modules/react/cjs/react-jsx-runtime.development.js","../../../node_modules/react/cjs/react-jsx-runtime.production.min.js","../../../node_modules/react/cjs/react.development.js","../../../node_modules/react/cjs/react.production.min.js","../../../node_modules/react/index.js","../../../node_modules/react/jsx-runtime.js","../../../node_modules/react/package.json","../../../package.json","../../package.json","../webpack-runtime.js"]}
->>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a

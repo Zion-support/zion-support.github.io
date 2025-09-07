@@ -126,7 +126,6 @@ export function Step() { return null; }
 
 
             {/* Step number would go here */}
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
           </span>;
 
           </span>
@@ -191,7 +190,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {}
           if (index < currentStep) status = "complete,
           if (index === currentStep) status = current",
           
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
       className;
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -286,8 +284,8 @@ export function Steps() {const childrenArray  = React.Children.toArray(children)
       <div className=hidden md:flex md:mt-4">;"
         <div className=ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light>;
           <div;"
-            className="h-full bg-zion-purple transition-all;
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
+            className="h-full bg-zion-purple transition-all";
+            style={{;
             style={{
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
             style={{interface StepsProps  {currentStep: number,className?: string;
@@ -407,7 +405,6 @@ if (status = "current") {}
           />;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/ui/steps.tsx
     </div>);
 }/> </div> </div> </div>);
 }"}

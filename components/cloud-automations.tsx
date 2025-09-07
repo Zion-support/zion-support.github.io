@@ -1,4 +1,4 @@
-
-=======
-
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+fetch ('/api/cloud-automations-status') .then ( (r) => r.json () ) .then (setData) ) : null 
+}</div>) ) 
+}</div> </div>) 
+}

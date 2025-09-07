@@ -1,5 +1,4 @@
-
-import type { NextApiRequest, NextApiResponse } from 'next;
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method !== POST') {
@@ -7,7 +6,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(405).end('Method Not Allowed);
     return;
   }
-
 
 
 
@@ -239,7 +237,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(500).json({ error: err.message || Internal error' })
   }
 }
-
   try {
       instanceName,
       tokenActivation
@@ -247,7 +244,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-)}-${Date.now()}`;
     
-=======
 
   try {
       defaultLanguage,
@@ -264,7 +260,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       branding
       modules = {}
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+      bonusModules = {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
       bonusModules = {} catch (error) {
     console.error(Error:", error);
     return res.status(500).json({ error: "Internal server error });
@@ -297,7 +295,9 @@ main
   }
 }
     // Simulated provisioning operations – replace with real infra hooks later
-
+    const now = new Date().toISOString();
+    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
+    const outputActions = {
       zionGPT: {
         initialized: true
         routes: [/gpt/gpt/router']
@@ -318,5 +318,17 @@ main
         summit: /summit'
       }
       publicPages: []
-    }
+    };
 
+    res.status(200).json({
+      success: true,
+      provisionId,
+      outputActions,
+      timestamp: now
+    });
+    return;
+  } catch (_error) {
+    res.status(500).json({ error: 'Failed to process genesis request' });
+    return;
+  }
+}

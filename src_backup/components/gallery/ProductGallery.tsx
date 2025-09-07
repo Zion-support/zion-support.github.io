@@ -11,12 +11,11 @@ import { Tabs, TabsList, TabsTrigger, TabsContent   } from @/components/ui/tabs'
 import { AspectRatio  } from '@/components/ui/aspect-ratio;
 const ReactPlayer = null;
   return (<Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>;
-      <Tabs defaultValue="images className=w-full">;
-      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light>;
-        <TabsTrigger value=images">Images</TabsTrigger>;
-        {videoUrl && <TabsTrigger value="video>Video</TabsTrigger>}
-        {modelUrl && <TabsTrigger value=model">3D</TabsTrigger>}
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
+      <Tabs defaultValue="images" className="w-full">;
+      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">;
+        <TabsTrigger value="images">Images</TabsTrigger>;
+        {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
+        {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
       </TabsList>
 
       <TabsContent value="images className=pt-4">
@@ -137,7 +136,7 @@ export function ProductGallery(): any ({
               >;
                 <ModelViewer;
                   src={modelUrl}
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
+                  alt='3d model'
                   alt='3d model
                   camera-controls
                   alt=3d model';
@@ -225,7 +224,6 @@ function ProductGallery() {const [selected, set_selected] = useState (0)const [z
                   style={{ width: '100%, height: 100%' }}
                 />;
               </Suspense>;
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
             </AspectRatio>;
 
           >;
@@ -245,7 +243,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150 : '}`}
             />          </div>;
         </DialogContent>;
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
       )}
 
     </Dialog>;
@@ -301,7 +298,6 @@ interface ProductGalleryProps {
               className={`w - full h - full object - contain transition - transform ${zoomed ? scale - 150' : ''}`}
             />          </div>;
         </DialogContent>)}
-<<<<<<< HEAD:src_backup/components/gallery/ProductGallery.tsx
     </Dialog>);
     </Dialog>)}</Dialog>;
   )

@@ -57,7 +57,9 @@ export const AppTestimonials: React.FC = () => {
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6>
           {testimonials.map((testimonial, index) => (
             <Card
-<<<<<<< HEAD:src_backup/components/mobile-app/AppTestimonials.tsx
+{{{name: 'Sarah Williams';
+    role: 'Tech Recruiter';
+    text: 'As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.';
 {{{name: Sarah Williams';
     role: 'Tech Recruiter;
     text: As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.';
@@ -89,7 +91,7 @@ const testimonials  = null;<div className=container mx-auto px-4'>;
                 <div className='flex mb-4>;
                   {Array.from({ length: 5 }).map((_, i) => (<Star;
                       key={i}
-<<<<<<< HEAD:src_backup/components/mobile-app/AppTestimonials.tsx
+                      className={`h-5 w-5 ${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-400'}`}                    />
                       className={`h-5 w-5 ${i < testimonial.rating ? text-yellow-400 fill-yellow-400' : 'text-gray-400}`}                    />
                   ))}
                 </div>
@@ -376,7 +378,6 @@ import { Card, CardContent, CardFooter } from @/components/ui/card",const testim
             </Card>))}
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/AppTestimonials.tsx
     </section>)}
         </div>;
       </div>;
@@ -517,9 +518,8 @@ avatar: "/placeholder.svg ;
 export const AppTestimonials: React.FC = () => {;
   return (<section className="py-16 bg-zion-blue" > <div className=container mx-auto px-4 > <div className="text-center mb-12" > <h2 className=text-3xl md:text-4xl font-bold mb-4 >What Our Users Say</h2> <p className="text-lg text-gray-300 max-w-2xl mx-auto" > ;
 }</div> </div> </section>) ;
-}
-'
-<<<<<<< HEAD:src_backup/components/mobile-app/AppTestimonials.tsx
+};
+'"
 origin/cursor/automate-test-improve-and-merge-code-2533
 avatar: /placeholder.svg";
 }];

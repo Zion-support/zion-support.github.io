@@ -4,22 +4,35 @@
   isOpen,
   onClose,
   defaultContext,
+  defaultKind = 'general','
+  userHeaders
+}: {;
 
+import { useState } from 'react';
+export type FeedbackContext = any;
+    onClose(true)
+export type FeedbackContext = { actionType?: string; metadata?: any }
+export default function FeedbackModal({
+  isOpen
+onClose,
+defaultContext
+defaultKind = 'general'}
+  userHeaders}
+}: {
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
-  defaultKind?: general' | 'bug | feature';
-
+  defaultKind?: 'general' | 'bug' | 'feature';
+  userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
   isOpen;
   onClose;
   defaultContext;
-  defaultKind = 'general;
+  defaultKind = 'general';
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<general' | 'bug | feature'>(defaultKind);
   const [comment, setComment] = useState(');
   const [loading, setLoading] = useState(false);
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
   if (!isOpen) return null;
 import { useState } from react';
 export type FeedbackContext = { actionType?: string, metadata?: any },
@@ -48,6 +61,8 @@ export default function FeedbackModal({
     if (rating < 1) return onClose(false);
     setLoading(true);
     try {
+      await fetch('/api/feedback', {
+        method: 'POST',
 
     setLoading(false);
     onClose(true);
@@ -103,6 +118,7 @@ export type FeedbackContext = any;
               onClick={() => setRating(n)}className={hover >= n || rating >= n ? text-yellow-500' : 'text-gray-300;
 
 className={
+                hover >= n || rating >= n ? 'text-yellow-500' : 'text-gray-300'
 
           ))}
           <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white>{loading? Submitting…' : 'Submit}</button>;

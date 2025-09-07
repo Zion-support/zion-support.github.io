@@ -1,4 +1,13 @@
-
+import { FooterNewsletter } from "@/components/FooterNewsletter";
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
+import Link from "next/link", // Changed from react-router-dom
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
+function resolveUrl(envVar: string | undefined, fallback: string) {
+  if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
+    return fallback
+  }
+  return envVar
+}
 
 const TWITTER_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_TWITTER_URL;
@@ -23,7 +32,12 @@ const GITHUB_URL = resolveUrl(
 
 export function Footer() {
   return (
-
+    <footer className="bg-card border-t border-primary/20 pt-12 pb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="space-y-4">
+            <div className="mb-4">
+              <span className="text-2xl font-bold bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">ZION</span>
             </div>
             <p className=text-foreground/80 mb-4" style={{ maxWidth: 'clamp(16rem, 90%, 20rem) }}>
               The world&apos,s first free marketplace dedicated to high-tech and artificial intelligence.
@@ -148,7 +162,7 @@ export function Footer() {
           </div>
         </div>
 
-
+        <div className="mt-8 flex justify-end">
           <button
             type="button
             onClick={() => {
@@ -165,4 +179,35 @@ export function Footer() {
           </button>
         </div>
 
-
+        <div className="mt-12 pt-8 border-t border-primary/20">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-foreground/80 text-sm">
+              &copy, {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md: mt-0">
+              <Link
+                href="/privacy"
+                className="text-foreground/80 hover:text-primary text-sm transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms"
+                className="text-foreground/80 hover:text-primary text-sm transition-colors"
+              >
+                Terms of Service
+              </Link>
+              <Link
+                href="/status"
+                className="text-foreground/80 hover:text-primary text-sm transition-colors"
+              >
+                API Status
+              </Link>
+            </div>
+          </div>
+        </div>
+        <FeedbackWidget />
+      </div>
+    </footer>
+  )
+}

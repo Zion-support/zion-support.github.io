@@ -1,5 +1,4 @@
-import React from 'react;
-
+import React from 'react';
 
 const Services: React.FC = () => {
   const services = [
@@ -71,4 +70,9 @@ const Services: React.FC = () => {
             </div>
           ))}
         </div>
+      </div>
+    </div>
+  );
+};
 
+export default Services;

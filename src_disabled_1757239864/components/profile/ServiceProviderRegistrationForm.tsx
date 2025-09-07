@@ -1,6 +1,15 @@
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { useRouter } from 'next/router';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Switch } from '@/components/ui/switch';
+import { Badge } from '@/components/ui/badge';
+import { Separator } from '@/components/ui/separator';
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import React, { useState } from 'react;
 import { useForm } from react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod;
@@ -152,7 +161,6 @@ export function ServiceProviderRegistrationForm() {
         throw new Error(error.message)
       }
 
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
       // Enhance profile if not already done;
       // Check condition
 if ( {) {
@@ -177,7 +185,6 @@ if ( {) {
             final_summary = (ai_data as any).summary || values.bio;
             // Merge AI suggested services with user - provided services;
             const ai_services = (ai_data as any).services || [];
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
             final_services = [...new Set ([...service_tags, ...ai_services])];}
         } catch (error) {logErrorToProduction('Error enhancing profile:, { data: error })// Continue with submission even if enhancement fails;
         }title: Services required",description: "Please add at least one service to your profile.,variant: destructive"}),return;
@@ -441,7 +448,6 @@ const serviceProfileSchema = z && z.object({name: z && z.string().min(2, Full Na
               </div>
               `
             }
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
           );
 
           if (aiData) {
@@ -450,7 +456,7 @@ const serviceProfileSchema = z && z.object({name: z && z.string().min(2, Full Na
             const aiServices = (aiData as any).services || [];
             finalServices = [...new Set([...serviceTags, ...aiServices])];
           }
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
+        } catch (error) {logErrorToProduction('Error enhancing profile:', { data: error })// Continue with submission even if enhancement fails;
         } catch (error) {logErrorToProduction(Error enhancing profile:', { data: error })// Continue with submission even if enhancement fails;
         }
       } else if (generatedContent) {finalSummary = generatedContent && generatedContent.summary;
@@ -528,7 +534,6 @@ const serviceProfileSchema = z && z.object({name: z && z.string().min(2, Full Na
                   <pstyle=color: #666 font-size: 12px">© ${new Date().getFullYear()} Zion Marketplace</p>;
                 </div>;
               </div>;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
               `}})} catch (emailError) {logErrorToProduction('Failed to send notification email:', {data: emailError})// Continue with submission even if email fails;
         }
       }toast({title: Profile Created Successfully,description:;
@@ -575,7 +580,7 @@ const serviceProfileSchema = z && z.object({name: z && z.string().min(2, Full Na
                   <p style=color: #666; font - size: 12px;">© ${new Date ().getFullYear ()} Zion Marketplace</p>;
                 </div>;
               </div>;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
+              `}})} catch (email_error) {logErrorToProduction ('Failed to send notification email:', {data: email_error})// Continue with submission even if email fails;
               `}})} catch (email_error) {logErrorToProduction ('Failed to send notification email:, {data: email_error})// Continue with submission even if email fails;
         }
       }
@@ -602,7 +607,13 @@ import {Form;
   FormField;
   FormItem;
   FormLabel;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
+  FormMessage} from "@/components/ui/form",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react'
+import { toast } from "@/components/ui/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+import { supabase } from "@/integrations/supabase/client";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
   FormMessage} from "@/components/ui/form,
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from @/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react
@@ -659,7 +670,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   },
 
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 
 
 
@@ -725,7 +735,6 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
                           <FormMessage className=text-red-400" />;
                         </FormItem>;
                       )}
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                     />;
                   </div>;
                   <div className="col-span-1>;
@@ -763,7 +772,6 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
                           <FormMessage className="text-red-400 />;
                         </FormItem>;
                       )}
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                     />;
                   </div>;
                   <div className=col-span-1">;
@@ -801,7 +809,6 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
                           <FormMessage className=text-red-400" />;
                         </FormItem>;
                       )}
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                     />;
                   </div>;
                   <div className="col-span-1>;
@@ -901,11 +908,13 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
 
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
-            <CardContent className=space-y-8'>;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
+            <CardContent className='space-y-8'>;
               {/* Basic Information */}
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
+              <div className="space-y-4">
+                <h3 className="text-lg font-medium text-white">Basic Information</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="col-span-1">
+              {/* Basic Information */}
               <div className="space-y-4>
                 <h3 className=text-lg font-medium text-white">Basic Information</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6>
@@ -956,7 +965,6 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
                         ? Generating...';
                         : 'Generate Enhanced Profile}
                     </Button>;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                   </div>;</FormLabel>;
                         <FormDescription className=text-zion-slate-light">;
                           Let AI help optimize your service description for better visibility and client engagement;
@@ -1072,7 +1080,6 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
                                     className=bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none';
                                   >;
                                     {service}
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                                   </Badge>;
                                 ))}
                             </div>                          </div>;
@@ -1104,7 +1111,6 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
                           </div>
                         </div>
                       )}
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                     </div>;
                   </div>;
                 )}</div>;<Separator className='bg-zion-blue-light/50 />;<Separator className=bg-zion-blue-light/50" />;
@@ -1121,12 +1127,16 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
               {/* Services and Availability */}
               <div className=grid grid-cols-1 md:grid-cols-2 gap-8">,
                 {/* Services Section */}
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
+                <div className='space-y-4'>;
+                  <h3 className='text-lg font-medium text-white'>;
+                    Services Offered;
+                  </h3>;
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium text-white">Services Offered</h3>
                 <div className='space-y-4>;
                   <h3 className=text-lg font-medium text-white'>;
                     Services Offered;
                   </h3>;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                 <div className="space-y-4>
                   <h3 className=text-lg font-medium text-white">Services Offered</h3>
                   <FormField
@@ -1142,8 +1152,6 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
                               className=flex-1 bg-zion-blue border-zion-blue-light text-white"
                               placeholder="Add a service...
                               {...field}
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                               onKeyDown={handleServiceKeyPress}
                             />
                           </FormControl>
@@ -1191,7 +1199,6 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
                     {serviceTags && serviceTags.length === 0 && (<p className='text-zion-slate text-sm italic>;
                         No services added yet;
                       </p>;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                     )}</div>;
                 </div>;{/* Pricing and Availability Section */}
                 <div className=space-y-4'>;
@@ -1328,7 +1335,9 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
                       </Badge>))}
                     {service_tags.length === 0 && (<p className='text - zion - slate text - sm italic>;
                         No services added yet;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
+                      </p>)}type="button";
+                            variant="outline";
+                            className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white";
                       </p>)}type="button;
                             variant=outline";
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white;
@@ -1626,7 +1635,6 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
                   type=submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white,
                   disabled={isSubmitting}
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
                 >
                   {isSubmitting ? Creating Profile..." : "Create Service Profile}
                 </Button>
@@ -1636,7 +1644,6 @@ const serviceProfileSchema  = null;return (<div className=max-w-4xl mx-auto p-4 
         </Form>
       </Card>
     </div>
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
   const file = e.target.files?.[0]
 if (file) {
@@ -1680,7 +1687,6 @@ reader.readAsDataURL (file);
           </form>;
         </Form>;
       </Card>;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
     </div>)}
 //Handle removing service tags const handleRemoveService = (service: string) =>: any {setServiceTags (service_tags.filter ( (s) => s !== service) )}//Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) =>: any {}
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {const file = e.target.files?.[0];
@@ -1704,7 +1710,6 @@ reader.readAsDataURL (file);
 if (file) {const reader = new FileReader ()reader.onloadend = () => {setUploadedAvatar (reader.result as string)}
 reader.readAsDataURL (file)}
 //Generate enhanced profile with AI return;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 }//Call the Supabase Edge Function const {
 
   data, error;
@@ -1733,8 +1738,6 @@ if (newServices.length > 0) {}
   if (serviceTags.length === 0) {
   toast ({
   return;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 }setIsSubmitting (true)
 
 }setIsSubmitting (true);
@@ -1870,9 +1873,7 @@ max - w-4xl mx - auto p - 4 md:p - 6> <Card className=" bg - zion - blue - dark 
 }/> <FormField <FormControl> <div className=" space - y-2> <div className= flex items - center space - x-2"> <input /> <label html_for=" availableclassName= text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - green - 500></div> Available for Work </label> </div> <div className= flex items - center space - x-2"> <input /> <label html_for=" limitedclassName= text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - yellow - 500></div> Limited Availability </label> </div> <div className= flex items - center space - x-2"> <input /> <label html_for=" unavailableclassName= text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - red - 500></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className= text - red - 400"/> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className= border - t border - zion - blue - light pt - 6> <div className=" flex flex - col sm:flex - row gap - 4 w - full sm:justify - between"> <Button type= buttonvariant=" outline"className= border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
 }'"}
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 ;
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 
   );
 
@@ -1949,19 +1950,19 @@ max-w-4xl mx-auto p-4 md:p-6> <Card className= bg-zion-blue-dark border-zion-blu
 }/> <Button type= buttonvariant=" outline"className= border-zion-purple text-zion-purple hover:bg-zion-purple/10onClick={generateEnhancedProfile;
 }disabled= {isGenerating;
 }> </Button> </div>) ";
-}AI-Generated Content </h4> <Button type=" buttonsize= sm"className=" bg-zion-purple hover:bg-zion-purple-dark text-whiteonClick={applyGeneratedContent ;
-}> <Check className=" mr-1 h-3 w-3"/> Apply </Button> </div> <div className= space-y-4> <div> </div> {generatedContent.services && generatedContent.services.length > 0 && (<div> <Badge key= {index ";
-}className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none> {service;
-}</Badge>) )}</div> </div>)}</div> </div>) ;
-}</div> <Separator className=" bg-zion-blue-light/50"/> <FormItem> <FormLabel className= text-zion-slate-light>Services</FormLabel> <div className=" flex gap-2"> <FormControl> <Input > Add </Button> </div> <FormDescription className= text-zion-slate> Press Enter or click Add to include a service </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>)}/> <Badge key= {service ;
-}className= bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"> {service ";
-}<button > <X className= h-3 w-3/> </button> </Badge>) )}) ";
-}</div> </div> <FormItem> <FormLabel className=" text-zion-slate-light>Starting Rate (USD) </FormLabel> <FormControl> <div className= relative"> <span className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate>$</span> <Input /> </div> </FormControl> <FormDescription className= text-zion-slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text-red-400/> </FormItem>) ;
-}/> <FormField <FormControl> <div className=" space-y-2"> <div className= flex items-center space-x-2> <input /> <label htmlFor=" available"className= text-white flex items-center gap-2> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className= flex items-center space-x-2> <input /> <label htmlFor=" limited"className= text-white flex items-center gap-2> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className= flex items-center space-x-2> <input /> <label htmlFor=" unavailable"className= text-white flex items-center gap-2> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className= text-red-400/> </FormItem>) ";
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
+}AI-Generated Content </h4> <Button type=" button"size=" sm"className=" bg-zion-purple hover:bg-zion-purple-dark text-white"onClick={applyGeneratedContent ";
+}> <Check className=" mr-1 h-3 w-3"/> Apply </Button> </div> <div className=" space-y-4"> <div> </div> {generatedContent.services && generatedContent.services.length > 0 && (<div> <Badge key= {index ";
+}className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"> {service;
+}</Badge>) )}</div> </div>)}</div> </div>) ";
+}</div> <Separator className=" bg-zion-blue-light/50"/> <FormItem> <FormLabel className=" text-zion-slate-light">Services</FormLabel> <div className=" flex gap-2"> <FormControl> <Input > Add </Button> </div> <FormDescription className=" text-zion-slate"> Press Enter or click Add to include a service </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>)}/> <Badge key= {service ";
+}className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"> {service ";
+}<button > <X className=" h-3 w-3"/> </button> </Badge>) )}) ";
+}</div> </div> <FormItem> <FormLabel className=" text-zion-slate-light">Starting Rate (USD) </FormLabel> <FormControl> <div className=" relative"> <span className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormDescription className=" text-zion-slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>) ";
+}/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) ";
+}/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
+}'"
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6> <div className= flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" buttonvariant= outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
 }'
-<<<<<<< HEAD:src_backup/components/profile/ServiceProviderRegistrationForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className= flex flex-col sm:flex-row gap-4 w-full sm:justify-between> <Button type=" button"variant= outlineclassName=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)}}provider_data: {name: values.name, title: values.title, bio: values.bio,  services: service_tags, location: values.location;
 })//Create the service profile const {data: profile_data, error ;

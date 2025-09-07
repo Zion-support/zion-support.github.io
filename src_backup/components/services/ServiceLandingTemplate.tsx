@@ -81,7 +81,6 @@ export interface Benefit {}
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({}
   title,
   subtitle,
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
   heroImage,
   heroImage,
 
@@ -234,7 +233,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
               {benefits && benefits.map((benefit, index) => (<div key={index} className="bg-white p-6 rounded-lg shadow-lg>;
                   {benefit && benefit.icon && (<div className=mb-4 text-blue-600">;
                       {benefit && benefit.icon}
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
                     </div>;
 
   title;
@@ -299,7 +297,6 @@ className=rounded-full mr-4';
                       <p className=font-semibold text-white'>{t.name}</p>;
                       {t.role && (<p className='text-sm text-gray-400>{t.role}</p>;
                       )}
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
                     </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
@@ -308,7 +305,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <p className="text-gray-600>{benefit.description}</p>;
                 </div>;
               ))}
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
             </div>
           </div>
         </section>
@@ -337,7 +333,6 @@ main
                 <div key={index} className=flex items-start>;"
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3></div>;
                   <span className="text-gray-700">{feature}</span>;
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
                 </div>;
 
               ))}
@@ -348,7 +343,6 @@ main
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
             </div>
           </div>
         </section>
@@ -397,15 +391,17 @@ main
                 </div>))}
             </div>;
           </div>;
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
         </section>)}
 
         </section>)}{stats.length > 0 && (<section className=py - 16 px - 4">;
           <div className="max - w-7xl mx - auto>;
             <div className=grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
               {stats.map ((stat, index) => (<div key={index}>;
-                  <div className="text - 4xl font - bold text - blue - 600 mb - 2>;
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
+                  <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
+      {stats.length > 0 && ("
+        <section className="py - 16 px - 4">;"
+          <div className="max - w-7xl mx - auto">;"
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
       {stats.length > 0 && (
         <section className="py - 16 px - 4">;
           <div className=max - w-7xl mx - auto">;"
@@ -439,8 +435,7 @@ main
                   <div className=text-4xl font-bold text-blue-600 mb-2">;
                     {stat && stat.value}
                   </div>;"
-                  <div className=text-gray-600>{stat && stat.label}</div>;
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
+                  <div className="text-gray-600">{stat && stat.label}</div>;
                 </div>;
 
               ))}
@@ -451,7 +446,6 @@ main
             </div>;
           </div>;
         </section>;
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
             </div>
           </div>
         </section>
@@ -582,7 +576,6 @@ main
                         loading="lazy;
                       />;
                     )}
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
                     <div>
               <Card;
                 key={idx}
@@ -608,12 +601,10 @@ main
                       {t.role && ("
                         <p className=text-sm text-gray-400>{t.role}</p>
                       )}
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
                     </div>
                   </div>
                 </CardFooter>
               </Card>
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
                     </div>;
                   </div>;
                 </CardFooter>;
@@ -702,7 +693,6 @@ main
           </a>;
         </div>;
       </section>;
-<<<<<<< HEAD:src_backup/components/services/ServiceLandingTemplate.tsx
     </div>);
     </div>)}}}
 },<section className=py-12 bg-zion-blue-dark text-center'>;

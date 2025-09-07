@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 import { SearchSuggestion } from "@/types/search";
 import React, { useState } from "react";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
 import { Search } from 'lucide-react'
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { cn } from "@/lib/utils";
@@ -99,12 +95,3 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 }
 
 export default ApiDocsLayout;
-=======
-  const navigationItems = [
-    { title: "API Reference", path: "/developers/docs/reference" },
-    { title: "Webhooks", path: "/developers/docs/webhooks" },
-    { title: "Sample Code", path: "/docs/sample-code" },
-    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }
-  ];
-  const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57

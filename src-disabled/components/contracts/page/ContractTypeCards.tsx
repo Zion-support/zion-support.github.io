@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 :src/components/contracts/page/ContractTypeCards.tsx
 import { Button } from '@/components/ui/button
 import {
@@ -30,7 +28,9 @@ interface ContractTypeCardsProps {
 
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
 
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
 import { Button } from "@/components/ui/button;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from @/components/ui/card";
   Card
@@ -45,16 +45,15 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
   onSmartClick: () => void
 }
 export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-10>
       <Card>
         <CardHeader>
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
+          <CardTitle className="flex items-center gap-2">
+<CardTitle className="flex items-center gap-2">
           <CardTitle className=flex items-center gap-2">
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 <CardTitle className="flex items-center gap-2>
 
 
@@ -69,8 +68,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardDescription>
         </CardHeader>
         <CardContent>
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
 
 
@@ -83,15 +80,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </ul>
         </CardContent>
         <CardFooter>
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
           <Button variant="outline onClick={onStandardClick}>
 
 
           <Button variant=outline" onClick={onStandardClick}>
 
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
           <Button variant="outline onClick={onStandardClick}>
 
@@ -115,17 +109,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <ShieldCheck className='h-5 w-5 text-primary />
               Smart Contracts
             </CardTitle>
-            <span className=px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>              Blockchain Powered      <Card>
-          <Button variant='outline onClick={onStandardClick}>
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
+            <span className='px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>              Blockchain Powered      <Card>
+          <Button variant='outline' onClick={onStandardClick}>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
             Create Standard Contract
           </Button>
         </CardFooter>
       </Card>
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg>
           <div className=flex justify-between items-center">
@@ -144,7 +135,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardTitle>
             <span className=px-2 py-1 bg-primary/10 text-primary text-xs rounded-full'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
       
       <Card>
 
@@ -165,8 +155,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardDescription>
         </CardHeader>
 
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
+          <ul className="space-y-2">
+            <li className="text-sm">✓ All standard contract features</li>
+            <li className="text-sm">✓ Automatic escrow payment release</li>
+            <li className="text-sm">✓ Transaction verification</li>
+            <li className="text-sm">✓ Permanent on-chain record</li>
+            <li className="text-sm">✓ Multi-signature approval flow</li>
           <ul className="space-y-2>
             <li className=text-sm">✓ All standard contract features</li>
             <li className="text-sm>✓ Automatic escrow payment release</li>
@@ -179,7 +173,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
             onClick={onSmartClick}
 
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
 <ul className='space-y-2>
             <li className=text-sm'>✓ All standard contract features</li>
@@ -193,8 +186,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Button
             className='w-full bg-gradient-to-r from-blue-600 to-indigo-600
             onClick={onSmartClick}
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
           >
@@ -207,18 +198,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
-import { Button } from @/components/ui/button';
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle} from '@/components/ui/card;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
+import { Button } from '@/components/ui/button';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+
+          <Button 
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { FileText, ShieldCheck } from 'lucide-react';
+interface ContractTypeCardsProps {;
 
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 
@@ -226,10 +223,8 @@ import { Button } from @/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card,
 import { FileText, ShieldCheck } from lucide-react';
 interface ContractTypeCardsProps {
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
   onStandardClick: () => void;
   onSmartClick: () => void;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
 
 export function ContractTypeCards(): any ({
@@ -349,10 +344,12 @@ import { Button } from @/components/ui/button",import { Card, CardContent, CardD
   onSmartClick: () => void;export function ContractTypeCards(): any ({onStandardClick,onSmartClick}: ContractTypeCardsProps) {return (<div className='grid md:grid-cols-2 gap-6 mb-10>;
       <Card>;
         <CardHeader>;
-          <CardTitle className=flex items-center gap-2'>;
-            <FileText className='h-5 w-5 />            Standard Contracts;
-          <CardTitle className=flex items-center gap-2">;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
+          <CardTitle className='flex items-center gap-2'>;
+            <FileText className='h-5 w-5' />            Standard Contracts;
+          <CardTitle className="flex items-center gap-2">;
+            <FileText className="h-5 w-5" />;
+interface ContractTypeCardsProps {;
+  onStandardClick: () => void,;
             <FileText className="h-5 w-5 />;
 interface ContractTypeCardsProps {
   onStandardClick: () => void,
@@ -360,18 +357,14 @@ interface ContractTypeCardsProps {
 }
 export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }:,  ContractTypeCardsProps) {
   return (
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
 
     <div className=grid md:grid-cols-2 gap-6 mb-10">;
 
       <Card>;
         <CardHeader>;
-          <CardTitle className="flex items-center gap-2>;
-            <FileText className=h-5 w-5" />;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
+          <CardTitle className="flex items-center gap-2">;
+            <FileText className="h-5 w-5" />;
 
 import { Button } from @/components / ui / button';
 import { Button } from '@/components/ui/ button;
@@ -383,7 +376,6 @@ import { Button } from '@/components/ui/ button;
   CardTitle} from @/components/ui/ card';
 import { FileText, ShieldCheck } from 'lucide-react;
 interface ContractTypeCardsProps {
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
   onStandardClick: () => void;
             <FileText className="h-5 w-5 />;interface ContractTypeCardsProps  {onStandardClick: () => void,onSmartClick: () => void;
 }export function ContractTypeCards(): any ({ onStandardClick, onSmartClick }: ContractTypeCardsProps) {return (<div className=grid md:grid-cols-2 gap-6 mb-10">;
@@ -418,11 +410,10 @@ export /**;
  */;
       <Card>;
         <CardHeader>;
-          <CardTitle className="flex items - center gap - 2>;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
+          <CardTitle className="flex items - center gap - 2">;
+            <FileText className="h - 5 w - 5" />;
             <FileText className=h - 5 w - 5" />;
 
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
             Standard Contracts;
             <FileText className="h - 5 w - 5 />;Standard Contracts;
             Standard Contracts;
@@ -431,10 +422,7 @@ export /**;
           <CardDescription>Generate traditional legal agreements for your projects;
           </CardDescription>;
         </CardHeader>;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
         <CardContent>;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
 
           <ul className=space - y-2'>;
@@ -458,7 +446,14 @@ export /**;
               <ShieldCheck className="h-5 w-5 text-primary />;
               Smart Contracts;
             </CardTitle>;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
+            <span className='px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full'>              Blockchain Powered      <Card>;
+        <CardHeader className="bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded - t-lg">;
+          <div className="flex justify - between items - center">;
+            <CardTitle className="flex items - center gap - 2">;
+              <ShieldCheck className="h - 5 w - 5 text - primary" />;
+              Smart Contracts;
+            </CardTitle>;
+            <span className="px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;
             <span className=px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full'>              Blockchain Powered      <Card>;
         <CardHeader className=bg - gradient - to - r from - blue - 500 / 10 to - purple - 500 / 10 rounded - t-lg">;
           <div className="flex justify - between items - center>;
@@ -466,10 +461,8 @@ export /**;
               <ShieldCheck className="h - 5 w - 5 text - primary />;
               Smart Contracts;
             </CardTitle>;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
             <span className=px - 2 py - 1 bg - primary / 10 text - primary text - xs rounded - full">;
 
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
 
               Blockchain Powered;
@@ -479,10 +472,7 @@ export /**;
           <CardDescription>Deploy agreements on Ethereum or Polygon with escrow capabilities;
           </CardDescription>;
         </CardHeader>;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
         <CardContent>;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
           <ul className='space - y-2>;
         <CardContent>;<ul className=space - y-2'>;
@@ -541,21 +531,19 @@ pr-12325
         </CardContent>;
         <CardFooter>;
           <Button;
-            className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
+            className="w - full bg - gradient - to - r from - blue - 600 to - indigo - 600";
+            on_click = {onSmartClick, }
+            className="w-full bg-gradient-to-r from-blue-600 to-indigo-600";
             on_click = {onSmartClick}
             className=w-full bg-gradient-to-r from-blue-600 to-indigo-600";
             onClick={onSmartClick}
           >;
 
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
             Create Smart Contract;
           </Button>;
         </CardFooter>;
       </Card>;
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 
   );
 }
@@ -580,5 +568,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   );
 }
-<<<<<<< HEAD:src_backup/components/contracts/page/ContractTypeCards.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533

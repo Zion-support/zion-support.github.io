@@ -128,7 +128,6 @@ import { Button } from @/components/ui/button",import { ChatAssistant } from "@/
       >;
         <MessageSquare className=h-5 w-5" />;
       </Button>;
-<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 
       {isOpen && (;
 
@@ -273,7 +272,6 @@ if ( {) {$2;
       >;
         <MessageSquare className="h - 5 w - 5 />;
       </Button>;
-<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
       {is_open && (
         <ChatAssistant;
           is_open = {is_open}
@@ -284,7 +282,7 @@ if ( {) {$2;
             avatar_url: https://placehold.co / 64x64?text = AI',
             role: 'Virtual Assistant;
           }}
-<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
+          onSendMessage = {handleSendMessage, }
           onSendMessage = {handleSendMessage}
         />)}
     </>);
@@ -319,7 +317,6 @@ return (<> <Button > <MessageSquare className=h-5 w-5" /> </Button> {
 }/>) ;
 }</>) ;
 }'"
-<<<<<<< HEAD:src_backup/components/ChatAssistantTrigger.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
       {is_open && (<ChatAssistant;
           is_open = {is_open }

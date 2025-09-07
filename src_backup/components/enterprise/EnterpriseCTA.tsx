@@ -3,10 +3,9 @@ import React from 'react;
 import { Button } from @/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react;
 
-import React from "react;
-import { Button } from @/components/ui/button";
-import { Calendar, ArrowRight } from lucide-react'
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Calendar, ArrowRight } from 'lucide-react'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 export function EnterpriseCTA() {
@@ -503,7 +502,6 @@ export /**;
                     <div className="h - 6 w - 6 rounded - full bg - primary / 20 flex items - center justify - center flex - shrink - 0">;
                       <span className=text - primary text - sm font - medium">4</span>;
                     </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseCTA.tsx
                     <p > Free consultation on implementation</p>;
 
                   </li>;

@@ -16,9 +16,9 @@ import { Notification, NotificationType  } from '@/context/notifications;
 export const getTypeIcon = null;
   TooltipContent;
   TooltipProvider;
-  TooltipTrigger } from @/components/ui/tooltip';
-import { useRouter  } from 'next/router;
-<<<<<<< HEAD:src_backup/components/notifications/NotificationItem.tsx
+  TooltipTrigger } from '@/components/ui/tooltip';
+import { useRouter  } from 'next/router';
+import React from 'react';
 import React from react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react
@@ -133,10 +133,9 @@ import { useRouter } from 'next/router;
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
-    case 'message:
-      return <span className="text-blue-500>💬</span>;
-      return <span className=text-orange-500">📦</span>;
-<<<<<<< HEAD:src_backup/components/notifications/NotificationItem.tsx
+    case 'message':
+      return <span className="text-blue-500">💬</span>;
+      return <span className="text-orange-500">📦</span>;
     default:
 
     default:;
@@ -500,9 +499,11 @@ onMarkAsRead;
 onDismiss ;
 }) => {const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {addSuffix: true ;
 }) : 'Just now' ;
-}</p> {notification.action url && notification.action text && (<Button variant="link size=sm" className="text-zion-cyan p-0 h-auto onClick={handleClick ;
-}> </Button>) ;
-<<<<<<< HEAD:src_backup/components/notifications/NotificationItem.tsx
+}</p> {notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={handleClick ;
+}> </Button>) ";
+}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
+};
+'"
 }</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400 /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
 }
 '

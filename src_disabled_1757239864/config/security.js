@@ -1,23 +1,24 @@
-
 // Security Configuration;
 export const security_config = {// Content Security Policy;
 // Security Configuration;
-
+export const security_config = {
+  // Content Security Policy;
   csp: {
     directives: {
 
-      defaultSrc: ["'self],
-      styleSrc: [self'", "'unsafe-inline, https://fonts && fonts.googleapis.com"],
-      fontSrc: ["self', https://fonts && fonts.gstatic.com"],
-      imgSrc: ["'self, data:", "https:],
-      scriptSrc: [self'"],
-      connectSrc: ["'self],
-      frameSrc: [none'"],
-      objectSrc: ["'none],
-      baseUri: [self'"],
-      formAction: ["'self],
-
-      upgradeInsecureRequests: []}},
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'", "https://fonts && fonts.googleapis.com"],
+      fontSrc: ["'self'", "https://fonts && fonts.gstatic.com"],
+      imgSrc: ["'self'", "data:", "https:"],
+      scriptSrc: ["'self'"],
+      connectSrc: ["'self'"],
+      frameSrc: ["'none'"],
+      objectSrc: ["'none'"],
+      baseUri: ["'self'"],
+      formAction: ["'self'"],
+      upgradeInsecureRequests: [],
+    },
+  },
 
   // Security Headers
   headers: {
@@ -33,8 +34,6 @@ export const security_config = {// Content Security Policy;
   }}
 
 export default securityConfig;
-
-=======
 export const security_config = {// Content Security Policy;
 // Security Configuration;
 export const securityConfig = {// Content Security Policy;
@@ -76,4 +75,3 @@ export const securityConfig = {// Content Security Policy;
 }export default securityConfig;
   }
 }export default securityConfig;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

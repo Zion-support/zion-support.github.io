@@ -1,12 +1,11 @@
 
-
-import React, { useState } from 'react;
-import { Button } from @/components/ui/button';
-import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator;
-import { Card, CardContent, CardHeader, CardTitle } from @/components/ui/card';
-import { Loader2, Sparkles, Check } from 'lucide-react
-import { Badge } from @/components/ui/badge';
-import { format, parseISO } from 'date-fns;
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Loader2, Sparkles, Check } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { format, parseISO } from 'date-fns';
 
 interface MilestoneSuggestionsProps {
   projectName: string,
@@ -74,7 +73,6 @@ export function MilestoneSuggestions({
               <Sparkles className=mr-2 h-4 w-4" />
               Suggest Project Milestones with AI
             </>
-
           )}
         </Button>
       )}
@@ -94,13 +92,16 @@ export function MilestoneSuggestions({
                   <div className=flex items-center justify-between mb-1">
                     <div className="font-medium flex items-center>
                       {milestone.title}
-                      <Badge variant=secondary" className="ml-2 text-xs>
-
+                      <Badge variant="secondary" className="ml-2 text-xs">
+                        AI Suggested
+                      </Badge>
+                    </div>
+                    <div className="text-sm text-muted-foreground">
                       Due: {formatDate(milestone.dueDate)}
                     </div>
                   </div>
-                  <p className=text-sm text-muted-foreground">{milestone.description}</p>
-                  <div className="flex justify-between items-center mt-2 text-sm>
+                  <p className="text-sm text-muted-foreground">{milestone.description}</p>
+                  <div className="flex justify-between items-center mt-2 text-sm">
                     <span>Estimated: {milestone.estimatedHours} hours</span>
                   </div>
                 </div>
@@ -114,4 +115,6 @@ export function MilestoneSuggestions({
           </CardContent>
         </Card>
       )}
-
+    </div>
+  )
+}

@@ -269,8 +269,7 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 })enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {;
   variant: error' ;
 })}(v) => setOpen (v ?? false)}> <PopoverTrigger asChild> {';
-  unreadCount > 9 ? 9+ : unreadCount ;
-<<<<<<< HEAD:src_backup/components/NotificationCenter.tsx
+  unreadCount > 9 ? '9+' : unreadCount ;
   variant: 'error' ;
 });
 

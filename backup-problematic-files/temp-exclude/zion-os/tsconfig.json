@@ -19,21 +19,20 @@
       }
     ]
   },
-
-  "include: [next-env.d.ts", "**/*.ts, **/*.tsx"],
-  "exclude: [node_modules"]
-  "include: [
-    next-env.d.ts",
-    ".next/types/**/*.ts,
-    **/*.ts",
-    "**/*.tsx
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ],
   exclude": [
     "node_modules
   ]
-
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 ursor/automate-test-improve-and-merge-code-646c
-  include": ["next-env.d.ts, **/*.ts", "**/*.tsx],
-  exclude": ["node_modules"]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

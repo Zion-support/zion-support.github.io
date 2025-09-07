@@ -127,7 +127,6 @@ if ( {) {$2;
             on_reject = {on_reject}
           />))}
       </div>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/MilestonesList.tsx
     </div>);
 }
 ;

@@ -116,7 +116,6 @@ import { SkillsFilterProps } from @/types/filters",
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
-<<<<<<< HEAD:src_backup/components/talent/filters/SkillsFilter.tsx
                 onCheckedChange={() => toggleSkill(skill)}
 
 className=border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'

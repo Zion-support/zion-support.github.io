@@ -120,7 +120,6 @@ if ( {) {$2;
         <Button as_child className="mt - 4">;
           <Link href=/post - job>Post Your First Job</Link>;
         </Button>;
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
       </div>);
   }
 
@@ -338,9 +337,8 @@ return (<div className=grid gap-6 md:grid-cols-2" > {
 
               <span className=font-medium">Budget:</span> ${job.budget.min} - ${job.budget.max}
             </div>"
-            <div className=mt-1 text-sm>"
-              <span className="font-medium>Deadline:</span> {format(new Date(job.deadline), PPP")}
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+            <div className="mt-1 text-sm">"
+              <span className="font-medium">Deadline:</span> {format(new Date(job.deadline), "PPP")}
             </div>
           </CardContent>"
           <CardFooter className=flex justify-between p-4 pt-0 gap-2>"
@@ -388,7 +386,7 @@ return (<div className=grid gap-6 md:grid-cols-2 > {jobs.map ( (job) => (<Card k
 }onClick={() => onSelectJob?. (job.id, job.title)}job.description ;
 }</p> + {job.skills.length - 3 ;
 }more </Badge>) ";
-<<<<<<< HEAD:src_backup/components/jobs/JobsList.tsx
+}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {;
 }</div> <div className=mt-3 text-sm> <span className="font-medium">Budget:</span> $ {
   job.budget.min ;
 }- $ {

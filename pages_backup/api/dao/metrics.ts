@@ -27,23 +27,6 @@ async function fetchJson(url: string) {
 
 
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-
-import { NextApiRequest, NextApiResponse } from "next;
-import fs from fs";
-import path from "path;
-const configPath = path.join(process.cwd(), data", "dao, config.json");
-const cachePath = path.join(process.cwd(), "data, dao", "metrics.json);
-async function fetchJson(url: string) {
-
-
-const configPath = path && path.join(process && process.cwd(), data", "dao, config && config.json");
-const cachePath = path && path.join(process && process.cwd(), "data, dao", "metrics && metrics.json);
-
-
-
-
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-
   return resp.json();
 
 
@@ -54,7 +37,6 @@ function readJson(p: string) {
     console.error("Error:, error);
     return res.status(500).json({ error: Internal server error" });
   }
-
 
 
 }
@@ -75,8 +57,11 @@ function writeJson(p: string, v: any) {
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   return JSON.parse(fs.readFileSync(p, "utf-8));
 
-  return JSON.parse(fs.readFileSync(p, utf-8"));
-  return JSON.parse(fs.readFileSync(p, 'utf-8));
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, "utf-8"));
+;
+function readJson(p: string) {;
+  return JSON.parse(fs.readFileSync(p, 'utf-8'));
   } catch (error) {
     console.error("Error:, error);
     return res.status(500).json({ error: Internal server error" });
@@ -96,19 +81,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
-
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
-=======
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
@@ -126,36 +103,27 @@ export default async function handler(
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 ;
 export default async function handler(req, res) {
 
-
   try {
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   try {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
-=======
 ursor/fix-website-loading-errors-and-merge-6662
   try {
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  try {;
+;
   try {
 export default async function handler(req, res) {
   try {
 export default async function handler(req, res) {
-
-  try {
+  try {;
+;
 export default async function handler(req, res) {
   try {
-
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date && Date.now();
@@ -165,15 +133,8 @@ export default async function handler(req, res) {
 
 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
 return res.status(200).json({ ...cache, cached: true });
     }
@@ -181,18 +142,16 @@ return res.status(200).json({ ...cache, cached: true });
     const tokenAddr = cfg.token.address;
 
 // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
-
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
     const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : "}`;
     const transfersJson = await fetchJson(transfersUrl);
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
-=======
+    const txs = transfersJson?.result || [];
+
+    const holderToDelta: Record<string, bigint> = {};
 origin/cursor/automate-test-improve-and-merge-code-2533
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const txs = transfersJson?.result || [];
 
     const holderToDelta: Record<string, bigint> = {}
@@ -200,9 +159,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
     const entries = Object && Object.entries(holderToDelta)
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const entries = Object.entries(holderToDelta)
 origin/cursor/automate-test-improve-and-merge-code-2533
       .map(([address, delta]) => ({ address, netDelta: delta }))
@@ -223,14 +179,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       address: e.address
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
-=======
 
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). Well simulate 0 for demo.
     const activeProposals: any[] = [];
@@ -266,13 +216,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100
           )
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         )
       : 0;
     const result = {
@@ -283,17 +227,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       governanceParticipationRate: participationRate
     }
     writeJson(cachePath, result);
-import { NextApiRequest, NextApiResponse  } from './next;
-import fs from ./fs';
-import path from './path;
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/dao/metrics.ts
-=======
+import { NextApiRequest, NextApiResponse  } from './next';
+import fs from './fs';
+import path from './path';
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 const config_path = path.join (process.cwd (), data", "dao, config.json");
 const cache_path = path.join (process.cwd (), "data, dao", "metrics.json);
@@ -389,7 +327,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 origin/cursor/integrate-build-improve-and-re-verify-2156
 }
-
 }
     return res
       .status(500)
@@ -463,12 +400,12 @@ origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 }
 }
-
-=======
+  }
+}
+}
 
   }
 }
 }
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

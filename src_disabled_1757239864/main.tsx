@@ -10,9 +10,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App />
-
-=======
+  </React.StrictMode>
+);
   </React.StrictMode>,
 );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:src_disabled_1757239864/main.tsx
->>>>>>> origin/main:src_disabled_1757239864/main.tsx

@@ -76,7 +76,6 @@ type EmptyStateCardProps = {type EmptyStateCardProps = {type: active' | 'archive
           }
         </p>;
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/quotes/EmptyStateCard.tsx
     </Card>);
     </Card>)}}type EmptyStateCardProps = any;
 }

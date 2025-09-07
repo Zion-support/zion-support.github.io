@@ -7,7 +7,7 @@ const Card = React.forwardRef<;
   HTMLDivElement,React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (<div;
     ref={ref}
-<<<<<<< HEAD:src_backup/components/ui/Card.tsx
+    className={cn('rounded-lg border bg-card text-card-foreground shadow-sm',className;
     className={cn('rounded-lg border bg-card text-card-foreground shadow-sm,className;
     )}
     {...props}
@@ -122,7 +122,6 @@ const CardFooter = React.forwardRef<
     ref={ref}
     className={cn('flex items-center p-6 pt-0, className)}
     {...props}
-<<<<<<< HEAD:src_backup/components/ui/Card.tsx
   />
 ));
 CardFooter.displayName = CardFooter';
@@ -136,7 +135,6 @@ export {
   CardContent
 }
 
-<<<<<<< HEAD:src_backup/components/ui/Card.tsx
 :src/components/ui/Card.tsx
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 export {
@@ -147,6 +145,5 @@ export {
   CardDescription,
   CardContent}
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0:components.disabled/components/ui/Card.tsx
-<<<<<<< HEAD:src_backup/components/ui/Card.tsx
   />;
 ))CardFooter.displayName = 'CardFooter';export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }export {Card,CardHeader,CardFooter,CardTitle,CardDescription,CardContent}

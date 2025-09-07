@@ -11,23 +11,17 @@ function createAdvancedMonitoring() {
   console.log('\n📊 Creating advanced monitoring system...);
   
   const monitoringFiles = {
-    monitoring/health-check.js': `// Advanced health check system
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    'monitoring/health-check.js': `// Advanced health check system
 class HealthChecker {
   constructor() {
     this.checks = new Map();
     this.results = new Map();
   }
 
-
-=======
 export class HealthChecker {
   constructor() {
     this.checks = new Map();
     this.results = new Map();  }
->>>>>>> main
 
   addCheck(name, checkFunction) {
     this.checks.set(name, checkFunction);
@@ -37,11 +31,12 @@ export class HealthChecker {
     const results = {}
     for (const [name, check] of this.checks) {
       try {
-
-        const result = await check();        results[name] = { status: 'healthy, result }    for (const [name, checkFunction] of this.checks) {
+        const result = await check();
+        const result = await check();
+        const result = await check();        results[name] = { status: 'healthy', result };    for (const [name, checkFunction] of this.checks) {
       try {
         const result = await checkFunction();
->>>>>>> main
+        results[name] = { status: 'healthy', result };
 
         results[name] = { status: healthy', result }
       } catch (error) {
@@ -49,9 +44,6 @@ export class HealthChecker {
       }
     }
     this.results = results;
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     return results;
   }
 
@@ -480,8 +472,6 @@ module.exports = { QueryOptimizer, queryOptimizer }`,
     
     database/connection-pool.js': `// Database connection pooling
 class ConnectionPool {
-
-=======
   }
 }
 
@@ -662,7 +652,6 @@ export const queryOptimizer = new QueryOptimizer();`,
     
     database/connection-pool.js': `// Database connection pooling
 export class ConnectionPool {
->>>>>>> main
 
   constructor(options = {}) {
     this.maxConnections = options.maxConnections || 10;
@@ -672,12 +661,10 @@ export class ConnectionPool {
     this.usedConnections = new Set();
   }
 
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
+  async getConnection() {
+  async getConnection() {
 async getConnection() {
->>>>>>> main
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+async getConnection() {
     if (this.availableConnections.length > 0) {
       const connection = this.availableConnections.pop();
       this.usedConnections.add(connection);
@@ -706,9 +693,6 @@ async getConnection() {
 });
   }
 
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
   releaseConnection(connection) {
     this.usedConnections.delete(connection);
     this.availableConnections.push(connection);
@@ -734,9 +718,7 @@ async getConnection() {
 }
 
 const connectionPool = new ConnectionPool();
-module.exports = { ConnectionPool, connectionPool }
-
-=======
+module.exports = { ConnectionPool, connectionPool };
 
 export function debounce(func, wait) {
   let timeout = null;
@@ -797,7 +779,7 @@ export function preloadCriticalResources() {
 
 
 export const connectionPool = new ConnectionPool();
->>>>>>> main
+  };
 
   }
 
@@ -808,33 +790,29 @@ export const connectionPool = new ConnectionPool();
     console.log(`[OK] Created ${filename}`);
   });
 });
+}
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
-=======
->>>>>>> main
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+}
+
 // Main execution
 async function main() {
   try {
     console.log('🚀 Starting advanced app improvements...);
     
     // Create all improvement systems
-
+    createAdvancedMonitoring();
+    createAdvancedMonitoring();
 // Main execution
 async function main() {
   try {
     console.log(🚀 Starting advanced app improvements...');
     
     // Create all improvement systems
->>>>>>> main
 
     createAdvancedCaching();
     createAPIOptimization();
     createDatabaseOptimization();
     
-
-=======
->>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     // Create PM2 ecosystem configuration
     const pm2Config = {
       apps: [{
@@ -877,30 +855,27 @@ async function main() {
     console.log('  - PM2 cluster configuration);
     
   } catch (error) {
-    console.error(❌ Error during advanced improvements:', error.message);
-
-=======
-    console.log('\n✅ Advanced app improvements completed successfully!);
-    console.log(\n📋 Summary:');
-    console.log('  - Advanced monitoring system created);
-    console.log(  - Performance optimization utilities added');
-    console.log('  - Accessibility improvements implemented);
-    console.log(\n🚀 Your app is now enhanced with advanced features!');
+    console.error('❌ Error during advanced improvements:', error.message);
+    console.log('\n✅ Advanced app improvements completed successfully!');
+    console.log('\n📋 Summary:');
+    console.log('  - Advanced monitoring system created');
+    console.log('  - Performance optimization utilities added');
+    console.log('  - Accessibility improvements implemented');
+    console.log('\n🚀 Your app is now enhanced with advanced features!');
     
   } catch (error) {
     console.error('❌ Error during app improvements:', error);
->>>>>>> main
 
     process.exit(1);
   }
 }
 
-
+main();
+main();
 main();// Run if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
->>>>>>> main
+export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
 

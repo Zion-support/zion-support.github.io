@@ -27,11 +27,9 @@ import { formatDistanceToNow } from date-fns",import { Card, CardContent, CardFo
           <AvatarImage src={reply.authorAvatar} alt={reply.authorName} />;
           <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>;
         </Avatar>;
-        <div className="flex-1>;
-          <div className=flex items-center">;
-            <span className="font-medium>;
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
+        <div className="flex-1">;
+          <div className="flex items-center">;
+            <span className="font-medium">;
 
 import { formatDistanceToNow } from 'date-fns;
 import { ThumbsUp, ThumbsDown, CheckCircle } from lucide-react';
@@ -39,13 +37,13 @@ import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader} from '@/components/ui/card;
-import { Avatar, AvatarFallback, AvatarImage } from @/components/ui/avatar';
-import { Button } from '@/components/ui/button;
-import { Badge } from @/components/ui/badge';
-import { ForumReply } from '@/types/community;
-import { cn } from @/lib/utils';
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
+  CardHeader,;
+} from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ForumReply } from '@/types/community';
+import { cn } from '@/lib/utils';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { formatDistanceToNow } from date-fns",
@@ -66,8 +64,7 @@ import { Badge } from @/components/ui/badge",
               </Badge>;
             )}
           </div>;
-          <div className="text-xs text-muted-foreground>;
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
+          <div className="text-xs text-muted-foreground">;
             {timeAgo}
 
 
@@ -257,10 +254,8 @@ export const ReplyCard = ({reply;
             Mark as Answer;
           </Button>)}
       </CardFooter>;
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
     </Card>);
 }
-<<<<<<< HEAD:src_backup/components/community/ReplyCard.tsx
 export default ReplyCard;
 
 import { ForumReply } from "@/types/community;

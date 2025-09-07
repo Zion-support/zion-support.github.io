@@ -25,7 +25,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         </p>
       </div>
     </div>
-<<<<<<< HEAD:src_backup/components/talent/filters/SearchFilter.tsx
+        <p id="talent-search-help" className="sr-only">;
         <p id="talent-search-help className=sr-only">;
 
           Type a name or skill to filter results;
@@ -63,8 +63,9 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           placeholder="Search talents...;
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          aria-describedby=talent-search-help";
-<<<<<<< HEAD:src_backup/components/talent/filters/SearchFilter.tsx
+          aria-describedby="talent-search-help";
+          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";/>;<p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">;<p id="talent-search-help" className="sr-only">;Type a name or skill to filter results;
+          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light;/>;<p id='talent-search-help className=sr-only'>          Type a name or skill to filter results        <p id=talent-search-help" className="sr-only>;<p id=talent-search-help" className="sr-only>;Type a name or skill to filter results;
           className=pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
         />;
@@ -76,7 +77,8 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
     </div>;
   );
 }
-<<<<<<< HEAD:src_backup/components/talent/filters/SearchFilter.tsx
+
+;
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

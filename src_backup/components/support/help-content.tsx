@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/support/help-content.tsx
 
     articles: [
 

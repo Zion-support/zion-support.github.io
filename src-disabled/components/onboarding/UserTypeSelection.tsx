@@ -1,14 +1,10 @@
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 :src/components/onboarding/UserTypeSelection.tsx
 import { useState } from "react;
 import { useState } from 'react;
 import { Briefcase, Star, User } from lucide-react';
 import { Button } from '@/components/ui/button;
 
-import { useState } from react";
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
+import { useState } from "react";
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { Briefcase, Star, User } from lucide-react'
@@ -18,8 +14,6 @@ export function UserTypeSelection({
   onSelect
   selectedType
 }: UserTypeSelectionProps) {
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 
 :src/components/onboarding/UserTypeSelection.tsx
   const userTypes: UserTypeOption[] = [
@@ -27,8 +21,7 @@ export function UserTypeSelection({
 id: 'serviceProvider
       name: Service Provider'
 
-      description: 'I want to offer services on the platform
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
+      description: 'I want to offer services on the platform'
       icon: Briefcase
 
 ;
@@ -56,7 +49,6 @@ function UserTypeSelection() {const user_types: UserTypeOption[] = [;
       description: I want to showcase my skills and find opportunities';
       icon: Star;
     }
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
     {
 
 
@@ -71,7 +63,6 @@ interface UserTypeSelectionProps {
   selectedType: string | null
 }
 
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 
     {
       id: serviceProvider",
@@ -89,8 +80,6 @@ interface UserTypeSelectionProps {
     },
 :src/components/onboarding/UserTypeSelection.tsx
     {
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 
 
 
@@ -136,7 +125,7 @@ interface UserTypeSelectionProps {
         <p className=text-zion-slate-light mt-2'>;
           This helps us personalize your experience;
         </p>;
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
+      </div>;<div className='grid gap-4 md:grid-cols-3'>;
       </div>;<div className='grid gap-4 md:grid-cols-3>;
         {userTypes && userTypes.map(type => {const Icon = type && type.icon;
           const isSelected  = selectedType === type && type.id;onClick={() => onSelect(type && type.id)}
@@ -182,9 +171,8 @@ interface UserTypeSelectionProps {
         <p className='text - zion - slate - light mt - 2'>;
           This helps us personalize your experience;
         </p>;
-      </div>;
-      <div className=grid gap - 4 md:grid - cols - 3'>;
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
+      </div>;'
+      <div className='grid gap - 4 md:grid - cols - 3'>;
         {user_types.map (type => {const Icon = type.icon;
           const is_selected = selected_type === type.id;
               on_click={() => on_select (type.id)}
@@ -214,7 +202,6 @@ interface UserTypeSelectionProps {
                   {type.description}
                 </p>;
               </div>;
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
             </Button>);
         })}
                 />;
@@ -222,9 +209,7 @@ interface UserTypeSelectionProps {
         {userTypes.map((type) => {
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
           
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 
 
       <div className="grid gap-4 md: grid-cols-3>
@@ -241,26 +226,21 @@ interface UserTypeSelectionProps {
       name: Talent";
       description: "I want to showcase my skills and find opportunities;
       icon: Star;
-    },{id: client";
-      name: "Client;
-      description: I want to discover and hire talent or services";
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
+    },{id: "client";
+      name: "Client";
+      description: "I want to discover and hire talent or services";
       icon: User
     }
   ],
 
   return (
     <div className;
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
           return (
             <Button;
               key={type.id}
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
               onClick={() => onSelect(type.id)}
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 
 
 
@@ -280,8 +260,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               variant=outline              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected
                   ? 'border-zion-purple bg-zion-purple/10 text-zion-purple'
-                  : border-zion-blue-light hover:border-zion-cyan/50 text-white
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
+                  : 'border-zion-blue-light hover:border-zion-cyan/50 text-white'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
                   : border-zion-blue-light hover:border-zion-cyan/50 text-white"
@@ -319,7 +298,6 @@ interface UserTypeOption {"
   description: string,
   icon: React.ElementType;
 }
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 
 ;
 interface UserTypeSelectionProps {"
@@ -340,7 +318,6 @@ interface UserTypeSelectionProps {"
       description: I want to discover and hire talent or services",
       icon: User;
     }
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
   ],return (<div className;return (<Button;
               key={type.id}
               onClick={() => onSelect(type.id)}variant="outline;
@@ -393,7 +370,6 @@ import { useState } from "react,import { Button } from @/components/ui/button",i
           const isSelected = selectedType === type.id;
           return (<Button;
               key={type.id}
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
               onClick={() => onSelect(type.id)}
               variant=outline;
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${isSelected;
@@ -416,12 +392,9 @@ import { useState } from "react,import { Button } from @/components/ui/button",i
                 </p>;
               </div>;
             </Button>;
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
           );
 
         })}
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 
 
 
@@ -450,7 +423,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
   );
-<<<<<<< HEAD:src_backup/components/onboarding/UserTypeSelection.tsx
 :src/components/onboarding/UserTypeSelection.tsx
 }
 }

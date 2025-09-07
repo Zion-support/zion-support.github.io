@@ -1,23 +1,38 @@
+import Image from 'next/image';
+import { Loader2 } from 'lucide-react';
+import { useState } from 'react';
+interface YoutubeEmbedProps {
+  videoId: string;
+  title: string;
+  poster: string
+}
 
+export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
+  const [loaded, setLoaded] = useState(false);
+  const src = null;
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <div className="relative aspect-video max-w-3xl mx-auto>
       {!loaded && (
         <>
+<div className="absolute inset-0 flex items-center justify-center bg-black/30">
 
+            <Loader2 className="h-8 w-8 animate-spin text-white" />
           <Image
             src={poster}
             alt={`${title} poster`}
             fill
             className='object-cover rounded
           />
-          <div className=absolute inset-0 flex items-center justify-center bg-black/30'>
-            <Loader2 className='h-8 w-8 animate-spin text-white />
-
+          <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
+            <Loader2 className='h-8 w-8 animate-spin text-white' />
+origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </>
       )}
       <iframe
-        className={`absolute inset-0 w-full h-full ${loaded ? visible' : 'invisible}`}
+        className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
+
 
         onLoad={() => setLoaded(true)}
 
@@ -67,11 +82,15 @@ interface YoutubeEmbedProps  {videoId: string;
         loading=lazy";
         onLoad={() => setLoaded(true)}
 
-=======
+
   )
         loading="lazy;
         onLoad={() => setLoaded(true)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/YoutubeEmbed.tsx
+        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
+        allowFullScreen;
+      />;
+    </div>;
+  );
         allow=accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
@@ -85,8 +104,7 @@ interface YoutubeEmbedProps  {videoId: string;
 
 interface YoutubeEmbedProps {
   video_id: string;
-=======
-  )loading="lazy;
+  )loading="lazy";
         onLoad={() => setLoaded(true)}onLoad={() => setLoaded(true)}allowFullScreen;
       />;
     </div>;
@@ -96,7 +114,6 @@ interface YoutubeEmbedProps {
       />;
     </div>;
   )})}interface YoutubeEmbedProps  {video_id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/YoutubeEmbed.tsx
   title: string;
   poster: string;
 export default /**;
@@ -133,10 +150,18 @@ function YoutubeEmbed() {const [loaded, set_loaded] = useState (false)const src 
         allow=accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture";
         allowFullScreen;
       />;
+    </div>);
+}
+;
 
+        src={src}
         title={title}
 loading='lazy';
         onLoad={() => setLoaded(true)}
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/YoutubeEmbed.tsx
+        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+        allowFullScreen
+      />
+    </div>
+  );
+}
+origin/cursor/automate-test-improve-and-merge-code-2533

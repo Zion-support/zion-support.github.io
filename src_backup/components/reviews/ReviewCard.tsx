@@ -1,5 +1,7 @@
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
+import { Review } from "@/types/reviews",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Review } from "@/types/reviews,
 import { Avatar, AvatarFallback, AvatarImage } from @/components/ui/avatar",
 import { Button } from "@/components/ui/button;
@@ -36,7 +38,6 @@ onReport: (reviewId: string, reason: string) => Promise<boolean>;
 setIsReporting (true)const success = await onReport (review.id, reportReason)setIsReporting (false)if (success) {export function ReviewCard() {const [reportReason, setReportReason] = useState(')const [isReporting, setIsReporting] = useState(false)const [isReportDialogOpen, setIsReportDialogOpen] = useState(false)const handleReport = async () => {if (!reportReason.trim()) return;
     setIsReporting(true)const success = await onReport(review.id, reportReason)setIsReporting(false)if (success) {setReportReason(')setIsReportDialogOpen(false)}
   }
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
   const renderStars = (rating?: number) => {
     if (!rating) return null
     return (
@@ -309,10 +310,23 @@ if (return null) {$2;
               {review.reviewer_profile?.avatar_url ? (<AvatarImage src={review && review.reviewer_profile.avatar_url} alt={review && review.reviewer_profile.display_name} />;
               ) : (<AvatarFallback>;
                   {review && review.reviewer_profile?.display_name ? ;
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
                     getInitials(review && review.reviewer_profile.display_name) : "??"}
 
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
+import { Review } from "@/types/reviews",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogTrigger} from "@/components/ui/dialog",;
+import { Textarea } from "@/components/ui/textarea",;
+interface ReviewCardProps {;
+  review: Review,;
 import { Review } from @/types/reviews,
 import { Button } from @/components/ui/button,
   Dialog,
@@ -396,7 +410,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               )}
             </Avatar>
           )}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 <div>
             <div className='font-medium'>
               {review.is_anonymous
@@ -418,7 +431,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='text-sm text-muted-foreground'>;
               {formatDistanceToNow(new Date(review.created_at), {addSuffix: true;
               })}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
             </div>
           </div>
         </div>
@@ -527,7 +539,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {review.timeliness_rating}/5;
                 </span>;
               </Badge>)}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
             {review.would_work_again !== undefined && (
               <Badge;
                 variant={review.would_work_again ? 'default' : secondary}
@@ -737,9 +748,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             )}
           </div>;
         </div>;
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
       )}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -774,7 +783,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
 If you believe this review violates our community guidelines,
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -850,7 +858,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>;
               <Button;
                 onClick={handleReport}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
                 disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? Submitting...' : 'Submit Report}
@@ -885,7 +892,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </DialogFooter>
           </DialogContent>
         </Dialog>
-<<<<<<< HEAD:src_backup/components/reviews/ReviewCard.tsx
       </div>
     </div>
   );

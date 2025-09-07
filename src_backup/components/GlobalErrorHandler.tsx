@@ -9,12 +9,12 @@ import React, {createContext;
   useState;
   useCallback;
   ReactNode;
-} from 'react;
-import { toast  } from @/hooks/use-toast';
-import { Button  } from '@/components/ui/button;
-import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield  } from lucide-react';
-import * as Sentry from '@sentry/nextjs;
-<<<<<<< HEAD:src_backup/components/GlobalErrorHandler.tsx
+} from 'react';
+import { toast  } from '@/hooks/use-toast';
+import { Button  } from '@/components/ui/button';
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield  } from 'lucide-react';
+import * as Sentry from '@sentry/nextjs';
+import {logErrorToProduction} from '@/utils/productionLogger';
 import {logErrorToProduction} from @/utils/productionLogger';
 interface ErrorContextType {
   reportError: (error: Error, context?: any) => void;
@@ -489,7 +489,6 @@ export function useErrorHandler() { return null; }
     handleAsyncOperation}    report_error;
     handleApiError;
     handleAsyncOperation}
-<<<<<<< HEAD:src_backup/components/GlobalErrorHandler.tsx
 }
 
         : undefined});

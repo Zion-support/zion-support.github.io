@@ -83,7 +83,7 @@ export const AvatarMenu: React.FC = () => {const { user, logout, avatarUrl }  = 
         <DropdownMenuSeparator />;
         <DropdownMenuItem;
           onClick={logout}
-<<<<<<< HEAD:src_backup/components/header/AvatarMenu.tsx
+          className='flex items-center cursor-pointer'
           className='flex items-center cursor-pointer
         >
           <LogOut className=mr-2 h-4 w-4' />

@@ -49,4 +49,3 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     </div>
   )
 }
-

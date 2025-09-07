@@ -45,7 +45,7 @@ export function AppHeader() {
     // This functions main job is just to open the modal.
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
-
+  };
   
   return (
     <>
@@ -61,7 +61,17 @@ export function AppHeader() {
           {showTagline && (
             <span className=ml-4 hidden text-sm text-muted-foreground md:inline">
               {t('home.header_tagline')}
-
+            </span>
+          )}
+          <div className="ml-6 flex-1 hidden md:block">
+            <nav role="navigation" aria-label="Main navigation">
+              <ResponsiveNavigation openLoginModal={openLoginModal} />
+            </nav>
+          </div>
+          
+          {/* Mobile menu button */}
+          <div className="md:hidden ml-auto mr-4">
+            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring
               aria-expanded={mobileMenuOpen}
@@ -80,10 +90,16 @@ export function AppHeader() {
           {!isLoggedIn && (
             <div className="ml-4 relative z-10 flex items-center>
               <Link
-                href=/auth/login"
-                className="text-sm font-medium text-foreground/70 hover:text-foreground
-                aria-label={t(auth.login)}
-
+                href="/auth/login"
+                className="text-sm font-medium text-foreground/70 hover:text-foreground"
+                aria-label={t('auth.login')}
+                data-testid="login-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  // For the main login link, we might not have a specific returnTo beyond current page;
+                  // or we could default to dashboard.
+                  // For consistency with how sub-menus now set it:
+                  router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
                   openLoginModal(router.asPath)
                 }}
               >
@@ -132,4 +148,3 @@ export function AppHeader() {
     </>
   )
 }
-

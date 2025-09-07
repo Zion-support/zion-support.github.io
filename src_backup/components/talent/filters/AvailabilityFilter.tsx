@@ -1,5 +1,5 @@
-<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
-<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
 import { Checkbox } from "@/components/ui/checkbox;
 import { AvailabilityFilterProps } from @/types/filters";
 
@@ -7,10 +7,9 @@ return (<div className='mb-6 border-b border-zion-blue-light pb-6>;import { Chec
 import { AvailabilityFilterProps  } from '@/types/filters;
 const AVAILABILITY_OPTIONS = null;
 const AVAILABILITY_OPTIONS = [;
-  { id: full_time', label: 'Full-time }
-  { id: part_time', label: 'Part-time }
-  { id: project', label: 'Project-based }
-<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
+  { id: 'full_time', label: 'Full-time' }
+  { id: 'part_time', label: 'Part-time' }
+  { id: 'project', label: 'Project-based' }
 ]
 export function AvailabilityFilter({
   selectedAvailability
@@ -177,7 +176,6 @@ export /**;
               </label>;
             </div>))}
         </div>)}
-<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
     </div>);
   toggle_section;
 }className="flex w - full items - center justify - between text - white font - medium" > <span > Availability</span>) : (<ChevronDown className=h - 4 w - 4 text - zion - slate - light />);
@@ -200,7 +198,7 @@ import { AvailabilityFilterProps } from @/types/filters,
   { id: "project", label: Project-based }
 ]
 
-<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
+        <div className='mt-4 space-y-2'>
         <div className='mt-4 space-y-2>
           {AVAILABILITY_OPTIONS.map(option => (
             <div key={option.id} className=flex items-center'>
@@ -235,12 +233,15 @@ export function AvailabilityFilter() {return (<div className=mb-6 border-b borde
                 id={`availability-${option.id}`}
                 checked={selectedAvailability.includes(option.id)}
                 onCheckedChange={() => toggleAvailability(option.id)}
-<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
+className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
+              />
+              <label
+                htmlFor={`availability-${option.id}`}
+                className='ml-2 text-sm text-zion-slate-light cursor-pointer'
 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple
               />
               <label
                 htmlFor={`availability-${option.id}`}
-<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
                 className=ml-2 text-sm text-zion-slate-light cursor-pointer'
               >
                 {option.label}

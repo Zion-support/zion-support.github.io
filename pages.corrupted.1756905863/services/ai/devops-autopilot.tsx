@@ -1,5 +1,4 @@
 
-
 ;
 ursor/automate-test-improve-and-merge-code-646c;
 
@@ -18,15 +17,14 @@ interface DevopsautopilotProps {
 
 
 }
-
+export default function Devopsautopilot({ }: DevopsautopilotProps) {
+export default function Devopsautopilot({}: DevopsautopilotProps) {
   return (
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
     <div>
       <h1>Devopsautopilot</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
 
 }
@@ -35,6 +33,3 @@ interface DevopsautopilotProps {
 
 
 
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

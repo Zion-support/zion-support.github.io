@@ -309,4 +309,5 @@ export function ChatBotPanel() {
         </form>
       </div>
     </div>
-
+  )
+}

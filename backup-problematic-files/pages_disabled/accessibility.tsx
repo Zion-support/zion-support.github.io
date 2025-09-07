@@ -1,8 +1,7 @@
-import React from 'react;
+import React from 'react';
+import React from 'react';
 
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 interface AccessibilityProps {
   className?: string;
 }
@@ -313,10 +312,9 @@ interface AccessibilityProps  {className?: string;
         </section>
       </div>
     </MainLayout>
-
-=======
   );
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+  );
+};
 }
 
 export default Accessibility;

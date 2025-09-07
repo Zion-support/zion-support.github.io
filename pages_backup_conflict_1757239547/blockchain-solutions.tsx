@@ -1,4 +1,11 @@
-<
+<<<<<<<< HEAD:temp_conflicts/pages/blockchain-solutions.jsx
+
+import Head from 'next/head';
+const BlockchainSolutions = () => {
+import type { NextPage } from 'next';
+import Head from 'next/head';
+const BlockchainSolutions: NextPage;
+const BlockchainSolutions: NextPage = () => {
   return (
     <div>
       <Head>
@@ -12,4 +19,9 @@
       </main>
     </div>
   )
-<
+<<<<<<<< HEAD:temp_conflicts/pages/blockchain-solutions.jsx
+},
+
+export default BlockchainSolutions,
+}
+export default BlockchainSolutions;

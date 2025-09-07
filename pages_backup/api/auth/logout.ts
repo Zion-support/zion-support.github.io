@@ -31,13 +31,9 @@ function handler() {
 }
 
 
-
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/logout.ts
-=======
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import { clearUserCookie } from '../../../utils/auth';
+ursor/fix-website-loading-errors-and-merge-6662
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: Forbidden' });
@@ -48,11 +44,5 @@ export default function handler(req, res) {
 }
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/logout.ts
-=======
 
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

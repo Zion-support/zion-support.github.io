@@ -1,6 +1,8 @@
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+import React from 'react';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { toast } from '@/hooks/use-toast';
 import React from 'react;
 import { Badge } from @/components/ui/badge';
 import { Button } from '@/components/ui/button;
@@ -35,7 +37,9 @@ import React from react",import { Badge } from "@/components/ui/badge,import { B
   CardDescription;
   CardFooter;
   CardHeader;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
+  CardTitle} from "@/components/ui/card",
+import { Sparkles } from 'lucide-react'
+import { Progress } from "@/components/ui/progress";
   CardTitle} from "@/components/ui/card,
 import { Sparkles } from 'lucide-react
 import { Progress } from @/components/ui/progress";
@@ -57,7 +61,6 @@ export function UsageStats() {
           Configure usage limits for your team to manage your subscription resources.
         </p>
       </div>
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 
 return (
 
@@ -66,7 +69,6 @@ return (
       <div className=grid grid-cols-1 lg:grid-cols-2 gap-6">
 
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 
         <Card>
           <CardHeader>
@@ -97,9 +99,7 @@ return (
           </CardFooter>
         </Card>
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 
         
 
@@ -134,9 +134,7 @@ return (
           </CardFooter>
         </Card>
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
         
 
 
@@ -170,9 +168,7 @@ return (
           </CardFooter>
         </Card>
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
         
 
 
@@ -222,9 +218,7 @@ return (
         </Card>
       </div>
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
       
       <div className=bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4>
@@ -529,10 +523,7 @@ export function UsageStats() {const handleSaveChanges = () => {toast({title: Lim
             </Button>;
           </CardFooter>;
         </Card>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
       </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
 
       <div className=bg - muted / 50 rounded - lg p - 6 flex items - center justify - between'>;
       </div>;</div>;
@@ -549,7 +540,6 @@ export function UsageStats() {const handleSaveChanges = () => {toast({title: Lim
           </div>;
         </div>;<Button > Contact Us</Button>;
       </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/UsageStats.tsx
     </div>);
 }"}
 

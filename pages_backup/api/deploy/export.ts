@@ -1,5 +1,4 @@
-
-import type { NextApiRequest, NextApiResponse } from 'next;
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse): Promise<void> {
   res.status(200).json({ message: Export endpoint' });
@@ -67,11 +66,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 }
-
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
     console.error("Error:, error);
     return res.status(500).json({ error: Internal server error" });
@@ -80,14 +76,8 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/deploy/export.ts
-=======
-
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

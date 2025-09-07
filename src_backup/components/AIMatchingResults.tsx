@@ -22,7 +22,6 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
   project_description?: string;
   service_type?: string;interface AIMatchingResultsProps  {matches: MatchResultItem[],onSelectMatch?: (match: MatchResultItem, ) => void,is_loading?: boolean,project_description?: string,service_type?: string;
 }
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 export /**
  * AIMatchingResults - Function description
  */
@@ -75,10 +74,8 @@ if ( {) {$2;
           <Skeleton className='h-[120px] w - full />;
           <Skeleton className=h-[120px] w - full' />;
         </div>;
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
       </div>);
   }
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 
 
 
@@ -221,7 +218,6 @@ export function AIMatchingResults({
           )}
         </CardContent>;
       </Card>;
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
     );
   }
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
@@ -252,8 +248,7 @@ export function AIMatchingResults({
             Equipment ({categories && categories.equipment.length})</TabsTrigger>;
         </TabsList>;{Object && Object.entries(categories).map(([tab, items]) => (<TabsContent key={tab} value={tab} className=mt-4 space-y-3'>;
             {items && items.length > 0 ? (items && items.map(match => {const CategoryIcon  = getCategoryIcon(match && match.category)onClick={() => onSelectMatch && onSelectMatch(match)}                  >;
-                    <div className='flex>;
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
+                    <div className='flex'>;
                       <div
                         className={cn(
                           w-2',
@@ -272,7 +267,6 @@ export function AIMatchingResults({
                           <Avatar className=h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (;
 
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 
 import Skeleton from @/components/ui/skeleton';
 import { cn } from '@/lib/utils;
@@ -296,7 +290,10 @@ interface AIMatchingResultsProps {
 export function AIMatchingResults({matches;
   onSelectMatch;
   isLoading;
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
+    <div className="space-y-4">
+      <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
+          <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">
     <div className="space-y-4>
       <Tabs defaultValue=all" value={activeTab} onValueChange={setActiveTab} className="w-full>
         <TabsList className=bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
@@ -448,7 +445,6 @@ if ( {) {$2;
                               )}</div>;
                                 </div>;
                               )}
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 
 
 
@@ -460,7 +456,6 @@ if ( {) {$2;
                                 </div>
                               )}
                             </div>
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 
                             <div className="mt-2 flex flex-wrap gap-1>
                               <Badge variant=outline">
@@ -473,10 +468,8 @@ if ( {) {$2;
                       </div>;
                     </div>;)}
           </TabsContent>;
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
         ))}
 
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 
 }
 
@@ -491,9 +484,7 @@ if ( {) {$2;
               </div>)}
           </TabsContent>))}
       </Tabs>;
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
     </div>);
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
 }
 
       </Tabs>

@@ -75,4 +75,39 @@ export function ITServicePricingTable() {
                   <ArrowUpDown className=h-4 w-4" />
                 </Button>
               </TableHead>
-
+              <TableHead className="text-right text-zion-cyan font-medium">
+                <Button 
+                  variant="ghost" 
+                  onClick={() => handleSort("pricePerIncident")}
+                  className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
+                >
+                  <span>Price Per Incident</span>
+                  <ArrowUpDown className="h-4 w-4" />
+                </Button>
+              </TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody className="bg-zion-blue-dark">
+            {sortedData.length > 0 ? (
+              sortedData.map((item) => (
+                <TableRow key={item.country} className="border-b border-zion-blue-light hover:bg-zion-blue/50">
+                  <TableCell className="flex items-center space-x-2">
+                    <Globe className="h-4 w-4 text-zion-purple" />
+                    <span className="text-white">{item.country}</span>
+                  </TableCell>
+                  <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
+                </TableRow>
+              ))
+            ) : (
+              <TableRow>
+                <TableCell colSpan={2} className="text-center py-10 text-zion-slate-light">
+                  No countries match your search
+                </TableCell>
+              </TableRow>
+            )}
+          </TableBody>
+        </Table>
+      </div>
+    </div>
+  )
+}

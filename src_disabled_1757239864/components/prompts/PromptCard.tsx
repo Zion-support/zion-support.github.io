@@ -34,4 +34,3 @@ export function PromptCard({ prompt }: PromptCardProps) {
     </div>
   )
 }
-

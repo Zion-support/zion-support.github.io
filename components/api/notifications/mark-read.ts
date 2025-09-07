@@ -1,6 +1,6 @@
 
   try {
-    }
+  try {}
     const userId = getUserId(req);
     const { error } = await supabase
       .from('notifications')
@@ -9,7 +9,6 @@
       .eq(user_id, userId);
     if (error) return res && res.status(200).json({ ok: true }); // tolerate in dev;
     return res && res.status(200).json({ ok: true });
-
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split(=)[1]);
   if (req && req.method !== 'POST')
@@ -33,6 +32,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { id } = req.body as { id?: string },
     if (!id) return res.status(400).json($2);
       .from('notifications')
+      .update({ read_status: true})
+      .eq('id', id)
+      .eq($2);
+    if (error) return res.status(200).json({ ok: true}), // tolerate in dev
 
-});
-  }
+    return res.status(200).json({ ok: true})

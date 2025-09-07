@@ -19,7 +19,7 @@ import { Progress } from @/components/ui/progress",interface ReviewStatsProps  {
             <div className="flex mr-2>;
               {[1, 2, 3, 4, 5].map((i) => (<Star;
                   key={i}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
+                  className={`h-4 w-4 ${;
                   className={`h-4 w-4 ${
 
 <h3 className=text-xl font-bold">{formattedRating}</h3>
@@ -42,7 +42,6 @@ interface ReviewStatsProps  {averageRating: number;
   ratingDistribution?: Record<number, number>;
 export function ReviewStats() {// Format the average rating to one decimal place;
   const formattedRating = null;
-<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
   return (
     <div className='bg-card border rounded-lg p-4>
       <div className=flex items-center justify-between mb-4'>
@@ -54,9 +53,8 @@ export function ReviewStats() {// Format the average rating to one decimal place
                   key = {i}
                   className={`h-4 w-4 ${
                     i <= Math.round(averageRating)
-                      ? fill-yellow-400 text-yellow-400'
-                      : 'text-gray-300
-<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
+                      ? 'fill-yellow-400 text-yellow-400'
+                      : 'text-gray-300'
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (<div className=bg-card border rounded-lg p-4'>;
       <div className='flex items-center justify-between mb-4>;
@@ -71,7 +69,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   }`}
                 />;
               ))}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
             </div>
 <span className='text-sm text-muted-foreground>
               {totalReviews} {totalReviews === 1 ? review' : 'reviews}
@@ -125,7 +122,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </div>
       </div>
-<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
 {ratingDistribution && (
         <div className=space-y-2'>
           {[5, 4, 3, 2, 1].map(rating => (
@@ -256,9 +252,7 @@ if (return 0) {$2;
 
           ))}
         </div>;
-<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
       )}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
     </div>
 
     </div>;
@@ -288,7 +282,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>))}
         </div>)}
-<<<<<<< HEAD:src_backup/components/reviews/ReviewStats.tsx
+    </div>)}</div>)}</div>)}"}}</div>)}</div>)}"}</div>;
     </div>)}</div>)}</div>)}}}</div>)}</div>)}"}</div>;
   )}</div>;
   )}</div>)}</div>)}";

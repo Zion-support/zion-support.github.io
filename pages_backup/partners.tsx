@@ -1,8 +1,7 @@
-
-import React from 'react;
-
-import Head from next/head';
-import Link from 'next/link;
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
+import Head from 'next/head';
+import Link from 'next/link';
 import {
   Handshake,
   Award,
@@ -150,9 +149,8 @@ const Page = () => {
 
 export default Page;
 
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import Head from 'next/head;
 import { motion } from framer-motion';
 import { Handshake, Globe, Rocket, Brain, Atom, Shield;
@@ -776,7 +774,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }> <h2 className=text-4xl font-bold text-white mb-6" > Ready to Partner with Us? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto > Join our ecosystem of technology leaders and create innovative solutions that drive business transformation and growth. </p> Partnership Inquiry </button> <button className=px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Download Partnership Guide </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

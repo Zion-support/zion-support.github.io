@@ -16,6 +16,8 @@
   // TODO: Implement
 >>>>>>> cursor/automate-test-improve-and-merge-code-18b6
     if (!email) {
+  // TODO: Implement
+    if (!email) {
       }
       res.statusCode = 400;
 

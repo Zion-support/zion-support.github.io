@@ -1,6 +1,5 @@
-
-import React from 'react;
-import MainLayout from ../components/layout/MainLayout';
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
   return (
@@ -21,8 +20,7 @@ const Page = () => {
 export default Page;
 
 
-
-import React, { useState } from 'react,
+import React, { useState } from 'react',
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Head from next/head';
 import Layout from '../components/layout/Layout;
@@ -34,16 +32,13 @@ import Layout from '../components/layout/Layout
 
 
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/blog.tsx
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+export default function BlogPage() {
+ursor/fix-website-loading-errors-and-merge-6662
+
+
 export default function BlogPage() {}
 
 
@@ -67,13 +62,14 @@ import React, { useState } from react';
 
 
 
-
-import Head from 'next/head;
-import Layout from ../components/layout/Layout';
-import Head from next/head',
-import Layout from '../components/layout/Layout,
-import Head from 'next/head
-import Layout from ../components/layout/Layout'
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import React, { useState } from 'react',
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
 
 
 export default function BlogPage() {
@@ -89,20 +85,15 @@ export default function BlogPage() {
 			</section>
 		</Layout>
 	)
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/blog.tsx
-=======
+}
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
     console.error(Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
+;
 
 
 
@@ -124,6 +115,4 @@ export default function BlogPage() {
     </Layout>
   );
 
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -100,7 +100,6 @@ function AIMatchmaker() {const [query, set_query] = useState (')const [is_matchm
 }
       toast ({title: 'Please enter a description,description: "Tell us what youre looking for so we can find matches.,variant: 'destructive'})return;
     }
-<<<<<<< HEAD:src_backup/components/AIMatchmaker.tsx
     setIsMatchmaking (true);
     setHasSearched (true);
     try {
@@ -141,7 +140,8 @@ interface AIMatchmakerProps {
   serviceType?: string;
 onMatchSelect?: (match: any) => void;
 className?: string ;
-<<<<<<< HEAD:src_backup/components/AIMatchmaker.tsx
+}if (!query && query.trim () ) {;
+  toast ({;
 }if (!query && query.trim () ) {
   toast ({
   return;
@@ -243,7 +243,6 @@ if ( {) {$2;
         </p>;
       </CardHeader>;
       <CardContent>;
-<<<<<<< HEAD:src_backup/components/AIMatchmaker.tsx
 
 
   },
@@ -294,7 +293,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             />;
             <Button;
               onClick={handleSearch}
-<<<<<<< HEAD:src_backup/components/AIMatchmaker.tsx
               disabled={isMatchmaking}
 
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white;

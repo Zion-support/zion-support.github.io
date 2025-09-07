@@ -1,6 +1,5 @@
-import React from 'react;
-
-import MainLayout from ../components/layout/MainLayout';
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
 
 export default function TestPage() {
   return (
@@ -14,10 +13,9 @@ export default function TestPage() {
     </MainLayout>
   );
 }
-
-import Layout from '../components/Layout;
-import Layout from ../components/Layout';
-import Head from 'next/head;
+import Layout from '../components/Layout';
+import Layout from '../components/Layout';
+import Head from 'next/head';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
@@ -88,13 +86,6 @@ origin/main
 
 
 }
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/test.tsx
-=======
+}
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

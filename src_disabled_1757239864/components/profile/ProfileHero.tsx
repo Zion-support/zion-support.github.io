@@ -6,7 +6,25 @@ avatarUrl?: string;
   aiScore?: number;
 
 
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Badge } from "@/components/ui/badge";
+import { Star } from 'lucide-react'
+import { cn } from "@/lib/utils";
+interface ProfileHeroProps {
+  name: string,
+  title: string,
+  avatarUrl?: string;
+  coverImageUrl?: string;
+  location?: string;
+  rating?: number;
+  reviewCount?: number;
+  aiScore?: number;
+  profileType: 'service' | 'talent'
+}
 
+export function ProfileHero({
+  name;
   title;
   avatarUrl;
   coverImageUrl;
@@ -38,12 +56,20 @@ avatarUrl?: string;
               {avatarUrl ? (
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
-                <AvatarFallback className=bg-zion-purple/20 text-zion-cyan text-xl">
-
-                  variant="outline 
+                <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
+                  {name.substring(0, 2).toUpperCase()}
+                </AvatarFallback>
+              )}
+            </Avatar>
+            
+            <div className="mt-4 md:mt-0 md:ml-6 md:mb-1">
+              <div className="flex flex-wrap items-center gap-2 mb-1">
+                <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
+                <Badge 
+                  variant="outline" 
                   className={cn(
-                    ml-2 border-zion-purple/50 text-zion-cyan";
-                    profileType === 'service ? "bg-zion-purple/10 : bg-zion-cyan/10"
+                    "ml-2 border-zion-purple/50 text-zion-cyan";
+                    profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                 >
                   {profileType === service' ? 'Service Provider : Talent'}
@@ -80,4 +106,17 @@ avatarUrl?: string;
                     )}
                   </div>
                 )}
-
+                
+                {aiScore && (
+                  <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
+                    AI Match: {aiScore}%
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

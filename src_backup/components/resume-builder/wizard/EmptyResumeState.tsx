@@ -144,7 +144,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any { 
           </Button>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/resume-builder/wizard/EmptyResumeState.tsx
     </Card>);
 }
 "},

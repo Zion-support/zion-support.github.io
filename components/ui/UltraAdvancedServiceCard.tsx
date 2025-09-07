@@ -3,12 +3,89 @@ import { ArrowRight, ExternalLink, Star, TrendingUp;
   }
   Users, Zap, Shield, Clock, Check, Brain;
   Rocket, Dna, DollarSign, Lock, Globe
-
+ } from 'lucide-react';
+origin/cursor/automate-test-improve-and-merge-code-2533
 interface UltraAdvancedServiceCardProps {
-=======
   Rocket, Dna, DollarSign, Lock, Globe;
 interface UltraAdvancedServiceCardProps {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import {;
+  }
+  ArrowRight,;
+  ExternalLink,;
+  Star,;
+  TrendingUp,;
+  Users,;
+  Zap,;
+  Shield,;
+  Clock,;
+  Check,;
+  Brain,;
+  Rocket,;
+  Dna,;
+  DollarSign,;
+  Lock,;
+  Globe,;} from 'lucide-react';'
+
+;
+import { ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe,} from 'lucide-react';
+import { ArrowRight;
+  ExternalLink;
+  Star;
+  TrendingUp;
+  Users;
+  Zap;
+  Shield;
+  Clock;
+  Check;
+  Brain;
+  Rocket;
+  Dna;
+  DollarSign;
+  Lock;
+  Globe; } from 'lucide-react';
+  Users, Zap, Shield, Clock, Check, Brain;
+  Rocket, Dna, DollarSign, Lock, Globe;
+
+
+import React, { useState } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { ArrowRight, ExternalLink, Star, TrendingUp;
+  Lock,;'
+  Globe,;} from 'lucide-react';
+  Users, Zap, Shield, Clock, Check, Brain;
+  Rocket, Dna, DollarSign, Lock, Globe;
+  } from 'lucide-react';'
+
+interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe} from 'lucide-react';'
+  Users, Zap, Shield, Clock, Check, Brain;
+  Rocket, Dna, DollarSign, Lock, Globe;interface UltraAdvancedServiceCardProps  {service: {id: string;
+import {
+  ArrowRight
+  ExternalLink
+  Star
+  TrendingUp
+  Users
+  Zap
+  Shield
+  Clock
+  Check
+  Brain
+  Rocket
+  Dna
+  DollarSign
+  Lock
+  Globe;} from 'lucide-react';
+interface UltraAdvancedServiceCardProps {
+  service: {import {
+  ArrowRight, ExternalLink, Star, TrendingUp
+  Users, Zap, Shield, Clock, Check, Brain;
+  Rocket, Dna, DollarSign, Lock, Globe
+interface UltraAdvancedServiceCardProps {
+  service: {
+    id: string;
+interface UltraAdvancedServiceCardProps {;
+  service: {;
+    id: string;
 import {
   ArrowRight,
   ExternalLink,
@@ -24,22 +101,15 @@ import {
   Dna,
   DollarSign,
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 import React, { useState } from react';
 import { motion, AnimatePresence  } from 'framer-motion;
-=======
   Lock,
   Globe} from 'lucide-react';
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   Users, Zap, Shield, Clock, Check, Brain;
 
-=======
 interface UltraAdvancedServiceCardProps {
   service: {
     id: string;
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     name: string;
     tagline: string;
     price: string;
@@ -48,9 +118,10 @@ interface UltraAdvancedServiceCardProps {
     features: string[];
     popular: boolean;
     icon: string;
-
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+    color: string;website: string;
+    }reviews: number;
+  }service: {id: string,name: string,tagline: string,price: string,period: string,description: string,features: string[],popular: boolean,icon: string,color: string,textColor: string,link: string,marketPosition: string,targetAudience: string,trialDays: number,setupTime: string,category: string,realService: boolean,technology: string[],integrations: string[],useCases: string[],roi: string,competitors: string[],marketSize: string,growthRate: string,variant: string,contactInfo: {mobile: string,email: string,address: string,website: string;
+    }
 
       website: string;
     }
@@ -62,44 +133,270 @@ interface UltraAdvancedServiceCardProps {
     customers: number;
     rating: number;
 
+      website: string;
+    }
 
+    textColor: string;
+    link: string;
+    marketPosition: string;
+    targetAudience: string;
+    trialDays: number;
+    setupTime: string;
+    category: string;
+    realService: boolean;
+    technology: string[];
+    integrations: string[];
+    useCases: string[];
+    roi: string;
+    competitors: string[];
+    marketSize: string;
+    growthRate: string;
+    variant: string;
+    contactInfo: {mobile: string;
+      email: string;
+      address: string;
+      website: string;
+    },realImplementation: boolean;
+    implementationDetails: string;
+    launchDate: string;
+    customers: number;
+    color: string;
+
+      website: string;
+    }
+
+
+    reviews: number;
+  };
+
+
+
+
+} from 'lucide-react',
+
+interface UltraAdvancedServiceCardProps {
+  service: {
+    id: string,
+    name: string,
+    tagline: string,
+    price: string,
+    period: string,
+    description: string,
+    features: string[],
+    popular: boolean,
+    icon: string,
+    color: string,
+    textColor: string,
+    link: string,
+    marketPosition: string,
+    targetAudience: string,
+    trialDays: number,
+    setupTime: string,
+    category: string,
+    realService: boolean,
+    technology: string[],
+    integrations: string[],
+    useCases: string[],
+    roi: string,
+    competitors: string[],
+    marketSize: string,
+    growthRate: string,
+    variant: string,
+    contactInfo: {
+      mobile: string,
+      email: string,
+      address: string,
+      website: string
+    };
+    if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;
+    if (category.includes('Space')) return <Rocket className="w-4 h-4" />;
+    if (category.includes('Biotech') |category.includes('Healthcare')) return <Dna className="w-4 h-4" />;
+    if (category.includes('Finance') |category.includes('Trading')) return <DollarSign className="w-4 h-4" />;
+    if (category.includes('Security') |category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;
+    if (category.includes('Internet') |category.includes('Network')) return <Globe className="w-4 h-4" />;
+    return <Zap className="w-4 h-4" />;
+  }
+}
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {const [isExpanded, setIsExpanded] = useState(false)const [isHovered, setIsHovered] = useState(false)const getCategoryIcon = (category: string) => {if (category && category.includes('AI') || category && category.includes('Machine Learning'))return <Brain className='w-4 h-4' />;
+    if (category && category.includes('Quantum')) return <Zap className='w-4 h-4' />;
+    if (category && category.includes('Space')) return <Rocket className='w-4 h-4' />;
+    if (category && category.includes('Biotech') || category && category.includes('Healthcare'))return <Dna className='w-4 h-4' />;
+    if (category && category.includes('Finance') || category && category.includes('Trading'))return <DollarSign className='w-4 h-4' />;
+    if (category && category.includes('Security') || category && category.includes('Cybersecurity'))return <Lock className='w-4 h-4' />;
+    if (category && category.includes('Internet') || category && category.includes('Network'))return <Globe className='w-4 h-4' />;
+    return <Zap className='w-4 h-4' />;  }const containerVariants = {hidden: { opacity: 0, y: 20 },visible: {      opacity: 1,y: 0,transition: {duration: 0 && 0.6,ease: 'easeOut' as const,},},    hover: {y: -10,transition: {duration: 0 && 0.3,ease: 'easeOut' as const,},},  }}
+    }
+  }const contentVariants = {hidden: { opacity: 0, height: 0 },visible: {height: 'auto',transition: {duration: 0 && 0.5,ease: 'easeOut' as const,},isHovered ? 'opacity-100' : 'opacity-50';
+        ease: 'ease_out' as const,},},{/* Glow Effect */}
+      <div  return (<motion.div;
+      className="relative group";
+      variants={container_variants}
+      initial="hidden";
+      animate="visible";
+      address: string;
+      website: string
+    },
+    realImplementation: boolean;
+    implementationDetails: string;
+    launchDate: string;
+    customers: number;
+    rating: number;
+origin/cursor/automate-test-improve-and-merge-code-2533
+    reviews: number
+  }
+}
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {}
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);'
+    if (category.includes('Quantum')) return <Zap className="w-4 h-4" />;'"
+    if (category.includes('Space')) return <Rocket className="w-4 h-4" />;'"
+    if (category.includes('Biotech') |category.includes('Healthcare')) return <Dna className="w-4 h-4" />;'"
+    if (category.includes('Finance') |category.includes('Trading')) return <DollarSign className="w-4 h-4" />;'"
+    if (category.includes('Security') |category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />;'"
+    if (category.includes('Internet') |category.includes('Network')) return <Globe className="w-4 h-4" />"
+    return <Zap className="w-4 h-4" />
+  }
+}
+const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {;
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const getCategoryIcon = (category: string) => {;'
+    if (category && category.includes('AI') || category && category.includes('Machine Learning'));'
+      return <Brain className='w-4 h-4' />;'
+    if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;'
+    if (category.includes('Space')) return <Rocket className='w-4 h-4' />;'
+    if (category.includes('Biotech') |category.includes('Healthcare'))return <Dna className='w-4 h-4' />;'
+    if (category.includes('Finance') |category.includes('Trading'))return <DollarSign className='w-4 h-4' />;'
+    if (category.includes('Security') |category.includes('Cybersecurity'))return <Lock className='w-4 h-4' />;'
+    if (category.includes('Internet') |category.includes('Network'))return <Globe className='w-4 h-4' />;'
+return <Zap className='w-4 h-4' />;'
+};
+
+
+const contentVariants = {
+    }
+    "hidden": { "opacity": 0, "height": 0
+},
+"visible": {
+      }
+      "opacity": 1,
+      "height": 'auto','
+      "transition": {
+        }
+        "duration": 0.5,
+        "ease": 'easeOut' as const,'
       }
     }
-  }
+  };
 
-
-      while_hover="hover;
+  const contentVariants = {;
+    hidden: { opacity: 0, height: 0 },;
+    visible: {;'
+      height: 'auto',;
+      transition: {;
+        duration: 0 && 0.5,;'
+        ease: 'easeOut' as const,;
+      },;
+'
+          isHovered ? 'opacity-100' : 'opacity-50';'
+        ease: 'ease_out' as const,
+      },
+    },
+      {/* Glow Effect */}
+      <div  return (
+    <motion.div;"
+      className="relative group";
+      variants={container_variants}"
+      initial="hidden";"
+      animate="visible";"
+      while_hover="hover";
       onHoverEnd={() => setIsHovered (false)}
     >;
       {/* Glow Effect */}
       <div;
+        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${is_hovered ? 'opacity - 100' : 'opacity - 50';
+        }`}
+        style={{background: `linear - gradient (135deg, ${service.color})`,transform: is_hovered ? 'scale (1.05)' : 'scale (1)',}}
+      />;
+      {/* Main Card */}
+      <div        className={`relative bg - gradient - to - br ${service.color} p - 1 rounded - 2xl transition - all duration - 500 ${is_hovered ? 'shadow - 2xl' : 'shadow - lg';
+        }`}
+      >;
+        <div className='bg - gray - 900 / 90 backdrop - blur - xl rounded - 2xl p - 6 h - full'>        className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${is_hovered ? 'opacity - 100' : 'opacity - 50';
+        }`}
+      <div;
+      <div 
+
 
   const getCategoryIcon = null;
-      return <Brain className='w-4 h-4 />;
-    if (category.includes(Quantum')) return <Zap className='w-4 h-4 />;
-    if (category.includes(Space')) return <Rocket className='w-4 h-4 />;
+      return <Brain className='w-4 h-4' />;
+    if (category.includes('Quantum')) return <Zap className='w-4 h-4' />;
+    if (category.includes('Space')) return <Rocket className='w-4 h-4' />;
+    if (category.includes('Biotech') |category.includes('Healthcare'))return <Dna className='w-4 h-4' />;
+    if (category.includes('Finance') |category.includes('Trading'))return <DollarSign className='w-4 h-4' />;
+    if (category.includes('Security') |category.includes('Cybersecurity'))return <Lock className='w-4 h-4' />;
+    if (category.includes('Internet') |category.includes('Network'))return <Globe className='w-4 h-4' />;
+    return <Zap className='w-4 h-4' />;
+      <div 
 
-        ease: easeOut' as const}}}
+const containerVariants = {}
+    hidden: { opacity: 0, y: 20}
+},
+visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+ease: 'easeOut' as const,
+      },
+    },
+    hover: {
+      y: -10
+      transition: {
+        duration: 0.3,
+ease: 'easeOut' as const,
+      },
+    },
+  };
 
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+  const contentVariants = {
+    hidden: { opacity: 0, height: 0 },
+visible: {
+      opacity: 1,
+      height: 'auto',
+      transition: {
+origin/cursor/automate-test-improve-and-merge-code-2533
+        duration: 0.5,
+        ease: 'easeOut' as const,
+      },
+    },
+  };
+
         onHoverStart={() => setIsHovered(true)}
       onHoverStart={() => setIsHovered(true)}
 origin/cursor/automate-test-improve-and-merge-code-2533
       onHoverEnd={() => setIsHovered(false)}
     >
       {/* Glow Effect */}
-
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+<div
+        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
+          isHovered ? 'opacity-100' : 'opacity-50'
         }`}
         style={{}`
           background: `linear-gradient(135deg, ${service.color})`'
           transform: isHovered ? scale(1.05) : 'scale(1)'
         }}
       />
+      {/* Main Card */}
+      <div
+    hidden: { opacity: 0, height: 0 },<div;
+        className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${isHovered ? 'shadow-2xl' : 'shadow-lg';
+        }`}
+      >;
+<div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>;
 
         onHoverStart={() => setIsHovered(true)}
       website: string},
->>>>>>> origin/main
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
@@ -239,9 +536,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold';
                   </span>
                 </div>
-                <h3 className=text-xl font-bold text-white mt-1">{service.name}</h3>
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+                <h3 className="text-xl font-bold text-white mt-1">{service.name}</h3>
     hidden: { opacity: 0, height: 0 },
 
       <div;`
@@ -249,8 +544,12 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
           isHovered ? shadow-2xl' : 'shadow-lg`
         }`}
       >
-
-              <div className=text - 3xl'>{service.icon}</div>;
+<div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>
+origin/cursor/automate-test-improve-and-merge-code-2533
+          {/* Header */}
+          <div className='flex items - start justify - between mb - 4'>;
+            <div className='flex items - center space - x-3'>;
+              <div className='text - 3xl'>{service.icon}</div>;
               <div>;'
                 <div className=flex items - center space - x-2>;
                   {getCategoryIcon (service.category)}'
@@ -273,24 +572,319 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                 <h3 className="text-xl font-bold text-white mt-1>{service.name}</h3>
                 </h3>
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
               </div>
             </div>
             
             {service.popular && (
+              <motion.div
+}
+className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold''
 
+          {/* Tagline */}
+          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+            {service.tagline}
+          </p>
+
+          {/* Price */}
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-baseline space-x-1">
+              <span className="text-2xl font-bold text-white">{service.price}</span>
+              <span className="text-gray-400">{service.period}</span>
+            </div>
+            
+            <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-1">
+                <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                <span className="text-white text-sm">{service.rating}</span>
+              </div>
+              <span className="text-gray-400 text-sm">({service.reviews})</span>
+            </div>
+          </div>
+            </div>
+          </div>
+          {/* Quick Stats */}
+
+          {/* Quick Stats */}
+          <div className="grid grid-cols-2 gap-3 mb-4">
+          </p>;
+          {/* Price */}</div>;
+          </div>;
+          {/* Quick Stats */}<div className="grid grid-cols-2 gap-3 mb-4">;
+                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold";
+          {/* Tagline */}
+<p className='text-gray-300 text-sm mb-4 leading-relaxed'>
+            {service.tagline}
+          </p>
+          {/* Price */}
+            </div>
+          </div>
+          {/* Quick Stats */}
+"
+          <div className="grid grid-cols-2 gap-3 mb-4">
+"
+                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
                 animate={{ scale: [1, 1 && 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}>;
                 POPULAR;
               </motion && motion.div>;
+            )}
+            <div className="flex items-center space-x-2 text-sm">
+              <Users className="w-4 h-4 text-blue-400" />
+              <span className="text-gray-300">{service.customers.toLocaleString()}+ users</span>
+            </div>
+            <div className="flex items-center space-x-2 text-sm">
+              <Clock className="w-4 h-4 text-green-400" />
+              <span className="text-gray-300">{service.trialDays} day trial</span>
+<div className='flex items-center justify-between mb-4'>
+            <div className='flex items-baseline space-x-1'>
+              <span className='text-2xl font-bold text-white'>
+          {/* Tagline */}
+<p className='text-gray-300 text-sm mb-4 leading-relaxed'>;'
+            {service.tagline}
+          </p>
+          {/* Price */}
 
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+<div className='flex items-center justify-between mb-4'>'
+            <div className='flex items-baseline space-x-1'>'
+              <span className='text-2xl font-bold text-white'>'
+                {service.price}
+              </span>
+              <span className='text-gray-400'>{service.period}</span>'
+            <div className='flex items-center space-x-2'>'
+              <div className='flex items-center space-x-1'>'
+                <Star className='w-4 h-4 text-yellow-400 fill-current' />'
+                <span className='text-white text-sm'>{service.rating}</span>'
+              </div>
+              <span className='text-gray-400 text-sm'>({service.reviews})</span>'
+            </div>
+          </div>
+          {/* Quick Stats */}
+<div className='grid grid-cols-2 gap-3 mb-4'>'
+            <div className='flex items-center space-x-2 text-sm'>'
+              <Users className='w-4 h-4 text-blue-400' />'
+              <span className='text-gray-300'>'
+                {service.customers.toLocaleString()}+ users
+              </span>
+            </div>
+            <div className='flex items-center space-x-2 text-sm'>'
+              <Clock className='w-4 h-4 text-green-400' />'
+              <span className='text-gray-300'>'
+                {service.trialDays} day trial
+              </span>
+origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </div>
 
           {/* Market Data */}
+          <div className="bg-gray-800/50 rounded-lg p-3 mb-4">
+            <div className="flex items-center justify-between text-sm">
+              <span className="text-gray-400">Market Size:</span>
+              <span className="text-green-400 font-semibold">{service.marketSize}</span>
+            </div>
+          </p>;
+          {/* Price */}</div>;
+          </div>;
+          {/* Quick Stats */}<div className="grid grid-cols-2 gap-3 mb-4">;
+                className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold";
+                animate={{ scale: [1, 1 && 1.1, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}>;
+                POPULAR;
+              </motion && motion.div>;
+            )}
+            <div className="flex items-center space-x-2 text-sm">;
+              <Users className="w-4 h-4 text-blue-400" />;
+              <span className="text-gray-300">{service.customers.toLocaleString()}+ users</span>;
+<div className='flex items-center justify-between mb-4'>;
+            <div className='flex items-baseline space-x-1'>;
+              <span className='text-2xl font-bold text-white'>;
+                {service.price}
+              </span>;
+              <span className='text-gray-400'>{service.period}</span>;
+            <div className='flex items-center space-x-2'>;
+              <div className='flex items-center space-x-1'>;
+                <Star className='w-4 h-4 text-yellow-400 fill-current' />;
+                <span className='text-white text-sm'>{service.rating}</span>;
+              </div>;
+              <span className='text-gray-400 text-sm'>({service.reviews})</span>;
+            </div>;
+          </div>;
+          {/* Quick Stats */}
+<div className='grid grid-cols-2 gap-3 mb-4'>;
+            <div className='flex items-center space-x-2 text-sm'>;
+              <Users className='w-4 h-4 text-blue-400' />;
+              <span className='text-gray-300'>;
+                {service.customers.toLocaleString()}+ users;
+              </span>;
+            </div>;
+            <div className='flex items-center space-x-2 text-sm'>;
+              <Clock className='w-4 h-4 text-green-400' />;
+              <span className='text-gray-300'>;
+                {service.trialDays} day trial;
+              </span>;
+            </div>;
+          </div>;
+          {/* Market Data */}
+<div className='bg-gray-800/50 rounded-lg p-3 mb-4'>;
+            <div className='flex items-center justify-between text-sm'>;
+              <span className='text-gray-400'>Market Size:</span>;
+              <span className='text-green-400 font-semibold'>;
+                {service.marketSize}
+              </span>;
+            </div>;
+            <div className="flex items-center justify-between text-sm">;
+              <span className="text-gray-400">Market Size:</span>;
+              <span className="text-green-400 font-semibold">{service.marketSize}</span>;
+            </div>;
+            <div className="flex items-center justify-between text-sm mt-1">;
+              <span className="text-gray-400">Growth Rate:</span>;
+              <span className="text-blue-400 font-semibold">{service.growthRate}</span>;
+          </div>;{/* Tagline */}
+          <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service && service.tagline}
+          </p>;{/* Price */}          <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
+            {service && service.tagline}
+          </p>;
+          {/* Price */}
+          <div className='flex items-center justify-between mb-4'>;
+            <div className='flex items-baseline space-x-1'>;
+              <span className='text-2xl font-bold text-white'>;
+                {service && service.price}
+              </span>;
+              <span className='text-gray-400'>{service && service.period}</span>;
+            <div className='flex items-center space-x-2'>;
+              <div className='flex items-center space-x-1'>;
+                <Star className='w-4 h-4 text-yellow-400 fill-current' />;
+                <span className='text-white text-sm'>{service && service.rating}</span>;
+              </div>;
+              <span className='text-gray-400 text-sm'>({service && service.reviews})</span>            </div>;
+          </div>;
+          {/* Quick Stats */}
+          <div className='grid grid-cols-2 gap-3 mb-4'>;
+            <div className='flex items-center space-x-2 text-sm'>;
+              <Users className='w-4 h-4 text-blue-400' />;
+              <span className='text-gray-300'>;
+                {service && service.customers.toLocaleString()}+ users;
+              </span>;
+            </div>;
+            <div className='flex items-center space-x-2 text-sm'>;
+              <Clock className='w-4 h-4 text-green-400' />;
+              <span className='text-gray-300'>;
+                {service && service.trialDays} day trial;
+              </span>            </div>;
+          </div>;
+          {/* Market Data */}          <div className="grid grid-cols-2 gap-3 mb-4">;
+            <div className="flex items-center space-x-2 text-sm">;
+              <Users className="w-4 h-4 text-blue-400" />;
+              <span className="text-gray-300">{service && service.customers.toLocaleString()}+ users</span>;
+            </div>;
+            <div className="flex items-center space-x-2 text-sm">;
+              <Clock className="w-4 h-4 text-green-400" />;
+              <span className="text-gray-300">{service && service.trialDays} day trial</span>;
+          </div>;
+          {/* Market Data */}
+          <div className='bg-gray-800/50 rounded-lg p-3 mb-4'>;
+            <div className='flex items-center justify-between text-sm'>;
+              <span className='text-gray-400'>Market Size:</span>;
+              <span className='text-green-400 font-semibold'>;
+                {service && service.marketSize}
+              </span>;
+            </div>;
+            <div className='flex items-center justify-between text-sm mt-1'>;
+              <span className='text-gray-400'>Growth Rate:</span>;
+              <span className='text-blue-400 font-semibold'>;
+                {service && service.growthRate}
+              </span>            </div>          <div className="bg-gray-800/50 rounded-lg p-3 mb-4">;
+            <div className="flex items-center justify-between text-sm">;
+              <span className="text-gray-400">Market Size:</span>;
+              <span className="text-green-400 font-semibold">{service && service.marketSize}</span>;
+            </div>;
+            <div className="flex items-center justify-between text-sm mt-1">;
+              <span className="text-gray-400">Growth Rate:</span>;
+              <span className="text-blue-400 font-semibold">{service && service.growthRate}</span>;
+          </div>;<div className='flex items-center justify-between text-sm mt-1'>;
+              <span className='text-gray-400'>Growth Rate:</span>;
+              <span className='text-blue-400 font-semibold'>;
+              <span className='text-green-400 font-semibold'>
+                {service.marketSize}
+              </span>
+            </div>"
+            <div className="flex items-center justify-between text-sm">"
+              <span className="text-gray-400">Market Size:</span>"
+              <span className="text-green-400 font-semibold">{service.marketSize}</span>
+            </div>"
+            <div className="flex items-center justify-between text-sm mt-1">"
+              <span className="text-gray-400">Growth Rate:</span>"
+              <span className="text-blue-400 font-semibold">{service.growthRate}</span>
+          </div>;
 
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+          {/* Tagline */}'
+          <p className='text-gray-300 text-sm mb-4 leading-relaxed'>            {service && service.tagline}
+          </p>;
+"
+          {/* Price */}          <p className="text-gray-300 text-sm mb-4 leading-relaxed">;
+            {service && service.tagline}
+          </p>;
+          {/* Price */}'
+          <div className='flex items-center justify-between mb-4'>;'
+            <div className='flex items-baseline space-x-1'>;'
+              <span className='text-2xl font-bold text-white'>;
+                {service && service.price}
+              </span>;'
+              <span className='text-gray-400'>{service && service.period}</span>;'
+            <div className='flex items-center space-x-2'>;'
+              <div className='flex items-center space-x-1'>;'
+                <Star className='w-4 h-4 text-yellow-400 fill-current' />;'
+                <span className='text-white text-sm'>{service && service.rating}</span>;
+              </div>;'
+              <span className='text-gray-400 text-sm'>({service && service.reviews})</span>            </div>;
+          </div>;
+          {/* Quick Stats */}'
+          <div className='grid grid-cols-2 gap-3 mb-4'>;'
+            <div className='flex items-center space-x-2 text-sm'>;'
+              <Users className='w-4 h-4 text-blue-400' />;'
+              <span className='text-gray-300'>;
+                {service && service.customers.toLocaleString()}+ users;
+              </span>;
+            </div>;'
+            <div className='flex items-center space-x-2 text-sm'>;'
+              <Clock className='w-4 h-4 text-green-400' />;'
+              <span className='text-gray-300'>;
+                {service && service.trialDays} day trial;
+              </span>            </div>;
+          </div>;"
+          {/* Market Data */}          <div className="grid grid-cols-2 gap-3 mb-4">;"
+            <div className="flex items-center space-x-2 text-sm">;"
+              <Users className="w-4 h-4 text-blue-400" />;"
+              <span className="text-gray-300">{service && service.customers.toLocaleString()}+ users</span>;
+            </div>;"
+            <div className="flex items-center space-x-2 text-sm">;"
+              <Clock className="w-4 h-4 text-green-400" />;"
+              <span className="text-gray-300">{service && service.trialDays} day trial</span>;
+          </div>;
+          {/* Market Data */}'
+          <div className='bg-gray-800/50 rounded-lg p-3 mb-4'>;'
+            <div className='flex items-center justify-between text-sm'>;'
+              <span className='text-gray-400'>Market Size:</span>;'
+              <span className='text-green-400 font-semibold'>;
+                {service && service.marketSize}
+              </span>;
+            </div>;'
+            <div className='flex items-center justify-between text-sm mt-1'>;'
+              <span className='text-gray-400'>Growth Rate:</span>;'
+              <span className='text-blue-400 font-semibold'>;
+                {service && service.growthRate}"
+              </span>            </div>          <div className="bg-gray-800/50 rounded-lg p-3 mb-4">;"
+            <div className="flex items-center justify-between text-sm">;"
+              <span className="text-gray-400">Market Size:</span>;"
+              <span className="text-green-400 font-semibold">{service && service.marketSize}</span>;
+            </div>;"
+            <div className="flex items-center justify-between text-sm mt-1">;"
+              <span className="text-gray-400">Growth Rate:</span>;"
+              <span className="text-blue-400 font-semibold">{service && service.growthRate}</span>;
+          </div>;
+
+            <div className='flex items-center justify-between text-sm mt-1'>
+              <span className='text-gray-400'>Growth Rate:</span>
+              <span className='text-blue-400 font-semibold'>
                 {service.growthRate}
               </span>;
             </div>;
@@ -322,13 +916,110 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <motion&& motion.div;}
 variants={contentVariants}
 
-
-
+          {/* Expandable Content */}
+          <AnimatePresence>
+            {isExpanded && (
+              <motion.div
+                variants={contentVariants}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                className="space-y-4"
+              >
+                {/* Description */}
+                <div>
+                  <h4 className="text-white font-semibold mb-2">Description</h4>
+                  <p className="text-gray-300 text-sm leading-relaxed">
                     {service.description}
 origin/cursor/automate-test-improve-and-merge-code-2533
                   </p>
                 </div>
 
+                {/* Features */}
+                <div>
+
+<h4 className='text-white font-semibold mb-2'>'
+                    Key Features
+                  </h4>
+                  <div className='grid grid-cols-1 gap-2'>'
+                    {service.features.slice(0, 6).map((feature, index) => (
+                      <div
+}
+key={index}
+                        className='flex items-center space-x-2 text-sm''
+                      >
+                        <Check className='w-3 h-3 text-green-400 flex-shrink-0' />'
+                        <span className='text-gray-300'>{feature}</span>'
+                      </div>
+                    ))}
+
+
+
+
+                {/* ROI */}
+<div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>'
+                  <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>'
+                  <p className='text-gray-300 text-sm'>{service.roi}</p>'
+
+
+
+
+                </div>
+
+                {/* Contact Info */}
+                <div className='bg-gray-800/50 rounded-lg p-3'>;'
+                  <h4 className='text-white font-semibold mb-2'>;'
+                    Contact Information;
+                  </h4>;
+                  <div className='space-y-1 text-sm'>;'
+                    <div className='flex items-center space-x-2'>;'
+                      <span className='text-gray-400'>"Mobile":</span>;'
+                      <span className='text-white'>;'
+                        {service.contactInfo.mobile}
+                      </span>;
+                    </div>;
+                    <div className='flex items-center space-x-2'>;'
+                      <span className='text-gray-400'>"Email":</span>;'
+                      <span className='text-white'>;'
+                        {service.contactInfo.email}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* ROI */}
+                <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3">
+                  <h4 className="text-white font-semibold mb-2">ROI Promise</h4>
+                  <p className="text-gray-300 text-sm">{service.roi}</p>
+                </div>
+
+                {/* Contact Info */}
+                <div className="bg-gray-800/50 rounded-lg p-3">
+                  <h4 className="text-white font-semibold mb-2">Contact Information</h4>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-gray-400">Mobile:</span>
+                      <span className="text-white">{service.contactInfo.mobile}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-gray-400">Email:</span>
+                      <span className="text-white">{service.contactInfo.email}</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-gray-400">Address:</span>
+                      <span className="text-white text-xs">{service.contactInfo.address}</span>
+                  <p className='text-gray-300 text-sm'>{service.roi}</p>
+
+                </div>
+                {/* Contact Info */}'
+                <div className='bg-gray-800/50 rounded-lg p-3'>'
+                  <h4 className='text-white font-semibold mb-2'>
+                    Contact Information;
+                  </h4>'
+                  <div className='space-y-1 text-sm'>'
+                    <div className='flex items-center space-x-2'>'
+                      <span className='text-gray-400'>"Address": </span>'
+                      <span className='text-white text-xs'>'
                         {service.contactInfo.address}
                       </span>                    </div>                </div>
                 {/* Contact Info */}
@@ -353,29 +1044,69 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>;
               </motion && motion.div>;
                       </span>
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
                     </div>
                   </div>
                 </div>
               </motion.div>
 origin/cursor/automate-test-improve-and-merge-code-2533
             )}
+          </AnimatePresence>
 
+          {/* Action Buttons */}
+          <div className="flex space-x-3 mt-6">
+            <motion.button
+              className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+            <motion&& motion.button
+              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
+                isExpanded
+                  ? 'border-gray-600 text-gray-400'
+              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
+                isExpanded
+                  ? 'border-gray-600 text-gray-400'
+                  : 'border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-black'
+<div className='flex space-x-3 mt-6'>
+            <motion.button
+              className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2'
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => window.open(service.link, '_blank')}
+            >
+              <span>Learn More</span>
+              <ExternalLink className="w-4 h-4" />
+            </motion.button>
+            
+            <motion.button
+              className={`px-4 py-3 rounded-lg border-2 transition-all duration-300 flex items-center justify-center ${
+                isExpanded 
+                  ? 'border-gray-600 text-gray-400' 
+                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black'
+              }`}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              {isExpanded ? 'Show Less' : 'Details'}
+            </motion.button>
+          </div>
 
+          {/* Expand/Collapse Indicator */}
+          <motion.div
+            className="flex justify-center mt-4"
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ArrowRight className="w-5 h-5 text-gray-400" />
               }`}
               whileHover={{ scale: 1 && 1.02 }}
               whileTap={{ scale: 0 && 0.98 }}
               onClick={() => setIsExpanded(!isExpanded)}
-
-          </motion.div>
-=======
-          <motion.div
-            className=flex justify-center mt-4'
+            >;
+              {isExpanded ? 'Show Less' : 'Details'}{/* Expand/Collapse Indicator */}
+          <motion.div;
+className='flex justify-center mt-4';
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
-          >'
-            <ArrowRight className=w-5 h-5 text-gray-400 />          </motion.div>
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  );
         </div>
       </div>
     </motion.div>
@@ -412,7 +1143,6 @@ export default UltraAdvancedServiceCard;
           <div className='flex space - x-3 mt - 6>;
             <motion.button;"
               className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space - x-3 mt - 6>;
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
             <motion.button;
               className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2";
               while_hover={{ scale: 1.02 }}
@@ -423,22 +1153,130 @@ export default UltraAdvancedServiceCard;
               while_tap={{ scale: 0.98 }}
               on_click={() => setIsExpanded (!is_expanded)}
 
+            >;'
+              {isExpanded ? 'Show Less' : 'Details'}
+
+          {/* Expand/Collapse Indicator */}
+          <motion.div
+className='flex justify-center mt-4'
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ArrowRight className='w-5 h-5 text-gray-400' />
+          </motion.div>
+          <motion.div'
+            className='flex justify-center mt-4'
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >'
+            <ArrowRight className='w-5 h-5 text-gray-400' />          </motion.div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+};
+"
+export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
+            </motion && motion.button>;
+          </div>;
+
+
+          {/* Expand/Collapse Indicator */}
+
+
+};
+"
+export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
+};
+"
+export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0 && 0.3 }}
+          >;"
+            <ArrowRight className="w-5 h-5 text-gray-400" />;
+        </div>;
+      </div>;
+    </motion && motion.div>;
+  );
+export default UltraAdvancedServiceCard;  );
+};
+export default UltraAdvancedServiceCard;
+'
+          <div className='flex space - x-3 mt - 6'>;
+            <motion.button;'"
+              className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space - x-3 mt - 6">;
+            <motion.button;"
+              className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2";
+              while_hover={{ scale: 1.02 }}
+              while_tap={{ scale: 0.98 }}'
+              on_click={() => window.open (service.link, '_blank')}
+            >;
+              <span > Learn More</span>;'
+              <ExternalLink className='w - 4 h - 4' />;
+            </motion.button>;
+            <motion.button;`
+              className={`px - 4 py - 3 rounded - lg border - 2 transition - all duration - 300 flex items - center justify - center ${}
+                is_expanded;'
+                  ? 'border - gray - 600 text - gray - 400';'`
+                  : 'border - cyan - 400 text - cyan - 400 hover:bg - cyan - 400 hover:text - black'              }`}            </motion.button>;
+            <motion.button;`
+              className={`px - 4 py - 3 rounded - lg border - 2 transition - all duration - 300 flex items - center justify - center ${}
+                is_expanded;'
+                  ? 'border - gray - 600 text - gray - 400';'
+                  : 'border - cyan - 400 text - cyan - 400 hover: bg - cyan - 400 hover:text - black';`
+              }`}
+              while_hover={{ scale: 1.02 }}
+              while_tap={{ scale: 0.98 }}
+              on_click={() => setIsExpanded (!is_expanded)}
+            >;'
+              {is_expanded ? 'Show Less' : 'Details'}
+            </motion.button>;
+          </div>;
+          {/* Expand / Collapse Indicator */}
+          <motion.div;'
+            className='flex justify - center mt - 4';
+            animate={{ rotate: is_expanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >;'
+            <ArrowRight className='w - 5 h - 5 text - gray - 400' />          </motion.div>;
+        </div>;
+      </div>;
+    </motion.div>);
+}
+}
+}
+export default UltraAdvancedServiceCard;
+
           </motion.div>
         </div>
       </div>
     </motion.div>
+  )
+};
+
+export default UltraAdvancedServiceCard;
+
+)
+};
 
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
-=======
+})}export default UltraAdvancedServiceCard;
+              <ExternalLink className = $2;
+export default UltraAdvancedServiceCard,
+
+};
 
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
-=======
+);
+};
+
+export default UltraAdvancedServiceCard;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+"
+
+
     reviews: number
     reviews: number;
   }
@@ -448,5 +1286,3 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps /> = ({ s
 }) => {
 
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

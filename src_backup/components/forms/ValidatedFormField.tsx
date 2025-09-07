@@ -1,9 +1,9 @@
-import {FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components/ui/form;
-import { Input  } from @/components/ui/input';
-import { Textarea  } from '@/components/ui/textarea;
-import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from @/components/ui/select';import { Checkbox  } from '@/components/ui/checkbox;
-import { cn  } from @/lib/utils';
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
+import {FormField,FormItem,FormLabel,FormControl,FormMessage} from '@/components/ui/form';
+import { Input  } from '@/components/ui/input';
+import { Textarea  } from '@/components/ui/textarea';
+import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';import { Checkbox  } from '@/components/ui/checkbox';
+import { cn  } from '@/lib/utils';
+import React, { useState, useEffect } from 'react'
 import React, { useState, useEffect } from 'react
 import {
   FormField
@@ -307,7 +307,6 @@ export function ValidatedFormField({
     if (validation.custom) {
       return validation.custom(value);
     }
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
 
   },
 
@@ -390,7 +389,6 @@ interface ValidatedFormFieldProps  {name: string;
               <SelectContent>;
                 {options.map((option) => (<SelectItem key={option.value} value={option.value}>;
                     {option.label}
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
                   </SelectItem>
                 ))}
 
@@ -407,7 +405,6 @@ interface ValidatedFormFieldProps  {name: string;
             </Select>;
             <div className=absolute top-2 right-8'>{getValidationIcon()}</div>;
           </div>;
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
         );
 
       case 'checkbox:;
@@ -445,7 +442,6 @@ interface ValidatedFormFieldProps  {name: string;
 
               {label}
             </label>;
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
             {getValidationIcon()}
 
         ),
@@ -547,7 +543,6 @@ interface ValidatedFormFieldProps  {name: string;
                     {fieldError.message}
                   </FormMessage>;
                 )}
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
                 {description && !fieldError && (
 
                   <p className=text-sm text-muted-foreground">{description}</p>
@@ -666,7 +661,6 @@ if ( {) {}
         <FormItem>;
           <FormLabel className='text - sm font - medium'>;
             {label}
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
             {validation.required && (
 
       />;
@@ -697,7 +691,6 @@ if ( {) {}
                   {fieldError.message}
                 </FormMessage>;
               )}
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
               {description && !fieldError && (
 
               {description && !fieldError && (<p className="text-sm text-muted-foreground">{description}</p>;
@@ -799,7 +792,6 @@ export const commonValidations = {
       if (value && !validationPatterns && validationPatterns.phone.test(value)) {'
         return 'Please enter a valid phone number';
       }
-<<<<<<< HEAD:src_backup/components/forms/ValidatedFormField.tsx
       return null;
 
   }}}

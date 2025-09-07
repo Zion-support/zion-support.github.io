@@ -119,4 +119,4 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       </div>
     </div>
   )
-
+};

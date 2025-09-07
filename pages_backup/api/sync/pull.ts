@@ -20,20 +20,18 @@ function handler() {
     events
     scope: requested_scope});
 }
-
     instanceId: state.config.instanceId
     lastSyncedAt: state.lastSyncedAt
     events
 
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/pull.ts
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, filterEventsByScope } from "../../../utils/sync/storage";
+ursor/fix-website-loading-errors-and-merge-6662
+
+
 import type { NextApiRequest, NextApiResponse } from next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -124,10 +122,4 @@ export default /**
     events
 
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/pull.ts
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -6,12 +6,14 @@ import { MessageSquare } from 'lucide-react
 import { Button } from @/components/ui/button'
 
 
-import React from 'react,
-import React from react';
-import Link from 'next/link;
-import { MessageSquare  } from lucide-react';
-import { Button  } from '@/components/ui/button;
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
+import React from 'react',
+
+;
+import React from 'react';
+import Link from 'next/link';
+import { MessageSquare  } from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from @/components/ui/tooltip';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import {
@@ -51,7 +53,6 @@ class ErrorBoundary extends React.Component {
   subtitle: string;
   cta: string;
   href: string;
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 
 import { MessageSquare } from lucide-react'
 import { Button } from '@/components/ui/button;
@@ -118,7 +119,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSessi
             {hasSession ? (<Button asChild>;
                 <Link href={href}>{cta}</Link>;
               </Button>;
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
             ) : (;
               <Button disabled>{cta}</Button>;
 

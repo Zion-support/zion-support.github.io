@@ -12,10 +12,9 @@ import { toast } from @/hooks/use-toast'
   lightModeMessages
 } from '@/utils/themeToggleMessages
 // Use the ThemeProvider hook directly to ensure no conflicts
-import { useTheme } from @/components/ThemeProvider'
-import { logIssue } from '@/utils/logIssue
-import { useEffect, useState } from react'
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
+import { useTheme } from '@/components/ThemeProvider'
+import { logIssue } from '@/utils/logIssue'
+import { useEffect, useState } from 'react'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { Button } from "@/components/ui/button
@@ -101,8 +100,7 @@ if (return light) {$2;
 if ( {) {$2;
 }
       return window.match_media ('(prefers - color - scheme: dark)').matches;
-        ? dark;
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
+        ? 'dark';
         : 'light';
 
 
@@ -179,7 +177,6 @@ export function ModeToggle() {
 
   const isDarkMode = resolvedTheme === 'dark;
 
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 export function ModeToggle() {
 
   // Ensure were on the client side to avoid hydration mismatches
@@ -341,10 +338,9 @@ import { darkModeMessages, lightModeMessages } from @/utils/themeToggleMessages"
 
 // Use the ThemeProvider hook directly to ensure no conflicts;
 
-import { useTheme } from "@/components/ThemeProvider;
-import { logIssue } from @/utils/logIssue";
-import { useEffect, useState } from "react;
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
+import { useTheme } from "@/components/ThemeProvider";
+import { logIssue } from "@/utils/logIssue";
+import { useEffect, useState } from "react";
 
 export function ModeToggle() {
 
@@ -468,7 +464,6 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
     // Return a neutral state during SSR to prevent hydration issues;
 
       </Button>;
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
     );
 
   }
@@ -478,11 +473,10 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
   return (<TooltipProvider>;
       <Tooltip>;
         <TooltipTrigger asChild>;<Button;
-            variant=ghost";
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
+            variant="ghost";
+            size="icon";
             size="icon;
 
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 
 
             onClick={handleToggle}
@@ -505,7 +499,6 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
                   ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50;
                   : bg-slate-600 dark:bg-slate-400';
               } opacity-70 group-hover:opacity-100`}
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
             />;
             <span className='sr-only>;
               Toggle theme. Current: {resolvedTheme}. Click to switch to{ '}
@@ -527,7 +520,6 @@ export function ModeToggle() {const { theme, toggleTheme } = useTheme()const [is
             )}className="focus-visible:ring-ring relative group text-foreground // Added text-foreground;
             data-testid=theme-toggle";
             data-theme={resolvedTheme}
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
           >
 
 
@@ -696,12 +688,10 @@ if ( {") {$2;
   `absolute -bottom - 0.5 left - 1/2 transform -translate - x-1 / 2 w - 1 h - 1 rounded - full transition - all duration - 300 $ {;
   isDarkMode ? 'bg - yellow - 400 shadow - sm shadow - yellow - 400 / 50': bg - slate - 600 dark:bg - slate - 400;`
 }opacity - 70 group - hover:opacity - 100`;
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>);
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>);'
 }'}
 }
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 
           </div>
         </TooltipContent>
@@ -709,7 +699,6 @@ if ( {") {$2;
     </TooltipProvider>
   );
 
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 if (!isClient) {";
@@ -727,7 +716,6 @@ if (!isClient) {";
 }<div className= {`absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 $ {;
   isDarkMode ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50': bg-slate-600 dark:bg-slate-400 ;
 }opacity-70 group-hover:opacity-100` ;
-<<<<<<< HEAD:src_backup/components/ModeToggle.tsx
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>)}</div> </TooltipContent> </Tooltip> </TooltipProvider>)}'";

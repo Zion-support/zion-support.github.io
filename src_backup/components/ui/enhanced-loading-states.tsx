@@ -15,11 +15,12 @@ import {Loader2;
   WifiOff;
   Clock;
   Zap;
-} from 'lucide-react; import { Button  } from @/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card;
-import { Badge  } from @/components/ui/badge';
-import { cn  } from '@/lib/utils;
-<<<<<<< HEAD:src_backup/components/ui/enhanced-loading-states.tsx
+} from 'lucide-react'; import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { cn  } from '@/lib/utils';
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import React, { useState, useEffect } from react'
 import { motion, AnimatePresence } from 'framer-motion
 import {
@@ -58,7 +59,6 @@ interface LoadingSpinnerProps {
   size?: 'sm' | md | 'lg' | xl;'
   variant?: 'default | primary' | 'success | warning' | 'error;
   className?: string;
-<<<<<<< HEAD:src_backup/components/ui/enhanced-loading-states.tsx
   showText?: boolean;
 
   text?: string;
@@ -641,7 +641,6 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
 
               </pre>;
             </details>;
-<<<<<<< HEAD:src_backup/components/ui/enhanced-loading-states.tsx
           )}
 
           <div className=flex flex-col sm:flex-row gap-2 justify-center>;
@@ -668,7 +667,6 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
               >;
             {action && (<Button onClick={action.onClick} variant={canRetry ? "outline" : default}>;
                 {action.label}
-<<<<<<< HEAD:src_backup/components/ui/enhanced-loading-states.tsx
               </Button>
             )}
 
@@ -687,7 +685,6 @@ interface SkeletonProps  {className?: string,variant?: text' | 'circular | recta
               >;
             {action && (<Button onClick={action.onClick} variant={canRetry ? "outline" : default}>;
                 {action.label}
-<<<<<<< HEAD:src_backup/components/ui/enhanced-loading-states.tsx
               </Button>
             )}
 
@@ -941,7 +938,6 @@ interface PerformanceIndicatorProps  {isLoading?: boolean,loadTime?: number,item
         </Badge>;
       )}}
 }
-<<<<<<< HEAD:src_backup/components/ui/enhanced-loading-states.tsx
 
   isLoading = false,
   loadTime,

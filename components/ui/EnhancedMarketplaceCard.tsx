@@ -1,14 +1,29 @@
+import React from 'react';
+import Image from 'next/image';
+import { Star, Heart, ShoppingCart } from 'lucide-react';
+import React from 'react';
+import Link from 'next/link';
+ursor/automate-test-improve-and-merge-code-646c;
 
-=======
-import React from 'react;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+pr-12243
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+      </div>;
+      <p className="text-sm text-gray-600 mb-4">{description}</p>;
+      <div className="mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+import React from 'react';
+import Link from 'next/link';
 import Link from next/link';
 
 interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   price?: string;
-
+  href: string, image?: string
+import React from 'react';
+import { Star, Heart, ShoppingCart } from 'lucide-react';
+pr-12243
   image?: string;
   href: string;
   category?: string;
@@ -123,26 +138,22 @@ export default function EnhancedMarketplaceCard({ title, description, price, ima
 
 export default EnhancedMarketplaceCard;
 
-        <h3 className=text-lg font-semibold text-gray-900">{title}</h3>;
+pr-12243
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
       </div>;
-      <p className="text-sm text-gray-600 mb-4>{description}</p>;
-      <div className=mt-auto flex items-center justify-between">;
-        {price && <span className="text-sm font-medium text-blue-600>{price}</span>}
-import Link from 'next/link;
-import Image from next/image';
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
-=======
+      <p className="text-sm text-gray-600 mb-4">{description}</p>;
+      <div className="mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>}
+import Link from 'next/link';
+import Image from 'next/image';
 interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
   href: string, image?: string
 import { Star, Heart, ShoppingCart } from lucide-react';
 pr-12243
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 interface MarketplaceCardProps {
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 interface EnhancedMarketplaceCardProps {
   title: string, description: string
   price?: string;
@@ -157,7 +168,6 @@ interface EnhancedMarketplaceCardProps {
   price?: string;
   href: string, image?: string
   href: string, image?: string
->>>>>>> origin/main
 
 interface MarketplaceCardProps {
   title: string,
@@ -169,10 +179,13 @@ interface MarketplaceCardProps {
   onFavorite?: () => void;
 }
 
-
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
+  title;
+  description;
+  price;
+  rating;
+  image;
+  onAddToCart;
 const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   title,
   description,
@@ -180,10 +193,8 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
   rating,
   image,
   onAddToCart,
-
   onFavorite
 }) => {
-=======
   onFavorite
 }) => {
   return (

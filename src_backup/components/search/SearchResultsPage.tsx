@@ -54,8 +54,12 @@ import { logErrorToProduction, log_info  } from '@/utils / production_logger;
   SheetHeader;
   SheetTitle;
   SheetTrigger;
-} from '@/components/ui/sheet;
-<<<<<<< HEAD:src_backup/components/search/SearchResultsPage.tsx
+} from '@/components/ui/sheet';
+import { EnhancedSearchInput } from './EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
+import React, { useState, useEffect, useMemo } from 'react'
+import { useRouter } from 'next/router'
 import { EnhancedSearchInput } from ./EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData;
 import { logErrorToProduction, logInfo } from @/utils/productionLogger';
@@ -169,7 +173,6 @@ interface SearchResult  {id: string;
   totalCount: number;
   page: number;
   limit: number;
-<<<<<<< HEAD:src_backup/components/search/SearchResultsPage.tsx
   query: string;
 
     return <span className={className}>{text}</span>;
@@ -402,7 +405,6 @@ const SearchResultCard: React.FC<{
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/search/SearchResultsPage.tsx
   );
 
 },
@@ -926,7 +928,6 @@ if ( {) {}
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/search/SearchResultsPage.tsx
   );
 
   const [filters, setFilters] = useState<SearchFilters>({
@@ -1266,7 +1267,6 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
                   </div>;
                 </SheetContent>;
               </Sheet>;
-<<<<<<< HEAD:src_backup/components/search/SearchResultsPage.tsx
             </div>;
           </div>;
 
@@ -1321,7 +1321,6 @@ export const SearchResultsPage: React.FC = () => {const router = useRouter(),con
                 availableCategories={availableCategories}
               />;
             </div>;
-<<<<<<< HEAD:src_backup/components/search/SearchResultsPage.tsx
           </div>;
           {/* Main Content */}
 

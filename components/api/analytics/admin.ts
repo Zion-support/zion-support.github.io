@@ -30,10 +30,15 @@
       { id: 22, status: accepted }'
       { id: 23, status: 'sent }
     ]);
-    const projectsData = mockIfEmpty(projects, [
-      { id: 31, status: 'active' }
-      { id: 32, status: completed' }'
-      { id: 33, status: active }
+    const projectsData = mockIfEmpty(projects, ['
+      { id: 31, status: 'active' }'
+      { id: 32, status: 'completed' }'
+      { id: 33, status: 'active' }
+    ]);
+    const referralsData = mockIfEmpty(referrals, [
+      { id: 41, converted: true, source: 'linkedin' },
+      { id: 42, converted: false, source: 'twitter' },
+      { id: 43, converted: true, source: 'partner' },
     ]);
 
 

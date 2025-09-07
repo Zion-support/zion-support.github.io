@@ -1,6 +1,22 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const FILE_PATH = path.join(process.cwd(), "dataproposalsindex.json");
+async function ensureStore() {
+  await fs.ensureFile(FILE_PATH);
+  try {
+    const raw = await fs.readFile(FILE_PATH, "utf8");
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsindex && dataproposalsindex.json");
 import type { NextApiRequest, NextApiResponse } from "next;
 import fs from fs-extra";
 import path from "path;
@@ -14,14 +30,9 @@ import fs from fs-extra';
 import path from 'path;
 const FILE_PATH = path.join(process.cwd(), dataproposalsindex.json');
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/proposals/index.ts
-=======
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from next";
 import fs from "fs-extra;
 import path from path";
@@ -38,23 +49,17 @@ async function ensureStore() {
     const raw = await fs.readFile(FILE_PATH, 'utf8);
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
-=======
+
+const FILE_PATH = path.join(process.cwd(), 'data', 'proposals', 'index.json');
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const FILE_PATH = path.join(process.cwd(), data', 'proposals, index.json');
 
 async function ensureStore() {
   await fs.ensureFile(FILE_PATH);
   try {
 if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
-
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
@@ -90,9 +95,8 @@ export default async function handler(
   if (req.method === POST') {
     const body = req.body || {}
 
-
-  if (req && req.method === "POST) {
-    const body = req && req.body || {}
+  if (req && req.method === "POST") {
+    const body = req && req.body || {};
     const data = await fs && fs.readJson(FILE_PATH);
     const item = {
       id: body && body.id
@@ -108,11 +112,10 @@ export default async function handler(
     return res && res.status(201).json(item);
   }
 }
-
-import type { NextApiRequest, NextApiResponse } from './next;
-import fs from ./fs - extra';
-import path from './path;
-const FILE_PATH = path.join (process.cwd (), "dataproposalsindex.json);
+import type { NextApiRequest, NextApiResponse } from './next';
+import fs from './fs - extra';
+import path from './path';
+const FILE_PATH = path.join (process.cwd (), "dataproposalsindex.json");
 async /**
  * ensure_store - Function description
  */
@@ -144,14 +147,24 @@ if ( {) {
 if ( {) {
   $2
 }
+    const body = req.body || {}
+    const data = await fs.read_json (FILE_PATH);
+    const item = {
+      id: body.id
+      title: body.title
+      target_institution: body.target_institution
+      regional_scope: body.regional_scope
+      type: body.type
+      status: body.status || "Draft"
+      created_at: new Date ().toISOString ()
+    }
+    data.items.unshift (item);
+    await fs.write_json (FILE_PATH, data, { spaces: 2 });
+    return res.status (201).json (item);
+  }
+}
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/proposals/index.ts
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   } catch (error) {
     console.error("Error:, error);
@@ -183,13 +196,7 @@ if ( {) {
   }
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/proposals/index.ts
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   } catch (error) {
     console.error("Error:, error);
     return res.status(500).json({ error: Internal server error" });
@@ -204,15 +211,8 @@ if ( {) {
   }
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 id: body.id,
       title: body.title,
       targetInstitution: body.targetInstitution,
@@ -227,7 +227,4 @@ id: body.id,
   res.status(405).json({ error: 'Method not allowed' });
 
 }}
-
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

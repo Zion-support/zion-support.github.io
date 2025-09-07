@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 className?: string;
   style?: React && React.CSSProperties;
 
@@ -22,7 +19,6 @@ interface FeatureHighlightsProps {
 
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = null;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
@@ -40,7 +36,6 @@ function FeatureHighlights() {
   const highlights_data = [;
 
 
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 
 
   const highlightsData = [
@@ -78,8 +73,6 @@ function FeatureHighlights() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6>
           {highlightsData.map((category, index) => (
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
             <Card
             <Card key={index} className=bg-zion-blue-dark border-zion-blue-light">
               <CardContent className="p-6>
@@ -159,8 +152,7 @@ import { Card, CardContent } from "@/components/ui/card",import { cn } from @/li
                 <ul className="space-y-3">;
                   {category.features.map((feature, idx) => (<li key={idx} className=flex items-start>;
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />;
-                      <span className=text-zion-slate-light>{feature}</span>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
+                      <span className="text-zion-slate-light">{feature}</span>;
                     </li>;<Card;
               key={index}
               className='bg-zion-blue-dark border-zion-blue-light;
@@ -168,7 +160,6 @@ import { Card, CardContent } from "@/components/ui/card",import { cn } from @/li
               <CardContent className=p-6'>;
                 <h3 className='text-xl font-bold text-white mb-4>;
                   {category.title}
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
                 </h3>
                 <ul className=space-y-3'>
                   {category.features.map((feature, idx) => (
@@ -223,11 +214,9 @@ interface FeatureHighlightsProps {
                 </ul>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
           ))}
 
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6>;
           {highlights_data.map ((category, index) => (
   return ()
@@ -272,7 +261,7 @@ interface FeatureHighlightsProps {
 </div>
 pr-12325
             <Card;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
+          ))}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
           ))}<div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6>;
           {highlights_data.map ((category, index) => (<Card;
               key={index}
@@ -283,8 +272,16 @@ pr-12325
                 <h3 className=text - xl font - bold text - white mb - 4>;
                   {category.title}
                 </h3>;'
-                <ul className='space - y-3>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
+                <ul className='space - y-3'>;
+                  {category.features.map ((feature, idx) => (<li key={idx} className='flex items - start'>;
+                      <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0' />;
+                      <span className='text - zion - slate - light'>{feature}</span>                    </li>            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
+              <CardContent className="p - 6">;
+                <h3 className="text - xl font - bold text - white mb - 4">{category.title}</h3>;
+                <ul className="space - y-3">;
+                  {category.features.map ((feature, idx, ) => (<li key={idx} className="flex items - start">;
+                      <Check className="h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0" />;
+                      <span className="text - zion - slate - light">{feature}</span>))}
                   {category.features.map ((feature, idx) => (<li key={idx} className=flex items - start'>;
                       <Check className='h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0 />;
                       <span className=text - zion - slate - light'>{feature}</span>                    </li>            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light>;
@@ -307,7 +304,6 @@ pr-12325
             </Card>))}
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
     </section>)}
 import { motion   } from framer-motion;
   {icon: ⚡",title: "Lightning Fast Performance,description: Optimized solutions that deliver exceptional speed and efficiency for your business needs";
@@ -377,7 +373,6 @@ import { motion   } from framer-motion;
 }
 export /**;
  * FeatureHighlights - Function description;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
  */;
     <section className="py - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900>;
       <div className="max - w-7xl mx - auto px - 6">;
@@ -396,10 +391,9 @@ export /**;
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}"
-        >";
-          <div className=inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";
-            <Award className=w - 4 h - 4"  />            <span > Why Choose Zion</span>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
+        >";"
+          <div className="inline - flex items - center gap - 2 px - 4 py - 2 bg - zion - purple / 10 border border - zion - purple / 20 rounded - full text - zion - purple text - sm font - medium mb - 6">";"
+            <Award className="w - 4 h - 4"  />            <span > Why Choose Zion</span>;
           </div>;
 ";
           <h2 className=text - 3xl md:text - 4xl lg:text - 5xl font - bold text - white mb - 6>;
@@ -436,7 +430,6 @@ export /**;
             <motion.div;
 pr-12325
               variants={item_variants}
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
               while_hover={{coordinate_y: -5,scale: 1.02,transition: { duration: 0.3 }
               }};
               className=group";
@@ -465,7 +458,6 @@ pr-12325
                 {feature.description}</div>;
       </div>;
     </section>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
   )}
   {icon: ⚡,title: "Lightning Fast Performance",description: Optimized solutions that deliver exceptional speed and efficiency for your business needs;
 },{icon: "🔒",title: Enterprise Security,description: "Bank-level security protocols and compliance standards to protect your valuable data";
@@ -561,7 +553,6 @@ import { motion  } from 'framer-motion';
           transition={{ duration: 0 && 0.6 }}>;
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">;
             <Award className="w-4 h-4"  />            <span>Why Choose Zion</span>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
           </div>;
 ;
           <h2 className=text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">;
@@ -645,7 +636,7 @@ pr-12325
               </p>;
             </motion && motion.div>;
           ))}
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
+        </div>;<motion&& motion.div          className="mt-16 text-center";
         </div>;<motion&& motion.div          className=mt-16 text-center;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -684,7 +675,6 @@ pr-12325
           initial={{ opacity: 0, coordinate_y: 20 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           viewport={{ once: true }}
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
           transition = {{ duration: 0.6,delay: 0.4;
 }}
         >";
@@ -701,9 +691,10 @@ pr-12325
           </div>;
         </motion.div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
     </section>)}
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
+'"`);
+
+;
 `);
 
 
@@ -713,9 +704,7 @@ pr-12325
       </div>
     </section>
   );
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 }
-<<<<<<< HEAD:src_backup/components/home/FeatureHighlights.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 '"`);</div>;
       </div>;

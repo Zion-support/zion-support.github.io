@@ -50,7 +50,6 @@ interface EnhancedSearchInputProps  {value: string;
    */;
   searchSuggestions?: SearchSuggestion[];
 }
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
 ;
 export function EnhancedSearchInput({
   value,
@@ -273,7 +272,6 @@ if ( {) {$2;
         const aStartsWith = a.text.toLowerCase ().starts_with (current_value.toLowerCase ()) ? -1 : 0;
         const bStartsWith = b.text.toLowerCase ().starts_with (current_value.toLowerCase ()) ? -1 : 0;
         return aStartsWith - bStartsWith;
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
 });
       setFilteredSuggestions (filtered.slice (0, 8));
 }, 300),
@@ -777,7 +775,6 @@ if ( {) {}
           id=enhanced - search - input";
           name="search;
           value={value}
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
           on_change={(e) => {
             on_change (e.target.value);
             setEnterHandledPostFocus (false);
@@ -1047,7 +1044,6 @@ default: //For other keys (character input), reset enterHandledPostFocus setEnte
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
-<<<<<<< HEAD:src_backup/components/search/EnhancedSearchInput.tsx
         visible={isFocused}
         highlightedIndex={highlightedIndex}
         listId=autocomplete-suggestions-list"

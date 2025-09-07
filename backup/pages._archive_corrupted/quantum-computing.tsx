@@ -1,5 +1,7 @@
 
-import Head from \'next/head\; import Link from \next/link\'; export default function QuantumComputing() { const site = \'"https\: const phone = \+1 302 464 0950\; return ( <> <Head> <title>Quantum Computing Services - Zion Tech Group</title> <meta name=\description\" content=\"Cutting-edge quantum computing services including algorithm development and optimization.\ /> <link rel=\canonical\" href={`${site}/quantum-computing`} /> </Head> <section className=\"bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20 text-center\> <h1 className=\text-4xl \"md\": text-6xl font-bold mb-6\>Quantum Computing Services</h1> <div className=\flex flex-col sm:flex-row gap-4 justify-center\"> <Link href=\"/contact\ className=\bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold\">Get Started</Link> <a href={`tel:${phone.replace(/[^\d+]/g,\'')}`} className=\"border-2 border-white text-white px-8 py-3 rounded-lg font-semibold\">Call {phone}</a> </div> </section> </> )}
+
+}
+import Head from \'next/head\'; import Link from \'next/link\'; export default function QuantumComputing() { const site = \'"https\": const phone = \'+1 302 464 0950\'; return ( <> <Head> <title>Quantum Computing Services - Zion Tech Group</title> <meta name=\"description\" content=\"Cutting-edge quantum computing services including algorithm development and optimization.\" /> <link rel=\"canonical\" href={`${site}/quantum-computing`} /> </Head> <section className=\"bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-20 text-center\"> <h1 className=\"text-4xl \"md\": text-6xl font-bold mb-6\">Quantum Computing Services</h1> <div className=\"flex flex-col sm:flex-row gap-4 justify-center\"> <Link href=\"/contact\" className=\"bg-white text-purple-700 px-8 py-3 rounded-lg font-semibold\">Get Started</Link> <a href={`tel:${phone.replace(/[^\d+]/g,\'')}`} className=\"border-2 border-white text-white px-8 py-3 rounded-lg font-semibold\">Call {phone}</a> </div> </section> </> )}
 import React from 'react';
 interface QuantumcomputingProps {
   // Add props here as needed
@@ -7,10 +9,8 @@ interface QuantumcomputingProps {
 
 
 
-
-=======
+export default function Quantumcomputing({ }: QuantumcomputingProps) {
 export default function Quantumcomputing({}: QuantumcomputingProps) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
     <div>
       <h1>Quantumcomputing</h1>
@@ -29,7 +29,3 @@ export default function Quantumcomputing() {export default function Quantumcompu
 }}ursor/automate-test-improve-and-merge-code-646c;
 }
 }
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

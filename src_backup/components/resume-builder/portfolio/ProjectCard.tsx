@@ -17,7 +17,6 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Edit, Trash2, Github, Link, FileText  } from 'lucide-react;
 interface ProjectCardProps  {project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
   onDelete: (projectId: string) => void
 origin/cursor/automate-test-improve-and-merge-code-2533
 import Image from next/image';
@@ -112,9 +111,7 @@ interface ProjectCardProps  {project: PortfolioProject,onEdit: (project: Portfol
       <div className=relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project.image_url ? (<Image;
             src={project.image_url}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
             alt={project.title}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 className='object-cover'
             loading=lazy
         ) : (
@@ -296,7 +293,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
 
           )}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
         </div>
       </CardContent>
 <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
@@ -332,7 +328,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </Link>
           )}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
           {project.demo_url && (
             <a
             alt={project.title}className=object-cover";
@@ -415,7 +410,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>;
             </a>;
           )}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
         </div>
 <div className=flex gap-2>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -462,7 +456,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </Link>
           )}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
         </div>
 
             <Edit className=h-4 w-4" />
@@ -478,7 +471,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
 Are you sure you want to delete this project? This action cannot
               be undone.
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -595,7 +587,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
             <AlertDialogAction;
               onClick={handleDelete}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
               className='bg-destructive text-destructive-foreground';
             >;
               Delete;
@@ -643,7 +634,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   );
 }
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectCard.tsx
     </Card>)})}
 }
     </Card>);

@@ -7,7 +7,6 @@
 
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
-
       const matchesTarget =
         r && r.toRole === (targetType as "talent | client") && r && r.toId === targetId;
     const filtered = all.filter((r) => {
@@ -79,7 +78,6 @@ if (return false) {
           x.to_role !== r.to_role &&;
           x.approved &&;
           !x.removed
-
       );
       return counterpart_exists;
     });
@@ -158,13 +156,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return res.status(200).json({ summary, reviews: publicReviews });
   } catch (error: any) {
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/reviews/list.ts
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === talent") {
@@ -227,7 +219,8 @@ if (author_name = Anonymous") {
         ((target_type === "talent && p.talent_slug === target_id) ||;
           (target_type === client" && p.client_id === target_id))
     ).length;
-
+;
+    const summary: ReviewsSummary = {
       average_rating
       total_reviews
       totalCompletedProjects
@@ -241,14 +234,8 @@ if (author_name = Anonymous") {
       .json ({ error: "Internal server error, details: error?.message });
   }
 
-
   }
 }
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/reviews/list.ts
-=======
 
 
   }
@@ -256,7 +243,6 @@ if (author_name = Anonymous") {
 ursor/fix-website-loading-errors-and-merge-6662
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
   }
@@ -281,18 +267,11 @@ ursor/fix-website-loading-errors-and-merge-6662
       .status(500)
       .json({ error: Internal server error", details: error?.message });
   }
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+}
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/reviews/list.ts
-=======
 
 
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

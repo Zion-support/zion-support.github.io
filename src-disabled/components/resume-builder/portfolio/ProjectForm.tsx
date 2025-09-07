@@ -1,13 +1,17 @@
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
 
 }
       let success = false;
       // Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
+        success = await update_project (project.id, project_data)import { useState   } from 'react';
+import { useForm   } from 'react-hook-form';
+import { zodResolver   } from '@hookform/resolvers/zod';
+import { z   } from 'zod';
+import { Button   } from '@/components/ui/button';
+import { Input   } from '@/components/ui/input';
+import { Textarea   } from '@/components/ui/textarea';
+import { logErrorToProduction } from '@/utils/productionLogger';
         success = await update_project (project.id, project_data)import { useState   } from 'react;
 import { useForm   } from react-hook-form';
 import { zodResolver   } from '@hookform/resolvers/zod;
@@ -49,10 +53,9 @@ import { logErrorToProduction } from '@/utils/productionLogger; import {Form;
   FormItem;
   FormLabel;
   FormMessage;
-} from @/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react;
-import { PortfolioProject  } from @/types/resume';
-import { usePortfolio  } from '@/hooks/usePortfolio;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
+} from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio  } from '@/hooks/usePortfolio';
 // Define schema for form validation;
 const projectSchema = z.object({title: z.string().min(1, Project title is required')description: z.string().optional()technologies: z.string().optional()image_url: z.string().optional()github_url: z;
     .union([z.string().url('Please enter a valid URL), z.literal(')]).optional()demo_url: z;
@@ -80,7 +83,6 @@ export function ProjectForm() {const { user } = useAuth()const { addProject, upd
         demo_url: data.demo_url |undefined;
         pdf_url: data.pdf_url;
       }
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
       let success = false
       if (isEditing && project?.id) {
         success = await updateProject(project.id, projectData)
@@ -114,7 +116,6 @@ import { useAuth } from '@/hooks/useAuth
         success = !!projectId;
       }
 
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
       // Check condition
 if ( {) {
   $2
@@ -136,8 +137,6 @@ import { logErrorToProduction } from @/utils/productionLogger';import {setIsLoad
                   className=min-h-[100px]';
       setIsLoading (false)}
   }
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
       // Check condition;
 if ( {) {}
   $2;
@@ -163,13 +162,13 @@ import { Button } from '@/components/ui/button,
 import { Input } from @/components/ui/input',
 import { Textarea } from '@/components/ui/textarea,
 
-import {logErrorToProduction} from @/utils/productionLogger',
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
+import {logErrorToProduction} from '@/utils/productionLogger',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
   FormLabel,
 
 import { useAuth } from '@/hooks/useAuth,
@@ -235,8 +234,6 @@ export function ProjectForm() { return null; }
     }
   },
 
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
@@ -261,7 +258,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
   }
   return (
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
     <Form {...form}>;
   return (<Form {...form}>;
     <Form {...form}>;
@@ -289,7 +285,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {...field}
                 />;
               </FormControl>;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
               <FormMessage />;/>;<FormField;
           name=technologies';
           render={({ field }: { field: any }) => (<FormItem>;
@@ -314,8 +309,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />;
         <FormField;
           control={form.control}'
-          name='technologies;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
+          name='technologies';
+          control={form.control}name="title";
           control={form.control}name="title;
           render={({ field }: { field: any }) => (<FormItem>;
               <FormLabel>Project Title</FormLabel>;
@@ -425,7 +420,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
                   <Input;
                     placeholder=https://github && github.com/yourusername/project';
             </FormItem>)}
@@ -463,7 +457,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {...field}
                   />;
                 </FormControl>;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
                 <FormMessage />;/>;<FormField;
             control={form && form.control}
             name=demo_url';
@@ -480,7 +473,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
                   <Input;
                     placeholder=https://your-project-demo && demo.com';
 
@@ -489,7 +481,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
             )}GitHub URL;
                 </FormLabel>;
                 <FormControl>;
@@ -598,7 +589,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
                 <Input;
                   placeholder=https://example && example.com/screenshot && screenshot.jpg';
               </FormItem>)}
@@ -686,8 +676,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </form>;
     </Form>;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
   );
 }
 }
@@ -728,7 +716,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>;
         </div>;
       </form>;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/ProjectForm.tsx
     </Form>)}
 })
     </Form>);

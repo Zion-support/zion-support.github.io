@@ -1,8 +1,10 @@
 
   }
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+  return <div>Something went wrong.</div>;
+    }return this.props.children;
+  }
+}
+import React from 'react';
 import React from react';
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
   return <NextSeo {...props} />;

@@ -1,4 +1,5 @@
-
+import React from 'react';
+import Link from 'next/link';
 
 const InteractiveNavigation = () => {
   return (
@@ -26,39 +27,40 @@ const InteractiveNavigation = () => {
   );
 }
 
+export default InteractiveNavigation;
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
+import React, { useState } from 'react';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+
 ;
 
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
-=======
-import React, { useState } from react";
-import Link from "next/link;
-import { ChevronDown, Menu, X } from lucide-react";
-=======
-import React, { useState } from "react;
-import Link from next/link";
-import { ChevronDown, Menu, X } from "lucide-react;
-=======
+import React, { useState } from "react";
+import Link from "next/link";
+import { ChevronDown, Menu, X } from "lucide-react";
+import React, { useState } from "react";
+import Link from "next/link";
+import { ChevronDown, Menu, X } from "lucide-react";
+;
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+
+
+
+interface NavigationItem {}
+  name: string, href: string;
+  submenu?: NavigationItem[];
 
 interface NavItem {
   label: string;
   href: string;
   children?: NavItem[];
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
-
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
 
 interface InteractiveNavigationProps {
@@ -66,13 +68,12 @@ interface InteractiveNavigationProps {
   className?: string;
 }
 
-
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   items,
-  className = "}) => {
-
-interface NavigationItem {
-  name: string, href: string,
+  className = "",
+}) => {
+interface NavigationItem {;
+  name: string, href: string,;
   submenu?: NavigationItem[];
 }
                 initial={{ opacity: 0, y: 10 }}
@@ -190,10 +191,6 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/contact className=text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
 
 export default Component}
-
-export default Component}
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -300,17 +297,33 @@ export default Component}
       </div>
     </nav>
   );
+}
+export default InteractiveNavigation;}
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
+};
+
+export default InteractiveNavigation;};
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
 }
+export default InteractiveNavigation;}
+ursor/automate-test-fix-improve-and-merge-code-99d1,";
+const InteractiveNavigation: React.FC: = () => {";
+    <nav className="bg-white shadow-lg">";";
+      <div: className="container mx-auto px-4">";";
+        <div: className="flex justify-between items-center py-4">";";
+          <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>";";
+          <div: className="hidden md:flex: space-x-8">",";
+            <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
 
+            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
 
->>>>>>> b34ea2545ce9392bcd445377e10b83a39d4ed330
-=======
+            <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
+            <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
     <nav className="bg-white shadow-lg">;;
       <div: className="container mx-auto px-4">;;
         <div: className="flex justify-between items-center py-4">;;
@@ -390,24 +403,14 @@ ursor / automate - test - fix - improve - and - merge - code - 99d1, ";
             <Link: href="/contact" className=text - gray - 600 hover:text - gray - 900: transition - colors>Contact</Link>", ';
 
 export default Component}
+;
 
-=======
-}
+export default Component}
+};
 
 export default InteractiveNavigation;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
-=======
 export default InteractiveNavigation;
-
->>>>>>> f6b849a806966ab0803a1eba10ab812addf04f56
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
-=======
 '";`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 import Link from 'next/link';
 
   return (

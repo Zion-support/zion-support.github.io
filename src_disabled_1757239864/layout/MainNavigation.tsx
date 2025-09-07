@@ -1,5 +1,17 @@
 <<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
-<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
+import Link from "next/link",
+import { useRouter } from "next/router",
+import { useState } from "react",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { useTranslation } from "react-i18next",
+import { useFavorites } from "@/hooks/useFavorites",
+import { useCart } from "@/context/CartContext";
+import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
+import { LanguageSelector  } from '@/components/header/LanguageSelector';
+import { HoverCard, HoverCardTrigger, HoverCardContent  } from '@/components/ui/hover-card';
+import { MiniCartPreview  } from '@/components/cart/MiniCartPreview';
+import { LoginModal } from '@/components/auth/LoginModal';
 import Link from "next/link,
 import { useRouter } from next/router",
 import { useState } from "react,
@@ -216,7 +228,6 @@ interface MainNavigationProps {
                 </Link>;
               </li>;
             )}
-<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
 
                     onClick={handleCartClick}
                     className={cn(
@@ -650,7 +661,6 @@ export default function Page() {[])const baseLinks: NavigationLink[]  = [{key: h
                     {cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
 >                        {cartCount}
-<<<<<<< HEAD:src_backup/layout/MainNavigation.tsx
                       </span>;
 
                     )}

@@ -1,11 +1,9 @@
-<<<<<<< HEAD:src_backup/components/profile/BackToDirectoryButton.tsx
-<<<<<<< HEAD:src_backup/components/profile/BackToDirectoryButton.tsx
 
 ;
-import React from 'react;
-import { Button  } from @/components/ui/button';
-import Link from 'next/link;
-<<<<<<< HEAD:src_backup/components/profile/BackToDirectoryButton.tsx
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import Link from 'next/link';
+import { ArrowLeft } from 'lucide-react';
 import { ArrowLeft } from lucide-react';
 
 import React from 'react,
@@ -26,7 +24,6 @@ export function BackToDirectoryButton() {
         <Link
           href=/talents
 
-<<<<<<< HEAD:src_backup/components/profile/BackToDirectoryButton.tsx
 import { ArrowLeft  } from 'lucide-react';
 import React from react,export function BackToDirectoryButton() {export function BackToDirectoryButton() {return (<div className='container mx-auto px-4 md:px-6 mb-12'>;
       <Button variant=outline asChild className='my-8'>;
@@ -116,11 +113,9 @@ function BackToDirectoryButton() {return (<div className='container mx - auto px
 
         </Link>;
       </Button>;
-<<<<<<< HEAD:src_backup/components/profile/BackToDirectoryButton.tsx
     </div>);
 });
 }
-<<<<<<< HEAD:src_backup/components/profile/BackToDirectoryButton.tsx
   );
 }
           className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'

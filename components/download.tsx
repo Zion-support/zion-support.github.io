@@ -1,4 +1,8 @@
 
 
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
+export { default } from "./mobile-launch";
+export { default } from "./mobile - launch";
+
+export { default } from "./mobile-launch";
+

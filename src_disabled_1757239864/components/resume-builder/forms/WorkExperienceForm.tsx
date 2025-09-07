@@ -354,4 +354,3 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     </div>
   )
 }
-

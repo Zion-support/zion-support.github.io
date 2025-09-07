@@ -1,6 +1,5 @@
-
-import React from 'react;
-import MainLayout from ../../components/layout/MainLayout';
+import React from 'react';
+import MainLayout from '../../components/layout/MainLayout';
 
 const Page = () => {
   return (
@@ -19,7 +18,6 @@ const Page = () => {
 }
 
 export default Page;
-
 
 
 class ErrorBoundary extends React.Component {
@@ -484,7 +482,4 @@ export default Index,
 
 import Head from 'next/head';
 const Index: NextPage;
-
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

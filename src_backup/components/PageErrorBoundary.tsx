@@ -15,7 +15,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
   return (
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
 import Link from next / link';
 import { ErrorBoundary, FallbackProps } from 'react - error - boundary;
@@ -50,8 +49,8 @@ interface PageErrorFallbackProps extends FallbackProps  {pageName?: string;
             </h1>;
             <p className=text-gray-600'>;
               {isAuthConfigError;
-                ? 'This page cannot load due to missing authentication configuration;
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
+                ? 'This page cannot load due to missing authentication configuration';
+                : 'An unexpected error occurred while loading this page'}import { logInfo;
                 : An unexpected error occurred while loading this page'}import { logInfo;
   logErrorToProduction as prodLogError;
  } from '@/utils/productionLogger;
@@ -96,7 +95,6 @@ import {logErrorToProduction} from @/utils/productionLogger',import { logInfo, l
               <summary className="cursor-pointer text-gray-700 font-medium>
                 Technical Details
               </summary>
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 
 
             <p className='text-gray-600>;
@@ -243,9 +241,8 @@ if ( {) {}
             </button>
             
             <Link 
-              href=/"
-              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
+              href="/"
+              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
 
 
 
@@ -254,7 +251,7 @@ if ( {) {}
               Go Home
             </Link>
           </div>
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
+              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors";
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors;
             >;
               <RefreshCw className=w-4 h-4 mr-2" />;
@@ -473,7 +470,6 @@ export default /**;
               href=mailto:support@zion.tech";"
               className=text-blue-400 hover:underline;
             >;
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
               support@zion.tech;
             </a>;
             <Link href="/status" className=text-blue-400 hover:underline>;
@@ -489,7 +485,6 @@ export default /**;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
   );
   )}interface PageErrorBoundaryProps  {children: React.ReactNode,pageName?: string,fallback?: React.ComponentType<FallbackProps>;
 }export default function PageErrorBoundary() {const handleError = (error: Error, errorInfo: React.ErrorInfo) => {prodLogError(`PageErrorBoundary caught error on ${pageName || unknown page'}:`, error),logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, {page: pageName || 'unknown,componentStack: errorInfo.componentStack || undefined,errorBoundary: PageErrorBoundary',timestamp: new Date().toISOString()})}const FallbackComponent = fallback || ((props: FallbackProps) => (<PageErrorFallback {...props} pageName={pageName} />;
@@ -502,7 +497,6 @@ export default /**;
     )logErrorToProduction(error instanceof Error ? error && error.message : String(error),error instanceof Error ? error : undefined,{page: pageName || unknown',componentStack: errorInfo && errorInfo.componentStack || undefined,errorBoundary: 'PageErrorBoundary,timestamp: new Date().toISOString()}
     )}const FallbackComponent =;
     fallback ||;
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
     ((props: FallbackProps) => (;
       <PageErrorFallback {...props} pageName={pageName} />;
     ));
@@ -554,8 +548,7 @@ export default function PageErrorBoundary({
       onError={handleError}
       onReset={() => {
         // Reset any application state if needed
-        logInfo(`Resetting error boundary for ${pageName || page'}`)
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
+        logInfo(`Resetting error boundary for ${pageName || 'page'}`)
 origin/cursor/automate-test-improve-and-merge-code-2533
       }}
     >;
@@ -601,7 +594,6 @@ interface PageErrorBoundaryProps {
 
     </ErrorBoundary>
   );
-<<<<<<< HEAD:src_backup/components/PageErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
     </ErrorBoundary>))}interface PageErrorBoundaryProps  {children:React.ReactNode,pageName?:string,fallback?:React.ComponentType<FallbackProps>;
 }}

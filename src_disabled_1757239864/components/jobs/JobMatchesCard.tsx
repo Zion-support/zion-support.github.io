@@ -1,7 +1,5 @@
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
+import { useState } from 'react';
 import { useState } from 'react;
 import {
   Card
@@ -10,13 +8,12 @@ import {
   CardTitle
   CardDescription
   CardFooter
-} from @/components/ui/card'
-import { Badge } from '@/components/ui/badge
-import { Button } from @/components/ui/button'
-import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react
-import { format } from "date-fns;
-import { JobMatch } from @/types/jobs";
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
+} from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react'
+import { format } from "date-fns";
+import { JobMatch } from "@/types/jobs";
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface JobMatchCardProps {
 import { useState } from react';
@@ -45,7 +42,6 @@ interface JobMatchCardProps {
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 
   return (
     <Card className=overflow-hidden border-l-4 border-l-blue-500'>;
@@ -66,16 +62,13 @@ export function JobMatchesCard(): any ({
   showApplied = false}: JobMatchCardProps) {
   const job = match && match.job;
 
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
   if (!job) return null,
 
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 }
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied;
@@ -114,8 +107,21 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied;
             <p className="text-xs text-muted-foreground mb-1>Matched skills:</p>
             <div className=flex flex-wrap gap-1">,
               {match.matched_skills.slice(0, 5).map((skill, i) => (
-                <Badge key={i} variant="secondary className=text-xs">
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
+                <Badge key={i} variant="secondary" className="text-xs">
+import { useState } from "react",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
+import { format } from "date-fns",;
+import { JobMatch } from "@/types/jobs",;
+interface JobMatchCardProps {;
+  match: JobMatch,;
+  onApply: (matchId: string, jobId: string) => void,;
+  onDecline: (matchId: string) => void,;
+
+;
+import { useState  } from 'react';
 import { useState } from "react,
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from @/components/ui/card",
 import { Badge } from "@/components/ui/badge,
@@ -210,10 +216,8 @@ import { useState } from "react,import { Card, CardContent, CardHeader, CardTitl
                   +{match.matched_skills.length - 5}
                 </Badge>;
               )}
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
             </div>;
           </div>;
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
             </div>
           </div>
         )}
@@ -228,11 +232,9 @@ import { useState } from "react,import { Card, CardContent, CardHeader, CardTitl
             <DollarSign className=h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
 
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 
 
 
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 
           </div>
           <div className=flex items-center text-sm'>
@@ -315,7 +317,7 @@ import { useState } from "react,import { Card, CardContent, CardHeader, CardTitl
               Decline;
             </Button>;
           </div>;
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
+        )}<div className="flex gap-2 w-full">;
         )}<div className="flex gap-2 w-full>;
             <Button;
               className=flex-1";
@@ -331,9 +333,7 @@ import { useState } from "react,import { Card, CardContent, CardHeader, CardTitl
               Decline;
             </Button>;
           </div>;
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
         )}
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
       </CardFooter>;
         )}</CardFooter>;
     </Card>;
@@ -456,18 +456,14 @@ if (return null) {$2;
             </Button>;
           </div>)}
       </CardFooter>;
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
     </Card>);
 }
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 ;
 
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 
       </CardFooter>
     </Card>
   );
-<<<<<<< HEAD:src_backup/components/jobs/JobMatchesCard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
     </Card>)}</CardFooter>;
     </Card>;

@@ -44,7 +44,6 @@ import { cn  } from @/lib / utils';
 import { log_info  } from '@/utils / production_logger;
 const ToastProvider = ToastPrimitives.Provider; import { log_info  } from @/utils / production_logger';
 const ToastViewport = React.forward_ref<;
-<<<<<<< HEAD:src_backup/components/ui/toast.tsx
   React.ElementRef < typeof ToastPrimitives.Viewport>,
   React.ComponentPropsWithoutRef < typeof ToastPrimitives.Viewport>;
 >(({ class_name, ...props }, ref, ) => (
@@ -183,7 +182,7 @@ const Toast = React && React.forwardRef<;
   React && React.ElementRef<typeof ToastPrimitives && ToastPrimitives.Root>,
   React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Root> &;
     VariantProps<typeof toastVariants>;
-<<<<<<< HEAD:src_backup/components/ui/toast.tsx
+>(({ className, variant, ...props }, ref) => {;
 >(({ className, variant, ...props }, ref) => {
       />;
   );
@@ -287,7 +286,6 @@ const ToastDescription = React.forward_ref<;
     className={cn (text - sm opacity - 90, class_name)}    {...props}
   />))ToastDescription.display_name = ToastPrimitives.Description.display_name;
 type ToastProps = React.ComponentPropsWithoutRef < typeof Toast>;
-<<<<<<< HEAD:src_backup/components/ui/toast.tsx
 type ToastActionElement = React.ReactElement < typeof ToastAction>;
 
 export {
@@ -425,7 +423,14 @@ const ToastDescription = React.forwardRef<;
 ))ToastDescription.displayName = ToastPrimitives.Description.displayName;
 type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>;
 type ToastActionElement = React.ReactElement<typeof ToastAction>;
-<<<<<<< HEAD:src_backup/components/ui/toast.tsx
+export {;
+  type ToastProps,;
+  type ToastActionElement,;
+  ToastProvider,;
+  ToastViewport,;
+  Toast,;
+  ToastTitle,;
+  ToastDescription,;
 export {
   type ToastProps,
   type ToastActionElement,

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react;
-import { Helmet } from react-helmet-async';
-<<<<<<< HEAD:src_backup/components/SEO.tsx
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 import { useLocation } from 'react-router-dom;
 
 interface SEOProps {
@@ -117,8 +117,8 @@ export function SEO({
 const SEO: React.FC<SEOProps> = ({}) => {
   const siteName = 'Zion Tech Group;
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const fullUrl = url ? `https://ziontechgroup.com${url}` : https://ziontechgroup.com';
-<<<<<<< HEAD:src_backup/components/SEO.tsx
+  const fullUrl = url ? `https://ziontechgroup.com${url}` : 'https://ziontechgroup.com';
+  type?: 'website' | 'article' | 'product' | 'service';
   type?: 'website | article' | 'product | service';
   author?: string;
   publishedTime?: string;
@@ -344,8 +344,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       }
     }
     return null;
-  }
-<<<<<<< HEAD:src_backup/components/SEO.tsx
+  };
 origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4210
 
   // Combine all structured data
@@ -408,9 +407,11 @@ pr-12325
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description content={description} />
-      <meta name=keywords" content={keywords} />
-<<<<<<< HEAD:src_backup/components/SEO.tsx
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta property="og: type" content={type} />
+      <meta property="og:url" content={url} />
+      <meta property="og:title" content={title} />
       <meta property="og: type content={type} />
       <meta property=og:url" content={url} />
       <meta property="og:title content={title} />
@@ -474,8 +475,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       </script>
     </Helmet>
   );
-}
-<<<<<<< HEAD:src_backup/components/SEO.tsx
+};
+      <meta name="author" content={author} />
+      <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
       <meta name="author content={author} />
       <meta name=robots" content={noindex ? 'noindex, nofollow : index, follow'} />
       
@@ -513,7 +515,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       {/* Canonical URL */}
       {canonical && <link rel=canonical" href={canonical} />}
       
-<<<<<<< HEAD:src_backup/components/SEO.tsx
       {/* Additional Meta Tags */}
       <meta name="viewport content=width=device-width, initial-scale=1, viewport-fit=cover" />
       <meta name="theme-color content=#0ea5e9" />

@@ -1,6 +1,5 @@
 
 
-
 interface ProfileErrorStateProps {
   error: string | null
 }
@@ -16,5 +15,5 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
-
+  )
 }

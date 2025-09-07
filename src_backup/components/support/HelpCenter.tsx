@@ -1,5 +1,12 @@
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
+import React, { useState } from 'react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { HelpCategoryList } from './HelpCategoryList';
+import { HelpArticleList } from './HelpArticleList';
+import { HelpArticleView } from './HelpArticleView';
+import { HELP_CATEGORIES } from './help-content';
+import { Search } from 'lucide-react';
 import React, { useState } from 'react;
 import { Input } from @/components/ui/input';
 import { Button } from '@/components/ui/button;
@@ -235,7 +242,6 @@ export default /**;
           </h1>;
           <p className=text-zion-slate-light mb-6>;
             Find answers to common questions or get in touch with our support;
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
             team.;
 
   const handleCategorySelect = (categoryId: string) => {
@@ -264,8 +270,7 @@ export default /**;
           <h1 className=text-3xl font-bold mb-2 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
             Help Center;
           </h1>;"
-          <p className=text-zion-slate-light mb-6>;
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
+          <p className="text-zion-slate-light mb-6">;
             Find answers to common questions or get in touch with our support team.;
 
           </p>;
@@ -362,7 +367,6 @@ export default /**;
                   <HelpArticleView articleId={selectedArticle} />
                 </>
               )}
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
             </TabsContent>
 
             <TabsContent value="faq>
@@ -388,7 +392,6 @@ export default /**;
                   </div>
 
                   <div>
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
                     <h3 className="font-medium text-zion-cyan mb-2">How do I hire someone on Zion?</h3>
                     <p className=text-zion-slate-light>
                       To hire talent on Zion, post a job or project, review matches or applications, interview candidates through our platform, and extend an offer. Our secure payment system protects both parties throughout the engagement.
@@ -546,7 +549,6 @@ export default /**;
                   </div>;
                 </div>;
               </div>;
-<<<<<<< HEAD:src_backup/components/support/HelpCenter.tsx
             </TabsContent>;
 
 

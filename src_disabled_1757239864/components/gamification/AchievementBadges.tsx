@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
 export interface Achievement {
 
 <<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
@@ -23,7 +22,6 @@ export interface Achievement {
 >  title: string;
   description: string;
   achieved: boolean;
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
 interface AchievementBadgesProps {
   achievements: Achievement[];
   achievements: Achievement[];
@@ -83,7 +81,6 @@ export interface Achievement {
 interface AchievementBadgesProps {
   achievements: Achievement[],
 >}
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
 
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
   return (
@@ -133,7 +130,6 @@ function AchievementBadges() {return (<Card>;
             </div>;
           </div>))}
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
     </Card>);
 }
 
@@ -158,7 +154,6 @@ function AchievementBadges() {return (<Card>;
             </div>;
           </div>;
         ))}
-<<<<<<< HEAD:src_backup/components/gamification/AchievementBadges.tsx
       </CardContent>
     </Card>
   );

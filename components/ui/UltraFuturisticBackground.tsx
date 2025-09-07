@@ -1,16 +1,24 @@
 
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
 
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
+pr-12243
+
+import React from 'react';
+
+interface UltraFuturisticBackgroundProps {}
+  children: React.ReactNode;
+  variant?: 'quantum' | 'matrix' | 'neon';
+  variant?: 'quantum' | 'neon' | 'cyber';
+  intensity?: 'low' | 'medium' | 'high';
+
+pr-12243
+  intensity?: 'low' | 'medium' | 'high';
+
 import React from 'react;
 
 interface UltraFuturisticBackgroundProps {}
   children: React.ReactNode;
 
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   intensity?: low' | 'medium | high';
   className?: string;
 }
@@ -50,21 +58,22 @@ export default function UltraFuturisticBackground({
   enableQuantumEffects?: boolean;
   enableNeonEffects?: boolean;
   enableSpaceTime?: boolean;
-  variant?: 'quantum | neon' | 'cyber;
+  variant?: 'quantum' | 'neon' | 'cyber';
 
-=======
-variant?: quantum' | 'neon | cyber';
-  intensity?: 'low | medium' | 'high;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+
+variant?: 'quantum' | 'neon' | 'cyber';
+  intensity?: 'low' | 'medium' | 'high';
   className?: string;
 }
 
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children,
+  variant = 'quantum',
+  intensity = 'medium',
 
-=======
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+pr-12243
+  intensity = 'medium',
+  colorScheme = 'quantum-fusion',
   intensity = medium',
   colorScheme = 'quantum-fusion,
   particleCount = 200,
@@ -73,38 +82,54 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   enableQuantumEffects = true,
   enableNeonEffects = true,
   enableSpaceTime = true,
-  variant = quantum',
+  variant = 'quantum',
 
-=======
 variant = 'quantum,
   intensity = medium',
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   className = '
 }) => {}
     const baseClasses = 'relative overflow-hidden';
     
     switch (variant) {
-      case quantum':
+      case 'quantum':
+        return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
+      case 'neon':
+        return `${baseClasses} bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900`;
+      case 'cyber':
+
+        return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;
+
+      default:
+variant = 'quantum',
+  intensity = 'medium',
+  className = ''
+}) => {}
+  const getBackgroundClasses = () => {'
+    const baseClasses = 'relative overflow-hidden';
+    
+    switch (variant) {'
+      case 'quantum':
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;'
       case neon:`
         return `${baseClasses} bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900`;'
-      case 'cyber:
+      case 'cyber':
+        return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-900`;
 
-=======
+pr-12243
         return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;
 return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-900`;
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       default:
-=======
 
       default:`
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
     }
   }
 
 
+  return (
+    <div className={`${getBackgroundClasses()} ${className}`}>
+      <div className="absolute inset-0 bg-black/20" />
+  const getIntensityClasses = () => {
     switch (intensity) {
       case low':
         return 'opacity-30;
@@ -129,15 +154,11 @@ return `${baseClasses} bg-gradient-to-br from-green-900 via-slate-900 to-blue-90
       </div>
       
       {/* Content */}
-
-=======
+pr-12243
   return (
     <div className={`${getBackgroundClasses()} ${className}`}>
-      <div className="absolute inset-0 bg-black/20 />
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="relative z-10">
       <div className=relative z-10">
         {children}
       </div>

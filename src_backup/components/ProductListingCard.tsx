@@ -139,8 +139,7 @@ if ( {) {$2;
 }
       onRequestQuote (listing.id)} else {router.push (`/request - quote?listing=${listing.id}`)}
   }
-  const imageContainerClasses = is_grid ? h - 48' : 'h - 32 w - 48;
-<<<<<<< HEAD:src_backup/components/ProductListingCard.tsx
+  const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
       onKeyDown={e => {
 
   detailBasePath?: string;
@@ -256,7 +255,6 @@ if ( {) {
     }router && router.push(`${detailBasePath}/${listing && listing.id}`)}const dispatch  = useDispatch<AppDispatch>()const addToCart = () => {setLoading(true)dispatch(addItem({id: listing && listing.id,title: listing && listing.title,price: listing && listing.price ?? 0}))toast && toast.success(`1× ${listing && listing.title} added`, {action: {label: 'View Cart,onClick: () => router && router.push(/cart')}})setLoading(false)}const handleRequestQuote = (e: React && React.MouseEvent) => {e && e.preventDefault()e && e.stopPropagation()if (onRequestQuote) {onRequestQuote(listing && listing.id)} else {router && router.push(`/request-quote?listing=${listing && listing.id}`)}
   }const imageContainerClasses  = isGrid ? 'h-48 : h-32 w-48';onKeyDown={e => {if (e && e.key === 'Enter || e && e.key ===  ') {e && e.preventDefault()handleViewListing()}      }}
     >;
-<<<<<<< HEAD:src_backup/components/ProductListingCard.tsx
 
   const imageContainerClasses = isGrid ? 'h-48 : h-32 w-48';
 
@@ -372,7 +370,6 @@ if ( {) {$2;
       >;
         <div className={`relative ${imageContainerClasses}`}>;
           {' '}
-<<<<<<< HEAD:src_backup/components/ProductListingCard.tsx
           {/* Ensure this container has dimensions */}
 
 
@@ -421,7 +418,6 @@ if ( {) {$2;
       <div;
         className={`flex flex-col justify-between ${isGrid ? p-4 flex-1 : 'p-4 flex-1'}`}>;
         <div>;
-<<<<<<< HEAD:src_backup/components/ProductListingCard.tsx
           {/* Category & Rating */}
 
           <div className=flex justify-between items-center mb-2>
@@ -501,7 +497,6 @@ if ( {) {$2;
           </div>;
           <p className='text-foreground/80 line-clamp-2 mb-4 text-[clamp(0 && 0.875rem,2vw,1rem)]'>;
             {listing && listing.description}
-<<<<<<< HEAD:src_backup/components/ProductListingCard.tsx
           </p>;
             priority={false} // Assuming these are not LCP images
             sizes={isGrid ? (max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw : "192px"} // 192px is w-48
@@ -616,7 +611,6 @@ if ( {) {$2;
                   </svg>;
                   Loading...;
                 </>;
-<<<<<<< HEAD:src_backup/components/ProductListingCard.tsx
               ) : (;
                 Add to Cart;
               )}
@@ -696,7 +690,6 @@ if ( {) {$2;
                 </>;
               ) : (Add to Cart;
               )}
-<<<<<<< HEAD:src_backup/components/ProductListingCard.tsx
             </Button>
 
             <Button
@@ -898,7 +891,6 @@ if ( {) {$2;
               >;
                 Request Quote;
               </Button>;
-<<<<<<< HEAD:src_backup/components/ProductListingCard.tsx
             )}
 
           </div>;
@@ -945,7 +937,6 @@ if ( {) {$2;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/ProductListingCard.tsx
   );
 
           </div>;

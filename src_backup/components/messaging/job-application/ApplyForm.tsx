@@ -1,4 +1,15 @@
-<<<<<<< HEAD:src_backup/components/messaging/job-application/ApplyForm.tsx
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Loader2 } from 'lucide-react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useJobApplications } from '@/hooks/useJobApplications';
+import { useMessaging } from '@/context/MessagingContext';
+import { toast } from '@/hooks/use-toast';
+import { ResumeSelector, ResumeOption } from '../resume-selector';
+import { MessageTab } from './MessageTab';
+import { ResumeTab } from './ResumeTab';
+import { Job } from './types';
+import { logErrorToProduction } from '@/utils/productionLogger';
 import React, { useState } from 'react;
 import { Button } from @/components/ui/button';
 import { Loader2 } from 'lucide-react;
@@ -199,7 +210,6 @@ interface ApplyFormProps  {job: Job,onClose: () => void,onApplySuccess?: (jobId:
           <ResumeTab;
             selectedResume={selectedResume}
             onResumeSelect={setSelectedResume}
-<<<<<<< HEAD:src_backup/components/messaging/job-application/ApplyForm.tsx
 
             message={message}
             setMessage={setMessage}
@@ -363,9 +373,9 @@ return (<> <Tabs value= {activeTab;
 }proposalLink= {proposalLink;
 }setProposalLink= {setProposalLink ;
 }/> </TabsContent> <TabsContent value=" resume"> <ResumeTab onResumeSelected= {handleResumeSelected;
-}selectedResumeId= {selectedResumeId ;
-}/> </TabsContent> </Tabs> <div className= flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'";
-<<<<<<< HEAD:src_backup/components/messaging/job-application/ApplyForm.tsx
+}selectedResumeId= {selectedResumeId ";
+}/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'";
+  isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') ;
   isSubmitting ? (<> <Loader2 className= h-4 w-4 mr-2 animate-spin /> Submitting... </>) : ('Submit Application) ;
 }</Button> </div> </>) ;
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : (Submit Application')}</Button> </div> </>)}'}

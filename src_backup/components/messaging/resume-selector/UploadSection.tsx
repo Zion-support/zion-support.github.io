@@ -1,7 +1,7 @@
 
 ;
-import React from 'react;
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/UploadSection.tsx
+import React from 'react';
+import { Button } from "@/components/ui/button";
 import { Button } from "@/components/ui/button;
 origin/cursor/automate-test-improve-and-merge-code-2533
 :src/components/messaging/resume-selector/UploadSection.tsx
@@ -33,7 +33,7 @@ interface UploadSectionProps  {customFile: File | null;
         <p className=text - sm text - zion - slate mb - 2'>;
           {custom_file;
             ? custom_file.name;
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/UploadSection.tsx
+            : 'Drag & drop your PDF or click to browse'}
             : 'Drag & drop your PDF or click to browse}
 
         </p>
@@ -220,7 +220,6 @@ import React from react',import { Button } from @/components/ui/button",interfac
           {isProcessing ? 'Processing... : Process Resume'}
         </Button>;
       )}
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/UploadSection.tsx
     </div>
   );
 }

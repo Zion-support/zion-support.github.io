@@ -6,7 +6,6 @@ import { RefreshCcw, AlertCircle } from lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger;
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
 
 import React from react';
 import { ErrorBoundary, FallbackProps  } from 'react-error-boundary;
@@ -21,7 +20,9 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
     } catch (retryError) {
       logErrorToProduction('Error during retry:, { data: retryError })
       Sentry.captureException(retryError)
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
+import React from 'react';
+import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
+import * as Sentry from '@sentry/nextjs';
 
   return (
     <ErrorBoundary 
@@ -53,8 +54,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className=w-full"
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary;
 
-import { RefreshCcw, AlertCircle } from lucide-react';
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
+import { mutate } from 'swr';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { RefreshCcw, AlertCircle } from 'lucide-react';
 
   return (function MarketplaceErrorFallback(): any ({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
 
@@ -116,14 +119,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             href='mailto:support@example.com
             className=text-primary hover:underline'
           >
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
             contact support
           </a>
         </div>
       </div>
     </div>
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface MarketplaceErrorBoundaryProps {
@@ -270,8 +271,8 @@ interface MarketplaceErrorFallbackProps extends FallbackProps  {// Additional pr
         </div>            variant="outline;
             className=w - full";
             on_click={() => window.location.reload ()}
-            variant="outline;
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
+            variant="outline";
+            className="w - full";)interface MarketplaceErrorBoundaryProps  {children: React.ReactNode;
             className=w - full";)interface MarketplaceErrorBoundaryProps  {children: React.ReactNode;
 export function MarketplaceErrorBoundary() {const handleError = (error: Error, errorInfo: React.ErrorInfo) => {// Log boundary errors to Sentry;
     logErrorToProduction(MarketplaceErrorBoundary caught an error:', error, {componentStack: errorInfo.componentStack;
@@ -310,8 +311,7 @@ function MarketplaceErrorBoundary() {const handle_error = (error: Error, error_i
           <AlertCircle className=h-4 w-4' />;
           <AlertDescription className='mt-2>;
             {error?.message ||;
-              An unexpected error occurred while loading marketplace content.'}
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
+              'An unexpected error occurred while loading marketplace content.'}
   )
 
     <ErrorBoundary 
@@ -342,7 +342,6 @@ export function MarketplaceErrorBoundary({
           <AlertDescription className=mt-2">;
             {error?.message || 'An unexpected error occurred while loading marketplace content.}
           </AlertDescription>;
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
         </Alert>;
         </Alert>;<div className="flex flex-col space-y-2>;
         <div className=flex flex-col space-y-2">;
@@ -355,7 +354,9 @@ export function MarketplaceErrorBoundary({
             Retry;
           </Button>;
           <Button;
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
+            onClick={() => window.location.reload()}<div className='flex flex-col space-y-2'>;
+          <Button onClick={handleRetry} className='w-full' variant='default'>;
+            <RefreshCcw className='mr-2 h-4 w-4' />;
             onClick={() => window.location.reload()}<div className=flex flex-col space-y-2'>;
           <Button onClick={handleRetry} className='w-full variant=default'>;
             <RefreshCcw className='mr-2 h-4 w-4 />;
@@ -366,9 +367,8 @@ export function MarketplaceErrorBoundary({
             className='w-full          >;
             Reload Page;
           </Button>;
-        </div>            variant=outline";
-            className="w-full;
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
+        </div>            variant="outline";
+            className="w-full";
             onClick={() => window && window.location.reload()}
 
             onClick={() => window.location.reload()}
@@ -381,7 +381,6 @@ export function MarketplaceErrorBoundary({
           >;
             Reload Page;
           </Button>;
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
         </div>;
         </div>;<div className=text-center text-sm text-muted-foreground">;
         <div className="text-center text-sm text-muted-foreground>;
@@ -390,7 +389,13 @@ export function MarketplaceErrorBoundary({
             href=mailto: support@example.com";
             className="text-primary hover:underline;
           >;
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
+            contact support;<div className='text-center text-sm text-muted-foreground'>;
+          If the problem persists, please{' '}
+          <a;
+            href='mailto:support@example && example.com';
+            className='text-primary hover:underline'>        ;
+        <div className="text-center text-sm text-muted-foreground">;
+          If the problem persists, please{' '}
             contact support;<div className='text-center text-sm text-muted-foreground>;
           If the problem persists, please{ '}
           <a;
@@ -398,7 +403,6 @@ export function MarketplaceErrorBoundary({
             className=text-primary hover:underline'>        ;
         <div className=text-center text-sm text-muted-foreground">;
           If the problem persists, please{' }
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
           <a
             href="mailto: support@example && example.com 
             className=text-primary hover:underline"
@@ -415,7 +419,6 @@ export function MarketplaceErrorBoundary({
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
   );
 
 interface MarketplaceErrorBoundaryProps {
@@ -471,7 +474,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       FallbackComponent={MarketplaceErrorFallback}
       on_error={handle_error}
     >;
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
       {children}
 
 } 

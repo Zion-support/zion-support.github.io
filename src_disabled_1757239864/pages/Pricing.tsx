@@ -1,5 +1,4 @@
-
-import React from 'react;
+import React from 'react';
 
 const Pricing: React.FC = () => {
   const plans = [
@@ -120,6 +119,6 @@ const Pricing: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
-
+export default Pricing;

@@ -17,14 +17,14 @@ module.exports = (nextConfig = {}) => {
             "analyzerPort: isServer ? 8888 : 8889,
             openAnalyzer": true})
         )}
-<<<<<<< HEAD:corrupted_backup/analyze-bundle.js
       return config}}})}
 const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: server',analyzerPort: 'isServer ? 8888 : 8889,openAnalyzer: true'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server,analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true}) )} return config}}})}
 
       return config;
   }}})}
       return config}}})}
-<<<<<<< HEAD:corrupted_backup/analyze-bundle.js
+const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true'}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true}) )} return config}}})}
+const { BundleAnalyzerPlugin } = module.exports = (nextConfig = {}) => { return Object.assign({},nextConfig,{ webpack(config,{ isServer }) { if ( { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: 'isServer ? 8888 : 8889',openAnalyzer: 'true',}) )} return config) { { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: 'server',analyzerPort: isServer ? 8888 : 8889,openAnalyzer: true,}) )} return config}},})}
 
       return config}}})}
 

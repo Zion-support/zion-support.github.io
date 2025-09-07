@@ -1,5 +1,10 @@
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+import Link from "next/link",
+import { GradientHeading } from "./GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Button } from "./ui/button";
+import { fireEvent } from '@/lib/analytics';
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
+import { Zap } from 'lucide-react'
 import Link from "next/link,
 import { GradientHeading } from ./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs,
@@ -287,9 +292,7 @@ import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, P
 export function FeaturesGuideSection() {
     {
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
       id: ai-matcher",
       title: "AI Matcher,
@@ -526,15 +529,13 @@ export function FeaturesGuideSection() {
       description: Access guides, tutorials, and support resources to maximize your marketplace experience.",
       icon: <HelpCircle className="h-10 w-10 text-zion-purple />,
       instructions: [;
-        Visit our comprehensive knowledge base",
-        "Watch video tutorials on specific features,
-        Join community forums to connect with other users",
-        "Contact our support team for personalized assistance;
-      ],
-      link: /help";
-      buttonText: "View Resources;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+        "Visit our comprehensive knowledge base",;
+        "Watch video tutorials on specific features",;
+        "Join community forums to connect with other users",;
+        "Contact our support team for personalized assistance";
+      ],;
+      link: "/help";
+      buttonText: "View Resources";
 
 
 
@@ -663,7 +664,10 @@ export function FeaturesGuideSection() {
                 key={feature.id}
                 value={feature.id}
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+      id: "ai-matcher",
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
+      icon: <Sparkles className = "h-10 w-10 text-zion-cyan" />,
       id: "ai-matcher,
       title: AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.,
@@ -903,8 +907,7 @@ export function FeaturesGuideSection() {
       link: /help',
       buttonText: 'View Resources}];
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+                className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
                 className=data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -1523,18 +1526,15 @@ export /**;
       ];
       link: /create - profile",button_text: "Create Listing;
     }
-    {id: help - center",title: "Help & Resources,description: Access guides, tutorials, and support resources to maximize your marketplace experience.";
-      icon: <HelpCircle className="h - 10 w - 10 text - zion - purple />,instructions: [;
-        Visit our comprehensive knowledge base";
-        "Watch video tutorials on specific features;
-        Join community forums to connect with other users";
-        "Contact our support team for personalized assistance;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+    {id: "help - center",title: "Help & Resources",description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
+      icon: <HelpCircle className="h - 10 w - 10 text - zion - purple" />,instructions: [;
+        "Visit our comprehensive knowledge base";
+        "Watch video tutorials on specific features";
+        "Join community forums to connect with other users";
+        "Contact our support team for personalized assistance";
       ];
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
                 className=data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
@@ -1546,9 +1546,7 @@ export /**;
             ))}
           </TabsList>
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 <TabsList className=grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1557,7 +1555,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1>
             {features.slice(4).map(feature => (
               <TabsTrigger 
@@ -1569,8 +1567,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className=data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+                className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
 
                 className='data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan
               >
@@ -1591,12 +1588,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {feature.title}
               </TabsTrigger>;
             ))}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
           </TabsList>
 
           {features.map(feature => (
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
       link: /help",
       button_text: "View Resources;
@@ -1644,8 +1638,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h3 className=text - 2xl font - bold text - white mb - 3'>;
                     {feature.title}
                   </h3>;
-                  <p className='text - zion - slate - light mb - 6>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+                  <p className='text - zion - slate - light mb - 6'>;
                     {feature.description}
 
 
@@ -1656,10 +1649,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <div className="bg-zion-blue-dark p-4 rounded-xl mb-4>,
                     {feature.icon}
                   </div>
-                  <h3 className=text-2xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-zion-slate-light mb-6>{feature.description}</p>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+                  <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-zion-slate-light mb-6">{feature.description}</p>
                   <Button 
                     className=bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
 
@@ -1691,7 +1682,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   </h3>;
                   <p className='text-zion-slate-light mb-6>;
                     {feature.description}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
                   </p>
                   <Button
                     className=bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
@@ -1702,7 +1692,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >
                     <Link href={feature.link}>
                       {feature.buttonText}
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
                   </p>;
@@ -1730,9 +1719,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <h4 className=text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4>
                     {feature.instructions.map((instruction, idx,) => (
-                      <li key={idx} className=text-zion-slate-light">
-                        <span className="text-zion-cyan mr-2>{idx + 1}.</span>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+                      <li key={idx} className="text-zion-slate-light">
+                        <span className="text-zion-cyan mr-2">{idx + 1}.</span>
 
     <section className=py-20 bg-zion-blue-dark">;
       <div className="container mx-auto px-4>;
@@ -1823,10 +1811,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <span className=text-zion-cyan mr-2'>{idx + 1}.</span>;
                         {instruction}
                       </li>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
                     ))}
                   </ol>;
@@ -1843,12 +1828,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             asChild;
           >;
             <Link;
-              href=/marketplace";
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+              href="/marketplace";
+              onClick = {() => fireEvent('explore_marketplace_click'),}
               onClick = {() => fireEvent(explore_marketplace_click')}
 
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 <ArrowRight className='ml-2 h-4 w-4 />
                     </Link>
@@ -1872,11 +1856,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </TabsContent>
           ))}
         </Tabs>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
         
         <div className="mt-12 text-center>
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
 <div className='mt-12 text-center>
@@ -1891,14 +1873,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             asChild
           >
             <Link
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+              href="/marketplace"
+              onClick={() => fireEvent('explore_marketplace_click')}
               href=/marketplace"
               onClick={() => fireEvent('explore_marketplace_click)}
             >
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4 />
 
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
 
@@ -1910,16 +1892,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               onClick={() => fireEvent('explore_marketplace_click)}
             >
               Explore Full Marketplace
-              <ArrowRight className=ml-2 h-4 w-4' />
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
+              <ArrowRight className='ml-2 h-4 w-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
             </Link>
           </Button>
         </div>
       </div>
     </section>
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
 
               onClick={() => fireEvent('explore_marketplace_click)}
@@ -1944,7 +1923,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
   );
 }
@@ -2009,11 +1987,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
     </section>);
 }
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
-<<<<<<< HEAD:src_backup/components/FeaturesGuideSection.tsx
 
   );
 }

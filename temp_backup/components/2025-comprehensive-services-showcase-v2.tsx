@@ -32,23 +32,22 @@ export default function ComprehensiveServicesShowcase2025V2() {const allNewServi
 
 
 const serviceCategories = [
-  {id: micro-saas',
-  name: 'Innovative Micro SAAS,icon: <Smartphone className=w-8 h-8" />,color: from-blue-500 to-cyan-500'}
-  services: advancedMicroSaasExpansion2025V2,description: 'Cutting-edge micro SAAS solutions for modern businesses;}
-    },{id: it-infrastructure',
-  name: 'IT Infrastructure Services,icon: <Cloud className="w-8 h-8 />,color: from-purple-500 to-pink-500'}
-  services: advancedITServices2025,description: 'Advanced IT infrastructure and security solutions;}
-    },{id: ai-services',
-  name: 'AI & Machine Learning,icon: <Brain className=w-8 h-8" />,color: from-green-500 to-emerald-500'}
-  services: advancedAIServices2025,description: 'Intelligent AI solutions for business transformation;}
-    },{id: industry-solutions',
-  name: 'Industry Solutions,icon: <Building className="w-8 h-8 />,color: from-orange-500 to-red-500'}
-  services: advancedITServices2025,description: 'Specialized solutions for specific industries;}
-    },{id: emerging-tech',
-  name: 'Emerging Technology,icon: <Zap className=w-8 h-8" />,color: from-indigo-500 to-purple-500'}
-  services: advancedAIServices2025,description: 'Breakthrough technologies of the future;}
-import { motion } from framer-motion';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+  {id: 'micro-saas',
+  name: 'Innovative Micro SAAS',icon: <Smartphone className="w-8 h-8" />,color: 'from-blue-500 to-cyan-500',}
+  services: advancedMicroSaasExpansion2025V2,description: 'Cutting-edge micro SAAS solutions for modern businesses';}
+    },{id: 'it-infrastructure',
+  name: 'IT Infrastructure Services',icon: <Cloud className="w-8 h-8" />,color: 'from-purple-500 to-pink-500',}
+  services: advancedITServices2025,description: 'Advanced IT infrastructure and security solutions';}
+    },{id: 'ai-services',
+  name: 'AI & Machine Learning',icon: <Brain className="w-8 h-8" />,color: 'from-green-500 to-emerald-500',}
+  services: advancedAIServices2025,description: 'Intelligent AI solutions for business transformation';}
+    },{id: 'industry-solutions',
+  name: 'Industry Solutions',icon: <Building className="w-8 h-8" />,color: 'from-orange-500 to-red-500',}
+  services: advancedITServices2025,description: 'Specialized solutions for specific industries';}
+    },{id: 'emerging-tech',
+  name: 'Emerging Technology',icon: <Zap className="w-8 h-8" />,color: 'from-indigo-500 to-purple-500',}
+  services: advancedAIServices2025,description: 'Breakthrough technologies of the future';}
+import { motion } from 'framer-motion';
 import { 
   Brain, Zap, Shield, Circle, ArrowRight;
   Check, Star, TrendingUp, Users;}
@@ -162,7 +161,6 @@ const contactInfo = {mobile: +1 302 464 0950'}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS,import { Brain, Atom, Shield, Target, Rocket;
   ArrowRight, Check, Star, TrendingUp, Users;
@@ -198,8 +196,7 @@ import { emergingTechBreakthroughs2025V2  } from ../data/2025-emerging-tech-brea
 const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.;
           </motion.p>;
           <motion.div;
-            className="flex flex-col sm:flex-row gap-4 justify-center;
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            className="flex flex-col sm:flex-row gap-4 justify-center";
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -245,7 +242,6 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
             initial={{ opacity: 0, y: 20 }
 }
@@ -259,13 +255,11 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
           <motion.div;
             className="grid md:grid-cols-3 gap-8;
 <motion.div;
-            className='grid md:grid-cols-3 gap-8;
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            className='grid md:grid-cols-3 gap-8';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
             <div className=text-center">;
            />;
@@ -312,13 +306,11 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
 <section id=services' className='py-20 px-4 />;
         <div className=max-w-7xl mx-auto' />;
           <motion.h2;
-            className='text-4xl md:text-5xl font-bold text-white text-center mb-16;
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
             initial={{ opacity: 0, y: 20 }
 }
@@ -386,8 +378,7 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
           <motion.div;
             className="space-y-20;
 <motion.div;
-            className=space-y-20';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            className='space-y-20';
             variants={staggerContainer}
             initial=initial";
             whileInView="animate;
@@ -422,7 +413,6 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
                      />;
                       <h4 className=text-xl font-semibold text-white mb-3" />;
                         {service.name}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
                       </h4>;
                       <p className="text-gray-300 mb-4 />;
                         {service.description}</p>;
@@ -455,8 +445,7 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
                        />;
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200>
 
-                        Learn More <ArrowRight className=w-4 h-4 ml-2" />;
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+                        Learn More <ArrowRight className="w-4 h-4 ml-2" />;
                       </p>;
                       <div className="space-y-3 mb-6 />;
                         <div className=flex items-center text-sm text-cyan-400" />;
@@ -490,12 +479,10 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
                         Learn More <ArrowRight className=w-4 h-4 ml-2' />;
                       </a>;
                     </motion.div>;
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
                   ))}
                 </div>;
               </motion.div>;
             ))}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           </motion.div>;
         </div>;
       </section>;
@@ -506,13 +493,11 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
 <section className='py-20 px-4 bg-black/20 />;
         <div className=max-w-7xl mx-auto' />;
           <motion.h2;
-            className='text-4xl md:text-5xl font-bold text-white text-center mb-16;
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            className='text-4xl md:text-5xl font-bold text-white text-center mb-16';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
             initial={{ opacity: 0, y: 20 }
 }
@@ -526,13 +511,11 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
           <motion.div;
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8;
 <motion.div;
-            className=grid md:grid-cols-2 lg:grid-cols-4 gap-8';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            className='grid md:grid-cols-2 lg:grid-cols-4 gap-8';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
             <div className=text-center">;
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2>25+</div>;
@@ -596,13 +579,11 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
 <section className='py-20 px-4 />;
         <div className=max-w-4xl mx-auto text-center' />;
           <motion.h2;
-            className='text-4xl md:text-5xl font-bold text-white mb-6;
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            className='text-4xl md:text-5xl font-bold text-white mb-6';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
             initial={{ opacity: 0, y: 20 }
 }
@@ -616,13 +597,11 @@ const fadeInUp  = null;IT infrastructure, AI services, industry solutions, and e
           <motion.p;
             className=text-xl text-gray-300 mb-8";
 <motion.p;
-            className=text-xl text-gray-300 mb-8';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            className='text-xl text-gray-300 mb-8';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
             initial={{ opacity: 0, y: 20 }
 }
@@ -642,13 +621,11 @@ Join thousands of businesses already transforming their operations;
             with our cutting-edge solutions.;
           </motion.p />;
           <motion.div;
-            className='flex flex-col sm:flex-row gap-4 justify-center;
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+            className='flex flex-col sm:flex-row gap-4 justify-center';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
           >;
            />;
             <a;
@@ -689,8 +666,7 @@ Join thousands of businesses already transforming their operations;
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200;
 <a;
               href={`mailto:${contactInfo.email}`}
-              className=px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg';
-<<<<<<< HEAD:components/2025-comprehensive-services-showcase-v2.tsx
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg';
             >;
               Contact Our Team;
             </a>;

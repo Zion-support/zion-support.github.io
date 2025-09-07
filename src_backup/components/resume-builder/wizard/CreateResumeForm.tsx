@@ -1,4 +1,10 @@
-
+import { CreateResumeFormProps } from "./types";
+export const CreateResumeForm = null;
+export const CreateResumeForm = ({
+  onCreateResume
+  onCancel
+  isLoading
+origin/cursor/automate-test-improve-and-merge-code-2533
 }: CreateResumeFormProps) => {
   const [newResumeTitle, setNewResumeTitle] = useState(')
   const handleSubmit = async () => {
@@ -6,8 +12,6 @@
     await onCreateResume(newResumeTitle)
   }
   return (
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/wizard/CreateResumeForm.tsx
 
 import { useState } from "react,import { Card, CardContent } from @/components/ui/card",import { Button  } from @/components/ui/button';
 import { Loader2  } from 'lucide-react;
@@ -30,16 +34,25 @@ export const CreateResumeForm = ({onCreateResume;
               className=flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm';
               value={newResumeTitle}
               onChange={e => setNewResumeTitle(e.target.value)}
+            />
+            <Button
+              onClick={handleSubmit}
+              disabled={!newResumeTitle.trim() |isLoading}            >
+              {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
+              Create
+            </Button>
+          </div>
 
+          <Button variant='ghost' onClick={onCancel} className='mt-4'>
+            Cancel
+origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>
         </div>
       </CardContent>
     </Card>
-
   )
 
               onChange={(e) => setNewResumeTitle(e && e.target.value)}
-=======
             />;
             <Button;
               onClick={handleSubmit}import { useState  } from 'react;
@@ -86,7 +99,6 @@ export const CreateResumeForm = ({onCreateResume,onCancel;
       </CardContent>;
     </Card>;
   )onChange={(e) => setNewResumeTitle(e && e.target.value)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/wizard/CreateResumeForm.tsx
             />;
             <Button;
               onClick={handleSubmit}
@@ -164,7 +176,17 @@ export const CreateResumeForm = ({onCreateResume,on_cancel,is_loading}: CreateRe
           </Button>;
         </div>;
       </CardContent>;
-
+    </Card>);
+}
+w - full max - w-2xl mx - auto"> <CardContent className=" py - 8"> <div className=" text - center"> <h2 className=" text - 2xl font - bold mb - 2">Create New Resume</h2> <p className=" text - muted - foreground mb - 6">Give your resume a title to get started</p> <div className=" flex gap - 2 max - w-md mx - auto" > <input /> <Button on_click={
+  handle_submit;
+}disabled= {
+  !newResumeTitle.trim () || is_loading;
+}> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>);
+}
+'"},
+  );
+}
 );
 }
 w-full max-w-2xl mx-auto> <CardContent className=" py-8"> <div className= text-center> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className= text-muted-foreground mb-6>Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={
@@ -175,7 +197,6 @@ w-full max-w-2xl mx-auto> <CardContent className=" py-8"> <div className= text-c
 }
 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </Card>)}
 w - full max - w-2xl mx - auto> <CardContent className=" py - 8"> <div className= text - center> <h2 className=" text - 2xl font - bold mb - 2">Create New Resume</h2> <p className= text - muted - foreground mb - 6>Give your resume a title to get started</p> <div className=" flex gap - 2 max - w-md mx - auto" > <input /> <Button on_click={handle_submit;
 }disabled= {!newResumeTitle.trim () || is_loading;
@@ -183,6 +204,3 @@ w - full max - w-2xl mx - auto> <CardContent className=" py - 8"> <div className
 },)})}w-full max-w-2xl mx-auto> <CardContent className=" py-8"> <div className= text-center> <h2 className=" text-2xl font-bold mb-2">Create New Resume</h2> <p className= text-muted-foreground mb-6>Give your resume a title to get started</p> <div className=" flex gap-2 max-w-md mx-auto" > <input /> <Button onClick={handleSubmit ;
 }disabled= {!newResumeTitle.trim () || isLoading ;
 }> Create </Button> </div> <Button > Cancel </Button> </div> </CardContent> </Card>)}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/wizard/CreateResumeForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/wizard/CreateResumeForm.tsx

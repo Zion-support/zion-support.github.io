@@ -1,4 +1,4 @@
-
+import React from 'react'
 
 interface SeparatorProps {
   }
@@ -9,5 +9,7 @@ interface SeparatorProps {
 export function Separator() {const baseClasses = 'bg-slate-600';'
 
 }
-
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+export function Separator() {const baseClasses = 'bg-slate-600';}
+}
+const orientationClasses  = orientation === 'horizontal' ? 'w-full h-px' : 'h-full w-px';return (<div className={`${baseClasses} ${orientationClasses} ${className}`} />;
+  )}

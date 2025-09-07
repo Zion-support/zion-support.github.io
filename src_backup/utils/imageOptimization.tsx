@@ -295,7 +295,6 @@ export function getImageDimensions(;
 ): Promise<{ width: number; height: number }> {}
   return new Promise((resolve, reject) => {}
     img.onload = () =>
-<<<<<<< HEAD:src_backup/utils/imageOptimization.tsx
       resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;
     img.src = src;

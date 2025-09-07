@@ -1,8 +1,7 @@
 
     if (!targetRef.current) return;
     const element = targetRef.current;
-    const html2pdf = (await import('html2pdf.js)).default;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+    const html2pdf = (await import('html2pdf.js')).default;
     const opt = {
       jsPDF: { unit: mm', format: 'a4, orientation: portrait' }
 
@@ -19,6 +18,14 @@ export default function PdfExportButton({ targetRef, fileName = $2;
     const element = $2;
     const html2pdf = $2;
       margin: [10, 10, 10, 10],
+
+      margin: [10, 10, 10, 10],
+      filename: fileName,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true},
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    } as any,
+
 
 
 
@@ -86,6 +93,4 @@ export type PdfExportButtonProps = any;
   )
 }
 
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+"

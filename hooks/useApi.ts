@@ -1,16 +1,24 @@
+import { useState, useEffect, useCallback } from 'react';
 
+interface ApiState<T> {
+  data: T | null;
+  loading: boolean;
+  error: string | null;
 }
 
 interface UseApiOptions {
   immediate?: boolean;
 }
 
-
+export function useApi<T>(
+  apiCall: () => Promise<T>;
+  options: UseApiOptions = {}
+): ApiState<T> & { refetch: () => void } {
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-
+  const fetchData = useCallback(async () => {
     setLoading(true);
     setError(null);
     
@@ -24,11 +32,19 @@ interface UseApiOptions {
       }
       setLoading(false);
     }
+  }, [apiCall]);
 
-
+  useEffect(() => {
     if (options.immediate !== false) {
       }
       fetchData();
     }
   }, [fetchData, options.immediate]);
 
+  return {
+    data;
+    loading;
+    error;
+    refetch: fetchData;
+  };
+}

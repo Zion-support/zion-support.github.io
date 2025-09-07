@@ -40,7 +40,6 @@ description: string;
 
 note?: string;
 params?: EndpointParam[];
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 
 
@@ -49,7 +48,6 @@ params?: EndpointParam[];
   " data: [ {
 
 
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
   Authorization': 'Bearer YOUR API KEYContent-Type: application/json' 
 
@@ -267,7 +265,6 @@ export /**;
               description="List all available jobs with optional filtering.;
               note=";
               params={[;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 {
                   name: 'page'
@@ -326,7 +323,6 @@ export /**;
   -H "Authorization: Bearer YOUR_API_KEY \\;
   -H Content - Type: application / json"`,javascript: `const response = await fetch ('https://api.ziontechgroup.com / v1 / jobs?limit = 10 & category = development', {method: GET,headers: {'Authorization': Bearer YOUR_API_KEY,'Content-Type': application/json;
   }
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 })
 
 
@@ -335,7 +331,6 @@ export /**;
 }';
 }/> <EndpointSection deadline: '2025-06-30T23:59:59Z ;
 }) ;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 
 
@@ -375,8 +370,7 @@ data=json.dumps (payload) ) data = response.json () print (data) `
   {
   success: ` {}`
 }"
-}/> </TabsContent> <TabsContent value= talentclassName=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) `
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+}/> </TabsContent> <TabsContent value=" talent"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) `
 
 const data = await response && response.json ()
 logInfo (data), `
@@ -491,8 +485,7 @@ print(data)`}`;
 }\`, {;
   method: GET';
 headers: {';
-  Authorization: 'Bearer YOUR API KEYContent - Type': application / json;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+  'Authorization': 'Bearer YOUR API KEYContent - Type': 'application / json';
 response = requests.get (
     'https://api.ziontechgroup.com / v1 / jobs',
     params={limit: 10, 'category': development},
@@ -522,7 +515,6 @@ data = response.json();
 print(data)`;
 
               }}
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               response_examples={{
                 success: `{
   data": [;
@@ -554,10 +546,9 @@ print(data)`;
 
   meta": {
 
-    "total: 42
-    page": 1
-    "limit: 10
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+    "total": 42
+    "page": 1
+    "limit": 10
 
 }`
   }
@@ -601,8 +592,7 @@ headers = {Authorization: 'Bearer YOUR_API_KEYContent-Type': application/json;
               method='GET';
               endpoint=/api / jobs/:id;
               description='Get detailed information about a specific job.';
-              note=;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+              note='';
               params={[;
 
                 {
@@ -640,8 +630,7 @@ python: `import requests headers = {';
 }talent id ';
 }';
 headers = headers) data = response.json () print (data) `;
-job_id = job_abc123;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+job_id = 'job_abc123';
 response = requests.get (
     f'https://api.ziontechgroup.com / v1 / jobs/{job_id}',
     headers = headers);
@@ -650,7 +639,6 @@ print (data)`}`;
 response = requests.get (fhttps://api.ziontechgroup.com / v1 / jobs/{job_id},headers = headers)data = response.json ()print (data)`}`;
               }}
             />;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 
 
@@ -726,7 +714,7 @@ response = requests.get (fhttps://api.ziontechgroup.com / v1 / jobs/{job_id},hea
                   type: string
                   description: 'Job title'
                   required: true
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+              params={[;{name: 'title';
               params={[;{name: title;
                   type: 'string';
                   description: Job title;
@@ -747,7 +735,6 @@ response = requests.get (fhttps://api.ziontechgroup.com / v1 / jobs/{job_id},hea
                   description: 'Required skills';
                   required: true;
                 }
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
                 {}
                 {
                   name: description
@@ -816,17 +803,16 @@ response = requests.get(f'https://api.ziontechgroup.com/v1/jobs/{job_id}',header
               note=Requires jobs:write scope";
               params={[;
               ]}
-              codeExamples={{curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs \\;
-  -H Authorization: Bearer YOUR_API_KEY" \\;
-  -H "Content-Type: application/json \\;
-  -d {title": "Senior React Developer;
-    description": "We need an experienced React developer...;
-    category": "development;
-    skills": ["react, typescript", "node.js];
-    budget": {"min: 5000;
-      max": 10000;
-      "currency: USD";
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+              codeExamples={{curl: `curl -X POST "https://api.ziontechgroup.com/v1/jobs" \\;
+  -H "Authorization: Bearer YOUR_API_KEY" \\;
+  -H "Content-Type: application/json" \\;
+  -d '{"title": "Senior React Developer";
+    "description": "We need an experienced React developer...";
+    "category": "development";
+    "skills": ["react", "typescript", "node.js"];
+    "budget": {"min": 5000;
+      "max": 10000;
+      "currency": "USD";
     },
     "deadline: 2025 - 06 - 30T23:59:59Z";
   }`,
@@ -959,7 +945,6 @@ headers = {Authorization': 'Bearer YOUR_API_KEY,Content - Type': 'application / 
 }/> </TabsContent> <TabsContent value= quotesclassName=" space - y-6"> <EndpointSection response = requests.post ('https: //api.ziontechgroup.com / v1 / quotes';
 headers = headers;
 data = json.dumps (payload) ) data = response.json () print (data) `;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 response = requests.post (
     https://api.ziontechgroup.com / v1 / jobs,
     headers = headers,
@@ -1042,8 +1027,7 @@ response = requests.post (https://api.ziontechgroup.com / v1 / jobs,headers = he
               method='GET';
               endpoint=/api / talent;
               description='List talent profiles with optional filtering.';
-              note=;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+              note='';
               params={[;
 
 
@@ -1075,7 +1059,6 @@ response = requests.post (https://api.ziontechgroup.com / v1 / jobs,headers = he
                   type: string[],
                   description: 'Filter by skills (comma - separated)'},
 
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 {
                   name: availability
@@ -1104,7 +1087,6 @@ response = requests.post (https://api.ziontechgroup.com / v1 / jobs,headers = he
   -H Authorization: Bearer YOUR_API_KEY \\;
   -H "Content - Type: application / json"`,javascript: `const response = await fetch (https://api.ziontechgroup.com / v1 / talent?skills = react, typescript, {method: 'GET',headers: {const data = await response && response.json()logInfo(data)`,Authorization: 'Bearer YOUR_API_KEY',Content-Type: 'application/json';
   }
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 });
 logInfo(data);`]}
               codeExamples={{
@@ -1118,9 +1100,8 @@ logInfo(data);`]}
 
                 python: `import requests
 headers = {
-    Authorization: 'Bearer YOUR_API_KEY'
-    Content-Type: 'application/json'
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
 
 response = requests && requests.get(
     https://api && api.ziontechgroup.com/v1/talent,
@@ -1133,7 +1114,6 @@ print(data)`,
 
 
 print(data)`,
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
     'Authorization': Bearer YOUR_API_KEY,
     'Content - Type': application / json;
@@ -1241,7 +1221,6 @@ print(data)`;
               description='Get detailed information about a specific talent profile.'
               note=
               params={[
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 })const data = await response.json()logInfo(data)`,python: `import requests;
 headers = {'Authorization': Bearer YOUR_API_KEY;
     'Content-Type': application/json;
@@ -1281,17 +1260,14 @@ response = requests && requests.get('https://api && api.ziontechgroup.com/v1/tal
               endpoint='/api / talent/:id';
               description=Get detailed information about a specific talent profile.;
               note='';
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               params={[;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 {
                   name: id
                   type: 'string'
                   description: The talent ID
                   required: true
-                }]}
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+                },              ]}
 
   -H "Content-Type: application/json"`,
 
@@ -1320,7 +1296,6 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
               response_examples = {{}`;
               }}
             />;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
           </TabsContent>;
 
           <TabsContent value=quotes className='space-y-6'>;
@@ -1370,7 +1345,6 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
               description=Create a quote request for a talent.
               note="Requires quotes:write scope"
               params={[
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
             <EndpointSection;
               method=GET;
@@ -1399,10 +1373,8 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
               endpoint='/api / quotes';
               description=Create a quote request for a talent.;
               note='Requires quotes:write scope';
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               params={[;
 
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 {
 
@@ -1447,7 +1419,6 @@ response = requests.get (f'https://api.ziontechgroup.com / v1 / talent/{talent_i
                   description: Name of the requester;
                   required: true;
                 }
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
                 {
                   name: 'requester_email'
                   type: string
@@ -1528,7 +1499,7 @@ headers = {
     "status": new,
     "created_at": 2025-05-16T14:30:15Z
   }
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+}`,              }}
 }`}}
             />;
 
@@ -1565,10 +1536,8 @@ headers = {success: `{data: {"id": quote_def456,"talent_id": talent_abc123,"requ
               endpoint='/api / quotes;
               description=List quote requests that youve created.;
               note='';
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               params={[;
 
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 {
                   name: page
@@ -1633,7 +1602,6 @@ print(data)`;
     "total": 5
     page: 1
     "limit": 20
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 }`
 
@@ -1769,7 +1737,6 @@ app.post('/webhook', express.raw({type: application/json}), (req, res) => {
                   </tr>
                 </tbody>
               </table>
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
               params={[;{name: page;
                   type: 'integer';
@@ -2069,7 +2036,6 @@ app && app.post(/webhook', express && express.raw({type: 'application/json}), (r
               <p className="text-zinc-400 mb-2">;
                 Heres an example of a <code className=bg-zinc-800 px-1 py-0.5 rounded>new_application</code> webhook payload:;
               </p>;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
 
 
@@ -2430,7 +2396,6 @@ app.post ('/webhook', express.raw ({type: application / json}), (req, res) => {c
                     </td>;
                   </tr>;
                 </tbody>;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               </table>;
 
 
@@ -2533,7 +2498,6 @@ app.post ('/webhook', express.raw ({type: application / json}), (req, res) => {c
                 The Zion API implements rate limiting to protect our;
                 infrastructure and ensure fair usage. Rate limits are applied on;
                 a per-API key basis. If you exceed the rate limits, you will;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 receive a{' }
                 <code className=bg-zinc-800 px-1 py-0 && 0.5 rounded'>;
@@ -2678,7 +2642,6 @@ app.post ('/webhook', express.raw ({type: application / json}), (req, res) => {c
     ];
   }
 }`}
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
                 language="json";
               />;
               <h4 className=text-md font-semibold mt-6 mb-2>Rate Limiting</h4>;
@@ -2693,7 +2656,6 @@ app.post ('/webhook', express.raw ({type: application / json}), (req, res) => {c
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>;
                 <li><code className=bg-zinc-800 px-1 py-0.5 rounded>X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>;
                 <li><code className="bg-zinc-800 px-1 py-0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               />;<h4 className='text-md font-semibold mt-6 mb-2'>Rate Limiting</h4>;
               <p className=text-zinc-400 mb-4>;
                 The Zion API implements rate limiting to protect our;
@@ -2767,7 +2729,8 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
                 following format:;
               </p>;
               <CodeBlock;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+                code = {`{"error": {"code": "invalid_request","message": "The request was invalid","details": [;
+      {"field": "project_name","message": "Project name is required";
                 code = {`{"error": {code: "invalid_request",message: "The request was invalid",details: [;
       {"field": project_name,"message": Project name is required;
        }
@@ -2844,7 +2807,6 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
                 <li>;<code className=bg - zinc - 800 px - 1 py - 0.5 rounded>;
                     X - RateLimit - Reset;</code>;
                   : Unix timestamp when the rate limit resets;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
                 </li>;
                 code = {`{
   "error": {
@@ -3022,10 +2984,8 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
               </tr>;
             </thead>;
             <tbody>;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
               {params && params.map((param, index) => (;
 
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
                 <tr
               {params.map((param, index) => (</div>;<p className=mt-2 text-zinc-400>{description}</p>;
@@ -3051,7 +3011,6 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
                   <td className='py-2 text-sm text-zinc-400'>;
                     {param && param.description}
                   </td>;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
                 </tr>;
 
                 </tr>
@@ -3067,7 +3026,6 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
             </tbody>;
           </table>;
         </div>;
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
       )}
 
       {codeExamples && (
@@ -3077,7 +3035,6 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
             <h4 className=font-medium>Request Example</h4>
             <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
               {Object.keys(codeExamples).map(lang => (                <button
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
       {codeExamples && (;
         <div className=border-t border-zinc-800 p-4>;
@@ -3104,7 +3061,6 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
                       : 'text-zinc-400 hover:bg-zinc-800'
 
                   }`}
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
 
       )}{codeExamples && (<div className=border-t border-zinc-800 p-4>;
           <div className='flex items-center mb-2'>;
@@ -3208,11 +3164,12 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
         </div>)}
       {response_examples && (<div className=border - t border - zinc - 800 p - 4>;
           <h4 className='font - medium mb - 2'>Response</h4>;
-          <CodeBlock code={response_examples.success} language=json />        </div>)}
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+          <CodeBlock code={response_examples.success} language='json' />        </div>)}
     </div>);
 }
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
+;
+    </div>);
+}
 
                   onClick={() => setActiveTab(lang)}
 
@@ -3222,7 +3179,6 @@ function EndpointSection() {response.;</p>;<p className=text-zinc-400 mb-2>;
                   {lang === "curl" ? cURL : lang === "javascript" ? JavaScript : "Python"}
                 </button>;
               ))}
-<<<<<<< HEAD:src_backup/components/developers/ApiDocumentation.tsx
             </div>
           </div>
           />

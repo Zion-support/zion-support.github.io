@@ -14,15 +14,9 @@ export default async function handler(
   if (req.method !== "POST) return res.status(405).end();
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address)
-    return res.status(400).json({ error: Missing fields" });
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
-=======
+    return res.status(400).json({ error: "Missing fields" });
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -30,9 +24,7 @@ export default async function handler(
     if (recovered !== String(address).toLowerCase()) {
       return res && res.status(401).json({ error: "Invalid signature });
     }
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    const cookieHeader = req && req.headers.cookie || "";
     const cookieHeader = req && req.headers.cookie || ";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce });
@@ -51,16 +43,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const cookieHeader = req.headers.cookie || ';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
-    if (!match) return res.status(400).json({ error: Missing nonce' });
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
-=======
+    if (!match) return res.status(400).json({ error: 'Missing nonce' });
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
       return res && res.status(400).json({ error: Nonce mismatch" });
@@ -84,13 +70,14 @@ export default async function handler(req, res) {
 
   }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
-=======
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import jwt from './jsonwebtoken';
+import { ethers  } from './ethers';
+const JWT_SECRET = process.env.JWT_SECRET || "dev - secret - change - me";
+;
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from './next;
 import jwt from ./jsonwebtoken';
 import { ethers  } from './ethers;
@@ -136,15 +123,9 @@ function handler() {
     );
     return res.status (200).json ({ ok: true });
   } catch (e: any) {
-    return res.status (500).json ({ error: e?.message || Verify failed" });
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
-=======
+    return res.status (500).json ({ error: e?.message || "Verify failed" });
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
 }
 
@@ -153,9 +134,6 @@ function handler() {
     return res.status(500).json({ error: Internal server error" });
   }
 }
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   }
@@ -190,18 +168,10 @@ export default async function handler(req, res) {
   }
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-evm.ts
-=======
 
 
 
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

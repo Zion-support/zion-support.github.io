@@ -12,13 +12,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { bytecode, constructorArgs } = req.body |{}
   if (!bytecode |!constructorArgs) {
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/contract-builder/deploy.ts
-=======
+
+    return res.status(400).json({ error: 'bytecode and constructorArgs are required' })
+import { Interface } from '[^']*';
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return res.status(400).json({ error: bytecode and constructorArgs are required' })
 import { Interface } from '[^]*;
 // Simple ABI for demonstration (release/refund)
@@ -51,13 +49,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import { Interface } from ethers
 // Simple ABI for demonstration (release / refund);
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/contract-builder/deploy.ts
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const abi = [;
   'constructor (address _client, address _talent, address _token, uint256 _totalAmount, string _projectTitle)function release () externalfunction refund () externalfunction client () view returns (address)function talent () view returns (address)function total_amount () view returns (uint256)';
 ]
@@ -86,11 +78,9 @@ if ( {) {
     }
     return res.status (200).json ({ abi, tx });
   } catch (e: any) {
-    return res.status (400).json ({ error: e?.message || Failed to prepare deployment tx });
-
+    return res.status (400).json ({ error: e?.message || 'Failed to prepare deployment tx' });
   }
 }
-
 
 
 
@@ -99,13 +89,7 @@ if ( {) {
 
 }
 
-
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/contract-builder/deploy.ts
-=======
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
   const { bytecode, constructorArgs } = req.body || {}
   if (!bytecode || !constructorArgs) {
@@ -136,11 +120,5 @@ ursor/fix-website-loading-errors-and-merge-6662
 }
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/contract-builder/deploy.ts
-=======
 
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

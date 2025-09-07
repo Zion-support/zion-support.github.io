@@ -114,8 +114,7 @@ interface ReputationDisplayProps  {reputation: number,size?: 'sm | md' | 'lg;
       progress: "h-3;
 import { Progress  } from @/components / ui / progress';
 interface ReputationDisplayProps  {reputation: number;
-  size?: 'sm | md' | 'lg;
-<<<<<<< HEAD:src_backup/components/community/ReputationDisplay.tsx
+  size?: 'sm' | 'md' | 'lg';
 
 
 export default ReputationDisplay,

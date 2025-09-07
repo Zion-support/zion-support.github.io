@@ -14,7 +14,6 @@
             {item.name}
           </Link>;
         ))}
-<<<<<<< HEAD:src_backup/components/header/MobileMenu.tsx
       </nav>
       <div className="mt-6 px-6>
         <ModeToggle />
@@ -30,7 +29,8 @@
   item.badge > 9 ? '9+' : item.badge ;
 }</span>)}</div> {item.name ;
 }</Link>) ) ";
-<<<<<<< HEAD:src_backup/components/header/MobileMenu.tsx
+}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
+}'"
 }</nav> <div className=mt-6 px-6 > <ModeToggle /> </div> </div>) ;
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533

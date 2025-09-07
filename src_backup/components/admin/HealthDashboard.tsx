@@ -111,7 +111,6 @@ interface HealthData {
     }
     topErrors: Array<{
 
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
 
       patternId: string;
@@ -213,7 +212,6 @@ interface HealthData  {status: healthy | 'warning' | critical;
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
 
 const HealthDashboard: React.FC = () => {
@@ -222,7 +220,6 @@ const HealthDashboard: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [autoRefresh, setAutoRefresh] = useState(true);
   }
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
 
 
@@ -252,7 +249,6 @@ const HealthDashboard: React.FC = () => {
   if (!healthData) return null,
 
 
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
 
 import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from lucide-react;
@@ -688,7 +684,6 @@ interface HealthData {'
                   <div className=text-center>;
                     <p className='text-2xl font-bold text-gray-600'>;
                       {healthData.errors.summary.low}
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
                     </p>
                     <p className=text-sm text-gray-600>Low</p>
                   </div>
@@ -701,7 +696,6 @@ interface HealthData {'
               </CardHeader>
               <CardContent>
                 {healthData.errors.topErrors.length > 0 ? (
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
 
                     </p>;
@@ -758,11 +752,9 @@ interface HealthData {'
               <CardContent>;
                 {healthData && healthData.errors.topErrors && topErrors.length > 0 ? (<div className=space-y-2>;
                     {healthData && healthData.errors.topErrors;
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
                       .slice(0, 5);
                       .map((error, index) => (;
 
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 
                         <div
                       .slice(0, 5).map((error, index) => (<div;
@@ -793,7 +785,6 @@ interface HealthData {'
                         </p>;
                       </div>;
                     ))}
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
                   </div>
 
         <TabsContent value="metrics" className=space-y-4>
@@ -1041,7 +1032,6 @@ interface HealthData {'
               ) : (<p className='text-gray-600>;
                   No specific recommendations at this time;
                 </p>;
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
               )}
               {healthData && healthData.health.recommendations && recommendations.length > 0 ? (;
                 <ul className='space-y-3'>;
@@ -1416,7 +1406,6 @@ if (return null) {}
                 </ul>) : ('
                 <p className='text - gray - 600'>;
                   No specific recommendations at this time;
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
                 </p>)}
 
             </CardContent>;
@@ -1436,7 +1425,6 @@ export default HealthDashboard;
 }
 
 export default HealthDashboard;
-<<<<<<< HEAD:src_backup/components/admin/HealthDashboard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>)}</CardContent>;
           </Card>;

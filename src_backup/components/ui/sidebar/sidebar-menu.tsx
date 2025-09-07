@@ -188,7 +188,6 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className=rounded-md px-3 py-2 text-sm font-medium">{title}</div>;"
       <div className=pl-2>{children}</div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/ui/sidebar/sidebar-menu.tsx
   );
 },
 export { SidebarMenuItem, SidebarMenuGroup }

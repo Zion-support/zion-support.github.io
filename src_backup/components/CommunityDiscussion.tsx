@@ -16,7 +16,6 @@ interface DiscussionPost  {id: number;
   title: string;
   body: string;
 const initial_posts: DiscussionPost[] = [;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
   {
     id: 1,  time: string,
 
@@ -48,7 +47,6 @@ interface DiscussionPost {
 
   title: string,
   body: string
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
@@ -77,7 +75,21 @@ interface DiscussionPost  {id: number;
 const initialPosts: DiscussionPost[] = [;
   {id: 1,  time: string,title: string,body: string;
 }
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
+const initialPosts: DiscussionPost[] = [;
+  {;
+    id: 1,;
+    author: 'Anna Zhou',;
+    time: '2h ago',;
+    title: 'What AI trends are you most excited for in 2025?',;
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",;
+  },;
+    id: 2,;
+    author: 'David Kim',;
+    time: '50m ago',;
+    title: 'Quick tip: How to rank your Zion listing higher',;
+    body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',;
+  },;
+];
   {
     id: 1,
     author: 'Anna Zhou,
@@ -95,8 +107,9 @@ export const CommunityDiscussion: React.FC = () => {
 export const CommunityDiscussion: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
-  const [newTitle, setNewTitle] = useState(');
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
+  const [newTitle, setNewTitle] = useState('');
+  const [newBody, setNewBody] = useState('');  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
   const [newBody, setNewBody] = useState(');  const [newTitle, setNewTitle] = useState(");
   const [newBody, setNewBody] = useState(");
 
@@ -113,15 +126,15 @@ export const CommunityDiscussion: React.FC = () => {
     id: 1;
   {id: 1,author: 'Anna Zhou,time: 2h ago',title: 'What AI trends are you most excited for in 2025?,body: Lets spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},id: 2,author: 'David Kim,time: 50m ago',title: 'Quick tip: How to rank your Zion listing higher,body: Fill out every profile detail, add strong tags, and post weekly! See results in a month.'}];export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts)const [showNew, setShowNew] = useState(false)const [newTitle, setNewTitle]  = useState(')export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts),const [showNew, setShowNew] = useState(false),const [newTitle, setNewTitle] = useState("),const [newBody, setNewBody] = useState("),const handleAddPost = () => {const [newBody, setNewBody] = useState(')const [newTitle, setNewTitle] = useState(")const [newBody, setNewBody]  = useState(")const handleAddPost = () => {if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
     setPosts([;
-      {id: Date && Date.now(),author: 'You,time: Now',title: newTitle,body: newBody},...posts])id: 1;
-    author: "Anna Zhou;
-    time: 2h ago";
-    title: "What AI trends are you most excited for in 2025?;
-    body: Let's spark some ideas! Im excited to see multi-modal models and open-source AI tools grow. What are you watching?"},{id: 2;
-    author: "David Kim;
-    time: 50m ago";
-    title: "Quick tip: How to rank your Zion listing higher;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
+      {id: Date && Date.now(),author: 'You',time: 'Now',title: newTitle,body: newBody},...posts])id: 1;
+    author: "Anna Zhou";
+    time: "2h ago";
+    title: "What AI trends are you most excited for in 2025?";
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},{id: 2;
+    author: "David Kim";
+    time: "50m ago";
+    title: "Quick tip: How to rank your Zion listing higher";
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
     body: Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
 
 export const CommunityDiscussion: React.FC;
@@ -153,7 +166,6 @@ export const CommunityDiscussion: React.FC = () => {
       {
         id: Date.now(),
 
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
 
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in>
@@ -247,8 +259,12 @@ export const CommunityDiscussion: React.FC = () => {
                 setNewTitle (e.target.value)}              max_length={80}
             />;
             <Textarea;
-              placeholder="Whats on your mind?;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
+              placeholder="What's on your mind?";
+              className='mb - 4 bg - zion - blue - light text - black placeholder:text - zion - slate min - h-[70px]'        title: new_title,body: new_body},...posts])setNewTitle ("")setNewBody ("")setShowNew (false)}return (id: 1,const handleAddPost = () => {if (!newTitle.trim() || !newBody.trim()) return,setPosts([;
+      {id: Date.now(),return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
+      <div className="flex items-center gap-3 mb-4">;
+        <MessageCircle size={28} className="text-zion-cyan" />;
+        <span className="font-bold text-2xl text-white tracking-tight">;
               className='mb - 4 bg - zion - blue - light text - black placeholder:text - zion - slate min - h-[70px]'        title: new_title,body: new_body},...posts])setNewTitle (")setNewBody (")setShowNew (false)}return (id: 1,const handleAddPost = () => {if (!newTitle.trim() || !newBody.trim()) return,setPosts([;
       {id: Date.now(),return (<div className=w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
       <div className="flex items-center gap-3 mb-4>;
@@ -342,7 +358,6 @@ export const CommunityDiscussion: React.FC = () => {
               placeholder=Title (e.g., Share an AI tool, Ask for help...);
               className='mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate';
               value={newTitle}
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setNewTitle(e.target.value)
               }
@@ -414,10 +429,11 @@ export const CommunityDiscussion: React.FC = () => {
           {posts && posts.length} posts;
         </span>;
       </div>;
-      <Separator className=mb-6" />;
-      <div className="mb-4 flex justify-end>;<Button;
-          className=bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
+      <Separator className="mb-6" />;
+      <div className="mb-4 flex justify-end">;<Button;
+          className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
+          size="sm";onClick={() => setShowNew((v) => !v)}
+          size="sm";
           size="sm;onClick={() => setShowNew((v) => !v)}
           size=sm";
 
@@ -448,7 +464,6 @@ className=mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>;
                 setNewBody(e.target.value)}
               maxLength={400}
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
               rows={3}            />
             <div className='flex gap-3 justify-end'>
               <Button
@@ -462,7 +477,6 @@ className=mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[
                 Cancel
               </Button>
               <Button
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
 
 
                 size="sm
@@ -577,9 +591,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         🚀 Stay engaged! Top contributors are regularly featured on the;
         homepage.;
       </div>;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
     </div>;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
 
                 disabled = {!newTitle.trim() |!newBody.trim()}
               >
@@ -626,7 +638,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardContent>;
           </Card>;
         ))}
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
       </div>
 <div className='mt-8 text-xs text-zion-slate-dark text-center>
         🚀 Stay engaged! Top contributors are regularly featured on the
@@ -691,7 +702,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     .split (" ).map ((s, ) => s[0]).join (").slice (0, 2)}
                 </AvatarFallback>;
               </Avatar>;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
+              <div>;<div className="flex gap-2 items-center">;
               <div>;<div className="flex gap-2 items-center>;
               <div>;
                 <div className=flex gap-2 items-center">;
@@ -704,7 +715,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </CardContent>;
           </Card>;
         ))}
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
       </div>;<div className='flex gap - 2 items - center'>;
                   <span className=font - semibold text - white>;
                     {post.author}
@@ -747,7 +757,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 '      <div className=mt - 8 text - xs text - zion - slate - dark text - center">;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
     </div>);
 }
       </div>;

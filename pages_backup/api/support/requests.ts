@@ -1,11 +1,8 @@
-
-import type { NextApiRequest, NextApiResponse } from 'next,
-import { readJson, writeJson } from ../../../utils/fsDb',
-=======
-import type { NextApiRequest, NextApiResponse } from 'next;
-import { readJson, writeJson } from ../../../utils/fsDb'
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJson, writeJson } from '../../../utils/fsDb'
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

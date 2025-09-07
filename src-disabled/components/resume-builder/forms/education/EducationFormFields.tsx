@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 }
   })
   const handleSubmit = async (data: EducationFormValues) => {}
@@ -7,25 +5,41 @@
     setError(null);    try {}
       await onSubmit(data)
 
-import { useForm } from 'react-hook-form;
-import { zodResolver } from @hookform/resolvers/zod';
-import { z } from 'zod;
-import { format } from date-fns';
-import { Loader2 } from 'lucide-react;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { format } from 'date-fns';
+import { Loader2 } from 'lucide-react';
+import { Button } from '@/components / ui / button';
+import { Textarea } from '@/components / ui / textarea';
+import { Input } from '@/components / ui / input';
+import { Checkbox } from '@/components / ui / checkbox';
+import { Alert, AlertDescription } from '@/components / ui / alert';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { format } from 'date-fns';
+import { Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Input } from '@/components/ui/input';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Button } from '@/components/ui/ button';
+import { Textarea } from '@/components/ui/ textarea';
+import { Input } from '@/components/ui/ input';
+import { Checkbox } from '@/components/ui/ checkbox';
+import { Alert, AlertDescription } from '@/components/ui/ alert';
 import { Button } from @/components / ui / button';
 import { Textarea } from '@/components / ui / textarea;
 import { Input } from @/components / ui / input';
 import { Checkbox } from '@/components / ui / checkbox;
 import { Alert, AlertDescription } from @/components / ui / alert';
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 import { Button } from @/components/ui/button';
 import { Textarea } from '@/components/ui/textarea;
 import { Input } from @/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox;
 import { Alert, AlertDescription } from @/components/ui/alert';
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 import { Button } from '@/components/ui/ button;
 import { Textarea } from @/components/ui/ textarea';
 import { Input } from '@/components/ui/ input;
@@ -40,8 +54,11 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+  FormMessage,
+} from '@/components/ui/ form';
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types/ resume';
   FormMessage} from @/components/ui/ form';
 import { useState } from 'react;
 import { EducationFormFieldsProps } from ./types';
@@ -109,7 +126,11 @@ import { EducationFormFieldsProps  } from ./types';
 // Define schema for form validation
 const educationSchema = null;
 
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+  FormMessage,;
+} from '@/components/ui/form';
+import { useState } from 'react';
+import { EducationFormFieldsProps } from './types';
+import { Education } from '@/types/resume';
   FormMessage} from @/components/ui/form';
 
 
@@ -154,13 +175,19 @@ import { Checkbox   } from '@/components/ui/checkbox;
   FormField;
   FormItem;
   FormLabel;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+  FormMessage } from '@/components/ui/form';
+import { useState  } from 'react';
+import { EducationFormFieldsProps  } from './types';
+import { Education } from '@/types/resume';
   FormMessage } from @/components/ui/form';
 // Define schema for form validation
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+      <form on_submit={form.handle_submit (handle_submit)} className='space - y-4'>;
+  FormMessage  } from '@/components/ui/form';
+import { useState   } from 'react';
+import { EducationFormFieldsProps   } from './types';
       <form on_submit={form.handle_submit (handle_submit)} className=space - y-4'>;
   FormMessage  } from '@/components/ui/form;
 import { useState   } from react';
@@ -176,7 +203,6 @@ pr-12325
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel > Institution</FormLabel>;
                 <FormControl>;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
                   <Input;
                     placeholder=University of California, MIT, etc.;{...field}
                   <Input;'
@@ -191,7 +217,6 @@ pr-12325
                   <Input placeholder=University of California, MIT, etc." {...field} />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
               </FormItem>;
             )}/>;<FormField;
             control={form && form.control}
@@ -308,14 +333,11 @@ pr-12325
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 
             )}
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
           />
 
           />;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
           />
 
             <FormField
@@ -338,11 +360,9 @@ pr-12325
             <FormField
               control={form.control}
 
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 
 
                     <Checkbox
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
                       checked={field.value}
                       onCheckedChange={field.onChange}
                     />
@@ -366,7 +386,6 @@ pr-12325
 
             {!form && form.watch(is_current') && (;
 
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
               <FormField
                   <Input;
                     type="date;
@@ -477,9 +496,10 @@ pr-12325
           />;
           <div className='space - y-4'>;
             <FormField;
-              control={form.control}
-              name=is_current';
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+              control={form.control}'
+              name='is_current';
+              render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
+              render={({ field }: { field: any }) => ('
               render={({ field }: { field: any }) => (<FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2>                  <FormControl>;
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex - row items - start space - x-3 space - y-0 py - 2'>                  <FormControl>;
@@ -492,7 +512,6 @@ pr-12325
                     <FormLabel > I am currently studying here</FormLabel>;
                   </div>;
                 </FormItem>)}
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
             />;
             {!form.watch ('is_current) && (<FormField;
                 control={form.control}
@@ -511,15 +530,12 @@ pr-12325
           </div>;
         </div>;
         <FormField;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
           control={form.control}
 
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
         />;
 
 
         <FormField
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
           control={form.control}
 
           control={form && form.control}
@@ -529,9 +545,8 @@ pr-12325
               <FormLabel>Description (Optional)</FormLabel>
               <FormControl>
                 <Textarea'
-                  placeholder=Notable achievements, courses, activities...'
-                  className='min-h-[100px]
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
+                  placeholder='Notable achievements, courses, activities...''
+                  className='min-h-[100px]'
           control={form.control}/>;<FormField;
           control={form && form.control}control={form.control}name=description';
           render={({ field }: { field: any }) => (            <FormItem>;
@@ -549,7 +564,6 @@ pr-12325
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel > Description (Optional)</FormLabel>;
               <FormControl>;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
                 <Textarea;
                   placeholder='Notable achievements, courses, activities...';
                   className=min - h-[100px];
@@ -598,7 +612,6 @@ pr-12325
                   {...field}
                 />;
               </FormControl>;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
               <FormMessage />;
 
         {error && <Alert variant="destructive><AlertDescription>{error}</AlertDescription></Alert>}
@@ -618,8 +631,6 @@ pr-12325
         </div>
       </form>
     </Form>
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
               <FormMessage />;{isEditing ? 'Update' : Add} Education;
@@ -636,7 +647,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Alert variant=destructive>;
             <AlertDescription>{error}</AlertDescription>;
           </Alert>;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
         )}<div className='flex justify-between pt-2'>;
           <Button type=button variant='outline' onClick={onCancel}>            {isEditing ? Cancel : 'Back'}
           </Button>;<Button type=submit disabled={isLoading}>;
@@ -649,7 +659,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>;
       </form>;
     </Form>;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
   )}</FormItem>)}
         />;
         {error && (<Alert variant='destructive>;
@@ -667,11 +676,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </Button>;
         </div>;
       </form>;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
     </Form>)}})
     </Form>);
 }
 }
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/education/EducationFormFields.tsx
 }})
 }

@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { toast } from "@/hooks/use-toast,
 import { useReferrals } from @/hooks/useReferrals",
@@ -119,8 +116,16 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input;
 import { Copy, Download, Link, Plus } from lucide-react'
 
-import { Copy, Download, Link, Plus } from 'lucide-react
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+import { useRef, useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Copy, Download, Link, Plus } from 'lucide-react'
+import { toast } from "@/hooks/use-toast",
+import { useReferrals } from "@/hooks/useReferrals",
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
+import { Label } from "@/components/ui/label",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { toast } from @/hooks/use-toast",
 import { useReferrals } from "@/hooks/useReferrals,
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from @/components/ui/dialog",
@@ -135,7 +140,6 @@ export function PartnerReferralLinks() {
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   
   // Get the base referral link
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
   const baseLink = null;
 export function PartnerReferralLinks() {
     referralCode
@@ -154,7 +158,7 @@ export function PartnerReferralLinks() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   const baseLink = getReferralLink(),
   
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+  const handleCopyLink = (link: string) => {
   const handleCopyLink = (link: string) => {,
     navigator.clipboard.writeText(link),
     toast({
@@ -169,18 +173,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       if (selectedCampaign !== default") {
         url.searchParams.append("campaign, selectedCampaign)
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
 
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
       }
       
       // Add custom parameter if provided
       if (customParam) {
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
 
 
@@ -228,9 +228,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <CardTitle className="flex items-center justify-between>
             <span>Your Referral Link</span>
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
             <Button 
               variant=outline" 
@@ -324,8 +322,7 @@ export function PartnerReferralLinks() {const {referralCode;
       Name,Link",...allLinks.map(l => `${l.name},${l.link}`)].join("\n),const blob = new Blob([csvContent], { type: text/csv,charset=utf-8,' }),const url = URL.createObjectURL(blob),const link = document.createElement(a"),link.setAttribute("href, url),link.setAttribute(download", "zion_referral_links.csv),link.style.visibility = 'hidden,document.body.appendChild(link),link.click(),document.body.removeChild(link)}}return (<div className=space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light>;
         <CardHeader>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+          <CardTitle className="flex items-center justify-between">;
           <CardTitle className=flex items-center justify-between">;
             <span>Your Referral Link</span>;
             <Button;
@@ -347,8 +344,8 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
               variant=outline';
               size='sm;
               on_click={handleDownloadLinks}
-              className=flex items - center gap - 2'            >;
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+              className='flex items - center gap - 2'            >;
+              <Download className='h - 4 w - 4' />;
               <Download className='h - 4 w - 4 />;
 
 
@@ -358,18 +355,14 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
           </CardTitle>;
           <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
         <CardContent>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
-          <div className='flex space - x-2>;
-            <Input value={base_link} read_only className=font - mono text - sm' />;
-            <Button variant='outline on_click={() => handleCopyLink (base_link)}>;
-              <Copy className=h - 4 w - 4' />;
-              <span className='sr - only>Copy</span>            </Button>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+          <div className='flex space - x-2'>;
+            <Input value={base_link} read_only className='font - mono text - sm' />;
+            <Button variant='outline' on_click={() => handleCopyLink (base_link)}>;
+              <Copy className='h - 4 w - 4' />;
+              <span className='sr - only'>Copy</span>            </Button>;
 
           </div>;
         <CardContent>;<div className=flex space - x-2'>;
@@ -396,10 +389,8 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
           </DialogTrigger>;
           <DialogContent className='sm:max - w-md bg - zion - blue border - zion - blue - light>;
             <DialogHeader>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
               <DialogTitle > Create Custom Campaign Link</DialogTitle>;
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
               <DialogDescription>;
                 Generate a trackable link for specific marketing campaigns;
               <DialogTitle > Create Custom Campaign Link</DialogTitle>;<DialogDescription>Generate a trackable link for specific marketing campaigns;
@@ -421,7 +412,6 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
                     <SelectItem value=social'>Social Media</SelectItem>;
                   </SelectContent>;
                 </Select>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
               </div>;
 
       <div className="flex justify-between items-center>
@@ -464,8 +454,6 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
                   </SelectContent>
                 </Select>
               </div>
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
 
 
@@ -475,8 +463,6 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
                   id="custom 
                   placeholder=spring_campaign, video_123, etc." 
                   value={customParam}
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
                   onChange={(e) => setCustomParam(e.target.value)}
                 />
               </div>
@@ -498,14 +484,11 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
               >
                 Cancel
               </Button>
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
               <Button 
                 type="button 
                 onClick={handleGenerateLink}
-                className=bg-zion-purple hover:bg-zion-purple-dark"
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+                className="bg-zion-purple hover:bg-zion-purple-dark"
 
 
               >
@@ -514,8 +497,6 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
               <Button
                 type='button
                 onClick={handleGenerateLink}
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
 
 
@@ -542,8 +523,11 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
 
                 </CardTitle>
               </CardHeader>
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+              <CardContent className='pb-4'>
+                <div className='flex space-x-2'>
+                className='bg-zion-purple hover:bg-zion-purple-dark'>;
+              </div>;<div className="flex justify-between items-center">;
+        <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>;
               <CardContent className=pb-4'>
                 <div className='flex space-x-2>
                 className=bg-zion-purple hover:bg-zion-purple-dark'>;
@@ -670,7 +654,6 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
                     variant="outline;
                     size=sm";
                     onClick={() => handleCopyLink(item.link)}
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
                   >
                     <Copy className="h-4 w-4 />
                     <span className=sr-only">Copy</span>
@@ -696,24 +679,20 @@ export function PartnerReferralLinks() {const { referralCode, getReferralLink, c
               <p className=text-zion-slate-light text-center mb-4">
                 Create custom campaign links to track different marketing efforts
               </p>
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
 
               <Button 
                 variant="outline
                 onClick={() => setIsDialogOpen(true)}
                 className=flex items-center gap-2";
               >;
-                <Plus className="h-4 w-4 />;
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+                <Plus className="h-4 w-4" />;
 
                 Create First Link;
               </Button>;
             </CardContent>;
           </Card>;
         )}
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
       </div>
     </div>
   );
@@ -737,7 +716,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 ...generatedLinks ];
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+link && link.style.visibility = 'hidden';
 link && link.style.visibility = hidden';
 document && document.body.appendChild (link);
 link && link.click ();
@@ -805,9 +784,8 @@ document && document.body.appendChild (link)link && link.click ()document && doc
             </div>;
             <DialogFooter>;
               <Button;
-                type='button;
-                variant=secondary';
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+                type='button';
+                variant='secondary';
                 on_click={() => setIsDialogOpen (false)}<Button;
                 variant=outline";
                 onClick={() => setIsDialogOpen(true)}
@@ -820,7 +798,6 @@ document && document.body.appendChild (link)link && link.click ()document && doc
         )}
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
   );
 }
 }const new_link = {
@@ -846,12 +823,10 @@ document.body.append_child (link)link.click ()document.body.remove_child (link)}
 }read_only className="font - mono text - xs"/> <Button > <Copy className=h - 4 w - 4/> <span className="sr - only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className=bg - zion - blue / 20 border - dashed border - zion - blue - light> <CardContent className="flex flex - col items - center justify - center p - 6"> <p className=text - zion - slate - light text - center mb - 4> Create custom campaign links to track different marketing efforts </p> <Button className="flex items - center gap - 2"> <Plus className=h - 4 w - 4 /> Create First Link </Button> </CardContent> </Card>)}</div> </div>)}"}
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
   );
 }
                 on_click={() => setIsDialogOpen (false)}
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
               <Button 
                 variant="outline
                 onClick={() => setIsDialogOpen(true)}
@@ -874,8 +849,7 @@ document.body.removeChild (link);
   item.link ";
 }readOnly className=font-mono text-xs/> <Button > <Copy className="h-4 w-4"/> <span className=sr-only>Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg-zion-blue/20 border-dashed border-zion-blue-light"> <CardContent className=flex flex-col items-center justify-center p-6> <p className="text-zion-slate-light text-center mb-4"> Create custom campaign links to track different marketing efforts </p> <Button className=flex items-center gap-2> <Plus className="h-4 w-4" /> Create First Link </Button> </CardContent> </Card>) ;
 }</div> </div>) ;
-}
-<<<<<<< HEAD:src_backup/components/partners/PartnerReferralLinks.tsx
+}'"
 origin/cursor/automate-test-improve-and-merge-code-2533
   )}link.style.visibility = hidden';
 document.body.appendChild (link)link.click ()document.body.removeChild (link)};

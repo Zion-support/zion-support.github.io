@@ -1,10 +1,57 @@
 
-import Head from 'next/head;
-import Link from next/link';
-import { BlogPost } from '@/utils/types/blog;
-import PageShareButtons from @/components/blog/PageShareButtons';
-import { listPublishedPosts } from '@/utils/data/blogStore;
-import BlogCard from @/components/blog/BlogCard';
+
+;
+import type { GetServerSideProps, NextPage } from 'next';
+
+
+
+
+
+
+
+
+
+import type { GetServerSideProps, NextPage } from 'next';
+
+const TopicPage: NextPage<Props> = ({
+  topic, posts 
+}) => {
+  return (<div> <Head> <title> {
+  topic 
+}- Zion Blog</title> <PageShareButtons title= {
+  `$ {
+  topic 
+}- Zion Blog` 
+}url= {
+  typeof window === 'undefined' ? `https://zion.app/categories/$ {
+  encodeURIComponent (topic) 
+}` : window.location.href 
+}description= {
+  `Articles about $ {
+  topic 
+}` 
+}onShare= {
+  (network) => fetch ('/api/analytics/share', {
+  method: 'POST', headers: {
+  'Content-Type': 'application/json' 
+}, body: JSON.stringify ({
+  url: window.location.href, title: `$ {
+  topic 
+}- Zion Blog`, network, utm: 'utm source=' + network + '&utm medium=share&utm campaign=category' 
+}) 
+}) .catch ( () => {
+  
+}) 
+}/> </div>) ) 
+}</div> <div className="mt-6" ><Link href="/blog" className="underline" >Back to Blog</a></div> </div> </div>) 
+}
+export default TopicPage
+import Head from 'next/head';
+import Link from 'next/link';
+import { BlogPost } from '@/utils/types/blog';
+import PageShareButtons from '@/components/blog/PageShareButtons';
+import { listPublishedPosts } from '@/utils/data/blogStore';
+import BlogCard from '@/components/blog/BlogCard';
 type Props = { topic: string, posts: BlogPost[] },
 
 import type { GetServerSideProps, NextPage } from 'next;
@@ -439,5 +486,17 @@ export default TopicPage;      </Head>;
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
             description={`Articles about ${topic}`}
+            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source = $2;
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const topic = String($2);
+  const posts = $2;
+  return { props: { topic, posts } }
+},
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+
+
+  return { props: { topic, posts } };
+};
+
+export default TopicPage;
+origin/cursor/automate-test-improve-and-merge-code-2533

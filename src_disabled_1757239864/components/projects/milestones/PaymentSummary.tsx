@@ -60,4 +60,4 @@ interface PaymentSummaryProps  {
       </CardContent>
     </Card>
   )
-
+};

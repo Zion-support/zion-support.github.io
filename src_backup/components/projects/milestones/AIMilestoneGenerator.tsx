@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
 interface AIMilestoneGeneratorProps  {import React, { useState } from 'react;
 import { Button   } from @/components/ui/button';
@@ -15,9 +14,13 @@ import { Button  } from '@/components/ui/button;
   AccordionContent;
   AccordionItem;
   AccordionTrigger;
- } from @/components/ui/accordion';
-import { format, parseISO  } from 'date-fns;
-<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
+ } from '@/components/ui/accordion';
+import { format, parseISO  } from 'date-fns';
+import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
+import { Badge } from '@/components/ui/badge';
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from @/hooks/useMilestoneGenerator';
 import { Badge } from '@/components/ui/badge;
 import React, { useState } from react'
@@ -61,7 +64,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   endDate: string | null;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
-<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
 
 
 
@@ -175,7 +177,6 @@ if ( {) {}
     } catch (error) {}
       return dateString;
     }
-<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
   }
 
 
@@ -419,9 +420,7 @@ export function AIMilestoneGenerator() {const { generateMilestones, generatedMil
             </Accordion>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
       )}
-<<<<<<< HEAD:src_backup/components/projects/milestones/AIMilestoneGenerator.tsx
     </div>
 
     </div>;

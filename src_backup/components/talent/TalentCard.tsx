@@ -1,4 +1,5 @@
-<<<<<<< HEAD:src_backup/components/talent/TalentCard.tsx
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge,
 import { Button } from @/components/ui/button",
 
@@ -299,7 +300,6 @@ if ( {) {}
             </Button>;
           </div>;
         </div>;
-<<<<<<< HEAD:src_backup/components/talent/TalentCard.tsx
       </div>;
 
     </Card>);

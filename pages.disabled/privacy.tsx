@@ -1,11 +1,8 @@
 
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+import React from 'react';
+import Head from 'next/head';
 import React from 'react;
 import Head from next/head';
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
 export default function Privacy() {
   return (
@@ -218,12 +215,8 @@ export default function Privacy() {
     </>
   );
 }
-
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+import React from 'react';
 import React from react;
 import Head from 'next/head';
 export default function Privacy() {return (<>;
@@ -414,8 +407,3 @@ export default function Privacy() {return (<>;
       </main>;
     </>;
   )}
-
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

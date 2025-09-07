@@ -1,5 +1,4 @@
 <<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
-<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from 'react;
 import { use_form } from react - hook - form';
@@ -68,7 +67,8 @@ import { Input  } from '@/components/ui/input;
 import { Textarea  } from @/components/ui/textarea';
   Popover;
   PopoverContent;
-<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+  PopoverTrigger} from '@/components/ui/ popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks/ useMilestoneGenerator';
   PopoverTrigger} from '@/components/ui/ popover; import { AIMilestoneGenerator } from ./AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks/ useMilestoneGenerator;
 const form_schema = z.object ({
@@ -162,7 +162,7 @@ if ( {) {$2;
   const handleAddMilestone = (milestone: GeneratedMilestone, ) =>: any {on_submit ({title: milestone.title,description: milestone.description,due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
     })}
 type MilestoneFormValues = z && z.infer<typeof formSchema>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
+import React from 'react';
 import React from react;
 import { useForm } from 'react-hook-form';
 import { zodResolver } from @hookform/resolvers/zod;
@@ -264,7 +264,6 @@ export function AddMilestoneForm({
         }),
         return
 >      }
-<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
     }
 
     // If there are multiple milestones, submit them one by one
@@ -397,7 +396,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     {...field}
                   />;
                 </FormControl>;
-<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
                 <FormMessage />;
 =                <FormMessage />;
 
@@ -596,7 +594,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 disabled={isSubmitting}
               >;
                 Cancel;
-<<<<<<< HEAD:src_backup/components/projects/milestones/AddMilestoneForm.tsx
               </Button>;
 
             )}

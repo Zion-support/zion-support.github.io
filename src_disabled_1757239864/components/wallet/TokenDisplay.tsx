@@ -1,5 +1,7 @@
-<<<<<<< HEAD:src_backup/components/wallet/TokenDisplay.tsx
-<<<<<<< HEAD:src_backup/components/wallet/TokenDisplay.tsx
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import Skeleton from "@/components/ui/skeleton";
 import { useWallet } from "@/hooks/useWallet,
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from @/components/ui/card",
 import { Button } from "@/components/ui/button;
@@ -18,7 +20,6 @@ export function TokenDisplay() {
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
-<<<<<<< HEAD:src_backup/components/wallet/TokenDisplay.tsx
 
   return (
     <Card>
@@ -43,7 +44,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-sm text-muted-foreground>
               Use your tokens to boost visibility, access premium features, or convert to credits.
             </p>
-<<<<<<< HEAD:src_backup/components/wallet/TokenDisplay.tsx
+            <div className='mt-2'>
+              <Button variant='outline' size='sm'>
             <div className=mt-2'>
               <Button variant='outline size=sm'>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -55,7 +57,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
             </div>
           </div>
-<<<<<<< HEAD:src_backup/components/wallet/TokenDisplay.tsx
 
 const { wallet, loading } = useWallet()return (import { useWallet } from "@/hooks/useWallet,import { Card, CardContent, CardDescription, CardHeader, CardTitle } from @/components/ui/card",import { Button  } from '@/components/ui/button;
 import Skeleton from @/components/ui/skeleton';
@@ -82,7 +83,6 @@ export function TokenDisplay() {const { wallet, loading }  = useWallet()return (
             </div>;
             <p className="text-sm text-muted-foreground>;
               Use your tokens to boost visibility, access premium features, or convert to credits.;
-<<<<<<< HEAD:src_backup/components/wallet/TokenDisplay.tsx
 
 import React from react",
 import { BadgeDollarSign } from lucide-react';
@@ -169,21 +169,18 @@ function TokenDisplay() {const { wallet, loading } = use_wallet ()return (<Card>
               <Button variant='outline size=sm'>                View Wallet <div className = mt - 2">;<Button variant="outline size=sm">;
                 View Wallet;
               </Button>;
-<<<<<<< HEAD:src_backup/components/wallet/TokenDisplay.tsx
             </div>;
 
-<<<<<<< HEAD:src_backup/components/wallet/TokenDisplay.tsx
 
 
 }
-<<<<<<< HEAD:src_backup/components/wallet/TokenDisplay.tsx
+;
 
         )}
       </CardContent>
     </Card>
   );
 }
-<<<<<<< HEAD:src_backup/components/wallet/TokenDisplay.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;})}
       </CardContent>;

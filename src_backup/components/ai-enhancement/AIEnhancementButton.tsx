@@ -151,7 +151,11 @@ export function AIEnhancementButton({
   variant = "ghost,
   size = sm",
   contentLength = 10;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementButton.tsx
+}: AIEnhancementButtonProps) {;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+  const [showActions, setShowActions] = useState(false),;
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
+  const handleEnhance = async () => {;
 }: AIEnhancementButtonProps) {
     if ((!options.content || options.content.trim().length < contentLength) &&;
         (!options.context || options.context.trim().length < contentLength)) {
@@ -363,16 +367,18 @@ export function AIEnhancementButton() {return (<div className=flex gap-2 items-c
           <Check className="h - 4 w - 4 mr - 1 />;Apply;
         </Button>;
         <Button;
-          type=button";
-          variant="ghost;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementButton.tsx
+          type="button";
+          variant="ghost";
+          size="sm";
+          on_click = {handle_regenerate, }
+          size="sm";on_click = {handle_regenerate }
+          className="text - blue - 500 hover:text - blue - 700 hover:bg - blue - 100 / 20";
           size=sm";
           on_click = {handle_regenerate}
           size="sm;on_click = {handle_regenerate }
           className=text - blue - 500 hover:text - blue - 700 hover:bg - blue - 100 / 20";
           disabled = {is_enhancing }
         >;
-<<<<<<< HEAD:src_backup/components/ai-enhancement/AIEnhancementButton.tsx
           {is_enhancing ? (
             <Loader2 className="h - 4 w - 4 mr - 1 animate - spin />) : (
             <RefreshCw className=h - 4 w - 4 mr - 1" />)}

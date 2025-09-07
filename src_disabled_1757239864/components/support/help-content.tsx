@@ -157,4 +157,3 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   }
 ];
-

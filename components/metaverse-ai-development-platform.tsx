@@ -1,10 +1,31 @@
-
-
-} from 'lucide-react;
-import UltraAdvancedFuturisticBackground from ../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button;
-import { enhancedRealMicroSaasServices } from ../data/enhanced-real-micro-saas-services';
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+import React from 'react',
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+export default function MetaverseAIPlatformPage() {
+  const service = null;
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Sparkles
+  Star;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Sparkles,;
+  Star,;
+} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
 export default function MetaverseAIPlatformPage() {
   }
@@ -24,7 +45,54 @@ import Button from '../components/ui/Button';'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';'
 
 export default function MetaverseAIPlatformPage() {
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/metaverse-ai-development-platform')
+  );
+  if (!service) return null;
+return (;
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>{service.name} - Zion Tech Group</title>
+<meta name='description' content={service.description} />
+        <link
+          rel='canonical'
+          href='https://ziontechgroup.com/metaverse-ai-development-platform'
+        />
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-6xl mx-auto'>
+          <div className='text-center mb-10'>
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
+              <Sparkles className='w-10 h-10' />
 
+  Phone,Mail,MapPin,Check,ArrowRight,Sparkles,Star,import React from 'react',import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Sparkles, Star   } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',import Button from '../components/ui/Button';
+import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
+export default function MetaverseAIPlatformPage() {const service = null;
+import { Phone;
+  Mail;
+  MapPin;
+  Check;
+  ArrowRight;
+  Sparkles;
+  Star;} from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+export default function MetaverseAIPlatformPage() {export default function MetaverseAIPlatformPage() {)if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+export default function MetaverseAIPlatformPage() {const service = enhancedRealMicroSaasServices.find(s =>;
+    s.link.endsWith('/metaverse-ai-development-platform'))if (!service) return null;
+  return (<UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service.name} - Zion Tech Group</title>;
+<meta name='description' content={service.description} />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup.com/metaverse-ai-development-platform';
+        />;
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-6xl mx-auto'>;
+          <div className='text-center mb-10'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;
+              <Sparkles className='w-10 h-10' />;
               {service.name}
             </h1>;
             <p className='mt-4 text-xl text-slate-300 max-w-3xl mx-auto>;
@@ -38,7 +106,6 @@ export default function MetaverseAIPlatformPage() {
               </h2>;
               <p className='text-slate-300 mb-6>{service.description}</p>;
               <ul className=grid grid-cols-1 md:grid-cols-2 gap-3'>;
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
                 {service.features.slice(0, 12).map((feat, i) => (<li;
                     }
                     key={i}
@@ -49,7 +116,6 @@ export default function MetaverseAIPlatformPage() {
               </ul>;
             </div>;
 
-=======
             <div className='bg-black/30 rounded-2xl border border-violet-500/30 p-6 h-fit>;
               <div className=flex items-end justify-between mb-3'>;
                 <div>;
@@ -67,13 +133,32 @@ export default function MetaverseAIPlatformPage() {
                 <div className='flex items-center text-yellow-400>;
                   <Star className=w-4 h-4 mr-1' />;
                   {service.rating.toFixed(1)}
-
+                </div>
+              </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
               <Button
-                href='/contact
-                variant=quantum'
-                size='lg
-
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+                href='/contact'
+                variant='quantum'
+                size='lg'
+                className='w-full'
+              >
+                Request a Demo
+                <ArrowRight className='w-5 h-5 ml-2' />'
+              </Button>
+              <div className='mt-6 space-y-3 text-sm text-slate-300'>'
+                <div className='flex items-center space-x-2'>'
+                  <Phone className='w-4 h-4 text-cyan-400' />'
+                  <span>{service.contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-2'>'
+                  <Mail className='w-4 h-4 text-purple-400' />'
+                  <span>{service.contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-2'>'
+                  <MapPin className='w-4 h-4 text-green-400' />'
+                  <span className='text-xs'>{service.contactInfo.address}</span>'
+                </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </div>
           </div>
@@ -83,9 +168,7 @@ export default function MetaverseAIPlatformPage() {
 
   );
 }
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+origin/cursor/automate-test-improve-and-merge-code-2533
       <Head>;
         <title>{service.name} - Zion Tech Group</title>;
         <meta name=description' content={service.description} />;
@@ -169,10 +252,13 @@ export default function MetaverseAIPlatformPage() {
           </div>;
         </div>;
       </div>;
-
-=======
     </UltraAdvancedFuturisticBackground>)}}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+    </UltraAdvancedFuturisticBackground>);
+}
+
+}
+
+
+
+
+    </UltraAdvancedFuturisticBackground>)}}

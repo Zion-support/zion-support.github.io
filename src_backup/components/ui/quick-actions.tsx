@@ -54,7 +54,10 @@ interface QuickAction  {id: string;
   description: string;
   icon: React.ReactNode;
   action: () => void;
-<<<<<<< HEAD:src_backup/components/ui/quick-actions.tsx
+  category: 'performance' | 'development' | 'maintenance';
+
+
+;
   category: 'performance' | development | 'maintenance';
   const [isVisible, setIsVisible] = useState(false);
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
@@ -107,7 +110,7 @@ interface QuickAction  {id: string;
   description: string;
   icon: React.ReactNode;
   action: () => void;
-<<<<<<< HEAD:src_backup/components/ui/quick-actions.tsx
+  category: 'performance' | 'development' | 'maintenance';
   category: 'performance' | development | 'maintenance';
 
 

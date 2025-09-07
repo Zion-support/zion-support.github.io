@@ -12,9 +12,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const state = null;
     results.push({ providerId: conn.providerId, ok: true })
 
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../../lib/integrations/fileStore";
+import { crm } from "../../../../lib/integrations/connectors";
 import type { NextApiRequest, NextApiResponse } from "next;
 import { readState, writeState } from ../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors;
@@ -24,14 +25,20 @@ export default async function handler(
 ) {
 
   const state = readState();
+  const crms = state && state.connections.filter(
+    (c) =>
+      c && c.providerId === "salesforce" ||
+      c && c.providerId === "hubspot" ||
+      c && c.providerId === "zoho" ||
+      c && c.providerId === "pipedrive"
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/resume-viewed.ts
-=======
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_state, write_state  } from '../../../../lib / integrations / file_store';
+import { crm  } from '../../../../lib / integrations / connectors';
+;
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from ./next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store;
 import { crm  } from ../../../../lib / integrations / connectors';
@@ -71,13 +78,12 @@ function handler() {
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/resume-viewed.ts
-=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readState, writeState } from '../../../../lib/integrations/fileStore';
+import { crm } from '../../../../lib/integrations/connectors';
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { readState, writeState } from ../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -93,7 +99,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status(200).json({ ok: true, results })
 }
-
 
       id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`
       provider_id: conn.provider_id
@@ -122,32 +127,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }
   res.status (200).json ({ ok: true, results });
   res.status(200).json({ ok: true, results });
+}
+}
 
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/resume-viewed.ts
+}
   res.status(200).json({ ok: true, results });
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
   res.status(200).json({ ok: true, results });
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 }
 
 }
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/integrations/webhooks/resume-viewed.ts
-=======
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,7 +1,11 @@
-
-
+import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+import { TALENT_PROFILES } from '../data/talent';
+</div>) 
+}</button> </form> </div>) 
+}
 export default function RequestToHirePage() {
-import { useEffect, useMemo, useState  } from 'react;
+import { useEffect, useMemo, useState  } from 'react';
 export default function RequestToHirePage() {export default function RequestToHirePage() {const router = useRouter()const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent)[talent];
   )export default function RequestToHirePage() {const router = useRouter()const { talent } = router.query as { talent?: string }
@@ -215,4 +219,3 @@ if ( {) {$2;
   )}
   )
 }
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7

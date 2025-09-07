@@ -21,6 +21,15 @@ interface CountryTabsProps {
   setSearchQuery: (query: string) => void
 }
 
+export function CountryTabs({
+  popularCountries;
+  filteredCountries;
+  handleCountrySelect;
+  onQuote;
+  searchQuery;
+  setSearchQuery}: CountryTabsProps) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const countriesPerPage = 50;
 
   useEffect(() => {
     setCurrentPage(1)
@@ -92,7 +101,6 @@ interface CountryTabsProps {
               onSelect={handleCountrySelect}
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
-
             />
           ))}
         </div>
@@ -141,4 +149,3 @@ interface CountryTabsProps {
     </Tabs>
   )
 }
-

@@ -8,7 +8,13 @@ async function handler(req, res) {
     return;
   }
 
-
+  try {
+    const { userId } = req.query || {};
+    
+    if (!userId) {
+      res.statusCode = 400;
+      res.json({ error: 'User ID is required' });
+      return;
     }
     res."statusCode": = 405;"
     res.setHeader('Allow', '';GET')';'

@@ -44,7 +44,6 @@ return (
             <p className='text-lg md:text-xl opacity-90 mb-8>
               Find top AI talent or global IT jobs on the go. Track projects
 
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileLaunchHero.tsx
 
               message candidates, and get AI-powered matches instantly with our
 
@@ -57,8 +56,7 @@ return (
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
             </div>
-            <div className=flex flex-wrap gap-4>
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileLaunchHero.tsx
+            <div className='flex flex-wrap gap-4'>
 <div className='flex flex-wrap gap-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -126,7 +124,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Link>
             </div>
           </div>
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileLaunchHero.tsx
           
           <div className=flex-1 flex justify-center md:justify-end">
             <div className="relative>
@@ -322,7 +319,6 @@ export const MobileLaunchHero: React.FC = () => {// App store links - these woul
                 </Button>;
               </Link>;
             </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileLaunchHero.tsx
           </div>;
           <div className="flex-1 flex justify-center md:justify-end>;
             <div className=relative">;
@@ -469,7 +465,6 @@ export const MobileLaunchHero: React.FC = () => {}
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileLaunchHero.tsx
     </section>);
 }"
   );

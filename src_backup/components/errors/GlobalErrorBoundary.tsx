@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/errors/GlobalErrorBoundary.tsx
 
   Clipboard} from 'lucide-react;
 import { Button } from @/components / ui / button';
@@ -29,7 +28,6 @@ interface ErrorBoundaryProps {
 
     this.state;
   }
-<<<<<<< HEAD:src_backup/components/errors/GlobalErrorBoundary.tsx
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
     return {
       hasError: true,
@@ -214,7 +212,6 @@ interface ErrorBoundaryState  {hasError: boolean;
         return null;
       }
     }
-<<<<<<< HEAD:src_backup/components/errors/GlobalErrorBoundary.tsx
     return null;
 
     return null;
@@ -417,7 +414,6 @@ buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || unknown'}
       return;
     }
     const retry_delay = Math.pow (2, this.state.retry_count) * 1000 // Exponential backoff;
-<<<<<<< HEAD:src_backup/components/errors/GlobalErrorBoundary.tsx
     const timeout = set_timeout (() => {      this.set_state ({
         has_error: false,
         error: null,
@@ -548,7 +544,6 @@ if (return) {$2;
       const response = await fetch ('/api / error - report, {method: POST',headers: {'Content - Type: application / json'},error_id: this.state.error_id,error: {message: this.state.error.message,stack: this.state.error.stack,name: this.state.error.name},error_info: this.state.error_info,user_feedback: this.state.user_feedback,context: this.props.context,timestamp: new Date ().toISOString ()})})timestamp: new Date ().toISOString ()})})// Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD:src_backup/components/errors/GlobalErrorBoundary.tsx
         // Show success message;
 }
     try {
@@ -989,7 +984,6 @@ return this.props.fallback;
                     <Bug className=h-4 w-4" />;
                     {this && this.state.showDetails ? 'Hide : Show'} Details;
                   </Button>;
-<<<<<<< HEAD:src_backup/components/errors/GlobalErrorBoundary.tsx
                 </div>;
 
                 {/* Error Details */}
@@ -998,8 +992,7 @@ return this.props.fallback;
                   {this.state.showDetails && (;
                     <motion.div;
                       initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto }}
-<<<<<<< HEAD:src_backup/components/errors/GlobalErrorBoundary.tsx
+                      animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
 
                           <h4 className="font-semibold text-sm mb-2>Error Message:</h4>
@@ -1253,7 +1246,7 @@ if ( {) {
                             Copy Details;
                           </Button>;{this && this.props.showReportButton !== false && (<Button;
                               onClick={this && this.reportError}
-<<<<<<< HEAD:src_backup/components/errors/GlobalErrorBoundary.tsx
+                              variant='outline'
                               variant='outline
 
                         {process.env.NODE_ENV === development' && this.state.error.stack && (
@@ -1323,7 +1316,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           </Button>;{this && this.props.showReportButton !== false && (<Button onClick={this && this.reportError} variant=outline" size="sm>;
                               <Send className=h-4 w-4 mr-2" />;
                               Report Issue;
-<<<<<<< HEAD:src_backup/components/errors/GlobalErrorBoundary.tsx
                             </Button>;
 
 

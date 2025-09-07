@@ -1,8 +1,210 @@
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../../components/Layout'
+export default function APIDocsPage() {
+  
+    >
+import React from 'react';
+import MainLayout from '../../components/layout/MainLayout';
+import { motion } from 'framer-motion';
+import { 
+  Code, 
+  ArrowRight, 
+  CheckCircle, 
+  ExternalLink,
+  Shield,
+  Zap,
+  Globe,
+  Database,
+  Settings,
+  BookOpen,
+  Terminal,
+  Lock,
+  Clock,
+  Users,
+  BarChart3,
+  Copy,
+  Play
+} from 'lucide-react';
+
+const apiEndpoints = [
+  {
+    method: 'GET',
+    path: '/api/v1/services',
+    description: 'Retrieve all available services',
+    parameters: [
+      { name: 'category', type: 'string', required: false, description: 'Filter by service category' },
+      { name: 'limit', type: 'number', required: false, description: 'Number of results to return' }
+    ],
+    example: {
+      request: 'GET /api/v1/services?category=ai&limit=10',
+      response: {
+        status: 200,
+        data: [
+          {
+            id: 1,
+            name: "AI-Powered Email Responder",
+            category: "ai",
+            description: "Automated email response system",
+            price: "$299/month"
+          }
+        ]
+      }
+    }
+  },
+  {
+    method: 'POST',
+    path: '/api/v1/contact',
+    description: 'Submit a contact form or inquiry',
+    parameters: [
+      { name: 'name', type: 'string', required: true, description: 'Contact name' },
+      { name: 'email', type: 'string', required: true, description: 'Contact email' },
+      { name: 'message', type: 'string', required: true, description: 'Message content' },
+      { name: 'service', type: 'string', required: false, description: 'Service of interest' }
+    ],
+    example: {
+      request: 'POST /api/v1/contact',
+      body: {
+        name: "John Doe",
+        email: "john@example.com",
+        message: "Interested in AI services",
+        service: "ai-solutions"
+      },
+      response: {
+        status: 201,
+        message: "Contact form submitted successfully",
+        id: "contact_123"
+      }
+    }
+  },
+  {
+    method: 'GET',
+    path: '/api/v1/quote',
+    description: 'Request a custom quote for services',
+    parameters: [
+      { name: 'service_type', type: 'string', required: true, description: 'Type of service needed' },
+      { name: 'project_scope', type: 'string', required: true, description: 'Project scope description' },
+      { name: 'timeline', type: 'string', required: false, description: 'Project timeline' }
+    ],
+    example: {
+      request: 'GET /api/v1/quote?service_type=ai&project_scope=custom-development&timeline=3-months',
+      response: {
+        status: 200,
+        data: {
+          estimated_cost: "$15,000 - $25,000",
+          timeline: "8-12 weeks",
+          next_steps: "Schedule consultation call"
+        }
+      }
+    }
+  }
+];
+
+const codeExamples = [
+  {
+    language: 'JavaScript',
+    title: 'Fetch Services',
+    code: `const response = await fetch('https://ziontechgroup.com/api/v1/services', {
+  method: 'GET',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  }
+});
+
+const data = await response.json();
+console.log(data);`
+  },
+  {
+    language: 'Python',
+    title: 'Submit Contact Form',
+    code: `import requests
+
+url = 'https://ziontechgroup.com/api/v1/contact'
+headers = {
+  'Authorization': 'Bearer YOUR_API_KEY',
+  'Content-Type': 'application/json'
+}
+data = {
+    'name': 'John Doe',
+    'email': 'john@example.com',
+    'message': 'Interested in AI services',
+    'service': 'ai-solutions'
+}
+
+response = requests.post(url, headers=headers, json=data)
+print(response.json())`
+  },
+  {
+    language: 'cURL',
+    title: 'Get Quote',
+    code: `curl -X GET "https://ziontechgroup.com/api/v1/quote?service_type=ai&project_scope=custom-development" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json"`
+  }
+];
+
+const authenticationMethods = [
+  {
+    name: "API Key Authentication",
+    description: "Simple API key-based authentication for basic access",
+    icon: Lock,
+    features: [
+      "Easy to implement",
+      "Suitable for server-to-server communication",
+      "Rate limiting included",
+      "Secure key management"
+    ]
+  },
+  {
+    name: "OAuth 2.0",
+    description: "Industry-standard OAuth 2.0 for secure user authentication",
+    icon: Shield,
+    features: [
+      "Secure token-based authentication",
+      "User consent management",
+      "Token refresh capabilities",
+      "Industry standard security"
+    ]
+  },
+  {
+    name: "JWT Tokens",
+    description: "JSON Web Tokens for stateless authentication",
+    icon: Lock,
+    features: [
+      "Stateless authentication",
+      "Self-contained tokens",
+      "Cross-domain compatibility",
+      "Secure token validation"
+    ]
+  }
+];
+
+const rateLimits = [
+  {
+    tier: "Free",
+    requests: "100/hour",
+    description: "Perfect for testing and small projects",
+    features: ["Basic API access", "Standard support", "Community resources"]
+  },
+  {
+    tier: "Professional",
+    requests: "1,000/hour",
+    description: "Ideal for growing businesses",
+    features: ["Priority support", "Advanced features", "SLA guarantee"]
+  },
+  {
+    tier: "Enterprise",
+    requests: "Unlimited",
+    description: "Custom solutions for large organizations",
+    features: ["Dedicated support", "Custom integrations", "SLA guarantee"]
+  }
+];
 
 export default function APIDocsPage() {
   return (
     <MainLayout>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/docs/api.tsx
+      <div className="min-h-screen bg-gray-50">
       <div className="min-h-screen bg-gray-50>
         {/* Hero Section */}
         <section className=bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -376,6 +578,8 @@ export default function APIDocsPage() {
           </div>
         </section>
       </div>
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75:pages/docs/api.tsx
+    </Layout>
+  )
+    </MainLayout>
+  );
 }

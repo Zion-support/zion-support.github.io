@@ -34,7 +34,6 @@ interface SmartContractBuilderProps  {isOpen: boolean;
   clientName: string;
   onContractGenerated?: (contractContent: string) => void;
 }
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
 export function SmartContractBuilder({
   isOpen;
 
@@ -185,7 +184,6 @@ interface SmartContractBuilderProps  {is_open: boolean;
 } catch(error) {console && console.error("Error generating Solidity contract:, error)toast && toast.error(Failed to generate Solidity contract.")}
   }// New function for generating Markdown legal draft;
       return}
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
     setIsLoadingLegalDraft(true);
     setLegalDraftError(null);
     setGeneratedMarkdownContract(null);
@@ -219,7 +217,9 @@ if ( {) {$2;
 if ( {) {$2;
 }
           onLegalDraftGenerated (data.markdown_content)}
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
+        setActiveTab ("preview_markdown"); // Switch to a new tab for Markdown preview;
+        toast.success ("Legal draft generated successfully!")} else {
+        throw new Error ("No content received from draft generator.")}
         setActiveTab (preview_markdown"); // Switch to a new tab for Markdown preview;
         toast.success ("Legal draft generated successfully!)} else {
         throw new Error (No content received from draft generator.")}
@@ -241,7 +241,6 @@ if ( {) {$2;
       toast.info("Generating PDF...)html2pdf().from(element).set(opt).save().then(() => toast.success(PDF downloaded successfully!")).catch((err) => {toast.error("PDF generation failed.)console.error(Error generating PDF:", err)})} else {toast.warn("No draft content available to download or form values missing.)}
   }
       return}
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
     network: 'ethereum';
     useEscrow: true;
     deployToChain: false
@@ -396,7 +395,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
   // This function is passed to ContractForm.// We now decide what "generate" means in this context.// The subtask asks for a Generate Legal Draft button.// Let's assume ContractForms onContractGenerated is for the primary action, which could be Solidity or data pass-through.// For clarity, we will add a dedicated "Generate Legal Draft" button in SmartContractBuilders JSX.// The onContractGenerated from ContractForm might be re-purposed or trigger our Solidity generation.const handleFormSubmitFromContractForm = (values: ContractFormValues) => {// This is called by ContractForm's own submit/generate button.// Let's make this one generate the Solidity code, as per existing flow.setFormValues(values)// Update formValues state first;
     handleGenerateSolidity()// Then generate Solidity.}
   return (<Dialog open={isOpen} onOpenChange={onClose}>;
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
 
       // Adjust constructor arguments based on contractTypeToDeploy;
       if(contractTypeToDeploy === simple') {
@@ -589,7 +587,6 @@ if ( { // Chain not added) {}
                     </Button>;
                   </div>                )}
               </div>;
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
             )}
 
         <TemplateManager
@@ -620,8 +617,7 @@ setActiveTab (preview")}";
 }onClose= {onClose;
 }deploymentInfo= {deploymentInfo;
 }/> > {';
-  deployStatus === 'deploying ? Deploying...' : 'Deploy to Blockchain ;
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
+  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
 }</Button> </div>) ;
 }</div>) ;
 }</TabsContent> </Tabs> <TemplateManagerisOpen= {
@@ -707,8 +703,7 @@ setActiveTab (preview")}";
 }onClose= {onClose ;
 }deploymentInfo= {deploymentInfo ;
 }/> > {';
-  deployStatus === deploying ? 'Deploying...' : Deploy to Blockchain ;
-<<<<<<< HEAD:src_backup/components/contracts/SmartContractBuilder.tsx
+  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
 }</Button> </div>) ;
 }</div>) ;
 }</TabsContent> </Tabs> <TemplateManager isOpen= {

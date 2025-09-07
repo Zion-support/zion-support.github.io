@@ -1,8 +1,7 @@
-
-import React from 'react;
-import { motion } from framer-motion';
-import { MessageCircle, Calendar, Users, Award } from 'lucide-react;
-import Layout from ../components/Layout';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { MessageCircle, Calendar, Users, Award } from 'lucide-react';
+import Layout from '../components/Layout';
 
 export default function CommunityPage() {
   const communityFeatures = [
@@ -139,9 +138,6 @@ export default function CommunityPage() {
   );
 }
 
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8>;
       <Head>;
@@ -189,7 +185,4 @@ export default function CommunityPage() {
 
     </div>
   );
-
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

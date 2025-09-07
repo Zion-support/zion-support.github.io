@@ -1,5 +1,77 @@
+import React, { useEffect } from 'react';
+import { Star } from 'lucide-react';
+}
+    }
 
+      observer.observe({ "entryTypes": ['navigation'],'
+})"memory": {"used": number;
+    }
 
+    return () => {
+      window.removeEventListener('load', measurePerformance)
+    }
+  }, [onPerformanceData])
+
+  return null
+}
+
+export default PerformanceMonitor
+  return null; // This component doesn't render anything;
+}export default PerformanceMonitor;
+
+interface PerformanceData {
+  domContentLoaded: number,
+  loadComplete: number,
+  totalLoadTime: number,
+  firstPaint: number,
+  firstContentfulPaint: number,
+  resourceCount: number,
+  memory: {
+    used: number,
+    total: number,
+    limit: number,
+  } | null;
+}
+
+interface PerformanceData {
+  domContentLoaded: number,
+  loadComplete: number,
+  totalLoadTime: number,
+  firstPaint: number,
+  firstContentfulPaint: number,
+  resourceCount: number,
+  memory: {
+    used: number,
+    total: number,
+    limit: number,
+  } | null;
+}
+
+interface PerformanceMonitorProps {
+  }
+  onPerformanceData?: ("data": any) => void;
+
+}
+
+interface Performance {
+  getEntriesByType(type: string): PerformanceEntry[],
+}
+
+interface PerformanceNavigationTiming extends PerformanceEntry {
+  loadEventEnd: number,
+  loadEventStart: number,
+  domContentLoadedEventEnd: number,
+  domContentLoadedEventStart: number,
+  responseEnd: number,
+  responseStart: number,
+  requestStart: number,
+  navigationStart: number,
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+  useEffect(() => {
+    // Only run on client side
+    if (typeof window === 'undefined' || typeof window.performance === 'undefined') return;
 
     const measurePerformance = () => {
       const navigation = window.performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;
@@ -30,8 +102,12 @@
         onPerformanceData(performanceData);
       }
 
-
-
+      // Log performance data in development
+      if (process.env.NODE_ENV === 'development') {
+         
+        console.log('Performance Metrics:', performanceData);
+      }
+    };
 
     // Measure performance after page load
     if (document.readyState === complete') {
@@ -40,11 +116,12 @@
       window.addEventListener('load', measurePerformance);
     }
 
-
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [onPerformanceData]);
 
   return null;
-}
+};
 
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
->>>>>>> origin/main
+export default PerformanceMonitor;

@@ -1,5 +1,27 @@
 
-import React, { useState } from 'react;
+export type ModerationModalProps = {
+  flag: any | null;
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+</div> <div className="p-4 space-y-4 text-sm" > <div className="grid grid-cols-2 gap-4" > <div> </div> </div> </div>) 
+}
+import React, { useState } from 'react';
 
 
 
@@ -530,5 +552,12 @@ export default function ModerationModal({
     </div>
 );
 }
+}
+origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+
+
+
+
+}
+

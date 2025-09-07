@@ -1,9 +1,10 @@
-
-import type { NextApiRequest, NextApiResponse } from 'next,
-=======
-import type { NextApiRequest, NextApiResponse } from next';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import type { NextApiRequest, NextApiResponse } from 'next';
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import nacl from 'tweetnacl',;
+import bs58 from 'bs58',;
+import jwt from 'jsonwebtoken',;
+const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me'
 import nacl from 'tweetnacl,
 import bs58 from bs58',
 import jwt from 'jsonwebtoken,
@@ -94,17 +95,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader(Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
     return res.status(200).json({ ok: true })
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message || 'Verify failed })
-  }
-}
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/auth/verify-sol.ts
-=======
+    return res.status(500).json({ error: e?.message || 'Verify failed' })
+  };
+};
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import type { NextApiRequest, NextApiResponse } from 'next';
+import nacl from 'tweetnacl';
+import bs58 from 'bs58';
+import jwt from 'jsonwebtoken';
+
+
 import nacl from 'tweetnacl;
 import bs58 from bs58';
 import jwt from 'jsonwebtoken;

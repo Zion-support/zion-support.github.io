@@ -41,7 +41,6 @@ interface ListingScoreCardProps  {title: string;
   image?: string;
   category: string;
   tags?: string[];
-<<<<<<< HEAD:src_backup/components/ListingScoreCard.tsx
   author?: string;
 
   authorImage?: string;
@@ -190,11 +189,11 @@ interface ListingScoreCardProps {
             <div className=flex">;
               {[1, 2, 3, 4, 5].map((star) => (<StarIcon;
                   key={star}
-                  className={cn("h-4 w-4,star <= Math.round(rating)? text-zion-cyan fill-zion-cyan";
-                      : "text-zion-slate-light;
-import { cn } from @/lib/utils",import { Badge } from "@/components/ui/badge,import { Button } from @/components/ui/button",import Image from 'next/image, // Import next/image;
-import React, { useState } from react', // Import useState;
-<<<<<<< HEAD:src_backup/components/ListingScoreCard.tsx
+                  className={cn("h-4 w-4",star <= Math.round(rating)? "text-zion-cyan fill-zion-cyan";
+                      : "text-zion-slate-light";
+import { cn } from "@/lib/utils",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",import Image from 'next/image', // Import next/image;
+import React, { useState } from 'react', // Import useState;
+interface ListingScoreCardProps {;
 interface ListingScoreCardProps {
   title: string,,
   description: string,
@@ -386,7 +385,6 @@ export function ListingScoreCard({
   authorImage;
   aiScore;
   rating;
-<<<<<<< HEAD:src_backup/components/ListingScoreCard.tsx
                     star <= Math.round(rating) 
                       ? "text-zion-cyan fill-zion-cyan 
                       : text-zion-slate-light"
@@ -433,7 +431,8 @@ export function ListingScoreCard({
           <div className='flex flex-wrap gap-2 mb-4>;
             {tags.map((tag, i) => (<Badge;
                 key={i}
-<<<<<<< HEAD:src_backup/components/ListingScoreCard.tsx
+                variant='outline'
+                className='border-zion-slate-dark text-zion-slate-light'>                {tag}
                 variant=outline'
                 className='border-zion-slate-dark text-zion-slate-light>                {tag}
 
@@ -561,7 +560,6 @@ export function ListingScoreCard({
               </div>;
             ) : (<div className=h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">;
                 {author.charAt(0)}
-<<<<<<< HEAD:src_backup/components/ListingScoreCard.tsx
               </div>
             )}
 

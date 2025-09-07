@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 try {
       // Create the product listing;
       const product_data = {
@@ -266,7 +264,6 @@ if ( {) {}
 }
           throw new Error (update_error.message)}
       }
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
       // Send listing to moderation service;
 
       try {'
@@ -304,20 +301,23 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
       if (productError) {}
         throw new Error(productError.message)
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { zodResolver } from @hookform/resolvers/zod","
-import z from zod,"
-import { useAuth } from "@/hooks/useAuth",
-import { useToast } from @/hooks/use-toast","
-import { useRouter } from next/router,
-import Image from 'next/image', // Import next/image;
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+import React from "react",;"
+import { useForm, ControllerRenderProps } from "react-hook-form",;"
+import { zodResolver } from "@hookform/resolvers/zod",;"
+import z from "zod",;"
+import { supabase } from "@/integrations/supabase/client",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { useToast } from "@/hooks/use-toast",;"
+import { useRouter } from "next/router",;'
+import Image from 'next/image', // Import next/image;'
+import {logErrorToProduction} from '@/utils/productionLogger',;
+import {;
+  Form,;
+  FormControl,;
+  FormDescription,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
 
 import { Sparkles } from 'lucide-react;
       // Send listing to moderation service;try {await supabase.functions.invoke (moderate - listing', {body: {listing_id: product_record.id,listing_type: 'product,description: values.description,images: imagePublicUrl ? [imagePublicUrl] : [],seller_id: user.id}})} catch (err) {logErrorToProduction (Error invoking moderation:', { data: err })}import React from 'react;
@@ -339,7 +339,6 @@ import { logErrorToProduction  } from @/utils/productionLogger';
   price: z;
     .string();
 
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
   // Initialize the form;
   const form = useForm<ProductFormValues>({
@@ -365,8 +364,7 @@ import { logErrorToProduction  } from @/utils/productionLogger';
 
         .from(product_listings');
         .insert([productData]);'
-        .select(id);
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+        .select('id');
 
       if (productError) {
 
@@ -404,18 +402,17 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
         const { error: uploadError } = await supabase && supabase.storage;
           .from(products).upload(imagePath, values && values.image)if (uploadError) {throw new Error(uploadError && uploadError.message)}// Get the public URL for the image;
         const { data: publicUrlData } = supabase && supabase.storage;
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
           .from('products');
           .getPublicUrl(imagePath);
         imagePublicUrl = publicUrlData && publicUrlData.publicUrl;
 
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
         // Update the product with the image URL;
         const { error: updateError } = await supabase;
-          .from(product_listings);
-          .update({
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+          .from('product_listings');
+          .update({;
+            images: [imagePublicUrl],;
+          });
             images: [imagePublicUrl]});
           .eq('id', productRecord && productRecord.id);
 
@@ -436,7 +433,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
           .from('product_listings').update({ video_url: publicUrlData && publicUrlData.publicUrl }).eq(id, productRecord && productRecord.id)if (updateError) {throw new Error(updateError && updateError.message)}
       }// Upload model if provided;
       if (values && values.model) {const modelPath = `product_models/${productRecord && productRecord.id}/${values && values.model.name}`;
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+        const { error: uploadError } = await supabase && supabase.storage;
           .from('products');
           .upload(modelPath, values && values.model);
       // Upload video if provided;
@@ -509,7 +506,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
         title: Publication Failed,
 
@@ -601,7 +597,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
           <form on_submit={form.handle_submit (on_submit)} className=space - y-6>;
             <FormField;
               control={form.control}
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
               name='title';
 
               render={({
@@ -724,7 +719,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                         placeholder="Enter product title;
                         onChange={onChange}
                         onBlur={onBlur}
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
                         value={value}
 
                       <Input
@@ -791,7 +785,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
               name="description";
               render={({ field }: { field: ControllerRenderProps<ProductFormValues description> }) => (<FormItem>;
@@ -822,9 +815,8 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               <FormField;
                 control={form.control}
                 name="price";
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+                render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (;
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues price> }) => (;
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
                   <FormItem>;
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (<FormItem>;
@@ -900,7 +892,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                     <FormDescription>Set your price in USD</FormDescription>;
                     <FormMessage />;
                   </FormItem>;
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
                 )}
                 )}/>;<FormField;
                 control={form && form.control}
@@ -1056,7 +1047,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               name=tags""
               render={({ field }: { field: ControllerRenderProps<ProductFormValues tags> }) => (
                 <FormItem>
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
 
                   <FormLabel>Tags</FormLabel>
@@ -1099,7 +1089,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                 </FormItem>;
               )}
             />;
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
                   <FormDescription>Add relevant tags to help users find your product (e && e.g., ai,productivity, design)</FormDescription>;
                   <FormMessage />;
@@ -1137,14 +1126,12 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                       type='file'
                       accept=image/*'
                       onChange={handleImageChange}
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
                     Add relevant tags to help users find your product (e.g., ai, productivity, design)
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
 
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
 
               render={() => (
                 <FormItem>
@@ -1179,7 +1166,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                           src={imagePreview}
 
 
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+                          alt="Product image preview"
                           alt="Product image preview
                           width={600} // Example width, adjust as needed
 
@@ -1379,8 +1366,7 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
               <Button'
                 type='submit
 
-                {isSubmitting ? Publishing...' : 'Publish Product}
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+                {isSubmitting ? 'Publishing...' : 'Publish Product'}
 
             />;
             <FormField;
@@ -1417,7 +1403,6 @@ type ProductFormValues = z && z.infer<typeof productSchema>;export function Prod
                   <FormMessage />
                 </FormItem>
               )}
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
             />
 
             <div className=flex justify-end">
@@ -1477,7 +1462,6 @@ if ( {) {$2;
         />;
       </TabsContent>;
     </Tabs>;
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
   );
 
   const file = e && e.target.files?.[0];
@@ -1499,7 +1483,7 @@ if (file) {reader && reader.onloadend = () => {setImagePreview (reader && reader
   FormLabel;
   FormMessage} from @/components/ui/form",import { Input } from "@/components/ui/input,import { Button } from @/components/ui/button",import { Textarea } from "@/components/ui/textarea,import { AspectRatio } from @/components/ui/aspect-ratio",// Define the form schema with zod;
 const productSchema = null;
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+            category: form.getValues("category")
             category: form.getValues("category)
           }}
         />
@@ -1545,8 +1529,7 @@ if (file) {}
   toast ({
   return;
 }setIsSubmitting (true);
-author: {;
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+author: {";
   name: user.displayName || "Anonymous Creator";
 id: user.id ;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -1558,7 +1541,8 @@ createdAt: new Date () .toISOString () ;
 data: productRecord, error: productError ';
 }= await supabase .from ('product listings) .insert ([productData]) .select (id') .single ();
 let imagePublicUrl: string | undefined;';
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+//If we have an image, upload it .from ('products') .upload (imagePath, values.image);
+//Get the public window.URL for the image const {;
 //If we have an image, upload it .from (products) .upload (imagePath, values.image);
 //Get the public window.URL for the image const {
   data: publicUrlData ';
@@ -1590,9 +1574,11 @@ imagePublicUrl = publicUrlData && publicUrlData.publicUrl;
   data: publicUrlData ';
 }= supabase && supabase.storage.from (products) .getPublicUrl (modelPath);
   error: updateError ';
-}= await supabase .from ('product listings) ;
-}//Send listing to moderation service try {;
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+}= await supabase .from ('product listings') ;
+}//Send listing to moderation service try {';
+  await supabase.functions.invoke ('moderate-listing', {;
+  body: {;
+  //Redirect to product page router.push (`/marketplace/listing/$ {;
   await supabase.functions.invoke ('moderate-listing', {
   body: {
   //Redirect to product page router.push (`/marketplace/listing/$ {
@@ -1661,21 +1647,22 @@ id: user.id ;}createdAt: new Date () .toISOString ()}data: productRecord, error:
 } = supabase && supabase.storage.from (products) .getPublicUrl (modelPath)//If we have an image, upload it .from ('products') .upload (imagePath, values.image)//Get the public window.URL for the image const {data: publicUrlData ;
 }= supabase.storage.from (products') .getPublicUrl (imagePath)imagePublicUrl = publicUrlData.publicUrl;
 //Update the product with the image window.URL const {error: updateError ';
-}= await supabase .from (product listings) .from ('products') .upload (videoPath, values.video)const {data: publicUrlData ;
-}= supabase.storage.from (products') .getPublicUrl (videoPath)const {error: updateError ';
-}= await supabase .from (product listings) .from ('products') .upload (modelPath, values.model)const {data: publicUrlData ;
-} = supabase.storage.from (products') .getPublicUrl (modelPath)const {error: updateError ';
-}= await supabase .from (product listings)}//Send listing to moderation service try {';await supabase && supabase.functions.invoke ('moderate-listing, {body: {//Redirect to product page router && router.push (`/marketplace/listing/$ {productRecord && productRecord.id ;
-}`)}catch (error) {toast ({await supabase.functions.invoke (moderate-listing', {body: {//Redirect to product page router.push (`/marketplace/listing/$ {productRecord.id ;
-}`)}catch (error) {toast ({}finally {setIsSubmitting (false)}}className=w-full"> <TabsList className="grid grid-cols-2 mb-6 > <TabsTrigger value=manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple > aiclassName="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className=h-4 w-4 mr-2/> AI-Powered Creation </TabsTrigger> </TabsList> ;
-}";}/> <FormFieldDescribe your product in detail..." className=min-h-32 {...field ';
-}/> </FormControl> <FormDescription> Provide a detailed description of what youre offering </FormDescription> <FormMessage /> </FormItem>) ";
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6 > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Inputtype=number" min="0 step=0 && 0.01" placeholder="0 && 0.00 {...field;
-}/> ;
-}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value=service >Service</option> <option value="ai tool" >AI Tool</option> <option value=course >Course</option> <option value="template" >Template</option> <option value=other >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
-}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Inputplaceholder="Enter tags separated by commas {...field;
-}/> ;
-<<<<<<< HEAD:src_backup/components/ProductSubmissionForm.tsx
+}= await supabase .from ('product listings') .from ('products') .upload (videoPath, values.video)const {data: publicUrlData ';
+}= supabase.storage.from ('products') .getPublicUrl (videoPath)const {error: updateError ';
+}= await supabase .from ('product listings') .from ('products') .upload (modelPath, values.model)const {data: publicUrlData ';
+} = supabase.storage.from ('products') .getPublicUrl (modelPath)const {error: updateError ';
+}= await supabase .from ('product listings')}//Send listing to moderation service try {';await supabase && supabase.functions.invoke ('moderate-listing', {body: {//Redirect to product page router && router.push (`/marketplace/listing/$ {productRecord && productRecord.id ;
+}`)}catch (error) {toast ({await supabase.functions.invoke ('moderate-listing', {body: {//Redirect to product page router.push (`/marketplace/listing/$ {productRecord.id ;
+}`)}catch (error) {toast ({;
+}finally {setIsSubmitting (false)}}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
+}";}/> <FormFieldDescribe your product in detail..." className="min-h-32" {...field ';
+}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Inputtype="number" min="0" step="0 && 0.01" placeholder="0 && 0.00" {...field;
+}/> ";
+}/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
+}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Inputplaceholder="Enter tags separated by commas" {...field;
+}/> ";
+}/> <FormField <FormItem> <FormLabel > Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" on_change= {
 }/> <FormField <FormItem> <FormLabel > Product Image</FormLabel> <FormControl> <Input type="file" accept=image/* on_change= {
   handleImageChange ";
 }className="cursor - pointer /> </FormControl> <FormDescription> Upload a high - quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;;

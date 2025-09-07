@@ -1,5 +1,7 @@
 
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+import { useState, useEffect  } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, ChevronDown;
   }
   Brain, Rocket, Shield;
@@ -8,7 +10,17 @@ import { Menu, ChevronDown;
   BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
-
-
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon;
+  } from 'lucide-react';
+const navigationItems  = null;
+    </>);
+}
+const navigationItems  = null;
+                            exit={{ opacity: 0, height: 0}}
+                            transition = $2;
+export default EnhancedNavigation2025,
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon}
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
+ } from 'lucide-react';
 
 const navigationItems = null;

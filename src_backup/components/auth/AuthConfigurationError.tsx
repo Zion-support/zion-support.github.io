@@ -60,8 +60,7 @@ export function AuthConfigurationError(): any ({
   const handleRefresh = () => {
     if (onRetry) {
       onRetry();
-    } else {
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+    } else {;
 
 }
 
@@ -152,7 +151,6 @@ if ( {) {}
             </ul>
           </div>
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
 ;
     }return this.props.children;
@@ -267,7 +265,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               resolved.;
             </AlertDescription>;
           </Alert>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
 
           <div className="flex flex-col sm:flex-row gap-3 mb-6">
@@ -276,7 +273,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 onClick={() => window.open(/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank)}
 
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
                 className=bg-blue-600 hover:bg-blue-700 text-white flex-1
               >
@@ -285,7 +281,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Button>
 
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
   }
   return (;
@@ -344,9 +339,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-gray-600">;
               The sign-up system needs to be configured before users can create accounts;
             </p>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
           </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
 
           <Alert variant=destructive className="mb-6">;
@@ -397,8 +390,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </AlertDescription>;
           </Alert>;
 
-            <ul className="text - sm text - gray - 700 space - y-1>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+            <ul className="text - sm text - gray - 700 space - y-1">;
 
               <li>• AUTH0_SECRET</li>;
             <ul className=text - sm text - gray - 700 space - y-1">;<li>• AUTH0_SECRET</li>;
@@ -413,10 +405,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
                 <Settings className='w-4 h-4 mr-2' />;
                 Setup Guide;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
               </Button>;
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
             )}
 
@@ -430,7 +420,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             >
               <RefreshCw className=w-4 h-4 mr-2" />
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
               className='flex-1'
             >
               <RefreshCw className=w-4 h-4 mr-2 />
@@ -470,11 +459,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <RefreshCw className=w-4 h-4 mr-2 />              Check Again              <RefreshCw className="w-4 h-4 mr-2 />;
               Check Again;
             </Button>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
           </div>;
 
           {/* Quick Setup Steps */}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 
 
 
@@ -497,7 +484,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   1
                 </span>
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+<div className='border-t pt-6'>
 <div className=border-t pt-6>
             <h3 className='font-semibold text-gray-900 mb-3'>
               Quick Setup Steps:
@@ -537,7 +524,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className=flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold>
                   2
                 </span>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
                   <strong>Create Application:</strong>
@@ -545,7 +531,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Create a "Regular Web Application" named Zion AI Marketplace
                 </div>
               </li>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
               
               <li className="flex items-start gap-3">
                 <span className=flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold>3</span>
@@ -559,7 +544,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <span className=flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold>
                   3
                 </span>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <div>
                   <strong>Configure Environment:</strong>
@@ -747,9 +731,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <br />
                   Copy credentials to <code className="bg-gray-100 px-1 rounded">.env.local</code> file;
                 </div>
-              </li>
-              <li className=flex items-start gap-3">
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+              </li>"
+              <li className="flex items-start gap-3">
 
               
               <li className="flex items-start gap-3>
@@ -774,7 +757,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ol>
           </div>
         </div>
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+                  </code>{' '}<li className="flex items-start gap-3">;
+                <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>;
                   </code>{' }<li className="flex items-start gap-3>;
                 <span className=flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>;
                 <div>;
@@ -854,7 +838,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </li>;
             </ol>;
           </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
         </div>;
 
         <div className="bg-blue-50 rounded-xl border border-blue-200 p-6>
@@ -909,8 +892,72 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Copy credentials to <code className="bg - gray - 100 px - 1 rounded">.env.local</code> file;
                 </div>;
               </li>;
-              <li className=flex items - start gap - 3">;"
-                <span className=flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold>4</span>;
+              <li className="flex items - start gap - 3">;
+                <span className="flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold">4</span>;
+                <div>;
+                  <strong > Restart Application:</strong>;
+                  <br />;
+                  Run <code className="bg - gray - 100 px - 1 rounded">npm run dev</code> to apply changes;
+                </div>;
+              </li>;
+            </ol>;
+          </div>;
+        </div>;
+
+        <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
+          <h3 className="font-semibold text-blue-900 mb-3">Alternative Actions:</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Link 
+              href="/marketplace" 
+              className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
+
+
+                  to apply changes                </div>                <div>;
+                  <strong>Configure Environment:</strong>;
+                  <br />;"
+                  Copy credentials to <code className="bg-gray-100 px-1 rounded">.env && env.local</code> file;
+                </div>;
+              </li>;
+"
+              <li className="flex items-start gap-3">;"
+                <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">4</span>;
+                <div>;
+                  <strong>Restart Application:</strong>;
+                  <br />;"
+                  Run <code className="bg-gray-100 px-1 rounded">npm run dev</code> to apply changes;'
+              <li className='flex items - start gap - 3'>;'
+                <span className='flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold'>;
+                  3;
+                </span>;
+                <div>;
+                  <strong > Configure Environment:</strong>;
+                  <br />;'
+                  Copy credentials to{' '}'
+                  <code className='bg - gray - 100 px - 1 rounded'>;
+                    .env.local;'
+                  </code>{' '}
+                  file;
+                </div>;
+              </li>;'
+              <li className='flex items - start gap - 3'>;'
+                <span className='flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold'>;
+                  4;
+                </span>;
+                <div>;
+                  <strong > Restart Application:</strong>;
+                  <br />;'
+                  Run{' '}'
+                  <code className='bg - gray - 100 px - 1 rounded'>;
+                    npm run dev;'
+                  </code>{' '}
+                  to apply changes                </div>                <div>;
+                  <strong > Configure Environment:</strong>;
+                  <br />;"
+                  Copy credentials to <code className="bg - gray - 100 px - 1 rounded">.env.local</code> file;
+                </div>;
+              </li>;"
+              <li className="flex items - start gap - 3">;"
+                <span className="flex - shrink - 0 w - 6 h - 6 bg - blue - 100 text - blue - 600 rounded - full flex items - center justify - center text - xs font - semibold">4</span>;
                 <div>;
                   <strong > Restart Application:</strong>;
                   <br />;"
@@ -996,8 +1043,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800>;
               <span>Browse Marketplace</span>            >;
               <span>Browse Marketplace</span>;"
-              <ExternalLink className="w-4 h-4 />;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+              <ExternalLink className="w-4 h-4" />;
             </Link>;
 
             <Link 
@@ -1202,9 +1248,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
         )}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
         {/* Footer */}
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+<div className='mt-6 text-center text-sm text-gray-500'>
 <div className='mt-6 text-center text-sm text-gray-500>
           <p>
             For detailed instructions, see{ '}
@@ -1233,7 +1278,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </div>
 
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+export default AuthConfigurationError };
+;
 export default AuthConfigurationError }
 export default AuthConfigurationError;
 }
@@ -1255,8 +1301,7 @@ export default AuthConfigurationError;
             <button;
               onClick={() => window.open(/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
 
-              className=text-blue-600 hover: underline";
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
+              className="text-blue-600 hover: underline";
               AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md;
 
         {/* Footer */}<div className="mt-6 text-center text-sm text-gray-500>;
@@ -1281,7 +1326,6 @@ export default AuthConfigurationError;
         </div>;
       </div>;
     </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
   );
 
   );
@@ -1391,7 +1435,6 @@ export default AuthConfigurationError;
           </p>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/auth/AuthConfigurationError.tsx
     </div>);
 export default AuthConfigurationError }
 export default AuthConfigurationError}

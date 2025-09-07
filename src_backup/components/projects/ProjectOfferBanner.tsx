@@ -191,7 +191,6 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
                 </Button>;
 
         ))}
-<<<<<<< HEAD:src_backup/components/projects/ProjectOfferBanner.tsx
     </div>
   );
 
@@ -242,7 +241,6 @@ export function ProjectOfferBanner() {const router = useRouter()const { projects
               </div>;
             </CardContent>;
           </Card>))}
-<<<<<<< HEAD:src_backup/components/projects/ProjectOfferBanner.tsx
     </div>)}, [projects, is_loading])const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {e.stop_propagation ()set_dismissed (prev => {const updated = new Set (prev)updated.add (project_id)return updated;
 })}
 const handleViewOffer = (project_id: string) =>: any {router.push (`/project/$ {</div>;

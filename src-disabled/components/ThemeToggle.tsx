@@ -1,4 +1,6 @@
-<<<<<<< HEAD:src_backup/components/ThemeToggle.tsx
+import React from 'react';
+import { Sun, Moon, Monitor  } from 'lucide-react';
+import { useTheme  } from './ThemeProvider';
 import React from 'react;
 import { Sun, Moon, Monitor  } from lucide-react';
 import { useTheme  } from './ThemeProvider;

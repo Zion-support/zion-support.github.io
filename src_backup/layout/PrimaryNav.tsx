@@ -56,11 +56,29 @@ import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigati
 import { MobileMenu } from '@/components/header/MobileMenu'
 import { MobileBottomNav } from @/components/header/MobileBottomNav'
 '
-import { Menu, X } from lucide-react';
-import { useTranslation  } from 'react-i18next;
-import { CartDrawer  } from '@/components/cart/CartDrawer';
-import { LoginModal } from @/components/auth/LoginModal';
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+import { useState } from 'react''
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger''
+import Link from 'next/link''
+import { useRouter } from 'next/router''
+import { Logo } from '@/components/header/Logo''
+import { PointsBadge } from '@/components/loyalty/PointsBadge''
+import { UserMenu } from '@/components/header/UserMenu''
+import { LanguageSelector } from '@/components/header/LanguageSelector''
+import { ModeToggle } from '@/components/ModeToggle''
+import { useAuth } from '@/hooks/useAuth''
+import { useIsMobile } from '@/hooks/use-mobile''
+import { useMessaging } from '@/context/MessagingContext''
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput''
+import { generateSearchSuggestions } from '@/data/marketplaceData''
+import { slugify } from '@/lib/slugify''
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation''
+import { MobileMenu } from '@/components/header/MobileMenu''
+import { MobileBottomNav } from '@/components/header/MobileBottomNav'
+'
+import { Menu, X } from 'lucide-react'';
+import { useTranslation  } from 'react-i18next';'
+import { CartDrawer  } from '@/components/cart/CartDrawer';'
+import { LoginModal } from '@/components/auth/LoginModal';
 
 import { Menu, X  } from 'lucide-react;
 import { useTranslation   } from react-i18next';
@@ -105,7 +123,6 @@ if ( {) {$2;
           logErrorToProduction (Search navigation failed', err, {query: trimmed,component: 'PrimaryNav;
           })) }
   }
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false),const [loginOpen, setLoginOpen] = useState(false),const { user } = useAuth(),const isLoggedIn = !!user;
             component: PrimaryNav';
           })) }
@@ -217,7 +234,7 @@ export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useSta
             <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />;
           </div>;
           {/* Actions container with responsive layout */}
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0>
             {/* Search form with clamped width */}
             <form onSubmit={handleSubmit} className=flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
@@ -314,7 +331,6 @@ if () {) {$2;
 if ( {) {$2;
 }
                     // Blog posts navigate to blog detail page;
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
                     router.push (`/blog/${sugg.slug}`);
 
                   } else {
@@ -333,7 +349,6 @@ if ( {) {$2;
                   if (sugg.id) {
 
                     // Product listings with IDs go to product detail page;
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
                     router.push(`/marketplace/listing/${sugg.id}`);
                   } else if (sugg.type === 'doc && sugg.slug && sugg.slug.startsWith(/')) {
                     // Documentation suggestions navigate directly to their path;
@@ -539,7 +554,7 @@ if ( {) {}
                     {t(auth && auth.signup)}
                   </Link>;
                 </>;
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+                    href="/signup";
                     href=/signup;
                     className="text-sm hover:text-primary whitespace-nowrap";
                   >;
@@ -613,7 +628,6 @@ if ( {) {}
               >;export function PrimaryNav() {const [mobileMenuOpen, setMobileMenuOpen] = useState(false)const [loginOpen, setLoginOpen] = useState(false)const { user } = useAuth()const isLoggedIn = null;
                   setLoginOpen(true)}}
               >;
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 
 
 export function PrimaryNav() {
@@ -723,7 +737,6 @@ export function PrimaryNav() {
           <div;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
           <div;
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
     </>;
@@ -739,7 +752,6 @@ export function PrimaryNav() {
         </div>;
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -750,7 +762,6 @@ return (<> <header className=sticky top-0 z-70 w-full border-b border-primary/20
 }setQuery ();
 //Track analytics event ;
 
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
 
 }searchSuggestions= {
   suggestions ;
@@ -772,8 +783,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</Link> </>) ;
 }{
   isLoggedIn && <UserMenu /> ;
-}</div> </div> <ModeToggle /> <LanguageSelector /> {;
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+}</div> </div> <ModeToggle /> <LanguageSelector /> {";
+  !isLoggedIn && (<Link href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={;
+  (e) => {;
   !isLoggedIn && (<Link href="/auth/login" className=text-sm hover:text-primary data-testid="login-link" onClick={
   (e) => {
   e.preventDefault ();
@@ -792,8 +804,10 @@ setLoginOpen (true) ;
   isLoggedIn && <UserMenu /> ;
 }</div> {
   /* Mobile menu button */ ";
-}<button) : (<Menu className="h-6 w-6 />) ;
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+}<button) : (<Menu className="h-6 w-6" />) ";
+}</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;
+  () => setMobileMenuOpen (false) ";
+}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
 }</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
   () => setMobileMenuOpen (false) ;
 }aria-hidden=true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto > <MobileMenu unreadCount= {
@@ -809,8 +823,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }openLoginModal= {
   (returnToPath) => setLoginOpen (true) ;
 }/> </div> </div>) ;
-}{
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+}{;
 
   isMobile && <MobileBottomNav unreadCount= {
   unreadCount ;
@@ -910,7 +923,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </nav>;
     </header>;
   )}
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+'"`;}return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />;
+}setQuery ('')//Track analytics event;
 '"`;}return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md role=navigation" aria-label="Primary data-testid=header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap > <Logo />;
 }setQuery ()//Track analytics event;
 }searchSuggestions= {suggestions;
@@ -1091,8 +1105,7 @@ return (<> <header className=sticky top - 0 z - 70 w - full border - b border - 
         </AnimatePresence>;
       </nav>;
     </header>)}
-"`;
-<<<<<<< HEAD:src_backup/layout/PrimaryNav.tsx
+'"`;
 }isMobile && <MobileBottomNav unreadCount= {unreadCount ;
 }/> ;
 }<LoginModal isOpen= {loginOpen ;

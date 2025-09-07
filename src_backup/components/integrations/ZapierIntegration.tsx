@@ -26,7 +26,10 @@ export function ZapierIntegration() {
 
 } from @/components/ui/card";
 
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
+import React, { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
 import React, { useState } from react",
 import { Badge } from "@/components/ui/badge,
 import { Button } from @/components/ui/button",
@@ -53,9 +56,9 @@ import { Badge } from @/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card;
 import { Zap } from lucide-react';
 
-export function ZapierIntegration() {
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R);
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
+export function ZapierIntegration() {;
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
 
     navigator && navigator.clipboard.writeText(apiKey);
     setCopied(true);
@@ -120,12 +123,10 @@ export /**;
             </div>;
           </CardHeader>;
           <CardContent>;
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
 
 
 
-                    {copied ? <Check className="h-4 w-4 /> : <Copy className=h-4 w-4" />}
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
+                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
 
                     {copied ? <Check className="h-4 w-4 /> : <Copy className=h-4 w-4" />}
 
@@ -180,7 +181,6 @@ export /**;
                     size=sm';
                     variant='outline;
                     onClick={handleCopyApiKey}
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
                     value={apiKey}
                     readOnly
                     className=font-mono text-sm'                  />
@@ -201,7 +201,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
           </CardContent>
 
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
 
 
 
@@ -234,10 +233,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <h3 className=text-lg font-semibold">Popular Zaps</h3>
           </CardHeader>
           <CardContent>
-            <ul className="space-y-2 text-sm>
-              <li className=flex items-center gap-2">
-                <Check className="h-4 w-4 text-green-500 />
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
+            <ul className="space-y-2 text-sm">
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-green-500" />
 
                 <span>Add new Zion contacts to Mailchimp</span>
               </li>
@@ -261,7 +259,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </ul>
           </CardContent>
           <CardFooter>
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
 
 
               <ExternalLink className=h-4 w-4" />
@@ -497,8 +494,7 @@ export function ZapierIntegration() {
             </div>;
           </CardHeader>;
           <CardContent>;
-            <p className=text-sm text-muted-foreground mb-4">;
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
+            <p className="text-sm text-muted-foreground mb-4">;
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;</p>;
             <div className=space - y-4'>;
               <div className='space - y-2>;
@@ -513,7 +509,6 @@ export function ZapierIntegration() {
                     variant=outline';
                     on_click={handleCopyApiKey}
                   >;
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
                     {copied ? (
                       <Check className='h - 4 w - 4 />) : (
                       <Copy className=h - 4 w - 4' />)}                  </Button>                  <Button size="sm variant=outline" on_click={handleCopyApiKey}>;
@@ -545,9 +540,7 @@ export function ZapierIntegration() {
               Open Zapier Dashboard;
             </Button>;
           </CardFooter>;
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
         </Card>;
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
 
         <Card>;
         </Card>;<Card>;
@@ -569,7 +562,6 @@ export function ZapierIntegration() {
                 <span>Sync completed projects to accounting</span>;
               </li>;
 
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
 
               </li>;
                 <span > Create calendar events for interviews</span>;</li>;
@@ -599,7 +591,6 @@ export function ZapierIntegration() {
             </div>;
           </div>;
         </CardContent>;
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
       </Card>;
 
       </Card>;)}

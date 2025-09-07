@@ -1,4 +1,39 @@
+export default function AIServices () {
+  return (<QuantumHolographicMatrixBackground intensity= {
+  1.5 
+}> <Head> <title>AI Services | Zion Tech Group</title> </div>) ) 
+}</div>) ) 
+}</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) ) 
+}</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) ) 
+}</div> </div> </section> <motion.div initial= {
+  opacity: 0, y: 20
+  {
+  opacity: 0, y: 20 
+}
+}animate= {
+  {
+  opacity: 1, y: 0 
+}
+}transition= {
+  {
+  duration: 0.8, delay: 0.4 
+}
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-gray-400 mb-8" > Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Schedule Consultation </motion.button> <motion.button 
+}
+  opacity: 0, y: 20 
 
+ export default function AIServices() {;
+
+export default function AIServices () {
+}> <Head> <title>AI Services | Zion Tech Group</title> </div>) )
+}</div>) )
+}</ul> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Our AI Service Portfolio </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business and accelerate innovation </p> </motion.div> </li>) )
+}</ul> <motion.a > Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" /> </motion.a> </motion.div>) )
+}</div> </div> </section> <motion.div initial= {
+  opacity: 0, y: 20
+}animate= {
+  {
+  opacity: 1, y: 0
 }transition= {
   {
 
@@ -108,21 +143,104 @@ function AIServices() {return (<QuantumHolographicMatrixBackground intensity={1.
                   <motion.a
                     href={service.href}
 
-=======
-                    whileHover={{ x: 5}}
-                    className=inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors"
-                  >
-                    Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform />
-                  </motion.a>
-                </motion.div>
-              ))}
-            </div>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl text-gray-400 mb-8">
+                Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+              transition={{ duration: 0.8, delay: 0.4 }}>;
+              transition={{ duration: 0.8, delay: 0.4 }}
+
+            >;
+              transition={{ duration: 0.8, delay: 0.4 }}>;
+              <h2 className="text - 4xl md:text - 5xl font - bold text-white mb-6">;
+                Ready to Transform Your Business with AI?;
+              </h2>;
+              <p className="text - xl text - gray-400 mb-8">;
+                Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap-4 justify-center">;
+                <motion.button;
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className="bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:shadow - 2xl transition-all duration-300";
+                >;
+                  Schedule Consultation;
+                </motion.button>;
+                <motion.button;
+                  while_hover={{ scale: 1.05 }}
+                  while_tap={{ scale: 0.95 }}
+                  className="border border - cyan - 500 text - cyan - 400 px - 8 py - 4 rounded - lg font - semibold text - lg hover: bg - cyan - 500 hover:text - white transition-all duration-300";
+                >;
+                  View Case Studies;
+                </motion.button>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+        {/* CTA Section */}
+        <section className="py - 20 px - 4 "sm":px-6 "lg":px-8">;"
+          <div className="max - w-4xl mx-auto text-center">;"
+            <motion.div;
+              initial={{ "opacity": 0, "coordinate_y": 20 
+}
+              animate={{ "opacity": 1, "coordinate_y": 0 
+}
+
+              transition={{ "duration": 0.8, "delay": 0.4 }}
+
+            >
+              <h2 className="text-4xl "md":text-5xl font-bold text-white mb-6">"
+                Ready to Transform Your Business with AI?
+              </h2>
+              <p className="text-xl text-gray-400 mb-8">"
+                Let's discuss how our AI solutions can accelerate your digital transformation and drive innovation.'
+              </p>
+              <div className="flex flex-col "sm":flex-row gap-4 justify-center">"
+                <motion.button,
+whileHover={{ "scale": 1.05 }}
+                  whileTap={{ "scale": 0.95 
+}
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg "hover":shadow-2xl transition-all duration-300">"
+
+                  Schedule Consultation;
+                </motion.button>;
+                <motion.button;
+                  whileHover={{ "scale": 1.05 }}
+                  whileTap={{ "scale": 0.95 }}
+
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg "hover": bg-cyan-500 "hover":text-white transition-all duration-300""
+                >
+                  View Case Studies
+                </motion.button>
+              </div>
+            </motion.div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className=py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+      </div>
+    </>
+  )
+}
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-500 hover:text-white transition-all duration-300";
+                >;
+                  View Case Studies;
+                </motion.button>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  )}
+}

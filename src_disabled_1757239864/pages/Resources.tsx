@@ -35,8 +35,8 @@ import {
   Headphones,
   Bookmark,
   Share2
-} from lucide-react';
-
+} from 'lucide-react';
+import SEO from '@/components/SEO';
 
 interface Resource {
   id: number;

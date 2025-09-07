@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
 
 <<<<<<<< HEAD:src_backup/components/partners/PartnerDashboard.tsx
 

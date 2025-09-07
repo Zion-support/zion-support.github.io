@@ -13,7 +13,6 @@ import type { QuoteRequest } from @/types/quotes';
 import { format  } from 'date-fns;
 interface QuoteDetailsProps  {quote: QuoteRequest | null;
   isOpen: boolean;
-<<<<<<< HEAD:src_backup/components/quotes/QuoteDetails.tsx
   onClose: () => void
 }
 
@@ -26,14 +25,13 @@ import {
   DialogHeader
   DialogTitle
   DialogDescription
-} from @/components/ui/dialog"
-import { Button } from "@/components/ui/button
-import { Calendar, User, Mail, Clock, DollarSign } from lucide-react'import { Card, CardContent } from @/components/ui/card"
-import { Separator } from "@/components/ui/separator
-import { QuoteStatusBadge } from ./QuoteStatusBadge"
-import type { QuoteRequest } from "@/types/quotes
-import {format} from date-fns"
-<<<<<<< HEAD:src_backup/components/quotes/QuoteDetails.tsx
+} from "@/components/ui/dialog"
+import { Button } from "@/components/ui/button"
+import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'import { Card, CardContent } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { QuoteStatusBadge } from "./QuoteStatusBadge"
+import type { QuoteRequest } from "@/types/quotes"
+import {format} from "date-fns"
 origin/cursor/automate-test-improve-and-merge-code-2533
 import React from "react;
   Dialog;

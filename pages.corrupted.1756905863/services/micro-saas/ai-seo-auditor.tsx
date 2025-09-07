@@ -1,5 +1,4 @@
 
-
 ;
 ursor/automate-test-improve-and-merge-code-646c;
 
@@ -18,15 +17,14 @@ interface AiseoauditorProps {
 
 
 }
-
+export default function Aiseoauditor({ }: AiseoauditorProps) {
+export default function Aiseoauditor({}: AiseoauditorProps) {
   return (
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
     <div>
       <h1>Aiseoauditor</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
 
 }
@@ -35,6 +33,3 @@ interface AiseoauditorProps {
 
 
 
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

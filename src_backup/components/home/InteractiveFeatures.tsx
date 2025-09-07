@@ -30,11 +30,12 @@ function InteractiveFeatures() {const [open_index, setOpenIndex] = React.useStat
     }return this.props.children;
   }
 }
-import React from react';
-import {Card,CardContent,CardHeader,CardTitle,CardDescription} from '@/components/ui/card;
-import { Button  } from @/components/ui/button';
-import Link from 'next/link;
-<<<<<<< HEAD:src_backup/components/home/InteractiveFeatures.tsx
+import React from 'react';
+import {Card,CardContent,CardHeader,CardTitle,CardDescription} from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {;
+  className?: string,;
 import { cn } from @/lib/utils';interface InteractiveFeaturesProps {
   className?: string,
   style?: React && React.CSSProperties;
@@ -177,7 +178,6 @@ import { cn } from '@/lib/utils;interface InteractiveFeaturesProps  {className?:
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD:src_backup/components/home/InteractiveFeatures.tsx
   );
 
             </Card>))}

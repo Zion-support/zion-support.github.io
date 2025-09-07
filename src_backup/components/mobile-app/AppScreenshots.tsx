@@ -13,9 +13,8 @@ export const AppScreenshots: React.FC = () => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
-        left: direction === "left ? -scrollAmount : scrollAmount
-        behavior: smooth"})
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
+        left: direction === "left" ? -scrollAmount : scrollAmount
+        behavior: "smooth"})
 
 
 :src/components/mobile-app/AppScreenshots.tsx
@@ -102,8 +101,7 @@ export const AppScreenshots: React.FC = () => {
             Take a visual tour through the Zion apps intuitive interface.;
           </p>;
         </div>;
-        <div className="relative>;
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
+        <div className="relative">;
 
         <div className=relative">
           <Button
@@ -124,7 +122,6 @@ export const AppScreenshots: React.FC = () => {
           >
             <ChevronLeft className=h-6 w-6" />
           </Button>
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
 
           <div
             ref = {scrollContainerRef}
@@ -154,7 +151,8 @@ export const AppScreenshots: React.FC = () => {
                 <img
                   src={screenshot.src}
                   alt={screenshot.alt}
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
+                  className="w-full h-full object-cover"
+                  loading="lazy"
                   className=w-full h-full object-cover"
                   loading="lazy
                 />
@@ -183,7 +181,6 @@ export const AppScreenshots: React.FC = () => {
                 />;
               </div>;
             ))}
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
           </div>
 
           
@@ -311,7 +308,6 @@ if ( {) {$2;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
     </section>);
 }
 '}}
@@ -323,10 +319,9 @@ import { Button } from "@/components/ui/button;
 // These would be replaced with actual screenshots
   );
 :src/components/mobile-app/AppScreenshots.tsx
-}
-}
-'
-<<<<<<< HEAD:src_backup/components/mobile-app/AppScreenshots.tsx
+};
+};
+'"
 origin/cursor/automate-test-improve-and-merge-code-2533
     </section>)}
 '"}}))// These would be replaced with actual screenshots;

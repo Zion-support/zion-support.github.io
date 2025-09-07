@@ -113,12 +113,11 @@ interface ActionButtonsProps  {export const ActionButtons: React.FC<ActionButton
         size="icon
         title=Ban User"
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
-        onClick={() => onAction(flagId, "ban)}
-        disabled={status === actioned" |status === "ignored}
-        aria-label=Ban user"
-        onClick={() => onAction(flagId, 'ban)}
-        disabled={status === actioned' || status === 'ignored}
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
+        onClick={() => onAction(flagId, "ban")}
+        disabled={status === "actioned" |status === "ignored"}
+        aria-label="Ban user"
+        onClick={() => onAction(flagId, 'ban')}
+        disabled={status === 'actioned' || status === 'ignored'}
       >
         <Ban className="h-4 w-4 />
       </Button>
@@ -158,7 +157,8 @@ interface ActionButtonsProps {
     </div>
   );
 
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
+import React from 'react';
+import { Button } from '@/components / ui / button';
 import { Button } from @/components / ui / button';
 
 interface ActionButtonsProps {
@@ -290,7 +290,6 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on
         >;
           Ignore;
         </Button>)}
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
     </div>);
 }
 "},

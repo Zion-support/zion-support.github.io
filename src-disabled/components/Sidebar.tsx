@@ -1,5 +1,4 @@
-import React from 'react;
-<<<<<<< HEAD:src_backup/components/Sidebar.tsx
+import React from 'react';
 interface SidebarProps  {isOpen: boolean;
   onClose: () => void;
 }const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {if (!isOpen) return null;return (<div className="fixed inset-0 z-50 lg:hidden>;

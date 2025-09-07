@@ -1,7 +1,6 @@
+const API_BASE = 'http: //localhost:4000',
+origin/cursor/automate-test-improve-and-merge-code-2533
 
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id], ({ user_id }) => cb(user_id))
 }
@@ -12,6 +11,8 @@ document.querySelectorAll(.example').forEach((btn) => {
   btn.addEventListener('click, () => {
     document.getElementById(prompt').value = btn.dataset.text |'
   })
+});
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
@@ -23,9 +24,8 @@ document && document.querySelectorAll(.example').forEach((btn) => {
 
 }),
 
-
-document.getElementById(askBtn').addEventListener('click, async () => {
-  const prompt = document.getElementById(prompt').value.trim(),
+document.getElementById('askBtn').addEventListener('click', async () => {
+  const prompt = document.getElementById('prompt').value.trim(),
   if (!prompt) return,
   const userId = await new Promise((r) => getUserId(r)),
   const res = await fetch(`${API_BASE}/ai/ask`, {
@@ -39,13 +39,15 @@ document.getElementById(askBtn').addEventListener('click, async () => {
 
 document.getElementById(postJob').addEventListener('click, async () => {
   const res = await fetch(`${API_BASE}/jobs/generate`, {
-    method: POST',
-    headers: { 'content-type: application/json', ...(userId ? { 'x-user-id: userId } : {}) },
-    body: JSON.stringify({ role: Cloud Engineer' })
-
-=======
+    method: 'POST',
+    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
+    body: JSON.stringify({ role: 'Cloud Engineer' })
+  });
+  const data = await res.json();
+origin/cursor/automate-test-improve-and-merge-code-2533
   }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  const data = await res.json(),
+  document.getElementById('result').textContent = data.description || 'Draft saved.'
   document.getElementById('result).textContent = data.description || Draft saved.'
 }),
 
@@ -65,6 +67,13 @@ document.getElementById('viewNotifications).addEventListener(click', async () =>
   document.getElementById(result').textContent = JSON.stringify(data.items || [], null, 2)
 }),
 
+document.getElementById('signIn').addEventListener('click', async () => {
+  // Placeholder sign-in: generate a random user id and store it.
+  const id = crypto.randomUUID();
+  setUserId(id);
+  document.getElementById('result').textContent = 'Signed in (local).'
+});
+origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
@@ -106,4 +115,3 @@ document && document.getElementById(viewNotifications').addEventListener('click,
   setUserId(id),
   document.getElementById(result').textContent = 'Signed in (local).';
 }),
-

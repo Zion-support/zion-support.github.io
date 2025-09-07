@@ -1,11 +1,9 @@
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 export function RoleManagement() {
   // Mock team members data
   const teamMembers = [
 import React from 'react;
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+import React from 'react';
 import React from react';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -15,8 +13,11 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+  TableRow,
+} from '@/components/ui/ table';
+import { Badge } from '@/components/ui/ badge';
+import { Switch } from '@/components/ui/ switch';
+import { toast } from '@/hooks/ use - toast'; import { InfoIcon } from 'lucide-react';
   TableRow} from @/components/ui/ table';
 import { Badge } from '@/components/ui/ badge;
 import { Switch } from @/components/ui/ switch';
@@ -49,15 +50,13 @@ import { InfoIcon } from lucide-react'
         view_billing: true,
         manage_billing: true}},
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
 
   const roleDescriptions: Record<string string> = {
-    Admin": "Full access to all features and settings,
-    Recruiter": "Can manage candidates and job postings,
-    Manager": "Can view candidates and create jobs,
-    Viewer": "Read-only access to candidates},
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
     {
       id: 2
       name: 'Jamie Smith
@@ -118,10 +117,13 @@ import { InfoIcon } from lucide-react'
   TableHead,
   TableHeader,
 origin/cursor/automate-test-improve-and-merge-code-2533
-  TableRow} from @/components/ui/table';
-import { Badge } from '@/components/ui/badge;
-import { Switch } from @/components/ui/switch';
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+  TableRow,;
+} from '@/components/ui/table';
+import { Badge } from '@/components/ui/badge';
+import { Switch } from '@/components/ui/switch';
+import { toast } from '@/hooks/use-toast';
+import { InfoIcon } from 'lucide-react';
+import {
 import { toast } from '@/hooks/use-toast;
 import { InfoIcon } from lucide-react';
   Tooltip,
@@ -176,7 +178,7 @@ import {Table;
   TableRow} from "@/components/ui/table,import { Badge } from @/components/ui/badge",Tooltip;
   TooltipContent;
   TooltipProvider;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+  TooltipTrigger} from "@/components/ui/tooltip",
   TooltipTrigger} from "@/components/ui/tooltip,
 
 export function RoleManagement() {
@@ -307,7 +309,6 @@ export function RoleManagement() {
         viewBilling: false,
 
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
 
 
@@ -315,7 +316,6 @@ export function RoleManagement() {
   return (
     <div className=space-y-6">
       <div>
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
 
         <h3 className='text-xl font-medium mb-4>Role Permissions</h3>
@@ -343,8 +343,6 @@ export function RoleManagement() {
               </div>
               <p className="text-sm text-muted-foreground>{description}</p>
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
             </div>
           ))}
 
@@ -479,9 +477,7 @@ export function RoleManagement() {
           </TableHeader>
           <TableBody>
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
@@ -495,8 +491,6 @@ export function RoleManagement() {
                   </div>
                 </TableCell>
                 <TableCell>
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
 
 
@@ -514,8 +508,6 @@ export function RoleManagement() {
                 </TableCell>
                 <TableCell className="text-center>
                   <Switch
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
 
 
@@ -758,22 +750,24 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
           <TableHeader>;
             <TableRow>;
               <TableHead>Team Member</TableHead>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead>Role</TableHead>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+
+
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
               <TableHead className='text-center>;
                 <div className=flex items-center justify-center gap-1'>;
 
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead className='text-center>;
                 <div className=flex items-center justify-center gap-1'>;
                   View Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
                         <InfoIcon className='h-4 w-4 text-muted-foreground />;
 
 
@@ -790,22 +784,24 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+
+
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
               <TableHead className='text-center>;
                 <div className=flex items-center justify-center gap-1'>;
 
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead className='text-center>;
                 <div className=flex items-center justify-center gap-1'>;
                   Edit Candidates;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
                         <InfoIcon className='h-4 w-4 text-muted-foreground />;
 
 
@@ -822,22 +818,24 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+
+
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
               <TableHead className='text-center>;
                 <div className=flex items-center justify-center gap-1'>;
 
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead className='text-center>;
                 <div className=flex items-center justify-center gap-1'>;
                   Create Jobs;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
                         <InfoIcon className='h-4 w-4 text-muted-foreground />;
 
 
@@ -854,22 +852,24 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+
+
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
               <TableHead className='text-center>;
                 <div className=flex items-center justify-center gap-1'>;
 
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead className='text-center>;
                 <div className=flex items-center justify-center gap-1'>;
                   Manage Team;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
                         <InfoIcon className='h-4 w-4 text-muted-foreground />;
 
 
@@ -886,22 +886,24 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
                     </Tooltip>;
                   </TooltipProvider>;
                 </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               </TableHead>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
+
+
+              <TableHead className='text-center'>;
+                <div className='flex items-center justify-center gap-1'>;
               <TableHead className='text-center>;
                 <div className=flex items-center justify-center gap-1'>;
 
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
               <TableHead className='text-center>;
                 <div className=flex items-center justify-center gap-1'>;
                   Billing Access;
                   <TooltipProvider>;
                     <Tooltip>;
                       <TooltipTrigger>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />;
                         <InfoIcon className='h-4 w-4 text-muted-foreground />;
 
 
@@ -1046,7 +1048,7 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
                   </select>;
                 </TableCell>;<TableCell className=text-center">;
                   <Switch;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+                    aria-label="View candidates";
                     aria-label="View candidates;
 
                     checked={member.permissions.viewCandidates}
@@ -1070,9 +1072,8 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
                       )
                     }                  />
                 </TableCell>
-                <TableCell className=text-center'>
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+                <TableCell className='text-center'>
+                    aria-label="View candidates";checked={member.permissions.viewCandidates}
                     aria-label=View candidates";checked={member.permissions.viewCandidates}
                     onCheckedChange={checked =>;
                       handlePermissionChange(member.id;
@@ -1134,8 +1135,7 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
                     onCheckedChange={checked =>;
                       handlePermissionChange(member && member.id, manageTeam', checked)}                  />;
                 </TableCell>;
-                <TableCell className='text-center>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
+                <TableCell className='text-center'>;
                   <Switch
                     aria-label=View billing'
 
@@ -1166,8 +1166,6 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
   );
 }
 
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 
                     onCheckedChange={(checked) =>;
                       handlePermissionChange(member.id, "viewBilling, checked);
@@ -1230,7 +1228,6 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
           </TableBody>;
         </Table>;
       </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
     </div>);
 }
 
@@ -1241,7 +1238,6 @@ import React from react",Table,TableBody,TableCell,TableHead,TableHeader,TableRo
       </div>
     </div>
   );
-<<<<<<< HEAD:src_backup/components/enterprise/admin/RoleManagement.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
     </div>)}</TableBody>;
         </Table>;

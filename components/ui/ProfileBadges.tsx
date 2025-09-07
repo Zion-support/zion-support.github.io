@@ -1,3 +1,9 @@
+import React from 'react';
+}
+import React from 'react';'
+import type { KycProfile } from '../../utils / kyc';'
+import { getBadgeLabels  } from '../../utils / kyc';'
+import { VerifiedBadge  } from './VerifiedBadge';'
 
 export /**;
  * ProfileBadges - Function description;

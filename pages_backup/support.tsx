@@ -1,6 +1,5 @@
-
-import React from 'react;
-import MainLayout from ../components/layout/MainLayout';
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
 
 const Page = () => {
   return (
@@ -20,9 +19,8 @@ const Page = () => {
 
 export default Page;
 
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import React, { useState } from 'react;
 import { motion } from framer-motion';
 
@@ -656,7 +654,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </>
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   );
-
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

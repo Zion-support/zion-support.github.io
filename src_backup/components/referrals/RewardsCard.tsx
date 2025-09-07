@@ -1,6 +1,9 @@
 
 
-<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralReward } from "@/types/referrals";
+import { formatDate } from "@/utils/referralUtils";
+import { BadgeDollarSign, Badge } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card,
 import { ReferralReward } from @/types/referrals";
 import { formatDate } from "@/utils/referralUtils;
@@ -43,7 +46,6 @@ import { Badge } from @/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card;
 
 interface RewardsCardProps {
-<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
   rewards: ReferralReward[];
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -51,7 +53,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
     return (
-<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
       <Card>
         <CardHeader>
 <CardTitle className=flex items-center gap-2'>
@@ -123,7 +124,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 
@@ -134,7 +134,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <Card>
       <CardHeader>
-<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
+<CardTitle className='flex items-center gap-2'>
+          <BadgeDollarSign className='h-5 w-5' />
 <CardTitle className='flex items-center gap-2>
           <BadgeDollarSign className=h-5 w-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -248,7 +249,6 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
         <CardHeader>;
 
   }
-<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
 ;
   if (rewards.length === 0) {
     return (;
@@ -328,7 +328,6 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
                       : Visibility Boost'}
                   </p>
                 </div>
-<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
                 </p>;
                 {reward.expires_at && (;
                   <p className=text-xs text-muted-foreground">;
@@ -377,9 +376,7 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
                 )}
               </div>;
             </div>;
-<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
           ))}
-<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
         </div>
       </CardContent>
     </Card>
@@ -421,7 +418,6 @@ import { ReferralReward } from @/types/referrals",import { formatDate } from "@/
             </div>))}
         </div>;
       </CardContent>;
-<<<<<<< HEAD:src_backup/components/referrals/RewardsCard.tsx
     </Card>)}</div>;
       </CardContent>;
     </Card>;

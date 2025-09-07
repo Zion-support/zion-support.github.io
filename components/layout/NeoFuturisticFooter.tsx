@@ -1,18 +1,42 @@
 
+
+import React from 'react';'
+import { motion  } from 'framer-motion';'
+import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';'
+
+const contactInfo = null;
+export default function NeoFuturisticFooter() {
+
+
+const contactInfo = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup && ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup && ziontechgroup.com',};
+export default function NeoFuturisticFooter() {;
+  return (  website: 'https://ziontechgroup && ziontechgroup.com'
+};
+
+export default function NeoFuturisticFooter() {;
   return (
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+              Productized AI, IT and micro SaaS solutions with transparent;
+
+;
+import {Phone,Mail,MapPin,Globe,Github,Linkedin,ExternalLink,const contactInfo = {mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com',}export default function NeoFuturisticFooter() {return (  website: 'https://ziontechgroup && ziontechgroup.com';
+}export default function NeoFuturisticFooter() {import React from 'react';
+import { motion   } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink  } from 'lucide-react';
+import React from 'react';
+import { motion  } from 'framer-motion';
+import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
               Productized AI, IT and micro SaaS solutions with transparent;
 import {Phone,Mail,MapPin,Globe,Github,Linkedin,ExternalLink,const contactInfo = {mobile: +1 302 464 0950',email: 'kleber@ziontechgroup && ziontechgroup.com,address: 364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com}export default function NeoFuturisticFooter() {return (  website: https://ziontechgroup && ziontechgroup.com';
 }export default function NeoFuturisticFooter() {import React from 'react;
 import { motion   } from framer-motion';
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink  } from 'lucide-react;
-=======
-=======
->>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
 import React from react';
 import { motion  } from 'framer-motion;
 import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 const contactInfo = null;
 export default function NeoFuturisticFooter() {return (Productized AI, IT and micro SaaS solutions with transparent;
               pricing and fast onboarding. Built for outcomes, delivered with;
@@ -20,7 +44,85 @@ export default function NeoFuturisticFooter() {return (Productized AI, IT and mi
             </p>;
           </div>;
             <a;
+              className='flex items-center gap-2 text-slate-300 "hover":text-cyan-300';'
+              href='/market-pricing'>;'
+              <ExternalLink className='w-4 h-4' /> Market Pricing;'
+            </a>;
+            <a;
+              className='flex items-center gap-2 text-slate-300 "hover":text-cyan-300';'
+              href='/services'>;'
+              <ExternalLink className='w-4 h-4' /> Services;'
+            </a>;
+            <a;
+              className='flex items-center gap-2 text-slate-300 "hover":text-cyan-300';'
+              href='/contact'>;'
+              <ExternalLink className='w-4 h-4' /> Contact;'
+            </a>;
+            <div className='flex items-center gap-3 pt-2'>;'
+              <a;
+                aria-label='GitHub';'
+                href='"https"://github && github.com/Zion-Holdings';'
+                className='text-slate-400 "hover":text-white'>;'
+                <Github className='w-5 h-5' />;'
+              </a>;
+          </div>
+        </div>
 
+<div className='mt-8 flex flex-col "md":flex-row items-start "md":items-center justify-between gap-4 border-t border-slate-800/60 pt-6'>'
+          <div className='text-xs text-slate-500'>'
+            © {new Date().getFullYear(
+} Zion Tech Group. All rights reserved.
+          </div>
+          <div className='text-xs text-slate-500 flex gap-4'>'
+            <a href='/privacy' className='"hover":text-slate-300'>'
+              Privacy
+            </a>
+            <a href='/terms' className='"hover":text-slate-300'>'
+              Terms
+            </a>
+          </div>
+        </div>
+  return (
+    <footer className="relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl" />
+        <div className="absolute inset-0 bg-neural-dots opacity-20 animate-shimmer" />
+      </div>
+
+              <a;
+                aria-label='LinkedIn';
+          </div>;
+        </div>;
+          <div className="space-y-2 text-sm">;
+            <div className="font-semibold text-slate-100 mb-2">Resources</div>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/market-pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/services"><ExternalLink className="w-4 h-4" /> Services</a>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/contact"><ExternalLink className="w-4 h-4" /> Contact</a>;
+            <div className="flex items-center gap-3 pt-2">;
+              <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>;
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
+                href='https://www && www.linkedin.com/company/zion-tech-group/';
+                className='text-slate-400 hover:text-white'>;
+                <Linkedin className='w-5 h-5' />;
+              </a>            </div>;
+          </div>;
+        </div>;
+          <div className="space-y-2 text-sm">;
+            <div className="font-semibold text-slate-100 mb-2">Resources</div>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/market-pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/services"><ExternalLink className="w-4 h-4" /> Services</a>;
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/contact"><ExternalLink className="w-4 h-4" /> Contact</a>;
+            <div className="flex items-center gap-3 pt-2">;
+              <a aria-label="GitHub" href="https://github && github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>;
+              <a aria-label="LinkedIn" href="https://www && www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
+          </div>;
+        </div>;<div className='space - y-2 text - sm'>;
+            <div className='font - semibold text - slate - 100 mb - 2'>Contact</div>;
+            <div className='flex items - center gap - 2 text - cyan - 300'>;
+              <Phone className='w - 4 h - 4' />;
+              <a;
+                href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}
+                className='hover:underline';
               >;
                 {contact_info.mobile}
               </a>;
@@ -46,8 +148,162 @@ export default function NeoFuturisticFooter() {return (Productized AI, IT and mi
               </a>;
             </div>;
             <div className='flex items - center gap - 2 text - sky - 300'>;
-              <Globe className=w - 4 h - 4' />;'
-              <a href={contact_info.website} className=hover:underline>;
+              <Globe className='w - 4 h - 4' />;
+              <a href={contact_info.website} className='hover:underline'>;
+                ziontechgroup.com;
+              </a>;
+            </div>;
+          </div>;
+          <div className='space - y-2 text - sm'>;
+            <div className='font - semibold text - slate - 100 mb - 2'>Resources</div>;
+            <a;
+              className='flex items - center gap - 2 text - slate - 300 hover:text - cyan - 300';
+              href='/market - pricing';
+            >;
+              <ExternalLink className='w - 4 h - 4' /> Market Pricing;
+            </a>;
+            <a;
+              className='flex items - center gap - 2 text - slate - 300 hover:text - cyan - 300';
+              href='/services';
+            >;
+              <ExternalLink className='w - 4 h - 4' /> Services;
+            </a>;
+            <a;
+              className='flex items - center gap - 2 text - slate - 300 hover:text - cyan - 300';
+              href='/contact';
+            >;
+              <ExternalLink className='w - 4 h - 4' /> Contact;
+            </a>;
+            <div className='flex items - center gap - 3 pt - 2'>;
+              <a;
+                aria - label='GitHub';
+                href='https://github.com / Zion - Holdings';
+                className='text - slate - 400 hover:text - white';
+              >;
+                <Github className='w - 5 h - 5' />;
+              </a>;
+              <a;
+                aria - label='LinkedIn';
+                href='https://www.linkedin.com / company / zion - tech - group/';
+                className='text - slate - 400 hover:text - white';
+              >;
+                <Linkedin className='w - 5 h - 5' />;
+              </a>            </div>;
+          </div>;
+        </div>;
+          <div className="space-y-2 text-sm">;
+            <div className="font - semibold text - slate-100 mb-2">Resources</div>;
+            <a className="flex items - center gap - 2 text - slate - 300 hover:text-cyan-300" href="/market - pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
+            <a className="flex items - center gap - 2 text - slate - 300 hover:text-cyan-300" href="/services"><ExternalLink className="w-4 h-4" /> Services</a>;
+            <a className="flex items - center gap - 2 text - slate - 300 hover:text-cyan-300" href="/contact"><ExternalLink className="w-4 h-4" /> Contact</a>;
+            <div className="flex items - center gap-3 pt-2">;
+              <a aria - label="GitHub" href="https://github.com / Zion - Holdings" className="text - slate-400 hover:text-white"><Github className="w-5 h-5" /></a>;
+              <a aria - label="LinkedIn" href="https://www.linkedin.com / company / zion - tech - group/" className="text - slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
+          </div>;
+        </div>;
+        <div className='mt - 8 flex flex - col md:flex - row items - start md:items - center justify - between gap - 4 border - t border - slate - 800 / 60 pt - 6'>;
+          <div className='text - xs text - slate - 500'>;
+            © {new Date ().getFullYear ()} Zion Tech Group. All rights reserved.;
+          </div>;
+          <div className='text - xs text - slate - 500 flex gap - 4'>;
+            <a href='/privacy' className='hover:text - slate - 300'>;
+              Privacy;
+            </a>;
+            <a href='/terms' className='hover:text - slate - 300'>;
+              Terms;
+            </a>          </div>        <div className="mt - 8 flex flex - col md:flex - row items - start md:items - center justify - between gap - 4 border - t border - slate-800 / 60 pt-6">;
+          <div className="text - xs text-slate-500">© {new Date ().getFullYear ()} Zion Tech Group. All rights reserved.</div>;
+          <div className="text - xs text - slate-500 flex gap-4">;
+            <a href="/privacy" className="hover: text-slate-300">Privacy</a>;
+            <a href="/terms" className="hover:text-slate-300">Terms</a>;
+        </div>;
+      </div>;
+    </footer>)}export default function NeoFuturisticFooter() {return (href='https://www.linkedin.com/company/zion-tech-group/';
+                className='text-slate-400 hover:text-white';
+              >;
+                <Linkedin className='w-5 h-5' />;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+<div className='mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-slate-800/60 pt-6'>;
+          <div className='text-xs text-slate-500'>;
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.;
+          </div>;
+          <div className='text-xs text-slate-500 flex gap-4'>;
+            <a href='/privacy' className='hover:text-slate-300'>;
+              Privacy;
+            </a>;
+            <a href='/terms' className='hover:text-slate-300'>;
+              Terms;
+            </a>;
+          </div>;
+        </div>;
+      </div>;
+    </footer>;
+    </footer>);
+}
+;
+
+export default function NeoFuturisticFooter() {
+  return (
+  )}
+      <div className="relative container mx-auto px-4 py-12 text-slate-200">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div>
+            <motion.h3 initial={{ opacity: 0, y: 8}} animate={{ opacity: 1, y: 0}} transition={{ duration: 0.5 }} className="text-xl font-semibold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3">
+              Zion Tech Group
+            </motion.h3>
+            <p className="text-slate-400 text-sm leading-relaxed">
+              Productized AI, IT and micro SaaS solutions with transparent pricing and fast onboarding. Built for outcomes, delivered with reliability.
+            </p>
+          </div>
+
+          <div className="space-y-2 text-sm">
+            <div className="font-semibold text-slate-100 mb-2">Contact</div>
+            <div className="flex items-center gap-2 text-cyan-300"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:underline">{contactInfo.mobile}</a></div>
+            <div className="flex items-center gap-2 text-purple-300"><Mail className="w-4 h-4" /><a href={`mailto:${contactInfo.email}`} className="hover:underline">{contactInfo.email}</a></div>
+            <div className="flex items-center gap-2 text-emerald-300"><MapPin className="w-4 h-4" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover:underline">{contactInfo.address}</a></div>
+            <div className="flex items-center gap-2 text-sky-300"><Globe className="w-4 h-4" /><a href={contactInfo.website} className="hover:underline">ziontechgroup.com</a></div>
+          </div>
+
+          <div className="space-y-2 text-sm">
+            <div className="font-semibold text-slate-100 mb-2">Resources</div>
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/market-pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/services"><ExternalLink className="w-4 h-4" /> Services</a>
+            <a className="flex items-center gap-2 text-slate-300 hover:text-cyan-300" href="/contact"><ExternalLink className="w-4 h-4" /> Contact</a>
+            <div className="flex items-center gap-3 pt-2">
+              <a aria-label="GitHub" href="https://github.com/Zion-Holdings" className="text-slate-400 hover:text-white"><Github className="w-5 h-5" /></a>
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/company/zion-tech-group/" className="text-slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>
+                href={`tel:${contact_info.mobile.replace (/[^+\d]/g, '')}`}
+                className='hover:underline';
+              >;
+                {contact_info.mobile}
+              </a>;
+            </div>;'
+            <div className='flex items - center gap - 2 text - purple - 300'>;'
+              <Mail className='w - 4 h - 4' />;
+              <a;`
+                href={`mailto:${contact_info.email}`}'
+                className='hover:underline';
+              >;
+                {contact_info.email}
+              </a>;
+            </div>;'
+            <div className='flex items - center gap - 2 text - emerald - 300'>;'
+              <MapPin className='w - 4 h - 4' />;
+              <a;`
+                href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`}'
+                target='_blank';'
+                rel='noopener noreferrer';'
+                className='hover:underline';
+              >;
+                {contact_info.address}
+              </a>;
+            </div>;'
+            <div className='flex items - center gap - 2 text - sky - 300'>;'
+              <Globe className='w - 4 h - 4' />;'
+              <a href={contact_info.website} className='hover:underline'>;
                 ziontechgroup.com;
               </a>;
             </div>;
@@ -88,7 +344,15 @@ export default function NeoFuturisticFooter() {return (Productized AI, IT and mi
                 <Linkedin className=w - 5 h - 5 />;
               </a>            </div>;
           </div>;
-
+        </div>;
+          <div className="space-y-2 text-sm">;
+            <div className="font - semibold text - slate-100 mb-2">Resources</div>;
+            <a className="flex items - center gap - 2 text - slate - 300 hover:text-cyan-300" href="/market - pricing"><ExternalLink className="w-4 h-4" /> Market Pricing</a>;
+            <a className="flex items - center gap - 2 text - slate - 300 hover:text-cyan-300" href="/services"><ExternalLink className="w-4 h-4" /> Services</a>;
+            <a className="flex items - center gap - 2 text - slate - 300 hover:text-cyan-300" href="/contact"><ExternalLink className="w-4 h-4" /> Contact</a>;
+            <div className="flex items - center gap-3 pt-2">;
+              <a aria - label="GitHub" href="https://github.com / Zion - Holdings" className="text - slate-400 hover:text-white"><Github className="w-5 h-5" /></a>;
+              <a aria - label="LinkedIn" href="https://www.linkedin.com / company / zion - tech - group/" className="text - slate-400 hover:text-white"><Linkedin className="w-5 h-5" /></a>;
           </div>;
         </div>;'
         <div className='mt - 8 flex flex - col md:flex - row items - start md:items - center justify - between gap - 4 border - t border - slate - 800 / 60 pt - 6>;
@@ -98,16 +362,29 @@ export default function NeoFuturisticFooter() {return (Productized AI, IT and mi
           <div className=text - xs text - slate - 500 flex gap - 4'>;'
             <a href=/privacy className='hover:text - slate - 300'>;
               Privacy;
-            </a>;
-            <a href=/terms' className='hover:text - slate - 300>;
-
+            </a>;'
+            <a href='/terms' className='hover:text - slate - 300'>;
+              Terms;
+            </a>          </div>        <div className="mt - 8 flex flex - col md:flex - row items - start md:items - center justify - between gap - 4 border - t border - slate-800 / 60 pt-6">;
+          <div className="text - xs text-slate-500">© {new Date ().getFullYear ()} Zion Tech Group. All rights reserved.</div>;
+          <div className="text - xs text - slate-500 flex gap-4">;
+            <a href="/privacy" className="hover: text-slate-300">Privacy</a>;
+            <a href="/terms" className="hover:text-slate-300">Terms</a>;
         </div>;
       </div>;
     </footer>);
 }
-=======
-aria-label=LinkedIn'
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+;
+aria-label='LinkedIn'
+
+export default function NeoFuturisticFooter() {
+  return (
+                href='https://www.linkedin.com/company/zion-tech-group/'
+                href='https: //www.linkedin.com/company/zion-tech-group/'
+                className='text-slate-400 hover:text-white'
+               />
+                <Linkedin className='w-5 h-5' />
+              </a>
 
 
             </div>

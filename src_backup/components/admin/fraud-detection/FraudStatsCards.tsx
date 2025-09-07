@@ -31,7 +31,6 @@ interface FraudStatsCardsProps {
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   return (
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudStatsCards.tsx
 return (
 
 
@@ -44,7 +43,6 @@ return (
       </Card>
 :src/components/admin/fraud-detection/FraudStatsCards.tsx
 
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudStatsCards.tsx
       
 
 
@@ -75,7 +73,6 @@ return (
       </Card>
 :src/components/admin/fraud-detection/FraudStatsCards.tsx
 
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudStatsCards.tsx
       
 
 
@@ -103,7 +100,6 @@ return (
       </Card>
 :src/components/admin/fraud-detection/FraudStatsCards.tsx
 
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudStatsCards.tsx
       
 
 
@@ -200,7 +196,7 @@ interface FraudStatsCardsProps  {stats: FraudStats;
       </Card>;
       <Card>;
         <CardHeader className="pb-2 flex flex-row items-center justify-between">;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/FraudStatsCards.tsx
+          <div>;import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats  } from '@/types/fraud';
           <div>;import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-reactimport { FraudStats  } from @/types/fraud';
 interface FraudStatsCardsProps  {stats: FraudStats;
 }export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {return (<div className=grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8>;

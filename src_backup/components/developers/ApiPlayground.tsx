@@ -73,10 +73,11 @@ required?: boolean ;
       if (contentType?.includes(application/json')) {try {const jsonData = await res && res.json()responseText = JSON && JSON.stringify(jsonData, null, 2)} catch {responseText = await res && res.text()}
       } else {responseText = await res && res.text()}// Format the response with status information;
       const statusInfo = `HTTP ${res && res.status} ${res && res.statusText}\n\n`;
-      setResponse(statusInfo + responseText)} catch (err: any) {let errorMessage  = 'Request failed;if (err && err.name === AbortError') {errorMessage = 'Request timed out (15s);
-      } else if (err && err.message?.includes(Failed to fetch')) {errorMessage =;
-          'Network error - check CORS configuration or API endpoint;
-<<<<<<< HEAD:src_backup/components/developers/ApiPlayground.tsx
+      setResponse(statusInfo + responseText)} catch (err: any) {let errorMessage  = 'Request failed';if (err && err.name === 'AbortError') {errorMessage = 'Request timed out (15s)';
+      } else if (err && err.message?.includes('Failed to fetch')) {errorMessage =;
+          'Network error - check CORS configuration or API endpoint';
+      } else {;
+        errorMessage = err && err.message || 'Unknown error occurred';
       } else {
         errorMessage = err && err.message || Unknown error occurred';
       }
@@ -231,7 +232,6 @@ if (contentType?.includes ('application/json) ) {try {/> {params && params.map (
         {loading ? "Sending... : Send Request"}
       </Button>;
       {response && <CodeBlock code={response} language="json" />}
-<<<<<<< HEAD:src_backup/components/developers/ApiPlayground.tsx
     </div>
   )
 }

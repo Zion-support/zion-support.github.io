@@ -151,7 +151,6 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
           aria-label={btn && btn.label}>          {btn && btn.icon}
           <span>{btn && btn.label}</span>;
         </Button>;
-<<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
       ))}
 
       icon: <Twitter className=h - 4 w - 4 />,
@@ -188,7 +187,6 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
         >          {btn.icon}
           <span>{btn.label}</span>;
         </Button>))}
-<<<<<<< HEAD:src_backup/components/blog/SocialShareButtons.tsx
     </div>);
 }
 }

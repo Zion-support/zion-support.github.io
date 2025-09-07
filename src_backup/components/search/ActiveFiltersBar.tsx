@@ -1,6 +1,78 @@
 
-import { Button  } from '@/components/ui/button;
-import { Badge  } from @/components/ui/badge';
+import React from 'react',;
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+interface SearchFilters {;
+  types: string[],;
+  category: string,;
+  minPrice: number,;
+  maxPrice: number,;
+  minRating: number,;
+  sort: string;
+
+
+
+}
+;
+interface ActiveFiltersBarProps {;
+  filters: SearchFilters,;
+  onFiltersChange: (filters: SearchFilters) => void,;
+  onClearAll: () => void,;
+  className?: string;
+}
+;
+export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
+  filters,;
+  onFiltersChange,;
+  onClearAll,;
+  className = '';
+}) => {;
+  const activeFilters: Array<{ key: string, label: string, value: string }> = [],;
+  // Add type filters;
+  filters.types.forEach(type => {;
+    const labels: Record<string string> = {;
+      product: 'Products',;
+      talent: 'Talent',;
+      service: 'Services',;
+      blog: 'Blog Posts',;
+      doc: 'Documentation';
+    },;
+    activeFilters.push({;
+      key: `type-${type}`,;
+      label: 'Type',;
+      value: labels[type] || type;
+    });
+  }),;
+  // Add category filter;
+  if (filters.category) {;
+    activeFilters.push({;
+      key: 'category',;
+      label: 'Category',;
+      value: filters.category;
+    });
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+import { X } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Badge  } from '@/components/ui/badge';
 interface SearchFilters  {types: string[],category: string,minPrice: number,maxPrice: number,minRating: number,sort: string;
 import React from 'react,import { Button } from @/components/ui/button',import { Badge } from '@/components/ui/badge,interface SearchFilters  {types: string[],category: string,minPrice: number,maxPrice: number,minRating: number,sort: string;}interface ActiveFiltersBarProps  {filters: SearchFilters,onFiltersChange: (filters: SearchFilters) => void,onClearAll: () => void,className?: string;
 }export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({filters,onFiltersChange,onClearAll,className = ';
@@ -176,12 +248,8 @@ if ( {) {$2;
       </button>;
     </div>)}
 '";
-
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/search/ActiveFiltersBar.tsx
+import React from 'react';
+export default ActiveFiltersBar; import React from 'react';
 import React from 'react;
 export default ActiveFiltersBar; import React from react';
 interface SearchFilters  {types: string[];
@@ -196,4 +264,5 @@ interface ActiveFiltersBarProps  {filters: SearchFilters;
   onClearAll: () => void;
   className?: string;
 }
-
+export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
+origin/cursor/automate-test-improve-and-merge-code-2533

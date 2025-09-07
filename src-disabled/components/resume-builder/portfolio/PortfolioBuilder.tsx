@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 Add Project;
         </Button>
       </div>
@@ -18,12 +16,14 @@ Add Project;
                 setShowAddProject(false)
                 setEditingProject(null) }}
 
-import { useState, useEffect } from 'react;
-import { Card, CardContent } from @/components/ui/card';
-import { Button } from '@/components/ui/button;
-import { FilePlus, Loader2 } from lucide-react';
-import { ProjectCard } from './ProjectCard;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+import { useState, useEffect } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { FilePlus, Loader2 } from 'lucide-react';
+import { ProjectCard } from './ProjectCard';
+import { ProjectForm } from './ProjectForm';
+import { PortfolioProject } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
 import { ProjectForm } from ./ProjectForm';
 import { PortfolioProject } from '@/types/resume;
 import { usePortfolio } from @/hooks/usePortfolio';
@@ -199,7 +199,6 @@ export function PortfolioBuilder() {<ProjectForm;
         </Button>;
       </div>;
       {/* Edit or Add Form */}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
       {(showAddProject || editingProject) && (
         <Card>
 
@@ -218,7 +217,6 @@ export function PortfolioBuilder() {<ProjectForm;
                 setEditingProject(null)
                 setEditingProject(null);
               }}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
 {/* Projects List */}
       {projects.length > 0 ? (
         <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -333,7 +331,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Add your best work to showcase your skills and experience to potential employers.;
                 </p>;
                 <Button;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+                  onClick={() => setShowAddProject(true)}className="mt-2";
                   onClick={() => setShowAddProject(true)}className=mt-2;
 {/* Projects List */}
       {projects.length > 0 ? (<div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
@@ -342,7 +340,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               project={project}
               onEdit={() => setEditingProject(project)}
               onDelete={handleDeleteProject}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
           {projects.map((project,) => (
             <ProjectCard
               key = {project.id}
@@ -435,7 +432,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               on_edit = {(, ) => setEditingProject (project) }
               on_delete = {handleDeleteProject }
             />))}
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
+        </div>) : (!showAddProject && (<Card className='text - center py - 12'>;
         </div>) : (!showAddProject && (<Card className=text - center py - 12'>;
             <CardContent>;
               <div className='flex flex - col items - center gap - 4>;
@@ -457,7 +454,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Add your best work to showcase your skills and experience to potential employers.;
                 </p>;
                 <Button;
-<<<<<<< HEAD:src_backup/components/resume-builder/portfolio/PortfolioBuilder.tsx
                   on_click={() => setShowAddProject (true)}
                   className="mt - 2";>;
                   Add Your First Project;

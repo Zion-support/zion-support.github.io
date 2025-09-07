@@ -1,10 +1,34 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import Layout from '../components/Layout';
+import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from 'lucide-react';
 
-import React from 'react;
-import { motion } from framer-motion';
-import Layout from '../components/Layout;
-import { Code, Book, Zap, Shield, CheckCircle, ArrowRight } from lucide-react';
-
-
+const apiFeatures = [
+  {
+    icon: Code,
+    title: 'RESTful API',
+    description: 'Clean, intuitive REST API endpoints for easy integration',
+    features: ['RESTful design', 'JSON responses', 'HTTP status codes', 'Error handling']
+  },
+  {
+    icon: Shield,
+    title: 'Security',
+    description: 'Enterprise-grade security with authentication and encryption',
+    features: ['JWT authentication', 'Rate limiting', 'HTTPS encryption', 'API key management']
+  },
+  {
+    icon: Zap,
+    title: 'Performance',
+    description: 'High-performance API with caching and optimization',
+    features: ['Response caching', 'CDN integration', 'Load balancing', 'Real-time updates']
+  },
+  {
+    icon: Book,
+    title: 'Documentation',
+    description: 'Comprehensive documentation with examples and guides',
+    features: ['Interactive docs', 'Code examples', 'SDK libraries', 'Developer support']
+  }
+];
 export default function API() {
   const apiEndpoints = [
     {
@@ -384,9 +408,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </motion.div>
         </div>
 
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Code,
   Check,
   Globe,
@@ -654,7 +675,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-
       </div>
     </Layout>
         {/* CTA Section */}
@@ -694,9 +714,6 @@ export default function APIPage() {
       </div>;
     </MainLayout>);
 }
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </main>
 </>
   );

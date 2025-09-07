@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
 
   }
   const handleEdit = (work: WorkExperience) => {
@@ -276,8 +275,7 @@ interface WorkExperienceFormProps {
                         ? 'Present 
                         : (work.end_date ? (typeof work.end_date === string' 
                           ? work.end_date 
-                          : format(work.end_date, 'MMM yyyy)) : ')}
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/WorkExperienceForm.tsx
+                          : format(work.end_date, 'MMM yyyy')) : '')}
                     </p>
                     {work.location && (
                       <p className=text-xs text-muted-foreground">{work.location}</p>

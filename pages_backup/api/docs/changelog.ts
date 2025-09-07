@@ -1,11 +1,5 @@
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET) {
     try {
@@ -36,13 +30,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       fs.writeFileSync(filePath, JSON.stringify(payload, null, 2));
       res.status(200).json({ ok: true })
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/changelog.ts
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (e: any) {
       res
         .status(500)
@@ -51,15 +39,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return;
   }
 
-
-  res.setHeader("Allow, GET, POST");
-  res.status(405).end("Method Not Allowed);
-=======
-  res.setHeader(Allow", "GET, POST);
-  res.status(405).end(Method Not Allowed");
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
+  res.setHeader("Allow", "GET, POST");
+  res.status(405).end("Method Not Allowed");
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -67,19 +52,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 res && res.setHeader("Allow, GET, POST");
   res && res.status(405).end("Method Not Allowed);
 }
 
 
-=======
 
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default /**
  * handler - Function description
  */
@@ -130,6 +110,5 @@ if ( {) {
 
 }
 
-=======
+
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

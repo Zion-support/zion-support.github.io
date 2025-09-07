@@ -1,3 +1,6 @@
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
 
 const AIAutonomousMarketingPlatform: React.FC = () => {
   return (
@@ -71,4 +74,7 @@ const AIAutonomousMarketingPlatform: React.FC = () => {
         </div>
       </main>
     </Layout>
+  );
+};
 
+export default AIAutonomousMarketingPlatform;

@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 return (
 
 return (<div className='space-y-3>;
@@ -213,7 +211,6 @@ interface BrowseFiltersProps  {return (<div className=space-y-3">;
                         <Badge variant=outline" className="cursor-pointer hover:bg-primary/5>Freelance</Badge>;
                       </div>;
                     </div>;
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from @/components/ui/sheet",
 import { Badge } from "@/components/ui/badge,
@@ -492,7 +489,6 @@ interface BrowseFiltersProps {
               />
             </Badge>
           ))}
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
         </div>
       </div>
     </div>
@@ -523,7 +519,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Badge>))}
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/mobile/components/browse/BrowseFilters.tsx
     </div>)}</div>;
       </div>;
     </div>;

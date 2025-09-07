@@ -1,7 +1,34 @@
+const sections = [ {
+  title: 'Getting Started', links: [ {
+  name: 'Overview', href: '/enhanced-services-showcase' 
+}
+{
+  name: 'Pricing & Market Benchmarks', href: '/market-pricing' 
+}
+{
+  name: 'Contact Sales', href: '/contact' 
+}] 
+}
+{
+  title: 'AI Services Docs', links: [ {
+  name: 'AI Guardrails', href: '/ai-guardrails' 
+}
+{
+  name: 'AI Evals', href: '/ai-evals' 
+}
+{
+  name: 'Agentic RAG', href: '/agentic-rag' 
+}] 
+}
+return (<UltraAdvancedFuturisticBackground> <Head> <title>Documentation | Zion Tech Group</title> </li>) ) 
+}</ul> </Card>) ) 
+}</div>) ) 
+}</ul> </Card> </div> </Card> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}
+  };
 
-
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+  return (
+  };
 
 return (;
 
@@ -83,5 +110,36 @@ return (;
     </UltraAdvancedFuturisticBackground>
   )
 }
+                {contact.email}</a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+                {contact.email}
+              </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+                {contact.email}</a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+            <h2 className="text - xl font - semibold mb - 4 text - white">Need help?</h2>;
+            <div className="flex flex - col sm:flex - row gap - 3">;
+              <Button href="/contact" className="bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white">Contact Support</Button>;
+              <Button href={contact.website} variant="outline" className="border - gray - 600 text - gray - 200">Visit Website</Button>;
+              <a className="text - cyan - 400" href={`tel:${contact.mobile.replace (/[^+\\d]/g, '')}`}>{contact.mobile}</a>;
+              <a className="text - purple - 400" href={`mailto:${contact.email}`}>{contact.email}</a>;
+          </Card>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>)}}))}
+            </ul>;
+          </Card>;
+              </a>;
+            </div>;
+          </Card>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+    </UltraAdvancedFuturisticBackground>);
+}
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+;
+}
+
+
+              ))}
+            </ul>
+          </Card>
+  )}

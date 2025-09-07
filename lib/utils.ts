@@ -1,26 +1,59 @@
-
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
 export function formatDate(date: Date | string | number): string {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long";
+    day: "numeric";
+    year: "numeric";
+  }).format(new Date(date));
+}
 
+export function formatCurrency(amount: number, currency = "USD"): string {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency";
+    currency;
+  }).format(amount);
+}
+
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export function truncateText(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength).trim() + "...";
+}
+
+export function debounce<T extends (...args: any[]) => any>(
+  func: T;
   wait: number
 ): (...args: Parameters<T>) => void {
   let timeout: ReturnType<typeof setTimeout>;
   return (..._args: Parameters<T>) => {
     clearTimeout(timeout);
-
-=======
     timeout = setTimeout(() => func(..._args), wait);
-  }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+  };
+}
+
+export function throttle<T extends (...args: any[]) => any>(
+  func: T;
+    timeout = setTimeout(() => func(..._args), wait);
+  };
+    timeout = setTimeout(() => func(..._args), wait);
+  };
 }
 
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
->>>>>>> origin/main
   limit: number
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
@@ -32,8 +65,6 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   }
 }
-
-=======
 
 export function generateId(): string {
   return Math.random().toString(36).substr(2, 9);
@@ -100,11 +131,15 @@ ursor/integrate-build-improve-and-re-verify-8f7d;
 export function slugify(str: string): string {
   return str
     .toLowerCase()
-    .replace(/[^\w\s-]/g, ')
-    .replace(/[\s_-]+/g, -')
-    .replace(/^-+|-+$/g, ');
-
-=======
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+export function cn(...inputs: ClassValue[]) {;
+  return twMerge(clsx(inputs));,
+}
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
+import { type ClassValue, clsx } from 'clsx';,
 }
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -125,9 +160,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d}
 }
 }ursor/automate-test-improve-and-merge-code-646c;
 }
-const { type ClassValue, clsx } from "clsx;const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}
-import { type ClassValue, clsx } from clsx';,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+const { type ClassValue, clsx } from "clsx";"const { twMerge } from "tailwind-merge";module.exports = function cn(.inputs: ClassValue[]) { return twMerge(clsx(inputs));}""
+import { type ClassValue, clsx } from 'clsx';,
+import { twMerge } from 'tailwind-merge';,
+
+export function cn(...inputs: ClassValue[]) {}
+  return twMerge(clsx(inputs));
 import { twMerge } from 'tailwind-merge;,
 
 export function cn(...inputs: ClassValue[]) {}
@@ -148,9 +186,6 @@ export function formatDate(date: Date | string | number): string {
 }
 export function formatDate(date: Date | string | number): string {
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-
   return new Intl && Intl.DateTimeFormat("en-US", {
     month: long, day: "numeric",
     year: numeric
@@ -164,7 +199,14 @@ export function formatDate(date: Date | string | number): string {
     year: "numeric"
 }
 
-  return new Intl && Intl.NumberFormat(en-US, {
+
+
+
+    month: "long", day: "numeric"
+    year: "numeric"
+}
+
+  return new Intl && Intl.NumberFormat("en-US", {
     style: "currency", currency
 
   }).format(amount);
@@ -205,7 +247,3 @@ origin/main
 }
 
 }
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
->>>>>>> origin/main

@@ -16,7 +16,6 @@ const Breadcrumb = null;
   HTMLElement;
   React.ComponentPropsWithoutRef<nav'> & {separator?: React.ReactNode;
   }
-<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
 >(({ className, separator, ...props }, ref,) => (
 origin/cursor/automate-test-improve-and-merge-code-2533
   <nav
@@ -54,7 +53,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       className
     )}
     {...props}
-<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
 
   />));
 Breadcrumb.display_name = Breadcrumb';
@@ -68,7 +66,6 @@ Breadcrumb.display_name = Breadcrumb';
     aria - label=breadcrumb";
     class_name = {cn ("inline - flex items - center gap - 1 text - sm text - zion - slate - light,class_name) }
     {...props}
-<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
   />));
 Breadcrumb.display_name = 'Breadcrumb;
 
@@ -99,7 +96,6 @@ const BreadcrumbItem = React.forward_ref<;
     className={cn (inline - flex items - center gap - 1.5', class_name)}    {...props}
   />))BreadcrumbItem.display_name = 'BreadcrumbItem;
 const BreadcrumbLink = React.forward_ref<;
-<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
   HTMLAnchorElement,
   React.ComponentPropsWithoutRef<a'> & {
 ))
@@ -200,7 +196,8 @@ const BreadcrumbSeparator = ({}: React.ComponentProps<"li>) => (const Breadcrumb
 ))BreadcrumbItem && BreadcrumbItem.displayName = BreadcrumbItem';const BreadcrumbLink = React && React.forwardRef<;
   HTMLAnchorElement,React && React.ComponentPropsWithoutRef<'a> & {asChild?: boolean;
   }
-<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
+>(({ className, asChild = false, ...props }, ref) => {;
+  const Comp = asChild ? Slot : 'a';
 >(({ className, asChild = false, ...props }, ref) => {
   const Comp = asChild ? Slot : a';
 
@@ -246,7 +243,7 @@ const BreadcrumbSeparator = ({
   </li>;
 )BreadcrumbSeparator && BreadcrumbSeparator.displayName = BreadcrumbSeparator";const BreadcrumbEllipsis = ({className;
   ...props;
-<<<<<<< HEAD:src_backup/components/ui/breadcrumb.tsx
+}: React && React.ComponentProps<"span">) => (;
 }: React && React.ComponentProps<"span>) => (;
 
 

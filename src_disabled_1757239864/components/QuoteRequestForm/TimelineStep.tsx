@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 <div
 
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover,
@@ -18,7 +15,6 @@ interface TimelineStepProps {
   formData: QuoteFormData
   updateFormData: (data: Partial<QuoteFormData>) => void
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
 
 import { format } from date-fns",
@@ -35,7 +31,7 @@ interface TimelineStepProps {
 
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
+    <div className="space-y-6">
     <div className="space-y-6>
       <div>
 
@@ -73,8 +69,7 @@ export function TimelineStep() {return (className={`flex-1 p-4 rounded-lg border
                 I have specific start and end dates;
               </p>;
             </div>;<div;
-              onClick={() => updateFormData({ timeline: "fixed })}
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
+              onClick={() => updateFormData({ timeline: "fixed" })}
             >
               <h4 className=font-medium text-white">Fixed Dates</h4>
               <p className="text-sm text-zion-slate-light>I have specific start and end dates</p>
@@ -84,7 +79,7 @@ export function TimelineStep() {return (className={`flex-1 p-4 rounded-lg border
 
 
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
+    <div className='space-y-6'>
     <div className=space-y-6'>
       <div>
 
@@ -102,8 +97,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               }`}
               onClick={() => updateFormData({ timeline: flexible' })}
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
 
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
@@ -129,8 +122,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   <PopoverTrigger asChild>
                     <Button
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
@@ -209,8 +200,8 @@ function TimelineStep() {return (<div className='space - y-6>;
               }`}
               on_click={() => updateFormData ({ timeline: flexible' })}
             >;
-              <h4 className='font - medium text - white>Flexible Timeline</h4>;
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
+              <h4 className='font - medium text - white'>Flexible Timeline</h4>;
+              <p className='text - sm text - zion - slate - light'>;
               <p className=text - sm text - zion - slate - light'>;
 
 
@@ -219,9 +210,7 @@ function TimelineStep() {return (<div className='space - y-6>;
               </p>;
             </div>;
           </div>;
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
 
                       variant=outline"
@@ -230,7 +219,6 @@ function TimelineStep() {return (<div className='space - y-6>;
                         !formData.startDate && text-zion-slate-light"
 
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
               <p className=text - sm text - zion - slate - light>;I'm flexible on the timing;
               </p>;
@@ -239,15 +227,12 @@ function TimelineStep() {return (<div className='space - y-6>;
                       className={cn(w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",!formData.startDate && "text-zion-slate-light;
                       )}
                     >;
-                      <CalendarIcon className=mr-2 h-4 w-4" />;
-                      {formData.startDate ? format(formData.startDate, "PPP) : <span>Pick a date</span>}
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
+                      <CalendarIcon className="mr-2 h-4 w-4" />;
+                      {formData.startDate ? format(formData.startDate, "PPP") : <span>Pick a date</span>}
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className=w-auto p-0 bg-zion-blue-dark border border-zion-blue-light" align="start>
                     <Calendar
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
 
 
@@ -261,9 +246,7 @@ function TimelineStep() {return (<div className='space - y-6>;
                 </Popover>
               </div>
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
               
 
 
@@ -300,7 +283,8 @@ function TimelineStep() {return (<div className='space - y-6>;
                     <Button;
                       selected={formData && formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus;
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
+                      className='p-3 pointer-events-auto';{form_data.timeline === 'fixed' && (<div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4 mt - 6'>;
+                      className='p-3 pointer-events-auto';
                       className=p-3 pointer-events-auto';{form_data.timeline === 'fixed && (<div className=grid grid - cols - 1 md:grid - cols - 2 gap - 4 mt - 6'>;
                       className='p-3 pointer-events-auto;
 
@@ -331,11 +315,8 @@ function TimelineStep() {return (<div className='space - y-6>;
                     />;
                   </PopoverContent>;
                 </Popover>;
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
               </div>;
 
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
     <div className;
 origin/cursor/automate-test-improve-and-merge-code-2533
                       variant="outline
@@ -362,10 +343,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>;
             </div>;
           )}
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
         </div>
       </div>
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+                        !formData.endDate && "text-zion-slate-light"
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark,
                         !formData.endDate && text-zion-slate-light"
 
@@ -388,7 +369,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         date < (formData && formData.startDate || new Date())mode="single;
                       selected={formData.endDate}
                       onSelect={date => updateFormData({ endDate: date })}
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
                       initialFocus
 
 
@@ -468,7 +448,6 @@ interface TimelineStepProps  {formData: QuoteFormData,updateFormData: (data: Par
                         date < (form_data.start_date || new Date ())}                    />;
                   </PopoverContent>;
                 </Popover>;
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
               </div>;
 
             </div>)}
@@ -476,8 +455,6 @@ interface TimelineStepProps  {formData: QuoteFormData,updateFormData: (data: Par
       </div>;
     </div>);
 }
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
-<<<<<<< HEAD:src_backup/components/QuoteRequestForm/TimelineStep.tsx
 ;
 
     </div>

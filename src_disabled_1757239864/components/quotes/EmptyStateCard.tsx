@@ -32,5 +32,4 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
       </CardContent>
     </Card>
   )
-
-}
+};

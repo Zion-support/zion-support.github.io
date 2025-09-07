@@ -183,4 +183,4 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardContent>
     </Card>
   )
-
+};

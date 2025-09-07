@@ -175,7 +175,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         isMobileFilterOpen={isMobileFilterOpen}      />;
       {isMobileFilterOpen && (;
 
-<<<<<<< HEAD:src_backup/components/talent/FilterSidebar.tsx
         <Button
           onClick={() =>
             window.dispatchEvent(new CustomEvent(closeMobileFilter'))

@@ -25,9 +25,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-Spinner && Spinner.displayName = 'Spinner;
-export default Spinner;import React from react';
-<<<<<<< HEAD:src_backup/components/ui/spinner.tsx
+Spinner && Spinner.displayName = 'Spinner';
+export default Spinner;import React from 'react';
+import { Loader2 } from 'lucide-react';
 import { Loader2 } from 'lucide-react;
 
 import { cn } from @/lib/utils';
@@ -69,7 +69,9 @@ export interface SpinnerProps extends React.SVGProps < SVGSVGElement>  {size?: n
 const Spinner = React.forward_ref < SVGSVGElement, SpinnerProps>(({ class_name, size = 24, ...props }, ref, ) => (<Loader2;
       ref = {ref }
       {...props}
-<<<<<<< HEAD:src_backup/components/ui/spinner.tsx
+      class_name = {cn ('animate - spin', class_name), }
+      width = {size, }
+      height = {size, }
       class_name = {cn (animate - spin', class_name)}
       width = {size}
       height = {size}

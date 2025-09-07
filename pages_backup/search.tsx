@@ -1,4 +1,23 @@
+import React from 'react';
+import MainLayout from '../components/layout/MainLayout';
 
+const Page = () => {
+  return (
+    <MainLayout
+      title="Search - Zion Tech Group"
+      description="Search our services and solutions"
+    >
+      <div className="min-h-screen bg-gray-50">
+        <div className="container mx-auto px-4 py-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Search</h1>
+          <p className="text-xl text-gray-600">Coming soon...</p>
+        </div>
+      </div>
+    </MainLayout>
+  );
+};
+
+export default Page;
 
 
 
@@ -901,7 +920,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 </>
   );
 }
-
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

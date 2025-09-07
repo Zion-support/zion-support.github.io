@@ -51,11 +51,9 @@ export const AppFeatures: React.FC = () => {
                 <CardDescription className=text-gray-300">{feature.description}</CardDescription>
               </CardContent>
             </Card>
-
           ))}
         </div>
       </div>
     </section>
   )
-}
-
+};

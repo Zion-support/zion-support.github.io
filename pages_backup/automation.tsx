@@ -1,8 +1,7 @@
-
-import * as React from 'react;
-import Head from next/head';
-import Link from 'next/link;
-import { motion } from framer-motion';
+import * as React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Zap, 
   Settings, 
@@ -346,9 +345,7 @@ export default function AutomationPage() {
   );
 }
 
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import React from 'react';
 import React from react;
 import Head from 'next / head';
   RefreshCw,
@@ -622,7 +619,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 );
-
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

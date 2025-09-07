@@ -1,11 +1,7 @@
 
 
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/graphql.ts
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import type { NextApiRequest, NextApiResponse } from './next';
+import v1 from "../../../data / api - docs / v1";
 import type { NextApiRequest, NextApiResponse } from './next;
 import v1 from "../../../data / api - docs / v1;
 /**
@@ -27,13 +23,7 @@ function toSDL() {
   return typedefs.join (\n");
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/docs/graphql.ts
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   res.status(200).send(toSDL());
 }

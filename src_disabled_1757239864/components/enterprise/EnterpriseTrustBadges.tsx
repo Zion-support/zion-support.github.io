@@ -1,13 +1,9 @@
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
 
 import React from 'react;
 import { Shield, Lock, Award, CheckCircle } from lucide-react';
 
-import React from "react;
-import { Shield, Lock, Award, CheckCircle } from 'lucide-react
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
+import React from "react";
+import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 export function EnterpriseTrustBadges() {
@@ -35,9 +31,8 @@ export function EnterpriseTrustBadges() {
             <Award className='h-5 w-5 text-primary />
             <span className=font-medium'>ISO 27001</span>
           </div>
-          <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border>
-            <CheckCircle className=h-5 w-5 text-primary' />
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
+          <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border'>
+            <CheckCircle className='h-5 w-5 text-primary' />
 
 import React from react";
 
@@ -47,7 +42,6 @@ import React from react";
 
             <span className=font-medium'>HIPAA Compliant</span>          </div>
 
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
 
 
 
@@ -72,11 +66,10 @@ export function EnterpriseTrustBadges() {
             <Award className=h-5 w-5 text-primary" />
             <span className="font-medium>ISO 27001</span>
           </div>
-          <div className=flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
-            <CheckCircle className="h-5 w-5 text-primary />
-            <span className=font-medium">HIPAA Compliant</span>
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
+          <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
+            <CheckCircle className="h-5 w-5 text-primary" />
+            <span className="font-medium">HIPAA Compliant</span>
+            <span className='font-medium'>HIPAA Compliant</span>
             <span className='font-medium>HIPAA Compliant</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
           </div>
@@ -212,7 +205,6 @@ export function EnterpriseTrustBadges() {return (<section className=py-10 px-4 m
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
   )}
   )}
 export /**;
@@ -220,7 +212,6 @@ export /**;
  */;
   );
 
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
 }
   );
 }
@@ -284,11 +275,9 @@ export /**;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
     </section>);
 }
 
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseTrustBadges.tsx
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533

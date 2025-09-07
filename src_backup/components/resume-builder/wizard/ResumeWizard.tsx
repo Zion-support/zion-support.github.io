@@ -1,20 +1,30 @@
+import { useState, useEffect } from 'react';
+import { useAuth } from '@/hooks/useAuth';
+import { useResume } from '@/hooks/useResume';
+import { Tabs } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Resume } from '@/types/resume';
 
-import { useAuth  } from '@/hooks/useAuth;
-import { useResume  } from @/hooks/useResume';
-import { Tabs  } from '@/components/ui/tabs;
-import { Card, CardContent  } from @/components/ui/card';
-import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert;
-import { AlertCircle, FilePlus, Loader2  } from lucide-react';
-import { Button  } from '@/components/ui/button;
-import { Resume  } from @/types/resume';
-import { useState, useEffect   } from 'react;
-import { useAuth   } from @/hooks/useAuth';
-import { useResume   } from '@/hooks/useResume;
-import { Tabs   } from @/components/ui/tabs';
-import { Card, CardContent   } from '@/components/ui/card;
-import { Alert, AlertDescription, AlertTitle   } from @/components/ui/alert';
-import { Button   } from '@/components/ui/button;
-import { Resume   } from @/types/resume';
+import { useState, useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useResume  } from '@/hooks/useResume';
+import { Tabs  } from '@/components/ui/tabs';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { Resume  } from '@/types/resume';
+import { useState, useEffect   } from 'react';
+import { useAuth   } from '@/hooks/useAuth';
+import { useResume   } from '@/hooks/useResume';
+import { Tabs   } from '@/components/ui/tabs';
+import { Card, CardContent   } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle   } from '@/components/ui/alert';
+import { Button   } from '@/components/ui/button';
+import { Resume   } from '@/types/resume';
 // Import components;
 import { ResumeProgress   } from './ResumeProgress;
 import { EmptyResumeState   } from ./EmptyResumeState';
@@ -31,7 +41,13 @@ export function ResumeWizard() {const { user } = useAuth()const {isLoading;
     createResume;
   } = useResume()const [activeTab, setActiveTab] = useState('basic-info)const [showNewResumeForm, setShowNewResumeForm] = useState(false)// Use the extracted hook for progress calculation;
   const progress = null;
-
+  if (isLoading) {
+origin/cursor/automate-test-improve-and-merge-code-2533
+    return (
+      <div className="flex justify-center items-center h-64">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    )
   }
   if (showNewResumeForm) {if (!resume && !showNewResumeForm) {return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }if (showNewResumeForm) {return (<CreateResumeForm;
@@ -108,4 +124,60 @@ if ( {) {$2;
             Create New;
           </Button>;
         </div>;
+      </div>;
 
+            />;
+
+            {resume && (;
+
+              <ResumeStepContent
+                activeTab = {activeTab,}
+                resume = {resume as Resume,}
+                onNextStep = {nextStep,}
+                onPrevStep = {prevStep,}
+              />
+            )}
+          </Tabs>
+        </CardContent>
+      </Card>
+    </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
+  );
+
+};
+
+};
+<AlertTitle>Error</AlertTitle> <AlertDescription> {;
+  error ;
+}</AlertDescription> </Alert>) ;
+
+}if (showNewResumeForm) {;
+  
+origin/cursor/automate-test-improve-and-merge-code-2533
+  () => setShowNewResumeForm (false) ;
+}isLoading= {;
+  isLoading ;
+}/>) ;
+}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {;
+  activeTab ;
+}onValueChange= {;
+  setActiveTab ;
+}> <ResumeSteps steps= {;
+  RESUME STEPS ;
+}activeTab= {;
+  activeTab ;
+}onChange= {;
+  setActiveTab ;
+}/> {;
+  resume && (<ResumeStepContent activeTab= {;
+  activeTab ;
+}resume= {;
+  resume as Resume ;
+}onNextStep= {;
+  nextStep ;
+}onPrevStep= {;
+  prevStep ;
+}/>) ;
+}</Tabs> </CardContent> </Card> </div>) ;
+}'"
+origin/cursor/automate-test-improve-and-merge-code-2533

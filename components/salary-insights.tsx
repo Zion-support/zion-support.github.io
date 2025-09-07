@@ -1,8 +1,39 @@
+import {;
+  LineChart,;
+  BarChart,;
+  DonutChart,;
+</div> <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" /> </div> <div className="grid grid-cols-2 gap-3 mt-3" > <div> <option>Junior</option> <option>Mid</option> <option>Senior</option> <option>Lead</option> </select> </div> <div> </select> </div> </div> Advanced filters are available when you sign in. </div>) 
+}</div> </div> </div>) : (<div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />) 
+}<thead> <tr className="text-left text-xs text-gray-500" > <th className="py-1" >Region</th> <th className="py-1" >Median (USD/hr) </th> </tr> </thead> <tbody> </tr>) ) 
+}</tbody> </table>) 
+}</div>) ) 
+}</div> </div>) : (<div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />) 
+}</div> </div>) ) 
+}</div> </div>) 
+}</div> </div> </div>) 
+}
+} from '../components/salary/InsightCharts';
+type InsightResponse = {;
+  }
+  "recommendedHourlyUsd": number;
 
+  "recommendedMonthlyUsd": number;
+  "medianHourlyUsd": number;
+  "minHourlyUsd": number;
+  "maxHourlyUsd": number;
 
+  "confidence": number;
 
-import React, { useEffect, useMemo, useState } from react';
-import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts;
+  "trendMonthly": { "label": string; "value": number
+}[];
+  "regionalComparison": { "region": string; "medianHourlyUsd": number
+}[];
+  "tags": string[];
+  gptRecommendation?: string
+};
+
+import React, { useEffect, useMemo, useState } from 'react';
+import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 type InsightResponse = $2;
   recommendedMonthlyUsd: number,
   medianHourlyUsd: number,
@@ -383,5 +414,3 @@ const payload = {
     </div>
   )
 }
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75

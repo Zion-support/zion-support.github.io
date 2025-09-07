@@ -1,4 +1,43 @@
+'use client';
 
+import React, {;
+  Suspense,;
+  lazy,;
+  useState,;
+  useEffect,;
+  ComponentType,;
+} from 'react';
+
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface LoadingState {;
+  isLoading: boolean;
+  error: Error | null;
+  retryCount: number;
+  isOnline: boolean;
+
+interface DynamicLoaderProps {;
+  importFn: () => Promise<{ default: ComponentType<any> }>;
+  fallback?: React && React.ReactNode;
+  errorFallback?: React && React.ComponentType<{ error: Error; retry: () => void }>;
+  loadingComponent?: React && React.ComponentType;
+
+  enableRetry?: boolean;
+  maxRetries?: number;
+  prefetch?: boolean;
+  className?: string;
+  children?: React && React.ReactNode;
+  [key: string]: any;
+
+
+// Enhanced Loading Component;
+const EnhancedLoading: React.FC<{;
+  progress?: number;
   message?: string;
   showProgress?: boolean;
 }> = ({progress = 0,message = 'Loading component...,showProgress = true}) => (<Card className=w-full max-w-md mx-auto'>;
@@ -11,7 +50,67 @@
   progress?: number;
   message?: string;
   show_progress?: boolean;
+}> = ({
+  progress = 0,
+  message = 'Loading component...',
+  show_progress = true,
+}) => (
 
+  <Card className="w-full max-w-md mx-auto">
+    <CardContent className="p-6">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="relative">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+          {showProgress && (
+
+
+            <motion.div
+              className="absolute inset-0 rounded-full border-2 border-primary"
+              style={{
+
+                background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+
+
+
+              }}
+              initial={{ rotate: 0 }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+
+
+
+
+
+
+// Enhanced Error Component
+const EnhancedError: React.FC<{
+  error: Error
+  retry: () => void
+  isOnline: boolean
+  retryCount: number
+  maxRetries: number
+}> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
+
+
+  <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
+    <CardContent className="p-6">
+      <div className="flex flex-col items-center space-y-4">
+        <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
+          {isOnline ? (
+            <AlertTriangle className="h-6 w-6 text-red-600" />
+
+
+          ) : (
+            <WifiOff className='h-6 w-6 text-red-600' />
+        </div>;
+      </div>;
+    </CardContent>;
+  </Card>;
+);
+
+// Enhanced Error Component;
+const EnhancedError: React.FC<{;
+  error: Error;
   retry: () => void;
   isOnline: boolean;
   retryCount: number;
@@ -60,7 +159,32 @@ const EnhancedError: React.FC<{error: Error;
               ? error.message || 'Failed to load component;
               : Please check your internet connection';
             }
+          </p>
+          {retryCount > 0 && (
 
+
+              Retry {retryCount}/{maxRetries}
+            </p>;
+          )}
+
+        </div>
+        {retryCount < maxRetries && (
+
+
+          <Button 
+            onClick={retry} 
+            variant="outline" 
+            size="sm"
+            className="border-red-300 text-red-700 hover:bg-red-100"
+          >
+            <RefreshCw className="h-4 w-4 mr-2" />
+
+
+            Try Again
+          </Button>
+        )}
+
+            />)}
         </div>;
         <div className='text - center>;
           <p className=text - sm font - medium'>{message}</p>;
@@ -103,7 +227,59 @@ const EnhancedError: React.FC<{error: Error;
           </Button>)}
       </div>;
     </CardContent>;
+  </Card>);
+// Network Status Hook;
+const useNetworkStatus = () =>: any {
+  const [is_online, setIsOnline] = useState (true);
+  useEffect (() => {
+    const updateOnlineStatus = () =>: any setIsOnline (navigator.on_line);
+    window.addEventListener ('online', updateOnlineStatus);
+    window.addEventListener ('offline', updateOnlineStatus);
 
+
+    return () => {
+      window.removeEventListener ('online', updateOnlineStatus);
+      window.removeEventListener ('offline', updateOnlineStatus);
+    }
+  }, []);
+  return is_online;
+}
+
+
+    };
+;
+
+
+
+    return () => {}; // Return empty cleanup function for other paths
+  }, [loadingState.isLoading, loadingState.error])
+  // Load component
+  const loadComponent = async () => {
+    try {
+      setLoadingState(prev => ({
+        ...prev
+        isLoading: true
+        error: null
+        isOnline
+      }))
+      setProgress(0)
+      const component = await importFn()
+      setDynamicComponent(() => component.default)
+      setProgress(100)
+      setTimeout(() => {
+        setLoadingState(prev => ({ ...prev, isLoading: false }))
+      }, 300); // Small delay for smoother transition    } catch (error) {
+      logErrorToProduction('Dynamic component loading failed:', {
+        data: error
+      })
+      setLoadingState(prev => ({
+        ...prev
+        isLoading: false
+        error: error as Error
+        retryCount: prev.retryCount + 1
+        isOnline
+      }))
+    }
   }
   // Retry functionality;
   const retry = () => {if (loadingState.retryCount < maxRetries) {loadComponent()}
@@ -117,7 +293,20 @@ const EnhancedError: React.FC<{error: Error;
       >;
         <EnhancedLoading;
           progress={progress}
-
+          message='Loading component...'
+          showProgress={true}        />
+      </motion.div>
+    )
+  }
+  // Error state
+  if (loadingState.error) {
+    if (errorFallback) {
+      return React.createElement(errorFallback, {
+        error: loadingState.error
+        retry
+      })
+    }
+          >
       </div>;
     </CardContent>;
   </Card>;
@@ -145,6 +334,21 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({importFn,f
           message='Loading component...;
           showProgress={true}        />;
       </motion && motion.div>;
+    );
+  }
+
+  // Error state;
+  if (loadingState && loadingState.error) {;
+    if (errorFallback) {;
+      return React && React.createElement(errorFallback, {;
+        error: loadingState && loadingState.error,;
+        retry,;
+      });
+    }
+
+          >;
+        <EnhancedError
+
 
           error={loadingState.error}
           retry={retry}
@@ -161,7 +365,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({importFn,f
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
 
+        />;
       </motion && motion.div>;
     )}// Success state;
   if (DynamicComponent) {return (<Suspense fallback={fallback || <EnhancedLoading />}>;
@@ -180,7 +386,124 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({importFn,f
             </DynamicComponent>;
           </motion.div>;</AnimatePresence>;
       </Suspense>;
+    );
+  }
 
+  return null;
+};
+
+// HOC for creating dynamic components easily;
+export const createDynamicComponent = <T extends ComponentType<any>>(;
+  importFn: (,) => Promise<{ default: T }>,;
+  options?: Omit<DynamicLoaderProps, 'importFn' | 'children'>;
+) => {;
+  return (props: React && React.ComponentProps<T> & { children?: React && React.ReactNode },) => (;
+
+    <DynamicComponentLoader
+      importFn = {importFn,}
+      {...(options |{})}
+      {...(props as any)}
+
+    />
+  );
+}
+
+
+
+
+// Predefined dynamic loaders for common heavy components
+// Note: These are examples - uncomment and install types as needed
+// export const DynamicChartComponent = createDynamicComponent(
+
+//   () => import('recharts').then(module => ({ default: module.LineChart })),
+
+
+//   {
+//     loadingComponent: () => (
+//       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading chart...</span>
+//       </div>
+//     )
+//     prefetch: true
+//   }
+// )
+// export const DynamicThreeComponent = createDynamicComponent(
+'use client';
+
+import React, {
+  Suspense
+  lazy
+  useState
+  useEffect
+  ComponentType
+} from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface LoadingState {
+  isLoading: boolean
+  error: Error | null
+  retryCount: number
+  isOnline: boolean
+interface DynamicLoaderProps {
+  importFn: () => Promise<{ default: ComponentType<any> }>
+  fallback?: React.ReactNode
+  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
+  loadingComponent?: React.ComponentType
+  enableRetry?: boolean
+  maxRetries?: number
+  prefetch?: boolean
+  className?: string
+  children?: React.ReactNode
+  [key: string]: any
+// Enhanced Loading Component
+const EnhancedLoading: React.FC<{
+  progress?: number
+  message?: string
+  showProgress?: boolean
+}> = ({ 
+  progress;
+origin/cursor/automate-test-improve-and-merge-code-2533
+//   {
+//     loadingComponent: () => (
+//       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
+//         <span className="text-muted-foreground">Loading 3D renderer...</span>
+//       </div>
+//     )
+//   }
+// )
+
+// Advanced Dynamic Component Loader;
+export const DynamicComponentLoader: React.FC < DynamicLoaderProps> = ({
+  import_fn,
+  fallback,
+  error_fallback,
+  loading_component,
+  enable_retry = true,
+  max_retries = 3,
+  prefetch = false,
+  class_name,
+  children,
+  ...props;
+}, ) => {
+  const [loading_state, setLoadingState] = useState < LoadingState>({
+    is_loading: true,
+    error: null,
+    retry_count: 0,
+    is_online: true,
+  });
+  const [progress, set_progress] = useState (0);
+  const [DynamicComponent, setDynamicComponent] =;
+    useState < ComponentType < any> | null>(null);
+  const is_online = useNetworkStatus ();
+  // Simulate loading progress for better UX;
+  useEffect ((, ) => {
+    // Check condition
+if ( {) {
+  $2
 }
       const interval = set_interval ((, ) => {set_progress (prev => {// Check condition;
 if (return prev) {$2;
@@ -280,4 +603,20 @@ export const createDynamicComponent = <T extends ComponentType < any>>(import_fn
 // )// export const DynamicThreeComponent = createDynamicComponent(//   (,) => import(three').then(module => ({ default: module && module.WebGLRenderer })),//   {//     loadingComponent: () => (//       <div className=w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">;
 //         <span className="text-muted-foreground">Loading 3D renderer...</span>;
 //       </div>;
+//     );
+//   }
+// );
 
+export default DynamicComponentLoader;export default DynamicComponentLoader ;
+
+// );
+export default DynamicComponentLoader; export default DynamicComponentLoader;
+
+
+// );
+
+export default DynamicComponentLoader;
+
+
+export default DynamicComponentLoader;
+origin/cursor/automate-test-improve-and-merge-code-2533

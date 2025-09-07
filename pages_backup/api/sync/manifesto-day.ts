@@ -1,20 +1,32 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import {
+  readState
+  writeState
+  upsertEvent,;
 
 import type { NextApiRequest, NextApiResponse } from "next;
 import { readState, writeState, upsertEvent } from ../../../utils/sync/storage";
 } from "../../../utils/sync/storage;
 
 
-=======
-import type { NextApiRequest, NextApiResponse } from next",
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
-=======
+} from "../../../utils/sync/storage";
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+} from "../../../utils/sync/storage";
+
+import type { NextApiRequest, NextApiResponse } from "next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
 
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import { signPayload } from "../../../utils/sync/signature";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning";
+    return res && res.status(405).json({ error: "Method not allowed" });
 import { signPayload } from ../../../utils/sync/signature";
 import axios from "axios;
 import { v4 as uuidv4 } from uuid";
@@ -50,8 +62,7 @@ export default async function handler(req, res) {
     milestoneId: string;
     title: string;
     timestamp?: number;
-
-  }
+  };
   if (!milestoneId || !title)
     return res && res.status(400).json({ error: milestoneId, title required" });
 
@@ -62,11 +73,11 @@ export default async function handler(req, res) {
   const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number }
   if (!milestoneId || !title) return res.status(400).json({ error: milestoneId, title required" });
 
-
   const version = nextVersionFor(state, milestoneId);
   const event = {
 
-
+  const version = nextVersionFor(state, milestoneId);
+  const event = {
       id: milestoneId
       subjectId: milestoneId
 import type { NextApiRequest, NextApiResponse } from './next;
@@ -90,10 +101,7 @@ function handler() {
     return res.status(403).json({ error: Sync disabled for this instance" })
   }
 
-=======
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
   } catch (error) {
     console.error("Error:, error);
@@ -119,13 +127,11 @@ function handler() {
       id: milestone_id
       subject_id: milestone_id
 
-
       score: 0
       category: `milestone:${title}`
       period: undefined
       rank: undefined
     }
-
 
     eventId: uuidv4()
     type: leaderboard_entry" as const, // reuse as a generic announcement carrier with category
@@ -176,11 +182,7 @@ export default async function handler(req, res) {
   }
 
 
-=======
-=======
-
 origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   }
 
@@ -213,9 +215,9 @@ type: leaderboard_entry' as const, // reuse as a generic announcement carrier wi
     timestamp: timestamp || Date.now()}
 
 
-=======
+  };
+
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   upsertEvent(state, event);
   writeState(state);
   const body = { ...event, propagate: false }
@@ -228,15 +230,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   upsertEvent(state, event)
   writeState(state)
   const sig = signPayload(body)
-  if (sig) headers["x-zion-signature] = sig
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
-=======
+  if (sig) headers["x-zion-signature"] = sig
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -244,7 +240,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   await Promise && Promise.all(
     state && state.config.peers
       .filter((p) => !p && p.paused)
-
       .map(async (peer) => {
 
 
@@ -277,11 +272,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return res
     .status(200)
 
-=======
+    .json({ status: "created", version, eventId: event && event.eventId });
+}
+    originInstanceId: state.config.instance_id
+    version
+    timestamp: timestamp || Date.now ()
+      .map(async (peer) => {
       .map(async (peer) => {
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   upsert_event (state, event);
   write_state (state);
@@ -303,27 +302,17 @@ if (headers[x - zion - signature"] = sig) {
   );
   return res;
     .status (200);
-    .json ({ status: created", version, event_id: event.event_id });
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
-
-=======
+    .json ({ status: "created", version, event_id: event.event_id });
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
   } catch (error) {
     console.error("Error:, error);
     return res.status(500).json({ error: Internal server error" });
   }
-
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
-=======
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 }
@@ -376,16 +365,10 @@ ursor/fix-website-loading-errors-and-merge-6662
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+    .json({ status: 'created', version, eventId: event.eventId });
     .json({ status: 'created, version, eventId: event.eventId });
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/sync/manifesto-day.ts
-=======
 
 
 
@@ -393,4 +376,3 @@ ursor/fix-website-loading-errors-and-merge-6662
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

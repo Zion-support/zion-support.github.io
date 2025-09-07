@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
 ;
 import React, { useState, useEffect } from "react,import { useRouter } from 'next/router,import { useDisputes } from @/hooks/useDisputes",import {logErrorToProduction} from @/utils/productionLogger',import {Dispute, disputeReasonLabels, DisputeMessage, DisputeStatus, ResolutionType;
@@ -62,7 +60,6 @@ export function DisputeDetail() {const router = useRouter()const { disputeId } =
   }>({summary: ',resolution_type: compromise'})const [activeTab, setActiveTab]  = useState('overview)// Check if user is admin (placeholder - implement proper admin check)const isAdmin  = user?.userType === admin';useEffect(() => {if (!disputeId) return;
     const loadDisputeData = async () => {setIsLoading(true)try {const disputeData = await getDisputeById(disputeId)if (!disputeData) {toast && toast.error('Dispute not found)router && router.push(/dashboard/disputes')return;
         }
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
         setDispute(disputeData);
 
         const messagesData = await getDisputeMessages(disputeId);
@@ -302,11 +299,10 @@ if ( {) {}
       </div>);
   }
 
-        return 'default;
-      case under_review':;
-        return 'secondary;
-      case resolved':;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
+        return 'default';
+      case 'under_review':;
+        return 'secondary';
+      case 'resolved':;
 
         return 'outline; // Changed from ./success'; to outline";
 
@@ -327,12 +323,12 @@ if ( {) {}
           >;
             Back to List;
           </Button>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
+          {isAdmin && dispute?.status === 'open' && (;
+            <Button onClick={() => handleStatusChange('under_review')}>              Start Review;
           {isAdmin && dispute?.status === 'open && (;
             <Button onClick={() => handleStatusChange(under_review')}>              Start Review;
             </Button>;
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
 
   return (
@@ -418,7 +414,6 @@ if ( {) {}
           <AlertTitle>This dispute has been resolved</AlertTitle>;
             </Button>;
           )}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
 
 
@@ -508,7 +503,7 @@ if ( {) {}
                 </CardHeader>
                 <CardContent className=space-y-4'>
                   <div>
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
+                    <h3 className='font-medium'>Reason</h3>
                     <h3 className='font-medium>Reason</h3>
                     <p>
                       {disputeReasonLabels[dispute.reason_code] ??
@@ -611,7 +606,6 @@ if ( {) {}
                     <p>{dispute.project?.title || Unknown Project}</p>;
                     <p className="text-sm text-muted-foreground">{dispute.project?.scope_summary}</p>;
                   </div>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
 
 
@@ -890,8 +884,7 @@ if ( {) {}
                     <CardTitle > Resolution</CardTitle>;
                   </CardHeader>;
                   <CardContent>;
-                    <p className=whitespace - pre - wrap'>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
+                    <p className='whitespace - pre - wrap'>;
                       {dispute.resolution_summary}
 
 
@@ -1001,7 +994,6 @@ if ( {) {}
                     )}
                   </CardContent>;
                 </Card>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
               )}
 
             <TabsContent value=messages" className="space-y-6>
@@ -1030,12 +1022,10 @@ if ( {) {}
                         <MessageSquare className='mx-auto h-12 w-12 text-muted-foreground mb-2' />;
                         <p className=text-muted-foreground>No messages yet</p>;
                       </div>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
                     ) : (;
                       messages;
                         .filter(msg => !msg.is_admin_note)
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
                               <div
                                 className={`max-w-[80%] ${
@@ -1092,9 +1082,8 @@ if ( {) {}
                                     : bg-muted;
                                 } p-4 rounded-lg`}
                               >;
-                                <div className=flex items-center gap-2 mb-2">;
-                                  <Avatar className="h-6 w-6>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
+                                <div className="flex items-center gap-2 mb-2">;
+                                  <Avatar className="h-6 w-6">;
                             <div;
                               key={msg.id}'`
                               className={`flex ${isCurrentUser ? 'justify-end : justify-start'}`}
@@ -1105,11 +1094,10 @@ if ( {) {}
                                     ? bg-primary text-primary-foreground;'
                                     : 'bg-muted;`
                                 } p-4 rounded-lg`}
-                              >;
-                                <div className="flex items-center gap-2 mb-2">;
-                                  <Avatar className=h-6 w-6">;"
-                                    <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || User avatar} />;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
+                              >;"
+                                <div className="flex items-center gap-2 mb-2">;"
+                                  <Avatar className="h-6 w-6">;"
+                                    <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />;
 
                                     <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />;<AvatarFallback>{msg && msg.user_profile?.display_name?.[0] ||;
                                     <AvatarFallback>;
@@ -1131,14 +1119,11 @@ if ( {) {}
 
                               </div>;
                             </div>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
                           );
                         });
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
 
                     )}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
                           )}))}</div>;
                 </CardContent>;
                 <CardFooter>;
@@ -1154,7 +1139,6 @@ if ( {) {}
                       onChange={(e) => setMessage(e.target.value)}
                       className=min-h-[100px];
                       disabled={isSending}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
                     />
                     <div className="flex justify-end">
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
@@ -1190,7 +1174,6 @@ if ( {) {}
             <TabsContent value="attachments>
 
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
               <Card>
                 <CardHeader>
@@ -1211,7 +1194,6 @@ if ( {) {}
             </TabsContent>
 
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
             
 
 
@@ -1353,10 +1335,8 @@ if ( {) {}
                   </div>;
                 </CardContent>;
               </Card>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
             </TabsContent>;
 
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
             {is_admin && (
               <TabsContent value='admin className=space - y-6'>;
@@ -1375,11 +1355,10 @@ if ( {) {}
                         >
                           Mark as Open;
                         </Button>
-                        <Button 
-                          variant=outline" "
-                          onClick={() => handleStatusChange(under_review)}"
-                          disabled={dispute.status === "under_review}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
+                        <Button "
+                          variant="outline" "
+                          onClick={() => handleStatusChange("under_review")}"
+                          disabled={dispute.status === "under_review"}
                         >
                           Mark as Under Review;
                         </Button>
@@ -1392,9 +1371,9 @@ if ( {) {}
                           Mark as Open
                         </Button>
                         <Button
-                          variant='outline
-                          onClick={() => handleStatusChange(under_review')}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
+                          variant='outline'
+                          onClick={() => handleStatusChange('under_review')}
+                          disabled={dispute && dispute.status === 'under_review'}
                           disabled={dispute && dispute.status === 'under_review}
                         >;
                           Mark as Under Review;
@@ -1618,7 +1597,6 @@ if ( {) {}
                                 <option value=dismissed'>Dismissed</option>;
                               </select>;
                             </div>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
                           </div>;
 
                           </div>;.map((msg) => (<div key={msg.id} className=bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900>;
@@ -1635,10 +1613,8 @@ if ( {) {}
                               </div>;
                               <p className='whitespace-pre-wrap text-sm>;
                                 {msg.message}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
                               </p>
                             </div>
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
                               </div>
                               <span className=text-xs opacity-70>
@@ -1693,9 +1669,7 @@ if ( {) {}
                       </div>;<Separator className='my-4 />;<div className=space-y-4'>;<Textarea;
                           placeholder='Add an admin note (only visible to administrators)...;
                           value={adminNote}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
                           onChange={e => setAdminNote(e && e.target.value)}                        />;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
 
                       
@@ -1777,7 +1751,6 @@ export function DisputeDetail() {
                                 setAdminNote("")
                               })
                             }
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                           }}
                         >;
@@ -1810,7 +1783,6 @@ export function DisputeDetail() {const router = null;
                     </div>;
                   </CardContent>;
                 </Card>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 
 
         
@@ -1987,8 +1959,7 @@ export function DisputeDetail() {const router = null;
                     : dispute.talent_profile &&;
                         dispute.raised_by === (dispute.talent_profile as any).id;
                       ? 'Talent';
-                      : Unknown}
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
+                      : 'Unknown'}
                 </span>
           <Card>
             <CardHeader>
@@ -2181,7 +2152,6 @@ container mx-auto p-4 space-y-6 > <div className="flex flex-wrap items-center ju
             </CardContent>;
           </Card>;
         </div>;
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
       </div>;
 
     </div>);
@@ -2246,13 +2216,18 @@ container mx-auto p-4 space-y-6 > <div className=flex flex-wrap items-center jus
   dispute.client profile?.display name || "Client avatar" ;
 }/> <AvatarFallback>C</AvatarFallback> </Avatar> <div> <p className=font-medium">Client</p> </p> </div> </div> <div className="flex justify-center> <ArrowDown className=h-6 w-6 text-muted-foreground" /> </div> <div className="flex items-start gap-4> <Avatar className=h-10 w-10"> <AvatarImage src= {dispute.talent profile?.avatar url ;
 }alt= {";
-  dispute.talent profile?.display name || Talent avatar ";
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
+  dispute.client profile?.display name || "Client avatar" ";
+}/> <AvatarFallback>C</AvatarFallback> </Avatar> <div> <p className="font-medium">Client</p> </p> </div> </div> <div className="flex justify-center"> <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {dispute.talent profile?.avatar url ;
+}alt= {";
+  dispute.talent profile?.display name || "Talent avatar" ";
+}/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className="font-medium">Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className="space-y-4 text-sm"> <div className="flex justify-between"> <span className="font-medium">Case ID:</span> <span className="font-mono"> {;
+  dispute.id ";
+}</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>) ;
+}'"
 }/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className="font-medium>Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className=space-y-4 text-sm"> <div className="flex justify-between> <span className=font-medium">Case ID:</span> <span className="font-mono> {
   dispute.id ;
 }</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>) ;
 }'
-<<<<<<< HEAD:src_backup/components/disputes/DisputeDetail.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }/> <AvatarFallback>T</AvatarFallback> </Avatar> <div> <p className=font-medium">Talent</p> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> <CardContent className="space-y-4 text-sm> <div className=flex justify-between"> <span className="font-medium>Case ID:</span> <span className=font-mono"> {dispute.id ";
 }</span> </div> <div className=flex justify-between> </div> </CardContent> </Card> </div> </div> </div>)}";

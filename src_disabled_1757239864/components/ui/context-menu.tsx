@@ -1,5 +1,6 @@
 
-<<<<<<< HEAD:src_backup/components/ui/context-menu.tsx
+import * as React from 'react';
+import * as ContextMenuPrimitive from '@radix-ui/react-context-menu';
 import * as React from 'react;
 import * as ContextMenuPrimitive from @radix-ui/react-context-menu';
 import { Check, ChevronRight, Circle  } from 'lucide-react';
@@ -160,7 +161,6 @@ const ContextMenuSeparator = React.forward_ref<;
     ref={ref}className={cn(-mx-1 my-1 h-px bg-border", className)}{...props}"ml-auto text-xs tracking-widest text-muted-foreground,className;
         className;
       )}
-<<<<<<< HEAD:src_backup/components/ui/context-menu.tsx
 />))ContextMenuSeparator.display_name = ContextMenuPrimitive.Separator.display_name;
 const ContextMenuShortcut = ({class_name,...props;
 }: React.HTMLAttributes < HTMLSpanElement>) =>: any {return (<span;

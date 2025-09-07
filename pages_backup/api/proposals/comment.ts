@@ -30,14 +30,21 @@ export default async function handler(
   if (req.method === POST") {
     const body = req.body |{}
     const comment = {
+      id: Date.now().toString()
+      proposalId: body.proposalId
+      region: body.region |"Global"
+      author: body.author |"anon"
+      text: body.text |""
+      createdAt: new Date().toISOString()
+    }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/api/proposals/comment.ts
-=======
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json');
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import type { NextApiRequest, NextApiResponse } from next';
 import fs from 'fs-extra;
 import path from path';
@@ -72,10 +79,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       region: body.region || 'Global, author: body.author || anon'
       id: Date.now().toString()
       proposalId: body.proposalId
-      region: body.region || 'Global
-      author: body.author || anon'
-
-      text: body.text || '
+      region: body.region || 'Global'
+      author: body.author || 'anon'
+      text: body.text || ''
 
       createdAt: new Date().toISOString()
       createdAt: new Date().toISOString(),
@@ -85,8 +91,75 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  }
+}
+res.status(405).json({ error: "Method not allowed" });
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs-extra';
+import path from 'path';
+const FILE_PATH = path.join(process.cwd(), 'dataproposalscomments.json'),;
+async function ensure() {;
+  await fs.ensureFile(FILE_PATH);
+  try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+  res.status(405).json({ error: 'Method not allowed' })
+}
+import type { NextApiRequest, NextApiResponse } from './next';
+import fs from './fs - extra';
+import path from './path';
+const FILE_PATH = path.join (process.cwd (), "dataproposalscomments.json");
+async /**
+ * ensure - Function description
+ */
+function ensure() {
+  await fs.ensure_file (FILE_PATH);
+  try {
+    await fs.read_json (FILE_PATH);
+  } catch {
+    await fs.write_json (FILE_PATH, { comments: [] }, { spaces: 2 });
+  }
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  await ensure ();
+  // Check condition
+if ( {) {
+  $2
+}
+    const data = await fs.read_json (FILE_PATH);
+    return res.status (200).json (data);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const body = req.body || {}
+    const data = await fs.read_json (FILE_PATH);
+    const comment = {
+      id: Date.now ().to_string ()
+      proposal_id: body.proposal_id
+      region: body.region || "Global"
+      author: body.author || "anon"
+      text: body.text || ""
+      created_at: new Date ().toISOString ()
+    }
+    data.comments.push (comment);
+    await fs.write_json (FILE_PATH, data, { spaces: 2 });
+    return res.status (201).json (comment);
+  }
+  res.status (405).json ({ error: "Method not allowed" });
+}
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(comment);
@@ -188,18 +261,10 @@ export default async function handler(req, res) {
   }
 }
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
 
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   res.status(405).json({ error: 'Method not allowed' });
 
 }}
-
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

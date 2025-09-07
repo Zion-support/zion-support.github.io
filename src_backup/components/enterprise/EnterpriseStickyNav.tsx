@@ -124,7 +124,9 @@ export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
 
   return (
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseStickyNav.tsx
+    <nav className="sticky top-16 z-40 bg-card border-b border-border">;
+      <div className="container mx-auto px-4 md:px-6">;
+        <div className="flex items-center justify-between h-12">;
     <nav className=sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6>;
         <div className=flex items-center justify-between h-12">;
@@ -330,7 +332,7 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
               <Link href="#testimonials className=text - sm font - medium hover:text - primary">Testimonials</Link>;
             </li>;
             <li>;
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseStickyNav.tsx
+              <Link href="#contact" className="text - sm font - medium hover:text - primary">Contact Us</Link>;
               <Link href="#contact className=text - sm font - medium hover:text - primary">Contact Us</Link>;
 
 
@@ -338,7 +340,6 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
           </ul>;
         </div>;
       </div>;
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseStickyNav.tsx
 
 
   );

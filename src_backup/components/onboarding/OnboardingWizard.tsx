@@ -61,7 +61,6 @@ interface WizardStep  {title: string;
   action: {text: string;
     url: string;}
   skipText?: string;
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
 
 interface OnboardingWizardProps {
 
@@ -363,7 +362,6 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
 
           onClick={handleAction}>;
           {steps[currentStep]?.action && action.text}
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
         </Button>;
 
         {steps[currentStep]?.skipText && (;
@@ -389,7 +387,6 @@ export function OnboardingWizard(): any ({type,onComplete,type,onComplete,onSkip
             variant=ghost""
             className=text-zion-slate-light hover:text-white
             onClick={handleSkip}
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
           >;
 
             {steps[currentStep]?.skipText}
@@ -486,7 +483,6 @@ if ( {) {$2;
             {steps[current_step]?.skip_text}
           </Button>)}
       </CardFooter>;
-<<<<<<< HEAD:src_backup/components/onboarding/OnboardingWizard.tsx
     </Card>);
 }
 

@@ -1,5 +1,4 @@
 <<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
-<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 
 interface SuggestedJobsProps  {talent_id?: string;
@@ -14,7 +13,6 @@ function SuggestedJobs() {const { user } = use_auth ()const currentTalentId = ta
   const { user } = useAuth(),const currentTalentId = talentId || user?.id,const {isLoading,updateJobMatchStatus,categorizedMatches: {if (isLoading) {// Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
     return (
 
 
@@ -198,7 +196,6 @@ import { Badge } from "@/components/ui/badge,import { useJobSuggestions } from @
             ))}
           </div>;
         </div>;
-<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
       )}
 
 
@@ -258,7 +255,6 @@ import { Badge } from "@/components/ui/badge,import { useJobSuggestions } from @
             ))}
           </div>;
         </div>;
-<<<<<<< HEAD:src_backup/components/jobs/SuggestedJobs.tsx
       )}
 
 

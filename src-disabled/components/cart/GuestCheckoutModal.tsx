@@ -1,6 +1,7 @@
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Label } from '@/components/ui/label',;
 import { useState } from 'react,
 import { Button } from @/components/ui/button',
 import { Input } from '@/components/ui/input,
@@ -13,15 +14,25 @@ import { useState } from 'react,import { Button } from @/components/ui/button',i
     }return this.props.children;
   }
 }
-import React from 'react;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+import React from 'react';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Label } from '@/components/ui/label',;
+import { Textarea } from '@/components/ui/textarea',;
+import {;
 import { useState } from react';
 import { Button } from '@/components/ui/button;
 import { Input } from @/components/ui/input';
 import { Label } from '@/components/ui/label;
 import { Textarea } from @/components/ui/textarea';
 
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 import { Textarea } from '@/components/ui/textarea,
 import {
 
@@ -33,9 +44,8 @@ import {
   DialogTitle} from @/components/ui/dialog',
 import { User, Mail, MapPin, CreditCard } from 'lucide-react;
 
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+interface GuestCheckoutModalProps {;
 interface GuestCheckoutModalProps {
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 
 import { useState  } from react';
 import { Button  } from '@/components/ui/button;
@@ -54,7 +64,13 @@ import { Dialog;
   DialogDescription;
   DialogFooter;
   DialogHeader;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+  DialogTitle } from '@/components/ui/dialog';
+import { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import { Textarea } from '@/components/ui/textarea'
+import {
   DialogTitle } from @/components/ui/dialog';
 import { useState } from 'react
 import { Button } from @/components/ui/button'
@@ -71,8 +87,6 @@ import { Textarea } from '@/components/ui/textarea
 import { User, Mail, MapPin, CreditCard } from 'lucide-react
 import { isProdDomain } from @/utils/getStripe';
 interface GuestCheckoutModalProps {
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   open: boolean;
   onOpenChange: (open: boolean) => void;
@@ -85,7 +99,6 @@ export default function GuestCheckoutModal(): any ({
   const [address, setAddress] = useState(');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
     }
   }
 
@@ -107,7 +120,6 @@ export default function GuestCheckoutModal(): any ({
 
 
 
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
   const handleSubmit = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
   return (
@@ -154,7 +166,6 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             Pay with test data – use card 4242 4242 4242 4242 and any future;
             date.;
           </div>;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
         )}
 
         <form onSubmit={handleSubmit} className=space-y-4'>;
@@ -185,7 +196,6 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
           <div className=rounded-md bg-amber-500/20 p-2 text-center text-amber-400">
             Pay with test data – use card 4242 4242 4242 4242 and any future date.
           </div>
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
         )}
               htmlFor=guest-email'
         )}<form onSubmit={handleSubmit} className='space-y-4>;
@@ -202,12 +212,15 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               <Mail className=h-4 w-4 text-zion-cyan' />;
               Email Address;
             </Label>;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
             <Input
-              id='guest-email
-              type=email'
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+              id='guest-email'
+              type='email'
+            <Input id='guest-email''
+              type='email''
+              value={email || ''}'
+              onChange={e = /> setEmail(e && e.target.value || '')}'
+            <Input
+              id='guest-email'
             <Input id='guest-email
               type='email'
               value={email || '}'
@@ -258,7 +271,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
             <Button;
               type="submit;
               disabled={isSubmitting || !email || !address}
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue";
               className=bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue";
             >;
               value={email || '}
@@ -266,7 +279,8 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               placeholder='your && your.email@example && example.com              required;
               className=bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light';
             />;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+          </div>;<div className='space-y-2'>;<Label;
+              htmlFor='guest-address';
           </div>;<div className='space-y-2>;<Label;
               htmlFor=guest-address';
           </div>;
@@ -278,7 +292,6 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               <MapPin className='h-4 w-4 text-zion-cyan' />;
               Shipping Address;
             </Label>;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
             <Textarea;
               id=guest-address;
               value={address || ''}
@@ -290,7 +303,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               placeholder='Enter your full shipping address...              required;
               className=bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]';,
             />;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+          </div>;<div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
           </div>;<div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3>;
           </div>;
           <div className=bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
@@ -344,14 +357,14 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               className=bg - zion - blue - light border - zion - cyan / 30 text - white placeholder:text - zion - slate - light min - h-[80px]';,
             />;
           </div>;
-          <div className='bg - yellow - 500 / 10 border border - yellow - 500 / 30 rounded - lg p - 3>;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+          <div className='bg - yellow - 500 / 10 border border - yellow - 500 / 30 rounded - lg p - 3'>;
+            <p className='text - yellow - 400 text - sm'>;💡 Creating an account allows you to track your order and checkout;
+            <p className='text - yellow - 400 text - sm'>;
             <p className=text - yellow - 400 text - sm'>;💡 Creating an account allows you to track your order and checkout;
             <p className='text - yellow - 400 text - sm>;
               💡 Creating an account allows you to track your order and checkout;
               faster next time.;
             </p>;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
           </div>;
         <form onSubmit={handleSubmit} className="space-y-4>
           <div className="space-y-2">
@@ -414,7 +427,7 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
 
         <form onSubmit={handleSubmit} className=space-y-4">
 
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+              className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue
             >
           <div className=space-y-2">
@@ -485,8 +498,6 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
                 </>
               )}
 
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 
           <DialogFooter className=space - x-2'>;
           </div>;<form onSubmit={handleSubmit} className=space-y-4">;
@@ -523,7 +534,6 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
               {is_submitting ? (Processing...') : (<>;
                   <CreditCard className='h - 4 w - 4 mr - 2 />;
                   Continue to Payment;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
                 </>)}
 
               disabled={isSubmitting || !email || !address}
@@ -537,15 +547,14 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
                 </>;
               )}
 
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
+};
+};
 }
 }
             </Button>;
           </DialogFooter>;
         </form>;
       </DialogContent>;
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 
 }
 
@@ -564,7 +573,6 @@ export default function GuestCheckoutModal(): any ({open,onOpenChange,onSubmit}:
       </DialogContent>
     </Dialog>
   );
-<<<<<<< HEAD:src_backup/components/cart/GuestCheckoutModal.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
                 </>)}</Button>;
           </DialogFooter>;

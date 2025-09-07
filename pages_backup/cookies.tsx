@@ -15,7 +15,6 @@ export default function CookiesPage() {
         </div>
       </div>
     </MainLayout>
-<<<<<<< HEAD:pages_backup/cookies.tsx
 
 import React, { useState } from react';
 import MainLayout from '../src / components / layout / MainLayout;

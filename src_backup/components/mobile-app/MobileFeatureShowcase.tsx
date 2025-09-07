@@ -35,7 +35,6 @@ import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react
 import { CheckCircle, Smartphone, Users, Star, Mail  } from 'lucide-react;
 export const MobileFeatureShowcase: React.FC;
 }
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
     {
@@ -63,7 +62,6 @@ export const MobileFeatureShowcase: React.FC = () => {
 :src/components/mobile-app/MobileFeatureShowcase.tsx
     }
 
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
     },
 
 
@@ -109,7 +107,6 @@ export const MobileFeatureShowcase: React.FC = () => {const features = [;
       icon: <Users className=h - 8 w - 8 text - zion - cyan" />,title: "Hire from Anywhere,description: Browse and hire top AI talent on the go with a streamlined mobile interface.";
     }{icon: <Star className="h - 8 w - 8 text - zion - purple />,title: AI - Match Instantly",description: "Get matched with the perfect talent or jobs using our advanced AI algorithm.;
     }
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
 
 
     {
@@ -131,14 +128,12 @@ export const MobileFeatureShowcase: React.FC = () => {const features = [;
       title: Instant Messaging",
       description: "Chat with candidates or clients and receive notifications in real - time.;
     }
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
     {
       icon: <Smartphone className=h - 8 w - 8 text - zion-cyan" />,
       title: "Biometric Security,
       description: Login quickly and securely with Face ID or Touch ID on supported devices.";
     }
   ];
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
     }
 
   ],
@@ -281,9 +276,7 @@ export const MobileFeatureShowcase: React.FC = () => {
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto>;
             The Zion mobile app brings the power of our AI marketplace to your pocket with these key features;
           </p>;
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
         </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
 
         <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">;
           {features.map((feature, index) => (;
@@ -300,9 +293,7 @@ export const MobileFeatureShowcase: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-2>{feature.title}</h3>;
               <p className=text-zion-slate-light">{feature.description}</p>;
             </div>;
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
           ))}
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
 
 }
 
@@ -312,9 +303,8 @@ export const MobileFeatureShowcase: React.FC = () => {
       </div>
     </section>
   );
-}
-'
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileFeatureShowcase.tsx
+};
+'"
 origin/cursor/automate-test-improve-and-merge-code-2533
           ))}</div>;
       </div>;

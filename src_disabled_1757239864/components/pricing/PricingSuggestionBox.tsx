@@ -1,17 +1,16 @@
 
-
-import React from "react;
-import { Button } from @/components/ui/button";
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip;
-import { Card, CardContent } from @/components/ui/card";
-import { Badge } from "@/components/ui/badge;
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Loader2, Info, ThumbsUp } from 'lucide-react'
-import { PricingSuggestion } from @/services/pricingSuggestionService";
+import { PricingSuggestion } from "@/services/pricingSuggestionService";
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
   isLoading: boolean,
   onApplySuggestion: () => void,
-  rateType: "hourly | fixed"
+  rateType: "hourly" | "fixed"
 }
 
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
@@ -44,12 +43,11 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     Low: bg-red-100 text-red-800"}[suggestion.confidence],
 
   return (
-    <Card className="border-2 border-dashed border-muted-foreground/20>
-      <CardContent className=p-5 space-y-4">
-        <div className="flex items-center justify-between>
-          <h4 className=font-semibold">AI Suggested Price</h4>
-          <Badge variant="outline className={confidenceColor}>
-
+    <Card className="border-2 border-dashed border-muted-foreground/20">
+      <CardContent className="p-5 space-y-4">
+        <div className="flex items-center justify-between">
+          <h4 className="font-semibold">AI Suggested Price</h4>
+          <Badge variant="outline" className={confidenceColor}>
             {suggestion.confidence} confidence
           </Badge>
         </div>
@@ -68,8 +66,7 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           <p>{suggestion.explanation}</p>
         </div>
 
-
-        <div className=flex items-center justify-between">
+        <div className="flex items-center justify-between">
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -94,5 +91,4 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
       </CardContent>
     </Card>
   )
-}
-
+};
