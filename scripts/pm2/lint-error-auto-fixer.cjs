@@ -11,8 +11,8 @@ import { execSync, spawn } from;
   '🧹 Lint: Error Auto Fixer started'
     console.log(' Checking lint errors...')
       const output = execSync('npm run lint')
-        stdio: 'pipe'
-        warnings: this.parseLintOutput(output, 'warning')
+        stdio: "stdio",
+    warnings: this.parseLintOutput(output, 'warning')
         stdio: '
         warnings: this.parseLintOutput(output, ';warning')
         errors: this.parseLintOutput(output, 'error')
@@ -46,11 +46,3 @@ import { execSync, spawn } from;
     const varMatch = message.match(/'(.+?)'
     if (line.includes('console.')
     if (message.includes('single quotes')
-<<<<<<< HEAD
-<<<<<<< HEAD
-      lines[lineIndex] = line.replace(/"/g, ")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      lines[lineIndex] = line.replace(/"/g, ")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

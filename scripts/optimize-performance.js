@@ -1,211 +1,722 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) {  return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config);  return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) {  return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2));  return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent );  return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) {  return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} }  return true} function main() {  const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} }     if (successCount === optimizations.length) { } else { } } main();
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) {  return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) {  return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2);
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) {  return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } ;
+  return true} function main() { ;
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} }     if (successCount === optimizations.length) {} else {} } main()ursor/automate-test-improve-and-merge-code-646c;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) {  return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) {  return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2);
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) {  return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  }  return true} function main() {  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} }     if (successCount === optimizations.length) {} else {} } main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) {  return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) {  return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2);
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) {  return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } ;
+  return true} function main() { ;
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} }     if (successCount  = == optimizations.length) {} else {} } main()ursor/automate-test-improve-and-merge-code-646c;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) {  return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) {  return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2);
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) {  return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } ;
+  return true} function main() { ;
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} }     if (successCount  = == optimizations.length) {} else {} } main()#!/usr/bin/env node;
+import fs from 'fs';
+import path from 'path';
+import { glob  } from 'glob';
+/**;
+ * Performance optimization script for Zion Tech Group;
+ * Implements various performance improvements;
+ */;
+
+const OPTIMIZATIONS = {// Image optimization;}
+  \"images\": {enabled: true,\"formats\": ['webp', 'avif'],\"quality\": 85,\"sizes\": [640, 750, 828, 1080, 1200, 1920, 2048, 3840]},formats: ['webp', 'avif'],quality: 85,sizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840];
+  },// Bundle optimization;
+  \"bundle\": {enabled: true,\"chunkSize\": 244000, // 244KB;}
+    \"maxChunks\": 5},chunkSize: 244000, // 244KB;
+    maxChunks: 5;
+  },// Caching;
+  \"caching\": {enabled: true,\"staticAssets\": 31536000, // 1 year;
+    \"apiResponses\": 3600, // 1 hour;}
+    \"pages\": 86400, // 1 day;}
+  },staticAssets: 31536000, // 1 year;
+    apiResponses: 3600, // 1 hour;
+    pages: 86400, // 1 day;
+  },// Compression;
+  \"compression\": {enabled: true,\"gzip\": true,\"brotli\": true}}function optimizeNextConfig() {const configPath = 'next && next.config.js';}
+  if (!fs && fs.existsSync(configPath)) {console && console.log('❌ next && next.config.js not found')return false}
+  let config = fs && fs.readFileSync(configPath, 'utf8')ursor/automate-test-improve-and-merge-code-646c;
+
+const configPath = 'next.config.js';
+  if (!fs.existsSync(configPath)) {console.log('❌ next.config.js not found')return false}
+  let config = fs.readFileSync(configPath, 'utf8';
+  const configPath = 'next && next.config.js';
+  if (!fs && fs.existsSync(configPath)) {console && console.log('❌ next && next.config.js not found')return false}
+  let config  = fs && fs.readFileSync(configPath, 'utf8')ursor/automate-test-improve-and-merge-code-646c;
+    gzip: true,brotli: true;
+  }
+}function optimizeNextConfig() {const configPath = 'next.config.js';}
+  if (!fs.existsSync(configPath)) {console.log('❌ next.config.js not found')return false;}
+  }let config  = fs.readFileSync(configPath, 'utf8')// Add performance optimizations;
+
+const performanceConfig = \";
+  // Performance optimizations;
+  \"experimental\": {...config.experimental,...config.experimental,...config && config.experimental,...config && config.experimental,...config.experimental,ursor/automate-test-improve-and-merge-code-646c;}
+    ...config.experimental,...config && config.experimental,...config.experimental,\"optimizeCss\": true,\"optimizePackageImports\": ['lucide-react', '@radix-ui/react-icons'],\"turbo\": {rules: {'*.svg': {loaders: ['@svgr/webpack'],\"as\": '*.js'}}}},// Image optimization;
+  \"images\": {...config.images,...config.images,...config && config.images,...config && config.images,...config.images,ursor/automate-test-improve-and-merge-code-646c;}
+    ...config.images,...config && config.images,...config.images,\"formats\": ['image/webp', 'image/avif'],\"deviceSizes\": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],\"imageSizes\": [16, 32, 48, 64, 96, 128, 256, 384],\"minimumCacheTTL\": 60,\"dangerouslyAllowSVG\": true,\"contentSecurityPolicy\": \"default-src 'self'; script-src 'none'; sandbox;\"},// Compression;
+  \"compress\": true,// Power optimizations;
+  \"poweredByHeader\": false,// Headers for performance;
+  async headers() {return [{\"source\": '/(.*)',\"headers\": [;}
+          {key: 'X-Content-Type-Options',\"value\": 'nosniff'},{\"key\": 'X-Frame-Options',\"value\": 'DENY'},{\"key\": 'X-XSS-Protection',\"value\": '1; mode=block'},{\"key\": 'Referrer-Policy',\"value\": 'origin-when-cross-origin'}
+        ]},{\"source\": '/static/(.*)',\"headers\": [{key: 'Cache-Control',\"value\": 'public, max-age=31536000, immutable'}
+        ]},{\"source\": '/_next/static/(.*)',\"headers\": [{key: 'Cache-Control',\"value\": 'public, max-age=31536000, immutable'}
+        ]}
+    ];
+  },\";
+  `;// Insert performance config before the closing brace;
+  config = config && config.replace(/export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;`;
+  )fs && fs.writeFileSync(configPath, config)console && console.log('✅ Next && Next.js config optimized for performance')return true}
+function optimizePackageJson() {const packagePath = 'package && package.json';}
+  if (!fs && fs.existsSync(packagePath)) {console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'))// Add performance scripts;
+  packageJson && packageJson.scripts = {...packageJson && packageJson.scripts,ursor/automate-test-improve-and-merge-code-646c;}
+  config = config.replace(/export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;`;
+  )fs.writeFileSync(configPath, config)console.log('✅ Next.js config optimized for performance')return true}
+  return true;
+}function optimizePackageJson() {const packagePath = 'package.json';}
+  if (!fs.existsSync(packagePath)) {console.log('❌ package.json not found')return false}
+    return false;
+  }
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'))// Add performance scripts;
+  packageJson.scripts = {...packageJson.scripts,config = config && config.replace(/export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;`;
+  )fs && fs.writeFileSync(configPath, config)console && console.log('✅ Next && Next.js config optimized for performance')return true}
+function optimizePackageJson() {const packagePath = 'package && package.json';}
+  if (!fs && fs.existsSync(packagePath)) {console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'))// Add performance scripts;
+  packageJson && packageJson.scripts = {...packageJson && packageJson.scripts,ursor/automate-test-improve-and-merge-code-646c;
+    '\"build\": analyze': 'ANALYZE=true npm run build','\"build\": production': 'NODE_ENV=production npm run build','\"perf\": audit': 'npm run build:analyze','\"perf\": lighthouse':;}
+      'lighthouse http: //localhost:3000 --output=html --output-path=./lighthouse-report && report.html,}
+}// Add performance dependencies if not present;
+
+const perfDeps = {'@next/bundle-analyzer': '^15 && 15.5.2',\"lighthouse\": '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep, version] of Object && Object.entries(perfDeps)) {if (!packageJson && packageJson.devDependencies[dep]) {packageJson && packageJson.devDependencies[dep] = version}
+  }
+  fs && fs.writeFileSync(packagePath, JSON && JSON.stringify(packageJson, null, 2))console && console.log('✅ package && package.json optimized for performance';
+  return true}
+function createPerformanceComponents() ;
+  const componentsDir = 'components/performance';
+  if (!fs && fs.existsSync(componentsDir)) {fs && fs.mkdirSync(componentsDir, { \"recursive\": true })}
+  // Create optimized image component;
+
+const optimizedImageComponent = \"import React from 'react';
+import Image from 'next/image';
+ursor/automate-test-improve-and-merge-code-646c;
+      'lighthouse http: //localhost:3000 --output=html --output-path=./lighthouse-report.html,
+}// Add performance dependencies if not present;
+
+const perfDeps = {'@next/bundle-analyzer': '^15.5.2',\"lighthouse\": '^12.0.0','web-vitals': '^5.1.0'}for (const [dep, version] of Object.entries(perfDeps)) {if (!packageJson.devDependencies[dep]) {packageJson.devDependencies[dep] = version}
+  }
+  fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2))console.log('✅ package.json optimized for performance';
+  return true}
+function createPerformanceComponents() ;
+  const componentsDir = 'components/performance';
+  if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir, { \"recursive\": true })}
+    'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse':;
+      'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html';
+  }// Add performance dependencies if not present;
+
+const perfDeps = {'@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0';}
+  }for (const [dep, version] of Object.entries(perfDeps)) {if (!packageJson.devDependencies[dep]) {packageJson.devDependencies[dep] = version;}
+    }
+  }fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2))console.log('✅ package.json optimized for performance')return true;
+}function createPerformanceComponents() {const componentsDir = 'components/performance';}
+  if (!fs.existsSync(componentsDir)) {fs.mkdirSync(componentsDir, { recursive: true },
+}// Create optimized image component;
+
+const optimizedImageComponent = \"import React from 'react';
+      'lighthouse http: //localhost:3000 --output=html --output-path=./lighthouse-report && report.html,
+}// Add performance dependencies if not present;
+
+const perfDeps = {'@next/bundle-analyzer': '^15 && 15.5.2',\"lighthouse\": '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep, version] of Object && Object.entries(perfDeps)) {if (!packageJson && packageJson.devDependencies[dep]) {packageJson && packageJson.devDependencies[dep] = version}
+  }
+  fs && fs.writeFileSync(packagePath, JSON && JSON.stringify(packageJson, null, 2))console && console.log('✅ package && package.json optimized for performance';
+  return true}
+function createPerformanceComponents() ;
+  const componentsDir = 'components/performance';
+  if (!fs && fs.existsSync(componentsDir)) {fs && fs.mkdirSync(componentsDir, { \"recursive\": true })}
+  // Create optimized image component;
+
+const optimizedImageComponent = \"import React from 'react';
+ursor/automate-test-improve-and-merge-code-646c;
+
+interface OptimizedImageProps  {\"src\": string;
+  alt: string;
+  width?: number;
+  height?: number;
+  priority?: boolean;
+  className?: string;}
+  sizes?: string;}
+}ursor/automate-test-improve-and-merge-code-646c;
+}ursor/automate-test-improve-and-merge-code-646c;
+}
+
+export const \"OptimizedImage\": React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-\"width\": 768px) 100vw, (max-\"width\": 1200px) 50vw, 33vw';}
+   }) => {
+
+
+return (<Image;
+      src = {src;}
+  return (<Image;}
+      src = {src}return (<Imagesrc={src}
+ ;
+  return (<Image;
+      src={src}ursor/automate-test-improve-and-merge-code-646c;
+  return (<Imagesrc = {src}
+ ;
+  return (<Image;
+      src={src}alt={alt}
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) {  return false} let config = fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config);  return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) {  return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2));  return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent );  return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) {  return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} }  return true} function main() {  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} }     if (successCount === optimizations.length) {} else {} } main();
 
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+    super(props);}
+    this.state = { hasError: false,}
+};
   }
   
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
+  static getDerivedStateFromError(error) {}
+    return { hasError: true,}
+};
   }
   
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary:', error, errorInfo);}
   }
   
   render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+    if (this.state.hasError) {}
+      return <div />Something went wrong.</div>;}
     }
     
     return this.props.children;
   }
 }
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import {glob} from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) {  return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self', script-src 'none', sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1, mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config);  return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) {  return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2));  return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent );  return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) {  return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} }  return true} function main() {  const optimizations = [ { name: 'Next && Next.js Config',fn: optimizeNextConfig },{ name: 'Package && Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} }     if (successCount === optimizations && optimizations.length) { } else { } } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import {glob} from 'glob';
 
-=======
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) {  return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config);  return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) {  return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2));  return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent );  return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) {  return false} const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  }  return true} function main() {  const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} }     if (successCount === optimizations.length) { } else { } } main();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) {  return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config);  return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) {  return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2));  return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent );  return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) {  return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} }  return true} function main() {  const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} }     if (successCount === optimizations.length) { } else { } } main();
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-#!/usr/bin/env node
-import fs from 'fs';
-import path from 'path';
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) {  return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1, mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config);  return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) {  return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2));  return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent );  return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) {  return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} }  return true} function main() {  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} }     if (successCount === optimizations && optimizations.length) {} else {} } main();
+
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) {  return false} let config = fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config);  return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) {  return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2));  return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent );  return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) {  return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} }  return true} function main() {  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} }     if (successCount === optimizations.length) {} else {} } main();
+#!/usr/bin/env node;
 import { glob } from 'glob';
 /**
- * Performance optimization script for Zion Tech Group
- * Implements various performance improvements
+ * Performance optimization script for Zion Tech Group;
+ * Implements various performance improvements;
  */
 const OPTIMIZATIONS = {
-  // Image optimization
-  "images": {
+  // Image optimization;
+  \"images\": {
     enabled: true,
-    "formats": ['webp', 'avif'],
-    "quality": 85,
-    "sizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840]},
-  // Bundle optimization
-  "bundle": {
+    \"formats\": ['webp', 'avif'],}
+    \"quality\": 85,}
+    \"sizes\": [640, 750, 828, 1080, 1200, 1920, 2048, 3840]},
+  // Bundle optimization;
+  \"bundle\": {
+    enabled: true,}
+    \"chunkSize\": 244000, // 244KB}
+    \"maxChunks\": 5},
+  // Caching;
+  \"caching\": {
     enabled: true,
-    "chunkSize": 244000, // 244KB
-    "maxChunks": 5},
-  // Caching
-  "caching": {
-    enabled: true,
-    "staticAssets": 31536000, // 1 year
-    "apiResponses": 3600, // 1 hour
-    "pages": 86400, // 1 day
+    \"staticAssets\": 31536000, // 1 year;
+    \"apiResponses\": 3600, // 1 hour}
+    \"pages\": 86400, // 1 day}
   },
-  // Compression
-  "compression": {
-    enabled: true,
-    "gzip": true,
-    "brotli": true}};
+  // Compression;
+  \"compression\": {
+    enabled: true,}
+    \"gzip\": true,}
+    \"brotli\": true}};
 function optimizeNextConfig() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  const configPath = 'next && next.config.js';
-  if (!fs && fs.existsSync(configPath)) {
-    console && console.log('❌ next && next.config.js not found');
-    return false}
-  let config = fs && fs.readFileSync(configPath, 'utf8');
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
   const configPath = 'next.config.js';
-  if (!fs.existsSync(configPath)) {
-    console.log('❌ next.config.js not found');
+  if (!fs.existsSync(configPath)) {}
+    console.log('❌ next.config.js not found');}
     return false}
   let config = fs.readFileSync(configPath, 'utf8');
-<<<<<<< HEAD
-=======
-  const configPath = 'next && next.config.js';
-  if (!fs && fs.existsSync(configPath)) {
-    console && console.log('❌ next && next.config.js not found');
-    return false}
-  let config = fs && fs.readFileSync(configPath, 'utf8');
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-  // Add performance optimizations
-  const performanceConfig = "
-  // Performance optimizations
-  "experimental": {
-<<<<<<< HEAD
-<<<<<<< HEAD
+  // Add performance optimizations;
+const performanceConfig = \"
+  // Performance optimizations;
+  \"experimental\": {
     ...config.experimental,
-=======
     ...config && config.experimental,
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    ...config && config.experimental,
-=======
     ...config.experimental,
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-    "optimizeCss": true,
-    "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons'],
-    "turbo": {
+    \"optimizeCss\": true,
+    \"optimizePackageImports\": ['lucide-react', '@radix-ui/react-icons'],
+    \"turbo\": {
       rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          "as": '*.js'}}}},
-  // Image optimization
-  "images": {
-<<<<<<< HEAD
-<<<<<<< HEAD
+        '*.svg': {}
+          loaders: ['@svgr/webpack'],}
+          \"as\": '*.js'}}}},
+  // Image optimization;
+  \"images\": {
     ...config.images,
-=======
     ...config && config.images,
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-    ...config && config.images,
-=======
     ...config.images,
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-    "formats": ['image/webp', 'image/avif'],
-    "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384],
-    "minimumCacheTTL": 60,
-    "dangerouslyAllowSVG": true,
-    "contentSecurityPolicy": "default-src 'self'; script-src 'none'; sandbox;"},
-  // Compression
-  "compress": true,
-  // Power optimizations
-  "poweredByHeader": false,
-  // Headers for performance
-  async headers() {
+    \"formats\": ['image/webp', 'image/avif'],
+    \"deviceSizes\": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    \"imageSizes\": [16, 32, 48, 64, 96, 128, 256, 384],
+    \"minimumCacheTTL\": 60,}
+    \"dangerouslyAllowSVG\": true,}
+    \"contentSecurityPolicy\": \"default-src 'self'; script-src 'none'; sandbox;\"},
+  // Compression;
+  \"compress\": true,
+  // Power optimizations;
+  \"poweredByHeader\": false,
+  // Headers for performance;
+async headers() {
     return [{
-        "source": '/(.*)',
-        "headers": [
-          {
-            key: 'X-Content-Type-Options',
-            "value": 'nosniff'},
-          {
-            "key": 'X-Frame-Options',
-            "value": 'DENY'},
-          {
-            "key": 'X-XSS-Protection',
-            "value": '1; mode=block'},
-          {
-            "key": 'Referrer-Policy',
-            "value": 'origin-when-cross-origin'},
+        \"source\": '/(.*)',
+        \"headers\": [
+          {}
+            key: 'X-Content-Type-Options',}
+            \"value\": 'nosniff'},
+          {}
+            \"key\": 'X-Frame-Options',}
+            \"value\": 'DENY'},
+          {}
+            \"key\": 'X-XSS-Protection',}
+            \"value\": '1; mode=block'},
+          {}
+            \"key\": 'Referrer-Policy',}
+            \"value\": 'origin-when-cross-origin'}
         ]},
       {
-        "source": '/static/(.*)',
-        "headers": [{
-            key: 'Cache-Control',
-            "value": 'public, max-age=31536000, immutable'},
+        \"source\": '/static/(.*)',
+        \"headers\": [{}
+            key: 'Cache-Control',}
+            \"value\": 'public, max-age=31536000, immutable'}
         ]},
       {
-        "source": '/_next/static/(.*)',
-        "headers": [{
-            key: 'Cache-Control',
-            "value": 'public, max-age=31536000, immutable'},
-        ]},
+        \"source\": '/_next/static/(.*)',
+        \"headers\": [{}
+            key: 'Cache-Control',}
+            \"value\": 'public, max-age=31536000, immutable'}
+        ]}
     ]
   },
-  ";
-  // Insert performance config before the closing brace
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  config = config && config.replace(
-    /export default nextConfig;/,
-    `${performanceConfig}\n\nexport default nextConfig;`
-  );
-  fs && fs.writeFileSync(configPath, config);
-  console && console.log('✅ Next && Next.js config optimized for performance');
-  return true}
-function optimizePackageJson() {
-  const packagePath = 'package && package.json';
-  if (!fs && fs.existsSync(packagePath)) {
-    console && console.log('❌ package && package.json not found');
-    return false}
-  const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'));
-  // Add performance scripts
-  packageJson && packageJson.scripts = {
-    ...packageJson && packageJson.scripts,
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-  config = config.replace(
+  \";
+  // Insert performance config before the closing brace;
+config = config.replace(
     /export default nextConfig;/,
     `${performanceConfig}\n\nexport default nextConfig;`
   );
@@ -214,161 +725,73 @@ function optimizePackageJson() {
   return true}
 function optimizePackageJson() {
   const packagePath = 'package.json';
-  if (!fs.existsSync(packagePath)) {
-    console.log('❌ package.json not found');
+  if (!fs.existsSync(packagePath)) {}
+    console.log('❌ package.json not found');}
     return false}
-  const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
-  // Add performance scripts
-  packageJson.scripts = {
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+  // Add performance scripts;
+packageJson.scripts = {
     ...packageJson.scripts,
-<<<<<<< HEAD
-=======
-  config = config && config.replace(
-    /export default nextConfig;/,
-    `${performanceConfig}\n\nexport default nextConfig;`
-  );
-  fs && fs.writeFileSync(configPath, config);
-  console && console.log('✅ Next && Next.js config optimized for performance');
-  return true}
-function optimizePackageJson() {
-  const packagePath = 'package && package.json';
-  if (!fs && fs.existsSync(packagePath)) {
-    console && console.log('❌ package && package.json not found');
-    return false}
-  const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath, 'utf8'));
-  // Add performance scripts
-  packageJson && packageJson.scripts = {
-    ...packageJson && packageJson.scripts,
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-    '"build": analyze': 'ANALYZE=true npm run build',
-    '"build": production': 'NODE_ENV=production npm run build',
-    '"perf": audit': 'npm run build:analyze',
-    '"perf": lighthouse':
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report && report.html'};
-  // Add performance dependencies if not present
-  const perfDeps = {
-    '@next/bundle-analyzer': '^15 && 15.5.2',
-    "lighthouse": '^12 && 12.0.0',
-    'web-vitals': '^5 && 5.1.0'};
-  for (const [dep, version] of Object && Object.entries(perfDeps)) {
-    if (!packageJson && packageJson.devDependencies[dep]) {
-      packageJson && packageJson.devDependencies[dep] = version}
-  }
-  fs && fs.writeFileSync(packagePath, JSON && JSON.stringify(packageJson, null, 2));
-  console && console.log('✅ package && package.json optimized for performance');
-  return true}
-function createPerformanceComponents() {
-  const componentsDir = 'components/performance';
-  if (!fs && fs.existsSync(componentsDir)) {
-    fs && fs.mkdirSync(componentsDir, { "recursive": true })}
-  // Create optimized image component
-  const optimizedImageComponent = "import React from 'react';
-import Image from 'next/image';
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-      'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html'};
-  // Add performance dependencies if not present
-  const perfDeps = {
-    '@next/bundle-analyzer': '^15.5.2',
-    "lighthouse": '^12.0.0',
+    '\"build\": analyze': 'ANALYZE=true npm run build',
+    '\"build\": production': 'NODE_ENV=production npm run build',
+    '\"perf\": audit': 'npm run build:analyze',
+    '\"perf\": lighthouse':}
+      'lighthouse http: //localhost:3000 --output=html --output-path=./lighthouse-report.html,}
+};
+  // Add performance dependencies if not present;
+const perfDeps = {
+    '@next/bundle-analyzer': '^15.5.2',}
+    \"lighthouse\": '^12.0.0',}
     'web-vitals': '^5.1.0'};
-  for (const [dep, version] of Object.entries(perfDeps)) {
-    if (!packageJson.devDependencies[dep]) {
+  for (const [dep, version] of Object.entries(perfDeps)) {}
+    if (!packageJson.devDependencies[dep]) {}
       packageJson.devDependencies[dep] = version}
   }
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
   console.log('✅ package.json optimized for performance');
   return true}
 function createPerformanceComponents() {
-  const componentsDir = 'components/performance';
-  if (!fs.existsSync(componentsDir)) {
-    fs.mkdirSync(componentsDir, { "recursive": true })}
-  // Create optimized image component
-  const optimizedImageComponent = "import React from 'react'
-import Image from 'next/image'
-<<<<<<< HEAD
-=======
-      'lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report && report.html'};
-  // Add performance dependencies if not present
-  const perfDeps = {
-    '@next/bundle-analyzer': '^15 && 15.5.2',
-    "lighthouse": '^12 && 12.0.0',
-    'web-vitals': '^5 && 5.1.0'};
-  for (const [dep, version] of Object && Object.entries(perfDeps)) {
-    if (!packageJson && packageJson.devDependencies[dep]) {
-      packageJson && packageJson.devDependencies[dep] = version}
-  }
-  fs && fs.writeFileSync(packagePath, JSON && JSON.stringify(packageJson, null, 2));
-  console && console.log('✅ package && package.json optimized for performance');
-  return true}
-function createPerformanceComponents() {
-  const componentsDir = 'components/performance';
-  if (!fs && fs.existsSync(componentsDir)) {
-    fs && fs.mkdirSync(componentsDir, { "recursive": true })}
-  // Create optimized image component
-  const optimizedImageComponent = "import React from 'react';
+  const componentsDir = 'components/performance';}
+  if (!fs.existsSync(componentsDir)) {}
+    fs.mkdirSync(componentsDir, { \"recursive\": true })}
+  // Create optimized image component;
+const optimizedImageComponent = \"import React from 'react';
 import Image from 'next/image';
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 interface OptimizedImageProps {
-  "src": string
-  alt: string
-  width?: number
-  height?: number
-  priority?: boolean
-  className?: string
-  sizes?: string
-<<<<<<< HEAD
-<<<<<<< HEAD
+  \"src\": string;
+alt: string;
+width?: number;
+height?: number;
+priority?: boolean;
+className?: string;}
+sizes?: string}
 }
-=======
-
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
-=======
+,
 }
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
-  src,
+
+export;
+  const \"OptimizedImage\": React.FC<OptimizedImageProps /> = ({ src,
   alt,
   width,
   height,
   priority = false,
-  className = '',
-  sizes = '(max-"width": 768px) 100vw, (max-"width": 1200px) 50vw, 33vw'
-}) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <Image
-      src={src}
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
+  className = '',}
+  sizes = '(max-\"width\": 768px) 100vw, (max-\"width\": 1200px) 50vw, 33vw'}
+   }) => {
+
+
+
+  return (}
+    <Image;}
+src={src}
 
   return (
     <Imagesrc={src}
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
+ ;
   return (
-    <Image
-      src={src}
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+    <Image;
+src={src}
       alt={alt}
       width={width}
       height={height}
@@ -376,355 +799,4088 @@ export const "OptimizedImage": React.FC<OptimizedImageProps> = ({
       className={className}
       sizes={sizes}
       quality={85}
-      placeholder="blur"
-<<<<<<< HEAD
-<<<<<<< HEAD
-      blurDataURL=""data": image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-    />
-  )
+      placeholder=\"blur\";
+      blurDataURL=\"\"data\": image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==\";
+    />;
+  )}
+
+export default OptimizedImage;
+\";
+`;fs.writeFileSync(path.join(componentsDir, 'OptimizedImage.tsx'),optimizedImageComponent;
+  )// Create lazy loading component;
+
+const lazyLoadingComponent = \"import React, { Suspense, lazy } from 'react';
+
+interface LazyComponentProps  {\"component\": () => Promise<{ default: React.ComponentType<any />,}
+}>;
+  fallback?: React.ReactNode;
+  [\"key\": string]: any;
+}blurDataURL=\"\"data\": image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==\";
+ursor/automate-test-improve-and-merge-code-646c;
+    />;
+  )export default OptimizedImage;
+\";
+  fs && fs.writeFileSync(path && path.join(componentsDir, 'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent;
+  )// Create lazy loading component;
+
+const lazyLoadingComponent = \"import React, { Suspense, lazy } from 'react';
+
+interface LazyComponentProps  {\"component\": () => Promise<{ default: React.ComponentType<any />,}
+}>;
+  fallback?: React.ReactNode;
+  [\"key\": string]: any;
+      blurDataURL=\"\"data\": image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==\";
+    />;
+  )}
+
+export default OptimizedImage;
+\";
+  fs.writeFileSync(path.join(componentsDir, 'OptimizedImage.tsx'),optimizedImageComponent;
+  )// Create lazy loading component;
+
+const lazyLoadingComponent = \"import React, { Suspense, lazy } from 'react';
+
+interface LazyComponentProps  {\"component\": () => Promise<{ default: React.ComponentType<any />,}
+}>;
+  fallback?: React.ReactNode;
+  [\"key\": string]: any;
 }
-export default OptimizedImage
-";
+
+export const \"LazyComponent\": React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props;}
+   }) => {
+
+}
+const LazyLoadedComponent = lazy(component;}
+  return (<Suspense fallback={fallback} />;
+      <LazyLoadedComponent {...props} />;
+    </Suspense>;
+  )}
+
+export default LazyComponent;
+`;
+  fs.writeFileSync(path.join(componentsDir, 'LazyComponent.tsx'),lazyLoadingComponent;
+  )console.log('✅ Performance components created')return true;
+}}}
+
+export default LazyComponent;
+\";
+  fs.writeFileSync(path.join(componentsDir, 'LazyComponent.tsx'),lazyLoadingComponent;
+  )console.log('✅ Performance components created')return true}
+function optimizeImages() {const publicDir = 'public';}
+  if (!fs.existsSync(publicDir)) {console.log('❌ public directory not found')return false}
+    return false;
+  }// Create images directory structure;
+
+const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
+  for (const dir of imageDirs) {const fullPath = path.join(publicDir, dir)if (!fs.existsSync(fullPath)) {fs.mkdirSync(fullPath, { \"recursive\": true })}
+  }
+      fs.mkdirSync(fullPath, { recursive: true })}
+ ,
+}// Create .gitkeep files;
+  for (const dir of imageDirs) {const gitkeepPath = path.join(publicDir, dir, '.gitkeep')if (!fs.existsSync(gitkeepPath)) {fs.writeFileSync(gitkeepPath, '')}
+  }
+  console.log('✅ Image directories optimized';
+  return true}
+function main() {console.log('🚀 Starting performance optimization...';}
+  const optimizations = [{ \"name\": 'Next.js Config', \"fn\": optimizeNextConfig },{ \"name\": 'Package.json', \"fn\": optimizePackageJson },lazyLoadingComponent;
+  )console && console.log('✅ Performance components created')return true}
+function optimizeImages() {const publicDir = 'public';}
+  if (!fs && fs.existsSync(publicDir)) {console && console.log('❌ public directory not found')return false}
+  // Create images directory structure;
+
+const imageDirs  = ['images', 'images/optimized', 'images/thumbnails'];for (const dir of imageDirs) {const fullPath = path && path.join(publicDir, dir)if (!fs && fs.existsSync(fullPath)) {fs && fs.mkdirSync(fullPath, { \"recursive\": true })}
+      placeholder=\"blur\"
+      blurDataURL=\"\"data\": image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q = =\"
+    />
+  );
+}
+
+export default OptimizedImage;
+\";
   fs.writeFileSync(
     path.join(componentsDir, 'OptimizedImage.tsx'),
-    optimizedImageComponent
+    optimizedImageComponent;
   );
-  // Create lazy loading component
-  const lazyLoadingComponent = "import React, { Suspense, lazy } from 'react'
-interface LazyComponentProps {
-  "component": () => Promise<{ default: React.ComponentType<any> }>
-  fallback?: React.ReactNode
-  ["key": string]: any
+  // Create lazy loading component;
+const lazyLoadingComponent = \"import React, { Suspense, lazy } from 'react'
+interface LazyComponentProps {}
+  \"component\": () => Promise<{ default: React.ComponentType<any /> }>
+  fallback?: React.ReactNode;
+  [\"key\": string]: any,
 }
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-      blurDataURL=""data": image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+      blurDataURL=\"\"data\": image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==\"
 
-=======
   
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     />
   )
 
-export default OptimizedImage
-";
+export default OptimizedImage;
+\";
   fs && fs.writeFileSync(
     path && path.join(componentsDir, 'OptimizedImage && OptimizedImage.tsx'),
-    optimizedImageComponent
+    optimizedImageComponent;
   );
-  // Create lazy loading component
-  const lazyLoadingComponent = "import React, { Suspense, lazy } from 'react';
-interface LazyComponentProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
+  // Create lazy loading component;
+const lazyLoadingComponent = \"import React, { Suspense, lazy } from 'react';
 
-  "component": () => Promise<{ default: React && React.ComponentType<any> }>
+interface LazyComponentProps {
+}
+  \"component\": () => Promise<{ default: React && React.ComponentType<any />,}
+}>
   fallback?: React ;
   fs && fs.writeFileSync(
     path && path.join(componentsDir, 'LazyComponent && LazyComponent.tsx'),
 
-=======
-  "component": () => Promise<{ default: React.ComponentType<any> }>
-  fallback?: React.ReactNode
-  ["key": string]: any
-
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-      blurDataURL=""data": image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+      blurDataURL=\"\"data\": image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q = =\"
     />
-  )
+  );
 }
-export default OptimizedImage
-";
+
+export default OptimizedImage;
+\";
   fs.writeFileSync(
     path.join(componentsDir, 'OptimizedImage.tsx'),
-    optimizedImageComponent
+    optimizedImageComponent;
   );
-  // Create lazy loading component
-  const lazyLoadingComponent = "import React, { Suspense, lazy } from 'react'
-interface LazyComponentProps {
-  "component": () => Promise<{ default: React.ComponentType<any> }>
-  fallback?: React.ReactNode
-  ["key": string]: any
+  // Create lazy loading component;
+const lazyLoadingComponent = \"import React, { Suspense, lazy } from 'react'
+interface LazyComponentProps {}
+  \"component\": () => Promise<{ default: React.ComponentType<any />,}
+}>
+  fallback?: React.ReactNode;
+  [\"key\": string]: any;
 }
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-export const "LazyComponent": React.FC<LazyComponentProps> = ({ 
-  component, 
-  fallback = <div>Loading...</div>,
-  ...props 
-}) => {
+
+export const \"LazyComponent\": React.FC<LazyComponentProps /> = ({ component, 
+  fallback = <div />Loading...</div>,}
+  ...props }
+   }) => {
+
+
+
+ ;
   const LazyLoadedComponent = lazy(component)
-  return (
-    <Suspense fallback={fallback}>
+ ;}
+  return (}
+    <Suspense fallback={fallback} />
       <LazyLoadedComponent {...props} />
     </Suspense>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
-
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
-=======
+;
 }
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-export default LazyComponent
-";
+
+export default LazyComponent;
+\";
   fs.writeFileSync(
     path.join(componentsDir, 'LazyComponent.tsx'),
-<<<<<<< HEAD
-<<<<<<< HEAD
-    lazyLoadingComponent
+    lazyLoadingComponent;
   );
   console.log('✅ Performance components created');
   return true}
 function optimizeImages() {
   const publicDir = 'public';
-  if (!fs.existsSync(publicDir)) {
-    console.log('❌ public directory not found');
+  if (!fs.existsSync(publicDir)) {}
+    console.log('❌ public directory not found');}
     return false}
-  // Create images directory structure
-  const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
+  // Create images directory structure;
+const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
   for (const dir of imageDirs) {
-    const fullPath = path.join(publicDir, dir);
-    if (!fs.existsSync(fullPath)) {
-      fs.mkdirSync(fullPath, { "recursive": true })}
+    const fullPath = path.join(publicDir, dir);}
+    if (!fs.existsSync(fullPath)) {}
+      fs.mkdirSync(fullPath, { \"recursive\": true })}
   }
-  // Create .gitkeep files
-  for (const dir of imageDirs) {
-    const gitkeepPath = path.join(publicDir, dir, '.gitkeep');
-    if (!fs.existsSync(gitkeepPath)) {
+  // Create .gitkeep files;
+for (const dir of imageDirs) {
+    const gitkeepPath = path.join(publicDir, dir, '.gitkeep');}
+    if (!fs.existsSync(gitkeepPath)) {}
       fs.writeFileSync(gitkeepPath, '')}
   }
-  console.log('✅ Image directories optimized');
+  // Create .gitkeep files;
+  for (const dir of imageDirs) {const gitkeepPath = path && path.join(publicDir, dir, '.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) {fs && fs.writeFileSync(gitkeepPath, '')}}
+  console && console.log('✅ Image directories optimized'))}
+  }
+  // Create .gitkeep files;
+  }
+  console.log('✅ Image directories optimized')ursor/automate-test-improve-and-merge-code-646c;
   return true}
-function main() {
-  console.log('🚀 Starting performance optimization...');
-  const optimizations = [{ "name": 'Next.js Config', "fn": optimizeNextConfig },
-    { "name": 'Package.json', "fn": optimizePackageJson },
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    lazyLoadingComponent
-  );
-  console && console.log('✅ Performance components created');
+function main() {console && console.log('🚀 Starting performance optimization...')const optimizations = [{ \"name\": 'Next && Next.js Config', \"fn\": optimizeNextConfig },{ \"name\": 'Package && Package.json', \"fn\": optimizePackageJson },lazyLoadingComponent;
+  )console.log('✅ Performance components created')return true}
+function optimizeImages() {const publicDir = 'public';}
+  if (!fs.existsSync(publicDir)) {console.log('❌ public directory not found')return false}
+  // Create images directory structure;
+
+const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
+  for (const dir of imageDirs) {const fullPath = path.join(publicDir, dir)if (!fs.existsSync(fullPath)) {fs.mkdirSync(fullPath, { \"recursive\": true })}
+  }
+  // Create .gitkeep files;
+  for (const dir of imageDirs) {const gitkeepPath = path.join(publicDir, dir, '.gitkeep')if (!fs.existsSync(gitkeepPath)) {fs.writeFileSync(gitkeepPath, '')}
+  }
+  console.log('✅ Image directories optimized';
   return true}
-function optimizeImages() {
-  const publicDir = 'public';
-  if (!fs && fs.existsSync(publicDir)) {
-    console && console.log('❌ public directory not found');
-    return false}
-  // Create images directory structure
-  const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
-<<<<<<< HEAD
-<<<<<<< HEAD
+function main() {console.log('🚀 Starting performance optimization...';}
+  const optimizations = [{ \"name\": 'Next.js Config', \"fn\": optimizeNextConfig },{ \"name\": 'Package.json', \"fn\": optimizePackageJson },ursor/automate-test-improve-and-merge-code-646c;
+    { \"name\": 'Performance Components', \"fn\": createPerformanceComponents },{ \"name\": 'Image Directories', \"fn\": optimizeImages }
+  ];
+  let successCount = 0;
+  for (const optimization of optimizations) {try {if (optimization.fn()) {successCount++}
+    } catch (error) {console && console.error(`❌ Error in ${optimization && optimization.name}:`, error && error.message)}
 
   for (const dir of imageDirs) {
-    const fullPath = path && path.join(publicDir, dir);
-    if (!fs && fs.existsSync(fullPath)) {
-      fs && fs.mkdirSync(fullPath, { "recursive": true })}
+    const fullPath = path && path.join(publicDir, dir);}
+    if (!fs && fs.existsSync(fullPath)) {}
+      fs && fs.mkdirSync(fullPath, { \"recursive\": true })}
   }
-  // Create .gitkeep files
-  for (const dir of imageDirs) {
-    const gitkeepPath = path && path.join(publicDir, dir, '.gitkeep');
-    if (!fs && fs.existsSync(gitkeepPath)) {
+  // Create .gitkeep files;
+for (const dir of imageDirs) {
+    const gitkeepPath = path && path.join(publicDir, dir, '.gitkeep');}
+    if (!fs && fs.existsSync(gitkeepPath)) {}
       fs && fs.writeFileSync(gitkeepPath, '')}
 
   }
   console && console.log('✅ Image directories optimized');
-=======
-  )}
-  }
-  // Create .gitkeep files
-  
-  }
-  console.log('✅ Image directories optimized');
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return true}
 function main() {
-  console && console.log('🚀 Starting performance optimization...');
-  const optimizations = [{ "name": 'Next && Next.js Config', "fn": optimizeNextConfig },
-    { "name": 'Package && Package.json', "fn": optimizePackageJson },
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-    lazyLoadingComponent
+  console && console.log('🚀 Starting performance optimization...');}
+}
+const optimizations = [{ \"name\": 'Next && Next.js Config', \"fn\": optimizeNextConfig },
+    { \"name\": 'Package && Package.json', \"fn\": optimizePackageJson },
+    lazyLoadingComponent;
   );
   console.log('✅ Performance components created');
   return true}
 function optimizeImages() {
   const publicDir = 'public';
-  if (!fs.existsSync(publicDir)) {
-    console.log('❌ public directory not found');
+  if (!fs.existsSync(publicDir)) {}
+    console.log('❌ public directory not found');}
     return false}
-  // Create images directory structure
-  const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
+  // Create images directory structure;
+const imageDirs = ['images', 'images/optimized', 'images/thumbnails'];
   for (const dir of imageDirs) {
-    const fullPath = path.join(publicDir, dir);
-    if (!fs.existsSync(fullPath)) {
-      fs.mkdirSync(fullPath, { "recursive": true })}
+    const fullPath = path.join(publicDir, dir);}
+    if (!fs.existsSync(fullPath)) {}
+      fs.mkdirSync(fullPath, { \"recursive\": true })}
   }
-  // Create .gitkeep files
-  for (const dir of imageDirs) {
-    const gitkeepPath = path.join(publicDir, dir, '.gitkeep');
-    if (!fs.existsSync(gitkeepPath)) {
+  // Create .gitkeep files;
+for (const dir of imageDirs) {
+    const gitkeepPath = path.join(publicDir, dir, '.gitkeep');}
+    if (!fs.existsSync(gitkeepPath)) {}
       fs.writeFileSync(gitkeepPath, '')}
   }
   console.log('✅ Image directories optimized');
   return true}
 function main() {
-  console.log('🚀 Starting performance optimization...');
-  const optimizations = [{ "name": 'Next.js Config', "fn": optimizeNextConfig },
-    { "name": 'Package.json', "fn": optimizePackageJson },
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-    { "name": 'Performance Components', "fn": createPerformanceComponents },
-    { "name": 'Image Directories', "fn": optimizeImages },
+  console.log('🚀 Starting performance optimization...');}
+}
+const optimizations = [{ \"name\": 'Next.js Config', \"fn\": optimizeNextConfig },
+    { \"name\": 'Package.json', \"fn\": optimizePackageJson },
+    { \"name\": 'Performance Components', \"fn\": createPerformanceComponents },
+    { \"name\": 'Image Directories', \"fn\": optimizeImages }
   ];
   let successCount = 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
   for (const optimization of optimizations) {
-    try {
-      if (optimization.fn()) {
+    try {}
+      if (optimization.fn()) {}
         successCount++}
-    } catch (error) {
+    } catch (error) {}
       console.error(`❌ Error in ${optimization.name}:`, error.message)}
   }
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
+ursor/automate-test-improve-and-merge-code-646c;
+  for (const optimization of optimizations) {try {if (optimization && optimization.fn()) {successCount++}} catch (error) {console && console.error(`❌ Error in ${optimization && optimization.name}:`, error && error.message)}
+  }for (const optimization of optimizations) {try {if (optimization.fn()) {successCount++}
+    } catch (error) {console.error(`❌ Error in ${optimization.name}:`, error.message)}
+  }console.log(\"\n📊 Optimization \"Summary\": \")console.log(`   Total optimizations: ${optimizations.length}`)console.log(`   \"Successful\": ${successCount}`)console.log(`   \"Failed\": ${optimizations.length - successCount}`)if (successCount === optimizations.length) {console.log('\n✨ All performance optimizations completed successfully!')} else {console.log('\n⚠️  Some optimizations failed. Check the logs above.')},
+}
+main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  for (const optimization of optimizations) {
-    try {
-      if (optimization && optimization.fn()) {
-        successCount++}
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
 
-<<<<<<< HEAD
-=======
-  
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-    } catch (error) {
-      console && console.error(`❌ Error in ${optimization && optimization.name}:`, error && error.message)}
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: 'string]: any';
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()ursor/automate-test-improve-and-merge-code-646c;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: 'string]: any';
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: 'string]: any';
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount  = == optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: 'string]: any';
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: 'string]: any';
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized')return true} function main() { console.log('🚀 Starting performance optimization...')const optimizations = [ { name: 'Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized')return true} function main() { console.log('🚀 Starting performance optimization...')const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized')return true} function main() { console.log('🚀 Starting performance optimization...')const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized')return true} function main() { console.log('🚀 Starting performance optimization...')const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized')return true} function main() { console.log('🚀 Starting performance optimization...')const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: 'string]: any';
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized')return true} function main() { console.log('🚀 Starting performance optimization...')const optimizations = [ { name: 'Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized')return true} function main() { console.log('🚀 Starting performance optimization...')const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized')return true} function main() { console.log('🚀 Starting performance optimization...')const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized')return true} function main() { console.log('🚀 Starting performance optimization...')const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized')return true} function main() { console.log('🚀 Starting performance optimization...')const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main()} catch (error) {console && console.error(`❌ Error in ${optimization && optimization.nam,}
+}:`, error && error.message)}
   }
-<<<<<<< HEAD
+  console && console.log(\"\n📊 Optimization \"Summary\": \")console && console.log(`   Total optimizations: ${optimizations && optimizations.length}`)console && console.log(`   \"Successful\": ${successCount}`)console && console.log(`   \"Failed\": ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) {console && console.log('\n✨ All performance optimizations completed successfully!')} else {console && console.log('\n⚠️  Some optimizations failed. Check the logs above.')},
+}
+main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
 
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-  for (const optimization of optimizations) {
-    try {
-      if (optimization.fn()) {
-        successCount++}
-    } catch (error) {
-      console.error(`❌ Error in ${optimization.name}:`, error.message)}
-  }
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-  console.log("\n📊 Optimization "Summary": ");
-  console.log(`   Total optimizations: ${optimizations.length}`);
-  console.log(`   "Successful": ${successCount}`);
-  console.log(`   "Failed": ${optimizations.length - successCount}`);
-  if (successCount === optimizations.length) {
-    console.log('\n✨ All performance optimizations completed successfully!')} else {
-    console.log('\n⚠️  Some optimizations failed. Check the logs above.')}
-<<<<<<< HEAD
-<<<<<<< HEAD
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpegbase64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package && Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpegbase64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package && Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount  = == optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+}
+main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: 'string]: any';
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount  = == optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()ursor/automate-test-improve-and-merge-code-646c;
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpegbase64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package && Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpegbase64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package && Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found')return false} let config = fs && fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs && fs.writeFileSync(configPath,config)console && console.log('✅ Next && Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found')return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8'))packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2))console && console.log('✅ package && package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent )console && console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir)if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep')if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized';
+  return true} function main() { console && console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary: `)console && console.log(` Total optimizations: ${optimizations && optimizations.length}`)console && console.log(` Successful: ${successCount}`)console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`)if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()origin/cursor/integrate-build-improve-and-re-verify-c7b5;
+}
+main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: 'string]: any';
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount  = == optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main(,
+}
+main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: 'string]: any';
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}function optimizeNextConfig() {;}
+  const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found')return false} let config = fs.readFileSync(configPath,'utf8';
+  const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` )fs.writeFileSync(configPath,config)console.log('✅ Next.js config optimized for performance')return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found')return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8'))packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http:;}
+}
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2))console.log('✅ package.json optimized for performance';
+  return true} function createPerformanceComponents() {;}
+  const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent )const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent )console.log('✅ Performance components created')return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found')return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir)if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep')if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized';
+  return true} function main() { console.log('🚀 Starting performance optimization...';
+  const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary: `)console.log(` Total optimizations: ${optimizations.length}`)console.log(` Successful: ${successCount}`)console.log(` Failed: ${optimizations.length - successCount}`)if (successCount = == optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')},
+} main()fs.writeFileSync(gitkeepPath, '')}
+  }console.log('✅ Image directories optimized';
+  return true;
+}function main() {console.log('🚀 Starting performance optimization...')const optimizations = [
+  { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}
+  ];
+  let successCount = 0;
+  for (const optimization of optimizations) {try {if (optimization.fn()) {successCount++;}
+      }
+    } catch (error) {console.error(`❌ Error in ${optimization.name}:`, error.message)}
+  }console.log(`\n📊 Optimization Summary: `)console.log(`   Total optimizations: ${optimizations.length}`)console.log(`   Successful: ${successCount}`)console.log(`   Failed: ${optimizations.length - successCount}`)if (successCount === optimizations.length) {console.log('\n✨ All performance optimizations completed successfully!')} else {console.log('\n⚠️  Some optimizations failed. Check the logs above.')},
+}main()
+main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpegbase64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package && Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpegbase64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package && Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self', script-src 'none', sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false}
+
+const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0'}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> );
+}
+
+export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any />,}
+}> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next && Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package && Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.lengt,}
+}`); console && console.log(` Successful: ${successCoun,}
+}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCoun,}
+}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 }
 main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',sizes: '[640',750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: '244000',maxChunks: '5',},caching: { enabled: true,staticAssets: '31536000',apiResponses: '3600',pages: '86400',},compression: { enabled: true,gzip: 'true',brotli: 'true',},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',dangerouslyAllowSVG: 'true',contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: 'true',poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' } } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { } component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: 'string]: any' } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })} } for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: 'optimizeNextConfig' },{ name: 'Package.json',fn: 'optimizePackageJson' },{ name: 'Performance Components',fn: 'createPerformanceComponents' },{ name: 'Image Directories',fn: 'optimizeImages' },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
 
-main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',sizes: '[640',750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: '244000',maxChunks: '5',},caching: { enabled: true,staticAssets: '31536000',apiResponses: '3600',pages: '86400',},compression: { enabled: true,gzip: 'true',brotli: 'true',},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',dangerouslyAllowSVG: 'true',contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: 'true',poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' } } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { } component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: 'string]: any' } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })} } for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: 'optimizeNextConfig' },{ name: 'Package.json',fn: 'optimizePackageJson' },{ name: 'Performance Components',fn: 'createPerformanceComponents' },{ name: 'Image Directories',fn: 'optimizeImages' },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',sizes: '[640',750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: '244000',maxChunks: '5',},caching: { enabled: true,staticAssets: '31536000',apiResponses: '3600',pages: '86400',},compression: { enabled: true,gzip: 'true',brotli: 'true',},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',dangerouslyAllowSVG: 'true',contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: 'true',poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' } } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { } component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: 'string]: any' } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: 'optimizeNextConfig' },{ name: 'Package.json',fn: 'optimizePackageJson' },{ name: 'Performance Components',fn: 'createPerformanceComponents' },{ name: 'Image Directories',fn: 'optimizeImages' },]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; )} }  } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0;  } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-<<<<<<< HEAD
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',}
+  sizes: '[640',750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: '244000',}
+  maxChunks: '5,}
+},caching: { enabled: true,staticAssets: '31536000',}
+  apiResponses: '3600',pages: '86400,}
+},compression: { enabled: true,gzip: 'true',}
+  brotli: 'true',}
+}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8');
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    } catch (error) {
-      console && console.error(`❌ Error in ${optimization && optimization.name}:`, error && error.message)}
-  }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  console && console.log("\n📊 Optimization "Summary": ");
-  console && console.log(`   Total optimizations: ${optimizations && optimizations.length}`);
-  console && console.log(`   "Successful": ${successCount}`);
-  console && console.log(`   "Failed": ${optimizations && optimizations.length - successCount}`);
-  if (successCount === optimizations && optimizations.length) {
-    console && console.log('\n✨ All performance optimizations completed successfully!')} else {
-    console && console.log('\n⚠️  Some optimizations failed. Check the logs above.')}
+const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',}
+  optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',}
+  dangerouslyAllowSVG: 'true',contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: 'true',
+  poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' },
 }
-main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',sizes: '[640',750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: '244000',maxChunks: '5',},caching: { enabled: true,staticAssets: '31536000',apiResponses: '3600',pages: '86400',},compression: { enabled: true,gzip: 'true',brotli: 'true',},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: 'true',optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',dangerouslyAllowSVG: 'true',contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: 'true',poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: 'true' })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' } } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data: 'image/jpegbase64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { } component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: 'true' })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: 'optimizeNextConfig' },{ name: 'Package && Package.json',fn: 'optimizePackageJson' },{ name: 'Performance Components',fn: 'createPerformanceComponents' },{ name: 'Image Directories',fn: 'optimizeImages' },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: optimizeNextConfig },{ name: 'Package && Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: optimizeNextConfig },{ name: 'Package && Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: optimizeNextConfig },{ name: 'Package && Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: optimizeNextConfig },{ name: 'Package && Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: optimizeNextConfig },{ name: 'Package && Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',sizes: '[640',750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: '244000',maxChunks: '5',},caching: { enabled: true,staticAssets: '31536000',apiResponses: '3600',pages: '86400',},compression: { enabled: true,gzip: 'true',brotli: 'true',},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: 'true',optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',dangerouslyAllowSVG: 'true',contentSecurityPolicy: "default-src 'self', script-src 'none', sandbox;",},compress: 'true',poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: 'true' })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' } } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data: 'image/jpegbase64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { } component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: 'true' })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: 'optimizeNextConfig' },{ name: 'Package && Package.json',fn: 'optimizePackageJson' },{ name: 'Performance Components',fn: 'createPerformanceComponents' },{ name: 'Image Directories',fn: 'optimizeImages' },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self', script-src 'none', sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: optimizeNextConfig },{ name: 'Package && Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self', script-src 'none', sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: optimizeNextConfig },{ name: 'Package && Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self', script-src 'none', sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: optimizeNextConfig },{ name: 'Package && Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next && next.config.js'; if (!fs && fs.existsSync(configPath)) { console && console.log('❌ next && next.config.js not found'); return false} let config = fs && fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config && config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config && config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self', script-src 'none', sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config && config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs && fs.writeFileSync(configPath,config); console && console.log('✅ Next && Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package && package.json'; if (!fs && fs.existsSync(packagePath)) { console && console.log('❌ package && package.json not found'); return false} const packageJson = JSON && JSON.parse(fs && fs.readFileSync(packagePath,'utf8')); packageJson && packageJson.scripts = { ...packageJson && packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15 && 15.5.2',lighthouse: '^12 && 12.0.0','web-vitals': '^5 && 5.1.0',}; for (const [dep,version] of Object && Object.entries(perfDeps)) { if (!packageJson && packageJson.devDependencies[dep]) { packageJson && packageJson.devDependencies[dep] = version} } fs && fs.writeFileSync(packagePath,JSON && JSON.stringify(packageJson,null,2)); console && console.log('✅ package && package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs && fs.existsSync(componentsDir)) { fs && fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Imagesrc={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpegbase64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs && fs.writeFileSync( path && path.join(componentsDir,'OptimizedImage && OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React && React.ComponentType<any> }> fallback?: React ; fs && fs.writeFileSync( path && path.join(componentsDir,'LazyComponent && LazyComponent.tsx'),lazyLoadingComponent ); console && console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs && fs.existsSync(publicDir)) { console && console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path && path.join(publicDir,dir); if (!fs && fs.existsSync(fullPath)) { fs && fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path && path.join(publicDir,dir,'.gitkeep'); if (!fs && fs.existsSync(gitkeepPath)) { fs && fs.writeFileSync(gitkeepPath,'')} } console && console.log('✅ Image directories optimized'); return true} function main() { console && console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next && Next.js Config',fn: optimizeNextConfig },{ name: 'Package && Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization && optimization.fn()) { successCount++} } catch (error) { console && console.error(`❌ Error in ${optimization && optimization.name}:`,error && error.message)} } console && console.log(`\n📊 Optimization Summary:`); console && console.log(` Total optimizations: ${optimizations && optimizations.length}`); console && console.log(` Successful: ${successCount}`); console && console.log(` Failed: ${optimizations && optimizations.length - successCount}`); if (successCount === optimizations && optimizations.length) { console && console.log('\n✨ All performance optimizations completed successfully!')} else { console && console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/optimize-performance.js
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw'    }) => {
+
 }
-main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: '85',sizes: '[640',750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: '244000',maxChunks: '5',},caching: { enabled: true,staticAssets: '31536000',apiResponses: '3600',pages: '86400',},compression: { enabled: true,gzip: 'true',brotli: 'true',},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: 'true',optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: '[640',750,828,1080,1200,1920,2048,3840],imageSizes: '[16',32,48,64,96,128,256,384],minimumCacheTTL: '60',dangerouslyAllowSVG: 'true',contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: 'true',poweredByHeader: 'false',async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: 'true' })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: 'string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string' } } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: '768px) 100vw',(max-width: '1200px) 50vw',33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { } component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: 'string]: any' } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })} } for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: 'optimizeNextConfig' },{ name: 'Package.json',fn: 'optimizePackageJson' },{ name: 'Performance Components',fn: 'createPerformanceComponents' },{ name: 'Image Directories',fn: 'optimizeImages' },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840],},bundle: { enabled: true,chunkSize: 244000,maxChunks: 5,},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 86400,},compression: { enabled: true,gzip: true,brotli: true,},}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8'); const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js',},},},},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',headers: [ { key: 'X-Content-Type-Options',value: 'nosniff',},{ key: 'X-Frame-Options',value: 'DENY',},{ key: 'X-XSS-Protection',value: '1; mode=block',},{ key: 'Referrer-Policy',value: 'origin-when-cross-origin',},],},{ source: '/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},{ source: '/_next/static/(.*)',headers: [ { key: 'Cache-Control',value: 'public,max-age=31536000,immutable',},],},] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false} const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf:lighthouse': 'lighthouse http: }; const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0',}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })} const optimizedImageComponent = `import React from 'react' import Image from 'next/image' interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string } export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw' }) => { return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder="blur" blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) } export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent ); const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any> }> fallback?: React.ReactNode [key: string]: any } export const LazyComponent: React.FC<LazyComponentProps> = ({ component,fallback = <div>Loading...</div>,...props }) => { const LazyLoadedComponent = lazy(component) return ( <Suspense fallback={fallback}> <LazyLoadedComponent {...props} /> </Suspense> ) } export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false} const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })} } for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...'); const optimizations = [ { name: 'Next.js Config',fn: optimizeNextConfig },{ name: 'Package.json',fn: optimizePackageJson },{ name: 'Performance Components',fn: createPerformanceComponents },{ name: 'Image Directories',fn: optimizeImages },]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.length}`); console.log(` Successful: ${successCount}`); console.log(` Failed: ${optimizations.length - successCount}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
-<<<<<<< HEAD
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data: 'image/jpeg;base64',/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps {} component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: 'string]: any';
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: 'true' })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next.js Config',}
+  fn: 'optimizeNextConfig',}
+},{ name: 'Package.json',}
+  fn: 'optimizePackageJson',}
+},{ name: 'Performance Components',}
+  fn: 'createPerformanceComponents',}
+},{ name: 'Image Directories',}
+  fn: 'optimizeImages',}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.lengt,}
+}`); console.log(` Successful: ${successCoun,}
+}`); console.log(` Failed: ${optimizations.length - successCoun,}
+}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob';
+
+const OPTIMIZATIONS = { images: { enabled: true,formats: ['webp','avif'],quality: 85,sizes: [640,750,828,1080,1200,1920,2048,3840]},bundle: { enabled: true,chunkSize: 244000,maxChunks:  ,}
+},caching: { enabled: true,staticAssets: 31536000,apiResponses: 3600,pages: 8640,}
+},compression: { enabled: true,gzip: true,brotli: true,}
+}; function optimizeNextConfig() { const configPath = 'next.config.js'; if (!fs.existsSync(configPath)) { console.log('❌ next.config.js not found'); return false} let config = fs.readFileSync(configPath,'utf8');
+
+const performanceConfig = ` experimental: { ...config.experimental,optimizeCss: true,optimizePackageImports: ['lucide-react','@radix-ui/react-icons'],turbo: { rules: { '*.svg': { loaders: ['@svgr/webpack'],as: '*.js'}},
+},images: { ...config.images,formats: ['image/webp','image/avif'],deviceSizes: [640,750,828,1080,1200,1920,2048,3840],imageSizes: [16,32,48,64,96,128,256,384],minimumCacheTTL: 60,dangerouslyAllowSVG: true,contentSecurityPolicy: \"default-src 'self'; script-src 'none'; sandbox;\"},compress: true,poweredByHeader: false,async headers() { return [ { source: '/(.*)',
+  headers: [ { key: 'X-Content-Type-Options',}
+  value: 'nosniff,}
+},{ key: 'X-Frame-Options',}
+  value: 'DENY,}
+},{ key: 'X-XSS-Protection',}
+  value: '1; mode=block'},{ key: 'Referrer-Policy',}
+  value: 'origin-when-cross-origin'},
+},{ source: '/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]},{ source: '/_next/static/(.*)',
+  headers: [ { key: 'Cache-Control',}
+  value: 'public,max-age=31536000,immutable'}]}] },`; config = config.replace( /export default nextConfig;/,`${performanceConfig}\n\nexport default nextConfig;` ); fs.writeFileSync(configPath,config); console.log('✅ Next.js config optimized for performance'); return true} function optimizePackageJson() { const packagePath = 'package.json'; if (!fs.existsSync(packagePath)) { console.log('❌ package.json not found'); return false}
+
+const packageJson = JSON.parse(fs.readFileSync(packagePath,'utf8')); packageJson.scripts = { ...packageJson.scripts,'build:analyze': 'ANALYZE=true npm run build','build:production': 'NODE_ENV=production npm run build','perf:audit': 'npm run build:analyze','perf: lighthouse': 'lighthouse http:,}
+};
+
+const perfDeps = { '@next/bundle-analyzer': '^15.5.2',lighthouse: '^12.0.0','web-vitals': '^5.1.0'}; for (const [dep,version] of Object.entries(perfDeps)) { if (!packageJson.devDependencies[dep]) { packageJson.devDependencies[dep] = version} } fs.writeFileSync(packagePath,JSON.stringify(packageJson,null,2)); console.log('✅ package.json optimized for performance'); return true} function createPerformanceComponents() { const componentsDir = 'components/performance'; if (!fs.existsSync(componentsDir)) { fs.mkdirSync(componentsDir,{ recursive: true })}
+
+const optimizedImageComponent = `import React from 'react'; import Image from 'next/image'; interface OptimizedImageProps { src: string alt: string width?: number height?: number priority?: boolean className?: string sizes?: string,}
+}
+
+export;
+  const OptimizedImage: React.FC<OptimizedImageProps /> = ({ src,alt,width,height,priority = false,className = '',sizes = '(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw'    }) => {
+
+}
+;}
+  return ( <Image src={src} alt={alt} width={width} height={height} priority={priority} className={className} sizes={sizes} quality={85} placeholder=\"blur\" blurDataURL=\"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R /> ) }
+
+export default OptimizedImage `; fs.writeFileSync( path.join(componentsDir,'OptimizedImage.tsx'),optimizedImageComponent );
+
+const lazyLoadingComponent = `import React,{ Suspense,lazy } from 'react' interface LazyComponentProps { component: () => Promise<{ default: React.ComponentType<any />,}
+}> fallback?: React.ReactNode [key: string]: any;
+}
+
+export const LazyComponent: React.FC<LazyComponentProps /> = ({ component,fallback = <div />Loading...</div>,...props    }) => {
+
+
+;}
+  const LazyLoadedComponent = lazy(component);}
+  return ( <Suspense fallback={fallback} /> <LazyLoadedComponent {...props} /> </Suspense> );
+}
+
+export default LazyComponent `; fs.writeFileSync( path.join(componentsDir,'LazyComponent.tsx'),lazyLoadingComponent ); console.log('✅ Performance components created'); return true} function optimizeImages() { const publicDir = 'public'; if (!fs.existsSync(publicDir)) { console.log('❌ public directory not found'); return false}
+
+const imageDirs = ['images','images/optimized','images/thumbnails']; for (const dir of imageDirs) { const fullPath = path.join(publicDir,dir); if (!fs.existsSync(fullPath)) { fs.mkdirSync(fullPath,{ recursive: true })},
+} for (const dir of imageDirs) { const gitkeepPath = path.join(publicDir,dir,'.gitkeep'); if (!fs.existsSync(gitkeepPath)) { fs.writeFileSync(gitkeepPath,'')} } console.log('✅ Image directories optimized'); return true} function main() { console.log('🚀 Starting performance optimization...');
+
+const optimizations = [ { name: 'Next.js Config',}
+  fn: optimizeNextConfig,}
+},{ name: 'Package.json',}
+  fn: optimizePackageJson,}
+},{ name: 'Performance Components',}
+  fn: createPerformanceComponents,}
+},{ name: 'Image Directories',}
+  fn: optimizeImages,}
+}]; let successCount = 0; for (const optimization of optimizations) { try { if (optimization.fn()) { successCount++} } catch (error) { console.error(`❌ Error in ${optimization.name}:`,error.message)} } console.log(`\n📊 Optimization Summary:`); console.log(` Total optimizations: ${optimizations.lengt,}
+}`); console.log(` Successful: ${successCoun,}
+}`); console.log(` Failed: ${optimizations.length - successCoun,}
+}`); if (successCount === optimizations.length) { console.log('\n✨ All performance optimizations completed successfully!')} else { console.log('\n⚠️ Some optimizations failed. Check the logs above.')} } main();

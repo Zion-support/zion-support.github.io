@@ -1,9 +1,0 @@
-
-  "gzip"
-    "enabled"
-    "level"
-    "threshold"
-  "brotli"
-    "enabled"
-    "level"
-    "threshold"

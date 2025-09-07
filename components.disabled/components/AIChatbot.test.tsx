@@ -1,3 +1,17 @@
->>>>>>> origin/main
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+import React from 'react';
+import { render, screen  } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AIChatbot from '../components/AIChatbot';
+describe('AIChatbot', () => {test('renders without crashing', () => {render(<AIChatbot />)expect(screen.getByTestId('aichatbot')).toBeInTheDocument()})test('displays correct content', () => {render(<AIChatbot />)// Add specific content tests here;}
+  })test('handles user interactions', () => {render(<AIChatbot />)// Add interaction tests here;}
+  })test('applies correct styling', () => {render(<AIChatbot />)// Add styling tests here;}
+  })})
+import React from 'react';
+import { render, screen  } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AIChatbot from '../components/AIChatbot';
+describe('AIChatbot', () => {test('renders without crashing', () => {render(<AIChatbot />)expect(screen.getByTestId('aichatbot')).toBeInTheDocument()})test('displays correct content', () => {render(<AIChatbot />)// Add specific content tests here;}
+  })test('handles user interactions', () => {render(<AIChatbot />)// Add interaction tests here;}
+  })test('applies correct styling', () => {render(<AIChatbot />)// Add styling tests here;}
+  })})
+

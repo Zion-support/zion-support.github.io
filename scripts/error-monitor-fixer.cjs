@@ -11,7 +11,6 @@ const { execSync } = require('child_process')
       const content = fs.readFileSync(filePath, 'utf8')
       const syntaxIssues = [{ "pattern": //, "message"}]
         { "pattern": //, "message"}
-        { "pattern": />>>>>>>/, "message"}
         { "pattern": /import\s+.*?from\s+['"][^'"]*?['"]\s*['"]/, "message"}
         { "pattern": /className=\{"[^"]*\$\{[^}]*\}[^"]*$/, "message"
         { "pattern": /console\.log\([^)]*$/, "message"}
@@ -26,11 +25,6 @@ const { execSync } = require('child_process')
       execSync('npm run lint', { "cwd": this.projectRoot, "stdio"})
       execSync('npm run type-"check": fast', { "cwd": this.projectRoot, "stdio"})
       execSync('npm run "build": fast', { "cwd": this.projectRoot, "stdio"})
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 cursor/fix-lint-push-and-merge-to-main-f3c1;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-cursor/fix-lint-push-and-merge-to-main-f3c1;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

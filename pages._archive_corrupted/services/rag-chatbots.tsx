@@ -1,34 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:corrupted_backup/rag-chatbots.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/services/rag-chatbots.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/rag-chatbots.tsx
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:pages._archive_corrupted/services/rag-chatbots.tsx
-=======
-<<<<<<< HEAD
-=======
 
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+;
+:corrupted_backup/rag-chatbots.tsx;
+:pages._archive_corrupted/services/rag-chatbots.tsx;
+:corrupted_backup/rag-chatbots.tsx;
+:pages._archive_corrupted/services/rag-chatbots.tsx;
+ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
 import React from 'react';
 import Link from 'next/link';
+import { MessageCircle, CheckCircle, ArrowRight, DollarSign, Clock  } from 'lucide-react';
+export default function RAGChatbots() {const benefits = ['Answer questions from your private knowledge bases','Reduce support tickets with instant, accurate responses','Citations and sources for every answer','Multi-language support and analytics',class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
+    }return this.props.children;
+  }
+}
+import { MessageCircle,, CheckCircle,, ArrowRight,, DollarSign,, Clock } from 'lucide-react';
+export default function RAGChatbots() {const benefits = ['Answer questions from your private knowledge bases';
+export default function RAGChatbots() {const benefits = ['Answer questions from your private knowledge bases';
+    'Reduce support tickets with instant, accurate responses','Citations and sources for every answer','Multi-language support and analytics'];}
+  return (<main className=\"min-h-screen bg-white\" />;}
 import { MessageCircle, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 export default function RAGChatbots() {
   const benefits = ['Answer questions from your private knowledge bases',
@@ -37,147 +26,109 @@ export default function RAGChatbots() {
     'Multi-language support and analytics',
 
 class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props) {}
+    super(props);}
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary:', error, errorInfo);}
   }
   
   render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+    if (this.state.hasError) {}
+      return <div />Something went wrong.</div>;}
     }
     
     return this.props.children;
   }
 }
-import React from 'react';
-import Link from 'next/link';
 import {MessageCircle,, CheckCircle,, ArrowRight,, DollarSign,, Clock} from 'lucide-react';
 export default function RAGChatbots() {;
-  const benefits = ['Answer questions from your private knowledge bases',;
+  const benefits = ['Answer questions from your private knowledge bases';
     'Reduce support tickets with instant, accurate responses',;
     'Citations and sources for every answer',;
     'Multi-language support and analytics',;
   ];
   return (
-    <main className="min-h-screen bg-white">;
-      <section className="bg-gradient-to-br from-purple-50 to-blue-100 py-16">;
-        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8">;
-          <div className="flex items-center gap-3 mb-6">;
-            <div className="p-3 rounded-lg bg-purple-600 text-white w-fit">;
-              <MessageCircle className="w-6 h-6" />;
+    <main className=\"min-h-screen bg-white\" />;
+      <section className=\"bg-gradient-to-br from-purple-50 to-blue-100 py-16\" />;
+        <div className=\"max-w-5xl mx-auto px-4 \"sm\": px-6 lg:px-8\" />;
+          <div className=\"flex items-center gap-3 mb-6\" />;
+            <div className=\"p-3 rounded-lg bg-purple-600 text-white w-fit\" />;
+              <MessageCircle className=\"w-6 h-6\" />;
             </div>;
-            <h1 className="text-3xl font-bold text-gray-900">RAG Knowledge Chatbots</h1>;
+            <h1 className=\"text-3xl font-bold text-gray-900\" />RAG Knowledge Chatbots</h1>;
           </div>;
-          <p className="text-gray-700 text-lg max-w-3xl">;
+          <p className=\"text-gray-700 text-lg max-w-3xl\" />;
             Deploy chatbots grounded in your documents, wikis, product manuals, and ticket history. We build secure ingestion pipelines, implement vector search, and deliver accurate, source-linked answers.;
           </p>;
         </div>;
       </section>;
-      <section className="py-12">;
-        <div className="max-w-5xl mx-auto px-4 "sm": px-6 lg:px-8 grid md:grid-cols-3 gap-6">;
-          <div className="bg-white rounded-lg border p-6">;
-            <h3 className="font-semibold text-gray-900 mb-2">Starter</h3>;
-            <div className="flex items-center justify-between mb-4 text-gray-700">;
-              <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>From $6,000</span></div>;
-              <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>3-4 weeks</span></div>;
-            </div>;
-            <ul className="space-y-2 mb-4">;
-              {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => (;
-                <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li>;
+      <section className=\"py-12\" />;
+        <div className=\"max-w-5xl mx-auto px-4 \"sm\": px-6 lg:px-8 grid md:grid-cols-3 gap-6\" />;
+          <div className=\"bg-white rounded-lg border p-6\" />;
+            <h3 className=\"font-semibold text-gray-900 mb-2\" />Starter</h3>;
+            <div className=\"flex items-center justify-between mb-4 text-gray-700\" />;
+              <div className=\"flex items-center gap-2\" /><DollarSign className=\"w-4 h-4\" /><span />From $6,000</span></div>;
+              <div className=\"flex items-center gap-2\" /><Clock className=\"w-4 h-4\" /><span />3-4 weeks</span></div>;
+            </div>;}
+            <ul className=\"space-y-2 mb-4\" />;}
+              {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => (<li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li>;
+              {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => (;}
+                <li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li>;
               ))}
             </ul>;
-            <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Get started <ArrowRight className="w-4 h-4 ml-2"/></Link>;
+            <Link href=\"/contact\" className=\"inline-flex items-center text-blue-600 font-semibold\" />Get started <ArrowRight className=\"w-4 h-4 ml-2\"/></Link>;
           </div>;
-          <div className="bg-white rounded-lg border p-6 ring-2 ring-purple-600/10">;
-            <h3 className="font-semibold text-gray-900 mb-2">Professional</h3>;
-            <div className="flex items-center justify-between mb-4 text-gray-700">;
-              <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>$15,000–$35,000</span></div>;
-              <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>5-7 weeks</span></div>;
+          <div className=\"bg-white rounded-lg border p-6 ring-2 ring-purple-600/10\" />;
+            <h3 className=\"font-semibold text-gray-900 mb-2\" />Professional</h3>;
+            <div className=\"flex items-center justify-between mb-4 text-gray-700\" />;
+              <div className=\"flex items-center gap-2\" /><DollarSign className=\"w-4 h-4\" /><span />$15,000–$35,000</span></div>;
+              <div className=\"flex items-center gap-2\" /><Clock className=\"w-4 h-4\" /><span />5-7 weeks</span></div>;
             </div>;
-            <ul className="space-y-2 mb-4">;
-              {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => (;
-                <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li>;
+            <ul className=\"space-y-2 mb-4\" />;
+              {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => (<li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li>;
+              {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => (;}
+                <li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li>;
               ))}
             </ul>;
-            <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Book a demo <ArrowRight className="w-4 h-4 ml-2"/></Link>;
+            <Link href=\"/contact\" className=\"inline-flex items-center text-blue-600 font-semibold\" />Book a demo <ArrowRight className=\"w-4 h-4 ml-2\"/></Link>;
           </div>;
-          <div className="bg-white rounded-lg border p-6">;
-            <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3>;
-            <div className="flex items-center justify-between mb-4 text-gray-700">;
-              <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>Custom</span></div>;
-              <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>8-12 weeks</span></div>;
+          <div className=\"bg-white rounded-lg border p-6\" />;
+            <h3 className=\"font-semibold text-gray-900 mb-2\" />Enterprise</h3>;
+            <div className=\"flex items-center justify-between mb-4 text-gray-700\" />;
+              <div className=\"flex items-center gap-2\" /><DollarSign className=\"w-4 h-4\" /><span />Custom</span></div>;
+              <div className=\"flex items-center gap-2\" /><Clock className=\"w-4 h-4\" /><span />8-12 weeks</span></div>;
             </div>;
-            <ul className="space-y-2 mb-4">;
-              {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => (;
-                <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li>;
+            <ul className=\"space-y-2 mb-4\" />;
+              {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => (<li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li>;
+              {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => (;}
+                <li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li>;
               ))}
             </ul>;
-            <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Talk to sales <ArrowRight className="w-4 h-4 ml-2"/></Link>;
+            <Link href=\"/contact\" className=\"inline-flex items-center text-blue-600 font-semibold\" />Talk to sales <ArrowRight className=\"w-4 h-4 ml-2\"/></Link>;
           </div>;
         </div>;
       </section>;
     </main>;
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD:corrupted_backup/rag-chatbots.tsx
+  )import React from 'react'; import Link from 'next/link'; import { MessageCircle,CheckCircle,ArrowRight,DollarSign,Clock } from 'lucide-react'; export default function RAGChatbots() { const benefits = [ 'Answer questions from your private knowledge bases','Reduce support tickets with instant,accurate responses','Citations and sources for every answer','Multi-language support and analytics']; return ( <main className=\"min-h-screen bg-white\" /> <section className=\"bg-gradient-to-br from-purple-50 to-blue-100 py-16\" /> <div className=\"max-w-5xl mx-auto px-4 sm:px-6 lg:px-8\" /> <div className=\"flex items-center gap-3 mb-6\" /> <div className=\"p-3 rounded-lg bg-purple-600 text-white w-fit\" /> <MessageCircle className=\"w-6 h-6\" /> </div> <h1 className=\"text-3xl font-bold text-gray-900\" />RAG Knowledge Chatbots</h1> </div> <p className=\"text-gray-700 text-lg max-w-3xl\" /> Deploy chatbots grounded in your documents,wikis,product manuals,and ticket history. We build secure ingestion pipelines,implement vector search,and deliver accurate,source-linked answers. </p> </div> </section> <section className=\"py-12\" /> <div className=\"max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6\" /> <div className=\"bg-white rounded-lg border p-6\" /> <h3 className=\"font-semibold text-gray-900 mb-2\" />Starter</h3> <div className=\"flex items-center justify-between mb-4 text-gray-700\" /> <div className=\"flex items-center gap-2\" /><DollarSign className=\"w-4 h-4\" /><span />From $6,000</span></div> <div className=\"flex items-center gap-2\" /><Clock className=\"w-4 h-4\" /><span />3-4 weeks</span></div> </div> <ul className=\"space-y-2 mb-4\" /> {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => ( <li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li> ))} </ul> <Link href=\"/contact\" className=\"inline-flex items-center text-blue-600 font-semibold\" />Get started <ArrowRight className=\"w-4 h-4 ml-2\"/></Link> </div> <div className=\"bg-white rounded-lg border p-6 ring-2 ring-purple-600/10\" /> <h3 className=\"font-semibold text-gray-900 mb-2\" />Professional</h3> <div className=\"flex items-center justify-between mb-4 text-gray-700\" /> <div className=\"flex items-center gap-2\" /><DollarSign className=\"w-4 h-4\" /><span />$15,000–$35,000</span></div> <div className=\"flex items-center gap-2\" /><Clock className=\"w-4 h-4\" /><span />5-7 weeks</span></div> </div> <ul className=\"space-y-2 mb-4\" /> {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => ( <li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li> ))} </ul> <Link href=\"/contact\" className=\"inline-flex items-center text-blue-600 font-semibold\" />Book a demo <ArrowRight className=\"w-4 h-4 ml-2\"/></Link> </div> <div className=\"bg-white rounded-lg border p-6\" /> <h3 className=\"font-semibold text-gray-900 mb-2\" />Enterprise</h3> <div className=\"flex items-center justify-between mb-4 text-gray-700\" /> <div className=\"flex items-center gap-2\" /><DollarSign className=\"w-4 h-4\" /><span />Custom</span></div> <div className=\"flex items-center gap-2\" /><Clock className=\"w-4 h-4\" /><span />8-12 weeks</span></div> </div> <ul className=\"space-y-2 mb-4\" /> {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => ( <li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li> ))} </ul> <Link href=\"/contact\" className=\"inline-flex items-center text-blue-600 font-semibold\" />Talk to sales <ArrowRight className=\"w-4 h-4 ml-2\"/></Link> </div> </div> </section> </main> )}:corrupted_backup/rag-chatbots.tsx;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD:pages._archive_corrupted/services/rag-chatbots.tsx
-<<<<<<< HEAD
-=======
-import React from 'react'; import Link from 'next/link'; import { MessageCircle,CheckCircle,ArrowRight,DollarSign,Clock } from 'lucide-react'; export default function RAGChatbots() { const benefits = [ 'Answer questions from your private knowledge bases','Reduce support tickets with instant,accurate responses','Citations and sources for every answer','Multi-language support and analytics',]; return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-purple-50 to-blue-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-purple-600 text-white w-fit"> <MessageCircle className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">RAG Knowledge Chatbots</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> Deploy chatbots grounded in your documents,wikis,product manuals,and ticket history. We build secure ingestion pipelines,implement vector search,and deliver accurate,source-linked answers. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6"> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Starter</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>From $6,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>3-4 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Get started <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6 ring-2 ring-purple-600/10"> <h3 className="font-semibold text-gray-900 mb-2">Professional</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>$15,000–$35,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>5-7 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Book a demo <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>Custom</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>8-12 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Talk to sales <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> </div> </section> </main> )}
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
-import React from 'react'; import Link from 'next/link'; import { MessageCircle,CheckCircle,ArrowRight,DollarSign,Clock } from 'lucide-react'; export default function RAGChatbots() { const benefits = [ 'Answer questions from your private knowledge bases','Reduce support tickets with instant,accurate responses','Citations and sources for every answer','Multi-language support and analytics',]; return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-purple-50 to-blue-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-purple-600 text-white w-fit"> <MessageCircle className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">RAG Knowledge Chatbots</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> Deploy chatbots grounded in your documents,wikis,product manuals,and ticket history. We build secure ingestion pipelines,implement vector search,and deliver accurate,source-linked answers. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6"> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Starter</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>From $6,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>3-4 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Get started <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6 ring-2 ring-purple-600/10"> <h3 className="font-semibold text-gray-900 mb-2">Professional</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>$15,000–$35,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>5-7 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Book a demo <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>Custom</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>8-12 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Talk to sales <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> </div> </section> </main> )}
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+:pages._archive_corrupted/services/rag-chatbots.tsx;
+:pages._archive_corrupted/services/rag-chatbots.tsx;
+:corrupted_backup/rag-chatbots.tsx;
+:corrupted_backup/rag-chatbots.tsx;
+:pages._archive_corrupted/services/rag-chatbots.tsx;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+  );
+}
+import React from 'react'; import Link from 'next/link'; import { MessageCircle,CheckCircle,ArrowRight,DollarSign,Clock } from 'lucide-react'; export default function RAGChatbots() { const benefits = [ 'Answer questions from your private knowledge bases','Reduce support tickets with instant,accurate responses','Citations and sources for every answer','Multi-language support and analytics']; return ( <main className=\"min-h-screen bg-white\" /> <section className=\"bg-gradient-to-br from-purple-50 to-blue-100 py-16\" /> <div className=\"max-w-5xl mx-auto px-4 sm:px-6 lg:px-8\" /> <div className=\"flex items-center gap-3 mb-6\" /> <div className=\"p-3 rounded-lg bg-purple-600 text-white w-fit\" /> <MessageCircle className=\"w-6 h-6\" /> </div> <h1 className=\"text-3xl font-bold text-gray-900\" />RAG Knowledge Chatbots</h1> </div> <p className=\"text-gray-700 text-lg max-w-3xl\" /> Deploy chatbots grounded in your documents,wikis,product manuals,and ticket history. We build secure ingestion pipelines,implement vector search,and deliver accurate,source-linked answers. </p> </div> </section> <section className=\"py-12\" /> <div className=\"max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6\" /> <div className=\"bg-white rounded-lg border p-6\" /> <h3 className=\"font-semibold text-gray-900 mb-2\" />Starter</h3> <div className=\"flex items-center justify-between mb-4 text-gray-700\" /> <div className=\"flex items-center gap-2\" /><DollarSign className=\"w-4 h-4\" /><span />From $6,000</span></div> <div className=\"flex items-center gap-2\" /><Clock className=\"w-4 h-4\" /><span />3-4 weeks</span></div> </div> <ul className=\"space-y-2 mb-4\" /> {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => ( <li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li> ))} </ul> <Link href=\"/contact\" className=\"inline-flex items-center text-blue-600 font-semibold\" />Get started <ArrowRight className=\"w-4 h-4 ml-2\"/></Link> </div> <div className=\"bg-white rounded-lg border p-6 ring-2 ring-purple-600/10\" /> <h3 className=\"font-semibold text-gray-900 mb-2\" />Professional</h3> <div className=\"flex items-center justify-between mb-4 text-gray-700\" /> <div className=\"flex items-center gap-2\" /><DollarSign className=\"w-4 h-4\" /><span />$15,000–$35,000</span></div> <div className=\"flex items-center gap-2\" /><Clock className=\"w-4 h-4\" /><span />5-7 weeks</span></div> </div> <ul className=\"space-y-2 mb-4\" /> {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => ( <li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li> ))} </ul> <Link href=\"/contact\" className=\"inline-flex items-center text-blue-600 font-semibold\" />Book a demo <ArrowRight className=\"w-4 h-4 ml-2\"/></Link> </div> <div className=\"bg-white rounded-lg border p-6\" /> <h3 className=\"font-semibold text-gray-900 mb-2\" />Enterprise</h3> <div className=\"flex items-center justify-between mb-4 text-gray-700\" /> <div className=\"flex items-center gap-2\" /><DollarSign className=\"w-4 h-4\" /><span />Custom</span></div> <div className=\"flex items-center gap-2\" /><Clock className=\"w-4 h-4\" /><span />8-12 weeks</span></div> </div> <ul className=\"space-y-2 mb-4\" /> {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => ( <li key={b} className=\"flex items-center text-sm text-gray-700\" /><CheckCircle className=\"w-4 h-4 text-green-600 mr-2\" />{b}</li> ))} </ul> <Link href=\"/contact\" className=\"inline-flex items-center text-blue-600 font-semibold\" />Talk to sales <ArrowRight className=\"w-4 h-4 ml-2\"/></Link> </div> </div> </section> </main> )}
 
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:pages._archive_corrupted/services/rag-chatbots.tsx
-import React from 'react'; import Link from 'next/link'; import { MessageCircle,CheckCircle,ArrowRight,DollarSign,Clock } from 'lucide-react'; export default function RAGChatbots() { const benefits = [ 'Answer questions from your private knowledge bases','Reduce support tickets with instant,accurate responses','Citations and sources for every answer','Multi-language support and analytics',]; return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-purple-50 to-blue-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-purple-600 text-white w-fit"> <MessageCircle className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">RAG Knowledge Chatbots</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> Deploy chatbots grounded in your documents,wikis,product manuals,and ticket history. We build secure ingestion pipelines,implement vector search,and deliver accurate,source-linked answers. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6"> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Starter</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>From $6,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>3-4 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Get started <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6 ring-2 ring-purple-600/10"> <h3 className="font-semibold text-gray-900 mb-2">Professional</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>$15,000–$35,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>5-7 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Book a demo <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>Custom</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>8-12 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Talk to sales <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> </div> </section> </main> )}
-import React from 'react'; import Link from 'next/link'; import { MessageCircle,CheckCircle,ArrowRight,DollarSign,Clock } from 'lucide-react'; export default function RAGChatbots() { const benefits = [ 'Answer questions from your private knowledge bases','Reduce support tickets with instant,accurate responses','Citations and sources for every answer','Multi-language support and analytics',]; return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-purple-50 to-blue-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-purple-600 text-white w-fit"> <MessageCircle className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">RAG Knowledge Chatbots</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> Deploy chatbots grounded in your documents,wikis,product manuals,and ticket history. We build secure ingestion pipelines,implement vector search,and deliver accurate,source-linked answers. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6"> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Starter</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>From $6,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>3-4 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Get started <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6 ring-2 ring-purple-600/10"> <h3 className="font-semibold text-gray-900 mb-2">Professional</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>$15,000–$35,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>5-7 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Book a demo <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>Custom</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>8-12 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Talk to sales <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> </div> </section> </main> )}
-<<<<<<< HEAD
-<<<<<<< HEAD:corrupted_backup/rag-chatbots.tsx
-=======
-=======
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b:corrupted_backup/rag-chatbots.tsx
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:pages._archive_corrupted/services/rag-chatbots.tsx
-=======
-=======
 
-import React from 'react'; import Link from 'next/link'; import { MessageCircle,CheckCircle,ArrowRight,DollarSign,Clock } from 'lucide-react'; export default function RAGChatbots() { const benefits = [ 'Answer questions from your private knowledge bases','Reduce support tickets with instant,accurate responses','Citations and sources for every answer','Multi-language support and analytics',]; return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-purple-50 to-blue-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-purple-600 text-white w-fit"> <MessageCircle className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">RAG Knowledge Chatbots</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> Deploy chatbots grounded in your documents,wikis,product manuals,and ticket history. We build secure ingestion pipelines,implement vector search,and deliver accurate,source-linked answers. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6"> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Starter</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>From $6,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>3-4 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Get started <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6 ring-2 ring-purple-600/10"> <h3 className="font-semibold text-gray-900 mb-2">Professional</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>$15,000–$35,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>5-7 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Book a demo <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>Custom</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>8-12 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Talk to sales <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> </div> </section> </main> )}
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 
-import React from 'react'; import Link from 'next/link'; import { MessageCircle,CheckCircle,ArrowRight,DollarSign,Clock } from 'lucide-react'; export default function RAGChatbots() { const benefits = [ 'Answer questions from your private knowledge bases','Reduce support tickets with instant,accurate responses','Citations and sources for every answer','Multi-language support and analytics',]; return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-purple-50 to-blue-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-purple-600 text-white w-fit"> <MessageCircle className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">RAG Knowledge Chatbots</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> Deploy chatbots grounded in your documents,wikis,product manuals,and ticket history. We build secure ingestion pipelines,implement vector search,and deliver accurate,source-linked answers. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6"> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Starter</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>From $6,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>3-4 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Get started <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6 ring-2 ring-purple-600/10"> <h3 className="font-semibold text-gray-900 mb-2">Professional</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>$15,000–$35,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>5-7 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Book a demo <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>Custom</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>8-12 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Talk to sales <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> </div> </section> </main> )}
-import React from 'react'; import Link from 'next/link'; import { MessageCircle,CheckCircle,ArrowRight,DollarSign,Clock } from 'lucide-react'; export default function RAGChatbots() { const benefits = [ 'Answer questions from your private knowledge bases','Reduce support tickets with instant,accurate responses','Citations and sources for every answer','Multi-language support and analytics',]; return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-purple-50 to-blue-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-purple-600 text-white w-fit"> <MessageCircle className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">RAG Knowledge Chatbots</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> Deploy chatbots grounded in your documents,wikis,product manuals,and ticket history. We build secure ingestion pipelines,implement vector search,and deliver accurate,source-linked answers. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6"> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Starter</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>From $6,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>3-4 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Get started <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6 ring-2 ring-purple-600/10"> <h3 className="font-semibold text-gray-900 mb-2">Professional</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>$15,000–$35,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>5-7 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Book a demo <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>Custom</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>8-12 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Talk to sales <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> </div> </section> </main> )}
-import React from 'react'; import Link from 'next/link'; import { MessageCircle,CheckCircle,ArrowRight,DollarSign,Clock } from 'lucide-react'; export default function RAGChatbots() { const benefits = [ 'Answer questions from your private knowledge bases','Reduce support tickets with instant,accurate responses','Citations and sources for every answer','Multi-language support and analytics',]; return ( <main className="min-h-screen bg-white"> <section className="bg-gradient-to-br from-purple-50 to-blue-100 py-16"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="flex items-center gap-3 mb-6"> <div className="p-3 rounded-lg bg-purple-600 text-white w-fit"> <MessageCircle className="w-6 h-6" /> </div> <h1 className="text-3xl font-bold text-gray-900">RAG Knowledge Chatbots</h1> </div> <p className="text-gray-700 text-lg max-w-3xl"> Deploy chatbots grounded in your documents,wikis,product manuals,and ticket history. We build secure ingestion pipelines,implement vector search,and deliver accurate,source-linked answers. </p> </div> </section> <section className="py-12"> <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6"> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Starter</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>From $6,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>3-4 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Content ingestion (PDF/HTML)','Embeddings + vector DB','Basic guardrails','Web widget'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Get started <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6 ring-2 ring-purple-600/10"> <h3 className="font-semibold text-gray-900 mb-2">Professional</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>$15,000–$35,000</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>5-7 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['Citations UI & feedback loop','Multi-source merge & dedupe','PII scrubbing','Analytics dashboard'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Book a demo <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> <div className="bg-white rounded-lg border p-6"> <h3 className="font-semibold text-gray-900 mb-2">Enterprise</h3> <div className="flex items-center justify-between mb-4 text-gray-700"> <div className="flex items-center gap-2"><DollarSign className="w-4 h-4" /><span>Custom</span></div> <div className="flex items-center gap-2"><Clock className="w-4 h-4" /><span>8-12 weeks</span></div> </div> <ul className="space-y-2 mb-4"> {['SAML/SSO & access control','Multi-tenant data isolation','Latency & cost optimization','24/7 support'].map((b) => ( <li key={b} className="flex items-center text-sm text-gray-700"><CheckCircle className="w-4 h-4 text-green-600 mr-2" />{b}</li> ))} </ul> <Link href="/contact" className="inline-flex items-center text-blue-600 font-semibold">Talk to sales <ArrowRight className="w-4 h-4 ml-2"/></Link> </div> </div> </section> </main> )}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

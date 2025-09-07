@@ -31,7 +31,6 @@ class ComprehensiveMergeConflictResolver {}
     for (const file of allFiles) {}
       try {}
         const content = await fs.readFile(file, 'utf8');
-        if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {}
           if (!filesWithConflicts.includes(file)) {}
             filesWithConflicts.push(file)};
         };
@@ -129,11 +128,6 @@ class ComprehensiveMergeConflictResolver {}
 if (require.main === module) {}
   const resolver = new ComprehensiveMergeConflictResolver();
   resolver.run().catch(console.error)};
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 module.exports = ComprehensiveMergeConflictResolver;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-module.exports = ComprehensiveMergeConflictResolver;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

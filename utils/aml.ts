@@ -1,30 +1,29 @@
-<<<<<<< HEAD
 interface AmlMatch {
   list: string;
-  name: string;
-  score: number;
+  name: string;}
+  score: number;}
 }
 
 interface AmlResult {
   status: 'review' | 'clear';
   matches: AmlMatch[];
-  checkedAt: string;
-  provider: string;
+  checkedAt: string;}
+  provider: string;}
 }
 
-interface AmlProvider {
-  checkBusiness(businessName: string): Promise<AmlResult>;
+interface AmlProvider {}
+  checkBusiness(businessName: string): Promise<AmlResult />;}
 }
 
 class MockAmlProvider implements AmlProvider {
-  async checkBusiness(businessName: string): Promise<AmlResult> {
+  async checkBusiness(businessName: string): Promise<AmlResult /> {
     const isSanction = businessName.toLowerCase().includes('sanction');
     return {
       status: isSanction ? 'review' : 'clear',
       matches: isSanction ? [{
         list: 'Sanctions',
-        name: businessName,
-        score: 0.8
+  name: businessName,}
+        score: 0.8}
       }] : [],
       checkedAt: new Date().toISOString(),
       provider: 'mock'
@@ -36,44 +35,23 @@ let provider: AmlProvider = new MockAmlProvider();
 
 export type { AmlProvider, AmlResult, AmlMatch };
 export { provider };
-=======
-<<<<<<< HEAD
 export type WatchlistMatch = {
-<<<<<<< HEAD
-  list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
-=======
-<<<<<<< HEAD
-  list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
-=======
-export type WatchlistMatch = {;
-  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
-  name: string;
-  score: number; // 0-1 match confidence
-  referenceId?: string;
-  detailsUrl?: string;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  list: \"OFAC\" | \"PEP\" | \"Sanctions\" | \"AdverseMedia\";
+  list: \"OFAC\" | \"PEP\" | \"Sanctions\" | \"AdverseMedia\";
 
 
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   name: string;
 
   score: number; // 0 - 1 match confidence;
-  reference_id?: string;
-  details_url?: string;
+  reference_id?: string;}
+  details_url?: string;}
 }
 ;
 
 export type AmlCheckResult = {
-<<<<<<< HEAD
-  status: "clear" | "match" | "review" | "unknown";
-=======
-<<<<<<< HEAD
-  status: "clear" | "match" | "review" | "unknown";
-=======
-<<<<<<< HEAD
+  status: \"clear\" | \"match\" | \"review\" | \"unknown\";}
+  status: \"clear\" | \"match\" | \"review\" | \"unknown\";}
 };
 
 export type AmlCheckResult = {;
@@ -81,69 +59,50 @@ export type WatchlistMatch = {
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
 export type AmlCheckResult = {
-=======
-=======
-
-};
-
-export type AmlCheckResult = {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   status: 'clear' | 'match' | 'review' | 'unknown';
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
   matches: WatchlistMatch[];
-  checkedAt: string; // ISO
-  provider: "mock" | "remote";
+  checkedAt: string; // ISO;}
+provider: \"mock\" | \"remote\";}
 };
 export interface AmlProvider {
   checkPerson(params: {
     fullLegalName: string;
-    country: string;
-    dob?: string;
-  }): Promise<AmlResult>;
+    country: string;}
+    dob?: string;}
+  }): Promise<AmlResult />;
   checkBusiness(params: {
-    businessName: string;
-    country: string;
-  }): Promise<AmlResult>;
+    businessName: string;}
+    country: string;}
+  }): Promise<AmlResult />;
 }
-export interface AmlProvider {
+export interface AmlProvider {}
   check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult>;
   check_business (params: { business_name: string, country: string }): Promise < AmlResult>;
 }
 class MockAmlProvider implements AmlProvider {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
   async checkPerson(params: {
     fullLegalName: string;
-    country: string;
-    dob?: string;
-  }): Promise<AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-    const name = params.fullLegalName.toLowerCase();
-    if (name.includes("test") || name.includes("demo")) {
-      return { status: "match", details: { reason: "Test name detected" } };
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-// AML (Anti-Money Laundering) utilities
+    country: string;}
+    dob?: string;}
+  }): Promise<AmlResult /> {
+    // Mock implementation - in production, this would call a real AML service;
+const name = params.fullLegalName.toLowerCase();}
+    if (name.includes(\"test\") || name.includes(\"demo\")) {}
+      return { status: \"match\", details: { reason: \"Test name detected\" } };
+// AML (Anti-Money Laundering) utilities;
 export interface AmlCheck {
   id: string;
   userId: string;
   checkType: 'sanctions' | 'pep' | 'adverse_media' | 'watchlist';
   status: 'pending' | 'completed' | 'failed' | 'error';
   result: 'clear' | 'hit' | 'error';
-  confidence: number; // 0-100
-  details: {
+  confidence: number; // 0-100;
+details: {
     matchedNames?: string[];
     matchedCountries?: string[];
     riskLevel?: 'low' | 'medium' | 'high' | 'critical';
-    sources?: string[];
-    notes?: string;
+    sources?: string[];}
+    notes?: string;}
   };
   createdAt: string;
   completedAt?: string;
@@ -159,13 +118,13 @@ export interface AmlProfile {
   businessName?: string;
   businessType?: string;
   businessCountry?: string;
-  riskScore: number; // 0-100
-  riskLevel: 'low' | 'medium' | 'high' | 'critical';
+  riskScore: number; // 0-100;
+riskLevel: 'low' | 'medium' | 'high' | 'critical';
   status: 'active' | 'suspended' | 'blocked';
   lastChecked: string;
   checks: AmlCheck[];
-  flags: string[];
-  notes?: string;
+  flags: string[];}
+  notes?: string;}
 }
 
 export interface AmlConfig {
@@ -173,24 +132,24 @@ export interface AmlConfig {
   providers: {
     sanctions: boolean;
     pep: boolean;
-    adverseMedia: boolean;
-    watchlist: boolean;
+    adverseMedia: boolean;}
+    watchlist: boolean;}
   };
   thresholds: {
     low: number;
     medium: number;
-    high: number;
-    critical: number;
+    high: number;}
+    critical: number;}
   };
   autoBlock: boolean;
   autoBlockThreshold: number;
-  checkInterval: number; // days
-  retentionPeriod: number; // days
+  checkInterval: number; // days;
+retentionPeriod: number; // days;
 }
 
 class AmlManager {
-  private profiles: Map<string, AmlProfile> = new Map();
-  private checks: Map<string, AmlCheck> = new Map();
+  private profiles: Map<string, AmlProfile /> = new Map();
+  private checks: Map<string, AmlCheck /> = new Map();
   private config: AmlConfig;
 
   constructor() {
@@ -199,183 +158,149 @@ class AmlManager {
       providers: {
         sanctions: true,
         pep: true,
-        adverseMedia: true,
-        watchlist: true
+        adverseMedia: true,}
+        watchlist: true}
       },
       thresholds: {
         low: 25,
         medium: 50,
-        high: 75,
-        critical: 90
+        high: 75,}
+        critical: 90}
       },
       autoBlock: false,
       autoBlockThreshold: 90,
       checkInterval: 30,
-      retentionPeriod: 365
+      retentionPeriod: 365;
     };
   }
 
-  // Profile methods
-  async createProfile(userId: string, fullName: string, additionalData?: Partial<AmlProfile>): Promise<AmlProfile> {
+  // Profile methods;
+async createProfile(userId: string, fullName: string, additionalData?: Partial<AmlProfile />): Promise<AmlProfile /> {
     const profile: AmlProfile = {
       userId,
       fullName,
       riskScore: 0,
       riskLevel: 'low',
-      status: 'active',
+  status: 'active',
       lastChecked: new Date().toISOString(),
       checks: [],
-      flags: [],
-      ...additionalData
+      flags: [],}
+      ...additionalData}
     };
 
     this.profiles.set(userId, profile);
     return profile;
   }
 
-  async getProfile(userId: string): Promise<AmlProfile | null> {
-    return this.profiles.get(userId) || null;
+  async getProfile(userId: string): Promise<AmlProfile | null /> {}
+    return this.profiles.get(userId) || null;}
   }
 
-  async updateProfile(userId: string, updates: Partial<AmlProfile>): Promise<AmlProfile | null> {
+  async updateProfile(userId: string, updates: Partial<AmlProfile />): Promise<AmlProfile | null /> {
     const profile = this.profiles.get(userId);
-    if (!profile) return null;
-
+    if (!profile) return null;}
+}
     const updatedProfile = { ...profile, ...updates };
     this.profiles.set(userId, updatedProfile);
     return updatedProfile;
   }
 
-  // Check methods
-  async runAmlCheck(userId: string, checkType: AmlCheck['checkType']): Promise<AmlCheck> {
+  // Check methods;
+async runAmlCheck(userId: string, checkType: AmlCheck['checkType']): Promise<AmlCheck /> {
     const profile = this.profiles.get(userId);
-    if (!profile) {
-      throw new Error('Profile not found');
-=======
-
-    const name = params && params.fullLegalName.toLowerCase();
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } };
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+    if (!profile) {}
+      throw new Error('Profile not found');}
     }
     return { status: 'clear' }
   }
-  async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-<<<<<<< HEAD
-=======
-
-    const name = params && params.businessName.toLowerCase();
-    if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } };
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+  async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult /> {}
+    // Mock implementation - in production, this would call a real AML service}
     }
-    return { status: "clear" };
+    return { status: \"clear\" };
   }
 
   async checkBusiness(params: {
-    businessName: string;
-    country: string;
-  }): Promise<AmlResult> {
-    // Mock implementation - in production, this would call a real AML service
-    const name = params.businessName.toLowerCase();
-    if (name.includes("test") || name.includes("demo")) {
-      return {
-        status: "match",
-        details: { reason: "Test business name detected" },
+    businessName: string;}
+    country: string;}
+  }): Promise<AmlResult /> {
+    // Mock implementation - in production, this would call a real AML service;
+const name = params.businessName.toLowerCase();
+    if (name.includes(\"test\") || name.includes(\"demo\")) {
+      return {}
+        status: \"match\",}
+        details: { reason: \"Test business name detected\" },
       };
     }
-    return { status: "clear" };
+    return { status: \"clear\" };
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
 
 export function getAmlProvider(): AmlProvider {
-  return provider;
-  return new MockAmlProvider();
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
+  return provider;}
+  return new MockAmlProvider();}
 }
 
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
-=======
 
 
 
 
-=======
 
-// Singleton instance
+// Singleton instance;
 export const amlManager = new AmlManager();
-// Utility functions
+// Utility functions;
 export function createAmlCheck(
   userId: string,
   checkType: AmlCheck['checkType']
-): Omit<AmlCheck, 'id' | 'createdAt' | 'expiresAt'> {
+): Omit<AmlCheck, 'id' | 'createdAt' | 'expiresAt' /> {
   return {
     userId,
     checkType,
     status: 'pending',
-    result: 'clear',
-    confidence: 0,
+  result: 'clear',}
+    confidence: 0,}
     details: {}
   };
 }
-export function generateAmlCheckId(): string {
+export function generateAmlCheckId(): string {}
   return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
-export function isAmlCheckExpired(check: AmlCheck): boolean {
-  return new Date(check.expiresAt) < new Date();
+export function isAmlCheckExpired(check: AmlCheck): boolean {}
+  return new Date(check.expiresAt) < new Date();}
 }
 export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   const colors = {
     low: 'green',
-    medium: 'yellow',
-    high: 'orange',
-    critical: 'red'
+  medium: 'yellow',
+    high: 'orange',}
+  critical: 'red'}
   };
   return colors[riskLevel];
 }
   async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {
     // Mock implementation - in production, this would call a real AML service;
     const name = params.fullLegalName.toLowerCase ();
-    if (|| name.includes ('demo')) {) {
-  $2
+    if (|| name.includes ('demo')) {) {}
+  $2}
 }
-      return { status: 'match', details: { reason: 'Test name detected' } }
+      return { status: 'match',}
+  details: { reason: 'Test name detected' } }
     }
     return { status: 'clear' }
   }
   async check_business (params: { business_name: string, country: string }): Promise < AmlResult> {
     // Mock implementation - in production, this would call a real AML service;
     const name = params.business_name.toLowerCase ();
-    if (|| name.includes ('demo')) {) {
-  $2
+    if (|| name.includes ('demo')) {) {}
+  $2}
 }
-      return { status: 'match', details: { reason: 'Test business name detected' } }
+      return { status: 'match',}
+  details: { reason: 'Test business name detected' } }
     }
     return { status: 'clear' }
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
-export function getAmlProvider (): AmlProvider {
-  return new MockAmlProvider ();
+export function getAmlProvider (): AmlProvider {}
+  return new MockAmlProvider ();}
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43

@@ -20,9 +20,7 @@ const glob = require("glob")
   "ignore": ["node_modules/**", "dist/**", "build/**", ".git/**"]
   const content = fs.readFileSync(file, "utf8")
           content.includes("")
-          content.includes(">>>>>>>")
           content.includes(")
-          content.includes(">>>>>>>")
               /\n([\s\S]*?)\n              "$1"
               /\n([\s\S]*?)\n              "$1"
   "type": "merge_conflict"
@@ -181,11 +179,6 @@ const files = glob.sync("**/*.{js,jsx,ts,tsx}")
       "summary"
         "totalErrors"
         "successRate"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
       console.error('Automation "failed")
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-      console.error('Automation "failed")
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

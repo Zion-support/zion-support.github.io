@@ -1,8 +1,26 @@
+
     expect(input).toBeInTheDocument();
   });
 });
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
     expect(input).toBeInTheDocument();
   });
 });
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+
+import React from 'react';
+import { render, screen  } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AIChatAssistant from '../components/AIChatAssistant';
+describe('AIChatAssistant', () => {test('renders without crashing', () => {render(<AIChatAssistant />)expect(screen.getByTestId('aichatassistant')).toBeInTheDocument()})test('displays correct content', () => {render(<AIChatAssistant />)// Add specific content tests here;}
+  })test('handles user interactions', () => {render(<AIChatAssistant />)// Add interaction tests here;}
+  })test('applies correct styling', () => {render(<AIChatAssistant />)// Add styling tests here;}
+  })})
+
+import React from 'react';
+import { render, screen  } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AIChatAssistant from '../components/AIChatAssistant';
+describe('AIChatAssistant', () => {test('renders without crashing', () => {render(<AIChatAssistant />)expect(screen.getByTestId('aichatassistant')).toBeInTheDocument()})test('displays correct content', () => {render(<AIChatAssistant />)// Add specific content tests here;}
+  })test('handles user interactions', () => {render(<AIChatAssistant />)// Add interaction tests here;}
+  })test('applies correct styling', () => {render(<AIChatAssistant />)// Add styling tests here;}
+  })})
+

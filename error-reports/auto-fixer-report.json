@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-09-07T05:08:49.763Z",
+  "results": {
+    "mergeConflicts": true,
+    "importErrors": true,
+    "typeScriptErrors": false,
+    "syntaxErrors": false
+  },
+  "fixesApplied": [
+    "Applied ESLint auto-fixes for imports"
+  ],
+  "fixesFailed": [
+    "Failed to fix TypeScript errors: spawnSync /bin/sh ENOBUFS"
+  ]
+}

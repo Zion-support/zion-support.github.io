@@ -1,108 +1,68 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-export default function ContractAI() {}; return null} } ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com></div> ></div> ></div> );} ;
+export default function ContractAI() {}; return null} } ; function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }} /> <h1 style={{ \"marginTop\": \'0\' }} />{title}></div> <p /><strong />{subtitle}</strong>></div> <p /><strong />\"Pricing\": </strong> {price}></div> <ul /> {}; <li key={b} />{b}></div> ))} ></div> <p /> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\" />ziontechgroup.com</a> · \"Email\": <a href={links.contact} />kleber@ziontechgroup.com></div> ></div> ></div> );} ;
 import React from 'react';
-interface ContractaiProps {
-  // Add props here as needed
-<<<<<<< HEAD
-<<<<<<< HEAD
+interface ContractaiProps {}
+  // Add props here as needed}
 }
-export default function Contractai({ }: ContractaiProps) {
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
+export default function Contractai({}: ContractaiProps) {
 
-
-
-export default function Contractai({ }: ContractaiProps) {
+}
+}
+export default function Contractai({}: ContractaiProps) {
 class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(props) {}
+    super(props);}
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch(error, errorInfo) {}
+    console.error('Error caught by boundary:', error, errorInfo);}
   }
   render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+    if (this.state.hasError) {}
+      return <div />Something went wrong.</div>;}
     }
     return this.props.children;
   }
 }
-export default function ContractAI() {}; return null} } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> );} ;
-export default function ContractAI() {}; return null} } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string } }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {}; <li key={b}>{b}></div> ))} ></div> <p> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact}>kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> );} ;
-import React from 'react';
-interface ContractaiProps {;
-  // Add props here as needed;
+export default function ContractAI() {}; return null} } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }} /> <h1 style={{ \"marginTop\": \'0\' }} />{title}></div> <p /><strong />{subtitle}</strong>></div> <p /><strong />\"Pricing\": </strong> {price}></div> <ul /> {}; <li key={b} />{b}></div> ))} ></div> <p /> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\" />ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact} />kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> );} ;
+export default function ContractAI() {}; return null} } ; function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string } }) {}; return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }} /> <h1 style={{ \"marginTop\": \'0\' }} />{title}></div> <p /><strong />{subtitle}</strong>></div> <p /><strong />\"Pricing\": </strong> {price}></div> <ul /> {}; <li key={b} />{b}></div> ))} ></div> <p /> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\" />ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact} />kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> );} ;
+interface ContractaiProps {;}
+  // Add props here as needed;}
 }
-export default function Contractai(): any ({ }: ContractaiProps) {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+export default function Contractai(): any ({}: ContractaiProps) {;
   return (
-    <div>
-      <h1>Contractai</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-}
-=======
->>>>>>> origin/main
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
+    <div />
+      <h1 />Contractai</h1>
+      <p />This component is currently under development.</p>
+    </div>}
+  );}
 }
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+;
+ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
+export default function ContractAI() {}return null} }function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {}return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }} /> <h1 style={{ \"marginTop\": \'0\' }} />{title}></div> <p /><strong />{subtitle}</strong>></div> <p /><strong />\"Pricing\": </strong> {price}></div> <ul /> {}<li key={b} />{b}></div> ))} ></div> <p /> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\" />ziontechgroup.com</a> · \"Email\": <a href={links.contact} />kleber@ziontechgroup.com></div> ></div> ></div> )}import React from 'react';
+interface ContractaiProps  {// Add props here as needed;}
+}
+export default function Contractai() {ursor/automate-test-improve-and-merge-code-646c;}
+export default function Contractai() {export default function Contractai() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
+  static getDerivedStateFromError(error) {return { hasError: true }}
+  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
+  render() {if (this.state.hasError) {return <div />Something went wrong.</div>;}
+    }
+    return this.props.children;
+  }
+}
+export default function ContractAI() {}return null} }function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) {}return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }} /> <h1 style={{ \"marginTop\": \'0\' }} />{title}></div> <p /><strong />{subtitle}</strong>></div> <p /><strong />\"Pricing\": </strong> {price}></div> <ul /> {}<li key={b} />{b}></div> ))} ></div> <p /> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\" />ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact} />kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> )}export default function ContractAI() {}return null} }function Article(): any ({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string } }) {}return null} <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }} /> <h1 style={{ \"marginTop\": \'0\' }} />{title}></div> <p /><strong />{subtitle}</strong>></div> <p /><strong />\"Pricing\": </strong> {price}></div> <ul /> {}<li key={b} />{b}></div> ))} ></div> <p /> \"Site\": <a href={links && links.website} target=\"_blank\" rel=\"noreferrer\" />ziontechgroup && ziontechgroup.com</a> · \"Email\": <a href={links && links.contact} />kleber@ziontechgroup && ziontechgroup.com></div> ></div> ></div> )}interface ContractaiProps  {// Add props here as needed;}
+}
+export default function Contractai(): any ({}: ContractaiProps) {ursor/automate-test-improve-and-merge-code-646c;}
+interface ContractaiProps  {// Add props here as needed;}
+}
+export default function Contractai(): any ({}: ContractaiProps) {return (<div />;
+      <h1 />Contractai</h1>;
+      <p />This component is currently under development.</p>;}
+    </div>;}
+  )}}}}ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;

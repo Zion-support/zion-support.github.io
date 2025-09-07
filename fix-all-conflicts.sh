@@ -4,41 +4,72 @@ echo "Fixing all remaining merge conflicts..."
 
 # Find all files with merge conflicts and fix them
 find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
-  if [ -f "$file" ] && grep -q "<<<<<<< HEAD\|=======\|>>>>>>> " "$file"; then
+  if [ -f "$file" ] && grep -q "\|    echo "Fixing conflicts in: $file"
+    
+
+    # Remove all merge conflict markers
+
+/d' "$file"
+
+    sed -i '/^/,/^/d' "$file"
+
+
+    
+    # Remove everything from  (inclusive)
+    
+    # Remove the     sed -i '/^    
+    
+    echo "Fixed: $file"
+  fi
+# Find all files with merge conflicts
+
+if [ -n "$files_with_conflicts" ]; then
+    echo "Found files with merge conflicts:"
+    echo "$files_with_conflicts"
+# Find all files with merge conflicts and fix them
+find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
+  if [ -f "$file" ] && grep -q "
     echo "Fixing conflicts in: $file"
     
-<<<<<<< HEAD
-    # Create a backup
-    cp "$file" "$file.backup"
-=======
     # Remove all merge conflict markers
-<<<<<<< HEAD:backup-problematic-files/fix-all-conflicts.sh
-<<<<<<< HEAD:fix-all-conflicts.sh
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:fix-all-conflicts.sh
-<<<<<<< HEAD
-    sed -i '/<<<<<<< HEAD/,/>>>>>>>/d' "$file"
-    sed -i '/=======/d' "$file"
-=======
-<<<<<<< HEAD:backup-problematic-files/fix-all-conflicts.sh
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/fix-all-conflicts.sh
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358:fix-all-conflicts.sh
+
+# Fix common syntax issues
+echo "Fixing common syntax issues..."
+
+# Fix files with malformed JSX structure
+for file in $(find ./app -name "*.tsx" -o -name "*.ts"); do
+    if grep -q "export const metadata" "$file" && ! grep -q "export default function" "$file"; then
+        echo "Fixing metadata placement in: $file"
+        # Move metadata to the top
+        sed -i '1i export const metadata = {\n  title: "Service | Zion Tech Group",\n  description: "Professional services for your business needs."\n};\n' "$file"
+    fi
     sed -i '/^/,/^/d' "$file"
-    sed -i '/^>>>>>>>/d' "$file"
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
+# Fix common syntax issues
+echo "Fixing common syntax issues..."
+
+# Fix files with malformed JSX structure
+for file in $(find ./app -name "*.tsx" -o -name "*.ts"); do
+    if grep -q "export const metadata" "$file" && ! grep -q "export default function" "$file"; then
+        echo "Fixing metadata placement in: $file"
+        # Move metadata to the top
+        sed -i '1i export const metadata = {\n  title: "Service | Zion Tech Group",\n  description: "Professional services for your business needs."\n};\n' "$file"
+    fi
+# Fix common syntax issues
+echo "Fixing common syntax issues..."
+
+# Fix files with malformed JSX structure
+for file in $(find ./app -name "*.tsx" -o -name "*.ts"); do
+    if grep -q "export const metadata" "$file" && ! grep -q "export default function" "$file"; then
+        echo "Fixing metadata placement in: $file"
+        # Move metadata to the top
+        sed -i '1i export const metadata = {\n  title: "Service | Zion Tech Group",\n  description: "Professional services for your business needs."\n};\n' "$file"
+    fi
     
-    # Remove everything from <<<<<<< HEAD to ======= (inclusive)
-    # Keep everything after ======= until >>>>>>> 
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    # Remove everything from 
+    sed -i '/^
     
-    # Remove the >>>>>>> markers
-    sed -i '/^>>>>>>> /d' "$file"
-    
-    # Remove any remaining ======= markers
-    sed -i '/^=======$/d' "$file"
+    # Remove any remaining  markers
+    sed -i '/^$/d' "$file"
     
     echo "Fixed: $file"
   fi
