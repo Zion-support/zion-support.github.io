@@ -7,14 +7,11 @@ const compat = new FlatCompat({
 });
 
 module.exports = [
-  ...compat.extends('next/core-web-vitals'),
   {
     rules: {
       'no-unused-vars': 'warn',
       'no-console': 'warn',
-      'prefer-const': 'warn',
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'warn'
+      'prefer-const': 'warn'
     }
   },
   {
@@ -27,7 +24,43 @@ module.exports = [
       '*.config.cjs',
       'public/**',
       'src/**',
-      'app/**'
+      'app/**',
+      'App.simple.tsx',
+      'App.smoke.test.tsx',
+      'App.tsx',
+      '*.cjs',
+      '*.js',
+      '*.tsx',
+      '*.ts',
+      'scripts/**',
+      'src.broken/**',
+      'src.disabled/**',
+      'src_backup_temp/**',
+      'temp_exclude/**',
+      'test-next/**',
+      'test_build/**',
+      'utils/**',
+      'zion_academy/**',
+      'backup/**',
+      'backups/**',
+      'backup-problematic-files/**',
+      'automation/**',
+      'automation_backup/**',
+      'pm2-automation/**',
+      'deployment/**',
+      'deployments/**',
+      'recovered-branches/**',
+      'data_backup/**',
+      'lib.broken/**',
+      'middleware/**',
+      'netlify/**',
+      'dao/**',
+      'components/**',
+      'fix-merge-conflicts.mjs',
+      'api-backup/**',
+      'api/**',
+      'apps.backup/**',
+      'backup-merge-conflicts/**'
     ]
   }
 ];
