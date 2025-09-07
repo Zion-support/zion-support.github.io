@@ -1,4 +1,5 @@
 export const metadata = {
+<<<<<<< HEAD
   title: 'AI Data Analysis Platform | Zion Tech Group',
   description: 'Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.',
 };
@@ -147,7 +148,7 @@ function Pricing() {
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your AI Data Platform?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-          Let's create a powerful AI data analysis platform that transforms your data into actionable business insights.
+          Let&apos;s create a powerful AI data analysis platform that transforms your data into actionable business insights.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -196,3 +197,49 @@ function Plan({ name, price, duration, features }: {
     </div>
   );
 }
+=======
+  title: 'Ai Data Analysis | Zion Tech Group',
+  description: 'Professional ai data analysis services for your business needs.',
+  keywords: 'ai-data-analysis, services, business, technology'
+};
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Data Analysis
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Professional ai data analysis services for your business needs.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Expert Solutions</h3>
+            <p className="text-gray-300">
+              Tailored ai data analysis solutions designed for your specific business requirements.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Cutting-edge technology and best practices to deliver exceptional results.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">24/7 Support</h3>
+            <p className="text-gray-300">
+              Round-the-clock support to ensure your ai data analysis solutions run smoothly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739

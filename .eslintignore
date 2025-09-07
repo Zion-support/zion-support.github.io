@@ -152,3 +152,11 @@ build-verification.js
 check-syntax.js
 clean-conflicts.js
 commit-and-push.js
+advanced-automation-improvements.cjs
+analyze_links.cjs
+app-enhancement-suite.cjs
+app-optimizer.js
+apps.backup/**
+automated-merge-conflict-resolver.cjs
+automation/**
+backup-problematic-files/**

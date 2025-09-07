@@ -1,167 +1,92 @@
-<<<<<<< HEAD
-interface Props {;
-  children: React && React.ReactNode;
+
+;
+interface Props  {children: React && React.ReactNode;
 }
-import { AlertTriangle, RefreshCw } from 'lucide-react'
-
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { logErrorToProduction } from '@/utils/productionLogger'
-interface Props {
-  children: React.ReactNode
-interface State {
-  hasError: boolean
-  error?: Error
-export class EquipmentErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props)
-    this.state = { hasError: false }
-  hasError: boolean
-  error?: Error
-}
-import {logErrorToProduction} from '@/utils/productionLogger'
-
-interface Props {
-  children: React.ReactNode
-}
-interface State {
-
-  hasError: boolean
-
-  error?: Error
-}
-export class EquipmentErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false }
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error }
-  }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className='container py-8'>
-          <Card className='border-red-200 bg-red-50'>
-            <CardContent className='p-8 text-center'>
-              <AlertTriangle className='mx-auto mb-4 h-12 w-12 text-red-600' />
-              <h2 className='text-2xl font-bold text-red-900 mb-2'>
-                Something went wrong
-              </h2>
-              <p className='text-red-700 mb-4'>
-                We're having trouble loading the equipment listings. This might
-                be a temporary issue.
-              </p>
-              <div className='flex gap-2 justify-center'>
-                <Button
-                  onClick={() =>
-                    this.setState({ hasError: false, error: undefined })
-                  }
-                  variant='outline'                >
-                  <RefreshCw className='h-4 w-4 mr-2' />
-                  Try Again
-                </Button>
-                <Button
-                  onClick={() => window.location.reload()}
-                  variant='default'
-                >                  Refresh Page
-                <Button onClick={() => window.location.reload()} variant="default">
-              </p>
-              <div className="flex gap-2 justify-center">
-                <Button
-                  onClick={() => this.setState({ hasError: false, error: undefined })}
-                  variant="outline"
-                >
-                  <RefreshCw className="h-4 w-4 mr-2" />
-                  Try Again
-                </Button>
-        <div className="container py-8">
-          <Card className="border-red-200 bg-red-50">
-            <CardContent className="p-8 text-center">
-              <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />
-              <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>
-              <p className="text-red-700 mb-4">
-                We're having trouble loading the equipment listings. This might be a temporary issue.
-              </p>
-              <div className="flex gap-2 justify-center">
-                <Button 
-                  onClick={() => this.setState({ hasError: false, error: undefined })} 
-                  variant="outline"
-                >
-                  <RefreshCw className="h-4 w-4 mr-2" />
-                  Try Again
-                </Button>
-=======
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface Props {;
-  children: React && React.ReactNode;
-}
-
-interface State {;
-  hasError: boolean,;
+import { AlertTriangle, RefreshCw  } from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import { logErrorToProduction  } from '@/utils/productionLogger';
+interface Props  {children: React.ReactNode;
+interface State  {hasError: boolean;
+  error?: Error;
+export class EquipmentErrorBoundary extends React.Component<Props, State> {constructor(props: Props) {super(props)this.state = { hasError: false }
+  hasError: boolean;
   error?: Error;
 }
-
-export class EquipmentErrorBoundary extends React && React.Component<Props, State> {;
-  constructor(props: Props) {;
-    super(props);
-
-
-  }
-
-  static getDerivedStateFromError(error: Error): State {;
-    return { hasError: true, error }
-  }
-
-
-
-  }
-
-  render() {;
-    if (this && this.state.hasError) {;
-      return (
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                <Button onClick={() => window.location.reload()} variant="default">
-                  Refresh Page
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      )
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-    return this.props.children
-  }      )
-    }
-
-    return this.props.children;
-  };
-} ;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+import { logErrorToProduction } from '@/utils/productionLogger';
+import React from 'react';
+import { Button   } from '@/components/ui/button';
+import { Card, CardContent   } from '@/components/ui/card';
+interface Props  {children: React.ReactNode;
 }
+interface State  {hasError: boolean;
+  hasError: boolean;error?: Error;
+}
+export class EquipmentErrorBoundary extends React.Component<Props, State> {constructor(props: Props) {super(props)this.state = { hasError: false }
+  static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
+  }
+  }render() {if (this.state.hasError) {return (<div className='container py-8'>;
+          <Card className='border-red-200 bg-red-50'>;
+            <CardContent className='p-8 text-center'>;
+              <AlertTriangle className='mx-auto mb-4 h-12 w-12 text-red-600' />;
+              <h2 className='text-2xl font-bold text-red-900 mb-2'>;
+                Something went wrong;
+              </h2>;
+              <p className='text-red-700 mb-4'>;
+                We're having trouble loading the equipment listings. This might;
+                be a temporary issue.;
+              </p>;
+              <div className='flex gap-2 justify-center'>;
+                <Button;
+                  onClick={() =>;
+                    this.setState({ hasError: false, error: undefined })}
+                  variant='outline'                >;
+                  <RefreshCw className='h-4 w-4 mr-2' />;
+                  Try Again;
+                </Button>;
+                <Button;
+                  onClick={() => window.location.reload()}
+                  variant='default';
+                >;
+                  <RefreshCw className="h-4 w-4 mr-2" />;
+                  Try Again;
+                </Button>;
+        <div className="container py-8">;
+          <Card className="border-red-200 bg-red-50">;
+            <CardContent className="p-8 text-center">;
+              <AlertTriangle className="mx-auto mb-4 h-12 w-12 text-red-600" />;
+              <h2 className="text-2xl font-bold text-red-900 mb-2">Something went wrong</h2>;
+              <p className="text-red-700 mb-4">;
+                We're having trouble loading the equipment listings. This might be a temporary issue.;
+              </p>;
+              <div className="flex gap-2 justify-center">;
+                <Button;
+                  onClick={() => this.setState({ hasError: false, error: undefined })}variant="outline";
+                >;
+                  <RefreshCw className="h-4 w-4 mr-2" />;
+                  Try Again;
+                </Button>;
+interface Props  {children: React && React.ReactNode;
+}interface State  {hasError: boolean,error?: Error;
+}export class EquipmentErrorBoundary extends React && React.Component<Props, State> {constructor(props: Props) {super(props)}static getDerivedStateFromError(error: Error): State {return { hasError: true, error }
+  }}render() {if (this && this.state.hasError) {return (<Button onClick={() => window.location.reload()} variant="default">;
+                  Refresh Page;
+                </Button>;
+              </div>;
+            </CardContent>;
+          </Card>;
+        </div>;
+      )return this.props.children;
+  }      )}return this.props.children;
+  }}}
                   onClick={() => window && window.location.reload()}
                   variant='default';
                 >                  Refresh Page;
                 <Button onClick={() => window && window.location.reload()} variant="default">;
               </p>;
               <div className="flex gap-2 justify-center">;
-                <Button
-                  onClick={() => this && this.setState({ hasError: false, error: undefined })} ;
-                  variant="outline";
+                <Button;
+                  onClick={() => this && this.setState({ hasError: false, error: undefined })}variant="outline";
                 >;
                   <RefreshCw className="h-4 w-4 mr-2" />;
                   Try Again;
@@ -173,32 +98,15 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
             </CardContent>;
           </Card>;
         </div>;
-      );
-    }
-
-    return this && this.props.children;
-  }      );
-
-
-    }
-
-    return this && this.props.children;
-  };
-
-
-  static getDerivedStateFromError (error: Error): State {
-    return { has_error: true, error }
+      )}return this && this.props.children;
+  }      )}return this && this.props.children;
+  }static getDerivedStateFromError (error: Error): State {return { has_error: true, error }
   }
-  componentDidCatch (error: Error, error_info: React.ErrorInfo) {
-    logErrorToProduction ('Equipment page error:', error, { component_stack: error_info.component_stack });
-  }
-  render () {
-    // Check condition
-if ( {) {
-  $2
+  componentDidCatch (error: Error, error_info: React.ErrorInfo) {logErrorToProduction ('Equipment page error:', error, { component_stack: error_info.component_stack })}
+  render () {// Check condition;
+if ( {) {$2;
 }
-      return (
-        <div className='container py - 8'>;
+      return (<div className='container py - 8'>;
           <Card className='border - red - 200 bg - red - 50'>;
             <CardContent className='p - 8 text - center'>;
               <AlertTriangle className='mx - auto mb - 4 h - 12 w - 12 text - red - 600' />;
@@ -212,8 +120,7 @@ if ( {) {
               <div className='flex gap - 2 justify - center'>;
                 <Button;
                   on_click={() =>;
-                    this.set_state ({ has_error: false, error: undefined });
-                  }
+                    this.set_state ({ has_error: false, error: undefined })}
                   variant='outline'                >;
                   <RefreshCw className='h - 4 w - 4 mr - 2' />;
                   Try Again;
@@ -238,15 +145,8 @@ if ( {) {
               </div>;
             </CardContent>;
           </Card>;
-        </div>);
-    }
+        </div>)}
     return this.props.children;
-  }      );
-    }
-<<<<<<< HEAD
-=======
-    return this.props.children;
+  }      )}return this.props.children;
+  }})}return this.props.children;
   }
-
-} ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

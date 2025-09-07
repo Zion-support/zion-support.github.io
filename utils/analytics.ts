@@ -1,12 +1,13 @@
-<<<<<<< HEAD
-export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';
 
-export interface TrackEventPayload {
-  event: string;
+;
+export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';export interface TrackEventPayload  {event: string;
   properties?: Record<string, any>;
   userId?: string;
   userType?: UserType;
+}export async function trackEvent() {try {await fetch('/api/analytics/events/track', {method: 'POST',headers: {'Content-Type': 'application/json';
+      },body: JSON.stringify(payload)})} catch (error) {console.error('Failed to track event:', error)}
 }
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',export type TrackEventPayload = {name: string;
 
 export async function trackEvent(payload: TrackEventPayload) {
   try {
@@ -21,12 +22,6 @@ export async function trackEvent(payload: TrackEventPayload) {
     console.error('Failed to track event:', error);
   }
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 export type TrackEventPayload = {
@@ -35,84 +30,31 @@ export type TrackEventPayload = {
   userType?: UserType;
   properties?: Record<string, any>;
   at?: string;
-},
-export async /**
- * track_event - Function description
- */
-function track_event() {
-  try {
-    await fetch ('/api / analytics / events / track', {
-      method: 'POST',
-      headers: { 'Content - Type': 'application / json' },
-      body: JSON.stringify (payload);
-      keepalive: true as any});
-  } catch (e) {
-    // swallow;
-
-  }
+},export async /**;
+ * track_event - Function description;
+ */;
+function track_event() {try {await fetch ('/api / analytics / events / track', {method: 'POST',headers: { 'Content - Type': 'application / json' },body: JSON.stringify (payload)keepalive: true as any})} catch (e) {// swallow;}
+}}
+}await fetch('/api/analytics/events/track', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify(payload)keepalive: true as any})}export async function trackEvent() {try {await fetch('/api/analytics/events/track', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify(payload)keepalive: true as any})} catch (e) {// swallow;method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify(payload)keepalive: true as any})}
 }
-<<<<<<< HEAD
-=======
-=======
-export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',;
-export type TrackEventPayload = {;
-  name: string,;
-  page?: string,;
-  userType?: UserType,;
-  properties?: Record<string any>,;
-  at?: string;
-},;
-export async function trackEvent(payload: TrackEventPayload) {;
-  try {;
-export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
-export type TrackEventPayload = {
-  name: string;
-  page?: string;
-  userType?: UserType;
-  properties?: Record<string, any>;
-  at?: string;
+  } catch (error) {// swallow;
+    } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-export async function trackEvent(payload: TrackEventPayload) {
-  try {
-    await fetch('/api/analytics/events/track', {
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify(payload)
-      keepalive: true as any
-    });
-  } catch (e) {
-    // swallow
-  userType?: UserType,;
-  properties?: Record<string, any>,;
-  at?: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+  } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
+}}
 
 
-=======
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
       keepalive: true as any});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 };
 export async function trackEvent(payload: TrackEventPayload) {;
   try {
@@ -123,9 +65,6 @@ export async function trackEvent(payload: TrackEventPayload) {;
       keepalive: true as any});
   } catch (e) {;
     // swallow;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   } catch (error) {
     // swallow;
     } catch (error) {
@@ -133,28 +72,12 @@ export async function trackEvent(payload: TrackEventPayload) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
   }
+}}
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 
   }
 }
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

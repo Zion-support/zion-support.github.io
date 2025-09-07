@@ -1,5 +1,4 @@
 #!/bin/bash
-<<<<<<< HEAD
 
 # Deployment script for production
 set -e

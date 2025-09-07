@@ -1,59 +1,31 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-
-
-=======
-=======
-import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
-ursor/fix-syntax-push-and-merge-to-main-40de
+import React from 'react';  import '@testing-library/jest-dom'; import Header from '../components/Header.dynamic'; describe('Header',() => { test('renders without crashing',() => { render(<Header />)expect(screen.getByTestId('header')).toBeInTheDocument()})test('displays correct content',() => { render(<Header />)})test('handles user interactions',() => { render(<Header />)})test('applies correct styling',() => { render(<Header />)})})ursor/fix-syntax-push-and-merge-to-main-40de;
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent  } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Headerdynamic from '../components/Header.dynamic';
-describe('Headerdynamic', () => {
-  test('renders without crashing', () => {
-    render(<Headerdynamic />);
-    expect(screen.getByTestId('header.dynamic')).toBeInTheDocument();
-  });
-  test('displays correct content', () => {
-    render(<Headerdynamic />);
-  });
-  test('handles user interactions', () => {
-    render(<Headerdynamic />);
-  });
-  test('applies correct styling', () => {
-    render(<Headerdynamic />);
-  });
-});
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Headerdynamic from "./components/Header.dynamic"; describe("Headerdynamic",() => { test("renders without crashing",() => { render(<Headerdynamic />); expect(screen.getByTestId("header.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Headerdynamic />)}); test("handles user interactions",() => { render(<Headerdynamic />)}); test("applies correct styling",() => { render(<Headerdynamic />)})});''"
-
+import Header from '../components/Header.dynamic';
+describe('Header', () => {test('renders without crashing', () => {render(<Header />)expect(screen.getByTestId('header')).toBeInTheDocument()})test('displays correct content', () => {render(<Header />)})test('handles user interactions', () => {render(<Header />)})test('applies correct styling', () => {render(<Header />)})})const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Header from "./components/Header.dynamic"; describe('Header', () => { test('renders without crashing', () => { render(<Header />)expect(screen.getByTestId("header.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<Header />)})test('handles user interactions', () => { render(<Header />)})test('applies correct styling', () => { render(<Header />)})})''";
+ursor/fix-syntax-push-and-merge-to-main-40de;
+describe('Header', () => {test('renders without crashing', () => {render(<Header />)expect(screen.getByTestId('header')).toBeInTheDocument()})test('displays correct content', () => {render(<Header />)})test('handles user interactions', () => {render(<Header />)})test('applies correct styling', () => {render(<Header />)})})const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Header from "./components/Header.dynamic"; describe('Header', () => { test('renders without crashing', () => { render(<Header />)expect(screen.getByTestId("header.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<Header />)})test('handles user interactions', () => { render(<Header />)})test('applies correct styling', () => { render(<Header />)})})''";
+ursor/add-new-services-and-deploy-updates-0462;
+ursor/fix-syntax-push-and-merge-to-main-40de;
+ursor/automate-test-improve-and-merge-code-646c;
+describe('Header';
+  test('renders without crashing';
+    expect(screen.getByTestId('header.dynamic';
+  test('displays correct content';
+  test('handles user interactions';
+  test('applies correct styling';
+const React from "react"; import { render, screen, fireEvent } from '@testing-library/react'; import '@testing-library/jest-dom'; import Header from "./components/Header.dynamic"; describe('Header', () => { test('renders without crashing', () => { render(<Header />)expect(screen.getByTestId("header.dynamic")).toBeInTheDocument()})test('displays correct content', () => { render(<Header />)})test('handles user interactions', () => { render(<Header />)})test("applies correct styling";
+ursor/automate-test-improve-and-merge-code-646c;
+  test('displays correct content', () => {render(<Header />)// Add specific content tests based on component;
+  })test('handles user interactions', () => {render(<Header />)// Add interaction tests based on component functionality;
+  })test('applies correct styling', () => {render(<Header />)// Add styling tests if needed;
+  })})
 import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
-import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+
+
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -65,29 +37,4 @@ describe('Headerdynamic'
   test('handles user interactions'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Headerdynamic from "./components/Header.dynamic"; describe('Headerdynamic', () => { test("renders without crashing",() => { render(<Headerdynamic />); expect(screen.getByTestId("header.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Headerdynamic />)}); test("handles user interactions",() => { render(<Headerdynamic />)}); test("applies correct styling"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

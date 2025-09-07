@@ -1,20 +1,21 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-"use client",
-import Link from './next / link';,
-import { ReactNode  } from './react';,
-interface CTAButtonProps {
-  href: string,
-  variant?: "primary" | "secondary" | "outline",
-  size?: "small" | "medium" | "large",
-  children: ReactNode,
-  class_name?: string,
-  on_click?: () => void;
-=======
-<<<<<<< HEAD
+;
+"use client",import Link from './next / link';,import { ReactNode  } from './react';,interface CTAButtonProps  {href: string,variant?: "primary" | "secondary" | "outline",size?: "small" | "medium" | "large",children: ReactNode,class_name?: string,on_click?: () => void;}
+export /**;
+ * CTAButton - Function description;
+ */;
+function CTAButton() {const base_classes = "inline - flex items - center justify - center font - semibold rounded - lg transition - all duration - 200 transform hover: scale - 105 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - gray - 900",const variant_classes = {primary: "bg - blue - 600 hover:bg - blue - 700 text - white focus:ring - blue - 500",secondary: "bg - gray - 700 hover:bg - gray - 600 text - white border border - gray - 600 hover:border - gray - 500",outline: "bg - transparent hover:bg - white / 10 text - white border border - white / 20 hover:border - white / 40";
+  },const size_classes = {small: "px - 4 py - 2 text - sm",medium: "px - 6 py - 3 text - base",large: "px - 8 py - 4 text - lg";
+  }
+"use client",import Link from "next/link",import { ReactNode } from "react",interface CTAButtonProps  {href: string,variant?: "primary" | "secondary" | "outline",size?: "small" | "medium" | "large",children: ReactNode,className?: string,onClick?: () => void;
+}export function CTAButton() {const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
+  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
+  const variantClasses = {primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500",secondary: "bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500",outline: "bg-transparent hover:bg-white/10 text-white border border-white/20 hover:border-white/40";
+  },const sizeClasses = {small: "px-4 py-2 text-sm",medium: "px-6 py-3 text-base",large: "px-8 py-4 text-lg";
+  }large: "px-8 py-4 text-lg";
+}const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  return (<Link;
+      href={href}className={classes}
 "use client";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -24,9 +25,6 @@ interface CTAButtonProps {href: string;
   children: ReactNode;
   className?: string;
   onClick?: () => void;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 export /**
  * CTAButton - Function description
@@ -43,21 +41,6 @@ function CTAButton() {
     medium: "px - 6 py - 3 text - base",
     large: "px - 8 py - 4 text - lg";
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;
-  return (
-
-    <Link;
-      href={href}
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -78,7 +61,7 @@ export function CTAButton({;
   className = "",;
   onClick;
 }: CTAButtonProps) {;
-  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900",;
+  const baseClasses = "inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 transform hover: scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900";
   const variantClasses = {;
     primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500",;
     secondary: "bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500",;
@@ -93,18 +76,10 @@ export function CTAButton({;
   return (;
     <Link;
       href={href} ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       className={classes}
       on_click={on_click}
       role="button";
       tab_index={0}
     >;
       {children}
-    </Link>);
-}
+    </Link>)}

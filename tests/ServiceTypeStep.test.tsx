@@ -1,76 +1,33 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
+import { render, screen  } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import ServiceTypeStep from '../components/ServiceTypeStep';
+describe('ServiceTypeStep', () => {test('renders without crashing', () => {render(<ServiceTypeStep />)expect(screen.getByTestId('servicetypestep')).toBeInTheDocument()})test('displays correct content', () => {render(<ServiceTypeStep />)// Add specific content tests here;
+  })test('handles user interactions', () => {render(<ServiceTypeStep />)// Add interaction tests here;
+  })test('applies correct styling', () => {render(<ServiceTypeStep />)// Add styling tests here;
+  })})
 interface ServiceTypeStep.testProps {
   // Add props here as needed
 }
-=======
+}
+
 
 interface ServiceTypeStep.testProps {
   // Add props here as needed
-<<<<<<<< HEAD:corrupted_backup/ServiceTypeStep.test.tsx
-}
-
-========
->>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:tests/ServiceTypeStep.test.tsx
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-
-interface ServiceTypeStep.testProps {
-  // Add props here as needed
-<<<<<<<< HEAD:tests/ServiceTypeStep.test.tsx
-========
-}
-
->>>>>>>> main:corrupted_backup/ServiceTypeStep.test.tsx
-=======
 interface ServiceTypeStep.testProps {
   // Add props here as needed
 }
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-export default function ServiceTypeStep.test({ }: ServiceTypeStep.testProps) {
+export default function ServiceTypeStep.test({}: ServiceTypeStep.testProps) {
   return (
     <div>
       <h1>ServiceTypeStep.test</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<<< HEAD:corrupted_backup/ServiceTypeStep.test.tsx
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<<< HEAD:tests/ServiceTypeStep.test.tsx
 
 
-========
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
 }
-=======
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
-}
-========
 
 
->>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:tests/ServiceTypeStep.test.tsx
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
 }
->>>>>>>> main:corrupted_backup/ServiceTypeStep.test.tsx
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

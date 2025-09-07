@@ -1,166 +1,70 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}
->>>>>>> main
->>>>>>> main
-=======
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
+;
+export default function handler() {res.status(200).json({ message: "Checkout session created" })}ursor/automate-test-improve-and-merge-code-646c;
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
-  res.status(200).json({ message: 'Checkout session created' });
-}
-export default function handler(req, res) {
-  res.status(200).json({ "message": 'Checkout session created' });
-}
-<<<<<<< HEAD
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
+  res.status(200).json({ message: 'Checkout session created' })}
+export default function handler() {res.status(200).json({ "message": 'Checkout session created' })}
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}import Stripe from 'stripe';
+async function handler() {if (req.method !== 'POST') {res.statusCode = 405;
+    res.setHeader('Allow', 'POST')res.end('Method Not Allowed')return;
+  }try {const { priceId, quantity  = 1 } = req.body || {}if (!priceId) {res.statusCode = 400;
+      res.json({ error: 'Price ID is required' })return;
+    }const session = await stripe.checkout.sessions.create({mode: 'subscription',payment_method_types: ['card'],line_items: [;
+        {price: priceId,quantity: quantity;
+        }
+      ],success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,cancel_url: `${req.headers.origin}/cancel`;
+    })ursor/automate-test-improve-and-merge-code-646c;
+    res.statusCode = 200;
+    res.json({success: true,sessionId: session.id,url: session.url;
+    })} catch (err) {// console.error('Checkout session API error:', err)res.statusCode = 500;
+    res.json({ error: err.message || 'Checkout session creation failed' })}
+}export default withErrorLogging(handler)export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}ursor/automate-test-improve-and-merge-code-646c;
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}export default function handler() {res.status(200).json({ message: "Checkout session created" })}
+export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
+  res.status(200).json({ message: 'Checkout session created' })}
+export default function handler() {res.status(200).json({ "message": 'Checkout session created' })}url: session.url;
+    })} catch (err) {,// console.error('Checkout session API error:, err),res.statusCode = 500,res.json({ error: err.message || 'Checkout session creation failed' })}}export default withErrorLogging(handler),}export default withErrorLogging(handler)export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}ursor/automate-test-improve-and-merge-code-646c;
+}export default withErrorLogging(handler)export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2023-10-16',
+  apiVersion: '2023-10-16'
 });
 
-async function handler(req, res) {
+export default function handler(req, res) {
   if (req.method !== 'POST') {
-    res.statusCode = 405;
-    res.setHeader('Allow', 'POST');
-    res.end('Method Not Allowed');
-    return;
+    return res.status(405).json({ message: 'Method not allowed' });
   }
 
   try {
-    const { priceId, quantity = 1 } = req.body || {};
-    
-    if (!priceId) {
-      res.statusCode = 400;
-      res.json({ error: 'Price ID is required' });
-      return;
+    const { amount, currency = 'usd' } = req.body;
+
+    if (!amount) {
+      return res.status(400).json({ message: 'Amount is required' });
     }
 
-    const session = await stripe.checkout.sessions.create({
-      mode: 'subscription',
+    const session = stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       line_items: [
         {
-          price: priceId,
-          quantity: quantity,
-        },
+          price_data: {
+            currency,
+            product_data: {
+              name: 'Zion Tech Group Service'
+            },
+            unit_amount: amount * 100, // Convert to cents
+          },
+          quantity: 1
+        }
       ],
+      mode: 'payment',
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${req.headers.origin}/cancel`,
+      cancel_url: `${req.headers.origin}/cancel`
     });
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    res.statusCode = 200;
-    res.json({ 
-      success: true, 
-      sessionId: session.id,
-      url: session.url 
-    });
-  } catch (err) {
-    // console.error('Checkout session API error:', err);
-    res.statusCode = 500;
-    res.json({ error: err.message || 'Checkout session creation failed' });
+    res.status(200).json({ sessionId: session.id });
+  } catch (error) {
+    console.error('Error creating checkout session:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-
-export default withErrorLogging(handler);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
-=======
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-
-export default function handler(req, res) {
-  res.status(200).json({ message: "Checkout session created" })}
-export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
-  res.status(200).json({ message: 'Checkout session created' });
-}
-export default function handler(req, res) {
-  res.status(200).json({ "message": 'Checkout session created' });
-}
-<<<<<<< HEAD
-=======
-=======
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      url: session.url
-    })
-  } catch (err) {,
-    // console.error('Checkout session API error:, err),
-    res.statusCode = 500,
-    res.json({ error: err.message || 'Checkout session creation failed' })
-  };
-};
-export default withErrorLogging(handler),
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
-,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-}
-
-export default withErrorLogging(handler);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
-=======
-export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

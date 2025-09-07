@@ -2,50 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Basic styles */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-<<<<<<< HEAD
-=======
 }
 
-.App {
-  text-align: center;
+/* Custom components */
+.btn-primary {
+  background-color: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  border: none;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-primary:hover {
+  background-color: #059669;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid #10b981;
+  color: #10b981;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  padding: 20px;
+.btn-secondary:hover {
+  background-color: #10b981;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #4f46e5 100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+@media (min-width: 640px) {
+  .cta-buttons {
+    flex-direction: row;
   }
-  to {
-    transform: rotate(360deg);
-  }
->>>>>>> bfa374f2346b9b099cf6d7b959fd7dc047e316cc
 }

@@ -1,19 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 // Type definition for MessageEvent
 interface MessageEvent {
   data: unknown;
-=======
 import { useEffect, useCallback } from "react";
 
-// Define MessageEvent if not available
-interface Event {
-  type: string;
+;
+}: MessageChannelHandlerProps = {}) {const handleMessage = useCallback((event: MessageEvent<unknown>) => {try {if (onMessage) {onMessage(event.data)}
+      } catch (error) {if (onError) {onError(error as Error)}
+// Type definition for MessageEvent;
+interface MessageEvent  {data: unknown;
+// Type definition for MessageEvent;
+interface MessageEvent  {data: unknown;
+import { useEffect, useCallback  } from 'react';
+// Define MessageEvent if not available;
+interface Event  {type: string;
   target: EventTarget | null;
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+}type EventListener = (event: Event) => void;interface EventTarget  {addEventListener(type: string, listener: EventListener): void;
 }
 
 type EventListener = (event: Event) => void;
@@ -21,39 +22,26 @@ type EventListener = (event: Event) => void;
 interface EventTarget {
   addEventListener(type: string, listener: EventListener): void;
   removeEventListener(type: string, listener: EventListener): void;
-}
-
-interface MessageEventSource {
-  postMessage(message: any, targetOrigin: string): void;
-}
-
-interface MessagePort {
-  postMessage(message: any): void;
+}interface MessageEventSource  {postMessage(message: any, targetOrigin: string): void;
+}interface MessagePort  {postMessage(message: any): void;
   start(): void;
   close(): void;
-}
-
-interface MessageEvent<T = any> extends Event {
-  data: T;
+}interface MessageEvent<T = any> extends Event  {data: T;
   origin: string;
   lastEventId: string;
   source: MessageEventSource | null;
   ports: ReadonlyArray<MessagePort>;
-}
-
-interface MessageChannelHandlerProps {
-  onMessage?: (message: unknown) => void;
+}interface MessageChannelHandlerProps  {onMessage?: (message: unknown) => void;
   onError?: (error: Error) => void;
+}export function useMessageChannelHandler() {const handleMessage = useCallback((event: MessageEvent<unknown>) => {try {if (onMessage) {onMessage(event.data)ursor/automate-test-improve-and-merge-code-646c;
+      }
+    },[onMessage, onError],)useEffect(() => {window.addEventListener("message", handleMessage)return () => {window.removeEventListener("message", handleMessage)}}, [handleMessage])}import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError])useEffect(() => { window.addEventListener('message',handleMessage)return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}ursor/automate-test-improve-and-merge-code-646c;
 }
 
 export function useMessageChannelHandler({
   onMessage,
-<<<<<<< HEAD
   onError,
-=======
->>>>>>> main
   onError
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
@@ -71,25 +59,4 @@ export function useMessageChannelHandler({
     };
   }, [handleMessage]);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

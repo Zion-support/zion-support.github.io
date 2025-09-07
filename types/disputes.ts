@@ -1,28 +1,18 @@
-<<<<<<< HEAD
-export type DisputeReason =
-  | 'Scope Disagreement'
-  | 'Quality Issues'
-  | 'Delivery Delay'
-  | 'Payment Issue'
-  | 'Communication Breakdown'
-  | 'Other';
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
-
-
-export type DisputeReason =;
+export interface Dispute  {export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
-export type DisputeAttachment = {
-=======
-export interface Dispute {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  id: string;
+  | 'Other';
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',export type DisputeReason =;
+  | 'Scope Disagreement';
+  | 'Quality Issues';
+  | 'Delivery Delay';
+  | 'Payment Issue';
+  | 'Communication Breakdown';
+export type DisputeAttachment = {id: string;
   orderId: string;
   userId: string;
   reason: string;
@@ -32,19 +22,11 @@ export interface Dispute {
   updatedAt: Date;
   resolution?: string;
   resolvedAt?: Date;
-}
-
-<<<<<<< HEAD
-
-  role: 'admin' | 'client' | 'talent';
-}
-};
-=======
-export interface DisputeResolution {
-  disputeId: string;
+}export interface DisputeResolution  {disputeId: string;
   resolution: string;
   resolvedBy: string;
   resolvedAt: Date;
   refundAmount?: number;
+}role: 'admin' | 'client' | 'talent';
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
+}
