@@ -2,177 +2,160 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Function to fix syntax errors in a file
-function fixSyntaxErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+class SyntaxErrorFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = 0;
+    this.errors = [];
+  }
 
-    // Fix import statements with commas instead of semicolons
-    const importRegex = /^import\s+.*?,\s*$/gm;
-    const matches = content.match(importRegex);
-    if (matches) {
-      content = content.replace(importRegex, (match) => {
-        return match.replace(/,\s*$/, ';');
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  fixFile(filePath) {
+    try {
+      if (!fs.existsSync(filePath)) {
+        return false;
+      }
+
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+
+      // Fix common JSX syntax errors
+      content = content.replace(/\s+\)\s*$/gm, '');
+      content = content.replace(/\s+\)\s*</gm, '</');
+      content = content.replace(/\s+\)\s*{/gm, '{');
+      
+      // Fix missing closing braces
+      const openBraces = (content.match(/\{/g) || []).length;
+      const closeBraces = (content.match(/\}/g) || []).length;
+      
+      if (openBraces > closeBraces) {
+        const missingBraces = openBraces - closeBraces;
+        content += '\n' + '}'.repeat(missingBraces);
+      }
+
+      // Fix TypeScript interface syntax errors
+      if (filePath.endsWith('.ts') && content.includes('name: string')) {
+        // Check if it's a broken interface
+        if (!content.includes('interface') && !content.includes('type')) {
+          // Wrap the properties in an interface
+          const lines = content.split('\n');
+          const fixedLines = [];
+          let inBrokenInterface = false;
+          
+          for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            
+            if (line.trim().match(/^\w+:\s*\w+/) && !inBrokenInterface) {
+              // Start of broken interface
+              fixedLines.push('interface AnalyticsData {');
+              inBrokenInterface = true;
+            }
+            
+            if (inBrokenInterface && line.trim() === '') {
+              fixedLines.push('}');
+              inBrokenInterface = false;
+            }
+            
+            fixedLines.push(line);
+          }
+          
+          if (inBrokenInterface) {
+            fixedLines.push('}');
+          }
+          
+          content = fixedLines.join('\n');
+        }
+      }
+
+      // Remove trailing whitespace and fix indentation
+      content = content.replace(/\s+$/gm, '');
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        this.fixedFiles++;
+        this.log(`Fixed syntax errors in: ${filePath}`, 'SUCCESS');
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      this.log(`Error fixing ${filePath}: ${error.message}`, 'ERROR');
+      this.errors.push(`${filePath}: ${error.message}`);
+      return false;
+    }
+  }
+
+  async fixAllFiles() {
+    this.log('🔍 Finding and fixing syntax errors...');
+    
+    const filesToFix = [
+      'app/about/page.tsx',
+      'app/services/ai-project-manager/page.tsx',
+      'app/services/automation/page.tsx',
+      'app/services/consulting/page.tsx',
+      'pages/api/admin/analytics/summary.ts'
+    ];
+
+    for (const file of filesToFix) {
+      this.fixFile(file);
+    }
+
+    // Also scan for other files with syntax issues
+    try {
+      const { execSync } = require('child_process');
+      const { stdout } = execSync('find . -name "*.tsx" -o -name "*.ts" | head -20', { 
+        cwd: this.projectRoot,
+        encoding: 'utf8'
       });
-      modified = true;
+      
+      const allFiles = stdout.trim().split('\n').filter(f => f && !f.includes('node_modules'));
+      
+      for (const file of allFiles) {
+        if (fs.existsSync(file)) {
+          this.fixFile(file);
+        }
+      }
+    } catch (error) {
+      this.log(`Error scanning files: ${error.message}`, 'ERROR');
     }
+  }
 
-    // Fix interface properties with commas instead of semicolons
-    const interfaceRegex = /interface\s+\w+\s*\{[^}]*\}/gs;
-    content = content.replace(interfaceRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
-      if (fixed !== match) {
-        modified = true;
-        return fixed;
+  async run() {
+    this.log('🚀 Starting syntax error fixing...');
+    
+    try {
+      await this.fixAllFiles();
+      
+      this.log('\n📊 Syntax Error Fixing Report');
+      this.log('='.repeat(50));
+      this.log(`Files Fixed: ${this.fixedFiles}`);
+      this.log(`Errors: ${this.errors.length}`);
+      
+      if (this.errors.length > 0) {
+        this.log('\nErrors encountered:');
+        this.errors.forEach(error => this.log(`  - ${error}`, 'ERROR'));
       }
-      return match;
-    });
-
-    // Fix type definitions with commas instead of semicolons
-    const typeRegex = /type\s+\w+\s*=\s*\{[^}]*\}/gs;
-    content = content.replace(typeRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
-      if (fixed !== match) {
-        modified = true;
-        return fixed;
-      }
-      return match;
-    });
-
-    // Fix object properties with commas instead of semicolons
-    const objectRegex = /const\s+\w+\s*=\s*\{[^}]*\}/gs;
-    content = content.replace(objectRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
-      if (fixed !== match) {
-        modified = true;
-        return fixed;
-      }
-      return match;
-    });
-
-    // Fix function parameters with commas instead of semicolons
-    const functionRegex = /function\s+\w+\s*\([^)]*\)/g;
-    content = content.replace(functionRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,)]+),\s*/g, '$1: $2, ');
-      if (fixed !== match) {
-        modified = true;
-        return fixed;
-      }
-      return match;
-    });
-
-    // Fix arrow function parameters with commas instead of semicolons
-    const arrowFunctionRegex = /\([^)]*\)\s*=>/g;
-    content = content.replace(arrowFunctionRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,)]+),\s*/g, '$1: $2, ');
-      if (fixed !== match) {
-        modified = true;
-        return fixed;
-      }
-      return match;
-    });
-
-    // Fix destructuring with commas instead of semicolons
-    const destructuringRegex = /const\s+\{[^}]*\}\s*=/g;
-    content = content.replace(destructuringRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,}]+),\s*/g, '$1: $2, ');
-      if (fixed !== match) {
-        modified = true;
-        return fixed;
-      }
-      return match;
-    });
-
-    // Fix array destructuring with commas instead of semicolons
-    const arrayDestructuringRegex = /const\s+\[[^\]]*\]\s*=/g;
-    content = content.replace(arrayDestructuringRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,\]]+),\s*/g, '$1: $2, ');
-      if (fixed !== match) {
-        modified = true;
-        return fixed;
-      }
-      return match;
-    });
-
-    // Fix React component props with commas instead of semicolons
-    const componentPropsRegex = /interface\s+\w+Props\s*\{[^}]*\}/gs;
-    content = content.replace(componentPropsRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,;]+),\s*$/gm, '$1: $2;');
-      if (fixed !== match) {
-        modified = true;
-        return fixed;
-      }
-      return match;
-    });
-
-    // Fix generic type parameters with commas instead of semicolons
-    const genericRegex = /<[^>]*>/g;
-    content = content.replace(genericRegex, (match) => {
-      const fixed = match.replace(/(\w+)\s*:\s*([^,>]+),\s*/g, '$1: $2, ');
-      if (fixed !== match) {
-        modified = true;
-        return fixed;
-      }
-      return match;
-    });
-
-    // Fix export statements with commas instead of semicolons
-    const exportRegex = /^export\s+.*?,\s*$/gm;
-    content = content.replace(exportRegex, (match) => {
-      return match.replace(/,\s*$/, ';');
-    });
-
-    // Fix variable declarations with commas instead of semicolons
-    const varRegex = /^(const|let|var)\s+.*?,\s*$/gm;
-    content = content.replace(varRegex, (match) => {
-      return match.replace(/,\s*$/, ';');
-    });
-
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed syntax errors in: ${filePath}`);
-      return true;
+      
+      this.log('\n✅ Syntax error fixing completed');
+      
+    } catch (error) {
+      this.log(`Fatal error: ${error.message}`, 'ERROR');
+      process.exit(1);
     }
-
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
 }
 
-// Main function to process all files
-function main() {
-  const patterns = [
-    'src/**/*.tsx',
-    'src/**/*.ts',
-    'src/**/*.jsx',
-    'src/**/*.js'
-  ];
-
-  let totalFiles = 0;
-  let fixedFiles = 0;
-
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    totalFiles += files.length;
-
-    files.forEach(file => {
-      if (fixSyntaxErrors(file)) {
-        fixedFiles++;
-      }
-    });
-  });
-
-  console.log(`\nProcessed ${totalFiles} files`);
-  console.log(`Fixed syntax errors in ${fixedFiles} files`);
-}
-
+// Run the fixer
 if (require.main === module) {
-  main();
+  const fixer = new SyntaxErrorFixer();
+  fixer.run().catch(console.error);
 }
 
-module.exports = { fixSyntaxErrors };
+module.exports = SyntaxErrorFixer;

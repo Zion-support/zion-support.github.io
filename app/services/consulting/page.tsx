@@ -2,11 +2,12 @@ export const metadata = {
   title: 'Technology Consulting | Zion Tech Group',
   description: 'Strategic technology consulting services including digital transformation, technology strategy, architecture design, and digital innovation. Expert guidance for your technology journey.'
 }
-export default function ConsultingPage() {
+export default
+function ConsultingPage() {
   return (
     <div className="animate-fade-in">
       <section className="text-center py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">
           Technology Consulting
         </h1>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
@@ -14,11 +15,10 @@ export default function ConsultingPage() {
           architecture design, and digital innovation. Get expert guidance for your technology journey.
         </p>
       </section>
-
       {/* Consulting Solutions Showcase */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Consulting Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           <ConsultingSolution
             title="Digital Transformation"
             description="Comprehensive digital transformation strategy and implementation to modernize your business operations"
@@ -63,15 +63,13 @@ export default function ConsultingPage() {
           />
         </div>
       </section>
-
       {/* Core Consulting Services */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Core Consulting Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
           <ConsultingServiceItem
             title="Strategic Planning"
-            details={[
-              "Technology roadmap development",
+            details={["Technology roadmap development",
               "Digital transformation strategy",
               "Innovation planning and execution",
               "Technology investment prioritization",
@@ -81,8 +79,7 @@ export default function ConsultingPage() {
           />
           <ConsultingServiceItem
             title="Architecture & Design"
-            details={[
-              "System architecture design",
+            details={["System architecture design",
               "Cloud architecture planning",
               "Integration strategy and design",
               "Scalability and performance planning",
@@ -92,8 +89,7 @@ export default function ConsultingPage() {
           />
           <ConsultingServiceItem
             title="Implementation Support"
-            details={[
-              "Project management and oversight",
+            details={["Project management and oversight",
               "Vendor selection and management",
               "Implementation planning and execution",
               "Change management and training",
@@ -103,11 +99,10 @@ export default function ConsultingPage() {
           />
         </div>
       </section>
-
       {/* Industry Expertise */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industry Expertise</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
           <IndustryCard
             title="Financial Services"
             description="Banking, insurance, and fintech technology consulting"
@@ -130,11 +125,10 @@ export default function ConsultingPage() {
           />
         </div>
       </section>
-
       {/* Consulting Process */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Consulting Process</h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-4 gap-6">
           <ProcessStep
             step="1"
             title="Discovery & Assessment"
@@ -161,17 +155,15 @@ export default function ConsultingPage() {
           />
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
           <ConsultingPricingPlan
             name="Strategy Workshop"
             price="$5k–$15k"
             duration="1–2 weeks"
-            features={[
-              "Current state assessment",
+            features={["Current state assessment",
               "Strategy workshop sessions",
               "Technology recommendations",
               "Implementation roadmap",
@@ -183,8 +175,7 @@ export default function ConsultingPage() {
             name="Full Consulting Engagement"
             price="$25k–$150k"
             duration="4–16 weeks"
-            features={[
-              "Comprehensive strategy development",
+            features={["Comprehensive strategy development",
               "Architecture design",
               "Implementation planning",
               "Vendor evaluation",
@@ -196,8 +187,7 @@ export default function ConsultingPage() {
             name="Retainer Consulting"
             price="$10k+/mo"
             duration="Ongoing"
-            features={[
-              "Monthly strategy sessions",
+            features={["Monthly strategy sessions",
               "Technology advisory",
               "Implementation oversight",
               "Vendor management",
@@ -207,11 +197,11 @@ export default function ConsultingPage() {
           />
         </div>
       </section>
-
       {/* Contact CTA */}
       <ContactCTA />
     </div>
-  )
+  );
+}
 function ConsultingSolution({ title, description, features, pricing, icon }: {
   title: string
   description: string
@@ -220,7 +210,7 @@ function ConsultingSolution({ title, description, features, pricing, icon }: {
   icon: string
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover: shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
@@ -234,7 +224,6 @@ function ConsultingSolution({ title, description, features, pricing, icon }: {
       </ul>
       <div className="text-lg font-bold text-blue-600">{pricing}</div>
     </div>
-  )
 function ConsultingServiceItem({ title, details }: {
   title: string
   details: string[]
@@ -251,7 +240,6 @@ function ConsultingServiceItem({ title, details }: {
         ))}
       </ul>
     </div>
-  )
 function IndustryCard({ title, description, icon }: {
   title: string
   description: string
@@ -263,7 +251,6 @@ function IndustryCard({ title, description, icon }: {
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  )
 function ProcessStep({ step, title, description, icon }: {
   step: string
   title: string
@@ -279,7 +266,6 @@ function ProcessStep({ step, title, description, icon }: {
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  )
 function ConsultingPricingPlan({ name, price, duration, features, popular }: {
   name: string
   price: string
@@ -308,7 +294,7 @@ function ConsultingPricingPlan({ name, price, duration, features, popular }: {
         ))}
       </ul>
       <a
-        href="tel:+13024640950"
+        href="tel: +13024640950"
         className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold text-center block transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -318,7 +304,6 @@ function ConsultingPricingPlan({ name, price, duration, features, popular }: {
         Get Started
       </a>
     </div>
-  )
 function ContactCTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center mt-12">
@@ -329,7 +314,7 @@ function ContactCTA() {
         Let's discuss your technology challenges and create a strategic roadmap for success.
         Our consultants have guided 500+ companies through digital transformation.
       </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="flex flex-col sm: flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"
           className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -349,3 +334,4 @@ function ContactCTA() {
     </div>
   );
 }
+}}}}}})))))

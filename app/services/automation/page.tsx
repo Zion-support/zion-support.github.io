@@ -2,11 +2,12 @@ export const metadata = {
   title: 'Automation Services | Zion Tech Group',
   description: 'Comprehensive automation services including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline operations and boost efficiency.'
 }
-export default function AutomationPage() {
+export default
+function AutomationPage() {
   return (
     <div className="animate-fade-in">
       <section className="text-center py-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">
           Automation Services
         </h1>
         <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
@@ -14,11 +15,10 @@ export default function AutomationPage() {
           and business process optimization. Streamline operations, reduce costs, and boost efficiency with intelligent automation.
         </p>
       </section>
-
       {/* Automation Solutions Showcase */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Automation Solutions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           <AutomationSolution
             title="Robotic Process Automation (RPA)"
             description="Automate repetitive tasks and processes using software robots to improve accuracy and efficiency"
@@ -63,15 +63,13 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Core Automation Services */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Core Automation Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
           <AutomationServiceItem
             title="Process Analysis & Design"
-            details={[
-              "Current state process mapping",
+            details={["Current state process mapping",
               "Gap analysis and optimization opportunities",
               "Future state process design",
               "ROI analysis and business case development",
@@ -81,8 +79,7 @@ export default function AutomationPage() {
           />
           <AutomationServiceItem
             title="Implementation & Integration"
-            details={[
-              "RPA bot development and deployment",
+            details={["RPA bot development and deployment",
               "Workflow automation platform setup",
               "System integration and API development",
               "Testing and quality assurance",
@@ -92,8 +89,7 @@ export default function AutomationPage() {
           />
           <AutomationServiceItem
             title="Management & Optimization"
-            details={[
-              "24/7 monitoring and maintenance",
+            details={["24/7 monitoring and maintenance",
               "Performance optimization and tuning",
               "Exception handling and resolution",
               "Continuous improvement initiatives",
@@ -103,11 +99,10 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Industry Applications */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Industry Applications</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
           <IndustryCard
             title="Finance & Banking"
             description="Automate loan processing, compliance reporting, and fraud detection"
@@ -130,11 +125,10 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-12 bg-gray-50 rounded-lg">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Automation Benefits</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
           <BenefitCard
             title="Cost Reduction"
             description="Reduce operational costs by up to 60% through process automation"
@@ -157,17 +151,15 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Pricing Plans */}
       <section className="py-12">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
           <AutomationPricingPlan
             name="Process Assessment"
             price="$5k–$15k"
             duration="2–4 weeks"
-            features={[
-              "Current process analysis",
+            features={["Current process analysis",
               "Automation opportunity identification",
               "ROI calculation",
               "Implementation roadmap",
@@ -179,8 +171,7 @@ export default function AutomationPage() {
             name="Automation Implementation"
             price="$15k–$75k"
             duration="4–12 weeks"
-            features={[
-              "Process automation development",
+            features={["Process automation development",
               "System integration",
               "Testing and deployment",
               "User training",
@@ -192,8 +183,7 @@ export default function AutomationPage() {
             name="Managed Automation"
             price="$3k+/mo"
             duration="Ongoing"
-            features={[
-              "24/7 monitoring and maintenance",
+            features={["24/7 monitoring and maintenance",
               "Performance optimization",
               "Exception handling",
               "Continuous improvement",
@@ -203,11 +193,11 @@ export default function AutomationPage() {
           />
         </div>
       </section>
-
       {/* Contact CTA */}
       <ContactCTA />
     </div>
-  )
+  );
+}
 function AutomationSolution({ title, description, features, pricing, icon }: {
   title: string
   description: string
@@ -216,7 +206,7 @@ function AutomationSolution({ title, description, features, pricing, icon }: {
   icon: string
 }) {
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+    <div className="bg-white border border-gray-200 rounded-xl p-6 hover: shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
@@ -230,7 +220,6 @@ function AutomationSolution({ title, description, features, pricing, icon }: {
       </ul>
       <div className="text-lg font-bold text-blue-600">{pricing}</div>
     </div>
-  )
 function AutomationServiceItem({ title, details }: {
   title: string
   details: string[]
@@ -247,7 +236,6 @@ function AutomationServiceItem({ title, details }: {
         ))}
       </ul>
     </div>
-  )
 function IndustryCard({ title, description, icon }: {
   title: string
   description: string
@@ -259,7 +247,6 @@ function IndustryCard({ title, description, icon }: {
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  )
 function BenefitCard({ title, description, icon }: {
   title: string
   description: string
@@ -271,7 +258,6 @@ function BenefitCard({ title, description, icon }: {
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 text-sm">{description}</p>
     </div>
-  )
 function AutomationPricingPlan({ name, price, duration, features, popular }: {
   name: string
   price: string
@@ -300,7 +286,7 @@ function AutomationPricingPlan({ name, price, duration, features, popular }: {
         ))}
       </ul>
       <a
-        href="tel:+13024640950"
+        href="tel: +13024640950"
         className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold text-center block transition-colors ${
           popular
             ? 'bg-blue-600 text-white hover:bg-blue-700'
@@ -310,7 +296,6 @@ function AutomationPricingPlan({ name, price, duration, features, popular }: {
         Get Started
       </a>
     </div>
-  )
 function ContactCTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center mt-12">
@@ -321,7 +306,7 @@ function ContactCTA() {
         Let's discuss your automation needs and create a solution that streamlines your operations.
         Our team has automated processes for 300+ companies, saving millions in operational costs.
       </p>
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="flex flex-col sm: flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"
           className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -341,3 +326,4 @@ function ContactCTA() {
     </div>
   );
 }
+}}}}}})))))

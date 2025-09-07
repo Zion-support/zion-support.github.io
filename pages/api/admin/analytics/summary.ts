@@ -3,16 +3,14 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
-
+interface EventRow {
   name: string
   page?: string
   userType?: string
   properties?: Record<string, any>
   at: string
 }
-
 const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl')
-
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
     if (!fs.existsSync(LOG_FILE)) return []
@@ -28,33 +26,23 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         const t = new Date(obj.at)
         if (start && t < start) continue
         if (end && t > end) continue
-
         rows.push(obj)
       } catch {}
     }
-
   } catch {
     return []
   }
 }
-
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
     .sort((a, b) => b.value - a.value),
-
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
-
     .sort((a, b) => b.value - a.value),
-
   const days = Object.keys(byDay).sort($2);
   const line = days.map((d) => ({ date: d, value: byDay[d] })),
-
   const days = Object.keys(byDay).sort()
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
-
   const funnelStages = ['VisitAI Prompt UsedPost CreatedMessage Sent']
   const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }))
-
   res.status(200).json({ pagesMostUsed, events, line, funnel });
-
