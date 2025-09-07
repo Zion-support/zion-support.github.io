@@ -1,7 +1,12 @@
 # Automation Report
 
+<<<<<<< HEAD
 **Timestamp:** 2025-09-07T05:22:55.964Z
 **Duration:** 28320ms
+=======
+**Timestamp:** 2025-09-07T05:09:16.275Z
+**Duration:** NaNms
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Summary
 - ✅ Successful: 3
@@ -10,8 +15,13 @@
 
 ## Successful Operations
 - Operation
+<<<<<<< HEAD
 - ESLint
 - Build
+=======
+- scripts/performance-monitor-enhanced.js
+- scripts/auto-fixer.js
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Errors
 - scripts/comprehensive-error-fixer.cjs: Command failed: node scripts/comprehensive-error-fixer.cjs
@@ -32,6 +42,7 @@ Error fixing failed: Error: ENOENT: no such file or directory, stat '/workspace/
   path: '/workspace/media/docu-script/requirements.txt'
 }
 
+<<<<<<< HEAD
 - scripts/auto-fixer.js: Command failed: node scripts/auto-fixer.js
 /workspace/scripts/auto-fixer.js:3
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; import { fileURLToPath } from 'url';
@@ -87,6 +98,28 @@ SyntaxError: Invalid or unexpected token
 Node.js v22.16.0
 
 - TypeScript: spawnSync /bin/sh ENOBUFS
+=======
+- scripts/advanced-build-optimizer.js: spawnSync /bin/sh ENOBUFS
+- ESLint: Command failed: npm run lint
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+
+- TypeScript: spawnSync /bin/sh ENOBUFS
+- Build: Command failed: npm run build
+npm warn config optional Use `--omit=optional` to exclude optional dependencies, or
+npm warn config `--include=optional` to include them.
+npm warn config
+npm warn config       Default value does install optional deps unless otherwise omitted.
+ ⨯ Failed to load next.config.js, see more info here https://nextjs.org/docs/messages/next-config-error
+
+> Build error occurred
+ReferenceError: module is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at <unknown> (next.config.js:58:1)
+
+>>>>>>> b547502a01c5baa88ddb8f82513787a696ec0950
 
 ## Warnings
 

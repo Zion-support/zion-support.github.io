@@ -1,101 +1,70 @@
+<<<<<<< HEAD
 const bundleAnalyzer = require('@next/bundle-analyzer');
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
+=======
+/** @type {import('next').NextConfig} */
+>>>>>>> cursor/automate-test-improve-and-merge-code-3e92
 const nextConfig = {
+  // Performance optimizations
   compress: true,
   poweredByHeader: false,
-  generateEtags: true,
+  generateEtags: false,
   
-  // Disable linting during build
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
-  // Disable type checking during build
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  
-  // Webpack configuration to handle TypeScript and JSX
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Handle TypeScript files
-    config.module.rules.push({
-      test: /\.tsx?$/,
-      use: [
-        {
-          loader: 'ts-loader',
-          options: {
-            transpileOnly: true,
-            compilerOptions: {
-              jsx: 'preserve',
-            },
-          },
-        },
-      ],
-    });
-    
-    return config;
+  // Build optimizations
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@radix-ui/react-icons', 'lucide-react']
   },
   
   // Image optimization
   images: {
-    domains: ['localhost'],
     formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
   },
   
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ];
-  },
-  
-  // Redirects
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ];
-  },
-  
-  
-  // Experimental features
-  experimental: {
-    optimizeCss: true,
-  },
-  
-  // Output configuration
-  output: 'standalone',
-  
-  // Trailing slash
-  trailingSlash: false,
-  
-  // Environment variables
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
-  },
+  // Bundle analyzer
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    if (process.env.ANALYZE === 'true') {
+      const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+      config.plugins.push(
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          openAnalyzer: false,
+          reportFilename: './bundle-analysis.html'
+        })
+      );
+    }
+    
+    // Optimize chunks
+    config.optimization.splitChunks = {
+      chunks: 'all',
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+        common: {
+          name: 'common',
+          minChunks: 2,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    };
+    
+    return config;
+  }
 };
 
+<<<<<<< HEAD
 module.exports = withBundleAnalyzer(nextConfig);
+=======
+export default nextConfig;
+>>>>>>> cursor/automate-test-improve-and-merge-code-3e92

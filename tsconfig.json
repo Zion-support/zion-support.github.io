@@ -52,7 +52,8 @@
     "strictNullChecks": true,
     "incremental": true,
     "module": "esnext",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "tsBuildInfoFile": ".next/tsconfig.tsbuildinfo"
   },
   "include": [
     "next-env.d.ts",
