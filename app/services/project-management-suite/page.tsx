@@ -1,68 +1,39 @@
-export default function ServicePage() {
+import React from 'react';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Project Management Suite - Zion Tech Group',
+  description: 'Professional project management suite services to help your business grow and succeed.',
+  keywords: 'project management suite, business solutions, professional services'
+};
+
+export default function ProjectManagementSuitePage() {
   return (
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Project Management Suite
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional project management suite services to help your business grow and succeed.
         </p>
-      </div>      </div>
       </div>
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Coming Soon
+        </h2>
+        <p className="text-lg text-gray-600 text-center">
+          This service is currently under development. Please contact us for more information.
+        </p>
       </div>
-      <PricingSection />
-
-      <ContactSection />
+      <div className="text-center">
+        <a
+          href="mailto:kleber@ziontechgroup.com?subject=Project Management Suite Inquiry"
+          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Contact Us
+        </a>
       </div>
+    </div>
   );
-
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-      </div>
-  );
-
-            "Email support",
-
-          ]}
-          popular={false}
-        />
-
-            "Priority support",
-
-          ]}
-          popular={true}
-        />
-
-            "24/7 phone support",
-
-          ]}
-          popular={false}
-        />
-      </div>
-      </div>
-  );
-
-  name,
-  price,
-  duration,
-
-  popular,
-
-  name: string;
-  price: string;
-  duration: string;
-
-  popular: boolean;
-
-            <span className="text-gray-600">{feature}</span>
-          </li>
-        ))}
-      </ul>
-
-      </a>
-      </div>
-  );
-
-      <div className="mt-6 text-sm text-gray-500">
-        <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-        <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
-      </div>
-      </div>
-  );
+}

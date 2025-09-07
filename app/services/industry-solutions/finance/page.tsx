@@ -1,53 +1,39 @@
-<p className="text-gray-600">{description}</p>
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Finance - Zion Tech Group',
+  description: 'Professional finance services to help your business grow and succeed.',
+  keywords: 'finance, business solutions, professional services'
+};
+
+export default function FinancePage() {
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Finance
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional finance services to help your business grow and succeed.
+        </p>
       </div>
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Coming Soon
+        </h2>
+        <p className="text-lg text-gray-600 text-center">
+          This service is currently under development. Please contact us for more information.
+        </p>
+      </div>
+      <div className="text-center">
+        <a
+          href="mailto:kleber@ziontechgroup.com?subject=Finance Inquiry"
+          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
   );
-
-      <p className="text-gray-600">{description}</p>
-      </div>
-  );
-
-            "Recommendations",
-
-          ]}
-          popular={false}
-        />
-
-            "Training",
-
-          ]}
-          popular={true}
-        />
-
-            "Maintenance",
-
-          ]}
-          popular={false}
-        />
-      </div>
-    </section>
-  );
-
-  name,
-  price,
-
-  popular,
-
-  name: string;
-  price: string;
-
-  popular: boolean;
-
-            <span className="text-blue-500 mr-3">✓</span> {feature}
-          </li>
-        ))}
-      </ul>
-
-      </a>
-      </div>
-  );
-
-      <div className="mt-6 text-sm text-gray-600">
-        <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
-      </div>
-      </div>
-  );
+}

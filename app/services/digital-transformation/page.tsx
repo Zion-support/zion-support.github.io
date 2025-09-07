@@ -1,48 +1,39 @@
-</div>
-      </section>
+import React from 'react';
+import { Metadata } from 'next';
 
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-          Digital Transformation Framework
+export const metadata: Metadata = {
+  title: 'Digital Transformation - Zion Tech Group',
+  description: 'Professional digital transformation services to help your business grow and succeed.',
+  keywords: 'digital transformation, business solutions, professional services'
+};
+
+export default function DigitalTransformationPage() {
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Digital Transformation
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional digital transformation services to help your business grow and succeed.
+        </p>
+      </div>
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Coming Soon
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Item
-            title="Assessment & Strategy"
-            details={[
-              'Current state analysis and digital maturity assessment',
-              'Competitive landscape analysis and market positioning',
-              'Technology stack evaluation and gap analysis',
-              'Digital strategy development and roadmap creation',
-              'Stakeholder alignment and change management planning',
-              'ROI modeling and business case development',
-            ]}
-          />
-          <Item
-            title="Implementation & Execution"
-            details={[
-              'Phased implementation approach with agile methodology',
-              'Technology selection and vendor management',
-              'Custom development and system integration',
-              'Data migration and system modernization',
-              'Testing, quality assurance, and performance optimization',
-              'Deployment and go-live support',
-            ]}
-          />
-          <Item
-            title="Optimization & Growth"
-            details={[
-              'Performance monitoring and continuous improvement',
-              'User adoption tracking and training optimization',
-              'Business process refinement and automation',
-              'Advanced analytics and AI implementation',
-              'Scalability planning and future roadmap',
-              'Ongoing support and maintenance',
-            ]}
-          />
+        <p className="text-lg text-gray-600 text-center">
+          This service is currently under development. Please contact us for more information.
+        </p>
       </div>
-      </section>
-
-      <Pricing />
-      <ContactSection />
+      <div className="text-center">
+        <a
+          href="mailto:kleber@ziontechgroup.com?subject=Digital Transformation Inquiry"
+          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Contact Us
+        </a>
       </div>
+    </div>
   );
+}

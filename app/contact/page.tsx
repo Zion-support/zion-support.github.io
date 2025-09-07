@@ -1,12 +1,5 @@
 'use client';
 import React, { useState } from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Contact Us - Zion Tech Group | Get In Touch',
-  description: 'Contact Zion Tech Group for your AI services, IT solutions, and micro SaaS development needs. Get in touch with our expert team today.',
-  keywords: 'contact us, get in touch, Zion Tech Group, AI services, IT solutions, micro SaaS, support'
-};
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

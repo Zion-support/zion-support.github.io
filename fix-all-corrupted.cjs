@@ -2,11 +2,14 @@ const fs = require('fs');
 const path = require('path');
 
 const corruptedFiles = [
-  'app/services/analytics-dashboard/page.tsx',
-  'app/services/automation-solutions/page.tsx',
-  'app/services/cloud-services/page.tsx',
-  'app/services/crm-platform/page.tsx',
-  'app/services/crm-solution/page.tsx'
+  'app/services/project-management/page.tsx',
+  'app/services/industry-solutions/finance/page.tsx',
+  'app/services/mobile-app-development/page.tsx',
+  'app/services/helpdesk-platform/page.tsx',
+  'app/services/ecommerce-platform/page.tsx',
+  'app/services/digital-transformation/page.tsx',
+  'app/services/social-media-management/page.tsx',
+  'app/services/email-automation/page.tsx'
 ];
 
 const basicPageTemplate = (title, description, keywords) => `import React from 'react';

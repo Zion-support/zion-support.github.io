@@ -1,11 +1,7 @@
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Welcome to Zion Tech Group</h1>
-    </main>
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Enterprise AI & IT Solutions | Micro SaaS Development',
   description: 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
@@ -31,6 +27,7 @@ export const metadata: Metadata = {
     images: ['/og-image.jpg']
   }
 };
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -71,6 +68,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
@@ -91,6 +89,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
       {/* Services Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
@@ -147,6 +146,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -177,68 +177,11 @@ export default function HomePage() {
               Call Us Now
             </a>
           </div>
-<div className="mt-6 text-sm text-gray-600">
+          <div className="mt-6 text-sm text-gray-600">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>
       </section>
-      {/* Stats Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-gray-600">Services Delivered</div>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-            <p className="text-gray-600">
-              Custom AI implementations that solve real business problems and drive efficiency.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">⚡</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Micro SaaS</h3>
-            <p className="text-gray-600">
-              Scalable software solutions designed for rapid deployment and growth.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🔧</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">IT Services</h3>
-            <p className="text-gray-600">
-              Comprehensive IT services to support your business infrastructure needs.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Choose Zion Tech Group?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-gray-600">Services Available</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">99.9%</div>
-              <div className="text-gray-600">Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
-              <div className="text-gray-600">Happy Clients</div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
