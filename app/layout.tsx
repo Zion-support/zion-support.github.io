@@ -2,6 +2,25 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  category: 'technology',
+  classification: 'Business Technology Services',
+  referrer: 'origin-when-cross-origin',
+  colorScheme: 'light',
+  themeColor: '#000000',
   title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
   description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.'
 };
@@ -9,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">

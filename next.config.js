@@ -2,10 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   eslint: {
-    ignoreDuringBuilds: true
+    ignoreDuringBuilds: true,
   },
   typescript: {
-    ignoreBuildErrors: true
+    ignoreBuildErrors: true,
   },
   images: {
     domains: ['ziontechgroup.com', 'images.unsplash.com', 'via.placeholder.com'],
