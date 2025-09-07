@@ -1,2 +1,0 @@
-
-export default UltraAdvancedFuturisticFooter2025;
