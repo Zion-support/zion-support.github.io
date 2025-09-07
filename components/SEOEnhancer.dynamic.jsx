@@ -1,19 +1,11 @@
-import React from 'react';
+import React from "react";
 
-;
-const SEOEnhancer.dynamic = () => {}
+const SEOEnhancerDynamic = () => {
   return (
-    <div data - testid="seoenhancer.dynamic">;
-      <h1 > SEOEnhancer.dynamic</h1>;
-    </div>);
-const SEOEnhancer.dynamic = () => ;
-  return (<div data - testid=\"seoenhancer.dynamic\"    />;
-      <h1     /> SEOEnhancer.dynamic</h1>
+    <div data-testid="seoenhancer-dynamic">
+      <h1> Dynamic</h1>
     </div>
   );
-}
-;
+};
 
-pr-12243
-export default SEOEnhancer.dynamic;
-
+export default SEOEnhancerDynamic;

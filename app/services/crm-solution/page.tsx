@@ -1,8 +1,8 @@
 import React from 'react'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Crm Solution - Zion Tech Group',
-  description: 'Professional crm solution services to help your business grow and succeed.',
+  title: 'CRM Solution - Zion Tech Group',
+  description: 'Professional CRM solution services to help your business grow and succeed.',
   keywords: 'crm solution, business solutions, professional services'
 };
 

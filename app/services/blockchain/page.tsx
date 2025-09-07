@@ -1,4 +1,7 @@
-export const metadata = { 
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = { 
   title: 'Blockchain Solutions | Zion Tech Group',
   description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and Web3 applications. Enterprise-grade blockchain solutions.'
 };

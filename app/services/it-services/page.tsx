@@ -1,4 +1,7 @@
-export const metadata = { 
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, SRE, cybersecurity, and infrastructure management. Enterprise-grade solutions for modern businesses.'
 };

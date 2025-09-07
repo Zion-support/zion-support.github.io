@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cloud Services - Zion Tech Group',
-  description: 'Professional cloud services services to help your business grow and succeed.',
+  description: 'Professional cloud services to help your business grow and succeed.',
   keywords: 'cloud services, business solutions, professional services'
 };
 

@@ -1,4 +1,7 @@
-export const metadata = { 
+import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, analytics platforms, and automation solutions. From MVP to scale.'
 };
