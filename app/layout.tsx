@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google';
 import Link from "next/link";
 import './globals.css';
 
+const inter = Inter({ subsets: ['latin'] });
+
 export const metadata: Metadata = {
   title: {
     default: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
