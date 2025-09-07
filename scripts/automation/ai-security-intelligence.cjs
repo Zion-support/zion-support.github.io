@@ -161,7 +161,7 @@ class AISecurityIntelligence {
   generateReport(analysis) {;
     this.log('📊 Generating security intelligence report...');
 ;
-    const report = {;
+    const report = {
       ...analysis,
       summary: {
         overallScore: this.calculateOverallScore(analysis),
@@ -191,11 +191,11 @@ class AISecurityIntelligence {
       configuration: 0.15,
     };
 ;
-    return Math.round(;
-      analysis.vulnerabilities.score * weights.vulnerabilities +;
-      analysis.dependencies.score * weights.dependencies +;
-      analysis.codeSecurity.score * weights.codeSecurity +;
-      analysis.configuration.score * weights.configuration;
+    return Math.round(
+      analysis.vulnerabilities.score * weights.vulnerabilities +
+      analysis.dependencies.score * weights.dependencies +
+      analysis.codeSecurity.score * weights.codeSecurity +
+      analysis.configuration.score * weights.configuration
     );
   }
 ;

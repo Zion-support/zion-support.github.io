@@ -8,18 +8,12 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-<<<<<<< HEAD
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-=======
     "strict": true,
-    "forceConsistentCasingInFileNames": false,
+    "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "moduleResolution": "bundler",
     "maxNodeModuleJsDepth": 0,
     "skipDefaultLibCheck": true,
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
     "esModuleInterop": true,
     "module": "ESNext",
     "resolveJsonModule": true,
@@ -33,9 +27,7 @@
         "name": "next"
       }
     ],
-<<<<<<< HEAD
-    "strictNullChecks": true
-=======
+    "strictNullChecks": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
@@ -75,7 +67,6 @@
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
     "noImplicitReturns": false
->>>>>>> cb8cfb4fb3d771dc157162ef9d8670f2dbe493da
   },
   "include": [
     "next-env.d.ts",

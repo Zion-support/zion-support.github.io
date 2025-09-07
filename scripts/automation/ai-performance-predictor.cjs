@@ -203,7 +203,7 @@ class AIPerformancePredictor {
   generateReport(analysis) {;
     this.log('📊 Generating performance prediction report...');
 ;
-    const report = {;
+    const report = {
       ...analysis,
       summary: {
         overallScore: this.calculateOverallScore(analysis),
@@ -233,11 +233,11 @@ class AIPerformancePredictor {
       memory: 0.2,
     };
 ;
-    return Math.round(;
-      analysis.bundleSize.score * weights.bundleSize +;
-      analysis.loadTime.score * weights.loadTime +;
-      analysis.runtime.score * weights.runtime +;
-      analysis.memory.score * weights.memory;
+    return Math.round(
+      analysis.bundleSize.score * weights.bundleSize +
+      analysis.loadTime.score * weights.loadTime +
+      analysis.runtime.score * weights.runtime +
+      analysis.memory.score * weights.memory
     );
   }
 ;
