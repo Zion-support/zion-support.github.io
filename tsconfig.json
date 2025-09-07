@@ -15,18 +15,13 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-<<<<<<< HEAD
     "forceConsistentCasingInFileNames": false,
     "noEmit": true,
     "moduleResolution": "bundler",
-=======
-    "noEmit": true,
     "maxNodeModuleJsDepth": 0,
     "skipDefaultLibCheck": true,
     "esModuleInterop": true,
     "module": "ESNext",
-    "moduleResolution": "node",
->>>>>>> origin/main
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -64,7 +59,6 @@
       ]
     },
     "allowSyntheticDefaultImports": true,
-<<<<<<< HEAD
     "strictNullChecks": true,
     "incremental": true,
     "module": "esnext",
@@ -73,13 +67,9 @@
     "allowImportingTsExtensions": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true
-=======
+    "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
-    "strictNullChecks": false,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false
->>>>>>> origin/main
+    "noImplicitReturns": false
   },
   "include": [
     "next-env.d.ts",

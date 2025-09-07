@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import { ArrowRightIcon from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import React from 'react';
-import Link from 'next/link';
-import { ArrowRightIcon from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { ArrowRightIcon from '@heroicons/react/24/outline';
 import React from 'react';

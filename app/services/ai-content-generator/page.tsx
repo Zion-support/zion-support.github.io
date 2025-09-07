@@ -1,6 +1,5 @@
 import React from "react";
-import { Metadata,
-  from 'next';
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Content Generator Pro | Zion Tech Group',
@@ -41,20 +40,17 @@ export default function AIContentGeneratorPage() {
               <FeatureItem icon="✍️"
                 title="Multi-Language Support"
                 description="Generate content in 50+ languages with native-level quality and cultural context."
-                benefits={["50+ languages", "Cultural adaptation", "Native-level quality",
-                "Real-time translation"
+                benefits={["50+ languages", "Cultural adaptation", "Native-level quality", "Real-time translation"]}
               />
               <FeatureItem icon="🔍"
                 title="SEO Optimization"
                 description="AI-powered SEO optimization with keyword research, meta descriptions, and content structure."
-                benefits={["Keyword research", "Meta optimization", "Content structure",
-                "Ranking analysis"
+                benefits={["Keyword research", "Meta optimization", "Content structure", "Ranking analysis"]}
               />
               <FeatureItem icon="🎨"
                 title="Brand Voice Consistency"
                 description="Maintain consistent brand voice across all content with custom tone and style settings."
-                benefits={["Custom tone settings", "Brand guidelines", "Style consistency"}
-            "Voice training"
+                benefits={["Custom tone settings", "Brand guidelines", "Style consistency", "Voice training"]}
               />
             </div>
           </div>

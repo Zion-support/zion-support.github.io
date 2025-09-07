@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { ArrowRightIcon,
-  from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export const metadata = {
   title: 'AI Customer Support - Zion Tech Group',
   description: 'Professional AI customer support solutions for your business needs.'
@@ -67,8 +66,7 @@ and get a custom solution tailored to your needs.
                />View All Services</Link>
             </div>
 import Link from 'next/link';
-import { ArrowRightIcon,
-  from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export const metadata = {
   title: 'Ai Customer Support | Zion Tech Group',
   description: 'Professional ai customer support services for your business needs.'
@@ -177,8 +175,7 @@ and get a custom solution tailored to your needs.
                />View All Services</Link>
             </div>
 import Link from 'next/link';
-import { ArrowRightIcon,
-  from '@heroicons/react/24/outline';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
           </div>
         </div>
