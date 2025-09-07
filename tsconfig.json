@@ -30,7 +30,7 @@
     },
     "allowSyntheticDefaultImports": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "app/**/*.ts", "app/**/*.tsx", ".next/types/**/*.ts"],
   "exclude": [
     "node_modules",
     "apps/**",
@@ -57,6 +57,7 @@
     "*.config.ts",
     "types/**",
     "netlify/**",
-    "components/**"
+    "components/**",
+    "src/**"
   ]
 }
