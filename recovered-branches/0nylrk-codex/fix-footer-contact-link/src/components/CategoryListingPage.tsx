@@ -123,7 +123,29 @@ interface CategoryListingPageProps {;
             <GradientHeading>{title}</GradientHeading>"
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
 ;
+<<<<<<< HEAD
+export function CategoryListingPage() {;
+  }
+  const [searchQuery, setSearchQuery] = useState(""),;"
+  const [selectedSort, setSelectedSort] = useState(sortOptions[0].value),;
+  const [selectedFilter, setSelectedFilter] = useState(filterOptions[0].value),;
+  // Process listings based on filters and search;
+    .filter((listing) => {;
+      // Apply search filter;
+      }
+        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+        (listing.tags && listing.tags.some(tag =>;
+          tag.toLowerCase().includes(searchQuery.toLowerCase());
+        )),;
+      // Apply category filters;
+      if (selectedFilter === 'all') return matchesSearch,;'
+      if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4,;'
+      if (selectedFilter === 'best-match') return matchesSearch && (listing.aiScore || 0) >= 85,;'
+      return matchesSearch;
+=======
 export function CategoryListingPage() { return null; }
+>>>>>>> origin/chore/fix-lint-and-merge
     });
     .sort((a, b) => {;
       // Apply sorting;

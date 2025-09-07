@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React, { useEffect, useState } from "react";
 import {useInterviews} from "@/hooks/useInterviews";
 import {Interview} from "@/types/interview";
@@ -24,6 +27,7 @@ import { Button } from "@/components/ui/button",
 
 import { Calendar, Clock, Video } from "lucide-react";
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
+>>>>>>> origin/chore/fix-lint-and-merge
 function InterviewsContent() {
 
   const { interviews, isLoading, fetchInterviews } = useInterviews();
@@ -43,6 +47,10 @@ function InterviewsContent() {
   const upcomingInterviews = interviews
     .filter((interview) => {
 
+<<<<<<< HEAD
+      }
+      const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');'
+=======
         ['confirmedrequested'].includes(interview.status)
     })
     .sort((a, b) =>
@@ -60,8 +68,17 @@ function InterviewsContent() {
 
     interviews.forEach((interview) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
+>>>>>>> origin/chore/fix-lint-and-merge
       if (!grouped[dateKey]) {
         grouped[dateKey] = []
+<<<<<<< HEAD
+return Object.entries(groupedInterviews);
+      .sort(([dateA], [dateB]) =>
+        parseISO(dateA).getTime() - parseISO(dateB).getTime()
+      )
+      .map(([date, interviews]) => (
+
+=======
 
 import React, { useEffect, useState } from "react";
 import {useInterviews} from "@/hooks/useInterviews";
@@ -325,11 +342,15 @@ function InterviewsContent() {;
               Upcoming;
               {upcomingInterviews.length > 0 && ("
                 <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
+>>>>>>> origin/chore/fix-lint-and-merge
                   {upcomingInterviews.length}
                 </span>
 
               )}
             </TabsTrigger>
+<<<<<<< HEAD
+
+=======
             <TabsTrigger value="pending">
               Pending
               {pendingInterviews.length > 0 && (
@@ -346,9 +367,14 @@ function InterviewsContent() {;
             {isLoading ? ("
               <div className="flex justify-center py-12">"
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
+>>>>>>> origin/chore/fix-lint-and-merge
               </div>
             ) : upcomingInterviews.length > 0 ? (
               renderInterviewGroups(upcomingGrouped)
+<<<<<<< HEAD
+            ) : (
+
+=======
             ) : ("
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">"
                 <Video className="h-12 w-12 mx-auto text-muted-foreground mb-4" />"
@@ -361,9 +387,14 @@ function InterviewsContent() {;
             {isLoading ? ("
               <div className="flex justify-center py-12">"
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
+>>>>>>> origin/chore/fix-lint-and-merge
               </div>
             ) : pendingInterviews.length > 0 ? (
               renderInterviewGroups(pendingGrouped)
+<<<<<<< HEAD
+            ) : (
+
+=======
             ) : ("
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">"
                 <Clock className="h-12 w-12 mx-auto text-muted-foreground mb-4" />"
@@ -376,14 +407,20 @@ function InterviewsContent() {;
             {isLoading ? ("
               <div className="flex justify-center py-12">"
                 <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full"></div>
+>>>>>>> origin/chore/fix-lint-and-merge
               </div>
             ) : pastInterviews.length > 0 ? (
               renderInterviewGroups(pastGrouped)
+<<<<<<< HEAD
+            ) : (
+
+=======
             ) : ("
               <div className="text-center py-12 bg-zion-blue-dark/40 rounded-lg border border-zion-blue-light">"
                 <Calendar className="h-12 w-12 mx-auto text-muted-foreground mb-4" />"
                 <h3 className="text-xl font-medium mb-2">No past interviews</h3>"
                 <p className="text-muted-foreground">Your interview history will appear here.</p>
+>>>>>>> origin/chore/fix-lint-and-merge
               </div>
             )}
 

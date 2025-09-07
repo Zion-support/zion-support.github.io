@@ -81,11 +81,24 @@ interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {;
   active?: boolean;
 }
 ;
+<<<<<<< HEAD
+export function SidebarItem() {;
+  }
+  return (;
+    <div;
+      className={cn(;
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";"
+        }
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground "hover":bg-accent "hover":text-accent-foreground";"
+        className;
+import {cn} from "@/lib/utils";"
+=======
 
 import React from "react",
 import { cn } from "@/lib/utils",
 
 import {cn} from "@/lib/utils";
+>>>>>>> origin/chore/fix-lint-and-merge
 interface SidebarItemProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
   className?: string;
@@ -101,10 +114,16 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
 
       )}
       {...props}>;
+<<<<<<< HEAD
+      {children}
+interface SidebarItemProps extends React.HTMLAttributes < HTMLDivElement> {
+  }
+=======
       {children}'
 import React from './react';'
 import { cn } from '@/lib / utils';
 
+>>>>>>> origin/chore/fix-lint-and-merge
   class_name?: string;
   children?: React.ReactNode;}
   active?: boolean;}

@@ -81,9 +81,23 @@ export function ContractForm({;
     defaultValues: initialValues || {"
       projectName: "","
       scopeSummary: "",
+<<<<<<< HEAD
+      startDate: new Date(),
+  const [isGenerating, setIsGenerating] = useState($2);
+  const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
+  const { toast } = useToast($2);
+    resolver: zodResolver($2);
+    defaultValues: initialValues || {
+      projectName: "",
+      scopeSummary: "",
+      startDate: new Date($2);
+      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
+=======
       startDate: new Date(),"
       paymentTerms: talent.hourly_rate ? "hourly" : "fixed","`
       paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "","
+>>>>>>> origin/chore/fix-lint-and-merge
       additionalClauses: ["nda", "ip"]}}),
 
   // Update form when initialValues change
@@ -176,6 +190,12 @@ export function ContractForm() { return null; }
       description: `${milestones.length} milestones have been generated and will be included in the contract.`})
 
   },
+<<<<<<< HEAD
+  
+    setIsGenerating($2);
+    try {
+      const contract = await generateContract($2);
+=======
 
     setIsGenerating(true)
     try {}
@@ -183,6 +203,7 @@ export function ContractForm() { return null; }
 
       ),
 
+>>>>>>> origin/chore/fix-lint-and-merge
       onContractGenerated(contract)
     } catch (error) {"
       console.error("Error generating contract:", error);

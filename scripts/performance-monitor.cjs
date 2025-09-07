@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +81,7 @@ const { execSync } = require('child_process')
 #!/usr/bin/env node
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -87,6 +90,10 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
 >>>>>>> main
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -604,3 +611,4 @@ if (failed === 0) {
   process.exit(1);
 }
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910
+>>>>>>> origin/chore/fix-lint-and-merge

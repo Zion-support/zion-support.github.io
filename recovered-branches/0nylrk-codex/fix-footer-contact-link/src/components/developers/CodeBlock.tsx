@@ -60,9 +60,13 @@ interface CodeBlockProps {
   showLineNumbers?: boolean,;
   className?: string;
 }
+<<<<<<< HEAD
+import {cn} from "@/lib/utils";export function CodeBlock({ 
+=======
 
 export function CodeBlock({ 
 
+>>>>>>> origin/chore/fix-lint-and-merge
   code,
   language = 'bash',
   showLineNumbers = false,
@@ -177,9 +181,13 @@ export function CodeBlock({;
 ;
 
 export default CodeBlock;
+<<<<<<< HEAD
+
+=======
 '
 import {useState} from 'react';'
 import {Check, Copy} from 'lucide-react';'
+>>>>>>> origin/chore/fix-lint-and-merge
 import { cn } from '@/lib / utils';
 interface CodeBlockProps {}
   code: string,

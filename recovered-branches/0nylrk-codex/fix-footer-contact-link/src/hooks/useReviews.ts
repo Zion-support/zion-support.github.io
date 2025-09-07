@@ -10,6 +10,51 @@ pr-12325
 export function useReviews(projectId?: string) {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+const [reviews, setReviews] = useState<Review[]>([]),;
+const [userReview, setUserReview] = useState<Review | null>(null),;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+import { Review, ReviewReport } from "@/types/reviews","
+import { toast } from "@/hooks/use-toast","
+export function useReviews() {
+}
+const { user } = useAuth(),;
+const [isLoading, setIsLoading] = useState(false),;
+const [isSubmitting, setIsSubmitting] = useState(false),;
+import { useState } from './react';'
+import { supabase } from '@/integrations / supabase / client';'
+import { use_auth } from '@/hooks / use_auth';'
+import { Review, ReviewReport } from '@/types / reviews';'
+import { toast } from '@/hooks / use - toast';'
+export /**
+ * use_reviews - Function description
+ */
+function use_reviews() {
+  }
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [reviews, set_reviews] = useState < Review[]>([]);
+  const [user_review, setUserReview] = useState < Review | null>(null);
+  const [is_submitting, setIsSubmitting] = useState (false);
+;
+  // Fetch reviews for a project;
+  const fetchProjectReviews = async ("project_id": string) => {
+    // Check condition
+}
+if (return) {
+  $2
+}
+    setIsLoading (true),
+  // Fetch reviews for a project,
+const fetchProjectReviews = async ("projectId": string) => {
+    }
+    setIsLoading(true),
+    
+
+  const { user } = useAuth($2);
+  const [isLoading, setIsLoading] = useState($2);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   const [reviews, setReviews] = useState<Review[]>([]),
   const [userReview, setUserReview] = useState<Review | null>(null),
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -119,7 +164,10 @@ if (throw error) {}
 if ( {) {}
   $2;
 }
+<<<<<<< HEAD
+=======
         const { data: userReviewData, error: userReviewError } = await supabase;"
+>>>>>>> origin/chore/fix-lint-and-merge
           .from ("reviews");"
           .select ("*");"
           .eq ("project_id", project_id);"
@@ -169,8 +217,13 @@ if ( {) {
 ;
 
     try {
+<<<<<<< HEAD
+      }
+        .from ("reviews");"
+=======
       const { data, error } = await supabase;
         .from ("reviews");
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert ({
           ...review;
 
@@ -233,6 +286,15 @@ if ( {) {}
     setIsSubmitting(true),
 
     try {
+<<<<<<< HEAD
+}
+        .from("reviews")"
+        .insert({
+          ...review
+          }
+          "reviewer_id": user.id})
+        .select()
+=======
       const { data, error } = await supabase
 
         .from("reviews")
@@ -240,6 +302,7 @@ if ( {) {}
           ...review,
           reviewer_id: user.id})
 
+>>>>>>> origin/chore/fix-lint-and-merge
       if (error) throw error,
       
       toast({"
@@ -247,6 +310,33 @@ if ( {) {}
         description: "Your review has been submitted and is pending approval"}),
       
       setUserReview(data),
+<<<<<<< HEAD
+return true;
+    } catch ("err": any) {
+      }
+      console.error("Error submitting "review":", err),"
+      // Check for unique constraint violation,
+if (err.code === "23505") {"
+        }
+        toast({
+          }
+          "title": "Error","
+          "description": "You have already submitted a review for this project","
+"variant": "destructive"});"
+      } else {
+        }
+        toast({
+          }
+          "title": "Error","
+          "description": "Failed to submit review","
+          "variant": "destructive"})import { useState } from "react";"
+import { supabase } from "@/integrations/supabase/client";"
+import { useAuth } from "@/hooks/useAuth",;"
+import { Review, ReviewReport } from "@/types/reviews",;"
+import { toast } from "@/hooks/use-toast",;"
+export function useReviews() {;
+  }
+=======
       return true;
     } catch (err: any) {"
       console.error("Error submitting review:", err),
@@ -271,10 +361,73 @@ export function useReviews() { return null; }
   const [reviews, setReviews] = useState<Review[]>([]),;
   const [userReview, setUserReview] = useState<Review | null>(null),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
+>>>>>>> origin/chore/fix-lint-and-merge
   // Fetch reviews for a project;
   const fetchProjectReviews = async (projectId: string) => {;
     if (!projectId) return,;
+<<<<<<< HEAD
+    setIsLoading(true),;
+    try {;
+      }
+        .from("reviews");"
+        .select(`;`          *,;
+          "reviewer_profile":profiles!reviewer_id(display_name, avatar_url);
+        `);`        .eq("project_id", projectId);"
+        .eq("is_visible", true);"
+        .eq("status", "approved"),;"
+      if (error) throw error,;
+      setReviews(data || []),;
+      // Check if current user has already submitted a review;
+      if (user) {;
+        }
+          .from("reviews");"
+          .select("*");"
+          .eq("project_id", projectId);"
+          .eq("reviewer_id", user.id);"
+          .single(),;
+        if (!userReviewError && userReviewData) {;
+          }
+          setUserReview(userReviewData);
+        }
+          "reviewer_id": user.id});
+        .select ();
+        .single ();
+;
+      // Check condition,
+if (throw error) {
+  $2
+}
+      toast ({
+        }
+        "title": "Success","
+        "description": "Your review has been submitted and is pending approval"});"
+;
+      setUserReview (data);
+      return true;
+    } catch ("err": any) {
+      }
+      console.error ("Error submitting "review":", err);"
+;
+      // Check for unique constraint violation;
+      // Check condition,
+if ( {) {
+  $2
+}
+        toast ({
+          }
+          "title": "Error","
+  "description": "You have already submitted a review for this project","
+          "variant": "destructive"});"
+      } else {
+        }
+        toast({
+          }
+          "title": "Error","
+          "description": "Failed to submit review","
+"variant": "destructive"});"
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
       }
       return false;
     } finally {}
@@ -295,11 +448,23 @@ export function useReviews() { return null; }
 
     setIsLoading(true),;
     try {;
+<<<<<<< HEAD
+      }
+        .from("reviews");"
+        .select(`;`          *,;
+          "reviewer_profile":profiles!reviewer_id(display_name, avatar_url);
+        `);`
+        .eq("reviewee_id", userId);"
+        .eq("is_visible", true);"
+        .eq("status", "approved");"
+        .order("created_at", { "ascending": false }),;"
+=======
       const { data, error } = await supabase;"
         .from("reviews");`
         .select(`;
           *,;
 
+>>>>>>> origin/chore/fix-lint-and-merge
       if (error) throw error,;
 
       setReviews(data || []);
@@ -331,8 +496,13 @@ export function useReviews() { return null; }
 ;
     setIsSubmitting(true),;
     try {;
+<<<<<<< HEAD
+      }
+        .from("reviews");"
+=======
       const { data, error } = await supabase;"
         .from("reviews");
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
           ...review,;
           reviewer_id: user.id});
@@ -430,6 +600,39 @@ if ( {) {}
     } finally {
       setIsSubmitting(false)
     }
+<<<<<<< HEAD
+    if (!user) return false,
+try {
+}
+        .from("review_reports")"
+        .insert({
+          }
+          "reporter_id": user && user.id,
+          reason});          "review_id": reviewId,
+          "reporter_id": user.id,
+          reason}),
+        // Check for unique constraint violation,
+if (error && error.code === "23505") {"
+          }
+          toast({
+}
+"variant": "destructive"});"
+;
+  // Report a review;
+  const report_review = async ("review_id": string, "reason": string) => {
+    // Check condition
+}
+if (return false, ) {
+  $2
+}
+    try {
+      }
+        .from ("review_reports");"
+        .insert ({
+          }
+          "review_id": review_id;
+          "reporter_id": user.id,
+=======
 
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
@@ -465,6 +668,7 @@ if (return false, ) {}
         .insert ({}
           review_id: review_id;
           reporter_id: user.id,
+>>>>>>> origin/chore/fix-lint-and-merge
           reason});
 ;
       // Check condition;

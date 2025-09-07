@@ -1,5 +1,28 @@
 articleId: string;
 }
+<<<<<<< HEAD
+  // Find the article in all categories,
+let article,;
+  for (const category of HELP_CATEGORIES) {
+    }
+    const found = category.articles.find(a => a.id === articleId),
+    if (found) {
+      }
+      article = found,
+break;
+import { Card } from "@/components/ui/card",;"
+import { ThumbsUp, ThumbsDown } from "lucide-react",;"
+import { toast } from "@/components/ui/use-toast",;"
+import { HELP_CATEGORIES } from "./help-content",;"
+interface HelpArticleViewProps {;
+  }
+  let article;
+  for (const category of HELP_CATEGORIES) {
+    }
+    const found = category.articles.find((a) => a.id === articleId);
+    if (found) {
+      }
+=======
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
@@ -9,6 +32,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
   // Find the article in all categories
 
+>>>>>>> origin/chore/fix-lint-and-merge
       article = found;
       break;
 

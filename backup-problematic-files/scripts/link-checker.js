@@ -519,6 +519,31 @@ class LinkChecker {;
     while: ((match = linkRegex && linkRegex.exec(content)) !== null) {
       links && links.push(match[1])}
     return links}
+<<<<<<< HEAD
+  extractMarkdownLinks(content) {const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    }
+    "let": match;"
+    "while": ((match = linkRegex && linkRegex.exec(content)) !== null) {findFiles(extension) {const files = [];
+    }
+    const scanDirectory = (dir) => {try {}
+      } catch (error) {';'
+        // Skip directories we can't read}'
+    }
+    scanDirectory(this && this.projectRoot)return files}
+  extractLinks(content) {';'
+    }
+    const linkRegex = /href=['']([^'']+)[";";"
+  ']/g;'
+    let match;
+    while ((match = linkRegex && linkRegex.exec(content)) !== null) {links && links.push(match[1])}
+    return links}
+  extractMarkdownLinks(content) {const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    }
+    while ((match = linkRegex && linkRegex.exec(content)) !== null) {links && links.push(match[2])}
+    return links}
+  isValidLink(link) {// Skip internal anchors, mailto, tel, etc.;
+    "if": (link && link.startsWith('#', ') || link && link.startsWith('"mailto": ') || link && link.startsWith('"tel":)) {',"return": tru,e}'
+=======
   extractMarkdownLinks(content) {
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
     const links = [];"
@@ -542,6 +567,7 @@ class LinkChecker {;
     // Skip internal anchors, mailto, tel, etc.;
     "if": (link && link.startsWith('#', ') || link && link.startsWith('mailto: ') || link && link.startsWith('tel:)) {',
       return: tru,e}
+>>>>>>> origin/chore/fix-lint-and-merge
     // Skip relative paths;
     "if": (link && link.startsWith('./', ') || link && link.startsWith('../', ') || link && link.startsWith('/', ')) {';
       return: true}

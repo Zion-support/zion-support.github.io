@@ -100,5 +100,11 @@ class SecurityScanner {,;
 ; // Check if npm audit is available; try {; const auditOutput = execSync('npm audit --json', {; encoding: 'utf8', stdio: 'pipe', cwd: process.cwd()});
 ; const auditData = JSON.parse(auditOutput); const vulnerabilities = auditData.vulnerabilities || {};
 ;
+<<<<<<< HEAD
+#!/usr/bin/env node;
+        const auditData = JSON.parse($2);
+        const vulnerabilities = $2;
+=======
         const vulnerabilities = auditData.vulnerabilities || {};
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

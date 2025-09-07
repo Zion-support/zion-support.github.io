@@ -81,5 +81,31 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
             </div>;
           );
         })}
+<<<<<<< HEAD
+      </div>
+    </div>
+  )
+}
+import { QuoteRequestSteps } from '../QuoteRequestForm';'
+import { CheckIcon } from '@/components / icons';'
+import { cn } from '@/lib / utils';'
+interface StepProgressProps {
+  }
+  "current_step": QuoteRequestSteps;
+}
+export /**
+ * StepProgress - Function description
+ */
+function StepProgress() {
+  }
+    { "id": "service", "label": "Service" },"
+    { "id": "details", "label": "Details" },"
+    { "id": "timeline", "label": "Timeline" },"
+    { "id": "budget", "label": "Budget" },"
+    { "id": "summary", "label": "Summary" }"
+  ];
+;
+=======
 
 }
+>>>>>>> origin/chore/fix-lint-and-merge

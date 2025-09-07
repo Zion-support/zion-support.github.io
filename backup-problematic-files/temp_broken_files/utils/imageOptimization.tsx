@@ -115,7 +115,22 @@ export function preloadImage(src:string):Promise<void> {;
 export function getImageDimensions(src: string):Promise<{ width:number;, height: number ;}> {;
   return new Promise((resolve, reject) => {;
     const img = new window.Image(),;
+<<<<<<< HEAD
+    img.onload = () => resolve(),;
+    img.onerror = reject,;
+    img.src = src,;
+  }),;
+}
+;
+// Utility to get image dimensions;
+export function getImageDimensions("src":string):Promise<{ "width":number, "height":number }> {;
+  }
+  return new Promise((resolve, reject) => {;
+    }
+    img.onload = () => resolve({ "width":img.naturalWidth, "height":img.naturalHeight }),;
+=======
     img.onload = () => resolve({ width: img.naturalWidth;, height: img.naturalHeight ;}),;
+>>>>>>> origin/chore/fix-lint-and-merge
     img.onerror = reject,;
     img.src = src,;
   }),;

@@ -359,6 +359,8 @@ class ErrorDetectionService {}
     
     try {}
       // Run ESLint check;
+<<<<<<< HEAD
+=======
       const result = this.runESLintCheck();
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -367,6 +369,7 @@ class ErrorDetectionService {}
       // Run ESLint check;
       const result = this.runESLintCheck();
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
         this.errorTypes.eslint = result.errors.map(error => ({})
           "file": error.filePath,""
           "type": 'eslint',
@@ -386,6 +389,8 @@ class ErrorDetectionService {}
     
     try {}
       // Try to build the project;
+<<<<<<< HEAD
+=======
       const result = this.runBuildCheck();
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -394,6 +399,7 @@ class ErrorDetectionService {}
       // Try to build the project;
       const result = this.runBuildCheck();
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
         this.errorTypes.build = result.errors.map(error => ({})
           "file": error.file || 'build',
           "type": 'build',
@@ -412,6 +418,8 @@ class ErrorDetectionService {}
     
     try {}
       // Check for dependency issues;
+<<<<<<< HEAD
+=======
       const result = this.runDependencyCheck();
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
@@ -420,6 +428,7 @@ class ErrorDetectionService {}
       // Check for dependency issues;
       const result = this.runDependencyCheck();
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
         this.errorTypes.dependency = result.errors.map(error => ({})
           "package": error.package,""
           "type": 'dependency',
@@ -694,8 +703,11 @@ class ErrorDetectionService {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       return { "errors": [] }} catch (error) {}
       // Build failed, extract errors from stderr;
+<<<<<<< HEAD
+=======
       const stderr = error.stderr ? error.stderr.toString() : '';
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
       // Build failed, extract errors from stderr;"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       return this.parseBuildErrors(stderr)};
@@ -752,6 +764,10 @@ class ErrorDetectionService {}
     return { errors }};
   parseESLintErrors(stderr) {}
     const errors = [];
+<<<<<<< HEAD
+    lines.forEach(line => {})
+  if($2) {}
+=======
     const lines = stderr.split('\n');
 <<<<<<< HEAD
 =======
@@ -760,6 +776,7 @@ class ErrorDetectionService {}
     lines.forEach(line => {})
       const match = line.match(/([^(]+)\((\d+),(\d+)\):\s+(.+)/);
       if (match) {}
+>>>>>>> origin/chore/fix-lint-and-merge
         errors.push({})
           "filePath": match[1].trim(),
           "line": parseInt(match[2]),
@@ -777,12 +794,15 @@ class ErrorDetectionService {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     return { errors }};
   parseBuildErrors(stderr) {}
+<<<<<<< HEAD
+=======
     const errors = [];
     const lines = stderr.split('\n');
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     lines.forEach(line => {})
 =======
           "file": match[1].trim(),""
@@ -811,6 +831,8 @@ class ErrorDetectionService {}
 <<<<<<< HEAD
     return { errors }};
   parseDependencyErrors(audit) {}
+<<<<<<< HEAD
+=======
     const errors = [];
 =======
     
@@ -823,6 +845,7 @@ class ErrorDetectionService {}
           "severity": 'high
   parseDependencyErrors(audit) {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     if (audit.vulnerabilities) {}
       Object.keys(audit.vulnerabilities).forEach(pkg => {})
         const vuln = audit.vulnerabilities[pkg];
@@ -862,11 +885,14 @@ class ErrorDetectionService {}
       return false} catch (error) {}
   extractConfigurationIssues(content, filename) {}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     const issues = [];
 <<<<<<< HEAD
 =======
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     try {}
       if (filename.endsWith('.json')) {}
 =======

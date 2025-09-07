@@ -131,7 +131,11 @@ export const checkSignupPatterns = async (;
   // If IP address is provided, check for rapid signups from same IP;
   if (ipAddress) {;
     try {;
+<<<<<<< HEAD
+      }
+=======
       const { data: recentSignups, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
         .from('profiles');'
         .select('created_at');'
         .eq('ip_address', ipAddress);'

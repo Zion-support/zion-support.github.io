@@ -35,6 +35,10 @@ class AdvancedAppImprovementSuite {
     }
   }
 
+<<<<<<< HEAD
+  log(message, level = 'INFO') {
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+=======
 main
 
 =======
@@ -43,9 +47,8 @@ main
   }
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> origin/chore/fix-lint-and-merge
   log(message) {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
 
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");
@@ -54,6 +57,22 @@ main
   async runCommand(command, description) {
 <<<<<<< HEAD
     this.log(`Starting: ${description}`);
+<<<<<<< HEAD
+  log(message, type = 'INFO') {
+    const prefix = {
+      'INFO': 'ℹ️',
+      'SUCCESS': '✅',
+      'ERROR': '❌',
+      'WARNING': '⚠️',
+      'PROGRESS': '🔄'
+    }[type] || 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`, 'PROGRESS');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
@@ -118,6 +137,17 @@ main
     this.log("Optimizing bundle size...");
     const optimizations = [
 
+<<<<<<< HEAD
+
+class PerformanceOptimizer {
+  constructor() {
+      { command: "npm run analyze", description: "Bundle Analysis" },
+      { command: "npm run build", description: "Production Build" }
+    ];
+    
+    const results = [];
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 main
 
 =======
@@ -146,7 +176,6 @@ main
 <<<<<<< HEAD
 <<<<<<< HEAD
     for (const optimization of optimizations) {
-      const result = await this.runCommand(optimization.command, optimization.description);
       results.push({ ...optimization, result });
 
 =======
@@ -163,35 +192,53 @@ main
     this.log("Improving performance...");
     const performanceTasks = [
     this.log("Improving performance...");
-    const performanceTasks = [
 
 
 main
+<<<<<<< HEAD
+    this.log("⚡ Improving performance...");
+    const tasks = [
+
+    this.log("Improving performance...");
+
+
+
+
+
+      { command: "npm run lint:fix", description: "Fix Linting Issues" },
+      { command: "npm run type-check", description: "TypeScript Type Check" }
+    ];
+    
+=======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       { command: "npm run lint:fix", description: "Fix Linting Issues" },
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 main
 
+<<<<<<< HEAD
+    for (const task of tasks) {
+      results.push({ ...task, ...result });
+=======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
       { command: "npm run type-check", description: "TypeScript Type Check" }"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const task of performanceTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 <<<<<<< HEAD
 <<<<<<< HEAD
     for (const task of performanceTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 =======
@@ -205,30 +252,47 @@ main
     this.log("Enhancing security...");
     const securityTasks = [
     this.log("Enhancing security...");
-    const securityTasks = [
 
 
 main
+<<<<<<< HEAD
+    this.log("🔒 Enhancing security...");
+
+    this.log("Enhancing security...");
+
+
+
+
+
+      { command: "npm audit --audit-level=moderate", description: "Security Audit" },
+      { command: "npm audit fix --force", description: "Fix Security Vulnerabilities" }
+    ];
+    
+=======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       { command: "npm audit --audit-level=moderate", description: "Security Audit" },
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 main
 
+<<<<<<< HEAD
+    for (const task of tasks) {
+      results.push({ ...task, ...result });
+=======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const task of securityTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 <<<<<<< HEAD
     for (const task of securityTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 =======
@@ -242,10 +306,23 @@ main
     this.log("Running tests...");
     const testTasks = [
     this.log("Running tests...");
-    const testTasks = [
 
 
 main
+<<<<<<< HEAD
+    this.log("🧪 Running tests...");
+
+    this.log("Running tests...");
+
+
+
+
+
+      { command: "npm test", description: "Run Test Suite" },
+      { command: "npm run test:coverage", description: "Generate Test Coverage" }
+    ];
+    
+=======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
@@ -253,20 +330,24 @@ main
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
       { command: "npm test", description: "Run Test Suite" },
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 main
 
+<<<<<<< HEAD
+    for (const task of tasks) {
+      results.push({ ...task, ...result });
+=======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const task of testTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 <<<<<<< HEAD
     for (const task of testTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 
 =======
@@ -282,9 +363,17 @@ main
       timestamp: new Date().toISOString(),
   async generateReports() {
     this.log("Generating improvement reports...");
-    const report = {
       timestamp: new Date().toISOString(),
 
+<<<<<<< HEAD
+  async generateReport(results) {
+    this.log("📊 Generating improvement reports...");
+      timestamp: new Date().toISOString(),
+      bundleOptimization: results.bundleOptimization,
+      performanceImprovements: results.performanceImprovements,
+      securityEnhancements: results.securityEnhancements,
+      testResults: results.testResults
+=======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
@@ -292,6 +381,7 @@ main
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       bundleOptimization: await this.optimizeBundleSize(),
       performanceImprovements: await this.improvePerformance(),
       securityEnhancements: await this.enhanceSecurity(),
@@ -308,7 +398,161 @@ main
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     };
+<<<<<<< HEAD
+  }
+
+  async analyzeBundleSize() {
+    try {
+      const buildDir = path.join(process.cwd(), '.next');
+      if (fs.existsSync(buildDir)) {
+        const stats = fs.statSync(buildDir);
+        this.metrics.bundleSize = stats.size;
+        console.log(\`Bundle size: \${(this.metrics.bundleSize / 1024 / 1024).toFixed(2)} MB\`);
+      }
+    } catch (error) {
+      console.error('Error analyzing bundle size:', error);
+    }
+  }
+
+  async analyzeMemoryUsage() {
+    const usage = process.memoryUsage();
+    this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024;
+    console.log(\`Memory usage: \${this.metrics.memoryUsage.toFixed(2)} MB\`);
+  }
+
+  async generateReport() {
+      timestamp: this.metrics.timestamp,
+      bundleSize: this.metrics.bundleSize,
+      memoryUsage: this.metrics.memoryUsage,
+      recommendations: this.generateRecommendations()
+    };
+
+    const reportPath = path.join(process.cwd(), 'performance-optimization-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(\`Performance report generated: \${reportPath}\`);
+  }
+
+  generateRecommendations() {
+    const recommendations = [];
+    
+    if (this.metrics.bundleSize > 1000000) {
+      recommendations.push('Consider code splitting to reduce bundle size');
+    }
+    if (this.metrics.memoryUsage > 100) {
+      recommendations.push('Consider optimizing memory usage');
+    }
+    
+    return recommendations;
+  }
+
+  async run() {
+
+    console.log('🚀 Starting Performance Optimization');
+    await this.analyzeBundleSize();
+    await this.analyzeMemoryUsage();
+    await this.generateReport();
+  }
+}
+
+if (require.main === module) {
+  const optimizer = new PerformanceOptimizer();
+  optimizer.run().catch(console.error);
+}
+
+module.exports = PerformanceOptimizer;`;
+
+    const scriptPath = path.join(this.projectRoot, 'scripts/performance-optimizer.cjs');
+    fs.mkdirSync(path.dirname(scriptPath), { recursive: true });
+    fs.writeFileSync(scriptPath, performanceScript);
+    fs.chmodSync(scriptPath, '755');
+    
+    this.improvements.push('Created performance optimization script');
+    this.log('Performance optimization script created', 'SUCCESS');
+  }
+
+  async createSecurityAuditScript() {
+    this.log('\n🔒 CREATING SECURITY AUDIT SCRIPT');
+    
+    const securityScript = `#!/usr/bin/env node
+
+
+class SecurityAuditor {
+  constructor() {
+    this.vulnerabilities = [];
+    this.recommendations = [];
+  }
+
+  async auditDependencies() {
+    try {
+      console.log('Auditing dependencies...');
+      const result = execSync('npm audit --json', { encoding: 'utf8' });
+      const auditData = JSON.parse(result);
+      
+      if (auditData.vulnerabilities) {
+        this.vulnerabilities = Object.values(auditData.vulnerabilities);
+        console.log(\`Found \${this.vulnerabilities.length} vulnerabilities\`);
+      }
+    } catch (error) {
+      console.error('Error auditing dependencies:', error);
+    }
+  }
+
+  async generateReport() {
+      timestamp: new Date().toISOString(),
+      vulnerabilities: this.vulnerabilities,
+      recommendations: this.recommendations
+    };
+
+    const reportPath = path.join(process.cwd(), 'security-audit-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    console.log(\`Security audit report generated: \${reportPath}\`);
+  }
+
+  async run() {
+    console.log('🔒 Starting Security Audit');
+    await this.auditDependencies();
+    await this.generateReport();
+  }
+}
+
+if (require.main === module) {
+  const auditor = new SecurityAuditor();
+  auditor.run().catch(console.error);
+}
+
+module.exports = SecurityAuditor;`;
+
+    const scriptPath = path.join(this.projectRoot, 'scripts/security-auditor.cjs');
+    fs.mkdirSync(path.dirname(scriptPath), { recursive: true });
+    fs.writeFileSync(scriptPath, securityScript);
+    fs.chmodSync(scriptPath, '755');
+    
+    this.improvements.push('Created security audit script');
+    this.log('Security audit script created', 'SUCCESS');
+  }
+
+  async updatePackageJsonScripts() {
+    this.log('\n📦 UPDATING PACKAGE.JSON SCRIPTS');
+    
+    try {
+      const packageJsonPath = path.join(this.projectRoot, 'package.json');
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+      
+      // Add new scripts
+      packageJson.scripts = {
+        ...packageJson.scripts,
+        'performance:optimize': 'node scripts/performance-optimizer.cjs',
+        'security:audit': 'node scripts/security-auditor.cjs',
+        'improve:all': 'npm run performance:optimize && npm run security:audit'
+      };
+      
+      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
+      this.improvements.push('Updated package.json with new scripts');
+      this.log('Package.json scripts updated', 'SUCCESS');
+    } catch (error) {
+=======
     const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");"
+>>>>>>> origin/chore/fix-lint-and-merge
 
     console.log(`[${timestamp}] ${message}`);
 
@@ -324,6 +568,21 @@ main
       this.log(`⚠️ Image optimization failed: ${error.message}`);
 
 
+<<<<<<< HEAD
+  async generateReport() {
+    const duration = Date.now() - this.startTime;
+      timestamp: new Date().toISOString(),
+      duration: `${Math.round(duration / 1000)}s`,
+      improvements: this.improvements.length,
+      errors: this.errors.length,
+      warnings: this.warnings.length,
+      details: {
+        improvements: this.improvements,
+        errors: this.errors,
+        warnings: this.warnings
+      }
+    };
+=======
   // TODO: Implement
 
 
@@ -345,6 +604,7 @@ main
   totalImprovements: this.improvements.length,
         totalErrors: this.errors.length,
         successRate: this.improvements.length / (this.improvements.length + this.errors.length) * 100;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 <<<<<<< HEAD
@@ -399,7 +659,6 @@ if (require.main === module) {
 }
 
 if (require.main === module) {
-  const suite = new AdvancedAppImprovementSuite();
   suite.run().catch(console.error);
 }
 
@@ -411,8 +670,12 @@ if (require.main === module) {
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 module.exports = AdvancedAppImprovementSuite;
+<<<<<<< HEAD
+// Run the improvement suite
+=======
 // Run the improvement suite;
 const suite = new AdvancedAppImprovementSuite();
+>>>>>>> origin/chore/fix-lint-and-merge
 suite.run().catch(console.error);
     this.ensureDirectories();,
 

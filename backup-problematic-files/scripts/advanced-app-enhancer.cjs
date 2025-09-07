@@ -26,8 +26,6 @@ const path = require('path')
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
 console.log(' Starting Advanced App Enhancer...')
       "status"

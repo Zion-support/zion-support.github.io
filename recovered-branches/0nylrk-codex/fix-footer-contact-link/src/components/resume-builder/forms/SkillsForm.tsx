@@ -23,6 +23,9 @@ import { SkillsFormProps } from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {
   return <SkillsFormComponent {...props} />;
 }
+<<<<<<< HEAD
+export function SkillsForm() {
+=======
 import {SkillsForm, as, SkillsFormComponent} from './skills';
 import {SkillsFormProps} from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {
@@ -33,6 +36,7 @@ import { SkillsFormProps } from './skills/types';
 export function SkillsForm(props: SkillsFormProps) {;
   return <SkillsFormComponent {...props} />;
 
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 ;
 

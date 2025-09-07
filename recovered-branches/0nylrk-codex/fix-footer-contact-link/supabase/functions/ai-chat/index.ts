@@ -31,8 +31,12 @@ const combinedMessages = [systemMessage, ...messages];
     const assistantMessage = data.choices[0].message.content;
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
+<<<<<<< HEAD
+    console.log('AI chat interaction logged');    }'
+=======
     console.log('AI chat interaction logged');    }
     const assistantMessage = data.choices[0].message.content;
+>>>>>>> origin/chore/fix-lint-and-merge
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.    return new Response(JSON.stringify({ message: assistantMessage }), {
 

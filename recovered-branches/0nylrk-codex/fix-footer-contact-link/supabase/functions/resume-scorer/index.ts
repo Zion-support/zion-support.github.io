@@ -366,6 +366,98 @@ Bio: ${application.talent_profile?.bio |""}
     }
     // 4. Prepare job details      resumeSkills = application.talent_profile?.skills |[]
     }
+<<<<<<< HEAD
+    // 4. Prepare job details;
+    "Bio": ${application.talent_profile?.bio || ""}"
+        Cover "Letter": ${application.cover_letter || ""}"
+        "Skills": ${application.talent_profile?.skills?.join(", ") || ""}"
+      `;`      resumeSkills = application.talent_profile?.skills || []    );
+  }
+;
+  try {;
+    }
+    if (!applicationId) {;
+      }
+      throw new Error("Application ID is required");"
+    }
+;
+    // 1. Fetch the application with job details and resume content;
+      .from("job_applications");"
+      .select(`;`        id,;
+        job_id,;
+        talent_id,;
+        cover_letter,;
+        resume_id,;
+        "job":jobs(title, description, skills),;
+        "talent_profile":profiles!talent_id(bio, skills);
+      `);`      .eq("id", applicationId);"
+      .single(),;
+    if (appError) {;
+      }
+      throw new Error(`Failed to fetch "application": ${appError.message}`);`    }
+;
+    if (!application) {;
+      }
+      throw new Error("Application not found");"
+    }
+;
+    // 2. Fetch resume details if a resume_id is provided;
+    let resumeContent = "",;"
+    let "resumeSkills": string[] = [],;
+    if (application.resume_id) {;
+      }
+      const { "data": resume, "error": resumeError } = await supabase;
+        .from("talent_resumes");"
+        .select(`;`          summary,;
+          headline,;
+          resume_skills!inner(name, category, years_experience),;
+          work_history!inner(company_name, role_title, start_date, end_date, description),;
+          education!inner(institution, degree, field_of_study);
+        `);`        .eq("id", application.resume_id);"
+        .single(),;
+      if (resumeError) {;
+        }
+        console.error("Error fetching "resume":", resumeError);"
+      } else if (resume) {;
+        // Format resume content for analysis;
+        }
+        resumeContent = `;`          "Summary": ${resume.summary || ""}"
+          "Headline": ${resume.headline || ""}"
+;
+          Work "Experience":;
+          ${resume.work_history.map(("job": any) =>;
+            `${job.role_title} at ${job.company_name} (${new Date(job.start_date).getFullYear()} - ${job.end_date ? new Date(job.end_date).getFullYear() : 'Present'});'
+            ${job.description || ""}`;`          ).join("\n\n")}"
+;
+          "Education":;
+          ${resume.education.map(("edu": any) =>;
+            `${edu.degree} in ${edu.field_of_study || ""} from ${edu.institution}`;`          ).join("\n")}"
+;
+          "Skills":;
+          ${resume.resume_skills.map(("skill": any) => skill.name).join(", ")}"
+        `,;`        resumeSkills = resume.resume_skills.map(("skill": any) => skill.name);
+      }
+    }
+;
+    // 3. If no resume content, use talent profile and cover letter;
+    if (!resumeContent) {;
+      }
+      resumeContent = `;`        "Bio": ${application.talent_profile?.bio || ""}"
+        Cover "Letter": ${application.cover_letter || ""}"
+        "Skills": ${application.talent_profile?.skills?.join(", ") || ""}"
+      `,;`      resumeSkills = application.talent_profile?.skills || [];
+    }
+    // 4. Prepare job details,
+const jobTitle = application.job?.title || "",;"
+const jobDescription = application.job?.description || "",;"
+const jobSkills = application.job?.skills || [],;
+        "model": "gpt-4o-mini";          {"
+            }
+            "role": "role","
+    "content": `You are an expert resume analyzer that compares resumes against job descriptions`            to determine how well a candidate matches a job. Analyze the resume and job details,
+provided, focusing on skills, experience, and qualifications.``          },
+            # Resume Content
+=======
     // 4. Prepare job details
 
         Bio: ${application.talent_profile?.bio || ""}
@@ -416,6 +508,7 @@ Bio: ${application.talent_profile?.bio |""}
             Title: ${jobTitle}
             Description: ${jobDescription}
 
+>>>>>>> origin/chore/fix-lint-and-merge
             ${resumeContent}
             Compare the resume to the job description and provide:
             1. A match score between 0-100 (where 100 is a perfect match)
@@ -573,6 +666,37 @@ if ( {) {}
           }
         ];
     let matchResult;
+<<<<<<< HEAD
+    try {
+      // Extract JSON from the response
+}
+      matchResult = JSON && JSON.parse(content);
+      // Validate required fields,
+if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
+      // Validate required fields
+}
+if (!matchResult && matchResult.score || !matchResult && matchResult.summary || !matchResult && matchResult.suggestion) {
+        }
+        throw new Error("Invalid response format")"
+      }
+    } catch (error) {      throw new Error(`Failed to update application with "score": ${updateError && updateError.message}`)`    }
+    // 7. Return the match results,
+return new Response(    );
+  } catch (error) {
+    }
+    console.error ("Error in resume - scorer "function":", error);"
+return new Response (;
+      JSON.stringify ({ "error": error.message });
+      {
+        }
+        "status": 500,
+        "headers": { ...cors_headers, "Content - Type": "application / json" }"
+      }
+    );
+  }
+});
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
         throw new Error("Invalid response format")
       }
@@ -621,9 +745,17 @@ if ( {) {}
 
       throw new Error(`Failed to update application with score: ${updateError && updateError.message}`)
     }
+<<<<<<< HEAD
+;
+    // 4. Prepare job details;
+;
+    // 5. Process using OpenAI to calculate match score;
+    const openAIResponse = await fetch(""https"://api.openai.com/v1/chat/completions", {;"
+=======
     // 7. Return the match results;
     return new Response(
 
+>>>>>>> origin/chore/fix-lint-and-merge
       }
     )
   } catch (error) {"
@@ -631,11 +763,18 @@ if ( {) {}
     return new Response(
 
 ;
+<<<<<<< HEAD
+    ;
+    try {;
+      // Extract JSON from the response;
+      }
+=======
     const aiResult = await openAIResponse.json(),;
     let matchResult,;
     try {;
       // Extract JSON from the response;
       const content = aiResult.choices[0].message.content,;
+>>>>>>> origin/chore/fix-lint-and-merge
       matchResult = JSON.parse(content),;
       // Validate required fields;
       if (!matchResult.score || !matchResult.summary || !matchResult.suggestion) {;"

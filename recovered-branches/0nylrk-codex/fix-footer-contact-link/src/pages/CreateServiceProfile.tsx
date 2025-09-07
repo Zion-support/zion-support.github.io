@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";"
+import React from "react","
+import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm","
+import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";"
+
+=======
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
 
@@ -9,6 +16,7 @@ import { ServiceProviderRegistrationForm } from "@/components/profile/ServicePro
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 import React from "react",
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default function CreateServiceProfile() {
   return (
@@ -48,10 +56,15 @@ export default function CreateServiceProfile() {
 
   )
 
+<<<<<<< HEAD
+
+import React from "react";"
+=======
 import {ServiceProviderRegistrationForm} from "@/components/profile/ServiceProviderRegistrationForm";
 
 import React from "react",;
 import { ServiceProviderRegistrationForm } from "@/components/profile/ServiceProviderRegistrationForm";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default function CreateServiceProfile() {;
   return (

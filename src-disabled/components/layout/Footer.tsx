@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp  } from 'lucide-react';
 
 export default function Footer() {const scrollToTop = (window.scrollTo({ top: 0, behavior: 'smooth',) => {

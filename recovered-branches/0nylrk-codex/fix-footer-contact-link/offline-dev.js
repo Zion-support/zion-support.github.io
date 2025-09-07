@@ -29,6 +29,20 @@ const server = http.createServer((req, res) => {
       }
       res.writeHead(200, { 'Content-Type': 'text/html' })
 
+<<<<<<< HEAD
+const http = require($2);
+const fs = require($2);
+const path = require($2);
+  if (req.url === '/' || req.url === '/index.html') {
+    fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
+      if (err) {
+        res.writeHead($2);
+        res.end($2);
+        return
+      }
+      res.writeHead($2);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       res.end(data)
     })
   } else if (req.url === '/online-check') {
@@ -62,8 +76,13 @@ const PORT = 8080
 `)
 
 }),;
+<<<<<<< HEAD
+;
+server.listen(PORT, () => {;
+=======
 const PORT = 8080,;
 server.listen(PORT, () => {;`
+>>>>>>> origin/chore/fix-lint-and-merge
   // // // console.log(`;
 
 ╔══════════════════════════════════════════════════════════════════╗;

@@ -209,11 +209,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
     return errors;
   }
   parseESLintErrors(output) {
+<<<<<<< HEAD
+=======
     const errors = [];
     const lines = output.split('\n');
 
 <
 
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const line of lines) {
       const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
       if (match) {
@@ -258,9 +261,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
       this.monitoringReport.healthStatus = 'critical';
   logHealthStatus() {
     const status = this.monitoringReport.healthStatus;
+<<<<<<< HEAD
+=======
     const totalErrors = this.monitoringReport.metrics.totalErrors;
 
     const totalWarnings = this.monitoringReport.metrics.totalWarnings;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <
     console.log(`📊 Health Status: ${status.toUpperCase()}`);

@@ -258,6 +258,20 @@ pr-12325
               disabled={isSubmitting} 
 
 }
+<<<<<<< HEAD
+import { useState } from "react";"
+import { Button } from "@/components/ui/button";"
+import { GradientHeading } from "@/components/GradientHeading",;"
+import { Input } from "@/components/ui/input",;"
+import { Label } from "@/components/ui/label",;"
+import { useToast } from "@/hooks/use-toast",;"
+import { Checkbox } from "@/components/ui/checkbox",;"
+export function WaitlistSection() {;
+  }
+  const [email, setEmail] = useState(""),;"
+  const handleSubmit = async ("e": React.FormEvent) => {;
+    }
+=======
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -269,6 +283,7 @@ import { Checkbox } from "@/components/ui/checkbox",;
 export function WaitlistSection() { return null; }
   const { toast } = useToast(),;
   const handleSubmit = async (e: React.FormEvent) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     e.preventDefault(),;
     if (!email || !name || !role || !agreeTerms) {;
 

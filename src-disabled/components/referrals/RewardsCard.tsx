@@ -41,16 +41,12 @@ import { ReferralReward } from '@/types/referrals';
 import { formatDate } from '@/utils/referralUtils';
 import { BadgeDollarSign, Badge } from 'lucide-react';
 
-import { ReferralReward } from "@/types/referrals";
-import { formatDate } from "@/utils/referralUtils";
-import { BadgeDollarSign, Badge } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
-import { BadgeDollarSign, Badge } from 'lucide-react'
 
 interface RewardsCardProps {
   rewards: ReferralReward[],
@@ -192,10 +188,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               key={reward.id}
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralReward } from "@/types/referrals",;
 import { formatDate } from "@/utils/referralUtils",;
-import { BadgeDollarSign, Badge } from 'lucide-react';
 interface RewardsCardProps {;
   rewards: ReferralReward[];,
   isLoading: boolean;
@@ -217,8 +211,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";""
 import { ReferralReward } from "@/types/referrals";""
 import { formatDate } from "@/utils/referralUtils";""
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
   // TODO: Implement
   rewards: ReferralReward[],
 

@@ -46,6 +46,14 @@ const languages: Language[] = [  { code: "en", name: "English", flag: "🇺🇸"
 
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
+<<<<<<< HEAD
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");"
+const { theme, setTheme } = useTheme(),;
+const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),;"
+return (;
+                  : "border-border "hover":border-primary/40""
+              }`}`              onClick={() => setSelectedLanguage(language.code)}
+=======
 
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
   const { theme, setTheme } = useTheme(),
@@ -58,6 +66,7 @@ export function LanguageThemeSelector() {
                   : "border-border hover:border-primary/40"
               }`}
               onClick={() => setSelectedLanguage(language.code)}
+>>>>>>> origin/chore/fix-lint-and-merge
             >
               <CardContent className="p-3 flex items-center justify-between">
                 <div className="flex items-center">
@@ -87,6 +96,23 @@ const languages: Language[] = [;
   { code: "zh", name: "中文", flag: "🇨🇳" }],;
 
 export function LanguageThemeSelector() {;
+<<<<<<< HEAD
+  }
+  return (;
+    <div className="space-y-8 px-4">;"
+      <div className="space-y-2">;"
+        <h2 className="text-xl font-medium">Select your language</h2>;"
+        <p className="text-muted-foreground">Choose your preferred language</p>;"
+        <div className="grid grid-cols-2 gap-3 mt-4">;"
+          {languages && languages.map((language) => (;
+}
+return (;
+    <div className="space-y-8 px-4">"
+      <div className="space-y-2">"
+        <h2 className="text-xl font-medium">Select your language</h2>"
+        <p className="text-muted-foreground">Choose your preferred language</p>"
+        <div className="grid grid-cols-2 gap-3 mt-4">"
+=======
 
   const { theme, setTheme } = useTheme();
 
@@ -132,6 +158,7 @@ export function LanguageThemeSelector() {
         <p className="text-muted-foreground">Choose your preferred language</p>
 
         <div className="grid grid-cols-2 gap-3 mt-4">
+>>>>>>> origin/chore/fix-lint-and-merge
           {languages.map((language) => (
             <Card
               key={language.code}

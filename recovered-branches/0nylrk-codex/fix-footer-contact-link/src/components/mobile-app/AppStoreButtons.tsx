@@ -94,12 +94,19 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
         </svg>
         <div>"
           <div className="text-xs">GET IT ON</div>"
+<<<<<<< HEAD
+          <div className="text-xl font-semibold">Google Play</div>"
+        </div>},
+import { Apple, GithubIcon } from "lucide-react";"
+import { cn } from "@/lib/utils",;"
+=======
           <div className="text-xl font-semibold">Google Play</div>
 
 import React from "react",;
 import { Apple, GithubIcon } from "lucide-react",;
 
 import { cn } from "@/lib/utils",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface AppStoreButtonsProps {;
   className?: string,;
   appStoreUrl?: string,;

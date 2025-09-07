@@ -36,12 +36,19 @@ class RobustSyntaxFixer {
 
   fixFile(filePath) {
     try {
+<<<<<<< HEAD
+      let content = fs.readFileSync(filePath, "utf8")
+      // Fix merge conflicts;
+      content = content.replace(/\n/g, "")
+      content = content.replace(/\n/g, "")
+=======
   // TODO: Implement
 }"
       let content = fs.readFileSync(filePath, "utf8")"
       // Fix merge conflicts;"
       content = content.replace(/\n/g, )
       content = content.replace(/\n/g, )"
+>>>>>>> origin/chore/fix-lint-and-merge
       content = content.replace(/      ;
       // Fix unterminated strings;)"
       content = content.replace(/&apos;s\s*\s*>/gm, "&apos;s>")

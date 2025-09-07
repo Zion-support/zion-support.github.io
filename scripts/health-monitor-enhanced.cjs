@@ -45,6 +45,18 @@ class EnhancedHealthMonitor {
     }
   }
 
+<<<<<<< HEAD
+// Check disk space
+function checkDiskSpace() {
+  try {
+    const stats = fs.statSync(__dirname);
+    
+    // This is a simplified check - in a real implementation,
+    // you'd use a proper disk space checking library
+    return {
+      available: 'unknown',
+      issues: issues
+=======
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
@@ -62,6 +74,7 @@ class EnhancedHealthMonitor {
       databas: e: await this.checkDatabaseHealth(),
       service: s: await this.checkServicesHealth(),
       networ: k: await this.checkNetworkHealth(),
+>>>>>>> origin/chore/fix-lint-and-merge
     };
 
     return healthCheck;
@@ -284,8 +297,6 @@ monitor.run().catch(console.error);
 ursor/automate-test-improve-and-merge-code-59d5
 
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 class HealthMonitor {
   constructor() {
@@ -296,6 +307,36 @@ class HealthMonitor {
     console.log('🏥 Running health monitoring...');
     console.log('✅ Health monitoring completed');
   }
+<<<<<<< HEAD
+// Check application health
+function checkApplicationHealth() {
+  
+  // Check for critical files
+  const criticalFiles = [
+    'package.json',
+    'next.config.js',
+    'tsconfig.json'
+  ];
+  
+  criticalFiles.forEach(file => {
+    const filePath = path.join(__dirname, '..', file);
+    if (!fs.existsSync(filePath)) {
+      issues.push({
+        type: 'missing-critical-file',
+        severity: 'high',
+        message: `Missing critical file: ${file}`,
+        file: file
+      });
+    }
+  });
+  
+  return {
+    criticalFiles: criticalFiles.length,
+    missingFiles: issues.length,
+    issues: issues
+  };
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 const monitor = new HealthMonitor();

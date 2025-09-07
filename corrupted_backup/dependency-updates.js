@@ -540,8 +540,14 @@ async function runDependencyUpdates() {"
     // Check for major version updates;"
     // // // // // // // console.log(',')
     try {;
+<<<<<<< HEAD
+        const current = info.current.split('
+  '.')[0];
+  ".")[0];
+=======
   '.')[0];
   ".")[0];"
+>>>>>>> origin/chore/fix-lint-and-merge
         return current !== latest})
         // // // console.log()"
   "⚠️  Major version updates "available": ");"

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React from "react";
 import {
 
@@ -167,6 +170,7 @@ import {;
       </div>;
 
       <div className="rounded-md border">;
+>>>>>>> origin/chore/fix-lint-and-merge
         <Table>;
           <TableHeader>;
             <TableRow>;
@@ -308,10 +312,14 @@ import {;
           <TableBody>;
             {activities.map ((activity) => (
               <TableRow key={activity.id}>;
+<<<<<<< HEAD
+
+=======
                 <TableCell className="font-medium">{activity.user}</TableCell>;
                 <TableCell>{activity.action}</TableCell>;
                 <TableCell>;
                   <span className="font-medium">{activity.target}</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
                 </TableCell>;
 
     </div>);
@@ -324,6 +332,8 @@ import {;
           </TableBody>
         </Table>
 
+<<<<<<< HEAD
+=======
                 </TableCell>
               </TableRow>
             ))}
@@ -394,3 +404,4 @@ const diffDays = Math.floor (diffMs / (1000 * 60 * 60 * 24) );
   )
 }
 ;
+>>>>>>> origin/chore/fix-lint-and-merge

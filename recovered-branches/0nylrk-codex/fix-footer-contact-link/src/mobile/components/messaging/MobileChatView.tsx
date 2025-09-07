@@ -331,8 +331,28 @@ export function MobileChatView() { return null; }
       handleSend();
     }
   };
+<<<<<<< HEAD
+    }
+    const roomId = `mobile-${contact && contact.id}`;`    toast && toast.success("Starting video call", {,"
+  }
+  "description": `Connecting with ${contact && contact.name}...`;`    });
+    // Navigate to video call page;
+    navigate(`/call/${roomId}`)`};
+  const startAudioCall = () => {;
+    }
+    const roomId = `mobile-audio-${contact && contact.id}`;`    toast && toast.success("Starting audio call", {,"
+  }
+  "description": `Connecting with ${contact && contact.name}...`;`    });
+    // Navigate to video call page with audio-only flag;
+    navigate(`/call/${roomId}?audioOnly=true`)`};
+return (  return (;
+import React, { useState } from "react",;"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;"
+import { Button } from "@/components/ui/button",;"
+=======
 
 import { toast } from "sonner",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface Message {;
   id:string,;
@@ -355,8 +375,21 @@ interface MobileChatViewProps {;
   onSendMessage:(content:string) => void;
 }
 ;
+<<<<<<< HEAD
+export function MobileChatView() {;
+  }
+  const [newMessage, setNewMessage] = useState(""),;"
+  const navigate = useNavigate(),;
+  ;
+    }
+    if (newMessage.trim() !== "") {;"
+      }
+      onSendMessage(newMessage),;
+      setNewMessage(""),;    }"
+=======
 export function MobileChatView() { return null; }
       setNewMessage(""),;    }
+>>>>>>> origin/chore/fix-lint-and-merge
   },;
   ;
   const handleKeyDown = (e:React.KeyboardEvent<HTMLInputElement>) => {;'
@@ -366,11 +399,39 @@ export function MobileChatView() { return null; }
     }
   },;
   ;
+<<<<<<< HEAD
+    }
+    const roomId = `mobile-${contact.id}`,;`    toast.success("Starting video call", {,"
+  }
+  "description":`Connecting with ${contact.name}...`;`    }),;
+    ;
+    // Navigate to video call page;
+    navigate(`/call/${roomId}`),;`  },;
+  ;
+    }
+    const roomId = `mobile-audio-${contact.id}`,;`    toast.success("Starting audio call", {,"
+  }
+  "description":`Connecting with ${contact.name}...`;`    }),;
+    ;
+    // Navigate to video call page with audio-only flag;
+    navigate(`/call/${roomId}?audioOnly=true`),;`  },;
+  ;
+return (,;
+  "description": `Connecting with ${contact.name}...`;`    }),;
+    // Navigate to video call page;
+    navigate(`/call/${roomId}`);`  },;
+    }
+  }
+  "description": `Connecting with ${contact.name}...`;`    }),;
+    // Navigate to video call page with audio-only flag;
+    navigate(`/call/${roomId}?audioOnly=true`);`
+=======
 
     }),;
     ;
     // Navigate to video call page;`
     navigate(`/call/${roomId}`),;
+>>>>>>> origin/chore/fix-lint-and-merge
   },;
   ;
 

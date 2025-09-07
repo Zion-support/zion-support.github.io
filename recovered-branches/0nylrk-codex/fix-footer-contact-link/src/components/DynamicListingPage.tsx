@@ -197,6 +197,25 @@ pr-12325
     const listing = allListings.find(item => item.id === listingId);
     setTimeout(() => {}
       setIsLoading(false)
+<<<<<<< HEAD
+      if (listing) {
+        }
+        toast({
+          }
+          "title": "title","
+    "description": `Your quote request for ${listing.title} has been sent.``        });
+        navigate("/request-quote", {"
+          }
+          "state": {
+            }
+            "serviceType": categorySlug;
+    "specificItem": {
+              }
+              "id": listing.id,
+"title": listing.title,
+"category": listing.category,
+"image": listing.images?.[0]
+=======
       if (listing) {}
         toast({"
           title: "Quote Requested"
@@ -224,6 +243,7 @@ pr-12325
   const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice),;
   const [selectedRating, setSelectedRating] = useState<number | null>(null),;
 
+>>>>>>> origin/chore/fix-lint-and-merge
     setTimeout(() => {;
       setIsLoading(false),;
       if (listing) {;
@@ -461,11 +481,20 @@ if ( {) {
       listing.price >= currentPriceFilter[0] && 
       listing.price <= currentPriceFilter[1])
     ),
+<<<<<<< HEAD
+=======
     const matchesRating = 
+>>>>>>> origin/chore/fix-lint-and-merge
       selectedRating === null || 
 
       (listing.rating !== undefined && listing.rating >= selectedRating),
+<<<<<<< HEAD
+return matchesSearch && matchesCategory && matchesPrice && matchesRating;
+  }),
+    }
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     setIsLoading(true),
     const listing = allListings.find(item => item.id === listingId),
 

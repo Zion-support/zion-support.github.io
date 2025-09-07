@@ -20,15 +20,28 @@ import {
   TableCell,
 
   TableHead,
+<<<<<<< HEAD
+  TableHeader,
+  TableRow} from "@/components/ui/table","
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar","
+  }
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,
   DialogContent,
   DialogDescription,
 
   DialogFooter,
+<<<<<<< HEAD
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog","
+  }
+=======
   DialogHeader,"
   DialogTitle} from "@/components/ui/dialog",
 import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   DropdownMenu,
   DropdownMenuContent,
 
@@ -202,16 +215,27 @@ import {;
   TableCell,;
   TableHead,;
   TableHeader,;
+<<<<<<< HEAD
+  TableRow} from "@/components/ui/table",;"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
+  }
+=======
   TableRow} from "@/components/ui/table",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,;
   DialogContent,;
   DialogDescription,;
   DialogFooter,;
   DialogHeader,;
+<<<<<<< HEAD
+  DialogTitle} from "@/components/ui/dialog",;"
+  }
+=======
   DialogTitle} from "@/components/ui/dialog",;
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
@@ -224,6 +248,16 @@ interface ReviewsModerationTableProps {;
   isLoading: boolean,;
   onRefresh: () => void;
 }
+<<<<<<< HEAD
+;
+export function ReviewsModerationTable() {;
+  }
+;
+  const { "mutate":updateReviewStatus, isPending } = useMutation({;
+    }
+    "mutationFn":async ({;
+      }
+=======
 
 export function ReviewsModerationTable(): any ({;
   reviews;
@@ -234,6 +268,7 @@ export function ReviewsModerationTable(): any ({;
 
   const { mutate: updateReviewStatus, isPending } = useMutation({;
     mutationFn: async ({;
+>>>>>>> origin/chore/fix-lint-and-merge
       reviewId,;
 
     }) => {;

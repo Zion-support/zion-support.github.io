@@ -13,6 +13,8 @@ const path = require('path')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 #!/usr/bin/env node;
+<<<<<<< HEAD
+=======
 const fs = require('fs')
 const path = require('path')
 <<<<<<< HEAD
@@ -22,6 +24,7 @@ const path = require('path')
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
@@ -62,12 +65,24 @@ console.log(' Starting Real-time Monitoring...')
       "status"
 
 <<<<<<< HEAD
+      "status"
+#!/usr/bin/env node;
+
+
+
+console.log(' Starting Real-time Monitoring...')
+      "status"
+      "status"
+
+=======
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     'next.config.js
     'tsconfig.json
         "status"""

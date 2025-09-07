@@ -172,8 +172,22 @@ self.addEventListener('fetch', (event) => {
       this.log('Service worker created', 'SUCCESS');
       
     } catch (error) {
+<<<<<<< HEAD
+      this.results.errorCount++;
+      this.log(`❌ ${suiteName} failed with exception: ${error.message}`, 'ERROR');
+      
+        name: suiteName,
+        success: false,
+        duration: suiteDuration,
+        error: error.message
+      };
+      
+      this.results.suites.push(suiteResult);
+      return suiteResult;
+=======
       this.results.optimizations.errors++;
       this.log(`Performance optimization error: ${error.message}`, 'ERROR');
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
 

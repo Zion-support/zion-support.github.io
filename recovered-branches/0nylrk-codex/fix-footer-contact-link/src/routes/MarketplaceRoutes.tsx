@@ -109,6 +109,29 @@ export default MarketplaceRoutes;
 },
 
 export default MarketplaceRoutes,
+<<<<<<< HEAD
+import { Route, Routes } from "react-router-dom";"
+import { ProtectedRoute } from "@/components/ProtectedRoute";"
+import Marketplace from "Marketplace";"
+import Categories from "Categories";"
+import CategoryDetail from "CategoryDetail";"
+import Featured from "Featured";"
+import ListingDetail from "ListingDetail";"
+import EquipmentPage from "EquipmentPage";"
+import EquipmentDetail from "EquipmentDetail";"
+import PostJob from "PostJob";"
+import JobDetails from "JobDetails";"
+import PublishProduct from "PublishProduct";"
+import ServicesPage from "ServicesPage";"
+import RequestQuote from "RequestQuote";"
+import AIMatcher from "AIMatcher";"
+import ServiceDescriptionGenerator from "ServiceDescriptionGenerator";"
+import ITOnsiteServicesPage from "ITOnsiteServicesPage";"
+import SearchPage from "SearchPage";"
+import ProjectRoom from "ProjectRoom";"
+import VideoCall from "VideoCall";"
+}
+=======
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import Marketplace from "@/pages/Marketplace",;
@@ -130,6 +153,7 @@ import SearchPage from "@/pages/SearchPage",;
 import ProjectRoom from "@/pages/ProjectRoom",;
 import VideoCall from "@/pages/VideoCall",;
 
+>>>>>>> origin/chore/fix-lint-and-merge
 const MarketplaceRoutes = () => {;
   return (
     <Routes>;

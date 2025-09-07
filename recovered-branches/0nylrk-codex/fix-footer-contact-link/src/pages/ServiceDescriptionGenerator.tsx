@@ -141,6 +141,8 @@ export default function ServiceDescriptionGenerator() { return null; }
     return <Navigate to="/login" state={{ from:'/service-description-generator' }} replace />,;
   }
 ;
+<<<<<<< HEAD
+=======
   const handleDescriptionSave = (editedDescription:string) => {;
     setGeneratedDescription(editedDescription),;
     // Here you could also save to database if needed;
@@ -154,6 +156,7 @@ export default function ServiceDescriptionGenerator() { return null; }
         keywords="service description, AI content, professional description generator";
 ;
   const handleDescriptionSave = (editedDescription: string) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     setGeneratedDescription(editedDescription);
     // Here you could also save to database if needed;
   };

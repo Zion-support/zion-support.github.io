@@ -60,9 +60,12 @@ class APIMonitor {
       });
 
       request.on('error', (error) => {
+<<<<<<< HEAD
+=======
         const endTime = Date.now();
         const responseTime = endTime - startTime;
         
+>>>>>>> origin/chore/fix-lint-and-merge
         resolve({
           endpoint,
           status: 0,

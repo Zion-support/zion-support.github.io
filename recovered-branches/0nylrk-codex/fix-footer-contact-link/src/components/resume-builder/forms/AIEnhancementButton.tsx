@@ -40,7 +40,6 @@ export function AIEnhancementButton({;
       return;
     }
     setError(null);
-    const enhancedContent = await enhanceContent(;
       currentContent;
       enhancementType;
       context;
@@ -81,7 +80,6 @@ export function AIEnhancementButton({;
 
 ;
     setError(null),;
-    const enhancedContent = await enhanceContent(;
       currentContent,;
       enhancementType,;
       context;

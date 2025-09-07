@@ -58,8 +58,38 @@ async function main() {
       if (fs.existsSync(file)) {
         if (resolveMergeConflicts(file)) {
           resolvedCount++;
+<<<<<<< HEAD
+        }
+      }
+    }
+    
+    console.log(`\n✅ Conflict resolution summary:`);
+    console.log(`- Files processed: ${conflictedFiles.length + filesWithConflicts.length}`);
+    console.log(`- Conflicts resolved: ${resolvedCount}`);
+    
+    // Add all resolved files to git
+    try {
+      execSync('git add .', { stdio: 'inherit' });
+      console.log('✅ Added resolved files to git');
+    } catch (error) {
+      console.error('Error adding files to git:', error.message);
+    }
+    
+    // Check if there are any remaining conflicts
+    try {
+      const remainingConflicts = statusOutput.split('\n').filter(line => line.includes('UU') || line.includes('AA') || line.includes('DD'));
+      
+      if (remainingConflicts.length === 0) {
+        console.log('\n🎉 All conflicts resolved! Ready to commit.');
+        
+        // Commit the resolved conflicts
+        console.log('💾 Committing resolved conflicts...');
+        execSync('git commit -m "fix: resolve merge conflicts automatically\n\n- Resolved conflicts in ' + resolvedCount + ' files\n- Kept HEAD version for consistency\n- Cleaned up duplicate content"');
+    }
+=======
     // Also check for files with conflict markers that might not be in git status;
     const filesWithConflicts = [
+>>>>>>> origin/chore/fix-lint-and-merge
 
     // Add all resolved files to git;
   // TODO: Implement

@@ -7,6 +7,15 @@ const DataScienceChat: NextPage = () => ;
   return (<div />;
       <Head />;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>DataScienceChat - Zion Tech Solutions</title>;
+        <meta name = "description" content="DataScienceChat blog post" />{" "}"
+;
+  return (<div>;
+      <Head></Head>;<meta name="description" content="DataScienceChat blog post" />;"
+=======
 const DataScienceChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -16,6 +25,7 @@ const DataScienceChat: NextPage = () => ;
   const DataScienceChat: NextPage = () => ;
   return (<div />;
       <Head /></Head>;<meta name=\"description\" content=\"DataScienceChat blog post\" />;
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       </Head>;<meta name=\"description\" content=\"DataScienceChat blog post\" />;
       </Head>;
@@ -36,11 +46,17 @@ const DataScienceChat: NextPage = () => {
       <Head />;
         <title />DataScienceChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+
+}
+return (;
+=======
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const DataScienceChat: NextPage = () => {
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <div>
 </div>
       <Head>
@@ -50,6 +66,8 @@ const DataScienceChat: NextPage = () => {
 
         <title>DataScienceChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+=======
 const DataScienceChat: NextPage = () => {
   return (
     <div />
@@ -57,6 +75,7 @@ const DataScienceChat: NextPage = () => {
 
       </Head>;
 
+>>>>>>> origin/chore/fix-lint-and-merge
       <main>
         <h1>DataScienceChat</h1>
         <p>Blog content coming soon...</p>
@@ -94,11 +113,18 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title > DataScienceChat - Zion Tech Solutions</title>;
+        <meta name="description" content="DataScienceChat blog post" />{" "}"
+=======
 const DataScienceChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> DataScienceChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"DataScienceChat blog post\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1  /> DataScienceChat</h1>;
@@ -122,11 +148,18 @@ export default DataScienceChat;<div />;
     </div>;
   )},export default DataScienceChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>DataScienceChat - Zion Tech Solutions</title>;
+        <meta name="description" content="DataScienceChat blog post" />{" "}"
+=======
 const DataScienceChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />DataScienceChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"DataScienceChat blog post\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1 />DataScienceChat</h1>;
@@ -142,7 +175,10 @@ export default DataScienceChat;<title />DataScienceChat - Zion Tech Solutions</t
 };
 
 export default DataScienceChat;
+<<<<<<< HEAD
+=======
 const DataScienceChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -164,7 +200,10 @@ export default DataScienceChat;
         <title />DataScienceChat - Zion Tech Solutions</title>
         <title />DataScienceChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const DataScienceChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />

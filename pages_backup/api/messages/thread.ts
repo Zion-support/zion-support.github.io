@@ -5,9 +5,6 @@ import {
   getMessages
   sendMessage
 
-import { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../utils/auth";
-import {
   getConversationById,
   getMessages,
   sendMessage,;

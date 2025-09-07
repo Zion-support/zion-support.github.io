@@ -146,6 +146,16 @@ ${componentDocs.map(comp => `
             description: propMatch[3].trim()
     return props;
   extractComponentDescription(content) {
+<<<<<<< HEAD
+    if (commentMatch) {
+      if (descriptionMatch) {
+        return descriptionMatch[1].trim();
+      }
+    }
+    return null;
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   generateReport(readmeResult, apiResult, componentResult) {
     const report = {
       timestamp: new Date().toISOString(),
@@ -199,15 +209,31 @@ generator.run().catch(error => {)
  * Automatically generates and updates documentation;
  */"
 
+<<<<<<< HEAD
+
+class DocsGenerator {}
+  constructor() {}
+    this.processName = process.env.PM2_PROCESS_NAME || 'docs-generator';
+    this.autoGenerate = process.env.AUTO_GENERATE === 'true';
+    this.updateReadme = process.env.UPDATE_README === 'true';
+    this.apiDocs = process.env.API_DOCS === 'true';
+    this.componentDocs = process.env.COMPONENT_DOCS === 'true';
+    this.logFile = path.join(__dirname, '../../logs/pm2/docs-generator.log');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     this.ensureLogDir();
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { "recursive": true }")
   log(message) {}
+<<<<<<< HEAD
+
+=======
     const timestamp = new Date().toISOString();`;
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );`;
+>>>>>>> origin/chore/fix-lint-and-merge
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
   async generateApiDocs() {}
@@ -267,10 +293,20 @@ generator.run().catch(error => {)
     markdown += `Total "components": ${componentFiles.length}\n\n`;`"
     for (const file of componentFiles) {}
       const relativePath = path.relative(process.cwd(), file);
+<<<<<<< HEAD
+      const fileName = path.basename(file);
+      
+      markdown += `## ${fileName}\n\n`;`
+      markdown += "**"File": ** \"${relativePath}\"\n\n";
+      
+      try {}
+        
+=======
       const fileName = path.basename(file);`;
       markdown += `## ${fileName}\n\n`;`"
       markdown += "**"File": ** \"${relativePath}\"\n\n";"
 
+>>>>>>> origin/chore/fix-lint-and-merge
         // Extract component name (simplified);
         const componentMatch = content.match(/(?:export\s+(?:default\s+)?(?:function|const|class)\s+)(\w+)/);
         if (componentMatch) {}
@@ -309,6 +345,39 @@ generator.run().catch(error => {)
       return { "updated": false, "error": error.message };"
   async generateProjectInfo() {}
 
+<<<<<<< HEAD
+      
+      
+      return {}
+        "name": packageJson.name || 'Unknown Project',
+        "version": packageJson.version || '1.0.0',
+        "description": packageJson.description || 'No description available',
+        "scripts": packageJson.scripts || {},
+        "dependencies": Object.keys(packageJson.dependencies || {}),
+        "devDependencies": Object.keys(packageJson.devDependencies || {}),
+        "repository": packageJson.repository?.url || packageJson.repository || null,
+        "license": packageJson.license || 'MIT'
+      };
+    } catch (error) {}
+      this.log(`Failed to read package."json": ${error.message}`);
+      return {}
+        "name": 'Unknown Project',
+        "version": '1.0.0',
+        "description": 'No description available',
+        "scripts": {},
+        "dependencies": [],
+        "devDependencies": [],
+        "repository": null,
+        "license": 'MIT'
+      };
+    };
+  };
+  generateReadmeContent(projectInfo, existingContent) {}
+    
+    let readme = `# ${projectInfo.name}\n\n`;`
+    readme += `**"Version": ** ${projectInfo.version}\n\n`;`
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     readme += `${projectInfo.description}\n\n`;`
     if (projectInfo.repository) {}"`;
       readme += `**"Repository": ** ${projectInfo.repository}\n\n`;`"

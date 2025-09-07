@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {}
   selectedCountry: CountryPricing;
@@ -82,6 +84,7 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         serviceId="it-onsite-service""
 
         providerId="zion-tech-group"
+>>>>>>> origin/chore/fix-lint-and-merge
 
       </p>
     </div>

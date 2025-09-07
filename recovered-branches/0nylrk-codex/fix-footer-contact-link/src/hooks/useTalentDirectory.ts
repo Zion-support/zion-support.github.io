@@ -33,9 +33,12 @@ export function useTalentDirectory() {
   } = useAuthStatus(),
 
   // Fetch talent data
-  const { 
     talents, 
     isLoading 
+<<<<<<< HEAD
+  } = useTalentData($2);
+  // Apply filters and sorting
+=======
 
   } = useTalentData(),
 
@@ -112,6 +115,7 @@ function useTalentDirectory() {}
   return {}
     // Talents and loading state;
     talents,
+>>>>>>> origin/chore/fix-lint-and-merge
     filteredTalents,
     isLoading,
     
@@ -127,8 +131,17 @@ function useTalentDirectory() {}
     setExperienceRange,
     sortOption,
     setSortOption,
+<<<<<<< HEAD
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters
+  } = useFilterTalents($2);
+  // Manage UI state
+=======
     
     // UI state;
+>>>>>>> origin/chore/fix-lint-and-merge
     isMobileFilterOpen,
     setIsMobileFilterOpen,
     isHireModalOpen,
@@ -158,6 +171,14 @@ import { useUIState } from "./talent/useUIState",;
 
   } = useAuthStatus(),;
   // Fetch talent data;
+<<<<<<< HEAD
+    }
+    talents,;
+    isLoading;
+  } = useTalentData(),;
+  // Apply filters and sorting;
+    }
+=======
   const {;
     talents,;}
     isLoading;}
@@ -170,6 +191,7 @@ import { useUIState } from "./talent/useUIState",;
   } = useTalentData(),;
   // Apply filters and sorting;
 pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
     filteredTalents,;
     searchTerm,;
     setSearchTerm,;
@@ -188,10 +210,14 @@ pr-12325
     clearFilters;}
   } = useFilterTalents(talents),;
   // Manage UI state;
+<<<<<<< HEAD
+    }
+=======
   const {;
   } = useFilterTalents(talents),;
   // Manage UI state;
 pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
     isMobileFilterOpen,;
     setIsMobileFilterOpen,;
     isHireModalOpen,;

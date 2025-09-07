@@ -142,7 +142,32 @@ import {Button} from '@/components / ui / button';
 
     </div>
   )
+<<<<<<< HEAD
+}import {Button} from '@/components / ui / button';'
+import { ShieldAlert } from './lucide-react';'
+import {RaiseDisputeButton} from '@/components / disputes / RaiseDisputeButton';'
+interface ProjectActionsProps {
+  }
+  "project_id": string,
+  "isUnderDispute": boolean,
+  dispute_id?: string;
+  "is_talent": boolean,
+  "onAddMilestone": () => void;
+}
+export /**
+ * ProjectActions - Function description
+ */
+function ProjectActions() {
+}
+return (;
+    <div className="flex gap-2">;"
+      {isUnderDispute && dispute_id ? (
+        <Button variant="outline" as_child>;"
+          <Link to={`/dashboard / disputes/${dispute_id}`}>;`
+            <ShieldAlert className="h - 4 w - 4 mr-2" />;"
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
             View Active Dispute;
           </Link>;
         </Button>) : (

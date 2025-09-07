@@ -82,8 +82,6 @@ const runTests = () => {}
 =======
 
   ];
-  let testsPassed = 0;
-  let testsFailed = 0;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (result.success) {}

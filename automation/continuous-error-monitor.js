@@ -244,10 +244,15 @@ if (this.config.errorCapture.autoReport) {}
       // Generate report;
 const report = this.generateAutoReport(errors);
       
+<<<<<<< HEAD
+      // Save report,
+      const reportFile = path.join(__dirname, '..', 'reports', `auto-report-${timestamp}.md`);`      fs.writeFileSync(reportFile, report);
+=======
       // Save report;
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
       const reportFile = path.join(__dirname, '..', 'reports', `auto-report-${timestamp}.md`);
       fs.writeFileSync(reportFile, report);
+>>>>>>> origin/chore/fix-lint-and-merge
       
       this.log(`📝 Auto-report saved: ${reportFile}`);
       

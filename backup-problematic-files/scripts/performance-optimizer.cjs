@@ -540,8 +540,15 @@ class PerformanceOptimizer {
 
       const imageFiles = this.getImageFiles(publicPath);
       let optimizedCount = 0;
+<<<<<<< HEAD
+      
+      imageFiles.forEach(file => {
+        totalSize += stats.size;
+        
+=======
       imageFiles.forEach(file => {)
 
+>>>>>>> origin/chore/fix-lint-and-merge
         // Check if image is already optimized (WebP, compressed)
         if (file.endsWith('.webp') || file.endsWith('.avif')) {
           optimizedCount++;
@@ -561,10 +568,14 @@ class PerformanceOptimizer {
     return imageExtensions.includes(ext)
   getImageRecommendations(imageFiles) {
 <<<<<<< HEAD
+    
+=======
+<<<<<<< HEAD
     const recommendations = [];
 <<<<<<< HEAD
     const unoptimizedImages = imageFiles.filter(file =>
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     const unoptimizedImages = imageFiles.filter(file => 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -598,6 +609,23 @@ class PerformanceOptimizer {
         potentiallyUnused.push(dep);
     return potentiallyUnused;
   getDependencyRecommendations(dependencies, devDependencies) {
+<<<<<<< HEAD
+    
+    if (dependencies.length > 20) {
+      recommendations.push('Consider removing unused dependencies to reduce bundle size');
+    }
+    
+    if (devDependencies.length > 30) {
+      recommendations.push('Review dev dependencies for unused packages');
+    }
+    
+    recommendations.push('Use npm audit to check for security vulnerabilities');
+    recommendations.push('Consider using lighter alternatives for heavy dependencies');
+    
+    return recommendations;
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }}
 ;  async checkCaching() {
@@ -649,7 +677,6 @@ optimizer.optimizePerformance().then(report => {
 const fs = require("fs")
 const path = require("path")
 #!/usr/bin/env node;
-const fs = require("fs")
 const path = require("fs")
 const { execSync } = require("child_process")
 class PerformanceOptimizer {
@@ -716,10 +743,13 @@ module.exports = {
     try {
       const performanceScript = `;
 const { execSync } = require("fs")
+<<<<<<< HEAD
+=======
 const fs = require("fs")
 const path = require("path")
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/performance-optimizer.cjs
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 <<<<<<< HEAD:backup-problematic-files/scripts/performance-optimizer.cjs
@@ -783,9 +813,14 @@ monitor.runBundleAnalysis()`;
 
   checkImageOptimization() {"
     this.log("🖼️ Checking image optimization...", "INFO")
+<<<<<<< HEAD
+    if (!fs.existsSync(publicDir)) {
+      this.log("⚠️ Public directory not found", "WARN")
+=======
     const publicDir = path.join(this.projectRoot, "public")"
     if (!fs.existsSync(publicDir)) {"
       this.log("⚠️ Public directory not found", "WARN")"
+>>>>>>> origin/chore/fix-lint-and-merge
       return,,
 <<<<<<< HEAD
 }

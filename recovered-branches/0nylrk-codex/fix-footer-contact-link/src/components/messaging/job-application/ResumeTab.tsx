@@ -44,20 +44,30 @@ export function ResumeTab(): any ({;
 
 import React from 'react',"
 import { ResumeSelector, ResumeOption } from "../resume-selector","
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button","
+=======
 import { Button } from "@/components/ui/button",
 
 import React from './react';
 import { ResumeSelector, ResumeOption  } from '../resume - selector';
 import { Button  } from '@/components / ui / button';
+>>>>>>> origin/chore/fix-lint-and-merge
 export interface ResumeTabProps {
   selectedResumeId?: string | null,
   onSelectResume?: (resumeId: string) => void,
   onResumeSelected?: (resume: ResumeOption) => void,
   onApply?: () => Promise<void>,
+<<<<<<< HEAD
+  isSubmitting?: boolean,
+import React from 'react';'
+import { Button } from "@/components/ui/button",;"
+=======
   isSubmitting?: boolean
 import React from 'react',;
 import { ResumeSelector, ResumeOption } from "../resume-selector",;
 import { Button } from "@/components/ui/button",;
+>>>>>>> origin/chore/fix-lint-and-merge
 export interface ResumeTabProps {;
   selectedResumeId?: string | null,;
   onSelectResume?: (resumeId: string) => void,;

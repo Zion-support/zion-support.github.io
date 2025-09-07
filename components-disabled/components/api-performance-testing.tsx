@@ -63,12 +63,21 @@ export default function ApiPerformanceTestingPage() {
   ];
   return (
 export default function ApiPerformanceTestingPage() {
+<<<<<<< HEAD
+}
+    "k6/Gatling-compatible test runner","
+    "SLO-aware latency reports","
+    "Regression baselines per endpoint","
+    "CI checks and PR annotations","
+    "Synthetic traffic for staging""
+=======
   const features = [
     \"k6/Gatling-compatible test runner\",
     \"SLO-aware latency reports\",
     \"Regression baselines per endpoint\",
     \"CI checks and PR annotations\",
     \"Synthetic traffic for staging\"
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
 ;
   return (
@@ -381,8 +390,12 @@ key={,}
       </main>;</>)}}</>)}ursor/fix-website-loading-errors-and-merge-6662;
     </>)}
 
+<<<<<<< HEAD
+  'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
+=======
 const features = [
   'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+>>>>>>> origin/chore/fix-lint-and-merge
 ];
 
 const features  = null;return (<>;
@@ -436,8 +449,12 @@ const features  = null;return (<>;
     </>);
 }
 
+<<<<<<< HEAD
+		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging''
+=======
 const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
+>>>>>>> origin/chore/fix-lint-and-merge
 	];
 	return (
 		<>

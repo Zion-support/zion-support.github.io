@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+
+import {useLocation} from "react-router-dom";
+import {useEffect} from "react";
+const NotFound = () => {
+  const location = useLocation();
+import { useLocation } from "react-router-dom",
+import { useEffect } from "react",
+
+  const location = useLocation(),
+
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+  const location = useLocation($2);
+=======
 const NotFound = () => {
   const location = useLocation(),
 
@@ -25,6 +40,7 @@ import { useEffect } from "react",;
 const NotFound = () => {
   const location = useLocation(),
 
+>>>>>>> origin/chore/fix-lint-and-merge
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:"

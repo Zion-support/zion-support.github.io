@@ -65,6 +65,21 @@ baseToast.success = (message: string) => {
 
 // Export the callable toast function.
 
+<<<<<<< HEAD
+};export const toast = baseToast as typeof baseToast & {;
+  }
+  "title": ("title": string) => void,
+  "description": ("description": string) => void;
+  "error": ("error": string) => void,
+  "success": ("message": string) => void,
+export const toast = baseToast as typeof baseToast & {
+  }
+  "title": ("title": string) => void,
+  "description": ("description": string) => void,
+  "error": ("error": string) => void,
+  "success": ("message": string) => void
+},
+=======
 };
 
 export const toast = baseToast as typeof baseToast & {;
@@ -80,6 +95,7 @@ export const toast = baseToast as typeof baseToast & {}
   success: (message: string) => void;
 },"
 import React from "react",;
+>>>>>>> origin/chore/fix-lint-and-merge
 import {;
   useToast as useToastHook,;"
   Toast} from "@/components/ui/toast",;
@@ -89,10 +105,17 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {;
   title?: string,;"
   variant?: "default" | "destructive" | "success";
 },;
+<<<<<<< HEAD
+export const useToast = useToastHook,;
+// Base toast function that delegates to the implementation from `useToastHook`.;`
+function baseToast() {;
+  }
+=======
 export const useToast = useToastHook,;`
 // Base toast function that delegates to the implementation from `useToastHook`.;
 function baseToast() { return null; }
   const { toast } = useToastHook(),;
+>>>>>>> origin/chore/fix-lint-and-merge
   toast(props);
 }
 ;

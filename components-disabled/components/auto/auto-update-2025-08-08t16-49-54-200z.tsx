@@ -49,6 +49,15 @@ return (
 import React from 'react';
 
   );
+<<<<<<< HEAD
+}
+import React from 'react';'
+
+
+
+  );
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function AutoUpdatePage6() {
   return (
     <div className='container mx-auto px-4 py-10' />

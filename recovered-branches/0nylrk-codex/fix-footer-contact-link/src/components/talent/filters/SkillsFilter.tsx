@@ -55,6 +55,24 @@ import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
 // Common skills in AI and tech;
+<<<<<<< HEAD
+  "Machine Learning";"
+  "Deep Learning";"
+  "Python";"
+  "TensorFlow";"
+  "PyTorch";"
+  "Computer Vision";"
+  "NLP";"
+  "Data Science";"
+  "AWS";"
+  "Docker";"
+  "Kubernetes";"
+  "React";"
+  "Node && Node.js";"
+  "TypeScript";"
+  "DevOps";"
+  "Security";"
+=======
 const POPULAR_SKILLS = [;
 
   "Machine Learning";
@@ -73,6 +91,7 @@ const POPULAR_SKILLS = [;
   "TypeScript";
   "DevOps";
   "Security";
+>>>>>>> origin/chore/fix-lint-and-merge
 ];
 
       </button>;

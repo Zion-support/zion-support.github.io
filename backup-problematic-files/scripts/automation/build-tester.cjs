@@ -1,13 +1,40 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
-const path = require('path')
+const path = require(path')
 const { execSync } = require('child_process')
-    this.logFile = path.join(this.projectRoot, 'logs', 'build-tester.log')
-    this.reportFile = path.join(this.projectRoot, 'error-reports')
-    fs.appendFileSync(this.logFile, logMessage + '\n')
-      this.log(' Starting build test...')
+    this.logFile = path.join(this.projectRoot, logs', 'build-tester.log)
+    this.reportFile = path.join(this.projectRoot, error-reports')
+    fs.appendFileSync(this.logFile, logMessage + '\n)
+      this.log( Starting build test...')
       const result = execSync('npm run build')
+<<<<<<< HEAD
+        "encoding
+        stdio"
+        "encoding
+        stdio"
+        "output
+        encoding"
+        "stdio
+        output"
+      this.log(' Build Test "Summary)
+      this.log(`   Type Check"`)
+      this.log(`   Lint "Check`)
+      this.log(`   Overall"`)
+        "priority
+        issue"
+        "action
+        impact"
+        "priority
+        issue"
+        "action
+        impact"
+        "priority
+        issue"
+        "action
+        impact"
+
+=======
         "encoding"
         "stdio"
         "encoding"
@@ -45,3 +72,4 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

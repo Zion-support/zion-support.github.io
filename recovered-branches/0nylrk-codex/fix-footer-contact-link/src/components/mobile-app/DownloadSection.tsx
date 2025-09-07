@@ -24,6 +24,12 @@ export const DownloadSection: React.FC = () => {
 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
+<<<<<<< HEAD
+                onAppStoreClick={() => console.log("App Store button clicked")}"
+                onGooglePlayClick={() => console.log("Google Play button clicked")}"
+import { AppStoreButtons } from "./AppStoreButtons",;"
+export const "DownloadSection": React.FC = () => {;
+=======
                 onAppStoreClick={() => console.log ("App Store button clicked")}
                 onGooglePlayClick={() =>;
                   console.log ("Google Play button clicked");
@@ -36,6 +42,7 @@ import React from "react",;
 import { QrCodeIcon } from "lucide-react",;
 import { AppStoreButtons } from "./AppStoreButtons",;
 export const DownloadSection: React.FC = () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   // These would typically come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;

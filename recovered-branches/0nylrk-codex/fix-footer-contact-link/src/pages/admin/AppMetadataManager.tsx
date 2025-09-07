@@ -31,6 +31,14 @@ const AppMetadataManager: React.FC = () => {
 export default AppMetadataManager;
 
 export default AppMetadataManager,
+<<<<<<< HEAD
+import { AppLayout } from "@/layout/AppLayout";"
+import { SEO } from "@/components/SEO",;"
+import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",;"
+const "AppMetadataManager": React.FC = () => {;
+  }
+  return (;export default AppMetadataManager;
+=======
 
       />;
 
@@ -98,3 +106,4 @@ export default AppMetadataManager;
   );
 },;
 export default AppMetadataManager;
+>>>>>>> origin/chore/fix-lint-and-merge

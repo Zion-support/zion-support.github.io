@@ -144,6 +144,22 @@ class MasterAutomationOrchestrator {
       'WARNING': '⚠️',
       'PROGRESS': '🔄'
     }[type] || 'ℹ️';
+<<<<<<< HEAD
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.logFile = path.join(this.reportsDir, 'master-automation.log');
+    this.ensureDirectories();
+  }
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
+    const logMessage = `[${timestamp}] ${message}`;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     const logMessage = `${prefix} [${timestamp}] ${message}`;
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
     console.log(logMessage);
@@ -264,9 +280,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     ];
 
-    const results = [];
     for (const script of testingScripts) {
-      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -286,9 +300,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     ];
 
-    const results = [];
     for (const script of performanceScripts) {
-      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -308,9 +320,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     ];
 
-    const results = [];
     for (const script of buildScripts) {
-      const result = await this.runAutomationScript(
         script.script,
         script.description
       );
@@ -342,7 +352,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       },
     ];
 
-    const results = [];
     for (const script of additionalScripts) {
       const result = await this.runCommand(script.command, script.description);
       results.push({ ...script, ...result });
@@ -602,7 +611,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
     }
 
     // Save comprehensive report
-    const report = {
       timestamp: new Date().toISOString(),
       duration,
       results: this.results,

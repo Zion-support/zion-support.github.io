@@ -63,8 +63,13 @@ class DependencyErrorResolver {
     try {
   // TODO: Implement
       // Run npm ls to check for missing dependencies;
+<<<<<<< HEAD
+      execSync(
+  'npm: ls', { "stdio": 'pipe})} "catch": (error) {';
+=======
       execSync()"
 
+>>>>>>> origin/chore/fix-lint-and-merge
       const output = error.stdout;
         ? error.stdout.toString();
         : error.stderr.toString();

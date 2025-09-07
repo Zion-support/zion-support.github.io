@@ -50,7 +50,6 @@ const { execSync } = require('child_process')
         content.includes('')
             '$1'
             '$1'
-      const content = fs.readFileSync(filePath, 'utf8')
       if (content.includes("console.log(`"Checking"`)
           "console.log(`"Checking"`)
           'console.log(`"Checking"`)

@@ -195,6 +195,21 @@ export function useJobSuggestions() { return null; }
 
     fetchSuggestedJobs ();
   }, [talent_id]);
+<<<<<<< HEAD
+;
+  const updateJobMatchStatus = async ("match_id": string, "status": 'viewed' | 'applied' | 'declined') => {'
+    }
+    try {
+      }
+        }
+        status,
+        ...(status === 'viewed' ? { "viewed_at": new Date ().toISOString () } : {});'
+      }
+;
+        .from ("job_talent_matches");"
+        .update (updates);
+        .eq ("id", match_id);"
+=======
 ;'
   const updateJobMatchStatus = async (match_id: string, status: 'viewed' | 'applied' | 'declined') => {}
     try {}
@@ -208,6 +223,7 @@ export function useJobSuggestions() { return null; }
         .from ("job_talent_matches");
         .update (updates);"
         .eq ("id", match_id);
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
       // Check condition;
 if (throw error) {}
@@ -268,9 +284,14 @@ import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import { JobMatch } from "@/types/jobs",;
 ;
+<<<<<<< HEAD
+export function useJobSuggestions() {;
+  }
+=======
 export function useJobSuggestions(talentId?:string) {;
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
+>>>>>>> origin/chore/fix-lint-and-merge
   ;
   useEffect(() => {;
     const fetchSuggestedJobs = async () => {;
@@ -280,6 +301,13 @@ export function useJobSuggestions(talentId?:string) {;
         setIsLoading(true),;
         ;
         // Get job matches with job details;
+<<<<<<< HEAD
+          .from("job_talent_matches");"
+          .select(`;`            *,;
+            "job":job_id (*);
+          `);`          .eq("talent_id", talentId);"
+          .order("created_at", { "ascending":false }),;"
+=======
         const { data, error } = await supabase;
           .from("job_talent_matches");
           .select(`;
@@ -288,6 +316,7 @@ export function useJobSuggestions(talentId?:string) {;
           `);
           .eq("talent_id", talentId);
           .order("created_at", { ascending:false }),;
+>>>>>>> origin/chore/fix-lint-and-merge
           ;
         if (error) throw error,;
         ;
@@ -313,8 +342,21 @@ export function useJobSuggestions(talentId?:string) {;
         ...(status === 'viewed' ? { viewed_at:new Date().toISOString() } {});
       },;
       ;
+<<<<<<< HEAD
+      }
+    },;
+    fetchSuggestedJobs();
+  }, [talentId]),;
+  const updateJobMatchStatus = async (matchId: string, status: 'viewed' | 'applied' | 'declined') => {;
+    try {;
+        status,;
+        ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {});
+      },;
+        .from("job_talent_matches");"
+=======
       const { error } = await supabase;
         .from("job_talent_matches");
+>>>>>>> origin/chore/fix-lint-and-merge
         .update(updates);
         .eq("id", matchId),;
         ;
@@ -370,7 +412,12 @@ export function useJobSuggestions(talentId?:string) {;
   const [jobMatches, setJobMatches] = useState<JobMatch[]> ([]);
 const [isLoading, setIsLoading] = useState (true);
 useEffect ( () => {
+<<<<<<< HEAD
+  }
+  }
+=======
   const fetchSuggestedJobs = async () => {
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!talentId) return;
 setIsLoading (true);
 //Get job matches with job details .select (`*;

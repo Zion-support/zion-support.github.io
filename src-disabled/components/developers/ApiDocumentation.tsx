@@ -386,6 +386,29 @@ print(data)`;
   -H "Content-Type: application/json"`,
                 javascript: `const jobId = 'job_abc123',
 const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`, {
+<<<<<<< HEAD
+:src/components/developers/ApiDocumentation.tsx
+  method: 'GET'
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+  }
+})
+logInfo (data), `
+python: `import requests headers = {'
+  'Authorization': 'Bearer YOUR API KEYContent-Type': 'application/json'
+}talent id '
+}'
+headers=headers) data = response.json () print (data) `
+job_id = 'job_abc123'
+response = requests.get(
+    f'https://api.ziontechgroup.com/v1/jobs/{job_id}'
+    headers=headers
+)
+data = response.json()
+print(data)`
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -564,10 +587,29 @@ print(data)`;
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/talent?skills=react,typescript', {
   method: 'GET',
   headers: {
+<<<<<<< HEAD
+:src/components/developers/ApiDocumentation.tsx
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+  }
+})
+logInfo(data);`
+                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+response = requests.get(
+    'https://api.ziontechgroup.com/v1/talent'
+    params={'skills': 'react,typescript'}
+    headers=headers
+)
+data = response.json()
+print(data)`
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
-const data = await response.json(),;
 logInfo(data),`,;
                 python: `import requests;
 headers = {;
@@ -618,6 +660,30 @@ print(data)`;
   -H "Content-Type: application/json"`,
                 javascript: `const talentId = 'talent_abc123',
 const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talentId}\`, {
+<<<<<<< HEAD
+:src/components/developers/ApiDocumentation.tsx
+  method: 'GET'
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+  }
+})
+logInfo(data);`
+                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+talent_id = 'talent_abc123'
+response = requests.get(
+    f'https://api.ziontechgroup.com/v1/talent/{talent_id}'
+    headers=headers
+)
+data = response.json()
+print(data)`
+              }}
+              responseExamples = {{
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   method: 'GET',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -641,7 +707,6 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json';
   }
 }),;
-const data = await response.json(),;
 logInfo(data),`,;
                 python: `import requests;
 headers = {;
@@ -723,6 +788,49 @@ print(data)`;
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
   method: 'POST',
   headers: {
+<<<<<<< HEAD
+:src/components/developers/ApiDocumentation.tsx
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+  }
+  body: JSON.stringify({
+    talent_id: 'talent_abc123'
+    project_name: 'E-commerce Website Redesign'
+    project_summary: 'Redesign our outdated e-commerce website with modern UI'
+    project_description: 'Our current website is 5 years old and needs a complete overhaul...'
+    timeline: '2-3 months'
+    budget_min: 8000
+    budget_max: 12000
+    requester_name: 'John Doe'
+    requester_email: 'john@example.com'
+  })
+})
+logInfo(data);`
+                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+payload = {
+    'talent_id': 'talent_abc123'
+    'project_name': 'E-commerce Website Redesign'
+    'project_summary': 'Redesign our outdated e-commerce website with modern UI'
+    'project_description': 'Our current website is 5 years old and needs a complete overhaul...'
+    'timeline': '2-3 months'
+    'budget_min': 8000
+    'budget_max': 12000
+    'requester_name': 'John Doe'
+    'requester_email': 'john@example.com'
+response = requests.post(
+    'https://api.ziontechgroup.com/v1/quotes'
+    headers=headers
+    data=json.dumps(payload)
+)
+data = response.json()
+print(data)`
+              }}
+              responseExamples = {{
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   },
   body: JSON.stringify({
@@ -738,10 +846,8 @@ print(data)`;
   })
 }),
 
-const data = await response.json(),
 logInfo(data),`,
                 python: `import requests
-import json
 
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
@@ -799,10 +905,28 @@ print(data)`;
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
   method: 'GET',
   headers: {
+<<<<<<< HEAD
+:src/components/developers/ApiDocumentation.tsx
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+  }
+})
+logInfo(data);`
+                python: `import requests
+headers = {
+    'Authorization': 'Bearer YOUR_API_KEY'
+    'Content-Type': 'application/json'
+response = requests.get(
+    'https://api.ziontechgroup.com/v1/quotes'
+    headers=headers
+)
+data = response.json()
+print(data)`
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
 }),;
-const data = await response.json(),;
 logInfo(data),`,;
                 python: `import requests;
 headers = {;
@@ -1165,7 +1289,6 @@ function EndpointSection({
   codeExamples,
   responseExamples
 }: EndpointSectionProps) {
-  const [activeTab, setActiveTab] = useState("curl"),
   return (
     <div className="border border-zinc-800 rounded-md">
       <div className="p-4">
@@ -1213,7 +1336,6 @@ function EndpointSection({;
   codeExamples;
   responseExamples;
 }: EndpointSectionProps) {;
-  const [activeTab, setActiveTab] = useState("curl");
   return (;
     <div className="border border-zinc-800 rounded-md">;
       <div className="p-4">;

@@ -244,14 +244,25 @@ message: data.message ;
   ;
 }
 };
+<<<<<<< HEAD
+  }
+  const "escalationMessage": Message = {;
+  }
+  "id": `bot-escalation-$ {;`  }
+=======
 const suggestEscalation = () => {;
   const escalationMessage: Message = {;
   id: `bot-escalation-$ {;
+>>>>>>> origin/chore/fix-lint-and-merge
   Date.now () ;
 }`;
 
 };
+<<<<<<< HEAD
+  }
+=======
 const logSupportEscalation = async () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   try {;
   //Send the conversation to the backend for logging //This would be implemented in a real system conversationHistory: messages.map (m => ({;
   content: m.content;,  sender: m.sender;, timestamp: m.timestamp ;
@@ -259,7 +270,11 @@ const logSupportEscalation = async () => {;
 component: 'ChatBotPanel' ;
 }
 };
+<<<<<<< HEAD
+  }
+=======
 const handleEscalateToLiveAgent = () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;
 

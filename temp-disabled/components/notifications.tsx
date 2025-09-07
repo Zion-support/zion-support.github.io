@@ -25,7 +25,6 @@ const NotificationCenter = dynamic(() => import('../components/notifications/Not
 )export default function NotificationsPage() ;
   return <NotificationCenter />;
 
-const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {ssr: fals,}
 }),export default function NotificationsPage() ;
   return <NotificationCenter />;
 }}

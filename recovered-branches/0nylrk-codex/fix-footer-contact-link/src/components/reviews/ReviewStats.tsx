@@ -2,6 +2,13 @@ import { Star } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 interface ReviewStatsProps {
 
+<<<<<<< HEAD
+  ratingDistribution?: Record<number, number>interface ReviewStatsProps {
+interface ReviewStatsProps {
+  averageRating: number,
+  totalReviews: number,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   ratingDistribution?: Record<number, number>
 "
 import { Star } from "lucide-react","

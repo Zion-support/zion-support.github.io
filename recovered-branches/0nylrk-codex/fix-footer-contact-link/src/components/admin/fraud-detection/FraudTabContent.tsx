@@ -75,8 +75,15 @@ interface FraudTabContentProps {
           </p>
         </div>
       )
+<<<<<<< HEAD
+    "default":
+return null;
+import React from "react";"
+interface FraudTabContentProps {;
+=======
     default:
 
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 }
 

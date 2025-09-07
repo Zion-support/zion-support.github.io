@@ -44,16 +44,30 @@ function useAuthOperations() {}
     checkUrlForReferralCode ();
   }, []);
 ;
+<<<<<<< HEAD
+    }
+=======
   const login = async ({ email, password }: { email: string, password: string }) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
     setIsLoading (true);
     try {}
         email;
         password});
+<<<<<<< HEAD
+      if (error) {
+        }
+        toast({
+      // Clean up any stale auth state before login
+}
+cleanupAuthState();
+        }
+=======
       if (error) {}
         toast({}
       // Clean up any stale auth state before login;
       cleanupAuthState();
       const { data, error } = await supabase.auth.signInWithPassword({}
+>>>>>>> origin/chore/fix-lint-and-merge
         email;
         password});
       if (error) {}
@@ -274,16 +288,114 @@ if ( {) {}
   const loginWithFacebook = async () => {
     setIsLoading (true);
     try {
+<<<<<<< HEAD
+      }
+        }
+        "provider": "facebook"});"
+      if (error) {
+        }
+        toast({
+          }
+          "variant": "destructive";"
+          "title": "Oh no! Something went wrong.""
+          "description": error.message})
+        "provider": "facebook"}),"
+      if (error) {
+        }
+        toast({
+}
+"variant": "destructive",;"
+          "title": "Oh no! Something went wrong.","
+          "description": error.message})
+=======
       const { data, error } = await supabase.auth.signInWithOAuth({
 
+>>>>>>> origin/chore/fix-lint-and-merge
   },;
   const loginWithFacebook = async () => {;
     setIsLoading(true),;
     try {;
+<<<<<<< HEAD
+      }
+        }
+        "provider": "facebook"}),;"
+=======
       const { data, error } = await supabase.auth.signInWithOAuth({;
         provider: "facebook"}),;
+>>>>>>> origin/chore/fix-lint-and-merge
       if (error) {;
         toast({;
+<<<<<<< HEAD
+          }
+          "variant": "destructive",;"
+          "title": "Oh no! Something went wrong.",,"
+  "description": error.message});
+  }
+    }
+    setIsLoading (true);
+    try {
+      }
+      const { data, error } = await supabase.auth.signInWithOAuth ({
+        }
+        "provider": "google"});"
+;
+      // Check condition,
+if ( {) {
+  $2
+}
+        toast ({
+          }
+          "variant": "destructive";"
+          "title": "Oh no! Something went wrong.","
+          "description": error.message});
+      }
+    } finally {
+      }
+      setIsLoading (false);
+    }
+  }
+      }
+    } finally {
+      }
+      setIsLoading (false);
+    }
+  const loginWithTwitter = async () => {
+    }
+    setIsLoading (true);
+    try {
+      }
+        }
+        "provider": "twitter"});"
+;
+      // Check condition,
+if ( {) {
+  $2
+}
+        toast ({
+          }
+          "variant": "destructive";"
+          "title": "Oh no! Something went wrong.","
+          "description": error.message})
+};
+  },
+    }
+    setIsLoading(true),
+    try {
+      }
+      }
+      if (error) {
+        }
+        toast({
+}
+"variant": "destructive",;"
+          "title": "Oh no! Something went wrong.","
+          "description": error.message})
+      }
+    } finally {
+      }
+      setIsLoading (false);
+    }
+=======
           variant: "destructive",;
           title: "Oh no! Something went wrong.",
           description: error.message});
@@ -318,6 +430,7 @@ if ( {) {}
           title: "Oh no! Something went wrong.",
           description: error.message});
 
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   const loginWithGoogle = async () => {}
     setIsLoading (true);
@@ -377,11 +490,20 @@ if ( {) {}
   const loginWithWeb3 = async () => {;
     setIsLoading(true),;
     try {;
+<<<<<<< HEAD
+      }
+      if (!ethereum) {;
+        }
+        throw new Error("Web3 wallet not found");"
+      }
+      const accounts = await ethereum.request({ "method": 'eth_requestAccounts' }),;'
+=======
       const ethereum = (window as any).ethereum,;
       if (!ethereum) {;"
         throw new Error("Web3 wallet not found");
       }'
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),;
+>>>>>>> origin/chore/fix-lint-and-merge
       const address = accounts[0],;
       await ethereum.request({;'
         method: 'personal_sign',;

@@ -21,6 +21,15 @@ const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({'
 import * as React from "react""
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group""
 import { type VariantProps } from "class-variance-authority""
+<<<<<<< HEAD
+import { type VariantProps } from "class-variance-authority"const ToggleGroup = React.forwardRef<"
+  React.ElementRef<typeof ToggleGroupPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
+    VariantProps<typeof toggleVariants>
+import React from 'react';'
+import * as React from 'react';import React from 'react';'
+import * as React from 'react';'
+=======
 import * as React from "react""
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group""
 import { type VariantProps } from "class-variance-authority"
@@ -36,6 +45,7 @@ const ToggleGroup = React.forwardRef<
 import React from 'react';
 import * as React from 'react';import React from 'react';
 import * as React from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
     ref={ref}
 
     className={cn('flex items-center justify-center gap-1', className)}

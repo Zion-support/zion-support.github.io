@@ -3,9 +3,15 @@ enhancementType: EnhancementType;
   context?: string;
   instructions?: string;
 }
+<<<<<<< HEAD
+import {supabase} from '@/integrations / supabase / client';'
+import {toast} from '@/hooks / use - toast';'
+type EnhancementType =;
+=======
 
 import {toast} from '@/hooks / use - toast';
 type EnhancementType =;'
+>>>>>>> origin/chore/fix-lint-and-merge
   | 'resume - summary';'
   | 'work - description';'
   | 'job - post';'

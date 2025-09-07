@@ -51,9 +51,18 @@
 #!/usr/bin/env node
 =======
 
+<<<<<<< HEAD
+
+      if (updated !== original) {
+        fs.writeFileSync(file, updated);
+        report.modifiedFiles.push(file);
+        report.actions.push(`${rel}: enabled experimental.optimizeCss`);
+main
+=======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 /*
  Simple Performance Optimizer;
@@ -63,6 +72,13 @@
 */
 
 
+<<<<<<< HEAD
+console.log(⚡ Starting Performance Optimizer...);
+  // TODO: Implement
+}
+  constructor() {
+
+=======
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -114,6 +130,7 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
   constructor() {
     this.reportsDir = path.join(process.cwd(), 'automation-reports');
+>>>>>>> origin/chore/fix-lint-and-merge
     this.ensureReportsDir();
   }
 
@@ -760,11 +777,13 @@ class PerformanceOptimizer {
       this.results.bundleAnalysis = {
         success: false,
         size: 0,
-        recommendations: ['Failed to analyze bundle size']
-      };
-    }
-  }
 
+<<<<<<< HEAD
+    const ext = path.extname(img).toLowerCase()
+    const outPath = img.replace(new RegExp(`${ext}$`), .webp')
+    try {
+        execSync(optimization.command, { stdio: 'pipe });
+=======
   async optimizeImages() {
     this.log('\n🖼️ OPTIMIZING IMAGES');
     
@@ -780,10 +799,11 @@ class PerformanceOptimizer {
 <<<<<<< HEAD
 >>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         execSync(optimization.command, { stdio: 'pipe' });
+>>>>>>> origin/chore/fix-lint-and-merge
         console.log(`✅ ${optimization.name} completed successfully`);
         results.push({ 
           name: optimization.name, 
-          status: 'success', 
+          status: success', 
           description: optimization.description,
           error: null 
         });
@@ -792,7 +812,7 @@ class PerformanceOptimizer {
         console.log(`❌ ${optimization.name} failed`);
         results.push({ 
           name: optimization.name, 
-          status: 'failed', 
+          status: 'failed, 
           description: optimization.description,
           error: error.message 
         });
@@ -819,11 +839,16 @@ class PerformanceOptimizer {
           success: true,
           optimized: imageFiles.length,
           recommendations: this.generateImageRecommendations(imageFiles.length)
-        };
+        }
       } else {
         this.results.imageOptimization = {
           success: true,
           optimized: 0,
+<<<<<<< HEAD
+          recommendations: [No images found to optimize']
+        }
+      }
+=======
           recommendations: ['No images found to optimize']
         };
 
@@ -855,14 +880,38 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
         chunks: 3,
         recommendations: this.generateCodeSplittingRecommendations()
       };
+>>>>>>> origin/chore/fix-lint-and-merge
     } catch (error) {
       this.results.codeSplitting = {
         success: false,
+<<<<<<< HEAD
+        optimized: 0,
+        recommendations: ['Failed to optimize images]
+      }
+    }
+  }
+      sharp(img).webp({ quality: 80 }).toFile(outPath)
+      optimized.push({ from: img, to: outPath })
+    } catch (e) {
+      report.errors.push(`Failed optimizing ${img}: ${e.message}`)
+  if($2) {
+    report.optimizedImages = optimized
+  report.actions.push(`Optimized ${optimized.length} images to WebP`)
+  const candidates = [next.config.js', 'deployment/next.config.js]
+  for($2) {
+    const file = path.join(rootDir, rel)
+    if (!fs.existsSync(file)) continue
+    const original = fs.readFileSync(file, utf8')
+    if (original.includes('optimizeCss: true)) {
+      report.actions.push(`${rel}: optimizeCss already enabled`);
+      continue;
+=======
         chunks: 0,
         recommendations: ['Failed to implement code splitting']
       };
     }
   }
+>>>>>>> origin/chore/fix-lint-and-merge
 
   async setupCaching() {
     this.log('\n💾 SETTING UP CACHING');
@@ -957,7 +1006,6 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
   }
 
   generateImageRecommendations(imageCount) {
-    const recommendations = [];
     
     if (imageCount > 0) {
       recommendations.push('Convert images to WebP format for better compression');
@@ -1018,6 +1066,11 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
     // Save detailed report
     const report = {
       timestamp: new Date().toISOString(),
+<<<<<<< HEAD
+
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    this.log(`\n📄 Detailed report saved to ${reportPath}`);
+=======
       totalDuration,
       results: this.results,
       summary: {
@@ -1034,6 +1087,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
       JSON.stringify(report, null, 2)
     );
     this.log('\n📄 Detailed report saved to performance-optimization-report.json');
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
   async run() {
@@ -1047,7 +1101,7 @@ const HeavyComponent = React.lazy(() => import('./HeavyComponent'));
       await this.setupCaching();
       await this.setupCompression();
     } catch (error) {
-      this.log(`Fatal error: ${error.message}`, 'ERROR');
+      this.log(`Fatal error: ${error.message}`, 'ERROR);
     } finally {
       this.generateReport();
 <<<<<<< HEAD
@@ -3418,6 +3472,14 @@ main
 
 // Run the performance optimizer
 if (require.main === module) {
+<<<<<<< HEAD
+
+  const optimizer = new PerformanceOptimizer();
+  optimizer.run().catch(console.error);
+}
+
+
+=======
     const optimizer = new PerformanceOptimizer(),
     optimizer.run().catch(console.error)
   }
@@ -3580,3 +3642,4 @@ module.exports = PerformanceOptimizer;
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

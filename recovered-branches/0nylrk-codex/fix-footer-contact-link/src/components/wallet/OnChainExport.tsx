@@ -68,12 +68,66 @@ export function OnChainExport() {
           ) : (;}
             <Wallet className=\"h-5 w-5\" />;}
           )}
+<<<<<<< HEAD
+          On-chain Export
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Info className="h-4 w-4 text-muted-foreground cursor-help" />
+              </TooltipTrigger>
+              <TooltipContent>
+                <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </CardTitle>
+        <CardDescription>Export your ZION$ to an external wallet</CardDescription>
+      </CardHeader>
+      <CardContent>
+        {isConnected ? (
+          <div className="space-y-4">
+            <div className="flex justify-between text-sm">
+              <span>Available to export:</span>
+              <span className="font-medium">250 ZION$</span>
+            </div>
+            {exportStatus === 'success' ? (
+              <Button className="w-full bg-green-600 hover:bg-green-700" disabled>
+                <Check className="mr-2 h-4 w-4" />
+                Tokens Exported
+              </Button>
+            ) : (
+              <Button
+                className="w-full"
+                onClick={handleExportTokens}
+                disabled={isExporting}
+              >
+                {isExporting ? "Processing..." : "Export Tokens"}
+                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
+              </Button>
+            )}
+          </div>
+        ) : (
+          <div className="space-y-2">"
+            <p className="text-sm text-muted-foreground mb-3">"
+              Connect your web3 wallet to export tokens to the blockchain.
+            </p>
+            <Button onClick={handleConnectWallet} className="w-full">"
+              Connect Wallet
+            </Button>
+          </div>
+};
+;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
+import { Button } from "@/components/ui/button",;"
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react",;"
+=======
 
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react",;
 
+>>>>>>> origin/chore/fix-lint-and-merge
 import {;
   Tooltip,;
   TooltipContent,;}
@@ -83,8 +137,12 @@ import { useToast } from \"@/hooks/use-toast\",;
 import { useAuth } from \"@/hooks/useAuth\",;
 export function OnChainExport() {;
   const [isConnected, setIsConnected] = useState(false),;
+<<<<<<< HEAD
+  const [isExporting, setIsExporting] = useState(false),;
+=======
   const [isExporting, setIsExporting] = useState(false),;}
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),;}
+>>>>>>> origin/chore/fix-lint-and-merge
   const { toast } = useToast(),;
   const { user } = useAuth(),;
   const handleConnectWallet = async () => {;

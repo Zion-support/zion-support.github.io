@@ -240,22 +240,31 @@ class IntelligentErrorDetector {
       );
       return [];
     } catch (error) {
+<<<<<<< HEAD
+      return lines.filter(line => this.errorPatterns.import.test(line));
+    }
+=======
     const lines = (error.stdout || error.stderr || '').split('\n'),
     return lines.filter(line => this.errorPatterns.import.test(line))
   }
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
   async detectBuildErrors() {
     try {
-      const result = execSync('npm run build', {
         stdio: 'pipe',
         cwd: process.cwd(),
       });
       return [];
     } catch (error) {
+<<<<<<< HEAD
+      return lines.filter(line => this.errorPatterns.build.test(line));
+    }
+=======
     const lines = (error.stdout || error.stderr || '').split('\n'),
     return lines.filter(line => this.errorPatterns.build.test(line))
   }
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
   async detectRuntimeErrors() {

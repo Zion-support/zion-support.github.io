@@ -130,6 +130,23 @@ interface AIEnhancementButtonProps {;
   size?: "default" | "sm" | "lg" | "icon",;
   contentLength?: number;
 }
+<<<<<<< HEAD
+export function AIEnhancementButton() {
+  }
+  options,
+  onEnhanced,
+  buttonText = "Enhance with AI","
+  className,
+variant = "ghost",;"
+  size = "sm","
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+}
+const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
+const [showActions, setShowActions] = useState(false),;
+const [generatedContent, setGeneratedContent] = useState<string | null>(null),;
+        return;
+=======
 ;
 
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
@@ -139,6 +156,7 @@ interface AIEnhancementButtonProps {;
       });
       return;
 
+>>>>>>> origin/chore/fix-lint-and-merge
     }
       setGeneratedContent(enhancedContent);
       setShowActions(true);

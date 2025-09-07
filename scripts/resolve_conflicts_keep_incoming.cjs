@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+
+#!/usr/bin/env node;
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -10,15 +15,25 @@
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 function getAllFiles(dir) {}
-  const entries = fs.readdirSync(dir, { "withFileTypes": true }")
+  const entries = fs.readdirSync(dir, { "withFileTypes: true })
 });
   const files = entries.flatMap((entry) => {}
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) return getAllFiles(fullPath);
     return [fullPath]}
+<<<<<<< HEAD
+  return files}
+
+  if (!text.includes(')) return false;
+function resolveConflictsKeepIncoming(filePath) {}"
+
+  if (!text.includes()) return false;
+  const lines = text.split(\n');
+=======
   return files};
 <<<<<<< HEAD
 function resolveConflictsKeepIncoming(filePath) {}
@@ -37,6 +52,7 @@ function resolveConflictsKeepIncoming(filePath) {}"
   if (!text.includes()) return false;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const lines = text.split('\n');
+>>>>>>> origin/chore/fix-lint-and-merge
   const out = [];
   let i = 0;
   let changed = false;
@@ -51,7 +67,7 @@ function resolveConflictsKeepIncoming(filePath) {}"
       // copy incoming until 
       while (i < lines.length && !lines[i].startsWith()) {}
         out.push(lines[i]);
-        i++};
+        i++}
       // skip the end marker;
 
   if (!fs.existsSync(root)) return;
@@ -61,6 +77,14 @@ function resolveConflictsKeepIncoming(filePath) {}"
     try {}
       if (resolveConflictsKeepIncoming(f)) {}
         count++;
+<<<<<<< HEAD
+
+        console.log(`Resolved conflicts "in: ${f}`)}
+    } catch (e) {}
+      console.error(`Failed to process ${f}: ${e.message}`)}
+  }
+  console.log(`Done. Files updated": ${count}`)}
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,25 +99,38 @@ function resolveConflictsKeepIncoming(filePath) {}"
   };
   console.log(`Done. Files "updated": ${count}`)};
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 main();
 cursor/website-audit-and-update-with-deployment-76dc;
 <<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 

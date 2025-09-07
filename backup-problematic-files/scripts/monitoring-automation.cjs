@@ -4,6 +4,15 @@
  * Sets up comprehensive monitoring for the application;
  */
 const fs = require('fs')
+<<<<<<< HEAD
+const path = require(path')
+  log(message, type = 'INFO)
+      INFO': 'ℹ
+      SUCCESS': '
+      ERROR': '
+      WARNING': '⚠
+      PROGRESS': '�
+=======
 const path = require('path')
   log(message, type = 'INFO')
 <<<<<<< HEAD
@@ -12,26 +21,30 @@ const path = require('path')
       'ERROR': ''
       'WARNING': '⚠'
       'PROGRESS': '�'
+>>>>>>> origin/chore/fix-lint-and-merge
     const healthCheck = "
-    "message"
+    message
     "version"
-    const metrics = "
-    const alerting = "
+    const metrics = 
+    const alerting = 
       "service"
-      console.error('Failed to send "alert")
+      console.error(Failed to send alert)
         "type"
-        "severity"
+        severity
         "type"
-        "severity"
+        severity
         "type"
-        "severity"
+        severity
         "type"
-        "severity"
+        severity
         "type"
-        "severity"
+        severity
         "type"
-        "severity"
+        severity
                 console.error('Failed to load "metrics")
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -45,3 +58,4 @@ const path = require('path')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

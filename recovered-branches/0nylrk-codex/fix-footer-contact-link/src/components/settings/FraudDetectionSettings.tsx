@@ -245,6 +245,11 @@ import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
 ;
 export function FraudDetectionSettings() {;
+<<<<<<< HEAD
+  }
+  ;
+    }
+=======
   const { user } = useAuth(),;
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true),;
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),;
@@ -252,6 +257,7 @@ export function FraudDetectionSettings() {;
   const [isSaving, setIsSaving] = useState(false),;
   ;
   const handleSavePreferences = async () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!user?.id) return,;
     ;
     setIsSaving(true),;

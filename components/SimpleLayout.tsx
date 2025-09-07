@@ -1,7 +1,26 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 interface SimpleLayoutProps {
   children: ReactNode;
   title?: string;
 }
+<<<<<<< HEAD
+export default /**
+ * SimpleLayout - Function description
+ */
+function SimpleLayout() {
+}
+
+{description && <meta name="description" content={description} />}
+      </Head>
+      {children}
+    </>)
+}
+=======
 
 const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
@@ -17,3 +36,4 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 };
 
 export default SimpleLayout;
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -94,8 +94,19 @@ import { Shield, Lock, Award, CheckCircle } from "lucide-react";
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+    </section>
+  );
+}
+    </section>;
+  );
+}
+    </section>
+  )
+=======
 
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export function EnterpriseTrustBadges() {;
 

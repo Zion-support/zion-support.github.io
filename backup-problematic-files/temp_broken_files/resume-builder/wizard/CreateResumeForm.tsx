@@ -53,8 +53,14 @@ export const CreateResumeForm = ({ ;
 onCancel;
 isLoading ;
 }: CreateResumeFormProps) => {;
+<<<<<<< HEAD
+  }
+  const [newResumeTitle, setNewResumeTitle] = useState ('');'
+  }
+=======
   const [newResumeTitle, setNewResumeTitle] = useState ('');
 const handleSubmit = async () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!newResumeTitle.trim () ) return;
 
 };

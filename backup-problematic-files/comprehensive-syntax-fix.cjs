@@ -69,6 +69,31 @@ for (const file of filesToFix) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+const fs = require('fs');
+
+class ComprehensiveSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.ensureReportsDir();
+  }
+
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] ${message}`);
+  }
+    content = content.replace(/[\s\S]*?[\s\S]*?
+    content = content.replace(/[\s\S]*?
+    content = content.replace(/[\s\S]*?
+    
+    // Fix common syntax errors
+=======
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +104,7 @@ for (const file of filesToFix) {
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+>>>>>>> origin/chore/fix-lint-and-merge
     return match.replace(/,\s*$/, '')
   // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
   content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"

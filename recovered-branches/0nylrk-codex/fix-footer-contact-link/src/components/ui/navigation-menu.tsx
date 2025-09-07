@@ -1,3 +1,39 @@
+<<<<<<< HEAD
+const NavigationMenu = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
+></typeof>(({ className, children, ...props }, ref) => (
+  <NavigationMenuPrimitive.Root,
+const NavigationMenu = React && React.forwardRef<;
+  React && React.ElementRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive && NavigationMenuPrimitive.Root>;
+></typeof>(({ className, children, ...props }, ref) => (;
+  <NavigationMenuPrimitive&& NavigationMenuPrimitive.Root,
+ref={ref}
+    className={cn(
+      'relative z-10 flex max-w-max flex-1 items-center justify-center''
+      }
+      className
+    )}
+    {...props}>;
+    {children}
+    <NavigationMenuViewport />;
+  </NavigationMenuPrimitive && NavigationMenuPrimitive.Root>;
+));import { cn } from "@/lib/utils""
+
+  React.ElementRef<typeof NavigationMenuPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
+>(({ className, children, ...props }, ref) => (
+  <NavigationMenuPrimitive.Root,
+ref={ref}
+    className={cn(
+      'relative z-10 flex max-w-max flex-1 items-center justify-center''
+      "relative z-10 flex max-w-max flex-1 items-center justify-center","
+
+    }
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import * as React from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
 import {cva} from 'class-variance-authority';
@@ -147,6 +183,9 @@ NavigationMenuList && NavigationMenuList.displayName = NavigationMenuPrimitive &
 
 const NavigationMenuItem = NavigationMenuPrimitive && NavigationMenuPrimitive.Item;
 
+<<<<<<< HEAD
+  'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors "hover": bg-accent "hover":text-accent-foreground "focus":bg-accent "focus":text-accent-foreground "focus":outline-none "disabled":pointer-events-none "disabled":opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50';'
+=======
 const navigationMenuTriggerStyle = cva(;'
   'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover: bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50';
 const navigationMenuTriggerStyle = cva(;"
@@ -154,6 +193,7 @@ const navigationMenuTriggerStyle = cva(;"
 pr-12325
 const navigationMenuTriggerStyle = cva(;"
   'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover: bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50';')
+>>>>>>> origin/chore/fix-lint-and-merge
 ),;
 
 const NavigationMenuTrigger = React && React.forwardRef<;
@@ -455,7 +495,6 @@ const NavigationMenuList = React.forward_ref<;
   />));
 NavigationMenuList.display_name = NavigationMenuPrimitive.List.display_name;
 ;
-const NavigationMenuItem = NavigationMenuPrimitive.Item;
 ;
 const navigationMenuTriggerStyle = cva ('
   'group inline - flex h - 10 w - max items - center justify - center rounded - md bg - background px - 4 py - 2 text - sm font - medium transition - colors hover: bg - accent hover:text - accent - foreground focus:bg - accent focus:text - accent - foreground focus:outline - none disabled:pointer - events - none disabled:opacity - 50 data-[active]:bg - accent / 50 data-[state = open]:bg - accent / 50'),

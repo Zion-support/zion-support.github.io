@@ -1,4 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
 
     return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
@@ -35,6 +36,11 @@ export default async /**;
  */
 
 }
+<<<<<<< HEAD
+    return res.status(405).json({ error: 'Method not allowed',
+  },,
+  });
+=======
   const {}
     candidate_name,
     role_title,
@@ -43,8 +49,12 @@ export default async /**;
     company_name,
     notes,
   } = req.body || {}
+>>>>>>> origin/main
 
   const method = null;
   return res.status(200).json({ email: text ;})
 }
+<<<<<<< HEAD
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/main

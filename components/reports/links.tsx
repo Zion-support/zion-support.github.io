@@ -38,6 +38,13 @@ if ( {) {}
 
       window.location.replace('/reports/links/index.html');
     }
+<<<<<<< HEAD
+  }, []),
+  return null
+}
+}
+=======
   }, []);
   return null;
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

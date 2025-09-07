@@ -1,11 +1,17 @@
+<<<<<<< HEAD
+=======
 import './App.css',
 import { ThemeProvider } from "./components/ThemeProvider","
 import { WhitelabelProvider } from "./context/WhitelabelContext",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
 
     super(props);
+<<<<<<< HEAD
+
+=======
     this.state = { hasError: false };
   }
   
@@ -15,6 +21,7 @@ class ErrorBoundary extends React.Component {
   
   componentDidCatch(error, errorInfo) {'
     console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   
   render() {}
@@ -26,6 +33,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
+=======
 "
 import React, { Suspense } from "react";"
 import { Routes, Route } from "react-router-dom";"
@@ -111,6 +120,7 @@ import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 
 import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
   AuthRoutes
   DashboardRoutes
@@ -179,6 +189,8 @@ import {
   EnterpriseRoutes,
   CommunityRoutes,
 
+<<<<<<< HEAD
+=======
   DeveloperRoutes,
 } from './routes';
 const Home = React.lazy (() => import ("./pages / Home"));
@@ -217,9 +229,22 @@ const base_routes = [;
   { path: "/contact", element: <ContactPage /> },
 ];
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
 const App = () =>: any {
   return (
     <WhitelabelProvider>;
+<<<<<<< HEAD
+
+          <Routes>;
+            {baseRoutes.map(({ path, element }) => (;
+              <Route key={path} path={path} element={element} />;
+            ))}
+
+}
+return (;
+    <WhitelabelProvider>;
+
+=======
       <ThemeProvider default_theme="dark">;
         <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
           <Routes>;
@@ -406,6 +431,7 @@ const App = () =>: any {}
             <Route path="/community/*" element={<CommunityRoutes />} />;"
             <Route path="/developers/*" element={<DeveloperRoutes />} />;"
             <Route path="*" element={<ErrorRoutes />} />;
+>>>>>>> origin/chore/fix-lint-and-merge
           </Routes>;
         </Suspense>;
         <Toaster />;

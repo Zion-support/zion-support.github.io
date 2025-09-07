@@ -87,8 +87,12 @@ function resolveMergeConflict(filePath) {;
     return false,,
 function findConflictedFiles() {
   try {
+<<<<<<< HEAD
+    const result = execSync(git status --porcelain | grep "^UU | awk {print $2}",
+=======
   // TODO: Implement
 }"
+>>>>>>> origin/chore/fix-lint-and-merge
 
       { encoding: "utf8" }")
     )
@@ -104,7 +108,13 @@ function main() {"`;
   if (conflictedFiles.length === 0) {"`;
     log("✅ No merge conflicts found!", `green`)"
     return,,
+<<<<<<< HEAD
+}
+const colors = {
+  reset: "\x1b[0m",";  red: "\x1b[31m",""green: "\x1b[32m",";  yellow": "\x1b[33m",";  blue: "\x1b[34m",";  magenta: "\x1b[35m",""cyan: "\x1b[36m","}";function log(message, color = "reset") {";  console.log(`${colors[color]}${message}${colors.reset}`)`}
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
 function resolveMergeConflict(filePath) {
   // TODO: Implement
     if (!fs.existsSync(filePath)) {
@@ -189,9 +199,6 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-const fs = require("$1")
-const path = require("$1")
-const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -272,8 +279,6 @@ function findConflictedFiles() {
 }
 function main() {
   log("🚀 Starting robust merge conflict resolution...", "cyan")"";  const conflictedFiles = findConflictedFiles()log(`Found ${conflictedFiles.length} files with merge conflicts`, "yellow")";`;  if (conflictedFiles.length === 0) {";    log("✅ No merge conflicts found!", "green")";    return,"}
-  let resolvedCount = 0;
-  let errorCount = 0;
   for (const filePath of conflictedFiles) {
     try {
       if (resolveMergeConflict(filePath)) {

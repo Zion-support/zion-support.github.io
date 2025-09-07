@@ -100,6 +100,94 @@ const "ContactPage": React.FC = () => {
     "Digital Transformation",
 
   ]
+<<<<<<< HEAD
+return (;
+    <>
+      <SEO title=\"Contact Us - Zion Tech Group\""
+        description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com\""
+        keywords=\"contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address\""
+        canonical=\""https\": //ziontechgroup.com/contact\"" />
+      <PageTransition>
+        <main className=\"min-h-screen bg-white\">"
+          {/* Hero Section */}
+          <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">;"
+            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
+              <motion.div;
+                initial={{ "opacity": 0, \"y\": 20 }}"
+                animate={{ \"opacity\": 1, \"y\": 0 }}"
+                transition={{ \"duration\": 0.6 }}"
+                className=\"text-center\";"
+              >;
+                <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">;"
+                  Get In <span className=\"text-blue-600\">Touch</span>;"
+                </h1>;
+                <p className=\"text-xl text-gray-600 mb-8 max-w-3xl mx-auto\">;"
+                  Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let\'s discuss your project.;'
+                </p>;
+                <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;"
+                  <motion.a;
+                    href=\""tel":+13024640950\";"
+                    whileHover={{ "scale": 1.05 }}
+                    whileTap={{ \"scale\": 0.95 }}"
+                    className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
+                  >;
+                    <Phone className=\"w-5 h-5\" />;"
+                    Call \"Now\": +1 302 464 0950;"
+                  </motion.a>;
+                  <motion.a;
+                    href=\""mailto": klebe r@ziontechgroup.com\";"
+                    whileHover={{ "scale": 1.05 }}
+                    whileTap={{ \"scale\": 0.95 }}"
+                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
+                  >;
+                    <Mail className=\"w-5 h-5\" />;"
+                    Send Email;
+                  </motion.a>;
+                </div>;
+              </motion.div>;
+            </div>;
+          </section>;
+ursor/automate-test-improve-and-merge-code-646c;
+  ];
+import { motion } from 'framer-motion';'
+import { Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe } from 'lucide-react';'
+  ];
+import { Mail,, Phone,, MapPin,, Clock,, Send,, CheckCircle } from 'lucide-react';'
+const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })const "ContactPage": React.FC = () => {const contactInfo = [{"icon": <Phone className=\"w-6 h-6\" />,\"title\": \"Phone\",\"details\": \"+1 302 464 0950\",\"link\": \""tel":+13024640950\";"
+    },{\"icon\": <Mail className=\"w-6 h-6\" />,\"title\": \"Email\",\"details\": \"kleber@ziontechgroup && ziontechgroup.com\",\"link\": \""mailto": klebe r@ziontechgroup && ziontechgroup.com\";"
+    },{\"icon\": <MapPin className=\"w-6 h-6\" />,\"title\": \"Address\",\"details\": \"364 E Main St STE 1008\nMiddletown, DE 19709\",\"link\": \""https"://maps && maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709\";"
+    },{\"icon\": <Clock className=\"w-6 h-6\" />,\"title\": \"Business Hours\",\"details\": \"Monday - "Friday": "9":00 AM - "6":00 PM\"nSaturday": "10":00 AM - "4":00 PM\",\"link\": null;"
+    }
+  ];
+  const services = [\"AI & Machine Learning Solutions\";"
+    \"IT Infrastructure & Support\",\"Micro SaaS Development\",\"Cybersecurity Services\",\"Cloud & DevOps Solutions\",\"Blockchain Technology\",\"Digital Transformation\",\"Consulting & Strategy\";"
+  const services = ["AI & Machine Learning Solutions";"
+    "IT Infrastructure & Support","Micro SaaS Development","Cybersecurity Services","Cloud & DevOps Solutions","Blockchain Technology","Digital Transformation","Consulting & Strategy";"
+  ];
+  return (<>;
+      <SEOtitle=\"Contact Us - Zion Tech Group\";"
+        description=\"Get in touch with Zion Tech Group for AI services, IT solutions, and micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup && ziontechgroup.com\";"
+        keywords=\"contact, Zion Tech Group, AI services, IT solutions, micro SaaS, phone, email, address\";"
+        canonical=\""https\": //ziontechgroup && ziontechgroup.com/contact\";"
+                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\""
+                  >
+                    <Mail className=\"w-5 h-5\" />"
+                    Send Email
+                  </motion.a>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+  ]
+import {motion} from 'framer-motion';'
+import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';'
+import {Helmet} from 'react-helmet-async';'
+import {Mail,, Phone,, MapPin,, Clock,, Send,, CheckCircle} from 'lucide-react';'
+const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false });"
+const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false });"
+const "ContactPage": React.FC = () => {;"
+  }
+=======
 import {motion} from 'framer-motion';
 import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react';
 import React, { useState } from 'react';
@@ -108,6 +196,7 @@ import {Mail,, Phone,, MapPin,, Clock,, Send,, CheckCircle} from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false });
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false });
 const "ContactPage": React.FC = () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   const contactInfo = [{;
       icon: <Phone className=\"w-6 h-6\"  />,;
       \"title\": \"Phone\",;
@@ -133,6 +222,22 @@ const "ContactPage": React.FC = () => {;
       \"link\": null;
     }
   ];
+<<<<<<< HEAD
+    \"IT Infrastructure & Support\",;"
+    \"Micro SaaS Development\",;"
+    \"Cybersecurity Services\",;"
+    \"Cloud & DevOps Solutions\",;"
+    \"Blockchain Technology\",;"
+    \"Digital Transformation\",;"
+    \"Consulting & Strategy\";"
+    "IT Infrastructure & Support",;"
+    "Micro SaaS Development",;"
+    "Cybersecurity Services",;"
+    "Cloud & DevOps Solutions",;"
+    "Blockchain Technology",;"
+    "Digital Transformation",;"
+    "Consulting & Strategy";"
+=======
   const services = [\"AI & Machine Learning Solutions\",;
     \"IT Infrastructure & Support\",;
     \"Micro SaaS Development\",;
@@ -149,6 +254,7 @@ const "ContactPage": React.FC = () => {;
     "Blockchain Technology",;
     "Digital Transformation",;
     "Consulting & Strategy";
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
   return (
     <>;
@@ -164,6 +270,88 @@ const "ContactPage": React.FC = () => {;
       <PageTransition>
         <main className=\"min-h-screen bg-white\">
           {/* Hero Section */}
+<<<<<<< HEAD
+          <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">;"
+            <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
+              <motion&& motion.div;
+              <motion&& motion.div,
+initial={{ "opacity": 0, \"y\": 20 }}"
+                animate={{ \"opacity\": 1, \"y\": 0 }}"
+                transition={{ \"duration\": 0 && 0.6 }}"
+                className=\"text-center\">;"
+                <h1 className=\"text-4xl \"md\": text-6xl font-bold text-gray-900 mb-6\">;"
+                  Get In <span className=\"text-blue-600\">Touch</span>;"
+                </h1>;
+                <p className=\"text-xl text-gray-600 mb-8 max-w-3xl mx-auto\">;"
+                  Ready to transform your business with our innovative AI, IT, and micro SaaS solutions? Let\'s discuss your project.;'
+                </p>;
+                <div className=\"flex flex-col \"sm\": fle x-row gap-4 justify-center\">;"
+                  <motion&& motion.a;
+                    href=\""tel":+13024640950\";"
+ursor/automate-test-improve-and-merge-code-646c;
+                    whileHover={{ "scale": 1.05 }}
+                    whileTap={{ \"scale\": 0.95 }}"
+                    className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
+                  >;
+                    <Phone className=\"w-5 h-5\" />;"
+                    Call \"Now\": +1 302 464 0950;"
+                  </motion.a>;
+                  <motion.a;
+                    href=\""mailto": klebe r@ziontechgroup.com\";"
+                    whileHover={{ "scale": 1.05 }}
+                    whileTap={{ \"scale\": 0.95 }}"
+                    className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2\";"
+                  >;
+                    <Mail className=\"w-5 h-5\" />;"
+                    Send Email;
+                  </motion.a>;
+                </div>;
+              </motion.div>;
+            </div>;
+          </section>;
+ursor/automate-test-improve-and-merge-code-646c;
+const \"Contact\": NextPage = () => {import type { NextPage } from 'next';'
+import MainLayout from '../components/layout/MainLayout';'
+import { Mail, Phone, MapPin, Clock, Send  } from 'lucide-react';'
+const "Contact": NextPage = () => {ursor/automate-test-improve-and-merge-code-646c;"
+  }
+  const contactInfo = [{const "Contact": NextPage = () => {  const contactInfo = [{"icon": Mail,\"title\": \'Email Us\',\"details\": \'info@ziontechgroup.com\',\"link\": \'"mailto":info@ziontechgroup.com\';'
+    },{\"icon\": Phone,\"title\": \'Call Us\',\"details\": \'+1 (555) 123-4567\',\"link\": \'"tel":+1-555-123-4567\';'
+    },{\"icon\": MapPin,\"title\": \'Visit Us\',\"details\": \'123 Tech Street, San Francisco, CA 94105\',\"link\": \'"https"://maps.google.com\';'
+    },{\"icon\": Clock,\"title\": \'Business Hours\',\"details\": \'Mon-"Fri": 9AM-6PM PST\',\"link\": null;"
+                  <motion&& motion.a
+}
+href=\""tel":+13024640950\""
+const \"Contact\": NextPage = () => {"
+}
+import type { NextPage } from 'next';'
+import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';'
+const "Contact": NextPage = () => {"
+  }
+      }
+      "icon": Mail,
+      \"title\": \'Email Us\','
+      \"details\": \'info@ziontechgroup.com\','
+      \"link\": \'"mailto":info@ziontechgroup.com\''
+    },
+    {
+      \"icon\": Phone,"
+      \"title\": \'Call Us\','
+      \"details\": \'+1 (555) 123-4567\','
+      \"link\": \'"tel":+1-555-123-4567\''
+    },
+    {
+      \"icon\": MapPin,"
+      \"title\": \'Visit Us\','
+      \"details\": \'123 Tech Street, San Francisco, CA 94105\','
+      \"link\": \'"https"://maps.google.com\''
+    },
+    {
+      \"icon\": Clock,"
+      \"title\": \'Business Hours\','
+      \"details\": \'Mon-"Fri": 9AM-6PM PST\','
+      \"link\": null"
+=======
           <section className=\"bg-gradient-to-br from-blue-50 to-indigo-100 py-20\">
             <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
               <motion.div
@@ -189,6 +377,7 @@ import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
 
   const contactInfo = [{
 
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   ];
   const offices = [{

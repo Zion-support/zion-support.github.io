@@ -21,9 +21,12 @@ export function SidebarMenu({}
     </ul>
   );
 }
+<<<<<<< HEAD
+=======
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
   className?:string,;

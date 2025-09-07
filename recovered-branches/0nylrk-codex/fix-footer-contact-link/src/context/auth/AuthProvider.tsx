@@ -65,6 +65,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     onboardingStep, setOnboardingStep 
   } = useAuthState(),    onboardingStep, setOnboardingStep 
   } = useAuthState(),
+<<<<<<< HEAD
+const navigate = useNavigate(),;
+const location = useLocation(),;
+const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),;
+    }
+    "login": loginImpl,
+    "signup": signupImpl,
+=======
 
   const navigate = useNavigate(),
   const location = useLocation(),
@@ -73,6 +81,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const {}
     login: loginImpl,
     signup: signupImpl,
+>>>>>>> origin/chore/fix-lint-and-merge
     logout,
     resetPassword,
     updateProfile,
@@ -118,6 +127,18 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           } catch (error) {
             console.error("Error fetching user profile:", error),
             setUser(null)
+<<<<<<< HEAD
+import { supabase, getFromProfiles } from "../../integrations/supabase/client";"
+import { useAuthOperations } from "../../hooks/useAuthOperations",;"
+import { AuthContext } from "./AuthContext",;"
+import { cleanupAuthState } from "../../utils/authUtils",;"
+import { useNavigate, useLocation } from 'react-router-dom',;'
+import { useAuthState } from "./useAuthState",;"
+import { useAuthEventHandlers } from "./useAuthEventHandlers",;"
+import { mapProfileToUser } from "./profileMapper",;"
+export const AuthProvider = ({ children }: { "children": React.ReactNode }) => {;
+  }
+=======
 
         } else {
           setUser(null);
@@ -136,6 +157,7 @@ import { useAuthEventHandlers } from "./useAuthEventHandlers",;
 
 import { mapProfileToUser } from "./profileMapper",;
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   const {;
     user, setUser,;
     isLoading, setIsLoading,;
@@ -193,6 +215,11 @@ pr-12325
   return $3;}
 }
   } = useAuthState(),;
+<<<<<<< HEAD
+    }
+    "login": loginImpl,;
+    "signup": signupImpl,;
+=======
   const navigate = useNavigate(),;
   const location = useLocation(),;
   const { handleSignedIn, handleSignedOut } = useAuthEventHandlers(setUser, setOnboardingStep),;
@@ -200,6 +227,7 @@ pr-12325
     login: loginImpl,;
     signup: signupImpl,;
 pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
     logout,;
     resetPassword,;
     updateProfile,;

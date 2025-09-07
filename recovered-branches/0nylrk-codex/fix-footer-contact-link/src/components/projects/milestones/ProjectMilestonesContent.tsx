@@ -15,11 +15,19 @@ import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
 export function ProjectMilestonesContent() {
   const { projectId } = useParams() as { projectId?: string }
+<<<<<<< HEAD
+  const { user } = useAuth();
+  const { getProjectById } = useProjects();
+    milestones
+    activities;
+    isLoading: milestonesLoading
+=======
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 
 import React, { useState, useEffect } from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
 
     createMilestone;
     updateMilestoneStatus;
@@ -56,8 +64,12 @@ import React, { useState, useEffect } from 'react';
         console.error("Error loading project:", error),;
       } finally {;
         setIsLoading(false),;      }
+<<<<<<< HEAD
+        if (projectData) {
+=======
         const projectData = await getProjectById(projectId);
         if (projectData) {}
+>>>>>>> origin/chore/fix-lint-and-merge
           setProject(projectData)}
       } catch (error) {} finally {setIsLoading(false)}
 
@@ -148,8 +160,11 @@ import {useJobDetails} from '@/hooks / useJobDetails';
 import {use_auth} from '@/hooks / use_auth';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
 import {useDisputeCheck} from '@/hooks / useDisputeCheck';
+<<<<<<< HEAD
+=======
 
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 
  */
@@ -157,7 +172,10 @@ function ProjectMilestonesContent() {}
   const { project_id } = use_params () as { project_id?: string }
   const { user } = use_auth ();
   const { getProjectById } = use_projects ();
+<<<<<<< HEAD
+=======
   const {}
+>>>>>>> origin/chore/fix-lint-and-merge
     milestones,
     activities;
     is_loading: milestones_loading,

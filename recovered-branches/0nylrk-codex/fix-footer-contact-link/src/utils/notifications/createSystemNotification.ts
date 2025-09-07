@@ -22,6 +22,11 @@ export async function createSystemNotification({;
     actionText;
 
   })
+<<<<<<< HEAD
+import {create_notification} from './create_notification';'
+import { createNotification } from './createNotification';'
+import { SystemNotificationParams } from './types';'
+=======
 
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
@@ -57,6 +62,7 @@ import {SystemNotificationParams} from './types';''
 import { createNotification } from './createNotification',;''
 import { SystemNotificationParams } from './types',;'
 
+>>>>>>> origin/chore/fix-lint-and-merge
 /**;
 * Creates a system notification for a user;
 */;
@@ -85,8 +91,11 @@ import { createNotification } from './createNotification',;
 import { SystemNotificationParams } from './types',;
 ;
 }
+<<<<<<< HEAD
+=======
 import { createNotification } from './createNotification',;
 import { SystemNotificationParams } from './types',;
+>>>>>>> origin/chore/fix-lint-and-merge
 /**;
  * Creates a system notification for a user;
  */;

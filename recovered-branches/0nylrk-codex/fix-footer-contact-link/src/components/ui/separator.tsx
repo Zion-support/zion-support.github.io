@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import * as React from 'react';
 import * as SeparatorPrimitive from '@radix-ui/react-separator';
 import {cn} from '@/lib/utils';
@@ -38,6 +41,7 @@ import {cn} from '@/lib/utils';
 import * as React from "react"""
 import * as SeparatorPrimitive from "@radix-ui/react-separator"""
 import { cn } from "@/lib/utils""
+>>>>>>> origin/chore/fix-lint-and-merge
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
 </typeof>
@@ -46,6 +50,13 @@ const Separator = React.forwardRef<
 
     ref
   ) => (
+<<<<<<< HEAD
+
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(        className
+=======
     <SeparatorPrimitive.Root
 
 "
@@ -183,25 +194,46 @@ import * as React from 'react';'
       {...props}
     />;
 </SeparatorPrimitive>
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const Separator = React.forward_ref<;
   React.ElementRef < typeof SeparatorPrimitive.Root />,
   React.ComponentPropsWithoutRef < typeof SeparatorPrimitive.Root>;
 ></typeof>(
+<<<<<<< HEAD
+  (
+
+=======
   ('
     { class_name, orientation = 'horizontal', decorative = true, ...props },
+>>>>>>> origin/chore/fix-lint-and-merge
     ref) => (
     <SeparatorPrimitive.Root;
       ref={ref}
       decorative={decorative}
       orientation={orientation}
+<<<<<<< HEAD
+      className={cn (
+
+=======
       className={cn ('
         'shrink - 0 bg - border','
         orientation === 'horizontal' ? 'h-[1px] w - full' : 'h - full w-[1px]',
+>>>>>>> origin/chore/fix-lint-and-merge
         class_name)}
       {...props}
     />));
 Separator.display_name = SeparatorPrimitive.Root.display_name;
+<<<<<<< HEAD
+export { Separator }
+import * as React from react';
+import * as SeparatorPrimitive from '@radix-ui/react-separator;
+import {cn} from @/lib/utils';
+
+import { cn } from @/lib/utils"
+
+const Separator = $2;
+=======
 ;
 
 Separator.displayName = SeparatorPrimitive.Root.displayName;
@@ -223,6 +255,7 @@ React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>)
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
 </typeof>
+>>>>>>> origin/chore/fix-lint-and-merge
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 
       ref={ref}

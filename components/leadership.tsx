@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<Head> <title>Leadership | Zion Tech Group</title> <meta name="description" content="Meet the leadership team guiding Zion Tech Group's vision and execution." /> <link rel="canonical" href="https://ziontechgroup.com/leadership" /> </Head> </div> </div> <div className="mt-10 text-slate-300" >Contact: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</a> • <a className="text-cyan-400" href="tel:+13024640950" >+1 302 464 0950</a></div> </div> </div>
+=======
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
@@ -62,3 +65,4 @@ startups.
     </div>
   );
 
+>>>>>>> origin/chore/fix-lint-and-merge

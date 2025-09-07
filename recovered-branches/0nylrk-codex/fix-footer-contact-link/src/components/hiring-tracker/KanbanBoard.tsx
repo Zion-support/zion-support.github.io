@@ -136,7 +136,6 @@ interface DropResult {;
 ;
 
 // Define the kanban board columns based on application statuses;
-const COLUMNS = [;
   {;
     id: "new",;
     title: "Applied",
@@ -309,6 +308,35 @@ interface DropResult {}
   destination?: DnDLocation | null;
 }
 // Define the kanban board columns based on application statuses;
+<<<<<<< HEAD
+  {
+    }
+    "id": "new","
+    "title": "Applied","
+    "description": "New applications"},"
+  {
+    }
+    "id": "shortlisted","
+    "title": "Shortlisted","
+    "description": "Candidates selected for review"},"
+  {
+    }
+    "id": "interview","
+    "title": "Interview","
+    "description": "Scheduled for interview"},"
+  {
+    }
+    "id": "hired","
+    "title": "Hired","
+    "description": "Successful candidates"},"
+  {
+    }
+    "id": "rejected","
+    "title": "Rejected","
+    "description": "Not moving forward"}],"
+interface KanbanBoardProps {
+  }
+=======
 const COLUMNS = [;
   {"
     id: "new","
@@ -331,6 +359,7 @@ const COLUMNS = [;
     title: "Rejected","
     description: "Not moving forward"}],
 interface KanbanBoardProps {}
+>>>>>>> origin/chore/fix-lint-and-merge
   job_id?: string;
 }
 export /**;
@@ -358,7 +387,11 @@ if ( {) {}
   }, [applications]);
 ;
   // Handle drag end event to update the application status;
+<<<<<<< HEAD
+    }
+=======
   const handleDragEnd = async (result: DropResult) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
     const { destination, source, draggable_id } = result;
 ;'
     // If there's no destination or the item is dropped in the same place, do nothing;

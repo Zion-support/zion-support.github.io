@@ -18,7 +18,19 @@ import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
 
 import { useNotifications } from "@/context/notifications/NotificationContext",
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { useNotifications } from "@/context/notifications/NotificationContext";
+import {
+  NotificationType,
+  NotificationContextType
+} from "@/context/notifications",
+import { formatDistanceToNow } from "date-fns";
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Bell, Check, Trash2, ChevronRight, CheckCircle, 
 
 import { cn } from "@/lib/utils",
@@ -331,6 +343,64 @@ function NotificationsPage() {}
     dismiss_notification;
     loading;
 
+<<<<<<< HEAD
+const getNotificationTypeBadge = $2;
+    case 'quote_request':
+      return <Badge className = $2;
+    case 'booking_confirmation':
+      return <Badge className = $2;
+    case 'hire_request':
+      return <Badge className = $2;
+    case 'onboarding':
+      return <Badge className = $2;
+    case 'system':
+      return <Badge className = $2;
+    default:
+      return <Badge variant = $2;
+const NotificationCard: React.FC<{
+  notification: {
+    id: string,
+    title: string,
+    message: string,
+    type: NotificationType,
+    read: boolean,
+    created_at: string,
+    action_url?: string,
+    action_text?: string
+  },
+  onMarkAsRead: (id: string) => Promise<void>,
+  onDismiss: (id: string) => Promise<void>
+}> = ({ notification, onMarkAsRead, onDismiss }) => {
+  const navigate = useNavigate($2);
+  const handleAction = $2;
+  return (
+    <div className = $2;
+      notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30"
+    )}>
+      <div className="flex items-start gap-4">
+        <div className="mt-1">
+          {getNotificationIcon(notification.type, "h-6 w-6")}
+        </div>
+        <div className="flex-1">
+          <div className="flex justify-between">
+            <div className="flex flex-col">
+              <h3 className="font-medium text-white">{notification.title}</h3>
+              <div className="flex items-center gap-2 mb-2">
+                {getNotificationTypeBadge(notification.type)}
+                <span className="text-xs text-zion-slate-light">
+                  {formatDistanceToNow(new Date(notification.created_at), { addSuffix: true})}
+                </span>
+                {!notification.read && (
+                  <Badge variant = $2;
+export default function NotificationsPage() {
+    filteredNotifications;
+    unreadCount;
+    markAsRead;
+    markAllAsRead;
+    dismissNotification;
+    loading;
+    filter;
+=======
     filteredNotifications,
     unreadCount,
     markAsRead,
@@ -339,6 +409,7 @@ function NotificationsPage() {}
     loading,
     filter,
 
+>>>>>>> origin/chore/fix-lint-and-merge
     setFilter
 
   } = useNotifications() as NotificationContextType,

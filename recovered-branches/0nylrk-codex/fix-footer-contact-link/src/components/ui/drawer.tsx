@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+import {cn} from '@/lib/utils';'
+import * as React from "react""
+import { Drawer as DrawerPrimitive } from "vaul""
+=======
 import * as React from 'react';
 import {Drawer, as, DrawerPrimitive} from 'vaul';
 import {cn} from '@/lib/utils';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
@@ -29,6 +35,12 @@ const Drawer = ({;
   ...props;
 }: React && React.ComponentProps<typeof DrawerPrimitive && DrawerPrimitive.Root>) =></typeof> (;
 
+<<<<<<< HEAD
+
+  React.ElementRef<typeof DrawerPrimitive.Overlay>,
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Overlay;
     ref={ref}'
@@ -203,7 +215,6 @@ const DrawerTitle = React.forwardRef<
 
 DrawerFooter.displayName = "DrawerFooter"
 
-const DrawerTitle = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Title>
 
@@ -327,7 +338,11 @@ const DrawerContent = React.forward_ref<;
   </DrawerPortal>));'
 DrawerContent.display_name = 'DrawerContent';
 ;
+<<<<<<< HEAD
+  }
+=======
 const DrawerHeader = ({}
+>>>>>>> origin/chore/fix-lint-and-merge
   class_name,
   ...props;
 }: React.HTMLAtt</HTMLDivElement > ributes < HTMLDivElement>) =>: any (

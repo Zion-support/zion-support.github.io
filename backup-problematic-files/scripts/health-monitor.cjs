@@ -1,11 +1,17 @@
 
 const { execSync } = require('child_process');
-const fs = require('fs')
+const fs = require(fs')
 class HealthMonitor {
   // TODO: Implement
 }
   constructor() {
+<<<<<<< HEAD
+    this.checks = [{ "name: 'Memory Usage, command": free -h' },
+      { "name: 'Disk Space, command": df -h' },
+      { "name: 'Process Status, command": ps aux | grep node' }
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     ]}
   async runChecks() {
 <<<<<<< HEAD
@@ -16,13 +22,16 @@ class HealthMonitor {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     for (const check of this.checks) {
       try {
-        const result = execSync(check.command, { "encoding": 'utf8' };);
-        const result = execSync(check.command, { encoding: 'utf8' });
+        const result = execSync(check.command, { "encoding": 'utf8 });
+        const result = execSync(check.command, { encoding: utf8' });
         console.log(`✅ ${check.name}:\n${result}`)} catch (error) {
         console.log(`❌ ${check.name}: ${error.message}`)}
     }
   }
 }
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -42,3 +51,4 @@ new HealthMonitor().runChecks();
 new HealthMonitor().runChecks();
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

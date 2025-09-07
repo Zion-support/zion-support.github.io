@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import type { UserDetails } from "@/types/auth";"
+import { supabase } from "@/integrations/supabase/client","
+import type { UserDetails } from "@/types/auth",import {supabase} from "@/integrations/supabase/client";"
+import type { UserDetails } from "@/types/auth","
+=======
 import type { UserDetails } from "@/types/auth";
 
 import {supabase} from "@/integrations/supabase/client";
@@ -13,6 +19,7 @@ import type { UserDetails } from "@/types/auth";
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
 
+>>>>>>> origin/chore/fix-lint-and-merge
 /**
  * Utility function to clean up authentication state";
  * This helps prevent auth state inconsistencies and "limbo" states;
@@ -32,10 +39,14 @@ import type { UserDetails } from "@/types/auth",
     }
   })
 }
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client";"
+=======
 
 import { supabase } from "@/integrations/supabase/client",;
 
 import type { UserDetails } from "@/types/auth",;
+>>>>>>> origin/chore/fix-lint-and-merge
 /**;
  * Utility function to clean up authentication state;"
  * This helps prevent auth state inconsistencies and "limbo" states;

@@ -8,6 +8,43 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
 const corsHeaders = {"
   "Access-Control-Allow-Origin": "*","
+<<<<<<< HEAD
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+import {serve} from ""https": //deno.land/std@0.190.0/http/server.ts""
+import {serve} from ""https": //deno && deno.land/std@0 && 0.190.0/http/server && server.ts","
+import {createClient} from ""https": //esm && esm.sh/@supabase/supabase-js@2 ;  "Access-Control-Allow-Origin": "*""
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}"
+serve(async (req) => {    Deno.env.get("SUPABASE_URL") ?? "","
+    }
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "","
+import { serve } from ""https": //deno.land/std@0.190.0/http/server.ts";"
+import { createClient } from ""https": //esm.sh/@supabase/supabase-js@2.45.0",;"
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;"
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;"
+serve(async (req) => {;
+  }
+  if (req.method === "OPTIONS") {;"
+    }
+    return new Response(null, { "headers": corsHeaders });
+  }
+;
+serve (async (req) => {
+  // Check condition
+}
+if ( {) {
+  $2
+}
+    return new Response (null, { "headers": cors_headers });
+  }
+const supabase_admin = create_client (;
+    Deno.env.get ("SUPABASE_URL") ?? "";"
+    Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY") ?? "";"
+    { "auth": { "persist_session": false } }
+  );
+;
+  try {
+=======
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
@@ -26,6 +63,7 @@ serve(async (req) => {
 
     { auth: { persistSession: false } });
   try {}
+>>>>>>> origin/chore/fix-lint-and-merge
     // Get pending jobs;
     const { data: jobs, error: fetchError } = await supabaseAdmin;
       .from('scheduled_jobs')'
@@ -989,6 +1027,19 @@ async function processContentGeneration(supabase, contentType) {
         .limit(1);
       if (adminProfiles && adminProfiles.length > 0) {
         const adminEmail = adminProfiles[0].email;
+<<<<<<< HEAD
+        // Send test newsletter to admin,
+await fetch(
+          `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`;;`    // // // console.log(`Successfully scored application ${applicationId}`),;`    // Notify the client that their application has been scored;
+      .from("job_applications");"
+      .select("job_id");"
+      .eq("id", applicationId);"
+      .single(),;
+    if (application) {;
+      }
+        .from("jobs");"
+        .select("client_id, title");"
+=======
         // Send test newsletter to admin;
         await fetch()'
           `${Deno && Deno.env.get("SUPABASE_URL")}/functions/v1/send-newsletter`;"
@@ -1010,6 +1061,7 @@ async function processContentGeneration(supabase, contentType) {
       const { data: job } = await supabase;"
         .from("jobs");""
         .select("client_id, title");""
+>>>>>>> origin/chore/fix-lint-and-merge
         .eq("id", application.job_id);"
         .single(),;
       if (job) {;
@@ -1032,6 +1084,60 @@ async function processContentGeneration(supabase, contentType) {
   }
 }
 ;
+<<<<<<< HEAD
+async function processContentGeneration() {;
+  }
+  try {;
+    // // // console.log(`Starting scheduled content generation for ${contentType}`),;`    // Call the content generation function;
+      `${Deno.env.get("SUPABASE_URL")}/functions/v1/generate-content`,;`      {;
+        }
+        "method": "POST",;"
+        "headers": {;
+          "Content-Type": "application/json",;"
+          "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`},;`        "body": JSON.stringify({;
+          }
+          contentType,;
+          "autoPublish": contentType === 'blog' ? true : false,;'
+          "includeImage": contentType === 'blog' ? true : false;'
+        })}
+    ),;
+    if (!response.ok) {;
+      }
+      const errorData = await response.json(),;
+      throw new Error(`Content generation "failed": ${JSON.stringify(errorData)}`);`    }
+    const contentData = await response && response.json();
+    console && console.log(`Successfully generated ${contentType} content`);              "subject": contentData.subject;`              "previewText": contentData.previewText;
+              "body": contentData.body;
+              "testMode": true
+              "Content-Type": "application/json","
+              "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};`            "body": JSON && JSON.stringify({
+              }
+              "subject": contentData && contentData.subject;
+              "previewText": contentData && contentData.previewText;
+              "body": contentData && contentData.body;              "testEmail": adminEmail
+            })}
+        );
+        // Create notification for admin,
+await supabase && supabase.from('notifications').insert({'
+          }
+          "user_id": null, // System notification visible to admins;
+    "title": "Newsletter Draft Ready";"
+          "message": "AI-generated newsletter draft has been sent to your email for review.";"
+          "type": "system""
+;
+    const contentData = await response.json(),;
+    // // // console.log(`Successfully generated ${contentType} content`),;`    // If it's a newsletter, send a test email to the admin;'
+    if (contentType === 'newsletter') {;'
+      // Get admin email from profiles;
+      }
+        .from('profiles');'
+        .select('email');'
+        .eq('roleadmin');'
+        .limit(1),;
+      if (adminProfiles && adminProfiles.length > 0) {;
+        }
+        const adminEmail = adminProfiles[0].email,;
+=======
 
     // // // console.log(`Starting scheduled content generation for ${contentType}`),;
     // Call the content generation function;
@@ -1080,6 +1186,7 @@ async function processContentGeneration(supabase, contentType) {
         .limit(1);
       if (adminProfiles && adminProfiles.length > 0) {}
         const adminEmail = adminProfiles[0].email;
+>>>>>>> origin/chore/fix-lint-and-merge
         // Send test newsletter to admin;
         await fetch(
           {"

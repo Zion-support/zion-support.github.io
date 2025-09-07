@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+:src/components/jobs/applications/ApplicationRow.tsx
+import { formatDistanceToNow } from 'date-fns'
+import { Calendar, User, FileText, BarChart } from 'lucide-react'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ApplicationRowProps {
 
 import { Button } from "@/components/ui/button",
@@ -95,16 +101,11 @@ export function ApplicationRow(): any ({;
                 height={36} // Corresponds to h-9 w-9
                 className="rounded-full object-cover" // Ensure rounded and object-cover"
 import { formatDistanceToNow } from "date-fns",
-import { Calendar, User, FileText, BarChart } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict
 import { TableRow, TableCell } from "@/components/ui/table",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 import { StatusBadge } from "./StatusBadge",
 import { ScoreBadge } from "./ScoreBadge",
 import { ApplicationActions } from "./ApplicationActions",
-import Image from 'next/image', // Import next/image
-import React, { useState } from 'react', // Import useState
 
 interface ApplicationRowProps {
   application: JobApplication,
@@ -144,7 +145,12 @@ export function ApplicationRow({
   onStatusChange;
   onViewScore
 }: ApplicationRowProps) {
+<<<<<<< HEAD
+:src/components/jobs/applications/ApplicationRow.tsx
+  const talentName = application.talent_profile?.full_name |'Unknown'
+=======
   const [avatarError, setAvatarError] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
   const talentName = null;
 
   return (
@@ -223,12 +229,8 @@ export function ApplicationRow({
         <ApplicationActions
 
 import { formatDistanceToNow } from "date-fns",;
-import { Calendar, User, FileText, BarChart } from 'lucide-react';
 import { Button } from "@/components/ui/button",;
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
-import { TableRow, TableCell } from "@/components/ui/table",;
-import { JobApplication, ApplicationStatus } from "@/types/jobs",;
-import { StatusBadge } from "./StatusBadge",;
 import { ScoreBadge } from "./ScoreBadge",;
 import { ApplicationActions } from "./ApplicationActions",;
 import Image from 'next/image', // Import next/image;
@@ -252,7 +254,6 @@ export function ApplicationRow({;
   onViewScore;
 }:,  ApplicationRowProps) {;,
 }: ApplicationRowProps) {;
-  const [avatarError, setAvatarError] = useState(false);
   const talentName = application.talent_profile?.full_name || "Unknown";
   return (;
     <TableRow key={application.id}>;
@@ -289,17 +290,6 @@ interface ApplicationRowProps {
   onViewScore: (application: JobApplication, ) => void;
 }
 
-import { formatDistanceToNow } from "date-fns",;
-import { Calendar, User, FileText, BarChart } from 'lucide-react';
-import { Button } from "@/components/ui/button",;
-import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed to avoid conflict;
-import { TableRow, TableCell } from "@/components/ui/table",;
-import { JobApplication, ApplicationStatus } from "@/types/jobs",;
-import { StatusBadge } from "./StatusBadge",;
-import { ScoreBadge } from "./ScoreBadge",;
-import { ApplicationActions } from "./ApplicationActions",;
-import Image from 'next/image', // Import next/image;
-import React, { useState } from 'react', // Import useState;
 interface ApplicationRowProps {;
   application: JobApplication,;
   processingId: string | null,;
@@ -315,8 +305,6 @@ export function ApplicationRow({;
   onStatusChange,;
   onViewScore;
 }:,  ApplicationRowProps) {;,
-  const [avatarError, setAvatarError] = useState(false);
-  const talentName = application.talent_profile?.full_name || "Unknown";
   return (;
     <TableRow key={application.id}>;
       <TableCell>;

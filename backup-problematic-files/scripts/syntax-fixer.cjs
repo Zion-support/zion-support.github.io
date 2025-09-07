@@ -1,5 +1,18 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
+<<<<<<< HEAD
+const fs = require("fs)
+const path = require(path")
+const { exec } = require("child_process)
+const util = require(util")
+    this.logFile = path.join(__dirname, "../logs/syntax-fixer.log)
+    this.reportFile = path.join(__dirname, ../logs/syntax-fixes.json")
+    this.projectRoot = path.join(__dirname, "..)
+  async log(message, level = INFO")
+      console.error(`Failed to write to log "file`)
+    await this.log( Starting syntax error fixing...")
+
+=======
 const fs = require("fs")
 const path = require("path")
 const { exec } = require("child_process")
@@ -23,3 +36,4 @@ const util = require("util")
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

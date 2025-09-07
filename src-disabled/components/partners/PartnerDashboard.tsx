@@ -7,7 +7,6 @@ import {;
   CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import {;
   BarChart,;
   DollarSign,;
   LineChart,;
@@ -25,11 +24,6 @@ import { Star } from 'lucide-react';
     pendingRevenue: 200.00
   },
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Star } from 'lucide-react';
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -44,7 +38,6 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
-import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
@@ -55,7 +48,6 @@ export function PartnerDashboard() {
 
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
-  const stats = {
     totalReferrals: 42,
     pendingReferrals: 8,
     completedReferrals: 34,

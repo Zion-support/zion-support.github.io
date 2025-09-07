@@ -2,6 +2,9 @@ import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(
+<<<<<<< HEAD
+export function addSkillsSection(  doc: jsPDF;
+=======
 
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
@@ -10,6 +13,7 @@ export function addSkillsSection(;
 
   doc: jsPDF;
 
+>>>>>>> origin/chore/fix-lint-and-merge
   skills: Skill[];
   colors: PdfThemeColors;
 

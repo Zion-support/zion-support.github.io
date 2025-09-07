@@ -124,6 +124,22 @@ class IntelligentErrorFixer {
         cwd: process.cwd()
       });
 
+<<<<<<< HEAD
+  async runLintCheck() {
+    try {
+      this.log('Running TypeScript check...')
+      const result = execSync('npx tsc --noEmit --skipLibCheck', {
+        encoding: 'utf8',
+
+    try {
+      this.log('Running TypeScript check...')
+        encoding: 'utf8',
+
+        stdio: 'pipe',
+        cwd: process.cwd()
+      });
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       this.log('Lint check completed');
       this.log('Lint check found issues: ' + error.message, 'WARN');
 
@@ -138,7 +154,6 @@ class IntelligentErrorFixer {
 
     try {
       this.log('Running TypeScript check...');
-      const result = execSync('npx tsc --noEmit --skipLibCheck', { 
         encoding: 'utf8', 
 
         stdio: 'pipe',
@@ -306,12 +321,20 @@ class IntelligentErrorFixer {
 
   async cleanupDuplicateFiles() {
     this.log('Checking for duplicate page files...');
-    const pagesDir = path.join(process.cwd(), 'pages');
     
     if (!fs.existsSync(pagesDir)) {
       return;
     }
 
+<<<<<<< HEAD
+
+    function scanDirectory(dir) {
+      
+
+
+      
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       files.forEach(file => {
 
       files.forEach(file => {
@@ -394,6 +417,14 @@ const {
       );
       this.errorPatterns = this.initializeErrorPatterns();
       // Ensure directories exist
+<<<<<<< HEAD
+      fs.mkdirSync(path.dirname(this.logFile), { "recursive": true })
+      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true })
+  log($2) {
+      )
+      fs.appendFileSync(this.logFile, logMessage)
+  initializeErrorPatterns($2) {
+=======
       fs.mkdirSync(path.dirname(this.logFile), { "recursive": true });
       fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
     }
@@ -404,6 +435,7 @@ const {
       fs.appendFileSync(this.logFile, logMessage);
     }
     initializeErrorPatterns() {
+>>>>>>> origin/chore/fix-lint-and-merge
       return {
         // Syntax errors
         "missingBraces": {
@@ -454,6 +486,8 @@ const {
 <
 
         this.log('Running build check...');
+<<<<<<< HEAD
+=======
 
 <
 
@@ -465,6 +499,7 @@ const {
         this.log(`Failed to install dependencies: ${error.message}`, 'ERROR');
 
         const result = execSync('yarn build', {
+>>>>>>> origin/chore/fix-lint-and-merge
           "encoding": 'utf8',
           "stdio": 'pipe',
           "cwd": process.cwd()});
@@ -477,8 +512,12 @@ const {
     }
     async runLintCheck() {
       try {
+<<<<<<< HEAD
+        this.log('Running lint check...')
+=======
         this.log('Running lint check...');
         const result = execSync('yarn lint --format=json', {
+>>>>>>> origin/chore/fix-lint-and-merge
           "encoding": 'utf8',
           "stdio": 'pipe',
           "cwd": process.cwd()});
@@ -572,8 +611,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
     async runTypeCheck() {
       try {
+<<<<<<< HEAD
+        this.log('Running TypeScript check...')
+=======
         this.log('Running TypeScript check...');
         const result = execSync('npx tsc --noEmit --skipLibCheck', {
+>>>>>>> origin/chore/fix-lint-and-merge
           "encoding": 'utf8',
           "stdio": 'pipe',
           "cwd": process.cwd()});

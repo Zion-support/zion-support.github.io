@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card","
+import { Button } from "@/components/ui/button","
+import { Badge } from "@/components/ui/badge","
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react";"
+import { CountryPricing } from "@/data/onsiteServicePricing";"
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react","
+import { CountryPricing } from "@/data/onsiteServicePricing","
+    const "emojiMap": Record<string, string> = {;
+    }
+    const "emojiMap": Record<string, string> = {
+    }
+      "United Kingdom": "🇬🇧";"
+      "Canada": "🇨🇦";"
+      "Australia": "🇦🇺";"
+      "Germany": "🇩🇪",      "Germany": "🇩🇪", ;"
+      "Germany": "🇩🇪", ;"
+      "Germany": "🇩🇪","
+      "Germany": "🇩🇪""
+      "Germany": "🇩🇪","
+      "France": "🇫🇷";"
+      "Japan": "🇯🇵";"
+      "China": "🇨🇳";"
+      "Brazil": "🇧🇷";"
+      "India": "🇮🇳";"
+      "Russia": "🇷🇺";"
+      "Singapore": "🇸🇬";"
+      "South Korea": "🇰🇷";"
+      "South Africa": "🇿🇦";"
+      "Germany": "🇩🇪", "
+      "France": "🇫🇷","
+      "Japan": "🇯🇵","
+      "China": "🇨🇳","
+      "Brazil": "🇧🇷","
+      "India": "🇮🇳","
+      "Russia": "🇷🇺","
+      "Singapore": "🇸🇬","
+      "South Korea": "🇰🇷","
+      "South Africa": "🇿🇦","
+=======
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
@@ -67,6 +107,7 @@ export function CountryServiceCard(): any ({ country, onSelect, isPopular }: Cou
       "South Korea": "🇰🇷";
       "South Africa": "🇿🇦";
 
+>>>>>>> origin/chore/fix-lint-and-merge
       // Default if no flag is found
       "default": "🌐"
     }

@@ -49,6 +49,16 @@ export function StructuredData() {;
     }
   };
 
+<<<<<<< HEAD
+
+  return (
+    <script
+      type=application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  )
+}
+=======
   return (;
 
 "use client",
@@ -135,3 +145,4 @@ export function StructuredData() {const structuredData = {;
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
     />);
 }
+>>>>>>> origin/chore/fix-lint-and-merge

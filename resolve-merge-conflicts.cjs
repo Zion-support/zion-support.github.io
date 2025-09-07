@@ -1,4 +1,14 @@
 <<<<<<< HEAD
+#!/usr/bin/env node
+
+
+const fs = require('fs');
+const path = require(path');
+
+
+      }
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,6 +71,7 @@ const path = require('path');
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Resolved conflicts in: ${filePath}`);
       return true;
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     return false;
   } catch (error) {
@@ -68,6 +79,9 @@ const path = require('path');
     return false;
   }
 }
+<<<<<<< HEAD
+
+=======
 function findFilesWithConflicts(dir) {
   const files = [];
   
@@ -564,3 +578,4 @@ main
 "`;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

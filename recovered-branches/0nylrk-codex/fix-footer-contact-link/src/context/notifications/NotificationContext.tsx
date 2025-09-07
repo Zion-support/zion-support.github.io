@@ -9,6 +9,22 @@ export const useNotifications = (): NotificationContextType => {
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {};
   const { user } = useAuth();
   const notificationOps = useNotificationOperations(user?.id);
+<<<<<<< HEAD
+  // Load notifications when user changes,
+useEffect(() => {
+    }
+    notificationOps.fetchNotifications();import {supabase} from '@/integrations/supabase/client';'
+import {NotificationContextType} from './types';'
+export const useNotifications = (): (NotificationContextType) => {;
+  }
+  if (!context) {
+    }
+    throw new Error('useNotifications must be used within a NotificationProvider')import React, { createContext, useContext, useEffect, ReactNode } from 'react';'
+import { supabase } from '@/integrations/supabase/client';'
+import { useAuth } from '@/hooks/useAuth',;'
+import { useNotificationOperations } from './useNotificationOperations',;'
+import { NotificationContextType } from './types',;'
+=======
 
 import {NotificationContextType} from './types';
 
@@ -20,6 +36,7 @@ import { useAuth } from '@/hooks/useAuth',;
 import { useNotificationOperations } from './useNotificationOperations',;
 import { NotificationContextType } from './types',;
 
+>>>>>>> origin/chore/fix-lint-and-merge
 // Default context used when React type definitions are missing. Providing a;
 // fully-typed object here avoids TypeScript errors that occur when an untyped;
 // `createContext` call returns `{}` instead of the expected shape.;
@@ -64,6 +81,26 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
         .channel('notifications-changes')
         .on('postgres_changes'
           {
+<<<<<<< HEAD
+            }
+            "event": "event","
+    "schema": 'public''
+            "table": 'notifications''
+            "filter": `user_id=eq.${user.id}`    // Set up real-time subscription for new notifications;`    if (user) {;
+      }
+        .channel('notifications-changes');'
+        .on('postgres_changes', ;'
+          {;
+            }
+            "event": '*', ;'
+            "schema": 'public',;'
+            "table": 'notifications',;'
+            "filter": `user_id=eq.${user && user.id}``};
+          (payload) => {;
+            }
+            console && console.log('Notification change "received":', payload);'
+            notificationOps && notificationOps.fetchNotifications();
+=======
             event: '*'
             schema: 'public'
             table: 'notifications'
@@ -92,6 +129,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
   useEffect(() => {;
     notificationOps && notificationOps.fetchNotifications();
 
+>>>>>>> origin/chore/fix-lint-and-merge
           }
           },
           (payload) => {

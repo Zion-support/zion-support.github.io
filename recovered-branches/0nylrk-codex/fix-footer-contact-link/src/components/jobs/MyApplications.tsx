@@ -16,6 +16,13 @@ export function MyApplications() { return null; }
 
     switch (status) {
 
+<<<<<<< HEAD
+      </div>
+    )
+  }
+  if (error) {
+
+=======
 import { Link } from "react-router-dom";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {
@@ -69,10 +76,15 @@ export function MyApplications() {}
   if (error) {}
     return ("
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">
+>>>>>>> origin/chore/fix-lint-and-merge
         <p>{error}</p>
       </div>
     )
   }
+<<<<<<< HEAD
+  if (applications.length === 0) {
+
+=======
   if (applications.length === 0) {}
     return ("
       <Card className="bg-muted/30">"
@@ -82,11 +94,14 @@ export function MyApplications() {}
           </p>"
           <Button className="mt-4" asChild>"
             <Link to="/jobs">Browse Jobs</Link>
+>>>>>>> origin/chore/fix-lint-and-merge
           </Button>
         </CardContent>
       </Card>
     )
 
+<<<<<<< HEAD
+=======
   return (
     <div className="grid gap-4 md:grid-cols-2">
       {applications.map((application) => (
@@ -113,9 +128,17 @@ export function MyApplications() {}
         return <Badge variant="outline">Viewed</Badge>;
       case "shortlisted":;
 
+>>>>>>> origin/chore/fix-lint-and-merge
   },
 
   if (isLoading) {
+<<<<<<< HEAD
+
+    }
+  }
+
+
+=======
 
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,;
       default:;"
@@ -126,19 +149,27 @@ export function MyApplications() {}
   if (isLoading) {;
 
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+>>>>>>> origin/chore/fix-lint-and-merge
       </div>;
     );
   }
 
+<<<<<<< HEAD
+
+=======
   if (error) {;
 
     return ("
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
+>>>>>>> origin/chore/fix-lint-and-merge
         <p>{error}</p>;
       </div>;
     );
   }
 
+<<<<<<< HEAD
+
+=======
   if (applications && applications.length === 0) {;
 
     return ("
@@ -149,12 +180,20 @@ export function MyApplications() {}
           </p>;"
           <Button className="mt-4" asChild>;"
             <Link to="/jobs">Browse Jobs</Link>;
+>>>>>>> origin/chore/fix-lint-and-merge
           </Button>;
         </CardContent>;
       </Card>;
     );
   }
 
+<<<<<<< HEAD
+        <p>{error}</p>;
+      </div>;
+    );
+  }
+
+=======
 import { useState } from "react",;
 
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -206,11 +245,18 @@ export function MyApplications() { return null; }
           </p>;"
           <Button className="mt-4" asChild>;"
             <Link to="/jobs">Browse Jobs</Link>;
+>>>>>>> origin/chore/fix-lint-and-merge
           </Button>;
         </CardContent>;
       </Card>;
     );
   }
+<<<<<<< HEAD
+              </CardTitle>
+              {getStatusBadge(application.status)}
+            </div>
+
+=======
 
                   {application.cover_letter}
                 </p>
@@ -282,3 +328,4 @@ export function MyApplications() { return null; }
     }
   }
 ;
+>>>>>>> origin/chore/fix-lint-and-merge

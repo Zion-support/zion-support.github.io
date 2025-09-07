@@ -83,6 +83,15 @@ export default function QuantumCybersecurityPage() {;
       color: "from-indigo-500 to-purple-500";
     }
   ];
+<<<<<<< HEAD
+    "Protect against quantum computing attacks with future-proof encryption";"
+    "Reduce security incidents by 90% with AI-powered threat detection";"
+import Head from 'next / head';'
+import {motion} from 'framer-motion';'
+import {Shield, Lock, Eye, AlertTriangle, Zap, Cpu, Database, Globe, ArrowRight, CheckCircle, Star, Users} from 'lucide-react';'
+import EnhancedNavigation from '../components / EnhancedNavigation';'
+import EnhancedFooter from '../components / EnhancedFooter';'
+=======
 
   const benefits = [;
     "Protect against quantum computing attacks with future-proof encryption";
@@ -92,11 +101,16 @@ import {motion} from 'framer-motion';
 import {Shield, Lock, Eye, AlertTriangle, Zap, Cpu, Database, Globe, ArrowRight, CheckCircle, Star, Users} from 'lucide-react';
 import EnhancedNavigation from '../components / EnhancedNavigation';
 import EnhancedFooter from '../components / EnhancedFooter';
+>>>>>>> origin/chore/fix-lint-and-merge
 export default /**
  * QuantumCybersecurityPage - Function description
  */
 function QuantumCybersecurityPage() {
+<<<<<<< HEAD
+  }
+=======
   const features = [;
+>>>>>>> origin/chore/fix-lint-and-merge
     {
       icon: Shield,
       title: "Quantum - Resistant Encryption",
@@ -135,6 +149,14 @@ function QuantumCybersecurityPage() {
     }
   ];
 ;
+<<<<<<< HEAD
+    "Protect against quantum computing attacks with future - proof encryption";"
+    "Reduce security incidents by 90% with AI - powered threat detection";"
+    "Achieve compliance with SOC 2, GDPR, and industry standards";"
+    "24 / 7 monitoring and automated incident response";"
+    "Scalable security that grows with your business";"
+    "Expert security team available around the clock";"
+=======
   const benefits = [;
     "Protect against quantum computing attacks with future - proof encryption";
     "Reduce security incidents by 90% with AI - powered threat detection";
@@ -142,6 +164,7 @@ function QuantumCybersecurityPage() {
     "24 / 7 monitoring and automated incident response";
     "Scalable security that grows with your business";
     "Expert security team available around the clock";
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
 ;
   const threats = [;

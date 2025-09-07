@@ -70,6 +70,14 @@ export interface TestWebhookResult {;
     if (!user) return;
     setLoading(true);
     setError(null);
+<<<<<<< HEAD
+      setWebhooks(result.webhooks |[])
+const env = (import.meta as any)?.env ?? process.env,;
+const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,;
+    return `${url}/functions/v1/webhook-manager``  },
+  // Fetch user's webhooks'
+    }
+=======
 
     const env = (import.meta as any)?.env ?? process.env,
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL,`
@@ -78,6 +86,7 @@ export interface TestWebhookResult {;
 '
   // Fetch user's webhooks;
   const fetchWebhooks = async () => {}
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!user) return,
     
     setLoading(true),
@@ -242,6 +251,49 @@ if ( {) {}
       const result = await response.json ();
 ;
 
+<<<<<<< HEAD
+;
+export function useWebhooks() {;
+  }
+  const { user } = useAuth(),;
+  const [webhooks, setWebhooks] = useState<Webhook[]>([]),;
+  const [loading, setLoading] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const [testResult, setTestResult] = useState<TestWebhookResult | null>(null),;
+  // Helper to get the base URL for webhook functions;
+  const getWebhookUrl = () => {;
+    // import.meta may be undefined when this hook is executed in a Node;
+    // environment (e.g. during server side rendering or tests). Using optional;
+    // chaining avoids a TypeError in those cases and falls back to process.env.;
+    }
+    return `${url}/functions/v1/webhook-manager`;`  },;
+  // Fetch user's webhooks;'
+  const fetchWebhooks = async () => {;
+    }
+    if (!user) return,;
+    setLoading(true),;
+    setError(null),;
+    try {;
+      }
+      const { "data": { session } } = await supabase.auth.getSession(),;
+      if (!session) {;
+        }
+        setError("Authentication required"),;"
+        return;
+      }
+;
+      const response = await fetch(`${getWebhookUrl()}/webhooks`, {;`        }
+        "method": 'GET',;'
+        "headers": {;
+          'Authorization': `Bearer ${session.access_token}`,;`          'Content-Type': 'application/json';'
+        }
+      }),;
+      const result = await response.json(),;
+      if (!response.ok) {;
+        }
+        throw new Error(result.error || 'Failed to fetch webhooks');'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
       // Add the new webhook to the list
@@ -307,14 +359,25 @@ if ( {) {}
     }
   },;
   // Toggle webhook active status;
+<<<<<<< HEAD
+    }
+=======
   const toggleWebhook = async (webhookId: string, isActive: boolean) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!user) return,;
     setLoading(true),;
     setError(null),;
     try {;
+<<<<<<< HEAD
+      }
+      if (!session) {;
+        }
+        setError("Authentication required"),;"
+=======
       const { data: { session } } = await supabase.auth.getSession(),;
       if (!session) {;"
         setError("Authentication required"),;
+>>>>>>> origin/chore/fix-lint-and-merge
         return;
       }
 ;`
@@ -326,14 +389,29 @@ if ( {) {}
         },;
         body: JSON.stringify({ webhookId, isActive });
       }),;
+<<<<<<< HEAD
+      if (!response.ok) {;
+        }
+        throw new Error(result.error || 'Failed to update webhook');'
+=======
       const result = await response.json(),;
       if (!response.ok) {;'
         throw new Error(result.error || 'Failed to update webhook');
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
       setWebhooks(prev => prev.map(webhook =>
         webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
       }
+<<<<<<< HEAD
+      if (!session) {
+        }
+        setError("Authentication required");"
+return;
+      });
+        "title": "Error updating webhook","
+        "description": err instanceof Error ? err && err.message : 'An unknown error occurred'})'
+=======
       // Update the webhook in the list
 
       ));
@@ -453,17 +531,26 @@ if ( {) {}
       });
 
       const result = await response && response.json();
+>>>>>>> origin/chore/fix-lint-and-merge
       
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to delete webhook')
 
       }
+<<<<<<< HEAD
+      // Check condition,
+if ( {) {
+  $2
+}
+        set_error ("Authentication required");"
+=======
 
     try {
 
       const { data: { session } } = await supabase.auth.getSession(),
       if (!session) {"
         setError("Authentication required"),
+>>>>>>> origin/chore/fix-lint-and-merge
         return;
       }`
       const response = await fetch(`${getWebhookUrl()}/delete`, {'
@@ -472,11 +559,71 @@ if ( {) {}
           'Authorization': `Bearer ${session.access_token}`;'
           'Content-Type': 'application/json'
         }
+<<<<<<< HEAD
+        "body": JSON.stringify ({ webhook_id, is_active });
+      });
+;
+;
+      // Check condition,
+if ( {) {
+  $2
+}
+        throw new Error (result.error || 'Failed to update webhook');'
+      }
+      // Update the webhook in the list;
+      set_webhooks (prev => { return prev.map (webhook =>; }
+        webhook.id === webhook_id ? { ...webhook, "is_active": is_active } : webhook));
+;
+      toast ({
+        }
+        "title": is_active ? "Webhook Activated" : "Webhook Deactivated","
+        "description": `The webhook has been ${is_active ? 'activated' : 'deactivated'} successfully.`});`;
+      return result;
+    } catch (err) {
+      }
+      console.error ('Error toggling "webhook":', err);'
+      set_error (err instanceof Error ? err.message : 'An unknown error occurred');'
+      toast ({
+        }
+        "variant": "destructive";"
+        "title": "Error updating webhook","
+        "description": err instanceof Error ? err.message : 'An unknown error occurred'});'
+    } finally {
+      }
+      set_loading (false);
+    }
+  }
+"variant": "destructive",;"
+        "title": "Error updating webhook","
+        "description": err instanceof Error ? err.message : 'An unknown error occurred'})'
+    } finally {
+      }
+      setLoading(false)
+    }
+    try {
+}
+      if (!session) {
+        }
+        setError("Authentication required"),"
+return;
+      }
+      const response = await fetch(`${getWebhookUrl()}/delete`, {`        }
+        "method": 'POST''
+        "headers": {
+          'Authorization': `Bearer ${session.access_token}`;`          'Content-Type': 'application/json''
+        }
+        "body": JSON.stringify({ webhookId })
+      });
+      if (!response.ok) {
+}
+throw new Error(result.error |'Failed to delete webhook');'
+=======
         body: JSON.stringify({ webhookId })
       });
       const result = await response.json();
       if (!response.ok) {'
         throw new Error(result.error |'Failed to delete webhook')
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
 ;
@@ -500,9 +647,16 @@ if ( {) {}
     setLoading(true),;
     setError(null),;
     try {;
+<<<<<<< HEAD
+      }
+      if (!session) {;
+        }
+        setError("Authentication required"),;"
+=======
       const { data: { session } } = await supabase.auth.getSession(),;
       if (!session) {;"
         setError("Authentication required"),;
+>>>>>>> origin/chore/fix-lint-and-merge
         return;
       }
 ;`
@@ -514,9 +668,15 @@ if ( {) {}
         },;
         body: JSON.stringify({ webhookId });
       }),;
+<<<<<<< HEAD
+      if (!response.ok) {;
+        }
+        throw new Error(result.error || 'Failed to delete webhook');'
+=======
       const result = await response.json(),;
       if (!response.ok) {;'
         throw new Error(result.error || 'Failed to delete webhook');
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
       // Remove the webhook from the list
@@ -553,6 +713,15 @@ if (return) {}
 }
     set_loading (true);
     set_error (null),
+<<<<<<< HEAD
+    try {
+      }
+      // Check condition,
+if ( {) {
+  $2
+}
+        set_error ("Authentication required");"
+=======
     try {}
       const { data: { session } } = await supabase.auth.get_session ();
       // Check condition;
@@ -560,6 +729,7 @@ if ( {) {}
   $2;
 }"
         set_error ("Authentication required");
+>>>>>>> origin/chore/fix-lint-and-merge
         return;
       }`
       const response = await fetch (`${getWebhookUrl ()}/delete`, {'
@@ -571,7 +741,6 @@ if ( {) {}
         body: JSON.stringify ({ webhook_id });
       });
 ;
-      const result = await response.json ();
 ;
       // Check condition;
 if ( {) {}
@@ -611,7 +780,10 @@ if ( {) {}
     setTestResult(null),
 
     try {
+<<<<<<< HEAD
+=======
       const { data: { session } } = await supabase && supabase.auth.getSession();
+>>>>>>> origin/chore/fix-lint-and-merge
       if (!session) {
         setError("Authentication required");
         return
@@ -675,9 +847,16 @@ if ( {) {}
     setError(null),;
     setTestResult(null),;
     try {;
+<<<<<<< HEAD
+      }
+      if (!session) {;
+        }
+        setError("Authentication required"),;"
+=======
       const { data: { session } } = await supabase.auth.getSession(),;
       if (!session) {;"
         setError("Authentication required"),;
+>>>>>>> origin/chore/fix-lint-and-merge
         return;
       }
 ;`
@@ -689,9 +868,15 @@ if ( {) {}
         },;
         body: JSON.stringify({ webhookId, eventType });
       }),;
+<<<<<<< HEAD
+      if (!response.ok) {;
+        }
+        throw new Error(result.error || 'Failed to test webhook');'
+=======
       const result = await response.json(),;
       if (!response.ok) {;'
         throw new Error(result.error || 'Failed to test webhook');
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
       // Store test result

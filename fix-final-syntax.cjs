@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+
+
+  // Fix unterminated string literals;
+  // Fix unterminated string literals;
+  {
+    "pattern: /'([^]*)\s*$/gm,
+    replacement": \'$1\';
+  },
+
+=======
 
 
 <<<<<<< HEAD
@@ -91,6 +102,7 @@ main
   // Fix malformed function declarations
 main
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   // Fix malformed function declarations
 
@@ -100,6 +112,12 @@ main
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   {
+<<<<<<< HEAD
+    "pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,
+    replacement": export default function $1() {\n  return ('
+  },
+
+=======
     pattern: /const\s+([^=]+)\s*=\s*([^;]+)\s*$/gm,
     replacement: const $1 = $2;
   },
@@ -113,6 +131,7 @@ main
   // Fix missing closing brackets and parentheses
 main
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   // Fix missing closing brackets and parentheses
 
@@ -122,6 +141,12 @@ main
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   {
+<<<<<<< HEAD
+    "pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,
+    replacement": 'return (\n    <div className="min-h-screen bg-white>
+  },
+
+=======
     pattern: /function\s+([^(]+)\s*\([^)]*\)\s*{\s*$/gm,
     replacement: function $1() {\n
   },
@@ -135,6 +160,7 @@ main
   // Fix malformed JSX attributes
 main
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   // Fix malformed JSX attributes
 
@@ -144,6 +170,13 @@ main
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
   {
+<<<<<<< HEAD
+    pattern": /className="([^]*);\s*/g,
+    "replacement": className=$1'
+  },
+
+
+=======
     pattern: /const\s+([^=]+)\s*=\s*\([^)]*\)\s*=>\s*([^;]+)\s*$/gm,
     replacement: const $1 = () => $2;
   },
@@ -194,6 +227,7 @@ main
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
   // Fix duplicated content (remove duplicate lines)
 
@@ -202,6 +236,9 @@ main
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
+<<<<<<< HEAD
+
+=======
     pattern: /return\s+([^;]+)\s*$/gm,
     replacement: 'return $1;'
   },
@@ -214,6 +251,7 @@ main
   // Fix missing closing brackets in arrays
 main
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   // Fix missing closing brackets in arrays
 
@@ -221,6 +259,9 @@ main
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
+<<<<<<< HEAD
+
+=======
     pattern: /if\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'if (condition) {\n'
   },
@@ -233,6 +274,7 @@ main
   // Fix malformed JSX closing tags
 main
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   // Fix malformed JSX closing tags
 
@@ -240,6 +282,9 @@ main
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 
   {
+<<<<<<< HEAD
+
+=======
     pattern: /for\s*\([^)]+\)\s*{\s*$/gm,
     replacement: 'for (let i = 0; i < length; i++) {\n'
   },
@@ -387,10 +432,21 @@ main
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 ];
 
 function fixFile(filePath) {
     if (!fs.existsSync(filePath)) {
+<<<<<<< HEAD
+
+
+        return;
+
+        return;
+
+    let modified = false;
+    }
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         return;
@@ -403,10 +459,14 @@ function fixFile(filePath) {
     }
 '
     let content = fs.readFileSync(filePath,utf8);
+>>>>>>> origin/chore/fix-lint-and-merge
 
     let modified = false;
 
 
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
     let modified = false;
     
@@ -428,11 +488,15 @@ function fixFile(filePath) {
     fixes.forEach(fix => {
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
         content = newContent;
         modified = true}
     });
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -443,12 +507,17 @@ function fixFile(filePath) {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
       return true}
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
   return false}
 
+<<<<<<< HEAD
+      if (stat.isDirectory()) {
+        fixedCount += walkDirectory(filePath)} else if (file.endsWith(.tsx') || file.endsWith('.ts) || file.endsWith(.jsx') || file.endsWith('.js)) {
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 function walkDirectory(dir) {
@@ -654,12 +723,86 @@ function walkDirectory(dir) {
       
       if (stat.isDirectory()) {
         fixedCount += walkDirectory(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+>>>>>>> origin/chore/fix-lint-and-merge
         if (fixFile(filePath)) {
           fixedCount++}
       }
     }
   } catch (error) {
     console.error(`Error reading directory ${dir}:`, error.message)}
+<<<<<<< HEAD
+
+
+    // Fix textarea.tsx;
+    if (filePath.includes(textarea.tsx')) {
+        // Fix malformed className;
+        content = content.replace(/className=\{`flex min-h-\[80px\] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: tex t-muted-foreground focus-visible: outlin e-none focus-visible: rin g-2 focus-visible: rin g-ring focus-visible: rin g-offset-2 disabled: curso r-not-allowed disabled: opacit y-50 \$\{className\}`\}/g,className={`flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}});
+    }
+
+    // Fix use-toast.ts;
+    if (filePath.includes('use-toast.ts')) {
+        // Fix malformed interface;
+        content = content.replace(/position\?\: "top-right" \| top-center \| "top-left" \| bottom-right \| "bottom-center" \| bottom-left\}\s*$/g,position?: "top-right" | top-center | "top-left" | bottom-right | "bottom-center" | bottom-left;\n});
+        // Fix malformed function;
+        content = content.replace(/const showToast = \(message: string, options\?\: ToastOptions\)\s*=> \{\s*return toast\(message, options\)\s*return \{ showToast \}\s*\}\s*$/g,const showToast = (message: string, options?: ToastOptions) => {\n    return toast(message, options);\n  }\n\n  return { showToast }\n});
+    }
+
+    // General fixes;
+    content = content.replace(/"/g, );
+    content = content.replace(//g, );
+    content = content.replace(/"`/g, );
+    content = content.replace(/`"/g, );
+    content = content.replace(/`\s*$/gm, );
+    content = content.replace(/^\s*`\s*$/gm, );
+    // Count fixes;
+    const originalContent = fs.readFileSync(filePath,utf8);
+];
+
+  try {
+  // TODO: Implement
+}
+    let content = fs.readFileSync(filePath,utf8);
+    let originalContent = content;
+    
+    // Apply all fixes;
+    for (const fix of fixes) {
+      content = content.replace(fix.pattern, fix.replacement);
+    }
+    
+    // Only write if content changed;
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed syntax in ${filePath});
+      return true;
+    }
+
+    if (fixes > 0) {
+        fs.writeFileSync(filePath, content,utf8);
+        console.log(`✅ Fixed ${fixes} issues in ${filePath});
+    } else {
+  // TODO: Implement
+}
+        console.log(`✨ No issues found in ${filePath});
+    }
+
+    return fixes;
+}
+
+// Process all files;
+let totalFixes = 0;
+filesToFix.forEach(file => {)
+    totalFixes += fixFile(file);
+});
+
+console.log(`\n📊 Summary:`);
+console.log(`   Files processed: ${filesToFix.length});
+console.log(`   Total fixes applied: ${totalFixes});
+
+if (totalFixes > 0) {
+
+if (totalFixes > 0) {} else {
+  // TODO: Implement
+=======
   
   return fixedCount}
     let fixes = 0;
@@ -668,12 +811,16 @@ if (totalFixes > 0) {
     
 } else {
     
+>>>>>>> origin/chore/fix-lint-and-merge
 }
     
 } else {
     
 }
 
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+=======
 <<<<<<< HEAD
 
 
@@ -734,3 +881,4 @@ main
 
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

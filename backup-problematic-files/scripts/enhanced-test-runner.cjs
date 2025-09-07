@@ -84,6 +84,126 @@ async function runJestTests() {}"
     testReport.summary.skipped += result.numPendingTests;
     testReport.summary.duration += endTime - startTime;
     if (result.coverageMap) {}
+<<<<<<< HEAD
+      testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct};
+    log('info', `Jest tests "completed": ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
+    log('warn', 'Jest tests failed or not configured', error.message)};
+};
+async function runPlaywrightTests() {}
+  log('info', 'Running Playwright tests');
+  
+  try {}
+    const output = execSync('npx playwright test --reporter=json', { })
+      "encoding": 'utf8',
+      "stdio": 'pipe'
+    }
+});
+    
+    
+    testReport.tests.push({})
+      "framework": 'playwright',
+      "duration": endTime - startTime,
+      "result": result;
+    }
+});
+    
+    testReport.summary.total += result.total;
+    testReport.summary.passed += result.passed;
+    testReport.summary.failed += result.failed;
+    testReport.summary.duration += endTime - startTime;
+    
+    log('info', `Playwright tests "completed": ${result.passed}/${result.total} passed`)} catch (error) {`}
+    log('warn', 'Playwright tests failed or not configured', error.message)};
+};
+async function runCypressTests() {}
+  log('info', 'Running Cypress tests');
+  
+  try {}
+    const output = execSync('npx cypress run --reporter json', { })
+      "encoding": 'utf8',
+      "stdio": 'pipe'
+    }
+});
+    
+    
+    testReport.tests.push({})
+      "framework": 'cypress',
+      "duration": endTime - startTime,
+      "result": result;
+    }
+});
+    
+    testReport.summary.total += result.total;
+    testReport.summary.passed += result.passed;
+    testReport.summary.failed += result.failed;
+    testReport.summary.duration += endTime - startTime;
+    
+    log('info', `Cypress tests "completed": ${result.passed}/${result.total} passed`)} catch (error) {`}
+    log('warn', 'Cypress tests failed or not configured', error.message)};
+};
+async function runLintTests() {}
+  log('info', 'Running linting tests');
+  
+  try {}
+    const output = execSync('npm run lint', { })
+      "encoding": 'utf8',
+      "stdio": 'pipe'
+    }
+});
+    
+    testReport.tests.push({})
+      "framework": 'eslint',
+      "duration": endTime - startTime,
+      "result": { passed: true, output };
+    }
+});
+    
+    testReport.summary.passed++;
+    testReport.summary.duration += endTime - startTime;
+    
+    log('info', 'Linting tests completed successfully')} catch (error) {}
+    testReport.tests.push({})
+      "framework": 'eslint',
+      "duration": 0,
+      "result": { passed: false, "error": error.message };
+    }
+});
+    
+    testReport.summary.failed++;
+    log('warn', 'Linting tests failed', error.message)};
+};
+async function runTypeTests() {}
+  log('info', 'Running TypeScript type tests');
+  
+  try {}
+    const output = execSync('npx tsc --noEmit', { })
+      "encoding": 'utf8',
+      "stdio": 'pipe'
+    }
+});
+    
+    testReport.tests.push({})
+      "framework": 'typescript',
+      "duration": endTime - startTime,
+      "result": { passed: true, output };
+    }
+});
+    
+    testReport.summary.passed++;
+    testReport.summary.duration += endTime - startTime;
+    
+    log('info', 'TypeScript type tests completed successfully')} catch (error) {}
+    testReport.tests.push({})
+      "framework": 'typescript',
+      "duration": 0,
+      "result": { passed: false, "error": error.message };
+    }
+});
+    
+    testReport.summary.failed++;
+    log('warn', 'TypeScript type tests failed', error.message)};
+};
+=======
 
       "result": { passed: true, output };"
     testReport.summary.passed++;
@@ -92,6 +212,7 @@ async function runJestTests() {}"
       "result": { passed: false, "error": error.message };"
     testReport.summary.failed++;"
 
+>>>>>>> origin/chore/fix-lint-and-merge
 function generateRecommendations() {}
   const recommendations = [];
   const { total, passed, failed, coverage } = testReport.summary;

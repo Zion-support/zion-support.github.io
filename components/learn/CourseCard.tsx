@@ -1,10 +1,103 @@
 import Link from 'next/link';
+<<<<<<< HEAD
+export type Course = any;
+export type Course = {
+=======
+
+<<<<<<< HEAD
+import Link from next/link';
+
+>>>>>>> origin/main
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+  id: string;
+  title: string;
+  duration_minutes: number;
+  level: string;
+  is_free: boolean;
+<<<<<<< HEAD
+
+export type Course = any;
+export type Course = {
+
+  }
+
+;
+import Link from 'next/link';
+export type Course = any;export type Course = {id: string;
+;
+import Link from 'next/link';
+export type Course = any;export type Course = {id: string;
+import Link from 'next/link';
 
   id: string;
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
+  category: string;certification_badge: string,description?: string;
+export default /**;
+ * CourseCard - Function description;
+ */;
+function CourseCard() {return (<div className='border rounded - lg p - 4 hover:shadow - md transition'>;
+  category: string;
+  certification_badge: string,
+  description?: string;
+export default /**
+ * CourseCard - Function description
+ */
+function CourseCard() {
+  return (
+    <div className='border rounded - lg p - 4 hover:shadow - md transition'>;
+      <div className='flex items - center justify - between'>;
+        <h3 className='font - semibold text - lg'>{course.title}</h3>;
+        <span className='text - xs border px - 2 py - 0.5 rounded bg - green - 50 text - green - 700'>;
+          {course.is_free ? 'Free' : 'Paid'}
+        </span>;
+      </div>;
+      <div className='text - xs text - gray - 500 mt - 1'>;
+        {Math.round (course.duration_minutes / 60)}h          {course.is_free ? 'Free' : 'Paid'}
+        </span>;
+      </div>;
+  return (
+    <div className='border rounded - lg p - 4 hover:shadow - md transition'>;'
+      <div className='flex items - center justify - between'>;'
+        <h3 className='font - semibold text - lg'>{course.title}</h3>;'
+        <span className='text - xs border px - 2 py - 0.5 rounded bg - green - 50 text - green - 700'>;'
+          {course.is_free ? 'Free' : 'Paid'}
+        </span>;
+      </div>;'
+      <div className='text - xs text - gray - 500 mt - 1'>;'
+        {Math.round (course.duration_minutes / 60)}h          {course.is_free ? 'Free' : 'Paid'}
+        </span>;
+      </div>;
+      <div className="text - xs text - gray-500 mt-1">{course.category} • {course.level} • {Math.round (course.duration_minutes / 60)}h</div>;
+      <div className="text - sm mt - 2 line-clamp-2">{course.description}</div>;
+      <div className="mt - 3 flex items-center justify-between">;
+        <span className="text - xs bg - indigo - 50 text - indigo - 700 px-2 py-0.5 rounded">Badge: {course.certification_badge}</span>;
+        <Link href={`/learn/${course.id}`}>;
+          <a className='text - blue - 600 hover:underline text - sm'>View course</a>;
+      </div>;
+      <div className='text - sm mt - 2 line - clamp - 2'>{course.description}</div>;
+      <div className='mt - 3 flex items - center justify - between'>;
+        <span className='text - xs bg - indigo - 50 text - indigo - 700 px - 2 py - 0.5 rounded'>;
+          Badge: {course.certification_badge}
+        </span>;
+        <Link href={`/learn/${course.id}`}>;
+          <a className='text - blue - 600 hover:underline text - sm'>View course</a>        </Link>;
+      </div>;
+    </div>)}          <a className="text - blue-600 hover: underline text-sm">View course</a>;
+        </Link>;
+      </div>;
+    </div>))certificationBadge: string;
+  description?: string;
+}export default function CourseCard() {return (<div className='border rounded-lg p-4 hover:shadow-md transition'>;
+export default function CourseCard() {return (<div className='border rounded-lg p-4 hover:shadow-md transition'>;
+      <div className='flex items-center justify-between'>;
+        <h3 className='font-semibold text-lg'>{course.title}</h3>;
+        <span className='text-xs border px-2 py-0.5 rounded bg-green-50 text-green-700'>;
+=======
   category: string;
   certification_badge: string,
   description?: string;
@@ -26,6 +119,7 @@ function CourseCard() {}
         </span>;
       </div>;
 
+>>>>>>> origin/chore/fix-lint-and-merge
           <a className='text - blue - 600 hover:underline text - sm'>View course</a>;
       </div>;'
       <div className='text - sm mt - 2 line - clamp - 2'>{course.description}</div>;'
@@ -35,6 +129,51 @@ function CourseCard() {}
         </span>;`
         <Link href={`/learn/${course.id}`}>;'
           <a className='text - blue - 600 hover:underline text - sm'>View course</a>        </Link>;
+<<<<<<< HEAD
+      </div>;
+    </div>);
+}          <a className="text - blue-600 hover: underline text-sm">View course</a>;
+        </Link>;
+      </div>;
+    </div>);
+
+  );
+
+  certificationBadge: string;
+  description?: string;
+};
+
+  certificationBadge: string;
+}
+
+export default function CourseCard() {return (<div className='border rounded-lg p-4 "hover":shadow-md transition'>;'
+
+}
+<<<<<<< HEAD
+export default function CourseCard() {return (
+    <div className='border rounded-lg p-4 hover:shadow-md transition' />;
+export default function CourseCard() {return (
+    <div className='border rounded-lg p-4 hover:shadow-md transition' />;}
+=======
+export default function CourseCard() {return (<div className='border rounded-lg p-4 hover:shadow-md transition' />;
+export default function CourseCard() {return (<div className='border rounded-lg p-4 hover:shadow-md transition' />;}
+>>>>>>> origin/main
+      <div className='flex items-center justify-between' />;}
+        <h3 className='font-semibold text-lg' />{course.title}</h3>;
+        <span className='text-xs border px-2 py-0.5 rounded bg-green-50 text-green-700' />;
+          {course.isFree ? 'Free' : 'Paid'}
+        </span>;
+      </div>;
+
+          <a className='text - blue - 600 hover:underline text - sm>View course</a>;
+      </div>;
+      <div className='text - sm mt - 2 line - clamp - 2'>{course.description}</div>;
+      <div className=mt - 3 flex items - center justify - between'>;'
+        <span className=text - xs bg - indigo - 50 text - indigo - 700 px - 2 py - 0.5 rounded>;
+          Badge: {course.certification_badge}
+        </span>;`
+        <Link href={`/learn/${course.id}`}>;'
+          <a className='text - blue - 600 hover:underline text - sm>View course</a>        </Link>;
       </div>;
 
         </Link>;
@@ -43,6 +182,71 @@ function CourseCard() {}
 
   );
 
+
+
+  certificationBadge: string;
+}
+
+export default function CourseCard() {return (<div className='border rounded-lg p-4 "hover":shadow-md transition'>;'
+
+}
+
+          {course.isFree ? 'Free : Paid'}
+        </span>;
+      </div>;
+      <div className='text-xs text-gray-500 mt-1>;
+        {course.category} • {course.level} •{ '}
+        {Math.round(course.durationMinutes / 60)}h;
+      </div>;
+      <div className='text-sm mt-2 line-clamp-2>{course.description}</div>;
+      <div className=mt-3 flex items-center justify-between'>;
+        <span className='text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded>;
+          Badge: {course.certificationBadge}
+        </span>;
+        <Link href={`/learn/${course.id}`}>;
+          <a className=text-blue-600 hover:underline text-sm'>View course</a>;
+        </Link>;
+      </div>;
+    </div>;
+  )}
+=======
+      </div>;
+
+        </Link>;
+      </div>;
+>>>>>>> origin/chore/fix-lint-and-merge
+    </div>);
+
+  );
+
+<<<<<<< HEAD
+  )}
+import Link from 'next/link;
+export type Course = $2;
+  title: string,
+  durationMinutes: number,
+  level: string,
+  isFree: boolean,
+  category: string,
+  certificationBadge: string,
+  description?: string
+},
+
+export default function CourseCard({ course }: { course: Course}) {
+  return (
+    <div className="border rounded-lg p-4 hover:shadow-md transition>
+      <div className=flex items-center justify-between">
+        <h3 className="font-semibold text-lg>{course.title}</h3>
+        <span className=text-xs border px-2 py-0.5 rounded bg-green-50 text-green-700">
+          {course.isFree ? Free' : 'Paid'}
+        </span>
+
+        </Link>
+      </div>
+    </div>
+  )
+}
+=======
   certificationBadge: string;
 }
   description?: string;}
@@ -75,4 +279,8 @@ export default function CourseCard() {return (<div className='border rounded-lg 
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main

@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+
+
+import * as React from "react
+
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+
+import * as React from "react"
+import {Slot} from "@radix-ui/react-slot"
+import {ChevronRight} from "lucide-react"
+
+import {cn} from "@/lib/utils"
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+const Breadcrumb = React.forwardRef<;
+  HTMLElement;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Slot } from "@radix-ui/react-slot"
 
 import { ChevronRight } from "lucide-react"
@@ -20,10 +39,14 @@ const Breadcrumb = React && React.forwardRef<;
     separator?: React && React.ReactNode;
   }
 >(({ className, separator, ...props }, ref) => (;
+<<<<<<< HEAD
+ 
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
 const Breadcrumb = React.forwardRef<
   HTMLElement,
-  React.ComponentPropsWithoutRef<"nav"> & {
+  React.ComponentPropsWithoutRef<nav"> & {
     separator?: React.ReactNode
 
   }
@@ -94,20 +117,67 @@ export {;
 export {
  
 export {;
+<<<<<<< HEAD
+export {;
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
 
+<<<<<<< HEAD
+=======
   BreadcrumbEllipsis}
 
 export {
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Breadcrumb,
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
+<<<<<<< HEAD
+  BreadcrumbSeparator,
+
+ 
+
 
   BreadcrumbEllipsis}
+  BreadcrumbEllipsis}
+    &#8230,;
+  </span>;
+);
+BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
+ ;
+export {;
+  Breadcrumb,;
+  BreadcrumbList,;
+  BreadcrumbItem,;
+  BreadcrumbLink,;
+  BreadcrumbSeparator,;
+  BreadcrumbEllipsis} const Breadcrumb = React.forwardRef< HTMLElement;
+) 
+}{
+  ...props 
+}/>) ) Breadcrumb.displayName = "Breadcrumb" const BreadcrumbList = React.forwardRef< HTMLOListElement;
+/>) ) BreadcrumbList.displayName = "BreadcrumbList" const BreadcrumbItem = React.forwardRef< HTMLLIElement;
+/>) ) BreadcrumbItem.displayName = "BreadcrumbItem" const BreadcrumbLink = React.forwardRef< HTMLAnchorElement;
+return (<Comp ref= {
+  ref 
+}/>) 
+}) BreadcrumbLink.displayName = "BreadcrumbLink" </li>) BreadcrumbSeparator.displayName = "BreadcrumbSeparator" > &#8230;
+</span>) BreadcrumbEllipsis.displayName = "BreadcrumbElipssis" export {
+  Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbEllipsis 
+}
+  BreadcrumbEllipsis}
+;
+  BreadcrumbEllipsis}
+;
+;
+=======
+
+  BreadcrumbEllipsis}
+>>>>>>> origin/chore/fix-lint-and-merge

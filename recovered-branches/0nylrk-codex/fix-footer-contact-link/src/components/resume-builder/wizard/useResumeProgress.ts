@@ -104,6 +104,10 @@ if ( {) {
     set_progress (progress_percentage);
   }, [resume]);
 ;
+<<<<<<< HEAD
+export const useResumeProgress = ("resume":Resume | null) => {;
+  }
+=======
 
   return progress;
 
@@ -116,6 +120,7 @@ import { Resume } from '@/types/resume',;
 ;
 export const useResumeProgress = (resume:Resume | null) => {;
   const [progress, setProgress] = useState(0),;
+>>>>>>> origin/chore/fix-lint-and-merge
   ;
   useEffect(() => {;
     // Calculate progress based on completed sections;
@@ -159,6 +164,14 @@ export const useResumeProgress = (resume:Resume | null) => {;
   // Basic info is always considered (1 point) completed += 1;
 // Work experience (1 point if at least one entry) return progress;
 };
+<<<<<<< HEAD
+return progress;
+};
+};
+    setProgress(progressPercentage);
+  }, [resume]);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   return progress;
 
 };

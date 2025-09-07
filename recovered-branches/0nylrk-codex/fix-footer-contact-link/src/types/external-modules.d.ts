@@ -143,7 +143,18 @@ import {FC, SVGProps} from 'react';
 
   export interface DateRange {;
     from?: Date;
+<<<<<<< HEAD
+    to?: Datedeclare module 'lucide-react' {'
+}
+  export type LucideProps = SVGProps < SVGSVGElement>;
+  export type LucideIcon = FC < LucideProps>;
+;}
+declare module 'child_process';'
+declare module 'date - fns';'
+declare module 'jspdf' {'
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   // Minimal placeholder for the DayPicker component used in the app;
   // The actual library provides full typings but we stub them here so the;

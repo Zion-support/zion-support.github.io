@@ -22,8 +22,18 @@ main
  * Collects basic performance metrics;
  */
 <<<<<<< HEAD
+const fs = require('fs')
+fs.writeFileSync('performance-metrics.json')
+console.log(' Performance metrics collected and saved to performance-metrics.json')
+
+fs.writeFileSync('performance-metrics.json')
+console.log(' Performance metrics collected and saved to performance-metrics.json')
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 const fs = require('fs')
+>>>>>>> origin/chore/fix-lint-and-merge
 fs.writeFileSync('performance-metrics.json')
 console.log(' Performance metrics collected and saved to performance-metrics.json')const fs = require('fs')
 fs.writeFileSync('performance-metrics.json')

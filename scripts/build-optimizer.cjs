@@ -139,9 +139,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 =======
 =======
 
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const { execSync } = require('child_process')
 const fs = require('fs')
+>>>>>>> origin/chore/fix-lint-and-merge
 // console.log(' Build Optimizer Starting...)
     console.log('🧹 Cleaning previous builds...)
     if (fs.existsSync('.next')
@@ -153,9 +156,7 @@ const fs = require('fs')
 =======
 #!/usr/bin/env node
 
-const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 console.log('🔍 Build Optimizer Starting...');
 >>>>>>> dbb9ab96b3dd6598799176036da112f1bc97b910

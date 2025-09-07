@@ -931,6 +931,15 @@ pr-12325
         type: "hire_request",
         related_id: requestRecord[0].id
       },
+<<<<<<< HEAD
+        .rpc('create_notification', {'
+          }
+          "_user_id": adminId,
+          "_title": adminNotificationContent.title,
+          "_message": adminNotificationContent.message,
+          "_type": adminNotificationContent.type,
+          "_related_id": adminNotificationContent.related_id
+=======
       const { error: notificationError } = await supabase
         .rpc('create_notification', {
           _user_id: adminId,
@@ -938,6 +947,7 @@ pr-12325
           _message: adminNotificationContent.message,
           _type: adminNotificationContent.type,
           _related_id: adminNotificationContent.related_id
+>>>>>>> origin/chore/fix-lint-and-merge
         }),
       if (notificationError) {
         console.error("Error creating admin notification:", notificationError)

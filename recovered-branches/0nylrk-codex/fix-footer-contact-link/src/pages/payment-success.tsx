@@ -10,6 +10,14 @@ import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
+<<<<<<< HEAD
+export default function PaymentSuccess() {;
+  }
+import React from 'react','
+import { Button } from '@/components/ui/button','
+import { useNavigate } from 'react-router-dom','
+import { CheckCircle2 } from 'lucide-react','
+=======
 
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
@@ -17,6 +25,7 @@ import {CheckCircle2} from 'lucide-react';
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function PaymentSuccess() {
 
 import {Button} from '@/components/ui/button';
@@ -79,6 +88,16 @@ export default function PaymentSuccess() {
     </div>
 
   )
+<<<<<<< HEAD
+import React from 'react';'
+import { Button } from '@/components/ui/button';'
+import { useNavigate } from 'react-router-dom',;'
+import { CheckCircle2 } from 'lucide-react',;'
+    <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;"
+      <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;"
+        <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">;"
+          <CheckCircle2 className="h-6 w-6 text-green-600" />;"
+=======
 
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
@@ -97,6 +116,7 @@ import { CheckCircle2 } from 'lucide-react',;
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">;
           <CheckCircle2 className="h-6 w-6 text-green-600" />;
+>>>>>>> origin/chore/fix-lint-and-merge
         </div>;
 
         <h1 className="text-2xl font-bold text-white mb-2">Payment Successful!</h1>;

@@ -112,6 +112,12 @@ export function MobileHeader({};
 }
 
 }
+<<<<<<< HEAD
+import { useNavigate } from "react-router-dom";"
+import { ChevronLeft, Bell, Settings } from "lucide-react",;"
+import { cn } from "@/lib/utils",;"
+import { Button } from "@/components/ui/button",;"
+=======
 
 import React from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -119,6 +125,7 @@ import { ChevronLeft, Bell, Settings } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 
 import { Button } from "@/components/ui/button",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface MobileHeaderProps {;
   title: string,;
   showBack?: boolean,;
@@ -138,7 +145,11 @@ interface MobileHeaderProps {;
   onSettingsClick?:() => void;
 
   onSettingsClick} MobileHeaderProps) {;
+<<<<<<< HEAD
+  }
+=======
   const navigate = useNavigate(),;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
   return (;
     <header className={cn(;"

@@ -39,9 +39,27 @@ export default function BlogPost() {
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
+<<<<<<< HEAD
+// Importing the sample blog posts - in a real app, you would fetch this from an API,
+import { BLOG_POSTS } from "@/data/blog-posts","
+export default function BlogPost() {
+  }
+const navigate = useNavigate(),;
+const [post, setPost] = useState<BlogPostType | null>(null),;
+const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),;
+const [showShareMenu, setShowShareMenu] = useState(false),;
+    useEffect(() => {
+    // Find the current post by slug
+}
+const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
+    if (currentPost) {
+  const { slug } = useParams() as { slug: string},
+  const navigate = useNavigate($2);
+=======
 
   const { slug } = useParams() as { slug: string },
   const navigate = useNavigate(),
+>>>>>>> origin/chore/fix-lint-and-merge
   const [post, setPost] = useState<BlogPostType | null>(null),
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),
   const [showShareMenu, setShowShareMenu] = useState(false),
@@ -138,6 +156,15 @@ import { AppLayout } from "@/layout/AppLayout",;
 // Importing the sample blog posts - in a real app, you would fetch this from an API;
 import { BLOG_POSTS } from "@/data/blog-posts",;
 export default function BlogPost() {;
+<<<<<<< HEAD
+  }
+;
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
+;
+export default function BlogPost() {;
+  }
+  const { slug } = useParams() as { "slug":string },;
+=======
   const { slug } = useParams() as { slug: string },;
 
 ;
@@ -151,6 +178,7 @@ export default function BlogPost() {;
   const [post, setPost] = useState<BlogPostType | null>(null),;
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]),;
   const [showShareMenu, setShowShareMenu] = useState(false),;
+>>>>>>> origin/chore/fix-lint-and-merge
   useEffect(() => {;
     // Find the current post by slug;
     const currentPost = BLOG_POSTS.find(p => p.slug === slug),;
@@ -395,26 +423,49 @@ export default function BlogPost() {;
           </div>
 
           {/* Featured image */}
+<<<<<<< HEAD
+          <div className="mb-12 max-w-5xl mx-auto">"
+            <div className="aspect-[21/9] rounded-lg overflow-hidden">"
+                className="object-cover w-full h-full""
+                onError={(e) => {
+                  }
+                  target.src = ""https": //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3""
+              <img,
+src={post.featuredImage}
+=======
           <div className="mb-12 max-w-5xl mx-auto">
             <div className="aspect-[21/9] rounded-lg overflow-hidden">
 
               <img 
                 src={post.featuredImage} 
+>>>>>>> origin/chore/fix-lint-and-merge
                 alt={post.title}
                 className="object-cover w-full h-full"
                 onError={(e) => {
+<<<<<<< HEAD
+}
+                  target.src = ""https": //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3""
+          <div className="mb-12 max-w-5xl mx-auto">;"
+            <div className="aspect-[21/9] rounded-lg overflow-hidden">;"
+=======
 
                   const target = e.target as HTMLImageElement,
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
           <div className="mb-12 max-w-5xl mx-auto">;
             <div className="aspect-[21/9] rounded-lg overflow-hidden">;
+>>>>>>> origin/chore/fix-lint-and-merge
               <img;
                 src={post.featuredImage} ;
                 alt={post.title}
                 className="object-cover w-full h-full";
                 onError={(e) => {;
+<<<<<<< HEAD
+                  }
+                  target.src = ""https": //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";"
+=======
                   const target = e.target as HTMLImageElement;
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
+>>>>>>> origin/chore/fix-lint-and-merge
                   )}
                 className="object-cover w-full h-full"
                 onError={(e) => {;
@@ -501,10 +552,15 @@ export default function BlogPost() {;
                           alt={relatedPost && relatedPost.title}"
                           className="object-cover w-full h-full"
                           onError={(e) => {;
+<<<<<<< HEAD
+                            }
+                            target && target.src = ""https": //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";"
+=======
                             const target = e && e.target as HTMLImageElement;"
                             target && target.src = "https: //images && images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4 && 4.0.3";
 
                   #{tag}
+>>>>>>> origin/chore/fix-lint-and-merge
                 </span>;
               ))}
 

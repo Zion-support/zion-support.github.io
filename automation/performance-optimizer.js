@@ -556,13 +556,9 @@ class PerformanceOptimizer {ursor/migrate-github-actions-to-pm2-and-clean-up-559
     try {
       this.log('Starting performance optimization...');
       // Analyze bundle size
-      const bundleAnalysis = this.analyzeBundleSize();
       // Optimize images
-      const imageOptimization = this.optimizeImages();
       // Check for unused dependencies
-      const dependencyAnalysis = this.analyzeDependencies();
       // Generate optimization report
-      const report = {
         "timestamp": new Date().toISOString(),
         "bundleSize": bundleAnalysis,
         "imageOptimization": imageOptimization,

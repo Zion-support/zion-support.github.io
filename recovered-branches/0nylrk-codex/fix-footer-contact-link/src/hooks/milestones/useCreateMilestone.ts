@@ -107,15 +107,25 @@ import { Milestone } from './types',;
 
 import { useRecordActivity } from './useRecordActivity',;
 export const useCreateMilestone = (projectId?: string) => {;
+<<<<<<< HEAD
+  }
+  const createMilestone = async ("milestoneData": Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {;'
+    }
+=======
   const { user } = useAuth(),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const { recordMilestoneActivity } = useRecordActivity(),;'
   const createMilestone = async (milestoneData: Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!user || !projectId) return null,;
     try {;
       setIsSubmitting(true),;
+<<<<<<< HEAD
+        .from('project_milestones');'
+=======
       const { data, error } = await supabase;'
         .from('project_milestones');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
           ...milestoneData,;
           project_id: projectId,;

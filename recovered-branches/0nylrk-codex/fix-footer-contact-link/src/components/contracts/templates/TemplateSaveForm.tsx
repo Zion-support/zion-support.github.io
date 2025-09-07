@@ -35,6 +35,8 @@ interface TemplateSaveFormProps {;
 
 import { useState } from "react",
 
+<<<<<<< HEAD
+=======
 const formSchema = z.object({
   title: z.string().min(1, "Title is required");
   isDefault: z.boolean().default(false)})
@@ -45,6 +47,7 @@ interface TemplateSaveFormProps {
 
 const formSchema = z.object({
 
+>>>>>>> origin/chore/fix-lint-and-merge
   title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
 

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+
+  ip_address?: string,
+  response_time_ms?: number
+}
+
+
+=======
 import { useState } from './react';
 import { use_auth } from '@/hooks / use_auth';
 import { supabase } from '@/integrations / supabase / client';
@@ -42,6 +50,7 @@ export function useApiKeys() {
   response_time_ms?: number;
 }
 
+>>>>>>> origin/chore/fix-lint-and-merge
   const { user } = useAuth();
   const [keys, setKeys] = useState<ApiKey[]>([]);
   const [logs, setLogs] = useState<ApiLog[]>([]);
@@ -55,6 +64,8 @@ export function useApiKeys() {
     // Using optional chaining ensures this function works both in the browser
     // (where import && import.meta.env is injected by Vite) and in Node environments
 
+<<<<<<< HEAD
+=======
     // such as tests or server side rendering.
 
     return `${url}/functions/v1/api-key-manager`
@@ -98,6 +109,7 @@ export function useApiKeys() {
 
   ip_address?: string,
 
+>>>>>>> origin/chore/fix-lint-and-merge
   response_time_ms?: number;
 }
 export /**;
@@ -111,14 +123,37 @@ function useApiKeys() {}
   const [loading, set_loading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
   const [newApiKey, setNewApiKey] = useState < string | null>(null);
+<<<<<<< HEAD
+=======
 
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
   // Helper to get the base URL for API functions;
   const getApiUrl = () =>: any {}
     // Using optional chaining ensures this function works both in the browser;
     // (where import.meta.env is injected by Vite) and in Node environments;
     // such as tests or server side rendering.;
     const env = (import.meta as any)?.env ?? process.env;
+<<<<<<< HEAD
+    const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;
+
+  const fetchApiKeys = async () => {
+    // Check condition
+}
+if (return) {
+  $2
+}
+    set_loading (true);
+    set_error (null);
+    try {
+      }
+      const { "data": { session } } = await supabase.auth.get_session ();
+      // Check condition,
+if ( {) {
+  $2
+}
+
+=======
     const url = env.VITE_SUPABASE_URL || env.SUPABASE_URL;`
     return `${url}/functions / v1 / api - key - manager`;
   }
@@ -146,10 +181,37 @@ if ( {) {}
         headers: {'`
           'Authorization': `Bearer ${session.access_token}`;'
           'Content - Type': 'application / json';
+>>>>>>> origin/chore/fix-lint-and-merge
         }
       });
-;
       const result = await response.json ();
+<<<<<<< HEAD
+
+      toast({          name;
+          }
+          scopes,
+          "expiresAt": expiresAt ? expiresAt && expiresAt.toISOString() : null
+        })
+      });
+      }
+      // Add the new key to the list,
+setKeys(prev => [{ ...result, "key": undefined }, ...prev]);
+      // Store the actual key value temporarily so it can be displayed once,
+toast({
+        }
+        "title": "title","
+    "description": "Your new API key has been generated. Save it now, you won't be able to see it again."});      toast({"
+        }
+        "title": "API Key Created""
+        "description": "Your new API key has been generated. Save it now, you won't be able to see it again."});"
+      toast({
+
+      setLoading(false);
+    }
+  },
+  // Create new API key;
+
+=======
 ;
 
         throw new Error (result.error || 'Failed to fetch API keys');
@@ -194,6 +256,7 @@ export function useApiKeys() {;
       const result = await response.json(),;
       if (!response.ok) {;
         throw new Error(result.error || 'Failed to fetch API keys');
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
       setKeys(result.keys || [])
@@ -205,6 +268,8 @@ export function useApiKeys() {;
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
 
+<<<<<<< HEAD
+=======
         title: "Error fetching API keys",
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
@@ -214,6 +279,7 @@ export function useApiKeys() {;
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
+>>>>>>> origin/chore/fix-lint-and-merge
       setLoading(false)
     }
 
@@ -230,6 +296,12 @@ export function useApiKeys() {;
     setNewApiKey(null),
 
     try {
+<<<<<<< HEAD
+      }
+      const { "data": { session } } = await supabase && supabase.auth.getSession();
+      if (!session) {
+
+=======
 
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {"
@@ -242,10 +314,44 @@ export function useApiKeys() {;
           scopes,
           expiresAt: expiresAt ? expiresAt && expiresAt.toISOString() : null;
         })
+>>>>>>> origin/chore/fix-lint-and-merge
       });
 
       const result = await response && response.json();
       
+<<<<<<< HEAD
+      if (!response && response.ok) {
+
+      setLoading(false);
+    }
+  },
+  // Regenerate API key;
+
+      }
+      // Update the key in the list,
+setKeys(prev => prev && prev.map(key =>
+        key && key.id === keyId ? { ...result, "key": undefined } : key
+      ));
+      // Store the new key value,
+setNewApiKey(result && result.key);
+      toast({
+        }
+        "title": "API Key Regenerated""
+        "description": "Your API key has been regenerated. Save it now, you won't be able to see it again."});      ));"
+      // Store the new key value,
+toast({
+        }
+        "title": "API Key Regenerated""
+        "description": "Your API key has been regenerated. Save it now, you won't be able to see it again."});      return result"
+    } catch (err) {
+      }
+      console && console.error('Error revoking API "key":', err);'
+      setError(err instanceof Error ? err && err.message : 'An unknown error occurred');'
+      toast({
+
+      setLoading(false)
+    }
+=======
       if (!response && response.ok) {'
         throw new Error(result && result.error || 'Failed to create API key')
 
@@ -304,6 +410,7 @@ export function useApiKeys() {;
       if (!response.ok) {;'
         throw new Error(result.error || 'Failed to create API key');
       }
+>>>>>>> origin/chore/fix-lint-and-merge
 
       // Add the new key to the list
       setKeys(prev => [{ ...result, key: undefined }, ...prev]),
@@ -323,6 +430,47 @@ export function useApiKeys() {;
       toast({
 
     try {
+<<<<<<< HEAD
+
+      }
+      if (!session) {
+        }
+        setError("Authentication required");"
+return;
+      }
+const response = await fetch (;
+        `${getApiUrl ()}/logs?limit=${limit}&offset=${offset}`,`        {
+          }
+          "method": 'GET''
+          "headers": {
+      }
+      
+      if (!response && response.ok) {
+
+      }
+
+      setLogs(result && result.logs || []);
+      setTotalLogs(result && result.count || 0);
+
+      setLogs(result.logs || []);
+
+  // Revoke API key;
+  const revokeApiKey = async ("key_id": string) => {
+    // Check condition
+}
+if (return) {
+  $2
+}
+    set_loading (true);
+    set_error (null),
+    try {
+      }
+      // Check condition,
+if ( {) {
+  $2
+}
+
+=======
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
         setError("Authentication required");
@@ -415,6 +563,7 @@ if ( {) {}
         headers: {'`
           'Authorization': `Bearer ${session.access_token}`;'
           'Content - Type': 'application / json';
+>>>>>>> origin/chore/fix-lint-and-merge
         }
         body: JSON.stringify ({}
           name;
@@ -422,6 +571,57 @@ if ( {) {}
           expires_at: expires_at ? expires_at.toISOString () : null;
         });
       });
+<<<<<<< HEAD
+
+    } finally {
+      }
+      set_loading (false);
+    }
+  }
+  const revokeApiKey = $2;
+    setLoading($2);
+    setError($2);
+    try {
+      const { data: { session } } = await supabase.auth.getSession($2);
+      if (!session) {
+        setError($2);
+        return
+      }
+      const response = await fetch(`${getApiUrl()}/revoke`, {
+        method: POST'
+        headers: {
+          'Authorization: `Bearer ${session.access_token}`;
+          Content-Type': 'application/json
+        }
+        body: JSON.stringify({ keyId })
+      }),
+
+      const result = await response.json($2);
+      if (!response.ok) {
+        throw new Error(result.error || Failed to revoke API key')
+      }
+      // Update the key's active status in the list
+      setKeys(prev => prev.map(key => 
+        key.id === keyId ? { ...key, is_active: false} : key
+      )),
+      
+      toast($2);
+      return result
+    } catch (err) {
+      console.error($2);
+      setError($2);
+      toast({
+        variant: destructive",
+        title: "Error revoking API key,
+        description: err instanceof Error ? err.message : An unknown error occurred})
+    } finally {
+      setLoading(false)
+    }
+        {
+
+    } finally {
+      }
+=======
 ;
       const result = await response.json ();
 ;
@@ -456,20 +656,33 @@ if ( {) {}
 '
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
 
+>>>>>>> origin/chore/fix-lint-and-merge
       setLoading(false)
     }
 
   },
+<<<<<<< HEAD
+  // Fetch API usage logs,
+    }
+=======
 
   // Regenerate API key;
   const regenerateApiKey = async (keyId: string) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!user) return,
     
     setLoading(true),
     setError(null),
     setNewApiKey(null),
 
+<<<<<<< HEAD
+    try {
+      }
+      if (!session) {
+
+=======
       const result = await response && response.json();
+>>>>>>> origin/chore/fix-lint-and-merge
       
       if (!response && response.ok) {
         throw new Error(result && result.error || 'Failed to regenerate API key')
@@ -679,6 +892,8 @@ if (return) {}
       setLogs(result && result.logs || []);
       setTotalLogs(result && result.count || 0);
 
+<<<<<<< HEAD
+=======
 ;
 
       // Update the key's active status in the list;
@@ -694,10 +909,18 @@ if (return) {}
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'});
     } finally {;
+>>>>>>> origin/chore/fix-lint-and-merge
       setLoading(false);
     }
-  },;
+  },
   // Fetch API usage logs;
+<<<<<<< HEAD
+
+        return;
+      }
+      const response = await fetch(;
+
+=======
   const fetchApiLogs = async (limit = 50, offset = 0) => {;
     if (!user) return,;
     setLoading(true),;
@@ -849,11 +1072,16 @@ if ( {) {}
       const result = await response.json(),;
       if (!response.ok) {;'
         throw new Error(result.error || 'Failed to fetch API logs');
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
       setLogs(result.logs || []),
       setTotalLogs(result.count || 0),
 
+<<<<<<< HEAD
+      toast({    error;
+    }
+=======
         {
           method: 'GET'
           headers: {
@@ -877,6 +1105,7 @@ if ( {) {}
 ;
       return result;
 
+>>>>>>> origin/chore/fix-lint-and-merge
     newApiKey;
     fetchApiKeys;
     createApiKey;
@@ -885,6 +1114,23 @@ if ( {) {}
     fetchApiLogs;
 
   }
+<<<<<<< HEAD
+}
+
+    } finally {
+      }
+      setLoading(false)
+
+    revokeApiKey;
+    fetchApiLogs;
+    "clearNewApiKey": () => setNewApiKey(null);
+  }
+}
+  }
+}
+    }
+  },
+=======
 }"
         variant: "destructive","
         title: "Error fetching API logs",'
@@ -921,9 +1167,12 @@ if ( {) {}
 
   }
 }
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }
 }
+<<<<<<< HEAD
+=======
 ;
 
   }
@@ -1398,3 +1647,4 @@ clearNewApiKey: () => setNewApiKey (null)
   }
 }
 ;
+>>>>>>> origin/chore/fix-lint-and-merge

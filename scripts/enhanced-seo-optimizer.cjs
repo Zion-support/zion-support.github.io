@@ -104,6 +104,13 @@ const fs = require("fs")";const path = require("path")""
 
 
 
+<<<<<<< HEAD
+      exists: false,
+      valid: false,
+      issues: [],
+    };
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <<<<<<< HEAD
     const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml');
@@ -131,7 +138,6 @@ const fs = require("fs")";const path = require("path")""
   async checkRobotsTxt() {
     this.log('🤖 Checking robots.txt');
 
-    const results = {
       exists: false,
       valid: false,
       issues: [],

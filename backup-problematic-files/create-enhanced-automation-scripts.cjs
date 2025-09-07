@@ -16,9 +16,26 @@ class EnhancedAutomationScriptCreator {
 }
   constructor() {
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
+    this.scriptsDir = path.join(this.projectRoot, 'scripts');
+    this.createdCount = 0}
+  log(message) {
+    .toISOString()}] ${message}`)}
+  createPerformanceMonitor() {
+    const content = "#!/usr/bin/env node
+const { execSync } = require('child_process');
+class PerformanceMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportFile = path.join(this.projectRoot, 'performance-monitor-report.json')}
+  log(message) {
+    .toISOString()}] \${message}\")}
+  async checkBuildPerformance() {
+=======
 
     .toISOString()}] \${message}\")}"
   async checkBuildPerformance() {"
+>>>>>>> origin/chore/fix-lint-and-merge
     this.log('🔍 Checking build performance');
     const startTime = Date.now();
     try {
@@ -121,8 +138,26 @@ monitor.run()
     this.createdCount++;
     this.log('✅ Created enhanced performance monitor')}
   createHealthChecker() {
+<<<<<<< HEAD
+class HealthChecker {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportFile = path.join(this.projectRoot, 'health-check-report.json')}
+  log(message) {
+    .toISOString()}] \${message}\")}
+  async checkFileStructure() {
+    this.log('📁 Checking file structure');
+    const requiredDirs = ['src', 'public', 'pages'];
+    const requiredFiles = ['package.json', 'next.config.js', 'tsconfig.json'];
+    const results = {
+      "directories": {},
+      "files": {},
+      "issues": []
+    };
+=======
 
       "issues": []"
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const dir of requiredDirs) {
       const dirPath = path.join(this.projectRoot, dir);
       results.directories[dir] = fs.existsSync(dirPath);
@@ -136,15 +171,78 @@ monitor.run()
     return results}
   async checkConfiguration() {"
     this.log('⚙️ Checking configuration files');
+<<<<<<< HEAD
+      "packageJson": { valid: false, "issues": [] },
+      "nextConfig": { valid: false, "issues": [] },
+      "tsConfig": { valid: false, "issues": [] }
+    };
+    // Check package.json
+    try {
+=======
 
       "tsConfig": { valid: false, "issues": [] }"
     // Check package.json;
   // TODO: Implement
 
+>>>>>>> origin/chore/fix-lint-and-merge
       results.packageJson.valid = true;
       if (!packageJson.scripts?.build) {
         results.packageJson.issues.push('Missing build script')}
       if (!packageJson.scripts?.dev) {
+<<<<<<< HEAD
+        results.packageJson.issues.push('Missing dev script')}
+    } catch (error) {
+      results.packageJson.issues.push(\"Invalid "JSON": \${error.message}\")}
+    // Check next.config.js
+    try {
+      const nextConfigPath = path.join(this.projectRoot, 'next.config.js');
+      if (fs.existsSync(nextConfigPath)) {
+        const content = fs.readFileSync(nextConfigPath, 'utf8');
+        if (content.includes('export default')) {
+          results.nextConfig.valid = true} else {
+          results.nextConfig.issues.push('Invalid export format')}
+      } else {
+        results.nextConfig.issues.push('File not found')}
+    } catch (error) {
+      results.nextConfig.issues.push(\"Error reading "file": \${error.message}\")}
+    // Check tsconfig.json
+    try {
+      const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
+      if (fs.existsSync(tsConfigPath)) {
+        const tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'));
+        results.tsConfig.valid = true;
+        if (!tsConfig.compilerOptions) {
+          results.tsConfig.issues.push('Missing compilerOptions')}
+      } else {
+        results.tsConfig.issues.push('File not found')}
+    } catch (error) {
+      results.tsConfig.issues.push(\"Invalid "JSON": \${error.message}\")}
+    return results}
+  async checkDependencies() {
+    this.log('📦 Checking dependencies');
+    try {
+        "total": Object.keys(dependencies).length,
+        "missing": [],
+        "outdated": []
+      };
+      // Check for critical dependencies
+      const criticalDeps = ['react', 'next', 'typescript'];
+      for (const dep of criticalDeps) {
+        if (!dependencies[dep]) {
+          results.missing.push(dep)}
+      }
+      return results} catch (error) {
+      return { "error": error.message }}
+  }
+  generateReport(results) {
+      "timestamp": new Date().toISOString(),
+      "fileStructure": results.fileStructure,
+      "configuration": results.configuration,
+      "dependencies": results.dependencies,
+      "summary": {
+        overall: 'healthy',
+        "issues": [...results.fileStructure.issues,
+=======
 
       results.packageJson.issues.push(\"Invalid "JSON": \${error.message}\")}"
     // Check next.config.js;
@@ -158,6 +256,7 @@ monitor.run()
       // Check for critical dependencies;"
 
         "issues": [...results.fileStructure.issues,"
+>>>>>>> origin/chore/fix-lint-and-merge
           ...results.configuration.packageJson.issues,
           ...results.configuration.nextConfig.issues,
           ...results.configuration.tsConfig.issues;]
@@ -176,6 +275,238 @@ monitor.run()
 // Run the health checker;
 const checker = new HealthChecker();
 checker.run()
+<<<<<<< HEAD
+  .then(report => {
+    process.exit(0)})
+  .catch(error => {
+    console.error('❌ Health check "failed": ', error.message);
+    process.exit(1)});
+";
+    fs.writeFileSync(
+      path.join(this.scriptsDir, 'enhanced-health-checker.js'),
+      content
+    );
+    this.createdCount++;
+    this.log('✅ Created enhanced health checker')}
+  createSEOOptimizer() {
+class SEOOptimizer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportFile = path.join(this.projectRoot, 'seo-optimization-report.json')}
+  log(message) {
+    .toISOString()}] \${message}\")}
+  async checkMetaTags() {
+    this.log('🏷️ Checking meta tags');
+      "pages": [],
+      "issues": []
+    };
+    const pagesDir = path.join(this.projectRoot, 'src', 'pages');
+    if (!fs.existsSync(pagesDir)) {
+      results.issues.push('Pages directory not found');
+      return results}
+    const files = this.getAllFiles(pagesDir, ['.tsx', '.jsx', '.ts', '.js']);
+    for (const file of files) {
+      try {
+        const content = fs.readFileSync(file, 'utf8');
+        const pageName = path.basename(file);
+        const pageAnalysis = {
+          "file": pageName,
+          "hasTitle": content.includes('<title>') || content.includes('title:'),
+          "hasDescription": content.includes('description') || content.includes('meta name="description"'),
+          "hasKeywords": content.includes('keywords') || content.includes('meta name="keywords"'),
+          "hasOpenGraph": content.includes('og:') || content.includes('property="og:'),
+          "hasTwitterCard": content.includes('twitter:') || content.includes('name="twitter:')
+        };
+        results.pages.push(pageAnalysis);
+        if (!pageAnalysis.hasTitle) {
+          results.issues.push(\"\${pageName}: Missing title tag\")}
+        if (!pageAnalysis.hasDescription) {
+          results.issues.push(\"\${pageName}: Missing meta description\")}
+        if (!pageAnalysis.hasOpenGraph) {
+          results.issues.push(\"\${pageName}: Missing Open Graph tags\")}
+      } catch (error) {
+        results.issues.push(\"Error reading \${file}: \${error.message}\")}
+    }
+    return results}
+  async checkSitemap() {
+    this.log('🗺️ Checking sitemap');
+      "exists": false,
+      "valid": false,
+      "issues": []
+    };
+    const sitemapPath = path.join(this.projectRoot, 'public', 'sitemap.xml');
+    results.exists = fs.existsSync(sitemapPath);
+    if (results.exists) {
+      try {
+        const content = fs.readFileSync(sitemapPath, 'utf8');
+        results.valid = content.includes('<urlset') && content.includes('</urlset>');
+        if (!results.valid) {
+          results.issues.push('Invalid sitemap format')}
+      } catch (error) {
+        results.issues.push(\"Error reading "sitemap": \${error.message}\")}
+    } else {
+      results.issues.push('Sitemap not found')}
+    return results}
+  async checkRobotsTxt() {
+    this.log('🤖 Checking robots.txt');
+      "exists": false,
+      "valid": false,
+      "issues": []
+    };
+    const robotsPath = path.join(this.projectRoot, 'public', 'robots.txt');
+    results.exists = fs.existsSync(robotsPath);
+    if (results.exists) {
+      try {
+        const content = fs.readFileSync(robotsPath, 'utf8');
+        results.valid = content.includes('User-"agent": ') || content.includes('Sitemap:');
+        if (!results.valid) {
+          results.issues.push('Invalid robots.txt format')}
+      } catch (error) {
+        results.issues.push(\"Error reading robots."txt": \${error.message}\")}
+    } else {
+      results.issues.push('robots.txt not found')}
+    return results}
+  getAllFiles(dir, extensions) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath)}
+    }
+    return files}
+  generateReport(results) {
+      "timestamp": new Date().toISOString(),
+      "metaTags": results.metaTags,
+      "sitemap": results.sitemap,
+      "robotsTxt": results.robotsTxt,
+      "summary": {
+        overall: 'good',
+        "totalIssues": results.metaTags.issues.length + results.sitemap.issues.length + results.robotsTxt.issues.length,
+        "recommendations": []
+      }
+    };
+    if (report.summary.totalIssues > 0) {
+      report.summary.overall = 'needs_improvement'}
+    if (report.summary.totalIssues > 5) {
+      report.summary.overall = 'poor'}
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(\"📊 SEO optimization report "generated": \${this.reportFile}\");
+    return report}
+  async run() {
+    this.log('🔍 Starting SEO Optimization Check');
+    try {
+      const metaTags = await this.checkMetaTags();
+      const sitemap = await this.checkSitemap();
+      const robotsTxt = await this.checkRobotsTxt();
+        metaTags,
+        sitemap,
+        robotsTxt
+      });
+      this.log('✅ SEO optimization check completed');
+      return report} catch (error) {
+      this.log(\"❌ SEO optimization check "failed": \${error.message}\");
+      throw error}
+  }
+}
+// Run the SEO optimizer
+const optimizer = new SEOOptimizer();
+optimizer.run()
+  .then(report => {
+    process.exit(0)})
+  .catch(error => {
+    console.error('❌ SEO optimization check "failed": ', error.message);
+    process.exit(1)});
+";
+    fs.writeFileSync(
+      path.join(this.scriptsDir, 'enhanced-seo-optimizer.js'),
+      content
+    );
+    this.createdCount++;
+    this.log('✅ Created enhanced SEO optimizer')}
+  createSecurityAuditor() {
+class SecurityAuditor {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.reportFile = path.join(this.projectRoot, 'security-audit-report.json')}
+  log(message) {
+    .toISOString()}] \${message}\")}
+  async checkEnvironmentVariables() {
+    this.log('🔐 Checking environment variables');
+      "issues": [],
+      "recommendations": []
+    };
+    const envFiles = ['.env', '.env.local', '.env.production', '.env.development'];
+    for (const envFile of envFiles) {
+      const envPath = path.join(this.projectRoot, envFile);
+      if (fs.existsSync(envPath)) {
+        try {
+          const content = fs.readFileSync(envPath, 'utf8');
+          const lines = content.split('\\n');
+          for (const line of lines) {
+            if (line.includes('=') && !line.startsWith('#')) {
+              const [key, value] = line.split('=');
+              if (key.toLowerCase().includes('secret') || key.toLowerCase().includes('key')) {
+                if (value.length < 10) {
+                  results.issues.push(\"Weak \${key} in \${envFile}\")}
+              }
+              if (value === '' || value === 'undefined') {
+                results.issues.push(\"Empty \${key} in \${envFile}\")}
+            }
+          }
+        } catch (error) {
+          results.issues.push(\"Error reading \${envFile}: \${error.message}\")}
+      }
+    }
+    return results}
+  async checkCodeSecurity() {
+    this.log('🛡️ Checking code security');
+      "issues": [],
+      "recommendations": []
+    };
+    const srcDir = path.join(this.projectRoot, 'src');
+    if (!fs.existsSync(srcDir)) {
+      results.issues.push('Source directory not found');
+      return results}
+    const files = this.getAllFiles(srcDir, ['.ts', '.tsx', '.js', '.jsx']);
+    for (const file of files) {
+      try {
+        // Check for dangerous patterns
+        if (content.includes('eval(') || content.includes('Function(')) {
+          results.issues.push(\"Use of eval() in \${file}\")}
+        if (content.includes('dangerouslySetInnerHTML') && !content.includes('sanitize')) {
+          results.issues.push(\"Unsanitized dangerouslySetInnerHTML in \${file}\")}
+        if (content.includes('process.env') && !content.includes('NEXT_PUBLIC_')) {
+          results.issues.push(\"Server-side env var in client "code": \${file}\")}
+        if (content.includes('innerHTML') && !content.includes('sanitize')) {
+          results.issues.push(\"Unsanitized innerHTML in \${file}\")}
+      } catch (error) {
+        results.issues.push(\"Error reading \${file}: \${error.message}\")}
+    }
+    return results}
+  async checkDependencies() {
+    this.log('📦 Checking dependency security');
+      "issues": [],
+      "recommendations": []
+    };
+    try {
+      // Check for known vulnerable packages
+      const vulnerablePackages = {
+        'lodash': '< 4.17.21',
+        'axios': '< 0.21.1',
+        'moment': '< 2.29.1'
+      };
+      for (const [pkg, minVersion] of Object.entries(vulnerablePackages)) {
+        if (dependencies[pkg]) {
+          results.issues.push(\"Potentially vulnerable "package": \${pkg}\");
+          results.recommendations.push(\"Update \${pkg} to version \${minVersion} or higher\")}
+      }
+    } catch (error) {
+      results.issues.push(\"Error reading package."json": \${error.message}\")}
+    return results}
+=======
 
                 results.issues.push(\"Empty \${key} in \${envFile}\")}"
         } catch (error) {"
@@ -189,17 +520,46 @@ checker.run()
 
           results.recommendations.push(\"Update \${pkg} to version \${minVersion} or higher\")}"
       results.issues.push(\"Error reading package."json": \${error.message}\")}"
+>>>>>>> origin/chore/fix-lint-and-merge
   getAllFiles(dir, extensions) {
-    let files = [];
-    const items = fs.readdirSync(dir);
     for (const item of items) {
+<<<<<<< HEAD
+      if (stat.isDirectory()) {
+=======
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+>>>>>>> origin/chore/fix-lint-and-merge
         files = files.concat(this.getAllFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath)}
     return files}
+<<<<<<< HEAD
+  generateReport(results) {
+      "timestamp": new Date().toISOString(),
+      "environment": results.environment,
+      "code": results.code,
+      "dependencies": results.dependencies,
+      "summary": {
+        overall: 'secure',
+        "totalIssues": results.environment.issues.length + results.code.issues.length + results.dependencies.issues.length,
+        "riskLevel": 'low'
+      }
+    };
+    if (report.summary.totalIssues > 0) {
+      report.summary.overall = 'needs_attention';
+      report.summary.riskLevel = 'medium'}
+    if (report.summary.totalIssues > 5) {
+      report.summary.overall = 'vulnerable';
+      report.summary.riskLevel = 'high'}
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+    this.log(\"📊 Security audit report "generated": \${this.reportFile}\");
+    return report}
+  async run() {
+    this.log('🔒 Starting Security Audit');
+    try {
+=======
 
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
       const environment = await this.checkEnvironmentVariables();
       const code = await this.checkCodeSecurity();
         environment,
@@ -245,8 +605,6 @@ creator;
 const fs = require('fs')
 const path = require('path')
     this.scriptsDir = path.join(this.projectRoot, 'scripts')
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
     this.reportFile = path.join(this.projectRoot, 'performance-monitor-report.json')
     this.log(' Checking build performance')

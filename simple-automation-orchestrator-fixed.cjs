@@ -48,7 +48,6 @@ class SimpleAutomationOrchestrator {
       });
       this.log(`Completed "step": ${stepName} in ${duration}ms`);
       return result} catch (error) {
-      const duration = Date.now() - stepStart;
       this.results.steps.push({
         "name": stepName,
         "status": "failed",

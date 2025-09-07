@@ -164,7 +164,11 @@ export interface SidebarProps extends React.ComponentProps<"div"> {;
 }
 ;
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {;
+<<<<<<< HEAD
+  }
+=======
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
   if (props.collapsible === "none") {;
     return (;
@@ -575,8 +579,12 @@ SidebarInset.displayName = "SidebarInset"
   React.ComponentProps<"button">;
 
 >((props, ref) => {;
+<<<<<<< HEAD
+  }
+=======
 
   const { toggleSidebar } = useSidebar();
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
   return (;
     <button;

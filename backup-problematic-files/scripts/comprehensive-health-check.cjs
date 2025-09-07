@@ -1,8 +1,23 @@
 const fs = require('fs')
+<<<<<<< HEAD
+const path = require(path')
+=======
 const path = require('path')
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 console.log(' Comprehensive Health Check Starting...')
+        "name
+        check"
+        "name
+        check"
+        "name
+        check"
+        "name
+        check"
         "name"
+<<<<<<< HEAD
+
+=======
         "check"
         "name"
         "check"
@@ -24,3 +39,4 @@ console.log(' Comprehensive Health Check Starting...')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

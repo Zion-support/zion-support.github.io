@@ -20,10 +20,16 @@ export function ITServicePricingTable() {
 import { useState, useMemo } from "react";
 import {}
   onsiteServicePricing,
+<<<<<<< HEAD
+  CountryPricing} from "@/data/onsiteServicePricing";"
+import { Input } from "@/components/ui/input";"
+  }
+=======
   CountryPricing,";
 } from "@/data/onsiteServicePricing";"
 import { Input } from "@/components/ui/input";
 import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   Table,
   TableBody,
   TableCell,
@@ -60,6 +66,20 @@ export function ITServicePricingTable() { return null; }
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
+<<<<<<< HEAD
+  return (    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;"
+      <div className="flex items-center mb-6">;"
+        <div className="relative flex-1">;"
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;"
+          <Input,
+placeholder="Search by country...""
+            value={searchQuery}
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";"
+import { Input } from "@/components/ui/input",;"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;"
+import { Globe, Search, ArrowUpDown } from "lucide-react",;"
+import { Button } from "@/components/ui/button",;"
+=======
       direction:
         sortConfig.key === key && sortConfig.direction === "ascending"
           ? "descending"
@@ -75,6 +95,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { Globe, Search, ArrowUpDown } from "lucide-react",;
 
 import { Button } from "@/components/ui/button",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 export function ITServicePricingTable() { return null; }
   }>({;"

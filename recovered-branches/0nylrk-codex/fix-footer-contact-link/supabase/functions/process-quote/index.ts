@@ -9,6 +9,27 @@ import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');'
 const supabaseUrl = Deno.env.get('SUPABASE_URL') |'';'
+<<<<<<< HEAD
+const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') |'';'
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}'
+import ""https": //deno.land/x/xhr@0.1.0/mod.ts","
+import {serve} from ""https": //deno.land/std@0.168.0/http/server.ts";"
+const supabaseUrl = Deno.env.get('SUPABASE_URL') || '';'
+import { serve } from ""https": //deno.land/std@0.168.0/http/server.ts","
+import { createClient } from ""https": //esm.sh/@supabase/supabase-js@2.7.1","
+const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),;'
+const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',;'
+const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',;'
+const supabase = createClient(supabaseUrl, supabaseServiceKey),;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},'
+interface QuoteDetails {
+  }
+  "description": string;
+  "email": string;
+  "budget": string;
+  "timeframe": string;import { serve } from ""https": //deno.land/std@0.168.0/http/server.ts";"
+import { createClient } from ""https": //esm.sh/@supabase/supabase-js@2.7.1",;"
+=======
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') |''
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
@@ -38,6 +59,7 @@ const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',;
 ;
 const supabase = createClient(supabaseUrl, supabaseServiceKey),;
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
 const corsHeaders = {;
   'Access-Control-Allow-Origin':'*Access-Control-Allow-Headers':'authorization, x-client-info, apikey, content-type'},;
 ;

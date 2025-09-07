@@ -60,7 +60,6 @@
 }, visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
 }
 ;
-  const itemVariants = { hidden: { opacity: 0, y: 20, scale: 0.9,}
 }, visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.5,' ease: 'easeOut' } },
 }';
   return (_jsxs('section', { className: 'relative py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark overflow-hidden', children[_jsxs('div', { className: 'absolute inset-0', children[_jsx('div', { className: 'absolute top-10 left-10 w-32 h-32 bg-zion-purple/5 rounded-full blur-3xl',}

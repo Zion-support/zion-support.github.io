@@ -1,4 +1,19 @@
 export function ApiGettingStarted() {
+<<<<<<< HEAD
+}
+const authExample = `curl -X GET \\;`  "https": //api.zionai.com/v1/jobs \\
+  -H ""Authorization": Bearer YOUR_API_KEY"`,;`const quickStartJs = `import axios from 'axios';export function ApiGettingStarted() {'
+}
+  -H ""Authorization": Bearer YOUR_API_KEY"``const quickStartJs = `import axios from 'axios';'
+  -H ""Authorization": Bearer YOUR_API_KEY"`,`  const quickStartJs = `import axios from 'axios',const quickStartJs = `import axios from 'axios';'const response = await axios.get ('"https"://api.zionai.com / v1 / jobs', {'
+  -H ""Authorization": Bearer YOUR_API_KEY"`,`}
+const quickStartJs = `import axios from 'axios',;'
+  -H ""Authorization": Bearer YOUR_API_KEY"`,`const quickStartJs = `import axios from 'axios',;'
+const response = await axios.get('"https"://api.zionai.com/v1/jobs', {'
+}
+const quickStartJs = `import axios from 'axios';'  -H ""Authorization": Bearer YOUR_API_KEY"`,`const quickStartJs = `import axios from 'axios',;'
+  -H ""Authorization": Bearer YOUR_API_KEY"`,`const quickStartJs = `import axios from 'axios',;'
+=======
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY"`,;
@@ -36,6 +51,7 @@ const response = await axios.get ('https://api.zionai.com / v1 / jobs', {
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
   -H "Authorization: Bearer YOUR_API_KEY"`
@@ -151,6 +167,11 @@ export default ApiGettingStarted;
 "
 import React from "react";"
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";"
+<<<<<<< HEAD
+import {CodeBlock} from "@/components/developers/CodeBlock";"
+import { CodeBlock } from "@/components/developers/CodeBlock",;"
+export function ApiGettingStarted() {;
+=======
 import {CodeBlock} from "@/components/developers/CodeBlock";
 "
 import React from "react",;"
@@ -159,6 +180,7 @@ import { CodeBlock } from "@/components/developers/CodeBlock",;
 
 export function ApiGettingStarted() { return null; }`
     Authorization: \`Bearer \${API_KEY}\`;
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 });
 `

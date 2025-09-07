@@ -81,7 +81,6 @@ class LinkIntegrityChecker {,"}),"})
         const scriptRegex = /<script[^>]+src=["']([^","}),"})
   ']+)["']/g,"}),"})
         while ((match = scriptRegex.exec(content)) !== null) {,"}),"})
-          const src = match[1],"}),"})
           if (!this.isValidAsset(src, file)) {,"}),"})
             this.issues.push(`Broken script reference in ${file}: ${src}`),"}),"})
           }"}),"})
@@ -115,13 +114,11 @@ class LinkIntegrityChecker {,"}),"})
 ,"}),"})
 
         this.checkedFiles++,"}),"})
-        const content = fs.readFileSync(file,utf8'),"}),"})
 ,"}),"})
         // Check for broken image references in CSS,"}),"})
         const urlRegex = /url\([,"}),"})
   '"]?([^'")\s]+)[,"}),"})
   '"]?\)/g,"}),"})
-        let match,"}),"})
 ,"}),"})
         while ((match = urlRegex.exec(content)) !== null) {,"}),"})
           const url = match[1],"}),"})
@@ -150,13 +147,11 @@ class LinkIntegrityChecker {,"}),"})
 ,"}),"})
 
         this.checkedFiles++,"}),"})
-        const content = fs.readFileSync(file,utf8'),"}),"})
 ,"}),"})
         // Check for broken import statements,"}),"})
         const importRegex = /import\s+.*?from\s+[,"}),"})
   '"]([^'"]+)[,"}),"})
   '"]/g,"}),"})
-        let match,"}),"})
 ,"}),"})
         while ((match = importRegex.exec(content)) !== null) {,"}),"})
           const importPath = match[1],"}),"})
@@ -219,7 +214,6 @@ class LinkIntegrityChecker {,"}),"})
         const assetRegex = /(src|href)=[","}),"})
   ']([^"']+)[","}),"})
   ']/g,"}),"})
-        let match,"}),"})
 ,"}),"})
         while ((match = assetRegex.exec(content)) !== null) {,"}),"})
           const assetPath = match[2],"}),"})
@@ -287,7 +281,6 @@ class LinkIntegrityChecker {,"}),"})
     if (importPath.startsWith('./,"}),"})
   ') || importPath.startsWith('../,"}),"})
   ')) {,"}),"})
-      const sourceDir = path.dirname(sourceFile),"}),"})
       const fullPath = path.resolve(sourceDir, importPath),"}),"})
 ,"}),"})
       // Check for .js, .ts, .tsx, .jsx extensions,"}),"})
@@ -309,7 +302,6 @@ class LinkIntegrityChecker {,"}),"})
   ',.tsx',.jsx,"}),"})
   '],"}),"})
       return extensions.some(ext => {,"}),"})
-        const testPath = ext ? `${fullPath}${ext}` : fullPath,"}),"})
         return fs.existsSync(testPath),"}),"})
       }),"}),"})
     }"}),"})
@@ -482,11 +474,15 @@ class LinkIntegrityChecker {;
     try {"
 
       for (const file of cssFiles) {;
+<<<<<<< HEAD
+        this.checkedFiles++;
+        // Check for broken image references in CSS;
+=======
         this.checkedFiles++;'
         const content = fs.readFileSync(file,utf8');
         // Check for broken image references in CSS;'
+>>>>>>> origin/chore/fix-lint-and-merge
         const urlRegex = /url\([']?([^')\s]+)[']?\)/g;
-        let match;
         while ((match = urlRegex.exec(content)) !== null) {;
           const url = match[1];
 
@@ -496,6 +492,50 @@ class LinkIntegrityChecker {;
       console.warn(,"
   ⚠️  Could not check CSS "integrity": error.message)}
   }
+<<<<<<< HEAD
+  async checkJsIntegrity() {
+    try {"
+      console.log('⚡ Checking JavaScript integrity...';);
+      const jsFiles = this.findFiles('.js';);
+      const tsFiles = this.findFiles('.ts';);
+      const allFiles = [...jsFiles, ...tsFiles];
+      for (const file of allFiles) {;
+        this.checkedFiles++;
+        // Check for broken import statements;
+        const importRegex = /import\s+.*?from\s+[']([^']+)[']/g;
+        while ((match = importRegex.exec(content)) !== null) {;
+          const importPath = match[1];
+          if (!this.isValidImport(importPath, file)) {'
+            this.issues.push(`Broken import in ${file}: ${importPath}`)}
+        }
+        // Check for broken require statements;"
+        const requireRegex = /require\s*\(\s*['']([^';']+)['']\s*\)/g;
+        while ((match = requireRegex.exec(content)) !== null) {
+          const requirePath = match[1];
+          if (!this.isValidImport(requirePath, file)) {'
+            this.issues.push("Broken require in ${file}: ${requirePath}")}
+        }
+      }
+    } catch (error) {
+      console.warn(,"
+  ⚠️  Could not check HTML "integrity": error.message)}
+
+  async checkCssIntegrity() {"
+    try {"
+  for($2) {
+        this.checkedFiles++;'
+        const content = fs.readFileSync(file,utf8')
+        // Check for broken image references in CSS;'
+        const urlRegex = /url\([']?([^')\s]+)[']?\)/g
+        let match
+        while ((match = urlRegex.exec(content)) !== null) {
+          const url = match[1]
+    } catch (error) {
+      console.warn(,"
+  ⚠️  Could not check CSS "integrity": error.message)}
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   async checkJsIntegrity() {"
     try {"'
       console.log('⚡ Checking JavaScript integrity...';);'

@@ -3,9 +3,15 @@ import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+import React from 'react;
+import Link from next/link';';
+=======
 import Link from 'next/link';';
+>>>>>>> origin/chore/fix-lint-and-merge
 
-import { motion } from 'framer-motion';
+import { motion } from framer-motion;
 import { Cloud,
   Shield,
   Zap,
@@ -21,12 +27,22 @@ import { Cloud,
   Brain;
 
 } from 'lucide-react';
-import Layout from "../../components/Layout";";
+import Layout from "../../components/Layout;;
 
       'Risk assessment'';
     ];
   },
   {}
+<<<<<<< HEAD
+    title: Assessment & Planning,,
+    description: 'Comprehensive analysis of current infrastructure and migration strategy development.,',
+    icon: BarChart3,
+    steps: [;
+      Infrastructure audit,,
+      'Workload analysis',,
+      Migration strategy',',
+    title: AWS Migration,,
+=======
 
     title: 'Design & Architecture,',
     description: 'Cloud-native architecture design and security framework implementation.,',
@@ -72,65 +88,85 @@ import Layout from "../../components/Layout";";
 ;];
 
     title: 'AWS Migration,',
+>>>>>>> origin/chore/fix-lint-and-merge
     description: 'Complete migration to Amazon Web Services with best practices and optimization.,',
     icon: Cloud,
     features: [;
-      'EC2 instance migration,',
-      'RDS database migration',',
-      'S3 storage migration',',
+      EC2 instance migration,,
+      'RDS database migration',,
+      S3 storage migration',',
 
-      'Lambda serverless functions'';
-
-    ];
-  },
+      Lambda serverless functions';
 
     ];
+  }];
   },
   {}
 
-    title: 'Azure Migration,',
-    description: 'Microsoft Azure cloud migration with enterprise-grade security and compliance.,',
+    title: 'Azure Migration,,
+    description: Microsoft Azure cloud migration with enterprise-grade security and compliance.,',
     icon: Shield,
     features: [;
-      'Azure Virtual Machines,',
-      'Azure SQL Database',',
-      'Azure Storage migration',',
+      'Azure Virtual Machines,,
+      Azure SQL Database',',
+      Azure Storage migration,',
 
-      'Azure Functions deployment'';
+      'Azure Functions deployment;
     ];
   },
   {}
 
     title: 'Google Cloud Migration,',
-    description: 'Google Cloud Platform migration with advanced AI and analytics capabilities.,',
+    description: Google Cloud Platform migration with advanced AI and analytics capabilities.,,
     icon: Brain,
     features: [;
       'Compute Engine migration,',
-      'Cloud SQL migration',',
-      'Cloud Storage migration',',
+      Cloud SQL migration,',
+      'Cloud Storage migration,,
 
-      'Cloud Functions deployment'';
-
-    ];
-  },
+      'Cloud Functions deployment';
 
     ];
+  }];
   },
   {}
 
-    title: 'Multi-Cloud Strategy,',
-    description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,',
+    title: Multi-Cloud Strategy,',
+    description: 'Hybrid and multi-cloud solutions for maximum flexibility and redundancy.,,
     icon: Globe,
     features: [;
-      'Cross-cloud integration,',
-      'Disaster recovery',',
-      'Load balancing',',
+      Cross-cloud integration,',
+      'Disaster recovery,,
+      'Load balancing',,
 
-      'Cost optimization'';
+      Cost optimization'';
     ];
-  }
-;];
+  }];
 
+<<<<<<< HEAD
+const benefits = [;
+  {}
+    title: Cost Reduction,,
+    description: 'Reduce infrastructure costs by up to 40% with cloud optimization.,',
+    icon: BarChart3;
+  },
+  {}
+    title: Enhanced Security,,
+    description: 'Enterprise-grade security with automated updates and monitoring.,',
+    icon: Shield;
+  },
+  {}
+    title: Improved Scalability,,
+    description: 'Scale resources up or down based on demand automatically.,',
+    icon: Zap;
+  },
+  {}
+    title: Better Performance,,
+    description: 'Faster load times and improved application performance.,',
+    icon: Smartphone;
+  }];
+}
+=======
 export default function CloudMigrationPage() {
 
   return (;
@@ -214,11 +250,12 @@ export default function CloudMigrationPage() {
                   </div>;"
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{phase.title}</h3>""
                   <p className="text-gray-600 mb-6 leading-relaxed">{phase.description}</p>"
+>>>>>>> origin/chore/fix-lint-and-merge
 
-                  <ul className="space-y-2 text-left">";
-                    {phase.steps.map((step, stepIndex) => (,"
-                      <li key={stepIndex} className="flex items-center text-sm text-gray-600">""
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
+                  <ul className="space-y-2 text-left">;
+                    {phase.steps.map((step, stepIndex) => (,
+                      <li key={stepIndex} className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
                         {step}
                       </li>,
                     ))}
@@ -230,25 +267,25 @@ export default function CloudMigrationPage() {
         </section>;
 
         {/* Services Section */}
-        <section className="py-20 bg-gray-50">"
+        <section className=py-20 bg-gray-50">"
 
-          <div className="container mx-auto px-4">";
+          <div className=container mx-auto px-4>";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
-              className="text-center mb-16""
+              className="text-center mb-16
             >;"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6>;
                 Cloud Migration Services;
 
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
                 Choose from leading cloud providers or implement a multi-cloud strategy;
                 for maximum flexibility and redundancy.;
               </p>;
             </motion.div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
+            <div className=grid grid-cols-1 md:grid-cols-2 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
                   key={service.title}
@@ -257,22 +294,31 @@ export default function CloudMigrationPage() {
 
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8""
+                  className=bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8"
                 >;"
-                  <div className="flex items-center mb-6">";"
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">";"
-                      <service.icon className="w-6 h-6 text-white" />";
+                  <div className=flex items-center mb-6>";"
+                    <div className=w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4>";"
+                      <service.icon className=w-6 h-6 text-white />";
                     </div>;"
-                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>"
+                    <h3 className=text-2xl font-bold text-gray-900>{service.title}</h3>"
                   </div>;
+<<<<<<< HEAD
+                  
+                  <p className="text-gray-600 mb-6 leading-relaxed>{service.description}</p>
+                  
+                  <div>;
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>;
+                    <ul className=space-y-2">";
+=======
                   "
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
                   
                   <div>;"
                     <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>";"
                     <ul className="space-y-2">";
+>>>>>>> origin/chore/fix-lint-and-merge
 
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />";
+                          <CheckCircle className=w-4 h-4 text-green-500 mr-2 flex-shrink-0 />";
                           {feature}
                         </li>,
                       ))}
@@ -285,38 +331,38 @@ export default function CloudMigrationPage() {
         </section>;
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white">"
+        <section className="py-20 bg-white>
 
-          <div className="container mx-auto px-4">";
+          <div className="container mx-auto px-4">;
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
-              className="text-center mb-16""
-            >;"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+              className=text-center mb-16""
+            >;
+              <h2 className=text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Why Choose Our Cloud Migration?;
 
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p className=text-xl text-gray-600 max-w-3xl mx-auto>";
                 Our cloud migration services deliver measurable improvements in cost,
                 performance, and security.,
               </p>;
             </motion.div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>;
               {benefits.map((benefit, index) => (,
                 <motion.div}),
                   key={benefit.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}"
-                  className="text-center""
+                  className="text-center
                 >;"
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6">";"
-                    <benefit.icon className="w-8 h-8 text-white" />";
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6>;"
+                    <benefit.icon className="w-8 h-8 text-white />;
                   </div>;"
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>""
-                  <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
+                  <h3 className="text-xl font-bold text-gray-900 mb-4>{benefit.title}</h3>"
+                  <p className="text-gray-600 leading-relaxed>{benefit.description}</p>
                 </motion.div>;
               ))}
             </div>,
@@ -324,9 +370,9 @@ export default function CloudMigrationPage() {
         </section>;
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">"
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
 
-          <div className="container mx-auto px-4 text-center">";
+          <div className=container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -338,6 +384,9 @@ export default function CloudMigrationPage() {
               </p>;
 
             >
+<<<<<<< HEAD
+              <h2 className=text-4xl md:text-5xl font-bold mb-6>
+=======
 
                 </Link>;
               </div>;
@@ -347,16 +396,17 @@ export default function CloudMigrationPage() {
       </div>;
 
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
+>>>>>>> origin/chore/fix-lint-and-merge
                 Ready to Move to the Cloud?
               </h2>"
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto>
 
                 with minimal downtime and maximum security.
-              </p>"
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href=/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold>
                   Start Your Cloud Migration;
-                </Link>"
+                </Link>
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">
                   Learn About Our Expertise;
                 </Link>

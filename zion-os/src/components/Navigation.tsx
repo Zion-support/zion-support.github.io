@@ -7,6 +7,8 @@ export function Navigation() {;
 
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+<<<<<<< HEAD
+=======
   return (;
 
 "use client",
@@ -38,8 +40,8 @@ export function Navigation() {;
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
   return (;  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   return (;
 
   const [isServicesOpen, setIsServicesOpen] = useState(false);

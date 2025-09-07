@@ -1,4 +1,40 @@
+<<<<<<< HEAD
+import {;
+  LineChart,;
+  BarChart,;
+  DonutChart,;
+</div> <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" /> </div> <div className="grid grid-cols-2 gap-3 mt-3" > <div> <option>Junior</option> <option>Mid</option> <option>Senior</option> <option>Lead</option> </select> </div> <div> </select> </div> </div> Advanced filters are available when you sign in. </div>) 
+}</div> </div> </div>) : (<div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />) 
+}<thead> <tr className="text-left text-xs text-gray-500" > <th className="py-1" >Region</th> <th className="py-1" >Median (USD/hr) </th> </tr> </thead> <tbody> </tr>) ) 
+}</tbody> </table>) 
+}</div>) ) 
+}</div> </div>) : (<div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />) 
+}</div> </div>) ) 
+}</div> </div>) 
+}</div> </div> </div>) 
+}
+} from '../components/salary/InsightCharts';
+type InsightResponse = {;
+  }
+  "recommendedHourlyUsd": number;
 
+  "recommendedMonthlyUsd": number;
+  "medianHourlyUsd": number;
+  "minHourlyUsd": number;
+  "maxHourlyUsd": number;
+
+  "confidence": number;
+
+  "trendMonthly": { "label": string; "value": number
+}[];
+  "regionalComparison": { "region": string; "medianHourlyUsd": number
+}[];
+  "tags": string[];
+  gptRecommendation?: string
+};
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
@@ -30,6 +66,8 @@ type InsightResponse = {;
 
 
 export default function SalaryInsightsPage() {
+<<<<<<< HEAD
+=======
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
 
 const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
@@ -53,6 +91,7 @@ const [data, setData] = useState<InsightResponse | null    />(null);
 const [error, setError] = useState<string | null>(null);
 
 const [isLoggedIn, setIsLoggedIn] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
 
   useEffect(() => {
 
@@ -72,6 +111,16 @@ setIsLoggedIn(!!user.data.user);
     setLoading(true);
     setError(null);
     try {
+<<<<<<< HEAD
+
+          region,
+experienceLevel
+          remote,
+
+    } finally {
+      }
+      setLoading(false);
+=======
       const res = await fetch('/api/salary-insights', {
         method: 'POST',}
   headers: { 'Content-Type': 'application/json',}
@@ -97,6 +146,7 @@ const json = (await res && res.json()) as InsightResponse;
       setError(e.message |'Unexpected error');}
     } finally {}
       setLoading(false);}
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
 
@@ -122,6 +172,19 @@ const payload = {
         skills,
         region,
         experienceLevel,
+<<<<<<< HEAD
+        remote,
+
+    fetchInsights($2);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []),
+
+    const payload = { createdAt: new Date().toISOString(), input: { roleTitle, skills, region, experienceLevel, remote, employmentType }, output: data},
+    (async () => {
+      }
+      try {
+        }
+=======
         remote,}
         employmentType,}
       },
@@ -129,9 +192,23 @@ const payload = {
     (async () => {}
       try {}
         const { supabase } = await import('../utils/supabase/client');
+>>>>>>> origin/chore/fix-lint-and-merge
 
-const user = await supabase.auth.getUser();
         if (user.data.user) {
+<<<<<<< HEAD
+          // Attempt to save to Supabase if table exists
+
+          return;
+        }
+          await supabase.from(salary_insights').insert($2);
+          alert($2);
+          return
+        }
+      } catch {
+        // fall back
+      }
+
+=======
           // Attempt to save to Supabase if table exists;
 await supabase.from('salary_insights').insert({
 
@@ -152,6 +229,7 @@ const history = JSON.parse(localStorage.getItem(key) |'[]');
         history.unshift(payload);
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));}
 alert('Insight saved locally');}
+>>>>>>> origin/chore/fix-lint-and-merge
       } catch {}
     })();
   }
@@ -160,8 +238,38 @@ alert('Insight saved locally');}
     })();
   }
 
-const donutData = useMemo(() => {
 
+<<<<<<< HEAD
+                <select;
+                  value={experienceLevel}
+                  onChange={e => setExperienceLevel(e.target.value as any)}
+    const lower = Math.max (0, median - min);
+    const upper = Math.max (0, max - median);
+    return [;
+      { label: Below Median', value: lower || 1 },
+      { label: 'Median, value: median || 1 },
+      { label: Above Median', value: upper || 1 }];  }, [data]);
+  return (
+    <div>      { label: 'Above Median, value: upper || 1 }];
+  }, [data]);
+  return (
+        <div className=absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
+      </div>
+        const key = $2;
+        const history = $2;
+        history.unshift($2);
+        localStorage.setItem(key, JSON.stringify(history.slice(0, 50))),
+        alert(Insight saved locally')
+      } catch {}
+    })()
+  }
+
+
+                  <option>Junior</option>
+                  <option>Mid</option>
+                  <option>Senior</option>
+                  <option>Lead</option>
+=======
     if (!data);}
   return [] as { label: string; value: number,}
 }[];
@@ -238,10 +346,13 @@ value={roleTitle}
                   <option    />Mid</option>
                   <option    />Senior</option>
                   <option    />Lead</option>
+>>>>>>> origin/chore/fix-lint-and-merge
                 </select>
               </div>
               <div    />
 
+<<<<<<< HEAD
+=======
 <label className='block text-sm mb-2'    />Employment</label>
                 <select;
 value={employmentType}
@@ -251,10 +362,13 @@ value={employmentType}
                   <option value='contract'    />Contract</option>
                   <option value='freelance'    />Freelance</option>
                   <option value='full-time'    />Full-time</option>
+>>>>>>> origin/chore/fix-lint-and-merge
                 </select>
               </div>
             </div>
 
+<<<<<<< HEAD
+=======
 <div className='flex items-center gap-2 mt-3'    />
               <input;
 id='remote'
@@ -295,10 +409,17 @@ onClick={saveInsigh,}
               <button;
                 onClick={() =    /> alert('This would prefill a job posting flow.')}
                 className='rounded bg-emerald-600 text-white py-2 text-sm hover:bg-emerald-700'>
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 Use in Job Post;
               </button>;
               <button;
+<<<<<<< HEAD
+                onClick={() =>;
+            )}
+
+
+=======
                 onClick={() =    />;
 }
                   alert('This would suggest a resume rate optimization.');}
@@ -308,10 +429,62 @@ onClick={saveInsigh,}
               >
                 Optimize Resume Rate;
               </button>
+>>>>>>> origin/chore/fix-lint-and-merge
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
+
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4>
+            <div className=rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <div className="text-xs text-gray-500>Recommended Hourly</div>
+              <div className=text-xl font-semibold">{data ? `$${data.recommendedHourlyUsd}` : —'}</div>
+            </div>
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4>
+              <div className=text-xs text-gray-500">Recommended Monthly</div>
+              <div className="text-xl font-semibold>{data ? `$${data.recommendedMonthlyUsd}` : '—}</div>
+            </div>
+            <div className=rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <div className="text-xs text-gray-500>Median</div>
+              <div className=text-xl font-semibold">{data ? `$${data.medianHourlyUsd}` : —'}</div>
+            </div>
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4>
+              <div className=text-xs text-gray-500">Confidence</div>
+              <div className="text-xl font-semibold>{data ? `${Math.round(data.confidence * 100)}%` : '—}</div>
+            </div>
+          </div>
+
+          <div className=rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+            <h3 className="font-medium mb-3>Trend: Last 12 months</h3>
+            {data ? <LineChart points={data.trendMonthly} /> : <div className=h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4>
+            <div className=rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-3>Regional comparison</h3>
+              {data ? (
+                <BarChart data={data.regionalComparison.map((r) => ({ label: r.region, value: r.medianHourlyUsd }))} />
+              ) : (
+                <div className=h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
+              )}
+              {data && (
+
+                        {d.label}
+              ) : (;
+                <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded />;
+            </div>
+
+            <div className=rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-3>Distribution</h3>
+              {data ? (
+                <div className=flex flex-col items-center gap-3">
+                  <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />
+                  <div className="flex gap-2 flex-wrap justify-center text-xs>
+                    {donutData.map((d) => (
+                      <span key={d.label} className=rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>
+=======
 <div className='lg:col-span-2 space-y-6'    />
           {error && (
             <div className='rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm'    />
@@ -425,22 +598,51 @@ key={d.label}
                         {d.label}
 
                       </span>
+>>>>>>> origin/chore/fix-lint-and-merge
                     ))}
                   </div>
                 </div>
               ) : (
 
+<<<<<<< HEAD
+
+              )}
+                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded />
+=======
 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded'    />
+>>>>>>> origin/chore/fix-lint-and-merge
               )}
             </div>
           </div>
           {data?.gptRecommendation && (
+<<<<<<< HEAD
+
+              </p>            </div>
+          )}
+          {data && (            <div className=rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              )}
+
+            </div>
+          </div>
+          {data?.gptRecommendation && (
+<div className='rounded-lg border border-gray-200 "dark":border-gray-800 p-4'>'
+              <h3 className='font-medium mb-2'>GPT Recommendation</h3>'
+              <p className='text-sm text-gray-700 "dark":text-gray-300 whitespace-pre-wrap'>'
+                {data.gptRecommendation}
+
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4>
+
+              )}
+              <h3 className=font-medium mb-2">GPT Recommendation</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap>{data.gptRecommendation}</p>
+=======
 <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'    />
               <h3 className='font-medium mb-2'    />GPT Recommendation</h3>}
               <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'    />}
                 {data.gptRecommendation}
 
               </p>
+>>>>>>> origin/chore/fix-lint-and-merge
             </div>
           )}
           {data && (
@@ -451,6 +653,104 @@ key={d.label}
                   Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr;
                 </span>
                 {data.tags.map(t => (
+<<<<<<< HEAD
+                  <span
+
+                    {t}
+                      </span>;
+                    ))}
+                  </div>;
+                </div>;
+              ) : (<div className=h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
+              )}</div>;
+          </div>;
+          {data?.gptRecommendation && (<div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4>;
+              <h3 className=font-medium mb-2'>GPT Recommendation</h3>;
+              <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap>;
+                {data.gptRecommendation}</p>            </div>;
+          )}
+          {data && (            <div className=rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
+              )}</div>;
+          </div>;
+          {data?.gptRecommendation && (<div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4>;
+              )}
+              <h3 className=font-medium mb-2">GPT Recommendation</h3>;
+              <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap>{data.gptRecommendation}</p>;
+            </div>;
+          )}
+          {data && (</p>;
+            </div>;
+          )}
+          {data && (<div className=rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
+              <h3 className='font-medium mb-3>Signals</h3>;
+              <div className=flex gap-2 flex-wrap'>;
+                <span className='rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs>;
+                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr;
+                </span>;
+                {data.tags.map(t => (<span;
+                    key={t}
+                    className=rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs'>;
+                    {t}</span>                ))}            <div className=rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
+                  </span>                ))}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4>;
+              <h3 className=font-medium mb-3">Signals</h3>;
+              <div className="flex gap-2 flex-wrap>;
+                <span className=rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data && data.minHourlyUsd} - ${data && data.maxHourlyUsd} / hr</span>;
+                {data && data.tags.map((t) => (<span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs>{t}</span>;
+              </div>;
+            </div>;
+          )}
+  )}
+                      donut_data.map ((d, i) => ({label: d.label,value: d.value})) as any;
+                    }
+                  />;
+                  <div className='flex gap - 2 flex - wrap justify - center text - xs>;
+                    {donut_data.map (d => (<span;
+                        key={d.label}
+                        className=rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5';
+                      >;
+                        {d.label}
+                      </span>                    ))}
+                  </div>;
+                </div>) : (<div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded />              )}                <div className=flex flex - col items-center gap-3">;
+                  <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;
+                  <div className="flex gap - 2 flex - wrap justify-center text-xs>;
+                    {donut_data.map ((d) => (<span key={d.label} className=rounded - full border border - gray - 300 dark:border - gray - 700 px-2 py-0.5">{d.label}</span>;
+                  </div>;
+                </div>) : (<div className=h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg-gray-900 rounded />)}
+            </div>;
+          </div>;
+          {data?.gpt_recommendation && (<div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4>;
+              <h3 className=font - medium mb - 2'>GPT Recommendation</h3>;
+              <p className='text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap>;
+                {data.gpt_recommendation}
+              </p>            </div>)}
+          {data && (            <div className=rounded - lg border border - gray - 200 dark:border - gray-800 p-4">;
+              <h3 className="font-medium mb-2>GPT Recommendation</h3>;
+              <p className=text - sm text - gray - 700 dark:text - gray - 300 whitespace-pre-wrap">{data.gpt_recommendation}</p>;
+            </div>)}
+          {data && (</div>;
+          )}<div className=rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
+              <h3 className='font - medium mb - 3>Signals</h3>;
+              <div className=flex gap - 2 flex - wrap'>;
+                <span className='rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py - 1 text - xs>;
+                  Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr;
+                </span>;
+                {data.tags.map (t => (<span;
+                    key={t}
+                    className=rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py - 1 text - xs';
+                  >;
+                    {t}
+                  </span>                ))}            <div className="rounded - lg border border - gray - 200 dark:border - gray-800 p-4>;
+              <h3 className=font-medium mb-3">Signals</h3>;
+              <div className="flex gap-2 flex-wrap>;
+                <span className=rounded - full bg - gray - 100 dark:bg - gray - 900 border border - gray - 200 dark:border - gray - 800 px - 3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>;
+                {data.tags.map ((t) => (<span key={t} className="rounded - full bg - indigo - 50 dark:bg - indigo - 900 / 30 text - indigo - 700 dark:text - indigo - 300 border border - indigo - 200 dark:border - indigo - 800 px - 3 py-1 text-xs>{t}</span>;
+              </div>;
+            </div>)}
+        </div>;
+      </div>;
+    </div>)</span>;
+=======
                   <span;}
 key={,}
 }
@@ -459,14 +759,44 @@ key={,}
 
                   </span>
 
+>>>>>>> origin/chore/fix-lint-and-merge
                 ))}
               </div>;
             </div>;
           )}
+<<<<<<< HEAD
+    </div>);
+}
+        </div>;
+      </div>;
+    </div>;
+  )}
+            <div className=rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-2>GPT Recommendation</h3>
+              <p className=text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
+            </div>
+          )}
 
+          {data && (
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4>
+              <h3 className=font-medium mb-3">Signals</h3>
+              <div className="flex gap-2 flex-wrap>
+                <span className=rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>
+                {data.tags.map((t) => (
+                  <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>
+                ))}
+              </div>
+            </div>
+          )}
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
         </div>
       </div>
     </div>
   );
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge

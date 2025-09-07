@@ -414,7 +414,18 @@ export function IntegrationsHub() {"
         </div>
       </Tabs>
     </div>
+<<<<<<< HEAD
+  )
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { IntegrationCards } from "./IntegrationCards",;"
+import { ZapierIntegration } from "./ZapierIntegration",;"
+import { Badge } from "@/components/ui/badge",;"
+import { WebhookManager } from "./WebhookManager",;"
+import { IntegrationsSyncLog } from "./IntegrationsSyncLog",;"
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace");
   return (

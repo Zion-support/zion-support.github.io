@@ -134,6 +134,11 @@ export /**;
             render={({ field }) => (
               <FormItem>;
                 <FormLabel > Institution</FormLabel>;
+<<<<<<< HEAD
+import { useForm } from 'react-hook-form',;'
+import { zodResolver } from '@hookform/resolvers/zod',;'
+  }
+=======
 
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -147,15 +152,19 @@ import { Checkbox } from '@/components/ui/checkbox',;
 
 import { Alert, AlertDescription } from '@/components/ui/alert',;
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormLabel,;'
   FormMessage} from '@/components/ui/form',;'
+<<<<<<< HEAD
+=======
 import { useState } from 'react',;'
 import { EducationFormFieldsProps } from './types',;'
 import { Education } from '@/types/resume',;
+>>>>>>> origin/chore/fix-lint-and-merge
 // Define schema for form validation;
 const educationSchema = z.object({;'
   institution:z.string().min(1, 'Institution is required'),;'
@@ -172,7 +181,24 @@ type EducationFormValues = z.infer<typeof educationSchema>,;
 
       location:''}}),;
 ;
+<<<<<<< HEAD
+    }
+    "resolver":zodResolver(educationSchema),;
+    "defaultValues":{;
+      }
+      "institution":'',;'
+      "degree":'',;'
+      "field_of_study":'',;'
+      "start_date":format(new Date(), 'yyyy-MM-dd'),;'
+      "is_current":false,,
+  "description":'',;'
+      "location":''}}),;'
+;
+  const handleSubmit = async ("data":EducationFormValues) => {;
+    }
+=======
   const handleSubmit = async (data:EducationFormValues) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     setIsLoading(true),;
     setError(null),;
     try {;

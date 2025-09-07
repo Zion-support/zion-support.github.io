@@ -11,7 +11,6 @@ const navItems = ['; {';\"\" name: \"Home\", \"';\" href: \"/\", ';\" icon: Home
 }']';
 ';'' import { Link, useLocation    } from 'react-router-dom'';'' import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart    } from 'lucide-react'';'' import { useCart } from '@/context/CartContext'';'' import { cn } from '@/lib/utils'';'' import { useAuth } from '@/hooks/useAuth'';'' import { useFavorites } from '@/hooks/useFavorites' export function MobileBottomNav({ unreadCount = 0 }) { const location = useLocation() const { user } = useAuth() const isAuthenticated = !!user const { count: favoritesCount } = useFavorites() const { items,}
 } = useCart()';
-  const cartCount = items.reduce((sum, i) => sum + i.quantity, 0)';
 
 const navItems = ['; {';'' name: 'Home', '';' href: '/', ';' icon: Home, '';' matches: (path) => path === '/',}
 }, '; {';'' name: 'Browse', '';' href: '/talent', ';' icon: Search, '';' matches: (path) => path.startsWith('/talent') || path.startsWith('/categories') || path.startsWith('/marketplace'),}

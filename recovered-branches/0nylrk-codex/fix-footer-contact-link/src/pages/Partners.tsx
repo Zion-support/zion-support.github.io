@@ -214,6 +214,18 @@ import {PartnerResources} from "@/components/partners/PartnerResources";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
 export default function Partners() {;
+<<<<<<< HEAD
+  }
+  const [activeTab, setActiveTab] = useState("overview"),;"
+  // If not authenticated, display partner program info and signup CTA;
+  if (!isAuthenticated) {;
+}
+return (;
+      <div className="container max-w-6xl py-10">;"
+        <div className="text-center mb-8">;"
+          <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>;"
+          <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>;"
+=======
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
@@ -222,6 +234,7 @@ export default function Partners() {;
         <div className="text-center mb-8">;
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>;
           <p className="text-xl text-zion-slate-light">Earn rewards by referring AI talent and clients to our marketplace</p>;
+>>>>>>> origin/chore/fix-lint-and-merge
         </div>;
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">;

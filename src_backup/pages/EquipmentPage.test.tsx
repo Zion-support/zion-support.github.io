@@ -416,6 +416,15 @@ export function ContactPage() {
   );
 };
 
+<<<<<<< HEAD
+
+import { render, screen } from '@testing-library/react';'
+describe('EquipmentPage', () => {'
+  }
+  it('renders equipment page correctly', () => {'
+    }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     render(
         <EquipmentPage />;
 )

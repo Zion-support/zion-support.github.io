@@ -7,6 +7,15 @@ const WebDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name = "description" content="WebDevelopmentChat blog post" />{" "}"
+;
+  return (<div>;
+      <Head></Head>;<meta name="description" content="WebDevelopmentChat blog post" />;"
+=======
 const WebDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -16,6 +25,7 @@ const WebDevelopmentChat: NextPage = () => ;
   const WebDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head /></Head>;<meta name=\"description\" content=\"WebDevelopmentChat blog post\" />;
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       </Head>;<meta name=\"description\" content=\"WebDevelopmentChat blog post\" />;
       </Head>;
@@ -36,11 +46,17 @@ const WebDevelopmentChat: NextPage = () => {
       <Head />;
         <title />WebDevelopmentChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+
+}
+return (;
+=======
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const WebDevelopmentChat: NextPage = () => {
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <div>
 </div>
       <Head>
@@ -50,6 +66,8 @@ const WebDevelopmentChat: NextPage = () => {
 
         <title>WebDevelopmentChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+=======
 const WebDevelopmentChat: NextPage = () => {
   return (
     <div />
@@ -57,6 +75,7 @@ const WebDevelopmentChat: NextPage = () => {
 
       </Head>;
 
+>>>>>>> origin/chore/fix-lint-and-merge
       <main>
         <h1>WebDevelopmentChat</h1>
         <p>Blog content coming soon...</p>
@@ -94,11 +113,18 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title > WebDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name="description" content="WebDevelopmentChat blog post" />{" "}"
+=======
 const WebDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> WebDevelopmentChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"WebDevelopmentChat blog post\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1  /> WebDevelopmentChat</h1>;
@@ -122,11 +148,18 @@ export default WebDevelopmentChat;<div />;
     </div>;
   )},export default WebDevelopmentChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name="description" content="WebDevelopmentChat blog post" />{" "}"
+=======
 const WebDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />WebDevelopmentChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"WebDevelopmentChat blog post\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1 />WebDevelopmentChat</h1>;
@@ -142,7 +175,10 @@ export default WebDevelopmentChat;<title />WebDevelopmentChat - Zion Tech Soluti
 };
 
 export default WebDevelopmentChat;
+<<<<<<< HEAD
+=======
 const WebDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -164,7 +200,10 @@ export default WebDevelopmentChat;
         <title />WebDevelopmentChat - Zion Tech Solutions</title>
         <title />WebDevelopmentChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const WebDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />

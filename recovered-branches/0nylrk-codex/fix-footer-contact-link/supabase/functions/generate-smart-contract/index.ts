@@ -7,6 +7,12 @@ const corsHeaders = {
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
+<<<<<<< HEAD
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};'
+import { serve } from ""https": //deno.land/std@0.168.0/http/server.ts","
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},'
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;'
+=======
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
@@ -58,6 +64,7 @@ import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
 
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+>>>>>>> origin/chore/fix-lint-and-merge
 serve(async (req) => {;
   // Handle CORS preflight requests;'
   if (req.method === 'OPTIONS') {;

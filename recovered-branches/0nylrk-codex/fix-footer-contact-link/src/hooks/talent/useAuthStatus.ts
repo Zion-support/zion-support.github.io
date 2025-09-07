@@ -36,9 +36,14 @@ export function useAuthStatus() {
     savedTalents;
     handleToggleSave;
 
+<<<<<<< HEAD
+export /**
+ * useAuthStatus - Function description
+=======
 import {useState} from 'react';
 export /**;
  * useAuthStatus - Function description;
+>>>>>>> origin/chore/fix-lint-and-merge
  */
 
 }

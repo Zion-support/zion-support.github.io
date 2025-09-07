@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+import Link from 'next/link'
+useEffect ( () => {
+  const handleScroll = () => {
+  setIsScrolled (window.scrollY > 20) 
+}
+return () => window.removeEventListener ('scroll', handleScroll) 
+}, [])
+return (<nav className= {
+  `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
+  isScrolled ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' <div className="max-w-7xl mx-auto px-6"> <div className="flex items-center justify-between h-20"> <Link href="/" className="flex items-center space-x-3"> <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center"> <Brain className="w-6 h-6 text-white" /> </div> <span className="text-xl font-bold text-white">Zion Tech Group</span> </Link> <div className="hidden md:flex items-center space-x-8"> <Link href="/services" className="text-white hover:text-cyan-400 transition-colors"> Services </Link> <Link href="/about" className="text-white hover:text-cyan-400 transition-colors"> About </Link> <Link href="/contact" className="text-white hover:text-cyan-400 transition-colors"> Contact </Link> </div> </div> 
+}
+
+
+=======
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -46,6 +61,7 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, User
   href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions',}
 }
   ];
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const company = [
   { name: 'About Us',}
@@ -70,6 +86,9 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === dropdown ? null : d
 }
 }
 
+<<<<<<< HEAD
+
+=======
 const closeAllDropdowns = (EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] =;
   useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -141,6 +160,7 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === dropdown ? null : d
                   className=\'absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6\';
                     />;
                 className=\"flex items-center space-x-1 text-white hover:text-blue-300 transition-colors\">
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 <span    />Services</span>;
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`}    />;
@@ -176,6 +196,13 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === dropdown ? null : d
               )}
             </div>;
             {/* Company Dropdown */}
+<<<<<<< HEAD
+
+          {/* Mobile Menu Button */}
+          <button;
+            onClick={() => setIsOpen(!isOpen)}
+
+=======
             <div className=\"relative\"    />;
               <button;
                 onClick={() =    /> toggleDropdown('company')}
@@ -260,9 +287,21 @@ const toggleDropdown = (setActiveDropdown(activeDropdown === dropdown ? null : d
           <button;
             onClick={() =    /> setIsOpen(!isOpen)}
             className=\"lg: hidden p-2 text-white hover:text-blue-300 transition-colors\">
+>>>>>>> origin/chore/fix-lint-and-merge
 
             {isOpen ? <X className=\"w-6 h-6\"    /> : <Menu className=\"w-6 h-6\"    />}
         {/* Mobile Menu */}
+<<<<<<< HEAD
+const EnhancedNavigation: React.FC;
+const EnhancedNavigation: React.FC;
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0}}
+            exit={{ opacity: 0, y: -20 }}
+            className = $2;
+export default EnhancedNavigation,
+=======
         {isOpen && (<motion&& motion.div;}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
@@ -562,3 +601,4 @@ import { Menu, X, ChevronDown, Globe, Brain, Shield, Rocket;}
   } from 'lucide-react';
 
 const EnhancedNavigation: React.FC;
+>>>>>>> origin/chore/fix-lint-and-merge

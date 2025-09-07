@@ -14,9 +14,79 @@ profile: TalentProfile,
     created_at: new Date ().toISOString (),
     updated_at: new Date ().toISOString ();
   }
+<<<<<<< HEAD
+  "profile": TalentProfile,
+  "onViewProfile": ("id": string) => void,
+  onRequestHire?: ("profile": TalentProfile) => void
+}
+export function TalentCardFooter() {;
+  }
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
+  const { userDetails } = useAuthStatus();
+  const navigate = useNavigate();
+  // Create a compatible UserProfile from UserDetails,
+const "userProfile": UserProfile = {
+    }
+    "id": userDetails?.id,
+"displayName": userDetails?.name |'''
+    "email": userDetails?.email |'''
+    "userType": "userType","
+    "profileComplete": false,
+"createdAt": new Date().toISOString()
+    "updatedAt": new Date().toISOString()
+  }
+  // Handle request to hire,
+const handleRequestHire = ("e": React.MouseEvent) => {
+    }
+    e.stopPropagation()
+    if (onRequestHire) {
+      }
+      onRequestHire(profile)
+    } else {
+      // Open hire modal directly if no handler provided
+}
+setIsHireModalOpen(true)
+    }
+  }
+  // Handle view profile,
+const handleViewProfile = ("e": React.MouseEvent) => {
+    }
+    e.stopPropagation()
+    // Navigate to the talent profile page,
+navigate(`/talent/${profile.id |''}`);`    // Also call the onViewProfile callback if provided,
+if (onViewProfile) {
+      }
+      onViewProfile(profile.id |'')'
+    }
+  }
+interface TalentCardFooterProps {
+  }
+  "profile": TalentProfile,
+  "onViewProfile": ("id": string) => void,
+  onRequestHire?: ("profile": TalentProfile) => void
+  };
+import { Star } from "lucide-react";"
+import { Button } from "@/components/ui/button",;"
+import { ExternalLink } from "lucide-react",;"
+import { TalentProfile } from "@/types/talent",;"
+import { HireRequestModal } from "@/components/profile/hire-request",;"
+import { useAuthStatus } from "@/hooks/talent",;"
+import { UserProfile } from "@/types/auth",;"
+import { useNavigate } from "react-router-dom",;"
+interface TalentCardFooterProps {;
+  }
+  "profile": TalentProfile,;
+  "onViewProfile": ("id": string) => void,;
+  onRequestHire?: ("profile": TalentProfile) => void;
+}
+export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {;
+  }
+    } else {
+=======
 ;
   // Handle request to hire;
 
+>>>>>>> origin/chore/fix-lint-and-merge
       // Open hire modal directly if no handler provided;
       setIsHireModalOpen (true);
     }

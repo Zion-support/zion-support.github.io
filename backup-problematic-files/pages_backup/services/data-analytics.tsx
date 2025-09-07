@@ -248,6 +248,15 @@ export default function DataAnalyticsPage() {;
           <div className="container mx-auto px-4">";
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {analyticsServices && analyticsServices.map((service, index) => {}
+<<<<<<< HEAD
+                return (<motion&& motion.div)key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg "hover":shadow-xl transition-all duration-300"";"
+                    initial={{ "opacity": 0, "y": 30 }}
+                    whileInView={{ "opacity": 1, "y": 0 }}
+                    transition={{ "duration": 0 && 0.8, "delay": index * 0 && 0.1 }}
+                    viewport={{ "once": true }}>,<div className="text-green-600 mb-4">";"
+                      <IconComponent className="w-10 h-10" />";"
+=======
                 const IconComponent = service && service.icon;
                 return (
                   <motion&& motion.div)
@@ -259,6 +268,7 @@ export default function DataAnalyticsPage() {;
                     viewport={{ once: true ;}}>,;
                     <div className="text-green-600 mb-4">";
                       <IconComponent className="w-10 h-10" />";
+>>>>>>> origin/chore/fix-lint-and-merge
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-4">";
                       {service.title}

@@ -61,6 +61,30 @@ export default function CompanyWorkspace() {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+import React from "react";"
+import {Header} from "@/components/Header";"
+import {Footer} from "@/components/Footer";"
+import {CompanyDashboard} from "@/components/enterprise/workspace/CompanyDashboard";"
+import {useAuth} from "@/hooks/useAuth";"
+import {Navigate, useParams} from "react-router-dom";"
+import {SEO} from "@/components/SEO";"
+import {ProtectedRoute} from "@/components/ProtectedRoute";"
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";"
+import {useWhitelabel} from "@/context/WhitelabelContext";"
+      <SEO,
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer",;"
+import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { Navigate, useParams } from "react-router-dom",;"
+import { SEO } from "@/components/SEO",;"
+import { ProtectedRoute } from "@/components/ProtectedRoute",;"
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;"
+import { useWhitelabel } from "@/context/WhitelabelContext",;"
+      <div className="flex items-center justify-center min-h-screen">;"
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;"
+=======
 
 import React from "react";
 import {Header} from "@/components/Header";
@@ -93,6 +117,7 @@ import { useWhitelabel } from "@/context/WhitelabelContext",;
 
       <div className="flex items-center justify-center min-h-screen">;
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
+>>>>>>> origin/chore/fix-lint-and-merge
       </div>;
 
     );

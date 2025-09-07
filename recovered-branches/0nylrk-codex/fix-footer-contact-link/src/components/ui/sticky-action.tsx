@@ -12,6 +12,11 @@ import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
 
 }
+<<<<<<< HEAD
+initial={{ "opacity": 0, "y": position === "bottom" ? 20 : -20 }}"
+import { cn } from "@/lib/utils";"
+import { motion, AnimatePresence } from "framer-motion",;"
+=======
   // TODO: Implement
 import React, { useEffect, useState } from "react";""
 import {cn} from "@/lib/utils";""
@@ -172,6 +177,7 @@ import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
 
 import { motion, AnimatePresence } from "framer-motion",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface StickyActionProps {;
   className?: string,;
   children: React.ReactNode,;

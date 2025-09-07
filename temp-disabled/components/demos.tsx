@@ -16,7 +16,6 @@ export default function DemosPage() {
 const demos = null;
 
 export default function DemosPage() {
-  const [activeDemo, setActiveDemo] = useState<string />('email-validator');
 
 const demos = [
     {

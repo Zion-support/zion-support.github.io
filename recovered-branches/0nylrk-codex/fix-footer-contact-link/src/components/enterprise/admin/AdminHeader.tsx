@@ -22,6 +22,9 @@ export function AdminHeader() {}
   const { company } = useCompanyWorkspace(),
 
 export function AdminHeader() {;
+<<<<<<< HEAD
+  }
+=======
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
 import React from "react",
@@ -107,6 +110,7 @@ import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
 export function AdminHeader() { return null; }
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
+>>>>>>> origin/chore/fix-lint-and-merge
   return (;
 
     <div className="space-y-4">;

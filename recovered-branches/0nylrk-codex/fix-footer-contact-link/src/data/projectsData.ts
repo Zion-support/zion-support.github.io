@@ -103,7 +103,28 @@ export const PROJECTS: Project[] = [;
     }
   }
 ];
+<<<<<<< HEAD
+import { Project } from "@/types/projects","
+export const "PROJECTS": Project[] = [
+import { Project } from '@/types/projects';'
+export const "PROJECTS": Project[] = [
+      "full_name": 'Alexandra Chen','
+      "professional_title": 'Senior AI Engineer'}}];'
+}];      "title": "AI Dashboard Development";"
+      "description": "Develop dashboards using React and integrate ML models""
+    };
+    "talent_profile": {
+      }
+      "full_name": "Alexandra Chen";"
+      "professional_title": "Senior AI Engineer""
+      "full_name": "Alexandra Chen","
+      "professional_title": "Senior AI Engineer""
+import { Project } from "@/types/projects",;"
+export const "PROJECTS": Project[] = [;
+  {;
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
 ];"

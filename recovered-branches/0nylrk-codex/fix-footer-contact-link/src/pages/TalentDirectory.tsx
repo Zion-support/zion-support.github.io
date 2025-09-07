@@ -86,8 +86,11 @@ function TalentDirectory() {}
 
   const navigate = useNavigate();
   // Use our custom hook to manage state
+<<<<<<< HEAD
+=======
   const {
 
+>>>>>>> origin/chore/fix-lint-and-merge
     filteredTalents,
 
     isLoading,

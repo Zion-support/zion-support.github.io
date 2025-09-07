@@ -123,7 +123,6 @@ const features = [
         'Get intelligent recommendations and actionable insights to improve your search rankings.',color: 'bg-gradient-to-br from-orange-500 to-red-600',
   gradient: 'from-orange-400 to-red-500',},];
 
-const seoFactors = [
   {category: 'On-Page SEO';}
       factors: [;}
 'Title tags optimization','Meta descriptions','Header structure (H1, H2, H3)','Content quality and length','Internal linking structure','Image optimization (alt tags)',],icon: '📝',
@@ -138,7 +137,6 @@ const seoFactors = [
         'Google My Business','Local citations','Review management','Local keyword targeting','Location-based content','Local link building',],icon: '📍',
   color: 'text-orange-400',},];
 
-const features = [
   {icon: <Search className='w-8 h-8 text-white' />,description:;}
         'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',color: 'bg-gradient-to-br from-green-500 to-emerald-600',
   gradient: 'from-green-400 to-emerald-500',},{icon: <Target className='w-8 h-8 text-white' />,title: 'Keyword Research',}

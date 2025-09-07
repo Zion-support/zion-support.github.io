@@ -594,6 +594,8 @@ const main = async () => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/health-monitor.cjs
   const report = generateHealthReport(results);
 
+<<<<<<< HEAD
+=======
   const report = generateHealthReport(results);
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/health-monitor.cjs
 
@@ -601,6 +603,7 @@ const main = async () => {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
   
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/health-monitor.cjs
   if (report.overall.status === 'HEALTHY') {}
@@ -608,7 +611,6 @@ const main = async () => {}
   // Check system health;
   const systemResults = checkSystemHealth();
   // Generate comprehensive report;
-  const results = {}
     system: systemResults;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

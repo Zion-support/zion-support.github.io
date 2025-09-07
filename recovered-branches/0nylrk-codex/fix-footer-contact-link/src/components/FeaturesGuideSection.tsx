@@ -19,6 +19,17 @@ import {}
 export function FeaturesGuideSection() {
   const features = [
     {
+<<<<<<< HEAD
+      }
+      "id": "id","
+    "title": "AI Matcher""
+      "description": "Find the perfect match for your project needs with our intelligent AI-powered matching system.""
+      "icon": <Sparkles className="h-10 w-10 text-zion-cyan" />      ]"
+      "link": "/match""
+      "buttonText": "Try AI Matcher""
+export function FeaturesGuideSection() {;
+  }
+=======
 
       id: "ai-matcher"
       title: "AI Matcher"
@@ -46,6 +57,7 @@ export function FeaturesGuideSection() {
       link: "/match",;
       buttonText: "Try AI Matcher";
     };
+>>>>>>> origin/chore/fix-lint-and-merge
     {;
       id: "talent-directory",;
       title: "Talent Directory",
@@ -484,11 +496,40 @@ import {;
   ArrowRight,;
   BarChart3,;
   Plus,;
+<<<<<<< HEAD
+  HelpCircle;
+} from "lucide-react",;"
+export function FeaturesGuideSection() {;
+  }
+    {;
+      }
+      "id": "ai-matcher",;"
+      "title": "AI Matcher",,"
+  "description": "Find the perfect match for your project needs with our intelligent AI-powered matching system.",;"
+      "icon": <Sparkles className="h-10 w-10 text-zion-cyan" />,;"
+      "instructions": [;
+        "Navigate to the AI Matcher page from the homepage or marketplace",;"
+        "Fill in your project requirements and specifications",;"
+        "Review the AI-recommended matches tailored to your needs",;"
+        "Connect with matched talents or services directly";"
+      ],;
+      "link": "/match",;"
+      "buttonText": "Try AI Matcher";"
+    },;
+    {;
+      }
+      "id": "talent-directory",;"
+      "title": "Talent Directory",,"
+  "description": "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.",;"
+      "icon": <Users className="h-10 w-10 text-zion-purple" />,;"
+      "instructions": [;
+=======
   HelpCircle;"
 } from "lucide-react",;
 
       icon: <Users className="h-10 w-10 text-zion-purple" />,;
       instructions: [;"
+>>>>>>> origin/chore/fix-lint-and-merge
         "Access the talent directory from the main navigation",;"
         "Use filters to narrow down by skills, experience, and pricing",;"
         "Save favorite profiles for future reference",;"

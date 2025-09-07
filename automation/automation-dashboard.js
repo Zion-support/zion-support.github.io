@@ -200,8 +200,12 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
     "for": (const [name, metric] of this.metrics) {}
       report.metrics[name] = metric}
     return report}
+<<<<<<< HEAD
+  calculateAverageSuccessRate($2) {calculateAverageSuccessRate() {}
+=======
 calculateAverageSuccessRate() {calculateAverageSuccessRate() {}
 const systems = Array.from(this.automationSystems.values());
+>>>>>>> origin/chore/fix-lint-and-merge
     const totalSuccessRate = systems.reduce((sum, system) => {}
       const rate = system.successCount / (system.successCount + system.failureCount) || 0;"
       "return": sum + rate}, 0);"

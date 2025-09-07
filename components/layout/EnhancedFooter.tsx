@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import React from 'react;
+import Link from next/link';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 ursor/automate-test-fix-improve-and-merge-code-48f3;
@@ -174,33 +180,40 @@ return (    <footer className='bg-gray-900 text-white'    />
               <Link href='/terms' className='text-gray-300 hover:text-white text-sm transition-colors'    />
                 Terms of Service;
               </Link>
+<<<<<<< HEAD
+              <Link href='/sitemap' className='text-gray-300 hover:text-white text-sm transition-colors'>
+                Sitemap
+=======
               <Link href='/sitemap' className='text-gray-300 hover:text-white text-sm transition-colors'    />
                 Sitemap;
+>>>>>>> origin/chore/fix-lint-and-merge
               </Link>
             </div>          </div>
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
+=======
   )
 }
 ;
   const EnhancedFooter: React.FC = () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const currentYear = new Date().getFullYear();
 
 const company = null;
 ];
 
-
 const resources = null;
 ];
-
 
 const socialLinks = null;
 
 const EnhancedFooter: React.FC = () => ;}
   const currentYear = new Date().getFullYear()import React from 'react';}
-import { motion  } from 'framer-motion';
+import { motion,
+  from 'framer-motion';
 import { Phone, Mail, MapPin, Globe;
   Twitter, Linkedin, Facebook, Instagram;
   ArrowRight, Rocket, Brain, Cpu, Shield;}
@@ -226,9 +239,7 @@ const serviceCategories = [
   href: '/ai-emotional-intelligence-platform'}
 }
       { name: 'AI Quantum Hybrid Computing'}
-  href: '/ai-quantum-hybrid-computing'}
-}
-    ];
+  href: '/ai-quantum-hybrid-computing'];
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }
 }static getDerivedStateFromError(error) ;
   return { hasError: true }
@@ -267,9 +278,7 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
   href: '/security'}
 },
   { name: 'Case Studies'}
-  href: '/case-studies'}
-}
-];
+  href: '/case-studies'];
 
 const company = [
   { name: 'About Us'}
@@ -285,9 +294,7 @@ const company = [
   href: '/news'}
 }
     { name: 'Partners'}
-  href: '/partners'}
-}
-  ];
+  href: '/partners'];
 
 const resources = [
   { name: 'Blog'}
@@ -300,9 +307,7 @@ const resources = [
   href: '/support'}
 }
     { name: 'FAQ'}
-  href: '/faq'}
-}
-  ];
+  href: '/faq'];
 
 const socialLinks = [
   { name: 'LinkedIn'}
@@ -312,15 +317,20 @@ const socialLinks = [
   href: 'https://twitter.com/ziontechgroup', icon: Twitter}
 }
     { name: 'GitHub'}
-  href: 'https://github.com/zion-tech-group', icon: Github}
-}
-  ];
+  href: 'https://github.com/zion-tech-group', icon: Github];
 
 const EnhancedFooter: React.FC = () => ;
   const currentYear = new Date().getFullYear(;
+<<<<<<< HEAD
+  return (
+          <footer className=\"bg-gray-900 text-white\" />;"
+      <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12\" />;"
+        <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\" />;"
+=======
   return (<footer className=\"bg-gray-900 text-white\"    />;"
       <div className=\"max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12\"    />;"
         <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\"    />;"
+>>>>>>> origin/main
           {\" \"}
           {/* Company Info */}"
           <div className=\"space-y-4\"    />;"
@@ -343,6 +353,23 @@ const EnhancedFooter: React.FC = () => ;
               Leading technology solutions provider helping businesses transform;
               their digital presence.;
             </p>;"
+<<<<<<< HEAD
+            <div className=\"flex space-x-4\" />;
+              <a"
+                href=\"#\";"
+                className=\"text-gray-400 hover:text-white transition-colors\" />;"
+                <Linkedin className=\"h-5 w-5\" />;
+              </a>;
+              <a"
+                href=\"#\";"
+                className=\"text-gray-400 hover:text-white transition-colors\" />;"
+                <Twitter className=\"h-5 w-5\" />;
+              </a>;
+              <a"
+                href=\"#\";"
+                className=\"text-gray-400 hover:text-white transition-colors\" />;"
+                <Github className=\"h-5 w-5\" />;
+=======
             <div className=\"flex space-x-4\"    />;
               <a;"
                 href=\'#\';"
@@ -358,12 +385,15 @@ const EnhancedFooter: React.FC = () => ;
                 href=\'#\';"
                 className=\"text-gray-400 hover:text-white transition-colors\"    />;"
                 <Github className=\"h-5 w-5\"    />;
+>>>>>>> origin/main
 import React from './react';
-import Link from './next / link';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github    } from './lucide-react';
-
-const EnhancedFooter: React.FC = () => ;
-  const current_year = new Date ().getFullYear ()import React from 'react';,import { motion } from 'framer-motion',import {Phone, Mail, MapPin, Globe,Twitter, Linkedin, Facebook, Instagram,ArrowRight, Rocket, Brain, Cpu, Shield,Star, Users, TrendingUp, Zap;}
+import Link from './next / link',
+  import { Mail, Phone, MapPin, Linkedin, Twitter, Github,
+  from './lucide-react',
+  ,,
+  const EnhancedFooter: React.FC = () => ;
+  const current_year = new Date ().getFullYear ()import React from 'react';,import { motion,
+  from 'framer-motion',import {Phone, Mail, MapPin, Globe,Twitter, Linkedin, Facebook, Instagram,ArrowRight, Rocket, Brain, Cpu, Shield,Star, Users, TrendingUp, Zap;}
 } from 'lucide-react',const contact_info = {mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com';}
@@ -380,9 +410,7 @@ const EnhancedFooter: React.FC = () => ;
   href: '/ai - emotional - intelligence - platform'}
 },
 { name: 'AI Quantum Hybrid Computing'}
-  href: '/ai - quantum - hybrid - computing'}
-}
-    ];
+  href: '/ai - quantum - hybrid - computing'];
   },{title: 'Cutting - Edge IT',
   services: [;
         { name: 'Zero Trust Architecture'}
@@ -395,9 +423,7 @@ const EnhancedFooter: React.FC = () => ;
   href: '/5g - private - network - solutions'}
 },
 { name: 'Blockchain Infrastructure'}
-  href: '/blockchain - infrastructure - platform'}
-}
-    ];
+  href: '/blockchain - infrastructure - platform'];
   },{title: 'Innovative SaaS',
   services: [;
         { name: 'AI Brand Personality'}
@@ -410,11 +436,8 @@ const EnhancedFooter: React.FC = () => ;
   href: '/ai - meeting - transcriber - pro'}
 },
 { name: 'AI Mental Health Companion'}
-  href: '/ai - mental - health - companion'}
-}
-    ];
-  }
-],const company_links = [
+  href: '/ai - mental - health - companion'];
+  ],const company_links = [
     { name: 'About Us'}
   href: '/about'}
 },
@@ -431,9 +454,7 @@ const EnhancedFooter: React.FC = () => ;
   href: '/blog'}
 },
 { name: 'Resources'}
-  href: '/resources'}
-}
-],const support_links = [
+  href: '/resources'],const support_links = [
   const _serviceCategories = [
   {_title: 'Next-Generation AI',
   _services: [;
@@ -444,9 +465,7 @@ const EnhancedFooter: React.FC = () => ;
 },{_name: 'AI Emotional Intelligence'}
   _href: '/ai-emotional-intelligence-platform}
 },{_name: 'AI Quantum Hybrid Computing'}
-  _href: '/ai-quantum-hybrid-computing}
-}
-    ];
+  _href: '/ai-quantum-hybrid-computing];
   },{_title: 'Cutting-Edge IT',
   _services: [;
       { name: 'Zero Trust Architecture'}
@@ -456,9 +475,7 @@ const EnhancedFooter: React.FC = () => ;
 },{_name: '5G Private Networks'}
   _href: '/5g-private-network-solutions}
 },{_name: 'Blockchain Infrastructure'}
-  _href: '/blockchain-infrastructure-platform}
-}
-    ];
+  _href: '/blockchain-infrastructure-platform];
   },{_title: 'Innovative SaaS',
   _services: [;
       { name: 'AI Brand Personality'}
@@ -468,11 +485,8 @@ const EnhancedFooter: React.FC = () => ;
 },{_name: 'AI Meeting Transcriber'}
   _href: '/ai-meeting-transcriber-pro}
 },{_name: 'AI Mental Health Companion'}
-  _href: '/ai-mental-health-companion}
-}
-    ];
-  }
-],const companyLinks = [
+  _href: '/ai-mental-health-companion];
+  ],const companyLinks = [
     { name: 'About Us'}
   href: '/about'}
 },
@@ -489,9 +503,7 @@ const EnhancedFooter: React.FC = () => ;
   href: '/blog'}
 },
 { name: 'Resources'}
-  href: '/resources'}
-}
-],const supportLinks = [
+  href: '/resources'],const supportLinks = [
     { name: 'Contact Support'}
   href: '/contact'}
 },
@@ -508,16 +520,13 @@ const EnhancedFooter: React.FC = () => ;
   href: '/security'}
 },
 { name: 'Privacy Policy'}
-  href: '/privacy'}
-}
-],const social_links = [
+  href: '/privacy'],const social_links = [
   { name: 'LinkedIn'}
   href: 'https://www.linkedin.com / company / zion - tech - group', icon: Linkedin}
 },{ name: 'Instagram'}
   href: 'https://www.instagram.com / ziontechgroup', icon: Instagram}
 },{ name: 'GitHub'}
-  href: 'https://github.com / Zion - Holdings', icon: Globe}
-}],export default /**;
+  href: 'https://github.com / Zion - Holdings', icon: Globe],export default /**;
  * EnhancedFooter - Function description;
  */;
 function EnhancedFooter() {const current_year = new Date ().getFullYear ();
@@ -538,9 +547,7 @@ function EnhancedFooter() {const current_year = new Date ().getFullYear ();
   href: '/security'}
 },
   { name: 'Case Studies'}
-  href: '/case - studies'}
-}
-];
+  href: '/case - studies'];
 
 const company = [
     { name: 'About Us'}
@@ -556,9 +563,7 @@ const company = [
   href: '/news'}
 },
   { name: 'Partners'}
-  href: '/partners'}
-}
-];
+  href: '/partners'];
 
 const resources = [
     { name: 'Blog'}
@@ -571,9 +576,7 @@ const resources = [
   href: '/support'}
 },
   { name: 'FAQ'}
-  href: '/faq'}
-}
-];
+  href: '/faq'];
 
 const social_links = [
   { name: 'LinkedIn'}
@@ -582,9 +585,16 @@ const social_links = [
   href: 'https://twitter.com / ziontechgroup', icon: Twitter}
 },{ name: 'GitHub'}
   href: 'https://github.com / zion - tech - group', icon: Github}"
+<<<<<<< HEAD
+}];return (
+          <footer className=\"bg - gray-900 text-white\" />;"
+      <div className=\"max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 py-12\" />;"
+        <div className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-4 gap-8\" />;"
+=======
 }];return (<footer className=\"bg - gray-900 text-white\"    />;"
       <div className=\"max - w-7xl mx - auto px - 4 sm:px - 6 lg:px-8 py-12\"    />;"
         <div className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-4 gap-8\"    />;"
+>>>>>>> origin/main
           {\" \"}
           {/* Company Info */}"
           <div className=\"space-y-4\"    />;"
@@ -595,22 +605,41 @@ const social_links = [
               Leading technology solutions provider helping businesses transform;
               their digital presence.;
             </p>;"
+<<<<<<< HEAD
+            <div className=\"flex space-x-4\" />;
+              <a"
+                href=\"#\";"
+                className=\"text - gray - 400 hover:text-white transition-colors\" />
+=======
             <div className=\"flex space-x-4\"    />;
               <a;"
                 href=\'#\';"
                 className=\"text - gray - 400 hover:text-white transition-colors\"    />
+>>>>>>> origin/main
 "
                 <Linkedin className=\"h-5 w-5\"    />;
               </a>;
+<<<<<<< HEAD
+              <a"
+                href=\"#\";"
+                className=\"text - gray - 400 hover:text-white transition-colors\" />
+=======
               <a;"
                 href=\'#\';"
                 className=\"text - gray - 400 hover:text-white transition-colors\"    />
+>>>>>>> origin/main
 "
                 <Twitter className=\"h-5 w-5\"    />;
               </a>;
+<<<<<<< HEAD
+              <a"
+                href=\"#\";"
+                className=\"text - gray - 400 hover:text-white transition-colors\" />
+=======
               <a;"
                 href=\'#\';"
                 className=\"text - gray - 400 hover:text-white transition-colors\"    />
+>>>>>>> origin/main
 "
                 <Github className=\"h-5 w-5\"    />;
               </a>;
@@ -657,6 +686,24 @@ const social_links = [
             </div>;
           </div>;
         </div>;"
+<<<<<<< HEAD
+        <div className=\"border - t border - gray - 800 mt-8 pt-8\" />;"
+          <div className=\"flex flex - col md:flex - row justify-between items-center\" />;"
+<p className=\"text - gray-400 text-sm\" />;
+              © {current_year,
+  Zion Tech Group. All rights reserved.;
+            </p>;"
+            <div className=\"flex space - x-6 mt-4 md:mt-0\" />;
+              <Link"
+                href=\"/privacy\";"
+                className=\"text - gray - 400 hover:text - white text-sm transition-colors\" />
+
+                Privacy Policy;
+              </Link>;
+              <Link"
+                href=\"/terms\";"
+                className=\"text - gray - 400 hover:text - white text-sm transition-colors\" />
+=======
         <div className=\"border - t border - gray - 800 mt-8 pt-8\"    />;"
           <div className=\"flex flex - col md:flex - row justify-between items-center\"    />;"
 <p className=\"text - gray-400 text-sm\"    />;
@@ -672,6 +719,7 @@ const social_links = [
               <Link;"
                 href=\'/terms\';"
                 className=\"text - gray - 400 hover:text - white text-sm transition-colors\"    />
+>>>>>>> origin/main
 
                 Terms of Service;
               </Link>;
@@ -680,5 +728,13 @@ const social_links = [
         </div>;
       </div>;
 }
-
+<<<<<<< HEAD
 export default EnhancedFooter;"
+=======
+
+<<<<<<< HEAD
+export default EnhancedFooter;
+=======
+export default EnhancedFooter;"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main

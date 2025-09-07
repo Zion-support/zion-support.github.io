@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import React from "react","
+import { Badge } from "@/components/ui/badge","
+import {Badge} from "@/components/ui/badge";"
+import { Badge } from "@/components/ui/badge",// Get top skills (limit to 4);"
+  const topSkills = skills.slice(0, 4) || [];
+  // Get top skills (limit to 4);
+=======
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import {Badge} from "@/components/ui/badge";
@@ -24,6 +32,7 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
   const topSkills = skills.slice(0, 4) || [];
   // Get top skills (limit to 4);
 pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
   // Get top skills (limit to 4)
   const topSkills = skills.slice(0, 4) |[];
   const topSkills = skills.slice(0, 4) || [],

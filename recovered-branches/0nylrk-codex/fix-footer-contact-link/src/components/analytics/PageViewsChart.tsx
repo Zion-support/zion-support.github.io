@@ -53,6 +53,9 @@ export function PageViewsChart(): any ({;
   timeRange,;
   onTimeRangeChange,;
 }: PageViewsChartProps) {;
+<<<<<<< HEAD
+}
+=======
 
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
@@ -78,6 +81,7 @@ import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface PageViewsChartProps {;
   data: Array<{ date: string, views: number }>,;
   timeRange: string;

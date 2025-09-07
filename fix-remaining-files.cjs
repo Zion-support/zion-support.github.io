@@ -24,7 +24,23 @@ import Link from 'next/link';
 >import Link from 'next/link';
 
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+<<<<<<< HEAD
+;
+const files = [;
+  {;
+    pat:h:'components/Header.tsx',;
+    conten:t:`import React, { useState } from 'react';
+>
+
+
+
+    path: 'components/Header.tsx',
+    content: `import React, { useState } from 'react';
+
+const Header: React.FC = () => {
+=======
 const: Header: React.FC = () => {]
+>>>>>>> origin/chore/fix-lint-and-merge
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -102,10 +118,19 @@ const: SearchBar: React.FC<SearchBarProps> = ({
 const: Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <X className="w-4 h-4" />;"
 
+<<<<<<< HEAD
+export default SearchBar;`
+  },
+  {
+    path: 'components/Sidebar.tsx',
+    content: `import React from 'react';
+import { Home, Settings, User, LogOut } from 'lucide-react';
+=======
             </button>;
         </div>;
       </form>;
 const:Sidebar:React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
 
     <>
       {isOpen && (
@@ -148,6 +173,14 @@ interface SimpleLayoutProps {
   title?: string;
 
 
+<<<<<<< HEAD
+export default SimpleLayout;`
+  },
+  {
+    path: 'components/layout/Footer.tsx',
+    content: `import React from 'react';
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
 
@@ -182,6 +215,32 @@ const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
             </ul>
 
 
+<<<<<<< HEAD
+        <div className=" border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className=" text-gray-400">
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;`
+  },
+  {
+    path: 'components/layout/Layout.tsx',
+    content: `import React, { ReactNode } from 'react';
+import Header from '../Header';
+import Footer from './Footer';
+
+interface LayoutProps {
+  children: ReactNode;
+}
+
+  return (
+    <div className=" min-h-screen flex flex-col">
+=======
             <div className="space-y-2">"
                 <span className="text-gray-300">+1 302 464 0950</span>"
                 <span className="text-gray-300">kleber@ziontechgroup.com</span>"
@@ -189,11 +248,21 @@ const: SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
           <p className="text-gray-400">"
     </footer>)
     <div className="min-h-screen flex flex-col">"
+>>>>>>> origin/chore/fix-lint-and-merge
       <Header />
       <main className="flex-1">"
       <Footer />
 
+<<<<<<< HEAD
+export default Layout;`
+  },
+  {
+    path: 'components/layout/MainLayout.tsx',
+    content: `import React, { ReactNode } from 'react';
+import SEOHead from '../SEOHead';
+=======
 const: MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }) => {
+>>>>>>> origin/chore/fix-lint-and-merge
 
       <SEOHead title={title} description={description} />
 
@@ -268,11 +337,54 @@ const: InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, c
           className="w-full bg-blue-600 text-white py-2 px-4 rounded-md: hover:bg-blue-700 flex items-center justify-center", >,"
           <ShoppingCart className="w-4 h-4 mr-2" />;"
 
+<<<<<<< HEAD
+export default EnhancedMarketplaceCard;`
+  },
+  {
+    path: 'components/ui/InteractiveNavigation.tsx',
+    content: `import React, { useState } from 'react';
+import { ChevronDown, Menu, X } from 'lucide-react';
+
+interface NavItem {
+  label: string;
+  href: string;
+  children?: NavItem[];
+}
+
+interface InteractiveNavigationProps {
+  items: NavItem[];
+  className?: string;
+}
+
+const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ items, className = '' }) => {
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleDropdown = (label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
+  };
+
+  return (
+    <nav className={'bg-white shadow-lg ' + className}>
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className=" flex justify-between items-center h-16">
+          <Link href="/" className=" text-xl font-bold text-blue-600">
+            Zion Tech Group
+          </Link>
+
+          <div className=" hidden md:flex items-center space-x-8">
+            {items.map((item) => (
+              <div key={item.label} className=" relative">
+                {item.children ? (
+                  <div className=" relative">
+                    <button
+=======
       <div className="max-w-7xl mx-auto px-4: sm:px-6: lg:px-8">"
         <div className="flex justify-between items-center h-16">"
           <Link href="/" className="text-xl font-bold text-blue-600">"
 
               <div key={item.label} className="relative">"
+>>>>>>> origin/chore/fix-lint-and-merge
                       onClick={() => toggleDropdown(item.label)}
                       <ChevronDown className="w-4 h-4 ml-1" />"
 
@@ -418,6 +530,173 @@ console.log('Fixed remaining files');
 
 
 <<<<<<< HEAD
+      await updateFlagStatus(id, status, adminNotes);
+      res.json({ success: true });
+    } else {
+      res.setHeader('Allow', 'POST');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+`
+  },
+  {
+    path: 'pages/api/admin/moderation/flags/index.ts',
+    content: `import type { NextApiRequest, NextApiResponse } from 'next';
+import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
+import { readAllFlags } from '../../../../../utils/moderationDb';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const user = parseUserFromRequest(req);
+    try { 
+      ensureAdmin(user) 
+    } catch (e: any) { 
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) 
+    }
+
+    if (req.method === 'GET') {
+      const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
+      const flags = await readAllFlags();
+      const filtered = flags.filter(f =>
+        (!status || f.status === status) &&
+        (!reason || f.reason?.includes(reason)) &&
+        (!userEmail || f.userEmail?.includes(userEmail)) &&
+        (!contentType || f.contentType === contentType)
+      );
+      res.json({ flags: filtered });
+    } else {
+      res.setHeader('Allow', 'GET');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+`
+  },
+  {
+    path: 'pages/api/admin/notes-all.ts',
+    content: `import type { NextApiRequest, NextApiResponse } from 'next';
+import { getAllNotes } from './notes';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'GET') {
+      const notes = getAllNotes();
+      res.json({ notes });
+    } else {
+      res.setHeader('Allow', 'GET');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+`
+  },
+  {
+    path: 'pages/api/admin/notes.ts',
+    content: `import type { NextApiRequest, NextApiResponse } from 'next';
+
+interface Note {
+  id: string;
+  targetType: string;
+  targetId: string;
+  content: string;
+  author: string;
+  createdAt: string;
+}
+
+let notesStore: Note[] = [];
+
+export function getAllNotes(): Note[] {
+  return notesStore;
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'GET') {
+      const { targetType, targetId } = req.query;
+      if (!targetType || Array.isArray(targetType)) return res.status(400).json({ error: 'Invalid targetType' });
+      if (!targetId || Array.isArray(targetId)) return res.status(400).json({ error: 'Invalid targetId' });
+      
+      const notes = notesStore
+        .filter((n) => n.targetType === targetType && n.targetId === targetId);
+      res.json({ notes });
+    } else if (req.method === 'POST') {
+      const { targetType, targetId, content, author } = req.body;
+      const note: Note = {
+        id: Date.now().toString(),
+        targetType,
+        targetId,
+        content,
+        author,
+        createdAt: new Date().toISOString()
+      };
+      notesStore.push(note);
+      res.json({ note });
+    } else {
+      res.setHeader('Allow', 'GET, POST');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+`
+  },
+  {
+    path: 'pages/api/admin/partners/fraud-flags.ts',
+    content: `import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'GET') {
+      const code = (req.query.code as string)?.toLowerCase();
+      if (!code) return res.status(400).json({ error: 'Code required' });
+
+      // Mock fraud flags data
+      const flags = [
+        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' }
+      ];
+
+      res.json({ flags });
+    } else {
+      res.setHeader('Allow', 'GET');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+`
+  }
+];
+
+filesToFix.forEach(file => {
+  try {
+    fs.writeFileSync(file.path, file.content);
+    console.log(`✅ Fixed: ${file.path}`);
+  } catch (error) {
+    console.error(`❌ Error fixing ${file.path}:`, error.message);
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 });
 ;

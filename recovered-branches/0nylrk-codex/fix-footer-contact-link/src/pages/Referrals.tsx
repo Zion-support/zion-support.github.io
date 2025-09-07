@@ -48,6 +48,15 @@ function ReferralsPage() {}
   const {}
     is_loading;
     referral_code;
+<<<<<<< HEAD
+export default function ReferralsPage() {
+}
+    }
+    isLoading;
+    referralCode;
+  const navigate = useNavigate($2);
+  const { isAuthenticated } = useAuth($2);
+=======
 
 import { useEffect  } from 'react';
 
@@ -86,6 +95,7 @@ import {Share, Users} from 'lucide-react';
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
   const {;
+>>>>>>> origin/chore/fix-lint-and-merge
     isLoading;
     referralCode;
 
@@ -94,6 +104,27 @@ import {Share, Users} from 'lucide-react';
     stats;
     getReferralLink;
     copyReferralLink;
+<<<<<<< HEAD
+import { useEffect } from 'react','
+import { useAuth } from '@/hooks/useAuth','
+import { useReferrals } from '@/hooks/useReferrals','
+import { ReferralStats } from '@/components/referrals/ReferralStats','
+import { ReferralLink } from '@/components/referrals/ReferralLink','
+import { ReferralTable } from '@/components/referrals/ReferralTable','
+import { RewardsCard } from '@/components/referrals/RewardsCard','
+import { ReferralGuide } from '@/components/referrals/ReferralGuide','
+import { ReferralLeaderboard } from '@/components/referrals/ReferralLeaderboard','
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
+import { Button } from '@/components/ui/button','
+import { toast } from '@/hooks/use-toast','
+import { Share, Users } from 'lucide-react','
+import { useNavigate } from 'react-router-dom','
+export default function ReferralsPage() {
+}
+const navigate = useNavigate(),;
+  const { isAuthenticated } = useAuth(),  const {
+    }
+=======
 
 import {useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
@@ -133,6 +164,7 @@ import { useNavigate } from 'react-router-dom',
 export default function ReferralsPage() {}
   const navigate = useNavigate(),
 
+>>>>>>> origin/chore/fix-lint-and-merge
     isLoading,
     referralCode,
     referrals,
@@ -252,10 +284,16 @@ import { Share, Users } from 'lucide-react',;
 import { useNavigate } from 'react-router-dom',;
 ;
 export default function ReferralsPage() {;
+<<<<<<< HEAD
+  }
+  const { isAuthenticated } = useAuth(),;
+    }
+=======
   const navigate = useNavigate(),;
 
   const { isAuthenticated } = useAuth(),;
   const {;
+>>>>>>> origin/chore/fix-lint-and-merge
     isLoading,;
     referralCode,;
     referrals,;

@@ -10,8 +10,11 @@
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+const pm2 = require('pm2)
+const fs = require(fs')
+=======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -23,9 +26,52 @@ const pm2 = require('pm2')
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs')
+>>>>>>> origin/chore/fix-lint-and-merge
 const path = require('path')
-const http = require('http')
+const http = require(http')
 const { execSync } = require('child_process')
+<<<<<<< HEAD
+    this.logFile = path.join(this.projectRoot, logs', 'health-dashboard.log)
+    this.dashboardFile = path.join(this.projectRoot, logs', 'dashboard-data.json)
+      await fs.mkdir(path.join(this.projectRoot, logs')
+      console.log('Logs directory already exists)
+  log(message, level = INFO')
+    fs.appendFile(this.logFile, logMessage + '\n)
+    this.log(� Initializing Health Dashboard...')
+          this.log(` Failed to connect to "PM2`)
+      this.log(` Dashboard update failed"`)
+      return { "status: 'offline, color": red', "message}
+      return { status": 'unstable, "color: orange', message"}
+      return { "status: 'warning, color": yellow', "message}
+      return { status": 'warning, "color: yellow', message"}
+    return { "status: 'healthy, color": green', "message}
+      this.log(` Failed to get system metrics"`)
+      const result = execSync('free -m, { "encoding})
+      const result = execSync(top -bn1 | grep Cpu(s)"', { "encoding}
+        cores"
+      const result = execSync('df -h /, { "encoding})
+        usagePercent"
+      return { "total: 0', used": '0, "available}
+      const result = execSync(uptime', { encoding"})
+      this.log(` Failed to save dashboard "data`)
+      this.log(` Health report generation failed"`)
+        "type
+        action"
+        "type
+        message"
+        "action
+        type"
+        "message
+        action"
+        "type
+        message"
+        "action
+        type"
+        "message
+        action"
+        res.end(JSON.stringify({ "error})
+        body { font-family"}
+=======
 <<<<<<< HEAD
     this.logFile = path.join(this.projectRoot, 'logs', 'health-dashboard.log')
     this.dashboardFile = path.join(this.projectRoot, 'logs', 'dashboard-data.json')
@@ -67,10 +113,16 @@ const { execSync } = require('child_process')
         "action"
         res.end(JSON.stringify({ "error"})
         body { font-"family"}
+>>>>>>> origin/chore/fix-lint-and-merge
             \"
-                    <div class="metric-value"
-                container.innerHTML = '<div style=""color": #6b7280;"
+                    <div class=metric-value
+                container.innerHTML = '<div style=""color: #6b7280;
             \"
+<<<<<<< HEAD
+                    "onlineProcesses
+                console.error('Failed to refresh data")
+
+=======
                     "onlineProcesses"
                 console.error('Failed to refresh "data")
 <<<<<<< HEAD
@@ -87,3 +139,4 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

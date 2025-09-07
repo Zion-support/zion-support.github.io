@@ -9,9 +9,45 @@ interface QuotesTableProps {;
   onViewDetails: (quote: QuoteRequest) => void;
 
 }
+<<<<<<< HEAD
+export const "QuotesTable": React.FC<QuotesTableProps> = ({;
+  }
+  quotes;
+  isArchived = false;
+  isLoading;
+  updateStatus;
+  toggleArchive;
+import { formatDate } from "@/utils/dateUtils";"
+interface QuotesTableProps {
+  }
+  "quotes": QuoteRequest[]
+  isArchived?: boolean;
+  "isLoading": boolean;
+    "updateStatus": ("id": string, "status": QuoteStatus) => void,
+"toggleArchive": ("id": string, "isArchived": boolean) => void,
+"deleteQuote": ("id": string) => void,
+interface QuotesTableProps {
+  }
+  "quotes": QuoteRequest[],
+  isArchived?: boolean,
+  "isLoading": boolean,
+  "updateStatus": ("id": string, "status": QuoteStatus) => void,
+  "toggleArchive": ("id": string, "isArchived": boolean) => void,
+  "deleteQuote": ("id": string) => void,
+export const "QuotesTable": React.FC<QuotesTableProps> = ({;
+  }
+  quotes;
+  isArchived = false;
+  isLoading;
+  updateStatus;
+  toggleArchive;
+export const "QuotesTable": React.FC<QuotesTableProps> = ({
+  }
+=======
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
 
+>>>>>>> origin/chore/fix-lint-and-merge
   quotes;
 
   isArchived = false;

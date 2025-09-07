@@ -6,6 +6,9 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
 <<<<<<< HEAD
+console.log('🔧 Final Syntax Fix);
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -14,6 +17,7 @@ const path = require('path');
 =======
 console.log('🔧 Final Syntax Fix');
 console.log('==================');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
@@ -28,12 +32,17 @@ console.log('==================');
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const fs = require('fs');
+const fs = require(fs');
 const path = require('path');
+<<<<<<< HEAD
+console.log(🔧 Final Syntax Fix');
+console.log('==================);
+=======
 console.log('🔧 Final Syntax Fix');
 <<<<<<< HEAD
 <<<<<<< HEAD
 console.log('==================');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,42 +55,77 @@ console.log('==================');
 
 
 <<<<<<< HEAD
+console.log(
+
+
+
+
+console.log('
+=======
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
 console.log('
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
     // Fix JSX closing tags
+<<<<<<< HEAD
+    .replace(/<\$1>/g, '>)
+    .replace(/<\/\$1>/g, >')
+    .replace(/<\$1/g, '<)
+    .replace(/<\/\$1/g, </')
+=======
     .replace(/<\$1>/g, '>')
     .replace(/<\/\$1>/g, '>')
     .replace(/<\$1/g, '<')
     .replace(/<\/\$1/g, '</')
 <<<<<<< HEAD
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix object literal syntax
+<<<<<<< HEAD
+    .replace(/\{\s*$/gm, '{)
+    .replace(/\[\s*$/gm, [')
+    .replace(/\(\s*$/gm, '()
+=======
     .replace(/\{\s*$/gm, '{')
     .replace(/\[\s*$/gm, '[')
     .replace(/\(\s*$/gm, '(')
 <<<<<<< HEAD
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix semicolons in wrong places
+<<<<<<< HEAD
+    .replace(/;\s*$/gm, ')
+    .replace(/;\s*}/g, '})
+    .replace(/;\s*]/g, ]')
+    .replace(/;\s*\)/g, '))
+=======
     .replace(/;\s*$/gm, '')
     .replace(/;\s*}/g, '}')
     .replace(/;\s*]/g, ']')
     .replace(/;\s*\)/g, ')')
 <<<<<<< HEAD
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix array and object syntax
+<<<<<<< HEAD
+    .replace(/\[\s*\{\s*$/gm, [{')
+    .replace(/\{\s*\[\s*$/gm, '{[)
+    .replace(/\}\s*\]\s*$/gm, }]')
+    .replace(/\]\s*\}\s*$/gm, ']})
+=======
     .replace(/\[\s*\{\s*$/gm, '[{')
     .replace(/\{\s*\[\s*$/gm, '{[')
     .replace(/\}\s*\]\s*$/gm, '}]')
@@ -91,13 +135,19 @@ function fixSpecificErrors(content) {
     .replace(/\{\s*\}/g, '{}')
     .replace(/\[\s*\]/g, '[]')
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
     // Fix empty objects and arrays
-    .replace(/\{\s*\}/g, '{}')
-    .replace(/\[\s*\]/g, '[]')
+    .replace(/\{\s*\}/g, {}')
+    .replace(/\[\s*\]/g, '[])
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Fix trailing commas
+<<<<<<< HEAD
+    .replace(/,\s*}/g, }')
+    .replace(/,\s*]/g, '])
+    .replace(/,\s*\)/g, )')
+=======
     .replace(/,\s*}/g, '}')
     .replace(/,\s*]/g, ']')
     .replace(/,\s*\)/g, ')')
@@ -106,18 +156,23 @@ function fixSpecificErrors(content) {
     .replace(/;;+/g, ';')
     .replace(/;\s*;/g, ';')
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
     // Clean up extra semicolons
-    .replace(/;;+/g, ';')
-    .replace(/;\s*;/g, ';')
+    .replace(/;+/g, ';)
+    .replace(/;\s*;/g, ;')
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     // Clean up whitespace
+<<<<<<< HEAD
+    .replace(/\n\s*\n\s*\n/g, '\n\n)
+    .replace(/\s+$/gm, ');
+=======
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '');
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-function fixSpecificErrors(content) {
   return content;
     // Fix JSX closing tags;
 
@@ -189,6 +244,17 @@ for (const file of filesToFix) {
   }
 }
 <<<<<<< HEAD
+console.log(🎉 Final syntax fix completed!');
+
+console.log(`\n✅ Fixed ${totalFixed} files`);
+
+console.log('🎉 Final syntax fix completed!);
+
+console.log(🎉 Final syntax fix completed!');
+console.log('🎉 Final syntax fix completed!');
+
+=======
+<<<<<<< HEAD
 console.log(`\n✅ Fixed ${totalFixed} files`);
 <<<<<<< HEAD
 
@@ -217,6 +283,7 @@ console.log('🎉 Final syntax fix completed!');
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     content = fixSpecificErrors(content);
     if (content !== originalContent) {
 

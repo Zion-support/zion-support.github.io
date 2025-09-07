@@ -112,6 +112,13 @@ export default function Marketplace() {;
     return true
 
   }),
+<<<<<<< HEAD
+    // // // console.log(`Filter "changed": ${filterType} = ${value}`),`    switch (filterType) {
+      }
+      case 'productType':'
+        setSelectedProductTypes(prev => { return prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
+        ); }
+=======
   
   const handleFilterChange = (filterType: string, value: string) => {}
     // // // console.log(`Filter changed: ${filterType} = ${value}`),
@@ -121,6 +128,7 @@ export default function Marketplace() {;
         setSelectedProductTypes(prev =>
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
         );
+>>>>>>> origin/chore/fix-lint-and-merge
         break;
       case 'location':
         setSelectedLocations(prev =>

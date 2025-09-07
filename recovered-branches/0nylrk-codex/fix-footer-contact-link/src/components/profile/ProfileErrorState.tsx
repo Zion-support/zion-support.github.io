@@ -23,6 +23,11 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {}
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
+import React from 'react';'
+import { Link } from "react-router-dom",;"
+}
+=======
 
   )
 import React from 'react',;
@@ -36,6 +41,7 @@ import { Link } from "react-router-dom",;
 
 import { ArrowLeft } from "lucide-react";
 }"
+>>>>>>> origin/chore/fix-lint-and-merge
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">;"
       <div className="text-red-400 mb-4 text-xl">{error || "Something went wrong"}</div>;
       <Button asChild>;"

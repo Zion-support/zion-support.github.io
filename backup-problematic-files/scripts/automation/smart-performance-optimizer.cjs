@@ -4,11 +4,32 @@
  * Monitors and optimizes application performance;
  */
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
 class SmartPerformanceOptimizer {}
     constructor() {}
         this.projectRoot = process.cwd();
+<<<<<<< HEAD
+        this.logFile = path.join(this.projectRoot, logs', 'smart-performance-optimizer.log);
+        this.reportFile = path.join(this.projectRoot, performance-optimization-report.json');
+        this.ensureLogsDirectory()}
+    ensureLogsDirectory() {}
+        const logsDir = path.join(this.projectRoot, 'logs;);
+        if () {}
+            fs.mkdirSync(logsDir, { "recursive: true })}
+    }
+    log(message) {}
+        const timestamp = new Date().toISOString() {}
+    ) {}
+            fs.mkdirSync(logsDir, { recursive": true })}
+    }
+    log(message) {}
+        const timestamp = new Date().toISOString(}
+});
+        const logMessage = `[${timestamp}] ${message}\;n;`;`
+        fs.appendFileSync(this.logFile, logMessage);
+        console.log(message)}
+=======
 
         if () {}
             fs.mkdirSync(logsDir, { "recursive": true })};"
@@ -22,11 +43,17 @@ class SmartPerformanceOptimizer {}
         fs.appendFileSync(this.logFile, logMessage);
         console.log(message)};
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
     analyzeBundleSize() {}
-        this.log('Analyzing bundle size...');
+        this.log(Analyzing bundle size...');
         
         try {}
             // Build the project first;
+<<<<<<< HEAD
+            execSync('npm run build, {})
+                "cwd: this.projectRoot, 
+                stdio": pipe'
+=======
             execSync('npm run build', { })
 <<<<<<< HEAD
                 "cwd": this.projectRoot,
@@ -34,10 +61,18 @@ class SmartPerformanceOptimizer {}
                 "cwd": this.projectRoot, 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "stdio": 'pipe'
+>>>>>>> origin/chore/fix-lint-and-merge
             }
 });
             
             // Analyze bundle;
+<<<<<<< HEAD
+            const bundleAnalysis = execSync('npm run analyze, {})
+                "cwd: this.projectRoot, 
+                encoding": utf8',
+                "stdio: 'pipe
+            });
+=======
             const bundleAnalysis = execSync('npm run analyze', { })
 <<<<<<< HEAD
                 "cwd": this.projectRoot,
@@ -47,18 +82,24 @@ class SmartPerformanceOptimizer {}
                 "encoding": 'utf8',
                 "stdio": 'pipe'
             };);
+>>>>>>> origin/chore/fix-lint-and-merge
             
-            this.log('Bundle analysis completed');
-            return { "status": 'success', "output": bundleAnalysis }} catch (error) {}
-            this.log(`Bundle analysis "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
+            this.log(Bundle analysis completed');
+            return { status": 'success, "output: bundleAnalysis }} catch (error) {}
+            this.log(`Bundle analysis failed": ${error.message}`);
+            return { "status: failed', error": error.message }}
+    }
     checkBuildPerformance() {}
-        this.log('Checking build performance...');
+        this.log('Checking build performance...);
         
         const startTime = Date.now(;);
         
         try {}
+<<<<<<< HEAD
+            execSync(npm run build', {})
+                "cwd: this.projectRoot, 
+                stdio": 'pipe
+=======
             execSync('npm run build', { })
 <<<<<<< HEAD
                 "cwd": this.projectRoot,
@@ -66,48 +107,53 @@ class SmartPerformanceOptimizer {}
                 "cwd": this.projectRoot, 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
                 "stdio": 'pipe'
+>>>>>>> origin/chore/fix-lint-and-merge
             }
 });
             
             const buildTime = Date.now() - startTi;m;e;
             this.log(`Build completed in ${buildTime}ms`);
             
-            return {;}
-                "status": 'success',
-                "buildTime": buildTime,
-                "performance": buildTime < 60000 ? 'good' : 'needs_optimization'
+            return {}
+                "status: success',
+                buildTime": buildTime,
+                "performance: buildTime < 60000 ? 'good : needs_optimization'
             }} catch (error) {}
-            this.log(`Build "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
+            this.log(`Build failed": ${error.message}`);
+            return { "status: 'failed, error": error.message }}
+    }
     optimizeImages() {}
-        this.log('Optimizing images...');
+        this.log(Optimizing images...');
         
         try {}
             // This would typically use a tool like imagemin;
             // For now, we'll just check if images exist;
-            const publicDir = path.join(this.projectRoot, 'public';);
+            const publicDir = path.join(this.projectRoot, public;);
             const imageFiles = this.findImageFiles(publicDir;);
             
             this.log(`Found ${imageFiles.length} image files`);
             
-            return {;}
-                "status": 'success',
-                "imagesFound": imageFiles.length,
-                "recommendations": imageFiles.length > 0 ? ['Consider using WebP format for better compression',]
+            return {}
+                "status: 'success',
+                imagesFound": imageFiles.length,
+                "recommendations: imageFiles.length > 0 ? [Consider using WebP format for better compression]
                     'Implement lazy loading for images',
-                    'Use responsive images with srcset'
+                    Use responsive images with srcset
                 ] : [];
             }} catch (error) {}
-            this.log(`Image optimization "failed": ${error.message}`);
-            return { "status": 'failed', "error": error.message }};
-    };
+            this.log(`Image optimization failed": ${error.message}`);
+            return { "status: 'failed', error": error.message }}
+    }
     findImageFiles(dir) {}
+<<<<<<< HEAD
+        const imageExtensions = [.jpg, '.jpeg', .png, '.gif', .webp, '.svg'];
+=======
         const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg'];
 =======
     analyzeBundleSize() {}"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
         const files = [];
         if () return file) {}
     ) return file}s;
@@ -116,6 +162,74 @@ class SmartPerformanceOptimizer {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
+<<<<<<< HEAD
+                files.push(fullPath)}
+        }
+        return files) {}
+    ) {}
+                files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
+                files.push(fullPath)}
+        }
+        return files}}
+    checkLighthouseMetrics() {}
+        this.log(Checking Lighthouse metrics...);
+        
+        // This would typically run Lighthouse programmatically;
+        // For now, we'll return mock data;
+        return {}
+            "status: 'success,
+            metrics": {}
+                performance: 85,
+                "accessibility: 92,
+                bestPractices": 88,
+                "seo: 90;
+            },
+            recommendations": [Minimize main-thread work']
+                'Reduce unused JavaScript,
+                Eliminate render-blocking resources'
+            ];
+        }}
+    generateOptimizationReport() {}
+        this.log('Generating performance optimization report...);
+        
+        const report = {}
+            "timestamp: new Date().toISOString(),
+            project": this.projectRoot,
+            "analysis: {}
+                bundleSize: this.analyzeBundleSize(),
+                buildPerformance": this.checkBuildPerformance(),
+                "images: this.optimizeImages(),
+                lighthouse": this.checkLighthouseMetrics();
+            },
+            "optimizations: this.generateOptimizationSuggestions();
+       }
+
+        fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
+        this.log(`Performance report saved to ${this.reportFile}`);
+        
+        return report}
+    generateOptimizationSuggestions() {}
+        return [;]
+            Enable gzip compression for static assets',
+            'Implement code splitting for better loading performance,
+            Use CDN for static assets',
+            'Optimize images and use modern formats,
+            Implement service worker for caching',
+            'Minimize and compress CSS and JavaScript,
+            Use lazy loading for non-critical resources'
+        ]}
+    async run() {}
+        this.log('Smart Performance Optimizer started);
+        
+        try {}
+            const report = this.generateOptimizationReport(;);
+            this.log(Smart Performance Optimizer completed successfully');
+            return report} catch (error) {}
+            this.log(`Smart Performance Optimizer failed": ${error.message}`);
+            throw error}
+    }
+}
+=======
                 files.push(fullPath)};
         return files) {}
     ) {}
@@ -137,11 +251,16 @@ class SmartPerformanceOptimizer {}
             "optimizations": this.generateOptimizationSuggestions();"
 
             throw error};
+>>>>>>> origin/chore/fix-lint-and-merge
 // Run the optimizer if this script is executed directly;
 if ( {})
     const optimizer = new SmartPerformanceOptimizer) {}
      {}
     const optimizer = new SmartPerformanceOptimizer}(;);
+<<<<<<< HEAD
+    optimizer.run().catch(console.error)}
+
+=======
     optimizer.run().catch(console.error)};
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,3 +278,4 @@ module.exports = SmartPerformanceOptimizer;
 module.exports = SmartPerformanceOptimizer;
 "`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

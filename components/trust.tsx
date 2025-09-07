@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+}load () 
+}, [userId])
+</li>) ) 
+}</ul> </div>) 
+}<strong>Operator GPT Analysis:</strong> {
+  data.reasonSummary 
+}</div>) 
+}</div> </form> </div>) 
+}</div> </div>) 
+}</div> </EnhancedLayout>) 
+}
+=======
 
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
@@ -165,3 +178,4 @@ className='text-sm px-3 py-1 rounded bg-blue-600 text-white'
   );
 }
 
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -41,8 +41,12 @@ class TypeChecker {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(message);
   error(message) {}
+<<<<<<< HEAD
+const errorMessage = `[${timestamp}] ERROR: ${message}\n`;`;
+=======
     const timestamp = new Date().toISOString();`;
     const errorMessage = `[${timestamp}] ERROR: ${message}\n`;`
+>>>>>>> origin/chore/fix-lint-and-merge
     fs.appendFileSync(this.errorFile, errorMessage);
     console.error(message);
   async runTypeCheck() {}
@@ -246,6 +250,11 @@ class TypeChecker {}
     this.log('Fixing common TypeScript issues...');
 <<<<<<< HEAD
     const files = this.getTypeScriptFiles();
+<<<<<<< HEAD
+    for (const file of files) {}
+      try {}
+        let content = fs.readFileSync(file, 'utf8');
+=======
     let fixedCount = 0;
 =======
     
@@ -261,6 +270,7 @@ class TypeChecker {}
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         // Common TypeScript fixes;
         const fixes = []
           {}

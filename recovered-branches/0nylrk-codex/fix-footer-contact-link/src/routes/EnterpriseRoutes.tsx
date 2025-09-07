@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+import { Fragment } from "react";"
+import { Route, Routes } from "react-router-dom";"
+import EnterprisePlans from "../pages/EnterprisePlans";"
+import EnterpriseAdmin from "../pages/EnterpriseAdmin";"
+import CompanyWorkspace from "../pages/CompanyWorkspace";"
+import EnterpriseBilling from "../pages/EnterpriseBilling";"
+import ZionHireAI from "../pages/ZionHireAI";"
+const EnterpriseRoutes = () => {import {Fragment} from "react";"
+import {Route, Routes} from "react-router-dom";"
+=======
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import EnterprisePlans from "../pages/EnterprisePlans";
@@ -24,14 +35,19 @@ import EnterpriseBilling from "../pages/EnterpriseBilling";
 import ZionHireAI from "../pages/ZionHireAI";
 
 "
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Fragment } from "react","
 import { Route, Routes } from "react-router-dom","
 import EnterprisePlans from "../pages/EnterprisePlans","
 import EnterpriseAdmin from "../pages/EnterpriseAdmin","
+<<<<<<< HEAD
+import CompanyWorkspace from "../pages/CompanyWorkspace","
+=======
 import CompanyWorkspace from "../pages/CompanyWorkspace",";
 import EnterpriseBilling from "../pages/EnterpriseBilling";"
 import ZionHireAI from "../pages/ZionHireAI";
 "
+>>>>>>> origin/chore/fix-lint-and-merge
 import EnterpriseBilling from "../pages/EnterpriseBilling","
 import ZionHireAI from "../pages/ZionHireAI",
 const EnterpriseRoutes = () => {}
@@ -49,8 +65,22 @@ const EnterpriseRoutes = () => {}
   );
 };
 export default EnterpriseRoutes;
+<<<<<<< HEAD
+},
+export default EnterpriseRoutes,
+import EnterprisePlans from "EnterprisePlans";"
+import EnterpriseAdmin from "EnterpriseAdmin";"
+import CompanyWorkspace from "CompanyWorkspace";"
+import EnterpriseBilling from "EnterpriseBilling";"
+import ZionHireAI from "ZionHireAI";"
+}
+const EnterpriseRoutes = () => {;
+      <Route path="/zion-hire-ai" element={<ZionHireAI />} />"
+      <Route path="/hire-ai" element={<ZionHireAI />} />"
+=======
 
       <Route path="/hire-ai" element={<ZionHireAI />} />
+>>>>>>> origin/chore/fix-lint-and-merge
     </Routes>
 
 };

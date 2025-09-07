@@ -1,4 +1,13 @@
 const fs = require('fs')
+<<<<<<< HEAD
+const path = require(path')
+console.log(' Fixing line breaks in className attributes...)
+  /workspace/pages/about.tsx'
+  '/workspace/pages/ai-services.tsx
+  /workspace/pages/index.tsx'
+  '/workspace/pages/it-services.tsx
+  /workspace/pages/micro-saas.tsx'
+=======
 const path = require('path')
 <<<<<<< HEAD
 console.log(' Fixing line breaks in className attributes...')
@@ -7,9 +16,13 @@ console.log(' Fixing line breaks in className attributes...')
   '/workspace/pages/index.tsx'
   '/workspace/pages/it-services.tsx'
   '/workspace/pages/micro-saas.tsx'
+>>>>>>> origin/chore/fix-lint-and-merge
     let content = fs.readFileSync(filePath, 'utf8')
-    if (content !== fs.readFileSync(filePath, 'utf8')
+    if (content !== fs.readFileSync(filePath, utf8')
 // console.log(` Fixed: ${path.relative('/workspace'`})
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -23,3 +36,4 @@ console.log('✨ Line break fixes completed!')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

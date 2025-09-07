@@ -22,11 +22,21 @@ const files = glob.sync ("src/**/*.{ts, tsx, js, jsx}", { cwd: process.cwd () })
 ;
 let total_fixed = 0;
 ;
+<<<<<<< HEAD
+files.for_each ((file) => {
+  }
+  try {
+    }
+    const file_path = path.join (process.cwd (), file);
+    let content = fs.readFileSync (file_path, "utf8");"
+
+=======
 files.for_each ((file) => {}
   try {}
     const file_path = path.join (process.cwd (), file);"
     let content = fs.readFileSync (file_path, "utf8");
     const modified = false;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
     // Fix import statements with double punctuation;
     content = content.replace ('"

@@ -3,7 +3,11 @@ import {MessageSquare} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {ChatAssistant} from "@/components/ChatAssistant";
 export function ChatAssistantTrigger() {;
+<<<<<<< HEAD
+  }
+=======
   const [isOpen, setIsOpen] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { useState } from "react",
 import { MessageSquare } from "lucide-react",

@@ -34,7 +34,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
-  const steps: { id: QuoteRequestSteps; label: string }[] = [
     { id: 'service', label: 'Service' },
     { id: 'details', label: 'Details' },
     { id: 'timeline', label: 'Timeline' },
@@ -42,7 +41,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
 import { QuoteRequestSteps } from "../QuoteRequestForm",
-import { CheckIcon } from 'lucide-react'
 import { cn } from "@/lib/utils",
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
@@ -59,7 +57,11 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     { id: "summary", label: "Summary" }
   ],
 
+<<<<<<< HEAD
+:src/components/QuoteRequestForm/StepProgress.tsx
+=======
   const getStepStatus = (stepId: QuoteRequestSteps) => {
+>>>>>>> origin/chore/fix-lint-and-merge
 
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),

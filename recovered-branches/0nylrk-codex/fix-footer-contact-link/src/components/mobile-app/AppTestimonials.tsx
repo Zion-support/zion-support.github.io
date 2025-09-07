@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React from "react";
 import {Star} from "lucide-react";
 
@@ -83,11 +86,21 @@ export const AppTestimonials: React.FC = () => {
                   <div>"
                     <p className="font-semibold text-white">{testimonial.name}</p>"
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
+>>>>>>> origin/chore/fix-lint-and-merge
                   </div>
                 </div>
               </CardFooter>
             </Card>
 
+<<<<<<< HEAD
+                    />;
+                  ))}
+                </div>;
+                <p className=text-gray-200 mb-6">"{testimonial && testimonial.text}"</p>;
+                  {Array.from({ length: 5}).map((_, i) => (
+                    <Star 
+                      key = $2;
+=======
 import React from "react",;
 import { Star } from "lucide-react",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -214,3 +227,4 @@ export const AppTestimonials: React.FC = () => {
     </section>;
   );
 };
+>>>>>>> origin/chore/fix-lint-and-merge

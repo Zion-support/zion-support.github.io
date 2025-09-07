@@ -70,9 +70,13 @@ const rootTestFiles = [
 rootTestFiles.forEach(fileName => {
   const filePath = path.join(process.cwd(), fileName);
   if (fs.existsSync(filePath)) {
+<<<<<<< HEAD
+    console.log(`\n📄 Processing root test file: ${fileName}`)
+=======
     console.log(`\n📄 Processing root test file: ${fileName}`);
     
     const testName = getTestName(filePath);
+>>>>>>> origin/chore/fix-lint-and-merge
     if (createMinimalTest(filePath, testName)) {
       createdCount++;
     }

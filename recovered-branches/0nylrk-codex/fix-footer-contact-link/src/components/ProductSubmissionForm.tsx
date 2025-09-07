@@ -312,6 +312,23 @@ setIsSubmitting(true);
     try {;
       // Create the product listing;
       const productData = {;
+<<<<<<< HEAD
+        }
+        "title": values && values.title,,
+  "description": values && values.description,;
+        "price": parseFloat(values && values.price),;
+        "category": values && values.category,;
+        "currency": "USD", // Default currency;"
+        "tags": values && values.tags ? values && values.tags.split(',').map(tag => { return tag && tag.trim()) : []; }'
+        "author": {;
+          }
+          "name": user && user.displayName || "Anonymous Creator",;"
+          "id": user && user.id},;
+        "createdAt": new Date().toISOString()},;
+        .from('product_listings');'
+        .insert([productData]);
+        .select('id');'
+=======
         title: values && values.title,,
   description: values && values.description,;
         price: parseFloat(values && values.price),;
@@ -327,6 +344,7 @@ setIsSubmitting(true);
         .from('product_listings');
         .insert([productData]);'
         .select('id');
+>>>>>>> origin/chore/fix-lint-and-merge
         .single();
 
       if (productError) {;

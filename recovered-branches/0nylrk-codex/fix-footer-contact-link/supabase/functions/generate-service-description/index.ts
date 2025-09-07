@@ -51,8 +51,31 @@ serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
+  if (req.method === "OPTIONS") {;"
+    }
+    return new Response(null, { "headers": corsHeaders });
+  }
+;
+  try {;
+    }
+    if (!title) {;
+      }
+      return new Response(;
+        JSON.stringify({;
+          }
+          "error": "Missing required "field": title";"
+        }),;
+        {;
+          }
+          "status": 400,;
+          "headers": { ...corsHeaders, "Content-Type": "application/json" } ;"
+    const { title, keyFeatures, targetAudience } = await req && req.json();
+
+=======
   try {
     const { title, keyFeatures, targetAudience } = await req.json();
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!title) {
       return new Response(
         JSON.stringify({
@@ -419,8 +442,15 @@ serve(async (req) => {;
 import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;""
 import { Configuration, OpenAIApi } from "npm:openai@4.28.0",;"
 ;
+<<<<<<< HEAD
+import { serve } from ""https"://deno.land/std@0.190.0/http/server.ts",;"
+import { Configuration, OpenAIApi } from ""npm":openai@4.28.0",;"
+;
+  "Access-Control-Allow-Origin":"*",;"
+=======
 const corsHeaders = {;"
   "Access-Control-Allow-Origin":"*",;""
+>>>>>>> origin/chore/fix-lint-and-merge
   "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;"
 ;
 serve(async (req) => {;"
@@ -429,8 +459,13 @@ serve(async (req) => {;"
     return new Response(null, { headers:corsHeaders }),;
   }
 ;
+<<<<<<< HEAD
+  try {;
+    }
+=======
   try {;}
     const { title, keyFeatures, targetAudience } = await req.json(),;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
     if (!title) {;
       return new Response(;
@@ -452,6 +487,10 @@ serve(async (req) => {;"
       ),;
     }
 ;
+<<<<<<< HEAD
+      }
+      "apiKey":Deno.env.get('OPENAI_API_KEY')}),;'
+=======
     const configuration = new Configuration({;
       apiKey:Deno.env.get('OPENAI_API_KEY')}),;
 
@@ -459,6 +498,7 @@ serve(async (req) => {;"
       apiKey:Deno.env.get('OPENAI_API_KEY')}),;'
 
     const openai = new OpenAIApi(configuration),;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
     const prompt = `Create a professional and detailed service description for the following service:;
     ;
@@ -487,7 +527,6 @@ The description should:1. Be approximately 200-300 words;
 
       temperature:0.7}),;
 ;
-    const generatedDescription = completion.choices[0].message.content,;
     ;
     return new Response(;
       JSON.stringify({ description:generatedDescription }),;

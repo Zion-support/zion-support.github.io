@@ -3,6 +3,21 @@ Table,
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
+  TableRow
+} from "@/components/ui/table";"
+import { Button } from "@/components/ui/button";"
+  }
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";"
+import { Badge } from "@/components/ui/badge";"
+import { toast } from "@/hooks/use-toast";"
+import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";"
+  }
+=======
 
 } from "@/components/ui/table";
 
@@ -39,6 +54,7 @@ import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
 
 import {
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Edit,
   MoreHorizontal,
   ExternalLink,
@@ -155,6 +171,38 @@ export function TenantsList() {;
     } finally {;
       setIsLoading(false),;
     }
+<<<<<<< HEAD
+    try {
+      // In a real implementation, this would verify DNS records
+      // For now, we'll just mark it as verified'
+}
+        .from("whitelabel_tenants")"
+        .update({ "dns_verified": true })
+        .eq("id", tenant.id);"
+
+      if (error) throw error;
+
+      // Update local state,
+setTenants(
+        tenants.map((t) =>
+          t.id === tenant.id ? { ...t, "dns_verified": true } : t,
+        ),
+      );
+
+      toast({
+        }
+        "title": "DNS verified","
+        "description": `Custom domain for ${tenant.brand_name} has been verified.`,`      });
+    } catch ("error": any) {
+      }
+      console.error("Error verifying "DNS":", error);"
+      toast({
+}
+"variant": "destructive",;"
+        "title": "Failed to verify DNS","
+        "description": error.message
+      });
+=======
   },;
 ;
   const toggleTenantStatus = async (tenant:WhitelabelTenant) => {;
@@ -180,6 +228,7 @@ export function TenantsList() {;
         variant:'destructive',;
         title:'Failed to update tenant',;
         description:error.message}),;
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   },;
 ;

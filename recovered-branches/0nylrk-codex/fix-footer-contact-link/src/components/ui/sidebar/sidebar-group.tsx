@@ -59,11 +59,36 @@ interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 
 }
 
+<<<<<<< HEAD
+const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
+  (
+    {
+      }
+      title,
+icon
+      defaultExpanded = true,
+showChevron = true,
+className
+      children
+      ...props
+    }
+    ref
+  ) => {
+    }
+    const [expanded, setExpanded] = React.useState(defaultExpanded);
+return (;
+      <div
+}
+import { ChevronDown } from "lucide-react";"
+import { cn } from "@/lib/utils",;"
+import { SafeRef } from "@/types/ref-types",;"
+=======
 import React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
 
 import { SafeRef } from "@/types/ref-types",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
   title?: string,;
   icon?: React.ReactNode,;

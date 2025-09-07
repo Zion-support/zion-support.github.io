@@ -1,7 +1,14 @@
 export interface TalentProfileData {}
 ';
 import {useState} from 'react';'
+<<<<<<< HEAD
+import {supabase} from '@/integrations / supabase / client';'
+export interface TalentProfileData {export interface TalentProfileData {
+}
+import {supabase} from '@/integrations/supabase/client';'
+=======
 import {supabase} from '@/integrations/supabase/client';
+>>>>>>> origin/chore/fix-lint-and-merge
 export interface TalentProfileData {;
 
   name: string;

@@ -1,4 +1,10 @@
 const fs = require('fs')
+<<<<<<< HEAD
+const path = require(path')
+// console.log('� Auditing dependencies...)
+        console.log( Auditing code security...')
+
+=======
 const path = require('path')
 <<<<<<< HEAD
 // console.log('� Auditing dependencies...')
@@ -16,3 +22,4 @@ const path = require('path')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

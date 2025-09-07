@@ -29,6 +29,20 @@ import {
   FormLabel;
   FormControl;
 
+<<<<<<< HEAD
+import React, { useState } from "react";
+import { Control } from "react-hook-form";
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormDescription,
+  FormMessage
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input";
+import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender";
+import { Card, CardContent } from "@/components/ui/card";
+=======
   FormDescription;
 
 import {Control} from "react-hook-form";
@@ -40,6 +54,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface RateOptimizationSectionProps {
 
   control: Control<any>

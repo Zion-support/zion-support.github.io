@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
 
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
@@ -674,11 +677,26 @@ const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "","
 // Get openAI API key from environment variables;"
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",""
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";"
+>>>>>>> origin/chore/fix-lint-and-merge
 /**
  * Normalizes skills using OpenAI;
  * @param skills Array of skill strings to normalize;
  * @returns Array of normalized skills;
  */
+<<<<<<< HEAD
+
+  }
+  try {
+
+              }
+              ...
+            ]``          }
+              {
+
+  } catch (error) {
+    // If AI matching fails, perform a basic skill matching
+}
+=======
 export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {
 </string>
 export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]> {;
@@ -904,6 +922,7 @@ pr-12325
                 "reason": "Brief reason for match";
             role: "system",;")"
             content: `You are an AI talent matcher for a job marketplace. Based on the job details and talent profiles provided, identify the top 5 matching talents (or fewer if there aren't 5 good matches). For each match, provide:;'
+>>>>>>> origin/chore/fix-lint-and-merge
 
             1. The talent ID;
             2. A match score from 0-100;
@@ -912,6 +931,8 @@ pr-12325
             Return your response in JSON format only, with no additional text:;
             [;
 
+<<<<<<< HEAD
+=======
               {;'
                 "talentId": "talent-id-1",;""
                 "score": 85,;"]"
@@ -948,11 +969,14 @@ pr-12325
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {;"
       throw new Error("Failed to match talents with AI");"
 
+>>>>>>> origin/chore/fix-lint-and-merge
     }
-;
     // Parse the AI response;
-    const aiResponse = JSON.parse(data.choices[0].message.content),;
+    const aiResponse = JSON.parse(data.choices[0].message.content),
     // Check if the response is in the expected format;
+<<<<<<< HEAD
+
+=======
     if (!Array.isArray(aiResponse)) {;"
       throw new Error("AI response format is invalid");
     }
@@ -963,23 +987,28 @@ pr-12325
 
     if (!Array.isArray(aiResponse)) {;"
       throw new Error("AI response format is invalid");"
+>>>>>>> origin/chore/fix-lint-and-merge
     }
-;
     return aiResponse;
+<<<<<<< HEAD
+
+=======
   } catch (error) {;"
     console.error("Error in findBestMatches:", error),;"
+>>>>>>> origin/chore/fix-lint-and-merge
     // If AI matching fails, perform a basic skill matching;
     return performBasicSkillMatching(jobDetails, talents);
 
   }
 }
-;
 /**;
  * Fallback method that uses basic string matching to find talent matches;
  * @param jobDetails The job to match;
  * @param talents Array of talent profiles;
  * @returns Array of matches with scores;
  */;
+<<<<<<< HEAD
+=======
 export function performBasicSkillMatching(jobDetails: any, talents: TalentProfile[]): MatchResult[] {;
   const requiredSkills = jobDetails.skills.map((skill: string) => skill.toLowerCase()),;
   return talents.map(talent => {;
@@ -1035,11 +1064,15 @@ pr-12325
 
       talentId: talent && talent.id;
       score: matchScore;
+>>>>>>> origin/chore/fix-lint-and-merge
 
     }
   })
   .filter(match => match && match.score > 30) // Only include matches with at least 30% score;
   .sort((a, b) => b && b.score - a && a.score) // Sort by score (highest first)
+<<<<<<< HEAD
+  .slice(0, 5), // Get top 5 matches
+=======
 
 ;
 
@@ -1071,12 +1104,20 @@ if ( {) {
   $2;
 }"
       throw new Error ("Failed to match talents with AI");"
+>>>>>>> origin/chore/fix-lint-and-merge
 
     }
     // Parse the AI response;
     const ai_response = JSON.parse (data.choices[0].message.content);
-;
     // Check if the response is in the expected format;
+<<<<<<< HEAD
+    if () {) {
+  $2
+}
+
+    // If AI matching fails, perform a basic skill matching;
+    return performBasicSkillMatching (job_details, talents);
+=======
 
       throw new Error ("AI response format is invalid");
     }
@@ -1094,6 +1135,7 @@ if ( {) {
 ;
     // If AI matching fails, perform a basic skill matching;}
     return performBasicSkillMatching (job_details, talents);}
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 }
 /**;
@@ -1102,15 +1144,28 @@ if ( {) {
 * @param talents Array of talent profiles;
 * @returns Array of matches with scores;
 */;
+<<<<<<< HEAD
+=======
 export function performBasicSkillMatching (job_details: any, talents: TalentProfile[]): MatchResult[] {};
   const required_skills = job_details.skills.map ((skill: string) => skill.toLowerCase ());
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
 
     const talent_skills = Array.is_array (talent.skills);
       ? talent.skills.map ((skill: string) => skill.toLowerCase ());
       : [];
-;
     // Find matching skills;
+<<<<<<< HEAD
+
+    // Calculate a basic match score;
+    const match_score = Math.round ((matched_skills.length / required_skills.length) * 100);
+    return {
+      }
+      "talent_id": talent.id;
+      "score": match_score;
+      "matched_skills": matched_skills,
+      "reason": `Matched ${matched_skills.length} out of ${required_skills.length} required skills.`;`
+=======
     const matched_skills = required_skills.filter ((skill: string) =>;
       talent_skills.some ((talent_skill: string) => talent_skill.includes (skill) || skill.includes (talent_skill)));
 ;
@@ -1122,6 +1177,7 @@ export function performBasicSkillMatching (job_details: any, talents: TalentProf
       score: match_score;
 
       reason: `Matched ${matched_skills.length} out of ${required_skills.length} required skills.`;
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   });
   .filter (match => match.score > 30) // Only include matches with at least 30% score;

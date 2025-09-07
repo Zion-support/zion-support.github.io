@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+const originalLog = console.log;
+        let fixCount = 0;
+            if (match) {fixCount = parseInt(match[1])}
+=======
 let fixCount = 0;
         console && console.log = (...args) => {
           const message = args && args.join(' ');
@@ -7,6 +12,7 @@ let fixCount = 0;
             if (match) {
               fixCount = parseInt(match[1]);
             }
+>>>>>>> origin/chore/fix-lint-and-merge
           }
 
         try {

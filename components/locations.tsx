@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+<Head> <title>Locations | Zion Tech Group</title> <meta name="description" content="Our office locations and contact information." /> <link rel="canonical" href="https://ziontechgroup.com/locations" /> </Head> </div> </div> </div>
+=======
 
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
 }componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) ;}
@@ -45,3 +48,4 @@ export default function LocationsPage() {return (<div className=\"min-h-screen p
     </div>
   );
 
+>>>>>>> origin/chore/fix-lint-and-merge

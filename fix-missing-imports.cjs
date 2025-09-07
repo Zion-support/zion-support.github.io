@@ -60,6 +60,23 @@ class ImportFixer {
 
 
       // Add missing icons to existing import;
+<<<<<<< HEAD
+      if (existingImports.length > 0) {;
+        const allIcons = [...existingImports, ...missingIcons].sort();
+        const importStatement = `import {;
+  ${allIcons.join(',\n  ')}
+} from 'lucide-react';`;
+;
+        content = content.replace(;
+          /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,
+          importStatement;
+        );
+      } else {;
+        // Create new import statement;
+  ${missingIcons.join(',\n  ')}
+} from 'lucide-react';`;
+;
+=======
       if (existingImports.length > 0) {
         const allIcons = [...existingImports, ...missingIcons].sort();`;
         const importStatement = `import {
@@ -72,6 +89,7 @@ class ImportFixer {
   // TODO: Implement
 }"
 
+>>>>>>> origin/chore/fix-lint-and-merge
         // Find the best place to insert the import;
         const lines = content.split('\n');
         let insertIndex = 0;

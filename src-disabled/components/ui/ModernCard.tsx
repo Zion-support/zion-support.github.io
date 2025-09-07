@@ -28,12 +28,10 @@ export const ModernCard: React.FC<ModernCardProps /> = ({ children, className, v
 
 
 ;
-  const baseClasses = cn(';relative overflow-hidden rounded-2xl transition-all duration-300', 'focus-within: ring-2 focus-within:ring-zion-cyan focus-within:ring-offset-2 focus-within:ring-offset-zion-slate', className )  const variantClasses = { default: 'bg-zion-slate/80 backdrop-blur-sm border border-zion-slate-light/20',
   elevated: 'bg-zion-slate/90 backdrop-blur-md border border-zion-cyan/30 shadow-2xl', glass: 'bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl'}
   neon: 'bg-zion-slate/80 backdrop-blur-sm border border-zion-cyan/50 shadow-neon'}
 }
 ;
-  const hoverClasses = hoverEffect && !disabled ? 'hover: scale-105 hover:shadow-2xl' : '' ;
   return ( <motion.div className={cn(baseClasses, variantClasses[variant], hoverClasses)} whileHover={hoverEffect && !disabled ? { y: -8 } : {}} whileTap={onClick && !disabled ? { scale: 0.98 } : {}} onClick={onClick} role={onClick ? 'button' : undefined} tabIndex={onClick && !disabled ? 0 : undefined} onKeyDown={(e) = /> { if (onClick && !disabled && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault() onClick() } }} disabled={disable}
 } initial={{ opacity: 0, y: 20 }
 } animate={{ opacity: 1, y: 0 }
@@ -57,7 +55,6 @@ export const ModernCard: React.FC<ModernCardProps /> = ({ children, className, v
   neon: 'bg-zion-slate/80 backdrop-blur-sm border border-zion-cyan/50 shadow-neon'}
 }
 ;
-  const hoverClasses = hoverEffect && !disabled ? 'hover: scale-105 hover:shadow-2xl' : '' ;
   return ( <motion.div className={cn(baseClasses, variantClasses[variant], hoverClasses)} whileHover={hoverEffect && !disabled ? { y: -8 } : {}} whileTap={onClick && !disabled ? { scale: 0.98 } : {}} onClick={onClick} role={onClick ? 'button' : undefined} tabIndex={onClick && !disabled ? 0 : undefined} onKeyDown={(e) = /> { if (onClick && !disabled && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault() onClick() } }} disabled={disable}
 } initial={{ opacity: 0, y: 20 }
 } animate={{ opacity: 1, y: 0 }
@@ -70,12 +67,10 @@ export const ModernCard: React.FC<ModernCardProps /> = ({ children, className, v
 
 
 ;
-  const baseClasses = cn(';relative overflow-hidden rounded-2xl transition-all duration-300', ';focus-within: ring-2 focus-within:ring-zion-cyan focus-within:ring-offset-2 focus-within:ring-offset-zion-slate', className )  const variantClasses = { default: 'bg-zion-slate/80 backdrop-blur-sm border border-zion-slate-light/20',
   elevated: 'bg-zion-slate/90 backdrop-blur-md border border-zion-cyan/30 shadow-2xl', glass: 'bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl'}
   neon: 'bg-zion-slate/80 backdrop-blur-sm border border-zion-cyan/50 shadow-neon'}
 }
 ;
-  const hoverClasses = hoverEffect && !disabled ? 'hover: scale-105 hover:shadow-2xl' : '' ;
   return ( <motion.div className={cn(baseClasses, variantClasses[variant], hoverClasses)} whileHover={hoverEffect && !disabled ? { y: -8 } : {}} whileTap={onClick && !disabled ? { scale: 0.98 } : {}} onClick={onClick} role={onClick ? 'button' : undefined} tabIndex={onClick && !disabled ? 0 : undefined} onKeyDown={(e) = /> { if (onClick && !disabled && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault() onClick() } }} disabled={disable}
 } initial={{ opacity: 0, y: 20 }
 } animate={{ opacity: 1, y: 0 }

@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+
+#!/"usr/bin/env"
+import { execSync  } from "child_process
+import fs from fs"
+import path from "path
+import { fileURLToPath } from url"
+console.log("� Starting continuous link integrity automation...)
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -7,9 +16,13 @@
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env""
+>>>>>>> origin/chore/fix-lint-and-merge
 import { execSync  } from "child_process"
-import fs from "fs"
+import fs from fs
 import path from "path"
+<<<<<<< HEAD
+
+=======
 import { fileURLToPath } from "url"
 console.log(""� Starting continuous link integrity automation...")
 import { execSync  } from "child_process"
@@ -43,14 +56,18 @@ console.log(""� Starting continuous link integrity automation...")
 // console.log(" Checking for orphaned files..."")
   console.log(""⚠  Orphaned files "found": ")
 // console.log("")
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log(` No orphaned files found``)
-// console.log(" Checking for missing assets..."")
-      console.log("⚠  Orphaned files "found": ")
+// console.log(" Checking for missing assets...)
+      console.log("⚠  Orphaned files "found: )
 // console.log(" No orphaned files found")
-    console.log(" Checking for missing assets..."")
-// console.log(""⚠  Missing assets "found": ")
-  console.log("")
+    console.log( Checking for missing assets...")
+// console.log("⚠  Missing assets found": ")
+  console.log()
 // console.log(` No missing assets found``)
+<<<<<<< HEAD
+
+=======
     console.log(" Generating link integrity report..."")
   "timestamp"
       "brokenInternalLinks"
@@ -102,16 +119,25 @@ console.log(""� Starting continuous link integrity automation...")
   const assetRef = match.match(/src=[""]([^"]+)["]|href=[""]([^""]+)["]/)[1] || match.match(/src=["]([^""]+)[""]|href=["]([^"]+)[""]
               if (assetRef && !assetRef.startsWith("http")
     if (brokenLinks.length > 0) {console.log(⚠  Found ${brokenLinks.length} broken external "links")
+>>>>>>> origin/chore/fix-lint-and-merge
       brokenLinks.forEach(link => {console.log(`  - ${link.url} ("Status"`)
-  console.log("" All external links are working")
+  console.log( All external links are working")
 async function runContinuous() {console.log("})
-  // Set up continuous execution"
-  setInterval(async () => {"}
+  // Set up continuous execution
+  setInterval(async () => {}
     await runLinkIntegrity();")}, AUTOMATION_INTERVAL);"
-  console.log( Continuous link integrity checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes"")
+  console.log( Continuous link integrity checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes)
 process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
+  console.log(� Received SIGINT, shutting down gracefully...)
 process.on("SIGTERM")
+<<<<<<< HEAD
+  console.log(� Received SIGTERM, shutting down gracefully...)
+
+
+  console.error(" Failed to start continuous link integrity "checker: )
+
+  console.error(" Failed to start continuous link integrity "checker: )
+=======
   console.log("� Received SIGTERM, shutting down gracefully...")
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,11 +149,16 @@ process.on("SIGTERM")
 =======
 <<<<<<< HEAD
   console.error(" Failed to start continuous link integrity "checker": ")
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error(" Failed to start continuous link integrity "checker": ")
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

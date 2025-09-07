@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+const AVAILABILITY_OPTIONS = [;
+  { "id": "full_time", "label": "Full-time" }"
+  { "id": "part_time", "label": "Part-time" }"
+import {ChevronDown, ChevronUp} from "lucide-react";"
+import {Checkbox} from "@/components/ui/checkbox";"
+import {AvailabilityFilterProps} from "@/types/filters";"
+import { ChevronDown, ChevronUp } from "lucide-react",import { Checkbox } from "@/components/ui/checkbox";"
+import { AvailabilityFilterProps } from "@/types/filters";"
+  { "id": "full_time", "label": "Full-time" },"
+  { "id": "part_time", "label": "Part-time" },"
+  { "id": "project", "label": "Project-based" }];"
+export function AvailabilityFilter() {
+}
+return (;
+    <div className="mb-6 border-b border-zion-blue-light pb-6">"
+      <button,
+onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium""
+=======
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
@@ -43,6 +63,7 @@ export function AvailabilityFilter({}
         onClick={toggleSection}"
 
         className="flex w-full items-center justify-between text-white font-medium"
+>>>>>>> origin/chore/fix-lint-and-merge
       >
         <span>Availability</span>
         {expanded ? ("
@@ -66,6 +87,18 @@ export function AvailabilityFilter({}
                 htmlFor={`availability-${option.id}`}"
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
+<<<<<<< HEAD
+import { ChevronDown, ChevronUp } from "lucide-react";"
+import { Checkbox } from "@/components/ui/checkbox";"
+import { AvailabilityFilterProps } from "@/types/filters",;"
+  { "id": "full_time", "label": "Full-time" },;"
+  { "id": "part_time", "label": "Part-time" },;"
+  { "id": "project", "label": "Project-based" }"
+    <div className="mb-6 border-b border-zion-blue-light pb-6">;"
+      <button,
+onClick={toggleSection}
+        className="flex w-full items-center justify-between text-white font-medium">;"
+=======
 
 import { AvailabilityFilterProps } from "@/types/filters",;
 const AVAILABILITY_OPTIONS = [;"
@@ -121,6 +154,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium";
       >;
+>>>>>>> origin/chore/fix-lint-and-merge
         <span>Availability</span>;
         {expanded ? (;
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;

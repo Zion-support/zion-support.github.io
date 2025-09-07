@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+/** @type {import('tailwindcss).Config} */
+module.exports = {
+  content: [
+
+=======
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,6 +11,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+>>>>>>> origin/chore/fix-lint-and-merge
   ],
   theme: {
     extend: {
@@ -55,6 +62,15 @@ module.exports = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
+<<<<<<< HEAD
+      fontFamily: {
+        sans: [Inter', 'system-ui, sans-serif'],
+        mono: ['JetBrains Mono, monospace']}}},
+  plugins: [
+    require('@tailwindcss/forms),
+    require(@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio')]}
+=======
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',

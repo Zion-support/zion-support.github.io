@@ -6,7 +6,7 @@
  */
 
 const { execSync } = require('child_process');
-const fs = require('fs');
+const fs = require(fs');
 const path = require('path');
 const log = (message) => {}
   const timestamp = new Date().toISOString();
@@ -15,6 +15,19 @@ const log = (message) => {}
 
 =======
   
+<<<<<<< HEAD
+}
+
+const runCommand = (command, description) => {}
+  try {}
+    log(`"Starting: ${description}`);
+    const output = execSync(command, {})
+      encoding": utf8', 
+      "stdio: 'pipe,
+      cwd": process.cwd(),
+      "maxBuffer: 1024 * 1024 * 10, // 10MB buffer;
+      timeout": 300000 // 5 minute timeout;
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -34,11 +47,21 @@ const runCommand = (command, description) => {}
       "cwd": process.cwd(),
       "maxBuffer": 1024 * 1024 * 10, // 10MB buffer;
       "timeout": 300000 // 5 minute timeout;
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 });
-    log(`"Completed": ${description}`);
-    return { "success": true, output };
+    log(`"Completed: ${description}`);
+    return { success": true, output }
   } catch (error) {}
+<<<<<<< HEAD
+    log(`"Failed: ${description} - ${error.message}`);
+    return { success": false, "error: error.message }
+  }
+}
+
+const main = async () => {}
+  log(Starting CI/CD Automation Process');
+=======
     log(`"Failed": ${description} - ${error.message}`);
     return { "success": false, "error": error.message };
   };
@@ -54,37 +77,54 @@ const main = async () => {}"
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Install dependencies;
-  const installResult = runCommand('npm ci', 'Installing dependencies');
+  const installResult = runCommand('npm ci, Installing dependencies');
   if (!installResult.success) {}
-    log('Dependency installation failed, trying npm install');
-    runCommand('npm install', 'Installing dependencies (fallback)');
-  };
+    log('Dependency installation failed, trying npm install);
+    runCommand(npm install', 'Installing dependencies (fallback));
+  }
   // Lint and type-check;
+<<<<<<< HEAD
+  runCommand(npm run lint', 'Running linting);
+  runCommand(npm run type-check', 'Running type checking);
+=======
   runCommand('npm run lint', 'Running linting');
   runCommand('npm run type-check', 'Running type checking');
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Build project;
-  const buildResult = runCommand('npm run build', 'Building project');
+  const buildResult = runCommand(npm run build', 'Building project);
   if (!buildResult.success) {}
-    log('Build failed, attempting to fix and rebuild');
+    log(Build failed, attempting to fix and rebuild');
     // Try to fix common build issues;
+<<<<<<< HEAD
+    runCommand('rm -rf .next && npm run build, Cleaning and rebuilding');
+  }
+=======
     runCommand('rm -rf .next && npm run build', 'Cleaning and rebuilding');
   };
 =======
   // Install dependencies;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
   // Verify build output;
-  if (fs.existsSync('dist') || fs.existsSync('out') || fs.existsSync('.next')) {}
-    log('Build "verification": Output directory found');
+  if (fs.existsSync('dist) || fs.existsSync(out') || fs.existsSync('.next)) {}
+    log(Build verification": Output directory found');
   } else {}
+<<<<<<< HEAD
+    log('Build "verification: No output directory found);
+  }
+  // Run tests if available;
+  runCommand(npm test --if-present', 'Running tests);
+=======
     log('Build "verification": No output directory found');
 <<<<<<< HEAD
   };
@@ -93,22 +133,60 @@ const main = async () => {}"
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Check for any pending changes;
   try {}
+<<<<<<< HEAD
+    const gitStatus = execSync(git status --porcelain', { encoding": 'utf8 }
+=======
     const gitStatus = execSync('git status --porcelain', { "encoding": 'utf8' }
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 });
     if (gitStatus.trim()) {}
-      log('Uncommitted changes detected');
+      log(Uncommitted changes detected');
       // Optionally auto-commit fixes;
+<<<<<<< HEAD
+      if (process.env.AUTO_COMMIT === 'true) {}
+        runCommand(git add .', 'Staging changes);
+        runCommand(git commit -m "Auto-fix: CI/CD automation fixes"', 'Committing fixes);
+      }
+    }
+  } catch (error) {}
+    log(`Git status check "failed: ${error.message}`);
+  }
+  log(CI/CD Automation Process completed');
+}
 
+// Handle process termination;
+process.on('SIGINT, () => {}
+  log(CI/CD Automation Process interrupted');
+  process.exit(0);
+}
+});
+
+process.on('SIGTERM, () => {}
+  log(CI/CD Automation Process terminated');
+  process.exit(0);
+}
+});
+
+// Run the main function;
+main().catch(error => {})
+  log(`CI/CD Automation Process failed": ${error.message}`);
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
   process.exit(1);
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -123,3 +201,4 @@ const main = async () => {}"
 =======
 "`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

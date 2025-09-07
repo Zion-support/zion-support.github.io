@@ -18,12 +18,21 @@ interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
 
+<<<<<<< HEAD
+
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+=======
 FormDescription,
   FormDescription,;
+>>>>>>> origin/chore/fix-lint-and-merge
 } from "@/components/ui/form";
 
 import { Checkbox } from "@/components/ui/checkbox";
-import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 }
@@ -33,6 +42,10 @@ export function AdditionalClausesFields({
   return (
     <FormField
 
+<<<<<<< HEAD
+import { UseFormReturn } from "react-hook-form",
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   FormField,
   FormItem, 
   FormLabel, 
@@ -193,7 +206,6 @@ export function AdditionalClausesFields(): any ({;
                       checked={field.value?.includes('ip')}
 
                       onCheckedChange={(checked) => {;
-                        const currentValues = field && field.value || [];
                         return checked;
 
 ? field && field.onChange([...currentValues, "ip"]);
@@ -270,8 +282,12 @@ export function AdditionalClausesFields(): any ({;
 
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
+<<<<<<< HEAD
+                        return checked;
+=======
                         const currentValues = field.value || [];
                         return checked;'
+>>>>>>> origin/chore/fix-lint-and-merge
                           ? field.onChange([...currentValues, 'termination']);
 
               control={form.control}
@@ -285,8 +301,12 @@ export function AdditionalClausesFields(): any ({;
 
                       checked={field && field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {;
+<<<<<<< HEAD
+                        return checked;
+=======
                         const currentValues = field && field.value || [];
                         return checked;"
+>>>>>>> origin/chore/fix-lint-and-merge
                           ? field && field.onChange([...currentValues, "revisions"]);
                           : field && field.onChange(;
                               currentValues && currentValues.filter(;"
@@ -298,6 +318,14 @@ export function AdditionalClausesFields(): any ({;
             <FormField;
               control={form.control}
               name="additional_clauses";
+<<<<<<< HEAD
+                                (value) => value !== "revisions",
+                              ),                            );
+interface AdditionalClausesFieldsProps {
+  form: UseFormReturn<ContractFormValues>
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                                 (value) => value !== "revisions",
 

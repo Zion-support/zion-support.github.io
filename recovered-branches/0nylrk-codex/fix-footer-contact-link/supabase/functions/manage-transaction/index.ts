@@ -125,6 +125,13 @@ serve(async (req) => {;
     return new Response(null, { headers:corsHeaders }),;
   }
 ;
+<<<<<<< HEAD
+    Deno.env.get("SUPABASE_URL") ?? "",;"
+    Deno.env.get("SUPABASE_ANON_KEY") ?? "";"
+  ),;
+  // Create service client for admin operations;
+    Deno.env.get("SUPABASE_URL") ?? "",;"
+=======
   const supabaseClient = createClient(;
     Deno.env.get("SUPABASE_URL") ?? "",;
     Deno.env.get("SUPABASE_ANON_KEY") ?? "";
@@ -199,6 +206,7 @@ serve(async (req) => {;"
   ),;
   // Create service client for admin operations;
   const supabaseAdmin = createClient(;)"
+>>>>>>> origin/chore/fix-lint-and-merge
     Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",;"
     { auth:{ persistSession:false } }
   try {;
@@ -218,16 +226,107 @@ serve(async (req) => {;"
 
     }
     // Get transaction details;
+<<<<<<< HEAD
+      .from("transactions");"
+      .select("*");"
+=======
 
     const { data:transaction, error:fetchError } = await supabaseAdmin;"
       .from("transactions");""
       .select("*");""
+>>>>>>> origin/chore/fix-lint-and-merge
       .eq("id", transactionId);"
       .single(),;
     if (fetchError || !transaction) {;"
       throw new Error("Transaction not found"),;"
 pr-12325
     }
+<<<<<<< HEAD
+;
+    // Verify user is authorized to manage this transaction;
+    // Clients can cancel or request refunds, providers can only release funds;
+    if (!isClient && !isProvider) {;
+      }
+      throw new Error("You are not authorized to manage this transaction");"
+    }
+;
+      }
+      "apiVersion": "2023-10-16"}),;"
+    switch (action) {;
+      }
+      case 'release':;'
+        // Only providers or admins can release escrow funds;
+        if (!isProvider) {;
+          }
+          throw new Error("Only service providers can release funds from escrow");"
+        }
+;
+        // Update transaction status;
+        await supabaseAdmin;
+          .from("transactions");"
+          .update({;
+            }
+            "status": "completed",;"
+            "in_escrow": false,;
+            "completed_at": new Date().toISOString();
+          });
+          .eq("id", transactionId),;"
+        result = { "message": "Funds released from escrow" },;"
+        break,;
+      case 'refund':;'
+        // Check if transaction can be refunded;
+        if (transaction.status !== "completed" && transaction.status !== "pending") {;"
+          }
+          throw new Error("This transaction cannot be refunded");"
+        }
+;
+        // Process refund via Stripe;
+        if (transaction.stripe_session_id) {;
+          // Retrieve payment intent from session;
+          }
+          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id),;
+          if (session.payment_intent) {;
+            }
+            const refund = await stripe.refunds.create({;
+              }
+              "payment_intent": session.payment_intent.toString(),;
+              "reason": "requested_by_customer";"
+            }),;
+            // Update transaction status;
+            await supabaseAdmin;
+              .from("transactions");"
+              .update({;
+                }
+                "status": "refunded",;"
+                "refunded_at": new Date().toISOString(),;
+                "refund_id": refund.id;
+              });
+              .eq("id", transactionId);"
+          }
+        }
+;
+        result = { "message": "Refund processed successfully" },;"
+        break,;
+      case 'cancel':;'
+        // Only allow cancellation for pending transactions;
+        if (transaction.status !== "pending") {;"
+          }
+          throw new Error("Only pending transactions can be cancelled");"
+        }
+;
+        // Update transaction status;
+        await supabaseAdmin;
+          .from("transactions");"
+          .update({;
+            }
+            "status": "cancelled",;"
+            "cancelled_at": new Date().toISOString();
+          });
+          .eq("id", transactionId),;"
+        result = { "message": "Transaction cancelled successfully" },;"
+        break,;
+      "default": throw new Error("Invalid action");"
+=======
 
       .single(),
     if (fetchError || !transaction) {
@@ -247,6 +346,7 @@ pr-12325
 
     if (!transactionId) {"
       throw new Error("Transaction ID is required")
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     // Get transaction details;
     const { data: transaction, error: fetchError } = await supabaseAdmin"

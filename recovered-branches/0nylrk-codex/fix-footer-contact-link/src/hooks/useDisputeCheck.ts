@@ -64,6 +64,13 @@ function useDisputeCheck() {}
 if ( {) {}
   $2;
 }
+<<<<<<< HEAD
+isLoading 
+    isLoading,
+export function useDisputeCheck() {;
+  }
+  const [isUnderDispute, setIsUnderDispute] = useState(false),;
+=======
         setIsLoading (false);
         return;
       }
@@ -161,6 +168,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
   const [isUnderDispute, setIsUnderDispute] = useState(false),;
   const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),;
   const [disputeId, setDisputeId] = useState<string | null>(null),;
+>>>>>>> origin/chore/fix-lint-and-merge
   const [isLoading, setIsLoading] = useState(true),;
   useEffect(() => {;
     const checkDispute = async () => {;
@@ -173,6 +181,20 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
     check_dispute ();
   }, [project_id, milestone_id]);
 ;
+<<<<<<< HEAD
+}  }
+}
+import { useState, useEffect } from "react",;"
+import { supabase } from "@/integrations/supabase/client",;"
+;
+export function useDisputeCheck() {;
+  }
+;
+  useEffect(() => {;
+    }
+      }
+      if (!projectId && !milestoneId) {;
+=======
 
         // Order by status priority: open, under_review, resolved, closed;"
 
@@ -188,6 +210,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {;
           setIsUnderDispute(false),;
           setDisputeStatus(null),;
           setDisputeId(null);
+>>>>>>> origin/chore/fix-lint-and-merge
         }
 
         console.error("Error checking dispute status:", err),;
@@ -281,11 +304,20 @@ export function useDisputeCheck() { return null; }
 const [disputeStatus, setDisputeStatus] = useState<'open' | 'under review' | 'resolved' | 'closed' | null> (null);
 const [disputeId, setDisputeId] = useState<string | null> (null);
 const [isLoading, setIsLoading] = useState (true);
+<<<<<<< HEAD
+  }
+  if (!projectId && !milestoneId) {
+  //If milestone ID is provided, filter by that too if (milestoneId) {
+  //Order by status "priority": open, under review, resolved, closed query = query.order ("status", {"
+  }
+  "ascending": true 
+=======
 const checkDispute = async () => {}
   if (!projectId && !milestoneId) {}
   //If milestone ID is provided, filter by that too if (milestoneId) {"
   //Order by status priority: open, under review, resolved, closed query = query.order ("status", {}
   ascending: true;
+>>>>>>> origin/chore/fix-lint-and-merge
 });
   data, error;
 }= await query;

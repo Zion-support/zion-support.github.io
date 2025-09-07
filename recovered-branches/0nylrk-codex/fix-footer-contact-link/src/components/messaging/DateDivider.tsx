@@ -57,6 +57,10 @@ import React from 'react';'
 import { format } from 'date-fns';
 
         {format(date, "MMM d, yyyy")}
+<<<<<<< HEAD
+      </div>
+      <div className="flex-1 border-t border-zion-purple/20"></div>
+=======
       </div>"
       <div className="flex-1 border-t border-zion-purple/20"></div>;
     </div>;
@@ -66,14 +70,27 @@ import { format } from 'date-fns';
 import React from 'react';
 
 import { format } from 'date-fns';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 }
 interface DateDividerProps {;
   date: Date;
 }
 
+<<<<<<< HEAD
+interface DateDividerProps {
+  date: Date;
+}
+;
+    </div>
+  )
+}
+}
+;
+=======
 import React from './react';
 
 import { format  } from './date - fns';
 interface DateDividerProps {}
   date: Date;
+>>>>>>> origin/chore/fix-lint-and-merge

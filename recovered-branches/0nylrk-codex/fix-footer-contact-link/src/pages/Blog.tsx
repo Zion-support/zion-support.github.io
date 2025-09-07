@@ -348,10 +348,20 @@ export default function Blog() {
 
 import { Search } from "lucide-react",;
 // Sample blog data - in a real app this would come from an API or CMS;
+<<<<<<< HEAD
+  {;
+    }
+    "id": "ai-trends-2025",;"
+    "title": "10 Emerging AI Trends to Watch in 2025",;"
+    "slug": "ai-trends-2025",;"
+    "excerpt": "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",;"
+    "content": `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>;`<h2>1. Multimodal AI Systems</h2>;
+=======
 const BLOG_POSTS: BlogPost[] = [;
 
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>;
 <h2>1. Multimodal AI Systems</h2>;
+>>>>>>> origin/chore/fix-lint-and-merge
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>;
 <h2>2. Neuromorphic Computing</h2>;'
 <p>Taking inspiration from the human brain's neural structure, neuromorphic computing represents a fundamental shift in how AI processes information. These systems consume significantly less power while delivering enhanced performance for complex tasks.</p>;

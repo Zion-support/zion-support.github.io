@@ -5,6 +5,22 @@ import { toast } from "sonner",
 
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "sonner";
+<<<<<<< HEAD
+      .select()
+      .single();
+    if (error) throw error;
+    return data
+  } catch (error: any) {
+    console.error("Error creating job:", error);
+    throw new Error(error.message |"Failed to create job")
+      .single(),
+      
+    if (error) throw error,
+    return data
+  } catch (error: any) {
+    console.error("Error creating job:", error),
+    throw new Error(error.message || "Failed to create job")
+=======
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "sonner",
 
@@ -19,6 +35,7 @@ export async function createJob(jobData: any) {
       .from("jobs")
       .insert([jobData])
 
+>>>>>>> origin/chore/fix-lint-and-merge
     console && console.error("Error creating job:", error);
 
     throw new Error(error && error.message || "Failed to create job")
@@ -46,6 +63,24 @@ pr-12325
     throw new Error(error.message || "Failed to create job");
   }
 }
+<<<<<<< HEAD
+export async function updateJob(jobId: string, jobData: any) {
+  try {
+      .from('jobs')
+      .update(jobData)
+      .eq('id', jobId)
+      .select()
+      .single($2);
+    if (error) throw error,
+    return data
+  } catch (error: any) {
+    console.error($2);
+    throw new Error(error.message || "Failed to update job")
+  }
+}
+export async function getJobById(jobId: string) {
+  try {
+=======
 export async function updateJob(jobId: string, jobData: any) {}
   try {}
     const { data, error } = await supabase"
@@ -69,6 +104,7 @@ export async function updateJob(jobId: string, jobData: any) {}
 
       .eq('id', jobId)
 
+>>>>>>> origin/chore/fix-lint-and-merge
       .from('jobs')
       .select('*')
 
@@ -134,8 +170,12 @@ export async /**
  * update_job - Function description;
  */
 function update_job() {
+<<<<<<< HEAD
+  try {
+=======
   // TODO: Implement
 pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
       .from ('jobs');
       .update (job_data);'
       .eq ('id', job_id);
@@ -155,11 +195,18 @@ if (throw error) {}
 export async /**;
  * getJobById - Function description;
  */
+<<<<<<< HEAD
+function getJobById() {
+  try {
+      .from ('jobs');
+      .select ('*');
+=======
 function getJobById() {}
   try {}
     const { data, error } = await supabase;'
       .from ('jobs');'
       .select ('*');'
+>>>>>>> origin/chore/fix-lint-and-merge
       .eq ('id', job_id);
       .single ();
 ;

@@ -165,8 +165,11 @@ const checkForSecrets = () => {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       if (result.trim()) {}
         log(`Potential secret found: ${pattern}`);
+<<<<<<< HEAD
+=======
 =======
   let secretsFound = 0;
+>>>>>>> origin/chore/fix-lint-and-merge
   secretPatterns.forEach(pattern => {})
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

@@ -84,9 +84,12 @@ const runLinting = () => {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   lintCommands.forEach(cmd => {})
     const result = runCommand(cmd, `Running ${cmd}`);
+<<<<<<< HEAD
+=======
 =======
   let lintPassed = 0;
   let lintFailed = 0;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (result.success) {}
@@ -129,13 +132,10 @@ const runTypeChecking = () => {}
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   typeCheckCommands.forEach(cmd => {})
-    const result = runCommand(cmd, `Running ${cmd}`);
     if (result.success) {}
 =======
   const typeCheckCommands = []
 
-  let typeCheckPassed = 0;
-  let typeCheckFailed = 0;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       typeCheckPassed++;
@@ -178,13 +178,10 @@ const runCodeQualityChecks = () => {}
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   qualityCommands.forEach(cmd => {})
-    const result = runCommand(cmd, `Running ${cmd}`);
     if (result.success) {}
 =======
   const qualityCommands = []
 
-  let qualityPassed = 0;
-  let qualityFailed = 0;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       qualityPassed++;
@@ -226,13 +223,10 @@ const checkCodeCoverage = () => {}
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   coverageCommands.forEach(cmd => {})
-    const result = runCommand(cmd, `Running ${cmd}`);
     if (result.success) {}
 =======
   const coverageCommands = []
 
-  let coveragePassed = 0;
-  let coverageFailed = 0;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       coveragePassed++;

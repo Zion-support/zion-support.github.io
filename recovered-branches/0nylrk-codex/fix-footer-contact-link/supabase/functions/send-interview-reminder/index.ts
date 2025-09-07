@@ -159,6 +159,13 @@ serve(async (req) => {;
     // Get upcoming interviews in the next hour;
     const now = new Date(),;
     const thirtyMinutesFromNow = new Date(now.getTime() + 30 * 60000),;
+<<<<<<< HEAD
+      .from('interviews');'
+      .select(`;`        *,;
+        "clients":client_id(*),;
+        "talents":talent_id(*);
+      `);`      .eq('statusconfirmed');'
+=======
     const { data: interviews, error } = await supabase;'
       .from('interviews');`
       .select(`;
@@ -167,6 +174,7 @@ serve(async (req) => {;
         talents:talent_id(*);`
       `);'
       .eq('statusconfirmed');'
+>>>>>>> origin/chore/fix-lint-and-merge
       .gte('scheduled_date', now.toISOString());'
       .lt('scheduled_date', thirtyMinutesFromNow.toISOString());'
       .is('reminder_sent', null),;

@@ -31,13 +31,10 @@ import {revolutionary2027MicroSaasServices} from '../data / revolutionary - 2027
 
 } from 'lucide-react';
 
-import { motion, AnimatePresence } from 'framer-motion';
 import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe } from 'lucide-react';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
 import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
 
-import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
 export default function Revolutionary2027ServicesShowcase(req, res) {}
   try {';
   const [searchTerm, setSearchTerm] = useState('');'
@@ -73,14 +70,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {}
       count: holographic_count,
     },  ];
 
-import React, { useState, useMemo } from 'react',
-import Head from 'next/head';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Search, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, MessageSquare, Globe  } from 'lucide-react';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
-import { revolutionary2027AIServices  } from '../data/revolutionary-2027-ai-services';
-import { revolutionary2027ITServices  } from '../data/revolutionary-2027-it-services';
-import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
@@ -237,6 +226,8 @@ website: 'https://ziontechgroup.com',
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 
@@ -246,13 +237,11 @@ import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolo
 import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
 import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function Revolutionary2027ServicesShowcase(req, res) {
   try {
-  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-  const allServices = [;
     ...revolutionary2027AIServices;
     ...revolutionary2027ITServices;
     ...revolutionary2027MicroSaasServices;
@@ -262,7 +251,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
   const quantumCount = allServices.filter(service => service.category.includes('Quantum')).length;
   const itCount = allServices.filter(service => service.category.includes('IT') || service.category.includes('Infrastructure')).length;
   const microSaasCount = allServices.filter(service => service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health')).length;
-  const holographicCount = allServices.filter(service => service.category.includes('Holographic')).length;
 
 ;
   const price_ranges = [;'
@@ -314,7 +302,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
     { id: 'customers', name: 'Customers' },;
 
   const filteredServices = useMemo(() => {;
-    let filtered = allServices;
     // Category filter;
     if (selectedCategory !== 'all') {;
 
@@ -333,7 +320,6 @@ export default function Revolutionary2027ServicesShowcase(req, res) {
           return service && service.category.includes('Holographic');
         return true;
 
-  const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',

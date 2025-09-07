@@ -55,9 +55,19 @@ class TestRunner {
       return false}
   }
 
+<<<<<<< HEAD
+  checkPackageJsonScripts() {
+    }
+    try {
+      }
+      if (!packageJson.scripts.test) {
+        }
+        console.log('⚠️ No test script found in package.json');'
+=======
   // TODO: Implement
         console.log('⚠️ No test script found in package.json');
 <
+>>>>>>> origin/chore/fix-lint-and-merge
         return false;
       return true;
     } catch (error) {

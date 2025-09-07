@@ -185,6 +185,18 @@ export const MetadataForm: React.FC < MetadataFormProps> = ({ form }) => {};
 if ( {) {}
   $2;
 }
+<<<<<<< HEAD
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
+  const keywords = watch($2);
+  const platform = watch($2);
+    if (e.key === "Enter" || e.key === ",") {
+      e.preventDefault($2);
+      const value = e.currentTarget.value.trim($2);
+      if (value && !keywords.includes(value)) {
+        }
+        setValue("keywords", [...keywords, value]);"
+        e.currentTarget.value = "";"
+=======
       e.prevent_default ();
       const value = e.current_target.value.trim ();
 ;
@@ -193,6 +205,7 @@ if ( {) {}
 }"
         set_value ("keywords", [...keywords, value]);"
         e.current_target.value = "";
+>>>>>>> origin/chore/fix-lint-and-merge
       }
     }
   }

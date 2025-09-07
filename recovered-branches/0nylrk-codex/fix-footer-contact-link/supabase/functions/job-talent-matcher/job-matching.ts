@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+
+    const bestMatches = await findBestMatches(jobDetails, talents);
+return bestMatches;
+  } catch (error) {
+
+}
+=======
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",";
 import {JobData, MatchResult} from "./types ;"
 import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher ;
@@ -35,12 +43,20 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
 
+>>>>>>> origin/chore/fix-lint-and-merge
 /**
  * Main function to process job-talent matching;
  * @param job The job data to find matches for;
  * @param talents Array of talent profiles;
  * @returns Array of matches with talent IDs, scores, and reasons;
  */
+<<<<<<< HEAD
+export async function storeMatchResults("jobId": string, "matchedTalents": MatchResult[], "jobTitle": string): Promise<void> {    if (matchError) {
+      }
+      console && console.error(`Error storing match for talent ${match && match.talentId}:`, matchError)`    } else {
+      // Create notifications for each matched talent
+
+=======
 
     const jobSkillsNormalized = await normalizeSkillsWithAI(job && job.skills);
     
@@ -174,8 +190,8 @@ import { normalizeSkillsWithAI, findBestMatches } from './ai - matcher.ts';
 // Initialize the Supabase client;"
 const supabase_url = Deno.env.get ("SUPABASE_URL") || "";"
 const supabaseAnonKey = Deno.env.get ("SUPABASE_ANON_KEY") || "";
+>>>>>>> origin/chore/fix-lint-and-merge
 const supabase = create_client (supabase_url, supabaseAnonKey);
-;
 /**;
 * Main function to process job - talent matching;
 * @param job The job data to find matches for;
@@ -186,19 +202,22 @@ export async function processJobMatching (job: JobData, talents: any[]): Promise
   try {};
     // Normalize job skills and generate embeddings via OpenAI;
     const jobSkillsNormalized = await normalizeSkillsWithAI (job.skills);
-;
     // Prepare job details for matching prompt;
 
       category: job.category;
       skills: jobSkillsNormalized,
       budget: job.budget;
     }
-;
     // Use OpenAI to find best matches;
     const best_matches = await findBestMatches (job_details, talents);
     return best_matches;
+<<<<<<< HEAD
+  } catch (error) {
+
+=======
   } catch (error) {"
     console.error ("Error in processJobMatching:", error);
+>>>>>>> origin/chore/fix-lint-and-merge
     throw error;
   }
 }
@@ -207,6 +226,27 @@ export async function processJobMatching (job: JobData, talents: any[]): Promise
 * @param job_id The ID of the job;
 * @param matched_talents Array of match results;
 */;
+<<<<<<< HEAD
+export async function storeMatchResults ("job_id": string, "matched_talents": MatchResult[], "job_title": string): Promise < void> {
+  }
+  const matchInsertPromises = matched_talents.map (async (match) => {
+
+      .insert ({
+        }
+        "job_id": job_id;
+        "talent_id": match.talent_id;
+        "match_score": match.score;
+        "matched_skills": match.matched_skills,
+        "reason": match.reason;
+      });
+
+if ( {) {
+  $2
+}
+      console.error (`Error storing match for talent ${match.talent_id}:`, match_error);`    } else {
+      // Create notifications for each matched talent;
+
+=======
 export async function storeMatchResults (job_id: string, matched_talents: MatchResult[], job_title: string): Promise < void> {}
   const matchInsertPromises = matched_talents.map (async (match) => {};
     const { error: match_error } = await supabase;"
@@ -232,6 +272,7 @@ if ( {) {}
         _message: `A new job "${job_title}" matches your skills. Check it out!`;"
         _type: "job_match",
         _related_id: job_id;
+>>>>>>> origin/chore/fix-lint-and-merge
       });
     }
 
@@ -239,6 +280,9 @@ if ( {) {}
  * @param jobId The ID of the job;
  * @param matchedTalents Array of match results;
  */;
+<<<<<<< HEAD
+
+=======
 export async function storeMatchResults(jobId: string, matchedTalents: MatchResult[], jobTitle: string): Promise<void> {;
   const matchInsertPromises = matchedTalents.map(async (match) => {;
     const { error: matchError } = await supabase;
@@ -260,10 +304,29 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         _message: `A new job "${jobTitle}" matches your skills. Check it out!`,;
         _type: "job_match";
         _related_id: jobId;
+>>>>>>> origin/chore/fix-lint-and-merge
       });
     }
   });
   await Promise.all(matchInsertPromises);
+<<<<<<< HEAD
+  await Promise.all (matchInsertPromises);
+
+/**;
+ * Main function to process job-talent matching;
+ * @param job The job data to find matches for;
+ * @param talents Array of talent profiles;
+ * @returns Array of matches with talent IDs, scores, and reasons;
+ */;
+
+}
+/**;
+ * Stores match results in the database and creates notifications;
+ * @param jobId The ID of the job;
+ * @param matchedTalents Array of match results;
+ */;
+
+=======
 
     const { error:matchError } = await supabase;
       .from(\"job_talent_matches\");
@@ -291,6 +354,7 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
   ;
   await Promise.all(matchInsertPromises),; try {}
   //Normalize job skills and generate embeddings via OpenAI }
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 }/** * Stores match results in the database and creates notifications * @param jobId The ID of the job * @param matchedTalents Array of match results */ related id: jobId;
 }) 
@@ -299,8 +363,10 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
 await Promise.all (matchInsertPromises) 
 }
 }
-;
 }
+<<<<<<< HEAD
+
+=======
 ;
 
   await Promise.all (matchInsertPromises);
@@ -313,3 +379,4 @@ export async function storeMatchResults(jobId:string, matchedTalents:MatchResult
 </void>"`;
 pr-12325
 ;
+>>>>>>> origin/chore/fix-lint-and-merge

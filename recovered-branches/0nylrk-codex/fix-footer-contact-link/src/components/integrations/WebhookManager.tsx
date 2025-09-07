@@ -121,8 +121,12 @@ import { useWebhooks, WebhookEventType } from "@/hooks/useWebhooks",
   }
 
   },
+<<<<<<< HEAD
+    }
+=======
   
   const handleTestWebhook = async (webhookId: string, eventType: WebhookEventType) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
     await testWebhook(webhookId, eventType)
   },
 

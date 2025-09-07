@@ -6,12 +6,17 @@ import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react","
+<<<<<<< HEAD
+import { Link } from "react-router-dom","
+import { NewsletterForm } from "@/components/NewsletterForm","
+=======
 import { Link } from "react-router-dom",
 
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export function Footer() {
   return (
   return (

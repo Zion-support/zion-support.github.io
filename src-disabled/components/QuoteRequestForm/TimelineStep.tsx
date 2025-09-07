@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+:src/components/QuoteRequestForm/TimelineStep.tsx
+import { format } from 'date-fns'
+import { Calendar } from '@/components/ui/calendar'
+import { Button } from '@/components/ui/button'
+import { Label } from '@/components/ui/label'
+import { CalendarIcon } from 'lucide-react'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 
 import { cn } from "@/lib/utils";
@@ -27,7 +36,6 @@ import { Calendar } from "@/components/ui/calendar",
 import { Button } from "@/components/ui/button",
 import { Label } from "@/components/ui/label",
 
-import { CalendarIcon } from 'lucide-react'
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
 import { cn } from "@/lib/utils",;
 import { QuoteFormData } from "@/types/quotes",;
@@ -36,12 +44,6 @@ interface TimelineStepProps {
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
-import { format } from "date-fns",
-import { Calendar } from "@/components/ui/calendar",
-import { Button } from "@/components/ui/button",
-import { Label } from "@/components/ui/label",
-import { CalendarIcon } from 'lucide-react'
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
 import { cn } from "@/lib/utils",
 import { QuoteFormData } from "@/types/quotes",
 interface TimelineStepProps {
@@ -216,9 +218,6 @@ import { Calendar } from "@/components/ui/calendar",;
 import { Button } from "@/components/ui/button",;
 import { Label } from "@/components/ui/label",;
 import { CalendarIcon } from 'lucide-react';
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
-import { cn } from "@/lib/utils",;
-import { QuoteFormData } from "@/types/quotes",;
 interface TimelineStepProps {;
   formData: QuoteFormData,;
   updateFormData: (data: Partial<QuoteFormData>) => void;

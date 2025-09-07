@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+import {cn} from '@/lib/utils';'
+import * as React from "react""
+import * as ProgressPrimitive from "@radix-ui/react-progress""
+=======
 import * as React from 'react';
 import * as ProgressPrimitive from '@radix-ui/react-progress';
 import {cn} from '@/lib/utils';
@@ -8,6 +13,7 @@ import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>
@@ -27,7 +33,10 @@ const Progress = React && React.forwardRef<;
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
+=======
 import * as React from "react";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import * as ProgressPrimitive from "@radix-ui/react-progress";
 ;"
@@ -42,14 +51,23 @@ const Progress = React.forwardRef<;
 "
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
-import { cn } from "@/lib/utils"
+<<<<<<< HEAD
+      "relative h-4 w-full overflow-hidden rounded-full bg-secondary","
 
-const Progress = React.forwardRef<
+=======
+import { cn } from "@/lib/utils"
+>>>>>>> origin/chore/fix-lint-and-merge
+
   React.ElementRef<typeof ProgressPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
+<<<<<<< HEAD
+>(({ className, value, ...props }, ref) => (
+  <ProgressPrimitive.Root,
+=======
 >(({ className, value, ...props }, ref) => (;
   <ProgressPrimitive.Root;
 const Progress = React && React.forwardRef<;
+>>>>>>> origin/chore/fix-lint-and-merge
   React && React.ElementRef<typeof ProgressPrimitive && ProgressPrimitive.Root>,;
   React && React.ComponentPropsWithoutRef<typeof ProgressPrimitive && ProgressPrimitive.Root>;
 ></typeof>(({ className, value, ...props }, ref) => (;

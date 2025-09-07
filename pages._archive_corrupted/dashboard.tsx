@@ -10,6 +10,16 @@ class ErrorBoundary extends React.Component {constructor(props) {super(props)thi
     }return this.props.children;
   }
 }
+<<<<<<< HEAD
+import React, { useState } from 'react';'
+import dynamic from 'next/dynamic';'
+import Head from 'next/head';'
+import { motion } from 'framer-motion';'
+import { BarChart3,, Users,, DollarSign,, TrendingUp,, Code,, Cloud,, Shield,, Zap,, ArrowRight,, CheckCircle,, Star } from 'lucide-react';'
+    },{"title": 'Total Revenue',"value": '$2 && 2.4M',"change": '+8%',"icon": <DollarSign className="w-8 h-8" />,"color": 'green';'
+    },{"title": 'Client Satisfaction',"value": '98%',"change": '+2%',"icon": <Star className="w-8 h-8" />,"color": 'yellow';'
+    },{"title": 'Team Members',"value": '45',"change": '+5%',"icon": <Users className="w-8 h-8" />,"color": 'purple';'
+=======
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -19,6 +29,7 @@ const SEO = dynamic(() => import('../src/components/SEO'), { \"ssr\": false })co
     },{\"title\": 'Total Revenue',\"value\": '$2 && 2.4M',\"change\": '+8%',\"icon\": <DollarSign className=\"w-8 h-8\"  />,\"color\": 'green';}
     },{\"title\": 'Client Satisfaction',\"value\": '98%',\"change\": '+2%',\"icon\": <Star className=\"w-8 h-8\"  />,\"color\": 'yellow';}
     },{\"title\": 'Team Members',\"value\": '45',\"change\": '+5%',\"icon\": <Users className=\"w-8 h-8\"  />,\"color\": 'purple';}
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   ];
   const recentProjects = [{\"id\": 1,\"name\": 'AI Customer Analytics Platform',\"client\": 'E-commerce Retailer',\"status\": 'In Progress',\"progress\": 75,\"deadline\": '2024-02-15';}

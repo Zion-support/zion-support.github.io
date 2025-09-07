@@ -7,7 +7,12 @@ import React from './react';
 import { Button  } from '@/components / ui / button';
 import { Interview  } from '@/types / interview';
 import { format, parseISO  } from './date - fns';
+<<<<<<< HEAD
+import { Interview } from "@/types/interview";
+import { format, parseISO } from "date-fns";
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface InterviewResponseFormProps {
 
 interface InterviewResponseFormProps {};
@@ -27,7 +32,17 @@ export function InterviewResponseForm(): any ({;
   const formattedTime = format(interviewDate, "h: mm a");
 import React from "react";
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
+import { format, parseISO } from "date-fns";export function InterviewResponseForm({ interview, onConfirm, onClose, isLoading }: InterviewResponseFormProps) {
+  // Format interview date and time
+  const interviewDate = parseISO(interview.scheduled_date),
+  const formattedDate = format(interviewDate, 'EEEE, MMMM d'),
+  const formattedTime = format(interviewDate, 'h: mm a'),  const endTime = new Date(interviewDate);
+  endTime && endTime.setMinutes(endTime && endTime.getMinutes() + interview && interview.duration_minutes);
+  const formattedEndTime = format(endTime, "h: mm a");
+=======
 import { Interview } from "@/types/interview";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 interface InterviewResponseFormProps {
 

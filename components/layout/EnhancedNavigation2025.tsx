@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+'use client',
+
+import { useState, useEffect,
+  from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence,
+  from 'framer-motion';
+=======
 service;
 }</span>) );
 }+ {}
@@ -7,6 +16,11 @@ service;
 }</div> </div> </a>) );
 }</div> </motion.div>);
 
+<<<<<<< HEAD
+import { useState, useEffect  } from 'react';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+=======
   /* Mobile Menu Button */;
 }<button </button> </div> </div> </nav> {}
   /* Mobile Menu */;
@@ -334,10 +348,33 @@ function EnhancedNavigation2025() {}
           </motion.div>)}
       </AnimatePresence>;
 
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
 import { Menu, ChevronDown;
   Brain, Rocket, Shield;
   Zap;
   Target, Atom;
   BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, X, Phone, Mail, MapPin, ArrowRight;
+<<<<<<< HEAD
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon;
+  } from 'lucide-react';
+const navigationItems  = null;
+    </>);
+}
+const navigationItems  = null;
+                            exit={{ opacity: 0, height: 0}}
+                            transition = $2;
+export default EnhancedNavigation2025,
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon}
+  Palette, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon
+ } from 'lucide-react';
+
+const navigationItems = null;
+<<<<<<< HEAD
+=======
+=======
+  Star, Sparkles, Cpu, Lock, Cloud, BarChart3 as BarChart3Icon, Settings, Eye, Award, Clock, Heart, Lightbulb;
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main

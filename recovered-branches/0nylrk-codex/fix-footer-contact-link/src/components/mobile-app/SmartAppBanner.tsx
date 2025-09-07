@@ -59,11 +59,17 @@ import { useIsMobile } from '@/hooks / use - mobile';
           )}
 
 },
+<<<<<<< HEAD
+import { X, ArrowRight } from "lucide-react";"
+import { Link } from "react-router-dom",;"
+import { useIsMobile } from "@/hooks/use-mobile",;"
+=======
 import React, { useState, useEffect } from "react",;
 import { X, ArrowRight } from "lucide-react",;
 import { Link } from "react-router-dom",;
 
 import { useIsMobile } from "@/hooks/use-mobile",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface SmartAppBannerProps {;
   appName?: string,;
   appIconSrc?: string,;
@@ -79,11 +85,20 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;"
   googlePlayUrl = "/download",;
   delay = 1500;
 }) => {;
+<<<<<<< HEAD
+  }
+  useEffect(() => {;
+    // Only show banner on mobile devices and if it hasn't been dismissed;'
+    }
+    if (isMobile && !localStorage.getItem("smartBannerDismissed")) {;"
+      }
+=======
   const [isVisible, setIsVisible] = useState(false),;
   const isMobile = useIsMobile(),;
   useEffect(() => {;'
     // Only show banner on mobile devices and if it hasn't been dismissed;"
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {;
+>>>>>>> origin/chore/fix-lint-and-merge
       const timer = setTimeout(() => {;
         setIsVisible(true);
       }, delay),;

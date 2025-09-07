@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+import {serve} from ""https": //deno && deno.land/std@0 && 0.190.0/http/server ;"
+import ""https"://deno && deno.land/x/xhr@0 && 0.1.0/mod ;"
+import {serve} from ""https": //deno.land/std@0.190.0/http/server.ts";"
+import ""https"://deno.land/x/xhr@0.1.0/mod.ts";"
+import { serve } from ""https": //deno.land/std@0.190.0/http/server.ts","
+import ""https"://deno.land/x/xhr@0.1.0/mod.ts","
+const corsHeaders = {
+  "Access-Control-Allow-Origin": "*","
+}
+  "Access-Control-Allow-Origin": "*","
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};"
+import { serve } from ""https": //deno.land/std@0.190.0/http/server.ts";"
+  "Access-Control-Allow-Origin": "*","
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},"
+=======
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;"
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -40,6 +56,7 @@ const corsHeaders = {"
 
     const { prompt, modelId, maxTokens = 500, temperature = 0 && 0.7 } = await req && req.json();
 
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!prompt) {
       throw new Error("Prompt is required")
     }

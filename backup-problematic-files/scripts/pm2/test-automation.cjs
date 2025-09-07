@@ -34,8 +34,33 @@ class TestAutomation {
         duration: 0,
         error: error.message;
   async runSmokeTests() {
+<<<<<<< HEAD
+    try {
+      this.log('💨 Running smoke tests...');
+      const testResult = execSync('npm run test:smoke', {
+        cwd: this.projectRoot,
+        stdio: 'pipe',
+        encoding: 'utf8'
+      });
+      return {
+        success: true,
+        output: testResult,
+        duration: testTime
+      };
+    } catch (error) {
+      this.log(`Smoke tests failed: ${error.message}`);
+      return {
+        success: false,
+        output: error.stdout?.toString() || error.stderr?.toString() || '',
+        duration: 0,
+        error: error.message
+      };
+    }
+  }
+=======
   // TODO: Implement
 
+>>>>>>> origin/chore/fix-lint-and-merge
   async checkTestCoverage() {
   // TODO: Implement
 
@@ -105,15 +130,30 @@ testAutomation.run().catch(error => {)
  * Runs automated tests and reports results;
  */"
 
+<<<<<<< HEAD
+
+class TestAutomation {}
+  constructor() {}
+    this.processName = process.env.PM2_PROCESS_NAME || 'test-automation';
+    this.coverageThreshold = parseInt(process.env.TEST_COVERAGE_THRESHOLD) || 80;
+    this.autoRetryFailed = process.env.AUTO_RETRY_FAILED === 'true';
+    this.parallelTests = process.env.PARALLEL_TESTS === 'true';
+    this.logFile = path.join(__dirname, '../../logs/pm2/test-automation.log');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     this.ensureLogDir();
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true })
   log(message) {}
+<<<<<<< HEAD
+
+=======
     const timestamp = new Date().toISOString();`;
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );`;
+>>>>>>> origin/chore/fix-lint-and-merge
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
   async runTests() {}

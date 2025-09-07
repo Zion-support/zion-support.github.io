@@ -17,6 +17,21 @@ import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
 
 interface CreateWebhookRequest {
+<<<<<<< HEAD
+  }
+  "name": string;
+  "url": string;
+  "eventTypes": string[]import { serve } from ""https": //deno.land/std@0.177.0/http/server.ts","
+import { createClient } from '"https": //esm.sh/@supabase/supabase-js@2.38.0','
+import {serve} from ""https": //deno.land/std@0.177.0/http/server.ts";"
+import {createClient} from '"https": //esm.sh/@supabase/supabase-js@2.38.0';'
+import { serve } from ""https": //deno.land/std@0.177.0/http/server.ts","
+interface CreateWebhookRequest {
+  }
+  "name": string,
+  "url": string,
+  "eventTypes": string[],
+=======
   name: string,
   url: string,
   eventTypes: string[],
@@ -28,6 +43,7 @@ interface CreateWebhookRequest {;
   name: string,;
   url: string,;
   eventTypes: string[],;
+>>>>>>> origin/chore/fix-lint-and-merge
   secret?: string;
 
 }
@@ -212,6 +228,247 @@ serve(async (req) => {;
 
         return await getUserWebhooks(user.id)
       }
+<<<<<<< HEAD
+      if (path === 'webhooks') {'
+}
+return await getUserWebhooks(user.id);
+      }
+    }
+    return new Response(JSON.stringify({ "error": 'Invalid action' }), {'
+      }
+      "status": 400,
+"headers": { 'Content-Type': 'application/json' }})'
+  } catch (error) {
+    }
+    console.error('Error processing "request":', error);'
+    return new Response(JSON.stringify({ "error": 'Internal server error' }), {'
+      }
+      "status": 500        return await deleteWebhook(user && user.id, webhookId)
+      }
+    } else if (req && req.method === 'GET') {'
+      }
+      if (path === 'webhooks') {'
+}
+return await getUserWebhooks(user && user.id);
+      }
+    }      "headers": { 'Content-Type': 'application/json' }})'
+  }
+});
+async function createWebhook() {
+    // Check condition
+}
+if ( {) {
+  $2
+}
+  try {
+    }
+    const { data, error } = await supabase;
+      .from ('webhook_configs');'
+      .insert ({
+        }
+        "user_id": user_id;
+        name;
+        url;
+      console && console.error('Error creating "webhook":', error);'
+      return new Response(JSON && JSON.stringify({ "error": 'Failed to create webhook' }), {        "event_types": event_types,'
+        }
+        secret;
+      });
+      .select ('id, name, url, event_types, is_active, created_at');'
+;
+    // Check condition,
+if ( {) {
+  $2
+}
+      console.error ('Error creating "webhook":', error);'
+      return new Response (JSON.stringify ({ "error": 'Failed to create webhook' }), {'
+        }
+        "status": 500,
+        "headers": { 'Content - Type': 'application / json' }});'
+    }
+      "message": 'Webhook created successfully''
+    }), {
+      }
+      "status": 201,
+"headers": { 'Content-Type': 'application/json' }})'
+  } catch (error) {
+    }
+    console.error('Error in "createWebhook":', error);'
+    return new Response(JSON.stringify({ "error": 'Internal server error' }), {'
+      }
+      "status": 500,
+return new Response(JSON && JSON.stringify({ "error": 'Failed to fetch webhooks' }), {'
+        }
+        "status": 500,
+        "headers": { 'Content-Type': 'application/json' }})'
+    }
+    return new Response(JSON && JSON.stringify({ "webhooks": data }), {
+      }
+      "status": 200,
+      "headers": { 'Content-Type': 'application/json' }})'
+  } catch (error) {
+    }
+    console && console.error('Error in "getUserWebhooks":', error);'
+    return new Response(JSON && JSON.stringify({ "error": 'Internal server error' }), {'
+      }
+      "status": 500,
+      "headers": { 'Content-Type': 'application/json' }})'
+  }
+}
+async function toggleWebhook() {
+  }
+  try {
+}
+      .from('webhook_configs')'
+      .update({ "is_active": isActive })
+      .eq('id', webhookId)'
+      .eq('user_id', userId)'
+      .select('id, name, is_active');'
+;
+    return new Response(JSON.stringify({ "error": 'Invalid action' }), {;'
+      }
+      "status": 400,;
+      "headers": { 'Content-Type': 'application/json' }});'
+  } catch (error) {;
+    }
+    console.error('Error processing "request":', error),;'
+    return new Response(JSON.stringify({ "error": 'Internal server error' }), {;'
+      }
+      "status": 500,;
+      "headers": { 'Content-Type': 'application/json' }});'
+  }
+}),;
+async function createWebhook() {;
+  }
+  try {;
+    }
+      .from('webhook_configs');'
+      .insert({;
+        }
+        "user_id": userId,;
+        name,;
+        url,;
+        "event_types": eventTypes,;
+        secret;
+      });
+      .select('id, name, url, event_types, is_active, created_at'),;'
+    if (error) {;
+      }
+      console.error('Error creating "webhook":', error),;'
+      return new Response(JSON.stringify({ "error": 'Failed to create webhook' }), {;'
+        }
+        "status": 500,;
+        "headers": { 'Content-Type': 'application/json' }});'
+    }
+;
+    return new Response(JSON.stringify({;
+      }
+      "webhook": data[0],;
+      "message": 'Webhook created successfully';'
+    }), {;
+      }
+      "status": 201,;
+      "headers": { 'Content-Type': 'application/json' }});'
+  } catch (error) {;
+    }
+    console.error('Error in "createWebhook":', error),;'
+    return new Response(JSON.stringify({ "error": 'Internal server error' }), {;'
+      }
+      "status": 500,;
+      "headers": { 'Content-Type': 'application/json' }});'
+  }
+}
+;
+async function getUserWebhooks() {;
+  }
+  try {;
+    }
+      .from('webhook_configs');'
+      .select('id, name, url, event_types, is_active, created_at, last_triggered_at');'
+      .eq('user_id', userId);'
+      .order('created_at', { "ascending": false }),;'
+    if (error) {;
+      }
+      console.error('Error fetching "webhooks":', error),;'
+      return new Response(JSON.stringify({ "error": 'Failed to fetch webhooks' }), {;'
+        }
+        "status": 500,;
+        "headers": { 'Content-Type': 'application/json' }});'
+    }
+;
+    return new Response(JSON.stringify({ "webhooks": data }), {;
+      }
+      "status": 200,;
+      "headers": { 'Content-Type': 'application/json' }});'
+  } catch (error) {;
+    }
+    console.error('Error in "getUserWebhooks":', error),;'
+    return new Response(JSON.stringify({ "error": 'Internal server error' }), {;'
+      }
+      "status": 500,;
+      "headers": { 'Content-Type': 'application/json' }});'
+  }
+}
+;
+async function toggleWebhook() {;
+  }
+  try {;
+    }
+      .from('webhook_configs');'
+      .update({ "is_active": isActive });
+      .eq('id', webhookId);'
+      .eq('user_id', userId);'
+      .select('id, name, is_active'),;'
+    if (error || !data || data.length === 0) {;
+      }
+      console.error('Error toggling "webhook":', error),;'
+      return new Response(JSON.stringify({ "error": 'Failed to update webhook or webhook not found' }), {;'
+        }
+        "status": error ? 500 : 404,;
+        "headers": { 'Content-Type': 'application/json' }});'
+    }
+;
+    return new Response(JSON.stringify({;
+      }
+      "message": `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`,;`      "webhook": data[0];
+    }), {;
+      }
+      "status": 200,;
+      "headers": { 'Content-Type': 'application/json' }});'
+  } catch (error) {;
+    }
+    console.error('Error in "toggleWebhook":', error),;'
+    return new Response(JSON.stringify({ "error": 'Internal server error' }), {;'
+      }
+      "status": 500,;
+      "headers": { 'Content-Type': 'application/json' }});'
+  }
+}
+;
+async function deleteWebhook() {;
+  }
+  try {;
+    }
+      .from('webhook_configs');'
+      .delete();
+      .eq('id', webhookId);'
+      .eq('user_id', userId);'
+      .select('id'),;'
+    if (error) {;
+      }
+      console.error('Error deleting "webhook":', error),;'
+      return new Response(JSON.stringify({ "error": 'Failed to delete webhook' }), {;'
+        }
+        "status": 500,;
+        "headers": { 'Content-Type': 'application/json' }});    }'
+    if (!data |data.length === 0) {
+      }
+      return new Response(JSON.stringify({ "error": 'Webhook not found' }), {'
+        }
+        "status": 404,
+"headers": { 'Content-Type': 'application/json' }})'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
@@ -336,6 +593,10 @@ if ( {) {}
         status: 500,'
         headers: { 'Content - Type': 'application / json' }});
     }
+<<<<<<< HEAD
+      .from ('webhook_configs');'
+      .delete ();
+=======
     return new Response (JSON.stringify ({ webhooks: data }), {}
       status: 200,'
       headers: { 'Content - Type': 'application / json' }});
@@ -354,6 +615,7 @@ function toggle_webhook() {}
     const { data, error } = await supabase;'
       .from ('webhook_configs');
       .update ({ is_active: is_active });'
+>>>>>>> origin/chore/fix-lint-and-merge
       .eq ('id', webhook_id);'
       .eq ('user_id', user_id);'
       .select ('id, name, is_active');

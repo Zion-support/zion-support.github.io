@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+.map (s => s.trim () ) .filter (Boolean) 
+}as Vendor
+//For MVP, update via direct API not implemented, keep local preview only setActiveVendor (updated) 
+}</div> md:col-span-2"> <button className=" px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button> </div> </form> </section> </div> </div> </section> </section> <div className=" text-center text-xs text-gray-500" >Powered by Zion</div> </div>) 
+}</select> </div>) ) 
+}</div>) 
+}
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+    const packages = [...(activeVendor.packages || []), {
+      id: `pkg_${Date.now()}`,
+      title: pkgTitle,
+      description: pkgDesc,
+      priceUsd: Number(pkgPrice)}],
+    setActiveVendor({ ...activeVendor, packages });
+    setPkgTitle(');
+    setPkgDesc(');
+    setPkgPrice(')
+  }
+
+
+=======
 import type { GetServerSideProps } from 'next';
 
 
@@ -68,10 +90,23 @@ const packages = [
           activeVendor.servicesOffered?.join(',') |;}
           '';}
       ).split(',').map(s => s.trim()).filter(Boolean)} as Vendor;
+>>>>>>> origin/chore/fix-lint-and-merge
     // For MVP, update via direct API not implemented; keep local preview only;
     setActiveVendor(updated)}
   function addPackage() {if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
+<<<<<<< HEAD
+}
+
+const packages = [;
+
+            Pending Verification;
+          </span>;
+        )}
+        <form;
+          onSubmit={saveProfile}
+
+=======
 const packages = [}
   ...(activeVendor.packages || []),{id: `pkg_${Date.now(,}
 }`;
@@ -127,10 +162,14 @@ name='servicesOffered'
             <button className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'    />
               Save;
             </button>
+>>>>>>> origin/chore/fix-lint-and-merge
           </div>
         </form>
       </section>
 
+<<<<<<< HEAD
+
+=======
 <section className='space-y-3'    />
         <h2 className='text-lg font-medium'    />Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'    />
@@ -199,16 +238,21 @@ onClick={addPackage}
                 />
               Add;
             </button>
+>>>>>>> origin/chore/fix-lint-and-merge
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+
+=======
 <section className='space-y-3'    />
         <h2 className='text-lg font-medium'    />Project Pipeline</h2>
         <Pipeline vendorId={activeVendor.i,}
 }    />
       </section>
       <div className='text-center text-xs text-gray-500'    />Powered by Zion</div>
+>>>>>>> origin/chore/fix-lint-and-merge
     </div>
   );
 
@@ -216,15 +260,27 @@ function Pipeline({ vendorId }: { vendorId: string,}
 }) {
   const [items, setItems] = useState<any[]    />([]);
   async function fetchItems() {
+<<<<<<< HEAD
+
+
+=======
 }
 const res = await fetch(}
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
+>>>>>>> origin/chore/fix-lint-and-merge
     );
 
-const data = await res.json();
     setItems(data.items || []);
   }
 
+<<<<<<< HEAD
+    fetchItems();
+  useEffect(() => {}
+
+    fetchItems();
+  }, []);
+
+=======
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
 
@@ -246,18 +302,26 @@ body: JSON.stringify({ itemId, status }),
       {items && items.length === 0 && (;
         <div className='text-sm text-gray-500'    />No leads yet.</div>;}
 }
+>>>>>>> origin/chore/fix-lint-and-merge
       )}
       {items && items.map(item => (<div;}
           key={item && item.id}
+<<<<<<< HEAD
+
+=======
           className='border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between'    />;
           <div    />;
             <div className='font-medium'    />{item && item.title}</div>;
             <div className='text-xs text-gray-500'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               {new Date(item && item.createdAt).toLocaleString()} • {item && item.status}
             </div>;
           </div>;
           <select;
             defaultValue={item && item.status}
+<<<<<<< HEAD
+
+=======
             onChange={e =    /> changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm'>
 
@@ -277,6 +341,7 @@ body: JSON.stringify({ itemId, status }),
 const { listVendors } = await import('../utils/vendor-store')const vendor = listVendors()[0] |null; // tie to auth later;
   return { props: { vendor } }
 })}
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const { listVendors,}
 } = await import('../utils/vendor-store')const vendor = listVendors()[0] || null; // tie to auth later;
@@ -284,6 +349,9 @@ const { listVendors,}
 }
             onChange={e => changeStatus(item.id, e.target.value)}
 
+<<<<<<< HEAD
+
+=======
             className='border rounded px-2 py-1 bg-transparent text-sm'
           >
             <option value='lead'    />Lead</option>
@@ -292,10 +360,19 @@ const { listVendors,}
             <option value='in_progress'    />In Progress</option>
             <option value='complete'    />Complete</option>
             <option value='lost'    />Lost</option>
+>>>>>>> origin/chore/fix-lint-and-merge
           </select>
         </div>
       ))}
 
+<<<<<<< HEAD
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const { listVendors } = await import('../utils/vendor-store');
+  const vendor = listVendors()[0] || null, // tie to auth later
+  return { props: { vendor } }
+};
+}
+=======
     </div>
 );
 
@@ -305,5 +382,30 @@ export const getServerSideProps: GetServerSideProps<Props    /> = async () => {}
 
 const vendor = listVendors()[0] || null; // tie to auth later;
 return { props: { vendor } }}
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
+<<<<<<< HEAD
+};
+        </div>))}
+    </div>);
+;
+export const getServerSideProps: GetServerSideProps < Props> = async () => {
+  const { list_vendors } = await import ('../utils / vendor - store');
+  const vendor = list_vendors ()[0] || null; // tie to auth later;
+  return { props: { vendor } }
+}  );
+}
+export const getServerSideProps: GetServerSideProps < Props> = async () => {
+  const { list_vendors } = await import ('../utils / vendor - store');
+  const vendor = list_vendors ()[0] || null, // tie to auth later;
+  return { props: { vendor } }
+}
+;
+  return { props: { vendor } }}
+  const { listVendors } = await import($2);
+  const vendor = listVendors()[0] || null, // tie to auth later
+  return { props: { vendor } }
+},
+=======
+>>>>>>> origin/chore/fix-lint-and-merge

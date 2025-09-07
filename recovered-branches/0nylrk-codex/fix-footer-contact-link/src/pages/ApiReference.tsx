@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+
+export function ApiReference() {
+  }
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");"
+import { CodeBlock } from "@/components/developers/CodeBlock","
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
+export function ApiReference() {
+
+export /**
+ * ApiReference - Function description
+ */
+function ApiReference() {
+
+  ];
+  // Find the active endpoint data;
+
+  return (;
+return (;
+    <ApiDocsLayout>;
+
+  ];
+  // Find the active endpoint data;
+=======
 import React, { useState } from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -696,10 +720,17 @@ export function ApiReference() {;
           <div className="sticky top-8">;"
             <h3 className="text-lg font-semibold text-white mb-4">Endpoints</h3>;"
             <ul className="space-y-2">;
+>>>>>>> origin/chore/fix-lint-and-merge
 
               {endpoints.map ((endpoint) => (
                 <li key={endpoint.id}>;
                   <button;
+<<<<<<< HEAD
+                    on_click={() => setActiveEndpoint (endpoint.id)}
+                    className={`w - full text - left px - 3 py - 2 rounded - md text - sm flex items - center ${`                      }
+                      active_endpoint === endpoint.id;
+
+=======
                     on_click={() => setActiveEndpoint (endpoint.id)}`
                     className={`w - full text - left px - 3 py - 2 rounded - md text - sm flex items - center ${}
                       active_endpoint === endpoint.id;"
@@ -734,6 +765,7 @@ export function ApiReference() {;
 </button>
                     </span>;"
                     <span className="truncate">{endpoint && endpoint.path}</span>;"
+>>>>>>> origin/chore/fix-lint-and-merge
                   </button>;
                 </li>;
     <ApiDocsLayout>;
@@ -765,15 +797,20 @@ export function ApiReference() {;
 
         {/* Endpoint details */}
 
+<<<<<<< HEAD
+=======
           {activeEndpointData ? (
 
 {/* Endpoint details */}
         <div className="md:col - span - 4">;
+>>>>>>> origin/chore/fix-lint-and-merge
           {activeEndpointData ? (
             </ul>;
           </div>;
         </div>;
 
+<<<<<<< HEAD
+=======
         <div className="md:col-span-4">;
           {activeEndpointData ? (;
             <div>;"
@@ -910,10 +947,14 @@ export function ApiReference() {;
 
                       language="bash"
 
+>>>>>>> origin/chore/fix-lint-and-merge
                       showLineNumbers={true}
                     />
                   </div>
                   {/* Response section */}
+<<<<<<< HEAD
+                  <div>
+=======
                   <div>"
                     <h3 className="text-xl font-semibold text-white mb-4">Responses</h3>
                     {Object.entries(activeEndpointData.responses).map(([status, response]) => ("
@@ -939,6 +980,7 @@ export function ApiReference() {;
                           }`}>;
                             {status}
                           language="json"
+>>>>>>> origin/chore/fix-lint-and-merge
 
                           showLineNumbers={true}
                         />;
@@ -1020,6 +1062,8 @@ export function ApiReference() {;
                       </div>))}
                   </div>;
                 </TabsContent>;
+<<<<<<< HEAD
+=======
                 <TabsContent value="try">;
                   <div className="p - 8 border border - zinc - 800 rounded - lg flex items - center justify - center">;
                     <div className="text - center">;
@@ -1040,12 +1084,17 @@ export default ApiReference;
             </div>) : (
             <div className="p - 8 border border - zinc - 800 rounded - lg text - center">;
               <p className="text - zinc - 400">Select an endpoint from the list to view details</p>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </div>)}
         </div>;
       </div>;
     </ApiDocsLayout>);
 }
+<<<<<<< HEAD
+export default ApiReference;
+
+=======
 
 ;
 export default ApiReference;
@@ -1251,3 +1300,4 @@ pr-12325
 export default ApiReference;
 ;
 export default ApiReference;
+>>>>>>> origin/chore/fix-lint-and-merge

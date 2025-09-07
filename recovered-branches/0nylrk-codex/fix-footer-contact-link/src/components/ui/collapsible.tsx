@@ -31,7 +31,11 @@ export { Collapsible, CollapsibleTrigger, CollapsibleContent };
 export { Collapsible, CollapsibleTrigger, CollapsibleContent };
 ;
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
+<<<<<<< HEAD
+import * as CollapsiblePrimitive from &quot;@radix-ui/react-collapsible&quot;
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }
 ;
 export { Collapsible, CollapsibleTrigger, CollapsibleContent }

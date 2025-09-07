@@ -56,10 +56,13 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
     </TabsList>);
 }
 ;
+<<<<<<< HEAD
+=======
 
 "
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
 import { StepProps } from "./types",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface ResumeStepsProps {;
   steps:StepProps[],;

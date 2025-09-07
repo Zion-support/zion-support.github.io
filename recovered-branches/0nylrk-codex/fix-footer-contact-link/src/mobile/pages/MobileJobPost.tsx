@@ -58,6 +58,23 @@ type JobPostStep = "details" | "requirements" | "budget" | "preview",
     </div>
   )
 }
+<<<<<<< HEAD
+function RequirementsStep() {
+}
+const [skills, setSkills] = useState<string[]>([;
+    "React", "TypeScript", "Node.js""
+  ]);
+  const [newSkill, setNewSkill] = useState("");"
+        <Textarea,
+id="description" "
+          placeholder="Describe the job role and responsibilities" "
+import { MobileHeader } from "../components/common/MobileHeader";"
+import { BottomNavigation } from "../components/common/BottomNavigation",;"
+import { Button } from "@/components/ui/button",;"
+import { Input } from "@/components/ui/input",;"
+import { Textarea } from "@/components/ui/textarea",;"
+import { Label } from "@/components/ui/label",;"
+=======
 
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
@@ -66,6 +83,7 @@ import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Label } from "@/components/ui/label",;
+>>>>>>> origin/chore/fix-lint-and-merge
 import {;
   Select,;
   SelectContent,;
@@ -79,6 +97,20 @@ import { Card, CardContent } from "@/components/ui/card",;
 type JobPostStep = "details" | "requirements" | "budget" | "preview",;
 
 export function MobileJobPost() {;
+<<<<<<< HEAD
+  }
+  const goToNextStep = () => {;
+    }
+    if (currentStep === "details") {;"
+      }
+      setCurrentStep("requirements");"
+    } else if (currentStep === "requirements") {;"
+      }
+      setCurrentStep("budget");"
+    } else if (currentStep === "budget") {;"
+      }
+      setCurrentStep("preview");"
+=======
 
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 
@@ -91,6 +123,7 @@ export function MobileJobPost() {;
     } else if (currentStep === "budget") {
 
       setCurrentStep("preview");
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
   const goToPrevStep = () => {"
@@ -142,6 +175,36 @@ export function MobileJobPost() {;
 /**
  * DetailsStep - Function description;
  */
+<<<<<<< HEAD
+function DetailsStep() {
+}
+return (;
+  },
+  const removeSkill = ("skill": string) => {
+    }
+    setSkills(skills.filter(s => s !== skill))
+  },
+  function RequirementsStep() {
+}
+    "React","
+    "TypeScript","
+    "Node.js","
+  ]);
+  const addSkill = () => {
+    }
+    if (newSkill && !skills.includes(newSkill)) {
+      }
+      setSkills([...skills, newSkill]);
+      setNewSkill("");"
+    }
+  };
+    }
+    setSkills(skills.filter((s) => s !== skill))
+};
+return (;
+    <div className="space-y-4">"
+      <h2 className="text-lg font-medium">Job Requirements</h2>"
+=======
 
 function RequirementsStep() {}
   const [skills, setSkills] = useState<string[]>(["
@@ -167,6 +230,7 @@ function RequirementsStep() {}
 
       <h2 className="text-lg font-medium">Job Requirements</h2>
 "
+>>>>>>> origin/chore/fix-lint-and-merge
       <div className="space-y-2">"
         <Label htmlFor="experience">Experience Level</Label>
         <Select>
@@ -206,8 +270,13 @@ function RequirementsStep() {}
 
 ;
 function RequirementsStep() {;
+<<<<<<< HEAD
+  }
+    "React", "TypeScript", "Node.js";"
+=======
   const [skills, setSkills] = useState<string[]>([;
     "React", "TypeScript", "Node.js";
+>>>>>>> origin/chore/fix-lint-and-merge
   ]),;
   const [newSkill, setNewSkill] = useState(""),;
   const addSkill = () => {;

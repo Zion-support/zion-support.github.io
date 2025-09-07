@@ -6,6 +6,9 @@
 
 
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -14,19 +17,28 @@
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 const { execSync } = require('child_process');
-const fs = require('fs');
+const fs = require(fs');
 const path = require('path');
 async function analyzeBundle() {}
   try {}
     // Install bundle analyzer if not present;
 <<<<<<< HEAD
     try {}
-      execSync('npm list @next/bundle-analyzer', { "stdio": 'pipe' })} catch {}
-      execSync('npm install @next/bundle-analyzer --save-dev', { "stdio": 'pipe' })};
+      execSync(npm list @next/bundle-analyzer', { "stdio: 'pipe })} catch {}
+      execSync(npm install @next/bundle-analyzer --save-dev', { stdio": 'pipe })}
     // Run bundle analysis;
-    execSync('ANALYZE=true npm run build', { "stdio": 'inherit' }
+    execSync(ANALYZE=true npm run build', { "stdio: 'inherit }
 });
+<<<<<<< HEAD
+
+    console.log(Bundle analysis completed. Check .next/analyze/ for results.')} catch (error) {}
+    console.error('Bundle analysis failed": ', error.message)}
+}
+analyzeBundle();
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,3 +68,4 @@ analyzeBundle();
 };
 analyzeBundle();
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

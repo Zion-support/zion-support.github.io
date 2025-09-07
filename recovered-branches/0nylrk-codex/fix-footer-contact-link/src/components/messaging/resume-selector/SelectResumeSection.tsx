@@ -1,9 +1,20 @@
+<<<<<<< HEAD
+
+
+
+  resumeOptions: ResumeOption[],
+  selectedResume: ResumeOption | null,
+  handleResumeSelect: (resumeId: string) => void,
+  handleDownloadResume: () => void,
+  isLoading: boolean
+=======
 resumeOptions: ResumeOption[],
   selectedResume: ResumeOption | null,
   handleResumeSelect: (resumeId: string) => void,
   handleDownloadResume: () => void,
   isLoading: boolean;
 
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export function SelectResumeSection({;
@@ -11,6 +22,14 @@ import React from 'react';
   resumeOptions;
   selectedResume;
   handleResumeSelect;
+<<<<<<< HEAD
+  handleDownloadResume;
+
+import React from 'react',;
+import { FileText } from 'lucide-react',;
+import { ResumeOption } from '../resume-selector/types',;
+import { ResumePreviewCard } from './ResumePreviewCard',;
+=======
 
 import React from 'react',;
 
@@ -18,6 +37,7 @@ import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
 import { ResumePreviewCard } from './ResumePreviewCard',;
 
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Resume } from '@/types/resume',;
 interface SelectResumeSectionProps {;
   resumeOptions: ResumeOption[],;
@@ -29,6 +49,8 @@ resumeOptions: ResumeOption[],
   isLoading: boolean;
 }
 
+<<<<<<< HEAD
+=======
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
@@ -43,6 +65,7 @@ import {ResumePreviewCard} from './ResumePreviewCard';
 
                 selectedResume?.id === option && option.id '
                   ? 'bg-zion-purple/20 border border-zion-purple' 
+>>>>>>> origin/chore/fix-lint-and-merge
 
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
@@ -52,6 +75,8 @@ import {ResumePreviewCard} from './ResumePreviewCard';
   isLoading: boolean
 }
 export function SelectResumeSection({
+<<<<<<< HEAD
+=======
 resumeOptions,
   selectedResume,
   handleResumeSelect,
@@ -70,6 +95,7 @@ resumeOptions,
               className={`w-full text-left p-3 rounded-md transition ${
                 selectedResume?.id === option.id
                   ? 'bg-zion-purple/20 border border-zion-purple'
+>>>>>>> origin/chore/fix-lint-and-merge
 import {FileText} from 'lucide-react';
 import {ResumeOption} from '../resume - selector / types';
 import {ResumePreviewCard} from './ResumePreviewCard';
@@ -94,6 +120,10 @@ import {ResumePreviewCard} from './ResumePreviewCard';
             />;
           )}
         </>;
+<<<<<<< HEAD
+      )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { Resume } from '@/types/resume',;
 ;
@@ -133,4 +163,8 @@ interface SelectResumeSectionProps {;
       )}
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

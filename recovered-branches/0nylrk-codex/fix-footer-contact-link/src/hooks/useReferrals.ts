@@ -32,6 +32,30 @@ export function useReferrals() {};
   const [rewards, setRewards] = useState<ReferralReward[]>([]),
 
   const [stats, setStats] = useState<ReferralStats>({
+<<<<<<< HEAD
+    }
+    "totalReferrals": 0;
+    "pendingReferrals": 0;
+    "completedReferrals": 0;
+    "totalRewards": 0});
+import { supabase } from "@/integrations/supabase/client","
+import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals","
+export function useReferrals() {
+}
+const { user } = useAuth(),;
+const [isLoading, setIsLoading] = useState(true),;
+    }
+    "totalReferrals": 0,
+    "pendingReferrals": 0,
+    "completedReferrals": 0,
+    "totalRewards": 0}),import { useState, useEffect } from './react';'
+import { toast } from '@/hooks / use - toast';'
+import { use_auth } from '@/hooks / use_auth';'
+import { supabase } from '@/integrations / supabase / client';'
+import { ReferralCode, ReferralStats, Referral, ReferralReward } from '@/types / referrals';'
+export /**
+ * useReferrals - Function description
+=======
 )
 
 pr-12325
@@ -48,6 +72,7 @@ pr-12325
 import { ReferralCode, ReferralStats, Referral, ReferralReward } from '@/types / referrals';
 export /**;
  * useReferrals - Function description;
+>>>>>>> origin/chore/fix-lint-and-merge
  */
 function useReferrals() {}
   const { user } = use_auth ();
@@ -126,6 +151,12 @@ if ( {) {}
   const fetchRewards = async () => {}
     try {}
       if (!user) return,
+<<<<<<< HEAD
+        .from('referral_rewards')'
+        .select('*')'
+        .eq('user_id', user.id)'
+        .order('created_at', { "ascending": false }),'
+=======
 
       const { data, error } = await supabase
         .from('referral_rewards')
@@ -134,6 +165,7 @@ if ( {) {}
 
         .order('created_at', { ascending: false }),
         
+>>>>>>> origin/chore/fix-lint-and-merge
       if (error) throw error,
       
       setRewards(data || [])
@@ -299,6 +331,11 @@ import { useState, useEffect } from "react",;"
 import { toast } from "@/hooks/use-toast",;"
 import { useAuth } from "@/hooks/useAuth",;"
 import { supabase } from "@/integrations/supabase/client",;"
+<<<<<<< HEAD
+import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals",;"
+export function useReferrals() {;
+  }
+=======
 import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals",;
 export function useReferrals() { return null; }
   const { user } = useAuth(),;
@@ -306,6 +343,7 @@ export function useReferrals() { return null; }
   const [isLoading, setIsLoading] = useState(true),;
   const [referrals, setReferrals] = useState<Referral[]>([]),;
   const [rewards, setRewards] = useState<ReferralReward[]>([]),;
+>>>>>>> origin/chore/fix-lint-and-merge
   const [stats, setStats] = useState<ReferralStats>({;
     totalReferrals: 0,;
     pendingReferrals: 0,;
@@ -322,7 +360,10 @@ export function useReferrals() { return null; }
   const fetchReferralCode = async () => {;
     try {;
       setIsLoading(true),;
+<<<<<<< HEAD
+=======
       const { data, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
         .from('referral_codes');'
         .select('*');'
         .eq('user_id', user?.id);

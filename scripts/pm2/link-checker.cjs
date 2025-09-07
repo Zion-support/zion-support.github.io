@@ -156,9 +156,14 @@ const main = async () => {}
   if (report.overall.status === 'PASS') {}
 =======
   // Generate comprehensive report;
+<<<<<<< HEAD
+    linkCheck: linkCheckResults
+  const report = generateLinkReport(results)
+=======
   const results = {}
     linkCheck: linkCheckResults;
   const report = generateLinkReport(results);
+>>>>>>> origin/chore/fix-lint-and-merge
   '
   if (report.overall.status ===PASS') {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

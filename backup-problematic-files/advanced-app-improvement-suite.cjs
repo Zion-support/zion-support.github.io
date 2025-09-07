@@ -204,10 +204,16 @@ log(message) {
     this.errors = [];
   }
   log(message) {
+<<<<<<< HEAD
+    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + "\n");
+  }
+=======
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message};
     console.log(logMessage);"
     fs.appendFileSync(this.logFile, logMessage + "\n");"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <<<<<<< HEAD
 =======
@@ -346,6 +352,9 @@ log(message) {
       { command: "npm run lint:fix", description: "Fix Linting Issues" },
       { command: "npm run type-check", description: "TypeScript Type Check" }
     ];
+<<<<<<< HEAD
+    
+=======
     const results = [];
 <<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
 <<<<<<< HEAD
@@ -369,6 +378,7 @@ log(message) {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const task of performanceTasks) {
       const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
@@ -430,6 +440,9 @@ log(message) {
       { command: "npm audit --audit-level=moderate", description: "Security Audit" },
       { command: "npm audit fix --force", description: "Fix Security Vulnerabilities" }
     ];
+<<<<<<< HEAD
+    
+=======
     const results = [];
 <<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
 <<<<<<< HEAD
@@ -453,8 +466,8 @@ log(message) {
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c:advanced-app-improvement-suite.cjs
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const task of securityTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 =======
@@ -557,6 +570,15 @@ log(message) {
     return results;
   }
 
+<<<<<<< HEAD
+  async runTests() {
+    this.log("Running tests...");
+    const testTasks = [
+      { command: "npm test", description: "Run Test Suite" },
+      { command: "npm run test:coverage", description: "Generate Test Coverage" }
+    ];
+    
+=======
 <<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -570,8 +592,8 @@ log(message) {
       testResults: results.testResults
 =======
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const task of testTasks) {
-      const result = await this.runCommand(task.command, task.description);
       results.push({ ...task, result });
     }
     return results;
@@ -648,7 +670,6 @@ log(message) {
   }
   async run() {
     this.log("Starting Advanced App Improvement Suite...");
-    const reportFile = path.join(this.reportsDir, "advanced-app-improvement-report.json");
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`Report saved to: ${reportFile}`);
 <<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs
@@ -812,7 +833,6 @@ if (require.main === module) {}
     const endTime = new Date();
     const duration = endTime - this.startTime;
     
-    const report = {
       timestamp: endTime.toISOString(),
       duration: duration,
       improvements: this.improvements,
@@ -972,7 +992,10 @@ module.exports = AdvancedAppImprovementSuite;
   fs.mkdirSync(this.reportsDir, { recursive: true });,
 
   log(message) {;
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");,"
 
@@ -986,20 +1009,35 @@ module.exports = AdvancedAppImprovementSuite;
   command: "npm run analyze",
         description: "Bundle Analysis";,"
 },
+<<<<<<< HEAD
+      {;
+  command: "npx next-bundle-analyzer",
+        description: "Next.js Bundle Analysis";,
+}
+    ];
+=======
 
         description: "Next.js Bundle Analysis";,"
 }]
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const opt of optimizations) {;
   const result = await this.runCommand(opt.command, opt.description);
       results.push({ ...opt, ...result });,
 
     return results;,
 
+<<<<<<< HEAD
+  async improvePerformance() {;
+  this.log("⚡ Improving performance...");
+    // Create performance optimization script;
+    const perfScript = `;
+=======
   async improvePerformance() {;"
   this.log("⚡ Improving performance...");"
     // Create performance optimization script;`;
     const perfScript = `;"
 
+>>>>>>> origin/chore/fix-lint-and-merge
 class PerformanceOptimizer {;
   constructor() {;
   this.projectRoot = process.cwd();,
@@ -1033,6 +1071,12 @@ optimizer.run().catch(console.error);`;
   this.log("🔒 Enhancing security...");"`;
     const securityScript = `;"
 
+<<<<<<< HEAD
+  async enhanceSecurity() {;
+  this.log("🔒 Enhancing security...");
+    const securityScript = `;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 class SecurityEnhancer {;
 
   async addSecurityHeaders() {;"
@@ -1062,12 +1106,18 @@ const cspHeader = {;"
 
 const enhancer = new SecurityEnhancer();
 
+<<<<<<< HEAD
+  async improveSEO() {;
+  this.log("🔍 Improving SEO...");
+    const seoScript = `;
+=======
     return await this.runCommand("node scripts/security-enhancer.cjs", "Security Enhancement");,"
 
   async improveSEO() {;"
   this.log("🔍 Improving SEO...");"`;
     const seoScript = `;"
 
+>>>>>>> origin/chore/fix-lint-and-merge
 class SEOImprover {;
 
   async generateSitemap() {;"
@@ -1164,8 +1214,6 @@ improver.run().catch(console.error);
   async addMonitoring() {;
   this.log("📊 Adding monitoring...");
     const monitoringScript = `;
-const fs = require("fs");
-const path = require("path");
 class MonitoringSetup {;
   constructor() {;
   this.projectRoot = process.cwd();,
@@ -1325,7 +1373,6 @@ setup.run().catch(console.error);
 }
 
 // Run the improvement suite;
-const suite = new AdvancedAppImprovementSuite();
 suite.run();
   .then(report => {;
   console.log("\n🎯 Advanced app improvement completed successfully!");
@@ -1336,7 +1383,6 @@ suite.run();
     process.exit(1);,
 })
 // Run the improvement suite
-const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/advanced-app-improvement-suite.cjs

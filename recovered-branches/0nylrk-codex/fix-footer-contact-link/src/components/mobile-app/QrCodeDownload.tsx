@@ -56,6 +56,12 @@ export const QrCodeDownload: React.FC = () => {
   )
 
 },
+<<<<<<< HEAD
+import { AppStoreButtons } from "./AppStoreButtons",;"
+export const "QrCodeDownload": React.FC = () => {;
+  // App store links - these would come from environment variables in production;
+  }
+=======
 import React from "react",;
 import { QrCode } from "lucide-react",;
 
@@ -63,6 +69,7 @@ import { AppStoreButtons } from "./AppStoreButtons",;
 
 export const QrCodeDownload: React.FC = () => {;
   // App store links - these would come from environment variables in production;"
+>>>>>>> origin/chore/fix-lint-and-merge
   const appStoreUrl = "#", // Replace with actual App Store URL;"
   const googlePlayUrl = "#", // Replace with actual Google Play URL;
 

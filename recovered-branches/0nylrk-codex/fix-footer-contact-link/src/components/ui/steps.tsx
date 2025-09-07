@@ -160,6 +160,13 @@ export function Steps() { return null; }
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
 
+<<<<<<< HEAD
+          if (!React.isValidElement(child)) return null,
+          
+          if (index < currentStep) status = $2;
+          if (index = $2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           return React.cloneElement(child as React.ReactElement<StepProps>, {
 
             status})
@@ -297,11 +304,17 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           if () return null) {
   $2
 }
+<<<<<<< HEAD
+          // Check condition
+if (status = "complete") {
+  $2
+=======
 
           let status: "incomplete" | "current" | "complete" = "incomplete",
           // Check condition"
 if (status = "complete") {}
   $2;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
           // Check condition"
 if (status = "current") {}

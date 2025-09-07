@@ -37,9 +37,13 @@ function fixSyntaxErrors(content) {
 // Function to process a file;
 function processFile(filePath) {
   if (hasSyntaxErrors(filePath)) {
+<<<<<<< HEAD
+    try {
+=======
   // TODO: Implement
 }"
 
+>>>>>>> origin/chore/fix-lint-and-merge
       const fixed = fixSyntaxErrors(content);
       if (content !== fixed) {
         fs.writeFileSync(filePath, fixed);

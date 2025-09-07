@@ -103,7 +103,6 @@ const getCategoryIcon = (category: string) = />: any {
 
 const getCategoryColor = (category: string) =>: any {
    ;
-  const cat = categories.find (c => c.name === category);}
     return cat ? cat.color : 'from - gray - 500 to - gray - 600'}
 };
 
@@ -156,7 +155,6 @@ const getCategoryIcon = (category: string) = />: any ;
   return cat ? cat.icon : Star;  }
 
 const getCategoryColor = (category: string) =>: any ;
-  const cat = categories.find (c => c.name === category;
   return cat ? cat.color : 'from - gray - 500 to - gray - 600';  }return (<Layout />;
       <SEO;
         title='2025 Innovative Services Showcase | Zion Tech Group';
@@ -180,13 +178,9 @@ const getCategoryColor = (category: string) =>: any ;
   icon: Database, color: 'from - emerald - 500 to - green - 500';}
 }
 
-const getCategoryIcon = (category: string) = />: any ;
-  const cat = categories.find (c => c.name === category;
   return cat ? cat.icon : Star;    return cat ? cat.icon : Star;
   }
 
-const getCategoryColor = (category: string) =>: any ;
-  const cat = categories.find (c => c.name === category;
   return cat ? cat.color : 'from - gray - 500 to - gray - 600';    return cat ? cat.color : 'from - gray - 500 to - gray - 600';
   }return (<Layout />;
       <SEO;

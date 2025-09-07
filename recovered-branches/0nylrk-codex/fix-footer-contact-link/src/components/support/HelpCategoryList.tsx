@@ -50,6 +50,22 @@ interface HelpCategoryListProps {;
       )
     : categories,
 
+<<<<<<< HEAD
+export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
+  // Filter categories based on search query;
+    ? categories && categories.filter(;
+        category =>;
+          category && category.name.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+          category && category.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+          category && category.articles.some(;
+            article =>;
+              article && article.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
+              article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
+          );
+      );
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
   return ("
@@ -189,7 +205,10 @@ interface HelpCategoryListProps {;
       ))}
 
 import React from './react';
+<<<<<<< HEAD
+=======
 import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   Card,
   CardContent,
   CardDescription,

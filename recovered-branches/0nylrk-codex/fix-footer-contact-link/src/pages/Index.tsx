@@ -32,6 +32,12 @@ import {}
 } from "lucide-react",
 
 export default function Index() {;
+<<<<<<< HEAD
+  }
+    }
+    }
+    },
+=======
 
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
@@ -127,6 +133,7 @@ export default function Index() {;
 </Header>
       <HeroSection />;
 
+>>>>>>> origin/chore/fix-lint-and-merge
     {
       title: t("home.tool_talent")
       description: t("home.tool_talent_desc")
@@ -321,6 +328,54 @@ import {;
   MessageSquare,;
   Sparkles,;
   BarChart3,;
+<<<<<<< HEAD
+  Smartphone;
+} from "lucide-react",;"
+export default function Index() {;
+  }
+  // Tools and features showcase;
+    {;
+      }
+      "title": t("home.tool_ai_matcher"),,"
+  "description": t("home.tool_ai_matcher_desc"),;"
+      "icon": <Sparkles className="h-6 w-6 text-zion-cyan" />,;"
+      "link": "/match";"
+    },;
+    {;
+      }
+      "title": t("home.tool_talent"),,"
+  "description": t("home.tool_talent_desc"),;"
+      "icon": <Users className="h-6 w-6 text-zion-purple" />,;"
+      "link": "/talent";"
+    },;
+    {;
+      }
+      "title": t("home.tool_services"),,"
+  "description": t("home.tool_services_desc"),;"
+      "icon": <Zap className="h-6 w-6 text-zion-cyan" />,;"
+      "link": "/services";"
+    },;
+    {;
+      }
+      "title": t("home.tool_equipment"),,"
+  "description": t("home.tool_equipment_desc"),;"
+      "icon": <Settings className="h-6 w-6 text-zion-purple" />,;"
+      "link": "/equipment";"
+    },;
+    {;
+      }
+      "title": t("home.tool_analytics"),,"
+  "description": t("home.tool_analytics_desc"),;"
+      "icon": <BarChart3 className="h-6 w-6 text-zion-cyan" />,;"
+      "link": "/analytics";"
+    },;
+    {;
+      }
+      "title": "Mobile App",,"
+  "description": "Take Zion with you on the go with our mobile app for iOS and Android",;"
+      "icon": <Smartphone className="h-6 w-6 text-zion-purple" />;"
+      "link": "/mobile-launch";"
+=======
   Smartphone;"
 } from "lucide-react",;
 export default function Index() { return null; }
@@ -330,6 +385,7 @@ export default function Index() { return null; }
   const toolsFeatures = [;
 
       link: "/mobile-launch";
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   ];
   return (;"

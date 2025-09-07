@@ -40,8 +40,12 @@ class ErrorFixer {}
     console.log(message);
   error(message) {}
 <<<<<<< HEAD
+const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;`;
+=======
+<<<<<<< HEAD
     const timestamp = new Date().toISOString();
     const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;`
+>>>>>>> origin/chore/fix-lint-and-merge
     fs.appendFileSync(this.errorFile, errorMessage);
     console.error(message);
   };

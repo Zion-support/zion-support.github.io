@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+            <Button;
+              key={type.id}          return (
+=======
 import {useState} from "react";
 import {Briefcase, Star, User} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -221,6 +226,7 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
           const isSelected = selectedType === type.id,
 
           return (
+>>>>>>> origin/chore/fix-lint-and-merge
             <Button;
               key={type.id}
 
@@ -245,6 +251,13 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
             <Button;
               key={type.id}
 
+<<<<<<< HEAD
+              </div>;
+              <div className="text-center">;"
+}      </div>;
+    </div>;
+  );
+=======
               }`}
             >"`
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>"`
@@ -254,6 +267,7 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
               <div className="text-center">"
                 <h4 className="font-medium">{type.name}</h4>"
                 <p className="text-sm text-zion-slate-light mt-1">
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   {type.description}
 
@@ -286,6 +300,8 @@ interface UserTypeOption {;
   onSelect: (userType: "serviceProvider" | "talent" | "client") => void,;
   selectedType: string | null;
 }
+<<<<<<< HEAD
+=======
 ;
 
       description: "I want to discover and hire talent or services",;
@@ -391,3 +407,4 @@ export function UserTypeSelection({ onSelect, selectedType } UserTypeSelectionPr
 }
 
 }
+>>>>>>> origin/chore/fix-lint-and-merge

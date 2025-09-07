@@ -783,6 +783,17 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
     }
   },;
   // Get category color;
+<<<<<<< HEAD
+    }
+    switch (category) {;
+      }
+      case 'programming': return 'bg-blue-500/20 "hover":bg-blue-500/30 text-blue-500',;'
+      case 'devops': return 'bg-green-500/20 "hover":bg-green-500/30 text-green-500',;'
+      case 'platforms': return 'bg-amber-500/20 "hover":bg-amber-500/30 text-amber-500',;'
+      case 'softSkills': return 'bg-purple-500/20 "hover":bg-purple-500/30 text-purple-500',;'
+      case 'other': return 'bg-gray-500/20 "hover":bg-gray-500/30 text-gray-500',;'
+      "default": return 'bg-zion-purple/20 "hover":bg-zion-purple/30 text-zion-purple';'
+=======
   const getCategoryColor = (category: CategoryType) => {;
     switch (category) {;'
       case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500',;'
@@ -791,6 +802,7 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500',;'
       case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500',;'
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   },
 
@@ -840,6 +852,21 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
 
       if (values.enhancedProfile && !generatedContent) {
         try {
+<<<<<<< HEAD
+          }
+          const { "data": aiData } = await supabase.functions.invoke('talent-profile-enhancer', {'
+            }
+            "body": {
+              }
+              "talentData": {
+                }
+                "name": values.name,
+"title": values.title,
+"bio": values.bio,
+"skills": skillTags,
+"location": values.location
+  // Send notification email,
+=======
           const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {
             body: {
               talentData: {
@@ -852,6 +879,7 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
       // Check condition
 if ( {) {
   $2
@@ -891,6 +919,49 @@ if ( {) {}
               }
             }
           });
+<<<<<<< HEAD
+          if (aiData) {
+            }
+            finalSummary = (aiData as EnhancedProfile).summary;
+            // Safely merge AI suggested skills with user-provided skills,
+const categorizedSkills = (aiData as EnhancedProfile).categorizedSkills;
+const "aiSkills": string[] = [];
+            // Extract skills from each category and ensure they're strings'
+            Object.values(categorizedSkills).forEach((categorySkills) => {
+              }
+              if (Array.isArray(categorySkills)) {
+                }
+                categorySkills.forEach((skill) => {
+                  }
+                  if (typeof skill === 'string' && skill) {'
+                    }
+                    aiSkills.push(skill)
+  },;
+  // Send notification email;
+    }
+    try {
+      }
+      await supabase.functions.invoke ('send - email', {'
+        }
+        "body": {
+        }
+      });
+    } catch (error) {;
+      }
+      console && console.error("Failed to send notification "email":", error);"
+    }
+  },;
+  // Handle form submission;
+    }
+    if (skillTags.length === 0) {;
+      }
+      toast({;
+        }
+        "title": "Skills required",,"
+  "description": "Please add at least one skill to your profile.",;"
+        "variant": "destructive"}),;"
+      return;
+=======
 ;
           // Check condition;
 if ( {) {}
@@ -901,6 +972,7 @@ if ( {) {}
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
             const ai_skills: string[] = [],'
             // Extract skills from each category and ensure they're strings;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                   }
                 });
@@ -932,9 +1004,13 @@ if ( {) {}
             const ai_skills: string[] = [],'
             // Extract skills from each category and ensure they're strings;
 ;
+<<<<<<< HEAD
+      // Enhance profile if not already done;
+=======
       // Enhance profile if not already done;"
       let finalSummary = "",;
       let finalSkills = skillTags,;
+>>>>>>> origin/chore/fix-lint-and-merge
       if (values.enhancedProfile && !generatedContent) {;
         try {;'
           const { data: aiData } = await supabase.functions.invoke('talent-profile-enhancer', {;

@@ -15,18 +15,30 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
+<<<<<<< HEAD
+    "forceConsistentCasingInFileNames": false,
     "noEmit": true,
+    "moduleResolution": "bundler",
+=======
+    "noEmit": true,
+    "maxNodeModuleJsDepth": 0,
+    "skipDefaultLibCheck": true,
     "esModuleInterop": true,
     "module": "ESNext",
     "moduleResolution": "node",
+>>>>>>> origin/main
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": ".",
     "paths": {
       "@/*": [
-<<<<<<< HEAD
         "./*"
       ],
       "@/components/*": [
@@ -49,109 +61,60 @@
       ],
       "@/assets/*": [
         "./assets/*"
-=======
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/pages/*": [
-        "./src/pages/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ],
-      "@/styles/*": [
-        "./src/styles/*"
-      ],
-      "@/assets/*": [
-        "./src/assets/*"
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
       ]
     },
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "sourceMap": true,
-    "declaration": false,
-    "declarationMap": false,
-    "removeComments": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
+<<<<<<< HEAD
+    "strictNullChecks": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "tsBuildInfoFile": ".next/cache/tsbuildinfo.json",
+    "allowImportingTsExtensions": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "noFallthroughCasesInSwitch": false,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "noFallthroughCasesInSwitch": true
+=======
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": false
+>>>>>>> origin/main
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-<<<<<<< HEAD
-=======
-    "pages/**/*.ts",
-    "pages/**/*.tsx",
-    "app/**/*.ts",
-    "app/**/*.tsx",
-    "components/**/*.ts",
-    "components/**/*.tsx",
-    "data/**/*.ts",
-    "data/**/*.tsx",
-    "types/**/*.ts",
-    "types/**/*.tsx",
-    "zion/**/*.ts",
-    "zion/**/*.tsx",
-    "protocol/**/*.ts",
-    "protocol/**/*.tsx",
-    "App.tsx",
-    "middleware.ts",
-    "jest.setup.ts",
->>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
-    "vite.config.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    ".next",
     "dist",
     "build",
-    "pages_backup*",
-    "pages.*",
-    "pages-*",
-    "pages_disabled*",
-    "pages.disabled*",
-    "pages.broken*",
-    "pages.corrupted*",
-    "pages.old*",
-    "pages._*",
-    "pages.__*",
-    "backup-pages",
-    "src.pages.disabled",
-    "lib_backup*",
-    "src_backup*",
-    "corrupted-files-backup*",
-    "performance-reports*",
-    "log-analysis-reports*",
-    "link-reports*",
-    "lint-target*",
-    "monitoring*",
-    "pm2-automation*",
-    "automation/logs*",
-    "automation/backup*",
-    "api-backup",
-    "contracts",
-    "hardhat"
+    "backup*",
+    "temp*",
+    "corrupted*",
+    "apps.backup*",
+    "apps*",
+    "recovered-branches*",
+    "src*",
+    "data*",
+    "**/*.backup.*",
+    "**/*.temp.*",
+    "**/*.conflict.*",
+    "src/App.tsx",
+    "src/components/DynamicListingPage.tsx",
+    "src/components/ErrorBoundary.tsx",
+    "src/components/FeaturesGuideSection.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Header.tsx",
+    "src/components/PerformanceMonitor.tsx",
+    "src/components/developers/WebhooksManager.tsx",
+    "src/components/icons/index.tsx",
+    "src/pages/About.tsx",
+    "src/pages/Contact.tsx",
+    "src/pages/Pricing.tsx",
+    "src/pages/Services.tsx"
   ]
 }

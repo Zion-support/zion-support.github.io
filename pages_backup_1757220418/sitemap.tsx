@@ -1,4 +1,9 @@
+<<<<<<< HEAD:pages/sitemap.tsx
+import { GetServerSideProps,
+  from 'next';
+=======
 // import { GetServerSideProps } from 'next';
+>>>>>>> origin/main:pages_backup_1757220418/sitemap.tsx
 
 const sitemap_data = [
   {
@@ -7,8 +12,7 @@ const sitemap_data = [
       { name: 'Home', url: '/', icon: 'Home' },
       { name: 'About', url: '/about', icon: 'Users' },
       { name: 'Contact', url: '/contact', icon: 'Globe' },
-      { name: 'Services', url: '/services', icon: 'Settings' }
-    ]
+      { name: 'Services', url: '/services', icon: 'Settings' ]
   },
   {
     category: 'Services',
@@ -18,10 +22,8 @@ const sitemap_data = [
       { name: 'Micro SaaS', url: '/micro-saas', icon: 'Target' },
       { name: 'Cloud Services', url: '/services/cloud', icon: 'Cloud' },
       { name: 'Cybersecurity', url: '/services/cybersecurity', icon: 'Shield' },
-      { name: 'Data Analytics', url: '/services/data-analytics', icon: 'BarChart3' }
-    ]
-  }
-];
+      { name: 'Data Analytics', url: '/services/data-analytics', icon: 'BarChart3' ]
+  ];
 
 function generateSiteMap() {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -30,9 +32,8 @@ function generateSiteMap() {
        .flatMap(category => category.pages)
        .map(page => {
          return `
-       <url>
-           <loc>https://ziontechgroup.com${page.url}</loc>
-           <lastmod>${new Date().toISOString()}</lastmod>
+       <url>,
+  <loc>https://ziontechgroup.com${page.url}</loc> <lastmod>${new Date().toISOString()}</lastmod>
            <changefreq>weekly</changefreq>
            <priority>0.8</priority>
        </url>
@@ -44,15 +45,21 @@ function generateSiteMap() {
 }
 
 function SiteMap() {
+<<<<<<< HEAD:pages/sitemap.tsx
+  // getServerSideProps will do the heavy lifting,
+  export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+=======
   // getServerSideProps will do the heavy lifting
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const getServerSideProps: GetServerSideProps = async ({ res }) => {
+>>>>>>> origin/main:pages_backup_1757220418/sitemap.tsx
   // We generate the XML sitemap with the posts data
   const sitemap = generateSiteMap();
 
-  res.setHeader('Content-Type', 'text/xml');
+  res.setHeader('Content-Type',,,
+  'text/xml');
   // we send the XML to the browser
   res.write(sitemap);
   res.end();
@@ -61,5 +68,4 @@ export const getServerSideProps: GetServerSideProps = async ({ res }) => {
     props: {},
   };
 };
-
 export default SiteMap;

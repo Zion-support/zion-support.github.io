@@ -27,7 +27,6 @@ class AppEnhancementSuite {
     this.log('🔒 Creating Security Enhancements');
 
     // Create security headers configuration
-    const securityConfig = {
       "headers": {
         'X-Content-Type-Options': 'nosniff',
         'X-Frame-Options': 'DENY',
@@ -377,6 +376,11 @@ ursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     const monitoringLines = ['#!/usr/bin/env node',
       '',
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       "const fs = require('fs');",
       "const path = require('path');",
       '',
@@ -492,7 +496,13 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 
     const securityHeaders = {}
+<<<<<<< HEAD
+
+
+
+=======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge
       timestamp: new Date().toISOString(),
       enhancements: this.enhancements,
       status: 'completed'
@@ -538,6 +548,9 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 
 
+<<<<<<< HEAD
+
+=======
     const securityHeaders = {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       timestamp: new Date().toISOString(),
@@ -560,6 +573,7 @@ ursor/automate-test-improve-and-merge-code-59d5
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       'X-Content-Type-Options': 'nosniff',
       'X-Frame-Options': 'DENY',
       'X-XSS-Protection': '1; mode=block',

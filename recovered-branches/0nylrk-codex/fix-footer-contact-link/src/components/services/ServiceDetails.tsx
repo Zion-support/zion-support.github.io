@@ -14,6 +14,8 @@ interface ServiceDetailsProps {
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
 
+<<<<<<< HEAD
+=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Clock, MapPin } from "lucide-react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
@@ -31,10 +33,25 @@ export function ServiceDetails({ country }: ServiceDetailsProps) {}
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Server, Clock, MapPin} from "lucide-react";
+>>>>>>> origin/chore/fix-lint-and-merge
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Server, Clock, MapPin } from "lucide-react",
 
+<<<<<<< HEAD
+// Component to show service details for the selected country;
+export /**
+ * ServiceDetails - Function description
+ */
+function ServiceDetails() {
+  // Get datacenters for regions (simplified - in production this would come from a real database);
+  const get_datacenters = (country: string): string[] => {
+interface ServiceDetailsProps {
+  country: string}
+
+export function ServiceDetails({ country }: ServiceDetailsProps) {
+  // Get datacenters for regions (simplified - in production this would come from a real database)
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   const getDatacenters = (country: string): string[] => {
 
     const dataCenters: Record<string, string[]> = {;
@@ -164,7 +181,21 @@ function ServiceDetails() {}
     }
     return regions[country] |regions["default"]
   }
+<<<<<<< HEAD
+  // Get region-specific image
+    // In a real app, you'd have specific images for each region
+    const regions: Record<string string> = {
+      "United States": "https://source.unsplash.com/featured/900x700/?datacenter,usa",
+      "United Kingdom": "https://source.unsplash.com/featured/900x700/?datacenter,uk",
+      "Germany": "https://source.unsplash.com/featured/900x700/?datacenter,germany",
+      "Japan": "https://source.unsplash.com/featured/900x700/?datacenter,japan",
+      "Australia": "https://source.unsplash.com/featured/900x700/?datacenter,australia",
+      "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
+      // Default placeholder
+      "default": "https://source.unsplash.com/featured/900x700/?datacenter"
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     },
     "
     return regions[country] || regions["default"]

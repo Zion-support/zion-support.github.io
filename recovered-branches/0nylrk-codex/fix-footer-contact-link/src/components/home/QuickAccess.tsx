@@ -261,7 +261,11 @@ import { ;
 } from "lucide-react",;
 ;
 export function QuickAccess() {;
+<<<<<<< HEAD
+  }
+=======
   const quickLinks = [;
+>>>>>>> origin/chore/fix-lint-and-merge
     {;
       title:"AI Matcher",,
   description:"Find the perfect match for your project needs",;

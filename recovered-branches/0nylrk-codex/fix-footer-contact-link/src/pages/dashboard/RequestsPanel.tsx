@@ -50,6 +50,17 @@ function RequestsPanel() {}
     setArchiveFilter;
     markAsViewed;
     markAsResponded;
+<<<<<<< HEAD
+import type { QuoteRequest } from "@/types/quotes","
+import { ProtectedRoute } from "@/components/ProtectedRoute","
+export default function RequestsPanel() {
+}
+const { user } = useAuth(),;
+const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',;'
+const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
+const [showDetails, setShowDetails] = useState(false),;
+    }
+=======
 
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
@@ -74,6 +85,7 @@ export default function RequestsPanel() {}
 
   const {
 
+>>>>>>> origin/chore/fix-lint-and-merge
     quotes,
     unreadCount,
     isLoading,
@@ -99,6 +111,14 @@ export default function RequestsPanel() {}
 
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),
+<<<<<<< HEAD
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer",;"
+import { useTalentQuotes } from "@/hooks/useTalentQuotes",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",;"
+=======
 
   return (
     <ProtectedRoute>
@@ -112,11 +132,18 @@ import { useAuth } from "@/hooks/useAuth",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",;
+>>>>>>> origin/chore/fix-lint-and-merge
 import {;
   RequestsHeader,;
   QuoteRequestsList;"
 } from "@/components/quotes",;"
 import type { QuoteRequest } from "@/types/quotes",;"
+<<<<<<< HEAD
+import { ProtectedRoute } from "@/components/ProtectedRoute",;"
+export default function RequestsPanel() {;
+  }
+    }
+=======
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
 export default function RequestsPanel() { return null; }
   const { user } = useAuth(),;'
@@ -124,6 +151,7 @@ export default function RequestsPanel() { return null; }
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
   const [showDetails, setShowDetails] = useState(false),;
   const {;
+>>>>>>> origin/chore/fix-lint-and-merge
     quotes,;
     unreadCount,;
     isLoading,;

@@ -44,9 +44,12 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     content = content.replace(/},\s*}/g, '}\n  }');
     content = content.replace(/},\s*]/g, '}\n  ]');
     content = content.replace(/"category": '[^']*'}\s*"category": '[^']*'\s*}/g, (match) => {}
+<<<<<<< HEAD
+=======
       const categoryMatch = match.match(/"category": '([^']*)'/);
 <<<<<<< HEAD
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
       if (categoryMatch) {
         return `category: '${categoryMatch[1]}'\n    }`}
       return match});

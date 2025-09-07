@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+const CommunityRoutes = () => {import { Fragment } from "react,
+import { Fragment } from react",
+import { Route, Routes } from "react-router-dom,
+import { ProtectedRoute } from ../components/ProtectedRoute",
+import CommunityPage from "../pages/CommunityPage,
+import ForumCategoryPage from ../pages/ForumCategoryPage",
+import ForumPostPage from "../pages/ForumPostPage,
+import CreatePostPage from ../pages/CreatePostPage",
+import EditPostPage from "../pages/EditPostPage;
+import CommunityProfilePage from ../pages/CommunityProfilePage";
+const CommunityRoutes = () => {
+const CommunityRoutes = () => {  return (
+=======
 import { Fragment } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ProtectedRoute } from "../components/ProtectedRoute";
@@ -31,23 +45,42 @@ import CommunityProfilePage from "../pages/CommunityProfilePage";
 
 const CommunityRoutes = () => {
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <Routes>
       {/* Public routes */}
-      <Route path="/community" element={<CommunityPage />} />
-      <Route path="/forum" element={<CommunityPage />} />
-      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
-      <Route path="/community/post/:postId" element={<ForumPostPage />} />
-      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
+      <Route path="/community element={<CommunityPage />} />
+      <Route path=/forum" element={<CommunityPage />} />
+      <Route path="/community/category/:categoryId element={<ForumCategoryPage />} />
+      <Route path=/community/post/:postId" element={<ForumPostPage />} />
+      <Route path="/community/profile/:userId element={<CommunityProfilePage />} />
 
+<<<<<<< HEAD
+=======const CommunityRoutes = () => {
+  return (
+    <Routes>;
+      {/* Public routes */}
+      <Route path=/community" element={<CommunityPage />} />
+      <Route path="/forum element={<CommunityPage />} />
+      <Route
+        path=/community/category/:categoryId"
+        element={<ForumCategoryPage />}
+      />
+      <Route path="/community/post/:postId element={<ForumPostPage />} />
+      <Route
+        path=/community/profile/:userId"
+        element={<CommunityProfilePage />}
+      />
+=======
 const CommunityRoutes = () => {}
 const CommunityRoutes = () => {}
 const CommunityRoutes = () => {;
 
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
 
       {/* Protected routes */}
       <Route
-        path="/community/create"
+        path="/community/create
         element={
           <ProtectedRoute>
             <CreatePostPage />
@@ -55,14 +88,14 @@ const CommunityRoutes = () => {;
         }
       />
       <Route
-        path="/community/edit/:postId"
+        path=/community/edit/:postId"
         element={
           <ProtectedRoute>
             <EditPostPage />
           </ProtectedRoute>
 
   )
-};
+}
 
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;

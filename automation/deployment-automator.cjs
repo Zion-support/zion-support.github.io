@@ -302,6 +302,8 @@ class DeploymentAutomator {
 // Run the deployment automator;
 const automator = new DeploymentAutomator();
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -309,6 +311,7 @@ const automator = new DeploymentAutomator();
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
+>>>>>>> origin/chore/fix-lint-and-merge
   log(message, type = "INFO")
   this.log(`"Running"`)
   "encoding": "utf8"
@@ -320,11 +323,9 @@ const { execSync } = require("child_process")
   { "name": "TypeScript Check", "command": "npx tsc --noEmit"}
       { "name": "Linting Check", "command": "npx eslint . --ext .js,.jsx,.ts,.tsx"}
       { "name": "Build Test", "command": "yarn build"}
-  const result = await this.runCommand(check.command, { "silent"})
         this.log(` ${check.name} failed`, "ERROR"`)
   this.log("� Committing all changes...")
       await this.runCommand("git add .")
-      const status = await this.runCommand("git status --porcelain", { "silent"})
   await this.runCommand("git commit -m ""feat": comprehensive automation improvements and fixes - Fixed TypeScript configuration and dependencies - Created comprehensive automation scripts - Improved code quality and performance - Added security scanning and health checks - Fixed corrupted import statements - Enhanced build process and error handling - Added deployment automation tools"")
         this.deploymentSteps.push(" Changes committed successfully")
         this.log(" Changes committed successfully")
@@ -337,7 +338,6 @@ const { execSync } = require("child_process")
       this.log(" Changes pushed to repository")
   this.log(` Failed to push "changes": ${error.message}`, "ERROR"`)
   this.log("� Merging to main branch...")
-      const currentBranch = await this.runCommand("git branch --show-current", { "silent"})
       if (currentBranch && currentBranch.trim() !== "main"
         await this.runCommand("git checkout main")
         await this.runCommand("git pull origin main")
@@ -354,7 +354,6 @@ const { execSync } = require("child_process")
         "successfulSteps": this.deploymentSteps.filter(step => step.startsWith("")
         "failedSteps": this.deploymentSteps.filter(step => step.startsWith("")
         "totalErrors"
-    const reportPath = path.join(this.projectRoot, "deployment-report.json")
     this.log("\\n DEPLOYMENT AUTOMATION REPORT")
     this.log("===")
     this.log(`Total "Steps"`)

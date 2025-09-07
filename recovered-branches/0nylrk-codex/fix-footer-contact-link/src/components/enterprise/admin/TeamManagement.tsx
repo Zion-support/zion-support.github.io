@@ -10,14 +10,23 @@ import {
 
   TableHead;
   TableHeader;
+<<<<<<< HEAD
+  TableRow} from "@/components/ui/table","
+  }
+=======
   TableRow} from "@/components/ui/table",
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog;
   DialogContent;
   DialogDescription;
 
   DialogFooter;
   DialogHeader;
+<<<<<<< HEAD
+  DialogTitle;import React, { useState } from "react","
+  }
+=======
 
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
@@ -35,14 +44,21 @@ import React, { useState } from "react",
 
 import {
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Table,
   TableBody,
   TableCell,
 
   TableHead,
+<<<<<<< HEAD
+  TableHeader,
+  TableRow} from "@/components/ui/table","
+  }
+=======
   TableHeader,"
   TableRow} from "@/components/ui/table",
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,
   DialogContent,
   DialogDescription,

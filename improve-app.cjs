@@ -89,9 +89,22 @@ const nextConfig = {
     return config;
 `;
 module.exports = nextConfig;`;
+<<<<<<< HEAD
+;
+    fs.writeFileSync('next.config.optimized.js', optimizedConfig);
+    this.log('✅ Created optimized next.config.js');
+  }
+;
+  createPerformanceScript() {;
+    const performanceScript = `#!/usr/bin/env node;
+;
+class PerformanceOptimizer {;
+  constructor() {;
+=======
 
 class PerformanceOptimizer {
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
     this.metrics = {};
 
   async analyzeBundle() {
@@ -134,9 +147,24 @@ if (require.main === module) {
   optimizer.analyzeBundle();
   optimizer.generateReport();
 module.exports = PerformanceOptimizer;`;
+<<<<<<< HEAD
+;
+    fs.writeFileSync('scripts/performance-optimizer.js', performanceScript);
+    this.log('✅ Created performance optimizer script');
+  }
+;
+  createSecurityScript() {;
+    const securityScript = `#!/usr/bin/env node;
+const { execSync } = require('child_process');
+;
+class SecurityAuditor {;
+  constructor() {;
+    this.issues = [];
+=======
 
 class SecurityAuditor {
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
     this.fixes = [];
 
   async runAudit() {
@@ -152,6 +180,34 @@ class SecurityAuditor {
       console.log(\`Found \${this.issues.length} security issues\`);
     } catch (error) {
       console.log('No security issues found or audit failed');
+<<<<<<< HEAD
+    }
+  }
+;
+  async fixIssues() {;
+    if (this.issues.length > 0) {;
+      console.log('🔧 Attempting to fix security issues...');
+      try {;
+        execSync('npm audit fix', { "stdio": 'inherit' });
+        this.fixes.push('Applied automatic security fixes');
+        console.log('✅ Security fixes applied');
+      } catch (error) {;
+        console.log('❌ Could not apply automatic fixes');
+      }
+    }
+  }
+;
+  generateReport() {;
+      "timestamp": new Date().toISOString(),
+      "issues": this.issues,
+      "fixes": this.fixes,
+      "summary": {;
+        "totalIssues": this.issues.length,
+        "fixesApplied": this.fixes.length;
+      }
+    };
+;
+=======
 
 
       issue: s: this.issues,
@@ -161,6 +217,7 @@ class SecurityAuditor {
         fixesApplie: d: this.fixes.length;
 
 
+>>>>>>> origin/chore/fix-lint-and-merge
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated');
 
@@ -173,6 +230,20 @@ module.exports = SecurityAuditor;`;
 
     fs.writeFileSync('scripts/security-auditor.js', securityScript);
     this.log('✅ Created security auditor script');
+<<<<<<< HEAD
+  }
+;
+  generateReport() {;
+      "timestamp": new Date().toISOString(),
+      "issues": this.issues,
+      "improvements": this.improvements,
+      "summary": {;
+        "totalIssues": this.issues.length,
+        "totalImprovements": this.improvements.length;
+      }
+    };
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       improvement: s: this.improvements,
         totalImprovement: s: this.improvements.length,

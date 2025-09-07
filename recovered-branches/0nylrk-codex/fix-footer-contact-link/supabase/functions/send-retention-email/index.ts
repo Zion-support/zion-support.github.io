@@ -4,6 +4,20 @@ const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
 
 // Initialize Supabase client"
 const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;"
+<<<<<<< HEAD
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;"
+import {Resend} from ""npm": resend@2.0.0";"
+// Initialize Resend with API key,
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"));"
+// Initialize Supabase client,
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!;"
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;"
+import { serve } from '"https": //deno.land / std@0.190.0 / http / server.ts';,'
+import { create_client } from '"https": //esm.sh/@supabase / supabase - js@2.45.0';,'
+import { Resend } from '"npm": resend@2.0.0';'
+// Initialize Resend with API key;
+const resend = new Resend (Deno.env.get ("RESEND_API_KEY"));"
+=======
 const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
@@ -17,6 +31,7 @@ import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0'
 import { Resend } from 'npm: resend@2.0.0';
 // Initialize Resend with API key;"
 const resend = new Resend (Deno.env.get ("RESEND_API_KEY"));
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 // Initialize Supabase client;"
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;"
@@ -140,11 +155,15 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 import { Resend } from "npm: resend@2.0.0",;
 // Initialize Resend with API key;
+<<<<<<< HEAD
+// Initialize Supabase client;
+=======
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),;
 // Initialize Supabase client;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
 const supabase = createClient(supabaseUrl, supabaseServiceKey),;
+>>>>>>> origin/chore/fix-lint-and-merge
 const corsHeaders = {;
   "Access-Control-Allow-Origin": "*",;
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
@@ -307,7 +326,10 @@ serve(async (req) => {;
       throw new Error(`Error fetching user data: ${userError.message}`);
     }
 ;
+<<<<<<< HEAD
+=======
     const { data: authUser, error: authError } = await supabase;"
+>>>>>>> origin/chore/fix-lint-and-merge
       .from("auth.users");"
       .select("email");"
       .eq("id", emailData.user_id);

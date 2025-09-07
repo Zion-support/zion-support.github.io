@@ -1,9 +1,15 @@
 import React from 'react';
 
+<<<<<<< HEAD
+import React from 'react';'
+interface SetupProps {
+  // Add props here as needed
+=======
 import React from 'react';
 
 interface SetupProps {}
   // Add props here as needed}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export default function Setup({ }: SetupProps) {
@@ -54,6 +60,10 @@ global.window.scrollTo = vi.fn(); // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind(vi);
   runAllTimers: vi.runAllTimers.bind(vi);
   // Reset / clear mocks;
+<<<<<<< HEAD
+export default function Setup() {
+  }
+=======
 
   // Core mocking utilities;
 fn: vi.fn.bind(vi),
@@ -73,6 +83,7 @@ interface SetupProps {
 }
 
 export default function Setup({ }: SetupProps) {
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <div>
       <h1>Setup</h1>

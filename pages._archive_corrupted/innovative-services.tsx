@@ -496,6 +496,32 @@ pr-12325
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+import { ArrowRight,, Award,, BarChart3,, Bot,, Brain,, CheckCircle,, Eye,, MessageSquare,, Shield,, Zap,, Cloud,, Database,, Users,, Settings,, Monitor,, Network,, FileText,, Target,, Calendar,, Smartphone,, Globe,, Lock,, TrendingUp,, Clock,, Star,, Cpu,, Wifi,, Server,, Code,, Mail,, Phone,, MapPin } from 'lucide-react';'
+const PageTransition = ({ children }: { "children": React && React.ReactNode }) => <div>{children}</div>;"
+export default function InnovativeServices() {const title = "Innovative Services — Zion Tech Group";"
+  }
+        "AI-powered email content generation","Behavioral trigger automation","Advanced segmentation and personalization","A/B testing with machine learning optimization","Deliverability optimization and monitoring","ROI tracking and analytics dashboard";"
+      ],"pricing": "$299 - $1,999/month","delivery": "2-3 weeks","category": "Email Marketing SaaS","benefits": "Increase email engagement by 40% and reduce manual work by 60%","marketPrice": "Average market "price": $500-2,500/month";"
+    },{"title": "Smart Inventory Management System","description": "AI-driven inventory optimization with predictive analytics and automated reordering","icon": Databas e,"features": ["Predictive demand forecasting","Automated reorder point calculations","Multi-location inventory tracking","Supplier performance analytics","Cost optimization recommendations","Integration with major e-commerce platforms";"
+      ],"pricing": "$199 - $1,299/month","delivery": "3-4 weeks","category": "Inventory SaaS","benefits": "Reduce inventory costs by 25% and prevent stockouts by 90%","marketPrice": "Average market "price": $300-1,500/month";"
+    },{"title": "AI Customer Support Chatbot","description": "Advanced conversational AI that handles customer inquiries with human-like responses","icon": Bo t,"features": ["Natural language processing and understanding","Multi-language support and translation","Integration with CRM and helpdesk systems","Sentiment analysis and escalation triggers","Knowledge base learning and updates","Performance analytics and optimization";"
+      ],"pricing": "$149 - $899/month","delivery": "2-3 weeks","category": "Customer Support AI","benefits": "Handle 80% of customer inquiries automatically, 24/7 availability","marketPrice": "Average market "price": $200-1,200/month";"
+    },{"title": "Blockchain Document Verification","description": "Secure document authentication and verification using blockchain technology","icon": Shiel d,"features": ["Immutable document verification","Digital signature validation","Cross-platform document sharing","Audit trail and compliance reporting","API integration for existing systems","Multi-signature approval workflows";"
+      ],"pricing": "$399 - $2,499/month","delivery": "4-6 weeks","category": "Blockchain SaaS","benefits": "Eliminate document fraud and reduce verification time by 70%","marketPrice": "Average market "price": $500-3,000/month";"
+    },{"title": "IoT Device Management Platform","description": "Comprehensive IoT device monitoring, management, and analytics platform","icon": Wif i,"features": ["Real-time device monitoring and alerts","Remote device configuration and updates","Data collection and analytics dashboard","Predictive maintenance scheduling","Security monitoring and threat detection","Integration with cloud platforms";"
+      ],"pricing": "$299 - $1,999/month","delivery": "5-7 weeks","category": "IoT Management","benefits": "Reduce device downtime by 50% and improve operational efficiency","marketPrice": "Average market "price": $400-2,500/month";"
+    },{"title": "AI-Powered Social Media Manager","description": "Intelligent social media content creation, scheduling, and engagement automation","icon": Glob e,"features": ["AI-generated content for multiple platforms","Optimal posting time recommendations","Hashtag research and optimization","Engagement tracking and analytics","Competitor analysis and insights","Multi-account management dashboard";"
+      ],"pricing": "$199 - $1,299/month","delivery": "2-3 weeks","category": "Social Media SaaS","benefits": "Increase social media engagement by 60% and save 10+ hours weekly","marketPrice": "Average market "price": $300-1,800/month";"
+    },{"title": "Smart Contract Development Platform","description": "No-code smart contract creation and deployment platform for blockchain applications","icon": Cod e,"features": ["Visual smart contract builder","Pre-built contract templates","Automated testing and deployment","Gas optimization recommendations","Multi-blockchain support","Security audit integration";"
+      ],"pricing": "$499 - $3,999/month","delivery": "6-8 weeks","category": "Blockchain Development","benefits": "Reduce smart contract development time by 80% and costs by 60%","marketPrice": "Average market "price": $800-5,000/month";"
+    },{"title": "AI-Powered Lead Scoring System","description": "Intelligent lead qualification and scoring using machine learning algorithms","icon": Targe t,"features": ["Behavioral pattern analysis","Predictive lead scoring models","Real-time lead qualification","CRM integration and automation","Custom scoring criteria setup","Performance analytics and optimization";"
+      ],"pricing": "$249 - $1,499/month","delivery": "3-4 weeks","category": "Sales Automation AI","benefits": "Increase lead conversion rates by 35% and sales efficiency by 45%","marketPrice": "Average market "price": $400-2,000/month";"
+    },{"title": "Quantum-Safe Encryption Service","description": "Future-proof encryption solutions resistant to quantum computing attacks","icon": Loc k,"features": ["Post-quantum cryptographic algorithms","Hybrid classical-quantum encryption","API integration for existing systems","Compliance with NIST standards","Performance optimization","Migration tools and support";"
+      ],"pricing": "$999 - $7,999/month","delivery": "8-12 weeks","category": "Cybersecurity","benefits": "Future-proof your data security against quantum computing threats","marketPrice": "Average market "price": $1,500-10,000/month";"
+    },{"title": "AI-Powered Code Review Assistant","description": "Automated code analysis, review, and optimization using advanced AI","icon": Cp u,"features": ["Automated code quality analysis","Security vulnerability detection","Performance optimization suggestions","Best practice recommendations","Integration with popular IDEs","Team collaboration and reporting";"
+      ],"pricing": "$199 - $1,299/month","delivery": "3-4 weeks","category": "Development Tools","benefits": "Improve code quality by 40% and reduce bugs by 60%","marketPrice": "Average market "price": $300-1,800/month";"
+=======
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -674,6 +700,7 @@ export default function InnovativeServices() {;
       "category": "Development Tools",;
       "benefits": "Improve code quality by 40% and reduce bugs by 60%",;
       "marketPrice": "Average market price: $300-1,800/month";
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   ];
   return (

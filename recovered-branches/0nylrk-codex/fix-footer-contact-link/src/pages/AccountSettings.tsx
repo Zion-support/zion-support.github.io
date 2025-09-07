@@ -27,6 +27,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/co
 import { Separator  } from '@/components/ui/separator';'
 import { Switch  } from '@/components/ui/switch';'
 import { Label  } from '@/components/ui/label';'
+<<<<<<< HEAD
+import { toast } from 'sonner';'
+export default function AccountSettings() {
+}
+import {useState, useEffect} from 'react';'
+=======
 import { toast } from 'sonner';
 
 import {useState, useEffect} from 'react';
@@ -42,6 +48,7 @@ import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function AccountSettings() {;
 
   const { user } = useAuth();
@@ -122,6 +129,9 @@ export default function AccountSettings() { return null; }
   }, []),
   }, []),
 
+<<<<<<< HEAD
+    }
+=======
   const handleSave = () => {
 
     setIsSubmitting(true);
@@ -130,6 +140,7 @@ export default function AccountSettings() { return null; }
   }, []),
 
   const handleSave = () => {}
+>>>>>>> origin/chore/fix-lint-and-merge
     setIsSubmitting(true),
 
     // Simulate API call

@@ -12,6 +12,14 @@ export function UserBehaviorStats() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d'),
 
 export function UserBehaviorStats() {;
+<<<<<<< HEAD
+  }
+  const { "data": behaviorData, isLoading } = useQuery({
+    }
+    "queryKey": ['user-behavior-data', timeRange];'
+    "queryFn": async () => {
+      // Convert timeRange to days      const days = parseInt(timeRange.replace('d', '')),'
+=======
 
   const [timeRange, setTimeRange] = useState<TimeRange>('7d');
 
@@ -19,6 +27,7 @@ export function UserBehaviorStats() {;
     queryKey: ['user-behavior-data', timeRange];
     queryFn: async () => {
 
+>>>>>>> origin/chore/fix-lint-and-merge
       // Get events grouped by type and date
       const { data, error } = await supabase.rpc('get_event_distribution', {
         days_back: days

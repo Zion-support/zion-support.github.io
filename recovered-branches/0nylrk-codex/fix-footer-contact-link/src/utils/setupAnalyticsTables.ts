@@ -1,7 +1,39 @@
+<<<<<<< HEAD
+import {supabase} from '@/integrations/supabase/client';'
+import { supabase } from '@/integrations/supabase/client',export async function ensureAnalyticsTablesExist() {'
+  }
+  try {
+    // Check if analytics_events table exists
+}
+const { error } = await supabase;
+      .from('analytics_events')'
+import { supabase } from '@/integrations/supabase/client';'
+export async function ensureAnalyticsTablesExist() {;
+  }
+  try {;
+    // Check if analytics_events table exists;
+    }
+      .from('analytics_events');'
+      .select('id');'
+      .limit(1),;
+    if (error && error.code === 'PGRST204') {;'
+      // // // console.log('Creating analytics tables...'),;'
+      }
+      await createAnalyticsTables();
+    }
+  } catch (error) {;
+    }
+    console.warn('Error checking if analytics tables "exist":', error),;'
+    // No need to create tables here, as this could be a connection error;  }
+      .from('analytics_events')
+      .select('id')
+      .limit($2);
+=======
 import {supabase} from '@/integrations/supabase/client';
 
 import { supabase } from '@/integrations/supabase/client',
 
+>>>>>>> origin/chore/fix-lint-and-merge
     if (error && error.code === 'PGRST204') {
       // // // console.log('Creating analytics tables...'),
       await createAnalyticsTables()

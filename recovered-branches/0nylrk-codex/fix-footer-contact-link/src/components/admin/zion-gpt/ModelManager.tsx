@@ -1,3 +1,27 @@
+<<<<<<< HEAD
+import { useState, useEffect } from 'react','
+import { Button } from "@/components/ui/button","
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table","
+import { Badge } from "@/components/ui/badge",import {useState, useEffect} from 'react';'
+import {Button} from "@/components/ui/button";"
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";"
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";"
+import {Badge} from "@/components/ui/badge";"
+import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";"
+import {supabase} from '@/integrations/supabase/client';'
+import {ModelConfig} from '@/utils/zion-gpt';interface ModelVersionData extends ModelConfig {'
+  }
+  "trainingStatus": 'queued' | 'running' | 'succeeded' | 'failed''
+  errorMessage?: string,
+import { Button } from '@/components / ui / button';'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';'
+import { Badge } from '@/components / ui / badge';'
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from './lucide-react';'
+import {supabase} from '@/integrations / supabase / client';'
+import {ModelConfig} from '@/utils / zion - gpt';'
+=======
 import { useState, useEffect } from 'react',
 import { useState, useEffect } from 'react',
 
@@ -31,6 +55,7 @@ import {Badge} from "@/components/ui/badge";
 import {Loader2, RefreshCw, Play, CheckCircle, AlertCircle} from "lucide-react";
 import {supabase} from '@/integrations/supabase/client';
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ModelVersionData extends ModelConfig {
 
 interface ModelVersionData extends ModelConfig {}
@@ -90,6 +115,59 @@ export function ZionGPTModelManager() { return null; }
       setActiveJobs (prev => ({ ...prev, [model_id]: false }));
     }
   }
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",;"
+import { supabase } from '@/integrations/supabase/client',;'
+import { ModelConfig } from '@/utils/zion-gpt',;'
+interface ModelVersionData extends ModelConfig {;
+  }
+  "trainingStatus": 'queued' | 'running' | 'succeeded' | 'failed',;'
+  errorMessage?: string;
+}
+;
+export function ZionGPTModelManager() {;
+  }
+  const [models, setModels] = useState<ModelVersionData[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [activeJobs, setActiveJobs] = useState<{["key": string]: boolean}>({}),;
+  // Fetch model data on component mount;
+  useEffect(() => {;
+    }
+    fetchModels();
+  }, []),;
+  const fetchModels = async () => {;
+    }
+    try {;
+      }
+      setIsLoading(true),;
+        .from('model_versions');'
+        .select('*');'
+        .order('createdAt', { "ascending": false }),;      // Also update in the database;'
+      await supabase;
+        .from('model_versions');'
+        .update({;
+          }
+          "training_status": data && data.status,;
+          "error_message": data && data.error || null,;
+          // If training succeeded, automatically set to active;
+          ...(data && data.status === 'succeeded' ? { "active": true } : {});'
+        });
+        .eq('id', modelId);'
+    } catch (error) {;
+      }
+      console && console.error(`Error checking status for model ${modelId}:`, error);`
+    } finally {;
+      }
+      setActiveJobs(prev => ({ ...prev, [modelId]: false }));
+    }
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react";
+import { supabase  } from '@/integrations/supabase/client';
+import { ModelConfig } from '@/utils/zion-gpt';
+=======
 
   };
 import { useState, useEffect } from 'react',
@@ -100,6 +178,7 @@ import { Badge } from "@/components/ui/badge",
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
 import { supabase } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string

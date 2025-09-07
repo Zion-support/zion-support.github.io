@@ -17,7 +17,12 @@ export function BackToDirectoryButton() {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
+import React from 'react';'
+import { Link } from "react-router-dom",;"
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export function BackToDirectoryButton() {;
   return (
     <div className="container mx-auto px-4 md: px-6 mb-12">;

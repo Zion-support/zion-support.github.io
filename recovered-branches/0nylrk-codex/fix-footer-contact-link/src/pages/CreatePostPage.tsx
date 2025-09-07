@@ -1,4 +1,25 @@
 interface PostFormValues {
+<<<<<<< HEAD
+  }
+  "title": string;
+    "content": string,
+"categoryId": ForumCategory,
+"tags": string}
+export default function CreatePostPage() {;
+  }
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+export default function CreatePostPage() {
+  }
+  const [searchParams] = useSearchParams();  // Get category from URL query params if available,
+const initialCategory = searchParams.get("category") as ForumCategory | null;"
+  const "initialValues": Partial<PostFormValues> = {
+    }
+    "categoryId": initialCategory || "project-help"};"
+  const handleSubmit = async ("values": PostFormValues) => {
+    }
+=======
 
   title: string
   content: string
@@ -8,6 +29,7 @@ interface PostFormValues {
 }
 
   const handleSubmit = async (values: PostFormValues) => {
+>>>>>>> origin/chore/fix-lint-and-merge
     try {
       // Here we would normally save to the database
       // For now, we'll just simulate a successful post creation

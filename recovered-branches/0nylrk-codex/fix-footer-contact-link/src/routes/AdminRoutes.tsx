@@ -35,6 +35,14 @@ const AdminRoutes = () => {;
       <Route
         path="/admin/quotes"
         element={
+<<<<<<< HEAD
+}
+import { ProtectedRoute } from "@/components/ProtectedRoute",;"
+;
+import TokenManager from "@/pages/admin/TokenManager","
+}
+return (;
+=======
 
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -75,6 +83,7 @@ import TokenManager from "@/pages/admin/TokenManager",;
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",;
 const AdminRoutes = () => {
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <Routes>
       <Route
         path="/admin/quotes"
@@ -152,6 +161,21 @@ const AdminRoutes = () => {
   )
 }
 export default AdminRoutes;
+<<<<<<< HEAD
+import { Fragment } from "react",;"
+import { Route, Routes } from "react-router-dom",;"
+// Admin Pages;
+import QuoteManager from "QuoteManager";"
+import ReviewsModeration from "ReviewsModeration";"
+import WhitelabelManager from "WhitelabelManager";"
+import PartnerManager from "PartnerManager";"
+import AppMetadataManager from "AppMetadataManager";"
+import SupportRequests from "SupportRequests";"
+import FraudDetection from "FraudDetection";"
+import TokenManager from "TokenManager";"
+import IntegrationsPage from "IntegrationsPage";"
+  }
+=======
 
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -167,6 +191,7 @@ import FraudDetection from "@/pages/admin/FraudDetection",;
 import TokenManager from "@/pages/admin/TokenManager",;
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",;
 const AdminRoutes = () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   return (;
     <Routes>;
       <Route;

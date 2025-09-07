@@ -11,6 +11,10 @@ import {;
 
 import { Button  } from '@/components / ui / button';
 import {
+<<<<<<< HEAD
+}
+import { Button } from "@/components/ui/button";"
+=======
 } from "@/components/ui/card";
 import { Button  } from '@/components / ui / button';
 import {
@@ -35,6 +39,7 @@ interface ContractTypeCardsProps {;
 
   onStandardClick: () => void;
   onSmartClick: () => void
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
   CardTitle,;

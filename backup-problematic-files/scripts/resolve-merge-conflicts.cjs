@@ -19,34 +19,50 @@ conflictType = 'incoming';
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
-
-console.log('🔧 Starting merge conflict resolution...');
-
+<<<<<<< HEAD
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
+  if () {
+    return false) {
+    ) {
+    return false}}
+console.log(🔧 Starting merge conflict resolution...');
+=======
+
+console.log('🔧 Starting merge conflict resolution...');
+>>>>>>> origin/chore/fix-lint-and-merge
+
+// Function to resolve merge conflicts in a file
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
 <<<<<<< HEAD
+
+    if (!content.includes(
+
+    if (!content.includes('') && !content.includes() && !content.includes('>>>>>>>')) {
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
     if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+>>>>>>> origin/chore/fix-lint-and-merge
       return false;
     }
     console.log(`📝 Resolving conflicts in: ${filePath}`);
     // Split by merge conflict markers
-    const lines = content.split('\n');
+    const lines = content.split(\n);
     const resolvedLines = [];
     let inConflict = false;
     let conflictType = '';
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      if (line.includes('')) {
+      if (line.includes()) {
         inConflict = true;
         conflictType = 'head';
-conflictType = 'incoming';
+conflictType = incoming;
         continue;
       }
       
@@ -64,6 +80,9 @@ function resolveMergeConflicts(filePath) {
 }
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+<<<<<<< HEAD
+        conflictType = incoming;
+=======
     // Check if file has merge conflicts;
     if (!content.includes(
       return false;
@@ -73,6 +92,7 @@ function resolveMergeConflicts(filePath) {
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         conflictType = 'incoming';
+>>>>>>> origin/chore/fix-lint-and-merge
         continue;
       }
       
@@ -86,7 +106,7 @@ function resolveMergeConflicts(filePath) {
       if (line.includes('>>>>>>>')) {
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
         inConflict = false;
-        conflictType = '';
+        conflictType = ;
         continue;
       }
       
@@ -110,6 +130,21 @@ conflictType = 'incoming';
       } else if (conflictType === 'head') {
         // Keep HEAD version (first part)
       // Skip incoming version (second part)
+<<<<<<< HEAD
+    }
+    
+    // Write resolved content
+    fs.writeFileSync(filePath, resolvedLines.join(\n));
+    console.log(`✅ Resolved conflicts in: ${filePath}`);
+    return true;
+    
+  } catch (error) {
+    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
+    return false;
+  }
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     return true;
   } catch (error) {`;
@@ -176,10 +211,14 @@ function findConflictedFiles(dir) {
 <<<<<<< HEAD
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules) {
         scanDirectory(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
+      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith(.ts) || item.endsWith('.js') || item.endsWith(.jsx))) {
         try {
+<<<<<<< HEAD
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes() || content.includes('') || content.includes(>>>>>>>)) {
+=======
 <<<<<<< HEAD
 
 =======
@@ -193,6 +232,7 @@ function findConflictedFiles(dir) {
 <<<<<<< HEAD
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+>>>>>>> origin/chore/fix-lint-and-merge
             conflictedFiles.push(fullPath);
           }
         } catch (error) {

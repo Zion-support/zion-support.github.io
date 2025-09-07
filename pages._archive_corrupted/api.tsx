@@ -71,6 +71,11 @@ class ErrorBoundary extends React.Component {
 <meta name=\"description\" content=\"Comprehensive API documentation for Zion Tech Group services and integrations.\" />;
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />;
       </Head>;
+<<<<<<< HEAD
+      <div className=\"min-h-screen bg-gray-50\">;"
+    },{"name": 'Contact API',"endpoint": '/api/contact',"method": 'POST',"description": 'Submit contact form',"response": 'Success message';'
+    },{"name": 'Quote API',"endpoint": '/api/quote',"method": 'POST',"description": 'Request a quote',"response": 'Quote details';'
+=======
       <div className=\"min-h-screen bg-gray-50\">;
 import React from 'react';
 import Head from 'next/head';
@@ -96,6 +101,7 @@ const "API": NextPage = () => {;
       "method": 'POST',;
       "description": 'Request a quote',;
       "response": 'Quote details';
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   ];
   return (

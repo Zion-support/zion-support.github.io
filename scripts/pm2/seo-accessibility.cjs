@@ -649,6 +649,8 @@ class SEOAccessibility {}
       this.log('Checking SEO compliance...');
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 
+<<<<<<< HEAD
+=======
       const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
 
@@ -671,6 +673,7 @@ class SEOAccessibility {}
       const seoIssues = [];
       const htmlFiles = this.findHTMLFiles();
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       for (const file of htmlFiles) {}
 
       this.log(`Found ${seoIssues.length} SEO issues`);
@@ -836,7 +839,6 @@ class SEOAccessibility {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
       
       const a11yIssues = [];
-      const htmlFiles = this.findHTMLFiles();
       
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 <<<<<<< HEAD
@@ -882,6 +884,8 @@ class SEOAccessibility {}
     };
   };
   analyzeAccessibility(content, filePath) {}
+<<<<<<< HEAD
+=======
     const issues = [];
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 
@@ -894,6 +898,7 @@ class SEOAccessibility {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
     // Check for proper heading hierarchy;
@@ -1017,6 +1022,8 @@ class SEOAccessibility {}
         const files = fs.readdirSync(currentDir);
         for (const file of files) {}
           const filePath = path.join(currentDir, file);
+<<<<<<< HEAD
+=======
           const stat = fs.statSync(filePath);
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
 
@@ -1029,6 +1036,7 @@ class SEOAccessibility {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
           if (stat.isDirectory()) {}
@@ -1071,11 +1079,15 @@ class SEOAccessibility {}
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
     
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
     const scanDir = (dir) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
       try {}
-        const files = fs.readdirSync(dir);
         for (const file of files) {}
+<<<<<<< HEAD
+=======
           const filePath = path.join(dir, file);
           const stat = fs.statSync(filePath);
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/seo-accessibility.cjs
@@ -1089,6 +1101,7 @@ class SEOAccessibility {}
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
           
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/seo-accessibility.cjs
           if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {}

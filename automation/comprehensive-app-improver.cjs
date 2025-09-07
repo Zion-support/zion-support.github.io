@@ -161,12 +161,36 @@ module.exports = nextConfig"}"
     this.log("Attempting to fix TypeScript errors...");"
     // Add missing type declarations;"
     const typeDeclarations = "declare module "*.svg" {;
+<<<<<<< HEAD
+  const "content": string;
+  export default content,}
+;
+declare module "*.png" {;
+  export default content,}
+;
+declare module "*.jpg" {;
+  export default content,}
+;
+declare module "*.jpeg" {;
+  export default content,}
+;
+declare module "*.gif" {;
+  export default content,}
+;
+declare module "*.webp" {;
+  export default content,}";
+    const typesPath = path.join(this.projectRoot, "types", "global.d.ts");
+    if (!fs.existsSync(path.dirname(typesPath))) {;
+  fs.mkdirSync(path.dirname(typesPath), { "recursive": true }),}
+    fs.writeFileSync(typesPath, typeDeclarations);
+=======
   const "content": string;"
 
     const typesPath = path.join(this.projectRoot, "types", "global.d.ts");"
     if (!fs.existsSync(path.dirname(typesPath))) {;"
   fs.mkdirSync(path.dirname(typesPath), { "recursive": true })}"
     fs.writeFileSync(typesPath, typeDeclarations);"
+>>>>>>> origin/chore/fix-lint-and-merge
     this.log("Created global type declarations");
     this.fixesApplied.push("Created global type declarations");"
 
@@ -183,9 +207,25 @@ module.exports = nextConfig"}"
     const buildResult = await this.runCommand("npm run build", { "silent": true });"
     if (buildResult) {;"
   this.log("Build completed successfully");
+<<<<<<< HEAD
+      this.fixesApplied.push("Build successful");
+      return true,}
+    ;
+    this.log("Build failed, but continuing with other improvements...", "WARN");
+    return false,}
+;
+  async createEnhancedAutomationScripts() {;
+  this.log("Creating enhanced automation scripts...");
+    const scripts = [;
+  {;
+  "name": "automation/health-check.cjs",
+        "content": "#!/usr/bin/env node;
+const { execSync } = require("child_process");
+=======
       this.fixesApplied.push("Build successful");"
 
 const path = require("path");"
+>>>>>>> origin/chore/fix-lint-and-merge
 class HealthChecker {;
   this.projectRoot = process.cwd();]
     this.issues = [];
@@ -209,8 +249,26 @@ class HealthChecker {;
     await this.checkTypeScript();
     await this.checkLinting();
     if (this.issues.length > 0) {;
+<<<<<<< HEAD
+      this.issues.forEach((issue, index) => ),}
+    ;
+    if (this.fixes.length > 0) {;
+      this.fixes.forEach((fix, index) => ),}
+    ;
+    if (this.issues.length === 0) {;
+  ,}
+  }
+}
+;
+const checker = new HealthChecker();
+checker.runAllChecks().catch(console.error);",},
+      {;
+  "name": "automation/performance-optimizer.cjs",
+        "content": "#!/usr/bin/env node;
+=======
 
 const { execSync } = require("child_process");"
+>>>>>>> origin/chore/fix-lint-and-merge
 class PerformanceOptimizer {;
   this.projectRoot = process.cwd();
   async optimizeImages() {;"
@@ -260,7 +318,18 @@ class PerformanceOptimizer {;
     await this.optimizeBundle();
     await this.optimizeCode();
     this.optimizations.forEach((opt, index) => {;
+<<<<<<< HEAD
+  ,}),}
+}
+;
+const optimizer = new PerformanceOptimizer();
+optimizer.runOptimizations().catch(console.error);",},
+      {;
+  "name": "automation/security-scanner.cjs",
+        "content": "#!/usr/bin/env node;
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
 class SecurityScanner {;
     this.vulnerabilities = [];
   async scanDependencies() {;
@@ -276,6 +345,43 @@ class SecurityScanner {;
     for (const file of files) {;
   const content = fs.readFileSync(file, "utf8");"
         for (const pattern of sensitivePatterns) {;
+<<<<<<< HEAD
+  if (pattern.test(content)) {;
+  this.vulnerabilities.push(\"Potential secret in \${path.relative(this.projectRoot, file)}\");
+            this.recommendations.push(\"Review \${path.relative(this.projectRoot, file)} for exposed secrets\"),}
+        }
+      } catch (error) {;
+  // Skip files that can"t be read,}
+    }
+    ;
+    ,}
+;
+  findSourceFiles() {;
+    const dirs = ["src", "components", "pages", "utils", "hooks"];
+    dirs.forEach(dir => {;
+  const fullPath = path.join(this.projectRoot, dir);
+      if (fs.existsSync(fullPath)) {;
+  this.findFilesRecursively(fullPath, files),}
+    });
+    return files.filter(file => ;
+      file.endsWith(".js") || ;
+      file.endsWith(".jsx") || ;
+      file.endsWith(".ts") || ;
+      file.endsWith(".tsx");
+    ),}
+;
+  findFilesRecursively(dir, files) {;
+    for (const item of items) {;
+      if (stat.isDirectory()) {;
+  this.findFilesRecursively(fullPath, files),} else {;
+  files.push(fullPath),}
+    }
+  }
+;
+  async scanConfiguration() {;
+    const configFiles = ["package.json", "next.config.js", ".env", ".env.local"];
+    for (const file of configFiles) {;
+=======
   if (pattern.test(content)) {;"
 
     const dirs = ["src", "components", "pages", "utils", "hooks"];"
@@ -285,6 +391,7 @@ class SecurityScanner {;
 
   async scanConfiguration() {;"
     const configFiles = ["package.json", "next.config.js", ".env", ".env.local"];"
+>>>>>>> origin/chore/fix-lint-and-merge
       if (fs.existsSync(filePath)) {;
   const content = fs.readFileSync(filePath, "utf8");"
           // Check for insecure configurations;"
@@ -298,9 +405,25 @@ class SecurityScanner {;
     for (const script of scripts) {;
   const scriptPath = path.join(this.projectRoot, script.name);
       const scriptDir = path.dirname(scriptPath);
+<<<<<<< HEAD
+      if (!fs.existsSync(scriptDir)) {;
+  fs.mkdirSync(scriptDir, { "recursive": true }),}
+      ;
+      fs.writeFileSync(scriptPath, script.content);
+      fs.chmodSync(scriptPath, "755");
+      this.log(`Created ${script.name}`);
+      this.fixesApplied.push(`Created ${script.name}`),}
+  }
+;
+  async updatePackageJsonScripts() {;
+  this.log("Updating package.json scripts...");
+    try {;
+      const newScripts = {;
+=======
       if (!fs.existsSync(scriptDir)) {;"
 
       const newScripts = {;"
+>>>>>>> origin/chore/fix-lint-and-merge
   "health-check": "node automation/health-check.cjs",
         "performance-optimize": "node automation/performance-optimizer.cjs",
         "security-scan": "node automation/security-scanner.cjs",
@@ -491,8 +614,6 @@ export default content}"
   "name": "automation/health-check.cjs"
         "content": "
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
   const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
       const nodeModulesExists = fs.existsSync(path.join(this.projectRoot, "node_modules")
   this.issues.push("node_modules directory missing")
@@ -523,9 +644,6 @@ const path = require("path")
 checker.runAllChecks().catch(console.error);"
   "name": "automation/performance-optimizer.cjs"
         "content": "
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
   console.log("�  Optimizing images...")
     const publicDir = path.join(this.projectRoot, "public")
       this.optimizations.push("Image optimization completed")
@@ -551,9 +669,6 @@ const { execSync } = require("child_process")
 optimizer.runOptimizations().catch(console.error);"
   "name": "automation/security-scanner.cjs"
         "content": "
-const fs = require("fs")
-const path = require("path")
-const { execSync } = require("child_process")
   console.log(" Scanning dependencies for vulnerabilities...")
   execSync("npm audit", { "stdio": "pipe"})
       console.log(" No critical vulnerabilities found")
@@ -594,8 +709,6 @@ scanner.runSecurityScan().catch(console.error);"
   fs.mkdirSync(scriptDir, { "recursive"})
       fs.chmodSync(scriptPath, "755")
   this.log("Updating package.json scripts...")
-  const packageJsonPath = path.join(this.projectRoot, "package.json")
-      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
   "health-check": "node automation/health-check.cjs"
         "performance-optimize": "node automation/performance-optimizer.cjs"
         "security-scan": "node automation/security-scanner.cjs"
@@ -711,10 +824,357 @@ main
 
 
 
+<<<<<<< HEAD
+  async runCommand(command, description) {
+    this.log(`🚀 ${description}`);
+    try {
+        cw: process.cwd(),
+        encodin: 'utf8',
+        timeou: 60000,
+        cwd: process.cwd(),
+        encoding: 'utf8',
+        timeout: 60000,
+      });
+      this.log(`✅ ${description} - Success`);
+      return { success: true, output: result };
+    } catch (error) {
+
+        cw: d: process.cwd(),
+        encodin: g: 'utf8',
+        timeou: t: 60000,
+      });
+      this.log(`✅ ${description} - Success`);
+      return { succes: s: true, outpu: t: result };
+    } catch (error) {
+      this.log(`❌ ${description} - Faile: d: ${error.message}`);
+      return { succes: s: false, erro: r: error.message };
+
+      this.log(`❌ ${description} - Failed: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async improveCodeQuality() {
+    this.log('🔧 Improving code quality...');
+
+    // Fix common syntax issues
+    await this.runCommand('node fix-syntax-errors.cjs', 'Fix syntax errors');
+
+    // Run linting fixes
+    await this.runCommand('npm run lint:fix', 'Fix linting issues');
+
+    // Optimize imports
+    await this.optimizeImports();
+
+    this.improvements.push('Code quality improvements applied');
+  }
+
+  async optimizeImports() {
+    this.log('📦 Optimizing imports...');
+
+    const files = this.getTypeScriptFiles('.');
+    let optimizedCount = 0;
+
+    for (const file of files) {
+      try {
+        let content = fs.readFileSync(file, 'utf8');
+        let originalContent = content;
+
+        // Remove unused imports
+        content = this.removeUnusedImports(content);
+
+        // Sort imports
+        content = this.sortImports(content);
+
+        if (content !== originalContent) {
+          fs.writeFileSync(file, content, 'utf8');
+          optimizedCount++;
+        }
+      } catch (error) {
+        this.errors.push({ file, erro: error.message });
+
+        this.errors.push({ file, erro: error.message });
+        this.errors.push({ file, erro: r: error.message });
+main
+        this.errors.push({ file, erro: r: error.message });
+
+        this.errors.push({ file, erro: error.message });
+
+        this.errors.push({ file, erro: r: error.message });
+
+        this.errors.push({ file, error: error.message });
+      }
+    }
+
+    this.log(`✅ Optimized ${optimizedCount} files`);
+  }
+
+  removeUnusedImports(content) {
+    // Simple unused import removal (basic implementation)
+    const lines = content.split('\n');
+    const usedIdentifiers = new Set();
+
+    // Find used identifiers
+    lines.forEach(line => {
+      const matches = line.match(/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g);
+      if (matches) {
+        matches.forEach(match => usedIdentifiers.add(match));
+      }
+    });
+
+    // Remove unused imports
+    return lines
+      .filter(line => {
+        if (line.trim().startsWith('import ')) {
+          const importMatch = line.match(/import\s*{([^}]+)}/);
+          if (importMatch) {
+            const imports = importMatch[1].split(',').map(imp => imp.trim());
+            const usedImports = imports.filter(imp => usedIdentifiers.has(imp));
+            if (usedImports.length === 0) {
+              return false; // Remove unused import
+            }
+          }
+        }
+        return true;
+      })
+      .join('\n');
+  }
+
+  sortImports(content) {
+    const importLines = [];
+    const otherLines = [];
+    let inImports = false;
+
+    lines.forEach(line => {
+      if (line.trim().startsWith('import ')) {
+    importLines.push(line),
+    inImports = true
+  } else if (inImports && line.trim() === '') {
+        importLines.push(line);
+      } else {
+        if (inImports) {
+    otherLines.push(line),
+    inImports = false
+  } else {
+
+
+        importLines.push(line);
+        inImports = true;
+      } else if (inImports && line.trim() === '') {
+        importLines.push(line);
+      } else {
+        if (inImports) {
+          otherLines.push(line);
+          inImports = false;
+        } else {
+          otherLines.push(line);
+        }
+      }
+    });
+
+    // Sort imports
+    importLines.sort();
+
+    return [...importLines, ...otherLines].join('\n');
+  }
+
+  getTypeScriptFiles(dir) {
+
+    function walkDir(currentPath) {
+      const items = fs.readdirSync(currentPath);
+
+      for (const item of items) {
+        const fullPath = path.join(currentPath, item);
+
+        if (
+          stat.isDirectory() &&
+          !item.startsWith('.') &&
+          item !== 'node_modules'
+        ) {
+          walkDir(fullPath);
+        } else if (
+          stat.isFile() &&
+          (item.endsWith('.ts') || item.endsWith('.tsx'))
+        ) {
+          files.push(fullPath);
+        }
+      }
+    }
+
+    walkDir(dir);
+    return files;
+  }
+
+  async improvePerformance() {
+    this.log('⚡ Improving performance...');
+
+    // Optimize images
+    await this.runCommand('npm run optimize:images', 'Optimize images');
+
+    // Bundle analysis
+    await this.runCommand('npm run analyze', 'Analyze bundle');
+
+    this.improvements.push('Performance optimizations applied');
+  }
+
+  async improveSecurity() {
+    this.log('🔒 Improving security...');
+
+    // Run security audit
+    await this.runCommand('npm audit', 'Security audit');
+
+    // Fix security issues
+    await this.runCommand('npm audit fix', 'Fix security issues');
+
+    this.improvements.push('Security improvements applied');
+  }
+
+  async improveAccessibility() {
+    this.log('♿ Improving accessibility...');
+
+    // Run accessibility tests
+    await this.runCommand('npm run test:accessibility', 'Accessibility tests');
+
+    this.improvements.push('Accessibility improvements applied');
+  }
+
+  async generateReport() {
+    const report = {
+      timestam: new Date().toISOString(),
+      improvement: this.improvements,
+      error: this.errors,
+      summar: {
+        totalImprovement: this.improvements.length,
+        totalError: this.errors.length,
+        successRat: this.errors.length === 0
+
+
+      timestam: p: new Date().toISOString(),
+      improvement: s: this.improvements,
+      error: s: this.errors,
+      summar: y: {
+        totalImprovement: s: this.improvements.length,
+        totalError: s: this.errors.length,
+        successRat: e:
+          this.errors.length === 0
+
+            ? 10: 0: Math.round(
+                (this.improvements.length /
+                  (this.improvements.length + this.errors.length)) *
+                  100
+              );
+      };
+    };
+
+    const reportPath = path.join(
+      this.reportsDir;
+      'comprehensive-app-improvement-report.json'
+    );
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    this.log(`📊 Report saved: to: ${reportPath}`);
+    return report;
+  }
+
+  async run() {
+    this.log('🚀 Starting Comprehensive App Improver...');
+
+    this.ensureDirectories();
+
+    try {
+      await this.improveCodeQuality();
+      await this.improvePerformance();
+      await this.improveSecurity();
+      await this.improveAccessibility();
+
+      const report = await this.generateReport();
+
+      this.log('🎉 Comprehensive app improvement completed!');
+      this.log(
+        `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
+
+        `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
+        `📊 Summar: y: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
+main
+        `📊 Summar: y: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
+
+        `📊 Summar: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
+
+        `📊 Summar: y: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
+
+      );
+
+      return report;
+    } catch (error) {
+      this.log(`❌ Erro: ${error.message}`);
+
+      this.log(`❌ Erro: ${error.message}`);
+      this.log(`❌ Erro: r: ${error.message}`);
+main
+      this.log(`❌ Erro: r: ${error.message}`);
+
+      this.log(`❌ Erro: ${error.message}`);
+
+      this.log(`❌ Erro: r: ${error.message}`);
+
+      throw error;
+    }
+  }
+}
+
+// Run the improver
+if (require.main === module) {
+  improver.run().catch(error => {
+    console.error('❌ Erro: ', error);
+
+    console.error('❌ Erro: ', error);
+    console.error('❌ Erro: r:', error);
+main
+    console.error('❌ Erro: r:', error);
+
+    console.error('❌ Erro: ', error);
+
+    console.error('❌ Erro: r:', error);
+
+    process.exit(1);
+  });
+}
+
+module.exports = ComprehensiveAppImprover;
+
+  this.log(`Fatal "error": ${error.message}`, ``)
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+class ComprehensiveAppImprover {
+  constructor() {
+    this.reportsDir = './automation-reports';
+    this.improvements = [];
+    this.errors = [];
+  }
+
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  ensureDirectories() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursiv: true });
+    }
+  }
+
+  async runCommand(command, description) {
+    this.log(`🚀 ${description}`);
+    try {
+=======
   // TODO: Implement
       const result = execSync(command, {
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
         cw: process.cwd(),
         encodin: 'utf8',
         timeou: 60000,
@@ -763,10 +1223,31 @@ main
 
   async improveCodeQuality() {
 
+<<<<<<< HEAD
+    // Fix common syntax issues
+    await this.runCommand('node fix-syntax-errors.cjs', 'Fix syntax errors');
+
+    // Run linting fixes
+    await this.runCommand('npm run: lint:fix', 'Fix linting issues');
+
+    // Optimize imports
+    await this.optimizeImports();
+
+    this.improvements.push('Code quality improvements applied');
+  }
+
+  async optimizeImports() {
+    this.log('📦 Optimizing imports...');
+
+
+    for (const file of files) {
+      try {
+=======
     let optimizedCount = 0;
 
     for (const file of files) {
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
 
         // Remove unused imports;
         content = this.removeUnusedImports(content);
@@ -803,12 +1284,15 @@ main
 
   removeUnusedImports(content) {
     // Simple unused import removal (basic implementation)
-    const lines = content.split('\n');
-    const usedIdentifiers = new Set();
 
+<<<<<<< HEAD
+    // Find used identifiers
+    lines.forEach(line => {
+=======
     // Find used identifiers;
     lines.forEach(line => {)
       const matches = line.match(/\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g);
+>>>>>>> origin/chore/fix-lint-and-merge
       if (matches) {
         matches.forEach(match => usedIdentifiers.add(match));
 
@@ -816,19 +1300,25 @@ main
     return lines;
       .filter(line => {)
         if (line.trim().startsWith('import ')) {
-          const importMatch = line.match(/import\s*{([^}]+)}/);
           if (importMatch) {
+<<<<<<< HEAD
+=======
 
             const usedImports = imports.filter(imp => usedIdentifiers.has(imp));
+>>>>>>> origin/chore/fix-lint-and-merge
             if (usedImports.length === 0) {
               return false; // Remove unused import;
         return true;
       })
       .join('\n');
 
+<<<<<<< HEAD
+  sortImports(content) {
+=======
     const importLines = [];
     const otherLines = [];
     let inImports = false;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <<<<<<< HEAD
     lines.forEach(line => {
@@ -889,13 +1379,14 @@ main
 
 
   getTypeScriptFiles(dir) {
-    const files = [];
 
     function walkDir(currentPath) {
-      const items = fs.readdirSync(currentPath);
 
       for (const item of items) {
+<<<<<<< HEAD
+=======
         const fullPath = path.join(currentPath, item);
+>>>>>>> origin/chore/fix-lint-and-merge
 
         if ()
           stat.isDirectory() &&
@@ -915,9 +1406,12 @@ main
 
 
   async generateReport() {
+<<<<<<< HEAD
+=======
     const report = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
       timestam: new Date().toISOString(),
       improvement: this.improvements,
       error: this.errors,
@@ -966,7 +1460,6 @@ main
               );
       };
 
-    const reportPath = path.join(
       this.reportsDir;
       'comprehensive-app-improvement-report.json)
 
@@ -982,7 +1475,6 @@ main
       await this.improveSecurity();
       await this.improveAccessibility();
 
-      const report = await this.generateReport();
 
 
       this.log('🎉 Comprehensive app improvement completed!');
@@ -1155,7 +1647,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 // Run the improver
 if (require.main === module) {
-  const improver = new ComprehensiveAppImprover();
   improver.run().catch(error => {
     console.error('❌ Erro: ', error);
     process.exit(1);
@@ -1164,6 +1655,8 @@ if (require.main === module) {
 
 module.exports = ComprehensiveAppImprover;
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -1175,6 +1668,7 @@ const { execSync, spawn } = require("child_process")
 =======
 const { execSync, spawn } = require("child_process")"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class $1 {
   // TODO: Implement
   constructor() {
@@ -1183,6 +1677,23 @@ class $1 {
     this.startTime = new Date()
     this.fixesApplied = []
     this.errorsFound = [],
+<<<<<<< HEAD
+}
+  log(message, type = "INFO") {
+  const timestamp = new Date().toISOString()
+    console.log(logMessage)
+    // Append to log file;
+    fs.appendFileSync(this.logFile, logMessage + "\n"),
+}
+  async runCommand(command, options = {}) {
+  try {
+  this.log(`Running command: ${command}`)
+  encoding: "utf8",
+        cwd: this.projectRoot,
+        stdio: options.silent ? "pipe" : "inherit",
+        ...options ;
+})
+=======
   log(message, type = "INFO") {"
 
     console.log(logMessage)
@@ -1194,6 +1705,7 @@ class $1 {
         cwd: this.projectRoot,"
         stdio: options.silent ? "pipe" : "inherit","
         ...options ;)
+>>>>>>> origin/chore/fix-lint-and-merge
       return result;
 
       this.errorsFound.push({ command, error: error.message })
@@ -1206,11 +1718,19 @@ class $1 {
         this.fixesApplied.push("Dependencies installed")"
     this.log("Failed to install dependencies with all methods", "ERROR")"
     return false;
+<<<<<<< HEAD
+}
+  async fixPackageJson() {
+  this.log("Fixing package.json...")
+    try {
+      const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))
+=======
   async fixPackageJson() {"
   this.log("Fixing package.json...")"
   // TODO: Implement
 
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"))"
+>>>>>>> origin/chore/fix-lint-and-merge
       // Fix common issues;
       const fixes = []
       // Remove problematic dependencies;"
@@ -1231,8 +1751,14 @@ class $1 {
   async createMissingConfigFiles() {"
   this.log("Creating missing configuration files...")"
     const configs = [
+<<<<<<< HEAD
+  {
+  file: "eslint.config.js",
+        content: `import js from "@eslint/js";
+=======
   {"
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export default [
   {]"
   files: ["**/*.{js,jsx,ts,tsx}"],"
@@ -1274,6 +1800,24 @@ module.exports = nextConfig`;
     const typeDeclarations = `declare module "*.svg" {"
   const content: string;
   export default content;
+<<<<<<< HEAD
+}
+declare module "*.png" {
+  export default content;
+}
+declare module "*.jpg" {
+  export default content;
+}
+declare module "*.jpeg" {
+  export default content;
+}
+declare module "*.gif" {
+  export default content;
+}
+declare module "*.webp" {
+  export default content;
+}`;
+=======
 declare module "*.png" {"
 declare module "*.jpg" {"
 declare module "*.jpeg" {"
@@ -1282,6 +1826,7 @@ declare module "*.webp" {"
   export default content;`;
 }`;"
     const typesPath = path.join(this.projectRoot, "types", "global.d.ts")"
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!fs.existsSync(path.dirname(typesPath))) {
   fs.mkdirSync(path.dirname(typesPath), { recursive: true }),
     fs.writeFileSync(typesPath, typeDeclarations)"
@@ -1302,8 +1847,14 @@ declare module "*.webp" {"
   async createEnhancedAutomationScripts() {"
   this.log("Creating enhanced automation scripts...")"
     const scripts = [
+<<<<<<< HEAD
+  {
+  name: "automation/health-check.cjs",
+        content: `#!/usr/bin/env node;
+=======
 
 const path = require("path")"
+>>>>>>> origin/chore/fix-lint-and-merge
 class HealthChecker {
   // TODO: Implement
   this.projectRoot = process.cwd()]
@@ -1315,8 +1866,14 @@ class HealthChecker {
         this.fixes.push("Run npm install"),"
       console.log("✅ Dependencies check completed"),"
   this.issues.push(\`Dependencies check failed: \${error.message}\`),
+<<<<<<< HEAD
+}
+  }
+  async checkConfiguration() {
+=======
   async checkConfiguration() {"
   const configFiles = ["package.json", "tsconfig.json", "next.config.js", "eslint.config.js"]"
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const file of configFiles) {
   const filePath = path.join(this.projectRoot, file)
       if (!fs.existsSync(filePath)) {`;
@@ -1350,15 +1907,25 @@ class HealthChecker {
   console.log("\\n🎉 All checks passed! Your app is healthy."),"
 const checker = new HealthChecker()`;
 checker.runAllChecks().catch(console.error)`;
+<<<<<<< HEAD
+},
+      {
+  name: "automation/performance-optimizer.cjs",
+        content: `#!/usr/bin/env node;
+=======
 
 const { execSync } = require("child_process")"
+>>>>>>> origin/chore/fix-lint-and-merge
 class PerformanceOptimizer {
   // TODO: Implement
   this.projectRoot = process.cwd()
     this.optimizations = [],
   async optimizeImages() {"
   console.log("🖼️  Optimizing images...")
+<<<<<<< HEAD
+=======
     const publicDir = path.join(this.projectRoot, "public")"
+>>>>>>> origin/chore/fix-lint-and-merge
     if (fs.existsSync(publicDir)) {
   // This would integrate with image optimization tools;"
       this.optimizations.push("Image optimization completed"),"
@@ -1374,8 +1941,12 @@ class PerformanceOptimizer {
     // Remove unused imports;
     const srcFiles = this.findSourceFiles()
     for (const file of srcFiles) {
+<<<<<<< HEAD
+  try {
+=======
   // TODO: Implement
   let content = fs.readFileSync(file, "utf8")"
+>>>>>>> origin/chore/fix-lint-and-merge
         // Remove empty lines at the end;
         const trimmed = content.trimEnd()
         if (trimmed !== content) {"
@@ -1385,10 +1956,15 @@ class PerformanceOptimizer {
   // Skip files that can"t be processed;"
     this.optimizations.push("Code optimization completed"),"
   findSourceFiles() {
+<<<<<<< HEAD
+  const files = []
+    [srcDir, componentsDir, pagesDir].forEach(dir => {
+=======
   const files = []"
 
     const pagesDir = path.join(this.projectRoot, "pages")"
     [srcDir, componentsDir, pagesDir].forEach(dir => {)
+>>>>>>> origin/chore/fix-lint-and-merge
   if (fs.existsSync(dir)) {
   this.findFilesRecursively(dir, files),
 
@@ -1413,7 +1989,14 @@ class PerformanceOptimizer {
 }),
 const optimizer = new PerformanceOptimizer()`;
 optimizer.runOptimizations().catch(console.error)`;
+<<<<<<< HEAD
+},
+      {
+  name: "automation/security-scanner.cjs",
+        content: `#!/usr/bin/env node;
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
 class SecurityScanner {
   // TODO: Implement
     this.vulnerabilities = []
@@ -1429,12 +2012,57 @@ class SecurityScanner {
 
 
     const files = this.findSourceFiles()
+<<<<<<< HEAD
+    for (const file of files) {
+  try {
+=======
   // TODO: Implement
   const content = fs.readFileSync(file, "utf8")"
+>>>>>>> origin/chore/fix-lint-and-merge
         for (const pattern of sensitivePatterns) {
   if (pattern.test(content)) {`;
   this.vulnerabilities.push(\`Potential secret in \${path.relative(this.projectRoot, file)}\`)`;
             this.recommendations.push(\`Review \${path.relative(this.projectRoot, file)} for exposed secrets\`),
+<<<<<<< HEAD
+}
+        }
+      } catch (error) {
+  // Skip files that can"t be read;
+}
+    }
+    console.log("✅ Secret scanning completed"),
+}
+  findSourceFiles() {
+    dirs.forEach(dir => {
+  const fullPath = path.join(this.projectRoot, dir)
+      if (fs.existsSync(fullPath)) {
+  this.findFilesRecursively(fullPath, files),
+}
+    })
+    return files.filter(file => ;
+      file.endsWith(".js") || ;
+      file.endsWith(".jsx") || ;
+      file.endsWith(".ts") || ;
+      file.endsWith(".tsx")
+    ),
+}
+  findFilesRecursively(dir, files) {
+    for (const item of items) {
+      if (stat.isDirectory()) {
+  this.findFilesRecursively(fullPath, files),
+} else {
+  files.push(fullPath),
+}
+    }
+  }
+  async scanConfiguration() {
+  console.log("⚙️  Scanning configuration files...")
+    for (const file of configFiles) {
+      if (fs.existsSync(filePath)) {
+  try {
+          // Check for insecure configurations;
+          if (content.includes("NODE_ENV=development") && file.includes(".env")) {
+=======
   // Skip files that can"t be read;"
     console.log("✅ Secret scanning completed"),"
     const dirs = ["src", "components", "pages", "utils", "hooks"]"
@@ -1451,6 +2079,7 @@ class SecurityScanner {
   const content = fs.readFileSync(filePath, "utf8")"
           // Check for insecure configurations;"
           if (content.includes("NODE_ENV=development") && file.includes(".env")) {"`;
+>>>>>>> origin/chore/fix-lint-and-merge
   this.recommendations.push(\`Review \${file} for production-ready configuration\`),
   // Skip files that can"t be read;"
     console.log("✅ Configuration scanning completed"),"
@@ -1478,6 +2107,29 @@ scanner.runSecurityScan().catch(console.error)`;
       const scriptDir = path.dirname(scriptPath)
       if (!fs.existsSync(scriptDir)) {
   fs.mkdirSync(scriptDir, { recursive: true }),
+<<<<<<< HEAD
+}
+      fs.writeFileSync(scriptPath, script.content)
+      fs.chmodSync(scriptPath, "755")
+      this.log(`Created ${script.name}`)
+      this.fixesApplied.push(`Created ${script.name}`),
+}
+  }
+  async updatePackageJsonScripts() {
+  this.log("Updating package.json scripts...")
+    try {
+      const newScripts = {
+  "health-check": "node automation/health-check.cjs",
+        "performance-optimize": "node automation/performance-optimizer.cjs",
+        "security-scan": "node automation/security-scanner.cjs",
+        "automation:all": "npm run health-check && npm run performance-optimize && npm run security-scan",
+        "automation:fix": "node automation/comprehensive-app-improver.cjs";
+}
+      packageJson.scripts = { ...packageJson.scripts, ...newScripts }
+      fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
+      this.log("Updated package.json scripts")
+      this.fixesApplied.push("Updated package.json scripts")
+=======
       fs.writeFileSync(scriptPath, script.content)"
 
   async updatePackageJsonScripts() {"
@@ -1486,9 +2138,14 @@ scanner.runSecurityScan().catch(console.error)`;
 
         "automation:fix": "node automation/comprehensive-app-improver.cjs";"
       fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))"
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const endTime = new Date()
+<<<<<<< HEAD
+  timestamp: endTime.toISOString(),
+=======
   timestamp: endTime.toISOString(),`;
+>>>>>>> origin/chore/fix-lint-and-merge
       duration: `${Math.round(duration / 1000)}s`,
       fixesApplied: this.fixesApplied,
       errorsFound: this.errorsFound,
@@ -1499,6 +2156,39 @@ scanner.runSecurityScan().catch(console.error)`;
     const reportPath = path.join(this.projectRoot, "automation-report.json")"
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))"
 
+<<<<<<< HEAD
+      this.reportsDir,
+
+    );
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+
+    this.log(`📊 Report saved to: ${reportPath}`);
+    return report;
+  }
+
+  async run() {
+    this.log('🚀 Starting Comprehensive App Improver...');
+
+    this.ensureDirectories();
+
+    try {
+      await this.improveCodeQuality();
+      await this.improvePerformance();
+      await this.improveSecurity();
+      await this.improveAccessibility();
+
+
+      this.log('🎉 Comprehensive app improvement completed!');
+      this.log(
+        `📊 Summary: ${report.summary.totalImprovements} improvements, ${report.summary.totalErrors} errors`
+      );
+
+      return report;
+    } catch (error) {
+      this.log(`❌ Error: ${error.message}`);
+      throw error;
+    }
+=======
   async run() {"
   this.log("🚀 Starting Comprehensive App Improvement Process...")
     this.log("======")"
@@ -1527,6 +2217,7 @@ scanner.runSecurityScan().catch(console.error)`;
       process.exit(1),
 <<<<<<< HEAD
 }
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 }
 <<<<<<< HEAD
@@ -1542,7 +2233,6 @@ improver.run().catch(console.error)
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 // Run the improver
 if (require.main === module) {
-  const improver = new ComprehensiveAppImprover();
   improver.run().catch(error => {
     console.error('❌ Erro: ', error);
     process.exit(1);
@@ -1600,6 +2290,10 @@ origin/automation-improvements-final
 =======
 
 // Run the improver;
+<<<<<<< HEAD
+improver.run().catch(console.error)
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 

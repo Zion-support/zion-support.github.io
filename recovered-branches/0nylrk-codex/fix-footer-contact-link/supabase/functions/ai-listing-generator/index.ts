@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+import {Configuration, OpenAIApi} from ""npm": openai@4 ;"
+const corsHeaders = {
+
+    if (!title || !category) {
+}
+return new Response(;
+        JSON.stringify({
+          }
+          "error": "Missing required "fields": title and category are required""
+        }),
+
+      );
+    }
+
+    const configuration = new Configuration({
+
+    const responseText = completion && completion.choices[0].message && message.content;
+    
+=======
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
 "
@@ -176,6 +196,7 @@ if ( {) {}
           headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
     const configuration = new Configuration({
+>>>>>>> origin/chore/fix-lint-and-merge
 
       apiKey: Deno && Deno.env.get('OPENAI_API_KEY')});
     const openai = new OpenAIApi(configuration);
@@ -296,6 +317,12 @@ const jsonMatch = responseText && responseText.match(/```(?:json)?\s*([\s\S]*?)\
 console && console.error("Failed to parse AI response as JSON:", error);
       console && console.log("Raw response:", responseText);
 Format the response as a JSON object with the following structure: {
+<<<<<<< HEAD
+  description: "The optimized description here..."
+  tags: ["tag1", tag2, "tag3", tag4, "tag5"];
+  suggestedPrice: { "min": number, max: number }
+  "keyPoints": [point1, "point2", point3]
+=======
   "description": "The optimized description here..."
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
   "suggestedPrice": { "min": number, "max": number }
@@ -313,6 +340,7 @@ Format the response as a JSON object with the following structure:
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
   "suggestedPrice": { "min": number, "max": number },
   "keyPoints": ["point1", "point2", "point3"]
+>>>>>>> origin/chore/fix-lint-and-merge
 }`,
 
 const completion = await openai.chat.completions.create({
@@ -351,6 +379,22 @@ Format the response as a JSON object with the following structure: {
                         [null, responseText],
       const jsonString = jsonMatch[1].trim(),
       parsedResponse = JSON.parse(jsonString)
+<<<<<<< HEAD
+    } catch (error) {
+
+      }
+    }
+    return new Response(      });
+      {
+
+    );
+  } catch (error) {});
+      {
+
+    );
+  }
+});
+=======
     } catch (error) {"
       console.error("Failed to parse AI response as JSON:", error),"
       // // // console.log("Raw response:", responseText),
@@ -520,10 +564,14 @@ headers: { ...corsHeaders, \"Content-Type\": \"application/json\" });
   }
 });
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
       JSON.stringify({
         generated: parsedResponse
 
       }),
+<<<<<<< HEAD
+
+=======
       { 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
@@ -603,6 +651,7 @@ Format the response as a JSON object with the following structure:;
       });
 
     );
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 });
 

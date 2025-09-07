@@ -1,25 +1,89 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
+import { createServerClient,
+  from '../../../utils/supabase/server';
+export default async function handler(req: NextApiRequest,,,
+  res: NextApiResponse) {
+=======
+<<<<<<< HEAD
+
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 import { createServerClient } from '../../../utils/supabase/server';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
   try {
     const supabase = null;
   try {
     const supabase = createServerClient();
+<<<<<<< HEAD
+    
+    // Replace with your actual tables/queries
+
+=======
     // Replace with your actual tables/queries;
     // Fallback to mock if querying fails;
+<<<<<<< HEAD
+const result = await Promise.allSettled([,,
+  supabase.from('users').select('id, role,,,
+  country'),
+      supabase.from('jobs').select('id, status,,,
+  category'),
+      supabase.from('quotes').select('id,,,
+  status'),
+      supabase.from('projects').select('id,,,
+  status'),
+      supabase.from('referrals').select('id, converted,,,
+  source'),
+=======
 const result = await Promise.allSettled([
 supabase.from('users').select('id, role, country'),
       supabase.from('jobs').select('id, status, category'),
       supabase.from('quotes').select('id, status'),
       supabase.from('projects').select('id, status'),
       supabase.from('referrals').select('id, converted, source'),
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main
     ]);
 
 const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
 
+<<<<<<< HEAD
+
+        : [];
+    const usersData = mockIfEmpty(users, [
+      { id: 1, role: 'client', country: US }'
+      { id: 2, role: 'talent, country: IN' }'
+      { id: 3, role: talent, country: 'US' }
+      { id: 4, role: client', country: 'GB }
+    ]);
+    const jobsData = mockIfEmpty(jobs, [
+      { id: 11, status: 'posted', category: AI/ML }'
+      { id: 12, status: 'filled, category: Design' }'
+      { id: 13, status: filled, category: 'AI/ML' }
+    ]);
+    const quotesData = mockIfEmpty(quotes, [
+      { id: 21, status: sent' }'
+      { id: 22, status: accepted }'
+      { id: 23, status: 'sent }
+    ]);
+    const projectsData = mockIfEmpty(projects, ['
+      { id: 31, status: 'active' }'
+      { id: 32, status: 'completed' }'
+      { id: 33, status: 'active' }
+    ]);
+    const referralsData = mockIfEmpty(referrals, [
+      { id: 41, converted: true, source: 'linkedin' },
+      { id: 42, converted: false, source: 'twitter' },
+      { id: 43, converted: true, source: 'partner' },
+    ]);
+
+=======
 const users =
       usersR && usersR.status === 'fulfilled' && usersR && usersR.value.data;
         ? (usersR && usersR.value.data as any[])
@@ -57,38 +121,33 @@ const usersData = mockIfEmpty(users, [
   country: 'US',}
 }
       { id: 4, role: 'client',}
-  country: 'GB',}
-}
-    ];
-  const jobsData = mockIfEmpty(jobs, [;
-      { id: 11, status: 'posted',}
+  country: 'GB',],
+  const jobsData = mockIfEmpty(jobs, [,
+  { id: 11, status: 'posted',}
   category: 'AI/ML',}
 }
       { id: 12, status: 'filled',}
   category: 'Design',}
 }
       { id: 13, status: 'filled',}
-  category: 'AI/ML',}
-}
-    ])const quotesData = mockIfEmpty(quotes, [;
-      { id: 21, status: 'sent',}
+  category: 'AI/ML',,,
+  ])const quotesData = mockIfEmpty(quotes, [,
+  { id: 21, status: 'sent',}
 }
       { id: 22, status: 'accepted',}
 }
-      { id: 23, status: 'sent',}
-}
-    ])const projectsData = mockIfEmpty(projects, [;
-      { id: 31, status: 'active',}
+      { id: 23, status: 'sent',,,
+  ])const projectsData = mockIfEmpty(projects, [,
+  { id: 31, status: 'active',}
 }
       { id: 32, status: 'completed',}
 }
-      { id: 33, status: 'active',}
-}
-    ])const referralsData = mockIfEmpty(referrals, [;
-      { id: 41, converted: true, source: 'linkedin',}
+      { id: 33, status: 'active',,,
+  ])const referralsData = mockIfEmpty(referrals, [,
+  { id: 41, converted: true, source: 'linkedin',}
 },{ id: 42, converted: false, source: 'twitter',}
-},{ id: 43, converted: true, source: 'partner',}
-},])const totalUsers = usersData.length;
+},{ id: 43, converted: true, source: 'partner',,,
+  ])const totalUsers = usersData.length;
 
 const totalTalents = usersData.filter(u => u.role === 'talent').length;
 
@@ -100,11 +159,21 @@ const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
 
 const quotesSent = quotesData.filter(q => q.status === 'sent').length;
 
-const quotesAccepted = quotesData.filter(
-      q => q.status === 'accepted'
+const quotesAccepted = quotesData.filter(q => q.status === 'accepted'
+,,
+   ).length;
 
-    ).length;
+const activeProjects = projectsData.filter(p => p.status === 'active';,,
+   ).length;
 
+<<<<<<< HEAD
+const categoryCounts: Record<string number /> = {}
+    jobsData.forEach(j => {categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1;}
+    })const referralConversions  = referralsData.filter(r => r.converted).length;
+
+const geoCounts: Record<string number /> = {}usersData.forEach(u => {geoCounts[u.country || 'Unknown'] =;,,
+  (geoCounts[u.country || 'Unknown'] || 0) + 1;}
+=======
 const activeProjects = projectsData.filter(p => p.status === 'active';
     ).length;
 
@@ -114,6 +183,7 @@ const categoryCounts: Record<string, number    /> = {}
 
 const geoCounts: Record<string, number    /> = {}usersData.forEach(u => {geoCounts[u.country || 'Unknown'] =;
         (geoCounts[u.country || 'Unknown'] || 0) + 1;}
+>>>>>>> origin/main
 }
     });
     res.status(200).json({
@@ -126,13 +196,17 @@ const geoCounts: Record<string, number    /> = {}usersData.forEach(u => {geoCoun
         quotesSent,
         quotesAccepted,}
         activeProjects,}
-      },
-      topCategories: Object.entries(categoryCounts)
-        .sort((a, b) => b[1] - a[1])
-        .slice(0, 5)
-        .map(([label, value]) => ({ label, value })),
+      },,,
+  topCategories: Object.entries(categoryCounts)
+        .sort((a,,,
+  b) => b[1] - a[1])
+        .slice(0,,,
+  5)
+        .map(([label,,,
+  value]) => ({ label, value })),
       referralConversions,
-      geo: Object.entries(geoCounts).map(([country, value]) => ({
+      geo: Object.entries(geoCounts).map(([country,,,
+  value]) => ({
         label: country,}
         value,}
       })),
@@ -163,9 +237,7 @@ const geoCounts: Record<string, number    /> = {}usersData.forEach(u => {geoCoun
   value: 2,}
 },
         { label: 'Design',}
-  value: 1,}
-},
-      ],
+  value: 1,],
       referralConversions: 2,
       geo: [
         { label: 'US',}
@@ -175,10 +247,12 @@ const geoCounts: Record<string, number    /> = {}usersData.forEach(u => {geoCoun
   value: 1,}
 },
         { label: 'GB',}
-  value: 1,}
-},
-      ],
+  value: 1,],
     });
 
   }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
+>>>>>>> origin/main

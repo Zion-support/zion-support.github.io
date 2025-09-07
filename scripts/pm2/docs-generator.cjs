@@ -665,7 +665,6 @@ main
       this.log('Generating component documentation...);
 
       // Look for React/Vue/Svelte components;
-      const componentFiles = this.findComponentFiles();
       if (componentFiles.length === 0) {}
         this.log('No component files found');
 
@@ -914,9 +913,7 @@ main
       return { "updated": false };"
 
       // Generate project information;
-      const projectInfo = await this.generateProjectInfo();
       // Update or create README;
-      const newReadme = this.generateReadmeContent(projectInfo, readmeContent);
       fs.writeFileSync(readmePath, newReadme);
 '
       this.log('README updated successfully');
@@ -945,6 +942,9 @@ main
         "license": 'MIT
   generateReadmeContent(projectInfo, existingContent) {}
 <<<<<<< HEAD
+let readme = `# ${projectInfo.name}\n\n`;`;
+=======
+<<<<<<< HEAD
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/docs-generator.cjs
 
@@ -958,6 +958,7 @@ main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/docs-generator.cjs
     
     let readme = `# ${projectInfo.name}\n\n`;`
+>>>>>>> origin/chore/fix-lint-and-merge
     readme += `**"Version": ** ${projectInfo.version}\n\n`;`
     readme += `${projectInfo.description}\n\n`;`
     
@@ -1089,6 +1090,8 @@ main
     try {}
       const report = await this.generateReport();
       
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/docs-generator.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1101,6 +1104,7 @@ main
 =======
       const report = await this.generateReport();
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       let generatedCount = 0;
       if (report.apiDocs.generated) generatedCount++;
       if (report.componentDocs.generated) generatedCount++;

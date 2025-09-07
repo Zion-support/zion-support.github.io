@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+<Head> <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400, 500, 600, 700, 800, 900&family=JetBrains+Mono:wght@400, 600&display=swap"rel="stylesheet" /> 
+}
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+
+=======
 
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import Document, {}
@@ -24,6 +30,7 @@ rel='preconnect'
           rel='stylesheet'
 
            />
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>
       <body    />
         <Main    />
@@ -32,5 +39,9 @@ rel='preconnect'
     </Html>}
   );}
 }
+<<<<<<< HEAD
+  )}}
+=======
 
 
+>>>>>>> origin/chore/fix-lint-and-merge

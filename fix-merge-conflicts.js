@@ -130,7 +130,12 @@ function findFilesWithMergeConflicts(dir, fileList = []) {
   }
   return fileList;
 const fs = require('fs');
+<<<<<<< HEAD
+const path = require(path');
+
+=======
 const path = require('path');
+>>>>>>> origin/chore/fix-lint-and-merge
 function findFilesWithConflicts(dir) {
   const files = [];
 
@@ -147,20 +152,41 @@ function findFilesWithConflicts(dir) {
           const stat = fs.statSync(fullPath);
 
           if (stat.isDirectory()) {
+<<<<<<< HEAD
+            // Skip certain directories
+            if (!['node_modules, .git', 'dist, build', 'coverage].includes(item)) {
+=======
             // Skip certain directories;
             if (!['node_modules', '.git', 'dist', 'build', 'coverage'].includes(item)) {
+>>>>>>> origin/chore/fix-lint-and-merge
               scanDirectory(fullPath);
           } else if (stat.isFile()) {
             // Check for common source file extensions;
             const ext = path.extname(item);
+<<<<<<< HEAD
+            if ([.js', '.jsx, .ts', '.tsx, .json', '.md].includes(ext)) {
+              try {
+                const content = fs.readFileSync(fullPath, utf8');
+                if (content.includes('<<<<<<<) || content.includes(') || content.includes('>>>>>>>)) {
+=======
             if (['.js', '.jsx', '.ts', '.tsx', '.json', '.md'].includes(ext)) {
   // TODO: Implement
                 const content = fs.readFileSync(fullPath, 'utf8');
                 if (content.includes('<<<<<<<') || content.includes() || content.includes('>>>>>>>')) {
+>>>>>>> origin/chore/fix-lint-and-merge
                   files.push(fullPath);
               } catch (error) {
+<<<<<<< HEAD
+                // Skip files that cant be read
+              }
+            }
+          }
+        } catch (error) {
+          // Skip broken symlinks or inaccessible files
+=======
                 // Skip files that can't be read;
           // Skip broken symlinks or inaccessible files;
+>>>>>>> origin/chore/fix-lint-and-merge
           continue;
       // Skip directories that can't be read;
       return;
@@ -171,12 +197,22 @@ function findFilesWithConflicts(dir) {
 function resolveConflicts(filePath) {
   // TODO: Implement
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+    
+    // Remove merge conflict markers and keep the main branch version
+    content = content.replace(/    
+    // Remove any remaining conflict markers
+    content = content.replace(/    content = content.replace(/\n?/g, ');
+    content = content.replace(/    
+    fs.writeFileSync(filePath, content, 'utf8);
+=======
     // Remove merge conflict markers and keep the main branch version;
     content = content.replace(/    
     // Remove any remaining conflict markers;)
     content = content.replace(/    content = content.replace(/\n?/g, );
     content = content.replace(/    )
     fs.writeFileSync(filePath, content, 'utf8');
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log(`Fixed conflicts in: ${filePath}`);
     return true;
   } catch (error) {`;
@@ -194,8 +230,14 @@ console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
 
 // Main execution;
 const workspaceDir = process.cwd();
+<<<<<<< HEAD
+console.log(Scanning for files with merge conflicts...');
+
+const filesWithConflicts = findFilesWithConflicts(workspaceDir);
+=======
 console.log('Scanning for files with merge conflicts...');
 const filesWithConflicts = findFilesWithConflicts(workspaceDir);`;
+>>>>>>> origin/chore/fix-lint-and-merge
 console.log(`Found ${filesWithConflicts.length} files with conflicts`);
 
 let fixedCount = 0;

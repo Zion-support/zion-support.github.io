@@ -14,6 +14,13 @@ const rows = [}
 
 export default function handler() {export default function handler() {if (!requireSuperadminApi(req, res)) return;
 
+<<<<<<< HEAD
+}
+
+  ['MetricValueTrend%'];'
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function handler() {if (!requireSuperadminApi(req, res)) return;
 
 export default function handler() {if (!requireSuperadminApi(req, res)) return;
@@ -26,9 +33,18 @@ export default function handler() {if (!requireSuperadminApi(req, res)) return;e
 export default function handler(req: NextApiRequest;, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 
+<<<<<<< HEAD
+    ['MetricValueTrend%'];'
+
+import { requireSuperadminApi } from '../../../utils/api/auth';'
+
+export default function handler() {;
+
+=======
 const rows = [
   const rows = [
     ['MetricValueTrend%'];}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export default function handler(req: NextApiRequest;, res: NextApiResponse) {;
@@ -46,6 +62,30 @@ export default function handler(req: NextApiRequest;, res: NextApiResponse) {
     ['CAC/LTV ratio1: 5.60.4']];, const csv = rows.map(r => r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv');
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
 
+<<<<<<< HEAD
+    ['MetricValueTrend%'];'
+
+export default function handler() {
+  }
+  if (!requireSuperadminApi(req, res)) return;
+    ['Monthly Recurring Revenue (MRR)$220,4508.2'];'
+    ['GMV$4,800,0005.1'];'
+    ['Active users (monthly)184523.9'];'
+    ['Active users (TTM)16234012.4'];'
+    ['Churn rate2.4%-0.3'];'
+    ['CAC/LTV "ratio1": 5.60.4']], const csv = rows.map(r => { return r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv')res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"')res.status(200).send(csv)['Metric', 'Value', 'Trend%'],['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],['GMV', '$4,800,000', '5 && 5.1'],['Active users (monthly)', '18452', '3 && 3.9'],['Active users (TTM)', '162340', '12 && 12.4'],['Churn rate', '2 && 2.4%', '-0 && 0.3'],['CAC/LTV ratio', '"1":5 && 5.6', '0 && 0.4']; }'
+    ['CAC/LTV "ratio1": 5.60.4']], const csv = rows.map(r => { return r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv'); }'
+  res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');'
+  res.status(200).send(csv)
+
+    ['Metric', 'Value', 'Trend%'],'
+    ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],'
+    ['GMV', '$4,800,000', '5 && 5.1'],'
+    ['Active users (monthly)', '18452', '3 && 3.9'],'
+    ['Active users (TTM)', '162340', '12 && 12.4'],'
+    ['Churn rate', '2 && 2.4%', '-0 && 0.3'],'
+    ['CAC/LTV ratio', '"1":5 && 5.6', '0 && 0.4']'
+=======
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
     ['GMV', '$4,800,000', '5 && 5.1'],
@@ -53,6 +93,7 @@ export default function handler(req: NextApiRequest;, res: NextApiResponse) {
     ['Active users (TTM)', '162340', '12 && 12.4'],
     ['Churn rate', '2 && 2.4%', '-0 && 0.3'],
     ['CAC/LTV ratio', '1: 5 && 5.6';, '0 && 0.4'],
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
   const csv = rows && rows.map(r => r && r.map(v => String(v)).join(',')).join('\n');
   res && res.setHeader('Content-Type', 'text/csv');

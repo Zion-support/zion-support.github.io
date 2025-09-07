@@ -10,6 +10,10 @@
 const { execSync } = require('child_process');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934:scripts/pm2/auto-fix.cjs
 
+<<<<<<< HEAD
+#!/usr/bin/env node;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

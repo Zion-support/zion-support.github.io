@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
+// Run if called directly
+if (require.main === module) {
+  const fixer = new SyntaxErrorFixer();
+  fixer.fixAllFiles().catch(console.error);
+}
+
+
+=======
 #!/usr/bin/env node
 /**
  * Syntax Error Fixer;
@@ -162,3 +176,4 @@ module.exports = SyntaxErrorFixer;
 
 
 
+>>>>>>> origin/chore/fix-lint-and-merge

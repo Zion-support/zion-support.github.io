@@ -33,8 +33,24 @@ export function ConversationDetailView() {;
   } = useMessaging();'
   const [messageText, setMessageText] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
+export function ConversationDetailView() {
+  const { user } = useAuth($2);
+    activeConversation,
+    activeMessages, 
+    sendMessage, 
+    loadMessages
+  } = useMessaging($2);
+  const [messageText, setMessageText] = useState($2);
+  const messagesEndRef = $2;
+  useEffect(() => {
+    }
+    if (activeConversation) {
+      }
+=======
   useEffect(() => {}
     if (activeConversation) {}
+>>>>>>> origin/chore/fix-lint-and-merge
       loadMessages(activeConversation.id)
     }
 

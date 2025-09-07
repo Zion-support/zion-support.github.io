@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+
+;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const PerformanceOptimizationChat: NextPage = () => {return (<div>;
+
+
+<div> <Head> <title>PerformanceOptimizationChat - Zion Tech Solutions</title> <meta name="description" content="PerformanceOptimizationChat service" /> </Head> <main> <h1>PerformanceOptimizationChat</h1> <p>Service details coming soon...</p> <a href="/services" >Back to Services</a> </main> </div> export default PerformanceOptimizationChat
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -7,16 +19,32 @@ const PerformanceOptimizationChat: NextPage = () => {;
     <div>;
       <Head>;
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>;
+<<<<<<< HEAD
+        <meta
+          name=description"
+          content="PerformanceOptimizationChat service
+        />{ "}
+      <main>
+        <h1>PerformanceOptimizationChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services>Back to Services</a>
+=======
 
         <a href="/services">Back to Services</a>
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>
     </div>
       </Head>;
 
       <main>;
         <h1>PerformanceOptimizationChat</h1>;
+<<<<<<< HEAD
+        <p>Service details coming soon...</p>;
+        <a href=/services">Back to Services</a>;
+=======
         <p>Service details coming soon...</p>;"
         <a href="/services">Back to Services</a>;
+>>>>>>> origin/chore/fix-lint-and-merge
       </main>;
     </div>;
   );
@@ -107,4 +135,9 @@ const PerformanceOptimizationChat: NextPage = () => {
 export default PerformanceOptimizationChat;
 
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
+<<<<<<< HEAD
         <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
+
+=======
+        <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,4 +1,17 @@
 const { execSync } = require('child_process')
+<<<<<<< HEAD
+const fs = require(fs')
+console.log(' Deployment Automator Starting...')
+        "name
+        command"
+        "name
+        command"
+        "name
+        command"
+        "name
+        command"
+
+=======
 const fs = require('fs')
 <<<<<<< HEAD
 console.log(' Deployment Automator Starting...')
@@ -23,3 +36,4 @@ console.log(' Deployment Automator Starting...')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

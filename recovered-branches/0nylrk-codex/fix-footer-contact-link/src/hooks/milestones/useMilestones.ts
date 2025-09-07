@@ -58,6 +58,17 @@ export const useMilestones = (projectId?: string) => {;
 
   }
 };
+<<<<<<< HEAD
+import { useState } from 'react',;'
+import { useLoadMilestones } from './useLoadMilestones',;'
+;
+export const useMilestones = (projectId?:string) => {;
+  }
+  const { createMilestone, "isSubmitting":isCreating } = useCreateMilestone(projectId),;
+  const { updateMilestoneStatus, updateMilestone, "isSubmitting":isUpdating } = useUpdateMilestone(),;
+  const { deleteMilestone, "isSubmitting":isDeleting } = useDeleteMilestone(),;
+  const { uploadDeliverable, "isSubmitting":isUploading } = useUploadDeliverable(),;
+=======
 
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
@@ -73,9 +84,9 @@ export const useMilestones = (projectId?:string) => {;
   const { updateMilestoneStatus, updateMilestone, isSubmitting:isUpdating } = useUpdateMilestone(),;
   const { deleteMilestone, isSubmitting:isDeleting } = useDeleteMilestone(),;
   const { uploadDeliverable, isSubmitting:isUploading } = useUploadDeliverable(),;
+>>>>>>> origin/chore/fix-lint-and-merge
   ;
   // Combine all loading states;
-  const isSubmitting = isCreating || isUpdating || isDeleting || isUploading,;
   ;
   // Function to upload deliverable with project_id;
   const handleUploadDeliverable = async (milestoneId:string, file:File) => {;

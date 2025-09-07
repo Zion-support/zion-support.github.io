@@ -109,9 +109,13 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
+<<<<<<< HEAD
+    </DropdownMenu>
+=======
     </DropdownMenu>"
 import React from "react",;"
 import { Button } from "@/components/ui/button",;"
+>>>>>>> origin/chore/fix-lint-and-merge
 import { SORT_OPTIONS } from "@/data/sortOptions",;"
 import { SortDesc, ChevronDown } from "lucide-react",;
 import {;

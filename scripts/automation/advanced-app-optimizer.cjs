@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -6,6 +9,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -15,8 +19,12 @@
  * Advanced optimization for Next.js applications;
  */
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
 =======
 
@@ -33,8 +41,8 @@ class AdvancedAppOptimizer {}
         this.projectRoot = process.cwd();
 
         if () {}
-            fs.mkdirSync(logsDir, { "recursive": true })};"
-    };
+            fs.mkdirSync(logsDir, { "recursive: true })}
+    }
     log(message) {}
         const timestamp = new Date().toISOString() {}
     ) {}"
@@ -42,6 +50,19 @@ class AdvancedAppOptimizer {}
 });
         const logMessage = `[${timestamp}] ${message}\;n;`;`
         fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
+
+        console.log(message)}
+    optimizeNextConfig() {}
+
+=======
+        this.log(Optimizing Next.js configuration...');
+        const nextConfigPath = path.join(this.projectRoot, 'next.config.js;);
+        let nextConfig = ;;';
+        console.log(message)}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -74,14 +95,24 @@ const nextConfig = {}
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   // Image optimization;
-  "images": {}
-    domains: ['ziontechgroup.com'],
-    "formats": ['image/webp', 'image/avif'],
-    "minimumCacheTTL": 60,
-    "dangerouslyAllowSVG": true,
-    "contentSecurityPolicy": "default-src 'sel) {}
+  "images: {}
+    domains: ['ziontechgroup.com],
+    formats": [image/webp', 'image/avif],
+    "minimumCacheTTL: 60,
+    dangerouslyAllowSVG": true,
+    "contentSecurityPolicy: default-src sel) {}
     ) {}
+<<<<<<< HEAD
+
+const nextConfig = {}
+  // Performance optimizations;
+  "compress: true,
+  poweredByHeader": false,
+  "generateEtags: false,
+
+=======
             nextConfig = fs.readFileSync(nextConfigPath, 'utf8')};
         const optimizedConfig = "/** @type {import('next').NextConfig} */
 const nextConfig = {}
@@ -93,9 +124,32 @@ const nextConfig = {}
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   // Image optimization;
-  "images": {}
+  images": {}
     domains: ['ziontechgroup.com'],
+<<<<<<< HEAD
+    "formats: [image/webp, 'image/avif'],
+    minimumCacheTTL": 60,
+    "dangerouslyAllowSVG: true,
+    contentSecurityPolicy": "default-src sel}f;; script-src 'none'; sandbox;},
+
+  // Bundle optimization;
+  webpack": (config, { dev, isServer }) => {}
+    optimizeNextConfig() {}"
+
+  // Bundle optimization;
+  webpack": (config, { dev, isServer }) => {}"
+    // Production optimizations;
+    if ( {})
+      config.optimization.splitChunks = {}
+
+=======
+
+    return config}},
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
     "formats": ['image/webp', 'image/avif'],
     "minimumCacheTTL": 60,
     "dangerouslyAllowSVG": true,
@@ -122,37 +176,54 @@ const nextConfig = {}
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   // Experimental features for performance;
-  "experimental": {}
+  experimental": {}
     optimizeCss: true,
+<<<<<<< HEAD
+    "optimizePackageImports: [lucide-react, '@radix-ui/react-icons']},
+
+=======
     "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons']},
 <<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   // Headers for security and performance;
   async headers() {}
     return [;]
       {}
-        "source": '/(.*)',
-        "headers": []
+        source": /(.*),
+        "headers: []
           {}
             key: 'X-Frame-Options',
-            "value": 'DENY'},
+            value": DENY},
           {}
-            "key": 'X-Content-Type-Options',
-            "value": 'nosniff'},
+            "key: 'X-Content-Type-Options',
+            value": nosniff},
           {}
+<<<<<<< HEAD
+            "key: 'Referrer-Policy',
+            value": origin-when-cross-origin}]}]},
+
+=======
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]},
 <<<<<<< HEAD
 =======
   
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   // Redirects and rewrites;
   async redirects() {}
     return [;]
       {}
+<<<<<<< HEAD
+        "source: '/home',
+        destination": /,
+        "permanent: true}]}}
+=======
         "source": '/home',
         "destination": '/',
         "permanent": true}]}};
@@ -172,12 +243,20 @@ module.exports = nextConfig;
   "experimental": {}"
     optimizeCss: true,"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
-        "permanent": true}]}};"
-module.exports = nextConfig;"
-";"
+
+        permanent": true}]}}"
+module.exports = nextConfig;
+;"
         fs.writeFileSync(nextConfigPath, optimizedConfig);"
         this.log('Next.js configuration optimized');
+<<<<<<< HEAD
+
+        const utilsDir = path.join(this.projectRoot, utils;);
+        if () {}
+
+=======
 <<<<<<< HEAD
         
         return { "status": 'success', "message": 'Next.js config optimized' }};
@@ -315,6 +394,7 @@ module.exports = {}
         const utilsDir = path.join(this.projectRoot, 'utils';);
         if () {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
+>>>>>>> origin/chore/fix-lint-and-merge
         // Performance monitoring utility;
         const performanceMonitor = "/**
  * Performance Monitoring Utility;
@@ -324,14 +404,13 @@ module.exports = {}
 =======
 =======
 
-  "theme": {}"
+  "theme: {}
     extend: {}
       colors: {}
         primary: {}"
 
-            fs.mkdirSync(utilsDir, { "recursive": true })};"
+            fs.mkdirSync(utilsDir, { "recursive: true })}
         // Performance monitoring utility;"
-        const performanceMonitor = "/**"
  * Performance Monitoring Utility;
  * Tracks and reports performance metrics;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -339,6 +418,14 @@ module.exports = {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 export class PerformanceMonitor {}
     this.metrics = new Map) {}
+<<<<<<< HEAD
+
+export class PerformanceMonitor {}
+  constructor() {}
+    this.metrics = new Map}(;);
+    this.isClient = typeof window !== 'undefined'}
+        // Performance monitoring utility;
+=======
 <<<<<<< HEAD
     ) {}
             fs.mkdirSync(utilsDir, { "recursive": true })};
@@ -357,23 +444,33 @@ export class PerformanceMonitor {}
     this.isClient = typeof window !== 'undefined'};
 =======
         // Performance monitoring utility;"
+>>>>>>> origin/chore/fix-lint-and-merge
 
     this.metrics = new Map}(;);"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   startTiming(name) {}
     if ( {})`;
-      performance.mark(\`\${name}-start\`)};
+      performance.mark(\`\${name}-start\`)}
   endTiming(name) {}
     if (this.isClient) {}`;
       performance.mark(\`\${name}-end\`)) {`}
      {}`;
-      performance.mark(\`\${name}-end\`)};`;
+      performance.mark(\`\${name}-end\`)}`;
       performance.measure(name, \`\${name}-start\`, \`\${name}-end\`);
 <<<<<<< HEAD
 <<<<<<< HEAD
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
+<<<<<<< HEAD
+
+
+      
+      this.metrics.set(name, measure.duration);
+
+      
+
+=======
 <<<<<<< HEAD
 
 =======
@@ -388,13 +485,13 @@ export class PerformanceMonitor {}
 <<<<<<< HEAD
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
       
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
-      const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -402,14 +499,32 @@ export class PerformanceMonitor {}
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       // Log slow operations;
 
-        console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};"
+        console.warn(\`Slow operation "detected: \${name} took \${measure.duration}ms\`)}
   getMetrics() {}
     return Object.fromEntries(this.metrics)) {}
      {}"`;
-    return Object.fromEntries(this.metrics)}};
+    return Object.fromEntries(this.metrics)}}
   clearMetrics() {}
     this.metrics.clear();
       performance.clearMarks()) {}
+<<<<<<< HEAD
+      performance.clearMarks()}
+      performance.clearMeasures()}
+
+        // Web Vitals utility;
+
+ * Web Vitals Utility;
+ * Measures Core Web Vitals;
+
+export function reportWebVitals(metric) {}
+  // Send to analytics service;
+  if ( {})
+    window.gtag(event, metric.name, {})
+      value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      "event_label: metric.id,
+
+      non_interaction": true})}
+=======
       performance.clearMarks()};
       performance.clearMeasures()};
 <<<<<<< HEAD
@@ -455,27 +570,43 @@ export function reportWebVitals(metric) {}
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       "non_interaction": true})};
+>>>>>>> origin/chore/fix-lint-and-merge
   // Log to console in development;
-  if (process.env.NODE_ENV === 'development') {}
+  if (process.env.NODE_ENV === development) {}
     console.log(metric)) {}
      {}
     window.gtag('event', metric.name, {})
-      "value": Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-      "event_label": metric.id,
-      "non_interaction": true})};
+      "value: Math.round(metric.name === CLS ? metric.value * 1000 : metric.value),
+      event_label": metric.id,
+      "non_interaction: true})}
   // Log to console in development;
   if (process.env.NODE_ENV === 'development') {}
+<<<<<<< HEAD
+
+
+    console.log(metric)}}
+=======
 =======
 "
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.log(metric)}};
+>>>>>>> origin/chore/fix-lint-and-merge
 export function initWebVitals() {}
     getCLS(reportWebVitals)) {}
-    getCLS(reportWebVitals)};
+    getCLS(reportWebVitals)}
     getFID(reportWebVitals);
     getFCP(reportWebVitals);
     getLCP(reportWebVitals);
+<<<<<<< HEAD
+    getTTFB(reportWebVitals)}
+
+        this.log(Performance monitoring utilities created);
+        return { "status": 'success', message: Performance monitoring created }}
+    optimizeImages() {}
+        this.log('Optimizing images...');
+
+=======
     getTTFB(reportWebVitals)};
 <<<<<<< HEAD
 };
@@ -510,10 +641,14 @@ export function initWebVitals() {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
         for (const file of imageFiles) {}
             try {}
                 const stats = fs.statSync(file;);
                 const sizeKB = Math.round(stats.size / 1024;);
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -521,18 +656,24 @@ export function initWebVitals() {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
                 if ( { // Only optimize large images;})
                     optimizations.push({})
 
-                    })};
+                    })}
                 optimizedCount++} catch (error) {}
-                this.log("Error processing image ${file}: ${error.message}")};"
-        };"
-        this.log("Processed ${optimizedCount} images")) {}"
+                this.log("Error processing image ${file}: ${error.message}")}
+        }
+        this.log("Processed ${optimizedCount} images")) {}
      { // Only optimize large images;}
-                    optimizations.push({})"
+                    optimizations.push({})
 
         const files = [];
+<<<<<<< HEAD
+
+        if () return file) {}
+    ) return file}s;
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
         if () return file) {}
@@ -547,39 +688,55 @@ export function initWebVitals() {}
         if () return file) {}
     ) return file}s;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
         const items = fs.readdirSync(dir;);
         for (const item of items) {}
             const fullPath = path.join(dir, item;);
             const stat = fs.statSync(fullPath;);
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
             if () {}
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
                 files.push(...this.findImageFiles(fullPath))} else if (imageExtensions.includes(path.extname(item).toLowerCase())) {}
-                files.push(fullPath)};
+                files.push(fullPath)}
         return files) {}
-        return files}};
+        return files}}
     generateOptimizationReport() {}
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
         this.log('Generating advanced app optimization report...');
 <<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         const report = {}
             "timestamp": new Date().toISOString(),
-            "project": this.projectRoot,
+            project: this.projectRoot,
             "optimizations": {}
                 nextConfig: this.optimizeNextConfig(),
-                "tailwindConfig": this.optimizeTailwindConfig(),
+                tailwindConfig: this.optimizeTailwindConfig(),
                 "performanceMonitoring": this.createPerformanceMonitoring(),
-                "images": this.optimizeImages();
+                images: this.optimizeImages();
             },
             "recommendations": this.generateOptimizationRecommendations();
+<<<<<<< HEAD
+       }
+
+        return report}
+    generateOptimizationRecommendations() {}
+
+=======
        };
 <<<<<<< HEAD
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
@@ -594,43 +751,61 @@ export function initWebVitals() {}
     generateOptimizationRecommendations() {}
         return [;]
             'Implement code splitting for better loading performance',
+>>>>>>> origin/chore/fix-lint-and-merge
             'Use dynamic imports for heavy components',
-            'Optimize images with Next.js Image component',
+            Optimize images with Next.js Image component,
             'Implement service worker for caching',
-            'Use React.memo for expensive components',
+            Use React.memo for expensive components,
             'Implement virtual scrolling for large lists',
-            'Use CSS-in-JS with zero runtime cost',
+            Use CSS-in-JS with zero runtime cost,
             'Implement progressive web app features',
-            'Use CDN for static assets',
+            Use CDN for static assets,
             'Implement proper error boundaries'
-        ]};
+        ]}
     async run() {}
+<<<<<<< HEAD
+        this.log(Advanced App Optimizer started);
+
+=======
         this.log('Advanced App Optimizer started');
 <<<<<<< HEAD
 =======
         
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         try {}
             const report = this.generateOptimizationReport(;);
             this.log('Advanced App Optimizer completed successfully');
             return report} catch (error) {}
+<<<<<<< HEAD
+            this.log(Advanced App Optimizer failed": ${error.message}`);
+=======
             this.log("Advanced App Optimizer "failed": ${error.message}`);
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-            "optimizations": {}"
+            "optimizations: {}
                 nextConfig: this.optimizeNextConfig(),"
-                "tailwindConfig": this.optimizeTailwindConfig(),
-                "performanceMonitoring": this.createPerformanceMonitoring(),
-                "images": this.optimizeImages();"
+                "tailwindConfig: this.optimizeTailwindConfig(),
+                performanceMonitoring": this.createPerformanceMonitoring(),
+                "images: this.optimizeImages();
             },"
-            "recommendations": this.generateOptimizationRecommendations();"
+            "recommendations: this.generateOptimizationRecommendations();
 
         fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));"
-        this.log("Advanced app optimization report saved to ${this.reportFile}");"
-        return report};
+        this.log("Advanced app optimization report saved to ${this.reportFile});
+        return report}
     generateOptimizationRecommendations() {}
         return [;]"
 
+<<<<<<< HEAD
+            throw error}
+// Run the optimizer if this script is executed directly;
+    const optimizer = new AdvancedAppOptimizer) {}
+    const optimizer = new AdvancedAppOptimizer}(;);
+    optimizer.run().catch(console.error)}
+
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
             throw error};
 // Run the optimizer if this script is executed directly;
@@ -640,18 +815,27 @@ export function initWebVitals() {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
 module.exports = AdvancedAppOptimizer;
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = AdvancedAppOptimizer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = AdvancedAppOptimizer;
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 

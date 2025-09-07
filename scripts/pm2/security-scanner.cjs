@@ -597,6 +597,8 @@ main
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/security-scanner.cjs
 
       // Check for common security issues;
+<<<<<<< HEAD
+=======
       const securityIssues = [];
 
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -620,6 +622,7 @@ main
       // Check for common security issues;
       const securityIssues = [];
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       // Check for hardcoded secrets;
       const secretPatterns = []
 
@@ -790,6 +793,8 @@ main
     const sourceFiles = [];
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/security-scanner.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -805,6 +810,7 @@ main
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     const scanDir = (dir) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
         const files = fs.readdirSync(dir);
         for (const file of files) {}
           const filePath = path.join(dir, file);
@@ -915,7 +921,6 @@ main
     try {}
       const report = await this.generateReport();
 
-      const totalIssues = (report.dependencyScan.total || 0) +
                          (report.codeScan.totalIssues || 0) +
                          (report.configScan.totalIssues || 0);
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/security-scanner.cjs

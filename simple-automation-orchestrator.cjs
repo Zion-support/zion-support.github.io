@@ -128,8 +128,17 @@ class SimpleAutomationOrchestrator {}
 });"`;
       this.log(`Completed "step": ${stepName} (${duration}ms)`);"
       return result} catch(error) {}
+<<<<<<< HEAD
+      this.results.steps.push({})
+        "name": stepName,
+        "status": "error",
+        "duration": duration,
+        "error": error.message;
+      }
+=======
 
         "error": error.message;"
+>>>>>>> origin/chore/fix-lint-and-merge
 });
       this.results.errors.push({})"
         "step": stepName,
@@ -287,6 +296,8 @@ class SimpleAutomationOrchestrator {}
 <<<<<<< HEAD
     // Create enhanced error checker;
     const enhancedErrorChecker = "#!/usr/bin/env node;
+<<<<<<< HEAD
+=======
 const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
@@ -294,6 +305,7 @@ const { execSync } = require("child_process");
     // Create enhanced error checker;"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class EnhancedErrorChecker {}
     this.logFile = path.join(this.projectRoot, "automation", "logs", "enhanced-error-checker.log");"
     this.ensureDirectories()};
@@ -301,17 +313,14 @@ class EnhancedErrorChecker {}
   ensureDirectories() {}
     const dirs = ["automation/logs"];
     dirs.forEach(dir => {})
-      const dirPath = path.join(this.projectRoot, dir;);
       if () {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
   log(message, level = "INFO") {}
-    const timestamp = new Date().toISOString() {}
     ) {}
         fs.mkdirSync(dirPath, { "recursive": true })};
     })};
   log(message, level = "INFO") {}
-    const timestamp = new Date().toISOString(}
 });
     const logMessage = \"[\${timestamp}] [\${level}] \${message}\;";
 <<<<<<< HEAD
@@ -417,8 +426,25 @@ module.exports = EnhancedErrorChecker;";"
         "committed": true,
         "pushed": true,
         "branch": currentBranch,
+<<<<<<< HEAD
+        "message": commitMessage;
+      }} catch(error) {}
+      this.log(`Git operations "failed": ${error.message}`, "ERROR");
+      return {;}
+        "committed": false,
+        "pushed": false,
+        "error": error.message;
+      }};
+  };
+  async mergeToMain() {}
+    this.log("Merging changes to main branch...");
+    try {}
+        "cwd": this.projectRoot,
+        "encoding": "utf8"
+=======
         "message": commitMessage;"
 
+>>>>>>> origin/chore/fix-lint-and-merge
       }).trim(;);
 <<<<<<< HEAD
       if ( {})

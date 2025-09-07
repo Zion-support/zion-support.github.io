@@ -5,6 +5,14 @@ import { FlagResult } from './types',
  */
 
 export const flagContent = async (;
+<<<<<<< HEAD
+
+/**;
+* Flag content for review;
+*/;
+export const flag_content = async (
+
+=======
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -61,12 +69,33 @@ export const flagContent = async (
 
     // // // console.log('Flagging content for review:', {
   content_excerpt: string;    // // // console.log('Flagging content for review:', {
+>>>>>>> origin/chore/fix-lint-and-merge
       userId,
       contentType,
       contentId,
       reason,
 
       severity;
+<<<<<<< HEAD
+    console.log($2);
+    const { error } = await supabase.from(fraud_flags').insert({
+      user_id: userId;
+      user_email: userEmail;
+      content_type: contentType;
+      content_id: contentId
+      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
+    });      reason;
+
+if (throw error) {
+  $2
+}
+    return { "success": true }
+  } catch (error) {
+
+  }
+}
+}
+=======
     });
 
     // // // console.log('Flagging content for review:', {
@@ -278,9 +307,23 @@ if (throw error) {}
 ;
 
 };
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
-};
+}
     }
   }
+<<<<<<< HEAD
+}
+    return { success: true}
+  } catch (error) {
+    console.error($2);
+    return { 
+      success: false, 
+      error: error instanceof Error ? error.message : 'Unknown error' 
+    }
+  }
+},
+=======
 };
+>>>>>>> origin/chore/fix-lint-and-merge

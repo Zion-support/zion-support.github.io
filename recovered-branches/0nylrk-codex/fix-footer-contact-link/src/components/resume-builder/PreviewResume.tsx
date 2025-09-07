@@ -11,6 +11,12 @@ import {;
   CertificationsSection;
 } from './preview',;
 interface PreviewResumeProps {;
+<<<<<<< HEAD
+  }
+  "resume": Resume;
+  "onBack": () => void;import { Resume } from "@/types/resume";"
+  }
+=======
   resume: Resume;
 
   onBack: () => void;import { Resume } from "@/types/resume";
@@ -23,6 +29,7 @@ interface PreviewResumeProps {
 import { Resume } from "@/types/resume";
 
 import {
+>>>>>>> origin/chore/fix-lint-and-merge
   PreviewHeader,
   ResumeBasicInfoSection,
   WorkExperienceSection,

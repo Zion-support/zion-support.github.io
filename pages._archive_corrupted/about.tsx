@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+const \"About\": NextPage = () => {"
+}
+}
+
+}
+=======
 const \"About\": NextPage = () => {
 const \"About\": NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -58,6 +66,18 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+}
+import { Users, Target, Award, Globe, Shield, Zap  } from 'lucide-react';'
+const "About": NextPage = () => {ursor/automate-test-improve-and-merge-code-646c;"
+  }
+  const values = [{"title": \'Innovation\',\"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',\"icon\": Zap;"
+    },{\"title\": \'Excellence\',\"description\": \'We maintain the highest standards of quality in everything we do.\',\"icon\": Award;"
+    },{\"title\": \'Integrity\',\"description\": \'We build trust through honest communication and ethical business practices.\',\"icon\": Shield;"
+    },{\"title\": \'Collaboration\',\"description\": \'We work closely with our clients to ensure their success is our success.\',\"icon\": Users;"
+    },{\"title\": \'Global Perspective\',\"description\": \'We bring international expertise and diverse perspectives to every project.\',\"icon\": Globe;"
+    },{\"title\": \'Results-Driven\',\"description\": \'We focus on delivering measurable outcomes that drive business growth.\',\"icon\": Target;"
+=======
 const \"About\": NextPage = () => {;
 
 import React from 'react';
@@ -95,6 +115,7 @@ import MainLayout from '../components/layout/MainLayout';
       \"description\": \'We focus on delivering measurable outcomes that drive business growth.\',
       \"icon\": Target
 
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   ];
   const team = [{
@@ -278,6 +299,155 @@ const "About": NextPage = () => {;
       \"bio\": \'Full-stack developer with expertise in modern web technologies and frameworks.\',;
       \"image\": \'/team/david && david.jpg\';
     }
+<<<<<<< HEAD
+  ];
+    { \"number\": \'50+\', \"label\": \'Happy Clients\' },'
+    { \"number\": \'5+\', \"label\": \'Years Experience\' },'
+  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' };'
+    { \"number\": \'50+\', \"label\": \'Happy Clients\' },;'
+    { \"number\": \'5+\', \"label\": \'Years Experience\' },;'
+    { \"number\": \'24/7\', \"label\": \'Support Available\' }'
+  ];
+export default function AboutPage() {;
+}
+return (;
+    { "number": '50+', "label": 'Happy Clients' },;'
+    { "number": '5+', "label": 'Years Experience' },;'
+    { "number": '24/7', "label": 'Support Available' }'
+  ];
+export default function AboutPage() {;
+}
+return (;
+    <main>;
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;"
+        <div className="container mx-auto px-4 text-center">;"
+          <h1 className="text-5xl "md": text-6xl font-bold mb-6">;"
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech Group</span>;"
+          </h1>;
+          <p className="text-xl "md":text-2xl mb-8 max-w-4xl mx-auto text-gray-200">;"
+            Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud, and modern development services.;
+          </p>;
+        </div>;
+      </section>;
+      <section className="py-20 bg-white">;"
+        <div className="container mx-auto px-4 max-w-4xl text-center">;"
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>;"
+          <p className="text-xl text-gray-600">;"
+            Empower businesses with innovative technology that drives growth, efficiency, and competitive advantage.;
+          </p>;
+        </div>;
+      </section>;
+      <section className="py-20 bg-gray-50">;"
+        <div className="container mx-auto px-4 text-center">;"
+          <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-10">Our Values</h2>;"
+          <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-8">;"
+            {[{ "title": 'Excellence', "desc": 'We deliver solutions that exceed expectations.' },{ "title": 'Integrity', "desc": 'We operate with honesty and transparency.' },{ "title": 'Innovation', "desc": 'We embrace modern technologies to solve problems.' },{ "title": 'Collaboration', "desc": 'We partner closely with clients for success.' }'
+            ].map((v) => (<div key={v.title} className="bg-white rounded-lg p-8 shadow text-center">;"
+                <h3 className="text-xl font-semibold mb-3">{v.title}</h3>;"
+                <p className="text-gray-600">{v.desc}</p>;"
+    <MainLayout;
+      title=\"About Us - Zion Tech Group\";"
+      description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\";"
+    >;
+      {/* Hero Section */}
+      <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">;"
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
+          <div className=\"text-center\">;"
+            <h1 className=\"text-5xl font-bold mb-6\">About Zion Tech Group</h1>;"
+            <p className=\"text-xl max-w-3xl mx-auto\">;"
+              We are passionate technologists dedicated to transforming businesses through;
+              innovative technology solutions and digital excellence.;
+            </p>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Mission & Vision */}
+      <section className=\"py-20\">;"
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
+          <div className=\"grid grid-cols-1 "lg":grid-cols-2 gap-12\">;"
+            <div>;
+              <h2 className=\"text-4xl font-bold text-gray-900 mb-6\">Our Mission</h2>;"
+              <p className=\"text-lg text-gray-600 mb-6\">;"
+                To empower businesses with cutting-edge technology solutions that drive;
+                innovation, efficiency, and growth. We believe that technology should be;
+                an enabler, not a barrier, to business success.;
+              </p>;
+              <p className=\"text-lg text-gray-600\">;"
+                Our team combines deep technical expertise with business acumen to deliver;
+                solutions that not only meet current needs but also scale for future growth.;
+              </p>;
+            </div>;
+            <div>;
+              <h2 className=\"text-4xl font-bold text-gray-900 mb-6\">Our Vision</h2>;"
+              <p className=\"text-lg text-gray-600 mb-6\">;"
+                To be the leading technology partner for businesses seeking digital;
+                transformation, known for our innovative solutions, exceptional service,and unwavering commitment to client success.;
+              </p>;
+              <p className=\"text-lg text-gray-600\">;"
+                We envision a future where every business can leverage technology to;
+                achieve its full potential and create lasting value for stakeholders.;
+              </p>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Stats Section */}
+      <section className=\"py-20 bg-gray-50\">;"
+        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 "lg":px-8\">;"
+          <div className=\"grid grid-cols-2 "md":grid-cols-4 gap-8\">;"
+            {stats.map((stat) => (ursor/automate-test-improve-and-merge-code-646c;
+}
+import { Users,, Target,, Award,, Globe,, Shield,, Zap } from 'lucide-react';'
+const "About": NextPage = () => {const values = [{"title": \'Innovation\',\"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',\"icon\": Zap;"
+    },{\"title\": \'Excellence\',\"description\": \'We maintain the highest standards of quality in everything we do.\',\"icon\": Award;"
+    },{\"title\": \'Integrity\',\"description\": \'We build trust through honest communication and ethical business practices.\',\"icon\": Shield;"
+    },{\"title\": \'Collaboration\',\"description\": \'We work closely with our clients to ensure their success is our success.\',\"icon\": Users;"
+    },{\"title\": \'Global Perspective\',\"description\": \'We bring international expertise and diverse perspectives to every project.\',\"icon\": Globe;"
+    },{\"title\": \'Results-Driven\',\"description\": \'We focus on delivering measurable outcomes that drive business growth.\',\"icon\": Target;"
+    }
+  ];
+  const team = [{\"name\": \'Sarah Johnson\',\"role\": \'CEO & Founder\',\"bio\": \'Visionary leader with 15+ years in technology consulting and digital transformation.\',\"image\": \'/team/sarah && sarah.jpg\';'
+    },{\"name\": \'Michael Chen\',\"role\": \'CTO\',\"bio\": \'Expert in cloud architecture and AI systems with deep technical expertise.\',\"image\": \'/team/michael && michael.jpg\';'
+    },{\"name\": \'Emily Rodriguez\',\"role\": \'Head of Design\',\"bio\": \'Creative director specializing in user experience and digital product design.\',\"image\": \'/team/emily && emily.jpg\';'
+    },{\"name\": \'David Kim\',\"role\": \'Lead Developer\',\"bio\": \'Full-stack developer with expertise in modern web technologies and frameworks.\',\"image\": \'/team/david && david.jpg\';'
+    }
+  ];ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
+  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },{ \"number\": \'50+\', \"label\": \'Happy Clients\' },{ \"number\": \'5+\', \"label\": \'Years Experience\' },const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' }{ \"number\": \'50+\', \"label\": \'Happy Clients\' },{ \"number\": \'5+\', \"label\": \'Years Experience\' },{ \"number\": \'24/7\', \"label\": \'Support Available\' }'
+  ];
+export default function AboutPage() {return (const stats = [{ "number": '150+', "label": 'Projects Completed' }const stats = [{ "number": '150+', "label": 'Projects Completed' },{ "number": '50+', "label": 'Happy Clients' },{ "number": '5+', "label": 'Years Experience' },{ "number": '24/7', "label": 'Support Available' }'
+  ];
+export default function AboutPage() {return (<main>;
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;"
+        <div className="container mx-auto px-4 text-center">;"
+          <h1 className="text-5xl "md": text-6xl font-bold mb-6">;"
+            }
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech Group</span>;"
+          </h1>;
+          <p className="text-xl "md":text-2xl mb-8 max-w-4xl mx-auto text-gray-200">;"
+            Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud, and modern development services.;
+          </p>;
+        </div>;
+      </section>;
+      <section className="py-20 bg-white">;"
+        <div className="container mx-auto px-4 max-w-4xl text-center">;"
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>;"
+          <p className="text-xl text-gray-600">;"
+            Empower businesses with innovative technology that drives growth, efficiency, and competitive advantage.;
+          </p>;
+        </div>;
+      </section>;
+      <section className="py-20 bg-gray-50">;"
+        <div className="container mx-auto px-4 text-center">;"
+          <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-10">Our Values</h2>;"
+          <div className="grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-8">;"
+            {[{ "title": 'Excellence', "desc": 'We deliver solutions that exceed expectations.' },{ "title": 'Integrity', "desc": 'We operate with honesty and transparency.' },{ "title": 'Innovation', "desc": 'We embrace modern technologies to solve problems.' },{ "title": 'Collaboration', "desc": 'We partner closely with clients for success.' }].map((v) => (<div key={v && v.title} className="bg-white rounded-lg p-8 shadow text-center">;"
+            {[{ "title": 'Excellence', "desc": 'We deliver solutions that exceed expectations.' },;'
+              { "title": 'Integrity', "desc": 'We operate with honesty and transparency.' },;'
+              { "title": 'Innovation', "desc": 'We embrace modern technologies to solve problems.' },;'
+              { "title": 'Collaboration', "desc": 'We partner closely with clients for success.' }'
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },
 

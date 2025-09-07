@@ -292,9 +292,36 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       console.log(`✅ Build completed successfully in ${buildDuration}ms`);
 
     } catch (error) {
+<<<<<<< HEAD
+      this.buildReport.buildAttempts.push({
+        "timestamp": new Date().toISOString(),
+        "duration": buildDuration,
+        "success": false,
+        "type": 'full_build',
+        "error": error.message});
+      this.buildReport.buildSuccess = false;
+      this.buildReport.totalBuilds += 1;
+      this.buildReport.failedBuilds += 1;
+      console.log(`❌ Build failed after ${buildDuration}"ms": `, error.message);
+      // Trigger error fixer on build failure
+      await this.triggerErrorFixer();
+    } finally {
+      this.isBuilding = false;
+    }
+  }
+  async runTypeCheck() {
+    console.log('🔍 Running type check...');
+    try {
+      execSync('npx tsc --noEmit', {
+        "encoding": 'utf8',
+        "cwd": this.projectRoot,
+        "stdio": 'pipe',
+        "timeout": 60000, // 1 minute timeout
+=======
 
       const buildDuration = Date.now() - buildStartTime;
 
+>>>>>>> origin/chore/fix-lint-and-merge
       });
 
 ursor/fix-syntax-push-and-merge-to-main-40de

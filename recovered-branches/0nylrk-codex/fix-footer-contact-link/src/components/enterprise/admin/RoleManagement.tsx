@@ -173,8 +173,13 @@ import {;
 import { Badge } from "@/components/ui/badge",;"
 import { Switch } from "@/components/ui/switch",;"
 import { toast } from "@/hooks/use-toast",;"
+<<<<<<< HEAD
+import { InfoIcon } from "lucide-react",;"
+  }
+=======
 import { InfoIcon } from "lucide-react",;
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   Tooltip,;
   TooltipContent,;
 

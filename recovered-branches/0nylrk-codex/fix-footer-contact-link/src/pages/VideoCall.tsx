@@ -26,6 +26,17 @@ import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 
 export default function VideoCall() {
+<<<<<<< HEAD
+  // useParams is typed as `any` in this environment due to missing type`  // definitions, so avoid passing a type argument to prevent TS2347.
+}
+import {use_params, use_navigate} from 'react-router-dom';'
+import {Header} from '@/components / Header';'
+import {Footer} from '@/components / Footer';'
+import {SEO} from '@/components / SEO';'
+import {VideoCallRoom} from '@/components / video / VideoCallRoom';'
+import {Button} from '@/components / ui / button';'
+import {toast} from 'sonner';    avatar?: string;'
+=======
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
 import {useState, useEffect} from 'react';
@@ -62,6 +73,7 @@ import {toast} from 'sonner';    avatar?: string;
   const [isJoining, setIsJoining] = useState(false);
   const [hasJoined, setHasJoined] = useState(false);
 
+>>>>>>> origin/chore/fix-lint-and-merge
     isMuted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;

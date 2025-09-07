@@ -640,12 +640,14 @@ main
   async performESLintFixes() {}"
 
       this.resetCounters();
-      const errors = await this.getESLintErrors();
       if (errors.length === 0) {}
 
       // Group errors by file for efficient processing;
+<<<<<<< HEAD
+=======
       const errorsByFile = this.groupErrorsByFile(errors);
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       for (const [filePath, fileErrors] of Object.entries(errorsByFile)) {}
         if (this.fixesApplied >= 100) break; // Limit fixes per run;
 
@@ -737,6 +739,8 @@ main
 
     return errors};
   groupErrorsByFile(errors) {}
+<<<<<<< HEAD
+=======
     const errorsByFile = {};
 
 <<<<<<< HEAD
@@ -763,6 +767,7 @@ main
   groupErrorsByFile(errors) {}
     const errorsByFile = {};
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     errors.forEach(error => {})
       if (!errorsByFile[error.filePath]) {}
         errorsByFile[error.filePath] = []};
@@ -1055,7 +1060,6 @@ main
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/pm2/eslint-error-fixer.cjs
 =======
         // Write fixed content;
-        const fixedContent = lines.join('\n');
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         // Verify the fix;
@@ -1194,6 +1198,8 @@ main
     
     const varName = varMatch[1];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         
     
     const varName = varMatch[1];
@@ -1317,6 +1323,7 @@ main
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> origin/chore/fix-lint-and-merge
     // Add underscore prefix to indicate intentionally unused;
     if (line.includes(varName)) {}
       return line.replace(new RegExp(`\\b${varName}\\b`,g'), `_${varName})};
@@ -1489,7 +1496,6 @@ main
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (result) {}
-        const parsed = JSON.parse(result);
 
         return parsed.length === 0; // No errors means fix was successful;
       return true} catch (error) {}

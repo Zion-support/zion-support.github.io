@@ -35,7 +35,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Check, Star, Zap, Shield, Users, Clock, ArrowRight } from 'lucide-react';
 export default function PricingPage() {
+<<<<<<< HEAD
+}
+=======
   const plans = [
+>>>>>>> origin/chore/fix-lint-and-merge
     {
       "name": "Starter",
       "description": "Perfect for small businesses and startups",
@@ -230,10 +234,51 @@ pr-12325
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
 
               <div
+<<<<<<< HEAD
+}
+key={plan.name}
+                className={`relative bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? \'ring-2 ring-blue-500 transform scale-105\' : \'';'                }`}`              >;
+                {plan.popular && (<div className=\"absolute -top-4 left-1/2 transform -translate-x-1/2\">;"
+                    <span className=\"bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium\">;"
+                      }
+                      Most Popular;
+                    </span>;
+                  </div>;
+                )}<div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">;"
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">;"
+          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">;"
+          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">;"
+ursor/automate-test-improve-and-merge-code-646c;
+            {pricingPlans.map((plan, index) => (class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { "hasError": false }}static getDerivedStateFromError(error) {return { "hasError": true }}componentDidCatch(error, errorInfo) {console.error('Error caught by "boundary":', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;'
+    }return this.props.children;
+  }
+}
+export default function PricingPage() {const plans = [;
+    {\"name\": \"Starter\",\"description\": \"Perfect for small businesses and startups\",\"price\": \"$2,999\",\"period\": \"/month\",\"icon\": Zap,\"color\": \"from-green-500 to-emerald-500\",\"features\": [;"
+        \"Up to 5 users\",\"Basic AI automation\",\"Standard security features\",\"Email support\",\"Basic analytics\",\"Monthly reports\";"
+}
+import { CheckCircle,, ArrowRight,, Users,, Zap,, Shield } from 'lucide-react';'
+        'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included';'
+}
+import { Check,, Star,, Zap,, Shield,, Users,, Clock,, ArrowRight } from 'lucide-react';'
+export default function PricingPage() {const plans = [;
+    {"name": "Starter","description": "Perfect for small businesses and startups","price": "$2,999","period": "/month","icon": Zap,"color": "from-green-500 to-emerald-500","features": [;"
+        "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports";"
+      ],\"popular\": false;"
+    },{\"name\": \"Professional\",\"description\": \"Ideal for growing businesses\",\"price\": \"$7,999\",\"period\": \"/month\",\"icon\": Shield,\"color\": \"from-cyan-500 to-blue-500\",\"features\": [\'Advanced website development\',\'Up to 15 pages\',\'Custom functionality\',\'Advanced SEO optimization\',\'Priority support\',\'6 months maintenance included\',\'Analytics integration\',\'Content management system\';'
+      "name": 'Professional',"description": 'Ideal for growing businesses',"price": '$5,000',"period": 'per month',"name": "Professional","description": "Ideal for growing businesses","price": "$7,999","period": "/month","icon": Shield,"color": "from-cyan-500 to-blue-500","features": ['Advanced website development','Up to 15 pages','Custom functionality','Advanced SEO optimization','Priority support','6 months maintenance included','Analytics integration','Content management system';'
+      ],\"popular\": true;"
+    },{\"name\": \'Enterprise\',\"description\": \'For large organizations and enterprises\',\"price\": \'$10,000\',\"period\": \'per month\',\"features\": [\'Full-stack development\',\'Unlimited pages\',\'Custom integrations\',\'Advanced security features\',\'24/7 dedicated support\',\'12 months maintenance included\',\'Performance optimization\',\'Scalable architecture\',\'API development\',\'Third-party integrations\';'
+      ],\"popular\": false;"
+    }
+  ];
+  return (<>;
+=======
                 key={plan.name}
                 className={`relative bg-white rounded-2xl shadow-lg p-8 ${
                   plan.popular ? \'ring-2 ring-blue-500 transform scale-105\' : \''
                 }`}
+>>>>>>> origin/chore/fix-lint-and-merge
               >
                 {plan.popular && (
                   <div className=\"absolute -top-4 left-1/2 transform -translate-x-1/2\">
@@ -272,7 +317,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 export default function PricingPage() {;
+<<<<<<< HEAD
+  }
+=======
   const plans = [;
+>>>>>>> origin/chore/fix-lint-and-merge
     {;
       \"name\": \"Starter\",;
       \"description\": \"Perfect for small businesses and startups\",;
@@ -308,7 +357,11 @@ import {Helmet} from 'react-helmet-async';
 import {Link} from 'react-router-dom';
 import {Check,, Star,, Zap,, Shield,, Users,, Clock,, ArrowRight} from 'lucide-react';
 export default function PricingPage() {;
+<<<<<<< HEAD
+  }
+=======
   const plans = [;
+>>>>>>> origin/chore/fix-lint-and-merge
     {;
       "name": "Starter",;
       "description": "Perfect for small businesses and startups",;

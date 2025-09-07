@@ -13,6 +13,10 @@ import React, { useState } from "react";
   DialogDescription,
   DialogFooter,
   DialogHeader,
+<<<<<<< HEAD
+DialogTitle
+  }
+=======
 
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -30,6 +34,7 @@ import {
 import React, { useState } from "react";
 
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,;
   DialogContent,;
   DialogDescription,;
@@ -159,7 +164,32 @@ import { Checkbox } from "@/components/ui/checkbox";""
 import { Switch } from "@/components/ui/switch";""
 import { toast } from "sonner";"
 interface Integration {
+<<<<<<< HEAD
+  }
+  "id": string,
+  "name": string,
+  "description": string,
+  logoUrl?: string,
+  "status": "connected" | "warning" | "disconnected","
+  lastSync?: string,
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";"
+import { Button } from "@/components/ui/button",;"
+import { Input } from "@/components/ui/input",;"
+import { Label } from "@/components/ui/label",;"
+import { Checkbox } from "@/components/ui/checkbox",;"
+import { Switch } from "@/components/ui/switch",;"
+import { toast } from "sonner",;"
+interface Integration {;
+  }
+  "id": string,;
+  "name": string,,
+  "description": string,;
+  logoUrl?: string,;
+  "status": "connected" | "warning" | "disconnected",;"
+  lastSync?: string;
+=======
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
 }
   id: string;,
   name: string;
@@ -174,8 +204,13 @@ interface Integration {
     syncJobDetails: true,
     syncApplicantData: true
   }),
+<<<<<<< HEAD
+  
+    }
+=======
 
   const handleConnectOAuth = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
     setIsConnecting(true),
 
     // Simulate OAuth flow
@@ -186,12 +221,24 @@ interface Integration {
     }, 2000),
 
     // In a real application, this would open a popup for OAuth authentication
+<<<<<<< HEAD
+    // window.open(`/api/oauth/${integration.id}`, 'oauthwidth=600,height=600')'  },
+    // In a real application, this would revoke the OAuth token
+}
+toast.info(`Disconnected from ${integration.name}`),`    onClose()
+  },
+  
+    // In a real application, this would save the sync settings
+}
+toast.success("Integration settings saved"),"
+=======
     // window.open(`/api/oauth/${integration.id}`, 'oauthwidth=600,height=600')
   },
 
   const handleDisconnect = () => {
     // In a real application, this would revoke the OAuth token
     toast.info(`Disconnected from ${integration.name}`),
+>>>>>>> origin/chore/fix-lint-and-merge
     onClose()
   },
 

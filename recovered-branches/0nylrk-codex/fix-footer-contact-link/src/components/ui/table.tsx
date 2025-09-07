@@ -5,6 +5,21 @@ import { cn } from &quot;@/lib/utils&quot;
 
 import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
+const Table = $2;
+  React.HTMLAttributes<HTMLTableElement>
+>(({ className, ...props }, ref) => (
+  <div className="relative w-full overflow-auto">
+    <table
+      ref={ref}
+      className={cn("w-full caption-bottom text-sm", className)}
+      {...props}
+/>
+  </div>
+))
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 const Table = React.forwardRef<
   HTMLTableElement
 

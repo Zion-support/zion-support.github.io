@@ -358,6 +358,19 @@ app.post ('/webhooks / zion', verifyWebhookSignature, (req, res) => {
   "created_at": "2023-06-10T15:42:31Z",
   "data": {
 
+<<<<<<< HEAD
+    "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf"
+    "created_at": "2023-06-10T15:42:31Z"
+  }
+}`;
+import React from "react",
+export function ApiWebhooks() {
+  // Sample webhook event payload
+  const newApplicationPayload = $2;
+  "created_at": "2023-06-10T15: 42: 31Z",
+  "data": {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     "application_id": "app-123456",
 
     "job_id": "job-789",

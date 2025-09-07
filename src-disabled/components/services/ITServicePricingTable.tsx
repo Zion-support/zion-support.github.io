@@ -72,18 +72,15 @@ import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { Input } from "@/components/ui/input",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Globe, Search, ArrowUpDown } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
-  const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing,
     direction: "ascending" | "descending"
   }>({
     key: "country",
     direction: "ascending"}),
 
-  const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
     // Filter by search query
     if (searchQuery) {
@@ -191,9 +188,13 @@ export function ITServicePricingTable() {
                   No countries match your search
                 </TableCell>
               </TableRow>
+<<<<<<< HEAD
+:src/components/services/ITServicePricingTable.tsx
+=======
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Globe, Search, ArrowUpDown } from 'lucide-react';
 import { Button } from "@/components/ui/button",;

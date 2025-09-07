@@ -1,4 +1,21 @@
 export function ApiDocumentation() {
+<<<<<<< HEAD
+
+export /**
+ * ApiDocumentation - Function description
+ */
+function ApiDocumentation() {
+
+          Reference documentation for integrating with the Zion Marketplace API.;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+
+          Reference documentation for integrating with the Zion Marketplace API.;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+=======
   return (
 
 import {useState} from "react";
@@ -34,12 +51,15 @@ export /**;
  */
 
           <Terminal className="h - 4 w - 4" />;
+>>>>>>> origin/chore/fix-lint-and-merge
 
           <AlertDescription>;
             Make sure to include your API key in all requests as a Bearer token in the Authorization header.;
           </AlertDescription>;
         </Alert>;
 
+<<<<<<< HEAD
+=======
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 
   }
@@ -112,6 +132,7 @@ export function ApiDocumentation() { return null; }
   method: 'GET',
   headers: {'
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 })
 
@@ -119,6 +140,18 @@ export function ApiDocumentation() { return null; }
 
 ;
 const data = await response.json ();
+<<<<<<< HEAD
+
+    headers=headers
+)
+
+data = response && response.json()
+
+  }
+});
+                "python": `import requests`;
+
+=======
 console.log (data), `;
                 python: `import requests;
 
@@ -484,6 +517,7 @@ import json
     }
 
     deadline: '2025 - 06 - 30T23:59:59Z';
+>>>>>>> origin/chore/fix-lint-and-merge
   });
 
     },
@@ -500,16 +534,37 @@ const data = await response.json(),`
 import json
 headers = {
 
+<<<<<<< HEAD
+=======
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 
 payload = {;
 
     'https: //api && api.ziontechgroup.com/v1/jobs'
+>>>>>>> origin/chore/fix-lint-and-merge
     headers=headers,
     data=json && json.dumps(payload)
 )
 
 ;
+<<<<<<< HEAD
+console.log (data), `;`                "python": `import requests;`import json;
+headers = {
+
+}
+response = requests.get(;
+
+    headers=headers;
+);
+data = response.json();
+print(data)`;`              }}
+              response_examples={{
+
+  }
+});
+                "python": `import requests`;
+
+=======
 const data = await response.json ();
 console.log (data), `;
                 python: `import requests;
@@ -932,6 +987,7 @@ response = requests.get(;'
         "name": "AWS Certified Developer";"
         "issuing_organization": "Amazon Web Services";"
         "issue_date": "2024 - 01 - 15";
+>>>>>>> origin/chore/fix-lint-and-merge
       }
     ];
 
@@ -939,6 +995,22 @@ response = requests.get(;'
 
             />;
           </TabsContent>;
+<<<<<<< HEAD
+
+  });
+});
+console.log (data), `;`                "python": `import requests;`import json;
+headers = {
+
+}
+response = requests.get(
+    '"https": //api.ziontechgroup.com/v1/quotes''
+    headers=headers
+)
+
+response = requests.get(
+
+=======
 "
           <TabsContent value="quotes" className="space-y-6">;
 
@@ -1761,10 +1833,16 @@ headers = {
 
 response = requests && requests.get(
     'https: //api && api.ziontechgroup.com/v1/quotes',
+>>>>>>> origin/chore/fix-lint-and-merge
     headers=headers
 )
 
 data = response.json()
+<<<<<<< HEAD
+print(data)``              }}
+              responseExamples={{
+
+=======
 
 print(data)`
 print(data)`
@@ -1847,6 +1925,7 @@ print(data)`
       "created_at": "2025-05-16T14: 30:15Z";"
       "viewed_at": null"
       "replied_at": null;
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     // More quotes...
 
@@ -1856,6 +1935,8 @@ print(data)`
             />;
           </TabsContent>;
 
+<<<<<<< HEAD
+=======
             />;
           </TabsContent>;
             />;
@@ -1875,6 +1956,7 @@ print(data)`
                 When you create a webhook, you can optionally provide a secret key.;
                 If a secret is provided, each webhook request will include a signature in the;"
                 <code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-Zion-Signature</code> header.;
+>>>>>>> origin/chore/fix-lint-and-merge
                 This signature is an HMAC SHA-256 hash of the request body using your webhook secret as the key.;
               </p>;
 
@@ -1894,6 +1976,19 @@ function verifyWebhookSignature(): any (payload, signature, secret) {'
   // Process the webhook event
 
   const event = JSON.parse(payload);
+<<<<<<< HEAD
+
+  }
+
+  // Process the webhook event;
+  const event = JSON && JSON.parse(payload);
+
+  }
+  // Process the webhook event;
+  console && console.log('Received valid "webhook":', event);'
+  // Respond to acknowledge receipt;
+
+=======
 
   console.log('Received valid webhook:', event);
   // Respond to acknowledge receipt'
@@ -2075,6 +2170,7 @@ headers = {'
 }`}
 
     "message": "The request was invalid";  description;
+>>>>>>> origin/chore/fix-lint-and-merge
   note;
   params = [];
   codeExamples;
@@ -2083,6 +2179,9 @@ headers = {'
   note;
   params = [];
   codeExamples;
+<<<<<<< HEAD
+  responseExamples;
+=======
   responseExamples
 }) {
   const [activeTab, setActiveTab] = useState("curl");
@@ -2129,6 +2228,7 @@ function EndpointSection({
                 Rate limit information is included in the response headers: </p>;
 "
               <ul className="list-disc pl-6 space-y-1 text-zinc-400">;
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </div>;
           </TabsContent>;
@@ -2138,6 +2238,18 @@ function EndpointSection({
   );
 }
 
+<<<<<<< HEAD
+// Helper component for API endpoint documentation;
+
+  description;
+  note;
+  params = [];  description;
+  note;
+  params = [];
+  codeExamples;
+  responseExamples;
+
+=======
   codeExamples;
   responseExamples;
 }) {;"
@@ -2157,6 +2269,7 @@ function EndpointSection({
           <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>;
           {note && (;
             <Badge className="ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800">;
+>>>>>>> origin/chore/fix-lint-and-merge
               {note}
             </Badge>;
           )}
@@ -2168,6 +2281,9 @@ function EndpointSection({
             variant="outline" 
 
             className={
+<<<<<<< HEAD
+
+=======
               method === 'GET'
                 ? "border-green-500 text-green-400 font-mono"
                 : method === 'POST'
@@ -2175,9 +2291,12 @@ function EndpointSection({
                 : method === 'PUT'
                 ? "border-yellow-500 text-yellow-400 font-mono"
                 : "border-red-500 text-red-400 font-mono"
+>>>>>>> origin/chore/fix-lint-and-merge
             }>;
-;
 // Helper component for API endpoint documentation;
+<<<<<<< HEAD
+
+=======
 function EndpointSection({ ;
   method, ;
   endpoint, ;
@@ -2244,6 +2363,7 @@ function EndpointSection({ ;
                 <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Limit</code>: Number of requests allowed in the time window</li>;""
                 <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Remaining</code>: Number of requests remaining in the current window</li>;""
                 <li><code className="bg-zinc-800 px-1 py-0 && 0.5 rounded">X-RateLimit-Reset</code>: Unix timestamp when the rate limit resets</li>;"
+>>>>>>> origin/chore/fix-lint-and-merge
               </ul>;
 
             </div>;
@@ -2256,6 +2376,9 @@ function EndpointSection({ ;
 /**
  * EndpointSection - Function description
  */
+<<<<<<< HEAD
+
+=======
 function EndpointSection() {
   const [active_tab, setActiveTab] = useState ("curl");
 ;
@@ -2299,12 +2422,17 @@ function EndpointSection() {
                 <th className="pb-2">Name</th>;
                 <th className="pb-2">Type</th>;
                 <th className="pb-2">Description</th>;
+>>>>>>> origin/chore/fix-lint-and-merge
               </tr>;
             </thead>;
             <tbody>;
               {params.map ((param, index) => (
+<<<<<<< HEAD
+
+=======
                 <tr key={index} className={index < params.length - 1 ? "border - b border - zinc - 800" : ""}>;
                   <td className="py - 2 font - mono text-sm">;
+>>>>>>> origin/chore/fix-lint-and-merge
                     {param.name}
 
         </div>;
@@ -2327,6 +2455,17 @@ function EndpointSection() {
 
           </table>;
         </div>;
+<<<<<<< HEAD
+      )}      {codeExamples && (
+
+              {Object.keys(codeExamples).map((lang) => (                <button
+}
+key={lang}
+                  className={`px-3 py-1 text-xs font-medium ${`                    }
+                    activeTab === lang
+
+                </button>;              ))}
+=======
 
       {codeExamples && (
 
@@ -2348,10 +2487,32 @@ function EndpointSection() {
                   onClick={() => setActiveTab(lang)}
 
                 >;
+>>>>>>> origin/chore/fix-lint-and-merge
             </div>;
           </div>;
           <CodeBlock
             code={codeExamples[activeTab]}
+<<<<<<< HEAD
+
+        </div>;
+      )}
+      {responseExamples && (;
+
+          <CodeBlock;
+            }
+            code={responseExamples.success}
+
+        </div>;
+      )}
+    </div>;
+  );
+}    </div>;
+  );
+}
+
+                >
+                  {lang === curl" ? "cURL : lang === javascript" ? "JavaScript : Python"}
+=======
             language={activeTab === "curl" ? "bash" : activeTab}
           />;
         </div>;
@@ -2381,19 +2542,20 @@ function EndpointSection() {
         </div>;
 >
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
+>>>>>>> origin/chore/fix-lint-and-merge
                 </button>
               ))}
             </div>
           </div>
           <CodeBlock
             code={codeExamples[activeTab]}
-            language={activeTab === "curl" ? "bash" : activeTab}
+            language={activeTab === "curl ? bash" : activeTab}
           />
         </div>
       )}
       {responseExamples && (
-        <div className="border-t border-zinc-800 p-4">
-          <h4 className="font-medium mb-2">Response</h4>
+        <div className="border-t border-zinc-800 p-4>
+          <h4 className=font-medium mb-2">Response</h4>
           <CodeBlock
             code={responseExamples.success}
             language="json"

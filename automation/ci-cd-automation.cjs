@@ -137,11 +137,18 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
   log(message) {}
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+    const logMessage = `[${timestamp}] ${message}\n`;
+    );
+    );
+    );
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

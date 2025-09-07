@@ -95,7 +95,12 @@ export function RedeemTokensCard() {;
   {;
   {;
   Gift,  ArrowRight, ExternalLink ;
+<<<<<<< HEAD
+ } from "lucide-react";"
+  }
+=======
  } from "lucide-react";
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog;
 DialogContent;
 DialogDescription;

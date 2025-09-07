@@ -29,7 +29,6 @@ import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/compo
 import {Button} from "@/components/ui/button";"
 import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";'
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from 'lucide-react';"
-import type { QuoteRequest } from "@/types/quotes";
 type QuoteRequestCardProps = {;
   quote: QuoteRequest,;
   onViewDetails: (quote: QuoteRequest) => void,;

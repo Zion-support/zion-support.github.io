@@ -24,9 +24,75 @@ const supportedLanguages = [
 
   { code: 'ar' as SupportedLanguage, name: 'العربية', flag: '🇸🇦' }
 ];
+<<<<<<< HEAD
+const "defaultLanguageContext": LanguageContextType = {
+  }
+  "currentLanguage": "currentLanguage","
+    "changeLanguage": async () => {}
+  "isRTL": false,
+supportedLanguages
+}  const { i18n, t } = useTranslation();
+  const { isAuthenticated, user } = authState;
+const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(;
+    (i18n.language?.substring(0, 2) as SupportedLanguage) |'en''
+  );
+  const [isRTL, setIsRTL] = useState(i18n.dir() === 'rtl');'
+  useEffect(() => {
+    // Set initial language from localStorage or browser
+}
+const savedLang = localStorage.getItem('zion_language') as SupportedLanguage;'
+    if (savedLang && supportedLanguages.some(lang => lang.code === savedLang)) {
+      }
+      i18n.changeLanguage(savedLang);
+      setCurrentLanguage(savedLang)
+    }
+  }, []);
+  // Update RTL status when language changes,
+useEffect(() => {
+    }
+    setIsRTL(i18n.dir() === 'rtl');'
+    document.documentElement.dir = i18n.dir();
+    document.documentElement.lang = currentLanguage;
+    // Add RTL class for Tailwind,
+if (i18n.dir() === 'rtl') {'
+      }
+      document.documentElement.classList.add('rtl')    const syncLanguageWithProfile = async () => {'
+      // Check condition
+}
+if ( {) {
+  $2
+}
+        try {
+    }
+    "isAuthenticated": boolean,;
+    "user": { id?: string } | null;
+  }
+}
+export const "LanguageProvider": React.FC<LanguageProviderProps> = ({ ;
+  }
+  children, ;
+  authState = { "isAuthenticated": false, "user": null } ;
+}) => {;
+  }
+  const { i18n, t } = useTranslation();
+    (i18n && i18n.language?.substring(0, 2) as SupportedLanguage) || 'en';'
+  );
+  const [isRTL, setIsRTL] = useState(i18n && i18n.dir() === 'rtl');'
+  useEffect(() => {;
+    // Set initial language from localStorage or browser;
+    }
+    const savedLang = localStorage && localStorage.getItem('zion_language') as SupportedLanguage;'
+    if (savedLang && supportedLanguages && supportedLanguages.some(lang => lang && lang.code === savedLang)) {;
+      }
+      i18n && i18n.changeLanguage(savedLang);
+      setCurrentLanguage(savedLang);
+    }
+  }, []);
+=======
 const defaultLanguageContext: LanguageContextType = {'
   currentLanguage: 'en'
   changeLanguage: async () => {}
+>>>>>>> origin/chore/fix-lint-and-merge
 
 interface LanguageProviderProps {
   children: ReactNode
@@ -292,7 +358,6 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({;
       });
       // If user is authenticated, update their profile
       if (isAuthenticated && user?.id) {
-        const { error } = await supabase
           .from('profiles')
           .update({ preferred_language: lang })
           .eq('id', user.id);

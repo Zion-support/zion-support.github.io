@@ -9,7 +9,6 @@ interface Speaker {
   twitter?: string
 
 import Image from "next/image",
-import { Twitter, Linkedin } from 'lucide-react'
 
 interface Speaker {
   name: string,
@@ -28,7 +27,6 @@ import Image from "next/image","
 import { Twitter, Linkedin } from 'lucide-react''
 
 import Image from "next/image",;
-import { Twitter, Linkedin } from 'lucide-react'
 
 interface Speaker {
   name: string,
@@ -65,7 +63,6 @@ interface Speaker {
 interface Speaker {
   linkedin?: string;
 
-const speakers: Speaker[] = [
   {
     name: 'Alex Zion',
     title: 'Founder & CEO',
@@ -82,8 +79,6 @@ export function SpeakersSection() {
           {speakers.map((sp) => (
             <div key={sp.name} className="text-center space-y-2">
               <Image
-import Image from "next/image",;
-import { Twitter, Linkedin } from 'lucide-react';
 interface Speaker {;
   name: string,;
   title: string,;
@@ -113,7 +108,6 @@ linkedin: '#',
 ];
   linkedin?: string
 }
-const speakers: Speaker[] = [
   {
 
     name: 'Alex Zion';

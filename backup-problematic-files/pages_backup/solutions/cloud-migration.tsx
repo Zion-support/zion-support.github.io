@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import { motion } from 'framer-motion';'
+import Link from 'next/link';'
+import Layout from '../../components/Layout';'
+import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';'
+import React from 'react';'
+import Link from 'next/link';';'
+import { Cloud 
+  }
+  Shield, 
+  Zap, 
+=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -10,6 +22,7 @@ import { Cloud,
   Shield,
   Zap,
 
+>>>>>>> origin/chore/fix-lint-and-merge
   CheckCircle,
   ArrowRight,
   BarChart3,

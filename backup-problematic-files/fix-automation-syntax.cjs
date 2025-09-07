@@ -66,7 +66,6 @@ function fixFile(filePath) {
 automationFiles.forEach(fixFile);
 <<<<<<< HEAD
     .replace(/\(\s*\{\},/g, '({};')
-    const content = fs.readFileSync(filePath, 'utf8')
 console.log('\n� All automation files have been processed!')
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

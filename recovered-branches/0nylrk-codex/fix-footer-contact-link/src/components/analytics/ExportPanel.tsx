@@ -200,6 +200,17 @@ function ExportPanel() {
           >
             Export as CSV
           </Button>
+<<<<<<< HEAD
+          <Button,
+variant="outline";"
+            className="border-zion-blue-light text-zion-slate-light""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
+import { Button } from "@/components/ui/button",;"
+import { useToast } from "@/hooks/use-toast",;"
+export function ExportPanel() {;
+  }
+  const handleExport = ("format": 'csv' | 'json') => {;'
+=======
 
 <Button
             variant="outline"
@@ -266,6 +277,7 @@ export function ExportPanel() {;
           <Button;"
             variant="outline";
 
+>>>>>>> origin/chore/fix-lint-and-merge
           >;
             Export as JSON;
           </Button>;

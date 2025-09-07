@@ -25,6 +25,8 @@ pr-12325
 
 export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
 
+<<<<<<< HEAD
+=======
         {isLoading ? (
           <div>Loading suggested talents...</div>
         ) : talents.length === 0 ? (
@@ -33,6 +35,7 @@ export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsPr
 
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const fetchSuggestedTalents = async () => {;
     setIsLoading(true);
@@ -128,8 +131,21 @@ function SuggestedTalents() {}
         title: "Error",
         description: "Failed to load suggested talents. Please try again later.",
         variant: "destructive"})
+<<<<<<< HEAD
+    } finally {
+      setIsLoading(false)
+    }
+  },
 
-  const handleViewProfile = (talentId: string) => {
+    // Implement logic to view talent profile
+    console.log($2);
+    toast({
+      title: "View Profile",
+      description: `Navigating to talent profile: ${talentId}`})
+  },
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+
     // Implement logic to view talent profile
     // // // console.log("View talent profile:", talentId),
     toast({

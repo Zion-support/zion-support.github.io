@@ -234,9 +234,12 @@ const fixes = [// Fix missing semicolons in import statements;
 
     "replacement"
     "replacement"
+<<<<<<< HEAD
+=======
 const fs = require('fs');
 const path = require('path');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> origin/chore/fix-lint-and-merge
 
     "replacement"
 =======
@@ -275,7 +278,46 @@ const path = require('path');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 function fixFinalErrors(filePath) {
   try {
+<<<<<<< HEAD
+    let modified = false;
+
+    // Fix operator.ts - fix object property syntax
+    if (filePath.includes('operator.ts')) {
+      content = content.replace(/];/g, '];');
+      modified = true;
+    }
+
+    // Fix track.ts - fix import path
+    if (filePath.includes('track.ts')) {
+      content = content.replace(/import { ensureAdmin } from '\.\.\/\.\.\/\.\.\/utils\/auth';/g, 'import { ensureAdmin } from \'../../../utils/auth\';');
+      modified = true;
+    }
+
+    // Fix applications.ts - fix import paths
+    if (filePath.includes('applications.ts')) {
+      content = content.replace(/import { rateLimit } from '\.\.\/\.\.\/utils\/rate-limit';/g, 'import { rateLimit } from \'../../utils/rate-limit\';');
+      content = content.replace(/import { readJsonFile, writeJsonFile } from '\.\.\/\.\.\/utils\/file-utils';/g, 'import { readJsonFile, writeJsonFile } from \'../../utils/file-utils\';');
+      modified = true;
+    }
+
+    // Fix nextauth.ts - remove catch block without try
+    if (filePath.includes('nextauth.ts')) {
+      content = content.replace(/} catch \(error\) \{[\s\S]*?return res\.status\(500\)\.json\(\{ error: "Internal server error" \}\);\s*}/g, '');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed final errors in: ${filePath}`);
+      return true;
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
+  return false;
+=======
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
     let modified = false;
@@ -304,7 +346,6 @@ const filesToFix = [
   'pages/api/auth/[...nextauth].ts
 ];
 
-let fixedCount = 0;
 
 
 <<<<<<< HEAD

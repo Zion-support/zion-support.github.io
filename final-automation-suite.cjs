@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+
+#!/usr/bin/env node
+
+const { execSync } = require("child_process");
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -21,11 +29,15 @@ const { execSync } = require("child_process");
 
 const fs = require('fs');
 const path = require('path');
+>>>>>>> origin/chore/fix-lint-and-merge
 class FinalAutomationSuite {
   // TODO: Implement
 }
   constructor() {
     this.projectRoot = process.cwd();
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2075,3 +2087,4 @@ module.exports = FinalAutomationSuite;
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

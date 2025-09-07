@@ -541,6 +541,28 @@ pr-12325
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+import { ArrowRight,, Award,, BarChart3,, Bot,, Brain,, CheckCircle,, Eye,, MessageSquare,, Shield,, Zap,, Cloud,, Database,, Users,, Settings,, Monitor,, Network,, FileText,, Target,, Calendar,, Smartphone,, Globe,, Lock,, TrendingUp,, Clock,, Star,, Cpu,, Wifi,, Server,, Code,, Mail,, Phone,, MapPin,, DollarSign,, Rocket,, Heart } from 'lucide-react';'
+const PageTransition = ({ children }: { "children": React && React.ReactNode }) => <div>{children}</div>;"
+export default function EnhancedServices() {const title = "Enhanced Services — Zion Tech Group";"
+  }
+        "Custom AI model development and training","Process automation with intelligent decision making","Natural language processing and chatbot integration","Predictive analytics and forecasting","Computer vision and image recognition","Real-time data processing and insights";"
+      ],"pricing": "$5,000 - $25,000/month","delivery": "4-8 weeks","category": "AI Services","benefits": "Reduce operational costs by 40% and increase efficiency by 60%","marketPrice": "Average market "price": $8,000-30,000/month","roi": ""ROI": 30 0% within 12 months";"
+    },{"title": "Enterprise Cloud Infrastructure","description": "Scalable, secure cloud solutions with 99 && 99.9% uptime guarantee and comprehensive monitoring","icon": Clou d,"features": ["Multi-cloud architecture design and implementation","Auto-scaling and load balancing","Disaster recovery and backup solutions","Security compliance (SOC 2, GDPR, HIPAA)","24/7 monitoring and support","Cost optimization and resource management";"
+      ],"pricing": "$3,000 - $15,000/month","delivery": "2-6 weeks","category": "Cloud Services","benefits": "Improve scalability by 200% and reduce infrastructure costs by 35%","marketPrice": "Average market "price": $5,000-20,000/month","roi": ""ROI": 25 0% within 18 months";"
+    },{"title": "Advanced Cybersecurity Solutions","description": "Comprehensive security framework with threat detection, prevention, and incident response","icon": Shiel d,"features": ["Zero-trust security architecture","Advanced threat detection and response","Penetration testing and vulnerability assessments","Security awareness training and compliance","Identity and access management (IAM)","Data encryption and privacy protection";"
+      ],"pricing": "$2,500 - $12,000/month","delivery": "3-6 weeks","category": "Security Services","benefits": "Reduce security incidents by 90% and ensure compliance","marketPrice": "Average market "price": $4,000-15,000/month","roi": ""ROI": 40 0% through risk mitigation";"
+    },{"title": "Micro SaaS Development Platform","description": "Custom software-as-a-service applications tailored to your specific business needs","icon": Cod e,"features": ["Custom SaaS application development","Multi-tenant architecture and scalability","API development and integration","User management and authentication","Payment processing and billing","Analytics and reporting dashboard";"
+      ],"pricing": "$4,000 - $20,000/month","delivery": "6-12 weeks","category": "Micro SaaS","benefits": "Generate recurring revenue and scale your business model","marketPrice": "Average market "price": $6,000-25,000/month","roi": ""ROI": 50 0% through recurring revenue";"
+    },{"title": "Intelligent Data Analytics Platform","description": "AI-driven business intelligence with real-time insights and predictive analytics","icon": BarChart 3,"features": ["Real-time data visualization and dashboards","Machine learning-powered insights","Predictive analytics and forecasting","Data integration from multiple sources","Custom reporting and automated alerts","Mobile-responsive analytics interface";"
+      ],"pricing": "$2,000 - $10,000/month","delivery": "4-8 weeks","category": "Analytics Services","benefits": "Improve decision-making speed by 70% and data accuracy by 85%","marketPrice": "Average market "price": $3,500-12,000/month","roi": ""ROI": 35 0% through better decisions";"
+    },{"title": "Blockchain & Web3 Solutions","description": "Decentralized applications, smart contracts, and blockchain integration services","icon": Networ k,"features": ["Smart contract development and auditing","DeFi and NFT platform development","Blockchain integration and consulting","Cryptocurrency wallet development","Tokenomics and governance design","Cross-chain interoperability solutions";"
+      ],"pricing": "$8,000 - $50,000/month","delivery": "8-20 weeks","category": "Blockchain Services","benefits": "Future-proof your business with decentralized technology","marketPrice": "Average market "price": $12,000-60,000/month","roi": ""ROI": 60 0% through innovation leadership";"
+    },{"title": "IoT Device Management Platform","description": "Comprehensive IoT monitoring, management, and analytics for connected devices","icon": Wif i,"features": ["Real-time device monitoring and alerts","Remote device configuration and updates","Data collection and analytics dashboard","Predictive maintenance scheduling","Security monitoring and threat detection","Integration with cloud platforms";"
+      ],"pricing": "$3,000 - $15,000/month","delivery": "6-12 weeks","category": "IoT Services","benefits": "Reduce device downtime by 50% and improve operational efficiency","marketPrice": "Average market "price": $5,000-18,000/month","roi": ""ROI": 28 0% through operational optimization";"
+    },{"title": "AI-Powered Customer Support","description": "Intelligent customer service with chatbots, sentiment analysis, and automated workflows","icon": MessageSquar e,"features": ["AI chatbot with natural language processing","Multi-channel support integration","Sentiment analysis and customer insights","Automated ticket routing and prioritization","Knowledge base and FAQ automation","Performance analytics and optimization";"
+      ],"pricing": "$1,500 - $8,000/month","delivery": "3-6 weeks","category": "Customer Support AI","benefits": "Handle 80% of inquiries automatically and improve satisfaction by 45%","marketPrice": "Average market "price": $2,500-10,000/month","roi": ""ROI": 32 0% through efficiency gains";"
+=======
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -693,6 +715,7 @@ export default function EnhancedServices() {;
       "benefits": "Handle 80% of inquiries automatically and improve satisfaction by 45%",;
       "marketPrice": "Average market price: $2,500-10,000/month",;
       "roi": "ROI: 32 0% through efficiency gains";
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   ];
   const stats = [{ "number": "500+", "label": "Projects Completed" },;

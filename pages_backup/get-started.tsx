@@ -4,15 +4,10 @@ export default function GetStarted() {
 
   const onboardingSteps = [
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Rocket, CheckCircle, ArrowRight, Brain, Atom;
   Shield, Zap, Users, Clock, Target, Star;
   FileText, Video, Code, Globe, Building
  } from 'lucide-react';
 export default function GetStarted() {
-  const [selectedPath, setSelectedPath] = useState<string>(''),
-  const [currentStep, setCurrentStep] = useState(1);
       step: 1,
       title: 'Choose Your Path',
       description: 'Select the technology area that best fits your needs',
@@ -70,7 +65,6 @@ description:
   Video,
   Code,
 
-  const onboardingSteps = [
     {
       step: 1,
       title: 'Choose Your Path',
@@ -100,7 +94,6 @@ description:
   }
 }
   ],
-  const technologyPaths = [
     {
       id: 'ai-consciousness',
       name: 'AI Consciousness & Emotional Intelligence',
@@ -154,7 +147,6 @@ description:
   }
 }
   ],
-  const quickStartOptions = [
     {
       title: 'Free Consultation',
       description: '30-minute session to discuss your needs',
@@ -191,19 +183,15 @@ description:
 
 export default function GetStarted() {;
   const [selectedPath, setSelectedPath] = useState<string>('');
-  const [currentStep, setCurrentStep] = useState(1);
 
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
-import {
   Rocket, CheckCircle, ArrowRight, Brain, Atom,
   Shield, Zap, Users, Clock, Target, Star,
   FileText, Video, Code, Globe, Building
 } from 'lucide-react',
 export default function GetStarted() {
-  const [selectedPath, setSelectedPath] = useState<string>(''),
   const [currentStep, setCurrentStep] = useState(1),
-  const onboardingSteps = [
     {
       step: 1,
       title: 'Choose Your Path',
@@ -233,7 +221,6 @@ export default function GetStarted() {
   }
 }
   ],
-  const technologyPaths = [
     {
       id: 'ai-consciousness',
       name: 'AI Consciousness & Emotional Intelligence',
@@ -280,6 +267,12 @@ export default function GetStarted() {
       ],
       useCases: ['Digital TransformationLegacy ModernizationData AnalyticsSecurity'],
       timeline: '4-12 months',
+<<<<<<< HEAD
+      complexity: 'Intermediate',
+    },
+  ];
+
+=======
       complexity: 'Intermediate'
       } catch (error) {
     console.error("Error:", error);
@@ -288,6 +281,7 @@ export default function GetStarted() {
 }
   ],
   const quickStartOptions = [
+>>>>>>> origin/chore/fix-lint-and-merge
     {
       title: 'Free Consultation',
       description: '30-minute session to discuss your needs',
@@ -336,7 +330,6 @@ export default function GetStarted() {
   Video,
   Code,
 
-  const onboardingSteps = [
 
     {
       step: 1,
@@ -344,8 +337,6 @@ export default function GetStarted() {
       description: 'Select the technology area that best fits your needs',
 
 export default function GetStarted() {;
-  const [selectedPath, setSelectedPath] = useState<string>('');
-  const [currentStep, setCurrentStep] = useState(1);
 
   const handlePathSelection = (pathId: string) => {;
     setSelectedPath(pathId);
@@ -371,13 +362,57 @@ export default function GetStarted() {;
 
   };
 
-  const handleNextStep = () => {
     if (currentStep < 4) {
 
   };
 
-  const handlePreviousStep = () => {
     if (currentStep > 1) {
+<<<<<<< HEAD
+:pages/get-started.tsx
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  return (
+    <div className='min-h-screen bg-black text-white'>
+      {/* Hero Section */}
+      <section className='relative pt-32 pb-20 overflow-hidden'>
+        <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20' />
+        <div className='relative z-10 container mx-auto px-4'>          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className='text-center max-w-4xl mx-auto'
+      color: 'from-orange-500 to-red-600'
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+    setSelectedPath(pathId);
+    setCurrentStep(2);
+  };
+  const handleNextStep = () => {;
+    if (currentStep < 4) {;
+      setCurrentStep(currentStep + 1);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+  const handlePreviousStep = () => {;
+    if (currentStep > 1) {;
+      setCurrentStep(currentStep - 1);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return (
     <div className="min-h-screen bg-black text-white">

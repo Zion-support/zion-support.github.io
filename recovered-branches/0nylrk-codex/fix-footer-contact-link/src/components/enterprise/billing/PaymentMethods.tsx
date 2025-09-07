@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import {;
   Card,;
   CardContent,;
@@ -7,6 +10,7 @@ import {;
   CardTitle,;
 
 import React from "react";
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
 
   Card
@@ -28,6 +32,16 @@ import {
   CardFooter,
   CardHeader,
 
+<<<<<<< HEAD
+  // Mock payment methods;
+  }
+  const paymentMethods = [;
+
+        <CardDescription>;
+          Manage your payment methods for automatic billing;
+        </CardDescription>;
+      </CardHeader>;
+=======
 import { CreditCard, Plus, Trash } from "lucide-react";
 
 } from "@/components/ui/card";
@@ -116,10 +130,23 @@ export function PaymentMethods() {;
   return (
     <Card>;
       <CardHeader>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
   );
 
   );
+<<<<<<< HEAD
+
+        {payment_methods.map ((method) => (
+          <div;
+            }
+            key={method.id}
+
+                  Expires {method.exp_month}/{method.exp_year}
+                </p>;
+              </div>;
+            </div>;
+=======
 "
       <CardContent className="space - y-4">;
 
@@ -129,8 +156,24 @@ export function PaymentMethods() {;
             className={`flex items - center justify - between p - 4 rounded - lg border ${"
               method.is_default ? "bg - muted border - primary" : "border - border";`
             }`}
+>>>>>>> origin/chore/fix-lint-and-merge
 
               </Button>;
             </div>;
           </div>))}
+<<<<<<< HEAD
       </CardContent>;
+      <CardFooter>;
+
+          Add Payment Method;
+        </Button>;
+      </CardFooter>;
+}
+}}
+  )
+}
+  );
+}
+=======
+      </CardContent>;
+>>>>>>> origin/chore/fix-lint-and-merge

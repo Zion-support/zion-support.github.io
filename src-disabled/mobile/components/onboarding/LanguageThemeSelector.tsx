@@ -170,10 +170,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 };
 
-import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
-import { Moon, Sun, Check } from 'lucide-react';
 
 import { Card, CardContent } from '@/components / ui / card';
 interface Language {}

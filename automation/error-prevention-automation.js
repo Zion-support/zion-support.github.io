@@ -60,8 +60,12 @@ class ErrorPreventionAutomation {}
   log(message) {
 
     const timestamp = new Date().toISOString(;
+<<<<<<< HEAD
+  });
+=======
   });`
     const logMessage = `[${timestamp}] ${message}\;n;`;
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log(logMessage.trim(););
 
     fs.appendFileSync(this.logFile, logMessage)}
@@ -150,9 +154,80 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       }}
   async checkTypes() {}
 
+<<<<<<< HEAD
+      return {
+        "success": false,",
+        "output": output,",
+        "errors": errorCount,",
+        "needsFix": true";,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       };,
   async checkBuild() {}
 
+<<<<<<< HEAD
+      return {
+        "success": false,",
+        "output": output,",
+        "errors": errorCount,",
+        "needsFix": true";,
+      };,
+    }
+  }
+  async checkDependencies() {}
+    try {}
+      this.log('Checking dependencies...');',
+      const result = execSync('npm outdated', { ',
+        "cwd": this.projectRoot,",
+        "encoding": 'utf8',',
+        "timeout": 30000"}),
+      return {
+        "success": true,",
+        "output": result,",
+        "outdated": 0"}
+        return {
+          "success": false,",
+          "output": output,",
+          "outdated": outdatedCount,",
+          "needsFix": true";,
+;        };,
+      } else {}
+        return {
+          "success": false,",
+          "output": error.message,",
+          "outdated": 0,",
+          "needsFix": false";,
+        };,
+      }
+    }
+  }
+  async checkSecurity() {}
+    try {}
+      this.log('Checking security...');',
+      const result = execSync('npm audit --audit-level=moderate', { ',
+        "cwd": this.projectRoot,",
+        "encoding": 'utf8',',
+        "timeout": 120000"}),
+      return {
+        "success": true,",
+        "output": result,",
+        "vulnerabilities": 0";,
+;      };,
+    } catch (error) {}
+}
+
+      const vulnerabilities = this.parseVulnerabilities(output);,
+      return {
+        "success": false,",
+        "output": output,",
+        "vulnerabilities": vulnerabilities,",
+        "needsFix": true";,
+      }}
+  }
+  async checkPerformance() {}
+    try {}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       this.log('Checking performance...');',
       // Check build size;'
       const buildDir = path.join(this.projectRoot, '.next');',
@@ -223,7 +298,6 @@ automation.start().catch(error => {}),'"
       // Apply fixes if needed
 
       results.fixes = await this.applyFixes(results.checks);
-      const endTime = Date.now();
       results.duration = endTime - startTime;
       this.lastRun = results;
 
@@ -367,8 +441,11 @@ automation.start().catch(error => {}),'"
 
       };
     } catch (error) {'
+<<<<<<< HEAD
+=======
       const output = error.stdout || error.stderr || '';
       const errorCount = (output.match(/error/g) || []).length;
+>>>>>>> origin/chore/fix-lint-and-merge
       return {"
         "success": false,"
         "output": output,"
@@ -435,8 +512,11 @@ automation.start().catch(error => {}),'"
 
       };
     } catch (error) {'
+<<<<<<< HEAD
+=======
       const output = error.stdout || error.stderr || '';
       const errorCount = (output.match(/error/g) || []).length;
+>>>>>>> origin/chore/fix-lint-and-merge
       return {"
         "success": false,"
         "output": output,"
@@ -520,9 +600,23 @@ automation.start().catch(error => {}),'"
 >};
 
       if (error.status === 1) {
+<<<<<<< HEAD
+        // npm outdated returns 1 when there are outdated packages
+  }'
+        const output = error.stdout || ;';'
+
+}
+    } catch (error) {
+>}
+  if($2) {
+
+        const output = error.stdout || ''
+        const outdatedCount = (output.match(/\n/g) || []).length - 1; // Subtract header lineursor/migrate-github-actions-to-pm2-and-clean-up-5599
+=======
 
         const output = error.stdout || '';
         const outdatedCount = (output.match(/\n/g) || []).length - 1; // Subtract header lineursor/migrate-github-actions-to-pm2-and-clean-up-5599;
+>>>>>>> origin/chore/fix-lint-and-merge
         return {"
           "success": false,"
           "output": output,"
@@ -605,8 +699,12 @@ automation.start().catch(error => {}),'"
 
       };
     } catch (error) {'
+<<<<<<< HEAD
+      const vulnerabilities = this.parseVulnerabilities(output)
+=======
       const output = error.stdout || error.stderr || '';
       const vulnerabilities = this.parseVulnerabilities(output);
+>>>>>>> origin/chore/fix-lint-and-merge
       return {"
         "success": false,"
         "output": output,"
@@ -741,7 +839,6 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
     return fixes}
   async saveReport(results) {}
-    const report = {}
       ...results,"
       "projectRoot": this.projectRoot,"
       "nodeVersion": process.version,"
@@ -798,9 +895,14 @@ return {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
 
     }, this.runInterval)}
 
+<<<<<<< HEAD
+// Start the error prevention automation
+automation.start().catch(error => {
+=======
 const automation = new ErrorPreventionAutomation;(;);
 automation.start().catch(error => {'"
 
+>>>>>>> origin/chore/fix-lint-and-merge
   console.error('Failed to start error prevention "automation": ', error);
   process.exit(1)});
 

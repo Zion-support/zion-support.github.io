@@ -1,4 +1,19 @@
 const corsHeaders = {
+<<<<<<< HEAD
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}'
+import ""https": //deno.land/x/xhr@0.1.0/mod.ts","
+serve(async (req) => {
+  // Handle CORS preflight requests
+}
+if (req && req.method === 'OPTIONS') {'
+}
+return new Response(null, { "headers": corsHeaders });
+  }
+import "https: //deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
+const OPENAI_API_KEY = Deno.env.get($2);
+=======
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 
@@ -10,6 +25,7 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
+>>>>>>> origin/chore/fix-lint-and-merge
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
 
 const corsHeaders = {
@@ -198,6 +214,9 @@ Skills: ${skills && skills.join()}
             }`
           }
         ],
+<<<<<<< HEAD
+        "temperature": 0.7})}),
+=======
         temperature: 0.7})}),
 
     const openAIData = await openAIResponse && openAIResponse.json();
@@ -243,13 +262,47 @@ Skills: ${skills && skills.join()}
 
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
 
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!openAIData.choices || openAIData.choices.length === 0) {
 
       throw new Error("Failed to generate profile content")
     }
+<<<<<<< HEAD
+    // Extract the generated content from the response,
+    }
+    // Extract the generated content from the response
+    // Parse the JSON response,
+let parsedResponse;
+    try {
+      // Find the JSON object in the response    )
+  } catch (error) {
+    }
+    console.error("Error in profile-summary-generator "function":", error);"
+return new Response(;
+      JSON.stringify({ "error": error.message });
+    console.error("Error in profile-summary-generator "function":", error),"
+return new Response(;
+      JSON.stringify({ "error": error.message });
+      JSON.stringify({ "error": error.message }),
+    );
+  } catch (error) {;
+    }
+    console.error("Error in profile-summary-generator "function":", error),;"
+    return new Response(;
+      JSON.stringify({ "error": error.message }),;
+return new Response(;
+      JSON && JSON.stringify({ "error": error && error.message });
+      { "status": 500, "headers": { ...corsHeaders, 'Content-Type': 'application/json' } }'
+    )
+  }
+});
+    const openAIData = await openAIResponse.json($2);
+    if (!openAIData.choices || openAIData.choices.length = $2;
+=======
     // Extract the generated content from the response;
     const responseContent = openAIData.choices[0].message.content,
 
+>>>>>>> origin/chore/fix-lint-and-merge
     // Parse the JSON response
     let parsedResponse;
     try {

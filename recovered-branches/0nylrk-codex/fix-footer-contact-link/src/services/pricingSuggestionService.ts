@@ -126,8 +126,13 @@ export interface TalentRateParams {;
     ;
 
     // Adjust based on job title keywords;
+<<<<<<< HEAD
+    if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;"
+      }
+=======
     const lowercaseTitle = jobTitle.toLowerCase(),;"
     if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {;
+>>>>>>> origin/chore/fix-lint-and-merge
       minRate += 20,;
       maxRate += 30;"
     } else if (lowercaseTitle.includes("junior")) {;
@@ -300,8 +305,12 @@ console.error ("Error generating budget suggestion:", error);
     // Base rate calculation based on years of experience;
     let base_rate = 25 + (years_experience * 5);
 ;
+<<<<<<< HEAD
+    // Adjust for in - demand skills;
+=======
     // Adjust for in - demand skills;'
     const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
+>>>>>>> origin/chore/fix-lint-and-merge
     const hasInDemandSkills = skills.some (skill =>;
       inDemandSkills.some (demand_skill => skill.toLowerCase ().includes (demand_skill)));
 ;

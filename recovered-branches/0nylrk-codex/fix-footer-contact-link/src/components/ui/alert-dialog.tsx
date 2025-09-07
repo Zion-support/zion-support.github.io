@@ -1,6 +1,8 @@
 import * as React from 'react';
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 
+<<<<<<< HEAD
+=======
 import {cn} from '@/lib/utils';
 
 import {buttonVariants} from '@/components/ui/button';
@@ -13,6 +15,7 @@ import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
 
+>>>>>>> origin/chore/fix-lint-and-merge
 const AlertDialogOverlay = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Overlay>
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Overlay>
@@ -37,6 +40,14 @@ const AlertDialogOverlay = React.forwardRef<
   />
 ));
 
+<<<<<<< HEAD
+const AlertDialogContent = React && React.forwardRef<;
+  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Content>,
+  React && React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.C</typeof>ontent>;
+>(({ className, ...props }, ref) => (;
+  <AlertDialogPortal>;
+    <AlertDialogOverlay />;
+=======
       'fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'
       "fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
 
@@ -71,6 +82,7 @@ const AlertDialogContent = React.forwardRef<;
 
       className={cn(
         'fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-background p-6 shadow-lg duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%] sm:rounded-lg'
+>>>>>>> origin/chore/fix-lint-and-merge
 
         className
 
@@ -95,6 +107,28 @@ const AlertDialogHeader = ({;
 }: React && React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (;
 
     className={cn(
+<<<<<<< HEAD
+
+  ...props;
+} React.HTMLAttributes<HTMLDivElement>) => (;
+  <div;
+    className={cn(;
+
+        className;
+      )}
+      {...props}
+  }
+  className
+  ...props
+}: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
+
+const AlertDialogTitle = React && React.forwardRef<;
+  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Title>,
+  React && React.Component</typeof>PropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Title>;
+>(({ className, ...props }, ref) => (;
+  <AlertDialogPrimitive&& AlertDialogPrimitive.Title
+
+=======
   className}
   ...props}
 }: React.HTMLAttributes<H</HTMLDivElement />TMLDivElement>) => (
@@ -177,11 +211,23 @@ const AlertDialogFooter = ({;
 );
 
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
+>>>>>>> origin/chore/fix-lint-and-merge
       className
     )}
     {...props}
   />;
 );
+<<<<<<< HEAD
+const AlertDialogTitle = React.forwardRef<;
+  React.ElementRef<typeof AlertDialogPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Title>;
+>(({ className, ...props }, ref) => (;
+  <AlertDialogPrimitive.Title;
+    ref={ref}
+
+));
+AlertDialogTitle.displayName = AlertDialogPrimitive.Title.displayName;
+=======
 import * as AlertDialogPrimitive from '@radix - ui / react - alert - dialog';
 ;
 import {cn} from '@/lib / utils';
@@ -351,22 +397,99 @@ const AlertDialogDescription = React.forward_ref<;
 
     className={cn ('text - sm text - muted - foreground', class_name)}
     {...props}
+>>>>>>> origin/chore/fix-lint-and-merge
 const AlertDialogDescription = React.forwardRef<;
-  React.ElementRef<typeof AlertDialogPrimitive.Description>,;
+  React.ElementRef<typeof AlertDialogPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
   <AlertDialogPrimitive.Description;
+<<<<<<< HEAD
+    ref={ref}
+
+));
+AlertDialogDescription.displayName =;
+  AlertDialogPrimitive.Description.displayName;
+const AlertDialogAction = React.forwardRef<;
+  React.ElementRef<typeof AlertDialogPrimitive.Action>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>;
+>(({ className, ...props }, ref) => (;
+  <AlertDialogPrimitive.Action;
+    ref={ref}
+
+    )}
+    {...props} />
+);
+
+const AlertDialogTitle = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Title>
+  React.Component</typeof>PropsWithoutRef<typeof AlertDialogPrimitive.Title>
+)
+
+  React.ElementRef<typeof AlertDialogPrimitive.Title>,
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Title>
+      ref = $2;
+        className
+      )}
+      {...props}
+    />
+  </AlertDialogPortal>
+))
+AlertDialogContent.displayName = $2;
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className = $2;
+      className
+    )}
+    {...props}
+  />
+)
+AlertDialogHeader.displayName = $2;
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <div
+    className = $2;
+      className
+    )}
+    {...props}
+  />
+)
+AlertDialogFooter.displayName = $2;
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Title>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Title
+    ref={ref}
+    className={cn('text-lg font-semibold, className)}
+    {...props}
+  />
+const AlertDialogDescription = React.forwardRef<
+  React.ElementRef<typeof AlertDialogPrimitive.Description>
+  React.Compon</typeof>entPropsWithoutRef<typeof AlertDialogPrimitive.Description>
+>(({ className, ...props }, ref) => (
+
+AlertDialogTitle.display_name = AlertDialogPrimitive.Title.display_name;
+const AlertDialogDescription = React.forward_ref<;
+  React.ElementRef < typeof AlertDialogPrimitive.Description>,
+  React.Compon</typeof > entPropsWithoutRef < typeof AlertDialogPrimitive.Description>;
+>(({ class_name, ...props }, ref) => (
+  <AlertDialogPrimitive.Description;    ref={ref}
+
+=======
 
     className={cn('text-sm text-muted-foreground', className)}
     {...props}
   />
+>>>>>>> origin/chore/fix-lint-and-merge
 ));
 AlertDialogDescription.displayName =
   AlertDialogPrimitive.Description.displayName;
 
     ref={ref}
 
+<<<<<<< HEAD
+=======
     className={cn ('text - sm text - muted - foreground', class_name)}
+>>>>>>> origin/chore/fix-lint-and-merge
     {...props}
     className={cn('text-lg font-semibold', className)}
 
@@ -391,6 +514,8 @@ const AlertDialogAction = React.forwardRef<
 </typeof>  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>
 >(({ className, ...props }, ref) => (
 
+<<<<<<< HEAD
+=======
     className={cn(buttonVariants(), className)}
     {...props}
   />
@@ -405,6 +530,7 @@ const AlertDialogCancel = React.forwardRef<
 
     ref={ref}
     className={cn ('text - sm text - muted - foreground', class_name)}
+>>>>>>> origin/chore/fix-lint-and-merge
     {...props}AlertDialogDescription && AlertDialogDescription.displayName =;
 
   <AlertDialogPrimitive.Action;
@@ -413,10 +539,14 @@ AlertDialogDescription && AlertDialogDescription.displayName =;
   AlertDialogPrimitive && AlertDialogPrimitive.Description.displayName;
 
 const AlertDialogAction = React && React.forwardRef<;
-  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Action>,;
+  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Action>,
 </typeof>  React && React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Action>;
 >(({ className, ...props }, ref) => (;
 
+<<<<<<< HEAD
+AlertDialogDescription.display_name =;
+  AlertDialogPrimitive.Description.display_name;
+=======
   />));
 AlertDialogDescription.display_name =;
   AlertDialogPrimitive.Description.display_name;
@@ -431,6 +561,7 @@ AlertDialogDescription.display_name =;
     {...props}
   />));
 </AlertDialogPrimitive>
+>>>>>>> origin/chore/fix-lint-and-merge
 const AlertDialogAction = React.forward_ref<;
   React.ElementRef < typeof AlertDialogPrimitive.Action>,
 </typeof>  React.ComponentPropsWithoutRef < typeof AlertDialogPrimitive.Action>;
@@ -448,6 +579,16 @@ const AlertDialogCancel = React && React.forwardRef<;
 >(({ className, ...props }, ref) => (;
 
     ref={ref}
+<<<<<<< HEAD
+    className={cn('text-sm text-muted-foreground, className)}
+    {...props}
+  />
+))
+AlertDialogDescription.displayName = $2;
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Action>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Action
+=======
 
 const AlertDialogAction = React.forwardRef<;
   React.ElementRef<typeof AlertDialogPrimitive.Action>,;
@@ -455,10 +596,19 @@ const AlertDialogAction = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <AlertDialogPrimitive.Action;
 
+>>>>>>> origin/chore/fix-lint-and-merge
     ref={ref}
     className={cn(buttonVariants(), className)}
     {...props}
   />
+<<<<<<< HEAD
+      className    className={cn(
+
+      className
+    )}
+    {...props} />;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 ));
 AlertDialogAction.displayName = AlertDialogPrimitive.Action.displayName;
 const AlertDialogCancel = React.forwardRef<
@@ -486,6 +636,22 @@ const AlertDialogCancel = React.forwardRef<
 ));
 
 AlertDialogCancel && AlertDialogCancel.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Cancel.displayName;
+<<<<<<< HEAD
+
+export {
+  }
+  AlertDialog,
+))
+AlertDialogAction.displayName = $2;
+  React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Cancel>
+>(({ className, ...props }, ref) => (
+  <AlertDialogPrimitive.Cancel
+    ref={ref}
+    className={cn($2);
+      mt-2 sm:mt-0",
+      className
+    )}
+=======
 AlertDialogCancel.displayName = AlertDialogPrimitive.Cancel.displayName;
 ;
 export {;
@@ -515,6 +681,7 @@ const AlertDialogCancel = React.forward_ref<;
 
       'mt - 2 sm:mt - 0',
       class_name)}
+>>>>>>> origin/chore/fix-lint-and-merge
     {...props}
   />));
 AlertDialogCancel.display_name = AlertDialogPrimitive.Cancel.display_name;
@@ -533,6 +700,8 @@ export {
   AlertDialogDescription,
   AlertDialogAction,
 
+<<<<<<< HEAD
+=======
 export {;
   AlertDialog,;
   AlertDialogPortal,;
@@ -544,6 +713,7 @@ export {;
   AlertDialogTitle,;
   AlertDialogDescription;
   AlertDialogAction;
+>>>>>>> origin/chore/fix-lint-and-merge
   AlertDialogCancel}
 ;
 

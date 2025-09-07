@@ -70,11 +70,28 @@ class BuildOptimizer {
 
       return { enabled: true };
   async checkMinification() {
+<<<<<<< HEAD
+    try {
+      this.log('🗜️  Checking minification...');
+      let minificationEnabled = true;
+      if (fs.existsSync(nextConfigPath)) {
+        minificationEnabled = !configContent.includes('swcMinify: false');
+      }
+      return {
+        enabled: minificationEnabled
+      };
+    } catch (error) {
+      this.log(`Minification check failed: ${error.message}`);
+      return { enabled: true };
+    }
+  }
+=======
   // TODO: Implement
 
   // TODO: Implement
         enabled: minificationEnabled;
 
+>>>>>>> origin/chore/fix-lint-and-merge
   async optimizeBundle() {
   // TODO: Implement
 
@@ -144,15 +161,31 @@ optimizer.run().catch(error => {)
  * Optimizes build process and bundle size;
  */"
 
+<<<<<<< HEAD
+
+class BuildOptimizer {}
+  constructor() {}
+    this.processName = process.env.PM2_PROCESS_NAME || 'build-optimizer';
+    this.optimizeBundles = process.env.OPTIMIZE_BUNDLES === 'true';
+    this.treeShaking = process.env.TREE_SHAKING === 'true';
+    this.codeSplitting = process.env.CODE_SPLITTING === 'true';
+    this.minification = process.env.MINIFICATION === 'true';
+    this.logFile = path.join(__dirname, '../../logs/pm2/build-optimizer.log');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     this.ensureLogDir();
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { "recursive": true }")
   log(message) {}
+<<<<<<< HEAD
+
+=======
     const timestamp = new Date().toISOString();`;
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );`;
+>>>>>>> origin/chore/fix-lint-and-merge
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
   async analyzeBundleSize() {}
@@ -172,6 +205,16 @@ optimizer.run().catch(error => {)
           "size": f.size,
           "sizeMB": (f.size / 1024 / 1024).toFixed(2);"
         }));
+<<<<<<< HEAD
+      };
+    } catch (error) {}
+      this.log(`Bundle analysis "failed": ${error.message}`);
+      return { "error": error.message };
+    };
+  };
+  getBundleFiles(dir) {}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       return { "error": error.message };"
   getBundleFiles(dir) {}
@@ -219,6 +262,15 @@ optimizer.run().catch(error => {)
       this.log('Tree shaking check disabled');
       return { "checked": false };"
 
+<<<<<<< HEAD
+      
+      
+      // This is a simplified check - in practice, you'd analyze the bundle;
+      if (!fs.existsSync(distDir)) {}
+        return { "checked": false, "error": 'No dist directory found' };
+      };
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       // Look for unused code patterns;
       let unusedCodeFound = 0;
 
@@ -234,6 +286,16 @@ optimizer.run().catch(error => {)
     if (!this.codeSplitting) {}"
       this.log('Code splitting check disabled');
 
+<<<<<<< HEAD
+      
+      
+      if (!fs.existsSync(distDir)) {}
+        return { "checked": false, "error": 'No dist directory found' };
+      };
+      const chunkFiles = bundleFiles.filter(f => f.name.includes('chunk') || f.name.includes('vendor'));
+      
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       this.log(`Found ${chunkFiles.length} chunk files`);
       `;
 

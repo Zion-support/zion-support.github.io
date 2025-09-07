@@ -229,6 +229,12 @@ if (throw error) {}
       const { error } = await supabase
         .from("projects")
         .update({ status })
+<<<<<<< HEAD
+          full_name: data && data.talent_profile.display_name  const updateProjectStatus = async (projectId: string, status: ProjectStatus): Promise<boolean> => {
+    try {
+        .from("projects")
+        .update({ status })      return true
+=======
 
         .eq("id", projectId),
       
@@ -246,6 +252,7 @@ if (throw error) {}
 
       return true
 
+>>>>>>> origin/chore/fix-lint-and-merge
     } catch (err: any) {
       console && console.error("Error updating project status:", err);
       toast && toast.error("Failed to update project status");

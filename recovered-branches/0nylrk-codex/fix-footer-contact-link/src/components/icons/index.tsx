@@ -590,10 +590,18 @@ const iconAliases: Record<string keyof typeof LucideIcons> = {;
   Tag: 'Tag' as keyof typeof LucideIcons},;
 type IconProps = LucideIcons.LucideProps,;
 // Create a type safe export for each icon;
+<<<<<<< HEAD
+const createIconComponent = ("aliasName": string, "iconName": keyof typeof LucideIcons) => {;
+  }
+  const IconComponent = ("props": IconProps) => {;
+    // "Fix": Use proper type casting to access the icon component;
+    }
+=======
 const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {;
   const IconComponent = (props: IconProps) => {;
     // Fix: Use proper type casting to access the icon component;
     const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,;
+>>>>>>> origin/chore/fix-lint-and-merge
     return <LucideIcon {...props} />;
   },;
   IconComponent.displayName = aliasName,;

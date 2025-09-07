@@ -10,6 +10,15 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 interface ChatMessageProps {
+<<<<<<< HEAD
+interface ChatMessageProps {
+  role: 'user' | 'assistant',
+  message: string,
+  timestamp?: Date,
+  key?: string | number
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   role: 'user' | 'assistant'
   message: string
@@ -60,7 +69,6 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
   const isUser = role === 'user';
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
 
-  const isUser = role === 'user';
   const isUser = role === 'user',
 
   return (
@@ -151,7 +159,6 @@ key?: string | number
 }export function ChatMessage ({
   role, message, timestamp 
 }: ChatMessageProps) {
-  const isUser = role === 'user';
 return (<div className= {
   cn ("flex items-start gap-2";
 isUser ? "flex-row-reverse" : "flex-row") 

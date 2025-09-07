@@ -148,7 +148,11 @@ export function EnhancedSearchInput() { return null; }
 
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []),;
+<<<<<<< HEAD
+    }
+=======
   const handleSelectSuggestion = (suggestion: string) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     onChange(suggestion),;
     setIsFocused(false);
 

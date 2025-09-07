@@ -47,9 +47,13 @@ interface RaiseDisputeButtonProps {;
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
 }
+<<<<<<< HEAD
+import { DisputeForm } from "./DisputeForm";
+=======
 
 import { useNavigate } from "react-router-dom";
 import { ShieldAlert } from "lucide-react";
+>>>>>>> origin/chore/fix-lint-and-merge
 interface RaiseDisputeButtonProps {
 
   projectId: string
@@ -81,10 +85,32 @@ interface RaiseDisputeButtonProps {
 
   const handleDisputeCreated = (disputeId: string) => {
 
+<<<<<<< HEAD
+  },
+  
+
+    setIsDialogOpen(false)
+    navigate(`/dashboard/disputes/${disputeId}`)
+  }
+export function RaiseDisputeButton({ 
+  projectId,
+  milestoneId, 
+  variant = $2;
+  size,
+  className 
+}: RaiseDisputeButtonProps) {
+  const [isDialogOpen, setIsDialogOpen] = useState($2);
+  const navigate = useNavigate($2);
+    setIsDialogOpen($2);
+    navigate(`/dashboard/disputes/${disputeId}`)
+  },
+  
+=======
     setIsDialogOpen(false)
     navigate(`/dashboard/disputes/${disputeId}`)
   }
 
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <>
       <Button;

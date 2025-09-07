@@ -58,12 +58,29 @@ export async function createNotification({;
   void actionText,
   try {
     // Call the create_notification database function
+<<<<<<< HEAD
+}
+      }
+      "_user_id": userId;
+      "_title": title;
+      "_message": message;
+      "_type": type;
+    "_related_id": relatedId
+    });
+    if (error) throw error;
+      "_user_id": userId,
+      "_title": title,
+      "_message": message,
+      "_type": type,
+      "_related_id": relatedId
+=======
 
       _user_id: userId,
       _title: title,
       _message: message,
       _type: type,
       _related_id: relatedId
+>>>>>>> origin/chore/fix-lint-and-merge
     }),
     
     if (error) throw error,

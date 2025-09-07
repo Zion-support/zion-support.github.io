@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+</div>) ) 
+}</div> </EnhancedLayout>) 
+}
+  );
+}
+    </EnhancedLayout>;
+);
+}
+=======
 
 
 import EnhancedLayout from '../components/layout/EnhancedLayout';
@@ -20,10 +30,14 @@ key={c}
 }
           </div>;
         ))}
+>>>>>>> origin/chore/fix-lint-and-merge
 
       </div>
     </EnhancedLayout>
 
   );
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge

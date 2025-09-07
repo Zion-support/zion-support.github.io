@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
 const { execSync } = require('child_process')
     this.reportFile = path.join(this.projectRoot,performance-monitor-report.json')
     this.log(' Checking build performance')
@@ -11,3 +16,4 @@ const { execSync } = require('child_process')
 
 
 
+>>>>>>> origin/chore/fix-lint-and-merge

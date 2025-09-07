@@ -112,6 +112,21 @@ function SharedInbox() {}
       unread: false;
     }
   ],
+<<<<<<< HEAD
+  return (import React from "react";"
+import { Badge } from "@/components/ui/badge",;"
+export function SharedInbox() {;
+  // Mock messages;
+  }
+    {;
+      }
+      "id": "msg-1",;"
+      "from": "John Smith",;"
+      "subject": "Interview Scheduled",;"
+      "preview": "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",;"
+      "timestamp": "2h ago",;"
+      "unread": true;
+=======
 
 import React from "react",;
 
@@ -119,6 +134,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 
 import { Badge } from "@/components/ui/badge",;
 export function SharedInbox() { return null; }
+>>>>>>> origin/chore/fix-lint-and-merge
     },;
     {;"
       id: "msg-2",;"

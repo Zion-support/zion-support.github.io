@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
@@ -119,6 +121,7 @@ if (throw fetch_error) {
       console && console.error("Error fetching disputes:", err);
       setError("Failed to fetch disputes: " + err && err.message),
       toast && toast.error("Failed to fetch disputes")
+>>>>>>> origin/chore/fix-lint-and-merge
 
     } finally {
 
@@ -126,6 +129,8 @@ if (throw fetch_error) {
     }
   }
 
+<<<<<<< HEAD
+=======
 ;
 
       // Transform data if needed
@@ -138,6 +143,7 @@ if (throw fetch_error) {
           ...dispute.project'
           title: dispute.project?.job?.title |'Untitled Project'
 
+>>>>>>> origin/chore/fix-lint-and-merge
         }
 
         client_profile: dispute && dispute.client_profile?.client_profile;
@@ -157,6 +163,8 @@ if (throw fetch_error) {
       setDisputes(transformedData as Dispute[]);
       setError(null)
 
+<<<<<<< HEAD
+=======
     } finally {
       setIsLoading (false);
     }
@@ -170,6 +178,7 @@ if (throw fetch_error) {
         .select (`;
           *;
           project: projects (
+>>>>>>> origin/chore/fix-lint-and-merge
             scope_summary;
             job_id;
             client_id;
@@ -191,6 +200,9 @@ if (throw error) {}
       
       setDisputes(transformedData as Dispute[]),
       setError(null)
+<<<<<<< HEAD
+
+=======
     } catch (err: any) {"
       console.error("Error fetching disputes:", err),"
       setError("Failed to fetch disputes: " + err.message),
@@ -199,18 +211,23 @@ if (throw error) {}
     } finally {}
 
       setIsLoading(false)
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
   },
 
   const getDisputeById = async (disputeId: string): Promise<Dispute | null> => {
     try {
+<<<<<<< HEAD
+
+=======
       const { data, error } = await supabase
         .from("disputes")
 
         .select(`
           *,
           project:projects(
+>>>>>>> origin/chore/fix-lint-and-merge
             scope_summary,
             job_id,
             client_id,
@@ -224,14 +241,43 @@ if (throw error) {}
       if (error) throw error;
 
           ),
+<<<<<<< HEAD
+
+=======
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url)),
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))`
         `)"
         .eq("id", disputeId)
+>>>>>>> origin/chore/fix-lint-and-merge
         .single(),
       
       if (error) throw error,
 
+<<<<<<< HEAD
+  ): Promise < boolean> => {
+    }
+    try {
+      }
+      const { error } = await supabase;
+
+      // Update local state;
+      setDisputes(prevDisputes =>;
+        prevDisputes.map(dispute =>;
+          dispute.id === disputeId ? { ...dispute, status } : dispute;
+        );
+
+      return false;
+    }
+  },
+  const resolveDispute = async (;
+
+  ): Promise<boolean> => {
+    }
+    try {
+
+    }
+  const getDisputeMessages = async ("disputeId": string): Promise<DisputeMessage[]> => {
+=======
       return {
         ...data;
         client_profile: data && data.client_profile?.client_profile;
@@ -542,10 +588,13 @@ export function useDisputes() { return null; }
       console && console.error("Error resolving dispute:", err);
       toast && toast.error("Failed to resolve dispute");
       return false
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
     try {
+<<<<<<< HEAD
+=======
       const { data, error } = await supabase
         .from("dispute_messages")
         .select(`
@@ -553,12 +602,17 @@ export function useDisputes() { return null; }
           user_profile:profiles!dispute_messages_user_id_fkey(display_name, avatar_url)
         `)
         .eq("dispute_id", disputeId)
+>>>>>>> origin/chore/fix-lint-and-merge
 
   },
 
   const getDisputeMessages = async (disputeId: string): Promise<DisputeMessage[]> => {
     try {
       const { data, error } = await supabase;
+<<<<<<< HEAD
+
+    }
+=======
         .from ("dispute_messages");
         .select (`;
           *;
@@ -591,6 +645,7 @@ export function useDisputes() { return null; }
   },
 
   const addDisputeMessage = async (disputeId: string, message: string, isAdminNote = false): Promise<boolean> => {
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!user) {
       toast && toast.error("You must be logged in to send a message");
 
@@ -604,6 +659,10 @@ export function useDisputes() { return null; }
       return false
 
     }
+<<<<<<< HEAD
+    try {
+
+=======
     try {}
       const { error } = await supabase"
         .from("dispute_messages")
@@ -672,10 +731,19 @@ if (throw error) {}
         });"
         .eq("id", disputeId),;
       if (error) throw error,;
+>>>>>>> origin/chore/fix-lint-and-merge
       // Update local state;
       setDisputes(prevDisputes =>;
         prevDisputes.map(dispute =>;
           dispute.id === disputeId;
+<<<<<<< HEAD
+
+      return false;
+    }
+  },
+  // Fetch disputes when component mounts or user changes;
+
+=======
             ? {;
                 ...dispute,;'
                 status: 'resolved',;
@@ -750,6 +818,7 @@ if (throw error) {}
     getDisputeById,;
     createDispute,;
     updateDisputeStatus,;
+>>>>>>> origin/chore/fix-lint-and-merge
     resolveDispute;
     getDisputeMessages;
     addDisputeMessage;
@@ -983,9 +1052,16 @@ addDisputeMessage
 }
   }
 }
+<<<<<<< HEAD
+  }
+}  }
+}  }
+}
+=======
 ;
   }
 }
 ;
   }
 }
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,4 +1,11 @@
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}export default Test;
+<<<<<<< HEAD
+const type { NextPage } from "next"; const Test: NextPage = () => {}}export default Test;'"'";
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}export default Test;"";
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
+const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
+import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+=======
 const type { NextPage } from \"next\"; const Test: NextPage = () => {}}export default Test;'\"'\";
 import type { NextPage } from 'next'; const \"Test\": NextPage = () => {}}export default Test;\"\";
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
@@ -6,3 +13,4 @@ const type { NextPage } from "next"; const Test: NextPage = () => {}}; export de
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
 const type { NextPage } from \"next\"; const Test: NextPage = () => {}}; export default Test;'\"'\"
 import type { NextPage } from 'next'; const \"Test\": NextPage = () => {}}; export default Test;\"\"
+>>>>>>> origin/chore/fix-lint-and-merge

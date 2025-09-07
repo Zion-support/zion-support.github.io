@@ -136,6 +136,56 @@ import CodeBlock from "./CodeBlock",
     setSelectedScopes([]);
     setShowCreateDialog(false)
 
+<<<<<<< HEAD
+    )
+  },
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";"
+import { format } from "date-fns";"
+import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;"
+import { Button } from "@/components/ui/button",;"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;"
+import { Input } from "@/components/ui/input",;"
+import { Checkbox } from "@/components/ui/checkbox",;"
+import { Label } from "@/components/ui/label",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;"
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;"
+import CodeBlock from "CodeBlock";"
+export function ApiKeysManager() {;
+  }
+  const {;
+    }
+    keys,;
+    loading,;
+    newApiKey,;
+    fetchApiKeys,;
+    createApiKey,;
+    regenerateApiKey,;
+    revokeApiKey,;
+    clearNewApiKey;
+  } = useApiKeys(),;
+  // Create key form state;
+  // Load keys on mount;
+  useState(() => {;
+    }
+    fetchApiKeys();
+  }),;
+  const handleCreateKey = async () => {;
+    }
+    if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;"
+    setShowCreateDialog(false);
+    setKeyName("");"
+    setSelectedScopes([])
+};  const handleRevokeKey = async ("keyId": string) => {;
+    }
+    await revokeApiKey(keyId),;
+    setShowDeleteConfirm(null)
+};
+    <Card className="bg-zinc-900 border-zinc-800 text-white">;"
+      <CardHeader>;
+=======
   return ("
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>"
@@ -188,6 +238,7 @@ import { useState } from "react",;
 
     <Card className="bg-zinc-900 border-zinc-800 text-white">;
       <CardHeader>;"
+>>>>>>> origin/chore/fix-lint-and-merge
         <CardTitle className="text-xl flex items-center">;"
           <Key className="mr-2" size={20} /> API Keys;
         </CardTitle>;"

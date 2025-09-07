@@ -1,4 +1,22 @@
 <<<<<<< HEAD
+
+
+=======
+#!/"usr/bin/env"
+#!/usr/bin/env
+const { execSync, spawn } = require("child_process)
+const fs = require(fs")
+const path = require("path)
+const { promisify } = require(util")
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+  console.error("Error: ")
+
+  console.error("Error: ")
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -196,15 +214,23 @@ const { promisify } = require("util")
 =======
 <<<<<<< HEAD
   console.error(""Error": ")
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
-  console.error(""Error": ")
+  console.error("Error: ")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======
     this.logDir = path.join(this.projectRoot, "automation/logs)
+<<<<<<< HEAD
+    this.reportsDir = path.join(this.projectRoot, automation/reports)
+// console.log( Master Error Detector & Fixer Started)
+    console.log("� Project "Root: ${this.projectRoot})"
+
+
+=======
     this.reportsDir = path.join(this.projectRoot, automation/reports")
 // console.log( Master Error Detector & Fixer Started")
     console.log("� Project "Root": ${this.projectRoot}")"
@@ -212,3 +238,4 @@ const { promisify } = require("util")
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

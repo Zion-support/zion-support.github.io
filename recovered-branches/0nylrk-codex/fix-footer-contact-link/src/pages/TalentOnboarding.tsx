@@ -15,7 +15,6 @@ import { useAuth } from "@/hooks/useAuth";
 
 import { Navigate } from "react-router-dom";
 export default function TalentOnboarding() {
-  const { user, isLoading } = useAuth();
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 export default function TalentOnboarding() {
@@ -25,6 +24,13 @@ export default function TalentOnboarding() {
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
 
+<<<<<<< HEAD
+import { Footer } from "@/components/Footer",
+import { useAuth } from "@/hooks/useAuth";
+export default function TalentOnboarding() {
+  const { user, isLoading } = useAuth($2);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
 

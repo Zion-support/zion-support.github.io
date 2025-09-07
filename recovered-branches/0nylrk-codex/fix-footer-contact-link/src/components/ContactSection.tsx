@@ -18,6 +18,51 @@ export /**;
  * ContactSection - Function description;
  */
 
+<<<<<<< HEAD
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1">"
+                    Message
+                  </label>
+                  <textarea,
+id="message""
+                    rows={4}
+                    className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light "focus": border-zion-purple "focus":ring-1 "focus":ring-zion-purple text-white""
+                  ></textarea>
+                </div>
+                <div>
+                  <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark "hover":from-zion-purple-light "hover":to-zion-purple text-white">"
+                    Send Message
+                  </Button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  )
+import { GradientHeading } from "@/components/GradientHeading";"
+export function ContactSection() {;
+  }
+  return (;
+    <section className="py-20 bg-zion-blue" id="contact">;"
+      <div className="container mx-auto px-4 "sm":px-6 "lg":px-8">;"
+        <div className="grid grid-cols-1 "lg":grid-cols-2 gap-16 items-center">;"
+          <div>;
+            <GradientHeading>Get In Touch</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl mb-8">;"
+              We have the equipment, the parts, and the maintenance services ready for you — right now. Contact us today.;
+            </p>;
+            <div className="flex items-center mb-6">;"
+              <div className="mr-4 p-2 bg-zion-purple/20 rounded-full text-zion-cyan">;"
+                <Mail className="h-6 w-6" />;"
+              </div>;
+              <div>;
+                <p className="text-white font-semibold">Email Us</p>;"
+                <a href=""mailto":commercial@ziontechgroup.com" className="text-zion-cyan "hover":text-zion-purple transition-colors">;"
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                   commercial@ziontechgroup.com;
                 </a>;
               </div>;

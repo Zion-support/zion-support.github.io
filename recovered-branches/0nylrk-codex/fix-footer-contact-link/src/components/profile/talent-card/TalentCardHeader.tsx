@@ -10,6 +10,16 @@ interface TalentCardHeaderProps {
   availabilityType: string,;
   yearsExperience: number;
 }
+<<<<<<< HEAD
+  availabilityType;import React from "react","
+interface TalentCardHeaderProps {
+  }
+  "fullName": string,
+"professionalTitle": string,
+profilePicture?: string;
+  "availabilityType": string,;
+  "yearsExperience": number;
+=======
 
 export function TalentCardHeader(): any ({ ;
   fullName;
@@ -30,6 +40,7 @@ interface TalentCardHeaderProps {}
   profilePicture?: string;
   availabilityType: string,;
   yearsExperience: number;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
   availabilityType;
 

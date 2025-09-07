@@ -2,6 +2,8 @@
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 const fs = require('fs');
 const path = require('path');
 
@@ -340,3 +342,4 @@ import fs from 'fs'; import path from 'path'; import { fileURLToPath } from 'url
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> main
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+>>>>>>> origin/chore/fix-lint-and-merge

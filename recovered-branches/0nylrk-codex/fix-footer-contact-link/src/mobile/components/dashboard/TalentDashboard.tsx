@@ -210,6 +210,19 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
     </div>
 
   )
+<<<<<<< HEAD
+import React from "react";"
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";"
+import {Button} from "@/components/ui/button";"
+import {Badge} from "@/components/ui/badge";"
+import {ChevronRight, FileText, Image, Clock, Zap, BookOpen} from "lucide-react";"
+import {Link} from "react-router-dom";"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";"
+import { Button } from "@/components/ui/button",;"
+import { Badge } from "@/components/ui/badge",;"
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react",;"
+    <div className="space-y-6 px-4 pb-24">;"
+=======
 }
 
 import React from "react",;
@@ -220,6 +233,7 @@ import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-reac
 import { Link } from "react-router-dom";
 
     <div className="space-y-6 px-4 pb-24">;
+>>>>>>> origin/chore/fix-lint-and-merge
       <section>;
         <div className="flex items-center justify-between mb-4">;
           <h2 className="text-lg font-medium">New Job Matches</h2>;

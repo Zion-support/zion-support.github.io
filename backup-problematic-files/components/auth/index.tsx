@@ -8,7 +8,6 @@ export default function AuthIndexPage() {
     </div>
 
   )
-import React from 'react';
 export default function AuthIndexPage() {;
   return (;
     <div className="container mx-auto px-4 py-10">;

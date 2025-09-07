@@ -22,8 +22,14 @@ interface SkillsSectionProps {;
 ;
 export function SkillsSection({ skills }: SkillsSectionProps) {;
   // Group skills by category;
+<<<<<<< HEAD
+  }
+    }
+    const category = skill.category || 'Other',;'
+=======
   const skillsByCategory = skills.reduce((acc, skill) => {;
     const category = skill.category || 'Other',;
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!acc[category]) {;
       acc[category] = [];
     }

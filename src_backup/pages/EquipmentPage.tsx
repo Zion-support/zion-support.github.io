@@ -20,7 +20,6 @@ import {
   RefreshCw,;
 } from 'lucide-react';
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
-import {
   generateDatacenterEquipment,
   getEquipmentMarketStats,
   getRecommendedEquipment,;

@@ -119,6 +119,37 @@ interface AIListingGeneratorProps {;
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
   const [isLoading, setIsLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
+<<<<<<< HEAD
+const { toast } = useToast(),;
+const [title, setTitle] = useState(initialValues.title || ""),;"
+const [category, setCategory] = useState(initialValues.category || ""),;"
+const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;"
+const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;"
+const [isLoading, setIsLoading] = useState(false),;
+const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),;
+  const handleInputChange = ("e": { "target": { "value": string } }, "field": string) => {
+    }
+    switch(field) {
+      }
+      case 'title':'
+        setTitle(e.target.value),
+break,;
+      case 'category':'
+        setCategory(e.target.value),
+break,;
+      case 'keyFeatures':'
+        setKeyFeatures(e.target.value),
+break,;
+      case 'targetAudience':'
+        setTargetAudience(e.target.value)
+break;
+    }
+  const [category, setCategory] = useState(initialValues && initialValues.category || "");"
+  const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");"
+  const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");"
+  const handleInputChange = ("e": { "target": { "value": string } }, "field": string) => {;
+    }
+=======
   const { toast } = useToast(),"
   const [title, setTitle] = useState(initialValues.title || ""),"
   const [category, setCategory] = useState(initialValues.category || ""),"
@@ -134,6 +165,7 @@ interface AIListingGeneratorProps {;
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     switch(field) {;
       case 'title':;
         setTitle(e && e.target.value);
@@ -191,10 +223,57 @@ interface AIListingGeneratorProps {;
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
+<<<<<<< HEAD
+        }
+        "title": "title","
+    "description": "Please provide at least a title and category.""
+"variant": "destructive";"
+      });
+        break;      });
+      return;
+    }
+    try {
+      }
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {'
+        }
+        "body": { title, category, key_features, target_audience }
+      });
+      if (error) {
+}
+throw new Error(error.message);
+      }),
+return;
+;
+export function AIListingGenerator() {;
+  }
+    }
+    switch(field) {;
+      }
+      case 'title':;'
+        setTitle(e.target.value),;
+        break,;
+      case 'category':;'
+        setCategory(e.target.value),;
+        break,;
+      case 'keyFeatures':;'
+        setKeyFeatures(e.target.value),;
+        break,;
+      case 'targetAudience':;'
+        setTargetAudience(e.target.value),;
+        break;
+    if (!title || !category) {;
+      }
+      toast({;
+        }
+        "title": "Missing required fields",,"
+  "description": "Please provide at least a title and category.",;"
+        "variant": "destructive";"
+=======
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
 
+>>>>>>> origin/chore/fix-lint-and-merge
       });
       return;
     }
@@ -300,6 +379,19 @@ if ( {) {}
       if (error) {;
         throw new Error(error.message);
 
+<<<<<<< HEAD
+    if (!title || !category) {
+      toast($2);
+      return
+    }
+
+    setIsLoading($2);
+    try {
+      const { data, error } = await supabase.functions.invoke($2);
+      if (error) {
+        throw new Error(error.message)
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       }
       if (data.error) {}
         throw new Error(data.error)

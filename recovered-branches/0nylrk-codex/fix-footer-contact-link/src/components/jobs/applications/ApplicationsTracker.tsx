@@ -15,6 +15,33 @@ export function ApplicationsTracker() {
     "all",;
 
   );
+<<<<<<< HEAD
+import { useState } from "react","
+import { useJobApplications } from "@/hooks/useJobApplications","
+import { ApplicationCard } from "./ApplicationCard","
+import { LoadingState } from "./LoadingState","
+import { EmptyState } from "./EmptyState","
+import { ErrorState } from "./ErrorState","
+import { Button } from "@/components/ui/button","
+import { ApplicationStatus } from "@/types/jobs","
+export function ApplicationsTracker() {
+}
+const { applications, isLoading, error } = useJobApplications(),;
+const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all'),;'
+  if (isLoading) {
+}
+return <LoadingState />;
+import { useState } from "react";"
+import { ApplicationCard } from "./ApplicationCard",;"
+import { LoadingState } from "./LoadingState",;"
+import { EmptyState } from "./EmptyState",;"
+import { ErrorState } from "./ErrorState",;"
+import { Button } from "@/components/ui/button",;"
+import { ApplicationStatus } from "@/types/jobs",;"
+export function ApplicationsTracker() {;
+  }
+  const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');'
+=======
 
 import { useState } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -54,6 +81,7 @@ import { ApplicationStatus } from "@/types/jobs",;
 export function ApplicationsTracker() { return null; }
   const { applications, isLoading, error } = useJobApplications(),;'
   const [statusFilter, setStatusFilter] = useState<ApplicationStatus | 'all'>('all');
+>>>>>>> origin/chore/fix-lint-and-merge
   if (isLoading) {;
     return <LoadingState />;
   }

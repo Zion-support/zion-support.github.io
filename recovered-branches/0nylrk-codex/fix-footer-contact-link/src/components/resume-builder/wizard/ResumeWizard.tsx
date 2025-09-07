@@ -9,6 +9,40 @@ import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
 import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
 '
 import {Button} from '@/components / ui / button';'
+<<<<<<< HEAD
+import {Resume} from '@/types / resume';'
+// Import components;import { useState, useEffect  } from 'react';'
+import { useAuth  } from '@/hooks/useAuth';'
+import { useResume  } from '@/hooks/useResume';'
+import { Tabs  } from '@/components/ui/tabs';'
+import { Card, CardContent  } from '@/components/ui/card';'
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';'
+import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';'
+import { Button  } from '@/components/ui/button';'
+import { Resume  } from '@/types/resume';'
+// Import components,
+import { ResumeProgress  } from './ResumeProgress';'
+import { EmptyResumeState  } from './EmptyResumeState';'
+import { CreateResumeForm  } from './CreateResumeForm';'
+import { ResumeSteps  } from './ResumeSteps';'
+import { ResumeStepContent  } from './ResumeStepContent';'
+import { useResumeProgress  } from './useResumeProgress';'
+import { ResumeVersionSelector  } from './ResumeVersionSelector';'
+import { RESUME_STEPS } from './constants';'
+export function ResumeWizard() {
+}
+import {useState, useEffect} from 'react';'
+import {Button} from '@/components/ui/button';'
+import {Resume} from '@/types/resume';'
+// Import components,
+import {EmptyResumeState} from './EmptyResumeState';'
+import {CreateResumeForm} from './CreateResumeForm';'
+import {ResumeSteps} from './ResumeSteps';'
+import {ResumeStepContent} from './ResumeStepContent';'
+import {useResumeProgress} from './useResumeProgress';'
+import {ResumeVersionSelector} from './ResumeVersionSelector';'
+import {RESUME_STEPS} from './constants';  // Use the extracted hook for progress calculation'
+=======
 import {Resume} from '@/types / resume';
 
 import { useState, useEffect  } from 'react';
@@ -89,6 +123,7 @@ export function ResumeWizard() {;
 
   // Use the extracted hook for progress calculation
 
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   const nextStep = () => {
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
@@ -382,10 +417,71 @@ export function ResumeWizard() {;
 
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
+<<<<<<< HEAD
+;
+  const next_step = () =>: any {
+    }
+    const current_index = RESUME_STEPS.find_index (step => { return step.id === active_tab); }
+    // Check condition,
+if ( {) {
+  $2
+}
+      setActiveTab (RESUME_STEPS[current_index + 1].id);
+    }
+  }
+;
+  const prev_step = () =>: any {
+    }
+    // Check condition,
+if ( {) {
+  $2
+}
+      setActiveTab (RESUME_STEPS[current_index - 1].id);
+    }
+  }
+;
+  const handleResumeChange = ("resume_id": string) =>: any {
+    }
+    fetch_resume (resume_id);
+  }
+;
+  // Check condition,
+if ( {) {
+  $2
+}
+return (;
+      <div className="flex justify - center items - center h-64">;"
+        <Loader2 className="h - 8 w - 8 animate - spin text-primary" />;"
+      </div>);
+  }
+  // Check condition,
+if ( {) {
+  $2
+}
+return (;
+      <Alert variant="destructive" className="mb-6">;"
+        <AlertCircle className="h - 4 w-4" />;"
+        <AlertTitle > Error</AlertTitle>;
+        <AlertDescription>{error}</AlertDescription>;
+      </Alert>);
+  }
+  // Check condition,
+if ( {) {
+  $2
+}
+    return <EmptyResumeState onCreateClick={() => setShowNewResumeForm (true)} />;
+  }
+  // Check condition,
+if ( {) {
+  $2
+}
+return (;
+=======
 
   if (showNewResumeForm) {;
 
     return (
+>>>>>>> origin/chore/fix-lint-and-merge
       <CreateResumeForm;
         onCreateResume={handleCreateNewResume}
         onCancel={() => setShowNewResumeForm(false)}
@@ -427,9 +523,97 @@ export function ResumeWizard() {;
             <ResumeProgress resume={resume} progress={progress} />;
 </ResumeProgress>
           </div>;
+<<<<<<< HEAD
+          <Tabs value={active_tab} onValueChange={setActiveTab}>;
+            <ResumeSteps;
+              steps={RESUME_STEPS}
+              active_tab={active_tab}
+              on_change={setActiveTab} />;
+            {resume && (
+              <ResumeStepContent;
+                }
+                active_tab={active_tab}
+                resume={resume as Resume}
+                onNextStep={next_step}
+                onPrevStep={prev_step} />)}
+          </Tabs>;
+        </CardContent>;
+      </Card>;
+    </div>);
+  ),; const [activeTab, setActiveTab] = useState ('basic-info');'
+//Use the extracted hook for progress calculation <AlertTitle>Error</AlertTitle> <AlertDescription> {
+  }
+  error 
+}</AlertDescription> </Alert>) 
+}
+}if (showNewResumeForm) {
+  }
+  return (<CreateResumeForm onCreateResume= {
+  }
+  handleCreateNewResume 
+}onCancel= {
+  () => setShowNewResumeForm (false) 
+}isLoading= {
+  }
+  isLoading 
+}/>) 
+}> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {"
+  }
+  activeTab 
+}onValueChange= {
+  }
+  setActiveTab 
+}> <ResumeSteps steps= {
+  }
+  RESUME STEPS 
+}activeTab= {
+  }
+  activeTab 
+}onChange= {
+  }
+  setActiveTab 
+} /> {
+  }
+  resume && (<ResumeStepContent activeTab= {
+  }
+  activeTab 
+}resume= {
+  }
+  resume as Resume 
+}onNextStep= {
+  }
+  nextStep 
+}onPrevStep= {
+  }
+  prevStep 
+} />) 
+}</Tabs> </CardContent> </Card> </div>) 
+}
+  );
+}
+export /**
+ * ResumeWizard - Function description
+ */
+function ResumeWizard() {
+  }
+  const { user } = use_auth ();
+  const {
+    }
+    is_loading;
+    error,
+    resume,
+    fetch_resume;
+    create_resume;
+  } = use_resume ();
+;
+      />
+    )
+  }
+=======
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
             <ResumeSteps
 
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">

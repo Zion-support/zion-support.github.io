@@ -710,7 +710,6 @@ main
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // This is a simplified check - in practice, you'd analyze the bundle;
-      const distDir = 'dist';
       if (!fs.existsSync(distDir)) {}
         return { "checked": false, "error": No dist directory found};
       };
@@ -782,6 +781,8 @@ main
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/build-optimizer.cjs
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -797,6 +798,7 @@ main
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       const distDir = 'dist';
+>>>>>>> origin/chore/fix-lint-and-merge
       if (!fs.existsSync(distDir)) {}
         return { "checked": false, "error": No dist directory found};
       };

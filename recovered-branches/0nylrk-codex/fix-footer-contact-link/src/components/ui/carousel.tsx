@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import * as React from &quot;react&quot;
 import useEmblaCarousel from &quot;embla-carousel-react&quot;
 import { ArrowLeft, ArrowRight } from &quot;lucide-react&quot;
@@ -10,11 +12,21 @@ import { ArrowLeft, ArrowRight } from "lucide-react"
 "
 import { cn } from "@/lib/utils""
 import { Button } from "@/components/ui/button"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
 type CarouselOptions = UseCarouselParameters[0]
 type CarouselPlugin = UseCarouselParameters[1]
+<<<<<<< HEAD
+type CarouselProps = {
+
+function useCarousel(): CarouselContextProps {
+}
+const context = React.useContext(CarouselContext) as CarouselContextProps | null;
+  if (!context) {
+
+=======
 
 }
 type CarouselContextProps = {}
@@ -34,10 +46,17 @@ import useEmblaCarousel from "embla-carousel-react";"
 import { ArrowLeft, ArrowRight } from "lucide-react";"
 import { cn } from "@/lib/utils";"
 import { Button } from "@/components/ui/button";
+>>>>>>> origin/chore/fix-lint-and-merge
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
 type CarouselOptions = UseCarouselParameters[0];
 type CarouselPlugin = UseCarouselParameters[1];
+<<<<<<< HEAD
+
+  }
+
+  }
+=======
 type CarouselProps = {;
   opts?: CarouselOptions;
   plugins?: CarouselPlugin;"
@@ -69,6 +88,7 @@ function useCarousel(): CarouselContextProps {;
 ;
 ;
 
+>>>>>>> origin/chore/fix-lint-and-merge
   return context as CarouselContextProps;
 }
 const Carousel = React.forwardRef<
@@ -76,6 +96,11 @@ const Carousel = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement> & CarouselProps;
 >(
   (
+<<<<<<< HEAD
+  orientation: horizontal" | "vertical
+} & Omit<CarouselProps, orientation">
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       ...props
 
@@ -134,6 +159,70 @@ import { ArrowLeft, ArrowRight } from &quot;lucide-react & quot;
 
       [scrollPrev, scrollNext];
     );
+<<<<<<< HEAD
+
+        return;
+      }
+import { cn } from &quot;@/lib / utils & quot;
+import { Button } from &quot;@/components / ui / button & quot;
+type CarouselApi = ReturnType < typeof useEmblaCarousel>[1];
+type UseCarouselParameters = Parameters < typeof useEmblaCarousel>;
+type CarouselOptions = UseCarouselParameters[0];
+type CarouselPlugin = UseCarouselParameters[1];
+type CarouselProps = {
+  }
+  opts?: CarouselOptions;
+  plugins?: CarouselPlugin;
+  orientation?: &quot;horizontal & quot; | &quot;vertical & quot;
+  set_api?: ("api": CarouselApi) => void;
+}
+type CarouselContextProps = {
+  }
+  "carousel_ref": ReturnType < typeof useEmblaCarousel>[0];
+  "api": ReturnType < typeof useEmblaCarousel>[1];
+  "scroll_prev": () => void;
+  "scroll_next": () => void;
+  "canScrollPrev": boolean;
+  "canScrollNext": boolean;  }
+  return context as CarouselContextProps;
+}
+const Carousel = React.forward_ref<;
+  HTMLDivElement,
+  React.HTMLAttributes < HTMLDivElement> & CarouselProps;
+>(
+  (
+    {
+      }
+      orientation = &quot;horizontal & quot;,
+      opts,
+      set_api,
+      plugins,
+      class_name,
+      children,
+      ...props;
+    },
+    ref) => {
+}
+const [carousel_ref, api] = useEmblaCarousel (;
+      {
+        ...opts
+        }
+        "axis": orientation === &quot;horizontal & quot; ? &quot;x & quot; : &quot;y & quot;},
+      plugins);
+    const [canScrollPrev, setCanScrollPrev] = React.useState (false);
+    const [canScrollNext, setCanScrollNext] = React.useState (false);
+    const on_select = React.useCallback (("api": CarouselApi) => {
+      // Check condition
+}
+if ( {) {
+  $2
+}
+        return;
+      }
+
+      return () => {
+
+=======
     React.useEffect(() => {;
       if (!api || !setApi) {;
         return;
@@ -162,6 +251,7 @@ if ( {) {
       return () => {"
         api?.off("select", onSelect)"
 
+>>>>>>> origin/chore/fix-lint-and-merge
       }
       set_api (api);
     }, [api, set_api]);
@@ -184,6 +274,44 @@ on_select (api);
     return (
       <CarouselContext.Provider;
 
+<<<<<<< HEAD
+    const handleKeyDown = $2;
+      [scrollPrev, scrollNext]
+    )
+
+    React.useEffect(() => {
+      if (!api || !setApi) {
+        return
+      }
+      [scrollPrev, scrollNext];
+    );
+    React.useEffect(() => {if (!api |!setApi) {
+        return;
+      }
+      setApi(api);
+    }, [api, setApi]);
+    React.useEffect(() => {if (!api) {
+        return;
+      }
+onSelect(api)
+      api.on(&quot;reInit&quot;, onSelect)
+      api.on(&quot;select&quot;, onSelect)
+
+      onSelect(api)
+      api.on(reInit", onSelect)
+      api.on("select, onSelect)
+
+      return () => {
+        api?.off(select", onSelect)
+      }
+    }, [api, onSelect])
+
+    return($2);
+          scrollPrev,
+          scrollNext,
+          canScrollPrev,
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           canScrollNext}}
 
       >;
@@ -213,6 +341,9 @@ Carousel.displayName = &quot;Carousel&quot;
 Carousel.displayName = "Carousel"
 className={cn (&quot;relative & quot;, class_name)}
           role=&quot;region & quot;
+<<<<<<< HEAD
+
+=======
           aria - roledescription=&quot;carousel & quot;          className={cn("relative", className)}
           role="region"
           aria-roledescription="carousel"
@@ -248,6 +379,7 @@ className={cn (&quot;relative & quot;, class_name)}
           className={cn("relative", className)}""
           role="region"""
           aria-roledescription="carousel""
+>>>>>>> origin/chore/fix-lint-and-merge
           {...props}
         >;
 </div>
@@ -276,16 +408,24 @@ className={cn (&quot;relative & quot;, class_name)}
       </CarouselContext.Provider>);
   }
 
+<<<<<<< HEAD
+)
+
+=======
 const CarouselContent = React.forwardRef<
   HTMLDivElement;
   React.HTMLAttributes<HTMLDivElement>
 </HTMLDivElement>
+>>>>>>> origin/chore/fix-lint-and-merge
     <div ref={carousel_ref} className=&quot;overflow - hidden & quot;>;
 </div>
 
       <div;
         ref={ref}
 
+<<<<<<< HEAD
+        className={cn(
+=======
           className
 
         )}
@@ -294,6 +434,7 @@ const CarouselContent = React.forwardRef<
     </div>
   )
 })
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const CarouselItem = React.forwardRef<
   HTMLDivElement;
@@ -310,6 +451,8 @@ const CarouselItem = React.forwardRef<
     </div>);
 });
 CarouselContent.display_name = &quot;CarouselContent & quot;
+<<<<<<< HEAD
+=======
 ;
 "
           "flex",""
@@ -326,6 +469,7 @@ const CarouselItem = React.forwardRef<
 </HTMLDivElement>
 
     </div>);
+>>>>>>> origin/chore/fix-lint-and-merge
 const CarouselItem = React.forward_ref<;
   HTMLDivElement,
   React.HTMLAttributes < HTMLDivElement>;
@@ -361,6 +505,10 @@ const CarouselItem = React.forward_ref<;
 })
 
 const CarouselPrevious = React.forwardRef<
+<<<<<<< HEAD
+
+        className;
+=======
   HTMLButtonElement;
   React.ComponentProps<typeof Button>
 >(({ className, variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {}
@@ -502,6 +650,7 @@ const CarouselPrevious = React.forwardRef<
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
 
         className
+>>>>>>> origin/chore/fix-lint-and-merge
       )}
 className={cn (
         &quot;absolute  h - 8 w - 8 rounded - full & quot;,
@@ -563,6 +712,10 @@ className={cn (
   )
 })
 CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
+<<<<<<< HEAD
+    >
+
+=======
 
       disabled={!canScrollNext}
       onClick={scrollNext}
@@ -668,6 +821,7 @@ className={cn (
           :"-bottom-12 left-1/2 -translate-x-1/2 rotate-90",;
         className;
       )}
+>>>>>>> origin/chore/fix-lint-and-merge
       disabled={!canScrollNext}
       on_click={scroll_next}
       {...props}
@@ -772,6 +926,24 @@ export {};
       <span className=&quot;sr - only & quot;>Next slide</span>;
     </Button>);
 });
+<<<<<<< HEAD
+CarouselNext.display_name = &quot;CarouselNext & quot;      disabled={!canScrollNext}
+      on_click={scroll_next}
+      {...props}
+    </Button>
+  )
+})
+CarouselNext.displayName = &quot;CarouselNext&quot;
+export {
+  }
+  type CarouselApi,
+Carousel
+  CarouselContent,
+CarouselItem
+  CarouselPrevious,
+CarouselNext}
+    >
+=======
 CarouselNext.display_name = &quot;CarouselNext & quot;
 ;
     >
@@ -780,14 +952,38 @@ CarouselNext.display_name = &quot;CarouselNext & quot;
 
 })
 CarouselNext.displayName = "CarouselNext"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export {
 
   type CarouselApi,
+<<<<<<< HEAD
+      ref = $2;
+        orientation = $2;
+        className
+      )}
+      disabled = $2;
+  React.ComponentProps<typeof Button>
+>(({ className, variant = outline", size = "icon", ...props }, ref) => {
+  const { orientation, scrollNext, canScrollNext } = useCarousel()
+  return (
+    <Button
+      ref = $2;
+        orientation = $2;
+        className
+      )}
+      disabled = $2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
+<<<<<<< HEAD
+  CarouselNext}  CarouselNext}
+
+  CarouselNext}
+=======
 
   CarouselNext};
 ;
@@ -877,3 +1073,4 @@ React.ComponentProps<typeof Button>)
 
 ;
   CarouselNext}
+>>>>>>> origin/chore/fix-lint-and-merge

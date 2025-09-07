@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useRouter } from "next/router";
-import { Button } from "@/components/ui/button";
-import { ChatBotPanel } from "./ChatBotPanel";
-import { MessageSquare, Info, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import React, { useState } from "react;
+import { useRouter } from next/router";
+import { Button } from "@/components/ui/button;
+import { ChatBotPanel } from ./ChatBotPanel";
+import { MessageSquare, Info, X } from "lucide-react;
+import { cn } from @/lib/utils";
 
-import { useTheme } from "@/hooks/useTheme";
-export function SupportWidget() {};
+import { useTheme } from "@/hooks/useTheme;
+export function SupportWidget() {}
   const [isOpen, setIsOpen] = useState(false);
   const { theme } = useTheme();
   const router = useRouter();
@@ -16,32 +16,32 @@ export function SupportWidget() {};
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button;
-          onClick={() => setIsOpen(true)}"
-          size="icon""
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50""
-          aria-label="Open support"
+          onClick={() => setIsOpen(true)}
+          size="icon"
+          className=fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50""
+          aria-label=Open support
         >"
-          <MessageSquare className="h-6 w-6" />
+          <MessageSquare className="h-6 w-6 />
         </Button>
       )}
       {/* Support panel */}
       {isOpen && (;
         <div;
-          className={cn("
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col","
-            theme === "dark""
-              ? "bg-zion-blue-dark border border-zion-blue-light""
-              : "bg-white border border-gray-200",
-          )}"
-          style={{ height: "600px", maxHeight: "80vh" }}
+          className={cn(
+            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col",
+            theme === dark""
+              ? bg-zion-blue-dark border border-zion-blue-light"
+              : "bg-white border border-gray-200,
+          )}
+          style={{ height: "600px", maxHeight: 80vh }}
         >"
-          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">"
-            <div className="flex items-center">"
-              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20>
+            <div className="flex items-center">
+              <MessageSquare className=h-5 w-5 text-zion-cyan mr-2" />
               <h3;
                 className={cn("
-                  "font-semibold","
-                  theme === "dark" ? "text-white" : "text-gray-800",
+                  font-semibold,"
+                  theme === "dark ? text-white" : "text-gray-800,
 const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
@@ -51,109 +51,226 @@ const [isOpen, setIsOpen] = useState(false)
       {!isOpen && (
         <Button
           onClick={() => setIsOpen(true)}
-          size='icon'
-          className='fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50'
-          aria-label='Open support'        >
-          <MessageSquare className='h-6 w-6' />
+          size='icon
+          className=fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50'
+          aria-label='Open support        >
+          <MessageSquare className=h-6 w-6' />
         </Button>
       )}
       {/* Support panel */}
       {isOpen && (
         <div
           className={cn(
+<<<<<<< HEAD
+  return (
+    <>
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (
+        <Button
+          onClick={() => setIsOpen(true)}
+          size='icon
+          className=fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50'
+          aria-label='Open support        >
+          <MessageSquare className=h-6 w-6' />
+        </Button>
+      )}
+      {/* Support panel */}
+      {isOpen && (
+        <div
+          className={cn(
+            'fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col
+            theme === dark'
+              ? 'bg-zion-blue-dark border border-zion-blue-light
+              : bg-white border border-gray-200'
+
+import React, { useState } from 'react;
+import { useRouter } from next/router';
+import { Button } from '@/components/ui/button;
+import { ChatBotPanel } from ./ChatBotPanel';
+import { MessageSquare, Info, X } from 'lucide-react;
+import { cn } from @/lib/utils';
+import { useTheme } from '@/hooks/useTheme;
+
+export function SupportWidget() {
+  const router = null;
+            theme === dark" 
+              ? "bg-zion-blue-dark border border-zion-blue-light 
+              : bg-white border border-gray-200"
+origin/cursor/automate-test-improve-and-merge-code-2533
+=======
             'fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col'
             theme === 'dark'
               ? 'bg-zion-blue-dark border border-zion-blue-light'
               : 'bg-white border border-gray-200'
 
+>>>>>>> origin/chore/fix-lint-and-merge
           )}
-          style={{ height: '600px', maxHeight: '80vh' }}        >
-          <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>
-            <div className='flex items-center'>
-              <MessageSquare className='h-5 w-5 text-zion-cyan mr-2' />
+          style={{ height: 600px', maxHeight: '80vh }}        >
+          <div className=flex items-center justify-between p-4 border-b border-zion-purple/20'>
+            <div className='flex items-center>
+              <MessageSquare className=h-5 w-5 text-zion-cyan mr-2' />
               <h3
                 className={cn(
+<<<<<<< HEAD
+                  'font-semibold
+                  theme === dark' ? 'text-white : text-gray-800'
+
+main
+=======
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
+>>>>>>> origin/chore/fix-lint-and-merge
                 )}
               >
 "
-import React, { useState } from "react","
-import { useRouter } from "next/router","
-import { Button } from "@/components/ui/button","
-import { ChatBotPanel } from "./ChatBotPanel",
-import { MessageSquare, Info, X } from 'lucide-react'"
-import { cn } from "@/lib/utils","
-import { useTheme } from "@/hooks/useTheme",
+import React, { useState } from react,"
+import { useRouter } from "next/router,
+import { Button } from "@/components/ui/button",
+import { ChatBotPanel } from ./ChatBotPanel",
+import { MessageSquare, Info, X } from 'lucide-react"
+import { cn } from @/lib/utils,"
+import { useTheme } from "@/hooks/useTheme,
 export function SupportWidget() {}
   const [isOpen, setIsOpen] = useState(false),
   const { theme } = useTheme(),
   const router = useRouter(),
   
   return (;
-    <>";
-import React, { useState } from "react",;"
-import { useRouter } from "next/router",;"
-import { Button } from "@/components/ui/button",;"
-import { ChatBotPanel } from "./ChatBotPanel",;'
-import { MessageSquare, Info, X } from 'lucide-react';"
-import { cn } from "@/lib/utils",;"
-import { useTheme } from "@/hooks/useTheme",;
+    <>;
+import React, { useState } from "react",
+import { useRouter } from next/router","
+import { Button } from @/components/ui/button,"
+import { ChatBotPanel } from "./ChatBotPanel,
+import { MessageSquare, Info, X } from 'lucide-react';
+import { cn } from "@/lib/utils",
+import { useTheme } from @/hooks/useTheme",
 export function SupportWidget() { return null; }
-  const { theme } = useTheme(),;
-  const router = useRouter();
   return (;
     <>;
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button;
           onClick={() => setIsOpen(true)}"
-          size="icon""
-          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50""
+          size=icon"
+          className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50
           aria-label="Open support"
-        >"
-          <MessageSquare className="h-6 w-6" />
+        >
+          <MessageSquare className=h-6 w-6" />
         </Button>
       )}
+<<<<<<< HEAD
+ursor/automate-test-improve-and-merge-code-646c;
+const [isOpen, setIsOpen] = useState(false)const { theme } = useTheme()const router = useRouter()import React, { useState } from react;
+import { useRouter  } from 'next/router';
+import { Button  } from @/components/ui/button;
+import { ChatBotPanel  } from './ChatBotPanel';
+import { MessageSquare, Info, X  } from lucide-react;
+import { cn  } from '@/lib/utils';
+import { useTheme  } from @/hooks/useTheme;
+export function SupportWidget() {const [isOpen, setIsOpen] = useState(false)const { theme } = useTheme()const router  = useRouter()return (<>;
+      {/* Fixed button in the bottom right */}
+      {!isOpen && (<Button;
+          onClick={() => setIsOpen(true)}
+          size="icon;
+          className=fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50";
+          aria-label="Open support;
+        >;
+          <MessageSquare className=h-6 w-6" />;
+        </Button>;
+      )}
+=======
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
       {/* Support panel */}
       {isOpen && (
         <div;
           className={cn("
-            "fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col","
-            theme === "dark" "
-              ? "bg-zion-blue-dark border border-zion-blue-light" "
-              : "bg-white border border-gray-200"
+            fixed bottom-6 right-6 w-[380px] rounded-2xl shadow-xl z-50 flex flex-col,"
+            theme === "dark 
+              ? "bg-zion-blue-dark border border-zion-blue-light" 
+              : bg-white border border-gray-200"
           )}"
-          style={{ height: "600px", maxHeight: "80vh" }}
-        >"
-          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">"
-            <div className="flex items-center">"
-              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />"
-              <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>
+          style={{ height: 600px, maxHeight: "80vh" }}
+        >
+          <div className=flex items-center justify-between p-4 border-b border-zion-purple/20">"
+            <div className=flex items-center>"
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2 />
+              <h3 className={cn("font-semibold", theme === dark ? "text-white" : text-gray-800)}>
                 Zion Support;
               </h3>
             </div>"
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2>
 
               <Button
+<<<<<<< HEAD
+:src/components/support/SupportWidget.tsx
+                variant='ghost'
+                size=icon
+                className='h-8 w-8 rounded-full'
+                onClick={() => router.push(/help)}
+                aria-label='Help center'              >
+                <Info className=h-5 w-5 />
+              </Button>
+              <Button
+                variant='ghost'
+                size=icon
+                className='h-8 w-8 rounded-full'
+                onClick={() => setIsOpen(false)}
+                aria-label=Close support              >
+                <X className='h-5 w-5' />
+              </Button>
+            </div>
+          </div>
+          <ChatBotPanel />
+        </div>
+      )}
+    </>
+  )
+}
+          <ChatBotPanel />
+        </div>
+      )}
+    </>;
+  );
+}
+                variant=ghost"
+                size="icon
+                className=h-8 w-8 rounded-full"
+        >;
+          <div className="flex items-center justify-between p-4 border-b border-zion-purple/20>;
+            <div className=flex items-center">;
+              <MessageSquare className="h-5 w-5 text-zion-cyan mr-2 />;
+              <h3 className={cn(font-semibold", theme === "dark ? text-white" : "text-gray-800)}>;
+                Zion Support;
+              </h3>;
+            </div>;
+            <div className=flex items-center gap-2">;
+ursor/automate-test-improve-and-merge-code-646c;
+              <Button;
+              <Button;
+                variant="ghost;
+                size=icon";
+                className="h-8 w-8 rounded-full;
+                onClick={() => router.push(/help")}
+=======
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
                 onClick={() => router.push("/help")}
+>>>>>>> origin/chore/fix-lint-and-merge
 
-                aria-label="Help center"
-              >"
+                aria-label="Help center
+              >
                 <Info className="h-5 w-5" />
               </Button>
-              <Button"
-                variant="ghost""
-                size="icon""
-                className="h-8 w-8 rounded-full"
-                onClick={() => setIsOpen(false)}"
+              <Button
+                variant=ghost""
+                size=icon"
+                className="h-8 w-8 rounded-full
+                onClick={() => setIsOpen(false)}
                 aria-label="Close support"
-              >"
-                <X className="h-5 w-5" />
+              >
+                <X className=h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -162,4 +279,20 @@ export function SupportWidget() { return null; }
         </div>
       )}
     </>
+<<<<<<< HEAD
   );
+              <Button
+;
+              <Button
+
+main
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+    </>;
+  )}
+              <Button;
+ursor/automate-test-improve-and-merge-code-646c;
+}<Button;
+=======
+  );
+>>>>>>> origin/chore/fix-lint-and-merge

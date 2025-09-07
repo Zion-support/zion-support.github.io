@@ -1,4 +1,26 @@
 <<<<<<< HEAD
+
+    return;
+  }
+
+  try {
+
+    
+    if (!country) {
+      }
+      res.statusCode = 400;
+
+    res.statusCode = 200;
+    res.json({ 
+      }
+      "success": true,
+      "rate": shippingRate,
+      "currency": 'USD''
+   
+});
+  } catch (err) {
+=======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export default function handler(req, res) {
@@ -107,6 +129,7 @@ export: default async function handler(req,res) { if (req.method !== POST') {'; 
     res.statusCode = 500;
 
     res.json({ error: err.message || 'Failed to calculate shipping rates' });
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }
 }

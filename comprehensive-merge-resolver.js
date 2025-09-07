@@ -48,7 +48,63 @@
     return pushResult.success}
   async processOpenPRs() {'
     this.log('📋 Processing open PRs...');
+<<<<<<< HEAD
+    // Read the PRs file if it exists
+    if (fs.existsSync('prs.json')) {
+      try {
+        const prsData = JSON.parse(fs.readFileSync('prs.json', 'utf8'));
+        const openPrs = prsData.filter(pr => pr.state === 'open' && !pr.draft);
+        this.log(`📊 Found ${openPrs.length} open PRs to process`);
+        for (const pr of openPrs.slice(0, 5)) { // Process first 5 PRs
+          this.log(`🔄 Processing PR #${pr.number}: ${pr.title}`);
+          try {
+            // Create a local branch for the PR
+            const branchName = `pr-${pr.number}`;
+            await this.executeCommand(`git checkout -b ${branchName}`);
+            // Try to fetch the PR
+            const fetchResult = await this.executeCommand(
+              `git fetch origin pull/${pr.number}/"head": ${branchName}`
+            );
+            if (fetchResult.success) {
+              // Merge the PR branch
+              await this.executeCommand('git checkout main');
+              const mergeResult = await this.executeCommand(`git merge ${branchName}`);
+              if (mergeResult.success) {
+                this.prsProcessed++;
+                this.results.success.push(`Merged PR #${pr.number}`);
+                this.log(`✅ Successfully merged PR #${pr.number}`)} else {
+                this.results.errors.push(`Failed to merge PR #${pr.number}`);
+                this.log(`❌ Failed to merge PR #${pr.number}`)}
+              // Clean up the branch
+              await this.executeCommand(`git branch -D ${branchName}`)}
+          } catch (error) {
+            this.results.errors.push(`Error processing PR #${pr.number}: ${error.message}`);
+            this.log(`❌ Error processing PR #${pr.number}: ${error.message}`)}
+        }
+      } catch (error) {
+        this.log(`❌ Error reading PRs "file": ${error.message}`)}
+    }
+    this.results.prsProcessed = this.prsProcessed}
+  async saveResults() {
+    try {
+      fs.writeFileSync(this.logFile, JSON.stringify(this.results, null, 2));
+      this.log(`📊 Results saved to ${this.logFile}`)} catch (error) {
+      this.log(`❌ Failed to save "results": ${error.message}`)}
+  }
+  async run() {
+    try {
+      this.log('🚀 Starting comprehensive merge resolution...');
+      // Step "1": Fetch latest changes
+      await this.fetchLatestChanges();
+      // Step 2: Check current status
+      const changes = await this.checkGitStatus();
+      this.log(`📍 Current branch: ${currentBranch}`);
+      // Step "3": Find and resolve conflicts
+      const conflictFiles = await this.findConflictFiles();
+      if (conflictFiles.length > 0) {
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
         this.log('🔧 Resolving merge conflicts...');
         for (const file of conflictFiles) {}
           await this.resolveConflictFile(file)}

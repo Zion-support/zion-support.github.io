@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
 export const aiAutonomousServices2026 = [] as [];
 export interface AiAutonomousService2026 {
   "id": string;
@@ -260,3 +266,4 @@ export const \"aiAutonomousServices2026\": AiAutonomousService2026[] = [{
       \"email\": \"kleber@ziontechgroup.com\",}
       \"address\": \"364 E Main St STE 1008 Middletown DE 19709\"}
 ]}}}
+>>>>>>> origin/chore/fix-lint-and-merge

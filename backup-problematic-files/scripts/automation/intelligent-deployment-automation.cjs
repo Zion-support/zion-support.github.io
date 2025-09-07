@@ -5,6 +5,11 @@
  * Features: Automated testing, health checks, gradual rollouts, intelligent rollbacks;
  */
 
+<<<<<<< HEAD
+
+        this.log('� Shutting down Deployment Automation...')
+
+=======
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -83,3 +88,4 @@ const http = require('http')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

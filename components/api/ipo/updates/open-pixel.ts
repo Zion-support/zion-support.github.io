@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest,,,
+  res: NextApiResponse) {
+
+  const id = null;}
+  res.status(200).send(pixel)}
+}
+=======
 }
 import type { NextApiRequest, NextApiResponse } from './next';'
 import { readJsonFile, writeJsonFile  } from '../../../../utils / api / storage';
@@ -29,3 +37,4 @@ if ( {) {}
   res.set_header ("
     "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate",
   );
+>>>>>>> origin/main

@@ -105,7 +105,12 @@ class AutomationSuiteRunner {
     const customScripts = [{ "path": "scripts/syntax-fixer.cjs", "name": "Syntax Fixer" },
       { "path": "scripts/performance-monitor.cjs", "name": "Performance Monitor" },
       { "path": "scripts/security-auditor.cjs", "name": "Security Auditor" },
+<<<<<<< HEAD
+      { "path": "scripts/seo-optimizer.cjs", "name": "SEO Optimizer" }
+    ];
+=======
       { "path": "scripts/seo-optimizer.cjs", "name": "SEO Optimizer" }"]
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const customScript of customScripts) {
       if (fs.existsSync(customScript.path)) {
   // TODO: Implement
@@ -146,25 +151,58 @@ class AutomationSuiteRunner {
     const performanceMetrics = {"
       "bundleSize": 0,
       "fileCount": 0,
+<<<<<<< HEAD
+      "largeFiles": []
+    };
+=======
       "largeFiles": []"
     };"
 
+>>>>>>> origin/chore/fix-lint-and-merge
     performanceMetrics.fileCount = files.length;
   // TODO: Implement
         const stats = fs.statSync(file);
         const sizeKB = stats.size / 1024;
         performanceMetrics.bundleSize += sizeKB;
+<<<<<<< HEAD
+        if (sizeKB > 100) { // Files larger than 100KB
+          performanceMetrics.largeFiles.push({
+            "file": path.relative(this.projectRoot, file),
+            "size": sizeKB
+          });
+        }
+      } catch (error) {
+        // Skip files that can't be analyzed
+        continue;
+      }
+    }
+    return performanceMetrics;
+  }
+  async auditSecurity() {
+    this.log("🔒 Running security audit...");
+    const securityIssues = [];
+    for (const file of files) {
+      try {
+        // Check for common security issues
+=======
         if (sizeKB > 100) { // Files larger than 100KB;
           performanceMetrics.largeFiles.push({)
 
         // Check for common security issues;"
+>>>>>>> origin/chore/fix-lint-and-merge
         const securityPatterns = [{ "pattern": /eval\s*\(/g, "type": "Eval Usage", "severity": "high" },
           { "pattern": /innerHTML\s*=/g, "type": "innerHTML Usage", "severity": "medium" },
           { "pattern": /document\.write/g, "type": "document.write Usage", "severity": "medium" },
           { "pattern": /localStorage\.setItem/g, "type": "localStorage Usage", "severity": "low" }"]
         ];)
         for (const { pattern, type, severity } of securityPatterns) {
+<<<<<<< HEAD
+          if (matches) {
+            securityIssues.push({
+              "file": path.relative(this.projectRoot, file),
+=======
             securityIssues.push({)"
+>>>>>>> origin/chore/fix-lint-and-merge
               type,
               severity,"
               "count": matches.length;"
@@ -175,11 +213,19 @@ class AutomationSuiteRunner {
       "totalLines": 0,
       "commentRatio": 0,
       "functionCount": 0,
+<<<<<<< HEAD
+      "complexityIssues": []
+    };
+    let totalComments = 0;
+    for (const file of files) {
+      try {
+=======
       "complexityIssues": []"
 
     let totalComments = 0;
   // TODO: Implement
 
+>>>>>>> origin/chore/fix-lint-and-merge
         const lines = content.split('\n');
         qualityMetrics.totalLines += lines.length;
 <<<<<<< HEAD

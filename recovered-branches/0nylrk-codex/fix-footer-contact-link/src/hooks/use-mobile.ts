@@ -6,7 +6,22 @@ import {useState, useEffect} from 'react';
 
   return isMobile
 
+<<<<<<< HEAD
+    const handleResize = () => {
+
+    }
+
+    if (typeof window !== 'undefined') {'
+      }
+      window && window.addEventListener('resize', handleResize);'
+      return () => window && window.removeEventListener('resize', handleResize)    }'
+    return undefined;
+  }, []);
+
+return isMobile;
+=======
 import {useState, useEffect} from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
 export /**
  * useIsMobile - Function description
  */
@@ -30,8 +45,13 @@ import { useState, useEffect } from 'react',;
 import { useState, useEffect } from 'react',;
 
 export function useIsMobile() {;
+<<<<<<< HEAD
+  }
+    typeof window !== 'undefined' ? window.innerWidth < 768 : false;'
+=======
   const [isMobile, setIsMobile] = useState(;
     typeof window !== 'undefined' ? window.innerWidth < 768 : false;
+>>>>>>> origin/chore/fix-lint-and-merge
   ),;
   useEffect(() => {;
     const handleResize = () => {;

@@ -81,7 +81,11 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     if (!userId) return,;
     setLoading(true),;
     try {;
+<<<<<<< HEAD
+      }
+=======
       const { data, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
         .from('notifications');'
         .select('*');'
         .eq('user_id', userId);'
@@ -111,9 +115,15 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
   const markAllAsRead = useCallback(async () => {;
     if (!userId) return,;
     try {;
+<<<<<<< HEAD
+      }
+        .from('notifications');'
+        .update({ "read": true });
+=======
       const { error } = await supabase;'
         .from('notifications');
         .update({ read: true });'
+>>>>>>> origin/chore/fix-lint-and-merge
         .eq('user_id', userId);'
         .eq('read', false),;
       if (error) throw error,;
@@ -125,9 +135,15 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
   const dismissNotification = useCallback(async (id: string) => {;
     if (!userId) return,;
     try {;
+<<<<<<< HEAD
+      }
+        .from('notifications');'
+        .delete();
+=======
       const { error } = await supabase;'
         .from('notifications');
         .delete();'
+>>>>>>> origin/chore/fix-lint-and-merge
         .eq('id', id);'
         .eq('user_id', userId),;
       if (error) throw error,;
@@ -216,6 +232,33 @@ export const useNotificationOperations = (userId?:string):NotificationContextTyp
     } catch (err) {;
       console.error('Error marking notification as read:', err),;
     }
+<<<<<<< HEAD
+  }, [userId, fetchNotifications]),
+
+  const markAllAsRead = $2;
+    try {
+        .from('notifications')
+        .update({ read: true})
+        .eq('user_id', userId)
+        .eq($2);
+      if (error) throw error,
+      await fetchNotifications()
+    } catch (err) {
+      console.error('Error marking all notifications as read:', err)
+    }
+  }, [userId, fetchNotifications]),
+
+  const dismissNotification = $2;
+    try {
+        .from('notifications')
+        .delete()
+        .eq('id', id)
+        .eq($2);
+      if (error) throw error,
+      await fetchNotifications()
+    } catch (err) {
+      console.error('Error dismissing notification:', err)
+=======
   }, [userId, fetchNotifications]),;
 ;
   const markAllAsRead = useCallback(async () => {;
@@ -249,6 +292,7 @@ export const useNotificationOperations = (userId?:string):NotificationContextTyp
       await fetchNotifications(),;
     } catch (err) {;
       console.error('Error dismissing notification:', err),;
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }, [userId, fetchNotifications]),;
 ;

@@ -268,4 +268,11 @@ isLoading: boolean
 }
 
 }
+<<<<<<< HEAD
+  )
+}
+}
+;
+=======
 import {
+>>>>>>> origin/chore/fix-lint-and-merge

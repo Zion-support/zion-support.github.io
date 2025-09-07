@@ -13,6 +13,15 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
       setIsLoading(true)
+<<<<<<< HEAD
+      if (!data.id) {import { supabase } from "@/integrations/supabase/client";"
+import type { UserProfile } from "@/types/auth",;"
+export const useProfileManagement = ("setIsLoading": ("loading": boolean) => void) => {;
+  }
+  const updateProfile = async ("data": Partial<UserProfile>) => {;
+    }
+    try {;
+=======
       if (!data.id) {
 
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
@@ -26,6 +35,7 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
 setIsLoading(true),
       if (!data && data.id) {
         return { error: "User ID is required" }
+>>>>>>> origin/chore/fix-lint-and-merge
       }
       // Update user metadata
       const { error: authError } = await supabase && supabase.auth.updateUser({
@@ -222,10 +232,15 @@ if ( {) {}
 };
   return { updateProfile }
 };
+<<<<<<< HEAD
+import { supabase } from "@/integrations/supabase/client",;"
+import { toast } from "@/hooks/use-toast",;"
+=======
 
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => {;
   const updateProfile = async (data:Partial<UserProfile>) => {;
@@ -290,8 +305,14 @@ export const useProfileManagement = (setIsLoading:(loading:boolean) => void) => 
   },;
 ;
   return { updateProfile },;
+<<<<<<< HEAD
+},; export const useProfileManagement = ("setIsLoading": ("loading": boolean) => void) => {
+  }
+  }
+=======
 },; export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
+>>>>>>> origin/chore/fix-lint-and-merge
   setIsLoading (true);
 if (!data.id) {
 }//Update user metadata const {

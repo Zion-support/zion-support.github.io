@@ -79,11 +79,16 @@ if ( {) {
 
       // Default implementation;
   };
+<<<<<<< HEAD
+      // // // console.log("Request to "hire":", talent.id)"
+import { TalentCard } from "@/components/talent/TalentCard";"
+=======
 
       // // // console.log("Request to hire:", talent.id)
 import { TalentCard } from "@/components/talent/TalentCard",;
 
 import { TalentProfile } from "@/types/talent",;
+>>>>>>> origin/chore/fix-lint-and-merge
 export interface TalentGridProps {;
   talents: TalentProfile[],;
   isLoading: boolean,;
@@ -122,11 +127,45 @@ export function TalentGrid() { return null; }
     return <div className="py-8 text-center bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">"
       <p className="text-zion-slate-light mb-4">No talents found matching your criteria</p>
       {clearFilters && (
+<<<<<<< HEAD
+}
+export function TalentGrid(): any ({ ;  talents, ;
+  }
+  isLoading, ;
+  onTalentClick, ;
+  savedTalentIds, ;
+  onToggleSave, ;
+  isAuthenticated;
+  viewProfile;
+  clearFilters;
+  handleRequestHire;
+}: TalentGridProps) {;
+  }
+  const handleRequestHireInternal = ("talent": TalentProfile) => {;    if (handleRequestHire) {;
+      }
+      handleRequestHire(talent);
+    } else {;
+      // Default implementation;
+      }
+      console && console.log("Request to "hire":", talent && talent.id);"
+    }        <button,
+onClick={clearFilters}  };
+    }
+    if (viewProfile) {;
+      }
+      viewProfile(id);
+    } else {;
+      }
+      onTalentClick(id);
+    }
+  };          className="px-4 py-2 bg-zion-purple text-white rounded "hover":bg-zion-purple-dark transition-colors""
+=======
 
           onClick={clearFilters}
 
 "
           className="px-4 py-2 bg-zion-purple text-white rounded hover:bg-zion-purple-dark transition-colors"
+>>>>>>> origin/chore/fix-lint-and-merge
         >
           Clear Filters;
         </button>

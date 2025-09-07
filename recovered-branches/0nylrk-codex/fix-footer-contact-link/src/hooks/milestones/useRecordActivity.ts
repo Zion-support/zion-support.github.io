@@ -106,8 +106,13 @@ export const useRecordActivity = () => {;
   ) => {;
     if (!user) return null,;
     try {;
+<<<<<<< HEAD
+      }
+        .from('milestone_activities');'
+=======
       const { data, error } = await supabase;'
         .from('milestone_activities');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
           milestone_id: milestoneId,;
           user_id: user.id,;

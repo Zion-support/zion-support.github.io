@@ -20,6 +20,10 @@ exports.handler = async function () {
         const ms = Date.now() - t0;
         results.push({ path: ep, status: resp.status, ms });
       } catch (e) {
+<<<<<<< HEAD
+        }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         results.push({
           path: ep;,
   status: 0;

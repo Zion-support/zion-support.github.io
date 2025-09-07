@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import {Education} from '@/types / resume';'
+import {format} from 'date - fns';'
+import {Education} from '@/types/resume';'
+import {format} from 'date-fns';'
+import { Education  } from '@/types/resume';'
+import { format } from 'date-fns';'
+=======
 import {Education} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -6,6 +14,7 @@ import {format} from 'date - fns';
 import {Education} from '@/types/resume';
 import {format} from 'date-fns';
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface EducationSectionProps {
 
   education: Education[];
@@ -67,7 +76,35 @@ interface EducationSectionProps {
   });
 
     }
+<<<<<<< HEAD
+    if (!date) return '''
+    if (typeof date === 'string') {'
+      }
+      return format(new Date(date), 'MMM yyyy')import { Education } from '@/types/resume';'
+interface EducationSectionProps {;
+  }
+  "education": Education[];
+}
+;
+export function EducationSection() {;
+  // Sort education by date (newest first);
+  }
+    }
+    if (a.is_current && !b.is_current) return -1,;
+    if (!a.is_current && b.is_current) return 1,;
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
+    return dateB.getTime() - dateA.getTime();
+  }),;
+  const formatDate = ("date": Date | string | undefined) => {;
+    }
+    if (!date) return '',;'
+    if (typeof date === 'string') {;'
+      }
+      return format(new Date(date), 'MMM yyyy');    }'
+    return format(date, 'MMM yyyy')'
+=======
     return format(date, 'MMM yyyy')
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   if (sortedEducation.length === 0) return null;
 

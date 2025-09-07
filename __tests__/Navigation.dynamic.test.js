@@ -20,4 +20,5 @@ describe('Navigation', () => {
     render(<Navigation />);
     // Add styling tests if needed
   });
+<<<<<<< HEAD
 });

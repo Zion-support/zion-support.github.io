@@ -225,10 +225,13 @@ export function GeneratedDescriptionDisplay({ ;
           <Button
             variant="outline" 
             size="sm" 
+<<<<<<< HEAD
+=======
 
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
+>>>>>>> origin/chore/fix-lint-and-merge
 
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
           >;
@@ -249,7 +252,10 @@ export function GeneratedDescriptionDisplay({ ;
 import { use_toast  } from '@/hooks / use - toast';
 
 import { Button  } from '@/components / ui / button';
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Card,
   CardContent,
   CardHeader,

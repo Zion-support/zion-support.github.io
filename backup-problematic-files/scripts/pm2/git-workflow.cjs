@@ -78,8 +78,44 @@ class GitWorkflowAutomator {
   // TODO: Implement
 
       let merged = 0;
+<<<<<<< HEAD
+      try {
+        // Switch to main branch
+        execSync('git checkout main', {
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
+        // Pull latest changes
+        execSync('git pull origin main', {
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
+        // Merge feature branch
+        execSync(`git merge ${currentBranch}`, {
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
+        // Push changes
+        execSync('git push origin main', {
+          cwd: this.projectRoot,
+          stdio: 'pipe'
+        });
+        merged = 1;
+        this.log(`Successfully merged ${currentBranch} into main`);
+      } catch (error) {
+        errors.push({ branch: currentBranch, error: error.message });
+        this.log(`Error merging ${currentBranch}: ${error.message}`);
+      }
+      return { merged, errors };
+    } catch (error) {
+      this.log(`Auto-merge failed: ${error.message}`);
+      return { merged: 0, errors: [{ branch: 'unknown', error: error.message }] };
+    }
+  }
+=======
   // TODO: Implement
 
+>>>>>>> origin/chore/fix-lint-and-merge
   generateReport(branchCleanup, conflictResolution, pullRequests, autoMerge) {
     const report = {
       timestamp: new Date().toISOString(),
@@ -135,17 +171,33 @@ automator.run().catch(error => {)
 /**
  * PM2 Git Workflow Service;
  * Manages git operations and branch cleanup;
+<<<<<<< HEAD
+ */
+class GitWorkflow {}
+  constructor() {}
+    this.processName = process.env.PM2_PROCESS_NAME || 'git-workflow';
+    this.autoBranchCleanup = process.env.AUTO_BRANCH_CLEANUP === 'true';
+    this.autoMergeSafe = process.env.AUTO_MERGE_SAFE === 'true';
+    this.conflictResolution = process.env.CONFLICT_RESOLUTION === 'true';
+    this.branchStrategy = process.env.BRANCH_STRATEGY || 'gitflow';
+    this.logFile = path.join(__dirname, '../../logs/pm2/git-workflow.log');
+=======
  */"
 
+>>>>>>> origin/chore/fix-lint-and-merge
     this.ensureLogDir();
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { "recursive": true }")
   log(message) {}
+<<<<<<< HEAD
+
+=======
     const timestamp = new Date().toISOString();`;
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );`;
+>>>>>>> origin/chore/fix-lint-and-merge
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
   async getCurrentBranch() {}
@@ -197,8 +249,38 @@ automator.run().catch(error => {)
   async safeMerge() {}
     if (!this.autoMergeSafe) {}"
       this.log('Safe merge disabled');
+<<<<<<< HEAD
+      return { "merged": false };
+    };
+    try {}
+      this.log('Attempting safe merge...');
+      if (!currentBranch || currentBranch === 'main' || currentBranch === 'master') {}
+        this.log('Cannot merge main/master branch');
+        return { "merged": false, "reason": 'Cannot merge main branch' };
+      };
+      // Check if there are any uncommitted changes;
+      const status = execSync('git status --porcelain', { })
+        "encoding": 'utf8',
+        "stdio": 'pipe'
+      }).trim();
+      if (status) {}
+        this.log('Cannot "merge": uncommitted changes detected');
+        return { merged: false, "reason": 'Uncommitted changes' };
+      };
+      // Try to merge with main;
+      try {}
+        execSync('git fetch origin', { "stdio": 'pipe' }
+});
+        execSync('git merge origin/main', { "stdio": 'pipe' }
+});
+        this.log('Safe merge completed successfully');
+        return { "merged": true };
+      } catch (mergeError) {}
+        this.log(`Merge "failed": ${mergeError.message}`);
+=======
       return { "merged": false };"
 
+>>>>>>> origin/chore/fix-lint-and-merge
         // Try to resolve conflicts automatically;
         if (conflictResolution.resolved) {}
 

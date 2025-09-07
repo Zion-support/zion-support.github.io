@@ -2,7 +2,77 @@ import Head from 'next/head.ts'
 import { motion  } from 'framer-motion'
 import { useState  } from 'react'
 
+<<<<<<< HEAD
+;
+import Head from 'next/head.ts';'
+import { motion   } from 'framer-motion';'
+import { useState   } from 'react';'
+ursor/fix-website-loading-errors-and-merge-6662;
+ursor/automate-test-improve-and-merge-code-646c;
+import { User,Mail,Lock,Eye,EyeOff,CheckCircle,AlertCircle,Building,Phone,Globe,Shield,Zap,Brain,Cloud;
+  } from 'lucide-react';'
+export default function Signup() {const [formData, setFormData] = useState({"firstName": '',"lastName": '',"email": '',"password": '',"confirmPassword": '',"comp": '',"phone": '',"website": '',"industry": '',"useCase": '';'
+  })const [showPassword, setShowPassword] = useState(false)const [showConfirmPassword, setShowConfirmPassword] = useState(false)const [isSubmitting, setIsSubmitting] = useState(false)const [errors, setErrors] = useState<Record<string, any>>({})const industries = ['Technology','Healthcare','Finance','Manufacturing','Retail','Education','Government','Non-profit','Other';'
+  ];
+  const useCases = ['AI & Machine Learning','Cloud Infrastructure','Cybersecurity','Digital Transformation','Data Analytics','IoT Solutions','Micro SaaS Development','Enterprise IT','Other';'
+  ];
+      // // // // // // //;
+    } catch (error) {// // // // // // // console.error('Signup "error": ', error)// // // //;'
+    } catch (error) {// // // // console.error('Signup "error": ', error)} finally {setIsSubmitting(false)const title = 'Sign Up — Zion Tech Group';'
+  }
+  const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.';'
+ursor/automate-test-improve-and-merge-code-646c;
+  return (<>;
+      <Helmet>;
+        <title>{title}</title>;
+        <meta name="description" content={description} />;"
+        <meta name="viewport" content="width=device-width, initial-scale=1" />;"
+        <link rel="canonical" href=""https": //ziontechgroup.com/signup" />;"
+        {/* Open Graph */}
+        <meta property=""og": titl e" content={title} />;"
+        <meta property=""og": descriptio n" content={description} />;"
+        <meta property=""og": ur l" content=""https"://ziontechgroup.com/signup" />;"
+        <meta property=""og": typ e" content="website" />;"
+        {/* Twitter */}
+        <meta name=""twitter": car d" content="summary_large_image" />;"
+        <meta name=""twitter": titl e" content={title} />;"
+        <meta name=""twitter": descriptio n" content={description} />;"
+      </Helmet>;
+      <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">;"
+        {/* Hero Section */}
+        <section className="relative overflow-hidden py-20">;"
+          <div className="absolute inset-0 opacity-10">;"
+            <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>;"
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>;"
+            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>;"
+          </div>;
+          <div className="container mx-auto px-4 "sm": p x-6 "lg": p x-8 relative z-10">;"
+            <motion.div;
+import Head from 'next/head ;'
+import { motion } from 'framer-motion';'
+import { useState } from 'react';'
+import { User,, Mail,, Lock,, Eye,, EyeOff,, CheckCircle,, AlertCircle,, Building,, Phone,, Globe,, Shield,, Zap,, Brain,, Cloud } from 'lucide-react';'
+export default function Signup() {const [formData, setFormData] = useState({"firstName": '',"lastName": '',"email": '',"password": '',"confirmPassword": '',"comp": '',"phone": '',"website": '',"industry": '',"useCase": '';'
+  })const [showPassword, setShowPassword] = useState(false)const [showConfirmPassword, setShowConfirmPassword] = useState(false)const [isSubmitting, setIsSubmitting] = useState(false)const [errors, setErrors] = useState<Record<string, any>>({})const industries = ['Technology';'
+  const industries = ['Technology';'
+    'Healthcare','Finance','Manufacturing','Retail','Education','Government','Non-profit','Other';'
+  ];
+  const useCases = ['AI & Machine Learning';'
+    'Cloud Infrastructure','Cybersecurity','Digital Transformation','Data Analytics','IoT Solutions','Micro SaaS Development','Enterprise IT','Other';'
+  ];
+      // // // // // // // ;
+    } catch (error) {// // // // // // // console && console.error('Signup "error": ', error)// // // // ;'
+    } catch (error) {// // // // console && console.error('Signup "error": ', error)} finally {setIsSubmitting(false)const title = 'Sign Up — Zion Tech Group';'
+  }
+  return (<>;
+import Head from 'next/head.ts''
+import { motion  } from 'framer-motion''
+import { useState  } from 'react''
+import { User
+  }
+=======
 import { User,
+>>>>>>> origin/chore/fix-lint-and-merge
   Mail,
   Lock,
   Eye,
@@ -62,10 +132,15 @@ export default function Signup() {
       // // // // console.error('Signup "error": ', error)
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
+const title = 'Sign Up — Zion Tech Group';'
+return (;
+=======
   const title = 'Sign Up — Zion Tech Group'
   const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.'
 
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <>
       <Helmet>
         <title>{title}</title>
@@ -110,6 +185,25 @@ export default function Signup() {;
     "industry": '',;
     "useCase": '';
   });
+<<<<<<< HEAD
+    'Healthcare',;'
+    'Finance',;'
+    'Manufacturing',;'
+    'Retail',;'
+    'Education',;'
+    'Government',;'
+    'Non-profit',;'
+    'Other';'
+  ];
+    'Cloud Infrastructure',;'
+    'Cybersecurity',;'
+    'Digital Transformation',;'
+    'Data Analytics',;'
+    'IoT Solutions',;'
+    'Micro SaaS Development',;'
+    'Enterprise IT',;'
+    'Other';'
+=======
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -133,6 +227,7 @@ export default function Signup() {;
     'Micro SaaS Development',;
     'Enterprise IT',;
     'Other';
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
       // // // // // // // ;
     } catch (error) {;
@@ -142,9 +237,13 @@ export default function Signup() {;
       // // // // console && console.error('Signup "error": ', error);
     } finally {;
       setIsSubmitting(false);
+<<<<<<< HEAD
+return (;
+=======
   const title = 'Sign Up — Zion Tech Group';
   const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.';
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <>;
       <Helmet>;
         <title>{title}</title>;

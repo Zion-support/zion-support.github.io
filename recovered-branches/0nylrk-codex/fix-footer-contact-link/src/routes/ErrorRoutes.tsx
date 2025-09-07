@@ -17,7 +17,37 @@ const ErrorRoutes = () => {
       <Route path="*" element={<NotFound />} />
     </Routes>
   )
+<<<<<<< HEAD
+};
+import {Fragment} from "react";"
+import {Route, Routes} from "react-router-dom";"
+import { Fragment } from "react","
+import { Route, Routes } from "react-router-dom","
+import NotFound from "@/pages/NotFound","
+import Unauthorized from "@/pages/Unauthorized","
+const ErrorRoutes = () => {
 }
+const ErrorRoutes = () => {;
+}
+return (;
+export default ErrorRoutes,
+import NotFound from "NotFound";"
+import Unauthorized from "Unauthorized";"
+}
+}
+return (;
+    <Routes>;
+      {/* Error Routes */}
+      <Route path="/unauthorized" element={<Unauthorized />} />;"
+      <Route path="*" element={<NotFound />} />"
+};
+},
+return (;
+    <Routes>;
+      {/* Error Routes */}
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge
 export default ErrorRoutes;
 
 },

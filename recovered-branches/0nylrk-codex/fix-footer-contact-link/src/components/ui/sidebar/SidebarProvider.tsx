@@ -35,6 +35,9 @@ export function SidebarProvider({
 
   return (
 
+<<<<<<< HEAD
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>`
+=======
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 
       <div
@@ -43,6 +46,7 @@ export function SidebarProvider({
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
 
 import React, { createContext, useContext, useState } from "react",;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 interface SidebarContextType {;
   isOpen: boolean,;
@@ -57,10 +61,6 @@ const SidebarContext = createContext<SidebarContextType>({;
   open: () => {},;
   close: () => {}}),;
 
-  const [isOpen, setIsOpen] = useState(defaultOpen);
-  const toggle = () => setIsOpen(!isOpen);
-  const open = () => setIsOpen(true);
-  const close = () => setIsOpen(false);
 
   return (;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;

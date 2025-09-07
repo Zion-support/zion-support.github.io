@@ -52,7 +52,6 @@ type FormFieldContextValue = {
   name: string
 }
 
-const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ""})
 
 const FormField = ({ ...props }: any) => {
@@ -137,8 +136,16 @@ const FormItem = React && React.forwardRef<;
 
       <div ref={ref} className={cn("space-y-2", className)} {...props} />
     </FormItemContext.Provider>
+<<<<<<< HEAD
+  )
+})
+FormItem.displayName = $2;
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
+>(({ className, ...props }, ref) => {
+=======
 
   const { error, formItemId } = useFormField();
+>>>>>>> origin/chore/fix-lint-and-merge
     />
   );
 });'
@@ -156,8 +163,12 @@ FormControl.displayName = 'FormControl';
 const FormDescription = React.forwardRef<
   HTMLParag</HTMLParagraphElement>raphElement;
   React.HTMLAttributes<HTMLParagraphElement>
+<<<<<<< HEAD
+>(({ className, ...props }, ref) => {
+=======
 >(({ className, ...props }, ref) => {}
   const { formDescriptionId } = useFormField();
+>>>>>>> origin/chore/fix-lint-and-merge
     />
   );
 });'
@@ -165,10 +176,15 @@ FormDescription.displayName = 'FormDescription';
 const FormMessage = React.</HTMLParagraphElement>forwardRef<
   HTMLParagraphElement;
   React.HTMLAttributes<HTMLParagraphElement>
+<<<<<<< HEAD
+>(({ className, children, ...props }, ref) => {
+  if (!body) {
+=======
 >(({ className, children, ...props }, ref) => {}
   const { error, formMessageId } = useFormField();
   const body = error ? String(error?.message) : children;
   if (!body) {}
+>>>>>>> origin/chore/fix-lint-and-merge
     return null;
 
   return (
@@ -178,7 +194,15 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<
       htmlFor={formItemId}
       {...props}
 
+<<<<<<< HEAD
+  React.ElementRef<typeof Slot>,
+      htmlFor = $2;
+  React.ComponentPropsWithoutRef<typeof Slot>
+>(({ ...props }, ref) => {
+  const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
+=======
     />
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return (
     <Slot;

@@ -79,6 +79,20 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
     if (!user) {;
       toast && toast.error("You must be logged in to apply"),;
       navigate("/login", { state: { returnTo: `/jobs/${job && job.id}` } }),;
+<<<<<<< HEAD
+      return;import { useState } from "react",
+interface ApplyToJobFormProps {
+
+  job: Job
+
+  onSuccess?: () => void
+}
+interface ApplyToJobFormProps {
+
+  job: Job
+
+  onSuccess?: () => void
+=======
       return;
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
@@ -96,6 +110,7 @@ import { formatDistanceToNow } from "date-fns",
 interface ApplyToJobFormProps {};
   job: Job;
   onSuccess?: () => void;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 interface ApplyToJobFormProps {;
 
@@ -103,8 +118,27 @@ interface ApplyToJobFormProps {;
   onSuccess?: () => void;
 }
 
+<<<<<<< HEAD
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
+  const { applyToJob } = useJobApplications();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+  const { user } = useAuth(),
+  const { applyToJob } = useJobApplications(),
+  const { resumes, isLoading: isResumesLoading } = useResume(),
+  const navigate = useNavigate(),
+  
+  const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`),
+  const [selectedResumeId, setSelectedResumeId] = useState<string>(""),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [error, setError] = useState<string | null>(null),
+  
+=======
   const { user } = useAuth();
 
+>>>>>>> origin/chore/fix-lint-and-merge
     e.preventDefault(),
 
     if (!user) {
@@ -130,6 +164,34 @@ interface ApplyToJobFormProps {;
 
       if (success) {
         toast.success("Your application has been submitted!"),
+<<<<<<< HEAD
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
+  const { user } = useAuth($2);
+  const { applyToJob } = useJobApplications($2);
+  const { resumes, isLoading: isResumesLoading} = useResume($2);
+  const navigate = useNavigate($2);
+  const [coverLetter, setCoverLetter] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  
+    e.preventDefault($2);
+    if (!user) {
+      toast.error($2);
+      navigate($2);
+      return
+    }
+    if (!coverLetter.trim()) {
+      setError($2);
+      return
+    }
+    
+    setIsSubmitting($2);
+    setError($2);
+    try {
+      const success = await applyToJob($2);
+      if (success) {
+        toast.success($2);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         if (onSuccess) {
 
           onSuccess()

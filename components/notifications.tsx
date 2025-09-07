@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import React from 'react';
+import dynamic from 'next/dynamic';
+const NotificationCenter = dynamic(() => import('../components/notifications/NotificationCenter'), {
+  ssr: false}),
+
+export default function NotificationsPage() {
+  return <NotificationCenter />
+}
+=======
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true ,}
@@ -117,3 +127,4 @@ function NotificationsPage() {
   return <NotificationCenter    />;}
 }
 
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -160,6 +160,30 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
   Heart, MessageSquare, CreditCard,   ShoppingCart, Wallet ;"
  } from "lucide-react";"
 import {;
+<<<<<<< HEAD
+  {;
+  {;
+  }
+  LanguageSelector ';';'
+}from '@/components/header/LanguageSelector';'
+  {;
+  {;';'
+  }
+  HoverCard,   HoverCardTrigger, HoverCardContent ';';'
+}from '@/components/ui/hover-card';'
+  {;
+  {;';'
+  }
+  MiniCartPreview ';';'
+}from '@/components/cart/MiniCartPreview';'
+  {;
+  {;';'
+  }
+  LoginModal ';';'
+}from '@/components/auth/LoginModal';'
+interface MainNavigationProps {;
+  }
+=======
   {;"
   LanguageSelector ';';
 }from '@/components/header/LanguageSelector';
@@ -170,6 +194,7 @@ import {;
 }from '@/components/cart/MiniCartPreview';
   LoginModal ';';
 }from '@/components/auth/LoginModal';
+>>>>>>> origin/chore/fix-lint-and-merge
   isAdmin?: boolean;
 unreadCount?: number;
 className?: string ;
@@ -184,6 +209,10 @@ const [loginOpen, setLoginOpen] = useState (false);
 const { ;
   count ;
  } = useFavorites ();
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   items ;
  } = useCart ();
 const cartCount = items.length;
@@ -195,6 +224,43 @@ const handleCartClick = (e: React.MouseEvent) => {;
 setLoginOpen (true);
 return ;
 }setIsMobileMenuOpen (false) 
+<<<<<<< HEAD
+};';'
+  }
+  "key": 'home';';';'
+"href": '/';';';'
+"matches": ("path": string) => path === '/' '
+};';'
+{';';'
+  }
+  "key": 'marketplace';';';'
+"href": '/marketplace';';';'
+"matches": ("path": string) => path.startsWith ('/marketplace') '
+};';'
+{';';'
+  }
+  "key": 'categories';';';'
+"href": '/categories';';';'
+"matches": ("path": string) => path.startsWith ('/categories') '
+};';'
+{';';'
+  }
+  "key": 'talent';';';'
+"href": '/talent';';';'
+"matches": ("path": string) => path.startsWith ('/talent') && !path.includes ('/talent-dashboard') '
+};';'
+{';';'
+  }
+  "key": 'equipment';';';'
+"href": '/equipment';';';'
+"matches": ("path": string) => path.startsWith ('/equipment') '
+};';'
+{';';'
+  }
+  "key": 'community';';';'
+"href": '/community';';';'
+"matches": ("path": string) => path.startsWith ('/community') || path.startsWith ('/forum') ;'
+=======
 };';
 const baseLinks = [ {';';
   key: 'home';';';
@@ -245,6 +311,7 @@ matches: (path: string) => path.startsWith ('/equipment') ;
   href: '/community';';';
 matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum') ;']
 pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
 }];
 const links = baseLinks.map (link => ({;`;
   ...link, name: t (`nav.$ {;

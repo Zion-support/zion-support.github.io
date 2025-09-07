@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+  const navigate = useNavigate();
+  const { getProjectById, updateProjectStatus } = useProjects();
+
+=======
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
   // type argument and cast the result instead to prevent TS2347 errors.;
@@ -75,6 +81,7 @@ import {}
   XCircle} from "lucide-react",
 
 function ProjectDetailsContent() {
+>>>>>>> origin/chore/fix-lint-and-merge
   // useParams may be untyped in this environment, so avoid passing a
 
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -89,6 +96,9 @@ function ProjectDetailsContent() {
         fetchProjectNotes(projectId)
       } else {
         toast({
+<<<<<<< HEAD
+
+=======
           title: "Project not found"
           description: "The requested project could not be found."
           variant: "destructive"})
@@ -232,6 +242,7 @@ if (throw error) {
 
     } catch (err) {
       console.error ("Error fetching project notes:", err);
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
 
@@ -273,6 +284,17 @@ if (throw error) {
       setIsSubmittingNote (false);
     }
   }
+<<<<<<< HEAD
+      setIsLoading($2);
+      const projectData = await getProjectById($2);
+      if (projectData) {
+        setProject($2);
+        // Now fetch notes
+        fetchProjectNotes(projectId)
+      } else {
+        toast($2);
+        navigate(/dashboard")
+=======
 
 ;
   const handleStatusChange = async (new_status: ProjectStatus) => {}
@@ -298,6 +320,7 @@ if ( {) {}
           title: "Offer Accepted! 🎉","
 
           description: "The project is now in progress. Congratulations!"});
+>>>>>>> origin/chore/fix-lint-and-merge
       }
     }
   }
@@ -333,6 +356,24 @@ if ( {) {}
 
     loadProject()
   }, [projectId]),
+<<<<<<< HEAD
+  
+  const fetchProjectNotes = async (projectId: string) => {
+    try {
+      const { data, error } = await supabase
+        .from("project_notes)
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)
+        .eq(project_id", projectId)
+        .order($2);
+      if (error) throw error,
+      
+      setNotes(data || [])
+    } catch (err) {
+      console.error("Error fetching project notes:, err)
+=======
 
         .order("created_at", { ascending: false }),
       
@@ -341,6 +382,7 @@ if ( {) {}
       setNotes(data || [])
     } catch (err) {"
       console.error("Error fetching project notes:", err)
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   },
   
@@ -350,12 +392,19 @@ if ( {) {}
     setIsSubmittingNote(true),
 
     try {
+<<<<<<< HEAD
+        .from(project_notes")
+        .insert({
+          project_id: project.id
+          user_id: user.id
+=======
       const { data, error } = await supabase
 
         .from("project_notes")
         .insert({}
           project_id: project.id;
           user_id: user.id;
+>>>>>>> origin/chore/fix-lint-and-merge
           content: newNote})
 
         .select(),
@@ -367,6 +416,41 @@ if ( {) {}
       setNewNote(""),
 
       toast({
+<<<<<<< HEAD
+        title: "Note added,
+        description: Your note has been added to the project."})
+    } catch (err: any) {
+      console.error($2);
+      toast({
+        title: "Failed to add note,
+        description: err.message || An error occurred while adding your note.",
+        variant: "destructive})
+    } finally {
+      setIsSubmittingNote(false)
+    }
+    switch (status) {        // Now fetch notes;
+        }
+        fetchProjectNotes(projectId);
+
+            <p > Loading project details...</p>;
+          </div>;
+        </div>;
+      </div>);  }
+  },
+  
+  if (isLoading) {
+
+                </span>
+              </div>
+            </div>
+            {/* Action Buttons Based on Role and Status */}
+
+              {isTalent && isOfferPending && (
+                <>
+                  <AlertDialog>
+                    <AlertDialogTrigger asChild>
+
+=======
         title: "Note added"
 
         description: "Your note has been added to the project."})
@@ -570,6 +654,7 @@ if ( {) {}
                     <AlertDialogTrigger asChild>"
                       <Button variant="default">"
                         <CheckCircle2 className="mr-2 h-4 w-4" /> Accept Offer;
+>>>>>>> origin/chore/fix-lint-and-merge
                       </Button>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
@@ -581,6 +666,16 @@ if ( {) {}
                         </AlertDialogDescription>
                       </AlertDialogHeader>
                       <AlertDialogFooter>
+<<<<<<< HEAD
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>
+
+                          Accept Offer
+                        </AlertDialogAction>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialog>
+
+=======
                         <AlertDialogCancel>Cancel</AlertDialogCancel>"
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>
                           Accept Offer;
@@ -598,6 +693,7 @@ if ( {) {}
                   <AlertDialogTrigger asChild>"
                     <Button variant="default">"
                       <CheckCircle2 className="mr-2 h-4 w-4" /> Mark as Completed;
+>>>>>>> origin/chore/fix-lint-and-merge
                     </Button>
                   </AlertDialogTrigger>
                   <AlertDialogContent>
@@ -609,14 +705,29 @@ if ( {) {}
                       </AlertDialogDescription>
                     </AlertDialogHeader>
                     <AlertDialogFooter>
+<<<<<<< HEAD
+                      <AlertDialogCancel>Cancel</AlertDialogCancel>
+
+                        Mark as Completed
+=======
                       <AlertDialogCancel>Cancel</AlertDialogCancel>"
                       <AlertDialogAction onClick={() => handleStatusChange("completed")}>
                         Mark as Completed;
+>>>>>>> origin/chore/fix-lint-and-merge
                       </AlertDialogAction>
                     </AlertDialogFooter>
                   </AlertDialogContent>
                 </AlertDialog>
               )}
+<<<<<<< HEAD
+              {isActiveProject && (
+
+                  </Link>
+                </Button>
+              )}
+              {isActiveProject && (
+
+=======
               {isActiveProject && ("
                 <Button variant="default" asChild>`
                   <Link to={`/project/${project.id}/milestones`}>"
@@ -637,10 +748,15 @@ if ( {) {}
                   onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
                 >"
                   <MessageSquare className="mr-2 h-4 w-4" /> Message;
+>>>>>>> origin/chore/fix-lint-and-merge
                 </Button>
               )}
             </div>
           </div>
+<<<<<<< HEAD
+        </div>
+
+=======
         </div>"
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">"
           <div className="order-2 lg:order-1 lg:col-span-2">"
@@ -655,6 +771,7 @@ if ( {) {}
                 )}
               </TabsList>"
               <TabsContent value="details">
+>>>>>>> origin/chore/fix-lint-and-merge
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Scope</CardTitle>
@@ -1163,6 +1280,13 @@ if ( {) {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
+<<<<<<< HEAD
+
+                          {project.payment_terms} Payment
+                        </Badge>
+                      </div>
+                      <div>
+=======
 </CardContent>"
                     <div className="space-y-4">"
 </div>
@@ -1187,14 +1311,20 @@ if ( {) {
                         <div className="bg-muted/30 p-4 rounded-md">"
 </div>"
                           <p className="whitespace-pre-wrap">{project.job?.description}</p>"
+>>>>>>> origin/chore/fix-lint-and-merge
 
                         </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
+<<<<<<< HEAD
+              </TabsContent>
+
+=======
               </TabsContent>"
               <TabsContent value="timeline">
+>>>>>>> origin/chore/fix-lint-and-merge
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Timeline</CardTitle>
@@ -1231,6 +1361,10 @@ if ( {) {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
+<<<<<<< HEAD
+
+                            {getStatusBadge(project.status)}
+=======
 </CardContent>"
                     <div className="space-y-4">"
 </div>"
@@ -1254,14 +1388,20 @@ if ( {) {
                           <div className="mt-1">"
 </div>
 
+>>>>>>> origin/chore/fix-lint-and-merge
                           </div>
                         </div>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
+<<<<<<< HEAD
+              </TabsContent>
+
+=======
               </TabsContent>"
               <TabsContent value="documents">
+>>>>>>> origin/chore/fix-lint-and-merge
                 <Card>
                   <CardHeader>
                     <CardTitle>Project Documents</CardTitle>
@@ -1270,6 +1410,48 @@ if ( {) {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
+<<<<<<< HEAD
+                    {project.agreement_url ? (
+
+                              Uploaded when project was created
+                            </p>
+                          </div>
+                        </div>
+
+                            View
+                          </Link>                          </Link>
+                          </Link>
+                        </Button>
+                      </div>
+                    ) : (
+
+                          No documents have been uploaded to this project.
+                        </p>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+              </TabsContent>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Project Notes</CardTitle>
+                    <CardDescription>
+                      Shared notes and updates
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+
+                </span>;
+              </div>;
+            </div>;
+            {/* Action Buttons Based on Role and Status */}
+
+              {is_talent && isOfferPending && (
+                <>;
+                  <AlertDialog>;
+                    <AlertDialogTrigger as_child>;
+=======
                     {project.agreement_url ? ("
                       <div className="flex items-center justify-between bg-muted/30 p-4 rounded-md">"
                         <div className="flex items-center gap-3">"
@@ -1288,6 +1470,7 @@ if ( {) {
                 </span>;
               </div>;
             </div>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                       </Button>;
                     </AlertDialogTrigger>;
@@ -1300,8 +1483,13 @@ if ( {) {
                         </AlertDialogDescription>;
                       </AlertDialogHeader>;
                       <AlertDialogFooter>;
+<<<<<<< HEAD
+                        <AlertDialogCancel > Cancel</AlertDialogCancel>;
+
+=======
                         <AlertDialogCancel > Cancel</AlertDialogCancel>;"
                         <AlertDialogAction on_click={() => handleStatusChange ("offer_accepted")}>;
+>>>>>>> origin/chore/fix-lint-and-merge
                           Accept Offer;
 
               </TabsContent>"
@@ -1432,6 +1620,10 @@ if ( {) {
                   </AlertDialog>;
 
                 <AlertDialog>;
+<<<<<<< HEAD
+                  <AlertDialogTrigger as_child>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     </Button>;
                   </AlertDialogTrigger>;
@@ -1444,22 +1636,36 @@ if ( {) {
                       </AlertDialogDescription>;
                     </AlertDialogHeader>;
                     <AlertDialogFooter>;
+<<<<<<< HEAD
+                      <AlertDialogCancel > Cancel</AlertDialogCancel>;
+
+=======
                       <AlertDialogCancel > Cancel</AlertDialogCancel>;"
                       <AlertDialogAction on_click={() => handleStatusChange ("completed")}>;
+>>>>>>> origin/chore/fix-lint-and-merge
                         Mark as Completed;
                       </AlertDialogAction>;
                     </AlertDialogFooter>;
                   </AlertDialogContent>;
+<<<<<<< HEAD
+                >;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 </Button>)}
             </div>;
           </div>;
+<<<<<<< HEAD
+        </div>;
+
+=======
         </div>;"
                 <TabsTrigger value="details">Project Details</TabsTrigger>;"
                 <TabsTrigger value="timeline">Timeline</TabsTrigger>;"
                 <TabsTrigger value="documents">Documents</TabsTrigger>;"
                 <TabsTrigger value="notes">Shared Notes</TabsTrigger>;"
               <TabsContent value="details">;
+>>>>>>> origin/chore/fix-lint-and-merge
                 <Card>;
                   <CardHeader>;
                     <CardTitle > Project Scope</CardTitle>;
@@ -1467,8 +1673,13 @@ if ( {) {
                       Project details and expectations;
                     </CardDescription>;
                   </CardHeader>;
+<<<<<<< HEAD
+                  <CardContent>;
+
+=======
 
                         <Badge variant="outline" className="capitalize">;
+>>>>>>> origin/chore/fix-lint-and-merge
                           {project.payment_terms} Payment;
 </AlertDialog>
                   <AlertDialogTrigger as_child>;
@@ -1536,8 +1747,13 @@ if ( {) {
                     </div>;
                   </CardContent>;
                 </Card>;
+<<<<<<< HEAD
+              </TabsContent>;
+
+=======
               </TabsContent>;"
               <TabsContent value="timeline">;
+>>>>>>> origin/chore/fix-lint-and-merge
                 <Card>;
                   <CardHeader>;
                     <CardTitle > Project Timeline</CardTitle>;
@@ -1568,8 +1784,13 @@ if ( {) {
                     </div>;
                   </CardContent>;
                 </Card>;
+<<<<<<< HEAD
+              </TabsContent>;
+
+=======
               </TabsContent>;"
               <TabsContent value="documents">;
+>>>>>>> origin/chore/fix-lint-and-merge
                 <Card>;
                   <CardHeader>;
                     <CardTitle > Project Documents</CardTitle>;
@@ -1578,12 +1799,21 @@ if ( {) {
                     </CardDescription>;
                   </CardHeader>;
                   <CardContent>;
+<<<<<<< HEAD
+                          <div>;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
                               Uploaded when project was created;
                             </p>;
                           </div>;
+<<<<<<< HEAD
+                        </div>;
+
+=======
                         </div>;"
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">;
+>>>>>>> origin/chore/fix-lint-and-merge
                             View;
                           </a>;
                         </Button>;
@@ -1620,8 +1850,13 @@ if ( {) {
                       </div>)}
                   </CardContent>;
                 </Card>;
+<<<<<<< HEAD
+              </TabsContent>;
+
+=======
               </TabsContent>;"
               <TabsContent value="notes">;
+>>>>>>> origin/chore/fix-lint-and-merge
                 <Card>;
                   <CardHeader>;
                     <CardTitle > Project Notes</CardTitle>;
@@ -1629,12 +1864,27 @@ if ( {) {
                       Shared notes and updates;
                     </CardDescription>;
                   </CardHeader>;
+<<<<<<< HEAD
+                  <CardContent>;
+
+=======
                   <CardContent>;"
     navigate("/unauthorized");
+>>>>>>> origin/chore/fix-lint-and-merge
     return null;
   }
 
                         {notes.length > 0 ? (
+<<<<<<< HEAD
+                          }
+                          notes.map ((note) => (
+
+              {isTalent && isOfferPending && (;
+                <>;
+                  <AlertDialog>;
+                    <AlertDialogTrigger asChild>;
+
+=======
 
   const isOfferPending = project && project.status === "offer_sent";
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project && project.status);
@@ -1658,6 +1908,7 @@ if ( {) {
                     <AlertDialogTrigger asChild>;"
                       <Button variant="default">;"
                         <CheckCircle2 className="mr-2 h-4 w-4" /> Accept Offer;
+>>>>>>> origin/chore/fix-lint-and-merge
                       </Button>;
                     </AlertDialogTrigger>;
                     <AlertDialogContent>;
@@ -1669,14 +1920,21 @@ if ( {) {
                         </AlertDialogDescription>;
                       </AlertDialogHeader>;
                       <AlertDialogFooter>;
+<<<<<<< HEAD
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>;
+
+=======
                         <AlertDialogCancel>Cancel</AlertDialogCancel>;"
                         <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>;
+>>>>>>> origin/chore/fix-lint-and-merge
                           Accept Offer;
                         </AlertDialogAction>;
                       </AlertDialogFooter>;
                     </AlertDialogContent>;
                   </AlertDialog>;
 
+<<<<<<< HEAD
+=======
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>;
 
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes;
@@ -1688,6 +1946,7 @@ if ( {) {
                     <Button variant="default">;
 
                       <CheckCircle2 className="mr-2 h-4 w-4" /> Mark as Completed;
+>>>>>>> origin/chore/fix-lint-and-merge
                     </Button>;
                   </AlertDialogTrigger>;
                   <AlertDialogContent>;
@@ -1699,8 +1958,13 @@ if ( {) {
                       </AlertDialogDescription>;
                     </AlertDialogHeader>;
                     <AlertDialogFooter>;
+<<<<<<< HEAD
+                      <AlertDialogCancel>Cancel</AlertDialogCancel>;
+
+=======
                       <AlertDialogCancel>Cancel</AlertDialogCancel>;"
                       <AlertDialogAction onClick={() => handleStatusChange("completed")}>;
+>>>>>>> origin/chore/fix-lint-and-merge
                         Mark as Completed;
                       </AlertDialogAction>;
                     </AlertDialogFooter>;
@@ -1708,6 +1972,32 @@ if ( {) {
                 </AlertDialog>;
               )}
 
+<<<<<<< HEAD
+              {isActiveProject && (;
+
+                </Button>;
+              )}
+
+              {isActiveProject && (;
+
+                </Button>;
+              )}
+            </div>;
+          </div>;
+        </div>;
+
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle>Project Scope</CardTitle>;
+                    <CardDescription>;
+                      Project details and expectations;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+
+                        </div>;
+                      </div>;
+=======
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
           <div className="order-2 lg:order-1 lg:col-span-2">;
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>;
@@ -1720,16 +2010,24 @@ if ( {) {
                   <TabsTrigger value="reviews">Reviews</TabsTrigger>;
                 )}
               </TabsList>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                       </div>;
                       <div>;
+<<<<<<< HEAD
+
+                          {project && project.payment_terms} Payment;
+=======
 </div>"
                         <h3 className="font-semibold mb-2">Payment Terms</h3>;""
                         <Badge variant="outline" className="capitalize">;"
 </Badge>
+>>>>>>> origin/chore/fix-lint-and-merge
                         </Badge>;
                       </div>;
                       <div>;
+<<<<<<< HEAD
+=======
                         <h3 className="font-semibold mb-2">Job Details</h3>;
                         <div className="bg-muted/30 p-4 rounded-md">;
                           <p className="whitespace-pre-wrap">{project.job?.description}</p>;
@@ -1739,6 +2037,7 @@ if ( {) {
 </div>"
                           <p className="whitespace-pre-wrap">{project && project.job?.description}</p>;"
                         </div>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                       </div>;
                     </div>;
@@ -1746,6 +2045,39 @@ if ( {) {
                 </Card>;
               </TabsContent>;
 
+<<<<<<< HEAD
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle>Project Timeline</CardTitle>;
+                    <CardDescription>;
+                      Key dates and milestones;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+
+                            {getStatusBadge(project && project.status)}                          </div>;
+                        </div>;
+                      </div>;
+                    </div>;
+                  </CardContent>;
+                </Card>;
+              </TabsContent>;
+
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle>Project Documents</CardTitle>;
+                    <CardDescription>;
+                      Agreements and relevant files;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+
+                              Uploaded when project was created;
+                            </p>;
+                          </div>;
+                        </div>;
+
+=======
                         <div className="flex items-center gap-3">;
 
                           <FileText className="h-5 w-5 text-primary" />;
@@ -1773,6 +2105,7 @@ if ( {) {
                         <h3 className="font-semibold">No Documents Yet</h3>;
 
                         <p className="text-sm text-muted-foreground">;
+>>>>>>> origin/chore/fix-lint-and-merge
                           No documents have been uploaded to this project.;
                         </p>;
                       </div>;
@@ -1780,12 +2113,74 @@ if ( {) {
                   </CardContent>;
                 </Card>;
               </TabsContent>;
+<<<<<<< HEAD
 
+                <Card>;
+                  <CardHeader>;
+                    <CardTitle>Project Notes</CardTitle>;
+                    <CardDescription>;
+                      Shared notes and updates;
+                    </CardDescription>;
+                  </CardHeader>;
+                  <CardContent>;
+
+                        {notes && notes.length > 0 ? (;
+                          }
+                          notes && notes.map((note) => (;
+
+                                  {note && note.created_by_profile?.avatar_url ? (;
+                                    <img
+}
+src={note && note.created_by_profile.avatar_url}
+                                      alt={note && note.created_by_profile.display_name} />;
+                                  ) : (;
+
+                              No notes yet. Add the first note to this project.;
+                            </p>;
+                          </div>;
+                        )}
+                      </div>;
+
+                      {isOfferAccepted && (;
+                        <div>;
+                          <Textarea
+
+                          />;
+                          <Button,
+onClick={handleSubmitNote}
+                            disabled={!newNote && newNote.trim() || isSubmittingNote}>;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
                     </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
 
+<<<<<<< HEAD
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+                        />
+                      ) : (
+
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+
+                      {project.client_profile?.avatar_url ? (
+                        <img
+}
+src={project.client_profile.avatar_url}
+                          alt={project.client_profile.display_name} />
+                      ) : (
+
+              <CardHeader>
+                <CardTitle>Project Status</CardTitle>
+              </CardHeader>
+              <CardContent>
+
+=======
                           notes.map((note) => (
                             <div key={note.id} className="bg-muted/30 p-3 rounded-md">
                               <div className="flex items-center gap-2 mb-2">
@@ -2155,10 +2550,15 @@ src={project.talent_profile.profile_picture_url}
                     <span className="text-sm font-medium">Start Date:</span>"
                     <span className="text-sm">"
                       {format(new Date(project.start_date), "PPP")}
+>>>>>>> origin/chore/fix-lint-and-merge
                     </span>
                   </div>
                 </div>
               </CardContent>
+<<<<<<< HEAD
+              {/* Conditional Footer Based on Status */}
+
+=======
               {/* Conditional Footer Based on Status */}"
               {project.status === "changes_requested" && isClient && ("
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">"
@@ -2265,6 +2665,7 @@ src={project.talent_profile.profile_picture_url}
               )}
 
             </Card>;
+>>>>>>> origin/chore/fix-lint-and-merge
                   </p>                    </div>;
                   </div>;
                 </div>;
@@ -2358,6 +2759,46 @@ function load_project() {
 if (return) {
   $2;
 }
+<<<<<<< HEAD
+                  </p>
+                  <Button
+                    variant=outline"
+                    onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
+                    className="w-full
+                  >
+                    <MessageSquare className=mr-2 h-4 w-4" /> Discuss Changes
+                  </Button>
+                </CardFooter>
+              )}
+              {project.status === "offer_sent && isClient && (
+                <CardFooter className=flex-col items-start gap-2 border-t pt-6">
+                  <p className="text-sm text-muted-foreground>
+                    Waiting for the talent to accept your offer.
+                  </p>
+                </CardFooter>
+              )}
+              {project.status === completed" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6>
+                  <p className=text-sm text-green-600 flex items-center gap-1">
+                    <CheckCircle2 className="h-4 w-4 /> This project has been completed.
+                  </p>
+                </CardFooter>
+              )}
+              {project.status === canceled" && (
+                <CardFooter className="flex-col items-start gap-2 border-t pt-6>
+                  <p className=text-sm text-red-600 flex items-center gap-1">
+                    <XCircle className="h-4 w-4" /> This project has been canceled.
+                  </p>
+                </CardFooter>
+              )}
+            </Card>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
+=======
       setIsLoading (true);
       const project_data = await getProjectById (project_id);
       // Check condition;
@@ -3060,6 +3501,7 @@ if (return, ) {
     </>);
 export default /**
  * ProjectDetails - Function description;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export default function ProjectDetails() {;

@@ -1,4 +1,29 @@
 <<<<<<< HEAD
+
+#!/usr/bin/env node;
+
+
+  log(message, level = info')
+    fixed = fixed.replace(/;\s*,/g, ',)
+    fixed = fixed.replace(/{\s*;/g, {'})
+    fixed = fixed.replace(/,\s*}/g, '})
+    fixed = fixed.replace(/;\s*\)/g, )'
+    fixed = fixed.replace(/;\s*\]/g, '])
+    fixed = fixed.replace(/;\s*$/gm, ')
+    fixed = fixed.replace(/{\s*;\s*/g, '{})
+    fixed = fixed.replace(/,\s*}/g, }')
+    fixed = fixed.replace(/\[\s*;\s*/g, '[)]
+    fixed = fixed.replace(/,\s*\]/g, ]')
+    fixed = fixed.replace(/\(\s*;\s*/g, '()
+
+    fixed = fixed.replace(/;\s*\)/g, )'
+    fixed = fixed.replace(/['"]\s*;\s*[]/g, ")
+    fixed = fixed.replace(/['"]\s*;\s*$/gm, ')
+    fixed = fixed.replace(/require\s*\(\s*[]\s*;\s*[']\s*\)/g, 'require("")
+      this.log(`⚠ ${this.errors.length} files had errors`)
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -44,18 +69,28 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
       this.log(`� Script fixing "failed"`)
+<<<<<<< HEAD
+
+      this.log(`� Script fixing failed`)
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
       this.log(`� Script fixing "failed"`)
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
       this.log(`� Script fixing "failed"`)
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

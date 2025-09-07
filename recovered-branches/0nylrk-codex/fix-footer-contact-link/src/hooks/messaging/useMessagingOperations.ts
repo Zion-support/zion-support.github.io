@@ -89,5 +89,62 @@ export /**;
 type UserWithProfile = UserProfile | UserDetails | null;
 /**
  * Hook that combines all messaging operations  }
+<<<<<<< HEAD
+import { useMessages } from './useMessages';
+// Allow either UserProfile or UserDetails
+type UserWithProfile = $2;
+/**
+ * Hook that combines all messaging operations
+ */
+}
+
+export function useMessagingOperations(user: UserWithProfile) {
+  // State management
+  const {;
+    messages;
+    setMessages;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    unreadCount;
+    setUnreadCount;
+    activeConversation;
+    setActiveConversation;
+    isLoading
+    setIsLoading
+  } = useConversationState($2);
+  // Conversations management
+  const {
+    fetchConversations;
+    createConversation
+  } = useConversations($2);
+  // Messages management
+    loadMessages;
+    sendMessage;
+    markAsRead
+  } = useMessages($2);
+  return {
+    // State
+    messages;
+    activeMessages;
+    setActiveMessages;
+    conversations;
+    setConversations;
+    unreadCount;
+    setUnreadCount;
+    activeConversation;
+    setActiveConversation;
+    isLoading;
+    // Operations
+    sendMessage;
+    createConversation;
+    markAsRead;
+    fetchConversations;
+
+    loadMessages
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 import { useMessages } from './useMessages';

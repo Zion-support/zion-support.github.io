@@ -10,28 +10,33 @@
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs')
-const path = require('path')
+const path = require(path')
 const { execSync } = require('child_process')
-        this.logFile = path.join(this.projectRoot, 'logs', 'error-recovery.log')
-        const logsDir = path.join(this.projectRoot, 'logs')
-        this.log(' Detecting errors...')
-            const syntaxCheck = execSync('npm run type-check', { "cwd": this.projectRoot, "encoding"})
-                "type"
-                "severity"
-            const lintCheck = execSync('npm run lint', { "cwd": this.projectRoot, "encoding"})
-                "type"
-                "severity"
-            const buildCheck = execSync('npm run build', { "cwd": this.projectRoot, "encoding"})
-                "type"
-                "severity"
+        this.logFile = path.join(this.projectRoot, logs', 'error-recovery.log)
+        const logsDir = path.join(this.projectRoot, logs')
+        this.log(' Detecting errors...)
+            const syntaxCheck = execSync(npm run type-check', { "cwd: this.projectRoot, encoding"})
+                "type
+                severity"
+            const lintCheck = execSync('npm run lint, { "cwd: this.projectRoot, encoding"})
+                "type
+                severity"
+            const buildCheck = execSync(npm run build', { "cwd: this.projectRoot, encoding"})
+                "type
+                severity"
             execSync('npm run "lint")
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,3 +56,4 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

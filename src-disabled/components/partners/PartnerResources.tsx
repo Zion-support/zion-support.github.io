@@ -22,10 +22,8 @@ interface ResourceItem {
   description: string;
   type: 'image' | 'video' | 'document' | 'link';
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast";
 
 import {
   Card
@@ -58,9 +56,6 @@ interface ResourceItem {
   type: 'image' | 'video' | 'document' | 'link';
   icon: JSX.Element;
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
 import { toast } from "@/hooks/use-toast",
 interface ResourceItem {
 
@@ -166,10 +161,14 @@ interface ResourceItem {;
                     className="w-full flex items-center gap-2"
                   >
                     <Download className="h-4 w-4" />
+<<<<<<< HEAD
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/partners/PartnerResources.tsx
+=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react';
 import { toast } from "@/hooks/use-toast",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ResourceItem {;
   id: string,;
   title: string,;
@@ -313,10 +312,6 @@ export function PartnerResources() {;
                     className="w-full flex items-center gap-2"
                   >
                     <Download className="h-4 w-4" />
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react';
-import { toast } from "@/hooks/use-toast",;
 interface ResourceItem {;
   id: string,;
   title: string,,

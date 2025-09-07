@@ -53,7 +53,6 @@ const navItems = [;
               {React.cloneElement(item.icon as React.ReactElement, {"
 
   const location = useLocation();
-  const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" }
     { path: "/mobile/browse", icon: <Search />, label: "Browse" }
     { path: "/mobile/projects", icon: <Briefcase />, label: "Projects" }

@@ -232,10 +232,13 @@ console.log('\n🎉 Ultimate syntax fix completed!');
 
 console.log('\n🎉 Final build fix completed!');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:backup-problematic-files/scripts/final-build-fix.cjs
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     let modified = false;
+>>>>>>> origin/chore/fix-lint-and-merge
 
     // Check for merge conflict markers
 <<<<<<< HEAD
@@ -245,7 +248,6 @@ console.log('\n🎉 Final build fix completed!');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 :backup-problematic-files/scripts/final-build-fix.cjs
-    let modified = false;
 
     // Check for merge conflict markers
 :scripts/resolve-final-conflicts.cjs
@@ -254,7 +256,17 @@ console.log('\n🎉 Final build fix completed!');
 =======
 =======
 
+<<<<<<< HEAD
+
+
+
+    // Check for merge conflict markers
+
+
+
+=======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

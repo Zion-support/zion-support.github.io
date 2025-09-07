@@ -15,7 +15,6 @@ import { JobSchemaType } from './validation',
 
 interface JobPostingFormProps {
 
-import React, { useState, useEffect, useCallback } from 'react';
 import {useNavigate} from 'react-router-dom';
 import {toast} from "sonner";
 import {Input} from "@/components/ui/input";
@@ -30,6 +29,14 @@ import {useJobs} from "@/hooks/useJobs";
 import {JobSchemaType} from './validation';
 import React, { useState, useEffect, useCallback } from 'react',
 import { useNavigate } from 'react-router-dom',
+<<<<<<< HEAD
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
+import { toast } from "sonner",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Button } from "@/components/ui/button",  const navigate = useNavigate();
+=======
 
 import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
@@ -40,6 +47,7 @@ import {BasicInfoFields} from './BasicInfoFields';
 import {DateFields} from './DateFields';
 import {DescriptionFields} from './DescriptionFields';
 
+>>>>>>> origin/chore/fix-lint-and-merge
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);"
   const [editorContent, setEditorContent] = useState("");
@@ -70,8 +78,27 @@ function JobPostingForm() {}
     is_remote;
     setIsRemote;
 
+<<<<<<< HEAD
+import { Form } from "@/components/ui/form";
+import { useJobForm  } from './useJobForm';
+import { BasicInfoFields  } from './BasicInfoFields';
+import { DateFields  } from './DateFields';
+import { DescriptionFields  } from './DescriptionFields';
+import { useJobs } from "@/hooks/useJobs";
+import { JobSchemaType } from './validation';
+interface JobPostingFormProps {
+  jobId?: string,
+  onSuccess?: () => void
+}
+export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
+  const navigate = useNavigate($2);
+  const { createJob, updateJob, getJobById } = useJobs($2);
+  const [isFormLoading, setIsFormLoading] = useState($2);
+  const [editorContent, setEditorContent] = useState($2);
+=======
   const {
 
+>>>>>>> origin/chore/fix-lint-and-merge
     form,
     isLoading,
     startDate,
@@ -331,6 +358,20 @@ if ( {) {}
       if (onSuccess) {;
         onSuccess();
 
+<<<<<<< HEAD
+    setIsFormLoading($2);
+    try {
+      const jobData = await submitJob($2);
+      if (jobId) {
+        await updateJob($2);
+        toast.success("Job updated successfully!")
+      } else {
+        await createJob($2);
+        toast.success($2);
+        form.reset($2);
+        setEditorContent("")
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
           setStartDate={setStartDate}

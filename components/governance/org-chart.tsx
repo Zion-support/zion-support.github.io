@@ -1,6 +1,87 @@
+<<<<<<< HEAD
+return <OrgChartPage />;
+=======
   return <OrgChartPage    />;
 }
 
+<<<<<<< HEAD
+}
+export default function OrgChartGovernancePage() {
+  return <OrgChartPage />;
+}
+export default /**
+ * OrgChartGovernancePage - Function description
+ */
+function OrgChartGovernancePage() {
+  return <OrgChartPage />;const OrgChartPage = dynamic (() => import ('../../components / org / OrgChartPage), { ssr: false }),
+export default /**
+ * OrgChartGovernancePage - Function description
+ */
+  return <OrgChartPage />;
+>>>>>>> origin/main
+}
+
+const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { "ssr": false,'
+}),
+export default function OrgChartGovernancePage() {
+  return <OrgChartPage />
+}
+  return <OrgChartPage />;
+}
+const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
+export default function OrgChartGovernancePage() {};
+  return <OrgChartPage />;
+}'
+import dynamic from 'next / dynamic';
+;
+const OrgChartPage = dynamic ('
+  () => import ('../../components / org / OrgChartPage'),
+  { ssr: false };
+);
+
+export default function OrgChartGovernancePage() { return null; }
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
+export default function OrgChartGovernancePage() { return null; }
+export default function OrgChartGovernancePage() {
+  return <OrgChartPage />;
+}
+}
+}
+import dynamic from 'next / dynamic;
+const OrgChartPage = dynamic (
+  () => import (../../components / org / OrgChartPage');
+  { ssr: false ;}
+);
+
+export default function OrgChartGovernancePage() {
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false ;}),
+export default function OrgChartGovernancePage() {
+  return <OrgChartPage />;
+}
+
+}
+export default function OrgChartGovernancePage() {}
+  return <OrgChartPage />;
+}
+export default /**;
+ * OrgChartGovernancePage - Function description;
+ */
+function OrgChartGovernancePage() { return null; }
+  return <OrgChartPage />;const OrgChartPage = dynamic (() => import ('../../components / org / OrgChartPage'), { ssr: false }),
+export default /**;
+ * OrgChartGovernancePage - Function description;
+ */
+  return <OrgChartPage />;
+}
+
+export default function OrgChartGovernancePage() {;
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false ;}),;
+
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+}
+}
+=======
 const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false,}
 }),
 export default function OrgChartGovernancePage() {
@@ -9,3 +90,7 @@ export default function OrgChartGovernancePage() {
 
 }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main

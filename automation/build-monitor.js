@@ -9,7 +9,142 @@ class BuildMonitor {
 
     this.logFile = path.join(__dirname, 'logs', 'build-monitor.log');
     this.reportFile = path.join(__dirname, 'reports', 'build-status.json');
+<<<<<<< HEAD
+    this.alertThreshold = 3; // Alert after 3 consecutive failures
+    this.consecutiveFailures = 0;
+    // Ensure directories exist
+    fs.mkdirSync(path.dirname(this.logFile), { recursive: true });
+    fs.mkdirSync(path.dirname(this.reportFile), { recursive: true });
+  }
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+  async checkBuildHealth() {
+    const results = {
+      timestamp: new Date().toISOString(),
+      build: { status: 'unknown', duration: 0, errors: [] },
+      lint: { status: 'unknown', issues: [] },
+      typeCheck: { status: 'unknown', errors: [] },
+      dependencies: { status: 'unknown', outdated: [] }
+    };
+    try {
+      // Check build
+      this.log('Checking build status...');
+      const buildStart = Date.now();
+      try {
+        execSync('yarn build', { 
+          stdio: 'pipe', 
+          timeout: 300000, // 5 minutes timeout
+          cwd: process.cwd()
+        });
+        results.build.status = 'success';
+        results.build.duration = Date.now() - buildStart;
+        this.consecutiveFailures = 0;
+        this.log('Build check: SUCCESS');
+      } catch (error) {
+        results.build.status = 'failed';
+        results.build.duration = Date.now() - buildStart;
+        results.build.errors = this.parseErrors(error.stdout || error.message);
+        this.consecutiveFailures++;
+        this.log(`Build check: FAILED (${this.consecutiveFailures} consecutive failures)`, 'ERROR');
+      }
+      // Check linting (non-blocking)
+      try {
+        execSync('yarn lint', { stdio: 'pipe', cwd: process.cwd() });
+        results.lint.status = 'success';
+        this.log('Lint check: SUCCESS');
+      } catch (error) {
+        results.lint.status = 'failed';
+        results.lint.issues = this.parseLintIssues(error.stdout || error.message);
+        this.log('Lint check: ISSUES FOUND', 'WARN');
+      }
+      // Check TypeScript (non-blocking)
+      try {
+        execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe', cwd: process.cwd() });
+        results.typeCheck.status = 'success';
+        this.log('TypeScript check: SUCCESS');
+      } catch (error) {
+        results.typeCheck.status = 'failed';
+        results.typeCheck.errors = this.parseTypeErrors(error.stdout || error.message);
+        this.log('TypeScript check: ERRORS FOUND', 'WARN');
+      }
+      // Check dependencies
+      try {
+        const outdated = execSync('yarn outdated --json', { 
+          stdio: 'pipe', 
+          cwd: process.cwd() 
+        });
+        results.dependencies.status = 'success';
+        results.dependencies.outdated = JSON.parse(outdated);
+        this.log('Dependencies check: SUCCESS');
+      } catch (error) {
+        results.dependencies.status = 'warning';
+        this.log('Dependencies check: Some packages may be outdated', 'WARN');
+      }
+    } catch (error) {
+      this.log(`Error during health check: ${error.message}`, 'ERROR');
+    }
+    return results;
+  }
+  parseErrors(output) {
+    const errors = [];
+    const lines = output.split('\n');
+    lines.forEach(line => {
+      if (line.includes('Error:') || line.includes('SyntaxError:')) {
+        errors.push(line.trim());
+      }
+    });
+    return errors;
+  }
+  parseLintIssues(output) {
+    const issues = [];
+    lines.forEach(line => {
+      if (line.includes('error') || line.includes('warning')) {
+        issues.push(line.trim());
+      }
+    });
+    return issues;
+  }
+  parseTypeErrors(output) {
+    lines.forEach(line => {
+      if (line.includes('error TS')) {
+        errors.push(line.trim());
+      }
+    });
+    return errors;
+  }
+  async sendAlert(results) {
+    if (this.consecutiveFailures >= this.alertThreshold) {
+      this.log(`ALERT: ${this.consecutiveFailures} consecutive build failures!`, 'CRITICAL');
+      // Create alert file for other processes to pick up
+      const alertData = {
+        type: 'build_failure',
+        consecutiveFailures: this.consecutiveFailures,
+        timestamp: new Date().toISOString(),
+        lastError: results.build.errors[0] || 'Unknown error',
+        results: results
+      };
+      fs.writeFileSync(
+        path.join(__dirname, 'alerts', 'build-failure-alert.json'),
+        JSON.stringify(alertData, null, 2)
+      );
+    }
+  }
+  async generateReport(results) {
+    // Read previous report for trends
+    let previousReport = null;
+    if (fs.existsSync(this.reportFile)) {
+      try {
+        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'));
+      } catch (error) {
+        this.log('Could not read previous report', 'WARN');
+      }
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     this.isRunning = false;
 
     this.checkInterval = parseInt(process.env.BUILD_CHECK_INTERVAL) || 300000; // 5 minutes
@@ -19,12 +154,20 @@ class BuildMonitor {
     this.buildHistory = [];
     this.maxBuildHistory = 10;
   }
+<<<<<<< HEAD
+  log(level, message) {
+    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+    if (level === 'error') {
+      console.error(logMessage);
+    } else if (level === 'warn') {
+=======
   log(level, message) {}
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;'
     if (level === 'error') {}
       console.error(logMessage);'
     } else if (level === 'warn') {}
+>>>>>>> origin/chore/fix-lint-and-merge
       console.warn(logMessage);
     } else {}
       console.log(logMessage);
@@ -42,6 +185,60 @@ class BuildMonitor {
       },
       healthScore: this.calculateHealthScore(results),
       recommendations: this.generateRecommendations(results)
+<<<<<<< HEAD
+    }
+module.exports = BuildMonitor;
+ursor/automate-test-improve-and-merge-code-646c;
+const fs = require('fs')const path = require('path'),const { execSync } = require(child_process')class BuildMonitor {constructor() {this.logFile = path.join(__dirname, 'logsbuild-monitor.log)this.reportFile = path.join(__dirname, 'reportsbuild-status.json')this.alertThreshold = 3; // Alert after 3 consecutive failures;
+
+const fs = require('fs');
+const path = require('path'),
+  const { execSync } = require(child_process');
+class BuildMonitor {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logsbuild-monitor.log);
+    this.reportFile = path.join(__dirname, 'reportsbuild-status.json');
+    this.alertThreshold = 3; // Alert after 3 consecutive failures
+    this.consecutiveFailures = 0;
+  log(message, level = INFO') {const timestamp = new Date().toISOString(),const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+    console.log(logMessage.trim())fs.appendFileSync(this.logFile, logMessage)}
+  async checkBuildHealth() {const results = {timestamp: new Date().toISOString(),build: { status: 'unknown, duration: 0, errors: [] },lint: { status: 'unknown', issues: [] },typeCheck: { status: unknown', errors: [] },dependencies: { status: 'unknown, outdated: [] }
+    }try {// Check build;
+      this.log('Checking build status...')const buildStart = Date.now(),try {execSync(yarn build', {stdio: 'pipe,timeout: 300000, // 5 minutes timeout;
+          cwd: process.cwd()})results.build.status = 'success';
+        results.build.duration = Date.now() - buildStart;
+        this.consecutiveFailures = 0,this.log(Build check: SUCCESS')} catch (error) {results.build.status = 'failed;
+        results.build.duration = Date.now() - buildStart;
+        results.build.errors = this.parseErrors(error.stdout || error.message)this.consecutiveFailures++,this.log(`Build check: FAILED (${this.consecutiveFailures} consecutive failures)`, 'ERROR')}
+      // Check linting (non-blocking)try {execSync(yarn lint', { stdio: 'pipe, cwd: process.cwd() })results.lint.status = 'success',this.log(Lint check: SUCCESS')} catch (error) {results.lint.status = 'failed;
+        results.lint.issues = this.parseLintIssues(error.stdout || error.message),this.log('Lint check: ISSUES FOUNDWARN')}
+      // Check TypeScript (non-blocking)try {execSync(npx tsc --noEmit --skipLibCheck', { stdio: 'pipe, cwd: process.cwd() })results.typeCheck.status = 'success',this.log(TypeScript check: SUCCESS')} catch (error) {results.typeCheck.status = 'failed;
+        results.typeCheck.errors = this.parseTypeErrors(error.stdout || error.message),this.log('TypeScript check: ERRORS FOUNDWARN')}
+      // Check dependencies;
+      try {const outdated = execSync(yarn outdated --json', {stdio: 'pipe,cwd: process.cwd()})results.dependencies.status = 'success';
+        results.dependencies.outdated = JSON.parse(outdated),this.log(Dependencies check: SUCCESS')} catch (error) {results.dependencies.status = 'warning,this.log('Dependencies check: Some packages may be outdatedWARN')}
+  parseErrors(output) {const errors = [];
+    const lines = output.split('\n),lines.forEach(line => {if (line.includes('Error:') || line.includes(SyntaxError:')) {errors.push(line.trim())}
+    })parseLintIssues(output) {const issues = [];
+    const lines = output.split('\n),lines.forEach(line => {if (line.includes('error') || line.includes(warning')) {issues.push(line.trim())}
+    })parseTypeErrors(output) {const errors = [];
+    const lines = output.split('\n),lines.forEach(line => {if (line.includes('error TS')) {errors.push(line.trim())}
+    })// Create alert file for other processes to pick up;
+      const alertData = {type: 'build_failure,consecutiveFailures: this.consecutiveFailures,timestamp: new Date().toISOString(),lastError: results.build.errors[0] || 'Unknown error',results: results;
+      }fs.writeFileSync(path.join(__dirname, alertsbuild-failure-alert.json'),JSON.stringify(alertData, null, 2))}
+  }
+  async generateReport(results) {// Read previous report for trends;
+    let previousReport = null,if (fs.existsSync(this.reportFile)) {try {previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'))} catch (error) {this.log('Could not read previous reportWARN')}
+    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
+    this.log(`Build health report updated: ${this.reportFile}`)
+    return report
+  calculateHealthScore($2) {
+    let score = 100
+    if (results.build.status === 'failed') score -= 40
+    if (results.lint.status === 'failed') score -= 20
+    if (results.typeCheck.status === 'failed') score -= 20
+    if (results.dependencies.status === 'warning') score -= 10
+=======
     };
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Build health report updated: ${this.reportFile}`);
@@ -53,6 +250,7 @@ class BuildMonitor {
     if (results.lint.status === 'failed') score -= 20;
     if (results.typeCheck.status === 'failed') score -= 20;
     if (results.dependencies.status === 'warning') score -= 10;
+>>>>>>> origin/chore/fix-lint-and-merge
     // Penalty for slow builds
     if (results.build.duration > 120000) score -= 10; // 2 minutes
     return Math.max(0, score);
@@ -310,7 +508,12 @@ class BuildMonitor {
 }
 // Handle command line arguments;
 const monitor = new BuildMonitor();
+<<<<<<< HEAD
+if (require.main === module) {
+  monitor.run().catch(console.error);
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   const command = process.argv[2];
 
   switch (command) {
@@ -340,6 +543,23 @@ const monitor = new BuildMonitor();
   }
 }
 
+<<<<<<< HEAD
+class BuildMonitor {
+  constructor() {
+    this.logFile = path.join(__dirname, 'logsbuild-monitor.log);
+    this.reportFile = path.join(__dirname, 'reportsbuild-status.json');
+    this.alertThreshold = 3; // Alert after 3 consecutive failures
+    this.consecutiveFailures = 0;
+  log(message, level = INFO') {
+    const timestamp = new Date().toISOString(),
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage)}
+  async checkBuildHealth() {
+      timestamp: new Date().toISOString(),
+      build: { status: 'unknown, duration: 0, errors: [] },
+      lint: { status: 'unknown', issues: [] },
+      typeCheck: { status: unknown', errors: [] },
+=======
 const fs = require('fs);
 const path = require('path'),
 
@@ -361,6 +581,7 @@ class BuildMonitor {}
       build: { status: 'unknown, duration: 0, errors: [] },'
       lint: { status: 'unknown', issues: [] },'
       typeCheck: { status: unknown', errors: [] },'
+>>>>>>> origin/chore/fix-lint-and-merge
       dependencies: { status: 'unknown, outdated: [] }
     };
     try {}
@@ -409,13 +630,30 @@ class BuildMonitor {}
   this.log(Dependencies check: SUCCESS')} catch (error) {'
         results.dependencies.status = 'warning,'
   this.log('Dependencies check: Some packages may be outdatedWARN')}
+<<<<<<< HEAD
+  parseErrors(output) {
+=======
   parseErrors(output) {}
     const errors = [];'
+>>>>>>> origin/chore/fix-lint-and-merge
     const lines = output.split('\n),
   lines.forEach(line => {'
       if (line.includes('Error:') || line.includes(SyntaxError:')) {}
         errors.push(line.trim())}
     });
+<<<<<<< HEAD
+  parseLintIssues(output) {
+  lines.forEach(line => {
+      if (line.includes('error') || line.includes(warning')) {
+        issues.push(line.trim())}
+    });
+  parseTypeErrors(output) {
+  lines.forEach(line => {
+      if (line.includes('error TS')) {
+        errors.push(line.trim())}
+    });
+      // Create alert file for other processes to pick up
+=======
   parseLintIssues(output) {}
     const issues = [];'
     const lines = output.split('\n),
@@ -432,6 +670,7 @@ class BuildMonitor {}
     });
       // Create alert file for other processes to pick up;
       const alertData = {'
+>>>>>>> origin/chore/fix-lint-and-merge
         type: 'build_failure,
         consecutiveFailures: this.consecutiveFailures,
         timestamp: new Date().toISOString(),'
@@ -446,12 +685,20 @@ class BuildMonitor {}
   async generateReport(results) {}
     // Read previous report for trends;
     let previousReport = null,
+<<<<<<< HEAD
+  if (fs.existsSync(this.reportFile)) {
+      try {
+        previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8'))} catch (error) {
+        this.log('Could not read previous reportWARN')}
+    }
+=======
   if (fs.existsSync(this.reportFile)) {}
       try {'
         previousReport = JSON.parse(fs.readFileSync(this.reportFile, 'utf8))} catch (error) {'
         this.log('Could not read previous reportWARN')}
     }
     const report = {}
+>>>>>>> origin/chore/fix-lint-and-merge
       ...results,
       trends: {}
         consecutiveFailures: this.consecutiveFailures,

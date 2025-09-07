@@ -16,7 +16,6 @@ import {QuoteFormData} from "@/types/quotes""
 import {Sparkles, Loader2} from 'lucide-react''
 import {z} from "zod""
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary""
-const serviceStepSchema = z.object({
 
 
 
@@ -289,7 +288,6 @@ case "summary": setCurrentStep ("budget");
 break;
 
 };
-const handleSubmit = async () => {;
   setIsSubmitting (true);
 try {";
   //In a real application,  you would send the data to your backend logDebug ("Submitting form data:", {;
@@ -299,7 +297,6 @@ try {";
   setIsSubmitting (false) ;
 
 };
-const handleAutoFill = async (description: string) => {;
   setAutoFillLoading (true);
 try {;
   updateFormData ({;
@@ -314,7 +311,6 @@ timeline: timeline || formData.timeline;
   setAutoFillLoading (false) ;
 
 };
-const renderStepContent = () => {;
   switch (currentStep) {;
   default: return null;
 
@@ -339,7 +335,6 @@ const renderStepContent = () => {;
   )
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-  const [formData, setFormData] = useState<QuoteFormData>({
 )"
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");"
 
@@ -348,8 +343,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 "
   const [current_step, setCurrentStep] = useState < QuoteRequestSteps>("service");"
   const [is_submitting, setIsSubmitting] = useState (false);
-  const [autoFillLoading, setAutoFillLoading] = useState (false);
-  const [autoFillOpen, setAutoFillOpen] = useState (false);
   const [form_data, setFormData] = useState < QuoteFormData>({"
     service_type: "",""
     service_category: "","

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+
+=======
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -37,3 +41,4 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

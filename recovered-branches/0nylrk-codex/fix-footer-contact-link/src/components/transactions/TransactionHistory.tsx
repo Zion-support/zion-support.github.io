@@ -128,6 +128,21 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from '@/components / ui / badge';'
 import { Skeleton } from '@/components / ui / skeleton';'
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from './lucide-react';'
+<<<<<<< HEAD
+import { formatDistanceToNow } from './date - fns';'
+interface Transaction {
+  }
+  "id": string,
+  "user_id": string,
+  "provider_id": string,
+  "service_id": string,
+  "amount": number,
+  "currency": string,
+  "status": 'pending' | 'completed' | 'refunded' | 'cancelled','
+  "in_escrow": boolean,
+  "created_at": string,
+import { useQuery } from "@tanstack/react-query";"
+=======
 import { formatDistanceToNow } from './date - fns';
 
 interface Transaction {}
@@ -143,6 +158,7 @@ interface Transaction {}
 "
 import React, { useState } from "react",;"
 import { useQuery } from "@tanstack/react-query",;"
+>>>>>>> origin/chore/fix-lint-and-merge
 import { supabase } from "@/integrations/supabase/client",;"
 import { useAuth } from "@/hooks/useAuth",;"
 import { useToast } from "@/hooks/use-toast",;"
@@ -419,6 +435,19 @@ export function TransactionHistory() { return null; }
   const {};
   user;
 }= useAuth ();
+<<<<<<< HEAD
+  }
+  toast 
+}= useToast ();
+const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'> ('all');'
+  }
+  "data": transactions, isLoading, error, refetch 
+}= useQuery ({
+  }
+  "queryKey": ['transactions', user?.id, filter];'
+"queryFn": async () => {
+  }
+=======
 const {}
   toast;
 }= useToast ();'
@@ -428,6 +457,7 @@ const {}
 }= useQuery ({'
   queryKey: ['transactions', user?.id, filter];
 queryFn: async () => {}
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!user) return [];
 return data as Transaction[] 
 };

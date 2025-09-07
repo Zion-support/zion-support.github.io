@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+export type AdminType = 'users' | 'projects' | 'services' | 'analytics' | 'settings';
+
+export const ADMIN_TYPES = {
+  USERS: 'users' as const,
+  PROJECTS: 'projects' as const,
+  SERVICES: 'services' as const,
+  ANALYTICS: 'analytics' as const,
+  SETTINGS: 'settings' as const,
+};
+=======
 export const ADMIN_TYPES = {
   USER: 'user',
   SERVICE: 'service',
@@ -10,10 +21,20 @@ export const ADMIN_TYPES = {
 } as const;
 
 export type AdminType = typeof ADMIN_TYPES[keyof typeof ADMIN_TYPES];
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export interface ListParams {
   page?: number;
   limit?: number;
+<<<<<<< HEAD
+  pageSize?: number;
+  search?: string;
+  sort?: string;
+  sortBy?: string;
+  order?: 'asc' | 'desc';
+  sortOrder?: 'asc' | 'desc';
+  filters?: Record<string, any>;
+=======
   search?: string;
   sort?: string;
   sortBy?: string;
@@ -22,6 +43,7 @@ export interface ListParams {
   pageSize?: number;
   filters?: Record<string, any>;
   format?: 'csv';
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export interface AdminUser {
@@ -30,12 +52,37 @@ export interface AdminUser {
   name: string;
   role: string;
   createdAt: string;
+<<<<<<< HEAD
+  lastLogin?: string;
+  status: 'active' | 'inactive' | 'suspended';
+}
+
+export interface AdminProject {
+  id: string;
+  name: string;
+  description: string;
+  status: 'draft' | 'in_progress' | 'completed' | 'cancelled';
+  clientId: string;
+  clientName: string;
+  createdAt: string;
+  updatedAt: string;
+  budget?: number;
+  deadline?: string;
+=======
   updatedAt: string;
   isActive: boolean;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export interface AdminService {
   id: string;
+<<<<<<< HEAD
+  name: string;
+  description: string;
+  category: string;
+  price: number;
+  status: 'active' | 'inactive';
+=======
   title: string;
   description: string;
   price: number;
@@ -94,12 +141,20 @@ export interface AdminVendor {
   phone: string;
   address: string;
   status: 'active' | 'inactive' | 'pending';
+>>>>>>> origin/chore/fix-lint-and-merge
   createdAt: string;
   updatedAt: string;
 }
 
 export interface AdminAnalytics {
   totalUsers: number;
+<<<<<<< HEAD
+  totalProjects: number;
+  totalRevenue: number;
+  activeUsers: number;
+  completedProjects: number;
+  monthlyGrowth: number;
+=======
   totalServices: number;
   totalOrders: number;
   totalRevenue: number;
@@ -112,4 +167,5 @@ export interface AdminAnalytics {
   }>;
   recentOrders: AdminOrder[];
   recentUsers: AdminUser[];
+>>>>>>> origin/chore/fix-lint-and-merge
 }

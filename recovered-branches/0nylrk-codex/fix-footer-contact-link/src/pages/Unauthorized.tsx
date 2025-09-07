@@ -49,6 +49,12 @@ export default function Unauthorized() {
     </>
 
   )
+<<<<<<< HEAD
+import { Link } from "react-router-dom";"
+import { Button } from "@/components/ui/button";"
+import { Header } from "@/components/Header",;"
+import { Footer } from "@/components/Footer",;"
+=======
 
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -56,6 +62,7 @@ import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { ShieldAlert } from "lucide-react";
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function Unauthorized() {;
   return (
 

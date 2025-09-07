@@ -19,7 +19,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 } from 'lucide-react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_points } from '@/hooks / use_points';
-import {
   Card,
   CardContent,
   CardDescription,

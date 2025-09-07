@@ -38,6 +38,8 @@ class UXOptimizer {
   constructor() {
     this.improvements = [];
 
+<<<<<<< HEAD
+=======
   async optimize() {
     try {
   // TODO: Implement
@@ -65,6 +67,7 @@ optimizer.optimize();
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs')
 const path = require('path')
+>>>>>>> origin/chore/fix-lint-and-merge
         console.log('⚡ Optimizing loading performance...')
         this.improvements.push('Loading optimization completed')
         console.log('♿ Optimizing accessibility...')
@@ -87,9 +90,53 @@ main
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
 
+<<<<<<< HEAD
+// Check loading states
+function checkLoadingStates(dir) {
+  
+  files.forEach(file => {
+    
+    // Check for async operations without loading states
+    if (content.includes('fetch(') || content.includes('axios.') || content.includes('useEffect')) {
+      if (!content.includes('loading') && !content.includes('isLoading') && !content.includes('spinner')) {
+        issues.push({
+          file: path.relative(__dirname, file),
+          type: 'missing-loading-state',
+          severity: 'medium',
+          message: 'Consider adding loading states for async operations'
+        });
+      }
+    }
+  });
+  
+  return issues;
+}
+
+// Check error handling
+function checkErrorHandling(dir) {
+  
+  files.forEach(file => {
+    
+    // Check for try-catch blocks
+    if (content.includes('fetch(') || content.includes('axios.') || content.includes('async')) {
+      if (!content.includes('try') && !content.includes('catch') && !content.includes('ErrorBoundary')) {
+        issues.push({
+          file: path.relative(__dirname, file),
+          type: 'missing-error-handling',
+          severity: 'high',
+          message: 'Consider adding error handling for async operations'
+        });
+      }
+    }
+  });
+  
+  return issues;
+}
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

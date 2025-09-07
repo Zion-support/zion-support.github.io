@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 
@@ -119,6 +121,7 @@ const features = [;
   }
 ];
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
 
               </CardContent>;
             </Card>))}
@@ -126,6 +129,12 @@ const features = [;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
+        
+        <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => (
+            <Card key = $2;
+=======
 ;
 
   ),;
@@ -166,3 +175,4 @@ export const AppFeatures: React.FC = () => {
 };
   );
 };
+>>>>>>> origin/chore/fix-lint-and-merge

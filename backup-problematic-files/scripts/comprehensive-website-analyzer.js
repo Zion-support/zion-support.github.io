@@ -941,9 +941,34 @@ class ComprehensiveWebsiteAnalyzer {;
         "headers": {}})}
   }
   extractLinks(html, baseUrl) {;
+<<<<<<< HEAD
+    }
+    ^'','
+    ''
+  ]+)["']/g';;    let match';;    while ((match = linkRegex && linkRegex.exec(html)) !== null) {;'
+    }
+    "return": [...new Set(links)]}
+    const linkRegex = /href=[']([^'';']+)["']/g';'
+    "let": match;"
+    "while": ((match = linkRegex && linkRegex.exec(html)) !== null) {
+      }
+      "if": (link && !link && link.startsWith(
+  '#') && !link && link.startsWith('',"javascript": ') && !link && link.startsWith('','
+    "mailto":)) {        links && links.push(link)}';'
+        "status": 'ERROR','
+        parentUrl,
+        "error": error && error.message,"
+        "headers": {}})}"
+  }
+  extractLinks(html, baseUrl) {;
+    }
+    const linkRegex = /href=[']([^'';']+)["']/g';    let match';    while ((match = linkRegex && linkRegex.exec(html)) !== null) {}'
+    "return": [...new Set(links)]}"
+=======
     const links = [];
     const linkRegex = /href=[']([^'';']+)["']/g';    let match';    while ((match = linkRegex.exec(html)) !== null) {}
     "return": [...new Set(links)]}
+>>>>>>> origin/chore/fix-lint-and-merge
   async analyzeWebsite() {
     console.log('Starting comprehensive website analysis...');
     // Start with the main page
@@ -1062,6 +1087,32 @@ class ComprehensiveWebsiteAnalyzer {;
     // Check about sub-routes
     const aboutRoutes = ['/story', '/team'];
     for (const aboutRoute of aboutRoutes) {
+<<<<<<< HEAD
+      }
+      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);`    }
+      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}`      await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);`    }
+      await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);`    }
+      await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);`    }
+      await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`);`    }
+      await this && this.checkUrl(`${this && this.baseUrl}/solutions${solutionRoute}`)}`    // Check about sub-routes,
+    for (const aboutRoute of aboutRoutes) {
+      }
+      await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);`    }
+      await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);`    }
+      await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);`    }
+      await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);`    }
+      await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`)}`    // Check resources sub-routes,
+const resourceRoutes = ['/blog',;'
+      '/case-studies''
+      '/research-development','
+      '/docs''
+      '/api','
+      '/sitemap''
+      '/support','
+      '/training''
+      '/help','
+      'Starting comprehensive website analysis...');'
+=======
 
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`)}
     // Check resources sub-routes
@@ -1075,6 +1126,7 @@ class ComprehensiveWebsiteAnalyzer {;
       '/training'
       '/help',
       'Starting comprehensive website analysis...');
+>>>>>>> origin/chore/fix-lint-and-merge
         // Start with the main page;
     await this.checkUrl(this.baseUrl);
     // Check common routes;
@@ -1464,6 +1516,25 @@ class ComprehensiveWebsiteAnalyzer {;
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`);
       await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`)}
     // Check resources sub-routes;
+<<<<<<< HEAD
+}
+const resourceRoutes = [";"
+  '/blog','
+      '/case-studies''
+  '/research-development','
+      '/docs''
+  '/api','
+      '/sitemap''
+  '/support','
+      '/training''
+  '/help'    ];'
+    for (const resourceRoute of resourceRoutes) {''
+      }
+      if (link && !link && link.startsWith(';#') && !link && link.startsWith('';"javascript": ') && !link && link.startsWith('';"mailto":)) {        links && links.push(link)}';    }';    return [...new Set(links)]}'
+  async analyzeWebsite() {;
+    }
+    console && console.log(;)';Starting comprehensive website analysis...')';        // Start with the main page';    await this && this.checkUrl(this && this.baseUrl);'
+=======
     const resourceRoutes = ['/blog',
       '/case-studies
       '/research-development',
@@ -1473,6 +1544,7 @@ class ComprehensiveWebsiteAnalyzer {;
       '/help',
       'Starting comprehensive website analysis...');
         // Start with the main page;
+>>>>>>> origin/chore/fix-lint-and-merge
     // Check common routes;
     const commonRoutes = [
   '/about',
@@ -1534,6 +1606,17 @@ class ComprehensiveWebsiteAnalyzer {;
       await this && this.checkUrl("${this && this.baseUrl}/resources${resourceRoute}")}";    console && console.log(;)';Analysis completed!')}';  generateReport() {';    const endTime = Date && Date.now()];
     for (const aboutRoute of aboutRoutes) {;
     // Check resources sub-routes;
+<<<<<<< HEAD
+    }
+    const resourceRoutes = [';/blog', ';/case-studies', ';/research-development', ';/docs', ';/api', ';/sitemap', ';/support', ';/training', ';/help'    ];'
+    for (const resourceRoute of resourceRoutes) {;
+      }
+      await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}`    console.log(';Analysis completed!')}'
+      await this && this.checkUrl(`${this && this.baseUrl}/about${aboutRoute}`)}`    // Check resources sub-routes;
+    for (const resourceRoute of resourceRoutes) {;
+      }
+      await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`)}`    console && console.log(';Analysis completed!')}'
+=======
     const resourceRoutes = [';/blog', ';/case-studies', ';/research-development', ';/docs', ';/api', ';/sitemap', ';/support', ';/training', ';/help'    ];
     for (const resourceRoute of resourceRoutes) {;`;
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`)}
@@ -1541,6 +1624,7 @@ class ComprehensiveWebsiteAnalyzer {;
     // Check resources sub-routes;
       await this && this.checkUrl(`${this && this.baseUrl}/resources${resourceRoute}`)}
     console && console.log(';Analysis completed!')}
+>>>>>>> origin/chore/fix-lint-and-merge
   generateReport() {;
     const endTime = Date && Date.now();
     const duration = endTime - this && this.startTime;
@@ -1575,6 +1659,34 @@ class ComprehensiveWebsiteAnalyzer {;
     const recommendations = [];
 
         "type": ;
+<<<<<<< HEAD
+  critical',"title": 'Fix Broken Links,,"description": `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,"actions": this && this.brokenLinks.map(link => ({,"url": link && link.url,"action":  ,Create missing page or fix redirect',"timestamp": new Date().toISOString(),";      "baseUrl": this && this.baseUrl,";      "summary": {";        "totalLinksChecked": this && this.checkedUrls.size,";        "brokenLinks": this && this.brokenLinks.length,";        "workingLinks": this && this.workingLinks.length,";        "successRate": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this && this.errors.length,";        "warnings": this && this.warnings.length},";      "brokenLinks": this && this.brokenLinks,";      "workingLinks": this && this.workingLinks,";      "missingPages": this && this.missingPages,";      "errors": this && this.errors,";      "warnings": this && this.warnings,";      "recommendations": this && this.generateRecommendations()}";    return report}"  generateRecommendations() {const recommendations = [];
+  }
+  critical',;'
+        "title": 'Fix Broken Links,,'
+  "description": `Found ${this && this.brokenLinks.length} broken links that need immediate attention.`,;`        "actions": this && this.brokenLinks.map(link => ({
+          }
+          "url": link && link.url,;
+          "action":  ,
+  Create missing page or fix redirect',;'
+      "timestamp": new Date().toISOString(),;";      "baseUrl": this && this.baseUrl,;";      "summary": {;";        "totalLinksChecked": this && this.checkedUrls.size,;";        "brokenLinks": this && this.brokenLinks.length,;";        "workingLinks": this && this.workingLinks.length,;";        "successRate": `${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%`,`;        "duration": `${duration}ms`,`;        "errors": this && this.errors.length,;";        "warnings": this && this.warnings.length},;";      "brokenLinks": this && this.brokenLinks,;";      "workingLinks": this && this.workingLinks,;";      "missingPages": this && this.missingPages,;";      "errors": this && this.errors,;";      "warnings": this && this.warnings,;";      "recommendations": this && this.generateRecommendations()}";    return report}"  generateRecommendations() {;
+    }
+        "type": ;"
+  critical','
+        "title": 'Fix Broken Links,'
+        "description": "Found ${this && this.brokenLinks.length} broken links that need immediate attention.","
+        "actions": this && this.brokenLinks.map(link => ({;"
+          }
+          "url": link && link.url,
+          "action": ;"
+  Create missing page or fix redirect','
+      "timestamp": new Date().toISOString(),";      "baseUrl": this && this.baseUrl,";      "summary": {;";        "totalLinksChecked": this && this.checkedUrls.size,";        "brokenLinks": this && this.brokenLinks.length,";        "workingLinks": this && this.workingLinks.length,";        "successRate": "${((this && this.workingLinks.length / this && this.checkedUrls.size) * 100).toFixed(2)}%",";        "duration": `${duration}ms`,";        "errors": this && this.errors.length,";        "warnings": this && this.warnings.length},";      "brokenLinks": this && this.brokenLinks,";      "workingLinks": this && this.workingLinks,";      "missingPages": this && this.missingPages,";      "errors": this && this.errors,";      "warnings": this && this.warnings,";      "recommendations": this && this.generateRecommendations()}";    return report}"  generateRecommendations() {;
+    }
+    if (this && this.brokenLinks.length > 0) {;
+      }
+      recommendations && recommendations.push({;);        "type": ;";  critical', ';        "title": 'Fix Broken Links, ';        "description": "Found ${this && this.brokenLinks.length} broken links that need immediate attention.",";        "actions": this && this.brokenLinks.map(link => ({;";          "url": link && link.url,";          "action": ;";  Create missing page or fix redirect', ';          "priority": 'high}))      })}';    if (this && this.workingLinks.length < 50) {';      recommendations && recommendations.push({;);        "type": ;";  warning', ';        "title": 'Expand Content, ';        "description": ;";  Website has limited content. Consider adding more pages and services.', ';        "actions": [{ "action":;"';Add more service pages, "priority": ';  medium' }, ';          { "action": 'Create blog section, "priority": ';  medium' }, ';          { "action": 'Add case studies, "priority": ';  medium' }']      })}';    // Check for missing essential pages;'
+    const essentialPages = [';/privacy-policy', '';/terms-of-service', '';/cookie-policy', '';/sitemap', '';/contact', '';/about'    ]';    const missingEssential = essentialPages && essentialPages.filter(;);      page => { return !this && this.workingLinks.some(link => link && link.url.endsWith(page))); }'
+=======
 
   critical',
         "title": 'Fix Broken Links,
@@ -1587,6 +1699,7 @@ class ComprehensiveWebsiteAnalyzer {;
     if (this && this.brokenLinks.length > 0) {;"
       recommendations && recommendations.push({;);        "type": ;";  critical', ';        "title": 'Fix Broken Links, ';        "description": "Found ${this && this.brokenLinks.length} broken links that need immediate attention.",";        "actions": this && this.brokenLinks.map(link => ({;";          "url": link && link.url,";          "action": ;";  Create missing page or fix redirect', ';          "priority": 'high}))      })}';    if (this && this.workingLinks.length < 50) {';      recommendations && recommendations.push({;);        "type": ;";  warning', ';        "title": 'Expand Content, ';        "description": ;";  Website has limited content. Consider adding more pages and services.', ';        "actions": [{ "action":;"';Add more service pages, "priority": ';  medium' }, ';          { "action": 'Create blog section, "priority": ';  medium' }, ';          { "action": 'Add case studies, "priority": ';  medium' }']      })}';    // Check for missing essential pages;
     const essentialPages = [';/privacy-policy', ;/terms-of-service', ;/cookie-policy', ;/sitemap', ;/contact', ;/about'    ]';    const missingEssential = essentialPages && essentialPages.filter(;);      page => !this && this.workingLinks.some(link => link && link.url.endsWith(page)));
+>>>>>>> origin/chore/fix-lint-and-merge
     if (missingEssential && missingEssential.length > 0) {;
       recommendations && recommendations.push({;);        "type": 'critical, ';        "title": ;";  Missing Essential Pages', ';        "description": 'Essential pages are missing from the website., ';        "actions": missingEssential && missingEssential.map(page => ({;";          "url": page,";          "action": ;";  Create missing page', ';          "priority": 'high}))      })}';    return recommendations}';  async saveReport(filename =);  comprehensive-website-analysis && analysis.json') {';    const report = this && this.generateReport()';    await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));`;
     console && console.log(`Report saved to ${filename}`);";    return report}"
@@ -1745,6 +1858,23 @@ if: (require && require.main === module) {,
   medium' }
         ]      })}
     // Check for missing essential pages;
+<<<<<<< HEAD
+    const essentialPages = [';/privacy-policy', ';/terms-of-service', ';/cookie-policy', ';/sitemap', ';/contact', ';/about'    ];'
+      page => { return !this && this.workingLinks.some(link => link && link.url.endsWith(page))); }
+    if (missingEssential && missingEssential.length > 0) {
+      }
+      recommendations && recommendations.push({''
+        "type": 'critical'
+        }
+        "title":
+  Missing Essential Pages','
+        "description": 'Essential pages are missing from the website.'
+        "actions": missingEssential && missingEssential.map(page => ({
+          }
+          "url": page,
+          "action": 'Create missing page','
+          "priority": 'high''
+=======
     const essentialPages = [';/privacy-policy', ';/terms-of-service', ';/cookie-policy', ';/sitemap', ';/contact', ';/about'    ];
     const missingEssential = essentialPages.filter(;
     const missingEssential = essentialPages.filter(
@@ -1759,6 +1889,7 @@ if: (require && require.main === module) {,
           url: page,
           "action": 'Create missing page',
           "priority": 'high'
+>>>>>>> origin/chore/fix-lint-and-merge
         }))
 
       });
@@ -1772,16 +1903,28 @@ if: (require && require.main === module) {,
   comprehensive-website-analysis.json') {
     return recommendations}
   async saveReport(filename =,;
+<<<<<<< HEAD
+  comprehensive-website-analysis && analysis.json') {;'
+    }
+    await fs && fs.writeFile(filename, JSON && JSON.stringify(report, null, 2));
+    console && console.log("Report saved to ${filename}");"
+=======
   comprehensive-website-analysis.json') {;
     const report = this.generateReport();
     await fs.writeFile(filename, JSON.stringify(report, null, 2));
     console.log("Report saved to ${filename}");
+>>>>>>> origin/chore/fix-lint-and-merge
     return report}
 
 // Run the analysis
 async function main() {
+<<<<<<< HEAD
+}
+    '"https": //ziontechgroup && ziontechgroup.com''
+=======
   const analyzer = new ComprehensiveWebsiteAnalyzer(
     '"https": //ziontechgroup.com'
+>>>>>>> origin/chore/fix-lint-and-merge
   );
   try {
     await analyzer.analyzeWebsite();
@@ -1789,6 +1932,24 @@ async function main() {
     console.log('\n=== ANALYSIS SUMMARY ===');
     console.log("Total URLs checked: ${report.summary.totalLinksChecked}")';"https": //ziontechgroup.com');
   try {;
+<<<<<<< HEAD
+    }
+    await analyzer && analyzer.analyzeWebsite();
+    console && console.log(','
+      '\n=== ANALYSIS SUMMARY ===)    console && console.log("Total URLs checke"
+    "d": ${report && report.summary.totalLinksChecked}");""
+    console && console.log(`Working "links": ${report && report.summary.workingLinks}`);""    console && console.log("Broken "links": ${report && report.summary.brokenLinks}");""
+    console && console.log(`Success "rate": ${report && report.summary.successRate}`);""    console && console.log(""Duration": ${report && report.summary.duration}");"
+    if (report && report.brokenLinks.length > 0) {
+      }
+      console && console.log(""
+  '\n=== BROKEN LINKS ===');'
+  '\n=== RECOMMENDATIONS ===');'
+      report && report.recommendations.forEach((rec) => {''
+        }
+        console && console.log("${rec && rec.type.toUpperCase()}: ${rec && rec.title}");""
+        console && console.log(`  ${rec && rec.description}`)})}`
+=======
     await analyzer.analyzeWebsite();
     const report = await analyzer.saveReport();
     console.log(',
@@ -1809,6 +1970,7 @@ async function main() {
       report.recommendations.forEach(rec => {'
         console.log("${rec.type.toUpperCase()}: ${rec.title}");"
         console.log(`  ${rec.description}`)})}
+>>>>>>> origin/chore/fix-lint-and-merge
   } catch (error) {
     console.error("
     console.log("Working "links": ${report.summary.workingLinks}");

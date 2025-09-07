@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React from 'react';
 
 import * as React from "react";
@@ -13,6 +16,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react",
 import { DayPicker } from "react-day-picker",
 import { cn } from "@/lib/utils",
 import { buttonVariants } from "@/components/ui/button",
+>>>>>>> origin/chore/fix-lint-and-merge
 export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 
 function Calendar({
@@ -24,6 +28,8 @@ function Calendar({
   return (
     <DayPicker;
       showOutsideDays={showOutsideDays}
+<<<<<<< HEAD
+=======
         day: cn(
           buttonVariants({ variant: "ghost" })
           "h-9 w-9 p-0 font-normal aria-selected: opacity-100"
@@ -116,12 +122,19 @@ function Calendar() { return null; }
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
+>>>>>>> origin/chore/fix-lint-and-merge
 
       {...props}
     />;
   );
 }
 
+<<<<<<< HEAD
+export { Calendar },
+Calendar.displayName = "Calendar";"
+export { Calendar }
+}
+=======
 Calendar.displayName = "Calendar",
 
 export { Calendar },";
@@ -177,3 +190,4 @@ Calendar.displayName = "Calendar",
 
 export { Calendar },";
 Calendar.displayName = "Calendar";
+>>>>>>> origin/chore/fix-lint-and-merge

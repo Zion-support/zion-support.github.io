@@ -41,10 +41,24 @@ interface TalentRateRecommenderProps {};
     }
     setIsLoading(true);
     try {;
-      const params: TalentRateParams = {;
         skills;
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth",
+import { Sparkles } from "lucide-react",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+  getTalentRateSuggestion,
+  PricingSuggestion,
+  TalentRateParams,
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox } from "./PricingSuggestionBox";
+import { useAuth } from "@/hooks/useAuth";
+import { Sparkles } from "lucide-react";
+=======
       const result = await getTalentRateSuggestion(params);
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface TalentRateRecommenderProps {
 
   skills: string[],
@@ -90,7 +104,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
   const [isLoading, setIsLoading] = useState(false),;
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),;
   const { user } = useAuth(),;
-  const generateSuggestion = async () => {;
     if (skills.length === 0 || yearsExperience <= 0) {;
 
     }
@@ -102,15 +115,22 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
         yearsExperience,
         location},
 
+<<<<<<< HEAD
+  const [isLoading, setIsLoading] = useState($2);
+  const { user } = useAuth($2);
+  const generateSuggestion = async () => {
+    if (skills.length === 0 || yearsExperience <= 0) {
+      return
+    }
+=======
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
 
     setIsLoading(true),;
     try {;
-      const params: TalentRateParams = {;
         skills,;
         yearsExperience,;
         location},;
-      const result = await getTalentRateSuggestion(params),;
       setSuggestion(result);
     } catch (error) {;"
       console.error("Error generating rate suggestion:", error);
@@ -189,8 +209,12 @@ if ( {) {}
       return;
     }
     setIsLoading (true);
+<<<<<<< HEAD
+    try {
+=======
     try {}
       const params: TalentRateParams = {}
+>>>>>>> origin/chore/fix-lint-and-merge
         skills;
         years_experience,
         location}

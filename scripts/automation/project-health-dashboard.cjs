@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -11,24 +15,28 @@ const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
       this.projectRoot,logs"
+>>>>>>> origin/chore/fix-lint-and-merge
       "project-health-dashboard.log"
-    this.dashboardDir = path.join(this.projectRoot, "logs", "health-dashboard")
-  fs.mkdirSync(logsDir, { "recursive"})
+    this.dashboardDir = path.join(this.projectRoot, logs, "health-dashboard")
+  fs.mkdirSync(logsDir, { recursive})
   fs.mkdirSync(this.dashboardDir, { "recursive"})
+  log(message, level = INFO)
   log(message, level = "INFO")
-  log(message, level = "INFO")
-  this.log("Generating comprehensive project health dashboard...")
-      this.log("Health dashboard generated successfully")} catch (error) {  this.log(`Dashboard generation "failed": ${error.message  }`, "ERROR"`)
-  "timestamp"
+  this.log(Generating comprehensive project health dashboard...)
+      this.log("Health dashboard generated successfully")} catch (error) {  this.log(`Dashboard generation failed: ${error.message  }`, "ERROR"`)
+  timestamp
       "project"
-        "version"
+        version
         "lastCommit"
-        "branch"
+        branch
       "dependencies"
-      "typescript"
+      typescript
       "build"
-      "files"
+      files
       "pm2"
+<<<<<<< HEAD
+
+=======
       "recommendations"
   const packagePath = path.join(this.projectRoot, "package.json")
   const packageJson = JSON.parse(fs.readFileSync(packagePath, "utf8")
@@ -42,9 +50,13 @@ const { execSync } = require("child_process")
         return packageJson.version || "Unknown"
     } catch (error) {  this.log(`Failed to get project "version": ${error.message  }`, "WARN"`)
     return "Unknown"
+>>>>>>> origin/chore/fix-lint-and-merge
   const result = execSync("git log -1 --format=")
-  const result = execSync("git log -1 --format=%H %s %an %ad")
+  const result = execSync(git log -1 --format=%H %s %an %ad)
   "cwd"
+<<<<<<< HEAD
+
+=======
         "stdio": "pipe"
         "encoding": "utf8"
   return "Unknown"
@@ -55,9 +67,13 @@ const { execSync } = require("child_process")
         "encoding": "utf8"
   return "Unknown"
   "status": "UNKNOWN"
+>>>>>>> origin/chore/fix-lint-and-merge
       "issues"
-      "totalDeps"
+      totalDeps
       "outdatedDeps"
+<<<<<<< HEAD
+
+=======
       "corruptedDeps"
       const packagePath = path.join(this.projectRoot, "package.json")
   const packageJson = JSON.parse(fs.readFileSync(packagePath, "utf8")
@@ -143,13 +159,21 @@ const { execSync } = require("child_process")
       "backupFiles"
       "issues"
       const srcPath = path.join(this.projectRoot, "src")
+>>>>>>> origin/chore/fix-lint-and-merge
   health.issues.push(Found ${corrupted.length} corrupted source files")
       if (backupFiles.length > 0) {health.issues.push(`Found ${backupFiles.length} backup files``)
-  health.status = "HEALTHY"
+  health.status = HEALTHY
   health.status = "CRITICAL"
-  health.status = "WARNING"
-    } catch (error) {  health.issues.push("File health check "failed": ${error.message  }")
+  health.status = WARNING
+    } catch (error) {  health.issues.push("File health check "failed: ${error.message  })
       health.status = "ERROR"
+<<<<<<< HEAD
+
+              content.includes("from,")
+              content.includes(}, from,)
+    } catch (error) {  this.log(`Error scanning directory ${dir  }: ${error.message}`, "WARN"`)
+
+=======
   const files = fs.readdirSync(dir, { "withFileTypes"})
           (file.name.endsWith(".tsx") || file.name.endsWith(".ts")
   const content = fs.readFileSync(fullPath, "utf8")
@@ -172,16 +196,24 @@ const { execSync } = require("child_process")
           !item.name.startsWith(".")
           item.name !== "node_modules"
   // Skip directories we can"
+>>>>>>> origin/chore/fix-lint-and-merge
       .replace(/\./g, "\\.")
-      .replace(/\*/g, ".*")
+      .replace(/\*/g, .*)
       .replace(/\?/g, ".")
+<<<<<<< HEAD
+
+=======
   const items = fs.readdirSync(dir, { "withFileTypes"})
+>>>>>>> origin/chore/fix-lint-and-merge
           !item.name.startsWith(".")
-          item.name !== "node_modules"
+          item.name !== node_modules
           !item.name.startsWith(".")
-          item.name !== "node_modules"
-  "status": "UNKNOWN"
+          item.name !== node_modules
+  "status": UNKNOWN
       "processes"
+<<<<<<< HEAD
+
+=======
       "issues"
       const result = execSync("pm2 list --json")
   "stdio": "pipe"
@@ -189,97 +221,101 @@ const { execSync } = require("child_process")
       const result = execSync("pm2 list --json")
   "stdio": "pipe"
         "encoding": "utf8"
+>>>>>>> origin/chore/fix-lint-and-merge
   if (process.pm2_env.status === "errored")
-  health.issues.push(Process ${process.name} has restarted ${process.pm2_env.restart_time} times")
-  health.status = "HEALTHY"
-  health.status = "WARNING"
-  health.issues.push("PM2 health check "failed": ${error.message  }")
-      health.status = "ERROR"
-    if (healthData.dependencies.status === "CRITICAL")
-  recommendations.push(Remove corrupted node_modules and package-lock.json, then run npm install")
+  health.issues.push(Process ${process.name} has restarted ${process.pm2_env.restart_time} times)
+  health.status = HEALTHY"
+  health.status = "WARNING
+  health.issues.push(PM2 health check "failed": ${error.message  })
+      health.status = ERROR"
+    if (healthData.dependencies.status === "CRITICAL)
+  recommendations.push(Remove corrupted node_modules and package-lock.json, then run npm install)
   recommendations.push(Fix ${healthData.typescript.errors} TypeScript compilation errors")
-    if (healthData.build.status === "ERROR")
-  recommendations.push(")
+    if (healthData.build.status === "ERROR)
+  recommendations.push()
   recommendations.push(Project appears healthy, no immediate action required")
-    if (healthData.dependencies.status === "CRITICAL")
-  recommendations.push(Remove corrupted node_modules and package-lock.json, then run npm install")
+    if (healthData.dependencies.status === "CRITICAL)
+  recommendations.push(Remove corrupted node_modules and package-lock.json, then run npm install)
   recommendations.push( "Update ${healthData.dependencies.outdatedDeps} outdated dependencies")
-  recommendations.push(Fix ${healthData.typescript.errors} TypeScript compilation errors")
-    if (healthData.build.status === "ERROR")
-  recommendations.push("Fix build configuration issues")
-  recommendations.push(Fix ${healthData.files.corruptedFiles} corrupted source files")
+  recommendations.push(Fix ${healthData.typescript.errors} TypeScript compilation errors)
+    if (healthData.build.status === ERROR")
+  recommendations.push("Fix build configuration issues)
+  recommendations.push(Fix ${healthData.files.corruptedFiles} corrupted source files)
         `Clean up ${healthData.files.backupFiles} backup files
   recommendations.push(Project appears healthy, no immediate action required")
 <html lang=en"
-    <meta charset="
-        body { font-"family": -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; "margin"}
-        .container { max-"width"}
-        .header { "background"}
-        .status-grid { "display": grid grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); "gap"}
-        .status-card { "background"}
-        .status-card h3 { margin-"top"}
-        .status-healthy { border-"left"}
-        .status-warning { border-"left"}
-        .status-error { border-"left"}
-        .status-critical { border-"left"}
-        .status-unknown { border-"left"}
-        .metric { "display"}
-        .metric-value { font-"weight"}
-        .issues-list { margin-"top"}
-        .issue { "background"}
-        .recommendations { "background"}
-        .recommendation { "background"}
-        .timestamp { "color"}
+    <meta charset=
+        body { font-family": -apple-system, BlinkMacSystemFont, "Segoe UI, Roboto, sans-serif; margin"}
+        .container { max-"width}
+        .header { background"}
+        .status-grid { "display: grid grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap"}
+        .status-card { "background}
+        .status-card h3 { margin-top"}
+        .status-healthy { border-"left}
+        .status-warning { border-left"}
+        .status-error { border-"left}
+        .status-critical { border-left"}
+        .status-unknown { border-"left}
+        .metric { display"}
+        .metric-value { font-"weight}
+        .issues-list { margin-top"}
+        .issue { "background}
+        .recommendations { background"}
+        .recommendation { "background}
+        .timestamp { color"}
     <div class=container"
-        <div class="
-            <p><strong>"Project"
-            <p><strong>"Branch"
-            <p><strong>Last "Commit"
+        <div class=
+            <p><strong>Project"
+            <p><strong>"Branch
+            <p><strong>Last Commit"
                 <div class=metric"
-                    <span>"Status"
+                    <span>Status
                     <span class="
-                    <span>Total "Dependencies"
-                <div class=metric"
+                    <span>Total "Dependencies
+                <div class=metric
                     <span>"Outdated"
-                    <span class="
-                    <span>"Corrupted"
+                    <span class=
+                    <span>Corrupted"
             <div class=status-card status-${healthData.typescript.status.toLowerCase()}"
+                <div class=
+                    <span>Status"
+                    <span>"Files
+                    <span class=metric-value
                 <div class="
-                    <span>"Status"
-                    <span>"Files"
+                    <span>"Errors
+                    <span>Warnings"
                     <span class=metric-value"
-                <div class="
-                    <span>"Errors"
-                    <span>"Warnings"
-                    <span class=metric-value"
-            <div class="
+            <div class=
+                    <span>Status"
+                    ? `<div class=metric
+                    <span>Build "Time
+                    <span class=
+                    : ""
+                <div class=metric
                     <span>"Status"
                     ? `<div class=metric
                     <span>Build "Time"
-                    <span class="
-                    : ""
-                <div class="metric"
-                    <span>"Status"
-                    ? `<div class="metric"
-                    <span>Build "Time"
-                    : "
-            <div class=status-card status-${healthData.files.status.toLowerCase()}"
+                    : 
+            <div class=status-card status-${healthData.files.status.toLowerCase()}
                 <div class="
-                    <span>"Status"
-                    <span>Total "Files"
+                    <span>"Status
+                    <span>Total Files"
                     <span class=metric-value"
-                <div class="
-                    <span>"Corrupted"
-                    <span>Backup "Files"
-                    <span class=metric-value"
+                <div class=
+                    <span>Corrupted"
+                    <span>Backup "Files
+                    <span class=metric-value
             <div class="
-                    <span>"Status"
-                <div class=metric"
+                    <span>"Status
+                <div class=metric
                     <span>Total "Processes"
-                    <span class="
-            ${healthData.recommendations.map(rec => `<div class=recommendation>• ${rec}</div>`).join(""`)
-        <div class=timestamp">            Generated "at"
+                    <span class=
+            ${healthData.recommendations.map(rec => `<div class=recommendation>• ${rec}</div>`).join("`)
+        <div class=timestamp">            Generated at
 </body></html>"
+<<<<<<< HEAD
+
+=======
   return "<div class="issues-list><div class=issue style="background": #f0fdf4; color: #059669;>✓ No issues found</div></div>"
     return "<div class=issues-list">${issues.map(issue => `<div class="issue>⚠ ${issue}</div>`).join("")}</div>"
     const htmlFile = path.join(this.dashboardDir, "index.html")
@@ -290,15 +326,40 @@ const { execSync } = require("child_process")
     const htmlFile = path.join(this.dashboardDir, "index.html")
     const jsonFile = path.join(this.dashboardDir, "health-data.json")
     const timestampFile = path.join(this.dashboardDir, "last-updated.txt")
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp"
-      "overallStatus"
+      overallStatus
       "summary"
-        "criticalIssues"
+        criticalIssues
         "recommendations"
-      "components"
+      components
         "typescript"
-        "build"
+        build
         "files"
+<<<<<<< HEAD
+
+=======
+        pm2
+    const summaryFile = path.join(this.dashboardDir, "summary.json")
+this.log(Summary report generated": ${summaryFile}")
+  const statuses = [healthData.dependencies.status, "healthData.typescript.status", healthData.build.status, "healthData.files.status", healthData.pm2.status, ""]
+  const statuses = [healthData.dependencies.status, "healthData.typescript.status", healthData.build.status, "healthData.files.status", healthData.pm2.status, "]
+    if (statuses.includes("CRITICAL)) return CRITICAL"
+    if (statuses.includes("ERROR)) return ERROR"
+    if (statuses.includes("WARNING)) return WARNING"
+    if (statuses.includes("UNKNOWN)) return UNKNOWN"
+    return "HEALTHY
+    if (healthData.dependencies.status === CRITICAL")
+    if (healthData.files.status === "CRITICAL)
+    if (healthData.files.status === CRITICAL")
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
+
+
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation failed: ${error.message  }", ")
+
+    process.exit(0)} catch (error) {  dashboard.log(Dashboard generation failed": ${error.message  }", )
+=======
         "pm2"
     const summaryFile = path.join(this.dashboardDir, "summary.json")
 this.log("Summary report "generated": ${summaryFile}")
@@ -322,10 +383,11 @@ this.log("Summary report "generated": ${summaryFile}")
 =======
 <<<<<<< HEAD
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
-    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+    process.exit(0)} catch (error) {  dashboard.log(Dashboard generation "failed": ${error.message  }, )
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
@@ -334,12 +396,15 @@ this.log("Summary report "generated": ${summaryFile}")
 
 </html>"
             <p><strong>"Branch
-</p>"
+</p>
 
-</div>"
+</div>
                     <span class="
                     <span>Total "Dependencies
 </span>"
 
 
+<<<<<<< HEAD
+=======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

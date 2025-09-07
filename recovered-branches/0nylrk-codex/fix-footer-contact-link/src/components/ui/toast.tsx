@@ -5,6 +5,8 @@ import {X} from 'lucide-react';
 import {cn} from '@/lib/utils';
 const ToastProvider = ToastPrimitives.Provider;
 
+<<<<<<< HEAD
+=======
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -16,6 +18,7 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const ToastProvider = ToastPrimitives.Provider
 
@@ -143,6 +146,10 @@ const ToastAction = React && React.forwardRef<;
 
   <ToastPrimitives.Action;
 
+<<<<<<< HEAD
+import * as ToastPrimitives from '@radix - ui / react - toast';
+import {cva, type, VariantProps} from 'class - variance - authority';
+=======
   React && React.ComponentPropsWithoutRef<typeof ToastPrimitives && ToastPrimitives.Root> &;
     VariantProps<typeof toastVa</typeof>riants>;
     <ToastPrimitives.Root;
@@ -161,6 +168,7 @@ import * as ToastPrimitives from '@radix - ui / react - toast';
 import {cva, type, VariantProps} from 'class - variance - authority';
 import {X} from 'lucide-react';
 
+>>>>>>> origin/chore/fix-lint-and-merge
     ref={ref}
     className={cn('
       'fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]'

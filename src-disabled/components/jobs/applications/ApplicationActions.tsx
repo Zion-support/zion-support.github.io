@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button";
 import Link from 'next/link'
-import {
   DropdownMenu
   DropdownMenuContent
   DropdownMenuItem
@@ -80,10 +79,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             onClick={() => onStatusChange(application.id, 'rejected')}'
             className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}"
 import Link from "next/link","
-import {
 
 import Link from "next/link",;
-import { 
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -149,7 +146,6 @@ export function ApplicationActions({
             className="text-red-600""
 } from "@/components/ui/dropdown-menu",
 import { Button } from "@/components/ui/button",;
-import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 
 interface ApplicationActionsProps {
@@ -320,7 +316,6 @@ pr-12325
             onClick={() => onStatusChange(application && application.id, "rejected")}"
             className="text-red-600";
 import Link from 'next / link';
-import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
@@ -339,16 +334,13 @@ import { Button } from '@/components / ui / button';
       </Button>
     </div>
   )
-import Link from "next/link",;
 import {;
   DropdownMenu,;
   DropdownMenuContent,;
   DropdownMenuItem,;
   DropdownMenuTrigger;
 } from "@/components/ui/dropdown-menu",;
-import { Button } from "@/components/ui/button",;
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
-import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;
   application: JobApplication,;
   processingId: string | null,;

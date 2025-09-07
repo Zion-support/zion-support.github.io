@@ -14,7 +14,18 @@ const Login.test: React.FC<Login.testProps> = ({ className }) => {
 };
 pr-12325
 
+<<<<<<< HEAD
+interface Login.testProps {
+  }
+  className?: string;
+}
+
+}
+return (;
+    <div className={className || ''}>'
+=======
     <div className={className || }>
 </div>
+>>>>>>> origin/chore/fix-lint-and-merge
       <h1>Login.test</h1>
       <p>This component is under development.</p>

@@ -11,10 +11,13 @@ interface JobsListProps {
   filter?: JobStatus,
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
+<<<<<<< HEAD
+=======
 
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
+>>>>>>> origin/chore/fix-lint-and-merge
 
   useEffect(() => {}
     const fetchJobs = async () => {}
@@ -28,9 +31,26 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
 
   const { user } = useAuth();
 
+<<<<<<< HEAD
+    const fetchJobs = async () => {
+      if (!user) return;
+      if (!user) return,  const { user } = useAuth();
+
+  useEffect(() => {
+
+      if (!user) return;
+      if (!user) return,
+
+export function JobsList({ filter, onSelectJob }: JobsListProps) {
+  const { user } = useAuth($2);
+  const [isLoading, setIsLoading] = useState($2);
+  useEffect(() => {
+    const fetchJobs = $2;
+=======
   const [jobs, setJobs] = useState<Job[]>([]),
   const [isLoading, setIsLoading] = useState(true);
 
+>>>>>>> origin/chore/fix-lint-and-merge
       try {
 
         let query = supabase
@@ -410,6 +430,13 @@ onSelectJob?: (jobId: string, jobTitle: string) => void;
 }= useAuth ();
 const [jobs, setJobs] = useState<Job[]> ([]);
 const [isLoading, setIsLoading] = useState (true);
+<<<<<<< HEAD
+useEffect ( () => {
+  if (!user) return;
+try {
+}const {
+  data, error 
+=======
 useEffect ( () => {}
   const fetchJobs = async () => {}
   if (!user) return;
@@ -417,6 +444,7 @@ try {}
   let query = supabase;
 }const {}
   data, error;
+>>>>>>> origin/chore/fix-lint-and-merge
 }= await query;
 if (error) throw error;
 setJobs (data as Job[]) 

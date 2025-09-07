@@ -27,6 +27,26 @@ export const MetadataManager: React.FC = () => {";
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } })"
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
 },
+<<<<<<< HEAD
+  }
+  "appTitle": "Zion AI Marketplace","
+  "shortDescription": "Hire top AI talent or find global IT jobs on the go.","
+  "longDescription": "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.","
+  "keywords": ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"],"
+  "version": "1.0.0","
+  "platform": "ios""
+},
+export const "MetadataManager": React.FC = () => {;
+  }
+export const "MetadataManager": React.FC = () => {
+  }
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios"),"
+const [isSaving, setIsSaving] = useState(false),;
+  // Separate form instances for each platform,
+const iosForm = useForm<AppMetadataValues>({ "defaultValues": { ...defaultValues, "platform": "ios" } }),"
+  const androidForm = useForm<AppMetadataValues>({ "defaultValues": { ...defaultValues, "platform": "android" } }),"
+  const currentForm = currentPlatform === "ios" ? iosForm : androidForm,"
+=======
 
 const defaultValues: AppMetadataValues = {"
   appTitle: "Zion AI Marketplace","
@@ -40,6 +60,7 @@ const defaultValues: AppMetadataValues = {"
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm,
 
   const handleSaveMetadata = async (data: AppMetadataValues) => {
+>>>>>>> origin/chore/fix-lint-and-merge
     setIsSaving(true)
     try {
       // This would be implemented with actual API calls in production
@@ -173,6 +194,18 @@ export const MetadataManager: React.FC = () => {";
   )
 
 },
+<<<<<<< HEAD
+import { useForm } from "react-hook-form";"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { MetadataForm } from "./MetadataForm",;"
+import { ScreenshotManager } from "./ScreenshotManager",;"
+import { ChangelogManager } from "./ChangelogManager",;"
+import { ExportPanel } from "./ExportPanel",;"
+import { Button } from "@/components/ui/button",;"
+import { toast } from "sonner",;"
+export type AppPlatform = "ios" | "android",;    } finally {;"
+      }
+=======
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -199,6 +232,7 @@ export type AppMetadataValues = {;
     try {;
       // This would be implemented with actual API calls in production;
 
+>>>>>>> origin/chore/fix-lint-and-merge
       setIsSaving(false);
     }
   };

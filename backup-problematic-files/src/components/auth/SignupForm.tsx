@@ -77,9 +77,14 @@ type SignupFormData = z.infer<typeof signupSchema>,;
     return null,;
   },;
 ;
+<<<<<<< HEAD
+  const getFieldClasses = ("fieldName":string) => {;
+    }
+=======
   const getFieldClasses = (fieldName:string) => {;
     const state = fieldStates[fieldName],;
     const isTouched = touchedFields[fieldName as keyof SignupFormData],;
+>>>>>>> origin/chore/fix-lint-and-merge
     ;
     if (!isTouched) return '',;
     ;

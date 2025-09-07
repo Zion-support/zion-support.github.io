@@ -410,7 +410,11 @@ export default function EditPostPage() { return null; }
     categoryId: post.categoryId as ForumCategory,;"
     tags: post.tags.join(", ");
   },;
+<<<<<<< HEAD
+    }
+=======
   const handleSubmit = async (values: PostFormValues) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     try {;
       // Here we would normally update the post in the database;'
       // For now, we'll just simulate a successful update;

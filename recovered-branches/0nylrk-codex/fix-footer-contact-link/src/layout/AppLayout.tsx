@@ -36,11 +36,16 @@ interface AppLayoutProps {;
   );
 
 }
+<<<<<<< HEAD
+import React from "react";"
+import { Footer } from "@/components/Footer",;"
+=======
 
 import React from "react",;
 import { AppHeader } from "./AppHeader",;
 
 import { Footer } from "@/components/Footer",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface AppLayoutProps {;
   children:React.ReactNode,;
@@ -56,7 +61,10 @@ export function AppLayout() { return null; }
 }"
 import React from "react",;"
 import { AppHeader } from "./AppHeader",;"
+<<<<<<< HEAD
+=======
 import { Footer } from "@/components/Footer",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface AppLayoutProps {;
   children: React.ReactNode;
   hideFooter?: boolean;

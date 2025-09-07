@@ -2,6 +2,15 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
+const path = require(path')
+    const buildDir = path.join(process.cwd(), '.next;
+    const reportPath = path.join(process.cwd(), performance-metrics.json;'
+    console.log(' Performance metrics saved')
+
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
 const path = require('path')
     const buildDir = path.join(process.cwd(), '.next;'
     const reportPath = path.join(process.cwd(), 'performance-metrics.json;'
@@ -20,3 +29,4 @@ const path = require('path')
 =======
     console.log(' Performance metrics saved')
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

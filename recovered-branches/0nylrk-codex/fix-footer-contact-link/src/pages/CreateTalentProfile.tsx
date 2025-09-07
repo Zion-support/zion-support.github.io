@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";"
+import React from "react","
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm","
+import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";"
+
+=======
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
 
@@ -9,6 +16,7 @@ import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationF
 import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default function CreateTalentProfile() {
   return (
@@ -46,9 +54,14 @@ export default function CreateTalentProfile() {
         <TalentRegistrationForm />
       </div>
     </div>
+<<<<<<< HEAD
+  )
+import React from "react";"
+=======
 
 import React from "react",;
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default function CreateTalentProfile() {;
   return (

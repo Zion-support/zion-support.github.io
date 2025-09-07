@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -11,11 +15,16 @@ const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
 console.log("🧠 Starting intelligent automation orchestrator...")
+>>>>>>> origin/chore/fix-lint-and-merge
 // Get automation interval from environment variable ("default")
-    "automations": ["enhanced-error-fixer", "console-error-fixer"]
-  "medium"
-    "automations": ["code-quality-automation", "link-checker", "security-audit"]
+console.log(🧠 Starting intelligent automation orchestrator...)
+    "automations": [enhanced-error-fixer, "console-error-fixer"]
+  medium
+    "automations": [code-quality-automation, "link-checker", security-audit]
   "low"
+<<<<<<< HEAD
+
+=======
     "automations": ["performance-monitor", "dependency-updates", "quality-checks"]
   "maintenance"
     "automations": ["smart-documentation-generator", "ai-code-analyzer"]
@@ -58,28 +67,33 @@ console.log("🧠 Starting intelligent automation orchestrator...")
   const lintResult = execSync("npm run lint", { "stdio": "pipe"})
       state.errorCount = (lintResult.match(/"error/g")
       state.warningCount = (lintResult.match(/"warning/g")
+>>>>>>> origin/chore/fix-lint-and-merge
         error.message.match(/(\d+)\s+errors?/)?.[1] || "0"
-        error.message.match(/(\d+)\s+warnings?/)?.[1] || "0"
-      state.errorCount = parseInt(")
-        error.message.match(/(\d+)\s+errors?/)?.[1] || "0"
-        error.message.match(/(\d+)\s+warnings?/)?.[1] || "0"
-  execSync("npm run build", { "stdio": "pipe"})
-      state.buildStatus = "success"
+        error.message.match(/(\d+)\s+warnings?/)?.[1] || 0
+  execSync("npm run build", { stdio: "pipe"})
+      state.buildStatus = success
   state.buildStatus = "failed"
-  execSync("npm test", { "stdio": "pipe"})
+  execSync(npm test, { "stdio": pipe})
       state.testStatus = "success"
-  state.testStatus = "failed"
+  state.testStatus = failed
     state.fileCount = countFiles("src")
+<<<<<<< HEAD
+
+=======
   const auditResult = execSync("npm audit --json")
   "stdio": "pipe"
         audit.metadata.vulnerabilities.total > 0 ? "vulnerable" : "secure"
+>>>>>>> origin/chore/fix-lint-and-merge
   state.dependencyStatus = "unknown"
-  execSync("npm run build", { "stdio": "pipe"})
+  execSync(npm run build, { "stdio": pipe})
       state.buildStatus = "success"
-  state.buildStatus = "failed"
-  execSync("npm test", { "stdio": "pipe"})
-      state.testStatus = "success"
+  state.buildStatus = failed
+  execSync("npm test", { stdio: "pipe"})
+      state.testStatus = success
   state.testStatus = "failed"
+<<<<<<< HEAD
+
+=======
     state.fileCount = countFiles("src")
   const auditResult = execSync("npm audit --json")
   "stdio": "pipe"
@@ -119,121 +133,132 @@ console.log("🧠 Starting intelligent automation orchestrator...")
     return "good"
   return "unknown"
   const fullPath = path.join(dir, ")
+>>>>>>> origin/chore/fix-lint-and-merge
   files.push(...findFilesWithPattern(fullPath")
-        item.endsWith(".ts")
+        item.endsWith(.ts)
         item.endsWith(".tsx")
-        item.endsWith(".js")
+        item.endsWith(.js)
         item.endsWith(".jsx")
+<<<<<<< HEAD
+
+=======
   const content = fs.readFileSync(fullPath, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
   // Skip files that can"
   // Skip directories that can"
-  // Skip files that can"
+  // Skip files that can
+  // Skip directories that can
   // Skip directories that can"
   // Skip directories that can"
-  // Skip directories that can"
-  if (projectState.buildStatus === "failed")
+  if (projectState.buildStatus === failed)
   automations.push("enhanced-error-fixer")
-  if (projectState.testStatus === "failed")
+  if (projectState.testStatus === failed)
   automations.push("code-quality-automation")
-  if (projectState.dependencyStatus === "vulnerable")
+  if (projectState.dependencyStatus === vulnerable)
   automations.push("security-audit")
-    automations.push("dependency-updates")
+    automations.push(dependency-updates)
   if (projectState.securityStatus === "vulnerable")
-  automations.push("security-audit")
+  automations.push(security-audit)
   if (projectState.performanceStatus === "poor")
-  automations.push("performance-monitor")
+  automations.push(performance-monitor)
     automations.push("code-quality-automation")
-  for (const ["priority", "schedule")]
-  try {console.log(` Executing "automation"`})
-        "status": "success"
+  for (const [priority, "schedule")]
+  try {console.log(` Executing automation`})
+        "status": success
         "timestamp"
-      )} catch (error) {  console.error( Automation ${automation  } failed:, error.message")
-        "status": "
-        "error"
+      )} catch (error) {  console.error( Automation ${automation  } failed:, error.message)
+        status": "
+        error
         "timestamp"
-        "status": "failed"
-        "error"
+        status: "failed"
+        error
         "timestamp"
-  const automationScripts = {enhanced-error-fixer": "./""scripts/automation/enhanced-error-fixer.cjs""",console-error-fixer": "./""scripts/automation/console-error-fixer.cjs""",code-quality-automation"}
-      "./""scripts/automation/code-quality-automation.cjs""",link-checker": "./""scripts/automation/link-checker.cjs""",security-audit": "./""scripts/automation/security-audit.cjs""",performance-monitor": "./""scripts/automation/performance-monitor.cjs""",dependency-updates": "./""scripts/automation/dependency-updates.cjs""",quality-checks": "./""scripts/automation/quality-checks.cjs""",smart-documentation-generator"
-      "./""scripts/automation/smart-documentation-generator.cjs""",ai-code-analyzer": "./""scripts/automation/ai-code-analyzer.cjs"""
-  const automationScripts = {enhanced-error-fixer": "./"scripts/automation/enhanced-error-fixer.cjs"",console-error-fixer": "./"scripts/automation/console-error-fixer.cjs"",code-quality-automation"}
-      "./"scripts/automation/code-quality-automation.cjs"",link-checker": "./"scripts/automation/link-checker.cjs"",security-audit": "./"scripts/automation/security-audit.cjs"",performance-monitor": "./"scripts/automation/performance-monitor.cjs"",dependency-updates": "./"scripts/automation/dependency-updates.cjs"",quality-checks": "./"scripts/automation/quality-checks.cjs"",smart-documentation-generator"
-      "./"scripts/automation/smart-documentation-generator.cjs"",ai-code-analyzer": "./"scripts/automation/ai-code-analyzer.cjs""
-  if (!scriptPath) {throw new Error("Unknown "automation": ${automationName}")
-  if (!fs.existsSync(scriptPath)) {throw new Error("Automation script not "found": ${scriptPath}")
-  // Execute the automation scriptconst result = execSync("node ${scriptPath}")
-  "stdio": "pipe"
+  const automationScripts = {enhanced-error-fixer: ./""scripts/automation/enhanced-error-fixer.cjs",console-error-fixer": ./"scripts/automation/console-error-fixer.cjs",code-quality-automation"}
+      "./scripts/automation/code-quality-automation.cjs"",link-checker: "./"scripts/automation/link-checker.cjs"",security-audit: ./""scripts/automation/security-audit.cjs",performance-monitor": ./"scripts/automation/performance-monitor.cjs",dependency-updates": "./scripts/automation/dependency-updates.cjs"",quality-checks: "./"scripts/automation/quality-checks.cjs"",smart-documentation-generator
+      ./""scripts/automation/smart-documentation-generator.cjs",ai-code-analyzer": ./"scripts/automation/ai-code-analyzer.cjs"
+  const automationScripts = {enhanced-error-fixer": "./scripts/automation/enhanced-error-fixer.cjs",console-error-fixer": ./scripts/automation/console-error-fixer.cjs"",code-quality-automation}
+      ./"scripts/automation/code-quality-automation.cjs",link-checker: "./"scripts/automation/link-checker.cjs,security-audit": "./scripts/automation/security-audit.cjs",performance-monitor": ./scripts/automation/performance-monitor.cjs"",dependency-updates: ./"scripts/automation/dependency-updates.cjs",quality-checks: "./"scripts/automation/quality-checks.cjs,smart-documentation-generator"
+      "./scripts/automation/smart-documentation-generator.cjs",ai-code-analyzer": ./scripts/automation/ai-code-analyzer.cjs""
+  if (!scriptPath) {throw new Error(Unknown automation": ${automationName}")
+  if (!fs.existsSync(scriptPath)) {throw new Error(Automation script not found": ${scriptPath}")
+  // Execute the automation scriptconst result = execSync(node ${scriptPath})
+  "stdio": pipe
     "timeout"
-  "lastRun"
+  lastRun
       "status"
-      "executionTime"
+      executionTime
       "errorCount"
-      "successCount"
-  "type": "error"
-      "severity": "high","message": "Project has ${projectState.errorCount} errors that need immediate attention"
-      "recommendation": Run enhanced-error-fixer automation to resolve these issues"
-  if (projectState.buildStatus === "failed")
-  "type": "build"
-      "severity": "high"
-      "message": "Project build is failing"
-      "recommendation": "Investigate build errors and run enhanced-error-fixer"
-  if (projectState.testStatus === "failed")
-  "type": "testing"
-      "severity": "medium"
-      "message": "Project tests are failing"
-      "recommendation": Run code-quality-automation to improve test coverage and fix failing tests"
-  if (projectState.dependencyStatus === "vulnerable")
-  "type": "security"
-      "severity": "high"
-      "message": "Dependencies have security vulnerabilities"
-      "recommendation": "Run security-audit and dependency-updates automations"
+      successCount
+  "type": error
+      "severity": high,"message": Project has ${projectState.errorCount} errors that need immediate attention
+      "recommendation": Run enhanced-error-fixer automation to resolve these issues
+  if (projectState.buildStatus === failed")
+  "type: build"
+      "severity: high"
+      "message: Project build is failing"
+      "recommendation: Investigate build errors and run enhanced-error-fixer"
+  if (projectState.testStatus === "failed)
+  type": "testing
+      severity": "medium
+      message": "Project tests are failing
+      recommendation": Run code-quality-automation to improve test coverage and fix failing tests"
+  if (projectState.dependencyStatus === vulnerable)
+  "type": security
+      "severity": high
+      "message": Dependencies have security vulnerabilities
+      "recommendation": Run security-audit and dependency-updates automations
   if (projectState.performanceStatus === "poor")
-  "type": "performance"
-      "severity": "medium"
-      "message": "Project has performance issues"
-      "recommendation": Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"
-    r => r.status === "success"
-  "type": "error"
-      "severity": "high","message": `Project has ${projectState.errorCount} errors that need immediate attention
-      "recommendation": Run enhanced-error-fixer automation to resolve these issues"
+  type: "performance"
+      severity: "medium"
+      message: "Project has performance issues"
+      recommendation: Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"
+    r => r.status === "success
+  type": "error
+      severity": "high,message": `Project has ${projectState.errorCount} errors that need immediate attention
+      "recommendation: Run enhanced-error-fixer automation to resolve these issues
   if (projectState.buildStatus === "failed")
-  "type": "build"
-      "severity": "high"
-      "message": "Project build is failing"
-      "recommendation": "Investigate build errors and run enhanced-error-fixer"
-  if (projectState.testStatus === "failed")
-  "type": "testing"
-      "severity": "medium"
-      "message": "Project tests are failing"
-      "recommendation": Run code-quality-automation to improve test coverage and fix failing tests"
-  if (projectState.dependencyStatus === "vulnerable")
-  "type": "security"
-      "severity": "high"
-      "message": "Dependencies have security vulnerabilities"
-      "recommendation": "Run security-audit and dependency-updates automations"
-  if (projectState.performanceStatus === "poor")
-  "type": "performance"
-      "severity": "medium"
-      "message": "Project has performance issues"
-      "recommendation": Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"
-    r => r.status === "success"
+  type: "build"
+      severity: "high"
+      message: "Project build is failing"
+      recommendation: "Investigate build errors and run enhanced-error-fixer"
+  if (projectState.testStatus === failed)
+  "type": testing
+      "severity": medium
+      "message": Project tests are failing
+      "recommendation": Run code-quality-automation to improve test coverage and fix failing tests
+  if (projectState.dependencyStatus === vulnerable")
+  "type: security"
+      "severity: high"
+      "message: Dependencies have security vulnerabilities"
+      "recommendation: Run security-audit and dependency-updates automations"
+  if (projectState.performanceStatus === "poor)
+  type": "performance
+      severity": "medium
+      message": "Project has performance issues
+      recommendation": Run performance-monitor and code-quality-automation to identify and fix performance bottlenecks"
+    r => r.status === success
   "type": `automation
-        "severity": "medium"
-        "message": "Automation success rate is ${successRate.toFixed(1)}%"
-        "recommendation": Investigate failing automations and improve error handling"
-  "type": "maintenance"
-      "severity": "low","message"
-      "recommendation": Consider code splitting and modularization to improve maintainability"
-    "
-process.on("SIGINT")
-  console.log("� Received SIGINT, shutting down gracefully...")
-    " Starting intelligent automation orchestrator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals"
+        severity: "medium"
+        message: "Automation success rate is ${successRate.toFixed(1)}%"
+        recommendation: Investigate failing automations and improve error handling"
+  "type: maintenance"
+      "severity: low","message
+      recommendation": Consider code splitting and modularization to improve maintainability"
+    
+process.on(SIGINT")
+  console.log("� Received SIGINT, shutting down gracefully...)
+     Starting intelligent automation orchestrator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals"
   console.log( Intelligent automation orchestrator running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes")
-process.on("SIGINT")
+process.on(SIGINT)
   console.log("� Received SIGINT, shutting down gracefully...")
-process.on("SIGTERM")
+process.on(SIGTERM)
   console.log("� Received SIGTERM, shutting down gracefully...")
+<<<<<<< HEAD
+
+
+  console.error( Failed to start intelligent automation orchestrator)
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -243,12 +268,17 @@ process.on("SIGTERM")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
   console.error( Failed to start intelligent automation "orchestrator")
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error( Failed to start intelligent automation "orchestrator")
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

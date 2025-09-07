@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+
+#!/usr/bin/env node
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -10,8 +15,9 @@
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
 class DependencyManager {
   // TODO: Implement
@@ -19,14 +25,14 @@ class DependencyManager {
 
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
-      fs.mkdirSync(this.reportsDir, { "recursive": true })}"
+      fs.mkdirSync(this.reportsDir, { "recursive: true })}
   log(message) {
     .toISOString()}] ${message})}
   analyzeDependencies() {"
 
-      const dependencies = packageJson.dependencies || {};
-      const devDependencies = packageJson.devDependencies || {};
-      const allDeps = { ...dependencies, ...devDependencies };
+      const dependencies = packageJson.dependencies || {}
+      const devDependencies = packageJson.devDependencies || {}
+      const allDeps = { ...dependencies, ...devDependencies }
       // Check for outdated packages;
       let outdatedPackages = [];
   // TODO: Implement
@@ -38,7 +44,7 @@ class DependencyManager {
   // TODO: Implement
 
       // Check for security vulnerabilities;
-      let vulnerabilities = {};
+      let vulnerabilities = {}
   // TODO: Implement
 
         const auditData = JSON.parse(auditResult);
@@ -48,31 +54,34 @@ class DependencyManager {
             vulnerabilities = auditData.vulnerabilities || {}} catch (parseError) {
 
       // Analyze package sizes;
-      const packageSizes = {};
+      const packageSizes = {}
   // TODO: Implement
 
       this.log(`🛡️ ${Object.keys(vulnerabilities).length} packages have security vulnerabilities`);
-      return {"success": true,"totalDependencies": Object.keys(allDeps).length,"dependencies": Object.keys(dependencies).length;"
+      return {"success: true,totalDependencies": Object.keys(allDeps).length,"dependencies: Object.keys(dependencies).length;
         devDependencies: Object.keys(devDependencies).length;,
   outdatedPackages: Object.keys(outdatedPackages).length;
         vulnerabilities: Object.keys(vulnerabilities).length;,
   outdatedDetails: outdatedPackages;
         vulnerabilityDetails: vulnerabilities;,
 
-      return {"success": false,"error": error.message;"
+      return {"success": false,error: error.message;"
         timestamp: new Date().toISOString()}}
   updateDependencies() {"
 
     const analysis = this.analyzeDependencies();
     const audit = this.auditDependencies();
     const report = {
-      "timestamp": new Date().toISOString();"
+      timestamp: new Date().toISOString();"
       analysis;
       audit;"
-      summary: {totalDependencies: analysis.success ? analysis.totalDependencies : 0,"outdatedPackages": analysis.success ? analysis.outdatedPackages : 0,"vulnerabilities": analysis.success ? analysis.vulnerabilities: 0;",
+      summary: {totalDependencies: analysis.success ? analysis.totalDependencies : 0,outdatedPackages: analysis.success ? analysis.outdatedPackages : 0,"vulnerabilities": analysis.success ? analysis.vulnerabilities: 0;",
   auditSuccessful: audit.success}
-    };`;
+    }`;
     const reportFile = path.join(this.reportsDir, `dependency-report-${Date.now()}.json`);
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved "to": ${reportFile}`);
@@ -88,31 +97,44 @@ class DependencyManager {
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     // Print summary;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     return report}
   async run() {"
-    try {this.log('🚀 Starting Dependency Manager'),const report = this.generateReport(),this.log('✅ Dependency management completed');
+    try {this.log(🚀 Starting Dependency Manager'),const report = this.generateReport(),this.log('✅ Dependency management completed');
 
       throw error}
 // Run the dependency manager;
 if (require.main === module) {const manager = new DependencyManager(),manager.run().catch(console.error)}
 <<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
 module.exports = DependencyManager;
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = DependencyManager;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = DependencyManager;
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 

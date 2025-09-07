@@ -62,6 +62,29 @@ const { disputeId } = useParams() as { disputeId?: string };
       setDispute({ ...dispute, status })
 
     }
+<<<<<<< HEAD
+    if (!disputeId) return;
+};
+import { useParams, useNavigate } from "react-router-dom";"
+import { useDisputes } from "@/hooks/useDisputes",;"
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;"
+import { Button } from "@/components/ui/button",;"
+import { Textarea } from "@/components/ui/textarea",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Separator } from "@/components/ui/separator",;"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;"
+import { format, formatDistanceToNow } from "date-fns",;"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;"
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { toast } from "sonner",;"
+export function DisputeDetail() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   const handleResolveDispute = async () => {}
     if (!disputeId) return;
@@ -131,7 +154,26 @@ export function DisputeDetail() { return null; }
     }
   },
 
+<<<<<<< HEAD
+    }
+    if (!disputeId) return,
+  const { disputeId } = useParams() as { disputeId?: string },
+  const navigate = useNavigate($2);
+  const { user } = useAuth($2);
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes($2);
+  const [dispute, setDispute] = useState<any>(null),
+  const [messages, setMessages] = useState<DisputeMessage[]>([]),
+  const [isLoading, setIsLoading] = useState($2);
+  const [message, setMessage] = useState($2);
+  const [isSending, setIsSending] = useState($2);
+  const [resolution, setResolution] = useState($2);
+  const [activeTab, setActiveTab] = useState($2);
+  // Check if user is admin (placeholder - implement proper admin check)
+  const isAdmin = $2;
+  useEffect(() => {
+=======
   const handleResolveDispute = async () => {}
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!disputeId) return,
 
     if (!resolution.summary) {
@@ -346,7 +388,14 @@ function DisputeDetail() {}
 if (return) {}
   $2;
 }
+<<<<<<< HEAD
+if (return) {
+  $2
+}
+      }
+=======
     const loadDisputeData = async () => {}
+>>>>>>> origin/chore/fix-lint-and-merge
       setIsLoading (true);
       try {}
         const dispute_data = await getDisputeById (dispute_id);
@@ -387,10 +436,14 @@ if ( {) {}
     }
   }
 ;
+<<<<<<< HEAD
+    // Check condition
+=======
   const handleResolveDispute = async () => {}
     // Check condition;
 if (return) {}
   $2;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
     // Check condition;
 if ( {) {}
@@ -457,12 +510,58 @@ import { useAuth } from "@/hooks/useAuth",;
 
 import { toast } from "sonner",;
 ;
+<<<<<<< HEAD
+  // Check condition,
+if ( {) {
+  $2
+}
+return (;
+      <div className="p - 8 text-center">;"
+        <div className="w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded-full"></div>;"
+        <p > Loading dispute details...</p>;
+      </div>);
+  }
+  // Check condition,
+if ( {) {
+  $2
+}
+return (;
+      <div className="p - 8 text-center">;"
+        <p > Dispute not found</p>;
+        <Button on_click={() => navigate ("/dashboard / disputes")} className="mt-4">;"
+          Back to Disputes;
+        </Button>;
+      </div>);
+  }
+  const getStatusBadgeVariant = ("status": DisputeStatus) =>: any {
+    }
+    switch (status) {
+      }
+      case "open": return "default";"
+      case "under_review": return "secondary","
+      case "resolved": return "outline", // Changed from './success'; to "outline";"
+      case "closed": return "outline";"
+      "default": return "default";"
+    }
+import React, { useState, useEffect } from "react",;"
+import { useParams, useNavigate } from "react-router-dom",;"
+;
+export function DisputeDetail() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  }
+=======
 export function DisputeDetail() { return null; }
+>>>>>>> origin/chore/fix-lint-and-merge
   const { disputeId } = useParams() as { disputeId?:string },;
-  const navigate = useNavigate(),;
-  const { user } = useAuth(),;
-  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),;
   ;
+<<<<<<< HEAD
+    }
+    "summary":"",;"
+    "resolution_type":"compromise"}),;"
+;
+  // Check if user is admin (placeholder - implement proper admin check);
+=======
   const [dispute, setDispute] = useState<any>(null),;
   const [messages, setMessages] = useState<DisputeMessage[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;"
@@ -475,22 +574,31 @@ export function DisputeDetail() { return null; }
 ;
   // Check if user is admin (placeholder - implement proper admin check);"
   const isAdmin = user?.userType === "admin",;
+>>>>>>> origin/chore/fix-lint-and-merge
   ;
   useEffect(() => {;
     if (!disputeId) return,;
 ;
+<<<<<<< HEAD
+      }
+      setIsLoading(true),;
+      try {;
+        }
+        if (!disputeData) {;
+          }
+=======
     const loadDisputeData = async () => {;
       setIsLoading(true),;
       try {;
         const disputeData = await getDisputeById(disputeId),;
         if (!disputeData) {;"
+>>>>>>> origin/chore/fix-lint-and-merge
           toast.error("Dispute not found"),;"
           navigate("/dashboard/disputes"),;
           return,;
         }
         setDispute(disputeData),;
         ;
-        const messagesData = await getDisputeMessages(disputeId),;
         setMessages(messagesData),;
       } catch (error) {;"
         console.error("Error loading dispute data:", error),;"
@@ -506,13 +614,16 @@ export function DisputeDetail() { return null; }
   const handleStatusChange = async (status:DisputeStatus) => {;
     if (!disputeId) return,;
     ;
-    const success = await updateDisputeStatus(disputeId, status),;
     if (success && dispute) {;
       setDispute({ ...dispute, status }),;
     }
   },;
 ;
+<<<<<<< HEAD
+    }
+=======
   const handleResolveDispute = async () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!disputeId) return,;
     ;
     if (!resolution.summary) {;"
@@ -537,12 +648,21 @@ export function DisputeDetail() { return null; }
     ;
     setIsSending(true),;
     try {;
+<<<<<<< HEAD
+      }
+      if (success) {;
+        // Refresh messages;
+        }
+        setMessages(updatedMessages),;
+        setMessage(""),;"
+=======
       const success = await addDisputeMessage(disputeId, message, isAdmin),;
       if (success) {;
         // Refresh messages;
         const updatedMessages = await getDisputeMessages(disputeId),;
         setMessages(updatedMessages),;"
         setMessage(""),;
+>>>>>>> origin/chore/fix-lint-and-merge
       }
     } catch (error) {;"
       console.error("Error sending message:", error),;

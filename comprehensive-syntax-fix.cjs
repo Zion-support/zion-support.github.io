@@ -144,9 +144,13 @@ for (const fix of fixes) {
 console.log(`✅ Fixed ${fixedCount} files`);
 <<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-59d5
+<<<<<<< HEAD
+
+=======
 const { execSync } = require('child_process');
 =======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> origin/chore/fix-lint-and-merge
 
           content = content.replace(/
 
@@ -154,7 +158,35 @@ const { execSync } = require('child_process');
   ensureReportsDir() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
+<<<<<<< HEAD
+    }
+  }
+
+  log(message) {
+    console.log(`[${timestamp}] ${message}`);
+  }
+
+  async fixMergeConflicts() {
+    this.log('🔧 Fixing merge conflicts...');
+    
+      'tsconfig.json',
+      '.eslintrc.js',
+      'package.json'
+    ];
+
+    for (const file of files) {
+      if (fs.existsSync(filePath)) {
+        try {
+          
+          // Remove merge conflict markers
+main
+
+          content = content.replace(/[\s\S]*?[\s\S]*?
+          content = content.replace(/[\s\S]*?
+          
 =======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           fs.writeFileSync(filePath, content);
           this.log(`✅ Fixed merge conflicts in ${file}`);
         } catch (error) {

@@ -41,8 +41,12 @@ class ContinuousLinter {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     console.log(message);
   error(message) {}
+<<<<<<< HEAD
+const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;`;
+=======
 
     const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;`"
+>>>>>>> origin/chore/fix-lint-and-merge
     fs.appendFileSync(this.errorFile, errorMessage);
     console.error(message);
   async runLintFix() {}
@@ -275,11 +279,52 @@ if (require.main === module) {}
 
 // Run if called directly;
 if (require.main === module) {}
-  const linter = new ContinuousLinter();
-  const command = process.argv[2];
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     linter.run();
+<<<<<<< HEAD
+  } else if (command === 'fix') {}
+    linter.runFullLint().then(success => {})
+      process.exit(success ? 0 : 1);
+    }
+  }
+  async run() {}
+this.log('Starting continuous linting automation...')
+    try {}
+      // Run initial full lint
+      await this.runFullLint()
+      // Start watching for changes
+      this.startWatching();      // Run initial full lint
+      await this.runFullLint()
+      // Start watching for changes
+      this.startWatching()
+      process.on('SIGINT, () => {}
+        this.log('Received SIGINT, stopping...)
+        this.stopWatching()
+        process.exit(0)
+})
+      process.on('SIGTERM', () => {}
+        this.log('Received SIGTERM, stopping...')
+        this.stopWatching()
+        process.exit(0)
+})
+      this.log('Continuous linting automation is running...');    } catch (err) {}
+      this.error(`Error in "run": ${err.message}`)
+      return { "success": false, "error": err.message }
+    }
+  }
+}
+// Run if called directly
+  if($2) {}
+  const linter = new ContinuousLinter()
+  const command = process.argv[2];  if (command === 'watch') {}
+
+// Run if called directly
+  if($2) {}
+  const command = process.argv[2]
+    linter.run()
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   } else if (command ===fix') {}
     linter.runFullLint().then(success => {})
       process.exit(success ? 0 : 1);

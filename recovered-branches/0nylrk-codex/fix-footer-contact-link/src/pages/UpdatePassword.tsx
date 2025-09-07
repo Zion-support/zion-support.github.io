@@ -1,9 +1,20 @@
+<<<<<<< HEAD
+
+import {
+  }
+=======
 import { Input } from "@/components/ui/input";
 import {};
+>>>>>>> origin/chore/fix-lint-and-merge
   Form;
   FormControl;
   FormField;
   FormItem;
+<<<<<<< HEAD
+  FormLabel;
+
+  }
+=======
   FormLabel;"
   FormMessage} from "@/components/ui/form","
 import { toast } from "@/hooks/use-toast","
@@ -13,10 +24,14 @@ import { cleanupAuthState } from "@/utils/authUtils";"
 import { Button } from "@/components/ui/button","
 import { Input } from "@/components/ui/input",
 import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   Form,
   FormControl,
   FormField,
   FormItem,
+<<<<<<< HEAD
+  FormLabel,
+=======
 
 import { cleanupAuthState } from "@/utils/authUtils",
 ;
@@ -74,9 +89,13 @@ type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,
     defaultValues: {"
       password: """
       confirmPassword: ""}})
+>>>>>>> origin/chore/fix-lint-and-merge
 
     if (token) {
       setAccessToken(token)
+<<<<<<< HEAD
+
+=======
     } else {
       setError("No access token found. Please request a new password reset link.")
     }
@@ -150,6 +169,7 @@ if ( {) {
       setAccessToken (token);
     } else {
       set_error ("No access token found. Please request a new password reset link.");
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
   }, [location]),
@@ -160,6 +180,9 @@ if ( {) {
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
+<<<<<<< HEAD
+
+=======
       setError("No access token found. Please request a new password reset link.")
       return
 
@@ -171,6 +194,7 @@ if ( {) {
       confirmPassword: ""}}),;
 
   useEffect(() => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     // Extract access token from URL hash;
     const hashParams = new URLSearchParams(location && location.hash.substring(1));"
     const token = hashParams && hashParams.get("access_token");
@@ -180,6 +204,32 @@ if ( {) {
     } else {;"
       setError("No access token found. Please request a new password reset link.");
     }
+<<<<<<< HEAD
+    const hashParams = new URLSearchParams(location && location.hash.substring(1));
+
+      if (error) {
+        }
+        toast({
+}
+return;
+      }
+      // Show success message and clean up auth state,
+setSuccess(true),
+      toast({
+
+    } finally {
+      }
+      setIsLoading(false)
+
+    }
+    // Clean up auth state to prevent issues;
+    cleanupAuthState();
+  }, [location]),
+  // Form submission handler;
+  const onSubmit = async (data: UpdatePasswordFormValues) => {
+    if (!accessToken) {
+      setError(No access token found. Please request a new password reset link."),
+=======
 
     // Clean up auth state to prevent issues;
     cleanupAuthState();
@@ -342,6 +392,7 @@ export default function UpdatePassword() { return null; }
   const onSubmit = async (data: UpdatePasswordFormValues) => {;
     if (!accessToken) {;"
       setError("No access token found. Please request a new password reset link."),;
+>>>>>>> origin/chore/fix-lint-and-merge
       return;
 
     }
@@ -349,11 +400,14 @@ export default function UpdatePassword() { return null; }
 
   },
 
+<<<<<<< HEAD
+=======
   return (
 
           title: "Password update failed",
           description: error.message,
           variant: "destructive"}),
+>>>>>>> origin/chore/fix-lint-and-merge
         setError(error.message),
 
         return
@@ -361,6 +415,9 @@ export default function UpdatePassword() { return null; }
       // Show success message and clean up auth state
       setSuccess(true);
       toast({
+<<<<<<< HEAD
+
+=======
         title: "Password updated successfully"
         description: "You can now log in with your new password."})
       // Clean auth state and redirect after a delay
@@ -375,8 +432,14 @@ export default function UpdatePassword() { return null; }
         description: error.message |"An unexpected error occurred"
         variant: "destructive"})
       setError(error.message |"An unexpected error occurred")
+>>>>>>> origin/chore/fix-lint-and-merge
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
+    try {
+      // Set the session with the access token;
+
+=======
 
     try {;
       // Set the session with the access token;
@@ -391,12 +454,110 @@ export default function UpdatePassword() { return null; }
       if (error) {;
 
           variant: "destructive"}),;
+>>>>>>> origin/chore/fix-lint-and-merge
         setError(error && error.message);
         return;
       }
 
       // Show success message and clean up auth state;
       setSuccess(true);
+<<<<<<< HEAD
+
+                              disabled={isLoading}
+                              {...field}
+                            />;
+                          </FormControl>;
+
+                        </FormItem>;
+                      )}
+                    />;
+                    <FormField;
+                      control={form.control}
+
+                          <FormControl>;
+                    <FormField
+                      control={form.control}
+                      name=password"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-zion-slate-light>New Password</FormLabel>
+                          <FormControl>
+                            <Input
+                              type=password"
+                              className="bg-zion-blue text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple
+                              placeholder=••••••••"
+                              disabled={isLoading}
+                              {...field}
+                            />
+                          </FormControl>
+
+                        </FormItem>;
+                      )}
+
+                    />;
+                              disabled={isLoading}
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage className=text-red-400" />
+                        </FormItem>
+                      )}
+                    />
+                    <Button
+                      type="submit
+                      className=w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
+                      disabled={isLoading |!accessToken}
+                    >
+                      {isLoading ? "Updating... : Update Password"}
+                    </Button>
+                    <div className="text-center>
+                      <Button
+                        variant=link"
+                        className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0
+                        onClick={() => navigate(/login")}
+    // Clean up auth state to prevent issues;
+    cleanupAuthState ();
+  }, [location]);
+  // Form submission handler;
+  const on_submit = async ("data": UpdatePasswordFormValues) => {
+    // Check condition
+}
+if ( {) {
+  $2
+}
+
+      return;
+    }
+    setIsLoading (true);
+    try {
+      // Set the session with the access token;
+      }
+      await supabase.auth.set_session ({
+
+      // Update the password;
+      const { error } = await supabase.auth.update_user ({
+        }
+        "password": data.password}),
+      // Check condition,
+if ( {) {
+  $2
+}
+        toast ({
+
+        set_error (error.message);
+        return;
+      }
+      // Show success message and clean up auth state;
+      set_success (true);
+      toast ({
+
+    } finally {
+      }
+      setIsLoading (false);
+    }
+  }
+
+=======
 
                   <p className="text-sm">{error}</p>;
 '
@@ -409,6 +570,7 @@ export default function UpdatePassword() { return null; }
               )}
 
                     onClick={() => navigate('/forgot-password')}
+>>>>>>> origin/chore/fix-lint-and-merge
                   >;
                     Request new reset link;
                   </Button>;
@@ -423,6 +585,32 @@ export default function UpdatePassword() { return null; }
                   </p>"
 
               {success ? (
+<<<<<<< HEAD
+
+                    Redirecting you to login...;
+                  </p>;
+                </div>) : (
+                <Form {...form}>;
+
+                              disabled={is_loading}
+                              {...field} />;
+                          </FormControl>;
+
+                        </FormItem>)}
+                    />;
+                    <FormField;
+                      control={form.control}
+
+                              disabled={is_loading}
+                              {...field} />;
+                          </FormControl>;
+
+                      >;
+                        Back to login;
+                      </Button>;
+                    </div>;
+
+=======
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
                     <LockKeyhole className="h-6 w-6 text-zion-purple" />
@@ -485,6 +673,7 @@ export default function UpdatePassword() { return null; }
                       )}
 
                         type="button"
+>>>>>>> origin/chore/fix-lint-and-merge
                       >
                         Back to login
                       </Button>
@@ -492,14 +681,52 @@ export default function UpdatePassword() { return null; }
                   </form>
                 </Form>
               )}
+<<<<<<< HEAD
+
+    </>);
+    </>;
+  ); import {
+  }
+  Form;
+FormControl;
+FormField;
+FormItem;
+FormLabel;
+
+}, [location]);
+//Form submission handler
+}setIsLoading (true);
+try {
+  //Set the session with the access token await supabase.auth.setSession ({
+  }
+  access "token": accessToken;
+refresh "token": '''
+});
+//Update the password const {
+  }
+  error
+}= await supabase.auth.updateUser ({
+  }
+  "password": data.password
+});
+if (error) {
+  }
+  toast ({
+
+}
+    </>;
+  );
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             </div>
           </div>
         </div>
-        <div className="hidden lg: block relative w-0 flex-1">
+        <div className=hidden lg: block relative w-0 flex-1>
           <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80">
-            <div className="flex flex-col justify-center items-center h-full px-8">
+            <div className=flex flex-col justify-center items-center h-full px-8>
               <div className="max-w-md text-center">
-                <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3>
+                <h3 className=text-3xl font-bold text-white mb-4>Password Recovery</h3>
                 <p className="text-lg text-white/80">
                   Set a strong password to secure your account and continue your journey in the Zion marketplace.
                 </p>
@@ -644,6 +871,9 @@ flex min-h-screen bg-zion-blue"> <div className=" flex-1 flex flex-col justify-c
 ;
 
 }
+<<<<<<< HEAD
+=======
 ;
     </>);
 }
+>>>>>>> origin/chore/fix-lint-and-merge

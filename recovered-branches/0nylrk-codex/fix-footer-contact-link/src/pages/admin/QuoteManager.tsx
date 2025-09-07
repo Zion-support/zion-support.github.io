@@ -50,6 +50,13 @@ import { Navigate } from "react-router-dom",
     setSearchQuery;
     date_range;
     setDateRange;
+<<<<<<< HEAD
+import type { QuoteRequest } from "@/types/quotes","
+import { ProtectedRoute } from "@/components/ProtectedRoute","
+import { QuoteDetails } from "@/components/quotes/QuoteDetails","
+import { ExportToCSV } from "@/components/quotes/ExportToCSV","
+  }
+=======
 
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
@@ -96,6 +103,7 @@ import { QuoteDetails } from "@/components/quotes/QuoteDetails",
 
 import { ExportToCSV } from "@/components/quotes/ExportToCSV",
 import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   QuoteStatusCards,
   QuotesFilter,
   QuotesTable"
@@ -181,8 +189,13 @@ import { Navigate } from "react-router-dom",;"
 import type { QuoteRequest } from "@/types/quotes",;"
 import { ProtectedRoute } from "@/components/ProtectedRoute",;"
 import { QuoteDetails } from "@/components/quotes/QuoteDetails",;"
+<<<<<<< HEAD
+import { ExportToCSV } from "@/components/quotes/ExportToCSV",;"
+  }
+=======
 import { ExportToCSV } from "@/components/quotes/ExportToCSV",;
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   QuoteStatusCards,;
   QuotesFilter,;
   QuotesTable;"
@@ -194,12 +207,14 @@ export default function QuoteManager() { return null; }
   const [showDetails, setShowDetails] = useState(false),;
 
 export default function QuoteManager() {;
+<<<<<<< HEAD
+  }
+=======
   const { user } = useAuth(),;
 
   const isAdmin = user?.userType === 'admin',;
+>>>>>>> origin/chore/fix-lint-and-merge
   ;
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
-  const [showDetails, setShowDetails] = useState(false),;
 ;
 
   const {;
@@ -307,7 +322,11 @@ function QuoteManager() {}
   const [selected_quote, setSelectedQuote] = useState < QuoteRequest | null>(null);
   const [show_details, setShowDetails] = useState (false);
 ;
+<<<<<<< HEAD
+    }
+=======
   const {}
+>>>>>>> origin/chore/fix-lint-and-merge
     quotes;
     is_loading;
     error;
@@ -321,6 +340,68 @@ function QuoteManager() {}
     setDateRange;
   }
 
+<<<<<<< HEAD
+  const handleResetFilters = () => {
+    setStatusFilter($2);
+    setArchiveFilter($2);
+    setSearchQuery($2);
+    setDateRange({ from: undefined, to: undefined})
+  },
+
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" replace />
+  }
+    setSelectedQuote(quote)
+    setShowDetails(true)
+  }
+    setStatusFilter('all'),
+    setArchiveFilter('all'),
+    setSearchQuery(''),
+    setDateRange({ from: undefined, to: undefined })
+  }
+  if (!isAdmin) {
+    return <Navigate to="/unauthorized" replace />
+  }
+  return (
+    <ProtectedRoute adminOnly>
+      <div>
+        <Header />
+        <div className="min-h-screen bg-zion-blue px-4 py-8">
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
+              <div>
+                <h1 className="text-3xl font-bold text-white mb-2">Quote Request Manager</h1>
+                <p className="text-zion-slate-light">Manage and respond to all talent hire requests</p>
+              </div>
+              <ExportToCSV quotes={quotes} filename="zion-quote-requests" />
+            </div>
+            {/* Status Summary Cards */}
+            <QuoteStatusCards statusCounts={statusCounts} />
+            {/* Filters */}
+            <QuotesFilter
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              statusFilter={statusFilter}
+              setStatusFilter={setStatusFilter}
+              archiveFilter={archiveFilter}
+              setArchiveFilter={setArchiveFilter}
+              dateRange={dateRange}
+              setDateRange={setDateRange}
+              onReset={handleResetFilters}
+            />
+            {/* Tabs for Active/Archived */}
+            <Tabs defaultValue="active" className="mb-6">
+              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
+                <TabsTrigger value="active">Active Quotes</TabsTrigger>
+                <TabsTrigger value="archived">Archived Quotes</TabsTrigger>
+              </TabsList>
+              <TabsContent value="active">
+                {/* Quotes Table */}
+                <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+                  <QuotesTable
+                    quotes={quotes.filter(quote => !quote.is_archived)}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -489,9 +570,26 @@ function QuoteManager() {}
         <Footer />;
 </Footer>
       </div>;
+<<<<<<< HEAD
+    </ProtectedRoute>;
+  ),;}
+  }
+  QuoteStatusCards;
+QuotesFilter;
+QuotesTable export default function QuoteManager() {
+  }
+  }
+  user
+}= useAuth ();
+const isAdmin = user?.userType === 'admin';'
+const [showDetails, setShowDetails] = useState (false);
+}min-h-screen bg-zion-blue px-4 py-8"> <div className=" container mx-auto"> <div className=" flex flex-col "md":flex-row justify-between items-start "md":items-center mb-8"> <div> <h1 className=" text-3xl font-bold text-white mb-2">Quote Request Manager</h1> <p className=" text-zion-slate-light">Manage and respond to all talent hire requests</p> </div> </div> {"
+  /* Status Summary Cards */
+=======
 
     </ProtectedRoute>;"
 }min-h-screen bg-zion-blue px-4 py-8"> <div className=" container mx-auto"> <div className=" flex flex-col md:flex-row justify-between items-start md:items-center mb-8"> <div> <h1 className=" text-3xl font-bold text-white mb-2">Quote Request Manager</h1> <p className=" text-zion-slate-light">Manage and respond to all talent hire requests</p> </div> </div> {"
+>>>>>>> origin/chore/fix-lint-and-merge
 }<QuoteStatusCards statusCounts= {
   statusCounts;
 }/> {

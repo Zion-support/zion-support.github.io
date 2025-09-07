@@ -11,9 +11,13 @@
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 const fs = require('fs');
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const path = require('path');
 const { execSync } = require('child_process');
+>>>>>>> origin/chore/fix-lint-and-merge
 class AutomationImprovementSuite {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -40,10 +44,14 @@ class AutomationImprovementSuite {}
     this.log('🔧 Creating Enhanced Automation Scripts');
 
     // 1. Create a comprehensive error fixer
+<<<<<<< HEAD
+const errorFixerScript = "#!/usr/bin/env node;
+=======
     const errorFixerScript = "#!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
   createEnhancedAutomationScripts() {
@@ -183,9 +191,12 @@ fixer.fixFiles().catch(console.error);
 
     // 2. Create a performance monitor
     const performanceMonitorScript = "#!/usr/bin/env node
+<<<<<<< HEAD
+=======
 
 const fs = require('fs');
 const path = require('path');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
     // 2. Create a performance monitor
@@ -243,8 +254,14 @@ function runCommand(command, description) {
 }
 =======
 
+<<<<<<< HEAD
+// Function to create performance monitoring script
+function createPerformanceMonitor() {
+const script = `#!/usr/bin/env node;
+=======
     return { success: false, error: error.message };
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
 // Function to create performance monitoring script;
 
@@ -266,9 +283,7 @@ function runCommand(command, description) {
     this.log('🔍 Analyzing Performance Metrics');
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Count files
-    const srcDir = path.join(this.projectRoot, 'src');
     if (fs.existsSync(srcDir)) {
-      const files = this.getAllFiles(srcDir, ['.tsx', '.ts', '.jsx', '.js']);
       this.metrics.fileCount = files.length}
 <<<<<<< HEAD
 
@@ -338,11 +353,136 @@ main();
       `;
       this.log(`${optimization.name} completed successfully`);
       return { }
+<<<<<<< HEAD
+        success: true, 
+        status: 'completed',
+        result;
+      };
+    } catch (error) {}
+    return files}
+}
+const auditor = new SecurityAuditor();
+auditor.auditSecurity().catch(console.error);
+";
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'security-audit-enhanced.cjs'),
+      securityAuditScript
+    );
+    this.log('✅ Created security-audit-enhanced.cjs');
+    // 4. Create a comprehensive test runner
+    const testRunnerScript = "#!/usr/bin/env node
+class ComprehensiveTestRunner {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.testResults = {
+      "passed": 0,
+      "failed": 0,
+      "skipped": 0,
+      "total": 0
+    }}
+  log(message) {
+    .toISOString()}] \${message}\")}
+  async runTests() {
+    this.log('🧪 Running Comprehensive Test Suite');
+    const tests = [{
+        "name": 'Lint Check',
+        "command": 'npm run lint',
+        "type": 'static'
+      },
+      {
+        "name": 'Type Check',
+        "command": 'npm run type-check',
+        "type": 'static'
+      },
+      {
+        "name": 'Unit Tests',
+        "command": 'npm run test',
+        "type": 'unit'
+      },
+      {
+        "name": 'Build Test',
+        "command": 'npm run build',
+        "type": 'build'
+      }
+    ];
+      this.log(`${optimization.name} failed: ${error.message}`, 'ERROR');
+      return { }
+        success: false, 
+        status: 'failed',
+        error: error.message;
+      };
+    };
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'test-results-comprehensive.json'),
+      JSON.stringify(report, null, 2)
+    );
+    this.log(\`🧪 Tests Completed: \${this.testResults.passed}/\${this.testResults.total} passed\`);
+  }
+}
+
+// Monitor file changes
+function monitorFileChanges() {
+  const chokidar = require('chokidar');
+  
+  const watcher = chokidar.watch('/workspace/src', {
+    ignored: /(^|[\/\\\\])\../, // ignore dotfiles
+    persistent: true
+  });
+  
+  watcher.on('change', (filePath) => {
+    console.log(\`📝 File changed: \${filePath}\`);
+    // Trigger rebuild or other actions
+  });
+  
+  console.log('👀 Watching for file changes...');
+}
+
+// Start monitoring
+monitorBuildPerformance();
+monitorFileChanges();
+`;
+
+  fs.writeFileSync('/workspace/performance-monitor.cjs', script);
+  console.log('✅ Performance monitor script created');
+}
+
+// Function to create security scanner
+function createSecurityScanner() {
+  const script = `#!/usr/bin/env node
+
+
+console.log('🔒 Security Scanner Started...');
+
+// Scan for security vulnerabilities
+function scanSecurity() {
+  const vulnerabilities = [];
+  
+  // Check for common security issues
+  const filesToCheck = [
+    '/workspace/package.json',
+    '/workspace/next.config.js',
+    '/workspace/tsconfig.json'
+  ];
+  
+  filesToCheck.forEach(file => {
+    if (fs.existsSync(file)) {
+      const content = fs.readFileSync(file, 'utf8');
+      
+      // Check for hardcoded secrets
+      if (content.includes('password') || content.includes('secret') || content.includes('key')) {
+        vulnerabilities.push({
+          file,
+          type: 'potential_hardcoded_secret',
+          severity: 'high'
+        });
+  };
+=======
 
         error: error.message;
 // Run the suite;
 const suite = new AutomationImprovementSuite();
 suite.run().catch(console.error);
+>>>>>>> origin/chore/fix-lint-and-merge
   async runAllOptimizations() {}
     const optimizations = this.getPerformanceOptimizations().optimizations;
     const results = [];
@@ -371,7 +511,6 @@ suite.run().catch(console.error);
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Generate security report
-  const report = {
     timestamp: new Date().toISOString(),
     vulnerabilities,
     totalVulnerabilities: vulnerabilities.length,
@@ -401,8 +540,13 @@ console.log('📊 Performance Monitor Started...');
 // Monitor build performance;
 function monitorBuildPerformance() {
   const startTime = Date.now();
+<<<<<<< HEAD
+  try {
+    execSync('npm run build', { stdio: 'pipe', cwd: '/workspace' });
+=======
   // TODO: Implement
 
+>>>>>>> origin/chore/fix-lint-and-merge
     const endTime = Date.now();
     const duration = endTime - startTime;
     console.log(\`✅ Build completed in \${duration}ms\`);
@@ -412,6 +556,64 @@ function monitorBuildPerformance() {
 
 // Monitor file changes;
 function monitorFileChanges() {
+<<<<<<< HEAD
+    ignored: /(^|[\/\\\\])\../, // ignore dotfiles;
+    persistent: true
+  });
+  watcher.on('change', (filePath) => {
+    console.log(\`📝 File changed: \${filePath}\`);
+    // Trigger rebuild or other actions
+  });
+  console.log('👀 Watching for file changes...');
+}
+// Start monitoring
+monitorBuildPerformance();
+monitorFileChanges();
+`;
+  fs.writeFileSync('/workspace/performance-monitor.cjs', script);
+  console.log('✅ Performance monitor script created');
+}
+// Function to create security scanner
+function createSecurityScanner() {
+console.log('🔒 Security Scanner Started...');
+// Scan for security vulnerabilities
+function scanSecurity() {
+  // Check for common security issues
+const filesToCheck = [;
+    '/workspace/package.json',
+    '/workspace/next.config.js',
+    '/workspace/tsconfig.json'
+  ];
+  filesToCheck.forEach(file => {
+    if (fs.existsSync(file)) {
+      // Check for hardcoded secrets
+      if (content.includes('password') || content.includes('secret') || content.includes('key')) {
+        vulnerabilities.push({
+          file,
+          type: 'potential_hardcoded_secret',
+          severity: 'high'
+        });
+      }
+      // Check for insecure configurations
+      if (content.includes('http://') && !content.includes('localhost')) {
+        vulnerabilities.push({
+          file,
+          type: 'insecure_http',
+          severity: 'medium'
+        });
+      }
+    }
+  });
+  // Generate security report
+    timestamp: new Date().toISOString(),
+    vulnerabilities,
+    totalVulnerabilities: vulnerabilities.length,
+    highSeverity: vulnerabilities.filter(v => v.severity === 'high').length,
+    mediumSeverity: vulnerabilities.filter(v => v.severity === 'medium').length,
+    lowSeverity: vulnerabilities.filter(v => v.severity === 'low').length
+  };
+  fs.writeFileSync('/workspace/security-report.json', JSON.stringify(report, null, 2));
+=======
   const chokidar = require('chokidar');
 
 // Scan for security vulnerabilities;
@@ -420,6 +622,7 @@ function scanSecurity() {
   // Check for common security issues;
   const filesToCheck = [
 
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log(\`🔒 Security scan completed. Found \${vulnerabilities.length} potential issues.\`);
 <<<<<<< HEAD
   
@@ -430,7 +633,20 @@ function scanSecurity() {
 
 // Run security scan;
 
+<<<<<<< HEAD
+  fs.writeFileSync('/workspace/security-scanner.cjs', script);
+  console.log('✅ Security scanner script created');
+}
+
+// Function to create code quality analyzer
+function createCodeQualityAnalyzer() {
+
+console.log('🔍 Code Quality Analyzer Started...');
+
+// Analyze code quality
+=======
 // Analyze code quality;
+>>>>>>> origin/chore/fix-lint-and-merge
 function analyzeCodeQuality() {
   const stats = {
     totalFiles: 0,
@@ -556,7 +772,6 @@ function analyzeCodeQuality() {
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Generate quality report
-  const report = {
     timestamp: new Date().toISOString(),
 =======
 
@@ -595,7 +810,16 @@ function analyzeCodeQuality() {
 
 // Run code quality analysis;
 
+<<<<<<< HEAD
+// Function to create automated testing script
+function createAutomatedTestingScript() {
+
+console.log('🧪 Automated Testing Script Started...');
+
+// Run different types of tests
+=======
 // Run different types of tests;
+>>>>>>> origin/chore/fix-lint-and-merge
 function runTests() {
   const testResults = {
     tests: []

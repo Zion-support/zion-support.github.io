@@ -67,10 +67,17 @@ interface DisputeStatusBadgeProps {;'
   status: 'open' | 'under_review' | 'resolved' | 'closed';
 
 }
+<<<<<<< HEAD
+;
+export function DisputeStatusBadge() {;
+  }
+  let message = "This item has an open dispute",;"
+=======
 
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
   let message = "This item has an open dispute",;
+>>>>>>> origin/chore/fix-lint-and-merge
   switch (status) {;
     case 'under_review':;
       variant = "secondary",;

@@ -78,7 +78,11 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
       </AlertDialog>;
     </Card>;
   ),;}
+<<<<<<< HEAD
+  }
+=======
  const handleDelete = () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   if (project.id) {;
   />) : (<div className="w-full h-full flex items-center justify-center bg-muted" > <FileText className="h-12 w-12 text-muted-foreground/50" /> </div>) ;
 }</div> </Badge>) ) ;

@@ -120,6 +120,11 @@ export function addCertificationsSection(;
     doc.text(cert.issuing_organization, 20, yPos + 5),;
     ;
     if (cert.issue_date) {;
+<<<<<<< HEAD
+      }
+      const issueDate = formatDate(cert.issue_date),;
+      doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);
+=======
 
       doc && doc.addPage();
       yPos = 20
@@ -245,3 +250,4 @@ pr-12325
 }
 }
 }
+>>>>>>> origin/chore/fix-lint-and-merge

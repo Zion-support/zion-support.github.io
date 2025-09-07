@@ -4,12 +4,43 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 
+<<<<<<< HEAD
+import {;
+  }
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormMessage,;
+} from "@/components/ui/form";"
+interface ReplyFormProps {;
+  }
+  "onSubmit": ("content": string) => Promise<void>;
+  parentId?: string
+}
+import { useState  } from './react';'
+import { use_form  } from './react - hook - form';'
+import { Button  } from '@/components / ui / button';'
+import { Textarea  } from '@/components / ui / textarea';'
+import {
+}
+import { useState } from "react";"
+import { useForm } from "react-hook-form";"
+import { Button } from "@/components/ui/button";"
+import { Textarea } from "@/components/ui/textarea";"
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   Form,
 
   FormControl,
   FormField,
   FormItem,
 FormMessage,;
+<<<<<<< HEAD
+} from "@/components/ui/form";"
+return (;
+=======
 
 import { Textarea  } from '@/components / ui / textarea';
 import {";
@@ -29,6 +60,7 @@ import { Textarea } from "@/components/ui/textarea";
 } from "@/components/ui/form";
 
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <Card>;
 
       <CardContent className="pt-6">;
@@ -107,9 +139,17 @@ pr-12325
                       placeholder={}
                         parent_id;"
                           ? "Write your reply...";"
+<<<<<<< HEAD
+                          : "Join the discussion...";"
+                      }
+                      className="min - h-[100px] resize-y";"
+  FormMessage;
+} from "@/components/ui/form",;"
+=======
                           : "Join the discussion...";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface ReplyFormProps {;
   onSubmit:(content:string) => Promise<void>,;
@@ -242,6 +282,18 @@ interface ReplyFormProps {;)
               render={({ field }) => (;
                 <FormItem>;
                   <FormControl>;
+<<<<<<< HEAD
+                    <Textarea,
+export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
+  }
+;
+    }
+    "default_values": {
+      }
+      "content": ""}});"
+;
+    }
+=======
                     <Textarea;
 export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {};
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -277,6 +329,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
   });
 ;
   const handle_submit = async (values: ReplyFormValues) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
     setIsSubmitting (true);
     try {}
       (await on_submit (values.content), form.reset ());
@@ -358,6 +411,13 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 ;
 export default ReplyForm;
 ;
+<<<<<<< HEAD
+} from "@/components/ui/form";"
+interface ReplyFormProps {
+  }
+  "onSubmit": ("content": string) => Promise<void>;
+  parentId?: string
+=======
 
 } from "@/components/ui/form";
 
@@ -368,25 +428,88 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
   onSubmit: (content: string) => Promise<void>;
   parentId?: string;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 interface ReplyFormValues {}
   content: string;
 }
 
+<<<<<<< HEAD
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
+  }
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useForm<ReplyFormValues>({
+    }
+    "defaultValues": {
+      }
+      "content": """
+    }
+  });
+  const handleSubmit = async ("values": ReplyFormValues) => {
+    }
+    setIsSubmitting(true);
+    try {
+      (await onSubmit(values.content), form.reset());
+    } finally {
+      }
+      setIsSubmitting(false);
+    }
+  }
+  };
+import { useState } from "react","
+import { useForm } from "react-hook-form","
+import { Button } from "@/components/ui/button","
+import { Textarea } from "@/components/ui/textarea","
+  }
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage
+} from "@/components/ui/form","
+import { Card, CardContent, CardFooter } from "@/components/ui/card","
+interface ReplyFormProps {
+  }
+  "onSubmit": ("content": string) => Promise<void>,
+  parentId?: string,
+import { useForm } from "react-hook-form",;"
+import { Button } from "@/components/ui/button",;"
+import { Textarea } from "@/components/ui/textarea",;"
+  }
+=======
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
   FormMessage,;"
 } from "@/components/ui/form";"
+<<<<<<< HEAD
+=======
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ReplyFormProps {;
 
   onSubmit: (content: string) => Promise<void>;
   parentId?: string;
 }
+<<<<<<< HEAD
+}
+}
+interface ReplyFormValues {;
+  }
+  "content": string;
+}
+    setIsSubmitting(true);
+    try {;
+      (await onSubmit(values && values.content), form && form.reset());
+    } finally {;
+      }
+      setIsSubmitting(false);
+    }
+=======
 '
 import { useState  } from './react';'
 import { use_form  } from './react - hook - form';'
@@ -398,6 +521,7 @@ import { useForm } from "react-hook-form";
 "
 import { Button } from "@/components/ui/button";"
 import { Textarea } from "@/components/ui/textarea";
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }
 

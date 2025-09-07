@@ -123,6 +123,13 @@ function EnterpriseHero() {
                   className="h-8";
                 />;
                 <img;
+<<<<<<< HEAD
+                  src="/logos / placeholder - logo.svg";"
+                  alt="Enterprise 3";"
+                  className="h-8";" />;                />;
+import React from "react";"
+import { GradientHeading } from "@/components/GradientHeading",;"
+=======
                   src="/logos / placeholder - logo.svg";
                   alt="Enterprise 3";
                   className="h - 8";
@@ -136,6 +143,7 @@ function EnterpriseHero() {
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 export function EnterpriseHero() {;
   return (;
@@ -157,12 +165,59 @@ export function EnterpriseHero() {;
                 Download Brochure;
               </Button>;
             </div>;
+<<<<<<< HEAD
+            <div className="mt-10 flex items-center gap-4">;"
+              <p className="text-sm text-muted-foreground">Trusted by leading "enterprises":</p>;"
+              <div className="flex gap-6 opacity-70">;"
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8" />;"
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8" />;"
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8" />;"
+            </div>;
+          </div>;
+        </div>;
+      </div>;    </section>;
+  );
+}
+    </section>
+    </section>
+  )
+import React from "React";"
+import { Button } from "@/components/ui/button",;"
+export function EnterpriseHero() {;
+  }
+  return (;
+    <section className="py-20 px-4 "md":px-6 bg-gradient-to-b from-background to-background/80">;"
+      <div className="container mx-auto max-w-6xl">;"
+        <div className="grid grid-cols-1 "lg":grid-cols-2 gap-12 items-center">;"
+          <div>;
+            <h1 className="text-4xl "md":text-5xl "lg":text-6xl font-bold tracking-tight mb-6">;"
+              Enterprise <GradientHeading className="inline">Talent Solutions</GradientHeading>;"
+            </h1>;
+            <p className="text-xl text-muted-foreground mb-8">;"
+              Scale your talent acquisition with a custom-branded hiring portal, dedicated talent pool, and powerful admin controls.;
+            </p>;
+            <div className="flex flex-col "sm": flex-row gap-4">;"
+              <Button size="lg" className="w-full "sm":w-auto">;"
+                Schedule a Demo;
+              </Button>;
+              <Button size="lg" variant="outline" className="w-full "sm":w-auto">;"
+                Download Brochure;
+              </Button>;
+            </div>;
+            <div className="mt-10 flex items-center gap-4">;"
+              <p className="text-sm text-muted-foreground">Trusted by leading "enterprises":</p>;"
+              <div className="flex gap-6 opacity-70">;"
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8" />;"
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8" />;"
+                <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8" />;"
+=======
             <div className="mt-10 flex items-center gap-4">;
               <p className="text-sm text-muted-foreground">Trusted by leading enterprises:</p>;
               <div className="flex gap-6 opacity-70">;
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 1" className="h-8" />;
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 2" className="h-8" />;
                 <img src="/logos/placeholder-logo.svg" alt="Enterprise 3" className="h-8" />;
+>>>>>>> origin/chore/fix-lint-and-merge
               </div>;
             </div>;
           </div>;

@@ -19,6 +19,8 @@ import React from "react";
       {children}
     </div>
 
+<<<<<<< HEAD
+=======
 import {cn} from "@/lib/utils";
 interface SidebarGroupLabelProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
@@ -69,6 +71,7 @@ import { cn } from "@/lib/utils",;"
     >;
       {children}
     </div>;
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 }
 }

@@ -7,6 +7,30 @@ import {};
   FormDescription;
   FormField;
   FormItem;
+<<<<<<< HEAD
+  FormLabel;
+import { Badge } from "@/components/ui/badge","
+import { Separator } from "@/components/ui/separator","
+  }
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form","
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card","
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react","
+import { toast } from "@/components/ui/use-toast","
+import { supabase } from "@/integrations/supabase/client","
+import { AspectRatio } from "@/components/ui/aspect-ratio";"
+import { useAuth } from "@/hooks/useAuth";"
+import { AspectRatio } from "@/components/ui/aspect-ratio","
+import { useAuth } from "@/hooks/useAuth",    "message": "Rate must be a number"}),"
+  "availability": z.enum(["available", "limited", "unavailable"]),"
+  "enhancedProfile": z.boolean().default(true),
+  "website": z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),"
+=======
 
 import { useAuth } from "@/hooks/useAuth",
 ;
@@ -49,6 +73,7 @@ const serviceProfileSchema = z.object({
   enhancedProfile: z.boolean().default(true),"
   website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),
 
+>>>>>>> origin/chore/fix-lint-and-merge
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
 
 export function ServiceProviderRegistrationForm() {;
@@ -138,10 +163,13 @@ export function ServiceProviderRegistrationForm() { return null; }
 
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
+<<<<<<< HEAD
+=======
 
   const [generatedContent, setGeneratedContent] = useState<{ summary: string, services: string[] } | null>(null),;
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
 
+>>>>>>> origin/chore/fix-lint-and-merge
   // Initialize form with default values;
   const form = useForm<ServiceFormValues>({;
     resolver: zodResolver(serviceProfileSchema),;
@@ -180,6 +208,10 @@ export function ServiceProviderRegistrationForm() { return null; }
       },;
       reader.readAsDataURL(file);
     }
+<<<<<<< HEAD
+  },  // Generate enhanced profile with AI,
+      }
+=======
 
   // Generate enhanced profile with AI
   const generateEnhancedProfile = async () => {
@@ -194,6 +226,7 @@ export function ServiceProviderRegistrationForm() { return null; }
     const formData = form.getValues(),
     if (!formData.bio || formData.bio.length < 20) {
 
+>>>>>>> origin/chore/fix-lint-and-merge
       toast({
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
@@ -676,8 +709,12 @@ if ( {) {}
       // (This assumes you have a service_profiles table in your database);
 
       /*;
+<<<<<<< HEAD
+        .from('service_profiles');'
+=======
       const { error: serviceError } = await supabase;'
         .from('service_profiles');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
 
           user_id: user && user.id,;

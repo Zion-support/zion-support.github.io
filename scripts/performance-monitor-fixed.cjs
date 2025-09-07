@@ -182,7 +182,6 @@ async collectSystemMetrics() {
 // console.log(" Collecting performance metrics...")
       console.log(" Performance monitoring completed")
       console.error(" Error during performance "monitoring": ")
-const { execSync } = require("child_process")
       "system"
         "cpu"
         "process"
@@ -305,6 +304,9 @@ const { execSync } = require("child_process")
         totalSize += stats.size}
     return totalSize}
   countFiles(dirPath, extensions) {
+<<<<<<< HEAD
+    for (const file of files) {
+=======
 <<<<<<< HEAD
     if (!fs.existsSync(dirPath)) return 0
     let count = 0
@@ -512,6 +514,7 @@ class PerformanceMonitor {
       const filePath = path.join(dirPath, file)
       const stats = fs.statSync(filePath)
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     let count = 0;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       if (stats.isDirectory()) {
@@ -601,7 +604,6 @@ class PerformanceMonitor {
       console.log("� Collecting build metrics...")
       const buildFiles = ["dist/index.html","dist/css","dist/js"]
         "dist/assets"
-      const packageJsonPath = path.join(this.projectRoot, "package.json")
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
       console.log(" Build metrics collected")
       console.warn("⚠  Could not collect build "metrics": ")

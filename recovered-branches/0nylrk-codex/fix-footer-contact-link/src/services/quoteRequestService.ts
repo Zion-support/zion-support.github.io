@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import {supabase} from "@/integrations/supabase/client";"
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";"
+import { supabase } from '@/integrations / supabase / client';'
+import type { QuoteRequest, QuoteStatus } from "@/types / quotes";"
+import { supabase } from "@/integrations/supabase/client";"
+import { supabase } from "@/integrations/supabase/client","
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes","
+    return data && data.map(("item": any) => ({
+      .select(`;`        *;
+      .select(``        *
+        }
+        "talent":talent_id (
+=======
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
@@ -78,6 +92,7 @@ import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
       .select(`
         *,
         talent:talent_id (
+>>>>>>> origin/chore/fix-lint-and-merge
           display_name
         )
       `)
@@ -150,11 +165,37 @@ pr-12325
     if (error) throw error;
     return data as QuoteRequest[]
   }
+<<<<<<< HEAD
+  // Archive/Unarchive a quote request,
+"toggleArchive": async ("id": string, "isArchived": boolean) => {
+}
+      .from('quote_requests')'
+      .update({ "is_archived": isArchived })
+      .eq('id', id)'
+      .select();
+    if (error) throw error;
+return data[0] as QuoteRequest;
+  }
+  // Delete a quote request,
+"delete": async ("id": string) => {
+}
+const { error } = await supabase;
+      .from('quote_requests')'
+      .delete()
+      .eq('id', id);'
+    if (error) throw error;
+return true;
+  }
+}
+      .single(),
+    
+=======
       .order('created_at', { ascending: false }),
     if (error) throw error,
     return data as QuoteRequest[]
   },
 
+>>>>>>> origin/chore/fix-lint-and-merge
   // Get a single quote request by id
   getById: async (id: string) => {
     const { data, error } = await supabase
@@ -200,6 +241,16 @@ pr-12325
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
+<<<<<<< HEAD
+export const quoteRequestService = {;
+  // Get all quote requests (for admin);
+  }
+  "getAll": async () => {;
+    }
+      .from('quote_requests');'
+      .select(`;`        *,;
+        "talent":talent_id (;
+=======
 
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
@@ -211,6 +262,7 @@ export const quoteRequestService = {;
       .select(`;
         *,;
         talent:talent_id (;
+>>>>>>> origin/chore/fix-lint-and-merge
           display_name;
         );
 
@@ -319,6 +371,10 @@ pr-12325
       talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[];
   },;
   // Get quote requests for a specific talent;
+<<<<<<< HEAD
+  "getByTalentId": async ("talentId": string) => {;
+    }
+=======
   getByTalentId: async (talentId: string) => {;
     const { data, error } = await supabase;
       .from('quote_requests');
@@ -326,6 +382,7 @@ pr-12325
       .eq('talent_id', talentId);
       .order('created_at', { ascending: false }),;
     const { data, error } = await supabase;"
+>>>>>>> origin/chore/fix-lint-and-merge
       .from('quote_requests');'
 
       .select(`;
@@ -355,6 +412,13 @@ pr-12325
     return data as QuoteRequest[];
   },;
   // Get a single quote request by id;
+<<<<<<< HEAD
+  "getById": async ("id": string) => {;
+    }
+      .from('quote_requests');'
+      .select(`;`        *,;
+        "talent":talent_id (;
+=======
 
   getById: async (id: string) => {;
     const { data, error } = await supabase;
@@ -362,6 +426,7 @@ pr-12325
       .select(`;
         *,;
         talent:talent_id (;
+>>>>>>> origin/chore/fix-lint-and-merge
           display_name;
         );
       `);
@@ -399,14 +464,25 @@ pr-12325
       ...data,;
 pr-12325
   // Update quote request status;
+<<<<<<< HEAD
+  "updateStatus": async ("id": string, "status": QuoteStatus) => {;
+    }
+=======
   updateStatus: async (id: string, status: QuoteStatus) => {;}
     const updates: any = { status },;
+>>>>>>> origin/chore/fix-lint-and-merge
     // If marking as responded, set replied_at;
     if (status === 'responded') {;
       updates.replied_at = new Date().toISOString();
     }
 ;
     // If marking as in_review and viewed_at is null, set viewed_at;
+<<<<<<< HEAD
+    if (status === 'in_review') {;'
+      }
+        .from('quote_requests');'
+        .select('viewed_at');'
+=======
     if (status === 'in_review') {;
       const { data } = await supabase;
         .from('quote_requests');
@@ -423,6 +499,7 @@ pr-12325
       const { data } = await supabase;'
         .from('quote_requests');''
         .select('viewed_at');''
+>>>>>>> origin/chore/fix-lint-and-merge
         .eq('id', id);'
 
         .single(),;
@@ -431,8 +508,12 @@ pr-12325
       }
     }
 ;
+<<<<<<< HEAD
+      .from('quote_requests');'
+=======
     const { data, error } = await supabase;
       .from('quote_requests');
+>>>>>>> origin/chore/fix-lint-and-merge
       .update(updates);
       .eq('id', id);
     const { data, error } = await supabase;'
@@ -444,6 +525,10 @@ pr-12325
     return data[0] as QuoteRequest;
   },;
   // Archive/Unarchive a quote request;
+<<<<<<< HEAD
+  "toggleArchive": async ("id": string, "isArchived": boolean) => {;
+    }
+=======
 
   toggleArchive: async (id: string, isArchived: boolean) => {;
     const { data, error } = await supabase;
@@ -451,6 +536,7 @@ pr-12325
       .update({ is_archived: isArchived });
       .eq('id', id);
     const { data, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
       .from('quote_requests');'
       .update({ is_archived: isArchived });'
       .eq('id', id);'
@@ -460,10 +546,16 @@ pr-12325
     return data[0] as QuoteRequest;
   },;
   // Delete a quote request;
+<<<<<<< HEAD
+  "delete": async ("id": string) => {;
+    }
+      .from('quote_requests');'
+=======
 
   delete: async (id: string) => {;
     const { error } = await supabase;
       .from('quote_requests');
+>>>>>>> origin/chore/fix-lint-and-merge
       .delete();
       .eq('id', id),;
     if (error) throw error;
@@ -566,8 +658,11 @@ pr-12325
         updates.viewed_at = new Date().toISOString()
       }
     }
+<<<<<<< HEAD
+=======
     
     const { data, error } = await supabase
+>>>>>>> origin/chore/fix-lint-and-merge
       .from('quote_requests')
       .update(updates)
       .eq('id', id)
@@ -578,8 +673,12 @@ pr-12325
   };
   
   // Archive/Unarchive a quote request
+<<<<<<< HEAD
+  toggleArchive: async(id: string, isArchived: boolean) => {
+=======
   toggleArchive: async (id: string, isArchived: boolean) => {
     const { data, error } = await supabase
+>>>>>>> origin/chore/fix-lint-and-merge
       .from('quote_requests')
       .update({ is_archived: isArchived })
       .eq('id', id)

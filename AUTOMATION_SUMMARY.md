@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+# Comprehensive Automation and Improvement Summary
+=======
 # Automation Scripts Summary
+>>>>>>> origin/chore/fix-lint-and-merge
 
 ## Overview
 This document summarizes the automation scripts that have been created and improved to enhance the Zion Tech Group application.
@@ -359,6 +363,8 @@ The automation system is now comprehensive and ready to use. It provides:
 All scripts are designed to be run independently or as part of the complete automation workflow.
 
 All scripts are designed to be run independently or as part of the complete automation workflow.
+<<<<<<< HEAD
+=======
 # All scripts are designed to be run independently or as part of the complete automation workflow.
 
 ### Maintenance
@@ -410,3 +416,4 @@ All scripts are designed to be run independently or as part of the complete auto
 
 > > > > > > > cursor/fix-syntax-push-and-merge-to-main-7ef8
 > > > > > > > 22585ea456adf6ad6cf7b3256318e997f8ac668b
+>>>>>>> origin/chore/fix-lint-and-merge

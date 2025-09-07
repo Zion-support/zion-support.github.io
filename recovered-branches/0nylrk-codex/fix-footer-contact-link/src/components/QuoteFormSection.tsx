@@ -194,9 +194,15 @@ import { Input } from "./ui/input",;
 import { GradientHeading } from "./GradientHeading",;
 import { useState } from "react",;
 export function QuoteFormSection() {;
+<<<<<<< HEAD
+  }
+  const handleSubmit = ("e": React.FormEvent) => {;
+    }
+=======
   const [isSubmitted, setIsSubmitted] = useState(false),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
   const handleSubmit = (e: React.FormEvent) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     e.preventDefault(),;
     setIsSubmitting(true),;
     // Simulate form submission;

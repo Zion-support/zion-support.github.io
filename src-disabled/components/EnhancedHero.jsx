@@ -60,16 +60,13 @@ const [currentSlide, setCurrentSlide] = useState (0)  const [isPlaying, setIsPla
   return $3;}
 }
 
-const prevSlide = ( setCurrentSlide ( (prev) => (prev - 1 + heroSlides.length) % heroSlides.length);) => {
   return $3;}
 }
 }
 
-const goToSlide = ( setCurrentSlide (index) ) => {
   return $3;}
 }
 ;
-  const toggleAutoPlay = ( setIsAutoPlaying (!isAutoPlaying)  if (!isAutoPlaying) { setIsPlaying (true) ) => {
   return $3;}
 } }';
   return (<div className='relative w - full h - screen overflow - hidden' /> {}' <div className='absolute inset - 0 bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900' />' <div className='absolute inset - 0 bg - black / 50'/> </div> {}' <div className='relative z - 10 flex items - center justify - center h - full px - 4 sm: px - 6 lg:px - 8' />' <div className='text - center max - w-6xl mx - auto' />' <AnimatePresence mode='wait' /> <motion.div key={currentSlid,}

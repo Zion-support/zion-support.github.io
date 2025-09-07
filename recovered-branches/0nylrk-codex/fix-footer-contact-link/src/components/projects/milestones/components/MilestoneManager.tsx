@@ -1,3 +1,46 @@
+<<<<<<< HEAD
+
+  paymentTerms?: string,
+  "isSubmitting": boolean,
+  "onCreateMilestone": ("data": any) => Promise<Milestone | null>,
+  "onUpdateStatus": ("id": string, "status": MilestoneStatus, comment?: string) => Promise<boolean>,
+  "onDeleteMilestone": ("id": string) => Promise<boolean>,
+  "onUploadDeliverable": ("id": string, "file": File) => Promise<any>,
+  "refetch": () => Promise<void>
+}  projectId;
+}
+export function MilestoneManager({
+  projectId;
+  milestones;
+  activities;
+  isLoading;
+  isClient;
+  isTalent;
+  paymentTerms;
+  isSubmitting;
+  onCreateMilestone;
+  onUpdateStatus;
+  onDeleteMilestone;
+  onUploadDeliverable;
+export function MilestoneManager({
+  }
+  projectId,
+  milestones,
+  activities,
+  isLoading,
+  isClient,
+  isTalent,
+  paymentTerms,
+  isSubmitting,
+  onCreateMilestone,
+  onUpdateStatus,
+  onDeleteMilestone,
+
+    }
+  }
+  return (;
+
+=======
 projectId: string
 
   milestones: Milestone[]
@@ -160,6 +203,7 @@ export function MilestoneManager() { return null; }
   return (;"
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;"
       <div className="lg:col-span-2">;
+>>>>>>> origin/chore/fix-lint-and-merge
         <MilestonesList;
 
           milestones={milestones}
@@ -186,7 +230,71 @@ export function MilestoneManager() { return null; }
         />;
       </div>;
       <div>;
+<<<<<<< HEAD
+        <PaymentSummary;
+          milestones={milestones}
+          payment_terms={payment_terms} />;
+      </div>;
+    </div>);
 
+paymentTerms?: string;
+"isSubmitting": boolean;
+"onCreateMilestone": ("data": any) => Promise<Milestone | null>;
+"onUpdateStatus": ("id": string, "status": MilestoneStatus, comment?: string) => Promise<boolean>;
+"onDeleteMilestone": ("id": string) => Promise<boolean>;
+"onUploadDeliverable": ("id": string, "file": File) => Promise<any>;
+"refetch": () => Promise<void>
+}projectId, milestones, activities, isLoading, isClient, isTalent, paymentTerms, isSubmitting, onCreateMilestone, onUpdateStatus, onDeleteMilestone, onUploadDeliverable, refetch
+}: MilestoneManagerProps) {
+
+}activities= {
+  }
+  activities
+}isLoading= {
+  }
+  isLoading
+}isClient= {
+  }
+  isClient
+}onCreateMilestone= {
+  }
+  onCreateMilestone
+}onUpdateStatus= {
+  }
+  onUpdateStatus
+}onDeleteMilestone= {
+  }
+  onDeleteMilestone
+}onUploadDeliverable= {
+  }
+  onUploadDeliverable
+}isSubmitting= {
+  }
+  isSubmitting
+}onApprove= {
+  }
+  isClient ? handleMilestoneApproved : undefined
+}onReject= {
+  }
+  isClient ? handleMilestoneRejected : undefined
+} /> </div> <div> <PaymentSummary milestones= {
+  }
+  milestones
+}paymentTerms= {
+  }
+  paymentTerms
+} /> </div> </div>)
+}
+          milestones={milestones}
+          activities={activities}
+          isLoading={isLoading}
+          isClient={isClient}
+          onCreateMilestone={onCreateMilestone}
+          onUpdateStatus={onUpdateStatus}
+          onDeleteMilestone={onDeleteMilestone}
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
           onUploadDeliverable={onUploadDeliverable}
 
         />;

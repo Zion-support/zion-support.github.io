@@ -10,6 +10,29 @@ export function useSavedTalents() {;
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
   const [savedTalentIds, setSavedTalentIds] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
+import { toast } from "@/hooks/use-toast","
+import { useAuthStatus } from "@/hooks/talent","
+export function useSavedTalents() {
+}
+const { isAuthenticated, userDetails } = useAuthStatus(),;
+const [isLoading, setIsLoading] = useState(true),;
+  // Fetch saved talents,
+useEffect(() => {
+    }
+      }
+      if (!isAuthenticated || !userDetails.id) {
+        }
+        setIsLoading(false),
+return;
+      }
+  // Fetch saved talents,
+useEffect(() => {
+    }
+      }
+      if (!isAuthenticated |!userDetails.id) {        if (savedError) throw savedError;
+        }
+=======
 
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
@@ -41,6 +64,7 @@ export function useSavedTalents() {};
           .eq('user_id', userDetails && userDetails.id);
 
         if (savedError) throw savedError;
+>>>>>>> origin/chore/fix-lint-and-merge
         if (savedData) {
           const talentIds = savedData && savedData.map(item => item && item.talent_id);
           setSavedTalentIds(talentIds);
@@ -80,7 +104,18 @@ function useSavedTalents() {}
 ;
 
   // Fetch saved talents;
+<<<<<<< HEAD
+  useEffect (() => {
+    }
+      // Check condition
+}
+if ( {) {
+  $2
+}
+        setIsLoading (false);
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
         return;
       }
 ;
@@ -252,8 +287,13 @@ if ( {) {
       } else {
 
         // Add to saved_talents
+<<<<<<< HEAD
+}
+          .from('saved_talents')'
+=======
         const { error } = await supabase
           .from('saved_talents')
+>>>>>>> origin/chore/fix-lint-and-merge
           .insert({
 
             talent_id: talent && talent.id});

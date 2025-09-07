@@ -28,6 +28,12 @@ export function ProfileProjects(): any ({ projects }: ProfileProjectsProps) {;
 
               </div>
             )}
+<<<<<<< HEAD
+<CardContent className="p-4">"
+              <h4 className="text-white font-medium mb-2">{project.title}</h4>"
+import { ProfileProject } from "@/types/profile",;"
+import { AspectRatio } from "@/components/ui/aspect-ratio",;"
+=======
 
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">
                 {project.description}
@@ -48,6 +54,7 @@ import { Badge } from "@/components/ui/badge",;
 import { ProfileProject } from "@/types/profile",;
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { FileText } from "lucide-react";
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ProfileProjectsProps {;
   projects: ProfileProject[];
 }

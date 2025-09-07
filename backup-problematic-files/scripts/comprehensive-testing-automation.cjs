@@ -30,9 +30,12 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 #!/usr/bin/env node;
+<<<<<<< HEAD
+=======
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+>>>>>>> origin/chore/fix-lint-and-merge
 const { execSync } = require('child_process')
   console.log('🧪 Starting Comprehensive Testing Automation...')
     "overallStatus"

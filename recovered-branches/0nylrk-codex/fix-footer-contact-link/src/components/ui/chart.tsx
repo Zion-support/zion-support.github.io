@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+  string;import { useReactId } from "@/hooks/useReactId
+
+import { cn } from @/lib/utils"
+
+// Format: { THEME_NAME: CSS_SELECTOR }
+
+const THEMES = { light: ", dark: .dark" } as const
+export type ChartConfig = Record<
+import * as React from "react;
+import type { CSSProperties } from react";
+import * as RechartsPrimitive from "recharts;
+import {useReactId} from @/hooks/useReactId";
+=======
 // Format: { THEME_NAME: CSS_SELECTOR }
 
   ChartStyle}
@@ -25,10 +39,14 @@ import * as React from "react";
 import type { CSSProperties } from "react";
 import * as RechartsPrimitive from "recharts";
 import {useReactId} from "@/hooks/useReactId";
+>>>>>>> origin/chore/fix-lint-and-merge
 
-import {cn} from "@/lib/utils";
+import {cn} from "@/lib/utils;
 
 // Format: { THEME_NAME: CSS_SELECTOR }
+<<<<<<< HEAD
+const THEMES = { light: ", dark: ".dark } as const;
+=======
 const THEMES = { light: "", dark: ".dark" } as const;
 export type ChartConfig = Record<;
   string;
@@ -53,11 +71,12 @@ import {cn} from "@/lib/utils";
 
 // Format: { THEME_NAME: CSS_SELECTOR }"
 const THEMES = { light: "", dark: ".dark" } as const;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export type ChartConfig = Record<;
 
   string;
-  {;
+  {
     label?: React && React.ReactNode;
     icon?: React && React.ComponentType;
   } & (;
@@ -99,11 +118,66 @@ export type ChartConfig = Record<;
 
 >;
 
+<<<<<<< HEAD
+type ChartContextProps = {
+  config: ChartConfig;
+}
+
+const ChartContext = React && React.createContext<ChartContextProps>({
+  config: {}});
+
+function useChart(): any (): ChartContextProps {
+  return React && React.useContext(ChartContext);
+}
+
+const ChartContainer = React && React.forwardRef<;
+    <ChartContext && ChartContext.Provider value={{ config }}>;  return (
+    <ChartContext && ChartContext.Provider value={{ config }}>;
+      <div
+        data-chart={chartId}
+        ref={ref}
+        className={cn(        __html: Object.entries (THEMES);
+          .map (
+            ([theme, prefix]) => `;
+${prefix} [data - chart=${id}] {
+${color_config;
+  .map (([key, item_config]) => {
+    const color =;
+      item_config.theme?.[theme as keyof typeof item_config.theme] ||;
+      item_config.color;
+    return color ? `  --color-${key}: ${color}, ` : null;
+  });
+  .join (\n")}
+}
+`);
+          .join ("\n)}}
+    />);
+}
+const ChartTooltip = RechartsPrimitive.Tooltip;
+const ChartTooltipContent = React.forward_ref<;
+  HTMLDivElement;
+  React.ComponentProps < typeof RechartsPrimitive.Tooltip> &;
+    React.ComponentProps<div"> & {
+      hide_label?: boolean;
+      hide_indicator?: boolean;
+      indicator?: "line | dot" | "dashed;
+      name_key?: string;
+      label_key?: string;
+    }
+import * as React from react"
+import type { CSSProperties } from "react
+import * as RechartsPrimitive from recharts"
+import { useReactId } from "@/hooks/useReactId
+
+
+// Format: { THEME_NAME: CSS_SELECTOR}
+=======
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
   string,
+>>>>>>> origin/chore/fix-lint-and-merge
 
   {
     label?: React.ReactNode
@@ -122,6 +196,18 @@ function useChart(): ChartContextProps {
   return React.useContext(ChartContext)
 }
 
+<<<<<<< HEAD
+type ChartContextProps = $2;
+  React.ComponentProps<"div> & {
+    config: ChartConfig
+    children: React.ComponentProps<
+      typeof RechartsPrimitive.ResponsiveContainer
+    >[children"]
+  }
+>(({ id, className, children, config, ...props }, ref) => {
+  const uniqueId = useReactId()
+  const chartId = `chart-${id |uniqueId.replace(/:/g, ")}`
+=======
   HTMLDivElement;
 
   React && React.ComponentProps<"div"> & {;
@@ -173,6 +259,7 @@ const ChartContainer = React.forward_ref<;
 >(({ id, class_name, children, config, ...props }, ref) => {
   const unique_id = useReactId ();
   const chart_id = `chart-${id || unique_id.replace (/:/g, "")}`;
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <ChartContext.Provider value={{ config }}>;
       <div;
@@ -282,8 +369,14 @@ const ChartTooltipContent = React.forward_ref<;
     </ChartContext.Provider>
   )
 })
+<<<<<<< HEAD
+ChartContainer.displayName = Chart"
+
+const ChartStyle = ({ id, config }: { id: string, config: ChartConfig}) => {
+=======
 ChartContainer.displayName = "Chart"
 const ChartStyle = ({ id, config }: { id: string, config: ChartConfig }) => {
+>>>>>>> origin/chore/fix-lint-and-merge
   const colorConfig = Object.entries(config).filter(
     ([_, config]) => config.theme |config.color
   )
@@ -304,11 +397,11 @@ ${colorConfig
       itemConfig.color
     return color ? `  --color-${key}: ${color},` : null
   })
-  .join("\n")}
+  .join("\n)}
 }
 `
           )
-          .join("\n")}}
+          .join(\n")}}
     />
   )
 }
@@ -316,10 +409,10 @@ const ChartTooltip = RechartsPrimitive.Tooltip
 const ChartTooltipContent = React.forwardRef<
   HTMLDivElement;
   React.ComponentProps<typeof RechartsPrimitive.Tooltip> &
-    React.ComponentProps<"div"> & {
+    React.ComponentProps<"div> & {
       hideLabel?: boolean
       hideIndicator?: boolean
-      indicator?: "line" | "dot" | "dashed"
+      indicator?: line" | "dot | dashed"
       nameKey?: string
       labelKey?: string
     }
@@ -343,8 +436,13 @@ const ChartTooltipContent = React.forwardRef<
       active,
 
       payload,
+<<<<<<< HEAD
+      className,
+      indicator = "dot,
+=======
       className,"
       indicator = "dot",
+>>>>>>> origin/chore/fix-lint-and-merge
       hideLabel = false,
       hideIndicator = false,
       label,
@@ -363,6 +461,17 @@ const ChartTooltipContent = React.forwardRef<
       if (hideLabel |!payload?.length) {}
         return null;
       }
+<<<<<<< HEAD
+      const [item] = payload
+      const key = `${labelKey |item.dataKey |item.name |value"}`
+      const itemConfig = getPayloadConfigFromPayload(config, item, key)
+      const value =
+        !labelKey && typeof label === "string
+          ? config[label as keyof typeof config]?.label |label
+          : itemConfig?.label
+      if (labelFormatter) {        return (
+          <div className={cn(font-medium", labelClassName)}>;
+=======
       const [item] = payload"`
       const key = `${labelKey |item.dataKey |item.name |"value"}`
       const itemConfig = getPayloadConfigFromPayload(config, item, key)
@@ -412,6 +521,7 @@ const ChartTooltipContent = React.forwardRef<
         return (
 
           <div className={cn("font-medium", labelClassName)}>;
+>>>>>>> origin/chore/fix-lint-and-merge
             {labelFormatter(value, payload)}
           </div>;
         );
@@ -459,9 +569,15 @@ const ChartTooltipContent = React.forwardRef<
             return (
               <div;
                 key={item && item.dataKey}
+<<<<<<< HEAD
+                className={cn(
+                  "flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2 && 2.5 [&>svg]:w-2 && 2.5 [&>svg]:text-muted-foreground;
+                  indicator === dot" && "items-center;
+=======
                 className={cn("
                   "flex w-full flex-wrap items-stretch gap-2 [&>svg]:h-2 && 2.5 [&>svg]:w-2 && 2.5 [&>svg]:text-muted-foreground";"
                   indicator === "dot" && "items-center";
+>>>>>>> origin/chore/fix-lint-and-merge
                 )}
               >;
                 {formatter && item?.value !== undefined && item && item.name ? (;
@@ -472,6 +588,22 @@ const ChartTooltipContent = React.forwardRef<
                       <itemConfig && itemConfig.icon />;
                     ) : (;
                       !hideIndicator && (;
+<<<<<<< HEAD
+                        <div
+                          className={cn(
+                            shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
+                            {
+                              "h-2 && 2.5 w-2 && 2.5: indicator === dot"
+                              "w-1: indicator === line"
+                              "w-0 border-[1 && 1.5px] border-dashed bg-transparent:
+                                indicator === dashed"
+                              "my-0 && 0.5: nestLabel && indicator === dashed"}
+                          )}
+                            style={
+                              {
+                                "--color-bg: indicatorColor
+                                --color-border": indicatorColor} as CSSProperties
+=======
                         <div;
                           className={cn("
                             "shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]"
@@ -485,26 +617,101 @@ const ChartTooltipContent = React.forwardRef<
 
                                 "--color-border": indicatorColor} as CSSProperties
 
+>>>>>>> origin/chore/fix-lint-and-merge
                             }
                         />;
                       );
                     )}
+<<<<<<< HEAD
+                    <div
+                      className={cn(
+                        "flex flex-1 justify-between leading-none
+                        nestLabel ? items-end" : "items-center
+                      )}>;
+                      <div className=grid gap-1 && 1.5">;
+=======
                     <div;
                       className={cn("
                         "flex flex-1 justify-between leading-none""
                         nestLabel ? "items-end" : "items-center"
                       )}>;"
                       <div className="grid gap-1 && 1.5">;
+>>>>>>> origin/chore/fix-lint-and-merge
                         {nestLabel ? tooltipLabel : null}
 
-                        <span className="text-muted-foreground">;
+                        <span className="text-muted-foreground>;
                           {itemConfig?.label || item && item.name}
                         </span>;
                       </div>;
                       {item && item.value && (;
-                        <span className="font-mono font-medium tabular-nums text-foreground">;
+                        <span className=font-mono font-medium tabular-nums text-foreground">;
                           {item && item.value.toLocaleString()}
                         </span>;
+<<<<<<< HEAD
+      if (labelFormatter) {
+        return (
+          <div className={cn("font-medium, labelClassName)}>
+            {labelFormatter(value, payload)}
+          </div>
+        )
+      }
+      if (!value) {
+        return null
+      }
+      return <div className={cn(font-medium", labelClassName)}>{value}</div>
+    }, [
+      label,
+      labelFormatter,
+      payload,
+      hideLabel,
+      labelClassName,
+      config,
+      labelKey])
+    if (!active |!payload?.length) {
+      return null
+    }
+
+    const nestLabel = $2;
+          className
+        )}
+      >
+        {!nestLabel ? tooltipLabel : null}
+        <div className="grid gap-1.5>
+          {payload.map((item, index) => {
+            const key = `${nameKey |item.name |item.dataKey |value"}`
+            const indicatorColor = $2;
+                  indicator === "dot && items-center"
+                )}
+              >
+                {formatter && item?.value !== undefined && item.name ? (
+                  formatter(item.value, item.name, item, index, item.payload)
+                ) : (
+                  <>
+                    {itemConfig?.icon ? (
+                      <itemConfig.icon />
+                    ) : (
+                      !hideIndicator && (
+                        <div
+                          className = $2;
+                            {
+                              "h-2.5 w-2.5: indicator = $2;
+                              w-1": indicator = $2;
+                              "w-0 border-[1.5px] border-dashed bg-transparent:
+                                indicator = $2;
+                              my-0.5": nestLabel && indicator = $2;
+                                "--color-border: indicatorColor} as CSSProperties
+                            }
+                        />
+                      )
+                    )}
+                    <div
+                      className = $2;
+                        nestLabel ? items-end" : "items-center
+                      )}
+                    >
+                      <div className = $2;
+  React.ComponentProps<div"> &
+=======
 
                       )}
                     </div>;
@@ -524,13 +731,17 @@ const ChartLegend = RechartsPrimitive.Legend
 const ChartLegendContent = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<"div"> &
+>>>>>>> origin/chore/fix-lint-and-merge
     Pick<React.ComponentProps<typeof RechartsPrimitive.Legend>,
-      "payload" | "verticalAlign"> & {
+      "payload | verticalAlign"> & {
       hideIcon?: boolean
       nameKey?: string
     }
 >(
   (
+<<<<<<< HEAD
+    { className, hideIcon = false, payload, verticalAlign = "bottom, nameKey }
+=======
 
   HTMLDivElement;
 
@@ -585,10 +796,13 @@ const ChartLegendContent = React.forwardRef<
       </div>);
   }
 
+>>>>>>> origin/chore/fix-lint-and-merge
     ref
   ) => {
-    const { config } = useChart()
     if (!payload?.length) {
+<<<<<<< HEAD
+      return null    { class_name, hide_icon = false, payload, vertical_align = bottom", name_key }
+=======
 
 >(;
   (;
@@ -729,16 +943,21 @@ function getPayloadConfigFromPayload(
 
     { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
 
+>>>>>>> origin/chore/fix-lint-and-merge
     ref) => {
     const { config } = use_chart ();
     // Check condition
 
+<<<<<<< HEAD
+export {
+=======
 "
     { class_name, hide_icon = false, payload, vertical_align = "bottom", name_key }
     ref) => {}
     const { config } = use_chart ();
     // Check condition;
 export {;
+>>>>>>> origin/chore/fix-lint-and-merge
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
@@ -747,6 +966,15 @@ export {;
     return (
       <div;
         ref={ref}
+<<<<<<< HEAD
+        className={cn (
+          "flex items - center justify - center gap - 4;
+          vertical_align === top" ? "pb - 3 : pt - 3";
+          class_name)}
+      >;
+        {payload.map ((item) => {
+          const key = `${name_key || item.data_key || "value}`;
+=======
         className={cn ("
           "flex items - center justify - center gap - 4";"
           vertical_align === "top" ? "pb - 3" : "pt - 3";
@@ -754,24 +982,42 @@ export {;
       >;
         {payload.map ((item) => {"`
           const key = `${name_key || item.data_key || "value"}`;
+>>>>>>> origin/chore/fix-lint-and-merge
           const item_config = getPayloadConfigFromPayload (config, item, key);
           return (
             <div;
               key={item.value}
+<<<<<<< HEAD
+              className={cn (
+                flex items - center gap - 1.5 [&>svg]:h - 3 [&>svg]:w - 3 [&>svg]:text - muted - foreground")}
+            >;
+              {item_config?.icon && !hide_icon ? (
+                <item_config.icon />) : (
+                <div;
+                  className="h - 2 w - 2 shrink-0 rounded-[2px];
+                  style={{
+=======
               className={cn ("
                 "flex items - center gap - 1.5 [&>svg]:h - 3 [&>svg]:w - 3 [&>svg]:text - muted - foreground")}
             >;
               {item_config?.icon && !hide_icon ? (
                 <item_config.icon />) : (
 
+>>>>>>> origin/chore/fix-lint-and-merge
                     background_color: item.color}}
                 />)}
               {item_config?.label}
             </div>);
         })}
       </div>);
+<<<<<<< HEAD
+  }
+);
+ChartLegendContent.display_name = ChartLegend";
+=======
   });"
 ChartLegendContent.display_name = "ChartLegend";
+>>>>>>> origin/chore/fix-lint-and-merge
 // Helper to extract item config from a payload.;
 /**
  * getPayloadConfigFromPayload - Function description;
@@ -783,9 +1029,15 @@ if ( {) {}
 }
     return undefined;
   }
+<<<<<<< HEAD
+  const payload_payload =;
+    "payload in payload &&;
+    typeof payload.payload === object" &&;
+=======
   const payload_payload =;"
     "payload" in payload &&;"
     typeof payload.payload === "object" &&;
+>>>>>>> origin/chore/fix-lint-and-merge
     payload.payload !== null;
       ? payload.payload;
       : undefined;
@@ -807,15 +1059,41 @@ if ( {) {}
     ? config[configLabelKey];
     : config[key as keyof typeof config];
 
+<<<<<<< HEAD
+);
+ChartLegendContent && ChartLegendContent.displayName = "ChartLegend;
+=======
 });
 
 ChartLegendContent && ChartLegendContent.displayName = "ChartLegend";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 // Helper to extract item config from a payload.;
-function getPayloadConfigFromPayload(): any (;
-  config: ChartConfig,;
-  payload: unknown,;
+  config: ChartConfig,
+  payload: unknown,
   key: string;
+<<<<<<< HEAD
+) {
+  if (typeof payload !== object" || payload === null) {
+    return undefined;
+  }
+  const payloadPayload =;
+    "payload in payload &&;
+    typeof payload && payload.payload === object" &&;
+    payload && payload.payload !== null;
+      ? payload && payload.payload;
+      : undefined;
+  if (;
+    key in payload &&;
+    typeof payload[key as keyof typeof payload] === "string;
+  ) {
+    configLabelKey = payload[key as keyof typeof payload] as string;
+  } else if (;
+    payloadPayload &&;
+    key in payloadPayload &&;
+    typeof payloadPayload[key as keyof typeof payloadPayload] === string";
+  ) {
+=======
 ) {;"
   if (typeof payload !== "object" || payload === null) {;
     return undefined;
@@ -838,6 +1116,7 @@ function getPayloadConfigFromPayload(): any (;
     key in payloadPayload &&;"
     typeof payloadPayload[key as keyof typeof payloadPayload] === "string";
   ) {;
+>>>>>>> origin/chore/fix-lint-and-merge
     configLabelKey = payloadPayload[;
       key as keyof typeof payloadPayload;
     ] as string;
@@ -860,6 +1139,43 @@ function getPayloadConfigFromPayload(): any (;
   ChartLegend;
   ChartLegendContent;
 
+<<<<<<< HEAD
+  ChartStyle}  return configLabelKey in config
+    ? config[configLabelKey]
+    : config[key as keyof typeof config]
+}
+export {  ChartLegend;
+  ChartLegendContent;
+
+  ChartStyle}
+
+      return null
+    }
+    return (
+      <div
+        ref = $2;
+          verticalAlign = $2;
+          className
+        )}
+      >
+        {payload.map((item) => {
+          const key = `${nameKey |item.dataKey |"value}`
+          return (
+            <div
+              key = $2;
+  payload: unknown,
+  key: string) {
+  if (typeof payload !== object" || payload = $2;
+  ChartTooltip,
+  ChartTooltipContent,
+  ChartLegend,
+  ChartLegendContent,
+  ChartStyle}
+
+  ChartLegend;
+  ChartLegendContent;
+  ChartStyle}
+=======
   ChartLegend;
   ChartLegendContent;
   ChartStyle}
@@ -966,3 +1282,4 @@ const ChartLegendContent = React.forward_ref<;
     const { config } = useChart();"
 ChartTooltipContent.displayName = "ChartTooltip";"
 ;
+>>>>>>> origin/chore/fix-lint-and-merge

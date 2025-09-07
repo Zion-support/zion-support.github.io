@@ -1,4 +1,13 @@
+<<<<<<< HEAD
+
+
+import {format} from 'date-fns';'
+
+
+
+=======
 import {format} from 'date-fns';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 /**
  * Formats a date for PDF display;

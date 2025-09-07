@@ -104,8 +104,22 @@ function track_referral() {
 export async /**;
  * track_referral - Function description;
  */
+<<<<<<< HEAD
+function track_referral() {
+  }
+  try {
+/**
+ * Track referral when a user signs up
+ */
+}
+function track_referral() {
+  }
+  try {
+    }
+=======
 
     const refCode = localStorage && localStorage.getItem('referral_code');
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!refCode) return,
   }
   return localStorage.getItem('referral_code')

@@ -586,6 +586,17 @@ pr-12325
 
       try {
         // First unset any existing default
+<<<<<<< HEAD
+}
+await supabase
+          .from('contract_templates')'
+          .update({ "is_default": false })
+        // Then set the new default,
+          .from('contract_templates')'
+          .update({ "is_default": true })
+          .eq('id', templateId)'
+          .eq('user_id', user.id),'
+=======
         await supabase
           .from('contract_templates')
           .update({ is_default: false })
@@ -596,6 +607,7 @@ pr-12325
           .update({ is_default: true })
           .eq('id', templateId)
 
+>>>>>>> origin/chore/fix-lint-and-merge
         if (error) throw error
       } finally {
 
@@ -683,10 +695,17 @@ pr-12325
   $2;
 }
       setIsLoading (true),
+<<<<<<< HEAD
+      try {
+        }
+          .from ('contract_templates');'
+          .delete ();
+=======
       try {}
         const { error } = await supabase;'
           .from ('contract_templates');
           .delete ();'
+>>>>>>> origin/chore/fix-lint-and-merge
           .eq ('id', template_id);'
           .eq ('user_id', user.id);
 ;
@@ -749,6 +768,9 @@ if (throw error) {}
         variant: "destructive"})
     }
   }),
+<<<<<<< HEAD
+  // Set a template as default,
+=======
 
   // Set a template as default;
   const setDefaultTemplate = useMutation({}
@@ -779,6 +801,7 @@ if (throw error) {}
       toast ({"
         title: "Template deleted","
         description: "Contract template has been successfully deleted."});
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     on_error: (error: Error) => {"
       console.error ("Error deleting template:", error);
@@ -944,9 +967,23 @@ if (throw error) {
     mutationFn: async (templateId: string) => {"
       if (!user) throw new Error("User not authenticated"),"
       setIsLoading(true),
+<<<<<<< HEAD
+          .eq('is_default', true),'
+          .eq('user_id', user.id)'
+          .eq('is_default', true);'
+          .eq('is_default', true),'
+        // Then set the new default,
+          .from('contract_templates')'
+          .update({ "is_default": true })
+          .eq('id', templateId)'
+          .eq('user_id', user && user.id);'
+        if (error) throw error  }
+}  }
+=======
 
       try {
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
 }
         // First unset any existing default;
         await supabase;"
@@ -1087,11 +1124,16 @@ import { useAuth } from "@/hooks/useAuth",;""
 import { ContractTemplate } from "@/types/contracts",;""
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",;"
 ;
+<<<<<<< HEAD
+export function useContractTemplates() {;
+  }
+=======
 
   const { user, isAuthenticated } = useAuth(),;
   const queryClient = useQueryClient(),;
   const { toast } = useToast(),;
   const [isLoading, setIsLoading] = useState(false),;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 
   // TODO: Implement
@@ -1246,7 +1288,10 @@ pr-12325
         return [];}
       }
 ;
+<<<<<<< HEAD
+=======
       const { data, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
         .from('contract_templates');'
         .select('*');'
         .order('is_default', { ascending:false });'
@@ -1305,6 +1350,8 @@ pr-12325
         }
         ;
         // Insert the new template;
+<<<<<<< HEAD
+=======
         const { data, error } = await supabase;'
           .from('contract_templates');
       isDefault?:boolean;)
@@ -1325,6 +1372,7 @@ pr-12325
         ;
         // Insert the new template;
         const { data, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
           .from('contract_templates');'
           .insert({;
             user_id:user.id,;
@@ -1374,8 +1422,14 @@ pr-12325
   }),;
 ;
   // Update an existing template;
+<<<<<<< HEAD
+    }
+    "mutationFn":async ({;
+      }
+=======
   const updateTemplate = useMutation({;
     mutationFn:async ({;
+>>>>>>> origin/chore/fix-lint-and-merge
       templateId,;
       title,;
       templateData,;}
@@ -1407,6 +1461,8 @@ pr-12325
         }
         ;
         // Update the template;
+<<<<<<< HEAD
+=======
         const { data, error } = await supabase;'
           .from('contract_templates');
           .update({;
@@ -1429,6 +1485,7 @@ pr-12325
         ;
         // Update the template;
         const { data, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
           .from('contract_templates');'
           .update({;
             title:title,;
@@ -1486,9 +1543,15 @@ pr-12325
       setIsLoading(true),;
       ;
       try {;
+<<<<<<< HEAD
+        }
+          .from('contract_templates');'
+          .delete();
+=======
         const { error } = await supabase;'
           .from('contract_templates');
           .delete();'
+>>>>>>> origin/chore/fix-lint-and-merge
           .eq('id', templateId);'
           .eq('user_id', user.id),;
         const { error } = await supabase;"
@@ -1549,9 +1612,14 @@ pr-12325
           .eq('is_default', true),;
         ;
         // Then set the new default;
+<<<<<<< HEAD
+          .from('contract_templates');'
+          .update({ "is_default":true });
+=======
         const { error } = await supabase;'
           .from('contract_templates');
           .update({ is_default:true });'
+>>>>>>> origin/chore/fix-lint-and-merge
           .eq('id', templateId);'
           .eq('user_id', user.id),;
 
@@ -1655,6 +1723,22 @@ pr-12325
 
 }= useAuth ();
 const queryClient = useQueryClient ();
+<<<<<<< HEAD
+  }
+  toast 
+}= useToast ();
+const [isLoading, setIsLoading] = useState (false);
+"data": templates = [], "isLoading": isLoadingTemplates, "error": templatesError 
+}= useQuery ({
+  }
+  "queryKey": ['contractTemplates', user?.id], "queryFn": async () => {'
+  }
+  if (!isAuthenticated || !user) {
+  }
+  }
+  data, error 
+}= await supabase .from ('contract templates') .select ('*') return data as ContractTemplate[] '
+=======
 const {}
   toast;
 }= useToast ();
@@ -1666,6 +1750,7 @@ data: templates = [], isLoading: isLoadingTemplates, error: templatesError;
   const {}
   data, error '
 }= await supabase .from ('contract templates') .select ('*') return data as ContractTemplate[] 
+>>>>>>> origin/chore/fix-lint-and-merge
 };
 enabled: isAuthenticated && !!user;
 });
@@ -1731,12 +1816,18 @@ enabled: isAuthenticated && !!user;
 }
 });
 //Delete a template try {
+<<<<<<< HEAD
+  }
+  }
+  error 
+=======
   // TODO: Implement
 }
   const {
   // TODO: Implement
 }
   error;'
+>>>>>>> origin/chore/fix-lint-and-merge
 }= await supabase .from ('contract templates') .delete () .eq ('id', templateId) .eq ('user id', user.id);'
 }
 });

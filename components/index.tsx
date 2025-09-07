@@ -1,8 +1,23 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+return () => clearInterval (interval) 
+}, [])
+]
 import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import {
+=======
+import Head from 'next/head';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
+<<<<<<< HEAD
+  }
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
+=======
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;}
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network}
  } from 'lucide-react';
@@ -15,6 +30,7 @@ import EnhancedFooter from '../components/EnhancedFooter';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 import EnhancedServicesShowcase from '../components/EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSection';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default function HomePage() {
   const [currentFeature, setCurrentFeature] = useState(0);
@@ -23,6 +39,18 @@ const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
 
     setIsVisible(true);
+<<<<<<< HEAD
+    // Auto-rotate features,
+const interval = null;
+              and digital transformation solutions that drive innovation and growth.;
+
+      <Head>;
+        <title>Zion Tech Group — Leading-Edge Technology Solutions & Autonomous;
+          Innovation Platform;
+        </title>;
+        <meta;
+
+=======
     // Auto-rotate features;
 const interval = null;}
               and digital transformation solutions that drive innovation and growth.;}
@@ -139,11 +167,15 @@ className='mb-8'    />
               Zion Tech Group;
             </h1>;
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               Leading-edge technology solutions and autonomous innovation;
               platform;
             </p>;
           </motion.div>;
           <motion.div;
+<<<<<<< HEAD
+
+=======
             initial={{ opacity: 0, y: 30 ,}
 }
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 ,}
@@ -178,18 +210,28 @@ href=\"#services\"
                 className=\"px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2\"    />;
                 Explore Services;
                 <ArrowRight className=\"w-5 h-5\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               </a>;
 
+<<<<<<< HEAD
+
+              >
+                Schedule Consultation
+=======
               <a;
 href=\"mailto: kleber@ziontechgroup.com\"
                 className=\"px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10\"
                   />
                 Schedule Consultation;
+>>>>>>> origin/chore/fix-lint-and-merge
               </a>
             </div>
           </motion.div>
         </div>
 
+<<<<<<< HEAD
+
+=======
         {/* Floating Elements *,}
 }
 <div className='absolute inset-0 pointer-events-none'    />;
@@ -208,6 +250,7 @@ href=\"mailto: kleber@ziontechgroup.com\"
           <motion.div;
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+>>>>>>> origin/chore/fix-lint-and-merge
 
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'
              />
@@ -215,6 +258,19 @@ href=\"mailto: kleber@ziontechgroup.com\"
 
         </div>
       </section>
+<<<<<<< HEAD
+
+
+<section className='py-20 px-6'>'
+        <div className='max-w-7xl mx-auto'>'
+          <motion.div
+
+
+
+      <section className='py-20 px-6'>;'
+        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="py-20 px-6">;"
+        <div className="max-w-7xl mx-auto">;"
+=======
       {/* Features Section *,}
 }
 
@@ -224,6 +280,7 @@ href=\"mailto: kleber@ziontechgroup.com\"
       <section className='py-20 px-6'    />;
         <div className='max-w-7xl mx-auto'    />          <motion && motion.div      <section className=\"py-20 px-6\"    />;
         <div className=\"max-w-7xl mx-auto\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
           <motion&& motion.div;
             initial={{ opacity: 0, y: 30 ,}
 }
@@ -233,6 +290,34 @@ href=\"mailto: kleber@ziontechgroup.com\"
             viewport={{ once: true ,}
 }
 
+<<<<<<< HEAD
+className='text-center mb-16''
+          >
+
+            </p>
+          </motion.div>
+          <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {services.map((service, index) => (          >
+            className="absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60
+          />
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className=py-20 px-6">
+        <div className="max-w-7xl mx-auto>
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true}}
+            className=text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent>
+              Revolutionary Technology Solutions
+            </h2>
+            <p className=text-xl text-white/70 max-w-3xl mx-auto">
+              Discover our cutting-edge services that are transforming industries and driving the future of technology
+=======
 className='text-center mb-16'
               />
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'    />
@@ -241,10 +326,13 @@ className='text-center mb-16'
             <p className='text-xl text-white/70 max-w-3xl mx-auto'    />
               Discover our cutting-edge services that are transforming;
 industries and driving the future of technology;
+>>>>>>> origin/chore/fix-lint-and-merge
             </p>
           </motion.div>
 
 
+<<<<<<< HEAD
+=======
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />
             {services.map((service, index) => (}
               <motion.div;}
@@ -254,10 +342,18 @@ key={service.title}
               Revolutionary Technology Solutions;
             </h2>;
             <p className='text-xl text-white/70 max-w-3xl mx-auto'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               Discover our cutting-edge services that are transforming;
               industries and driving the future of technology;
             </p>;
           </motion && motion.div>;
+<<<<<<< HEAD
+
+            {services && services.map((service, index) => (<motion&& motion.div;
+                }
+                key={service && service.title}
+
+=======
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />            {services && services.map((service, index) => (          >;
             <h2 className=\"text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent\"    />;
               Revolutionary Technology Solutions;
@@ -296,6 +392,7 @@ className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 fl
                   <div className='mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300'    />;
                     <span className='text-sm font-medium'    />Learn More</span>;
                     <ChevronRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                   </div>;
                 </div>;
               </motion.div>;
@@ -332,6 +429,19 @@ import {
   ChevronRight,
   ExternalLink,
   TrendingUp,
+<<<<<<< HEAD
+  BarChart3,
+  Cloud,
+
+  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
+<section className=py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-7xl mx-auto>;
+          <div className=grid grid-cols-2 md:grid-cols-4 gap-8'>;
+            {stats.map((stat, index) => (<motion.div;
+import {ArrowRight,Brain,Shield,Rocket,Cpu,Database,Atom,Target,Star,Sparkles,Zap,Users,Award,Clock,CheckCircle,Globe,Code,Server,ChevronRight,ExternalLink,TrendingUp,BarChart3,Cloud,Network} from 'lucide-react;import {ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
+=======
   BarChart3,}
   Cloud,}
   Network,} from 'lucide-react';import {
@@ -344,10 +454,21 @@ import EnhancedFooter from '../components / EnhancedFooter';
 import EnhancedContactForm from '../components / EnhancedContactForm';
 import EnhancedServicesShowcase from '../components / EnhancedServicesShowcase';
 import EnhancedTestimonialsSection from '../components / EnhancedTestimonialsSection';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default /**;
  * HomePage - Function description;
  */;
+<<<<<<< HEAD
+function HomePage() {const [current_feature, setCurrentFeature] = useState (0)const [is_visible, setIsVisible]  = useState (false)useEffect (() => {setIsVisible (true)// Auto - rotate features;
+
+      <Head>;
+        <title>Zion Tech Group — Leading - Edge Technology Solutions & Autonomous;
+          Innovation Platform;
+        </title>;
+        <meta;
+
+=======
 function HomePage() {const [current_feature, setCurrentFeature] = useState (0)const [is_visible, setIsVisible]  = useState (false)useEffect (() =    /> {setIsVisible (true)// Auto - rotate features;}
 }
 const interval = set_interval (() => {setCurrentFeature ((prev) => (prev + 1) % 6)}, 5000)return () => clear_interval (interval;
@@ -457,10 +578,13 @@ const stats = [
               Zion Tech Group;
             </h1>;
             <p className=\"text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               Leading - edge technology solutions and autonomous innovation platform;
             </p>;
           </motion.div>;
           <motion.div;
+<<<<<<< HEAD
+=======
             initial={{ opacity: 0, coordinate_y: 30 ,}
 }
             animate={{ opacity: is_visible ? 1 : 0, coordinate_y: is_visible ? 0 : 30 ,}
@@ -498,6 +622,7 @@ const stats = [
               <a;
                 href=\'mailto:kleber@ziontechgroup.com\';
                 className=\"px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10\"    />
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 Schedule Consultation;
               </a>;
@@ -505,6 +630,9 @@ const stats = [
           </motion.div>;
         </div>;
         {/* Floating Elements */}
+<<<<<<< HEAD
+
+=======
         <div className='absolute inset - 0 pointer - events - none'    />;
           <motion.div;
             animate={{ coordinate_y: [0, -20, 0] }}
@@ -559,10 +687,16 @@ const stats = [
               Revolutionary Technology Solutions;
             </h2>;
             <p className='text - xl text - white / 70 max - w-3xl mx - auto'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               Discover our cutting - edge services that are transforming;
               industries and driving the future of technology;
             </p>;
           </motion.div>;
+<<<<<<< HEAD
+
+            {services.map ((service, index) => (<motion.div;
+                }
+=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'    />            {services.map ((service, index) => (          >;
             <h2 className=\"text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent\"    />;
               Revolutionary Technology Solutions;
@@ -573,6 +707,7 @@ const stats = [
           </motion.div>;
           <div className=\"grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8\"    />;}
             {services.map ((service, index) => (<motion.div;}
+>>>>>>> origin/chore/fix-lint-and-merge
                 key={service.title}
                 initial={{ opacity: 0, coordinate_y: 30 ,}
 }
@@ -582,6 +717,36 @@ const stats = [
 
                 viewport={{ once: true }}
 
+<<<<<<< HEAD
+className='text-center''
+              >
+
+              </motion.div>;
+            ))}
+            {services.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true}}
+                className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl
+              >
+                <div className=absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                <div className="relative z-10>
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-6 flex items-center justify-center`}>
+                    <service.icon className=w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-white>{service.title}</h3>
+                  <p className=text-white/70 leading-relaxed">{service.description}</p>
+                  <div className="mt-6 flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300>
+                    <span className=text-sm font-medium">Learn More</span>
+                    <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300 />
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+=======
 className='text-center'
                   />
                 <div className='w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center'    />
@@ -596,28 +761,38 @@ className='text-center'
               </motion.div>;
             ))}
 
+>>>>>>> origin/chore/fix-lint-and-merge
           </div>
         </div>
       </section>
 
-      {/* Enhanced Services Showcase */}
 
+<<<<<<< HEAD
+=======
 <div id='services'    />
         <EnhancedServicesShowcase    />
       </div>
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection    />
+>>>>>>> origin/chore/fix-lint-and-merge
             ))}
           </div>
         </div>
       </section>
 
       {/* Enhanced Services Showcase */}
+<<<<<<< HEAD
+
+
+      <div id=services">
+        <EnhancedServicesShowcase />
+=======
       <div id='services'    />        <EnhancedServicesShowcase    />
 
 
 
         <EnhancedServicesShowcase    />
+>>>>>>> origin/chore/fix-lint-and-merge
       </div>
 
 
@@ -626,6 +801,9 @@ className='text-center'
 
       {/* Latest Updates Section */}
 
+<<<<<<< HEAD
+                Open <span aria-hidden>→</span>
+=======
 <section className='py-20 px-6'    />
         <div className='max-w-7xl mx-auto'    />
           <motion.div;
@@ -687,6 +865,7 @@ href='/reports/updates/update-2025-08-15-0457'
               </p>
               <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300'    />
                 Open <span aria-hidden    />→</span>
+>>>>>>> origin/chore/fix-lint-and-merge
               </div>
             </a>
           </div>
@@ -694,13 +873,161 @@ href='/reports/updates/update-2025-08-15-0457'
       </section>
       {/* Contact Form Section *,}
 }
+<<<<<<< HEAD
+<section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>'
+        <div className='max-w-7xl mx-auto'>'
+          <motion.div,
+initial={{ "opacity": 0, "y": 30 
+}
+            whileInView={{ "opacity": 1, "y": 0 }}
+            transition={{ "duration": 0 && 0.8 }}
+            viewport={{ "once": true 
+}
+
+
+
+              technology solutions can transform your business            </p>          >
+      <section className=py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto>
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true}}
+            className=text-center mb-16"
+          >
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent>
+              Ready to Get Started?
+            </h2>
+            <p className=text-xl text-white/70 max-w-3xl mx-auto">
+              Lets discuss your project and explore how our cutting-edge technology solutions can transform your business
+            </p>
+          </motion.div>
+
+          <EnhancedContactForm />
+        </div>
+      </section>
+
+      <EnhancedFooter />
+    </div>
+            <a;
+              href=/reports/updates/update-2025-08-15-0457';
+        <div className="max-w-7xl mx-auto>;
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105;
+            >;
+              <div className=pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
+              <h3 className='text-lg font-semibold text-white>;
+                Autonomous Update — 2025: 08: 15: 0457;
+              </h3>;
+              <p className=mt-1 text-sm text-white/75'>;
+                Freshly published by autonomous agents.;
+              </p>;
+              <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300>;
+                Open <span aria-hidden>→</span>;
+              </div>;
+            </a>;
+          </div>;
+        </div>;
+      </section>;
+      {/* Contact Form Section */}
+<section className=py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>;
+        <div className='max-w-7xl mx-auto>;
+=======
 <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'    />
         <div className='max-w-7xl mx-auto'    />
+>>>>>>> origin/chore/fix-lint-and-merge
           <motion.div;
 initial={{ opacity: 0, y: 30 ,}
 }
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
+<<<<<<< HEAD
+            viewport={{ once: true }}className=text-center mb-16';
+          >;
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent>;
+              Ready to Get Started?;
+            </h2>;
+            <p className=text-xl text-white/70 max-w-3xl mx-auto'>;
+              Let's discuss your project and explore how our cutting-edge;
+              technology solutions can transform your business            </p>          >;
+            className=text-center mb-16";
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent>;
+              Ready to Get Started?;
+            </h2>;
+            <p className=text-xl text-white/70 max-w-3xl mx-auto">;
+              Let's discuss your project and explore how our cutting-edge technology solutions can transform your business;
+              technology solutions can transform your business;
+            </p>;
+          </motion.div>;
+          <EnhancedContactForm />;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+    </div>;
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
+              Ready to Get Started?;
+            </h2>;
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
+              Let's discuss your project and explore how our cutting-edge;
+              technology solutions can transform your business            </p>          >;
+            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">;
+              Ready to Get Started?;
+            </h2>;
+            <p className="text-xl text-white/70 max-w-3xl mx-auto">;
+              Let's discuss your project and explore how our cutting-edge technology solutions can transform your business;
+            </p>;
+          </motion && motion.div>;and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </a> </div> </motion && motion.div> </div> /> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Discover our cutting-edge services that are transforming industries and driving the future of technology </p> </motion && motion.div> </div> </div> </motion && motion.div>) )}</div> </div> </section> > <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center" > <stat && stat.icon className="w-8 h-8 text-white" /> </div> </motion && motion.div>) )}</div> </div> </section> <EnhancedServicesShowcase /> </div> {/* Enhanced Testimonials Section */ ;
+      {/* Contact Form Section */}
+      <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div      <section className="py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
+        <div className="max - w-7xl mx - auto">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text - center mb - 16';
+          >;
+            <h2 className='text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent'>;
+              Ready to Get Started?;
+            </h2>;
+            <p className='text - xl text - white / 70 max - w-3xl mx - auto'>;
+              Let's discuss your project and explore how our cutting - edge;
+              technology solutions can transform your business            </p>          >;
+            <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
+              Ready to Get Started?;
+            </h2>;
+            <p className="text - xl text - white / 70 max - w-3xl mx - auto">;
+              Let's discuss your project and explore how our cutting - edge technology solutions can transform your business;
+            </p>;
+          </motion.div>;
+          <EnhancedContactForm />;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+    </div>)and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a href="#services" className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2" > Explore Services <ArrowRight className="w - 5 h - 5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent" > Revolutionary Technology Solutions </h2> <p className="text - xl text - white / 70 max - w-3xl mx - auto" > Discover our cutting - edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) )}</div> </div> </section> > <div className="w - 16 h - 16 rounded - full bg - gradient - to - br from - cyan - 500 to - blue - 500 p - 4 mx - auto mb - 4 flex items - center justify - center" > <stat.icon className="w - 8 h - 8 text - white" /> </div> </motion.div>) )}</div> </div> </section> <EnhancedServicesShowcase /> </div> {/* Enhanced Testimonials Section */;
+}<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
+  ))and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Discover our cutting-edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) )}</div> </div> </section> > <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) )}</div> </div> </section> <EnhancedServicesShowcase /> </div> {/* Enhanced Testimonials Section */;
+}<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
+}<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>))and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Discover our cutting-edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) )}</div> </div> </section> > <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) )}</div> </div> </section> <EnhancedServicesShowcase /> </div> {/* Enhanced Testimonials Section */;
+
+
+
+}<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>)
+  )
+}
+
+and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Discover our cutting-edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) ) 
+}</div> </div> </section> > <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 p-4 mx-auto mb-4 flex items-center justify-center" > <stat.icon className="w-8 h-8 text-white" /> </div> </motion.div>) ) 
+}</div> </div> </section> <EnhancedServicesShowcase /> </div> {
+  /* Enhanced Testimonials Section */ 
+}<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) 
+}
+=======
             viewport={{ once: true ,}
 }
 
@@ -727,3 +1054,4 @@ and digital transformation solutions that drive innovation and growth. </p> <div
   /* Enhanced Testimonials Section */ ,}
 }<EnhancedTestimonialsSection    /> > <h2 className=\"text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent\"     /> Latest Autonomous Updates </h2> <p className=\"text-xl text-white/70 max-w-3xl mx-auto\"     /> Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\"     /> <a href=\"/reports/updates/update-2025-08-15-0508\" className=\"group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105\"     /> <div className=\"pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100\"    /> <h3 className=\"text-lg font-semibold text-white\"     />Autonomous Update — 2025: 08: 15: 0508</h3> <p className=\"mt-1 text-sm text-white/75\"     />Freshly published by autonomous agents.</p> <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300\"     /> Open <span aria-hidden    />→</span> </div> </a> <a href=\"/reports/updates/update-2025-08-15-0507\" className=\"group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105\"     /> <div className=\"pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100\"    /> <h3 className=\"text-lg font-semibold text-white\"     />Autonomous Update — 2025: 08: 15: 0507</h3> <p className=\"mt-1 text-sm text-white/75\"     />Freshly published by autonomous agents.</p> <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300\"     /> Open <span aria-hidden    />→</span> </div> </a> <a href=\"/reports/updates/update-2025-08-15-0457\" className=\"group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105\"     /> <div className=\"pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100\"    /> <h3 className=\"text-lg font-semibold text-white\"     />Autonomous Update — 2025: 08: 15: 0457</h3> <p className=\"mt-1 text-sm text-white/75\"     />Freshly published by autonomous agents.</p> <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300\"     /> Open <span aria-hidden    />→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className=\"text-xl text-white/70 max-w-3xl mx-auto\"     /> Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm    /> </div> </section> <EnhancedFooter    /> </div>)
 
+>>>>>>> origin/chore/fix-lint-and-merge

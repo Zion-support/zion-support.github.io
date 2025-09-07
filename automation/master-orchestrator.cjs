@@ -38,11 +38,35 @@ const { execSync } = require('child_process');
 
 class MasterOrchestrator {
   constructor() {
+<<<<<<< HEAD
     this.projectRoot = process.cwd();
     this.logsDir = path.join(this.projectRoot, 'logs');
     this.logFile = path.join(this.logsDir, 'master-orchestrator.log');
     this.startTime = Date.now();
     this.results = {};
+<<<<<<< HEAD
+=======
+    this.logFile = path.join(
+      __dirname,
+      'logs',
+      'master-orchestrator.log'
+    );
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+    this.ensureLogDir();
+  }
+
+  ensureLogDir() {
+    if (!fs.existsSync(this.logsDir)) {
+      fs.mkdirSync(this.logsDir, { recursive: true });
+    }
+  }
+
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}`;
+    console.log(logMessage);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     try {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -377,7 +401,6 @@ module.exports = MasterOrchestrator;
   async runBuildProcess() {
     this.log('🏗️ Running build process...');
 
-    const commands = [
       { cmd: 'npm run clean', desc: 'Clean build artifacts' },
       { cmd: 'npm run build', desc: 'Build application' },
     ];
@@ -916,10 +939,20 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
     const reportPath = path.join(
+<<<<<<< HEAD
+<<<<<<< HEAD
+      this.projectRoot,
+=======
       __dirname,
       '..',
+>>>>>>> origin/chore/fix-lint-and-merge
       'automation-reports',
       'master-orchestrator-report.json'
+=======
+      __dirname,
+      'reports',
+      'master-automation-report.json'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);

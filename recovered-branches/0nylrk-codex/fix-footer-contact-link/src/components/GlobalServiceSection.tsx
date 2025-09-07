@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import {GradientHeading} from "./GradientHeading";"
+import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";"
+import {Button} from "./ui/button";"
+import { GradientHeading } from "./GradientHeading","
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons","
+import { Button } from "./ui/button",import { GradientHeading } from "./GradientHeading","
+import { Button } from "./ui/button","
+=======
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
@@ -13,6 +22,7 @@ import { Button } from "./ui/button",
 
 const services = [
 
+>>>>>>> origin/chore/fix-lint-and-merge
   {
     title: "Servers"
     description: "Enterprise-grade servers for any workload with 24/7 maintenance and support"
@@ -84,6 +94,13 @@ const services = [;
     icon: <Truck className="h-10 w-10" />}],;
 
 export function GlobalServiceSection() {;
+<<<<<<< HEAD
+}
+return (;
+import { GradientHeading } from "./GradientHeading";"
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons";"
+import { Button } from "./ui/button",;"
+=======
   return (
 
   {
@@ -97,6 +114,7 @@ import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;
 const services = [;
+>>>>>>> origin/chore/fix-lint-and-merge
   {;
     title: "Servers",
     description: "Enterprise-grade servers for any workload with 24/7 maintenance and support",;

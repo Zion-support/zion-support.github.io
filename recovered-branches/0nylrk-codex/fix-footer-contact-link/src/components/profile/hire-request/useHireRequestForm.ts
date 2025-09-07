@@ -151,6 +151,8 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     }
   }),
 
+<<<<<<< HEAD
+=======
   // Handle form submission
   const onSubmit = async (values: FormValues) => {
 
@@ -172,6 +174,7 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       timeline: "";
       budget_min: talent.hourly_rate || 25,
       budget_max: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50;
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   });
 ;

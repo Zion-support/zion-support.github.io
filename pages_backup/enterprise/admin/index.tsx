@@ -5,7 +5,6 @@ import Link from 'next/link';
 type Member = {
   id: string;
 
-import Link from 'next/link';
 type Member = any;
 type Member = {
   id: string;
@@ -25,7 +24,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   status: string,;
 };'
-const COMPANY_ID = 'cmp_acme';
 
   );  const [members, setMembers] = useState<Member[]>([]);
   const [usage, setUsage] = useState<Usage | null>(null);
@@ -35,15 +33,10 @@ const COMPANY_ID = 'cmp_acme';
   status: string;
 };
 
-const COMPANY_ID = 'cmp_acme';
 export default function CompanyAdmin() {
-const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
     'members'
   );
   const [members, setMembers] = useState<Member[]>([]);
-  const [usage, setUsage] = useState<Usage | null>(null);
-  const [activity, setActivity] = useState<any[]>([]);
-  const [invoices, setInvoices] = useState<Invoice[]>([]);
   useEffect(() => {
 fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
       .then(r => r.json())
@@ -224,7 +217,6 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
   const [email, setEmail] = useState(''),'
   const [role, setRole] = useState<Member['role']>('viewer'),
 
-  const add = async () => {
 
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
     const created = await r.json();
@@ -259,6 +251,23 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ memberId: id, role: newRole })
     });
+<<<<<<< HEAD
+:pages/enterprise/admin/index.tsx
+    setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));  }
+    const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) }),
+    const created = await r.json(),
+    setMembers([created, ...members]),
+    setName(''), setEmail(''), setRole('viewer')
+  },
+  const remove = async (id: string) => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`, { method: 'DELETE' }),
+    setMembers(members.filter(m => m.id !== id))
+  },
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
+    setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
+  },
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));
   };
 
@@ -588,9 +597,7 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
 
 function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {}
   const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts);
-  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
 
-  const save = async () => {
 
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) });
     setUsage({ monthlyJobPosts, budgetCapUsd })

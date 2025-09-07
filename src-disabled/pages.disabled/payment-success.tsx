@@ -58,12 +58,10 @@ export default function PaymentSuccess() {
           >
             {t('errors.go_to_dashboard')}
           </Button>
-import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router'; // Changed from useNavigate;
 import { CheckCircle2 } from 'lucide-react';import { useTranslation } from 'react-i18next';
 
-import React from 'react';
 
 
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
@@ -130,12 +128,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next',
 export default function PaymentSuccess() {
-  const router = useRouter(), // Changed from navigate
-  const { t } = useTranslation(),
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -173,7 +167,6 @@ export default function PaymentSuccess() {
 }
   );
 }
-import React from 'react';
 import { Button } from '@/components / ui / button';
 import { use_router } from 'next / router'; // Changed from use_navigate;
 import { CheckCircle2 } from 'lucide-react'; import { use_translation } from 'react - i18next';

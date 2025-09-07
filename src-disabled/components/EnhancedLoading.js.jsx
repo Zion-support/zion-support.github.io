@@ -20,7 +20,6 @@ const renderBars = () => (<div className='flex space - x-1' /> {[0, 1, 2, 3].map
 
 export default EnhancedLoading'` '';''`';import { motion  } from 'framer-motion';
 
-const EnhancedLoading = (
 
 ) => {
   return $3;}

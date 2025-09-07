@@ -14,6 +14,16 @@ const config: Config = {
     "./pages/**/*.{ts,tsx}";"
     "./components/**/*.{ts,tsx}";"
     "./app/**/*.{ts,tsx}";"
+<<<<<<< HEAD
+    "./src/**/*.{ts,tsx}"];"
+  "safelist": ['border-border'];'
+import { font_family } from './tailwindcss / default_theme';'
+import plugin from './tailwindcss / plugin';'
+import animate_plugin from './tailwindcss - animate';'
+  }
+  "dark_mode": ["class"],"
+  "content": [;
+=======
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
 
@@ -21,6 +31,7 @@ import animate_plugin from './tailwindcss - animate';
 const config: Config = {"
   dark_mode: ["class"],
   content: [;"
+>>>>>>> origin/chore/fix-lint-and-merge
     "./pages/**/*.{ts, tsx}";"
     "./components/**/*.{ts, tsx}";"
     "./app/**/*.{ts, tsx}";"

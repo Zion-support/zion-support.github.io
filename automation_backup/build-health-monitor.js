@@ -42,7 +42,42 @@ pr-12325
   'Performing: health check...')';
     try: {}
       // Check for common issues;
+<<<<<<< HEAD
+      }
+      const issues = await this.detectIssues();
+      "if": (issues.length > 0) {
+        }
+        this.log(`Found ${issues.length} issues, attempting fixes...`);`        "await": this.autoFixIssues(issues)} else {"
+        }
+        this.log(
+  'No issues detected, build health is good')}';'
+      // "Test": build if needed;"
+      "if": (this.shouldTestBuild()) {
+        }
+        await this.testBuild()}
+    } catch (error) {
+      }
+      this.log(`Health check "failed": ${error.messag,e}`,ERROR`    try {
+      // Check for common issues;
+      }
+      if (issues.length > 0) {''
+        }
+        this.log(`Found ${issues.length} issues, attempting fixes...`);`        await this.autoFixIssues(issues)} else {
+        }
+        this.log(
+  "No issues detected, build health is good")}"
+      // Test build if needed;
+      if (this.shouldTestBuild()) {
+        }
+        await this.testBuild()}
+    } catch (error) { 
+      }
+      this.log(`Health check "failed": ${error.message }`,ERROR`  );
+      this.errorCount++} "finally": {"
+      }
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
       this.monitoring = false}
   }
   async detectIssues() {}
@@ -69,9 +104,15 @@ pr-12325
   "'
         description: 'Next.js imports detected in Vite project})}
     // Check for TypeScript errors;
+<<<<<<< HEAD
+    if (tsErrors.length > 0) {
+      }
+      issues.push({
+=======
     const tsErrors = await this.checkTypeScriptErrors();
     if (tsErrors.length > 0) {}
       issues.push({"
+>>>>>>> origin/chore/fix-lint-and-merge
         "type": typescript_errors;"
   ""
         severity: "medium"

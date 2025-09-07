@@ -253,7 +253,12 @@ const Home = memo(() => {
 import {ArrowRight,, CheckCircle,, Star,, Users,, Zap,, Shield,, Globe,, TrendingUp,, Award,, Clock,, Brain,, Cloud,, Database,, Network,, Target,, Phone,, Mail,, Menu,, Server,, Smartphone,, MapPin} from 'lucide-react';
 const Home = memo(() => {;
 
+<<<<<<< HEAD
+  }
+
+=======
   const [sidebarOpen, setSidebarOpen] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
   const handleSidebarToggle = useCallback(() => {;
     setSidebarOpen(prev => !prev);
   }, []);

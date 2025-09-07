@@ -56,8 +56,6 @@ export function AuthorBio(): any ({ author }:,  AuthorBioProps) {;
 }'"};
 ;
 export function AuthorBio({ author }:,  AuthorBioProps) {;
-import React from 'react',;
-import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {;
   author: BlogAuthor;
 }
@@ -71,7 +69,6 @@ export function AuthorBio({ author }: AuthorBioProps) {
         alt={author.name}
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
         onError={(e) => {
-          const target = e.currentTarget as HTMLImageElement,
           target.src = '/images/blog-placeholder.svg'
         }}
       />
@@ -96,7 +93,6 @@ export function AuthorBio({ author }: AuthorBioProps) {;
           const target = e.currentTarget as HTMLImageElement;
           target.src = '/images/blog-placeholder.svg';
         }}
-import React from 'react';
 import type { BlogAuthor } from '@/types / blog';
 interface AuthorBioProps {
   author: BlogAuthor;

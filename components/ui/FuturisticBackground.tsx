@@ -1,7 +1,4 @@
-
-
 import React from 'react';
-
 export default function FuturisticBackground() {
 
 class ErrorBoundary extends React.Component {
@@ -14,8 +11,10 @@ class ErrorBoundary extends React.Component {
     return { hasError: true,}
 };
   }
-  componentDidCatch(error, errorInfo) {}
-    console.error('Error caught by boundary:', error, errorInfo);}
+  componentDidCatch(error,,,
+  errorInfo) {}
+    console.error('Error caught by boundary:', error,,,
+  errorInfo);}
   }
   render() {
     if (this.state.hasError) {
@@ -25,8 +24,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+<<<<<<< HEAD
+export default function FuturisticBackground() {return (
+    <div className='pointer-events-none absolute inset-0 overflow-hidden' />;}
+=======
 
 export default function FuturisticBackground() {return (<div className='pointer-events-none absolute inset-0 overflow-hidden'    />;}
+>>>>>>> origin/main
       {/* Animated gradient background */}
       {/* Glow orbs */}
 
@@ -36,4 +40,3 @@ export default function FuturisticBackground() {return (<div className='pointer-
 
     </div>
   );
-

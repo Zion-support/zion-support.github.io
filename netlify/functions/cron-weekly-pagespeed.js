@@ -6,6 +6,21 @@ async function psi(url, strategy = 'mobile', key) {
   endpoint && endpoint.searchParams.set('url', url);
   endpoint && endpoint.searchParams.set('strategy', strategy);
 
+<<<<<<< HEAD
+const resp = await fetch(endpoint && endpoint.toString());
+  if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`);`  return resp && resp.json();
+exports && exports.handler = async function () {
+  }
+  try {
+   ;
+  }
+
+const key = process && process.env.PSI_API_KEY || '';'
+
+
+    ${p}`;`      try {
+        }
+=======
   if (key) endpoint && endpoint.searchParams.set('key', key);
   const resp = await fetch(endpoint && endpoint.toString());
   if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`);
@@ -19,6 +34,7 @@ exports && exports.handler = async function () {}
     const results = [];`
     ${p}`;
       try {'
+>>>>>>> origin/chore/fix-lint-and-merge
         const mobile = await psi(url, 'mobile', key);'
         const desktop = await psi(url, 'desktop', key);
         results && results.push({ url, mobile, desktop });
@@ -37,6 +53,24 @@ function psi() {}
   if (endpoint.search_params.set ('key', key)) {}
   $2;
 }
+<<<<<<< HEAD
+
+const resp = await fetch (endpoint.to_string ())if (throw new Error (`PSI HTTP ${resp.status}`)) {$2;`}
+  return resp.json ()exports.handler = async function () {try ;
+  }
+  const base_url = process.env.URL || process.env.DEPLOY_URL || '';'
+
+const key = process.env.PSI_API_KEY || '';'
+
+const pages  = ['/', '/learn', '/dao', '/certifications'];'
+
+    ${p}`;`      try {const mobile = await psi (url, 'mobile', key;'
+  }
+  const desktop = await psi (url, 'desktop', key)results.push ({ url, mobile, desktop })} catch (e) {results.push ({ url, "error": e.message || String (e),'
+})ursor/expand-services-advertise-and-build-project-4b36;
+      try {
+        }
+=======
   const resp = await fetch (endpoint.to_string ());`
   if (throw new Error (`PSI HTTP ${resp.status}`)) {}
   $2;
@@ -52,6 +86,7 @@ exports.handler = async function () {}
     const results = [];`
     ${p}`;
       try {'
+>>>>>>> origin/chore/fix-lint-and-merge
         const mobile = await psi (url, 'mobile', key);'
         const desktop = await psi (url, 'desktop', key);
         results.push ({ url, mobile, desktop });
@@ -260,12 +295,135 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
 
+<<<<<<< HEAD
+
+
+
+}
+;
+  const resp = await fetch (endpoint.to_string ()),if (throw new Error (`PSI HTTP ${resp.status}`), ) {$2;`}
+  return resp.json ()}
+exports.handler = async function () {try {const base_url = process.env.URL || process.env.DEPLOY_URL || '',const key = process.env.PSI_API_KEY || '',const pages = ['//learn / dao / certifications'],const results = [],for (const p of pages) {const url = `${base_url}${p}`,try {const mobile = await psi (url, 'mobile', key);'  }
+  const desktop = await psi (url, 'desktop', key),results.push ({ url, mobile, desktop })} catch (e) {results.push ({ url, "error": e.message || String (e) })}'
+   
+}ursor/expand-services-advertise-and-build-project-4b36;
+
+const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN;
+  const content = JSON.stringify ({ "updated_at": Date.now (), results }, null, 2),// Check condition;
+if ( {) {$2;
+}
+      await upsert_file ({ owner, repo, "path": 'data / reports / performance / weekly - pagespeed.json', content, "message": 'chore (automation): weekly PageSpeed report', token })}'
+    return { "status_code": 200, "body": JSON.stringify ({ "ok": true, "pages": results.length })
+}
+      "statusCode": 200,"body": JSON && JSON.stringify({ "ok": true, "pages": results && results.length }
+} catch (e) {return { "status_code": 500, "body": JSON.stringify ({ "error": e.message }) }
+  
+} catch (e) {return { "status_code": 500, "body": JSON.stringify ({ "error": e.message }) }
+ 
+}ursor/expand-services-advertise-and-build-project-4b36;
+      "statusCode": 200,"body": JSON && JSON.stringify({ "ok": true, "pages": results && results.length })
+} catch (e) {return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }}
+}async function psi() {const endpoint = new URL('"https": //www && www.googleapis.com/pagespeedonline/v5/runPagespeed'),endpoint && endpoint.searchParams.set('url', url),endpoint && endpoint.searchParams.set('strategy', strategy),if (key) endpoint && endpoint.searchParams.set('key', key),const resp = await fetch(endpoint && endpoint.toString()),if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`),return resp && resp.json()}`exports && exports.handler = async function() {try {const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',const key = process && process.env.PSI_API_KEY || '',const pages = ['//learn/dao/certifications'],const { upsertFile } = require('./_lib/github')async function psi() {const endpoint = new URL('"https": //www.googleapis.com/pagespeedonline/v5/runPagespeed')endpoint.searchParams.set('url', url)endpoint.searchParams.set('strategy', strategy)if (key) endpoint.searchParams.set('key', key)const resp = await fetch(endpoint.toString())if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`);`  return resp.json()}
+exports && exports.handler = async function() {try {const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',const key = process && process.env.PSI_API_KEY || '';'
+  }
+  const pages = ['//learn/dao/certifications'],ursor/expand-services-advertise-and-build-project-4b36;'
+
+const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';'
+
+const key = process.env.PSI_API_KEY |'';'
+
+const pages = ['//learn/dao/certifications'];'
+
+    for (const p of pages) {const url = `${baseUrl}${p}`;`      try {},try {const mobile = await psi(url, 'mobile', key);'
+  }
+  const desktop = await psi(url, 'desktop', key),results && results.push({ url, mobile, desktop })try {ursor/expand-services-advertise-and-build-project-4b36;'
+
+}
+
+const mobile = await psi(url, 'mobile', key),const desktop = await psi(url, 'desktop', key),results && results.push({ url, mobile, desktop })const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',const key = process.env.PSI_API_KEY || '';'
+
+    for (const p of pages) {const url = `${baseUrl}${p}`;`      try {const mobile = await psi(url, 'mobile', key)const desktop = await psi(url, 'desktop', key)results.push({ url, mobile, desktop })} catch (e) {results && results.push({ url, "error": e && e.message || String(e) },'
+}
+   ;
+}
+
+const owner = process && process.env.GITHUB_OWNER,const repo = process && process.env.GITHUB_REPO,const token = process && process.env.GITHUB_TOKEN,const content = JSON.stringify({ "updatedAt": Date.now(), results }, null, 2)if (owner && repo && token) {await upsertFile({ owner, repo, "path": 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, "message": 'chore(automation): weekly PageSpeed report', token })}'
+    return { "statusCode": 200, "body": JSON && JSON.stringify({ "ok": true, "pages": results && results.length })
+}if (owner && repo && token) {await upsertFile({ owner, repo, "path": 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, "message": 'chore(automation): weekly PageSpeed report', token });'
+  return { "statusCode": 200, "body": JSON && JSON.stringify({ "ok": true, "pages": results && results.length })
+}ursor/expand-services-advertise-and-build-project-4b36;
+  } catch (e) {return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }
+  }
+}
+
+},return { "statusCode": 200, "body": JSON.stringify({ "ok": true, "pages": results.length }) }
+ 
+} catch (e) {return { "statusCode": 500, "body": JSON.stringify({ "error": e.message }) }
+  }
+}
+exports.handler = async function () {
+  }
+  try {
+}
+const base_url = process.env.URL || process.env.DEPLOY_URL || '',;'
+const key = process.env.PSI_API_KEY || '',;'
+    const pages = ['//learn / dao / certifications'],'
+const results = [],;
+    for (const p of pages) {
+}
+const url = `${base_url}${p}`,;`      try {
+}
+const mobile = await psi (url, 'mobile', key),;'
+       ;
+const desktop = await psi (url, 'desktop', key),;'
+        results.push ({ url, mobile, desktop });
+      } catch (e) {
+        }
+        results.push ({ url, "error": e.message || String (e)
+});
+      }
+    }
+
+const owner = process.env.GITHUB_OWNER,;
+const repo = process.env.GITHUB_REPO,;
+const token = process.env.GITHUB_TOKEN,;
+   ;
+  const content = JSON.stringify ({ "updated_at": Date.now (), results }, null, 2),
+    // Check condition,
+if ( {) {
+  $2
+}
+      await upsert_file ({ owner, repo, "path": 'data / reports / performance / weekly - pagespeed.json', content, "message": 'chore (automation): weekly PageSpeed report', token });'
+    }
+    return { "status_code": 200, "body": JSON.stringify ({ "ok": true, "pages": results.length }) }
+ 
+} catch (e) {
+    }
+    return { "status_code": 500, "body": JSON.stringify ({ "error": e.message }) }
+ 
+}
+      "statusCode": 200,
+      "body": JSON && JSON.stringify({ "ok": true, "pages": results && results.length })
+   
+};
+  } catch (e) {
+    }
+    return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message })
+};
+  }
+};async function psi() {'
+}
+const endpoint = new URL('"https": //www && www.googleapis.com/pagespeedonline/v5/runPagespeed'),;'
+  endpoint && endpoint.searchParams.set('url', url),'
+  endpoint && endpoint.searchParams.set('strategy', strategy),'
+=======
     const pages = ['//learn/dao/certifications']
   }'
 };async function psi(url, strategy = 'mobile', key) {''
   const endpoint = new URL('https: //www && www.googleapis.com/pagespeedonline/v5/runPagespeed'),''
   endpoint && endpoint.searchParams.set('url', url),''
   endpoint && endpoint.searchParams.set('strategy', strategy),''
+>>>>>>> origin/chore/fix-lint-and-merge
   if (key) endpoint && endpoint.searchParams.set('key', key),'
   const resp = await fetch(endpoint && endpoint.toString()),
 
@@ -275,6 +433,20 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 exports && exports.handler = async function() {
   try {
+<<<<<<< HEAD
+}
+const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',;'
+const key = process && process.env.PSI_API_KEY || '',;'
+    const pages = ['//learn/dao/certifications'],'
+    const pages = ['//learn/dao/certifications']'
+    for (const p of pages) {
+}
+const url = `${baseUrl}${p}`;`
+      try {
+}
+const mobile = await psi(url, 'mobile', key),;'
+const desktop = await psi(url, 'desktop', key),;'
+=======
 
   // TODO: Implement
 }'
@@ -292,6 +464,7 @@ ursor/expand-services-advertise-and-build-project-4b36
         const mobile = await psi(url, 'mobile', key),
 
         const desktop = await psi(url, 'desktop', key),
+>>>>>>> origin/chore/fix-lint-and-merge
         results && results.push({ url, mobile, desktop })
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
     const key = process.env.PSI_API_KEY || '',

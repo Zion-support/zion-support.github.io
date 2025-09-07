@@ -109,8 +109,14 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
     setTimeout(() => {}
       document.body.removeChild(link),
       URL.revokeObjectURL(url)
+<<<<<<< HEAD
+    }, 100)import { Button } from "@/components/ui/button";"
+import type { QuoteRequest } from "@/types/quotes",;"
+;
+=======
 
 import type { QuoteRequest } from "@/types/quotes",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ExportToCSVProps {;
   quotes: QuoteRequest[],;
   filename?: string;

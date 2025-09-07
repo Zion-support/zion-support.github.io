@@ -100,6 +100,13 @@ export const focusElement = (element = document.getElementById(elementId)if (ele
 };
 }
 
+<<<<<<< HEAD
+export const announceToScreenReader = (message) => {;
+  }
+
+export const skipToContent = () => {;
+  }
+=======
 export const announceToScreenReader = (;) => {
   return $3;}
 }
@@ -109,6 +116,7 @@ export const skipToContent = (;) => {
   return $3;}
 }
   const mainContent = document.querySelector('main') || document.querySelector('#main')if (mainContent) { mainContent.focus()mainContent.scrollIntoView()};
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export default function Accessibility() {return (<div    />;

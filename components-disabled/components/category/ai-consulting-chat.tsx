@@ -7,6 +7,15 @@ const AiConsultingChat: NextPage = () => ;
   return (<div />;
       <Head />;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>AiConsultingChat - Zion Tech Solutions</title>;
+        <meta name = "description" content="AiConsultingChat blog post" />{" "}"
+;
+  return (<div>;
+      <Head></Head>;<meta name="description" content="AiConsultingChat blog post" />;"
+=======
 const AiConsultingChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -16,6 +25,7 @@ const AiConsultingChat: NextPage = () => ;
   const AiConsultingChat: NextPage = () => ;
   return (<div />;
       <Head /></Head>;<meta name=\"description\" content=\"AiConsultingChat blog post\" />;
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       </Head>;<meta name=\"description\" content=\"AiConsultingChat blog post\" />;
       </Head>;
@@ -36,11 +46,17 @@ const AiConsultingChat: NextPage = () => {
       <Head />;
         <title />AiConsultingChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+
+}
+return (;
+=======
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const AiConsultingChat: NextPage = () => {
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <div>
 </div>
       <Head>
@@ -50,6 +66,8 @@ const AiConsultingChat: NextPage = () => {
 
         <title>AiConsultingChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+=======
 const AiConsultingChat: NextPage = () => {
   return (
     <div />
@@ -57,6 +75,7 @@ const AiConsultingChat: NextPage = () => {
 
       </Head>;
 
+>>>>>>> origin/chore/fix-lint-and-merge
       <main>
         <h1>AiConsultingChat</h1>
         <p>Blog content coming soon...</p>
@@ -94,11 +113,18 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title > AiConsultingChat - Zion Tech Solutions</title>;
+        <meta name="description" content="AiConsultingChat blog post" />{" "}"
+=======
 const AiConsultingChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> AiConsultingChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"AiConsultingChat blog post\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1  /> AiConsultingChat</h1>;
@@ -122,11 +148,18 @@ export default AiConsultingChat;<div />;
     </div>;
   )},export default AiConsultingChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>AiConsultingChat - Zion Tech Solutions</title>;
+        <meta name="description" content="AiConsultingChat blog post" />{" "}"
+=======
 const AiConsultingChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />AiConsultingChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"AiConsultingChat blog post\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1 />AiConsultingChat</h1>;
@@ -142,7 +175,10 @@ export default AiConsultingChat;<title />AiConsultingChat - Zion Tech Solutions<
 };
 
 export default AiConsultingChat;
+<<<<<<< HEAD
+=======
 const AiConsultingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -164,7 +200,10 @@ export default AiConsultingChat;
         <title />AiConsultingChat - Zion Tech Solutions</title>
         <title />AiConsultingChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const AiConsultingChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />

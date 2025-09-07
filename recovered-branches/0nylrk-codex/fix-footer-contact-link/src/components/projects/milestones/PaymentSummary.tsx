@@ -108,22 +108,34 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({}
 '
 import React from 'react',;'
 import { Milestone } from '@/hooks/useMilestones',;'
+<<<<<<< HEAD
+=======
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;'
 import { CreditCard } from 'lucide-react',;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface PaymentSummaryProps {;
   milestones:Milestone[],;
   paymentTerms:string | null;
 }
 ;
+<<<<<<< HEAD
+export const "PaymentSummary":React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {;
+  }
+=======
 export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {;
   const totalPayment = milestones.reduce(;
+>>>>>>> origin/chore/fix-lint-and-merge
     (sum, m) => sum + parseFloat(m.amount.toString()), ;
     0;
   ).toFixed(2),;
   ;
+<<<<<<< HEAD
+    .filter(m => { return m.status === 'paid'); }'
+=======
   const paidAmount = milestones;'
     .filter(m => m.status === 'paid');
+>>>>>>> origin/chore/fix-lint-and-merge
     .reduce(;
       (sum, m) => sum + parseFloat(m.amount.toString()), ;
       0;

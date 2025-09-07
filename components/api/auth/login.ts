@@ -1,12 +1,32 @@
+<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import {
+  }
+  createSessionCookie,
 
+=======
+
+>>>>>>> origin/main
 import {
   createSessionCookie,}
   validateCredentials,;}
 } from '../../../utils/auth-utils';
+<<<<<<< HEAD
+export default function handler(req: NextApiRequest,,,
+  res: NextApiResponse) {
+  if (req && req.method !== 'POST') {}
+    return res && res.status(405).json({ error: 'Method not allowed',
+  },,
+  });
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 
     return res && res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/main
   }
   }
 
@@ -24,6 +44,7 @@ if ( {) {}
   $2;
 }'
     return res.status (400).json ({ error: 'Missing credentials' });
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   const result = validate_credentials (email, password, code);
   // Check condition;
@@ -44,12 +65,22 @@ if ( {) {}
 
 const cookie = createSessionCookie({
     email,
+<<<<<<< HEAD
+
+=======
     role: result.role,}
-    twofaVerified: true,}
+    twofaVerified: true,
+  },,
   });
-  res.setHeader('Set-Cookie', cookie);
-  return res.status(200).json({ ok: true,}
-});
+  res.setHeader('Set-Cookie',,,
+  cookie);
+  return res.status(200).json({ ok: true,
+  },,
+  });
   return res.status(200).json({ ok: true }),
 }
+<<<<<<< HEAD
+=======
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main

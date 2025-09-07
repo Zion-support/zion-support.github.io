@@ -8,11 +8,18 @@ const SystemAdministrationChat: NextPage = () => ;
 
 ;
 
+<<<<<<< HEAD
+  return (<div>;
+import type { NextPage } from "next";"
+import Head from "next/head";"
+import Link from "next/link";"
+=======
 const SystemAdministrationChat: NextPage = () => ;
   return (<div />;
 import type { NextPage } from \"next\";
 import Head from \"next/head\";
 import Link from \"next/link\";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const SystemAdministrationChat: NextPage = () => {;
   return (
@@ -92,6 +99,14 @@ name=\"description\"}
 
 export default SystemAdministrationChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+=======
 const SystemAdministrationChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -99,6 +114,7 @@ const SystemAdministrationChat: NextPage = () => ;
         <title />SystemAdministrationChat - Zion Tech Solutions</title>;
         <title />SystemAdministrationChat - Zion Tech Solutions</title>;
         <title />SystemAdministrationChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/fix-website-loading-errors-and-merge-6662;
   );
 }
@@ -107,7 +123,11 @@ ursor/fix-website-loading-errors-and-merge-6662;
 export default SystemAdministrationChat;
 
 
+<<<<<<< HEAD
+const "SystemAdministrationChat": NextPage = () => {
+=======
 const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -120,6 +140,14 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+}
+return (;
+    <div>;
+      <Head>;
+        <title > SystemAdministrationChat - Zion Tech Solutions</title>;
+=======
 const SystemAdministrationChat: NextPage = () => ;
   return (<div />;
 const SystemAdministrationChat: NextPage = () => {
@@ -127,6 +155,7 @@ const SystemAdministrationChat: NextPage = () => {
     <div />;
       <Head />;
         <title  /> SystemAdministrationChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";}
           content=\"SystemAdministrationChat blog post\";}
@@ -154,10 +183,16 @@ export default SystemAdministrationChat;<div />;
     </div>;
   )},export default SystemAdministrationChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>SystemAdministrationChat - Zion Tech Solutions</title>;
+=======
 const SystemAdministrationChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />SystemAdministrationChat - Zion Tech Solutions</title>;
+>>>>>>> origin/chore/fix-lint-and-merge
         <meta;
           name=\"description\";
           content=\"SystemAdministrationChat blog post\";
@@ -181,7 +216,10 @@ export default SystemAdministrationChat;<title />SystemAdministrationChat - Zion
 
 ;
 export default SystemAdministrationChat;
+<<<<<<< HEAD
+=======
 const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -203,7 +241,10 @@ name=\"description\"}
 
 export default SystemAdministrationChat;
 export default SystemAdministrationChat;
+<<<<<<< HEAD
+=======
 const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -228,7 +269,10 @@ export default SystemAdministrationChat;
         <title />SystemAdministrationChat - Zion Tech Solutions</title>
         <title />SystemAdministrationChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const SystemAdministrationChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />

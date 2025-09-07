@@ -48,6 +48,26 @@ export function LazyLoad(): any ({;interface LazyLoadProps {
   children: ReactNode,
   loadingComponent?: ReactNode,  className?: string
 }
+<<<<<<< HEAD
+export function LazyLoad() {
+  }
+  const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  height = "200px","
+  width = "100%","
+  children,
+  loadingComponent,
+  className}: LazyLoadProps) {
+}
+const [isVisible, setIsVisible] = useState(false),;
+const [isLoaded, setIsLoaded] = useState(false),;
+const containerRef = useRef<HTMLDivElement>(null),;
+        "threshold": 0.1}
+    );
+import { useEffect, useState, useRef, ReactNode } from "react";"
+import { Skeleton } from "@/components/ui/skeleton",;"
+=======
 
 export function LazyLoad({
 
@@ -73,6 +93,7 @@ import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 
 import { Skeleton } from "@/components/ui/skeleton",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface LazyLoadProps {;
   height?: string | number,;
   width?: string | number,;
@@ -81,10 +102,17 @@ interface LazyLoadProps {;
   className?: string;
 }
 ;
+<<<<<<< HEAD
+export function LazyLoad() {;
+  }
+import { useEffect, useState, useRef, ReactNode } from "react",;"
+import { cn } from "@/lib/utils",;"
+=======
 
 import { useEffect, useState, useRef, ReactNode } from "react",;
 import { cn } from "@/lib/utils",;
 import { Skeleton } from "@/components/ui/skeleton",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface LazyLoadProps {;
   height?:string | number,;
@@ -94,6 +122,10 @@ interface LazyLoadProps {;
   className?:string;
 }
 ;
+<<<<<<< HEAD
+export function LazyLoad() {;
+  }
+=======
 export function LazyLoad({;
   height = "200px",;
   width = "100%",;
@@ -103,6 +135,7 @@ export function LazyLoad({;
   const [isVisible, setIsVisible] = useState(false),;
   const [isLoaded, setIsLoaded] = useState(false),;
   const containerRef = useRef<HTMLDivElement>(null),;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 
   useEffect(() => {;

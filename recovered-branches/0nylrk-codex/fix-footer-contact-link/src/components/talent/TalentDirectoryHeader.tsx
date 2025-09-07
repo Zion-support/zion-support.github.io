@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React from "react";
 
   title: string;
@@ -77,6 +80,7 @@ interface TalentDirectoryHeaderProps {;
 ;
 export function TalentDirectoryHeader() { return null; }
         <p className="text-zion-slate-light max-w-2xl">{description}</p>
+>>>>>>> origin/chore/fix-lint-and-merge
       </div>
     </div>
   );
@@ -93,6 +97,9 @@ interface TalentDirectoryHeaderProps {;
   title: string,
   description: string;
 }
+<<<<<<< HEAD
+
+=======
 ;
 export function TalentDirectoryHeader() { return null; }
           {title}
@@ -123,3 +130,4 @@ export function TalentDirectoryHeader() { return null; }
 }
 ;
 }
+>>>>>>> origin/chore/fix-lint-and-merge

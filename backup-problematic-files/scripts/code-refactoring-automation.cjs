@@ -1,21 +1,27 @@
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 console.log(' Starting Code Refactoring Automation...')
-    "file"
-    "issues"
-    "file"
-    "issues"
-    "file"
-    "issues"
-    "file"
-    "issues"
+    "file
+    issues"
+    "file
+    issues"
+    "file
+    issues"
+    "file
+    issues"
   const serviceCardComponent = "
-      "duplicateCodeFiles"
+      duplicateCodeFiles
       "recommendations"
-    "extractedComponents"
+    extractedComponents
     "nextSteps"
   console.log('� Next "steps")
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -29,3 +35,4 @@ console.log(' Starting Code Refactoring Automation...')
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

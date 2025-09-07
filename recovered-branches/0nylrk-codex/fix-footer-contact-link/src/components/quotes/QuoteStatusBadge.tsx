@@ -19,9 +19,15 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
   )
 
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
+<<<<<<< HEAD
+  }
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
+  }
+=======
 
   const config = statusConfig[status];
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {};
+>>>>>>> origin/chore/fix-lint-and-merge
   const config = status_config[status];
 ;
   return (

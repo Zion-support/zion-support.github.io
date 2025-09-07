@@ -68,11 +68,18 @@ function handler() {}
     ua: req.headers['user - agent'] || '',
   }'
   const list: any[] = JSON.parse (fs.readFileSync (FILE_PATH, 'utf8'));
+<<<<<<< HEAD
+  list.push (entry);
+  fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8');
+  res.status (200).json ({ ok: true });  const entry = { url, title, network, utm, ts: new Date ().toISOString (), ua: req.headers['user - agent'] || '' }
+  list.push (entry);
+=======
   list.push (entry);'
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8');'
   res.status (200).json ({ ok: true });  const entry = { url, title, network, utm, ts: new Date ().toISOString (), ua: req.headers['user - agent'] || '' }'
   const list: any[] = JSON.parse (fs.readFileSync (FILE_PATH, 'utf8'));
   list.push (entry);'
+>>>>>>> origin/chore/fix-lint-and-merge
   fs.writeFileSync (FILE_PATH, JSON.stringify (list, null, 2), 'utf8');
   res.status (200).json ({ ok: true });
 

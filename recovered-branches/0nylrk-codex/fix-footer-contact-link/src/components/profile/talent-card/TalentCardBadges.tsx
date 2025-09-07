@@ -12,10 +12,14 @@ interface TalentCardBadgesProps {
     </div>
 
 }
+<<<<<<< HEAD
+import { Award } from "lucide-react",;"
+=======
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;
 import { Award } from "lucide-react",;
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface TalentCardBadgesProps {;
   featured: boolean | undefined;
 
@@ -46,6 +50,14 @@ export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
       </Badge>;
     </div>);
 }
+<<<<<<< HEAD
+import { Badge } from "@/components/ui/badge",;"
+interface TalentCardBadgesProps {;
+  }
+  "featured": boolean | undefined;
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   )
 

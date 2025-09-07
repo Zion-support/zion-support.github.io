@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+
+#!/usr/bin/env node;
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -18,6 +23,7 @@ const { execSync } = require("child_process")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       fs.mkdirSync(this.reportsDir, { "recursive"})
     this.log(" Analyzing bundle size...")
     const buildDir = path.join(this.projectRoot, ".next")
@@ -48,10 +54,16 @@ const { execSync } = require("child_process")
     const srcDir = path.join(this.projectRoot, "src")
     const pagesDir = path.join(this.projectRoot, "pages")
     const analysis = {"dynamicImports": 0,"lazyComponents": 0,"largeComponents"}
+<<<<<<< HEAD
+const codeExtensions = [".js", ".jsx", ".ts", ".tsx"];
+const content = fs.readFileSync(filePath, "utf8");
+const lines = content.split("\n");
+=======
     const files = fs.readdirSync(dir, { "withFileTypes"})
     const codeExtensions = [".js", ".jsx", ".ts", ".tsx"]
       const content = fs.readFileSync(filePath, "utf8")
       const lines = content.split("\n")
+>>>>>>> origin/chore/fix-lint-and-merge
       if (lines > 150 && content.includes("export default") && content.includes("function") || content.includes("const") && content.includes("=")
         analysis.largeComponents.push({"file": path.relative(this.projectRoot, filePath),"lines"}
       if (content.includes("import") && content.includes("from") && !content.includes("import(")
@@ -74,6 +86,27 @@ const { execSync } = require("child_process")
     this.log(" Starting Performance Optimizer")
     const results = {"timestamp"}
     const reportFile = path.join(this.reportsDir, "performance-optimization-report.json")
+<<<<<<< HEAD
+
+
+    this.log(` Performance optimization report "generated`)
+// console.log(\n� Performance Analysis "Summary": )
+    console.log(`�  Total images"`)
+// console.log(`� Dynamic "imports`)
+    console.log(`⚡ Lazy components"`)
+    console.log(` Optimization "recommendations`)
+    const highPriority = recommendations.filter(r => r.priority === high")
+
+
+      console.log("\n� High Priority Optimizations)
+
+      console.log("\n� High Priority "Optimizations)
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      console.log(\n� High Priority "Optimizations")
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -103,6 +136,7 @@ const { execSync } = require("child_process")
 =======
       console.log("\n� High Priority "Optimizations")
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

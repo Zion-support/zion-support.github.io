@@ -119,7 +119,23 @@ interface ApplicationProgressProps {;
   className?: string;
 }
 ;
+<<<<<<< HEAD
+export function ApplicationProgress() {;
+  // Define the progress value based on status;
+  }
+    }
+    switch (status) {;
+      }
+      case "new": return 20,;"
+      case "viewed": return 40,;"
+      case "shortlisted": return 60,;"
+      case "interview": return 80,;"
+      case "hired": return 100,;"
+      case "rejected": return 100,;"
+      "default": return 0;
+=======
 export function ApplicationProgress() { return null; }
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   },;
   const progressValue = getProgressValue(),;

@@ -1,5 +1,12 @@
 <<<<<<< HEAD
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
+#!/usr/bin/env node
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -57,9 +64,20 @@ function fixFile(filePath) {
       return false;
     }
 <<<<<<< HEAD
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove all merge conflict markers
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/\n?/g, '');
+    content = content.replace(/    
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     let content = fs.readFileSync(filePath, 'utf8');
+>>>>>>> origin/chore/fix-lint-and-merge
     // Remove all merge conflict markers
 
     content = content.replace(/\n?/g, '');

@@ -7,6 +7,10 @@ import {
 
   DialogHeader;
   DialogTitle;
+<<<<<<< HEAD
+  DialogDescription;import React, { useState } from 'react','
+  }
+=======
 
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -21,6 +25,7 @@ import React, { useState } from 'react',
 
 import {
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,
   DialogContent,
   DialogHeader,
@@ -110,6 +115,17 @@ pr-12325
   const { createConversation } = useMessaging();
 
   const navigate = useNavigate();
+<<<<<<< HEAD
+  const navigate = useNavigate(),  const handleSendMessage = async () => {
+    }
+    if (!message.trim()) {
+      }
+      toast({
+        }
+        "title": "title","
+    "description": "Please enter a message before sending.""
+        "variant": "destructive"      });"
+=======
   const { createConversation } = useMessaging(),
   const navigate = useNavigate(),
 
@@ -139,6 +155,7 @@ pr-12325
   const handleSendMessage = async () => {;
     if (!message && message.trim()) {;
 
+>>>>>>> origin/chore/fix-lint-and-merge
       return;
     }
 
@@ -178,10 +195,36 @@ function MessageTalentModal() {}
     }
 
       setIsSubmitting(true),
+<<<<<<< HEAD
+      // Create context data for the conversation,
+const contextData = {
+        }
+        "title": jobTitle || `Discussion with ${talent.full_name}`,`        "description": talent.bio || talent.professional_title || "","
+        "image_url": talent.profile_picture_url || "";"
+      }
+;
+      // Create conversation with this talent;
+      await create_conversation (
+  jobTitle
+}: MessageTalentModalProps) {
+  const { createConversation } = useMessaging($2);
+  const navigate = useNavigate($2);
+  const [message, setMessage] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+    if (!message.trim()) {
+      toast($2);
+      return
+    }
+    try {
+      setIsSubmitting($2);
+      // Create context data for the conversation
+      const contextData = $2;
+=======
       
       // Create context data for the conversation;
       const contextData = {}`
         title: jobTitle || `Discussion with ${talent.full_name}`,"
+>>>>>>> origin/chore/fix-lint-and-merge
         description: talent.bio || talent.professional_title || "",
 
 "

@@ -49,6 +49,10 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           type="text"
           placeholder="Search talents..."
           value={searchTerm}
+<<<<<<< HEAD
+export function SearchFilter() {;
+  }
+=======
 
           onChange={(e) => setSearchTerm(e.target.value)}
 
@@ -61,6 +65,7 @@ import { Input } from "@/components/ui/input",;
 import { SearchIcon } from "lucide-react",;
 import { SearchFilterProps } from "@/types/filters";
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {;
+>>>>>>> origin/chore/fix-lint-and-merge
   return (;
     <div className="mb-6">;
       <div className="relative">;

@@ -28,6 +28,46 @@ interface BrowseItem {}
   price?: string;
   image?: string;
   match?: number;
+<<<<<<< HEAD
+  },
+return (;
+    <div className="space-y-4 pb-24">;"
+      {items && items.map((item) => (;
+        <Card key={item && item.id} className="overflow-hidden">;"
+          <CardContent className="p-0">;"
+            <div className="p-4">;"
+              <div className="flex justify-between">;"
+                <div className="flex items-center gap-3">;"
+                  {type === "talents" ? (;"
+                    <Avatar className="h-12 w-12">;"
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;"
+                      <span className="text-primary font-semibold">JOB</span>;"
+                    </div>;
+                  )}
+
+                  <div>;
+                    <h3 className="font-medium">{item && item.title}</h3>;"
+                    <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;"
+                  </div>;
+                </div>;
+import { Card, CardContent } from "@/components/ui/card";"
+import { Button } from "@/components/ui/button",;"
+import { Badge } from "@/components/ui/badge",;"
+import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react",;"
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;"
+interface BrowseItem {;
+  }
+  "id": string,;
+  "title": string,;
+  "subtitle": string,,
+  "description": string,;
+  location?: string,;
+  "badges": string[],;
+  price?: string,;
+  image?: string,;
+  match?: number,;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   timePosted?: string;
 }
 

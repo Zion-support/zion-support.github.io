@@ -49,6 +49,13 @@ interface ApplyFormProps {
 
   onApplySuccess?: (jobId: string) => Promise<void>
 }
+<<<<<<< HEAD
+interface ApplyFormProps {
+  }
+  "job": Job,
+"onClose": () => void,
+onApplySuccess?: ("jobId": string) => Promise<void>
+=======
 
 interface ApplyFormProps {
 
@@ -102,6 +109,7 @@ interface ApplyFormProps {};
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>
 
+>>>>>>> origin/chore/fix-lint-and-merge
 }interface ApplyFormProps {;
 
   job: Job,;
@@ -114,6 +122,49 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 export function ApplyForm() { return null; }
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
+<<<<<<< HEAD
+export function ApplyForm() {
+}
+const { createConversation } = useMessaging(),;
+const { applyToJob } = useJobApplications(),;
+const [message, setMessage] = useState(;
+    `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`  const { createConversation } = useMessaging();`  const { applyToJob } = useJobApplications();
+    `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;`  );
+  const [proposalLink, setProposalLink] = useState('');'
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [activeTab, setActiveTab] = useState<string>("message");"
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
+interface ApplyFormProps {
+}
+const [proposalLink, setProposalLink] = useState(''),;'
+const [isSubmitting, setIsSubmitting] = useState(false),;
+const [activeTab, setActiveTab] = useState<string>("message"),;"
+const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),;
+const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null),;
+  const handleResumeSelected = ("resume": ResumeOption) => {
+    }
+    setSelectedResume(resume)
+    setSelectedResumeId(resume.id)
+  const handleApply = async () => {
+    }
+    if (!message.trim()) {
+      }
+      toast({
+        }
+        "title": "title","
+    "description": "Please enter a message before applying.""
+"variant": "destructive";"
+      }),
+return;
+    }
+    try {
+  const handleResumeSelected = (resume: ResumeOption) => {
+    setSelectedResume($2);
+    setSelectedResumeId(resume.id)
+  },
+  
+=======
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {}
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
@@ -136,6 +187,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {}
   const [selectedResumeId, setSelectedResumeId] = useState<string | null>(null);
 
   const handleApply = async () => {
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!message.trim()) {
       toast({
         title: "Message required"
@@ -300,6 +352,16 @@ export function ApplyForm() { return null; }
 ;
 
       // Create context data for the conversation;
+<<<<<<< HEAD
+        }
+        "title": job.title,,
+  "description": job.description,;
+        "attachedResume": selectedResume ? {;
+          }
+          "id": selectedResume.id,;
+          "title": selectedResume.title,;
+          "type": selectedResume.type;
+=======
       const contextData = {;
         title: job.title,;
         description: job.description,;
@@ -307,6 +369,7 @@ export function ApplyForm() { return null; }
           id: selectedResume.id,;
           title: selectedResume.title,;
           type: selectedResume.type;
+>>>>>>> origin/chore/fix-lint-and-merge
         } : null;
       },;
       // Create conversation with the job client;
@@ -394,9 +457,28 @@ export function ApplyForm() { return null; }
             Resume;
           </TabsTrigger>;
         </TabsList>;
+<<<<<<< HEAD
+        <TabsContent value="message">;"
+import { Button } from '@/components / ui / button';'
+import { Loader2 } from './lucide-react';'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';'
+import { useJobApplications } from '@/hooks / useJobApplications';'
+import { use_messaging } from '@/context / MessagingContext';'
+import { toast } from '@/hooks / use - toast';'
+import { ResumeSelector, ResumeOption } from '../resume - selector';'
+import { MessageTab } from './MessageTab';'
+import { ResumeTab } from './ResumeTab';'
+import { Job } from './types';'
+interface ApplyFormProps {
+  }
+  "job": Job,
+  "on_close": () => void,
+  onApplySuccess?: ("job_id": string) => Promise < void>;
+=======
 
         <TabsContent value="message">;
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
 }
   job: Job;,
   onClose: () => void;
@@ -677,5 +759,35 @@ if ( {) {}
         </Button>;
       </div>;
     </>);
+<<<<<<< HEAD
+}  ),; interface ApplyFormProps {
+  }
+  "job": Job;
+"onClose": () => void;
+onApplySuccess?: ("jobId": string) => Promise<void>
+}export function ApplyForm() {
+  }
+  const {
+  }
+  createConversation
+}= useMessaging ();
+  }
+  applyToJob
+}= useJobApplications ();
+const [message, setMessage] = useState ();
+const [proposalLink, setProposalLink] = useState ('');'
+const [isSubmitting, setIsSubmitting] = useState (false);
+const [activeTab, setActiveTab] = useState<string> ("message");"
+const [selectedResume, setSelectedResume] = useState<ResumeOption | null> (null);
+const [selectedResumeId, setSelectedResumeId] = useState<string | null> (null);
+  if (!message.trim () ) {
+  }
+  toast ({
+  }
+  return;
+}
+;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   ),; interface ApplyFormProps {

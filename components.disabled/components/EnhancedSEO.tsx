@@ -103,4 +103,10 @@ const EnhancedSEO: React.FC<SEOProps> = ({
 };
 
 export default EnhancedSEO;
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/chore/fix-lint-and-merge

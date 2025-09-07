@@ -58,6 +58,18 @@ describe('/api/admin/generate-pitch-deck API Endpoint', () => {
 
     await handler(req, res);
 
+<<<<<<< HEAD
+      "method": 'POST' as RequestMethod,'
+      "headers": { "Authorization": 'Bearer valid-token','
+},
+      "body": {"
+        }
+        "prompt": mockPrompt,
+        "inputData": mockInputData,"
+        "syncedData": mockSyncedData}});"
+    await handler(req as NextApiRequest, res as NextApiResponse);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     expect(res._getStatusCode()).toBe(200);
   });
 });

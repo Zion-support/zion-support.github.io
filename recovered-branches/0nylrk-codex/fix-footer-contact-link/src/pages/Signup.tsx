@@ -92,6 +92,12 @@ const signupSchema = z;
     message: "Passwords do not match",;
     path: ["confirmPassword"]}),;
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+<<<<<<< HEAD
+  // Redirect if user is already logged in and has completed profile,
+if (isAuthenticated && user?.profileComplete) {
+}
+return <Navigate to="/" />;"
+=======
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -129,6 +135,7 @@ type SignupFormValues = z && z.infer<typeof signupSchema>;
   if (isAuthenticated && user?.profileComplete) {
 
     return <Navigate to="/" />
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   // Redirect to onboarding if user is authenticated but hasn't completed profile;
   if (isAuthenticated && !user?.profileComplete) {"
@@ -186,11 +193,19 @@ import {;
 import { Header } from "@/components/Header",;"
 import { Footer } from "@/components/Footer",;
 // Form validation schema;
+<<<<<<< HEAD
+  .object({;
+    }
+    "displayName": z.string().min(2, "Name must be at least 2 characters"),;"
+    "email": z.string().email("Please enter a valid email"),;"
+    "password": z.string();
+=======
 const signupSchema = z;
   .object({;"
     displayName: z.string().min(2, "Name must be at least 2 characters"),;"
     email: z.string().email("Please enter a valid email"),;
     password: z.string();"
+>>>>>>> origin/chore/fix-lint-and-merge
       .min(8, "Password must be at least 8 characters");"
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter");"
       .regex(/[a-z]/, "Password must contain at least one lowercase letter");"

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -6,6 +9,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -14,6 +18,9 @@
  * Content Generator Script;
  * Generates meaningful content for placeholder pages;
  */
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 const fs = require("child_process")
 const path = require("path")
@@ -32,10 +39,18 @@ const path = require("path")
       console.error(" Error generating "content": ")
     console.log(" Generating service page content...")
       "ai-services": {"title": "AI Services","description": "Comprehensive AI solutions for modern businesses"}
+>>>>>>> origin/chore/fix-lint-and-merge
         content: "
-        "
-      "it-services": {"title": "IT Services","description": "Complete IT solutions for digital transformation"}
+        
+      it-services": {"title: IT Services","description: Complete IT solutions for digital transformation"}
         content: "
+<<<<<<< HEAD
+
+        
+    console.log( Generating solution page content...")
+      "enterprise: {title": "Enterprise Solutions,description": "Scalable solutions for large organizations}
+        content: 
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -43,11 +58,19 @@ const path = require("path")
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         "
-    console.log(" Generating solution page content...")
-      "enterprise": {"title": "Enterprise Solutions","description": "Scalable solutions for large organizations"}
-        content: "
+    console.log(" Generating landing page content...)
+      home": {"title: Zion Tech Group - Technology Solutions","description: Leading provider of AI, IT, and digital transformation services","content: }
         "
+<<<<<<< HEAD
+
+
+
+    console.log(`� Report saved "to`)
+
+    console.log(`� Report saved to"`)
+=======
     console.log(" Generating landing page content...")
       "home": {"title": "Zion Tech Group - Technology Solutions","description": "Leading provider of AI, IT, and digital transformation services","content": "}
         "
@@ -63,11 +86,16 @@ const path = require("path")
 =======
 <<<<<<< HEAD
     console.log(`� Report saved "to"`)
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
     console.log(`� Report saved "to"`)
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

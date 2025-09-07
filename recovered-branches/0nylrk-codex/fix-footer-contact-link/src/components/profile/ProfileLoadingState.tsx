@@ -10,9 +10,12 @@ export function ProfileLoadingState() {
   );
 }
 ;
+<<<<<<< HEAD
+=======
 
 import React from "react";
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export function ProfileLoadingState() {
   return (
     <div className="min-h-screen bg-zion-blue flex justify-center items-center p-4">

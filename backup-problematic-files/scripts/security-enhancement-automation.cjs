@@ -1,44 +1,53 @@
+<<<<<<< HEAD
+
+console.log('� Starting Security Enhancement Automation...)
+    "file
+    issue"
+    "severity
+    line"
+        content = content.replace(/dangerouslySetInnerHTML/g, // "SECURITY)
+    key"
+    "value
+    key"
+    "value
+    key"
+    "value
+    key"
+    "value
+    key"
+    "value
+    key"
+    "value
+    key"
+    "value: 
+=======
 
 <<<<<<< HEAD
 
 console.log('� Starting Security Enhancement Automation...')
     "file"
+>>>>>>> origin/chore/fix-lint-and-merge
     "issue"
-    "severity"
-    "line"
-        content = content.replace(/dangerouslySetInnerHTML/g, '// "SECURITY")
-    "key"
-    "value"
-    "key"
-    "value"
-    "key"
-    "value"
-    "key"
-    "value"
-    "key"
-    "value"
-    "key"
-    "value"
-    "key"
-    "value": "
+    severity
     "issue"
-    "severity"
+    severity
     "issue"
-    "severity"
+    severity
     "issue"
-    "severity"
+    severity
     "issue"
-    "severity"
-    "issue"
-    "severity"
+    severity
     "high"
-    "medium"
+    medium
     "low"
-      "securityHeaders"
+      securityHeaders
       "validationScript"
-    "recommendations"
+    recommendations
     "nextSteps"
   console.log('� Security improvements "applied")
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -52,3 +61,4 @@ console.log('� Starting Security Enhancement Automation...')
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

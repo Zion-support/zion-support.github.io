@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import { Trophy } from "lucide-react","
+import { Progress } from "@/components/ui/progress","
+import { Trophy } from "lucide-react";"
+import { Progress } from "@/components/ui/progress";"
+import {Trophy} from "lucide-react";"
+import {Progress} from "@/components/ui/progress";"
+=======
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 
@@ -11,6 +19,7 @@ import {Progress} from "@/components/ui/progress";
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ReputationDisplayProps {
 
   reputation: number
@@ -52,6 +61,9 @@ export const ReputationDisplay = ({
       icon: "w-5 h-5"
       progress: "h-3"
     }
+<<<<<<< HEAD
+import {Progress} from "@/components/ui/progress";import {Trophy} from "lucide-react";"
+=======
 
   },
 
@@ -73,13 +85,27 @@ export const ReputationDisplay = ({
 
 import {Progress} from "@/components/ui/progress";
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ReputationDisplayProps {;
   reputation: number,;'
   size?: 'sm' | 'md' | 'lg';
 }
 
     </div>;
+<<<<<<< HEAD
+size = 'md''
+}: ReputationDisplayProps) => {
+  //Calculate next milestone const currentLevel = Math.floor (reputation / 100);
+}
+const progress = ( (reputation % 100) /100) * 100;
+"sm": {
+  </div> </div>)
+};
+export default ReputationDisplay;
+  )
+=======
   );
+>>>>>>> origin/chore/fix-lint-and-merge
 };
 
 },

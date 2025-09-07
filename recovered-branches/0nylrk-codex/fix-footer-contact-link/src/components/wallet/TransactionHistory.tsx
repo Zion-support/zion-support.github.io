@@ -8,7 +8,20 @@ import React from "react";
 import { formatDistanceToNow } from "date-fns";
 export function TransactionHistory() {};
   const { transactions, loading } = useWallet();
+<<<<<<< HEAD
+import React from "react","
+import { useWallet } from "@/hooks/useWallet","
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
+import { ScrollArea } from "@/components/ui/scroll-area",import { Badge } from "@/components/ui/badge";"
+import { formatDistanceToNow } from "date-fns";"
+export function TransactionHistory() {
+  }
+  if (loading) {;
+  }
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   if (loading) {
     return (
 
@@ -133,6 +146,42 @@ export function TransactionHistory() {;
       </Card>;
     );
   }
+<<<<<<< HEAD
+import { useWallet } from "@/hooks/useWallet";"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { ScrollArea } from "@/components/ui/scroll-area",;"
+import { Badge } from "@/components/ui/badge",;"
+import { formatDistanceToNow } from "date-fns",;"
+export function TransactionHistory() {;
+  }
+  const { transactions, loading } = useWallet(),;
+  if (loading) {;
+    }
+    return (;
+      <Card>;
+        <CardHeader>;
+          <CardTitle>Transaction History</CardTitle>;
+          <CardDescription>Loading transactions...</CardDescription>;
+        </CardHeader>;
+      </Card>;    return (
+import { ScrollArea } from "@/components/ui/scroll-area",
+import { Badge } from "@/components/ui/badge";
+import { formatDistanceToNow } from "date-fns";
+export function TransactionHistory() {
+  const { transactions, loading } = useWallet($2);
+  if (loading) {
+    return (
+      <Card>
+        <CardHeader>
+          <CardTitle>Transaction History</CardTitle>
+          <CardDescription>Loading transactions...</CardDescription>
+        </CardHeader>
+      </Card>
+    )
+  }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     <Card>;
       <CardHeader>;

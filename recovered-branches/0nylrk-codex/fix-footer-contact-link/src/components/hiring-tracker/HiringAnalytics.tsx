@@ -149,12 +149,19 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
         : 0;
 
       // Funnel data;
+<<<<<<< HEAD
+        { "name": 'Applied', "value": applications.length },;'
+        { "name": 'Shortlisted', "value": applications && applications.filter(app => { return app && app.status === 'shortlisted').length },; }'
+        { "name": 'Interview', "value": applications && applications.filter(app => { return app && app.status === 'interview').length },; }'
+        { "name": 'Hired', "value": applications && applications.filter(app => { return app && app.status === 'hired').length }],; }'
+=======
       const funnelData = [;'
         { name: 'Applied', value: applications.length },;'
         { name: 'Shortlisted', value: applications && applications.filter(app => app && app.status === 'shortlisted').length },;'
         { name: 'Interview', value: applications && applications.filter(app => app && app.status === 'interview').length },;'
         { name: 'Hired', value: applications && applications.filter(app => app && app.status === 'hired').length }],;
 
+>>>>>>> origin/chore/fix-lint-and-merge
       setAnalyticsData({;
         statusDistribution;
         timeToHire: avgTimeToHire,;
@@ -190,6 +197,21 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
       </Card>
     )
   }
+<<<<<<< HEAD
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];'
+const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],;'
+  return (  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];'
+return (;
+    ),;
+  }
+  ;
+  const COLORS = ['#0088FE#00C49F', '#FFBB28#FF8042', '#8884d8'],;'
+  ;
+  return (;
+                data={analyticsData && analyticsData.statusDistribution}
+                cx="50%""
+                cy="50%""
+=======
 
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
@@ -211,6 +233,7 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
                 data={analyticsData.statusDistribution}
                 cx="50%";
                 cy="50%";
+>>>>>>> origin/chore/fix-lint-and-merge
                 labelLine={false}
                 outerRadius={80}
                 fill="#8884d8";

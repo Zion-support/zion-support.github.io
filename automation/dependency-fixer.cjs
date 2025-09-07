@@ -268,13 +268,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 "
 
+<<<<<<< HEAD
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require("fs")
 const path = require("path")
+>>>>>>> origin/chore/fix-lint-and-merge
 const { execSync } = require("child_process")
   log(message, type = "INFO")
   this.log(" Fixing package.json dependencies...")
-  const packageJsonPath = path.join(this.projectRoot, "package.json")
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
       if (packageJson.dependencies.react === "^17.0.2")
   packageJson.dependencies.react = "^18.3.1"

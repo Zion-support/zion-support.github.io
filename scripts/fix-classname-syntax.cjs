@@ -187,6 +187,8 @@ const glob = require('glob')
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
       const fixedQuoted = quoted.replace(/"([a-z]+)"
 
+<<<<<<< HEAD
+=======
       const fixedQuoted = quoted.replace(/"([a-z]+)"
 <<<<<<< HEAD
 =======
@@ -198,13 +200,13 @@ const glob = require('glob')
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/fix-classname-syntax.cjs
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 
 
-      const fixedQuoted = quoted.replace(/"([a-z]+)"
 
 =======
   log(message, type = 'INFO')`;

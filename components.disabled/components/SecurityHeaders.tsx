@@ -48,4 +48,10 @@ const SecurityHeaders: React.FC = () => {
 };
 
 export default SecurityHeaders;
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/chore/fix-lint-and-merge

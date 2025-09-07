@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
@@ -93,12 +96,29 @@ import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide
 import { toast } from "@/hooks/use-toast",;
 
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
+>>>>>>> origin/chore/fix-lint-and-merge
         <CardHeader>;
           <CardTitle>Marketing Resources</CardTitle>;
           <CardDescription>;
             Download brand assets and marketing materials to promote Zion AI;
           </CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
+        <CardContent>;
+
+                  </Button>
+                </CardContent>
+              </Card>                  </Button>;
+                </CardContent>;
+
+        <CardHeader>;
+          <CardTitle>Promotion Guidelines</CardTitle>
+}
+          </div>;
+        </CardContent>;
+      </Card>;
+
+=======
         <CardContent>;"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">;
 
@@ -206,6 +226,7 @@ import { toast } from "@/hooks/use-toast",;
         </CardContent>;
       </Card>;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
+>>>>>>> origin/chore/fix-lint-and-merge
         <CardHeader>;
           <CardTitle>Promotion Guidelines</CardTitle>;
 
@@ -213,6 +234,9 @@ import { toast } from "@/hooks/use-toast",;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
         </CardHeader>;
+<<<<<<< HEAD
+
+=======
                     <Download className="h - 4 w - 4" />;"
 
               <li > Use our official brand assets from the resources provided</li>;
@@ -229,6 +253,7 @@ pr-12325
             <h3 className="text - lg font - semibold text - white">Don'ts</h3>;''
             <ul className="list - disc pl - 5 space - y-1 text - zion - slate - light">;"
 </ul>
+>>>>>>> origin/chore/fix-lint-and-merge
               <li > Make unrealistic promises about earnings or results</li>;
               <li > Use manipulative or misleading marketing tactics</li>;
               <li > Spam your referral link across unrelated content</li>;

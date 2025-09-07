@@ -1,5 +1,8 @@
 {
 
+<<<<<<< HEAD
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
   "results": {
     "tests": {
       "passed": 0,
@@ -156,4 +159,5 @@
 
   }
 
+>>>>>>> origin/chore/fix-lint-and-merge
 }

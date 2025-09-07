@@ -73,6 +73,29 @@ export default function ContentGenerator() {
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
+<<<<<<< HEAD
+      }
+      toast.error("You must be logged in to access this page");"
+      navigate("/login?redirect=/content-generator")"
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer",;"
+import { Button } from "@/components/ui/button",;"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;"
+import { Textarea } from "@/components/ui/textarea",;"
+import { Input } from "@/components/ui/input",;"
+import { Switch } from "@/components/ui/switch",;"
+import { Label } from "@/components/ui/label",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { toast } from "sonner",;"
+import { Loader2 } from "lucide-react",;"
+import { supabase } from "@/integrations/supabase/client",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { ScrollArea } from "@/components/ui/scroll-area",;"
+import { useNavigate } from "react-router-dom",;"
+export default function ContentGenerator() {;
+  }
+=======
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator")
 
@@ -120,6 +143,7 @@ import { ScrollArea } from "@/components/ui/scroll-area",;
 
 import { useNavigate } from "react-router-dom",;
 export default function ContentGenerator() { return null; }
+>>>>>>> origin/chore/fix-lint-and-merge
   const { user, isLoading } = useAuth(),;
   const navigate = useNavigate(),;'
   const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog'),;'

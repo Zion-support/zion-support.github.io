@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import _React from';react'';"export": { function }';"export": default function CheckoutProgress() { return() <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';'
+import React from\';react\'';\"export\": { function }\';\"export\": default function CheckoutProgress() { return() <Steps currentStep={currentStep} className={className}> <Step status=\'incomplete\' label=\'Shipping\' />\' <Step status=\'incomplete\' label=\'Payment\' />\' <Step status=\'incomplete\' label=\'Review\' />\' </Steps>\' ) } \''\';\';'
+const React from";react"";"export": { function }";"export": default function CheckoutProgress() { return() <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'";"
+ursor/automate-test-improve-and-merge-code-646c;
+import React from\';react\'';\"export\": { function }\';\"export\": default function CheckoutProgress() { return () <Steps currentStep={currentStep} className={className}> <Step status=\'incomplete\' label=\'Shipping\' />\' <Step status=\'incomplete\' label=\'Payment\' />\' <Step status=\'incomplete\' label=\'Review\' />\' </Steps>\' ) } \''\';\';'
+const React from";react"";"export": { function }";"export": default function CheckoutProgress() { return () <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'";"
+import _React from';react'';"export": { function }';"export": default function CheckoutProgress() { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';const React from";react"";"export": { function }";"export": default function CheckoutProgress() { return() <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'";"
+ursor/automate-test-improve-and-merge-code-646c;
+const React from";react"";"export": { function }";"export": default function CheckoutProgress() { return () <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'""
+import _React from';react'';"export": { function }';"export": default function CheckoutProgress() { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';'
+=======
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return() <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
 
 :src.disabled/components/checkout/CheckoutProgress.js.jsx
@@ -12,6 +24,7 @@ import _React from';react'';"export": { function }';"export": default function C
 
 import React from\';react\'';\"export\": { function }\';\"export\": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status=\'incomplete\' label=\'Shipping\' />\' <Step status=\'incomplete\' label=\'Payment\' />\' <Step status=\'incomplete\' label=\'Review\' />\' </Steps>\' ) } \''\';\';
 const React from";react"";export: { function }";export: default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status="incomplete" label="Shipping" />" <Step status="incomplete" label="Payment" />" <Step status="incomplete" label="Review" />" </Steps>" ) } """;";'"'"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import _React from';react'';"export": { function }';"export": default function CheckoutProgress({ currentStep,className }) { return () <Steps currentStep={currentStep} className={className}> <Step status='incomplete' label='Shipping' />' <Step status='incomplete' label='Payment' />' <Step status='incomplete' label='Review' />' </Steps>' ) } ''';';
 

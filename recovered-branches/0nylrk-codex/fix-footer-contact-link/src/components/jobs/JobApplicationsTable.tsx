@@ -18,7 +18,6 @@ interface JobApplicationsTableProps {
     updateApplicationStatus
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
-  const {
     applications
     isLoading
     error

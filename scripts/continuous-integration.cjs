@@ -52,7 +52,11 @@
 
   generateCIReport() {`;
     const reportPath = path.join(this.logDir, `ci-pipeline-report-${this.timestamp}.json`);
+<<<<<<< HEAD
+    
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     const averageDuration = this.ciResults.stages.length > 0 ?
       this.ciResults.stages.reduce((sum, stage) => sum + stage.duration, 0) / this.ciResults.stages.length : 0;
 

@@ -1,8 +1,12 @@
+<<<<<<< HEAD
+
+=======
 #!/usr/bin/env node
 
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 #!/usr/bin/env node;
 const fs = require('fs');
@@ -50,6 +54,43 @@ function findConflictedFiles(dir) {
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
     
+<<<<<<< HEAD
+    // Skip if no conflicts,
+if (!content.includes('')) {'
+      }
+      return false;
+function resolveMergeConflicts() {
+    }
+    try {
+
+        }
+        
+        // "Strategy": Keep HEAD version (current branch) for most conflicts
+        // Remove merge conflict markers and keep the HEAD version
+        
+        // Remove any remaining conflict markers
+        
+        // Remove any remaining conflict markers,
+content = content.replace(/<<<<<<< [^\n]+\n?/g, '');'
+        content = content.replace(/\n?/g, '');'
+        
+
+        }
+        console.error(`❌ Error processing ${filePath}:`, error.message);`        return false;
+function resolveConflicts() {
+  }
+  try {
+    }
+
+    
+    // Skip if no conflicts,
+if (!content.includes('')) {'
+      }
+      return false;
+function resolveMergeConflicts() {
+    }
+
+=======
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
@@ -126,6 +167,7 @@ function findConflicts(dir) {
         } catch (error) {
             // Skip directories that can't be read
         }
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     scan(dir);
     return conflicts;

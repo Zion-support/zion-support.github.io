@@ -5,6 +5,22 @@ import {;
 
   CardDescription,;
   CardContent,;
+<<<<<<< HEAD
+} from "@/components/ui/card";"
+import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";"
+import { JobMatchCard } from "@/components/jobs/JobMatchCard";"
+import { useJobMatches } from "@/hooks/useJobMatches";"
+import { Skeleton } from "@/components/ui/skeleton";"
+import React from "react";"
+import {
+  }
+  Card,
+CardHeader
+  CardTitle,
+CardDescription
+  CardContent,
+  }
+=======
 
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
@@ -22,19 +38,35 @@ import {};
   CardContent"
 import React from "react";
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Card,
   CardHeader,
   CardTitle,
   CardDescription,;
   CardContent,;
+<<<<<<< HEAD
+  }
+=======
 
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   Card,;
   CardHeader,;
   CardTitle,;
 
   CardDescription,;
   CardContent,;
+<<<<<<< HEAD
+} from "@/components/ui/card";"
+import React from "react","
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card","
+import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard","
+import { JobMatchCard } from "@/components/jobs/JobMatchCard","
+import { useJobMatches } from "@/hooks/useJobMatches","
+import { Skeleton } from "@/components/ui/skeleton",    useJobMatches(jobId);"
+const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),;
+  if (isLoading) {
+=======
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
@@ -44,6 +76,7 @@ import { useJobMatches } from "@/hooks/useJobMatches",
 
 interface JobMatchesProps {};
   jobId: string;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
   const { matches, isLoading, isProcessing, triggerAIMatching } =;
@@ -249,8 +282,13 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
       ))}
     </div>;
   );
+<<<<<<< HEAD
+import React from './react';'
+  }
+=======
 import React from './react';
 import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   Card,
   CardHeader,
   CardTitle,

@@ -4,9 +4,21 @@ import React from "react";
   DialogContent,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
+  DialogDescription} from "@/components/ui/dialog";"
+import { Button } from "@/components/ui/button";"
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react";"
+import { Card, CardContent } from "@/components/ui/card";"
+import { Separator } from "@/components/ui/separator";"
+import { QuoteStatusBadge } from "./QuoteStatusBadge";"
+import type { QuoteRequest } from "@/types/quotes";"
+import React from "react","
+  }
+=======
 
 import React from "react",
 import { 
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,
   DialogContent, 
   DialogHeader, 
@@ -42,6 +54,29 @@ import {format} from "date-fns";
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
+<<<<<<< HEAD
+    }
+    if (!dateString) return "Not specified";"
+    try {
+      }
+      return format(new Date(dateString), "PPP");"
+    } catch (e) {
+      }
+      return dateString;
+    }
+  }
+  };
+    }
+    if (!dateString) return "Not specified";"
+    try {
+      }
+      return format(new Date(dateString), "PPP");"
+    } catch (e) {
+      }
+      return dateString;
+    }
+  };
+=======
   const formatDate = (dateString?: string) => {"
     if (!dateString) return "Not specified";
     try {"
@@ -63,6 +98,7 @@ import {format} from "date-fns";
   };
 
 import React from "react",;
+>>>>>>> origin/chore/fix-lint-and-merge
 import {;
   Dialog,;
   DialogContent,;
@@ -70,7 +106,10 @@ import {;
   DialogTitle,;
   DialogDescription;"
 } from "@/components/ui/dialog",;"
+<<<<<<< HEAD
+=======
 import { Button } from "@/components/ui/button",;"
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;"
 import { Card, CardContent } from "@/components/ui/card",;"
 import { Separator } from "@/components/ui/separator",;"
@@ -85,9 +124,14 @@ interface QuoteDetailsProps {;
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
+<<<<<<< HEAD
+import React from './react';'
+  }
+=======
 
 import React from './react';
 import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,
   DialogContent,
   DialogHeader,

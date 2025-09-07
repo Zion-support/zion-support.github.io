@@ -147,7 +147,11 @@ const [messageScanningEnabled, setMessageScanningEnabled] = useState (true);
 const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState (true);
 const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState (true);
 const [isSaving, setIsSaving] = useState (false);
+<<<<<<< HEAD
+  }
+=======
 const handleSavePreferences = async () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!user?.id) return;
 try {;
   ;

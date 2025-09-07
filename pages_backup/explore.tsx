@@ -199,23 +199,21 @@ const matchesSearch =
         return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
 
   });
+<<<<<<< HEAD
+=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 
 import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/chore/fix-lint-and-merge
 import {;
   Search, Filter, Grid, List, ArrowRight, ChevronRight,;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,;
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
 } from 'lucide-react',;
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage(req, res) {
   try {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
   const categories = [;
     {;
       id: 'ai';
@@ -335,9 +333,6 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
 
   const featuredServices = [;
     {;'

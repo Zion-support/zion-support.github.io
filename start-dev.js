@@ -78,8 +78,11 @@ process.on ('SIGINT', () => {
   process.exit (0);
 
 }),
+<<<<<<< HEAD
+=======
 
 const { spawn } = require('child_process');
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 console.log('🚀 Starting development server...');
 

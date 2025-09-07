@@ -149,7 +149,13 @@ class ConsoleCleaner {;
         await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {"`
       `📊 Total console statements "removed": ${this.totalConsoleStatements}`)}
   async processDirectory(dirPath) {;
+<<<<<<< HEAD
+    for (const item of items) {;
+      if (stat.isDirectory()) {;
+        await this.processDirectory(itemPath)} else if (this.isJavaScriptFile(item)) {;
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
         await this.cleanFile(itemPath)}
     }
   }

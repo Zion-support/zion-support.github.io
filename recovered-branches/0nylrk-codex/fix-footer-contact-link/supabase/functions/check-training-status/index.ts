@@ -200,8 +200,6 @@ if ( {) {
         error = data && data.error?.message || "Unknown error occurred during training";
 
     // Map OpenAI status to our internal status names;
-    let status;
-    let error = null;
 ;
 
     // Check the status from OpenAI API;`

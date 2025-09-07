@@ -324,7 +324,6 @@ console.log( Starting enhanced error detector...")
   const tsResult = execSync("npx tsc --noEmit")
   "encoding": "utf8"
         "stdio": "pipe"
-  const tsResult = execSync("npx tsc --noEmit")
   "encoding": "utf8"
         "stdio": "pipe"
   const tsOutput = error.stdout || error.stderr || 
@@ -352,14 +351,12 @@ console.log(" Detecting build errors...")
   console.error(" Error detection "failed": ")
   const lines = output.split("\n")
   if (line.includes("error TS")
-  const lines = output.split("\n")
   if (line.includes("error TS")
   "file"
           "line"
           "column"
           "message"
           "type": "typescript"
-  const lines = output.split("\n")
       line.includes("error")
       (line.includes(".tsx")
         line.includes(".ts")
@@ -370,7 +367,6 @@ console.log(" Detecting build errors...")
           "column"
           "message"
           "type": "linting"
-  const lines = output.split("\n")
       line.includes("Failed to compile")
       line.includes("Type error")
       line.includes("Cannot find module")
@@ -393,7 +389,6 @@ console.log(" Detecting build errors...")
           file.endsWith(".ts")
           file.endsWith(".jsx")
           file.endsWith(".js")
-  const content = fs.readFileSync(file, "utf8")
   "file": file,"message"
               "type": "syntax"
   const fullPath = path.join(currentDir, ")

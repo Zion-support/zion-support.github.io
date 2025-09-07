@@ -137,6 +137,10 @@ const nextConfig = {
         "net": false;
         tls: false }}
     return config}
+<<<<<<< HEAD
+  createPerformanceScript() { const performanceScript = "#!/usr/bin/env node"
+}
+=======
 };
 module.exports = nextConfig;";
     fs.writeFileSync('next.config.optimized.js', optimizedConfig);
@@ -144,6 +148,7 @@ module.exports = nextConfig;";
   createPerformanceScript() { const performanceScript = "#!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
+>>>>>>> origin/chore/fix-lint-and-merge
 class PerformanceOptimizer {
   constructor() {
     this.metrics = { }}
@@ -184,6 +189,16 @@ class PerformanceOptimizer {
     return recommendations}
 }
 if() { const optimizer = new PerformanceOptimizer;(;);
+<<<<<<< HEAD
+  }
+  optimizer && optimizer.analyzeBundle();
+  optimizer && optimizer.generateReport() }
+module && module.exports = PerformanceOptimizer";"
+    fs && fs.writeFileSync('scripts/performance-optimizer && optimizer.js', performanceScript);'
+  createSecurityScript() { const securityScript = "#!/usr/bin/env node"
+}
+const { execSync  } = require('child_process';);'
+=======
   optimizer.analyzeBundle();
   optimizer.generateReport() }
 module.exports = PerformanceOptimizer";
@@ -192,6 +207,7 @@ module.exports = PerformanceOptimizer";
   createSecurityScript() { const securityScript = "#!/usr/bin/env node
 const { execSync  } = require('child_process';);
 const fs = require('fs')
+>>>>>>> origin/chore/fix-lint-and-merge
 class SecurityAuditor {
   constructor() { this.issues = [];
     this.fixes = [] }
@@ -532,6 +548,38 @@ if () { const auditor = new SecurityAuditor;();
   auditor.run_audit ();
   auditor.fix_issues ();
   auditor.generate_report () }
+<<<<<<< HEAD
+module.exports = SecurityAuditor";"
+    fs.writeFileSync ('scripts / security - auditor.js', security_script);'
+    this.log ('✅ Created security auditor script')}'
+  generate_report () {
+    }
+      "timestamp": new Date ().toISOStrin, g ();"
+      "issues": this.issues;"
+      }
+      "improvements": this.improvements;
+      "summary": {
+        }
+        "total_issues": this.issues.length;
+        "total_improvements": this.improvements.length }
+    }
+    fs.writeFileSync ('app - analysis - report.json', JSON.stringify (report, null, 2));'
+    console.log ('\\n📊 App Analysis "Report": ');'
+    console.log (\`❌ Issues "found": \${this.issues.length}\`);console.log (\`🚀 Improvements "suggested": \${this.improvements.length}\`);`    if () {) {
+  $2
+}
+    {
+      }
+      console.log ('\\"n_issues": ')}this.issues.for_each (issue => console.log (\`  - \${issue}\`))}`    if () {) {
+  $2
+}
+    {
+      }
+      console.log ('\\"n_improvements": ')}this.improvements.for_each (improvement => console.log (\`  - \${improvement}\`))}`
+  }
+  async run () { this.log ('🚀 Starting app improvement analysis...');'
+    }
+=======
 module.exports = SecurityAuditor";""
     fs.writeFileSync ('scripts / security - auditor.js', security_script);
     this.log ('✅ Created security auditor script')}
@@ -544,6 +592,7 @@ module.exports = SecurityAuditor";""
       console.log ('\\n_issues: ')}this.issues.for_each (issue => console.log (\`  - \${issue}\`))}
       console.log ('\\n_improvements: ')}this.improvements.for_each (improvement => console.log (\`  - \${improvement}\`))}
   async run () { this.log ('🚀 Starting app improvement analysis...');
+>>>>>>> origin/chore/fix-lint-and-merge
     this.analyze_app ();
     this.createOptimizedNextConfig ();
     this.createPerformanceScript ();

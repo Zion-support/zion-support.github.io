@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+interface ScreenshotManagerProps {
+  }
+  "platform": AppPlatform
+=======
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -14,6 +20,7 @@ import {AppPlatform} from "./MetadataManager";
 import {toast} from "sonner";
 interface ScreenshotManagerProps {}
   platform: AppPlatform;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 type Screenshot = {}
@@ -27,6 +34,17 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+<<<<<<< HEAD
+  const handleFileSelect = ("e": React.ChangeEvent<HTMLInputElement>) => {
+    }
+    if (e.target.files) {
+      }
+
+      return;
+    }
+    // Limit the number of screenshots;
+
+=======
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {}
     if (e.target.files) {}
       addScreenshots(Array.from(e.target.files))
@@ -173,11 +191,14 @@ interface ScreenshotManagerProps {
       // Revoke object URL to avoid memory leaks;
       const removed = prev.find(screenshot => screenshot.id === id),;
       if (removed) {;
+>>>>>>> origin/chore/fix-lint-and-merge
         URL.revokeObjectURL(removed.url);
       }
-;
       return filtered;
     });
+<<<<<<< HEAD
+
+=======
   },;
   const handleDragOver = (e: React.DragEvent) => {;
     e.preventDefault(),;
@@ -260,6 +281,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 
       <CardHeader>;
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
+>>>>>>> origin/chore/fix-lint-and-merge
       </CardHeader>;
       <CardContent>;
 
@@ -270,6 +292,74 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
 
             isDragging
+<<<<<<< HEAD
+
+    // Check condition
+}
+if ( {) {
+  $2
+}
+      add_screenshots (Array.from (e.target.files));
+    }
+  }
+
+    }
+    const filesToAdd = image_files.slice (0, available_slots);
+    const new_screenshots = filesToAdd.map (file => ({
+      }
+      "id": Math.random ().to_string (36).substring (2, 9);
+      "url": URL.createObjectURL (file),
+      file;
+    }));
+
+if ( {) {
+  $2
+}
+      toast.warning (`Only added ${filesToAdd.length} screenshots. Maximum is ${max_screenshots}.`);`    }
+  }
+
+      // Revoke object URL to avoid memory leaks;
+      const removed = prev.find (screenshot => screenshot.id === id),
+      // Check condition,
+if ( {) {
+  $2
+}
+        URL.revokeObjectURL (removed.url);
+      }
+      return filtered;
+    });
+  }
+
+    e.prevent_default (),
+    setIsDragging (true);
+  }
+  const handleDragLeave = () =>: any {
+    }
+    setIsDragging (false);
+  }
+
+    e.prevent_default ();
+    setIsDragging (false),
+    // Check condition,
+if ( {) {
+  $2
+}
+      add_screenshots (Array.from (e.data_transfer.files));
+    }
+  }
+
+      </CardHeader>;
+      <CardContent>;
+        <div;
+          className={`border - 2 border - dashed rounded - lg p - 4 mb - 4 text - center transition - colors ${`            }
+            is_dragging;
+
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          on_drop={handle_drop}
+        >;
+
+=======
               ? "border-zion-cyan bg-zion-cyan/10"
             isDragging 
               ? "border-zion-cyan bg-zion-cyan/10" 
@@ -362,6 +452,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               <button
                 onClick={() => removeScreenshot(screenshot && screenshot.id)}
                 className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity";
+>>>>>>> origin/chore/fix-lint-and-merge
               >;
                 <Trash2 className="h-3 w-3" />;
               </button>;
@@ -404,9 +495,30 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+  },
+  
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault($2);
+    setIsDragging(true)
+  },
+  
+  const handleDragLeave = $2;
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault($2);
+    setIsDragging($2);
+    if (e.dataTransfer.files) {
+      addScreenshots(Array.from(e.dataTransfer.files))
+    }
+  },
+  
+  return (
+    <Card className = $2;
+=======
 
         </div>;
       </CardContent>;
     </Card>;
   );
 };
+>>>>>>> origin/chore/fix-lint-and-merge

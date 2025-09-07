@@ -47,12 +47,29 @@ export default function AIMatcherPage() {};
 import { toast } from "@/hooks/use-toast",
 import { MatchResult } from "@/lib/ai-matchmaking",
 export default function AIMatcherPage() {
+<<<<<<< HEAD
+}
+const navigate = useNavigate(),;
+const [selectedCategory, setSelectedCategory] = useState<string>("all"),;"
+    // Get the item type from the category
+}
+let itemType = "service",;"
+const category = match.item.category.toLowerCase(),;
+    if (category.includes("talent") || category === "engineering" || "
+        category === "data science" || category === "development") {"
+      }
+      itemType = "talent""
+    } else if (category.includes("equipment") |category === "hardware") {"
+      }
+      itemType = "equipment""
+=======
   const navigate = useNavigate(),
   const [selectedCategory, setSelectedCategory] = useState<string>("all"),
 
       itemType = "talent"
     } else if (category.includes("equipment") |category === "hardware") {
       itemType = "equipment"
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     toast({
       title: "Match Selected"

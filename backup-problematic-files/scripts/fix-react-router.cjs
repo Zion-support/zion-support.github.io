@@ -1,13 +1,28 @@
 const fs = require('fs')
+<<<<<<< HEAD
+const path = require(path')
+console.log(' Fixing react-router-dom imports...)
+const pagesDir = path.join(__dirname, ..', 'pages)
+const files = fs.readdirSync(pagesDir).filter(file => file.endsWith(.tsx')
+=======
 const path = require('path')
 <<<<<<< HEAD
 console.log(' Fixing react-router-dom imports...')
 const pagesDir = path.join(__dirname, '..', 'pages')
 const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
+>>>>>>> origin/chore/fix-lint-and-merge
   let content = fs.readFileSync(filePath, 'utf8')
-  if (content.includes('react-router-dom')
-      /import\s*{\s*Link\s*}\s*from\s*['']
+  if (content.includes(react-router-dom')
+      /import\s*{\s*Link\s*}\s*from\s*[']
       "
+<<<<<<< HEAD
+      /import\s*{\s*Link\s*,\s*useNavigate\s*}\s*from\s*[']
+      
+      /import\s*{\s*useNavigate\s*}\s*from\s*[']
+      
+    content = content.replace(/to="/g, href=')
+
+=======
       /import\s*{\s*Link\s*,\s*useNavigate\s*}\s*from\s*['']
       "
       /import\s*{\s*useNavigate\s*}\s*from\s*['']
@@ -26,3 +41,4 @@ const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

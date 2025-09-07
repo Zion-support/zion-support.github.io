@@ -243,6 +243,10 @@ import {Badge} from "@/components/ui/badge";"
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
+import React from "react";"
+import { Badge } from "@/components/ui/badge",;"
+=======
 
 }
 
@@ -263,6 +267,7 @@ import { Badge } from "@/components/ui/badge",;
 export function RecentActivity() {;
   // Mock activity data;
   const activities = [;
+>>>>>>> origin/chore/fix-lint-and-merge
     {;
       id: "act-1",;
       user: "Michael Chen",;
@@ -353,8 +358,14 @@ target: "Frontend Developer application";"
 timestamp: "2d ago";"
 type: "comment" 
 }];
+<<<<<<< HEAD
+  }
+  switch (type) {
+  }
+=======
 const getBadgeForType = (type: string) => {}
   switch (type) {"
+>>>>>>> origin/chore/fix-lint-and-merge
   case "candidate": return <Badge variant="outline" className="bg-green-100 text-green-800 border-green-200">Candidate</Badge>;"
 case "interview": return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;"
 case "comment": return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>;

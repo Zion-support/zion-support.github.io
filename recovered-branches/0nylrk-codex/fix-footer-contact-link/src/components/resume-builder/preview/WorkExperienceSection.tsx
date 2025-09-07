@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import {WorkExperience} from '@/types / resume';'
+import {format} from 'date - fns';'
+import {WorkExperience} from '@/types/resume';'
+import {format} from 'date-fns';'
+import { WorkExperience  } from '@/types/resume';'
+import { format } from 'date-fns';'
+=======
 import {WorkExperience} from '@/types / resume';
 import {format} from 'date - fns';
 
@@ -6,6 +14,7 @@ import {format} from 'date - fns';
 import {WorkExperience} from '@/types/resume';
 import {format} from 'date-fns';
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface WorkExperienceSectionProps {
 
   work_experience: WorkExperience[];
@@ -67,7 +76,35 @@ interface WorkExperienceSectionProps {
   });
 
     }
+<<<<<<< HEAD
+    if (!date) return '''
+    if (typeof date === 'string') {'
+      }
+      return format(new Date(date), 'MMM yyyy')import { WorkExperience } from '@/types/resume';'
+interface WorkExperienceSectionProps {;
+  }
+  "workExperience": WorkExperience[];
+}
+;
+export function WorkExperienceSection() {;
+  // Sort work experience by date (newest first);
+  }
+    }
+    if (a.is_current && !b.is_current) return -1,;
+    if (!a.is_current && b.is_current) return 1,;
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
+    return dateB.getTime() - dateA.getTime();
+  }),;
+  const formatDate = ("date": Date | string | undefined) => {;
+    }
+    if (!date) return '',;'
+    if (typeof date === 'string') {;'
+      }
+      return format(new Date(date), 'MMM yyyy');    }'
+    return format(date, 'MMM yyyy')'
+=======
     return format(date, 'MMM yyyy')
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   if (sortedWorkExperience.length === 0) return null;
 

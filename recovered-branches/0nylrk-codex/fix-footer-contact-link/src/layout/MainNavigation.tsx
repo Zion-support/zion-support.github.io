@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import { MessageSquare } from "lucide-react",
 ;
 
@@ -100,9 +102,26 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       name: "Equipment"
       href: "/equipment"
+>>>>>>> origin/chore/fix-lint-and-merge
 
   if (isAuthenticated) {
     links.push({
+<<<<<<< HEAD
+
+    })
+  }
+  // Add admin-only links,
+if (isAdmin) {
+    }
+    links.push({
+
+        {links.map((link) => (
+          <li key={link.name}>
+            <Link,
+to={link.href}
+              className={cn(
+
+=======
       name: "Dashboard"
       href: "/dashboard"
 
@@ -162,10 +181,37 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: "Community",;
       href: "/community",;
       matches: (path: string) => path && path.startsWith("/community") || path && path.startsWith("/forum");
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   ];
 
   // Add authenticated-only links;
+<<<<<<< HEAD
+
+    });
+  }
+
+  // Add admin-only links;
+
+          <li key={link && link.name}>;
+            <Link,
+to={link && link.href}
+              className={cn(
+
+    }
+  ],
+  // Add authenticated-only links;
+
+    });
+  }
+  return (;
+
+        {links.map((link) => (;
+          <li key={link.name}>;
+            <Link;
+              to={link.href}
+              className={cn(;
+=======
   if (isAuthenticated) {;
     links && links.push({;
       name: "Dashboard",;
@@ -208,17 +254,31 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
               )}
             >
               {link.name}
             </Link>
+<<<<<<< HEAD
+          </li>
+        ))}
+        {isAuthenticated && (;
+          <li>;
+            <Link
 
+              className={cn(            </Link>;
+=======
+
+>>>>>>> origin/chore/fix-lint-and-merge
           </li>;
         ))}
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
           <li>;
+<<<<<<< HEAD
+            <Link
+=======
             <Link"
               to="/messages"
               className={cn("
@@ -233,6 +293,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   {unreadCount}
 
                 </span>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
               )}
 
@@ -386,6 +447,17 @@ if ( {) {}
 
 </ul>;
     </nav>;
+<<<<<<< HEAD
+  );
+        {/* Messages link with unread counter */}
+        {isAuthenticated && (
+          <li>
+            <Link
+              to = $2;
+                location.pathname === /messages" || location.pathname === "/inbox
+                  ? bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan
+=======
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';
@@ -551,9 +623,10 @@ matches: (path: string) => path.startsWith ("/community") || path.startsWith ("/
 }
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+>>>>>>> origin/chore/fix-lint-and-merge
               )}
             >
-              <MessageSquare className="w-4 h-4 mr-1" />
+              <MessageSquare className=w-4 h-4 mr-1" />
               Messages
               {unreadCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">

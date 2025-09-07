@@ -242,8 +242,33 @@ export default SyntaxFixer;
         },
 ,
         if (modified) {,
+<<<<<<< HEAD
+          fs.writeFileSync($2);
+          this.fixesApplied++,
+          this.log($2);
+        }
+      } catch (error) {,
+        this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+      }
+    })
+  },
+,
+  async fixExportIssues() {,
+    files.forEach($2);
+,
+        // Fix export statements,
+        content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
+,
+        if (content !== fs.readFileSync(file, "utf8")) {,
+          modified = $2;
+,
+        if (modified) {,
+          fs.writeFileSync($2);
+          this.fixesApplied++,
+=======
           fs.writeFileSync(file, content),
           this.fixesApplied++,`
+>>>>>>> origin/chore/fix-lint-and-merge
           this.log(`Fixed export issues in ${file}`)
         }
 

@@ -113,7 +113,12 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {;
   const [matches, setMatches] = useState<MatchResult[]>([]),;
   // Run AI matching when the component mounts;
   useEffect(() => {;
+<<<<<<< HEAD
+    }
+      }
+=======
     const runMatching = async () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
       if (!formData.projectDescription) return,;
       setIsMatching(true),;
       try {;

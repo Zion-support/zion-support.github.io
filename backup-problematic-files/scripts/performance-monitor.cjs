@@ -65,7 +65,6 @@ const fileCounts = {;
 function countFiles(dirPath) {;
   if (!fs.existsSync(dirPath)) return;
   ;
-  const files = fs.readdirSync(dirPath, { recursive:true });
   files.forEach(file => {;
     if (typeof file === 'string') {;
       const ext = path.extname(file);
@@ -102,7 +101,6 @@ if (fs.existsSync(publicDir)) {;
     if (typeof file === 'string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {;
       try {;
         const filePath = path.join(publicDir, file);
-        const stats = fs.statSync(filePath);
         if (stats.size > 500 * 1024) { // 500KB;
           largeImages++;
         }
@@ -129,7 +127,6 @@ if (fs.existsSync(publicDir)) {;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
-const path = require('path');
 const { execSync } = require('child_process');
 class PerformanceMonitor {
   // TODO: Implement
@@ -148,6 +145,8 @@ monitor.run().catch(console.error);
 
 module.exports = PerformanceMonitor;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
@@ -155,6 +154,7 @@ module.exports = PerformanceMonitor;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
+>>>>>>> origin/chore/fix-lint-and-merge
   log(message, type = 'INFO')
 
 const performanceMetrics = {
@@ -166,19 +166,34 @@ const performanceMetrics = {
 // Check bundle sizes;
 function getDirectorySize(dirPath) {
   if (!fs.existsSync(dirPath)) return 0;
-  let totalSize = 0;
   const files = fs.readdirSync(dirPath, { recursive: true });
+<<<<<<< HEAD
+  files.forEach(file => {
+    if (typeof file === 'string') {
+      try {
+=======
   files.forEach(file => {)
 
       const filePath = path.join(dirPath, file);
       try {
   // TODO: Implement
         const stats = fs.statSync(filePath);
+>>>>>>> origin/chore/fix-lint-and-merge
         if (stats.isFile()) {
           totalSize += stats.size;
 
   });
   return totalSize;
+<<<<<<< HEAD
+}
+// Check .next directory
+performanceMetrics.bundleSize['.next'] = {
+  size: nextDirSize,
+  sizeMB: (nextDirSize / 1024 / 1024).toFixed(2)
+};
+// Check node_modules
+performanceMetrics.bundleSize['node_modules'] = {
+=======
 
 // Check .next directory;
 const nextDirSize = getDirectorySize('.next');
@@ -189,6 +204,7 @@ const nextDirSize = getDirectorySize('.next');
 // Check node_modules;
 const nodeModulesSize = getDirectorySize('node_modules');
 
+>>>>>>> origin/chore/fix-lint-and-merge
   size: nodeModulesSize,
   sizeMB: (nodeModulesSize / 1024 / 1024).toFixed(2)
 
@@ -198,12 +214,40 @@ const fileCounts = {
 
 function countFiles(dirPath) {
   if (!fs.existsSync(dirPath)) return;
+<<<<<<< HEAD
+  files.forEach(file => {
+    if (typeof file === 'string') {
+      if (fileCounts.hasOwnProperty(ext)) {
+        fileCounts[ext]++;
+      }
+    }
+  });
+}
+['components', 'pages', 'lib', 'styles'].forEach(dir => countFiles(dir));
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
 performanceMetrics.fileCounts = fileCounts;
 
 // Performance recommendations;
 if (nextDirSize > 50 * 1024 * 1024) { // 50MB;
   performanceMetrics.recommendations.push('Consider optimizing bundle size - .next directory is large');
+<<<<<<< HEAD
+}
+if (fileCounts['.tsx'] + fileCounts['.ts'] > 50) {
+  performanceMetrics.recommendations.push('Consider code splitting - many TypeScript files detected');
+}
+if (fileCounts['.css'] > 10) {
+  performanceMetrics.recommendations.push('Consider CSS optimization - multiple CSS files detected');
+}
+// Check for large images
+if (fs.existsSync(publicDir)) {
+  const publicFiles = fs.readdirSync(publicDir, { recursive: true });
+  publicFiles.forEach(file => {
+    if (typeof file === 'string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {
+      try {
+        if (stats.size > 500 * 1024) { // 500KB
+=======
 
 // Check for large images;
 const publicDir = 'public';
@@ -215,6 +259,7 @@ if (fs.existsSync(publicDir)) {
   // TODO: Implement
         const filePath = path.join(publicDir, file);
         if (stats.size > 500 * 1024) { // 500KB;
+>>>>>>> origin/chore/fix-lint-and-merge
           largeImages++;
 
   if (largeImages > 0) {`;

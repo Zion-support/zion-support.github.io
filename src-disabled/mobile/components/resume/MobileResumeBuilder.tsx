@@ -434,7 +434,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import {
   );
 
 };";
@@ -546,7 +545,6 @@ export function MobileResumeBuilder() {;"
 
 function ExperienceStep() {"
   const [experiences, setExperiences] = useState([{ id: '1' }])
-  const addExperience = () => {
 
   const [current_step, setCurrentStep] = useState < ResumeStep>("basics"),"
   const renderStepContent = () =>: any {

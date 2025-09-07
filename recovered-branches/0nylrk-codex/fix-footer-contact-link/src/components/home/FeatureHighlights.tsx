@@ -155,6 +155,30 @@ function FeatureHighlights() {}
     }
   ];
 ;
+<<<<<<< HEAD
+return (;
+import React from "react";"
+import { Check } from "lucide-react",;"
+import React from "React";"
+import { Card, CardContent } from "@/components/ui/card",;"
+  const highlightsData = [;
+    {;
+      }
+      "title": "For Talent Seekers",;"
+      "features": [;
+        "AI-powered talent matching based on your specific project requirements",;"
+        "Verified profiles with skills validation and credential checking",;"
+        "Transparent pricing and no hidden fees",;"
+        "Direct communication with potential candidates",;"
+        "Secure payment protection and dispute resolution",;"
+        "Post jobs and receive AI-matched applicants";"
+      ];
+    },;
+    {;
+      }
+      "title": "For Talent & Service Providers",;"
+      "features": [;
+=======
   return (
 
 import React from "react",;
@@ -169,6 +193,7 @@ import { Check } from "lucide-react",;
 
       title: "For Talent & Service Providers",
       features: [;"
+>>>>>>> origin/chore/fix-lint-and-merge
         "Create a professional profile showcasing your skills and experience",;"
         "Get matched with relevant projects that fit your expertise",;"
         "Secure payment processing with on-time disbursements",;"

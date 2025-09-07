@@ -1,31 +1,45 @@
+<<<<<<< HEAD
+:src/components/enterprise/EnterpriseStickyNav.tsx
+import { useState } from "react;
+import { Menu } from 'lucide-react
+import { useState } from react";
+import { Menu } from lucide-react'
+
+import Link from 'next/link
+  const [ open, setOpen ] = useState(false)
+import { useState } from react';
+import { Menu } from 'lucide-react;
+import Link from next/link';
+=======
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
+>>>>>>> origin/chore/fix-lint-and-merge
 
-  const [ open, setOpen ] = useState(false),;
+  const [ open, setOpen ] = useState(false),
 
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
-import Link from 'next/link';
+import { useState } from 'react;
+import { Menu } from lucide-react';
+import Link from 'next/link;
   const [ open, set_open ] = useState (false),
   return (
-    <nav className='sticky top - 16 z - 40 bg - card border - b border - border'>;
-      <div className='container mx - auto px - 4 md:px - 6'>;
-        <div className='flex items - center justify - between h - 12'>;
+    <nav className=sticky top - 16 z - 40 bg - card border - b border - border'>;
+      <div className='container mx - auto px - 4 md:px - 6>;
+        <div className=flex items - center justify - between h - 12'>;
           <button;
-            className='md:hidden p - 2 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary';
+            className='md:hidden p - 2 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary;
             on_click={() => set_open (!open)}
-            aria - label='Toggle navigation';
+            aria - label=Toggle navigation';
             aria - expanded={open}          >;
-            <Menu className='h - 6 w - 6' />;
+            <Menu className='h - 6 w - 6 />;
           </button>;
           <ul;
-            className={`${open ? 'flex' : 'hidden'} flex - col gap - 4 md:flex md:flex - row md:gap - 8 w - full md:w - auto`}
+            className={`${open ? flex' : 'hidden} flex - col gap - 4 md:flex md:flex - row md:gap - 8 w - full md:w - auto`}
           >;
             <li>;
               <Link;
-                href='#features';
-                className='text - sm font - medium hover:text - primary';
+                href=#features';
+                className='text - sm font - medium hover:text - primary;
               >;
 
                 Features;
@@ -34,8 +48,8 @@ import Link from 'next/link';
             <li>;
 
               <Link;
-                href='#pricing';
-                className='text - sm font - medium hover:text - primary';
+                href=#pricing';
+                className='text - sm font - medium hover:text - primary;
               >;
 
                 Pricing;
@@ -44,8 +58,8 @@ import Link from 'next/link';
             <li>;
 
               <Link;
-                href='#testimonials';
-                className='text - sm font - medium hover:text - primary';
+                href=#testimonials';
+                className='text - sm font - medium hover:text - primary;
               >;
 
                 Testimonials;
@@ -53,134 +67,325 @@ import Link from 'next/link';
             </li>;
             <li>;
 
-import { useState } from "react";
-import { Menu } from 'lucide-react'
-import Link from "next/link";
+import Link from next/link";
 
-import Link from "next/link";
+import Link from "next/link;
   return (
-    <nav className='sticky top-16 z-40 bg-card border-b border-border'>
-      <div className='container mx-auto px-4 md:px-6'>
-        <div className='flex items-center justify-between h-12'>
+    <nav className='sticky top-16 z-40 bg-card border-b border-border>
+      <div className=container mx-auto px-4 md:px-6'>
+        <div className='flex items-center justify-between h-12>
           <button
-            className='md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
+            className=md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary'
             onClick={() => setOpen(!open)}
-            aria-label='Toggle navigation'
+            aria-label='Toggle navigation
             aria-expanded={open}          >
-            <Menu className='h-6 w-6' />
+            <Menu className=h-6 w-6' />
           </button>
           <ul
-            className={`${open ? 'flex' : 'hidden'} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}
+            className={`${open ? 'flex : hidden'} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}
           >
             <li>
               <Link
-                href='#features'
-                className='text-sm font-medium hover:text-primary'
+                href='#features
+                className=text-sm font-medium hover:text-primary'
               >
                 Features
               </Link>
             </li>
             <li>
               <Link
-                href='#pricing'
-                className='text-sm font-medium hover:text-primary'
+                href='#pricing
+                className=text-sm font-medium hover:text-primary'
               >
                 Pricing
               </Link>
             </li>
             <li>
               <Link
-                href='#testimonials'
-                className='text-sm font-medium hover:text-primary'
+                href='#testimonials
+                className=text-sm font-medium hover:text-primary'
               >
                 Testimonials
               </Link>
             </li>
             <li>
               <Link
-                href='#contact'
-                className='text-sm font-medium hover:text-primary'
+                href='#contact
+                className=text-sm font-medium hover:text-primary'
               >
                 Contact Us
               </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
 export function EnterpriseStickyNav() {
-                className='text-sm font-medium hover:text-primary'>;
+                className='text-sm font-medium hover:text-primary>;
                 Contact Us;
               </Link>            </li>;
-              <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
-export function EnterpriseStickyNav() {;
+              <Link href=#contact" className="text-sm font-medium hover:text-primary>Contact Us</Link>;
+export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false);
 
-import { useState } from "react",
-import { Menu } from 'lucide-react'
-import Link from "next/link",
+import { useState } from react",
+import Link from "next/link,
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
 
   return (
+<<<<<<< HEAD
+    <nav className="sticky top-16 z-40 bg-card border-b border-border">;
+      <div className="container mx-auto px-4 md:px-6">;
+        <div className="flex items-center justify-between h-12">;
+    <nav className=sticky top-16 z-40 bg-card border-b border-border">;
+      <div className="container mx-auto px-4 md:px-6>;
+        <div className=flex items-center justify-between h-12">;
+          <button
+
+            className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary
+            onClick={() => setOpen(!open)}
+            aria-label=Toggle navigation";
+            aria-expanded={open}
+
+
+
+    <nav className="sticky top-16 z-40 bg-card border-b border-border>
+      <div className=container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between h-12>
+=======
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12">
+>>>>>>> origin/chore/fix-lint-and-merge
           <button
 
           </button>
-          <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>
+          <ul className={`${open ? flex" : "hidden} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>
             <li>
-              <Link href="#features" className="text-sm font-medium hover: text-primary">Features</Link>
+              <Link href=#features" className="text-sm font-medium hover: text-primary>Features</Link>
             </li>
             <li>
-              <Link href="#pricing" className="text-sm font-medium hover:text-primary">Pricing</Link>
+              <Link href=#pricing" className="text-sm font-medium hover:text-primary>Pricing</Link>
             </li>
             <li>
-              <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>
+              <Link href=#testimonials" className="text-sm font-medium hover:text-primary>Testimonials</Link>
             </li>
 
-              <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
+              <Link href=#contact" className="text-sm font-medium hover:text-primary>Contact Us</Link>
 
             </li>
           </ul>
         </div>
       </div>
 
+<<<<<<< HEAD
+import { useState  } from 'react;
+import { Menu  } from lucide-react';
+  const [ open, setOpen ]  = useState(false),import Link from next / link';
+  const [ open, set_open ] = useState (false),return (<nav className='sticky top - 16 z - 40 bg - card border - b border - border>;
+      <div className=container mx - auto px - 4 md:px - 6'>;
+        <div className='flex items - center justify - between h - 12>;
+          <button;
+            className=md:hidden p - 2 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary';
+            on_click={() => set_open (!open)}
+            aria - label='Toggle navigation;
+            aria - expanded={open}          >;
+            <Menu className=h - 6 w - 6' />;
+          </button>;
+          <ul;
+            className={`${open ? 'flex : hidden'} flex - col gap - 4 md:flex md:flex - row md:gap - 8 w - full md:w - auto`}
+          >;
+            <li>;
+              <Link;
+                href='#features;
+                className=text - sm font - medium hover:text - primary';
+              >;Features;
+              </Link>;
+            </li>;
+            <li>;<Link;
+                href='#pricing;
+                className=text - sm font - medium hover:text - primary';
+              >;Pricing;
+              </Link>;
+            </li>;
+            <li>;<Link;
+                href='#testimonials;
+                className=text - sm font - medium hover:text - primary';
+              >;Testimonials;
+              </Link>;
+            </li>;
+            <li>;return (<nav className='sticky top-16 z-40 bg-card border-b border-border>;
+      <div className=container mx-auto px-4 md:px-6'>;
+        <div className='flex items-center justify-between h-12>;
+          <button;
+            className=md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary';
+            onClick={() => setOpen(!open)}
+            aria-label='Toggle navigation;
+            aria-expanded={open}          >;
+            <Menu className=h-6 w-6' />;
+          </button>;
+          <ul;
+            className={`${open ? 'flex : hidden'} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}
+          >;
+            <li>;
+              <Link;
+                href='#features;
+                className=text-sm font-medium hover:text-primary';
+              >;
+                Features;
+              </Link>;
+            </li>;
+            <li>;
+              <Link;
+                href='#pricing;
+                className=text-sm font-medium hover:text-primary';
+              >;
+                Pricing;
+              </Link>;
+            </li>;
+            <li>;
+              <Link;
+                href='#testimonials;
+                className=text-sm font-medium hover:text-primary';
+              >;
+                Testimonials;
+              </Link>;
+            </li>;
+            <li>;
+              <Link;
+                href='#contact;
+                className=text-sm font-medium hover:text-primary';
+              >;
+                Contact Us;
+              </Link>;
+export function EnterpriseStickyNav() {className='text-sm font-medium hover:text-primary>;
+                Contact Us;
+              </Link>            </li>;
+              <Link href=#contact" className="text-sm font-medium hover:text-primary>Contact Us</Link>;
+export function EnterpriseStickyNav() {const [open, setOpen]  = useState(false)import { useState } from react",import Link from "next/link,export function EnterpriseStickyNav() {const [open, setOpen] = useState(false),return (<nav className=sticky top-16 z-40 bg-card border-b border-border">;
+      <div className="container mx-auto px-4 md:px-6>;
+        <div className=flex items-center justify-between h-12">;
+          <button;
+          </button>;
+          <ul className={`${open ? "flex : hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>;
+            <li>;
+              <Link href="#features className=text-sm font-medium hover: text-primary">Features</Link>;
+            </li>;
+            <li>;
+              <Link href="#pricing className=text-sm font-medium hover:text-primary">Pricing</Link>;
+            </li>;
+            <li>;
+              <Link href="#testimonials className=text-sm font-medium hover:text-primary">Testimonials</Link>;
+            </li>;
+            <li>;
+:src/components/enterprise/EnterpriseStickyNav.tsx
+    </nav>;
+  );
+}
+
+import { useState } from "react,
+import Link from next/link",
+export function EnterpriseStickyNav() {
+=======
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
 import Link from "next/link",;
 export function EnterpriseStickyNav() {;
   const [open, setOpen] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
   return (;
-    <nav className="sticky top-16 z-40 bg-card border-b border-border">;
-      <div className="container mx-auto px-4 md:px-6">;
-        <div className="flex items-center justify-between h-12">;
+    <nav className="sticky top-16 z-40 bg-card border-b border-border>;
+      <div className=container mx-auto px-4 md:px-6">;
+        <div className="flex items-center justify-between h-12>;
           <button;
-            className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+            className=md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
             onClick={() => setOpen(!open)}
+<<<<<<< HEAD
+            aria-label="Toggle navigation;
+            aria-expanded={open}
+=======
             aria-label="Toggle navigation";
+>>>>>>> origin/chore/fix-lint-and-merge
 
     </nav>
 
           >;
 
-            <Menu className="h-6 w-6" />;
+            <Menu className=h-6 w-6" />;
           </button>;
-          <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>;
+          <ul className={`${open ? "flex : hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>;
             <li>;
-              <Link href="#features" className="text-sm font-medium hover: text-primary">Features</Link>;
+              <Link href="#features className=text-sm font-medium hover: text-primary">Features</Link>;
             </li>;
             <li>;
-              <Link href="#pricing" className="text-sm font-medium hover:text-primary">Pricing</Link>;
+              <Link href="#pricing className=text-sm font-medium hover:text-primary">Pricing</Link>;
             </li>;
             <li>;
-              <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>;
+              <Link href="#testimonials className=text-sm font-medium hover:text-primary">Testimonials</Link>;
             </li>;
             <li>;
+<<<<<<< HEAD
+              <Link href="#contact className=text-sm font-medium hover:text-primary">Contact Us</Link>;
+
+
+              <Link;
+                href='#contact;
+                className=text - sm font - medium hover:text - primary';
+              >;
+                Contact Us;
+              </Link>            </li>;
+              <Link href="#contact className=text - sm font - medium hover:text - primary">Contact Us</Link>;
+export /**;
+ * EnterpriseStickyNav - Function description;
+ */;
+function EnterpriseStickyNav() {const [open, set_open] = useState (false)return (<nav className="sticky top - 16 z - 40 bg - card border - b border - border>;
+      <div className=container mx - auto px - 4 md:px - 6">;
+        <div className="flex items - center justify - between h - 12>;
+          <button;
+            className=md:hidden p - 2 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary";
+            on_click={() => set_open (!open)}
+            aria - label="Toggle navigation;
+            aria - expanded={open}
+          >;
+            <Menu className=h - 6 w - 6" />;
+          </button>;
+          <ul className={`${open ? "flex : hidden"} flex - col gap - 4 md:flex md:flex - row md:gap - 8 w - full md:w - auto`}>;
+            <li>;
+              <Link href="#features className=text - sm font - medium hover: text - primary">Features</Link>;
+            </li>;
+            <li>;
+              <Link href="#pricing className=text - sm font - medium hover:text - primary">Pricing</Link>;
+            </li>;
+            <li>;
+              <Link href="#testimonials className=text - sm font - medium hover:text - primary">Testimonials</Link>;
+            </li>;
+            <li>;
+              <Link href="#contact" className="text - sm font - medium hover:text - primary">Contact Us</Link>;
+              <Link href="#contact className=text - sm font - medium hover:text - primary">Contact Us</Link>;
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
             </li>;
           </ul>;
         </div>;
       </div>;
+<<<<<<< HEAD
+
 
   );
 }
+              <Link href="#contact className=text - sm font - medium hover:text - primary">Contact Us</Link>;</li>;
+          </ul>;
+        </div>;
+      </div>;)}
+    </nav>)})}
+
+  );
+}
+:src/components/enterprise/EnterpriseStickyNav.tsx
+;
+=======
+
+  );
+}
+>>>>>>> origin/chore/fix-lint-and-merge
     </nav>);
 }

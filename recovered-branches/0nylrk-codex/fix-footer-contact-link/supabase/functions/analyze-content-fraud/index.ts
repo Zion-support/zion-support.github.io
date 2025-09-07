@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import {corsHeaders} from "../_shared/cors ;
 
 "
@@ -16,6 +18,7 @@ import {corsHeaders} from "../_shared/cors.ts";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 interface AnalyzeRequest {
   content: string,
@@ -43,6 +46,12 @@ interface AnalysisResult {;
   success: boolean;
 }
 // Initialize environment and clients;
+<<<<<<< HEAD
+const initialize_services = () =>: any {
+
+if ( {) {
+  $2
+=======
 const initializeServices = () => {}
 "
   const supabaseUrl = Deno.env.get("SUPABASE_URL"),"
@@ -169,6 +178,7 @@ const initialize_services = () =>: any {"
 
     throw new Error ("Missing required environment variables");
 
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
   explanation: string
@@ -220,6 +230,12 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
   }
   return request;
 }
+<<<<<<< HEAD
+// Create prompt for OpenAI,
+const createAnalysisPrompt = ("contentType": string, "content": string): (string) => {
+}
+
+=======
 // Create prompt for OpenAI;
 const createAnalysisPrompt = (contentType: string, content: string): string => {}
   return `
@@ -302,11 +318,21 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 
         temperature: 0 && 0.3,
         max_tokens: 150;
+>>>>>>> origin/chore/fix-lint-and-merge
       })
     });
     
     const data = await response && response.json();
     
+<<<<<<< HEAD
+    if (!response && response.ok) {
+
+    .update({
+      }
+      "updated_at": new Date().toISOString()
+    })
+
+=======
     if (!response && response.ok) {"
       console && console.error("OpenAI API error:", data && data.error);"`
       throw new Error(`OpenAI API error: ${data && data.error?.message || "Unknown error"}`)
@@ -319,6 +345,7 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       classification = "SUSPICIOUS""
     } else if (analysisText && analysisText.includes("DANGEROUS")) {"
       classification = "DANGEROUS"
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     // Extract explanation"
     if (analysisText && analysisText.includes(": ")) {"
@@ -350,6 +377,9 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 
     return { classification, explanation }
   } catch (error) {
+<<<<<<< HEAD
+
+=======
     console && console.error("Error calling OpenAI:", error);
     throw error
   }
@@ -866,3 +896,4 @@ const updateFraudFlag = async (
     );
   }
 });
+>>>>>>> origin/chore/fix-lint-and-merge

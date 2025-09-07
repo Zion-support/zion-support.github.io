@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+import { GradientHeading } from './GradientHeading';'
+import { Check, Handshake, Search, Send } from './lucide-react';'
+const steps = [;
+    "title": "Post","
+    "description": "Publish your service, job, or equipment in minutes with our AI - powered form.";"
+    "icon": Send},
+import {Check, Handshake, Search, Send} from "lucide-react";"
+  {
+    }
+    "title": "title","
+    "description": "Publish your service, job, or equipment in minutes with our AI-powered form.";"
+    "icon": Send}
+=======
 {}
     title: "Post","
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
@@ -17,9 +31,12 @@ const steps = []
     title: "Post""
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
     icon: Send}"
+>>>>>>> origin/chore/fix-lint-and-merge
 import {GradientHeading} from "./GradientHeading";"
-import {Check, Handshake, Search, Send} from "lucide-react";"
 import { GradientHeading } from "./GradientHeading","
+<<<<<<< HEAD
+import { Check, Handshake, Search, Send } from "lucide-react","
+=======
 import { Check, Handshake, Search, Send } from "lucide-react",
 
 import { GradientHeading } from './GradientHeading';
@@ -34,6 +51,7 @@ import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
 
 const steps = [
+>>>>>>> origin/chore/fix-lint-and-merge
   {
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";

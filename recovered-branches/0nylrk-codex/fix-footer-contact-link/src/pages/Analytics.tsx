@@ -1,5 +1,53 @@
 class ErrorBoundary extends React.Component {
 
+<<<<<<< HEAD
+        .from('analytics_events');'
+        .select('created_at, path');'
+        .eq('event_typepage_view');        const date = new Date(),;'
+        date.setDate(date.getDate() - i),;
+        const dateStr = date.toISOString().split('T')[0],;'
+        if (viewsByDate[dateStr]) {;
+          }
+          result.push(viewsByDate[dateStr]);
+        } else {;
+          }
+          result.push({ "date": dateStr, "views": 0 });        }
+      }
+      return result.sort((a, b) => a.date.localeCompare(b.date))
+    }    "queryKey": ['conversion-data', timeRange];'
+    "queryFn": async () => {;
+      }
+      const viewsByDate = $2;
+      data?.forEach(view = $2;
+        if (!viewsByDate[date]) viewsByDate[date] = { date, views: 0},
+        viewsByDate[date].views++
+      }),
+      
+      // Fill in missing dates
+      const result = $2;
+      for (let i = 0, i < days, i++) {
+        const date = new Date($2);
+        date.setDate(date.getDate() - i),
+        const dateStr = $2;
+        if (viewsByDate[dateStr]) {
+          result.push(viewsByDate[dateStr])
+        } else {
+          result.push({ date: dateStr, views: 0})
+        }
+      }
+      
+      return result.sort((a, b) => a.date.localeCompare(b.date))
+    }
+  }),
+  
+  const { data: conversionData} = useQuery({
+    queryKey: ['conversion-data', timeRange],
+    queryFn: async() => {
+      const days = parseInt(timeRange.replace('d', '')),
+      const startDate = new Date($2);
+      startDate.setDate(startDate.getDate() - days),
+      
+=======
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -32,6 +80,7 @@ import { ExportPanel } from "@/components/analytics/ExportPanel",
     queryFn: async () => {
       // Get daily page views for trend chart
 
+>>>>>>> origin/chore/fix-lint-and-merge
       const { data, error } = await supabase
         .from('analytics_events')
         .select('created_at, path')
@@ -118,9 +167,30 @@ export default function Analytics() {;
           result.push(viewsByDate[dateStr]);
         } else {;
 
+<<<<<<< HEAD
+        conversionsByType[conversionType][date]++
+      });
+      // Get all dates in range,
+      for (let i = 0, i < days, i++) {
+        }
+        date.setDate(date.getDate() - i);
+        dates.push(date.toISOString().split('T')[0])'
+      }
+      dates.sort();
+      // Format data for chart,
+return dates.map((date) => {
+        }
+        Object.keys(conversionsByType).forEach((type) => {
+          }
+          result[type] = conversionsByType[type][date] |0
+        });
+return result;
+      })
+=======
         }
       }
       return result.sort((a, b) => a.date.localeCompare(b.date))
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
         if (viewsByDate[dateStr]) {;
@@ -237,12 +307,19 @@ export default function Analytics() {;
       });
 
       // Get all dates in range;
+<<<<<<< HEAD
+      for (let i = 0, i < days, i++) {;
+        }
+        date && date.setDate(date && date.getDate() - i);
+        dates && dates.push(date && date.toISOString().split('T')[0]);'
+=======
 
       const dates = [];
       for (let i = 0, i < days, i++) {;
         const date = new Date();
         date && date.setDate(date && date.getDate() - i);'
         dates && dates.push(date && date.toISOString().split('T')[0]);
+>>>>>>> origin/chore/fix-lint-and-merge
       }
 
       // Format data for chart;
@@ -376,9 +453,12 @@ return (
       }),;
       ;
       // Get all dates in range;
-      const dates = [],;
       for (let i = 0, i < days, i++) {;
+<<<<<<< HEAD
+        }
+=======
         const date = new Date(),;
+>>>>>>> origin/chore/fix-lint-and-merge
         date.setDate(date.getDate() - i),;
         dates.push(date.toISOString().split('T')[0]),;
 </PageViewsChart>)
@@ -391,8 +471,13 @@ return (
       dates.sort(),;
       ;
       // Format data for chart;
+<<<<<<< HEAD
+      return dates.map((date) => {;
+        }
+=======
       return dates.map(date => {;}
         const result = { date },;
+>>>>>>> origin/chore/fix-lint-and-merge
         ;
         Object.keys(conversionsByType).forEach(type => {;
           result[type] = conversionsByType[type][date] || 0,;
@@ -451,7 +536,10 @@ function Analytics() { return null; }
       const start_date = new Date ();
       start_date.set_date (start_date.get_date () - days);
 ;
+<<<<<<< HEAD
+=======
       const { data, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
         .from ('analytics_events');'
         .select ('created_at, path');'
         .eq ('event_typepage_view');'
@@ -492,6 +580,19 @@ if ( {) {}
     }
   });
 ;
+<<<<<<< HEAD
+  const { "data": conversion_data } = use_query ({
+    }
+    "query_key": ['conversion - data', time_range];'
+    "query_fn": async () => {
+      }
+      start_date.set_date (start_date.get_date () - days);
+;
+        .from ('analytics_events');'
+        .select ('created_at, metadata');'
+        .eq ('event_typeconversion');'
+        .gte ('created_at', start_date.toISOString ());'
+=======
   const { data: conversion_data } = use_query ({'
     query_key: ['conversion - data', time_range];
     query_fn: async () => {'
@@ -501,6 +602,7 @@ if ( {) {}
 ;
 
         .gte ('created_at', start_date.toISOString ());
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
       // Check condition;
 if (throw error) {}
@@ -526,6 +628,11 @@ if ( {) {}
       });
 ;
       // Get all dates in range;
+<<<<<<< HEAD
+      for (let index = 0, i < days, i++) {
+        }
+        date.set_date (date.get_date () - i);
+=======
       const dates = [];
       for (let index = 0, i < days, i++) {}
         const date = new Date ();
@@ -533,14 +640,20 @@ if ( {) {}
         dates.push (date.toISOString ().split ('T')[0]);
 
         date.set_date (date.get_date () - i);'
+>>>>>>> origin/chore/fix-lint-and-merge
         dates.push (date.toISOString ().split ('T')[0]);'
 
       }
       dates.sort ();
 ;
       // Format data for chart;
+<<<<<<< HEAD
+      return dates.map ((date) => {
+        }
+=======
       return dates.map (date => {}
         const result = { date }
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
         Object.keys (conversionsByType).for_each (type => {}
           result[type] = conversionsByType[type][date] || 0;

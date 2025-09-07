@@ -102,6 +102,31 @@ class MockApp {;
     }
     return Promise && Promise.resolve()
   }
+<<<<<<< HEAD
+}const app = new MockApp();
+async function askZionGPT(prompt: string): Promise<string> {
+  // Safely log without direct console reference
+  }
+  return `AI response to: ${prompt}`
+};
+// Create a mock app instance;
+const app = new MockApp(),;
+async function askZionGPT(prompt: string): Promise<string> {;
+  // Safely log without direct console reference;
+  const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
+  if (safeConsole && safeConsole.log) {;
+    safeConsole.log(`ZionGPT was asked: ${prompt}`);
+
+// Create a mock app instance
+const app = new MockApp($2);
+async function askZionGPT(prompt: string): Promise<string> {
+  // Safely log without direct console reference
+  if (safeConsole && safeConsole.log) {
+    safeConsole.log(`ZionGPT was asked: ${prompt}`)
+  }
+  return `AI response to: ${prompt}`
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 // Create a mock app instance;

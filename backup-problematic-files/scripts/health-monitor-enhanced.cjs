@@ -291,7 +291,6 @@ class HealthMonitor {
 
     try {
       // Check build time (if build exists)
-      const buildDir = path.join(this.projectRoot, '.next');
       if (fs.existsSync(buildDir)) {
         const buildStats = fs.statSync(buildDir);
         const buildAge = Date.now() - buildStats.mtime.getTime();
@@ -400,7 +399,43 @@ class HealthMonitor {
    */
   displayStatus() {
     console.log('\n🏥 HEALTH MONITOR REPORT');
+<<<<<<< HEAD
+    console.log('===');
+    console.log(`Overall Status: ${this.healthData.overallStatus.toUpperCase()}`);
+    console.log(`Timestamp: ${this.healthData.timestamp}`);
+    
+    if (this.healthData.recommendations.length > 0) {
+      console.log('\n📋 Recommendations:');
+      this.healthData.recommendations.forEach((rec, index) => {
+        console.log(`${index + 1}. ${rec}`);
+      });
+    }
+  }
+}
+
+// Run if called directly
+if (require.main === module) {
+  const monitor = new HealthMonitor();
+  monitor.runHealthChecks()
+    .then(() => monitor.displayStatus())
+    .catch(console.error);
+}
+const monitor = new EnhancedHealthMonitor();
+monitor.generateReport();
+const fs = require("fs");"const path = require("path");class EnhancedHealthMonitor { constructor() { this.metrics = { uptime: process.uptime()," memory: process.memoryUsage()," timestamp: new Date().toISOString() }} checkSystemHealth() {" console.log(" Checking system health."); const health = {"" status: "healthy"," checks: { memory: this.checkMemory()," disk: this.checkDisk()," network: this.checkNetwork()," database: this.checkDatabase() }," metrics: this.metrics }; return health} checkMemory() { const usage = process.memoryUsage(); const isHealthy = usage.heapUsed < usage.heapTotal * 0.8; return {"" status: isHealthy ? "healthy" : "warning"," usage: usage,"" message: isHealthy ? "Memory usage normal" : "High memory usage detected" }} checkDisk() { / Simplified disk check return {"" status: "healthy","" message: "Disk space available" }} checkNetwork() { / Simplified network check return {"" status: "healthy","" message: "Network connectivity normal" }} checkDatabase() { / Simplified database check return {"" status: "healthy","" message: "Database connection stable" }} generateReport() { const health = this.checkSystemHealth(); const reportPath = `health-report-${Date.now()}.json`; fs.writeFileSync(reportPath, JSON.stringify(health, null, 2));"` console.log(` Health report generated: ${reportPath}`); return health}}const monitor = new EnhancedHealthMonitor();monitor.generateReport();""`"`
+        console.log(' Checking system health...')
+            "status"
+            "status"
+            "message"
+            "status"
+            "message"
+            "status"
+            "message"
+            "status"
+            "message"
+=======
     console.log('
+>>>>>>> origin/chore/fix-lint-and-merge
 
 module.exports = HealthMonitor;
 >>>>>>> origin/automation-improvements-final

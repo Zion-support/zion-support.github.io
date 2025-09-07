@@ -233,7 +233,11 @@ onRefresh: () => Promise<void> ;
   const {;
   user ;
 }= useAuth ();
+<<<<<<< HEAD
+  }
+=======
 const {;
+>>>>>>> origin/chore/fix-lint-and-merge
   respondToInterview, cancelInterview ;
 }= useInterviews ();
 const [isResponseDialogOpen, setIsResponseDialogOpen] = useState (false);
@@ -249,7 +253,11 @@ const formattedEndTime = format (endTime, 'h: mm a');';
 const isInterviewPending = interview.status === 'requested';';
 const isInterviewConfirmed = interview.status === 'confirmed';
 const isInterviewLive = isInterviewConfirmed && !isPast (interviewDate) && isPast (new Date (interviewDate.getTime () - 5 * 60000) ), //5 minutes before const isInterviewPast = isPast (interviewDate);
+<<<<<<< HEAD
+  }
+=======
 const getRelativeTime = () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   if (isPast (interviewDate) ) {;
   return `Took place $ {;
   formatDistanceToNow (interviewDate) ;
@@ -257,7 +265,33 @@ const getRelativeTime = () => {;
 }else {;
   return `Starts in $ {;
   formatDistanceToNow (interviewDate) ;
+<<<<<<< HEAD
+}` ;`}
+}if (success) {toast ({"title": `Interview $ {status ;`}`;`}setIsLoading (false)}}setIsLoading (false)}const getStatusBadge = () => {switch (interview.status) {';'
+  }
+  case 'requested': "default": return <Badge> {interview.status ;'
+};
+if (success) {;
+  }
+  toast ({;
+  }
+  "title": `Interview $ {;`  }
+  status ;
+}`;`
+}setIsLoading (false) 
+};
+}setIsLoading (false) 
+};
+  }
+  switch (interview.status) {';'
+  }
+  case 'requested': "default": return <Badge> {;'
+  }
+  interview.status ;
+}</Badge> ;
+=======
 }` ;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 };
 if (success) {;

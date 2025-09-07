@@ -1,4 +1,26 @@
 <<<<<<< HEAD
+
+
+export {};
+export {};
+
+module.exports = {};
+module.exports = {};
+describe('Utils', () => {
+  test('utility functions work', () => {
+    // Add utility tests here
+describe('Utils', () => {
+  test('utility functions work', () => {
+    // Add utility tests here
+    expect(true).toBe(true);
+  });
+});
+    expect(true).toBe(true);
+  });
+});
+
+=======
+<<<<<<< HEAD
 describe('Utils', () => {
   test('utility functions work', () => {
     // Add utility tests here
@@ -11,3 +33,4 @@ describe('utils', () => {
     expect(true).toBe(true);
   });
 });
+>>>>>>> origin/chore/fix-lint-and-merge

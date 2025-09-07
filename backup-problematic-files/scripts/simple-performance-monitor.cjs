@@ -64,7 +64,6 @@ fs.writeFileSync('performance-metrics.json', JSON.stringify(metrics, null, 2));
 // Display summary
 }MB`);
 }s`);
-const fs = require('fs')
 fs.writeFileSync('performance-metrics.json')
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

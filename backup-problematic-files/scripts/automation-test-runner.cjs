@@ -4,8 +4,18 @@
  * Tests all automation scripts and reports results;
  */
 const fs = require('fs')
-const path = require('path')
+const path = require(path')
 const { execSync } = require('child_process')
+<<<<<<< HEAD
+        "encoding
+        stdio"
+        "status
+        status"
+    const testScripts = [{ "path: scripts/health-check.cjs', desc"}]
+      { "path: 'scripts/simple-performance-monitor.cjs, desc"}
+      { "path: scripts/simple-code-quality.cjs', desc"}
+
+=======
 <<<<<<< HEAD
         "encoding"
         "stdio"
@@ -27,3 +37,4 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

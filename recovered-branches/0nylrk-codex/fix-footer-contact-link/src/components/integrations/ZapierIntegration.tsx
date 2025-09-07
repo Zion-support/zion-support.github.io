@@ -12,6 +12,19 @@ import { Input } from "@/components/ui/input";
 import { toast } from "sonner";"
 import { Check, Copy, ExternalLink } from "lucide-react";"
 } from "@/components/ui/card";"
+<<<<<<< HEAD
+export function ZapierIntegration() {;
+  }
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");"
+import React, { useState } from "react","
+import { Badge } from "@/components/ui/badge","
+import { Button } from "@/components/ui/button","
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card","
+import { Input } from "@/components/ui/input","
+import { toast } from "sonner","
+import { Check, Copy, ExternalLink } from "lucide-react","
+=======
 import { Input } from "@/components/ui/input";"
 import { toast } from "sonner";"
 
@@ -25,6 +38,7 @@ import { Input } from "@/components/ui/input",
 import { toast } from "sonner",
 import { Check, Copy, ExternalLink } from "lucide-react",
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export function ZapierIntegration() {
   const [copied, setCopied] = useState(false),
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),
@@ -35,6 +49,11 @@ export function ZapierIntegration() {
     setTimeout(() => setCopied(false), 2000),
     toast.success("API key copied to clipboard")
   },
+<<<<<<< HEAD
+} from "@/components/ui/card";"
+export function ZapierIntegration() {;
+  }
+=======
 
 export function ZapierIntegration() {;
   const [copied, setCopied] = useState(false);
@@ -54,6 +73,7 @@ export function ZapierIntegration() {}
 
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
 
+>>>>>>> origin/chore/fix-lint-and-merge
   const handleCopyApiKey = () => {;
     navigator && navigator.clipboard.writeText(apiKey);
     setCopied(true);
@@ -340,17 +360,38 @@ export function ZapierIntegration() {;
 
   );
 }
+<<<<<<< HEAD
+  )
+=======
   )"
 import React, { useState } from "react",;"
 import { Badge } from "@/components/ui/badge",;"
+>>>>>>> origin/chore/fix-lint-and-merge
 import { Button } from "@/components/ui/button",;"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;"
 import { Input } from "@/components/ui/input",;"
 import { toast } from "sonner",;"
+<<<<<<< HEAD
+import { Check, Copy, ExternalLink } from "lucide-react",;"
+export function ZapierIntegration() {;
+  }
+    }
+    navigator.clipboard.writeText(apiKey),;
+    setCopied(true),;
+    setTimeout(() => setCopied(false), 2000);
+    toast.success("API key copied to clipboard")"
+};
+  return (;
+    <div className="space-y-6">;"
+      <div className="grid "md":grid-cols-3 gap-6">;"
+        <Card className=""md":col-span-2">;"
+          <CardHeader>;
+=======
 import { Check, Copy, ExternalLink } from "lucide-react",;
 
         <Card className="md:col-span-2">;
           <CardHeader>;"
+>>>>>>> origin/chore/fix-lint-and-merge
             <div className="flex items-center justify-between">;"
               <h3 className="text-lg font-semibold">Zapier Connection</h3>;"
               <Badge variant="outline" className="bg-blue-100 text-blue-800">Active</Badge>;

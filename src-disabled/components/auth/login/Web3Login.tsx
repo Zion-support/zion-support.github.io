@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 
-import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {;
 
 
@@ -16,7 +15,6 @@ import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { useAuth } from "@/hooks/useAuth",
 import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
-import { Wallet } from 'lucide-react'
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
 export function Web3Login() {
@@ -52,7 +50,6 @@ export function Web3Login() {
   },
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable,
-  const buttonTitle = !isWalletSystemAvailable
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
     : "",
 
@@ -173,17 +170,9 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
 import { useWallet as useAppWallet } from '../../../context/WalletContext.tsx'; // Renamed to avoid conflict if useWallet hook is defined locally
-import { Wallet } from 'lucide-react';
 import { toast } from 'sonner';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { useAuth } from "@/hooks/useAuth"
-import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
-import { Wallet } from 'lucide-react'
-import { toast } from "sonner";
-import {logErrorToProduction} from '@/utils/productionLogger';
 export function Web3Login() {
   );
 }return;
@@ -214,8 +203,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     } finally {;
       setIsLoading(false);
 
-  const buttonDisabled = isLoading || !isWalletSystemAvailable;
-  const buttonTitle = !isWalletSystemAvailable;
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured.";""
   )
   const button_disabled = is_loading || !isWalletSystemAvailable;

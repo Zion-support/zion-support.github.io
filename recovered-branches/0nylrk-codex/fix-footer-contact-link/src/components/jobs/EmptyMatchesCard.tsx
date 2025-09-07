@@ -1,6 +1,25 @@
+<<<<<<< HEAD
+import { Card } from "@/components/ui/card","
+import { Button } from "@/components/ui/button","
+import { Sparkles, RefreshCcw } from "lucide-react","
+export interface EmptyMatchesCardProps {
+  }
+  "onRefresh": () => void,
+  "isProcessing": booleanimport { Card } from "@/components/ui/card","
+export interface EmptyMatchesCardProps {
+  }
+  "onRefresh": () => void,
+  "isProcessing": boolean,
+export interface EmptyMatchesCardProps {;
+  }
+  "onRefresh": () => void;
+  "isProcessing": boolean
+}
+=======
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Sparkles, RefreshCcw } from "lucide-react",
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export interface EmptyMatchesCardProps {
   onRefresh: () => void,
@@ -57,6 +76,8 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches;
           </>
+<<<<<<< HEAD
+=======
 
     </Card>
   );
@@ -65,6 +86,7 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
 import { Button } from "@/components/ui/button",;
 
 import { Sparkles, RefreshCcw } from "lucide-react",;
+>>>>>>> origin/chore/fix-lint-and-merge
 export interface EmptyMatchesCardProps {;
   onRefresh: () => void;
   isProcessing: boolean;

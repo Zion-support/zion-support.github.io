@@ -93,7 +93,6 @@ interface 500Props {
 }
 }
 
-const 500: React.FC<500Props /> = ({ className   ,}
 }) => {
 
 

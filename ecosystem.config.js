@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+      script: 'automation/lint-error-fixer.cjs',
+      args: 'continuous',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      error_file: './logs/error-fixer-error.log',
+      out_file: './logs/error-fixer-out.log',
+      log_file: './logs/error-fixer-combined.log',
+      time: true},
+    {
+      }
+      "name": 'intelligent-orchestrator','
+      "script": 'automation/intelligent-orchestrator.cjs','
+      "args": 'continuous','
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G','
+      "env": {
+        }
+        "NODE_ENV": 'production''
+     
+},
+      "error_file": './logs/orchestrator-error.log','
+      "out_file": './logs/orchestrator-out.log','
+      "log_file": './logs/orchestrator-combined.log','
+      "time": true
+   
+},
+    {
+      }
+      "name": 'automation-dashboard','
+      "script": 'automation/automation-dashboard.cjs','
+      "args": 'start''
+   
+}
+    "env_production": {"NODE_ENV": "production";"
+      }
+      "PORT": 3000;
+=======
 export default {apps: [;
     {name: 'bolt-zion-app',export default {apps: [;
     {name: 'bolt-zion-app',ursor/fix-website-loading-errors-and-merge-6662;
@@ -269,6 +314,7 @@ export default {
       NODE_ENV: "production"
       PORT: 3000
 
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     env_production: {
       NODE_ENV: "production"
@@ -2243,6 +2289,8 @@ module && module.exports = {
     }
   ]
 },
+<<<<<<< HEAD
+=======
 
     node_args: "--max-old-space-size=1024",
     error_file: "./logs/err.log",
@@ -2251,3 +2299,4 @@ module && module.exports = {
     time: true
   }]
 };
+>>>>>>> origin/chore/fix-lint-and-merge

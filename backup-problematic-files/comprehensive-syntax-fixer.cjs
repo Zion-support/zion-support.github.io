@@ -144,14 +144,20 @@ class ComprehensiveSyntaxFixer {
   }
 
   getAllCodeFiles() {
+<<<<<<< HEAD
+    
+=======
     const files = [];
 <<<<<<< HEAD
 
+>>>>>>> origin/chore/fix-lint-and-merge
     const scanDirectory = (dir) => {
       const items = fs.readdirSync(dir);
 
       for (const item of items) {
         const fullPath = path.join(dir, item);
+<<<<<<< HEAD
+=======
         const stat = fs.statSync(fullPath);
 
 =======
@@ -167,6 +173,7 @@ class ComprehensiveSyntaxFixer {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
         
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======

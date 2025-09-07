@@ -1,6 +1,17 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
+<<<<<<< HEAD
+const { execSync } = require(child_process')
+console.log('🧪 Starting Comprehensive Test Runner...)
+  "overall
+    const output = execSync(command, { encoding": utf8', "stdio})
+    execSync('npx jest --version, { stdio"})
+    addTest(Unit Tests', 'skipped, 0, { "reason})
+    runCommand(PYTHONPATH=$(pwd)/zion_academy" python3 -m unittest discover -s zion_academy/tests -p "test_*.py
+    addTest('Python Unit Tests', 'skipped', 0, { reason"})
+
+=======
 const { execSync } = require('child_process')
 console.log('🧪 Starting Comprehensive Test Runner...')
   "overall"
@@ -22,3 +33,4 @@ console.log('\n Test Results "Summary")
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

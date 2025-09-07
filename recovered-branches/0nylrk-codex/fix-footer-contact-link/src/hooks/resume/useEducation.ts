@@ -62,8 +62,13 @@ export function useEducation() { return null; }
     setIsLoading(true),;
     setError(null),;
     try {;
+<<<<<<< HEAD
+      }
+        .from('education');'
+=======
       const { error } = await supabase;'
         .from('education');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
           resume_id: resumeId,;
           institution: education.institution,;
@@ -94,6 +99,11 @@ export function useEducation() { return null; }
     setIsLoading(true),
     setError(null),
 
+<<<<<<< HEAD
+;
+export function useEducation() {;
+  }
+=======
     }
     
     setIsLoading(true),
@@ -109,6 +119,7 @@ export function useEducation() {;
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
+>>>>>>> origin/chore/fix-lint-and-merge
   ;
   const addEducation = async (resumeId:string, education:Education):Promise<boolean> => {;
     if (!user) {;
@@ -120,8 +131,13 @@ export function useEducation() {;
     setError(null),;
     ;
     try {;
+<<<<<<< HEAD
+      }
+        .from('education');'
+=======
       const { error } = await supabase;
         .from('education');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
           resume_id:resumeId,;
           institution:education.institution,;
@@ -154,8 +170,13 @@ export function useEducation() {;
     setError(null),;
     ;
     try {;
+<<<<<<< HEAD
+      }
+        .from('education');'
+=======
       const { error } = await supabase;
         .from('education');
+>>>>>>> origin/chore/fix-lint-and-merge
         .update({;
           institution:education.institution,;
           degree:education.degree,;
@@ -188,8 +209,13 @@ export function useEducation() {;
     setError(null),;
     ;
     try {;
+<<<<<<< HEAD
+      }
+        .from('education');'
+=======
       const { error } = await supabase;
         .from('education');
+>>>>>>> origin/chore/fix-lint-and-merge
         .delete();
         .eq('id', eduId),;
       ;
@@ -203,8 +229,13 @@ export function useEducation() {;
     }
 
     try {
+<<<<<<< HEAD
+}
+        .from('education')'
+=======
       const { error } = await supabase
         .from('education')
+>>>>>>> origin/chore/fix-lint-and-merge
         .update({
 
           institution: education && education.institution;
@@ -249,8 +280,13 @@ export function useEducation() {;
     setIsLoading(true),;
     setError(null),;
     try {;
+<<<<<<< HEAD
+      }
+        .from('education');'
+=======
       const { error } = await supabase;'
         .from('education');
+>>>>>>> origin/chore/fix-lint-and-merge
         .update({;
           institution: education.institution,;
           degree: education.degree,;
@@ -282,8 +318,13 @@ export function useEducation() {;
     setError(null),
 
     try {
+<<<<<<< HEAD
+}
+        .from('education')'
+=======
       const { error } = await supabase
         .from('education')
+>>>>>>> origin/chore/fix-lint-and-merge
         .delete()
 
         .eq('id', eduId),
@@ -334,6 +375,13 @@ import {useState} from 'react';
       setError('You must be logged in to delete education'),;
       return false;
 
+<<<<<<< HEAD
+import {supabase} from '@/integrations / supabase / client';'
+import {Education} from '@/types / resume';'
+import {use_auth} from '@/hooks / use_auth';'
+export /**
+ * use_education - Function description
+=======
     }
     
     setIsLoading(true),
@@ -350,6 +398,7 @@ import {use_auth} from '@/hooks / use_auth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export /**;
  * use_education - Function description;
+>>>>>>> origin/chore/fix-lint-and-merge
  */
 function use_education() {}
   const { user } = use_auth ();
@@ -385,9 +434,14 @@ if ( {) {}
 ;
 
     try {
+<<<<<<< HEAD
+      }
+        .from ('education');'
+=======
   // TODO: Implement
       const { error } = await supabase;
         .from ('education');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert ({
 
 if (throw error) {
@@ -416,7 +470,12 @@ if (throw error) {
 ;
 
     try {
+<<<<<<< HEAD
+      }
+        .from ('education');'
+=======
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
         .update ({
 
         .eq ('id', edu_id);
@@ -439,7 +498,12 @@ if (throw error) {
 ;
 
     try {
+<<<<<<< HEAD
+      }
+        .from ('education');'
+=======
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
         .delete ();
       // Check condition;
       return showSuccessToast ("Education deleted", "Your education has been removed from your resume");"

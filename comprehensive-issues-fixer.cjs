@@ -127,8 +127,8 @@ export default defineConfig({
       // Update tsconfig.json to handle memory issues
       const tsconfigPath = path.join(this.rootPath, 'tsconfig.json');
       if (fs.existsSync(tsconfigPath)) {
-        let content = fs.readFileSync(tsconfigPath, 'utf8');
-        let config = JSON.parse(content);
+        const content = fs.readFileSync(tsconfigPath, 'utf8');
+        const config = JSON.parse(content);
 
         // Add memory optimization settings
         config.compilerOptions = {

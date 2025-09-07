@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
 export interface InnovativeMicroSaasService {
   "id": string;
 export const innovativeMicroSaasServices: InnovativeMicroSaasService[] = [ { id: \"smart-project-manager\",name: \"Smart Project Manager\",tagline: \"AI-powered project management and collaboration\",price: \"$39/month\",description: \"Intelligent project management platform that uses AI to optimize workflows and team collaboration.\",features[ \"AI task prioritization\",\"Team collaboration tools\",\"Progress tracking\",\"Resource optimization\",\"Integration capabilities\" ],link: \"/services/smart-project-manager\",category: \"Project Management\",realImplementation: true,contactInfo: { mobile: \"+1 302 464 0950\",email: \"kleber@ziontechgroup.com\",address: \"364 E Main St STE 1008 Middletown DE 19709\" ]},
@@ -185,3 +191,4 @@ export interface InnovativeMicroSaasService { id: string; name: string; tagline:
       \"email\": \"kleber@ziontechgroup.com\",}
       \"address\": \"364 E Main St STE 1008 Middletown DE 19709\"}
 ]}}}
+>>>>>>> origin/chore/fix-lint-and-merge

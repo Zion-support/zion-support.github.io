@@ -15,8 +15,31 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+<<<<<<< HEAD
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState("company");"
+  const [isSubmitting, setIsSubmitting] = useState(false);
+import React, { useState } from "react","
+import { Header } from "@/components/Header","
+import { Footer } from "@/components/Footer","
+import { SEO } from "@/components/SEO","
+import { useAuth } from "@/hooks/useAuth","
+import { Navigate } from "react-router-dom","
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card","
+import { Input } from "@/components/ui/input","
+import { Label } from "@/components/ui/label","
+import { Button } from "@/components/ui/button","
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs","
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select","
+import { toast } from "sonner","
+import { supabase } from "@/integrations/supabase/client";"
+import { Switch } from "@/components/ui/switch";"
+export default function TenantOnboarding() {
+  }
+=======
 
       return <div>Something went wrong.</div>;
+>>>>>>> origin/chore/fix-lint-and-merge
     }
     
     return this.props.children;
@@ -140,6 +163,33 @@ export default function TenantOnboarding() { return null; }
   description: error && error.message ;
       });
     } finally {;
+<<<<<<< HEAD
+      }
+      setIsSubmitting(false);import React, { useState } from "react","
+export default function TenantOnboarding() {
+  }
+    }
+    "subdomain": """
+    "logo_url": """
+    "primary_color": "#9b87f5""
+    "theme_preset": "light""
+    "company_size": """
+    "industry": """
+    "custom_domain": """
+    "is_co_branded": true
+  });
+
+  // Check if user has admin role;
+  // Check if user has admin role,
+const isAdmin = user?.role === "admin",;"
+  if (!isAdmin) {
+}
+return <Navigate to="/unauthorized" />;"
+  }
+  const handleInputChange = ("e": React.ChangeEvent<HTMLInputElement>) => {      // Submit to Supabase
+}
+        .from('whitelabel_tenants')'
+=======
       setIsSubmitting(false);
 
 import React, { useState } from "react",
@@ -365,6 +415,7 @@ export default function TenantOnboarding() {
 
       const { data, error } = await supabase
         .from('whitelabel_tenants')
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({
           brand_name: formData.brand_name
           subdomain: subdomain
@@ -692,6 +743,31 @@ class ErrorBoundary extends React.Component {
 </Input>
                       </div>;
                     </div>;
+<<<<<<< HEAD
+                    <div className="space-y-2">;"
+                      <Label htmlFor="theme_preset">Theme Preset</Label>;"
+                      <Select,
+name="theme_preset""
+                        value={formData && formData.theme_preset}
+                        onValueChange={(value) => handleSelectChange("theme_preset", value)}                        placeholder="hire && hire.yourcompany.com""
+                        placeholder="hire && hire.yourcompany.com""
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer",;"
+import { SEO } from "@/components/SEO",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { Navigate } from "react-router-dom",;"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;"
+import { Input } from "@/components/ui/input",;"
+import { Label } from "@/components/ui/label",;"
+import { Button } from "@/components/ui/button",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;"
+import { toast } from "sonner",;"
+import { supabase } from "@/integrations/supabase/client",;"
+import { Switch } from "@/components/ui/switch",;"
+export default function TenantOnboarding() {;
+  }
+=======
                     <div className=\"space-y-2\" />;
                       <Label htmlFor=\"theme_preset\" />Theme Preset</Label>;
                       <Select;
@@ -715,6 +791,7 @@ import { toast } from \"sonner\",;
 import { supabase } from \"@/integrations/supabase/client\",;
 import { Switch } from \"@/components/ui/switch\",;
 export default function TenantOnboarding() {;}
+>>>>>>> origin/chore/fix-lint-and-merge
   const { user } = useAuth(),;
   const [activeTab, setActiveTab] = useState(\"company\"),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
@@ -730,9 +807,15 @@ export default function TenantOnboarding() {;}
     is_co_branded: true;}
   }),;
   // Check if user has admin role;
+<<<<<<< HEAD
+  if (!isAdmin) {;
+    }
+    return <Navigate to="/unauthorized" />;"
+=======
   const isAdmin = user?.role === \"admin\",;
   if (!isAdmin) {;}
     return <Navigate to=\"/unauthorized\" />;}
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ;
   const handleInputChange = (;) => {
@@ -741,6 +824,12 @@ export default function TenantOnboarding() {;}
     const { name, value } = e.target,;
     setFormData(prev => ({ ...prev, [name]: value }));
   },;
+<<<<<<< HEAD
+    }
+    setFormData(prev => ({ ...prev, [name]: value }));
+  },;
+    }
+=======
   const handleSelectChange = (;) => {
   return $3;}
 }
@@ -749,6 +838,7 @@ export default function TenantOnboarding() {;}
   const handleSwitchChange = (;) => {
   return $3;}
 }
+>>>>>>> origin/chore/fix-lint-and-merge
     setFormData(prev => ({ ...prev, [name]: checked }));
   },;
   const handleSubmit = async (e: React.FormEvent) => {;
@@ -758,6 +848,14 @@ export default function TenantOnboarding() {;}
       // Generate subdomain if not provided;'
       const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),;
       // Create landing page copy;
+<<<<<<< HEAD
+        }
+        "headline": "AI Hiring Assistant",;"
+        "subtitle": `Find the best talent for your ${formData.industry || "company"}`,;`        "cta": "Get Started";"
+      },;
+      // Submit to Supabase;
+        .from('whitelabel_tenants');'
+=======
       const landingPageCopy = {;"
         headline: "AI Hiring Assistant",;"`
         subtitle: `Find the best talent for your ${formData.industry || "company"}`,;"
@@ -770,6 +868,7 @@ export default function TenantOnboarding() {;}
       // Submit to Supabase;
       const { data, error } = await supabase;'
         .from('whitelabel_tenants');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
           brand_name: formData.brand_name,;
           subdomain: subdomain,;

@@ -1,4 +1,10 @@
 const fs = require('fs');
+<<<<<<< HEAD
+<<<<<<< HEAD
+const path = require(path');
+
+
+=======
 const path = require('path');
 
 const testDir = path.join(__dirname, '__tests__');

@@ -13,11 +13,17 @@ function fixFile(filePath, description, fixFunction) {
     
 console.log('🔧 Starting comprehensive syntax error fixing...');
 
+<<<<<<< HEAD
+;
+function fixSyntaxErrors(filePath) {;
+  try {;
+=======
 const fs = require('fs');
 const path = require('path');
 
 function fixSyntaxErrors(filePath) {
   try {
+>>>>>>> origin/chore/fix-lint-and-merge
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 

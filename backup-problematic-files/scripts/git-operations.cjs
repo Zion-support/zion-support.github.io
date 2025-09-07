@@ -1,7 +1,16 @@
 
 const { execSync } = require('child_process')
-const fs = require('fs')
+const fs = require(fs')
 const path = require('path')
+<<<<<<< HEAD
+    this.log( Starting Git Operations')
+      this.log('� Adding all changes to git)
+      execSync(git add .')
+      this.log('� Committing changes)
+      this.log(� Pushing to current branch')
+      const currentBranch = execSync('git branch --show-current')
+
+=======
     this.log(' Starting Git Operations')
       this.log('� Adding all changes to git')
 <<<<<<< HEAD
@@ -22,3 +31,4 @@ const path = require('path')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

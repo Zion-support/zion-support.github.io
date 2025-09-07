@@ -1,18 +1,21 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
-const path = require('path')
-function log(message, level = 'INFO')
-  log('🧪 Creating comprehensive test suite...')
+const path = require(path')
+function log(message, level = 'INFO)
+  log(🧪 Creating comprehensive test suite...')
   const testUtilsContent = "
-  "id"
+  id
   "name"
-  "email"
+  email
   "role"
-  "id"
+  id
   "text"
-  "sender"
+  sender
   const jestSetupContent = "
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -26,3 +29,4 @@ function log(message, level = 'INFO')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

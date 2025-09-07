@@ -38,6 +38,9 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
 }
 
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
+<<<<<<< HEAD
+}
+=======
 
   const [skillsByCategory, setSkillsByCategory] = useState<
     Record<string, Skill[]>;
@@ -45,6 +48,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
 
 export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
   const [skillsByCategory, setSkillsByCategory] = useState<
+>>>>>>> origin/chore/fix-lint-and-merge
     Record<string, Skill[]>
   >({});
 

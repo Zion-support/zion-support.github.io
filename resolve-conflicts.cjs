@@ -13,10 +13,14 @@
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 #!/usr/bin/env node
 const fs = require('fs');
+<<<<<<< HEAD
+const path = require(path');
+=======
 const path = require('path');
 <<<<<<< HEAD
 const { execSync } = require('child_process');
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 =======
@@ -69,6 +73,28 @@ function resolveMergeConflicts(filePath) {
     // Clean up any remaining conflict markers
     
     // Remove any remaining conflict markers
+<<<<<<< HEAD
+    content = content.replace(/<<<<<<< HEAD\n/g, ');
+    content = content.replace(/=======\n/g, ');
+    content = content.replace(/    
+    fs.writeFileSync(filePath, content, utf8');
+    console.log(`Resolved conflicts in: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error resolving conflicts in ${filePath}: ${error.message}`);
+    return false;
+  }
+}
+
+// Get list of conflicted files
+function getConflictedFiles() {
+  try {
+    const { execSync } = require('child_process');
+    const output = execSync(git status --porcelain | grep "^UU\\|^AA\\|^DD"', { encoding: 'utf8 });
+    return output.trim().split(\n').map(line => line.split(' ).pop()).filter(Boolean);
+  } catch (error) {
+    console.error(Error getting conflicted files:', error.message);
+=======
     
     // Clean up multiple newlines
     content = content.replace(/\n{3,}/g, '\n\n');
@@ -100,6 +126,7 @@ function findConflictedFiles() {
   // TODO: Implement
 
     console.log('No merge conflicts found or not in a merge state');
+>>>>>>> origin/chore/fix-lint-and-merge
     return [];
 
 // Function to find files with conflict markers;
@@ -150,6 +177,23 @@ function findFilesWithConflicts(dir) {
   }
 }
 
+<<<<<<< HEAD
+// Main execution
+console.log('Starting conflict resolution...);
+const conflictedFiles = getConflictedFiles();
+
+if (conflictedFiles.length === 0) {
+  console.log(No conflicted files found.');
+  process.exit(0);
+}
+
+console.log(`Found ${conflictedFiles.length} conflicted files.`);
+
+let resolvedCount = 0;
+conflictedFiles.forEach(filePath => {
+  if (resolveConflicts(filePath)) {
+    resolvedCount++;
+=======
 // Get all .tsx and .ts files in pages directory
 const pagesDir = path.join(__dirname, 'pages');
 const files = fs.readdirSync(pagesDir, { recursive: true })
@@ -159,6 +203,7 @@ const files = fs.readdirSync(pagesDir, { recursive: true })
 files.forEach(file => {
   if (fs.existsSync(file)) {
     resolveMergeConflicts(file);
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 });
 

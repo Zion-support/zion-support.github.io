@@ -31,8 +31,13 @@ import {};
 import { Header } from "@/components/Header";"
 import { Footer } from "@/components/Footer";"
 import { Button } from "@/components/ui/button","
+<<<<<<< HEAD
+import { Input } from "@/components/ui/input","
+  }
+=======
 import { Input } from "@/components/ui/input",
 import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   Form,
   FormControl,
   FormField,
@@ -45,11 +50,21 @@ import { Footer } from "@/components/Footer",
 // Form validation schema
 
 const forgotPasswordSchema = z.object({
+<<<<<<< HEAD
+}
+  }
+  "email": z.string().email("Please enter a valid email")})"
+=======
 
   email: z.string().email("Please enter a valid email")})
+>>>>>>> origin/chore/fix-lint-and-merge
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 export default function ForgotPassword() {};
   const { resetPassword, isLoading } = useAuth();
+<<<<<<< HEAD
+  const [submitted, setSubmitted] = useState(false);export default function ForgotPassword() {;
+  }
+=======
 
   email: z.string().email("Please enter a valid email")}),
 
@@ -58,6 +73,7 @@ type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 export default function ForgotPassword() {;
 
   const { resetPassword, isLoading } = useAuth();
+>>>>>>> origin/chore/fix-lint-and-merge
   const [submitted, setSubmitted] = useState(false);
 export default function ForgotPassword() {}
   const { resetPassword, isLoading } = useAuth(),
@@ -416,9 +432,14 @@ import { Footer } from "@/components/Footer",;
 const forgotPasswordSchema = z.object({;"
   email: z.string().email("Please enter a valid email")}),;
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,;
+<<<<<<< HEAD
+export default function ForgotPassword() {;
+  }
+=======
 export default function ForgotPassword() { return null; }
   const { resetPassword, isLoading } = useAuth(),;
   const [submitted, setSubmitted] = useState(false),;
+>>>>>>> origin/chore/fix-lint-and-merge
   // Initialize react-hook-form;
   const form = useForm({;
     resolver: zodResolver(forgotPasswordSchema),;

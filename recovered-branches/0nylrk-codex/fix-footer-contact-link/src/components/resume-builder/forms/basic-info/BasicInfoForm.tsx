@@ -119,8 +119,12 @@ export interface BasicInfoFormProps {;
     }
 
   }, [initialData, form]),;
+<<<<<<< HEAD
+    }
+=======
 
   const handleSubmit = (data: BasicInfoFormData) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     onSave(data),;
     if (onComplete) {;
       onComplete();

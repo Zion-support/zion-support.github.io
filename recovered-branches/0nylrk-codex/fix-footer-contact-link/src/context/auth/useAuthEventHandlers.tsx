@@ -151,11 +151,18 @@ if ( {) {}
 
   return {}
     handleSignedIn,
+<<<<<<< HEAD
+    handleSignedOut,
+import { toast } from "@/hooks/use-toast";"
+import { checkNewRegistration } from "@/utils/authUtils",;"
+import { useNavigate } from 'react-router-dom',;'
+=======
     handleSignedOut"
 import { toast } from "@/hooks/use-toast",;"
 import type { UserProfile } from "@/types/auth",;"
 import { checkNewRegistration } from "@/utils/authUtils",;'
 import { useNavigate } from 'react-router-dom',;
+>>>>>>> origin/chore/fix-lint-and-merge
 /**;
  * Custom hook for auth event handling;
  */;
@@ -177,14 +184,30 @@ export function useAuthEventHandlers(): any (;
 "
 import { toast } from "@/hooks/use-toast",;"
 import type { UserProfile } from "@/types/auth",;"
+<<<<<<< HEAD
+=======
 import { checkNewRegistration } from "@/utils/authUtils",;'
 import { useNavigate } from 'react-router-dom',;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 /**;
  * Custom hook for auth event handling;
  */;
+<<<<<<< HEAD
+export function useAuthEventHandlers() {;
+  }
+;
+  const handleSignedIn = ("mappedUser":UserProfile) => {;
+    }
+    toast({;
+      }
+      "title":"Welcome back!",,"
+  "description":`You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;`
+      "variant":"default"}),;"
+=======
 
       variant:"default"}),;
+>>>>>>> origin/chore/fix-lint-and-merge
     ;
     // Check for new registration and send welcome email if needed;
     setTimeout(() => {;

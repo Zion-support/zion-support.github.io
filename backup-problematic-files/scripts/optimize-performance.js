@@ -200,12 +200,22 @@ function optimizeNextConfig() {
   console.log('✅ package.json optimized for performance');
   return true}
 function createPerformanceComponents() {
+<<<<<<< HEAD
+  }
+  const componentsDir = 'components/performance';'
+  if (!fs && fs.existsSync(componentsDir)) {
+    }
+    fs && fs.mkdirSync(componentsDir, { "recursive": true })}"
+  // Create optimized image component,
+import Image from 'next/image''
+=======
   const componentsDir = 'components/performance';
   if (!fs.existsSync(componentsDir)) {
     fs.mkdirSync(componentsDir, { "recursive": true })}
   // Create optimized image component
   const optimizedImageComponent = "import React from 'react'
 import Image from 'next/image'
+>>>>>>> origin/chore/fix-lint-and-merge
 interface OptimizedImageProps {
   "src": string
   alt: string

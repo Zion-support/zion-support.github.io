@@ -17,6 +17,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const rows = ['
     ['MetricValueTrend%'];
 
+<<<<<<< HEAD
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+
+    ['MetricValueTrend%'];
+
+
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];

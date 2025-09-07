@@ -21,12 +21,17 @@ export function Markdown({ content, className }: MarkdownProps) {}
   );
 }
   )
+<<<<<<< HEAD
+import React from "react";"
+import { cn } from "@/lib/utils",;"
+=======
 
   )
 import React from "react",;
 import ReactMarkdown from "react-markdown",;
 import { cn } from "@/lib/utils",;
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface MarkdownProps {;
   content: string,;
 
@@ -61,4 +66,38 @@ function Markdown() {}
 
   )
 
+<<<<<<< HEAD
+;
+;
+import React from "React";"
+import ReactMarkdown from "ReactMarkdown";"
+;
+interface MarkdownProps {;
+  }
+  "content":string,;
+  className?:string;
 }
+;
+export function Markdown() {;
+  );
+}
+  )
+  )
+interface MarkdownProps {;
+  }
+  "content": string;
+  className?: string;
+}
+;
+export function Markdown() {;
+  }
+  return (;
+    <div className={cn("prose "dark":prose-invert max-w-none", className)}>;"
+      <ReactMarkdown>{content}</ReactMarkdown>;
+    </div>;
+  );
+}
+;
+=======
+}
+>>>>>>> origin/chore/fix-lint-and-merge

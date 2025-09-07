@@ -39,6 +39,17 @@ export function ConversionAnalysisChart({
   CardContent,
   CardDescription,
   CardHeader,
+<<<<<<< HEAD
+  CardTitle
+} from '@/components / ui / card';'
+import { AnalyticsChart  } from '@/components / analytics / AnalyticsChart';  CardTitle,;'
+} from "@/components/ui/card";"
+interface ConversionAnalysisProps {
+  }
+  "data": Array<Record<string, any>>;
+  "timeRange": string;
+  "onTimeRangeChange": ("range": string) => void
+=======
 
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 "
@@ -47,6 +58,7 @@ interface ConversionAnalysisProps {}
   data: Array<Record<string, any>>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export function ConversionAnalysisChart({};
@@ -64,12 +76,20 @@ export function ConversionAnalysisChart(): any ({;
   timeRange,;
   onTimeRangeChange,;
 }: ConversionAnalysisProps) {;
+<<<<<<< HEAD
+  }
+    data && data.length > 0;
+      ? Object && Object.keys(data[0]).filter((key) => key !== "date");"
+import React from './react';'
+  }
+=======
   const dataKeys =;
     data && data.length > 0;"
       ? Object && Object.keys(data[0]).filter((key) => key !== "date");
 
 import React from './react';
 import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   Card,
   CardContent,
   CardDescription,
@@ -96,12 +116,19 @@ interface ConversionAnalysisProps {
           title=""
           data={data |[]}
           dataKeys={dataKeys}
+<<<<<<< HEAD
+          type="bar""
+export function ConversionAnalysisChart() {
+}
+    ? Object.keys(data[0]).filter(key => { return key !== 'date')'
+=======
           type="bar"
 
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange }: ConversionAnalysisProps) {
 
   const dataKeys = data && data.length > 0
     ? Object.keys(data[0]).filter(key => key !== 'date')
+>>>>>>> origin/chore/fix-lint-and-merge
     : [],
 
   return (
@@ -146,6 +173,10 @@ function ConversionAnalysisChart() {
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;"
+=======
 
 Track different conversion types;
         </CardDescription>;
@@ -154,17 +185,25 @@ import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface ConversionAnalysisProps {;
   data:Array<Record<string any>>,;
   timeRange:string,;
   onTimeRangeChange:(range:string) => void;
 }
 ;
+<<<<<<< HEAD
+export function ConversionAnalysisChart() {;
+  }
+    ? Object.keys(data[0]).filter(key => { return key !== 'date'); }'
+    : [];
+=======
 export function ConversionAnalysisChart({ data, timeRange, onTimeRangeChange } ConversionAnalysisProps) {;
   const dataKeys = data && data.length > 0;
     ? Object.keys(data[0]).filter(key => key !== 'date');
     :[],;
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
   return (;
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;

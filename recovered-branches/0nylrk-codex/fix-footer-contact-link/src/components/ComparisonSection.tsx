@@ -1,4 +1,36 @@
 import {
+<<<<<<< HEAD
+  }
+  Table,
+TableBody
+  TableCell,
+TableHead
+  TableHeader,
+TableRow
+} from "./ui/table";"
+          </p>
+        </div>
+        <div className="max-w-4xl mx-auto">"
+          <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">"
+            <Table>
+              <TableHeader>
+                <TableRow className="border-b border-zion-purple/20">"
+                  <TableHead className="text-white">Service</TableHead>"
+                  <TableHead className="text-white text-center">Traditional Providers</TableHead>"
+                  <TableHead className="text-white text-center">With Zion</TableHead>"
+                  <TableHead className="text-white text-center">Savings</TableHead>                  <TableHead className="text-white text-center">Traditional Providers</TableHead>"
+                  <TableHead className="text-white text-center">With Zion</TableHead>"
+                  <TableHead className="text-white text-center">Savings</TableHead>"
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {[
+}
+import { GradientHeading  } from './GradientHeading';'
+import { Button  } from './ui / button';'
+import { CheckCircle2  } from './lucide-react';'
+  }
+=======
   Table
   TableBody
   TableCell
@@ -21,6 +53,7 @@ import { GradientHeading } from "./GradientHeading";
 import { Button } from "./ui/button";
 import { CheckCircle2 } from "lucide-react";
 import {
+>>>>>>> origin/chore/fix-lint-and-merge
   Table,
   TableBody,
   TableCell,

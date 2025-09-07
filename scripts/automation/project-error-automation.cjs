@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -16,19 +20,23 @@ const glob = require("glob")
     await this.log(" Starting Project Error Automation")
   const dirs = ["""automation/logs"""", """automation/reports""", """automation/backups""""]
   await fs.mkdir(path.join(this.projectRoot, "dir)", { "recursive"}
+>>>>>>> origin/chore/fix-lint-and-merge
     console.log(")
-    await fs.appendFile(this.logFile, logMessage + "\n")
+    await fs.appendFile(this.logFile, logMessage + \n)
   "cwd"
-        "encoding": "utf8"
-        "stdio": options.silent ? "pipe" : "inherit"
-      return { "success": true, "output"}
-  return { "success": false, "output"}
+        encoding: "utf8"
+        stdio: options.silent ? "pipe" : inherit
+      return { "success": true, output}
+  return { "success": false, output}
   "cwd"
-        "encoding": "utf8"
-        "stdio": options.silent ? "pipe" : "inherit"
-      return { "success": true, "output"}
-  return { "success": false, "output"}
+        encoding: "utf8"
+        stdio: options.silent ? "pipe" : inherit
+      return { "success": true, output}
+  return { "success": false, output}
   await this.log("� Checking dependencies...")
+<<<<<<< HEAD
+
+=======
     const npmCheck = await this.runCommand("npm ls --depth=0", { "silent"})
   await this.log("⚠  Dependency conflicts detected")
   "type": "dependency-conflict"
@@ -36,35 +44,53 @@ const glob = require("glob")
         "details"
   "type": "dependency-conflict"
         "message": "Dependency conflicts found"
+>>>>>>> origin/chore/fix-lint-and-merge
         "details"
+  type: "dependency-conflict"
+        message: "Dependency conflicts found"
+        details
       await this.log(" Attempting to fix dependency conflicts...")
+<<<<<<< HEAD
+
+=======
       const fixResult = await this.runCommand("npm install --legacy-peer-deps")
+>>>>>>> origin/chore/fix-lint-and-merge
   await this.log(" Dependencies fixed successfully")
-  "type": "dependency-fix"
-          "action": "npm install --legacy-peer-deps"
-          "timestamp"
+  type: "dependency-fix"
+          action: "npm install --legacy-peer-deps"
+          timestamp
   await this.log(" Dependencies are healthy")
+<<<<<<< HEAD
+
+=======
   await this.log(" Checking TypeScript errors...")
     const typeCheck = await this.runCommand("npm run type-check", { "silent"})
+>>>>>>> origin/chore/fix-lint-and-merge
   await this.log("⚠  TypeScript errors detected")
-  "type": "typescript-error"
-        "message": "TypeScript compilation errors"
-        "details"
+  type: "typescript-error"
+        message: "TypeScript compilation errors"
+        details
   await this.log(" No TypeScript errors found")
-  await this.log(" Attempting to fix TypeScript errors...")
+  await this.log( Attempting to fix TypeScript errors...)
     if (errorOutput.includes("Cannot find module")
-  fixes.push("import-fix")
-    if (errorOutput.includes("Type \"any\" is not assignable")
+  fixes.push(import-fix)
+    if (errorOutput.includes("Type \"any\ is not assignable)
   fixes.push("type-annotation-fix")
-    if (errorOutput.includes("JSX element")
+    if (errorOutput.includes(JSX element)
     if (errorOutput.includes("Cannot find module")
-  fixes.push("import-fix")
-    if (errorOutput.includes("Type \"any\" is not assignable")
+  fixes.push(import-fix)
+    if (errorOutput.includes("Type \"any\ is not assignable)
   fixes.push("type-annotation-fix")
-    if (errorOutput.includes("JSX element")
+    if (errorOutput.includes(JSX element)
   fixes.push("jsx-fix")
-  case "import-fix"
+  case import-fix
       case "type-annotation-fix"
+<<<<<<< HEAD
+
+        if (content.includes("class=")
+  content = content.replace(/class=/g, className=)
+  "type": jsx-fix
+=======
       case "jsx-fix"
   const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd"})
   const filePath = path.join(this.projectRoot, ")
@@ -102,9 +128,19 @@ const glob = require("glob")
         if (content.includes("class=")
   content = content.replace(/class=/g, "className=")
   "type": "jsx-fix"
+>>>>>>> origin/chore/fix-lint-and-merge
             "file"
-            "timestamp"
+            timestamp
   await this.log(" Checking linting errors...")
+<<<<<<< HEAD
+
+  await this.log("⚠  Linting errors detected")
+  type: "linting-error"
+        message: "ESLint errors found"
+        details
+      await this.log(" Attempting to auto-fix linting issues...")
+
+=======
     const lintCheck = await this.runCommand("npm run lint", { "silent"})
   await this.log("⚠  Linting errors detected")
   "type": "linting-error"
@@ -125,77 +161,98 @@ const glob = require("glob")
   await this.log(" No linting errors found")
   const eslintConfigPath = path.join(this.projectRoot, ".eslintrc.js")
       const configContent = await fs.readFile(eslintConfigPath, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
       // Check if there"
-      if (!configContent.includes("module.exports")
-  await this.log(" Fixing ESLint configuration...");const fixedConfig = "
-  "extends": ["""next/core-web-vitals""", """next/typescript"""]
-  "rules": {@typescript-""eslint/no-unused-vars""": "warn",@typescript-""eslint/no-explicit-any""": "warn",""react/react-in-jsx-scope""": "off",""react/prop-types""": "off",no-console": "warn"}
-  "ignorePatterns": ["node_modules/", ".next/", "out/", "dist/"]};"
+      if (!configContent.includes("module.exports)
+  await this.log( Fixing ESLint configuration...");const fixedConfig = "
+  extends: [""next/core-web-vitals"", "next/typescript"]
+  "rules": {@typescript-eslint/no-unused-vars"": warn",@typescript-"eslint/no-explicit-any"": warn,""react/react-in-jsx-scope": "off,"react/prop-types": "off",no-console: warn"}
+  "ignorePatterns: [node_modules/", ".next/, out/", "dist/]}
         await this.log(" ESLint configuration fixed")
-  "type": "eslint-config-fix"
-          "file": ".eslintrc.js"
-          "timestamp"
   type: "eslint-config-fix"
-          "file": ".eslintrc.js"
-          "timestamp"
+          file: ".eslintrc.js"
+          timestamp
+  type: "eslint-config-fix"
+          file: ".eslintrc.js"
+          timestamp
     } catch (error) {  await this.log(` Error fixing ESLint "config"`})
+<<<<<<< HEAD
+
+=======
   await this.log(" Checking build errors...")
     const buildCheck = await this.runCommand("npm run build", { "silent"})
+>>>>>>> origin/chore/fix-lint-and-merge
   await this.log("⚠  Build errors detected")
-  "type": "build-error"
-        "message": "Build compilation errors"
-        "details"
+  type: "build-error"
+        message: "Build compilation errors"
+        details
   await this.log(" Build successful")
-  await this.log(" Attempting to fix build errors...")
+  await this.log( Attempting to fix build errors...)
     if (errorOutput.includes("Unexpected token")
-    if (errorOutput.includes("Cannot find module")
+    if (errorOutput.includes(Cannot find module)
     if (errorOutput.includes("Unexpected token")
+<<<<<<< HEAD
+
+=======
     if (errorOutput.includes("Cannot find module")
   const jsFiles = glob.sync("automation/**/*.js", { "cwd"})
   const filePath = path.join(this.projectRoot, ")
         let content = await fs.readFile(filePath", "utf8")
         const objectPattern = /(\w+:\s*["^", "}")]
+>>>>>>> origin/chore/fix-lint-and-merge
   content = content.replace(objectPattern, "$1,\n  $2")
-  content = content.replace(semicolonPattern, "$1;\n$2")
-  "type": "syntax-fix"
+  content = content.replace(semicolonPattern, $1;\n$2)
+  "type": syntax-fix
             "file"
-            "timestamp"
+            timestamp
   type: "syntax-fix"
-            "file"
+            file
             "timestamp"
+<<<<<<< HEAD
+
+=======
   await this.log(" Fixing module resolution issues...")
   const tsConfigPath = path.join(this.projectRoot, "tsconfig.json")
       const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
       tsConfig.compilerOptions.moduleResolution = "node"
-      await this.log(" TypeScript configuration updated")
-  "type": "tsconfig-fix"
-        "file": "tsconfig.json"
-        "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing TypeScript "config"`})
+      await this.log( TypeScript configuration updated)
+  "type": tsconfig-fix
+        "file": tsconfig.json
+        "timestamp": new Date().toISOString()})} catch (error) {  await this.log(` Error fixing TypeScript config`})
   "timestamp"
-      "duration"
+      duration
       "errorsFound"
-      "fixesApplied"
+      fixesApplied
       "errors"
-      "fixes"
+      fixes
       "summary"
-  dependencyIssues: this.errorsFound.filter(e => e.type === "dependency-conflict")
-        "typescriptIssues": this.errorsFound.filter(e => e.type === "typescript-error")
-        "lintingIssues": this.errorsFound.filter(e => e.type === "linting-error")
-        "buildIssues": this.errorsFound.filter(e => e.type === "build-error")
+  dependencyIssues: this.errorsFound.filter(e => e.type === dependency-conflict)
+        "typescriptIssues": this.errorsFound.filter(e => e.type === typescript-error)
+        "lintingIssues": this.errorsFound.filter(e => e.type === linting-error)
+        "buildIssues": this.errorsFound.filter(e => e.type === build-error)
       "duration"
-      "errorsFound"
+      errorsFound
       "fixesApplied"
-      "errors"
+      errors
       "fixes"
-      "summary"
+      summary
   dependencyIssues: this.errorsFound.filter(e => e.type === "dependency-conflict")
-        "typescriptIssues": this.errorsFound.filter(e => e.type === "typescript-error")
-        "lintingIssues": this.errorsFound.filter(e => e.type === "linting-error")
-        "buildIssues": this.errorsFound.filter(e => e.type === "build-error")
-    await fs.writeFile(this.errorReportFile, JSON.stringify(report, null, 2));await this.log(` Report "generated"`)
-      await this.log(" Project Error Automation completed");await this.log(` "Summary"`)
-      return report} catch (error) {  await this.log(` Error in "automation": ${error.message  }`)} catch (error) {await this.log(` Error in "automation"`})
+        typescriptIssues: this.errorsFound.filter(e => e.type === "typescript-error")
+        lintingIssues: this.errorsFound.filter(e => e.type === "linting-error")
+        buildIssues: this.errorsFound.filter(e => e.type === "build-error")
+    await fs.writeFile(this.errorReportFile, JSON.stringify(report, null, 2));await this.log(` Report generated`)
+      await this.log(" Project Error Automation completed");await this.log(` Summary`)
+      return report} catch (error) {  await this.log(` Error in "automation": ${error.message  }`)} catch (error) {await this.log(` Error in automation`})
       throw error} catch (error) {  await this.log(` Error in "automation"`})
+<<<<<<< HEAD
+  console.log(Automation completed successfully)
+
+
+  console.error("Automation "failed: )
+
+  console.error("Automation "failed: )
+=======
   console.log("Automation completed successfully")
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -207,11 +264,16 @@ const glob = require("glob")
 =======
 <<<<<<< HEAD
   console.error("Automation "failed": ")
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error("Automation "failed": ")
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

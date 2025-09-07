@@ -21,10 +21,28 @@ import { Control } from \"react-hook-form\";
   FormControl,
 
 import {
+<<<<<<< HEAD
+  }
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage} from '@/components / ui / form';'
+import { Input  } from '@/components / ui / input';'
+import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';'
+import { Card, CardContent  } from '@/components / ui / card';import React, { useState } from "react","
+import { Control } from "react-hook-form","
+  }
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+=======
   FormField
   FormItem
   FormLabel
   FormControl
+>>>>>>> origin/chore/fix-lint-and-merge
   FormMessage
   FormField,
   FormItem,
@@ -71,16 +89,38 @@ import { Control } from "react-hook-form",
               <Input placeholder="e.g. Senior React Developer" {...field} />
             </FormControl>
             <FormMessage />
+<<<<<<< HEAD
+          </FormItem>
+import React, { useState } from "react";"
+import { Control } from "react-hook-form";"
+  }
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormMessage;
+} from "@/components/ui/form",;"
+import { Input } from "@/components/ui/input",;"
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;"
+import { Card, CardContent } from "@/components/ui/card",;"
+import React, { useState } from "react",;"
+import { Control } from "react-hook-form",;"
+  }
+=======
           </FormItem>"
 import React, { useState } from "react",;"
 import { Control } from "react-hook-form",;
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   FormField,;
   FormItem,;
   FormLabel,;
   FormControl,;
   FormMessage;"
 } from "@/components/ui/form",;"
+<<<<<<< HEAD
+import { Card, CardContent } from "@/components/ui/card",;        <FormField"
+=======
 import { Input } from "@/components/ui/input",;"
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;"
 import { Card, CardContent } from "@/components/ui/card",;
@@ -224,6 +264,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
         <FormField;
 
+>>>>>>> origin/chore/fix-lint-and-merge
           control={control}
           name="budgetMin";
           render={({ field:{ onChange, ...rest } }) => (;

@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import React from "react",
 import HelpCenter from "@/components/support/HelpCenter";
 import { SEO } from "@/components/SEO";
@@ -6,10 +9,14 @@ import { SEO } from "@/components/SEO",
 
 export default function HelpCenterPage() {
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <>
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
+<<<<<<< HEAD
+
+=======
     this.state = { hasError: false };
   }
   
@@ -19,6 +26,7 @@ class ErrorBoundary extends React.Component {
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   
   render() {
@@ -30,6 +38,10 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
+export default /**
+ * HelpCenterPage - Function description
+=======
 import React from "react";
 
 import HelpCenter from "@/components/support/HelpCenter";
@@ -94,6 +106,7 @@ import HelpCenter from "@/components / support / HelpCenter";
 import { SEO } from '@/components / SEO';
 export default /**;
  * HelpCenterPage - Function description;
+>>>>>>> origin/chore/fix-lint-and-merge
  */
 function HelpCenterPage() {}
   return (
@@ -101,11 +114,14 @@ function HelpCenterPage() {}
     <>;
       <SEO;
 
+<<<<<<< HEAD
+=======
         title="Help Center | Zion AI Marketplace";
         description="Find answers to common questions about using the Zion AI Marketplace platform. Browse help articles or contact our support team.";
 
         keywords="help center, support, FAQ, tutorial, guide, Zion AI Marketplace";
       />;
+>>>>>>> origin/chore/fix-lint-and-merge
       <HelpCenter />;
 
 import React from "react";""
@@ -181,6 +197,8 @@ function HelpCenterPage() {
   );
 
 }
+<<<<<<< HEAD
+=======
 ;
 }
 ;
@@ -188,3 +206,4 @@ function HelpCenterPage() {
     </>);
 pr-12325
 }
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -120,6 +120,14 @@ function ReviewsModerationContent() {
     fetchReviews()
   }, [activeTab]),
 
+<<<<<<< HEAD
+  
+
+    }
+    fetchReviews()
+};
+return (;
+=======
   const handleRefresh = () => {
 
   const handleRefresh = () => {}
@@ -127,6 +135,7 @@ function ReviewsModerationContent() {
   };
 
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <>;
       <SEO"
         title="Review Moderation | Zion AI Marketplace""
@@ -210,10 +219,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Star, AlertTriangle } from "lucide-react",;
 import { toast } from "@/components/ui/use-toast",;
 function ReviewsModerationContent() {;
+<<<<<<< HEAD
+  }
+    }
+=======
   const [activeTab, setActiveTab] = useState("pending"),;
   const [reviews, setReviews] = useState([]),;
   const [isLoading, setIsLoading] = useState(true),;
   const fetchReviews = async () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     setIsLoading(true),;
 
       // In a real application, you would fetch reviews from an API;

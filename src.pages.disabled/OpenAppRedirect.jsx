@@ -35,9 +35,13 @@ import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 
 :src.pages.disabled/OpenAppRedirect.jsx
+<<<<<<< HEAD
+:src.pages.disabled/OpenAppRedirect.jsx
+=======
 import _React from 'react' export default OpenAppRedirect';
 
 import _React from 'react' export default OpenAppRedirect';
+>>>>>>> origin/chore/fix-lint-and-merge
 ursor/add-new-services-and-deploy-updates-0462
 :src.pages.disabled/OpenAppRedirect.jsx
 import _React from 'react' export default OpenAppRedirect';
@@ -48,6 +52,8 @@ import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 
 :src.pages.disabled/OpenAppRedirect.jsx
+<<<<<<< HEAD
+=======
 
 import _React from 'react' export default OpenAppRedirect';
 
@@ -55,3 +61,4 @@ import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
 import _React from 'react' export default OpenAppRedirect';
+>>>>>>> origin/chore/fix-lint-and-merge

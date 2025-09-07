@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+export default function ExpoRoute() {
+  return <ExpoPage />
+}
+=======
 
   return <ExpoPage    />;
 }
@@ -67,3 +72,4 @@ const ExpoPage = dynamic(() => import('../components/expo/ExpoPage'), { ssr: fal
 }
 }
 
+>>>>>>> origin/chore/fix-lint-and-merge

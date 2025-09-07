@@ -28,8 +28,13 @@ export const useJobs = (userId?: string, status?: JobStatus) => {}
     try {
 
       setIsLoading(true),
+<<<<<<< HEAD
+const clientId = userId || user?.id,;
+    }
+=======
 
   const fetchJobs = async () => {
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!clientId) {
       setIsLoading(false),
       return
@@ -190,7 +195,6 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   const [jobs, setJobs] = useState<Job[]>([]),;
   const [isLoading, setIsLoading] = useState(true),;
   const [error, setError] = useState<string | null>(null),;
-  const clientId = userId || user?.id,;
   const fetchJobs = async () => {;
     if (!clientId) {;
       setIsLoading(false),;
@@ -222,9 +226,15 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
   },;
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {;
     try {;
+<<<<<<< HEAD
+      }
+        .from("jobs");"
+        .update({ "status": newStatus });
+=======
       const { error: updateError } = await supabase;"
         .from("jobs");
         .update({ status: newStatus });"
+>>>>>>> origin/chore/fix-lint-and-merge
         .eq("id", jobId);"
         .eq("client_id", clientId), // Ensure user can only update their own jobs;
       if (updateError) throw updateError,;

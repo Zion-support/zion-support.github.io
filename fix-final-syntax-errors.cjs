@@ -11,7 +11,20 @@ const fs = require('fs');
 const path = require('path');
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 
+<<<<<<< HEAD
+
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+#!/usr/bin/env node
+
+
 =======
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 console.log('🔧 Fixing final syntax errors...');
 
 // Function to fix specific syntax issues

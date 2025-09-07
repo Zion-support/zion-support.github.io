@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import { Link  } from 'react-router-dom';
 
 import { cn } from "@/lib/utils";
@@ -26,12 +29,17 @@ interface MainNavigationProps {};
           cn(;
             "text-sm font-medium transition-colors hover: text-primary",;
             isActive ? "text-zion-cyan" : "text-muted-foreground";
+>>>>>>> origin/chore/fix-lint-and-merge
           );
 
 export /**
  * MainNavigation - Function description
 
  */
+<<<<<<< HEAD
+function MainNavigation() {
+
+=======
 function MainNavigation() {}
   return ("
     <nav className={cn ("hidden md:flex items - center space - x-6", class_name)}>;
@@ -95,6 +103,7 @@ function MainNavigation() {}
 
             isActive ? "text-zion-cyan" : "text-muted-foreground",;
             "bg-zion-purple px-4 py-2 rounded-md hover:bg-zion-purple-light";
+>>>>>>> origin/chore/fix-lint-and-merge
           );
         }
       >;
@@ -103,6 +112,23 @@ function MainNavigation() {}
     </nav>;
   );
 }
+<<<<<<< HEAD
+      <NavLink;
+
+        }
+      >;
+        Register;
+      </NavLink>;
+    </nav>);
+}
+
+          )
+        }
+      >
+        Home
+      </NavLink>
+
+=======
 
             isActive ? "text-zion-cyan" : "text-muted-foreground"
           )
@@ -131,6 +157,7 @@ function MainNavigation() {}
           cn(
 
             isActive ? "text-zion-cyan" : "text-muted-foreground"
+>>>>>>> origin/chore/fix-lint-and-merge
           )
         }
       >
@@ -160,6 +187,8 @@ function MainNavigation() {}
   )
 }
 
+<<<<<<< HEAD
+=======
         }
       >;
         Home;
@@ -178,3 +207,4 @@ function MainNavigation() {}
       </NavLink>;
     </nav>);
 }
+>>>>>>> origin/chore/fix-lint-and-merge

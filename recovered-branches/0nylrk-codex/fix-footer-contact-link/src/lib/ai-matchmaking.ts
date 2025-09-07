@@ -140,7 +140,10 @@ export async function findMatches(
     return []
 ;
 // Sample data for testing when API is not available;
+<<<<<<< HEAD
+=======
 const sampleData: MatchResultItem[] = [;
+>>>>>>> origin/chore/fix-lint-and-merge
   {;
     id: "talent-1",;
     title: "Senior AI Engineer",,

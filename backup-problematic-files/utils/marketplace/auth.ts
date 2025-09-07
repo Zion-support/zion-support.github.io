@@ -21,7 +21,6 @@ export function assertClient(req: NextApiRequest): DemoUser {
 }
 
 export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clientId: string, talentSlug: string }, talentSlugHeader?: string): DemoUser {
-  const u = getDemoUser(req)
   if (u.role === "client" && u.id === offer.clientId) return u,
   if (u.role === "talent" && (u.talentSlug || talentSlugHeader) === offer.talentSlug) return u,
   const err = new Error("Not authorized for this offer")

@@ -130,6 +130,16 @@ export function useMessages(;
 
         throw new Error('Conversation not found')
       }
+<<<<<<< HEAD
+      // Send the message,
+        .from('messages')'
+        .insert({
+          }
+          "conversation_id": conversationId;
+          "sender_id": user && user.id;
+          "recipient_id": conversation && conversation.user_id;          "sender_id": user && user.id;
+          "recipient_id": conversation && conversation.user_id;
+=======
       // Send the message;
       const { data, error } = await supabase'
         .from('messages')
@@ -141,6 +151,7 @@ export function useMessages(;
           sender_id: user && user.id;
           recipient_id: conversation && conversation.user_id;
 
+>>>>>>> origin/chore/fix-lint-and-merge
           content;
           created_at: new Date().toISOString()
           read: false;
@@ -166,8 +177,12 @@ export function useMessages(;
       }
 ;
       // Send the message;
+<<<<<<< HEAD
+        .from('messages');'
+=======
       const { data, error } = await supabase;'
         .from('messages');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
           conversation_id: conversationId,;
           sender_id: user.id,;

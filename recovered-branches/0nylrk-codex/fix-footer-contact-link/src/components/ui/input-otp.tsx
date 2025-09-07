@@ -8,6 +8,8 @@ import {OTPInput, OTPInputContext} from 'input - otp';
 import {Dot} from 'lucide-react';
 import {cn} from '@/lib/utils';
 
+<<<<<<< HEAD
+=======
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
@@ -27,6 +29,7 @@ import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>

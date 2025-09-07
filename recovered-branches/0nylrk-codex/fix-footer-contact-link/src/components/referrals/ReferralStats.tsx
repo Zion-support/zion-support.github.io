@@ -6,6 +6,17 @@ interface ReferralStatsProps {}
   isLoading: boolean;
 }
 
+<<<<<<< HEAD
+}
+const statCards = [;
+    {
+
+            {card.icon}
+          </CardHeader>
+          <CardContent>
+            {isLoading ? (
+
+=======
       description: "People you've invited"
     }
     {"
@@ -119,6 +130,7 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {}
               <>"
                 <div className="text-2xl font-bold">{card.value}</div>"
                 <p className="text-xs text-muted-foreground">
+>>>>>>> origin/chore/fix-lint-and-merge
                   {card.description}
                 </p>
               </>

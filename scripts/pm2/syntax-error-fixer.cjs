@@ -372,12 +372,62 @@ class SyntaxErrorFixer {}
         if (stat.isDirectory()) {}
           files.push(...this.walkDirectory(fullPath, extensions))} else if (stat.isFile()) {}
           const ext = path.extname(item);
+<<<<<<< HEAD
+          if (extensions.includes(ext)) {
+            files.push(fullPath);
+          }
+        }
+      });
+    } catch (error) {
+      this.log('warn', `Error reading directory: ${dir}`, error.message);
+    }
+    return files;
+  }
+  async hasSyntaxIssues(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      // Skip large files if configured
+      if (this.skipLargeFiles && content.length > this.largeFileThreshold) {
+        return false;
+      }
+      // Check for various syntax issues
+      return this.detectSyntaxIssues(content);
+    } catch (error) {
+      this.log('warn', `Error reading file: ${filePath}`, error.message);
+      return false;
+    }
+  }
+  detectSyntaxIssues(content) {
+    // Check for unterminated strings
+    for (const dir of sourceDirs) {}
+      if (fs.existsSync(fullPath)) {}
+        const files = this.walkDirectory(fullPath, extensions)
+  for($2) {}
+          if (await this.hasSyntaxIssues(file)) {}
+            filesWithIssues.push(file)}
+    return filesWithIssues}
+  walkDirectory($2) {}
+    const files = []
+    try {}
+      const items = fs.readdirSync(dir)
+      items.forEach(item => {})
+const fullPath = path.join(dir, item)
+        const stat = fs.statSync(fullPath);      const items = fs.readdirSync(dir)
+      items.forEach(item => {})
+        const stat = fs.statSync(fullPath)
+          files.push(...this.walkDirectory(fullPath, extensions))} else if (stat.isFile()) {}
+          const ext = path.extname(item)
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
           if (extensions.includes(ext)) {}
             files.push(fullPath)};
       })} catch (error) {}`;
       this.log('warn', `Error reading directory: ${dir}`, error.message)};
     return files};
   async hasSyntaxIssues(filePath) {}
+<<<<<<< HEAD
+    try {}
+=======
       const content = fs.readFileSync(filePath, 'utf8');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -386,6 +436,7 @@ class SyntaxErrorFixer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       // Skip large files if configured;
       if (this.skipLargeFiles && content.length > this.largeFileThreshold) {}
         return false};
@@ -486,8 +537,11 @@ class SyntaxErrorFixer {}
         await this.createBackup(filePath)};
       // Read file content;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
       const content = fs.readFileSync(filePath, 'utf8');
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
       // Apply fixes;
       const fixedContent = await this.applySyntaxFixes(content, filePath);
       if (fixedContent !== content) {}
@@ -614,6 +668,20 @@ class SyntaxErrorFixer {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Fix single quotes;
     const singleQuoteMatches = fixed.match(/'[^']*$/gm);
+<<<<<<< HEAD
+    if (singleQuoteMatches) {
+      singleQuoteMatches.forEach(match => {
+        const original = match;
+        const fixed = match + "'";
+        fixed = fixed.replace(original, fixed);
+        fixes.push({ type: 'unterminated_string', original, fixed });
+      });
+    }
+    // Fix double quotes
+    const doubleQuoteMatches = fixed.match(/"[^"]*$/gm);
+    if (doubleQuoteMatches) {
+      doubleQuoteMatches.forEach(match => {
+=======
     if (singleQuoteMatches) {}
       singleQuoteMatches.forEach(match => {})
         const original = match;
@@ -625,10 +693,18 @@ class SyntaxErrorFixer {}
     if (doubleQuoteMatches) {}
       doubleQuoteMatches.forEach(match => {})
         const original = match;"
+>>>>>>> origin/chore/fix-lint-and-merge
         const fixed = match + '"';
         fixed = fixed.replace(original, fixed);
     // Fix backticks;`;
     const backtickMatches = fixed.match(/`[^`]*$/gm);
+<<<<<<< HEAD
+    if (backtickMatches) {
+      backtickMatches.forEach(match => {
+        const fixed = match + '`';
+    return fixed};
+  fixUnterminatedComments(content, fixes) {}
+=======
     if (backtickMatches) {}
       backtickMatches.forEach(match => {})
         const original = match;`;
@@ -638,6 +714,7 @@ class SyntaxErrorFixer {}
 <<<<<<< HEAD
     const fixed = content;
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
     // Find lines with unterminated block comments;
     const lines = fixed.split('\n');
     let inComment = false;
@@ -669,10 +746,12 @@ class SyntaxErrorFixer {}
     return lines.join('\n')};
   fixMissingSemicolons(content, fixes) {}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     const fixed = content;
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
     // Fix missing semicolons after statements;
-    const lines = fixed.split('\n');
     for (let i = 0; i < lines.length; i++) {}
       const line = lines[i].trim();
       if (line && )
@@ -781,6 +860,8 @@ class SyntaxErrorFixer {}
 <<<<<<< HEAD
     return fixed};
   fixUnclosedBrackets(content, fixes) {}
+<<<<<<< HEAD
+=======
     let fixed = content;
 =======
     
@@ -792,6 +873,7 @@ class SyntaxErrorFixer {}
 =======
   fixUnclosedBrackets(content, fixes) {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     // Count brackets and add missing ones;
     const openBraces = (fixed.match(/\{/g) || []).length;}
     const closeBraces = (fixed.match(/\}/g) || []).length;
@@ -836,6 +918,8 @@ class SyntaxErrorFixer {}
       fixes.push({ type: 'unclosed_brackets', action: `added_${missing}_closing_parentheses` })};
   fixJSXIssues(content, fixes) {}
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     let fixed = content;
 <<<<<<< HEAD
 =======
@@ -843,6 +927,7 @@ class SyntaxErrorFixer {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     // Fix JSX self-closing tags;
     fixed = fixed.replace(/(<[^>]+)(?=\n|$)/g, (match, tagStart) => {}
       if (tagStart.includes('=') && !tagStart.endsWith('/>')) {}
@@ -868,6 +953,8 @@ class SyntaxErrorFixer {}
 <<<<<<< HEAD
     return fixed};
   fixTypeScriptIssues(content, fixes) {}
+<<<<<<< HEAD
+=======
     let fixed = content;
 =======
     
@@ -876,6 +963,7 @@ class SyntaxErrorFixer {}
     let fixed = content;
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     // Fix type annotations;
     fixed = fixed.replace(/(\w+):\s*([^,\n]+?)(?=\s*[,\n])/g, (match, varName, typeName) => {}
       if (typeName.includes('any') && typeName !== 'any') {}
@@ -904,11 +992,14 @@ class SyntaxErrorFixer {}
   async verifyFix(filePath) {}
     try {}
       // Try to parse the file to verify syntax is correct;
+<<<<<<< HEAD
+=======
       const content = fs.readFileSync(filePath, 'utf8');
 <<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Basic syntax validation;
       if (this.detectSyntaxIssues(content)) {}
         return false};

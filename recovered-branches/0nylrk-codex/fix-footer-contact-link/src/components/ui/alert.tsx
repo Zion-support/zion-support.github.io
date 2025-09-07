@@ -15,6 +15,24 @@ const alertVariants = cva('
     defaultVariants: {'
       variant: 'default'
     }
+<<<<<<< HEAD
+  }
+);
+import { cn } from "@/lib/utils""
+  "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground","
+  {
+    }
+    "variants": {
+      }
+      "variant": {
+        }
+        "default": "bg-background text-foreground","
+        "destructive":
+          "border-destructive/50 text-destructive "dark":border-destructive [&>svg]:text-destructive"}},"
+    "defaultVariants": {
+      }
+      "variant": "default"}}"
+=======
   });
 
 import * as React from "react"
@@ -34,9 +52,21 @@ const alertVariants = cva("
           "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive"}},
     defaultVariants: {"
       variant: "default"}}
+>>>>>>> origin/chore/fix-lint-and-merge
 )
 
 const Alert = React.forwardRef<
+<<<<<<< HEAD
+  HTMLDivElement,
+React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
+  <div,
+ref={ref}
+    role="alert""
+    className={cn(alertVariants({ variant }), className)}
+    {...props} />
+  HTMLDivElement,
+React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
+=======
   HTMLDivElement
 
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
@@ -46,6 +76,7 @@ const Alert = React.forwardRef<
 const Alert = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
+>>>>>>> origin/chore/fix-lint-and-merge
 ></typeof>(({ className, variant, ...props }, ref) => (
 
   <div;
@@ -211,9 +242,13 @@ const AlertDescription = React.forwardRef<
   HTMLParagraphElement
   React.HTMLAttr</HTMLParagraphElement>ibutes<HTMLParagraphElement>
 ))
+<<<<<<< HEAD
+AlertTitle.displayName = "AlertTitle""
+=======
 AlertTitle.displayName = "AlertTitle"
 
 const AlertDescription = React.forwardRef<
+>>>>>>> origin/chore/fix-lint-and-merge
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 

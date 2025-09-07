@@ -26,6 +26,8 @@ const path = require('path')
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 
 #!/usr/bin/env node;
+<<<<<<< HEAD
+=======
 const fs = require('fs')
 const path = require('path')
 =======
@@ -33,6 +35,7 @@ const path = require('path')
 
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -66,10 +69,19 @@ const { execSync } = require('child_process')
     console.error(' Bundle analysis "failed")
 
 <<<<<<< HEAD
+
+
+
+    console.error(' Bundle analysis "failed")
+    console.error(' Bundle analysis "failed")
+
+=======
+<<<<<<< HEAD
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 =======
 =======
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -195,14 +207,12 @@ class BundleAnalyzer {
 
   analyzeSourceDirectory(dir) {
     let totalSize = 0;
-    let fileCount = 0;
 
     const scanDirectory = (currentDir) => {
       const files = fs.readdirSync(currentDir);
       
       for (const file of files) {
         const filePath = path.join(currentDir, file);
-        const stat = fs.statSync(filePath);
         
         if (stat.isDirectory()) {
           const subStats = scanDirectory(filePath);

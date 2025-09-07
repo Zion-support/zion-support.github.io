@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+const sections = [ {
+  title: 'Getting Started', links: [ {
+  name: 'Overview', href: '/enhanced-services-showcase' 
+}
+{
+  name: 'Pricing & Market Benchmarks', href: '/market-pricing' 
+}
+{
+  name: 'Contact Sales', href: '/contact' 
+}] 
+}
+{
+  title: 'AI Services Docs', links: [ {
+  name: 'AI Guardrails', href: '/ai-guardrails' 
+}
+{
+  name: 'AI Evals', href: '/ai-evals' 
+}
+{
+  name: 'Agentic RAG', href: '/agentic-rag' 
+}] 
+}
+return (<UltraAdvancedFuturisticBackground> <Head> <title>Documentation | Zion Tech Group</title> </li>) ) 
+}</ul> </Card>) ) 
+}</div>) ) 
+}</ul> </Card> </div> </Card> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}
+  };
+
+  return (
+  };
+
+return (;
+
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>Documentation | Zion Tech Group</title>
+
+=======
 
 
 import Head from 'next/head';
@@ -171,9 +211,24 @@ name='description'
             <p className='text-slate-300 mt-4'    />
               Quick links, references, and integration guides for our services.
             </p>
+>>>>>>> origin/chore/fix-lint-and-merge
           </div>
           <div className='grid grid-cols-1 md: grid-cols-3 gap-6'    />
             {sections.map(s => (
+<<<<<<< HEAD
+              <Card
+
+                        {l.name}
+
+          <div className=grid grid-cols-1 md:grid-cols-3 gap-6">
+            {sections.map((s) => (
+              <Card key={s.title} className="p-6 bg-black/40 border border-gray-700/50>
+                <h2 className=text-xl font-semibold mb-4 text-white">{s.title}</h2>
+                <ul className="space-y-2>
+                  {s.links.map((l) => (
+                    <li key={l.name}>
+                      <a href={l.href} className=text-cyan-400 hover:underline">{l.name}</a>
+=======
               <Card;}
 key={s && s.titl,}
 }
@@ -192,6 +247,7 @@ href={l.href}
                         {l.name}
 
                       </a>
+>>>>>>> origin/chore/fix-lint-and-merge
                     </li>
                   ))}
                 </ul>
@@ -200,6 +256,9 @@ href={l.href}
 
           </div>
 
+<<<<<<< HEAD
+
+=======
 <Card className='p-6 bg-black/40 border border-gray-700/50'    />
             <h2 className='text-xl font-semibold mb-4 text-white'    />
               External References;
@@ -233,10 +292,14 @@ href={e && e.url}
 href='/contact'
 
                 className='bg-gradient-to-r from-cyan-600 to-blue-600 text-white'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                 Contact Support;
               </Button>;
               <Button;
                 href={contact && contact.website}
+<<<<<<< HEAD
+
+=======
                 variant='outline';
                 className='border-gray-600 text-gray-200'    />;
                 Visit Website;
@@ -257,11 +320,15 @@ href='/contact'
               <a className=\"text-cyan-400\" href={`tel:${contact && contact.mobile.replace(/[^+\\d]/g, '')}`}    />{contact && contact.mobile}</a>;
               <a className=\"text-purple-400\" href={`mailto: ${contact && contact.email}`}    />{contact && contact.emai,}
 }</a>;
+>>>>>>> origin/chore/fix-lint-and-merge
           </Card>;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
                       </a>                    </li>      </Head>;
+<<<<<<< HEAD
+
+=======
       <div className=\"min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8\"    />;
         <div className=\"max - w-6xl mx - auto space - y-10\"    />;
           <div className=\"text - center\"    />;
@@ -275,10 +342,14 @@ href='/contact'
                   {s.links.map ((l) => (<li key={l.name}    />;
                       <a href={l.href} className=\"text - cyan - 400 hover: underline\"    />{l.nam,}
 }</a>;
+>>>>>>> origin/chore/fix-lint-and-merge
                     </li>))}
                 </ul>;
               </Card>))}
           </div>;
+<<<<<<< HEAD
+
+=======
           <Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'    />;
             <h2 className='text - xl font - semibold mb - 4 text - white'    />;
               External References;
@@ -293,10 +364,13 @@ href='/contact'
 
                     {e.nam,}
 }
+>>>>>>> origin/chore/fix-lint-and-merge
                   </a>;
                 </li>              ))}
             </ul>;
           </Card>;
+<<<<<<< HEAD
+=======
           <Card className=\"p - 6 bg - black / 40 border border - gray - 700 / 50\"    />;
             <h2 className=\"text - xl font - semibold mb - 4 text - white\"    />External References</h2>;
             <ul className=\"grid grid - cols - 1 md:grid - cols - 2 gap - 3 text - slate - 300\"    />;
@@ -312,11 +386,32 @@ href='/contact'
               <Button;
                 href='/contact';
                 className='bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white'    />
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 Contact Support;
               </Button>;
               <Button;
                 href={contact.website}
+<<<<<<< HEAD
+
+
+          <Card className=p-6 bg-black/40 border border-gray-700/50">
+            <h2 className="text-xl font-semibold mb-4 text-white>External References</h2>
+            <ul className=grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
+              {external.map((e) => (
+                <li key={e.name}><a href={e.url} target="_blank rel=noopener noreferrer" className="text-cyan-400 hover:underline>{e.name}</a></li>
+              ))}
+            </ul>
+          </Card>
+
+          <Card className=p-6 bg-black/40 border border-gray-700/50">
+            <h2 className="text-xl font-semibold mb-4 text-white>Need help?</h2>
+            <div className=flex flex-col sm:flex-row gap-3">
+              <Button href="/contact className=bg-gradient-to-r from-cyan-600 to-blue-600 text-white">Contact Support</Button>
+              <Button href={contact.website} variant="outline className=border-gray-600 text-gray-200">Visit Website</Button>
+              <a className="text-cyan-400 href={`tel:${contact.mobile.replace(/[^+\\d]/g, ')}`}>{contact.mobile}</a>
+              <a className=text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
+=======
                 variant='outline';
                 className='border - gray - 600 text - gray - 200'    />
 
@@ -334,11 +429,50 @@ href='/contact'
                 {contact.email}
 
               </a>
+>>>>>>> origin/chore/fix-lint-and-merge
             </div>
           </Card>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
+  )
+}
+                {contact.email}</a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+                {contact.email}
+              </a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+                {contact.email}</a>            </div>          <Card className="p - 6 bg - black / 40 border border - gray - 700 / 50">;
+            <h2 className="text - xl font - semibold mb - 4 text - white">Need help?</h2>;
+            <div className="flex flex - col sm:flex - row gap - 3">;
+              <Button href="/contact" className="bg - gradient - to - r from - cyan - 600 to - blue - 600 text - white">Contact Support</Button>;
+              <Button href={contact.website} variant="outline" className="border - gray - 600 text - gray - 200">Visit Website</Button>;
+              <a className="text - cyan - 400" href={`tel:${contact.mobile.replace (/[^+\\d]/g, '')}`}>{contact.mobile}</a>;
+              <a className="text - purple - 400" href={`mailto:${contact.email}`}>{contact.email}</a>;
+          </Card>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>)}}))}
+            </ul>;
+          </Card>;
+              </a>;
+            </div>;
+          </Card>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+    </UltraAdvancedFuturisticBackground>);
+}
+
+;
+}
+
+
+              ))}
+            </ul>
+          </Card>
+  )}
+=======
   );
 }
 
+>>>>>>> origin/chore/fix-lint-and-merge

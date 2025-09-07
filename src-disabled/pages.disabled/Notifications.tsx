@@ -6,7 +6,6 @@ import {
   NotificationContextType,;
 } from '@/context/notifications';
 import { formatDistanceToNow } from 'date-fns';
-import {
   Bell,
   Check,
   Trash2,
@@ -23,7 +22,6 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';

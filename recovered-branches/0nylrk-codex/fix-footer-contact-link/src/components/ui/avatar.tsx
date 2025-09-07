@@ -14,8 +14,6 @@ import {cn} from '@/lib/utils';
 import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 import * as React from "react"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
-import * as React from "react"
-import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
 import { cn } from "@/lib/utils"
 
@@ -102,6 +100,24 @@ const AvatarImage = React.forwardRef<
 
 const AvatarImage = React.forwardRef<;
 
+<<<<<<< HEAD
+
+const Avatar = $2;
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Root
+    ref = $2;
+      className
+    )}
+    {...props}
+  />
+))
+Avatar.displayName = $2;
+  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>
+>(({ className, ...props }, ref) => (
+  <AvatarPrimitive.Image
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     ref={ref}
 
     className={cn('aspect-square h-full w-full', className)}

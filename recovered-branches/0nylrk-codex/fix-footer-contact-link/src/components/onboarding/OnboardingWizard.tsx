@@ -338,6 +338,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     }
   ];
   // Navigate to the specified URL;
+<<<<<<< HEAD
+    }
+=======
   const handleAction = () => {;
 
   return ()'
@@ -362,6 +365,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,;"
 </Rocket>
 
+>>>>>>> origin/chore/fix-lint-and-merge
     if (currentStep < steps && steps.length - 1) {;
       navigate(steps[currentStep].action && action.url);
       setCurrentStep(currentStep + 1);
@@ -372,7 +376,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     }
   };
   // Skip the current step;
+<<<<<<< HEAD
+    }
+=======
   const handleSkip = () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     if (currentStep < steps && steps.length - 1) {;
       setCurrentStep(currentStep + 1);
     } else {;

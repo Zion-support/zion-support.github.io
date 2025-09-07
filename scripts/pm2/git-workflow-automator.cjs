@@ -4,7 +4,7 @@
 
 
             // Simple conflict resolution - take the incoming change
-            const resolved = content.replace(/\n<<<<<<<[\s\S]*?=======[\s\S]*?>>>>>>>\n/g, '\n');
+            const resolved = content.replace(/\n<<<<<<<[\s\S]*?=======[\s\S]*?>>>>>>>\n/g, '\n);
             // Simple conflict resolution - take the incoming change
 
 main
@@ -22,12 +22,30 @@ main
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?
 )
             fs.writeFileSync(file, resolved);
+<<<<<<< HEAD
+            execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: pipe' });
+            this.log(`✅ Auto-resolved conflicts in: ${file}`);
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
           }
 
         // Commit the resolution;
         try {
+<<<<<<< HEAD
+          execSync('git commit -m "fix: resolve merge conflicts, {
+            cwd: this.projectRoot,
+            stdio: pipe'
+          });
+          this.log('✅ Merge conflicts resolved and committed);
+          return true;
+        } catch (error) {
+          this.log(`Warning: Could not commit conflict resolution: ${error.message}`);
+        }
+      }
+=======
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
   async generateWorkflowReport() {
@@ -38,7 +56,7 @@ main
       localBranches: await this.getLocalBranches(),
       remoteBranches: await this.getRemoteBranches(),
       recommendations: []
-    };
+    }
 
     // Generate recommendations;
 
@@ -48,6 +66,11 @@ main
       report.recommendations.push(`Branch is ${report.branchStatus.ahead} commits ahead of origin. Consider pushing changes.`);
 
     if (report.branchStatus && report.branchStatus.hasChanges) {
+<<<<<<< HEAD
+      report.recommendations.push(Working directory has uncommitted changes. Consider committing or stashing them.');
+    }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
     const oldBranches = report.localBranches.filter(branch =>)
@@ -67,7 +90,15 @@ main
         fs.mkdirSync(logsDir, { recursive: true });
 
 
+<<<<<<< HEAD
+  async run() {
+    this.log('🚀 Git Workflow Automator starting...);
+
+    try {
+      // Generate workflow report
+=======
       // Generate workflow report;
+>>>>>>> origin/chore/fix-lint-and-merge
       const report = await this.generateWorkflowReport();
       await this.saveReport(report);
 
@@ -79,6 +110,17 @@ main
       await this.resolveMergeConflicts();
 
 
+<<<<<<< HEAD
+      if (report.recommendations.length > 0) {
+        this.log(💡 Recommendations:');
+        report.recommendations.forEach(rec => this.log(`   - ${rec}`));
+      }
+
+      this.log('✅ Git Workflow Automator completed successfully);
+    } catch (error) {
+      this.log(`❌ Git Workflow Automator failed: ${error.message}`);
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       process.exit(1);
 
 // Run if called directly;
@@ -88,6 +130,30 @@ if (require.main === module) {
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
+        "stdio"
+  'git: checkout main, { cwd: this.projectRoo,t, "stdio"}
+  git: pull origin main, { "cwd": this.projectRoo,t, stdio}
+          "stdio"
+        execSync(git)
+          stdio": ;pipe})} "else
+          stdio"
+  git: push origin main, { "cwd: this.projectRoo,t, stdio"}
+      execSync("git: branch -d ${branchName}, { cwd": this.projectRoo,t, "stdio})
+          stdio": ;pipe})} "catch
+  'git pull origin main, { cwd": this.projectRoot, "stdio}
+      'git push origin main, { cwd": this.projectRoot, "stdio}
+          encoding"
+              "stdio
+   Cleanup"
+        "encoding
+          encoding"
+execSync(`"git: add ${file}, { cwd": this.projectRoo,t, "stdio`})
+            stdio"
+          this.log( "Merge)
+execSync(`git add ${file}, { cwd": this.projectRoot, "stdio`})
+  git commit -m 'fix"
+=======
 <<<<<<< HEAD
 module.exports = GitWorkflowAutomator;'
 
@@ -178,3 +244,4 @@ execSync(`"git": add ${file}, { "cwd": this.projectRoo,t, "stdio"`})
 execSync(`git add ${file}, { "cwd": this.projectRoot, "stdio"`})
   git commit -m '"fix"
 
+>>>>>>> origin/chore/fix-lint-and-merge

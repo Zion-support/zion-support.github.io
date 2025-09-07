@@ -122,6 +122,21 @@ interface TranslatableJobFormProps {;
     ar: ""}),;
 
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({;
+<<<<<<< HEAD
+  }
+    }
+    "en": "",;"
+    "es": "",;"
+    "pt": "",;"
+    "ar": ""}),;"
+  const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({;
+  }
+    }
+    "en": "",;"
+    "es": "",;"
+    "pt": "",;"
+    "ar": ""}),;"
+=======
 
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({;
     en: "",;
@@ -167,6 +182,7 @@ interface TranslatableJobFormProps {;
       deadline});
   };
 
+>>>>>>> origin/chore/fix-lint-and-merge
   // Auto translate content when language tab changes;
   const handleTabChange = async (tab: SupportedLanguage) => {;
     if (tab !== activeTab) {;
@@ -760,4 +776,81 @@ function TranslatableJobForm() {}
             t ('jobs.post_job_button'))}
         </Button>;
       </div>;
+<<<<<<< HEAD
     </form>);
+}          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark "hover":from-zion-cyan-light "hover":to-zion-cyan";"
+          disabled={isSubmitting || isTranslating}
+        >;
+          {isSubmitting ? (;
+            <>;
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;              {t('jobs.submitting')}'
+            </>;
+          ) :(;
+            t('jobs.post_job_button');'
+          )}
+        </Button>;
+      </div>;
+    </form>;
+  ),; interface TranslatableJobFormProps {
+  }
+  "onSubmit": ("formData": any) => void;
+isSubmitting?: boolean
+}export function TranslatableJobForm() {
+  }
+  const {
+  }
+  t
+}= useTranslation ();
+  }
+  translateContent, isTranslating
+}= useTranslationService ();
+  }
+  supportedLanguages, currentLanguage
+}= useLanguage ();
+//Form fields with translations const [budget, setBudget] = useState ("");"
+const [deadline, setDeadline] = useState ("");"
+onSubmit ({
+  //Find first non-empty content to translate for (const lang of supportedLanguages.map (l => l.code) ) {
+  }
+  if (field === 'title' && title[lang]) {'
+  }
+  return;
+}return;
+}
+;
+
+}
+};
+//Ensure all translations are available if (!title.en && !title.es && !title.pt && !title.ar) return;
+if (!description.en && !description.es && !description.pt && !description.ar) return;
+//Title translations if (Object.values (title) .some (val => val) && Object.values (title) .some (val => !val) ) {
+  ) : (<Globe className=" h-4 w-4" />)"
+}{
+  }
+  t ('translation.auto translate')'
+}</Button> </div> </TabsTrigger>) )
+}</TabsList> /> </div> </TabsContent>) )
+}</Tabs> </div>) : (<Globe className=" h-4 w-4" />)"
+}{
+  }
+  t ('translation.auto translate')'
+}</Button> </div> </TabsTrigger>) )
+}</TabsList> /> </TabsContent>) )
+}</Tabs> </div>) : (<Globe className=" h-4 w-4" />)"
+}{
+  }
+  t ('translation.auto translate')'
+}</Button> </div> </TabsTrigger>) )
+}</TabsList> /> </TabsContent>) )
+}</Tabs> </div> /> </div> </div> </div> <div className=" pt-4"> <Button > {"
+  }
+  isSubmitting ? (<> <Loader2 className=" mr-2 h-4 w-4 animate-spin" /> {"
+  }
+  t ('jobs.submitting')'
+}</>) : (t ('jobs.post job button') )'
+}</Button> </div> </form>)
+}
+;
+=======
+    </form>);
+>>>>>>> origin/chore/fix-lint-and-merge

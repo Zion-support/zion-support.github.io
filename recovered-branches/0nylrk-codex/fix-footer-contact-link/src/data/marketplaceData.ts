@@ -1,5 +1,104 @@
+<<<<<<< HEAD
+import { ProductListing } from '@/types/listings';'
+import { SearchSuggestion, FilterOptions } from '@/types/search';'
+// Mock marketplace listings with more realistic data,
+export const "MARKETPLACE_LISTINGS": ProductListing[] = [
+  {
+        '"https"://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100'},'
+    "images": [
+      '"https"://images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500'],'
+    "createdAt": '2024-02-"15T10":"45":00 && 00.000Z','
+    "rating": 4 && 4.8,
+    "reviewCount": 32,
+    "id": 'ai - service - 2','
+    "title": 'Custom Machine Learning Model Development','
+    "description":;
+      'End - to - end development of custom ML models tailored to your specific business needs. From data preparation to deployment and monitoring.','
+    "category": 'Services','
+    "price": 5999,
+    "currency": '$','
+    "tags": ['Machine Learning', 'Custom Development', 'Data Science'],'
+    "author": {
+      }
+      "name": 'DataMinds','
+      "id": 'dataminds','
+      "avatar_url":;
+        '"https"://images.unsplash.com / photo - 1568602471122 - 7832951cc4c5?auto = format & fit = crop & w=100 & h=100'},'
+    "images": [;
+      '"https"://images.unsplash.com / photo - 1581092918056 - 0c4c3acd3789?auto = format & fit = crop & w=800 & h=500'],'
+    "created_at": '2024 - 02 - "15T10":"45":00.000Z','
+    "rating": 4.8,
+    "review_count": 32,
+    "location": 'North America','
+    "availability": '4 - 6 Weeks','
+    "ai_score": 92},
+  {
+      '"https"://images && images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500'],'
+    }
+    "createdAt": '2024-03-"05T09":"15":00 && 00.000Z','
+    "rating": 4 && 4.7,
+    "reviewCount": 18,
+    "id": 'ai - equipment - 3','
+    "title": 'AI Workstation Supercomputer','
+    "description":;
+      'High - performance computing rig optimized for AI model training and deep learning applications. Features NVIDIA A100 GPUs, terabytes of storage, and pre - installed ML frameworks.','
+    "category": 'Equipment','
+    "price": 12999,
+    "currency": '$','
+    "tags": ['Hardware', 'Deep Learning', 'GPU'],'
+    "author": {
+      }
+      "name": 'TechGear Pro','
+      "id": 'techgear'},'
+    "images": [;
+      '"https"://images.unsplash.com / photo - 1591405351990 - 4726e331f141?auto = format & fit = crop & w=800 & h=500'],'
+    "created_at": '2024 - 03 - "05T09":"15":00.000Z','
+    "rating": 4.7,
+    "review_count": 18,
+    "featured": true,
+    "location": 'Global','
+    "availability": '2 - 3 Weeks','
+    "ai_score": 95},
+  {
+        '"https"://images && images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100'},'
+    "images": [
+      '"https"://images && images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500'],'
+    "createdAt": '2024-01-"28T14":"20":00 && 00.000Z','
+    "rating": 4 && 4.6,
+    "reviewCount": 124,
+    "id": 'ai - content - 4','
+    "title": 'AI Content Generation Suite','
+    "description":;
+      'Complete toolkit for generating blog posts, social media content, product descriptions, and more using advanced AI. Includes API access and user - friendly interface.','
+    "category": 'Content Creation','
+    "price": 399,
+    "currency": '$','
+    "tags": ['Content Generation', 'Copywriting', 'Marketing'],'
+    "author": {
+      }
+      "name": 'ContentGenius','
+      "id": 'contentgenius','
+      "avatar_url":;
+        '"https"://images.unsplash.com / photo - 1573497161161 - c3e73707e25c?auto = format & fit = crop & w=100 & h=100'},'
+    "images": [;
+      '"https"://images.unsplash.com / photo - 1513258496099 - 48168024aec0?auto = format & fit = crop & w=800 & h=500'],'
+    "created_at": '2024 - 01 - "28T14":"20":00.000Z','
+    "rating": 4.6,
+    "review_count": 124,
+    "location": 'Global','
+    "availability": 'Immediate','
+    "ai_score": 88},
+  {
+}
+import { ProductListing } from "@/types/listings";"
+import { SearchSuggestion, FilterOptions } from "@/types/search";"
+  {;
+}
+  {
+=======
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
+>>>>>>> origin/chore/fix-lint-and-merge
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
 
@@ -894,12 +993,18 @@ export const generateFilterOptions = (): FilterOptions => {
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+<<<<<<< HEAD
+}
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => { return listing.category))].sort(); }
+const locations = [;
+=======
 const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),
 
   ].sort();
   const locations = []
 
+>>>>>>> origin/chore/fix-lint-and-merge
     ...new Set(
       MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.map(listing => listing && listing.location).filter(Boolean)
     ),
@@ -1311,9 +1416,32 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 ];
 ;
 // Generate search suggestions based on existing listings;
+<<<<<<< HEAD
+export const generateSearchSuggestions = (): SearchSuggestion[] => {
+  }
+    'AI models','
+    'GPT integration','
+    'Machine learning','
+    'Computer vision','
+    'Speech recognition','
+    'Data analysis','
+    'Content generation','
+    'Code assistant','
+    'Virtual assistant','
+    'Enterprise AI solutions','
+    'Robotics','
+    'AI workstation','
+    'Business intelligence','
+    'Custom model development','
+    'Server rack','
+    'GPU cluster','
+    'Edge computing','
+    'High performance storage'];'
+=======
 
     'High performance storage',
   ];
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
   // Convert strings to SearchSuggestion objects;
 
@@ -1324,6 +1452,11 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 
   // Extract unique categories, locations, and availability options from listings;
   const product_types = [;
+<<<<<<< HEAD
+    ...new Set (MARKETPLACE_LISTINGS.map (listing => { return listing.category))].sort (); }
+    ...new Set (
+      MARKETPLACE_LISTINGS.map (listing => { return listing.location).filter (Boolean))].sort (); }
+=======
     ...new Set (MARKETPLACE_LISTINGS.map (listing => listing.category)),
   ].sort ();
   const locations = [;
@@ -1331,6 +1464,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
       MARKETPLACE_LISTINGS.map (listing => listing.location).filter (Boolean)),
   ].sort ();
   const availability = [;
+>>>>>>> origin/chore/fix-lint-and-merge
     ...new Set (
       MARKETPLACE_LISTINGS.map (listing => listing.availability).filter (Boolean)),
   ].sort ();

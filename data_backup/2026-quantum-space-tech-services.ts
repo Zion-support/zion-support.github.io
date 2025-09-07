@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
 export const quantumSpaceTechServices2026 = [] as [];
 export interface QuantumSpaceTechService2026 {
   "id": string;
@@ -260,3 +266,4 @@ export const \"quantumSpaceTechServices2026\": QuantumSpaceTechService2026[] = [
       \"email\": \"kleber@ziontechgroup.com\",}
       \"address\": \"364 E Main St STE 1008 Middletown DE 19709\"}
 ]}}}
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -5,10 +5,40 @@ import React, { useState } from 'react';
   Dialog;
   DialogContent;
   DialogDescription;
+<<<<<<< HEAD
+  DialogHeader;  DialogTitle} from "@/components/ui/dialog","
+import { Button } from "@/components/ui/button","
+import { Input } from "@/components/ui/input","
+import { Label } from "@/components/ui/label","
+import { Textarea } from "@/components/ui/textarea","
+import { toast } from "@/hooks/use-toast","
+import { supabase } from "@/integrations/supabase/client","
+import { TalentProfile } from "@/types/talent","
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";"
+import {Button} from "@/components/ui/button";"
+import {Input} from "@/components/ui/input";"
+import {Label} from "@/components/ui/label";"
+import {Textarea} from "@/components/ui/textarea";"
+import {toast} from "@/hooks/use-toast";"
+import {supabase} from "@/integrations/supabase/client";"
+import {TalentProfile} from "@/types/talent";"
+import {useAuth} from "@/hooks/useAuth";"
+import {JobApplication} from "@/types/jobs";"
+  isOpen;
+export function HireConfirmationModal() {;
+  }
+  const [projectName, setProjectName] = useState('');'
+  const [projectDescription, setProjectDescription] = useState('');'
+  const [updateAvailability, setUpdateAvailability] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+const { user } = useAuth();import React, { useState } from 'react',;'
+  }
+=======
 
 import React, { useState } from 'react',
 import {}
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,
   DialogContent,
   DialogDescription,
@@ -81,6 +111,14 @@ import React, { useState } from 'react',
   DialogDescription,
   DialogHeader,"
   DialogTitle} from "@/components/ui/dialog","
+<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth","
+import { JobApplication } from "@/types/jobs","
+export interface HireConfirmationModalProps {
+  }
+  "isOpen": boolean,
+  "onClose": () => void,
+=======
 import { Button } from "@/components/ui/button","
 import { Input } from "@/components/ui/input","
 import { Label } from "@/components/ui/label","
@@ -95,6 +133,7 @@ import { JobApplication } from "@/types/jobs",
 
   isOpen: boolean,
   onClose: () => void,
+>>>>>>> origin/chore/fix-lint-and-merge
   candidateData?: TalentProfile,
   application?: JobApplication,
 

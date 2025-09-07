@@ -129,9 +129,7 @@ const payload = {
     };
     (async () => {}
       try {}
-        const { supabase } = await import('../utils/supabase/client');
 
-const user = await supabase.auth.getUser();
         if (user.data.user) {
           // Attempt to save to Supabase if table exists;
 await supabase.from('salary_insights').insert({

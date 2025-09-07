@@ -14,8 +14,6 @@ import {cn} from '@/lib/utils';
 import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
-import * as React from "react"
-import * as SwitchPrimitives from "@radix-ui/react-switch"
 
 import { cn } from "@/lib/utils"
 
@@ -28,7 +26,10 @@ const Switch = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof SwitchPrimitives && SwitchPrimitives.Root>;
 ></typeof>(({ className, ...props }, ref) => (;
 
+<<<<<<< HEAD
+=======
     className={cn(
+>>>>>>> origin/chore/fix-lint-and-merge
 
       className
 

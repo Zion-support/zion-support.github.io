@@ -4,6 +4,10 @@ import { MemoryRouter } from 'react-router-dom';
 import AppLayout from '../components/layout/AppLayout';
 import AIMatcherPage from '../pages/AIMatcher';
 
+<<<<<<< HEAD
+import { render, MemoryRouter } from 'lucide-react'; import { AppLayout } from '@/layout/AppLayout'; import AIMatcherPage from '@/pages/AIMatcher'; test('')'
+
+=======
 describe('AIMatcherPageNavbar', () => {
   it('renders without crashing', () => {
     render(
@@ -16,3 +20,4 @@ describe('AIMatcherPageNavbar', () => {
     expect(screen.getByTestId('ai-matcher-page')).toBeInTheDocument();
   });
 });
+>>>>>>> origin/chore/fix-lint-and-merge

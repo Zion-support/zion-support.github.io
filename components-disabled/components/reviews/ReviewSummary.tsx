@@ -201,7 +201,10 @@ export default ReviewSummary;
 
   summary: ReviewsSummary;
 
+<<<<<<< HEAD
+=======
 const ReviewSummary: React.FC < Props> = ({ summary   ,}
+>>>>>>> origin/chore/fix-lint-and-merge
 }) => {
 
 return (<div className='enhanced - card flex items - center justify - between' />;

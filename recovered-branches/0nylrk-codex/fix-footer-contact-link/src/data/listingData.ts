@@ -225,6 +225,19 @@ location: 'Global',
 
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
+<<<<<<< HEAD
+}
+    'AI models','
+    'GPT integration','
+    'Machine learning','
+    'Computer vision','
+    'Speech recognition','
+    'Data analysis','
+    'Content generation','
+    'Code assistant','
+    'Virtual assistant','
+    'Enterprise AI solutions',;'
+=======
   const suggestions = [
     location: 'North America',
     availability: '4 - 6 Weeks',
@@ -428,6 +441,7 @@ pr-12325
     'Code assistant',
     'Virtual assistant',
     'Enterprise AI solutions',;
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
 
 type: 'product', // Use a valid type from the SearchSuggestion interface
@@ -685,6 +699,19 @@ export const generateFilterOptions = () => {
 ;
 // Generate search suggestions based on existing listings;
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
+<<<<<<< HEAD
+  }
+    'AI models','
+    'GPT integration','
+    'Machine learning','
+    'Computer vision','
+    'Speech recognition','
+    'Data analysis','
+    'Content generation','
+    'Code assistant','
+    'Virtual assistant','
+    'Enterprise AI solutions'];'
+=======
   const suggestions = [;
     'AI models',
     'GPT integration',
@@ -697,6 +724,7 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'Virtual assistant',
     'Enterprise AI solutions',
   ];
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
   return suggestions.map (text => ({
     text,
@@ -736,6 +764,11 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 export const generateFilterOptions = () =>: any {
   // Extract unique categories, locations, and availability options from listings;
   const product_types = [;
+<<<<<<< HEAD
+    ...new Set (MARKETPLACE_LISTINGS.map (listing => { return listing.category))].sort (); }
+    ...new Set (
+      MARKETPLACE_LISTINGS.map (listing => { return listing.location).filter (Boolean))].sort (); }
+=======
     ...new Set (MARKETPLACE_LISTINGS.map (listing => listing.category)),
   ].sort ();
   const locations = [;
@@ -743,10 +776,20 @@ export const generateFilterOptions = () =>: any {
       MARKETPLACE_LISTINGS.map (listing => listing.location).filter (Boolean)),
   ].sort ();
   const availability = [;
+>>>>>>> origin/chore/fix-lint-and-merge
     ...new Set (
       MARKETPLACE_LISTINGS.map (listing => listing.availability).filter (Boolean)),
   ].sort ();
 ;
+<<<<<<< HEAD
+    "product_types": product_types.map (type => ({
+}
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => { return listing.category)),; }
+  ].sort();
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => { return listing.location).filter(Boolean)
+    )].sort(); }
+=======
     product_types: product_types.map (type => ({
 const productTypes = [
   const productTypes = [
@@ -758,6 +801,7 @@ const productTypes = [
     ),
   ].sort();
   const availability = [
+>>>>>>> origin/chore/fix-lint-and-merge
     ...new Set(
       MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
     ),
@@ -881,6 +925,12 @@ locations: locations.map (location => ({
 availability_options: availability.map (item => ({
   label: item, value: item;
 }) );
+<<<<<<< HEAD
+export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => { return listing.price || 0)); }
+"ratingOptions": [1, 2, 3, 4, 5]
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => { return listing.price || 0)); }
+    "ratingOptions": [1, 2, 3, 4, 5]
+=======
 
 rating_options: [1, 2, 3, 4, 5];
 }export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
@@ -897,6 +947,7 @@ ratingOptions: [1, 2, 3, 4, 5]
     ratingOptions: [1, 2, 3, 4, 5]
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion } from "@/types/search",;
+>>>>>>> origin/chore/fix-lint-and-merge
 // Shared data source for marketplace listings;
 export const MARKETPLACE_LISTINGS: ProductListing[] = [;
   {;
@@ -1023,6 +1074,9 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 ],;
 // Generate search suggestions based on existing listings;
 export const generateSearchSuggestions = (): SearchSuggestion[] => {;
+<<<<<<< HEAD
+  }
+=======
   const suggestions = [;
     "AI models",;
     "GPT integration",;
@@ -1876,6 +1930,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 // Generate search suggestions based on existing listings;
 export const generateSearchSuggestions = (): SearchSuggestion[] => {;
   const suggestions = [;"
+>>>>>>> origin/chore/fix-lint-and-merge
     "AI models",;"
     "GPT integration",;"
     "Machine learning",;"

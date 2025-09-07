@@ -136,11 +136,21 @@ const navigate = useNavigate();
   const handleSubmit = async () => {
 
     setIsSubmitting(true);
+<<<<<<< HEAD
+    try {
+      // In a real application, you would send the data to your backend
+}
+console.log("Submitting form "data":", formData);"
+      // Simulate API call  },
+  
+    }
+=======
     try {}
       // In a real application, you would send the data to your backend"
       console.log("Submitting form data:", formData);
 
   const handleSubmit = async () => {
+>>>>>>> origin/chore/fix-lint-and-merge
     setIsSubmitting(true),
     
     try {

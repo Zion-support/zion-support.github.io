@@ -1,10 +1,45 @@
+<<<<<<< HEAD
+
+
+;
+  return (<div className='enhanced-card flex items-center justify-between'>import React from 'react';
+
+
+  return (
+    <div className='enhanced-card flex items-center justify-between'>import React from 'react';
+import React from 'react';
+=======
 return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';'
 import React from 'react';'
+>>>>>>> origin/chore/fix-lint-and-merge
 import type { ReviewsSummary } from '../../types/reviews';
 </div> </div> </div>) }
 ;
 
+<<<<<<< HEAD
+const ReviewSummary: React.FC<Props> = ({ summary }) => {
+import StarRating from './StarRating';
+type Props = {
+  summary: ReviewsSummary
+};
+
+const ReviewSummary: React.FC<Props> = ({ summary }) => {
+  return (
+    <div className="enhanced-card flex items-center justify-between">
+      <div>
+</div> </div> </div>) 
+}
+export default ReviewSummary
+        <div className="flex items-center gap-3">
+          <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
+        <div className="flex items-center gap-3>
+          <span className=text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
+          <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
+        </div>
+        <div className="text-sm text-gray-600 mt-1>
+          <span className=mr-3">{summary.totalReviews} reviews</span>
+=======
   return (
 
     <div className='enhanced-card flex items-center justify-between'>;
@@ -51,13 +86,24 @@ export default ReviewSummary;
           <span className='mr-3'>{summary.totalReviews} reviews</span>
 origin/cursor/automate-test-improve-and-merge-code-2533
 
+>>>>>>> origin/chore/fix-lint-and-merge
           <span>{summary.totalCompletedProjects} completed projects</span>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+  )
+};
+
+export default ReviewSummary;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+=======
 
 );
 };
 
 export default ReviewSummary;
 origin/cursor/automate-test-improve-and-merge-code-2533
+>>>>>>> origin/chore/fix-lint-and-merge

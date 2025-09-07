@@ -59,8 +59,29 @@ function removeUnusedLucideImports(filePath) {
     return false}
 // Function to fix common syntax errors;
 function fixSyntaxErrors(filePath) {
+<<<<<<< HEAD
+  try {
+    let modified = false;
+    // Fix unterminated string literals
+    if (content.includes('"') && !content.match(/"[^"]*$/)) {
+      for (let i = 0; i < lines.length; i++) {
+        if (line.includes('"') && !line.match(/"[^"]*"$/)) {
+          // Try to fix unterminated strings
+          lines[i] = line.replace(/"[^"]*$/, '""');
+          modified = true}
+      }
+      if (modified) {
+        content = lines.join('\n')}
+    }
+    // Fix missing semicolons
+    content = content.replace(/([^}])\n/g, '$1;\n');
+    // Fix missing commas in object literals
+    content = content.replace(/([^}])\n\s*}/g, '$1,\n}');
+    if (modified) {
+=======
   // TODO: Implement
 
+>>>>>>> origin/chore/fix-lint-and-merge
       fs.writeFileSync(filePath, content);
     console.error(`❌ Error fixing syntax in ${filePath}:`, error.message);
 // Function to find all TypeScript/JavaScript files;

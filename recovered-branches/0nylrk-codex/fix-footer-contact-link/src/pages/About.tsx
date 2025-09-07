@@ -355,6 +355,15 @@ export default function About() {
     </>
 
   )
+<<<<<<< HEAD
+import {Header} from "@/components/Header";"
+import {Footer} from "@/components/Footer";"
+import {SEO} from "@/components/SEO";"
+import {GradientHeading} from "@/components/GradientHeading";"
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer";"
+import { SEO } from "@/components/SEO",;"
+=======
 
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -366,6 +375,7 @@ import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading";
 
+>>>>>>> origin/chore/fix-lint-and-merge
       />;
       <Header />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;

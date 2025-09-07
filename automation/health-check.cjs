@@ -166,6 +166,10 @@ if (healthCheck.status === 'healthy') {
 =======
 #!/usr/bin/env node
 
+<<<<<<< HEAD
+
+
+=======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
 =======
@@ -247,6 +251,7 @@ const fs = require('fs');
 const path = require('path');
 
 class HealthCheckMonitor {
+>>>>>>> origin/chore/fix-lint-and-merge
   constructor() {
     this.logFile = path.join(__dirname, 'logs', 'health-check.log');
     this.ensureLogDir();
@@ -558,6 +563,133 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
   async checkDependencies() {
     this.log('📦 Checking dependencies...');
     
+<<<<<<< HEAD
+    try {
+
+    } catch (error) {
+      this.log(`❌ Failed to check dependencies: ${error.message}`, 'ERROR');
+      this.results.dependencies = {
+        success: false,
+        issues: ['Failed to check dependencies'],
+        fixes: []
+      };
+    }
+  }
+
+  async checkConfiguration() {
+
+      }
+
+      this.results.configuration = {
+        success: issues.length === 0,
+        issues,
+        fixes
+      };
+
+    } catch (error) {
+      this.log(`❌ Failed to check configuration: ${error.message}`, 'ERROR');
+      this.results.configuration = {
+        success: false,
+        issues: ['Failed to check configuration'],
+        fixes: []
+      };
+    }
+
+  }
+
+  async checkTypeScript() {
+    this.log('\n🔷 CHECKING TYPESCRIPT');
+    
+    try {
+
+    }
+  }
+
+  async checkLinting() {
+    this.log('\n🔍 CHECKING LINTING');
+    
+    try {
+
+    }
+  }
+
+  async checkTests() {
+    this.log('\n🧪 CHECKING TESTS');
+    
+
+    }
+  }
+
+  async checkDiskSpace() {
+    this.log('\n💾 CHECKING DISK SPACE');
+    
+    try {
+      const diskUsage = await this.runCommand('df -h', 'Check Disk Usage');
+      
+      if (diskUsage.success) {
+        this.log('✅ Disk space check completed');
+      } else {
+        this.log('⚠️ Could not check disk space', 'WARNING');
+      }
+    } catch (error) {
+      this.log(`❌ Failed to check disk space: ${error.message}`, 'ERROR');
+    }
+  }
+
+  async checkMemoryUsage() {
+    this.log('\n🧠 CHECKING MEMORY USAGE');
+    
+    try {
+      const memoryUsage = await this.runCommand('free -h', 'Check Memory Usage');
+      
+      if (memoryUsage.success) {
+        this.log('✅ Memory usage check completed');
+      } else {
+        this.log('⚠️ Could not check memory usage', 'WARNING');
+      }
+    } catch (error) {
+      this.log(`❌ Failed to check memory usage: ${error.message}`, 'ERROR');
+    }
+  }
+
+  generateReport() {
+    const totalDuration = Date.now() - this.startTime;
+    
+    this.log('\n📊 HEALTH CHECK REPORT');
+    this.log('='.repeat(60));
+    this.log(`Total Duration: ${totalDuration}ms`);
+    this.log('');
+
+    let totalIssues = 0;
+    let totalFixes = 0;
+    let passedChecks = 0;
+
+    Object.entries(this.results).forEach(([check, result]) => {
+      const status = result.success ? '✅' : '❌';
+      const issuesCount = result.issues?.length || 0;
+      const fixesCount = result.fixes?.length || 0;
+      
+      totalIssues += issuesCount;
+      totalFixes += fixesCount;
+      if (result.success) passedChecks++;
+
+      this.log(`${status} ${check}: ${issuesCount} issues, ${fixesCount} fixes`);
+      
+      if (issuesCount > 0) {
+        result.issues.forEach(issue => this.log(`  - ${issue}`, 'WARNING'));
+      }
+      if (fixesCount > 0) {
+        result.fixes.forEach(fix => this.log(`  + ${fix}`, 'INFO'));
+      }
+    });
+
+    this.log('\n📈 SUMMARY');
+    this.log(`Passed Checks: ${passedChecks}/${Object.keys(this.results).length}`);
+    this.log(`Total Issues: ${totalIssues}`);
+    this.log(`Total Fixes: ${totalFixes}`);
+
+    // Save detailed report
+=======
     const depCheck = await this.runCommand(
       'npm audit --audit-level=moderate',
       'Dependency security check'
@@ -567,6 +699,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
     if (depCheck.success) {
       this.log('✅ Dependencies are secure');
 
+>>>>>>> origin/chore/fix-lint-and-merge
     const report = {
       timestamp: new Date().toISOString(),
       healthStatus: this.healthStatus,

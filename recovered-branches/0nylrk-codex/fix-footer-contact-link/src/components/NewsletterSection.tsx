@@ -2,6 +2,9 @@ import { GradientHeading } from "@/components/GradientHeading",
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 import {GradientHeading} from "@/components/GradientHeading";
 import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
+<<<<<<< HEAD
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",  );
+=======
 import { GradientHeading } from "@/components/GradientHeading",
 
 import { GradientHeading } from "@/components/GradientHeading";
@@ -51,6 +54,7 @@ import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
         </div>;
       </div>;
 
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
   )

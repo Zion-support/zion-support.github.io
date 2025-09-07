@@ -23,7 +23,10 @@ import { AnalysisResult } from './types',;
  */;
 export const analyzeContent = (content: string): AnalysisResult => {;
   const contentLower = content.toLowerCase(),;
+<<<<<<< HEAD
+=======
   const reasons: string[] = [],;
+>>>>>>> origin/chore/fix-lint-and-merge
   // Check for suspicious phrases;
   for (const phrase of suspiciousPhrases) {;
     if (contentLower.includes(phrase.toLowerCase())) {;
@@ -91,9 +94,15 @@ import { AnalysisResult } from './types',;
 /**;
  * Analyzes text content for suspicious patterns;
  */;
+<<<<<<< HEAD
+export const analyzeContent = ("content":string):(AnalysisResult) => {;
+  }
+  const "reasons":string[] = [],;
+=======
 export const analyzeContent = (content:string):AnalysisResult => {;
   const contentLower = content.toLowerCase(),;
   const reasons:string[] = [],;
+>>>>>>> origin/chore/fix-lint-and-merge
   ;
   // Check for suspicious phrases;
   for (const phrase of suspiciousPhrases) {;
@@ -103,8 +112,12 @@ export const analyzeContent = (content:string):AnalysisResult => {;
   }
   ;
   // Check for links (simplified check);
+<<<<<<< HEAD
+  if (hasExternalLinks && (;
+=======
   const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower),;
   if (hasExternalLinks && (;'
+>>>>>>> origin/chore/fix-lint-and-merge
     contentLower.includes('payment') || ;'
     contentLower.includes('money') || ;'
     contentLower.includes('deal');
@@ -113,9 +126,15 @@ export const analyzeContent = (content:string):AnalysisResult => {;
   }
   ;
   // Check for excessive capitalization (potential scam);
+<<<<<<< HEAD
+  if (capitalRatio > 0.3 && content.length > 20) {;
+    }
+    reasons.push('Excessive capitalization'),;'
+=======
   const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length,;
   if (capitalRatio > 0.3 && content.length > 20) {;'
     reasons.push('Excessive capitalization'),;
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   ;
   // Check for poor grammar with repetitive punctuation;

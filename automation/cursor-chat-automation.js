@@ -330,8 +330,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
     return `${seconds}s`;
   /**
+<<<<<<< HEAD
+   * Terminate a session
+   */
+  terminateSession(sessionId) {
+    if (!session) {
+      this.log(`Session ${sessionId} not found for termination`, 'WARN');
+      return false;
+    }
+=======
    * Terminate a session;
 
+>>>>>>> origin/chore/fix-lint-and-merge
     session.status = 'terminated';
     this.stats.sessionsTerminated++;`
     this.log(`Session ${sessionId} terminated`);
@@ -415,7 +425,15 @@ if (require.main === module) {
     console.log('\nFinal "Statistics": ');
     console.log(JSON.stringify(stats, null, 2));
 
+<<<<<<< HEAD
+    process.exit(0);
+  });
+  // Keep the process alive
+  setInterval(() => {
+    console.log(`\n[${new Date().toISOString()}] Status: ${stats.activeSessions} active sessions, ${stats.totalCommands} commands sent`);
+=======
 ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/chore/fix-lint-and-merge
 
     process.exit(0);
   });

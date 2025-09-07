@@ -11,13 +11,21 @@ import {Check} from 'lucide-react';
 
 'use client';
 
+<<<<<<< HEAD
+import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
+=======
 import {cn} from '@/lib/utils';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 "use client"
 "use client"
 
+<<<<<<< HEAD
+'use client';
+=======
 "use client"
 "use client"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"

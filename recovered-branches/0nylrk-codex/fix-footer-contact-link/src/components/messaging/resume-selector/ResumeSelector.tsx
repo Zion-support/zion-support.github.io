@@ -245,6 +245,23 @@ function ResumeSelector() {
     loadResumes();
   }, [fetchResume]);        setSelectedResume(options[0]);
         onResumeSelected(options[0]);
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';'
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;"
+import { Label } from "@/components/ui/label",;"
+import { Plus, Loader2 } from 'lucide-react',;'
+import { useResume } from "@/hooks/useResume",;"
+import { exportResumeToPDF } from "@/utils/pdfExport",;"
+import { toast } from "@/components/ui/use-toast",;"
+import { ResumePreviewCard } from './ResumePreviewCard',;'
+import { UploadSection } from './UploadSection',;'
+import { SelectResumeSection } from './SelectResumeSection',;'
+import { ResumeOption, ResumeSelectorProps } from './types',;'
+;
+export function ResumeSelector() {;
+  }
+  ;
+=======
 
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -424,6 +441,7 @@ import { ResumeOption, ResumeSelectorProps } from './types',;
 ;
 export function ResumeSelector() { return null; }
   const { resume, fetchResume } = useResume(),;
+>>>>>>> origin/chore/fix-lint-and-merge
   ;
   // Fetch resume data when component mounts;
   useEffect(() => {;
@@ -483,6 +501,9 @@ export function ResumeSelector() { return null; }
         console.error("Error loading resumes:", error)
       } finally {}
   };
+<<<<<<< HEAD
+  // Handle custom file upload,
+=======
 
   }
   // Handle resume selection change
@@ -490,11 +511,18 @@ export function ResumeSelector() { return null; }
     const selected = resumeOptions.find((opt) => opt.id === resumeId);
     if (selected) {
       (setSelectedResume(selected), onResumeSelected(selected));
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }
   // Handle custom file upload
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
+<<<<<<< HEAD
+}
+      // Check if it's a PDF file'
+      if (file.type !== "application/pdf") {"
+        }
+=======
       const file = e.target.files[0];
   };
 
@@ -565,6 +593,7 @@ export function ResumeSelector() { return null; }
 
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
+>>>>>>> origin/chore/fix-lint-and-merge
         toast({
 
 '
@@ -736,6 +765,11 @@ export function ResumeSelector() { return null; }
             Select from saved versions;
           </Label>
         </div>
+<<<<<<< HEAD
+      </RadioGroup>      // Create download link;
+      link.href = url,;
+      link.download = `${selectedResume.title || 'Resume'}.pdf`,;`
+=======
 
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
@@ -750,6 +784,7 @@ export function ResumeSelector() { return null; }
       const link = document.createElement('a'),;
       link.href = url,;'`
       link.download = `${selectedResume.title || 'Resume'}.pdf`,;
+>>>>>>> origin/chore/fix-lint-and-merge
       document.body.appendChild(link),;
       link.click(),;
       // Clean up;

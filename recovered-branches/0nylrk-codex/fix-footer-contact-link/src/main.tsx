@@ -37,6 +37,18 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
+<<<<<<< HEAD
+import React from 'react';'
+import ReactDOM from 'react-dom/client';'
+import App from './App ;'
+import './index ;'
+import {HelmetProvider} from 'react-helmet-async';'
+import {BrowserRouter, as, Router} from 'react-router-dom';'
+import App from "App";"
+import './index.css',;'
+import { HelmetProvider } from 'react-helmet-async',;'
+import { BrowserRouter as Router } from 'react-router-dom',;'
+=======
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
@@ -52,6 +64,7 @@ import App from './App.tsx',;
 import './index.css',;
 import { HelmetProvider } from 'react-helmet-async',;
 import { BrowserRouter as Router } from 'react-router-dom',;
+>>>>>>> origin/chore/fix-lint-and-merge
 // Import i18n configuration;
 import './i18n';
 import {LanguageProvider} from '@/context/LanguageContext';
@@ -82,6 +95,18 @@ import {AnalyticsProvider} from './context/AnalyticsContext';
         </Router>;
       </WhitelabelProvider>;
     </HelmetProvider>;
+<<<<<<< HEAD
+import ReactDOM from 'react-dom / client';'
+import App from './App.tsx';'
+import './index.css';'
+import {HelmetProvider} from 'react - helmet - async';'
+// Import i18n configuration;
+import {LanguageProvider} from '@/context / LanguageContext';'
+import {LanguageDetectionPopup} from './components / LanguageDetectionPopup';'
+import {WhitelabelProvider} from '@/context / WhitelabelContext';'
+// Import auth and notification providers;
+import {AuthProvider} from '@/context / auth / AuthProvider';'
+=======
 
 import React from 'react';
 import ReactDOM from 'react-dom / client';
@@ -98,6 +123,7 @@ import {WhitelabelProvider} from '@/context / WhitelabelContext';
 // Import auth and notification providers;
 import {AuthProvider} from '@/context / auth / AuthProvider';
 import {NotificationProvider} from './context';
+>>>>>>> origin/chore/fix-lint-and-merge
 // Import analytics provider;
 import {AnalyticsProvider} from './context / AnalyticsContext';
 // Render the app with proper provider structure;

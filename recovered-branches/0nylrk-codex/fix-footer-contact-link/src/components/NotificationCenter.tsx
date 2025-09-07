@@ -80,7 +80,10 @@ export const NotificationCenter: React.FC = () => {;
     setFilter,;
     fetchNotifications;
   } = useNotifications(),;
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   // Refresh notifications when popover opens;
   useEffect(() => {;
     if (open) {;
@@ -114,11 +117,25 @@ export const NotificationCenter: React.FC = () => {;
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead(),
+<<<<<<< HEAD
+      toast.success("All notifications marked as read")"
+    } catch (err) {
+      }
+      console.error("Failed to mark notifications as "read":", err),"
+      toast.error("Failed to update notifications")"
+    }
+  }
+  const handleFilterChange = ("newFilter": FilterType) => {
+    }
+    setFilter(newFilter as any)
+  }
+=======
 
       toast.success("All notifications marked as read")
     } catch (err) {"
       console.error("Failed to mark notifications as read:", err),"
       toast.error("Failed to update notifications")
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
   const handleFilterChange = (newFilter: FilterType) => {}
@@ -293,6 +310,16 @@ if ( {) {}
       ;
       loadNotifications(),;
     }
+<<<<<<< HEAD
+  }, [open, fetchNotifications]),
+
+    try {
+      await markAllAsRead($2);
+      toast.success("All notifications marked as read")
+    } catch (err) {
+      console.error($2);
+      toast.error("Failed to update notifications")
+=======
   }, [open, fetchNotifications]),;
 ;
   const handleMarkAllAsRead = async () => {;
@@ -302,6 +329,7 @@ if ( {) {}
     } catch (err) {;
       console.error("Failed to mark notifications as read:", err),;
       toast.error("Failed to update notifications"),;
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   },;
 ;

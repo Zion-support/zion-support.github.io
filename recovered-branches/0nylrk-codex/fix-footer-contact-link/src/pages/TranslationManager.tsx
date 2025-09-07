@@ -170,10 +170,94 @@ export default function TranslationManager() { return null; }
     Object && Object.values(currentTranslations).forEach(langTranslations => {;
       Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
     });
+<<<<<<< HEAD
+    setTranslations(currentTranslations);
+    // Get all unique keys across all languages,
+const allKeys = new Set<string>();
+    Object.values(currentTranslations).forEach((langTranslations) => {
+      }
+      Object.keys(langTranslations).forEach(key => { return allKeys.add(key))
+    }); }
+    setFilteredKeys(Array.from(allKeys))
+  }, [selectedNamespace, i18n]);
+  // Filter keys based on search query,
+useEffect(() => {
+    }
+    if (!searchQuery.trim()) {
+      // Get all unique keys across all languages
+}
+      Object.values(translations).forEach((langTranslations) => {
+        }
+        Object.keys(langTranslations).forEach(key => { return allKeys.add(key))
+      }); }
+      setFilteredKeys(Array.from(allKeys));
+return;
+    }
+    const query = searchQuery.toLowerCase().trim();
+const "filtered": string[] = [];
+    // Search in keys and values,
+Object.values(translations).forEach((langTranslations) => {
+      }
+      Object.entries(langTranslations).forEach(([key, value]) => {
+        }
+        if (
+          key.toLowerCase().includes(query) |
+          (typeof value === 'string' && value.toLowerCase().includes(query))'
+        ) {
+          }
+          filtered.push(key)
+        }
+      })
+    });
+    setFilteredKeys([...new Set(filtered)])
+  }, [searchQuery, translations]);
+  const handleEdit = ("key": string) => {
+    }
+    setEditingKey(key)
+    // Initialize edited translations for this key,
+const "initialEdits": Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>;
+    supportedLanguages.forEach((lang) => {
+      }
+      initialEdits[lang.code] = translations[lang.code]?.[key] |'''
+    });
+    setEditedTranslations({
+      ...editedTranslations;
+      [key]: initialEdits
+    })
+  }
+  const handleSave = ("key": string) => {
+    }
+    setIsSaving(true)
+    // In a real application, you would save these to your backend,
+setTimeout(() => {
+      // Update translations with edited values
+}
+const updatedTranslations = { ...translations }
+      supportedLanguages.forEach((lang) => {
+        }
+        if (!updatedTranslations[lang.code]) {    const allKeys = new Set<string>();
+    }
+    Object && Object.values(currentTranslations).forEach((langTranslations) => {;
+      }
+      Object && Object.keys(langTranslations).forEach(key => { return allKeys && allKeys.add(key)); }
+    });
+    setFilteredKeys(Array && Array.from(allKeys));
+  }, [selectedNamespace, i18n]);
+  // Filter keys based on search query;
+  useEffect(() => {;
+    }
+    if (!searchQuery && searchQuery.trim()) {;
+      // Get all unique keys across all languages;
+      }
+      Object && Object.values(translations).forEach((langTranslations) => {;
+        }
+        Object && Object.keys(langTranslations).forEach(key => { return allKeys && allKeys.add(key)); }
+=======
 
       const allKeys = new Set<string>();
       Object && Object.values(translations).forEach(langTranslations => {;
         Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
+>>>>>>> origin/chore/fix-lint-and-merge
       });
       setFilteredKeys(Array && Array.from(allKeys));
       return;
@@ -195,9 +279,16 @@ export default function TranslationManager() { return null; }
   useEffect(() => {;
     if (!searchQuery.trim()) {;
       // Get all unique keys across all languages;
+<<<<<<< HEAD
+      }
+      Object.values(translations).forEach((langTranslations) => {;
+        }
+        Object.keys(langTranslations).forEach(key => { return allKeys.add(key)); }
+=======
       const allKeys = new Set<string>(),;
       Object.values(translations).forEach(langTranslations => {;
         Object.keys(langTranslations).forEach(key => allKeys.add(key));
+>>>>>>> origin/chore/fix-lint-and-merge
       }),;
       setFilteredKeys(Array.from(allKeys)),;
       return;

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+
+#!/"usr/bin/env" node;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -8,6 +12,7 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 #!/""usr/bin/env"" node;
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 /**;
@@ -17,6 +22,15 @@
  */;
 #!/usr/bin/env node
 /**;
+<<<<<<< HEAD
+ */;
+const fs = require(fs");
+const path = require("path);
+const { execSync, spawn } = require(child_process");
+
+=======
+const glob = require("glob);
+=======
  */;"
 const fs = require("fs");
 const path = require("path");
@@ -29,23 +43,26 @@ const glob = require("glob");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 const glob = require("glob");"
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 class $1 {}
   constructor() {}
   this.projectRoot = process.cwd();"
     this.logFile = path.join(this.projectRoot, "automation/logs/pm2-error-prevention.log);
-    this.errorLogFile = path.join(this.projectRoot, automation/logs/pm2-error-prevention-error.log");"
+    this.errorLogFile = path.join(this.projectRoot, automation/logs/pm2-error-prevention-error.log);
     this.ensureLogDirectory();
     this.errorCount = 0;
-    this.fixCount = 0};
-;
+    this.fixCount = 0}
   ensureLogDirectory() {}
   const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}"
-  fs.mkdirSync(logDir, { "recursive": true })};"
-  };
+  fs.mkdirSync(logDir, { "recursive: true })}
+  }
   log(message, isError = false) {}
   const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -68,21 +85,32 @@ class $1 {}
         "stdio": "pipe",
         "timeout": 60000;
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
-=======
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   async runTypeCheck() {}
   try {}"
-  this.log("Running TypeScript type check...");
-      execSync("npm run type-check", {})
-  "cwd": this.projectRoot,
-        "stdio": "pipe",
-        "timeout": 60000;"
+  this.log("Running TypeScript type check...);
+      execSync(npm run type-check", {})
+  "cwd: this.projectRoot,
+        stdio": "pipe,
+        timeout": 60000;"
 
-      return false};
+      return false}
   async runLint() {}
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
 <<<<<<< HEAD
   try {}
   this.log("Running ESLint...");
@@ -109,42 +137,53 @@ class $1 {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   async runBuild() {}
   try {}
-  this.log("Running build process...");
+  this.log(Running build process...);
       execSync("npm run build", {})
-  "cwd": this.projectRoot,
-        "stdio": "pipe",
+  cwd: this.projectRoot,
+        "stdio": pipe,
         "timeout": 120000 }
 });
-      this.log("Build process passed");
+      this.log(Build process passed);
       return true} catch (error) {  this.log(`Build process "failed": ${error.message  }`, true);
-      return false};
-  };
-;
+      return false}
+  }
   fixCommonSyntaxErrors() {}
-  this.log("Fixing common syntax errors...");
+  this.log(Fixing common syntax errors...);
     // Fix common JSX syntax issues;
+<<<<<<< HEAD
+    const jsxFiles = glob.sync("src/**/*.{tsx,jsx}", { cwd: this.projectRoot }
+=======
     const jsxFiles = glob.sync("src/**/*.{tsx,jsx}", { "cwd": this.projectRoot }
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   fixCommonSyntaxErrors() {}"
-  this.log("Fixing common syntax errors...");"
+  this.log("Fixing common syntax errors...);
     // Fix common JSX syntax issues;"
+<<<<<<< HEAD
+    const jsxFiles = glob.sync("src/**/*.{tsx,jsx}, { cwd": this.projectRoot }")
+=======
     const jsxFiles = glob.sync("src/**/*.{tsx,jsx}", { "cwd": this.projectRoot }")
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 });
     jsxFiles.forEach(filePath => {})
 
-        let content = fs.readFileSync(fullPath", "utf8");"
+        let content = fs.readFileSync(fullPath, utf8");"
         let modified = false;
-        // Fix stray quotes in JSX;"
-        const quoteRegex = /"([^]*)\s*/g;"
+        // Fix stray quotes in JSX;
+        const quoteRegex = /([^]*)\s*/g;"
         if (quoteRegex.test(content)) {}"
-  content = content.replace(quoteRegex, "$1");"
-          modified = true};
+  content = content.replace(quoteRegex, $1);"
+          modified = true}
         // Fix broken JSX expressions;
         const brokenJsxRegex = /<([A-Z][a-zA-Z]*)\s*\(([^)]+)\)/g;
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
         if (brokenJsxRegex.test(content)) {}
   content = content.replace(brokenJsxRegex, "<$1 $2");
@@ -161,37 +200,58 @@ class $1 {}
       } catch (error) {  this.log(`Error fixing ${filePath  }: ${error.message}`, true)};
     })};
 ;
+>>>>>>> origin/chore/fix-lint-and-merge
   fixImportIssues() {}
-  this.log("Fixing import issues...");
-    const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd": this.projectRoot }
+  this.log("Fixing import issues...);
+    const tsFiles = glob.sync(src/**/*.{ts,tsx}", { "cwd: this.projectRoot }
 });
     tsFiles.forEach(filePath => {})
   try {}
-  const fullPath = path.join(this.projectRoot, "filePath);
-        let content = fs.readFileSync(fullPath", "utf8");
-        let modified = false;
+  const fullPath = path.join(this.projectRoot, filePath);
+        let content = fs.readFileSync(fullPath", "utf8);
         // Fix broken import statements;
-        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["]([^"]+)["]\s*;?\s*$/gm;
+        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*[]([^"]+)["]\s*;?\s*$/gm;
         if (brokenImportRegex.test(content)) {}
   content = content.replace(brokenImportRegex, (match, imports, module) => {}
-  const cleanImports = imports.replace(/\s+/g, " ").trim();return `import { ${cleanImports} } from `${module}";"}
+  const cleanImports = imports.replace(/\s+/g,  ).trim();return `import { ${cleanImports} } from `${module}";"}
 });
-          modified = true};
-;
+          modified = true}
         // Fix missing semicolons;
-        const missingSemicolonRegex = /import\s*{[^}]+}\s*from\s*["][^"]+[""](?!\s*)/g;
+        const missingSemicolonRegex = /import\s*{[^}]+}\s*from\s*[][^]+[""](?!\s*)/g;
         if (missingSemicolonRegex.test(content)) {}
+<<<<<<< HEAD
+  content = content.replace(missingSemicolonRegex, $&;);
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
   content = content.replace(missingSemicolonRegex, "$&;");
 <<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   fixImportIssues() {}
   this.log("Fixing import issues...");
-    const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd": this.projectRoot }
+    const tsFiles = glob.sync(src/**/*.{ts,tsx}, { "cwd": this.projectRoot }
 });
     tsFiles.forEach(filePath => {})
   try {}
+<<<<<<< HEAD
+        let content = fs.readFileSync(fullPath, "utf8");
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
   const fullPath = path.join(this.projectRoot, "filePath);
         let content = fs.readFileSync(fullPath", "utf8");
         let modified = false;
@@ -199,63 +259,79 @@ class $1 {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         // Fix broken import statements;
-        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*[""]([^"]+)["]\s*;?\s*$/gm;
         if (brokenImportRegex.test(content)) {}
   content = content.replace(brokenImportRegex, (match, imports, module) => {}
-  const cleanImports = imports.replace(/\s+/g, " ").trim();return "import { ${cleanImports} } from "${module}";"}
+  const cleanImports = imports.replace(/\s+/g,  ).trim();return "import { ${cleanImports} } from "${module};}
 });
-          modified = true};
-;
+          modified = true}
         // Fix missing semicolons;
-        const missingSemicolonRegex = /import\s*{[^}]+}\s*from\s*[""][^""]+[""](?!\s*)/g;
+        const missingSemicolonRegex = /import\s*{[^}]+}\s*from\s*[""][^]+[""](?!\s*)/g;
         if (missingSemicolonRegex.test(content)) {}
-  content = content.replace(missingSemicolonRegex, "$&;");
-          modified = true};
-;
+  content = content.replace(missingSemicolonRegex, $&;);
+          modified = true}
         if (modified) {}
   fs.writeFileSync(fullPath, content);this.log("Fixed import issues in ${filePath}");
+<<<<<<< HEAD
+          this.fixCount++}
+      } catch (error) {  this.log(Error fixing imports in ${filePath  }: ${error.message}, true)}
+=======
           this.fixCount++};
       } catch (error) {  this.log("Error fixing imports in ${filePath  }: ${error.message}", true)};
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
         if (brokenJsxRegex.test(content)) {}"
-  content = content.replace(brokenJsxRegex, "<$1 $2");"
+  content = content.replace(brokenJsxRegex, "<$1 $2);
         // Fix unterminated strings;"
-        const unterminatedStringRegex = /([^"]*)$/gm;"
-        if (unterminatedStringRegex.test(content)) {}"
+        const unterminatedStringRegex = /([^"]*)$/gm;
+        if (unterminatedStringRegex.test(content)) {}
 
+<<<<<<< HEAD
+    })}
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     })};
+>>>>>>> origin/chore/fix-lint-and-merge
   fixImportIssues() {}"
-  this.log("Fixing import issues...");
-    const tsFiles = glob.sync("src/**/*.{ts,tsx}", { "cwd": this.projectRoot }")
+  this.log("Fixing import issues...);
+    const tsFiles = glob.sync(src/**/*.{ts,tsx}", { "cwd: this.projectRoot })
     tsFiles.forEach(filePath => {})
 
         // Fix broken import statements;"
-        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["]([^"]+)["]\s*;?\s*$/gm;"
+        const brokenImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*["]([^]+)[]\s*;?\s*$/gm;"
         if (brokenImportRegex.test(content)) {}
   content = content.replace(brokenImportRegex, (match, imports, module) => {}"`;
-  const cleanImports = imports.replace(/\s+/g, " ").trim();return `import { ${cleanImports} } from `${module}";"}"
-        // Fix missing semicolons;"
-        const missingSemicolonRegex = /import\s*{[^}]+}\s*from\s*["][^"]+[](?!\s*)/g;"
-        if (missingSemicolonRegex.test(content)) {}"
-  content = content.replace(missingSemicolonRegex, "$&;");"
+        // Fix missing semicolons;
+        const missingSemicolonRegex = /import\s*{[^}]+}\s*from\s*["][^"]+[](?!\s*)/g;
+        if (missingSemicolonRegex.test(content)) {}
+  content = content.replace(missingSemicolonRegex, "$&;");
 
-  content = content.replace(brokenImportRegex, (match, imports, module) => {}"
-  const cleanImports = imports.replace(/\s+/g, " ").trim();return "import { ${cleanImports} } from "${module}";"}"
-        // Fix missing semicolons;"
+  content = content.replace(brokenImportRegex, (match, imports, module) => {}
+  const cleanImports = imports.replace(/\s+/g, " ").trim();return import { ${cleanImports} } from ${module}";"}
+        // Fix missing semicolons;
 
         if (modified) {}"
-  fs.writeFileSync(fullPath, content);this.log("Fixed import issues in ${filePath}");"
-          this.fixCount++};"
-      } catch (error) {  this.log("Error fixing imports in ${filePath  }: ${error.message}", true)};"
+  fs.writeFileSync(fullPath, content);this.log("Fixed import issues in ${filePath});
+          this.fixCount++}"
+      } catch (error) {  this.log("Error fixing imports in ${filePath  }: ${error.message}, true)}
   fixComponentIssues() {}"
-  this.log("Fixing component issues...");
-    const componentFiles = glob.sync("src/**/*.{tsx,jsx}", { "cwd": this.projectRoot }")
+  this.log("Fixing component issues...);
+    const componentFiles = glob.sync(src/**/*.{tsx,jsx}", { "cwd: this.projectRoot })
     componentFiles.forEach(filePath => {})
 
         // Fix broken JSX component calls;
         const brokenComponentRegex = /<([A-Z][a-zA-Z]*)\s*\(([^)]+)\)\s*>/g;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
 <<<<<<< HEAD
         if (brokenComponentRegex.test(content)) {}
   content = content.replace(brokenComponentRegex, "<$1 $2>");
@@ -268,17 +344,48 @@ class $1 {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
         // Fix missing closing tags;
-        const selfClosingTags = ["img", "input", "br", "hr", "meta", "link"];
+        const selfClosingTags = ["img", input, "br", hr, "meta", link];
         selfClosingTags.forEach(tag => {const regex = new RegExp(`<${tag}([^>]*)(?<!\\/>)>`, "g");
+<<<<<<< HEAD
+        if (brokenComponentRegex.test(content)) {}
+  content = content.replace(brokenComponentRegex, <$1 $2>");"
+        // Fix missing closing tags;
+=======
 =======
         if (brokenComponentRegex.test(content)) {}"
   content = content.replace(brokenComponentRegex, "<$1 $2>");"
         // Fix missing closing tags;"
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
           if (regex.test(content)) {content = content.replace(regex, `<${tag}$1 />`);
         }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+        if (modified) {}
+  fs.writeFileSync(fullPath, content);this.log(`Fixed component issues in ${filePath}`);
+          this.fixCount++}
+      } catch (error) {  this.log(`Error fixing components in ${filePath  }: ${error.message}`, true)}
+    })}
+
+
+=======
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+=======
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
@@ -315,57 +422,68 @@ class $1 {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       // Check if other essential dependencies are available;
-      const essentialDeps = ["@"types/react"", "@"types/react-dom"", "@"types/node""];
+      const essentialDeps = [@"types/react", @"types/react-dom", @"types/node"];
       for (const dep of essentialDeps) {}
-  try {execSync(`npx ${dep} --version`, { "stdio": "pipe" })} catch (error) {this.log(`Installing missing "dependency": ${dep}`);execSync(`npm install --save-dev ${dep}`, { "cwd": this.projectRoot, "stdio": "pipe" }
-});this.log(`${dep} installed`)};
-      };
-    } catch (error) {  this.log(`Error installing "dependencies": ${error.message  }`, true)};
-  };
-;
+  try {execSync(`npx ${dep} --version`, { stdio": "pipe })} catch (error) {this.log(`Installing missing dependency": ${dep}`);execSync(`npm install --save-dev ${dep}`, { "cwd: this.projectRoot, stdio": "pipe }
+});this.log(`${dep} installed`)}
+      }
+    } catch (error) {  this.log(`Error installing dependencies": ${error.message  }`, true)}
+  }
   async runTests() {}
   try {}
-  this.log("Running tests...");
-      execSync("npm test -- --passWithNoTests", {})
-  "cwd": this.projectRoot,
-        "stdio": "pipe",
-        "timeout": 120000}
+  this.log("Running tests...);
+      execSync(npm test -- --passWithNoTests", {})
+  "cwd: this.projectRoot,
+        stdio": "pipe,
+        timeout": 120000}
 });
-        "timeout": 120000}
+        "timeout: 120000}
 });
-      this.log("Tests passed");
-      return true} catch (error) {  this.log(`Tests "failed": ${error.message  }`, true);
-      return false};
-  };
-;
+      this.log(Tests passed");
+      return true} catch (error) {  this.log(`Tests "failed: ${error.message  }`, true);
+      return false}
+  }
   async cleanup() {}
   try {}
-  this.log("Cleaning up build artifacts...");
+  this.log(Cleaning up build artifacts...");
       // Remove build artifacts;
-      const buildDirs = ["dist", "build", ".next", "out"];
+      const buildDirs = ["dist, build", ".next, out"];
       buildDirs.forEach(dir => {})
   const fullPath = path.join(this.projectRoot, "dir);
         if (fs.existsSync(fullPath)) {}
-  fs.rmSync(fullPath", { "recursive": true, "force": true }
-});this.log(`Removed ${dir} directory`)};
+  fs.rmSync(fullPath, { recursive": true, "force: true }
+});this.log(`Removed ${dir} directory`)}
       }
 });
       // Remove TypeScript build info;
-      const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");
+      const tsBuildInfo = path.join(this.projectRoot, tsconfig.tsbuildinfo");
       if (fs.existsSync(tsBuildInfo)) {}
   async cleanup() {}
   try {}
-  this.log("Cleaning up build artifacts...");
+  this.log("Cleaning up build artifacts...);
       // Remove build artifacts;
-      const buildDirs = ["dist", "build", ".next", "out"];
+      const buildDirs = [dist", "build, .next", "out];
       buildDirs.forEach(dir => {})
-  const fullPath = path.join(this.projectRoot, "dir);
+  const fullPath = path.join(this.projectRoot, dir);
         if (fs.existsSync(fullPath)) {}
-  fs.rmSync(fullPath", { "recursive": true, "force": true }
-});this.log(`Removed ${dir} directory`)};
+  fs.rmSync(fullPath", { "recursive: true, force": true }
+});this.log(`Removed ${dir} directory`)}
       }
 });
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      // Remove TypeScript build info;
+      const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo);
+=======
 <<<<<<< HEAD
 =======
 
@@ -373,33 +491,40 @@ class $1 {}
       // Remove TypeScript build info;
       const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-        execSync("npm install --save-dev typescript", { "cwd": this.projectRoot, "stdio": "pipe"   }")
-        this.log("TypeScript installed")};"
-      // Check if other essential dependencies are available;"
+        execSync(npm install --save-dev typescript", { "cwd: this.projectRoot, stdio": "pipe   })
+        this.log("TypeScript installed")}
+      // Check if other essential dependencies are available;
 
   async cleanup() {}
-  this.log("Cleaning up build artifacts...");"
-      // Remove build artifacts;"
-      const buildDirs = ["dist", "build", ".next", "out"];"
+  this.log("Cleaning up build artifacts...");
+      // Remove build artifacts;
+      const buildDirs = ["dist", build, ".next", out];"
       buildDirs.forEach(dir => {})"
-  const fullPath = path.join(this.projectRoot, "dir);"
         if (fs.existsSync(fullPath)) {}"
+<<<<<<< HEAD
+  fs.rmSync(fullPath", { recursive: true, "force": true })`;
+});this.log(`Removed ${dir} directory`)}
+      // Remove TypeScript build info;
+      const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");
+=======
   fs.rmSync(fullPath", { "recursive": true, "force": true }")`;
 });this.log(`Removed ${dir} directory`)};
       // Remove TypeScript build info;"
       const tsBuildInfo = path.join(this.projectRoot, "tsconfig.tsbuildinfo");"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       if (fs.existsSync(tsBuildInfo)) {}
-      // Remove build artifacts;"
+      // Remove build artifacts;
 
       // Remove TypeScript build info;"
   fs.unlinkSync(tsBuildInfo);"
 
-    return report};
-  async run() {}"
-  this.log("Starting PM2 Error Prevention Automation...");"
-  // Step "1": Install missing dependencies;"
+    return report}
+  async run() {}
+  this.log(Starting PM2 Error Prevention Automation...");"
+  // Step 1: Install missing dependencies;"
       await this.installMissingDependencies();
       // Step 2: Fix common syntax errors;
       this.fixCommonSyntaxErrors();
@@ -420,6 +545,16 @@ class $1 {}
       // Generate report;
       const report = await this.generateReport();
 <<<<<<< HEAD
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+<<<<<<< HEAD
       if (typeCheckPassed && lintPassed && buildPassed && testsPassed) {}
   this.log("All checks passed successfully!");this.log(`Fixed ${this.fixCount} errors during this run`)} else {`}
   this.log("Some checks failed, but errors were fixed", true);
@@ -430,15 +565,21 @@ class $1 {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
   async run() {}
-  this.log("Starting PM2 Error Prevention Automation...");
+  this.log("Starting PM2 Error Prevention Automation...);
     try {}
-  // Step "1": Install missing dependencies;
+  // Step 1": Install missing dependencies;
       await this.installMissingDependencies();
+<<<<<<< HEAD
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
 =======
 
   // Step "1": Install missing dependencies;"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       // Step 2: Fix common syntax errors;
       // Step 3: Fix import issues;
       // Step 4: Fix component issues;
@@ -447,15 +588,57 @@ class $1 {}
       // Step 7: Run lint;
       // Step 8: Run build;
       // Step 9: Run tests;
+<<<<<<< HEAD
+
+      // Step 2: Fix common syntax errors;
+      this.fixCommonSyntaxErrors();
+      // Step 3: Fix import issues;
+      this.fixImportIssues();
+      // Step 4: Fix component issues;
+      this.fixComponentIssues();
+      // Step 5: Clean up build artifacts;
+      await this.cleanup();
+      // Step 6: Run type check;
+      // Step 7: Run lint;
+      // Step 8: Run build;
+      // Step 9: Run tests;
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       // Generate report;
 
-  return files};
+  return files}
 // Run the automation;
 const automation = new ErrorPreventionAutomation();
 // Handle process signals;"
-process.on("SIGINT", () => {}
-  automation.log("Received SIGINT, shutting down gracefully...");"
+process.on(SIGINT, () => {}
+  automation.log("Received SIGINT, shutting down gracefully...");
   process.exit(0)}
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+process.on(SIGTERM", () => {}
+  automation.log("Received SIGTERM, shutting down gracefully...);
+  process.exit(0)}
+});
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+// Run the automation;
+automation.run().catch(error => {automation.log(`Unhandled error": ${error.message}`, true);
+=======
 <<<<<<< HEAD
 });
 <<<<<<< HEAD
@@ -473,11 +656,24 @@ process.on("SIGTERM", () => {}
 // Run the automation;
 automation.run().catch(error => {automation.log(`Unhandled "error": ${error.message}`, true);
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 "
-process.on("SIGTERM", () => {}
+process.on(SIGTERM, () => {}
   automation.log("Received SIGTERM, shutting down gracefully...");"
 
 
+<<<<<<< HEAD
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+
+  process.exit(1)}
+});
+
+});
+});
+});
+});
+
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   process.exit(1)}
 <<<<<<< HEAD
@@ -489,6 +685,7 @@ process.on("SIGTERM", () => {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 });
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -499,4 +696,12 @@ process.on("SIGTERM", () => {}
 =======
 
 
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge

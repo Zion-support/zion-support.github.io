@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+fetch ('/api/cloud-automations-status') .then ( (r) => r.json () ) .then (setData) ) : null 
+}</div>) ) 
+}</div> </div>) 
+}
+=======
 
 export default function CloudAutomationsPage() {
 
@@ -63,3 +69,4 @@ key={key}
   );
 }
 
+>>>>>>> origin/chore/fix-lint-and-merge

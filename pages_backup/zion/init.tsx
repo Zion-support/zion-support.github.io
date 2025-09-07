@@ -23,7 +23,6 @@ const defaultBonus: DeployFormState['bonusModules'] = {
   trailer: false
   'book-store': false
 }
-const InitPage: NextPage = () => {
   const [state, setState] = useState<DeployFormState>({
     instanceName: ''
     defaultLanguage: 'en'
@@ -58,12 +57,7 @@ const InitPage: NextPage = () => {
       [group]: { ...prev[group], [key]: !prev[group][key] }}))
   };
 
-import { useState  } from 'react';
-import type { NextPage } from 'next';
 type GovernanceMode = any;
-  const [result, setResult] = useState<any>(null);
-  const [error, setError] = useState<string | null>(null);
-  const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {
 setState(prev => ({
       ...prev,
       [group]: { ...prev[group], [key]: !prev[group][key] },
@@ -115,8 +109,6 @@ const InitPage: NextPage = () => {;
     modules: defaultModules,;
     bonusModules: defaultBonus,;
   });  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<any>(null);
-  const [error, setError] = useState<string | null>(null);
 '
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {;
     setState(prev => ({;
@@ -169,7 +161,6 @@ const InitPage: NextPage = () => {;
         headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify(state),
       });
-      const json = await res.json();
       if (!res.ok) throw new Error(json?.error |'Deployment failed');
       setResult(json);
     } catch (err: any) {

@@ -18,6 +18,12 @@ export default function RequestQuote() {
       <Footer />
 
   )
+<<<<<<< HEAD
+import {Header} from "@/components/Header";"
+import {Footer} from "@/components/Footer";"
+import {QuoteRequestForm} from "@/components/QuoteRequestForm";"
+import { Header } from "@/components/Header";"
+=======
 
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -27,6 +33,7 @@ import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function RequestQuote() {;
 
   )

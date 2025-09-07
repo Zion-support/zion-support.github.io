@@ -1,9 +1,20 @@
+<<<<<<< HEAD
+import React from "react","
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";"
+import { Badge } from "@/components/ui/badge";interface QuoteStatusCardsProps {"
+  }
+  "status_counts": {
+}
+import React from "react";"
+import { Badge } from "@/components/ui/badge",;"
+=======
 import { Badge } from "@/components/ui/badge";interface QuoteStatusCardsProps {
   status_counts: {
 
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface QuoteStatusCardsProps {;
   statusCounts:{;
@@ -93,6 +104,17 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
       <Card className=&quot;bg-zion-blue-dark border border-zion-blue-light&quot;>
         <CardHeader className=&quot;pb-2&quot;>
           <CardTitle className=&quot;text-lg font-medium text-white flex justify-between items-center&quot;>
+<<<<<<< HEAD
+interface QuoteStatusCardsProps {"_statusCounts": {
+}
+import { Badge } from "@/components/ui/badge";"
+  "status_counts": {
+    }
+    "new": number;
+    "in_review": number;
+    "responded": number;
+    "accepted": number;
+=======
 import React from "react";
 
 interface QuoteStatusCardsProps {_statusCounts: {
@@ -101,6 +123,7 @@ import React from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 import { Badge } from "@/components/ui/badge";
+>>>>>>> origin/chore/fix-lint-and-merge
 interface QuoteStatusCardsProps {
   statusCounts: {
 status_counts: {
@@ -170,10 +193,15 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
   return (
   )
 },
+<<<<<<< HEAD
+import React from "React";"
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;"
+=======
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 
 import { Badge } from "@/components/ui/badge",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface QuoteStatusCardsProps {;
   statusCounts: {;
     new: number,;

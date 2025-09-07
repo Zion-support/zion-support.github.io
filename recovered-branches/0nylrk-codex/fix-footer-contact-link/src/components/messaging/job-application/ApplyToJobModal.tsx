@@ -32,8 +32,11 @@ export function ApplyToJobModal(): any ({;
           <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
 
 import React from './react';
+<<<<<<< HEAD
+=======
 import {}
 
+>>>>>>> origin/chore/fix-lint-and-merge
   Dialog,
   DialogContent,
   DialogDescription,

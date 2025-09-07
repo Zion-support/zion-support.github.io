@@ -279,12 +279,31 @@ interface SmartContractBuilderProps {;
   onDeploy?: (contractContent: string) => void;
 }
 ;
+<<<<<<< HEAD
+export function SmartContractBuilder() {;
+  }
+  const [activeTab, setActiveTab] = useState<string>("form"),;"
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null),;
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
+    undefined;
+  ),;
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),;
+  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({;
+    }
+    "network": 'ethereum',;'
+    "useEscrow": true,;
+    "deployToChain": false;
+  }),;
+  const handleLoadTemplate = ("templateData": ContractFormValues) => {;
+    }
+=======
 export function SmartContractBuilder() { return null; }
   }),;'
   const [deployStatus, setDeployStatus] = useState<string>(''),;
   const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),;
   const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts(),;
   const handleLoadTemplate = (templateData: ContractFormValues) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
     setFormValues(templateData);
   },;
   // Convert ContractFormValues to contract content string;
@@ -526,5 +545,122 @@ export function SmartContractBuilder() { return null; }
         />;
       </DialogContent>;
     </Dialog>);
+<<<<<<< HEAD
+}  ),; interface SmartContractBuilderProps {
+  }
+  "isOpen": boolean;
+"onClose": () => void;
+"talent": TalentProfile;
+"clientName": string;
+onContractGenerated?: ("contractContent": string) => void;
+onDeploy?: ("contractContent": string) => void
+}export function SmartContractBuilder() {
+  }
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined> (undefined);
+const [deployOptions, setDeployOptions] = useState<DeploymentOptions> ({
+  }
+  "network": 'ethereum';'
+"useEscrow": true;
+"deployToChain": false
+});
+const [deployStatus, setDeployStatus] = useState<string> ('');'
+const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null> (null);
+const {
+  }
+  generateSolidityContract, deploySmartContract, deploymentStatus
+}= useSmartContracts ();
+  }
+  setFormValues (templateData)
+};
+//Convert ContractFormValues to contract content string const handleContractGenerated = async ("formValues": ContractFormValues) => {
+  }
+  if (!formValues) return;
+try {
+  }
+  setGeneratedContract (generatedContractText);
+setActiveTab ("preview");"
+}
+
+};
+  }
+  if (!generatedContract) return;
+try {
+  }
+  setDeployStatus ('deploying');'
+const contractInfo = await deploySmartContract (generatedContract, deployOptions);
+if (contractInfo) {
+  
+}
+};
+//This should be a function that takes a string (contract content) //Since we need to adapt the interface, we'll implement the simplest solution that works if (onContractGenerated) {'
+  }
+  setGeneratedContract (contract);
+setActiveTab ("preview")"
+};
+  talent
+}clientName= {
+  }
+  clientName
+}initialValues= {
+  }
+  formValues
+}onFormValuesChange= {
+  }
+  setFormValues
+}onContractGenerated= {
+  }
+  handleFormSubmit
+}deployOptions= {
+  }
+  deployOptions
+}onDeployOptionsChange= {
+  }
+  setDeployOptions
+}/> </TabsContent> <div> <ContractPreview generatedContract= {
+  }
+  generatedContract
+}talent= {
+  }
+  talent
+}onClose= {
+  }
+  onClose
+}deployStatus= {
+  }
+  deployStatus
+}deploymentInfo= {
+  }
+  deploymentInfo
+} /> > {
+  }
+  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain''
+}</Button> </div>)
+}</div>)
+}</TabsContent> </Tabs> <TemplateManager isOpen= {
+  }
+  templateManagerOpen
+}onClose= {
+  () => setTemplateManagerOpen (false)
+}onSelectTemplate= {
+  }
+  handleLoadTemplate
+}currentValues= {
+  }
+  formValues
+}/> </DialogContent> </Dialog>)
+}
+        />
+      </DialogContent>
+    </Dialog>
+  )
+}
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
+;
+=======
 
   ),; interface SmartContractBuilderProps {
+>>>>>>> origin/chore/fix-lint-and-merge

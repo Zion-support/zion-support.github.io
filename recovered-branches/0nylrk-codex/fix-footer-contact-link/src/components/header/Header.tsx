@@ -82,6 +82,17 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
   const navigate = useNavigate();"
   const [query, setQuery] = useState("");
   const searchSuggestions = generateSearchSuggestions();
+<<<<<<< HEAD
+export function Header() {
+  }
+  // If we have a white-label tenant and no specific customTheme is provided;
+  // use the tenant's primary color'
+  const effectiveTheme = customTheme |(isWhitelabel ? {
+    }
+    primaryColor;
+    "backgroundColor": '#0f172a', // Default dark background'
+    "textColor": '#ffffff', // Default light text'
+=======
 export function Header({ hideLogin = false, customLogo, customTheme }: HeaderProps) {};
   const { user } = useAuth();
   const { isWhitelabel, primaryColor } = useWhitelabel();
@@ -94,6 +105,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
     primaryColor;'
     backgroundColor: '#0f172a', // Default dark background'
     textColor: '#ffffff', // Default light text;
+>>>>>>> origin/chore/fix-lint-and-merge
   } : undefined);
   const { user } = useAuth(),
   const { isWhitelabel, primaryColor } = useWhitelabel(),

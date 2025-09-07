@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+import {useState, useEffect} from "react";"
+import {AppHeader} from "@/layout/AppHeader";"
+import {Footer} from "@/components/Footer";"
+import {SEO} from "@/components/SEO";"
+import {TalentCard} from "@/components/talent/TalentCard";"
+import {useAuth} from "@/hooks/useAuth";"
+import {supabase} from "@/integrations/supabase/client";"
+import {TalentProfile} from "@/types/talent";"
+import {toast} from "@/components/ui/use-toast";"
+import {useNavigate} from "react-router-dom";"
+export default function SavedTalentsPage() {;
+  }
+  const navigate = useNavigate();
+import { useState, useEffect } from "react","
+import { AppHeader } from "@/layout/AppHeader","
+import { Footer } from "@/components/Footer","
+import { SEO } from "@/components/SEO","
+import { TalentCard } from "@/components/talent/TalentCard","
+import { useAuth } from "@/hooks/useAuth","
+import { supabase } from "@/integrations/supabase/client","
+import { TalentProfile } from "@/types/talent","
+import { toast } from "@/components/ui/use-toast";"
+import { useNavigate } from "react-router-dom";"
+export default function SavedTalentsPage() {
+  }
+  const { user } = useAuth();
+const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),;
+  const [isLoading, setIsLoading] = useState(true);
+import { toast } from "@/components/ui/use-toast","
+import { useNavigate } from "react-router-dom","
+export default function SavedTalentsPage() {
+}
+const { user } = useAuth(),;
+const [isLoading, setIsLoading] = useState(true),;
+const navigate = useNavigate(),;
+  useEffect(() => {;
+    }
+    const fetchSavedTalents = async () => {;
+  }
+=======
 useEffect(() => {;
     const fetchSavedTalents = async () => {;
 
@@ -98,6 +139,7 @@ export default function SavedTalentsPage() {}
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true);
+>>>>>>> origin/chore/fix-lint-and-merge
       setIsLoading(true);
       try {;
         if (!user) {;"
@@ -105,6 +147,13 @@ export default function SavedTalentsPage() {}
           return;
         }
 
+<<<<<<< HEAD
+          .from("saved_talents")
+          .select(
+            `
+            talent_profile (
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
               id;
               user_id;
               full_name;
@@ -118,7 +167,6 @@ export default function SavedTalentsPage() {}
               location;
               availability;
 
-  const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
 
   const [isLoading, setIsLoading] = useState(true);        if (data) {
@@ -194,6 +242,16 @@ if ( {) {}
       if (!user) {"
         console.warn("User not authenticated.")
 
+<<<<<<< HEAD
+    fetchSavedTalents()
+  }, [user]),
+    }
+    navigate(`/talent/${talentId}`)`  },
+  const handleRequestHire = ("talent": TalentProfile) => {
+    }
+    console.log("Request to "hire":", talent);    toast({"
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       }
       if (isCurrentlySaved) {
         // Remove from saved talents
@@ -250,6 +308,87 @@ if ( {) {}
           prevTalents.filter(talent => talent.id !== talentId)
 
         }
+<<<<<<< HEAD
+        if (talentData) {
+          }
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
+          toast({
+            }
+            "title": "Talent Saved""
+            "description": "Talent saved to your list."})"
+        }
+      }
+    } catch (error) {
+      }
+      console.error("Error toggling saved "talent":", error),      console.error("Error toggling saved "talent":", error),"
+      toast({
+        }
+        "title": "Error""
+        "description": "Failed to update saved talents. Please try again later.""
+"variant": "destructive"});"
+return (;
+    <>;
+      <SEO,
+title="Saved Talents | Zion AI Marketplace""
+        description="View and manage your saved talents in the Zion AI Marketplace";"
+    fetchSavedTalents ();
+  }, [user]);
+;
+  const handleViewProfile = ("talent_id": string) =>: any {
+    }
+    navigate (`/talent/${talent_id}`);`  }
+;
+  const handleRequestHire = ("talent": TalentProfile) =>: any {
+    }
+    console.log ("Request to "hire":", talent);"
+    toast ({
+      }
+      "title": "Hire Request Sent","
+      "description": `A hire request has been sent to ${talent.full_name}.`});`  }
+;
+  const handleToggleSave = async ("talent_id": string, "isCurrentlySaved": boolean) => {
+    }
+    try {
+      // Check condition
+}
+if ( {) {
+  $2
+}
+        console.warn ("User not authenticated."),"
+        return;
+      }
+      // Check condition,
+if ( {) {
+  $2
+}
+        // Remove from saved talents;
+          .from ('saved_talents');'
+          .delete ();
+          .eq ('user_id', user.id);'
+          .eq ('talent_id', talent_id);'
+;
+        // Check condition,
+if ( {) {
+  $2
+}
+          throw error;
+        }
+        setSavedTalents (prev_talents =>;
+          prev_talents.filter (talent => { return talent.id !== talent_id)); }
+        toast ({
+          }
+          "title": "Talent Removed","
+          "description": "Talent removed from saved list."});"
+      } else {
+        // Add to saved talents;
+        }
+          .from ('saved_talents');'
+          .insert ([{ "user_id": user.id, "talent_id": talent_id }]),
+        // Check condition,
+if ( {) {
+  $2
+}
+=======
   
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
@@ -264,6 +403,7 @@ if ( {) {}
           .from('saved_talents')
           .insert([{ user_id: user.id, talent_id: talentId }])
         if (error) {}
+>>>>>>> origin/chore/fix-lint-and-merge
           throw error;
         }
         // Fetch the updated talent profile and add it to the list;
@@ -715,8 +855,14 @@ pr-12325
 const [savedTalents, setSavedTalents] = useState<TalentProfile[]> ([]);
 const [isLoading, setIsLoading] = useState (true);
 const navigate = useNavigate ();
+<<<<<<< HEAD
+useEffect ( () => {
+  }
+  }
+=======
 useEffect ( () => {}
   const fetchSavedTalents = async () => {}
+>>>>>>> origin/chore/fix-lint-and-merge
   setIsLoading (true);
 
 }= await supabase .from ("saved talents") user id;

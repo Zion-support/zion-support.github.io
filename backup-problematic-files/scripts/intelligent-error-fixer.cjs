@@ -1,39 +1,45 @@
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const { execSync } = require('child_process')
-      "status"
-        "status"
-        "message"
-        "status"
-      return { "status"}
-        "stdio"
-      return { "status": 'success', "message"}
-        "status"
-            "file"
-            "file"
+      "status
+        status"
+        "message
+        status"
+      return { "status}
+        stdio"
+      return { "status: success', message"}
+        "status
+            file"
+            "file
+      lines[0] = 
       lines[0] = "
-      lines[0] = "
-        "stdio"
-      return { "status": 'success', "message"}
-        "status"
-            "rule"
-            "message"
-            "rule"
-            "message"
-        newContent = newContent.replace(/from ['"]\.\.\/\.\.\/components\//g, ")
-        newContent = newContent.replace(/from ['"]\.\.\/components\//g, ")
-        newContent = newContent.replace(/from ['"]\.\.\/\.\.\/lib\//g, ")
-        newContent = newContent.replace(/from ['"]\.\.\/lib\//g, ")
+        "stdio
+      return { status": 'success, "message}
+        status"
+            "rule
+            message"
+            "rule
+            message"
+        newContent = newContent.replace(/from ["]\.\.\/\.\.\/components\//g, )
+        newContent = newContent.replace(/from [']\.\.\/components\//g, ")
+        newContent = newContent.replace(/from ['"]\.\.\/\.\.\/lib\//g, )
+        newContent = newContent.replace(/from []\.\.\/lib\//g, ")
           newContent = "
-          newContent = "
-      "status"
-        "stdio"
-      return { "status": 'success', "message"}
-        "status"
-          "type"
-          "type"
+          newContent = 
+      status"
+        "stdio
+      return { status": success', "message}
+        status"
+          "type
+          type"
     console.log('\n Error Fixing "Summary")
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -47,3 +53,4 @@ const { execSync } = require('child_process')
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

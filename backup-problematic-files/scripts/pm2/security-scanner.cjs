@@ -51,7 +51,10 @@ class SecurityScanner {
     walkDir(this.projectRoot);
     return files;
   analyzeFileForSecurityIssues(filePath, content) {
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     const lines = content.split('\n');
     lines.forEach((line, index) => {
       const lineNum = index + 1;
@@ -64,8 +67,25 @@ class SecurityScanner {
       for (const configFile of configFiles) {
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {
+<<<<<<< HEAD
+          const content = fs.readFileSync(filePath, 'utf8');
+          const fileIssues = this.analyzeConfigFile(filePath, content);
+          issues.push(...fileIssues);
+        }
+      }
+      return issues;
+    } catch (error) {
+      this.log(`Config scan failed: ${error.message}`);
+      return [];
+    }
+  }
+  analyzeConfigFile(filePath, content) {
+    lines.forEach((line, index) => {
+      // Check for exposed ports
+=======
 
       // Check for exposed ports;
+>>>>>>> origin/chore/fix-lint-and-merge
       if (line.match(/port\s*[:=]\s*(\d+)/)) {
         const port = parseInt(line.match(/port\s*[:=]\s*(\d+)/)[1]);
         if (port < 1024 && port !== 80 && port !== 443) {
@@ -136,15 +156,31 @@ scanner.run().catch(error => {)
  * Scans for security vulnerabilities and issues;
  */"
 
+<<<<<<< HEAD
+
+class SecurityScanner {}
+  constructor() {}
+    this.processName = process.env.PM2_PROCESS_NAME || 'security-scanner';
+    this.scanDependencies = process.env.SCAN_DEPENDENCIES === 'true';
+    this.scanCode = process.env.SCAN_CODE === 'true';
+    this.scanConfigs = process.env.SCAN_CONFIGS === 'true';
+    this.alertOnCritical = process.env.ALERT_ON_CRITICAL === 'true';
+    this.logFile = path.join(__dirname, '../../logs/pm2/security-scanner.log');
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     this.ensureLogDir();
   ensureLogDir() {}
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {}
       fs.mkdirSync(logDir, { recursive: true })
   log(message) {}
+<<<<<<< HEAD
+
+=======
     const timestamp = new Date().toISOString();`;
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;
     );`;
+>>>>>>> origin/chore/fix-lint-and-merge
     const logMessage = `[${timestamp}] [${this.processName}] ${message}\n`;`
     console.log(logMessage.trim());
   async scanDependencies() {}
@@ -191,8 +227,12 @@ scanner.run().catch(error => {)
 
       const sourceFiles = this.getSourceFiles();
       for (const file of sourceFiles) {}
+<<<<<<< HEAD
+        try {}
+=======
         try {}"
 
+>>>>>>> origin/chore/fix-lint-and-merge
           for (const pattern of secretPatterns) {}
             const matches = content.match(pattern);
             if (matches) {}
@@ -207,6 +247,44 @@ scanner.run().catch(error => {)
         issues: securityIssues,
         totalIssues: securityIssues.length;
 
+<<<<<<< HEAD
+      
+      
+      const configFiles = []
+        'package.json',
+        'next.config.js',
+        'vite.config.js',
+        'webpack.config.js',
+      ].filter(file => fs.existsSync(file));
+
+      const configIssues = [];
+
+      for (const file of configFiles) {}
+        try {}
+          
+          // Check for unsafe configurations;
+          if (content.includes('eval(') || content.includes('Function(')) {}
+            configIssues.push({})
+              file,
+              type: 'unsafe_eval',
+              severity: 'high'
+            }
+});
+          };
+          if (content.includes('process.env') && !content.includes('process.env.NODE_ENV')) {}
+            configIssues.push({})
+              file,
+              type: 'env_exposure',
+              severity: 'medium'
+            }
+});
+          };
+        } catch (err) {}
+          // Skip files that can't be read;
+        };
+      };
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
       this.log(`Found ${configIssues.length} configuration security issues`);
 
 

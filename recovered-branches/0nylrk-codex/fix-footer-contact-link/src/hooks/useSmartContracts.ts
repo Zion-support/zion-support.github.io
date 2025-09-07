@@ -379,6 +379,60 @@ import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from '@/types
 import { TalentProfile } from '@/types/talent',;''
 import { ContractFormValues } from "@/components/contracts/components/ContractForm",;"
   const { user } = useAuth(),;
+<<<<<<< HEAD
+  const [isLoading, setIsLoading] = useState(false),;
+  const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),;'
+    "values": ContractFormValues,;
+    "talent": TalentProfile,;
+    "clientName": string;
+  ): Promise<string> => {;
+    }
+    try {;
+      }
+      setIsLoading(true),;
+      const { data, error } = await supabase.functions.invoke("generate-smart-contract", {;"
+        }
+        "body": {;
+          }
+          "talentName": talent.full_name,;
+          "clientName": clientName,;
+          "projectName": values.projectName,;
+          "scopeSummary": values.scopeSummary,;
+          "startDate": values.startDate.toISOString(),;
+          "endDate": values.endDate?.toISOString(),;
+          "paymentTerms": values.paymentTerms,;
+          "paymentAmount": values.paymentAmount,;
+          "additionalClauses": values.additionalClauses || []}
+      }),;
+      if (error) throw error,;
+      if (data && data.solidityCode) {;
+        }
+        return data.solidityCode;
+      } else {;
+        }
+        throw new Error("Failed to generate Solidity contract");"
+      }
+    } catch ("err": any) {;
+      }
+      console.error("Error generating Solidity "contract":", err),;"
+      toast.error("Failed to generate smart contract"),;"
+      throw err;
+    } finally {;
+      }
+      setIsLoading(false);
+    }
+  },;
+  const deploySmartContract = async (;
+    "contractCode": string,;
+    "options": DeploymentOptions;
+  ): Promise<SmartContractInfo | null> => {;
+    }
+    if (!user?.id) {;
+      }
+      toast.error("You must be logged in to deploy a contract"),;"
+      return null;
+    }
+=======
   const [isLoading, setIsLoading] = useState(false),;"
     values:ContractFormValues, ;
     talent:TalentProfile, ;
@@ -418,6 +472,7 @@ deploymentStatus;
 }
   }
 }
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
   }
 }

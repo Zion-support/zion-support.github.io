@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+import React from 'react';
+return (<UltraAdvancedFuturisticBackground> <Head> <title> {
+  service.name 
+}- Zion Tech Group</title>) ) 
+}</ul> </div> <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
+}
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { extraServices } from '../data/extra-services';
+=======
 import Head from 'next/head';
 
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
@@ -5,10 +18,60 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function SecurityAwarenessPhishingPage() {
 
   );
   if (!service) return null;
+<<<<<<< HEAD
+return (;
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>{service.name} - Zion Tech Group</title>
+
+  const service = extraServices.find(s =>
+    s.link.endsWith('/security-awareness-phishing')
+  );  if (!service) return null;export default function SecurityAwarenessPhishingPage() {
+  const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'));
+
+export default function SecurityAwarenessPhishingPage() {;
+  const service = extraServices && extraServices.find(s =>;
+    s && s.link.endsWith('/security-awareness-phishing');
+  );  if (!service) return null;export default function SecurityAwarenessPhishingPage() {;
+  const service = extraServices && extraServices.find(s => s && s.link.endsWith('/security-awareness-phishing'));
+  if (!service) return null;
+
+  return (
+    <UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service && service.name} - Zion Tech Group</title>;
+        <meta name='description' content={service && service.description} />;
+        <link
+          rel='canonical'
+          href='https://ziontechgroup && ziontechgroup.com/security-awareness-phishing'
+import { Phone, Mail, MapPin, Check, ArrowRight, Shield   } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',import Button from '../components/ui/Button';
+import { extraServices  } from '../data/extra-services';
+export default function SecurityAwarenessPhishingPage() {const service = extraServices.find(s =>;
+    s.link.endsWith('/security-awareness-phishing'))if (!service) return null;export default function SecurityAwarenessPhishingPage() {const service  = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'))export default function SecurityAwarenessPhishingPage() {const service = extraServices && extraServices.find(s =>;
+    s && s.link.endsWith('/security-awareness-phishing'))if (!service) return null;export default function SecurityAwarenessPhishingPage() {const service = extraServices && extraServices.find(s => s && s.link.endsWith('/security-awareness-phishing'))if (!service) return null;return (<UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service && service.name} - Zion Tech Group</title>;
+        <meta name='description' content={service && service.description} />;)if (!service) return null;
+  return (<UltraAdvancedFuturisticBackground>;
+      <Head>;
+        <title>{service.name} - Zion Tech Group</title>;
+<meta name='description' content={service.description} />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup && ziontechgroup.com/security-awareness-phishing';
+        />;
+      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-6xl mx-auto'>;
+          <div className='text-center mb-10'>;
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>;
+              <Shield className='w-10 h-10' />;
+=======
   return (
     <UltraAdvancedFuturisticBackground    />}
       <Head    />}
@@ -24,6 +87,7 @@ rel='canonical'
           <div className='text-center mb-10'    />;
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent flex items-center justify-center gap-3'    />;
               <Shield className='w-10 h-10'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               {service && service.name}
             </h1>;
             <p className='mt-4 text-xl text-slate-300 max-w-3xl mx-auto'    />;
@@ -96,4 +160,7 @@ href='/contact'
   );
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge

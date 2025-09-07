@@ -163,8 +163,6 @@ function createSecurityAudit() {
   
   const auditScript = `#!/usr/bin/env node
 
-const { execSync } = require('child_process');
-const fs = require('fs');
 
 console.log('🔍 Security Audit Starting...\\n');
 
@@ -250,8 +248,6 @@ function createEnvSecurityChecker() {
   
   const envChecker = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔐 Environment Security Check Starting...\\n');
 
@@ -396,7 +392,6 @@ function checkGitignore() {
 
 // Run all checks
 function runAllChecks() {
-  const results = {
     secrets: scanForSecrets(),
     sensitiveFiles: checkSensitiveFiles(),
     gitignore: checkGitignore()
@@ -446,7 +441,6 @@ function testSecurityHeaders(url) {
     const client = url.startsWith('https') ? https : http;
     
     client.get(url, (res) => {
-      const results = {
         url,
         headers: res.headers,
         missing: [],

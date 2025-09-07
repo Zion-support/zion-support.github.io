@@ -16,7 +16,6 @@ const [data, setData] = useState<any />(null);
 }));
 
 export default function CloudAutomationsPage() {
-  const [data, setData] = useState<any />(null);
   useEffect(() => {
 
     fetch('/api/cloud-automations-status')

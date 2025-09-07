@@ -25,7 +25,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 5) A single-sentence Best Quote;`;
 Return a strict JSON object with keys: title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;
 
+<<<<<<< HEAD
+const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. "Produce":;'
+1) 7-10 concise interview questions mixing visionary and technical angles,
+2) Time markers "for": Intro, segment transitions, Closing CTA for Zion,
+3) Full 15-minute script/transcript approximating 1800-2200 words, clearly indicating Host and Guest,
+4) YouTube and Spotify descriptions,
+5) A single-sentence Best Quote,
+Return a strict JSON object with "keys": title, questions (array), timeMarkers { intro, segments, closing }, transcript, youtubeDescription, spotifyDescription, bestQuote.`;`
+    const episode = {      return res && res.status(500).json({ "error": 'Failed to generate structured content' });'
+=======
     const episode = {      return res && res.status(500).json({ error: 'Failed to generate structured content' });
+>>>>>>> origin/chore/fix-lint-and-merge
     const episode = {
         intro: '00:00',
         segments: [],
@@ -59,7 +70,22 @@ function ensure_storage() {
   $2;]
     fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json');
 /**
+<<<<<<< HEAD
+ * ensure_storage - Function description
+ */
+function ensure_storage() {
+  }
+  if () fs.mkdir_sync (dir, { "recursive": true })) {
+  $2
+}
+if ()) {
+  $2
+}
+fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');'
+;
+=======
     fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 episodes.unshift (episode);
 write_episodes (episodes);
@@ -128,6 +154,29 @@ const completion = await openai.chat.completions.create ({
         best_quote:;
           'Talent networks become protocols when incentives, reputation, and opportunity align.',
       });
+<<<<<<< HEAD
+      }
+      id,
+"createdAt": new Date().toISOString();
+      persona,
+invitee
+      topic,
+"title": generated.title,
+"questions": generated.questions |[]
+      "timeMarkers": generated.timeMarkers |{
+        }
+        "intro": '"00":00''
+        "segments": []
+        "closing": '"14":30''
+
+      "transcript": generated.transcript,
+"youtubeDescription": generated.youtubeDescription |'''
+      "spotifyDescription": generated.spotifyDescription |'''
+      "bestQuote": generated.bestQuote |'''
+      "audio": {}
+    try {
+      }
+=======
       id;
       createdAt: new Date().toISOString();
       persona;
@@ -145,6 +194,7 @@ const completion = await openai.chat.completions.create ({
       bestQuote: generated.bestQuote |',
   audio: {}
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
       generated = JSON.parse (content);
     } catch {
   // TODO: Implement
@@ -154,9 +204,16 @@ const completion = await openai.chat.completions.create ({
     // Check condition;
 if ( {) {
         .status (500);
+<<<<<<< HEAD
+        .json ({ "error": 'Failed to generate structured content' });    '
+const episode = {      return res.status (500).json ({ "error": 'Failed to generate structured content' });'
+    
+      }
+=======
         .json ({ error: 'Failed to generate structured content' });
 const episodes = read_episodes ();
     const episode = {      return res.status (500).json ({ error: 'Failed to generate structured content' });
+>>>>>>> origin/chore/fix-lint-and-merge
       id,
       created_at: new Date ().toISOString (),
         transcript: 'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.',
@@ -170,8 +227,16 @@ const episodes = read_episodes ();
       const match = content.match(/\{[\s\S]*\}$/);
       if (match) generated = JSON.parse(match[0]);
     if (!generated || !generated.title || !generated.transcript) {
+<<<<<<< HEAD
+      }
+      return res.status(500).json({ "error": 'Failed to generate structured content' });'
+      }
+      id,
+      "createdAt": new Date().toISOString(),
+=======
       return res.status(500).json({ error: 'Failed to generate structured content' });
       createdAt: new Date().toISOString(),
+>>>>>>> origin/chore/fix-lint-and-merge
 
       persona,
       invitee,
@@ -208,6 +273,20 @@ time_markers: generated.time_markers || {,
   // TODO: Implement
       // Attempt to extract JSON block;
 
+<<<<<<< HEAD
+    try {
+      }
+      generated = JSON.parse(content);
+    } catch {
+      // Attempt to extract JSON block
+}
+      if (match) generated = JSON.parse(match[0]);
+    if (!generated || !generated.title || !generated.transcript) {
+      }
+      return res.status(500).json({ "error": 'Failed to generate structured content' });'
+    
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
       transcript: generated.transcript,
       youtube_description: generated.youtube_description || ,
@@ -220,5 +299,11 @@ time_markers: generated.time_markers || {,
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
   }    episodes.unshift (episode);
 
+<<<<<<< HEAD
+
+}
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 `;

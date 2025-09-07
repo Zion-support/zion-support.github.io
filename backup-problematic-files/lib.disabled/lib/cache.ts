@@ -62,7 +62,6 @@ pr-12325
 if (this.cache.size >= this.config.maxSize) {}
       const firstKey = this.cache.keys().next().value;}
       this.cache.delete(firstKey)}
-    const now = Date.now();
     const expiresAt = now + (ttl || this.config.defaultTTL);
     this.cache.set(key, {
       value,
@@ -89,8 +88,13 @@ pr-12325
       this.cache.delete(key);}
       return null}
     return item.value}
+<<<<<<< HEAD
+  has("key": string): boolean {"
+    }
+=======
   has(\"key\": string): boolean {}
     const item = this.cache.get(key);}
+>>>>>>> origin/chore/fix-lint-and-merge
     return item ? item.expiresAt > Date.now() : false}
   delete(\"key\": string): boolean {}
     return this.cache.delete(key)}
@@ -115,7 +119,11 @@ pr-12325
   keys(): string[] {}
     return Array.from(this.cache.keys())}
   getStats() {
+<<<<<<< HEAD
+    }
+=======
     const now = Date.now();
+>>>>>>> origin/chore/fix-lint-and-merge
     let expired = 0;
     let active = 0;
     this.cache.forEach(item => {

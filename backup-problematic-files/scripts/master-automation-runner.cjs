@@ -1,26 +1,33 @@
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const { execSync } = require('child_process')
-console.log(' Starting Master Automation Runner...')
-    "name"
-    "script"
-    "name"
-    "script"
-    "name"
-    "script"
-    "name"
-    "script"
-    "name"
-    "script"
-    "name"
-    "script"
-    "name"
-    "script"
-    "name"
-    "script"
-    execSync(automation.script, { "stdio"})
+console.log( Starting Master Automation Runner...')
+    "name
+    script"
+    "name
+    script"
+    "name
+    script"
+    "name
+    script"
+    "name
+    script"
+    "name
+    script"
+    "name
+    script"
+    "name
+    script"
+    execSync(automation.script, { "stdio})
+    recommendations.push('CRITICAL")
     recommendations.push('"CRITICAL")
+<<<<<<< HEAD
+
+=======
     recommendations.push('"CRITICAL")
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,3 +42,4 @@ console.log(' Starting Master Automation Runner...')
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

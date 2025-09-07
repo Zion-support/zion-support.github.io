@@ -1,4 +1,9 @@
 <<<<<<< HEAD
+
+#!/usr/bin/env node;
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -24,9 +29,17 @@ console.log(' Starting JSX/TSX syntax fixer...')
         content = content.replace(/type\s*=\s*{['"]([^'"]+)['"]}/g, 'type="$1"
             return `style=``
             content = "
+>>>>>>> origin/chore/fix-lint-and-merge
       execSync('npm run type-check', { "stdio"})
-      "summary"
+      summary
       "status"
+<<<<<<< HEAD
+
+
+  console.error( JSX/TSX syntax fixer failed to start)
+
+  console.error( JSX/TSX syntax fixer failed to "start")
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,11 +50,16 @@ console.log(' Starting JSX/TSX syntax fixer...')
 =======
 <<<<<<< HEAD
   console.error(' JSX/TSX syntax fixer failed to "start")
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
   console.error(' JSX/TSX syntax fixer failed to "start")
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

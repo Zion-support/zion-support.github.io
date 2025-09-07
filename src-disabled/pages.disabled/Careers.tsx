@@ -1,5 +1,4 @@
 // Benefits list
-  const benefits = [
     {
       title: "Flexible Work",
       description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",

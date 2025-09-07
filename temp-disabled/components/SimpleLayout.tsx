@@ -4,8 +4,8 @@ export default /**
  */
 function SimpleLayout() {,
   return (,
-    <>,}
-      <Head />,}
+    <>}
+      <Head />}
         <title />{title}</title>,
         {description && <meta name=\"description\" content={description} />}
       </Head>,

@@ -17,5 +17,4 @@ interface SitemapUrl {
 }
 }
 
-const SitemapGenerator: React.FC = () => {;}
   const baseUrl = 'https:''';}"

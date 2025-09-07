@@ -62,8 +62,13 @@ export function useCertifications() { return null; }
     setIsLoading(true),;
     setError(null),;
     try {;
+<<<<<<< HEAD
+      }
+        .from('certifications');'
+=======
       const { error } = await supabase;'
         .from('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
           resume_id: resumeId,;
           name: cert.name,;
@@ -91,6 +96,11 @@ export function useCertifications() { return null; }
     setIsLoading(true),
     setError(null),
 
+<<<<<<< HEAD
+;
+export function useCertifications() {;
+  }
+=======
     }
     
     setIsLoading(true),
@@ -106,6 +116,7 @@ export function useCertifications() {;
   const { user } = useAuth(),;
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
+>>>>>>> origin/chore/fix-lint-and-merge
   ;
   const addCertification = async (resumeId:string, cert:Certification):Promise<boolean> => {;
     if (!user) {;
@@ -117,8 +128,13 @@ export function useCertifications() {;
     setError(null),;
     ;
     try {;
+<<<<<<< HEAD
+      }
+        .from('certifications');'
+=======
       const { error } = await supabase;
         .from('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
           resume_id:resumeId,;
           name:cert.name,;
@@ -148,8 +164,13 @@ export function useCertifications() {;
     setError(null),;
     ;
     try {;
+<<<<<<< HEAD
+      }
+        .from('certifications');'
+=======
       const { error } = await supabase;
         .from('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .update({;
           name:cert.name,;
           issuing_organization:cert.issuing_organization,;
@@ -179,8 +200,13 @@ export function useCertifications() {;
     setError(null),;
     ;
     try {;
+<<<<<<< HEAD
+      }
+        .from('certifications');'
+=======
       const { error } = await supabase;
         .from('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .delete();
         .eq('id', certId),;
       ;
@@ -194,8 +220,13 @@ export function useCertifications() {;
     }
 
     try {
+<<<<<<< HEAD
+}
+        .from('certifications')'
+=======
       const { error } = await supabase
         .from('certifications')
+>>>>>>> origin/chore/fix-lint-and-merge
         .update({
 
           name: cert && cert.name;
@@ -234,8 +265,13 @@ export function useCertifications() {;
     setIsLoading(true),;
     setError(null),;
     try {;
+<<<<<<< HEAD
+      }
+        .from('certifications');'
+=======
       const { error } = await supabase;'
         .from('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .update({;
           name: cert.name,;
           issuing_organization: cert.issuing_organization,;
@@ -264,8 +300,13 @@ export function useCertifications() {;
     setError(null),
 
     try {
+<<<<<<< HEAD
+}
+        .from('certifications')'
+=======
       const { error } = await supabase
         .from('certifications')
+>>>>>>> origin/chore/fix-lint-and-merge
         .delete()
 
         .eq('id', certId),
@@ -313,6 +354,13 @@ import {useState} from 'react';
       setError('You must be logged in to delete certifications'),;
       return false;
 
+<<<<<<< HEAD
+import {supabase} from '@/integrations / supabase / client';'
+import {Certification} from '@/types / resume';'
+import {use_auth} from '@/hooks / use_auth';'
+export /**
+ * use_certifications - Function description
+=======
     }
     
     setIsLoading(true),
@@ -329,6 +377,7 @@ import {use_auth} from '@/hooks / use_auth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export /**;
  * use_certifications - Function description;
+>>>>>>> origin/chore/fix-lint-and-merge
  */
 function use_certifications() {}
   const { user } = use_auth ();
@@ -364,9 +413,14 @@ if ( {) {}
 ;
 
     try {
+<<<<<<< HEAD
+      }
+        .from ('certifications');'
+=======
   // TODO: Implement
       const { error } = await supabase;
         .from ('certifications');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert ({
 
 if (throw error) {
@@ -395,7 +449,12 @@ if (throw error) {
 ;
 
     try {
+<<<<<<< HEAD
+      }
+        .from ('certifications');'
+=======
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
         .update ({
 
         .eq ('id', cert_id);
@@ -418,7 +477,12 @@ if (throw error) {
 ;
 
     try {
+<<<<<<< HEAD
+      }
+        .from ('certifications');'
+=======
   // TODO: Implement
+>>>>>>> origin/chore/fix-lint-and-merge
         .delete ();
       // Check condition;
       return showSuccessToast ("Certification deleted", "Your certification has been removed from your resume");"

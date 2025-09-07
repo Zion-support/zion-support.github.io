@@ -56,8 +56,20 @@ export default function EmailValidatorPage() {;
       issues.push('Possible typo in domain');
 
 export default function EmailValidatorPage() {
+<<<<<<< HEAD
+}
+  const validateEmails = async () => {
+    }
+    if (!emails.trim()) return,    
+    setIsValidating(true),
+    setValidationResults([]),
+    const emailList = emails.split('\n').filter(email => { return email.trim()),'
+const results = [],; }
+    // Simulate email validation with realistic results,
+=======
   const [emails, setEmails] = useState(),
   const [validationResults, setValidationResults] = useState<any[]>([]),
+>>>>>>> origin/chore/fix-lint-and-merge
 for (let i = 0, i < emailList.length, i++) {
       await new Promise(resolve => setTimeout(resolve, 200)),
       
@@ -73,9 +85,14 @@ for (let i = 0, i < emailList.length, i++) {
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     
     // Check for common disposable email domains,
+<<<<<<< HEAD
+      'tempmail.orgguerrillamail.commailinator.com10minutemail.com','
+      'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com''
+=======
 const disposableDomains = [
       'tempmail.orgguerrillamail.commailinator.com10minutemail.com',
       'throwaway.emailtemp-mail.orgsharklasers.comgetairmail.com]
+>>>>>>> origin/chore/fix-lint-and-merge
     ],
     
     // Check for common typos,

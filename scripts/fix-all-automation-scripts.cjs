@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+
+#!/usr/bin/env node;
+=======
+<<<<<<< HEAD
 #!/usr/bin/env node
 /**
  * Fix All Automation Scripts
@@ -33,6 +37,7 @@ class ScriptFixer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
@@ -43,8 +48,24 @@ class ScriptFixer {
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs').promises;
-const path = require('path');
+const path = require(path');
 const { exec } = require('child_process');
+<<<<<<< HEAD
+const util = require(util');
+
+const execAsync = util.promisify(exec);
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
 const util = require('util');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,15 +77,19 @@ const execAsync = util.promisify(exec);
 const execAsync = util.promisify(exec);
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 class AutomationScriptFixer {}
   constructor() {}
 
     this.fixedScripts = [];
-    this.errors = []};
-  async log(message, level = 'INFO') {}
+    this.errors = []}
+  async log(message, level = 'INFO) {}
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;`
     try {}
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
       await fs.appendFile(this.logFile, logEntry);
 <<<<<<< HEAD
@@ -74,10 +99,26 @@ class AutomationScriptFixer {}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       console.log(`[${level}] ${message}`)} catch (error) {`}
-      console.error(`Failed to write to log "file": ${error.message}`)};
-  };
+      console.error(`Failed to write to log "file: ${error.message}`)}
+  }
   async ensureDirectories() {}
+<<<<<<< HEAD
+
+      path.dirname(this.reportFile),
+      path.join(this.projectRoot, logs'),
+      path.join(this.projectRoot, 'reports);
+    ];
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
     const dirs = [path.dirname(this.logFile),]
       path.dirname(this.reportFile),
       path.join(this.projectRoot, 'logs'),
@@ -87,14 +128,21 @@ class AutomationScriptFixer {}
 =======
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const dir of dirs) {}
       try {}
-        await fs.mkdir(dir, { "recursive": true })} catch (error) {}
+        await fs.mkdir(dir, { recursive": true })} catch (error) {}
         // Directory might already exist;
-      };
-    };
-  };
+      }
+    }
+  }
   async findScriptFiles() {}
+<<<<<<< HEAD
+
+    ];
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
     const scriptDirs = [path.join(this.projectRoot, 'scripts'),]
       path.join(this.projectRoot, 'scripts/automation');
     ];
@@ -102,11 +150,14 @@ class AutomationScriptFixer {}
     const scriptFiles = [];
 =======
 >>>>>>> origin/main
+>>>>>>> origin/chore/fix-lint-and-merge
 
   fixSyntaxErrors(content) {
     // Fix common syntax errors
     let fixed = content;
     
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
     // Fix missing semicolons after require statements
     fixed = fixed.replace(/(const\s+\w+\s*=\s*require\([^)]+\))\s*\n/g, '$1;\n');
@@ -138,112 +189,57 @@ class AutomationScriptFixer {}
     
     return fixed;
   }
+>>>>>>> origin/chore/fix-lint-and-merge
 
-  fixESModuleSyntax(content) {
-    // Convert ES modules to CommonJS if needed
-    let fixed = content;
-    
-    // Fix import statements
-    fixed = fixed.replace(/import\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g, 'const $1 = require("$2");');
-    fixed = fixed.replace(/import\s*{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, 'const { $1 } = require("$2");');
-    fixed = fixed.replace(/import\s+\*\s+as\s+(\w+)\s+from\s+['"]([^'"]+)['"];?/g, 'const $1 = require("$2");');
-    
-    // Fix export statements
-    fixed = fixed.replace(/export\s+default\s+/g, 'module.exports = ');
-    fixed = fixed.replace(/export\s+const\s+(\w+)/g, 'const $1');
-    fixed = fixed.replace(/export\s+function\s+(\w+)/g, 'function $1');
-    fixed = fixed.replace(/export\s+class\s+(\w+)/g, 'class $1');
-    
-    // Fix fileURLToPath usage
-    fixed = fixed.replace(/const\s+__filename\s*=\s*fileURLToPath\(import\.meta\.url\);?/g, '');
-    fixed = fixed.replace(/const\s+__dirname\s*=\s*path\.dirname\(__filename\);?/g, 'const __dirname = __dirname || path.dirname(__filename);');
-    
-    return fixed;
-  }
-
-  fixScript(scriptPath) {
-    try {
-      this.log(`Fixing ${path.basename(scriptPath)}...`);
-      
-      let content = fs.readFileSync(scriptPath, 'utf8');
-      const originalContent = content;
-      
-      // Fix merge conflicts
-      content = this.fixMergeConflicts(content);
-      
-      // Fix syntax errors
-      content = this.fixSyntaxErrors(content);
-      
-      // Fix ES module syntax
-      content = this.fixESModuleSyntax(content);
-      
-      // Only write if content changed
-      if (content !== originalContent) {
-        fs.writeFileSync(scriptPath, content, 'utf8');
-        this.fixedCount++;
-        this.log(`Fixed ${path.basename(scriptPath)}`, "success");
-      } else {
-        this.log(`No changes needed for ${path.basename(scriptPath)}`);
-      }
-      
-    } catch (error) {
-      this.errorCount++;
-      this.log(`Failed to fix ${path.basename(scriptPath)}: ${error.message}`, "error");
-    }
-  }
-
-  async fixAllScripts() {
-    this.log("🔧 Starting script fixing process...");
-    
-    if (!fs.existsSync(this.scriptsDir)) {
-      this.log("Scripts directory not found", "error");
-      return;
-    }
-    
-    const files = fs.readdirSync(this.scriptsDir);
-    const scriptFiles = files.filter(file => 
-      file.endsWith('.js') || file.endsWith('.cjs') || file.endsWith('.mjs')
-    );
-    
-    this.log(`Found ${scriptFiles.length} script files to check`);
-    
-    for (const file of scriptFiles) {
-      const scriptPath = path.join(this.scriptsDir, file);
-      this.fixScript(scriptPath);
-    }
-    
-    this.log(`✅ Script fixing completed!`);
-    this.log(`Fixed: ${this.fixedCount} scripts`);
-    this.log(`Errors: ${this.errorCount} scripts`);
-  }
-}
-
-// Run the script fixer
-const fixer = new ScriptFixer();
-fixer.fixAllScripts().catch(console.error);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 
-  };
+  }
   async ensureDirectories() {}
     const dirs = [path.dirname(this.logFile)]
       path.dirname(this.reportFile),"
 
-        await fs.mkdir(dir, { "recursive": true })} catch (error) {}"
+        await fs.mkdir(dir, { recursive: true })} catch (error) {}"
         // Directory might already exist;
   async findScriptFiles() {}"
 
 
     const scriptFiles = [];
+<<<<<<< HEAD
+
+=======
+
+    
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+    
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const dir of scriptDirs) {}
         const files = await fs.readdir(dir);
         for (const file of files) {}
-          if (file.endsWith('.cjs') || file.endsWith('.js')) {}
-            scriptFiles.push(path.join(dir, file))};
+          if (file.endsWith(.cjs') || file.endsWith('.js)) {}
+            scriptFiles.push(path.join(dir, file))}
 
       let fixedContent = content;
+<<<<<<< HEAD
+
+=======
+
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+      // Fix common issues;
+      const fixes = [// Fix malformed require statements;]
+        {}
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
 <<<<<<< HEAD
 =======
 
@@ -294,22 +290,30 @@ fixer.fixAllScripts().catch(console.error);
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       let hasChanges = false;
       for (const fix of fixes) {}
         if (fix.pattern.test(fixedContent)) {}
           fixedContent = fixedContent.replace(fix.pattern, fix.replacement);
-          hasChanges = true};
-      if (hasChanges) {}"
+          hasChanges = true}
+      if (hasChanges) {}
 
-          "timestamp": new Date().toISOString();"
+          timestamp": new Date().toISOString();"
         }
 });
-        return true};
+        return true}
 
-      return false};
+      return false}
   async testScript(filePath) {}
+<<<<<<< HEAD
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+    const scriptFiles = await this.findScriptFiles();
+    await this.log(`Found ${scriptFiles.length} script files to check`, INFO');
+
+=======
 <<<<<<< HEAD
     try {}
       // Try to run the script with --help or similar to test syntax;
@@ -324,21 +328,38 @@ fixer.fixAllScripts().catch(console.error);
 <<<<<<< HEAD
     const scriptFiles = await this.findScriptFiles();
     await this.log(`Found ${scriptFiles.length} script files to check`, 'INFO');
+>>>>>>> origin/chore/fix-lint-and-merge
     let fixedCount = 0;
     let testedCount = 0;
     for (const scriptFile of scriptFiles) {}
+<<<<<<< HEAD
+      await this.log(`Processing: ${path.basename(scriptFile)}`, 'INFO);
+=======
       await this.log(`"Processing": ${path.basename(scriptFile)}`, 'INFO');
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
-    const scriptFiles = await this.findScriptFiles();
-    await this.log(`Found ${scriptFiles.length} script files to check`, 'INFO');
 
-    let fixedCount = 0;
-    let testedCount = 0;
+    await this.log(`Found ${scriptFiles.length} script files to check`, INFO');
+
 
     for (const scriptFile of scriptFiles) {}
-      await this.log(`"Processing": ${path.basename(scriptFile)}`, 'INFO');
+      await this.log(`"Processing": ${path.basename(scriptFile)}`, 'INFO);
       
+<<<<<<< HEAD
+
+      // Try to run the script with --help or similar to test syntax;`;
+      const { stdout, stderr } = await execAsync(`node -c ${filePath}"`, { "timeout: 5000 })
+});"
+
+
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
       // Try to run the script with --help or similar to test syntax;"`;
@@ -346,30 +367,68 @@ fixer.fixAllScripts().catch(console.error);
 });"
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       const wasFixed = await this.fixScriptFile(scriptFile);
       if (wasFixed) {}
-        fixedCount++};
+        fixedCount++}
       // Test the script;
       const testResult = await this.testScript(scriptFile);
       testedCount++;
+<<<<<<< HEAD
+
+=======
+      
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+=======
+      
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
       
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
       if (testResult.success) {}
-        await this.log(`✓ Syntax "OK": ${path.basename(scriptFile)}`, 'SUCCESS')} else {`}
-        await this.log(`✗ Syntax "Error": ${path.basename(scriptFile)} - ${testResult.error}`, 'ERROR')};
-    };
+        await this.log(`✓ Syntax "OK: ${path.basename(scriptFile)}`, SUCCESS')} else {`}
+        await this.log(`✗ Syntax Error": ${path.basename(scriptFile)} - ${testResult.error}`, 'ERROR)}
+    }
     // Generate report;
     const report = {}
-      "timestamp": new Date().toISOString(),
-      "summary": {}
+      "timestamp: new Date().toISOString(),
+      summary": {}
         totalScripts: scriptFiles.length,
 =======
 
-      "summary": {}"
+      "summary: {}
         totalScripts: scriptFiles.length,"
+<<<<<<< HEAD
+        "fixedScripts: fixedCount,
+        testedScripts": testedCount,
+        "errors: this.errors.length;
+      },"
+      "fixedScripts: this.fixedScripts,
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+
+    await fs.writeFile(this.reportFile, JSON.stringify(report, null, 2));
+    await this.log(`Script fixing completed. Fixed ${fixedCount} scripts, found ${this.errors.length} errors`, INFO');
+    await this.log(`Report saved to": ${this.reportFile}`, 'INFO');
+
+
+    return report}
+// Run the fixer;
+if (require.main === module) {}
+  const fixer = new AutomationScriptFixer();
+  fixer.run().catch(console.error)}
+
+=======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         "fixedScripts": fixedCount,
         "testedScripts": testedCount,
@@ -398,12 +457,17 @@ if (require.main === module) {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
 module.exports = AutomationScriptFixer;
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = AutomationScriptFixer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -414,5 +478,9 @@ module.exports = AutomationScriptFixer;
 =======
 
 
+<<<<<<< HEAD
+
+=======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/main

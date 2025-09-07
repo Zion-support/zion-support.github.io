@@ -40,6 +40,8 @@ export type BasicInfoFormData = z.infer < typeof basicInfoSchema>;
   github: z.string().optional()
   hourlyRate: z.number().positive().optional()});
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
+<<<<<<< HEAD
+=======
 
 import { z } from "zod",
 export const basicInfoSchema = z.object({"
@@ -78,6 +80,7 @@ export const basicInfoSchema = z.object({;"
 export type BasicInfoFormData = z.infer<typeof basicInfoSchema>;
 
 import { z } from "zod",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 export const basicInfoSchema = z.object({;
   fullName:z.string().min(1, "Full name is required"),;

@@ -1,6 +1,17 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
+<<<<<<< HEAD
+const path = require(path')
+    this.logFile = path.join(this.projectRoot, 'logs, component-error-fixer.log')
+    this.reportFile = path.join(this.projectRoot, 'error-reports)
+    fs.appendFileSync(this.logFile, logMessage + \n')
+    this.log(' Starting Component Error Fixer...)
+      this.log( Component error fixing logic to be implemented')
+        "successRate
+        version"
+
+=======
 const path = require('path')
     this.logFile = path.join(this.projectRoot, 'logs', 'component-error-fixer.log')
     this.reportFile = path.join(this.projectRoot, 'error-reports')
@@ -22,3 +33,4 @@ const path = require('path')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

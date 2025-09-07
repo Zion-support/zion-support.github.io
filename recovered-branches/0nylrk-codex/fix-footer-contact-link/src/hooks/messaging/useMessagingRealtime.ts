@@ -9,6 +9,12 @@ import {toast} from '@/hooks / use - toast';
 type UserWithProfile = UserProfile | UserDetails | null;
 ;
 export function useMessagingRealtime (
+<<<<<<< HEAD
+import {supabase} from '@/integrations/supabase/client';'
+import {UserProfile, UserDetails} from '@/types/auth';'
+import {Message, Conversation} from '@/types/messaging';'
+import {toast} from '@/hooks/use-toast';'
+=======
 
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -27,6 +33,7 @@ export function useMessagingRealtime(;
 '
         'postgres_changes', 
 
+>>>>>>> origin/chore/fix-lint-and-merge
         { 
           event: 'INSERT', 
           schema: 'public', 
@@ -172,8 +179,12 @@ export function useMessagingRealtime(;
     if (!user) return,;
 ;
     // Subscribe to new messages;
+<<<<<<< HEAD
+      .channel('messages');'
+=======
     const subscription = supabase;
       .channel('messages');
+>>>>>>> origin/chore/fix-lint-and-merge
       .on(;
         'postgres_changes',;
         {;

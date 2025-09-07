@@ -51,8 +51,13 @@ function LazyImage() {const [is_loaded, setIsLoaded] = useState (false)const [is
 if (return) {$2;}
 }
 
+<<<<<<< HEAD
+}
+if ( {) {$2;
+=======
 const observer = new IntersectionObserver (([entry]) => {// Check condition;}
 if ( {) {$2;}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
           setIsInView (true)observer.disconnect ()}
       },{threshold: 0.1,root_margin: \"50px\",},)// Check condition;

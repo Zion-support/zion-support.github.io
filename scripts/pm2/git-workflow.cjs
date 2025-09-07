@@ -31,7 +31,6 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 class GitWorkflowAutomator {
   constructor() {
     this.projectRoot = process.cwd();
@@ -163,7 +162,6 @@ class GitWorkflowAutomator {
       this.log('🔧 Attempting to resolve conflicts...');
       const conflictFiles = await this.checkMergeConflicts();
       let resolved = 0;
-      const errors = [];
       for (const file of conflictFiles) {
         try {
           // Try to resolve conflicts automatically
@@ -218,7 +216,6 @@ class GitWorkflowAutomator {
         return { merged: 0, errors: [] };
       }
       let merged = 0;
-      const errors = [];
       try {
         // Switch to main branch
         execSync('git checkout main', {
@@ -428,10 +425,13 @@ class GitWorkflow {}
       fs.mkdirSync(logDir, { "recursive": true }")
 });
   log(message) {}
+<<<<<<< HEAD
+=======
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/git-workflow.cjs
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -590,12 +590,82 @@ main
   async safeMerge() {}
     if (!this.autoMergeSafe) {}"
       this.log('Safe merge disabled');
+<<<<<<< HEAD
+      return { "merged": false };
+    };
+    try {}
+      this.log('Attempting safe merge...');
+      if (!currentBranch || currentBranch === 'main' || currentBranch === 'master') {}
+        this.log('Cannot merge main/master branch');
+        return { "merged": false, "reason": 'Cannot merge main branch' };
+      };
+      // Check if there are any uncommitted changes;
+const status = execSync('git status --porcelain', { });
+        "encoding": 'utf8',
+        "stdio": 'pipe'
+      }).trim();
+      if (status) {}
+        this.log('Cannot "merge": uncommitted changes detected');
+        return { merged: false, "reason": 'Uncommitted changes' };
+      };
+      // Try to merge with main;
+      try {}
+        execSync('git fetch origin', { "stdio": 'pipe' }
+});
+        execSync('git merge origin/main', { "stdio": 'pipe' }
+});
+        this.log('Safe merge completed successfully');
+        return { "merged": true };
+      } catch (mergeError) {}
+        this.log(`Merge "failed": ${mergeError.message}`);
+        // Try to resolve conflicts automatically;
+        if (conflictResolution.resolved) {}
+          try {}
+            execSync('git commit -m "Auto-resolved merge conflicts"', { "stdio": 'pipe' }
+});
+            this.log('Merge completed after conflict resolution');
+            return { "merged": true, "conflictsResolved": true };
+          } catch (commitError) {}
+            this.log(`Failed to commit after conflict "resolution": ${commitError.message}`);
+            return { "merged": false, "error": commitError.message };
+          };
+        };
+        return { "merged": false, "error": mergeError.message };
+      };
+    } catch (error) {}
+      this.log(`Safe merge "failed": ${error.message}`);
+      return { "merged": false, "error": error.message };
+    };
+  };
+  async generateReport() {}
+    const report = {}
+      "timestamp": new Date().toISOString(),
+      "processName": this.processName,
+      "currentBranch": await this.getCurrentBranch(),
+      "branches": await this.getBranches(),
+      "branchCleanup": await this.cleanupBranches(),
+      "conflictCheck": await this.checkForConflicts(),
+      "conflictResolution": await this.resolveConflicts(),
+      "safeMerge": await this.safeMerge(),
+      "environment": {}
+        NODE_ENV: process.env.NODE_ENV,
+        "autoBranchCleanup": this.autoBranchCleanup,
+        "autoMergeSafe": this.autoMergeSafe,
+        "conflictResolution": this.conflictResolution,
+        "branchStrategy": this.branchStrategy;
+      };
+    };
+    const reportFile = path.join(__dirname, '../../logs/pm2/git-workflow-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`Git workflow report "generated": ${reportFile}`);
+=======
       return { "merged": false };"
 
       const currentBranch = await this.getCurrentBranch();
       if (!currentBranch || currentBranch ===main' || currentBranch ===master') {}
         this.log('Cannot merge main/master branch');
 
+>>>>>>> origin/chore/fix-lint-and-merge
     return report;
   async start() {}`;
     this.log(`${this.processName} started`);

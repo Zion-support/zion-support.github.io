@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import Head from "next/head";
+import { ReactNode } from "react";
+=======
 type ModernLayoutProps = {children: ReactNode;
 
 type ModernLayoutProps = {children: ReactNode,title?: string;
@@ -40,8 +44,14 @@ const ModernLayout = (;
         <link rel=\"manifest\" href=\"/site.webmanifest\"    />;
       </Head>;"
       <div className=\"min - h-screen bg - white text-gray-900\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
         {children}
       </div>;
+<<<<<<< HEAD
+</>)}
+export default ModernLayout;"
+=======
 <   />)}
 
 export default ModernLayout;"
+>>>>>>> origin/main

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -6,6 +9,7 @@
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> origin/chore/fix-lint-and-merge
 #!/usr/bin/env node;
 =======
 #!/usr/bin/env node
@@ -14,6 +18,13 @@
  * Comprehensive Error Fixer
  * Automatically fixes common syntax and import errors
  */
+<<<<<<< HEAD
+const fs = require("fs);
+const path = require(path");
+const { execSync } = require("child_process);
+
+>>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
 <<<<<<< HEAD
 const fs = require("child_process");
 const path = require("child_process");
@@ -25,16 +36,123 @@ const path = require("child_process");
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 const { execSync } = require("child_process");
+>>>>>>> origin/chore/fix-lint-and-merge
 class ComprehensiveErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
     this.logs = [];
     this.errors = [];
+<<<<<<< HEAD
+    this.fixes = [];
+  }
+
+  log(message, type = info") {
+=======
     this.fixes = []};
   log(message, type = "info") {}
+>>>>>>> origin/chore/fix-lint-and-merge
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}
     console.log(logEntry);
+<<<<<<< HEAD
+
+      await this.fixCommonSyntaxErrors();
+      
+      this.log(📊 Error fixing completed");
+      this.log(`✅ Files fixed: ${this.fixes.length}`);
+      this.log(`❌ Errors encountered: ${this.errors.length}`);
+      
+      if (this.errors.length > 0) {
+        this.log("Errors encountered:);
+        this.errors.forEach(error => {
+          this.log(`  - ${error.file}: ${error.error}`, error");
+        });
+      }
+<<<<<<< HEAD
+    }
+    
+    this.log(`Fixed ${fixedCount} files`, 'success');
+  }
+
+  fixCommonSyntaxIssues(content) {
+    let fixed = content;
+    
+    // Fix shebang issues
+    fixed = fixed.replace(/^#!/gm, '#!/usr/bin/env node');
+    
+    // Fix import/require issues
+    fixed = fixed.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?/g, "const { $1 } = require('$2');");
+    fixed = fixed.replace(/import\s+([^{][^;]+)\s+from\s+['"]([^'"]+)['"];?/g, "const $1 = require('$2');");
+    fixed = fixed.replace(/export\s+default/g, 'module.exports =');
+    fixed = fixed.replace(/export\s+{\s*([^}]+)\s*};?/g, 'module.exports = { $1 };');
+    
+    // Fix class constructor syntax
+    fixed = fixed.replace(/constructor\(\)\s*\{\s*\}/g, 'constructor() {\n    // Constructor\n  }');
+    
+    // Fix template literal issues
+    fixed = fixed.replace(/`([^`]*)\$\{([^}]+)\}([^`]*)`/g, '"$1" + $2 + "$3"');
+    
+    // Fix arrow function issues
+    fixed = fixed.replace(/\(\s*\)\s*=>\s*\{/g, 'function() {');
+    fixed = fixed.replace(/\(\s*([^)]+)\s*\)\s*=>\s*\{/g, 'function($1) {');
+    
+    return fixed;
+  }
+
+  getAllJSFiles() {
+    const files = [];
+    const extensions = ['.js', '.cjs', '.mjs', '.ts', '.tsx', '.jsx'];
+    
+    const scanDirectory = (dir) => {
+      try {
+        if (!fs.existsSync(dir)) {
+          return;
+        }
+        
+        const items = fs.readdirSync(dir);
+        
+        for (const item of items) {
+          const fullPath = path.join(dir, item);
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory()) {
+            // Skip node_modules and other common directories
+            if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+              scanDirectory(fullPath);
+            }
+          } else if (extensions.some(ext => item.endsWith(ext))) {
+            files.push(fullPath);
+          }
+        }
+      } catch (error) {
+        this.log(`Error scanning directory ${dir}: ${error.message}`, 'warning');
+=======
+      
+      return {
+        success: this.errors.length === 0,
+        fixes: this.fixes,
+        errors: this.errors
+>>>>>>> origin/main
+      }
+    } catch (error) {
+      this.log(`❌ Error fixer failed: ${error.message}`, "error);
+      throw error;
+    }
+  }
+}
+
+// Main execution
+if (require.main === module) {
+  const fixer = new ComprehensiveErrorFixer();
+  fixer.run().catch(error => {
+    console.error(Error fixer failed:", error);
+    process.exit(1);
+  });
+}
+
+module.exports = ComprehensiveErrorFixer;
+
+=======
     this.logs.push(logEntry)};
   async fixCommonSyntaxErrors() {}
     try {}
@@ -161,12 +279,17 @@ module.exports = ComprehensiveErrorFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
 =======
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 module.exports = ComprehensiveErrorFixer;
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
 module.exports = ComprehensiveErrorFixer;
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

@@ -42,7 +42,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   const [copied, setCopied] = useState(false);
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
-  const [copied, setCopied] = useState(false);
 
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false),

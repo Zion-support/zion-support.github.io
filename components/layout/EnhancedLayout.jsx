@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
+>>>>>>> origin/main
+=======
 import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedFooter from './EnhancedFooter';
@@ -18,3 +25,4 @@ EnhancedLayout.propTypes = {
 };
 
 export default EnhancedLayout;
+>>>>>>> origin/chore/fix-lint-and-merge

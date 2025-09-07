@@ -43,6 +43,20 @@ function pingPreview() {
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 #!/usr/bin/env node;
+<<<<<<< HEAD
+
+const distOk = fs.existsSync('dist/index.html');
+
+function pingPreview() {}
+	return new Promise((resolve) => {}
+		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}
+			resolve(res.statusCode && res.statusCode < 500)}
+});
+		req.on('error', () => resolve(false));
+		req.end()})};
+(async () => {}
+	if (!ok) {}
+=======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const fs = require('fs');
@@ -56,6 +70,7 @@ function pingPreview() {
 (async () => {
 	const ok = distOk && (await pingPreview());
 	if (!ok) {
+>>>>>>> origin/chore/fix-lint-and-merge
 		console.error('Healthcheck failed');
 <<<<<<< HEAD
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/healthcheck.cjs
@@ -154,8 +169,12 @@ class HealthChecker {
   checkMemoryUsage() {
     try {
       const result = execSync('free -h', { encodin: 'utf8' });
+<<<<<<< HEAD
+
+=======
       const lines = result.trim().split('\n');
       const data = lines[1].split(/\s+/);
+>>>>>>> origin/chore/fix-lint-and-merge
       return {
         tota: data[1],
         use: data[2],

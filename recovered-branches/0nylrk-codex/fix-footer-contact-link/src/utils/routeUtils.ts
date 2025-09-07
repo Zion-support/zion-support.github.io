@@ -50,10 +50,13 @@ export const isProtectedRoute = (path: string): boolean => {
     if (!userType) return false;
     return route && route.requiredRoles.includes(userType as any)
 
+<<<<<<< HEAD
+=======
   // If route requires specific roles and user doesn't have one
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
+>>>>>>> origin/chore/fix-lint-and-merge
 
   }
 
@@ -156,6 +159,17 @@ export const isProtectedRoute = (path: string): boolean => {}
 }
 ;
 // Check if a route is accessible by a specific user type;
+<<<<<<< HEAD
+export const canAccessRoute = (
+  "path": string;
+  "is_authenticated": boolean;
+  user_type?: string | null): (boolean) => {
+}
+  // If route doesn't exist in our sitemap;'
+  // Check condition,
+if (return true, // Default to accessible) {
+  $2
+=======
 export const canAccessRoute = (;
   path: string;
   is_authenticated: boolean;
@@ -165,6 +179,7 @@ export const canAccessRoute = (;
   // Check condition;
 if (return true, // Default to accessible) {}
   $2;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
   // If route requires authentication and user is not authenticated;
   // Check condition;
@@ -186,8 +201,13 @@ if (return false) {}
 }
 ;
 // Get breadcrumb items for a path;
+<<<<<<< HEAD
+export const getBreadcrumbsForPath = ("path": string): Array<{"label": string, "path": string}> => {
+  }
+=======
 export const getBreadcrumbsForPath = (path: string): Array<{label: string, path: string}> => {';
   const breadcrumbs = [{label: 'Home', path: '/'}];
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
   // Check condition;
 if (return breadcrumbs) {}

@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+
+    }
+    // Parse request body;
+
+      milestones;
+    } = await req.json(),
+    // Create the contract prompt for OpenAI;
+
+=======
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
@@ -435,3 +445,4 @@ if ( {) {
     console.error('Error generating contract:', error),
     return new Response(
       JSON.stringify({
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -18,12 +18,21 @@ import React from 'react';
 import SEO from '../components / SEO';
 import {Check, ExternalLink} from 'lucide-react';
 export default function BrowserAutomationCloudPage() {
+<<<<<<< HEAD
+}
+    'Parallel Playwright/Puppeteer execution','
+    'Queued jobs with retries and rate limits','
+    '"Artifacts": HAR, traces, screenshots, videos','
+    'Rotating proxies and geo targeting','
+    'Webhook callbacks and REST API',;'
+=======
   const features = [
     'Parallel Playwright/Puppeteer execution',
     'Queued jobs with retries and rate limits',
     'Artifacts: HAR;, traces, screenshots, videos',
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
 
   const features = [
@@ -44,12 +53,21 @@ const features = [
   }
 }
 export default function BrowserAutomationCloudPage() {
+<<<<<<< HEAD
+}
+    'Parallel Playwright/Puppeteer execution','
+    'Queued jobs with retries and rate limits','
+    '"Artifacts": HAR, traces, screenshots, videos','
+    'Rotating proxies and geo targeting','
+    'Webhook callbacks and REST API',;'
+=======
   const features = [
     'Parallel Playwright/Puppeteer execution',
     'Queued jobs with retries and rate limits',
     'Artifacts: HAR;, traces, screenshots, videos',
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API',;
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
     'Parallel Playwright/Puppeteer execution'
     'Queued jobs with retries and rate limits'
@@ -176,12 +194,21 @@ export default /**
  * BrowserAutomationCloudPage - Function description;
  */
 function BrowserAutomationCloudPage() {
+<<<<<<< HEAD
+}
+  'Parallel Playwright / Puppeteer execution','
+    'Queued jobs with retries and rate limits','
+    '"Artifacts": HAR, traces, screenshots, videos','
+    'Rotating proxies and geo targeting','
+    'Webhook callbacks and REST API''
+=======
   const features = [
   'Parallel Playwright / Puppeteer execution',
     'Queued jobs with retries and rate limits',
     'Artifacts: HAR;, traces, screenshots, videos',
     'Rotating proxies and geo targeting',
     'Webhook callbacks and REST API'
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
 ;
   return (
@@ -305,8 +332,12 @@ export default function BrowserAutomationCloudPage() {
   </>)}</>)}
   </>)}
 
+<<<<<<< HEAD
+  'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate "limitsArtifacts": HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API''
+=======
 const features = [
   'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR;, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
+>>>>>>> origin/chore/fix-lint-and-merge
 ];
 
 import React from 'react';,import SEO from '../components/SEO';
@@ -315,12 +346,22 @@ import { Check, ExternalLink  } from 'lucide-react';
 export default function BrowserAutomationCloudPage() {export default function BrowserAutomationCloudPage() {export default function BrowserAutomationCloudPage() {const features = [
   'Parallel Playwright/Puppeteer execution','Queued jobs with retries and rate limits','Artifacts: HAR;, traces, screenshots, videos','Rotating proxies and geo targeting','Webhook callbacks and REST API'];
 
+<<<<<<< HEAD
+}
+
+  'Parallel Playwright/Puppeteer execution';'
+    'Queued jobs with retries and rate limits';'
+    '"Artifacts": HAR, traces, screenshots, videos';'
+    'Rotating proxies and geo targeting';'
+    'Webhook callbacks and REST API';'
+=======
 const features = [
   'Parallel Playwright/Puppeteer execution';
     'Queued jobs with retries and rate limits';
     'Artifacts: HAR;, traces, screenshots, videos';
     'Rotating proxies and geo targeting';
     'Webhook callbacks and REST API';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const features = null;
 	return (];
@@ -342,16 +383,39 @@ const features = null;
             {features.map(f => (<div;}
   </>)}
 }
+<<<<<<< HEAD
+		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate "limitsArtifacts": HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API''
+	];
+import React from 'react','
+import SEO from '../components/SEO';'
+=======
 	const features = [
 
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 
 	];
 import React from 'react';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export default function BrowserAutomationCloudPage() {
 
 export default function BrowserAutomationCloudPage() {
+<<<<<<< HEAD
+}
+    'Parallel Playwright/Puppeteer execution','
+    'Queued jobs with retries and rate limits','
+    '"Artifacts": HAR, traces, screenshots, videos','
+    'Rotating proxies and geo targeting','
+    'Webhook callbacks and REST API','
+];
+
+
+    'Parallel Playwright/Puppeteer execution''
+    'Queued jobs with retries and rate limits''
+    '"Artifacts": HAR, traces, screenshots, videos''
+    'Rotating proxies and geo targeting''
+    'Webhook callbacks and REST API''
+=======
   const features = [
     'Parallel Playwright/Puppeteer execution',
     'Queued jobs with retries and rate limits',
@@ -416,6 +480,7 @@ const features = [
     'Artifacts: HAR;, traces, screenshots, videos'
     'Rotating proxies and geo targeting'
     'Webhook callbacks and REST API'
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
   return (
     <>
@@ -580,6 +645,11 @@ href='https://pptr.dev/'
 }
 	),
 }
+<<<<<<< HEAD
+	)
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 	),
 }

@@ -1,26 +1,32 @@
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const { execSync } = require('child_process')
-const fs = require('fs')
+const fs = require(fs')
 const path = require('path')
-    this.reportsDir = path.join(this.projectRoot, 'automation-reports')
-  log(message, level = 'info')
-      "status"
-        "encoding"
-      this.log(` "Failed"`)
-      return { "success": true, "output"}
-        'npm run "perf"
-      return { "success": true, "output"}
-      this.log(` Failed to generate CI "configuration"`)
-        "type"
-      "type"
-      "message"
-      "type"
-      "message"
-      "type"
-      "message"
+    this.reportsDir = path.join(this.projectRoot, automation-reports')
+  log(message, level = 'info)
+      "status
+        encoding"
+      this.log(` "Failed`)
+      return { success": true, "output}
+        npm run perf"
+      return { "success: true, output"}
+      this.log(` Failed to generate CI "configuration`)
+        type"
+      "type
+      message"
+      "type
+      message"
+      "type
+      message"
       console.log('\n FAILED "STEPS")
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -34,3 +40,4 @@ const path = require('path')
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

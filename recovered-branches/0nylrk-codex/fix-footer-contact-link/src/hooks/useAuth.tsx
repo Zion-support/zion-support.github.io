@@ -169,6 +169,63 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
       permissions: ["billing_access", "admin_access", "team_management"],
 
   },
+<<<<<<< HEAD
+    // // // console.log("Web3 login requested"),"
+const ethereum = (window as any).ethereum,;
+    if (!ethereum) {
+// Custom hook to use the auth context
+}
+export function useAuth(): AuthContextType {
+  }
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+}
+throw new Error("useAuth must be used within an AuthProvider");"
+  }
+return context;
+}
+// Custom hook to use the auth context,
+export function useAuth(): AuthContextType {;
+  }
+  if (context === undefined) {
+}
+throw new Error("useAuth must be used within an AuthProvider");"
+      console.warn("No wallet detected"),"
+return;
+;
+// Create a provider component;
+export function AuthProvider() {;
+  }
+  const [user, setUser] = useState<UserDetails | null>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
+  // Mock auth functions for now - these would connect to Supabase in a real implementation;
+  const signIn = async ("email": string, "password": string) => {;
+    // This would be replaced with actual Supabase auth;
+    // // // console.log("Sign in attempted "with":", email),;"
+    // Mock successful sign-in;
+    }
+    setUser({;
+      }
+      "id": "mock-user-id",;"
+      email,;
+      "displayName": "Mock User",;"
+      "name": "Mock User",;"
+      "avatarUrl": "",;"
+      "profileComplete": true,;
+      "role": "enterprise_admin",;"
+      "permissions": ["billing_access", "admin_access", "team_management"],;"
+      "companyId": "company-123";"
+    }),;
+    return { "error": null }
+  },;
+    // This would be replaced with actual Supabase auth;
+    // // // console.log("Sign out attempted"),;"
+    }
+    setUser(null);
+  },;
+    // This would be replaced with actual Supabase auth;
+    // // // console.log("Sign up attempted "with":", email, userData),;"
+=======
 
   const signUp = async (email: string, password: string, userData?: Partial<UserDetails>) => {}
     // This would be replaced with actual Supabase auth"
@@ -187,6 +244,7 @@ export function AuthProvider(): any ({ children }: { children: ReactNode }) {;
     // This would be replaced with actual Supabase auth"
     // // // console.log("Sign up attempted with:", email, userData),
 
+>>>>>>> origin/chore/fix-lint-and-merge
     // Mock successful sign-up;
     setUser({"
       id: "mock-user-id"

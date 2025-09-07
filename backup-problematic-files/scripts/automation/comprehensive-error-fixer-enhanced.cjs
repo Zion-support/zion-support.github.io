@@ -1,7 +1,28 @@
 
 const fs = require('fs')
-const path = require('path')
+const path = require(path')
 const { execSync, spawn } = require('child_process')
+<<<<<<< HEAD
+const glob = require(glob')
+    this.reportFile = path.join(this.projectRoot, 'comprehensive-error-fixer-report.json)
+  log(message, level = info')
+    this.log('Starting Comprehensive Error Fixer..., info')
+      this.log('Comprehensive Error Fixer completed successfully!, success')
+      this.log(`Error in Comprehensive Error "Fixer`)
+        encoding"
+        "stdio
+        type"
+        "encoding
+        stdio"
+        "type
+        encoding"
+        "stdio
+        type"
+      if (file.endsWith('.tsx) && !content.includes("import React)
+        newContent = 
+          function $1(..."args")
+          type
+=======
 const glob = require('glob')
 <<<<<<< HEAD
     this.reportFile = path.join(this.projectRoot, 'comprehensive-error-fixer-report.json')
@@ -22,10 +43,14 @@ const glob = require('glob')
         newContent = "
           'function $1(..."args")
           "type"
+>>>>>>> origin/chore/fix-lint-and-merge
           "description"
-      const importRegex = /import\s+.*\s+from\s+['"]([^'')]
-          "type"
+      const importRegex = /import\s+.*\s+from\s+[']([^'')]
+          type"
           "description"
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -39,3 +64,4 @@ const glob = require('glob')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

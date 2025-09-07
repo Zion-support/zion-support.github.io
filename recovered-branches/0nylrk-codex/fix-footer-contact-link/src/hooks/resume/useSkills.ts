@@ -4,6 +4,20 @@ import { Skill  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { handleResumeError, showSuccessToast } from './useResumeUtils';
 
+<<<<<<< HEAD
+  const [error, setError] = useState<string | null>(null);
+  const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to add skills')
+export function useSkills() {
+  const { user } = useAuth($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  
+    if (!user) {
+      setError($2);
+      return false
+=======
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Skill} from '@/types/resume';
@@ -26,6 +40,7 @@ export function useSkills() { return null; }
   const [error, setError] = useState<string | null>(null),;
   const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {;
 
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
     setIsLoading(true),
@@ -34,10 +49,22 @@ export function useSkills() { return null; }
     try {
       const { error } = await supabase
         .from('resume_skills')
+<<<<<<< HEAD
+        .insert($2);
+      if (error) throw error,
+      
+      return showSuccessToast("Skill added", "Your skill has been added to your resume")
+    } catch (e: any) {
+      return handleResumeError(e, 'Could not add skill')
+    } finally {
+      setIsLoading(false)
+      return false    try {
+=======
         .insert({
 
     try {}
       const { error } = await supabase'
+>>>>>>> origin/chore/fix-lint-and-merge
         .from('resume_skills')
         .insert({}
           name: skill && skill.name;
@@ -171,7 +198,6 @@ export function useSkills() {;
     }
 
     try {
-      const { error } = await supabase
         .from('resume_skills')
         .delete()
 

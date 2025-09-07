@@ -95,7 +95,11 @@ onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void ;
   referralLink,  onCopy, onShare ;
 }: ReferralLinkProps) {;
   const [copied,  setCopied] = useState (false);
+<<<<<<< HEAD
+  }
+=======
 const handleCopy = () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   onCopy ();
 setCopied (true);
 

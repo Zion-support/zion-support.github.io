@@ -1,23 +1,36 @@
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 function improvePerformance() {}
   try {}
     // Create next.config.js optimizations;
-    const nextConfigContent = "/** @type {import('next').NextConfig} */
+    const nextConfigContent = "/** @type {import('next).NextConfig} */
 const nextConfig = {}
 <<<<<<< HEAD
+  reactStrictMode: true,
+=======
+<<<<<<< HEAD
   "reactStrictMode": true,
+>>>>>>> origin/chore/fix-lint-and-merge
   "swcMinify": true,
-  "compress": true,
+  compress: true,
   "poweredByHeader": false,
+<<<<<<< HEAD
+  generateEtags: false,
+
+=======
   "generateEtags": false,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,11 +50,15 @@ const nextConfig = {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge
   // Image optimization;
   "images": {}
-    formats: ['image/webp', 'image/avif'],
-    "deviceSizes": [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    formats: [image/webp', 'image/avif],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -62,26 +79,30 @@ const nextConfig = {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge
   // Bundle optimization;
-  "webpack": (config, { dev, isServer }) => {}
+  webpack: (config, { dev, isServer }) => {}
     if ( {})
       config.optimization.splitChunks = {}
-        "chunks": 'all',
-        "cacheGroups": {}
+        "chunks": all',
+        cacheGroups: {}
           vendor: {}
             test: /[\\/]node_modules[\\/]/,
-            "name": 'vendors',
-            "chunks": 'all'}}}};
+            "name": 'vendors,
+            chunks: all'}}}}
     return confi) {}
      {}
       config.optimization.splitChunks = {}
-        "chunks": 'all',
-        "cacheGroups": {}
+        "chunks": 'all,
+        cacheGroups: {}
           vendor: {}
             test: /[\\/]node_modules[\\/]/,
-            "name": 'vendors',
-            "chunks": 'all'}}}};
+            "name": vendors',
+            chunks: 'all}}}}
     return confi}g},
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -102,22 +123,27 @@ const nextConfig = {}
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge
   // Headers for performance;
   async headers() {}
     return [;]
       {}
-        "source": '/(.*)',
-        "headers": []
+        "source": /(.*)',
+        headers: []
           {}
-            key: 'X-Content-Type-Options',
-            "value": 'nosniff'},
+            key: 'X-Content-Type-Options,
+            "value": nosniff'},
           {}
-            "key": 'X-Frame-Options',
-            "value": 'DENY'},
+            key: 'X-Frame-Options,
+            "value": DENY'},
           {}
-            "key": 'X-XSS-Protection',
-            "value": ';1; mode=block'},
+            key: 'X-XSS-Protection,
+            "value": ;1; mode=block'},
           {}
+<<<<<<< HEAD
+            key: 'Referrer-Policy,
+            "value": origin-when-cross-origin'}]}]}}
+=======
             "key": 'Referrer-Policy',
             "value": 'origin-when-cross-origin'}]}]}};
 <<<<<<< HEAD
@@ -138,9 +164,19 @@ module.exports = nextConfig;";
       fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge
 
-module.exports = nextConfig;";
+module.exports = nextConfig;;
       
+<<<<<<< HEAD
+      fs.writeFileSync(path.join(process.cwd(), 'next.config.js), nextConfigContent);
+
+      console.log(Performance improvements completed')} catch (error) {}
+      console.error('Performance improvement failed": ', error.message)}
+  }
+}
+
+=======
       fs.writeFileSync(path.join(process.cwd(), 'next.config.js'), nextConfigContent);
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
@@ -197,3 +233,4 @@ improvePerformance();
   };
 improvePerformance();
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

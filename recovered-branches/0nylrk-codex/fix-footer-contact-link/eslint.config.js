@@ -164,6 +164,9 @@ export default tseslint.config (
 ),
 
 ),
+<<<<<<< HEAD
+import js from "js";"
+=======
 ),
 
 import js from "@eslint/js",;
@@ -172,6 +175,7 @@ import reactHooks from "eslint-plugin-react-hooks",;
 import reactRefresh from "eslint-plugin-react-refresh",;
 
 import tseslint from "typescript-eslint",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 export default tseslint.config(;"
   { ignores:["dist"] },;

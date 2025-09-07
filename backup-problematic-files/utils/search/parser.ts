@@ -22,7 +22,6 @@ function extractAvailability(text: string): ParsedFilters['availability'] | unde
 }
 
 function extractType(text: string): SearchType {
-  const lower = text.toLowerCase()
   if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower)) return 'talent',
   if (/(jobs?|roles?|openings?|hiring)/.test(lower)) return 'jobs',
   if (/(projects?|gigs?)/.test(lower)) return 'projects',
@@ -30,7 +29,6 @@ function extractType(text: string): SearchType {
 }
 
 function extractLocation(text: string): string | undefined {
-  const lower = text.toLowerCase()
   // Simple heuristic e.g., "in latam", "in berlin", "remote"
 }
 

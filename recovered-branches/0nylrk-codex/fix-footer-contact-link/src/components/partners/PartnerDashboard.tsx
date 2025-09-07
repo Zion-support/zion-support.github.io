@@ -11,8 +11,13 @@ import {
   CardHeader,
   CardTitle,";
 } from "@/components/ui/card";"
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";"
+  }
+=======
 import { Button } from "@/components/ui/button";
 import {}
+>>>>>>> origin/chore/fix-lint-and-merge
   BarChart,
   DollarSign,
   LineChart,
@@ -104,7 +109,28 @@ import {}
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
+  );
+  )
+}
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",;
+export function PartnerDashboard() {;
+  // Placeholder data - would come from API in real implementation;
+    totalReferrals: 42,;
+    pendingReferrals: 8,;
+    completedReferrals: 34,;
+    conversionRate: 18.5,;
+    totalRevenue: 850.00;
+    pendingRevenue: 200.00;
+  };
+  return (;
+    <div className="space-y-6">;
+      {/* Stats Overview */}
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
         <Card className="bg-zion-blue-dark border-zion-blue-light">;
           <CardHeader className="flex flex-row items-center justify-between pb-2">;

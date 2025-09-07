@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,10 +202,8 @@ console.log('🔒 Zion Tech Group - Security Scanner');
 console.log('
 
 #!/usr/bin/env node
+>>>>>>> origin/chore/fix-lint-and-merge
 
-const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
 /**
  * Security Scanner
@@ -213,6 +213,14 @@ class SecurityScanner {
   constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
+<<<<<<< HEAD
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+=======
     this.results = {
       dependencyAudit: { success: false, vulnerabilities: 0, fixes: [] },
       codeSecurity: { success: false, issues: [], fixes: [] },
@@ -378,11 +386,20 @@ runSecurityCheck('Dependency Security', () => {
         
         if (fixResult.success) {
           fixes.push('Successfully applied automatic fixes');
+>>>>>>> origin/chore/fix-lint-and-merge
         }
       }
 
       this.results.dependencyAudit = {
         success: auditResult.success,
+<<<<<<< HEAD
+
+      this.results.dependencyAudit = {
+        success: false,
+        vulnerabilities: 0,
+        fixes: [Failed to audit dependencies']
+      }
+=======
         vulnerabilities,
         fixes
       };
@@ -390,6 +407,7 @@ runSecurityCheck('Dependency Security', () => {
     } catch (error) {
       this.log(`❌ Failed to check file permissions: ${error.message}`, "ERROR");
       this.errors.push(error.message);
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
 });
@@ -420,7 +438,7 @@ runSecurityCheck('Environment Security', () => {
   }
 
   async scanCodeSecurity() {
-    this.log('\n🔍 SCANNING CODE SECURITY');
+    this.log('\n🔍 SCANNING CODE SECURITY);
     
     try {
       const issues = [];
@@ -430,30 +448,40 @@ runSecurityCheck('Environment Security', () => {
       const securityChecks = [
         {
           pattern: /eval\s*\(/g,
-          issue: 'Use of eval() function detected',
-          fix: 'Replace eval() with safer alternatives like JSON.parse() or Function constructor'
+          issue: Use of eval() function detected',
+          fix: 'Replace eval() with safer alternatives like JSON.parse() or Function constructor
         },
         {
           pattern: /innerHTML\s*=/g,
-          issue: 'Direct innerHTML assignment detected',
-          fix: 'Use textContent or sanitize HTML before assignment'
+          issue: Direct innerHTML assignment detected',
+          fix: 'Use textContent or sanitize HTML before assignment
         },
         {
           pattern: /document\.write\s*\(/g,
-          issue: 'Use of document.write() detected',
-          fix: 'Replace document.write() with DOM manipulation methods'
+          issue: Use of document.write() detected',
+          fix: 'Replace document.write() with DOM manipulation methods
         },
         {
+<<<<<<< HEAD
+          pattern: /localStorage\.setItem\s*\([^]+,\s*[^)]*\+/g,
+          issue: Potential XSS in localStorage',
+          fix: 'Sanitize data before storing in localStorage
+=======
           pattern: /localStorage\.setItem\s*\([^,]+,\s*[^)]*\+/g,
           issue: 'Potential XSS in localStorage',
           fix: 'Sanitize data before storing in localStorage'
 
+>>>>>>> origin/chore/fix-lint-and-merge
         }
       ];
 
       // Scan common file types
+<<<<<<< HEAD
+
+=======
       const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
       const scanDirs = ['components', 'pages', 'lib', 'utils', 'hooks'];
+>>>>>>> origin/chore/fix-lint-and-merge
 
       for (const dir of scanDirs) {
         const dirPath = path.join(this.projectRoot, dir);
@@ -466,13 +494,13 @@ runSecurityCheck('Environment Security', () => {
         success: true,
         issues,
         fixes
-      };
+      }
     } catch (error) {
       this.results.codeSecurity = {
         success: false,
-        issues: ['Failed to scan code security'],
+        issues: ['Failed to scan code security],
         fixes: []
-      };
+      }
     }
   }
 
@@ -483,6 +511,13 @@ runSecurityCheck('Environment Security', () => {
       items.forEach(item => {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
+        
+        if (stat.isDirectory()) {
+          this.scanDirectoryForSecurity(fullPath, securityChecks, issues, fixes);
+        } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(item)) {
+
+=======
   async runSecurityScan() {
     const securityChecks = [
       { name: 'NPM Audit', command: 'npm audit', description: 'Checking for vulnerable dependencies' },
@@ -519,32 +554,33 @@ runSecurityCheck('Environment Security', () => {
           error: error.message 
         });
       }
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
   async setupSecurityHeaders() {
-    this.log('\n🛡️ SETTING UP SECURITY HEADERS');
+    this.log(\n🛡️ SETTING UP SECURITY HEADERS');
     
     try {
       const securityHeaders = {
-        'X-Content-Type-Options': 'nosniff',
-        'X-Frame-Options': 'DENY',
-        'X-XSS-Protection': '1; mode=block',
-        'Referrer-Policy': 'strict-origin-when-cross-origin',
-        'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-        'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
-      };
+        'X-Content-Type-Options: nosniff',
+        'X-Frame-Options: DENY',
+        'X-XSS-Protection: 1; mode=block',
+        'Referrer-Policy: strict-origin-when-cross-origin',
+        'Permissions-Policy: camera=(), microphone=(), geolocation=()',
+        'Strict-Transport-Security: max-age=31536000; includeSubDomains'
+      }
 
       // Create security headers middleware
       const middlewareContent = `
 // Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
-    'X-Content-Type-Options': 'nosniff',
-    'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
-    'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+    'X-Content-Type-Options: nosniff',
+    'X-Frame-Options: DENY',
+    'X-XSS-Protection: 1; mode=block',
+    'Referrer-Policy: strict-origin-when-cross-origin',
+    'Permissions-Policy: camera=(), microphone=(), geolocation=()',
+    'Strict-Transport-Security: max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res.setHeader(key, value);
   });
@@ -553,7 +589,7 @@ export function securityHeaders(req, res, next) {
 }
 `;
 
-      const middlewarePath = path.join(this.projectRoot, 'middleware', 'security.js');
+      const middlewarePath = path.join(this.projectRoot, 'middleware, security.js');
       fs.mkdirSync(path.dirname(middlewarePath), { recursive: true });
       fs.writeFileSync(middlewarePath, middlewareContent);
 
@@ -561,73 +597,73 @@ export function securityHeaders(req, res, next) {
         success: true,
         headers: Object.keys(securityHeaders),
         recommendations: [
-          'Implement security headers middleware',
-          'Configure Content Security Policy',
-          'Set up HTTPS redirect',
-          'Implement rate limiting'
+          'Implement security headers middleware,
+          Configure Content Security Policy',
+          'Set up HTTPS redirect,
+          Implement rate limiting'
         ]
-      };
+      }
     } catch (error) {
       this.results.headersSecurity = {
         success: false,
         headers: [],
-        recommendations: ['Failed to setup security headers']
-      };
+        recommendations: ['Failed to setup security headers]
+      }
     }
   }
 
   async setupContentSecurityPolicy() {
-    this.log('\n🔒 SETTING UP CONTENT SECURITY POLICY');
+    this.log(\n🔒 SETTING UP CONTENT SECURITY POLICY');
     
     try {
       const cspPolicy = {
-        'default-src': ["'self'"],
-        'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
-        'style-src': ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-        'img-src': ["'self'", "data:", "https:"],
-        'font-src': ["'self'", "https://fonts.gstatic.com"],
-        'connect-src': ["'self'", "https://api.zion.app"],
-        'frame-src': ["'none'"],
-        'object-src': ["'none'"],
-        'base-uri': ["'self'"],
-        'form-action': ["'self'"]
-      };
+        'default-src: [self'"],
+        'script-src: ["self', 'unsafe-inline", "unsafe-eval'],
+        'style-src: [self'", "'unsafe-inline, https://fonts.googleapis.com"],
+        img-src': ["'self, data:", "https:],
+        font-src': ['self", "https://fonts.gstatic.com],
+        connect-src': ['self", "https://api.zion.app],
+        frame-src': ['none"],
+        object-src': ["'none],
+        base-uri': ['self"],
+        form-action': ["'self"]
+      }
 
       const cspString = Object.entries(cspPolicy)
-        .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
-        .join('; ');
+        .map(([directive, sources]) => `${directive} ${sources.join( ')}`)
+        .join('; );
 
       // Create CSP configuration
       const cspConfig = {
         policy: cspString,
         reportOnly: false,
-        reportUri: '/api/csp-report'
-      };
+        reportUri: /api/csp-report'
+      }
 
-      const cspPath = path.join(this.projectRoot, 'csp-config.json');
+      const cspPath = path.join(this.projectRoot, 'csp-config.json);
       fs.writeFileSync(cspPath, JSON.stringify(cspConfig, null, 2));
 
       this.results.contentSecurityPolicy = {
         success: true,
         policy: cspString,
         recommendations: [
-          'Implement CSP in middleware',
-          'Set up CSP violation reporting',
-          'Test CSP with different browsers',
-          'Consider using nonce-based CSP for inline scripts'
+          Implement CSP in middleware',
+          'Set up CSP violation reporting,
+          Test CSP with different browsers',
+          'Consider using nonce-based CSP for inline scripts
         ]
-      };
+      }
     } catch (error) {
       this.results.contentSecurityPolicy = {
         success: false,
-        policy: '',
-        recommendations: ['Failed to setup Content Security Policy']
-      };
+        policy: ',
+        recommendations: ['Failed to setup Content Security Policy]
+      }
     }
   }
 
   async checkAuthenticationSecurity() {
-    this.log('\n🔐 CHECKING AUTHENTICATION SECURITY');
+    this.log(\n🔐 CHECKING AUTHENTICATION SECURITY');
     
     try {
       const checks = [];
@@ -635,6 +671,9 @@ export function securityHeaders(req, res, next) {
 
       // Check for authentication-related files
       const authFiles = [
+<<<<<<< HEAD
+
+=======
         'lib/auth.js',
         'lib/auth.ts',
         'utils/auth.js',
@@ -642,6 +681,7 @@ export function securityHeaders(req, res, next) {
         'pages/api/auth',
         'pages/api/login',
         'pages/api/logout'
+>>>>>>> origin/chore/fix-lint-and-merge
       ];
 
       let hasAuth = false;
@@ -654,40 +694,46 @@ export function securityHeaders(req, res, next) {
       });
 
       if (hasAuth) {
-        recommendations.push('Implement JWT token validation');
-        recommendations.push('Add password hashing with bcrypt');
-        recommendations.push('Implement session management');
-        recommendations.push('Add rate limiting for authentication endpoints');
-        recommendations.push('Implement two-factor authentication');
+        recommendations.push(Implement JWT token validation');
+        recommendations.push('Add password hashing with bcrypt);
+        recommendations.push(Implement session management');
+        recommendations.push('Add rate limiting for authentication endpoints);
+        recommendations.push(Implement two-factor authentication');
       } else {
+<<<<<<< HEAD
+        recommendations.push('Consider implementing authentication system);
+        recommendations.push(Add user registration and login functionality');
+      }
+=======
     recommendations.push('Consider implementing authentication system'),
     recommendations.push('Add user registration and login functionality')
   }
+>>>>>>> origin/chore/fix-lint-and-merge
 
       this.results.authenticationSecurity = {
         success: true,
         checks,
         recommendations
-      };
+      }
     } catch (error) {
       this.results.authenticationSecurity = {
         success: false,
-        checks: ['Failed to check authentication security'],
+        checks: ['Failed to check authentication security],
         recommendations: []
-      };
+      }
     }
   }
 
   generateReport() {
     const totalDuration = Date.now() - this.startTime;
     
-    this.log('\n📊 SECURITY SCANNER REPORT');
-    this.log('='.repeat(60));
+    this.log(\n📊 SECURITY SCANNER REPORT');
+    this.log('=.repeat(60));
     this.log(`Total Duration: ${totalDuration}ms`);
-    this.log('');
+    this.log(');
     
     Object.entries(this.results).forEach(([task, result]) => {
-      const status = result.success ? '✅' : '❌';
+      const status = result.success ? '✅ : ❌';
       this.log(`${status} ${task}: ${JSON.stringify(result, null, 2)}`);
     });
 
@@ -726,11 +772,21 @@ export function securityHeaders(req, res, next) {
         cspConfigured: this.results.contentSecurityPolicy.success,
         authChecked: this.results.authenticationSecurity.success
       }
-    };
+    }
     
+<<<<<<< HEAD
+
+  }
+
+  async run() {
+    this.log('🚀 Starting Security Scanner);
+    this.log(='.repeat(60));
+    
+=======
     this.log(`📊 Security scan completed! Report saved to: ${reportPath}`);
     this.log(`🔒 Security Score: ${report.securityScore}% (${passedChecks}/${securityChecks.length} checks passed)`);
 
+>>>>>>> origin/chore/fix-lint-and-merge
     try {
       await this.auditDependencies();
       await this.scanCodeSecurity();
@@ -3606,6 +3662,9 @@ main
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 }
 
+<<<<<<< HEAD
+
+=======
 // Run the security scanner
 if (require.main === module) {
 <<<<<<< HEAD
@@ -3766,3 +3825,4 @@ if (require.main === module) {
 
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

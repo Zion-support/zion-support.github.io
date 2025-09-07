@@ -45,6 +45,8 @@ export interface Message {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
 
 }
+<<<<<<< HEAD
+=======
 
 '
 import {ChatMessage} from './ChatMessage';'
@@ -52,6 +54,7 @@ import {ChatInput} from './ChatInput';
 
 '
 
+>>>>>>> origin/chore/fix-lint-and-merge
   isOpen;
   onClose;
   recipient;
@@ -62,6 +65,25 @@ import {ChatInput} from './ChatInput';
   const scrollToBottom = () => {'
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
 
+<<<<<<< HEAD
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  },
+  
+export function ChatAssistant({
+  isOpen,
+  onClose,
+  recipient,
+  conversationId,
+  initialMessages = $2;
+  onSendMessage,
+  contextHeader
+}: ChatAssistantProps) {
+  const [messages, setMessages] = useState<Message[]>(initialMessages),
+  const messagesEndRef = $2;
+  useEffect(() => {
+    if (initialMessages.length > 0) {
+      setMessages(initialMessages)
+=======
 import { X } from "lucide-react",
 export interface Message {}
   id: string,'
@@ -99,6 +121,7 @@ export interface ChatAssistantProps {;
     if (initialMessages.length > 0) {;
       setMessages(initialMessages);
 
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   }, [initialMessages]),
 

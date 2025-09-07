@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+const "AIConsciousnessEvolutionPlatform": React.FC = () => {
+ }
+
+  }
+=======
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {

@@ -6,6 +6,9 @@
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 const fs = require("child_process")
 const path = require("path")
@@ -29,16 +32,20 @@ Allow: /contact"
     const metaConfig = "
   "title": "Bolt.new Zion App - Advanced Web Development Solutions"
   description: "Professional web development services with cutting-edge technology and innovative solutions."
+>>>>>>> origin/chore/fix-lint-and-merge
   keywords: "web development, react, nextjs, typescript, full-stack development"
-  "author": "Zion Tech Group"
-  viewport: "width=device-width, initial-scale=1"
-  "robots": "index, follow"
-  "og": {title: "Bolt.new Zion App - Advanced Web Development Solutions","description": "Professional web development services with cutting-edge technology and innovative solutions.","type": "website"}
+  author: "Zion Tech Group"
+  viewport: width=device-width, initial-scale=1
+  "robots": index, follow
+  "og": {title: Bolt.new Zion App - Advanced Web Development Solutions,"description": Professional web development services with cutting-edge technology and innovative solutions.,"type": website}
     url: "https://bolt.new.zion.app"
-    image: "https://bolt.new.zion.app/og-image.jpg"
-  "twitter": {card: "summary_large_image","title": "Bolt.new Zion App - Advanced Web Development Solutions","description": "Professional web development services with cutting-edge technology and innovative solutions."}
+    image: https://bolt.new.zion.app/og-image.jpg
+  "twitter": {card: summary_large_image,"title": Bolt.new Zion App - Advanced Web Development Solutions,"description": Professional web development services with cutting-edge technology and innovative solutions.}
     image: "https://bolt.new.zion.app/og-image.jpg"
 "
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
     fs.writeFileSync(path.join(this.projectRoot, "config/meta-tags.js")
 // console.log(" Meta tags configuration created")
@@ -62,3 +69,4 @@ const path = require("path")
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

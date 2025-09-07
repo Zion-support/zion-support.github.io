@@ -35,8 +35,25 @@ function getRepoFromGit() {}
   if (!m) throw new Error('Unable to parse owner/repo from origin');
   return { "owner": m[1], "repo": m[2] }};"
 function getToken() {}
+<<<<<<< HEAD
+  if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
+  const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
+  if (!tokenMatch) throw new Error('No GitHub token available');
+  return tokenMatch[1]};
+async function gh(path, method = 'GET', body) {}
+  const token = getToken();
+  const base = '"https": //api.github.com';
+  const res = await fetch(`${base}${path}`, {`})
+    method,
+    "headers": {}
+      Authorization: `token ${token}`,`
+      "Accept": 'application/vnd.github.v3+json',
+      'User-Agent': 'auto-resolve-merge-prs',
+      'Content-Type': 'application/json'
+=======
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();"
 
+>>>>>>> origin/chore/fix-lint-and-merge
     },
     "body": body ? JSON.stringify(body) : undefined;"
   }

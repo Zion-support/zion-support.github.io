@@ -51,6 +51,14 @@ class PM2ErrorAutomationOrchestrator {
     if (this.isRunning) {
       this.log('Orchestrator is already running', 'warn');
       return}
+<<<<<<< HEAD
+    this.log('Starting PM2 Error Automation Orchestrator...', 'info')
+    this.isRunning = true
+///usr/bin/env node
+
+const { ErrorAnalyzer } = require('./error-analyzer.cjs')
+const { ComprehensiveErrorFixer } = require('./comprehensive-error-fixer.cjs')
+=======
     this.log('Starting PM2 Error Automation Orchestrator...', 'info');
     this.isRunning = true;
 #!/usr/bin/env node
@@ -59,6 +67,7 @@ const fs = require('fs');
 const path = require('path');
 const { ErrorAnalyzer } = require('./error-analyzer.cjs');
 const { ComprehensiveErrorFixer } = require('./comprehensive-error-fixer.cjs');
+>>>>>>> origin/chore/fix-lint-and-merge
 class PM2ErrorAutomationOrchestrator {
   constructor() {
     this.automations = {
@@ -196,9 +205,14 @@ class PM2ErrorAutomationOrchestrator {
   async runComprehensiveErrorFixer() {
     this.log('Running comprehensive error fixer...', 'info');
     try {
+<<<<<<< HEAD
+      const scriptPath = path.join(this.projectRoot, 'scripts/automation/comprehensive-error-fixer-enhanced.cjs')
+      const result = await this.runCommand(`node ${scriptPath}`)
+=======
       const scriptPath = path.join(this.projectRoot, 'scripts/automation/comprehensive-error-fixer-enhanced.cjs');
       const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
         "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output
@@ -213,9 +227,13 @@ class PM2ErrorAutomationOrchestrator {
   async runTypeScriptErrorFixer() {
     this.log('Running TypeScript error fixer...', 'info');
     try {
+<<<<<<< HEAD
+      const scriptPath = path.join(this.projectRoot, 'scripts/automation/typescript-error-fixer.cjs')
+=======
       const scriptPath = path.join(this.projectRoot, 'scripts/automation/typescript-error-fixer.cjs');
       const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
         "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output
@@ -226,8 +244,12 @@ class PM2ErrorAutomationOrchestrator {
   async runBuildChecker() {
     this.log('Running build checker...', 'info');
     try {
+<<<<<<< HEAD
+      const result = await this.runCommand('npm run build')
+=======
       const result = await this.runCommand('npm run build');
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
         "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output
@@ -245,8 +267,12 @@ class PM2ErrorAutomationOrchestrator {
       // Check for outdated dependencies
       const outdatedResult = await this.runCommand('npm outdated --json');
       // Check for security vulnerabilities
+<<<<<<< HEAD
+      const auditResult = await this.runCommand('npm audit --json')
+=======
       const auditResult = await this.runCommand('npm audit --json');
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
         "timestamp": new Date().toISOString(),
         "outdated": outdatedResult.output,
         "audit": auditResult.output
@@ -275,9 +301,13 @@ class PM2ErrorAutomationOrchestrator {
   async runSecurityChecker() {
     this.log('Running security checker...', 'info');
     try {
+<<<<<<< HEAD
+      const scriptPath = path.join(this.projectRoot, 'scripts/automation/security-audit.cjs')
+=======
       const scriptPath = path.join(this.projectRoot, 'scripts/automation/security-audit.cjs');
       const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
         "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output
@@ -288,9 +318,13 @@ class PM2ErrorAutomationOrchestrator {
   async runPerformanceChecker() {
     this.log('Running performance checker...', 'info');
     try {
+<<<<<<< HEAD
+      const scriptPath = path.join(this.projectRoot, 'scripts/automation/performance-monitor.cjs')
+=======
       const scriptPath = path.join(this.projectRoot, 'scripts/automation/performance-monitor.cjs');
       const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
         "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output
@@ -676,6 +710,14 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
   async runErrorChecker() {
   this.log("Running error checker...", "info");
     try {
+<<<<<<< HEAD
+  // Check for TypeScript errors
+      const typeCheckResult = await this.runCommand("npm run type-check")
+      // Check for build errors
+      const buildResult = await this.runCommand("npm run build")
+      // Check for linting errors
+      const lintResult = await this.runCommand("npm run lint")
+=======
   // Check for TypeScript errors;
       const typeCheckResult = await this.runCommand("npm run type-check");
       // Check for build errors;
@@ -683,6 +725,7 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
       // Check for linting errors;
       const lintResult = await this.runCommand("npm run lint");
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp": new Date().toISOString(),
         "typeCheck": typeCheckResult.success,
         "build": buildResult.success,
@@ -695,6 +738,11 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
   async runErrorChecker() {
   this.log("Running error checker...", "info");
     try {
+<<<<<<< HEAD
+  // Check for TypeScript errors
+      // Check for build errors
+      // Check for linting errors
+=======
   // Check for TypeScript errors;
       const typeCheckResult = await this.runCommand("npm run type-check");
       // Check for build errors;
@@ -702,6 +750,7 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
       // Check for linting errors;
       const lintResult = await this.runCommand("npm run lint");
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp": new Date().toISOString(),
         "typeCheck": typeCheckResult.success,
         "build": buildResult.success,
@@ -722,8 +771,12 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
   async runComprehensiveErrorFixer() {
   this.log("Running comprehensive error fixer...", "info");
     try {
+<<<<<<< HEAD
+  const scriptPath = path.join(this.projectRoot, ""scripts/automation/comprehensive-error-fixer-enhanced.cjs"");const result = await this.runCommand(`node ${scriptPath}`)
+=======
   const scriptPath = path.join(this.projectRoot, ""scripts/automation/comprehensive-error-fixer-enhanced.cjs"");const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output}
@@ -734,8 +787,12 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
   async runComprehensiveErrorFixer() {
   this.log("Running comprehensive error fixer...", "info");
     try {
+<<<<<<< HEAD
+  const scriptPath = path.join(this.projectRoot, "scripts/automation/comprehensive-error-fixer-enhanced.cjs");const result = await this.runCommand(`node ${scriptPath}`)
+=======
   const scriptPath = path.join(this.projectRoot, "scripts/automation/comprehensive-error-fixer-enhanced.cjs");const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output}
@@ -750,8 +807,12 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
   async runTypeScriptErrorFixer() {
   this.log("Running TypeScript error fixer...", "info");
     try {
+<<<<<<< HEAD
+  const scriptPath = path.join(this.projectRoot, ""scripts/automation/typescript-error-fixer.cjs"");const result = await this.runCommand(`node ${scriptPath}`)
+=======
   const scriptPath = path.join(this.projectRoot, ""scripts/automation/typescript-error-fixer.cjs"");const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output}
@@ -761,8 +822,12 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
   async runBuildChecker() {
   this.log("Running build checker...", "info");
     try {
+<<<<<<< HEAD
+  const result = await this.runCommand("npm run build")
+=======
   const result = await this.runCommand("npm run build");
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output}
@@ -779,6 +844,23 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
   async runDependencyChecker() {
   this.log("Running dependency checker...", "info");
     try {
+<<<<<<< HEAD
+  // Check for outdated dependencies
+      const outdatedResult = await this.runCommand("npm outdated --json")
+      // Check for security vulnerabilities
+      const auditResult = await this.runCommand("npm audit --json")
+  "timestamp": new Date().toISOString(),
+        "outdated": outdatedResult.output,
+        "audit": auditResult.output}
+
+      this.saveReport("dependency-check", report)
+      // If there are issues, run the dependency fixer
+  if($2) {
+        if (Object.keys(outdated).length > 0) {
+  this.log("Outdated dependencies found, running fixer", "warn")
+      // If there are issues, run the dependency fixer
+  if($2) {
+=======
   // Check for outdated dependencies;
       const outdatedResult = await this.runCommand("npm outdated --json");
       // Check for security vulnerabilities;
@@ -797,6 +879,7 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
       // If there are issues, run the dependency fixer;
       if (outdatedResult.success && outdatedResult.output) {
   const outdated = JSON.parse(outdatedResult.output);
+>>>>>>> origin/chore/fix-lint-and-merge
         if (Object.keys(outdated).length > 0) {
   this.log("Outdated dependencies found, running fixer", "warn");
           await this.runDependencyFixer()}
@@ -817,8 +900,12 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
   async runSecurityChecker() {
   this.log("Running security checker...", "info");
     try {
+<<<<<<< HEAD
+  const scriptPath = path.join(this.projectRoot, ""scripts/automation/security-audit.cjs"");const result = await this.runCommand(`node ${scriptPath}`)
+=======
   const scriptPath = path.join(this.projectRoot, ""scripts/automation/security-audit.cjs"");const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output}
@@ -828,8 +915,12 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
   async runPerformanceChecker() {
   this.log("Running performance checker...", "info");
     try {
+<<<<<<< HEAD
+  const scriptPath = path.join(this.projectRoot, ""scripts/automation/performance-monitor.cjs"");const result = await this.runCommand(`node ${scriptPath}`)
+=======
   const scriptPath = path.join(this.projectRoot, ""scripts/automation/performance-monitor.cjs"");const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp": new Date().toISOString(),
         "success": result.success,
         "output": result.output}
@@ -839,7 +930,6 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
   async runCommand(command) {
   return new Promise((resolve) => {
   try {
-  const output = execSync(command, {
   "cwd": this.projectRoot,
           "encoding": "utf8",
           "stdio": "pipe",
@@ -859,11 +949,18 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, "info")}
     // Monitor PM2 processes;
     setInterval(async () => {
   try {
+<<<<<<< HEAD
+  const pm2Status = execSync("pm2 status --json", { "encoding": "utf8" })
+        // Check for any stopped processes
+        const stoppedProcesses = status.filter(proc => proc.pm2_env.status === "stopped")
+  if($2) {this.log(`Found ${stoppedProcesses.length} stopped PM2 processes, restarting...`, "warn")
+=======
   const pm2Status = execSync("pm2 status --json", { "encoding": "utf8" });
         const status = JSON.parse(pm2Status);
         // Check for any stopped processes;
         const stoppedProcesses = status.filter(proc => proc.pm2_env.status === "stopped");
         if (stoppedProcesses.length > 0) {this.log(`Found ${stoppedProcesses.length} stopped PM2 processes, restarting...`, "warn");
+>>>>>>> origin/chore/fix-lint-and-merge
           execSync("pm2 restart all", { "stdio": "inherit" })}
       } catch (error) {  this.log(`Error monitoring "PM2": ${error.message  }`, "error")}
     }, 60000); // Check every minute}
@@ -902,6 +999,18 @@ console.log(""🎯 Starting PM2 Error Automation Orchestrator...");
   return {
   "isRunning": this.isRunning,
       "scheduledJobs": this.scheduledJobs.map(({ name, schedule }) => ({ name, schedule })),
+<<<<<<< HEAD
+      "config": this.config
+
+console.log(""🎯 Starting PM2 Error Automation Orchestrator...")
+// Get automation interval from environment variable ("default": 15 minutes)
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes
+async function $1() {
+  try {
+  console.log(`🎯 Running PM2 Error Automation Orchestrator at ${new Date().toISOString()}"
+console.log(`🎯 Starting PM2 Error Automation Orchestrator...")
+// Get automation interval from environment variable ("default": 15 minutes)
+=======
       "config": this.config;
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -915,6 +1024,7 @@ async function $1() {
 console.log(`🎯 Starting PM2 Error Automation Orchestrator...");
 // Get automation interval from environment variable ("default": 15 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes;
+>>>>>>> origin/chore/fix-lint-and-merge
 async function runErrorAutomationOrchestrator() {
   try {
   console.log("🎯 Running PM2 Error Automation Orchestrator at ${new Date().toISOString()}";
@@ -1024,6 +1134,13 @@ function parseTypeScriptErrors(output) {
   return errors}
 ;
 function parseBuildErrors(output) {
+<<<<<<< HEAD
+  for($2) {
+  if (
+      line.includes("Failed to compile") ||
+      line.includes("Type error") ||
+      line.includes("Cannot find module")
+=======
   const errors = [];
   const lines = output.split("\n");
   for (const line of lines) {
@@ -1031,6 +1148,7 @@ function parseBuildErrors(output) {
       line.includes("Failed to compile") ||;
       line.includes("Type error") ||;
       line.includes("Cannot find module");
+>>>>>>> origin/chore/fix-lint-and-merge
     ) {
   errors.push({
   "message": line.trim(),
@@ -1044,7 +1162,6 @@ async function generateComprehensiveReport(;
   fixesApplied,
   remainingErrors;
 ) {
-  const report = {
   "timestamp": new Date().toISOString(),
     "summary": {
   initialErrors: {
@@ -1080,10 +1197,16 @@ async function generateComprehensiveReport(;
   initialErrors: initialErrors,
       "remainingErrors": remainingErrors},
     "status": "completed"}
+<<<<<<< HEAD
+    process.cwd(),pm2-error-automation-report.json"
+  )
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
+=======
   const reportPath = path.join(;
     process.cwd(),pm2-error-automation-report.json";
   );
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+>>>>>>> origin/chore/fix-lint-and-merge
   console.log("📊 Comprehensive report saved "to": ${reportPath}")}
 ;
 async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {
@@ -1110,8 +1233,12 @@ async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {
 ;
 async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {
   try {
+<<<<<<< HEAD
+  // Create a status file for PM2 monitoring
+=======
   // Create a status file for PM2 monitoring;
     const status = {
+>>>>>>> origin/chore/fix-lint-and-merge
   "timestamp": new Date().toISOString(),
       "initialErrors": initialErrors,
       "fixesApplied": fixesApplied,
@@ -1124,6 +1251,14 @@ async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {
             ).toFixed(2) + "%";
           : "0%",
       "status": remainingErrors.length === 0 ? "clean" : "has_errors"}
+<<<<<<< HEAD
+
+      process.cwd(),pm2-error-automation-status.json"
+    )
+    fs.writeFileSync(statusPath, JSON.stringify(status, null, 2))
+    // Update PM2 logs
+    console.log(` 📈 PM2 Status "Updated": ${status.status} (${status.successRate} success rate)
+=======
 ;
     const statusPath = path.join(;
       process.cwd(),pm2-error-automation-status.json";
@@ -1131,6 +1266,7 @@ async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {
     fs.writeFileSync(statusPath, JSON.stringify(status, null, 2));
     // Update PM2 logs;
     console.log(` 📈 PM2 Status "Updated": ${status.status} (${status.successRate} success rate);
+>>>>>>> origin/chore/fix-lint-and-merge
     `)} catch (error) {
   console.error("❌ PM2 status update "failed": ", error.message)}
 }
@@ -1190,7 +1326,10 @@ module.exports = {
 }
 // Main execution
 async function main() {
+<<<<<<< HEAD
+=======
   const orchestrator = new PM2ErrorAutomationOrchestrator();
+>>>>>>> origin/chore/fix-lint-and-merge
   // Handle graceful shutdown
   process.on('SIGINT', async () => {
     await orchestrator.stop();

@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+import { motion } from 'framer-motion';'
+import Link from 'next/link';'
+import Layout from '../../components/Layout';'
+import { Building, Shield, Users, CheckCircle, ArrowRight, Globe, BarChart3, FileText, Lock, Database, Phone, Mail } from 'lucide-react';;'
+import React from 'react';'
+import Link from 'next/link';';'
+=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -8,6 +16,7 @@ import Link from 'next/link';';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
   // TODO: Implement;
 }
@@ -21,11 +30,72 @@ import {
   FileText,
   Lock,
   Database,
+<<<<<<< HEAD
+  Mail;
+} from 'lucide-react';'
+import Layout from '../../components/Layout';';'
+const services = [;
+  {}
+  {"title": 'Citizen Service Portals',"description": 'Comprehensive digital platforms for citizen-government interaction and service delivery.',"icon": Globe,"features": [;'
+      'Online service applications,','Digital document submission',','Status tracking systems',',"title": 'Citizen Service Portals,',,"description": 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',const services = [;'
+  {"title": 'Citizen Service Portals',,"description": 'Comprehensive digital platforms for citizen-government interaction and service delivery.',"icon": Globe,"features": [,'Online service applications,','Digital document submission',','Status tracking systems',','Multi-language support'';'
+    ];
+  },{}
+    "title": 'Secure Data Management,',,"description": 'Government-grade data security and management systems for sensitive information.,',"icon": Shield,"features": [,'Encrypted data storage,','Access control systems',','Audit trail management',','Compliance monitoring'';'
+    ];
+  },{}
+    "title": 'Digital Identity Solutions,',,"description": 'Secure digital identity verification and management systems for citizens.,',"icon": Users,"features": [,'Biometric authentication,','Digital ID cards',','Identity verification',','Fraud prevention'';'
+    ];
+  },{}
+    "title": 'Public Safety Systems,',,"description": 'Advanced systems for emergency response and public safety management.,',"icon": Phone,"features": [,'Emergency dispatch systems,','Real-time monitoring',','Incident management',','Resource coordination'';'
+    ];
+  },{}
+    "title": 'Government Analytics,',,"description": 'Data analytics platforms for informed policy-making and resource allocation.,',"icon": BarChart3,"features": [,'Performance metrics,','Trend analysis',','Predictive modeling',','Resource optimization'';'
+    ];
+  },{}
+    "title": 'Compliance Management,',,"description": 'Automated systems for regulatory compliance and policy enforcement.,',"icon": FileText,"features": [,'Regulatory tracking,','Compliance reporting',','Policy management',','Audit automation'';'
+    ];
+  }];
+const benefits = [;
+  {}
+    "title": 'Enhanced Security,',,"description": 'Government-grade security measures protect sensitive citizen and government data.,',"icon": Shield;'
+];
+  {"title": 'Enhanced Security',,"description": 'Government-grade security measures protect sensitive citizen and government data.',"icon": Shield;'
+  },{}
+    "title": 'Improved Efficiency,',,"description": 'Digital processes streamline government operations and reduce administrative burden.,',"icon": BarChart3},{}'
+    "title": 'Better Citizen Experience,',,"description": 'User-friendly digital services make government more accessible to citizens.,',"icon": Users},{}'
+    "title": 'Transparency & Accountability,',,"description": 'Digital systems provide transparency and enable better accountability.,',"icon": Globe}];'
+export default function GovernmentPage() {return (<Layout)title="Government Technology Solutions - Zion Tech Group"";"
+      }
+      description="Transform government operations with citizen service portals, secure data management, digital identity solutions, and public safety systems."";"
+  {
+    }
+    "title": 'Citizen Service Portals','
+    "description": 'Comprehensive digital platforms for citizen-government interaction and service delivery.','
+    "icon": Globe,
+    "features": [;
+      'Online service applications,','
+      'Digital document submission',','
+      'Status tracking systems',','
+    "title": 'Citizen Service Portals,',,'
+  "description": 'Comprehensive digital platforms for citizen-government interaction and service delivery.,',;'
+  {;
+    }
+    "title": 'Citizen Service Portals',,'
+  "description": 'Comprehensive digital platforms for citizen-government interaction and service delivery.',;'
+    "icon": Globe,;
+    "features": [,;
+      'Online service applications,',;'
+      'Digital document submission',',;'
+      'Status tracking systems',',;'
+      'Multi-language support'';'
+=======
 
       'Encrypted data storage,',;
       'Access control systems',',;
       'Audit trail management',',;
       'Compliance monitoring'';
+>>>>>>> origin/chore/fix-lint-and-merge
     ];
   },;
   {}
@@ -71,9 +141,16 @@ import {
       'Audit automation'';
     ];
   }
+<<<<<<< HEAD
+;];
+  {}
+    "title": 'Enhanced Security,',,'
+  "description": 'Government-grade security measures protect sensitive citizen and government data.,',;'
+    "icon": Shield;
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
 ];
-const benefits = [;
   {;
     title: 'Enhanced Security',;
     description: 'Government-grade security measures protect sensitive citizen and government data.',;

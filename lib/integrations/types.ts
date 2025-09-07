@@ -1,4 +1,19 @@
+<<<<<<< HEAD
+export type IntegrationCategory = 'crm' | 'ats';
+export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+export type IntegrationProviderId =
+
+ursor/fix-website-loading-errors-and-merge-6662
+
+export type IntegrationCategory = 'crm' | 'ats';
+
+
+
+export type IntegrationCategory = 'crm' | 'ats';
+
+=======
 '
+>>>>>>> origin/chore/fix-lint-and-merge
 export type IntegrationCategory = 'crm' | 'ats';
 
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
@@ -14,12 +29,25 @@ export type IntegrationProviderId =;'
 export type IntegrationCategory = 'crm' | 'ats';
 
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
+<<<<<<< HEAD
+export type IntegrationProviderId =
+  | 'salesforce'
+  | 'hubspot'
+  | 'zoho'
+  | 'pipedrive'
+  | 'greenhouse'
+  | 'lever'
+  | 'workable'
+  | 'bamboohr',
+
+=======
 export type IntegrationProviderId ='
   | 'salesforce''
   | 'hubspot''
   | 'zoho''
   | 'pipedrive''
   | 'greenhouse''
+>>>>>>> origin/chore/fix-lint-and-merge
   | 'lever'
 
   | 'workable';
@@ -56,11 +84,38 @@ export interface SyncRules {
   syncRules?: SyncRules;
   lastSyncAt?: number;
 
+<<<<<<< HEAD
+lastError?: string | null;
+origin/cursor/automate-test-improve-and-merge-code-2533
+
+export interface SyncLogEntry {
+  lastError?: string | null;
+export interface SyncLogEntry {;
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+export interface SyncLogEntry {
+
+  lastError?: string | null;
+export interface SyncLogEntry {;
+
+
+  id: string;
+  timestamp: number;
+  provider_id: IntegrationProviderId;
+  level: 'info' | 'warn' | 'error';
+  action: string;
+
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
   id: string;
   timestamp: number;
   provider_id: IntegrationProviderId;'
   level: 'info' | 'warn' | 'error';
   action: string;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 export interface ManualOverride {
 
@@ -86,6 +141,75 @@ export interface ZapierEvent {;
 export interface ManualOverride {;
   jobId: string;
   disableCrmSync?: boolean;
+<<<<<<< HEAD
+  disableAtsSync?: boolean;export interface ZapierEvent  {id: string;
+  type: 'zion.job.posted' | 'zion.talent.matched';
+  timestamp: number;
+  payload: Record<string, any>;
+  connections: ProviderConnection[];
+  logs: SyncLogEntry[];
+  overrides: ManualOverride[];
+  events: ZapierEvent[];  events: ZapierEvent[];
+}}
+}
+}
+}
+}export interface IntegrationsState  {ursor/fix-website-loading-errors-and-merge-6662;
+  connections: ProviderConnection[];
+  logs: SyncLogEntry[];
+  overrides: ManualOverride[];lastError?: string | null;
+}export interface SyncLogEntry  {id: string, timestamp: number,providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error',action: string,details?: Record<string, any>;
+}
+export interface ManualOverride  {jobId: string, disableCrmSync?: boolean,disableAtsSync?: boolean;
+  events: ZapierEvent[];  events: ZapierEvent[]
+}
+
+
+  lastError?: string | null
+}
+  lastError?: string | null
+}
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+export type IntegrationCategory = $2;
+export type IntegrationProviderId = $2;
+export interface IntegrationProviderMeta {
+  id: IntegrationProviderId, name: string,
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+  icon?: string
+}
+
+
+export interface SyncRules {
+  // CRM rules
+  autoCreateContacts?: boolean,
+  pushNotesMode?: 'auto' | 'manual',
+  // ATS rules
+  autoSyncApplicants?: boolean;
+  autoUploadResumes?: boolean;
+
+export interface ProviderConnection {
+  providerId: IntegrationProviderId;
+  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
+  expiresAt?: number;
+  connectedAt?: number;
+  syncRules?: SyncRules;
+  lastSyncAt?: number;
+  lastError?: string | null;
+export interface SyncLogEntry {
+  id: string;
+  timestamp: number;
+  providerId: IntegrationProviderId;
+  level: 'info' | 'warn' | 'error';
+  action: string;
+  details?: Record<string, any>;
+
+export interface ManualOverride {
+  jobId: string;
+  disableCrmSync?: boolean;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   disableAtsSync?: boolean;
 
 export interface ZapierEvent {;
@@ -93,6 +217,26 @@ export interface ZapierEvent {;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>;
+<<<<<<< HEAD
+
+export interface IntegrationsState {
+  connections: ProviderConnection[];
+  logs: SyncLogEntry[];
+  overrides: ManualOverride[];
+  events: ZapierEvent[];  events: ZapierEvent[]
+  | 'salesforce
+  | hubspot'
+  | 'zoho
+  | pipedrive'
+  | 'greenhouse
+
+  id: string;
+  timestamp: number;
+  provider_id: IntegrationProviderId;
+  level: info' | 'warn | error';
+  action: string;
+
+=======
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
@@ -111,6 +255,7 @@ export interface SyncLogEntry {
 export interface ManualOverride {}
   jobId: string, disableCrmSync?: boolean,;
   disableAtsSync?: boolean;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 export interface ZapierEvent {'
   id: string, type: 'zion.job.posted' | 'zion.talent.matched',

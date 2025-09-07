@@ -61,6 +61,52 @@ if ( {) {
     }
     return result;
   }
+<<<<<<< HEAD
+  const fetchResumeOperations = useFetchResume();
+  const resumeActions = useResumeActions();
+  const workOperations = useWorkExperience();
+  const educationOperations = useEducation();
+  const skillsOperations = useSkills();
+  const certOperations = useCertifications();
+  const resumeListOperations = useResumeList();
+  // Determine overall loading state  // Override the fetch resume function to update local state,
+const fetchResume = async (resumeId?: string) => {
+    }
+    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);  // Override the fetch resume function to update local state,
+    }
+    const result = await fetchResumeOperations && fetchResumeOperations.fetchResume(resumeId);
+import { useState } from 'react';
+import { Resume } from '@/types/resume';
+import { useFetchResume } from './useFetchResume';
+import { useResumeActions } from './useResumeActions';
+import { useWorkExperience } from './useWorkExperience';
+import { useEducation } from './useEducation';
+import { useSkills } from './useSkills';
+import { useCertifications } from './useCertifications';
+import { useResumeList } from './useResumeList';
+export function useResume() {
+  const [resume, setResume] = useState<Resume | null>(null),
+  
+  const fetchResumeOperations = useFetchResume($2);
+  const resumeActions = useResumeActions($2);
+  const workOperations = useWorkExperience($2);
+  const educationOperations = useEducation($2);
+  const skillsOperations = useSkills($2);
+  const certOperations = useCertifications($2);
+  const resumeListOperations = useResumeList($2);
+  // Determine overall loading state
+  const isLoading = $2;
+  // Determine overall error state (use first non-null error)
+  const error = $2;
+  // Override the fetch resume function to update local state
+    const result = await fetchResumeOperations.fetchResume($2);
+    if (result) {
+      }
+      setResume(result)
+    }
+return result;
+  }export * from './useResumeActions';'
+=======
 ;
 
   return {
@@ -138,6 +184,7 @@ export * from './useResumeUtils';
 
 '
 export * from './useResumeActions';'
+>>>>>>> origin/chore/fix-lint-and-merge
 export * from './useWorkExperience';'
 export * from './use_education';'
 export * from './use_skills';'

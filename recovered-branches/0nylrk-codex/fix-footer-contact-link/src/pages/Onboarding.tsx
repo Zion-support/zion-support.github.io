@@ -10,6 +10,93 @@ import {Steps, Step} from "@/components/ui/steps";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export default function Onboarding() {;
+<<<<<<< HEAD
+}
+import { useState } from "react","
+import { useNavigate } from "react-router-dom","
+import { useAuth } from "@/hooks/useAuth","
+import { Button } from "@/components/ui/button","
+import { Header } from "@/components/Header","
+import { Footer } from "@/components/Footer","
+import { UserTypeSelection } from "@/components/onboarding/UserTypeSelection","
+import { ProfileSetup } from "@/components/onboarding/ProfileSetup","
+import { Steps, Step } from "@/components/ui/steps","
+import { supabase } from "@/integrations/supabase/client";"
+import { toast } from "@/hooks/use-toast";"
+export default function Onboarding() {  const { user, updateProfile, isLoading } = useAuth();
+  const [currentStep, setCurrentStep] = useState(0);
+  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);"
+  const navigate = useNavigate();
+  const mapUserTypeToDatabase = ("type": "serviceProvider" | "talent" | "client") => {"
+    }
+    switch (type) {
+  // Convert our user types to match what's expected in the database;'
+  }
+  const mapUserTypeToDatabase = ("type": "serviceProvider" | "talent" | "client") => {;"
+    }
+    switch (type) {;
+      }
+      case "serviceProvider": return "creator";"
+      case "talent":;"
+        return "jobSeeker";"
+  // Convert our user types to match what's expected in the database;'
+    }
+    switch (type) {;
+      }
+      case "serviceProvider": return "creator";"
+      case "talent":;"
+        return "jobSeeker";"
+export default function Onboarding() {
+  }
+  const { user, updateProfile, isLoading } = useAuth();
+  // Convert our user types to match what's expected in the database'
+    }
+    switch (type) {
+      }
+      case "serviceProvider": return "creator","
+      case "talent":"
+return "jobSeeker",;"
+      case "client":"
+return "employer";"
+      "default":
+return "buyer";"
+    }
+  }
+  const handleUserTypeSelect = ("type": "serviceProvider" | "talent" | "client") => {"
+    }
+    setUserType(type);
+  },
+    }
+    setUserType(type),
+    // Direct to specific registration page based on user type,
+if (type === "serviceProvider") {"
+      }
+      navigate('/service-onboarding')'
+return;
+    } else if (type === "talent") {    }"
+  },
+  const handleProfileComplete = async ("data": { "displayName": string, "bio": string, "headline": string }) => {
+    }
+    if (!user |!userType) {
+      }
+      toast({        "title": "Authentication Error","
+        }
+        "description": "Your session may have expired. Please log in again.","
+"variant": "destructive"}),;"
+      navigate('/login'),'
+return;
+    }
+const dbUserType = mapUserTypeToDatabase(userType),;
+          // Update onboarding milestone,
+await supabase.rpc('update_onboarding_milestone', {'
+        }
+        "_user_id": user.id;
+    "_milestone": "_milestone","
+    "_status": true,
+"description": 'There was a problem updating your profile. Please try again.''
+"variant": 'destructive'});'
+    }
+=======
 
   const { user, updateProfile, isLoading } = useAuth();
 
@@ -18,6 +105,7 @@ export default function Onboarding() {;
 "
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
+>>>>>>> origin/chore/fix-lint-and-merge
 
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
@@ -274,7 +362,21 @@ export default function Onboarding() { return null; }
       return;
     }
   }
+<<<<<<< HEAD
+;
+    { "label": "Select Role", "description": "Choose how you'll use the platform" },"
+    { "label": "Create Profile", "description": "Tell us about yourself" }],"
+  // Check condition,
+if ( {) {
+  $2
+}
+    navigate ('/login');'
+    return null;
+  }
+return (;
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     <>;
       <Header />;"
       <div className="min-h-screen bg-zion-blue py-12 px-4">;"

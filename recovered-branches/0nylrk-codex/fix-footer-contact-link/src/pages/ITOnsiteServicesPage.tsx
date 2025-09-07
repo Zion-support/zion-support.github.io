@@ -127,7 +127,52 @@ export default function ITOnsiteServicesPage() {};
   }
 
   },
+<<<<<<< HEAD
+  
+import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
+import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
+import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
+export default function ITOnsiteServicesPage() {
+  const [searchParams] = useSearchParams($2);
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
+  const [searchQuery, setSearchQuery] = useState($2);
+  // Check for success parameter in URL
+  const success = searchParams.get($2);
+  // Show success toast if redirected from successful payment
+  useEffect(() => {
+    if (success = $2;
+        description: "Your IT onsite service request has been received. Our team will contact you shortly."})
+    }
+  }, [success]),
+  
+  // Popular countries for the featured cards
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
+  
+  // Filter countries based on search query
+    .filter(country =>
+      country.country.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    .sort((a, b) => {
+      // First, sort by popular status
+      const aIsPopular = popularCountries.includes($2);
+      const bIsPopular = popularCountries.includes($2);
+      if (aIsPopular && !bIsPopular) return -1,
+      if (!aIsPopular && bIsPopular) return 1,
+      
+      // Then sort alphabetically
+      return a.country.localeCompare(b.country)
+    }),
+  
+    setSelectedCountry($2);
+    // Scroll to the service details section
+    setTimeout(() => {
+      document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
+    }, 100)
+  },
+  
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   return (
     <AppLayout>"
       <section className="py-16 bg-zion-blue">"

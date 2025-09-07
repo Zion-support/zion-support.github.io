@@ -40,10 +40,14 @@ class AdvancedAppEnhancementSuite {
   async createPerformanceOptimizationScript() {
     this.log('🚀 Creating Performance Optimization Script');
     
+<<<<<<< HEAD
+const scriptContent = `#!/usr/bin/env node;
+=======
     const scriptContent = `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 class PerformanceOptimizer {
   constructor() {
@@ -168,10 +172,13 @@ module.exports = PerformanceOptimizer;
   async createSecurityEnhancementScript() {
     this.log('🔒 Creating Security Enhancement Script');
     
+<<<<<<< HEAD
+=======
     const scriptContent = `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 class SecurityEnhancer {
   constructor() {
@@ -237,7 +244,6 @@ class SecurityEnhancer {
   async generateSecurityReport() {
     this.log('📋 Generating security report...');
     
-    const report = {
       timestamp: new Date().toISOString(),
       vulnerabilities: this.vulnerabilities,
       recommendations: [
@@ -289,9 +295,12 @@ module.exports = SecurityEnhancer;
   async createSEOOptimizationScript() {
     this.log('🔍 Creating SEO Optimization Script');
     
+<<<<<<< HEAD
+=======
     const scriptContent = `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 class SEOOptimizer {
   constructor() {
@@ -317,11 +326,8 @@ class SEOOptimizer {
   }
 
   findAndAnalyzeHTML(dir) {
-    const files = fs.readdirSync(dir);
     
     for (const file of files) {
-      const fullPath = path.join(dir, file);
-      const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
         this.findAndAnalyzeHTML(fullPath);
@@ -431,7 +437,6 @@ class SEOOptimizer {
   async generateSEOReport() {
     this.log('📋 Generating SEO report...');
     
-    const report = {
       timestamp: new Date().toISOString(),
       issues: this.seoIssues,
       recommendations: [
@@ -486,9 +491,12 @@ module.exports = SEOOptimizer;
   async createAccessibilityEnhancementScript() {
     this.log('♿ Creating Accessibility Enhancement Script');
     
+<<<<<<< HEAD
+=======
     const scriptContent = `#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 class AccessibilityEnhancer {
   constructor() {
@@ -504,7 +512,6 @@ class AccessibilityEnhancer {
   async analyzeHTMLFiles() {
     this.log('📄 Analyzing HTML files for accessibility...');
     try {
-      const distDir = path.join(this.projectRoot, 'dist');
       if (fs.existsSync(distDir)) {
         this.findAndAnalyzeHTML(distDir);
       }
@@ -514,11 +521,8 @@ class AccessibilityEnhancer {
   }
 
   findAndAnalyzeHTML(dir) {
-    const files = fs.readdirSync(dir);
     
     for (const file of files) {
-      const fullPath = path.join(dir, file);
-      const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
         this.findAndAnalyzeHTML(fullPath);
@@ -530,10 +534,8 @@ class AccessibilityEnhancer {
 
   analyzeHTMLFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
       
       // Check for alt attributes on images
-      const imgTags = content.match(/<img[^>]*>/g) || [];
       for (const imgTag of imgTags) {
         if (!imgTag.includes('alt=')) {
           this.accessibilityIssues.push({
@@ -595,7 +597,6 @@ class AccessibilityEnhancer {
   async generateAccessibilityReport() {
     this.log('📋 Generating accessibility report...');
     
-    const report = {
       timestamp: new Date().toISOString(),
       issues: this.accessibilityIssues,
       recommendations: [
@@ -669,7 +670,6 @@ module.exports = AccessibilityEnhancer;
     const endTime = Date.now();
     const duration = endTime - this.startTime;
     
-    const report = {
       timestamp: new Date().toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
       summary: {

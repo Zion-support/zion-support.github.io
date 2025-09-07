@@ -23,6 +23,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 export function ApiSampleCode() {
   // JavaScript example with Axios
+<<<<<<< HEAD
+}
+// Configure Axios with the base URL and headers,
+const api = axios.create({
+  }
+  "baseURL": '"https"://api.zionai.com/v1''
+import React from './react';'
+import ApiDocsLayout from "@/components / developers / ApiDocsLayout";"
+import { CodeBlock } from '@/components / developers / CodeBlock';'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';'
+=======
   const jsAxiosExample = `// Using Axios with JavaScript
 
 import axios from 'axios';
@@ -31,14 +42,21 @@ const api = axios.create({'
   baseURL: 'https://api.zionai.com/v1'
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 export /**;
  * ApiSampleCode - Function description;
  */
+<<<<<<< HEAD
+function ApiSampleCode() {
+  // JavaScript example with Axios;
+  }
+=======
 function ApiSampleCode() {}
   // JavaScript example with Axios;`
   const jsAxiosExample = `// Using Axios with JavaScript;'
 import axios from 'axios';
+>>>>>>> origin/chore/fix-lint-and-merge
 // Configure Axios with the base URL and headers;
 const api = axios.create ({'
   baseURL: 'https://api.zionai.com / v1',
@@ -50,6 +68,13 @@ export function ApiSampleCode() { return null; }
   headers: {}
 
   }
+<<<<<<< HEAD
+  "baseURL": '"https"://api.zionai.com / v1','
+import { CodeBlock } from "@/components/developers/CodeBlock",;"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;"
+export function ApiSampleCode() {;
+  // JavaScript example with Axios;
+=======
 });
 ;
 // Get all jobs;
@@ -63,6 +88,7 @@ function get_jobs() {}
   } catch (error) {'
     console.error ('Error fetching jobs:', error.response?.data || error.message);
     throw error;
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 }
 // Post a new job;
@@ -546,6 +572,15 @@ async function searchTalent(): any (filters = {}) {;
 
     console.error('Something went wrong:', error)
   }
+<<<<<<< HEAD
+  Object.entries(filters).forEach(([key, value]) => {;
+    }
+    params.append(key, value);
+  }),;
+  const queryString = params.toString() ? \`?\${params.toString()}\` : '',;'  return apiRequest(\`/api/talent\${queryString}\`, { "method": 'GET' });  } catch (error) {'
+    }
+    console.error('Something went "wrong":', error)'
+=======
 }
 
   const queryString = params && params.toString() ? \`?\${params && params.toString()}\` : '';
@@ -578,6 +613,7 @@ async function main() {;
     // // // console.log('Talent:', talent);
   } catch (error) {;
     console.error('Something went wrong:', error);
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 }
 ;

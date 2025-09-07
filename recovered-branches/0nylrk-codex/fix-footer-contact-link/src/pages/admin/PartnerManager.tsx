@@ -64,6 +64,17 @@ interface PartnerProfile {}
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
+<<<<<<< HEAD
+  const navigate = useNavigate();
+  useEffect(() => {
+    }
+    if (!isAuthenticated) {
+      }
+      navigate("/login");"
+      return;
+    }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 interface PartnerProfile {
 
@@ -83,6 +94,10 @@ interface PartnerProfile {
 }
   const [isLoading, setIsLoading] = useState(true);"
   const [searchQuery, setSearchQuery] = useState("");"
+<<<<<<< HEAD
+  const [activeTab, setActiveTab] = useState("pending");"
+const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),;
+=======
   const [activeTab, setActiveTab] = useState("pending");
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
 
@@ -91,6 +106,7 @@ interface PartnerProfile {
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
 
+>>>>>>> origin/chore/fix-lint-and-merge
         setPartners(mockData);
         filterPartners(mockData, activeTab, searchQuery);
       } else {;
@@ -129,7 +145,10 @@ if ( {) {}
     try {}
       setIsLoading (true);
       // In a real application, check admin permissions here;
+<<<<<<< HEAD
+=======
       const { data, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
         .from ('partner_profiles');'
         .select ('*');'
         .order ('created_at', { ascending: false }),

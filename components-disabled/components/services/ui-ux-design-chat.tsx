@@ -7,6 +7,15 @@ const UiUxDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>UiUxDesignChat - Zion Tech Solutions</title>;
+        <meta name = "description" content="UiUxDesignChat service" />{" "}"
+;
+  return (<div>;
+      <Head></Head>;<meta name="description" content="UiUxDesignChat service" />;"
+=======
 const UiUxDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -16,6 +25,7 @@ const UiUxDesignChat: NextPage = () => ;
   const UiUxDesignChat: NextPage = () => ;
   return (<div />;
       <Head /></Head>;<meta name=\"description\" content=\"UiUxDesignChat service\" />;
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       </Head>;<meta name=\"description\" content=\"UiUxDesignChat service\" />;
       </Head>;
@@ -36,11 +46,17 @@ const UiUxDesignChat: NextPage = () => {
       <Head />;
         <title />UiUxDesignChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+
+}
+return (;
+=======
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const UiUxDesignChat: NextPage = () => {
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <div>
 </div>
       <Head>
@@ -50,6 +66,8 @@ const UiUxDesignChat: NextPage = () => {
 
         <title>UiUxDesignChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+=======
 const UiUxDesignChat: NextPage = () => {
   return (
     <div />
@@ -57,6 +75,7 @@ const UiUxDesignChat: NextPage = () => {
 
       </Head>;
 
+>>>>>>> origin/chore/fix-lint-and-merge
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Service details coming soon...</p>
@@ -94,11 +113,18 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title > UiUxDesignChat - Zion Tech Solutions</title>;
+        <meta name="description" content="UiUxDesignChat service" />{" "}"
+=======
 const UiUxDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"UiUxDesignChat service\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1  /> UiUxDesignChat</h1>;
@@ -122,11 +148,18 @@ export default UiUxDesignChat;<div />;
     </div>;
   )},export default UiUxDesignChat;
 
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>UiUxDesignChat - Zion Tech Solutions</title>;
+        <meta name="description" content="UiUxDesignChat service" />{" "}"
+=======
 const UiUxDesignChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />UiUxDesignChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"UiUxDesignChat service\" />{\" \"}
+>>>>>>> origin/chore/fix-lint-and-merge
       </Head>;
       <main />;
         <h1 />UiUxDesignChat</h1>;
@@ -142,7 +175,10 @@ export default UiUxDesignChat;<title />UiUxDesignChat - Zion Tech Solutions</tit
 };
 
 export default UiUxDesignChat;
+<<<<<<< HEAD
+=======
 const UiUxDesignChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />
@@ -164,7 +200,10 @@ export default UiUxDesignChat;
         <title />UiUxDesignChat - Zion Tech Solutions</title>
         <title />UiUxDesignChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
+=======
 const UiUxDesignChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
  ;
   return (
     <div />

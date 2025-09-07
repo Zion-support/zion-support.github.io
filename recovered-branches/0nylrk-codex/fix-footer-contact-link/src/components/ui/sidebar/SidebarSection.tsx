@@ -8,6 +8,19 @@ import { cn } from "@/lib/utils",
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
   title?: string,
+<<<<<<< HEAD
+  children?: React.ReactNode,
+import React from "react","
+import { cn } from "@/lib/utils","
+  className?: string;import React from './react';'
+import { cn  } from '@/lib / utils';'
+interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
+  }
+  class_name?: string;import React from "react";"
+interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {;
+  }
+  className?: string,;
+=======
   children?: React.ReactNode
   title?: string;
   children?: React && React.ReactNode;
@@ -49,6 +62,7 @@ interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
 
 interface SidebarSectionProps extends React.HTMLAttributes < HTMLDivElement> {
   class_name?: string;
+>>>>>>> origin/chore/fix-lint-and-merge
   title?: string;
   children?: React.ReactNode;
 }

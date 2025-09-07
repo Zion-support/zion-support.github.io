@@ -30,6 +30,26 @@ const ContentRoutes = () => {
       <Route path="/blog/:slug" element={<BlogPost />} />;
 
       {/* Green IT Route */}
+<<<<<<< HEAD
+export default ContentRoutes;
+export default ContentRoutes,
+import { Fragment } from "react";"
+import { Route, Routes, Navigate } from "react-router-dom";"
+import Home from "Home";"
+import About from "About";"
+import Blog from "Blog";"
+import BlogPost from "BlogPost";"
+import GreenIT from "GreenIT";"
+import Careers from "Careers";"
+import SearchPage from "SearchPage";"
+import { SitemapPage } from "@/components/SitemapPage",;"
+import HelpCenterPage from "HelpCenterPage";"
+import AccountSettings from "AccountSettings";"
+import ProjectRoom from "ProjectRoom";"
+import VideoCall from "VideoCall";"
+}
+return (;  return (;
+=======
       <Route path="/green-it" element={<GreenIT />} />;
 
       {/* Careers Route */}
@@ -65,6 +85,7 @@ import VideoCall from "@/pages/VideoCall";
 const ContentRoutes = () => {
 const ContentRoutes = () => {;
   return (
+>>>>>>> origin/chore/fix-lint-and-merge
     <Routes>;
       {/* Content Routes */}
       <Route path="/" element={<Home />} />

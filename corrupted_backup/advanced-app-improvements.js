@@ -40,8 +40,14 @@ export class HealthChecker {
 
   getStatus() {
     const allResults = Array.from(this.results.values());
+<<<<<<< HEAD
+
+
+const total = allResults.length;
+=======
     const healthy = allResults.filter(r => r.status === 'healthy').length;
     const total = allResults.length;
+>>>>>>> origin/chore/fix-lint-and-merge
     
     return {
   // TODO: Implement
@@ -68,7 +74,10 @@ export class PerformanceMonitor {
       console.warn(\`Timer "\${name}" was not started\`);"
       return;
 
+<<<<<<< HEAD
+=======
     const duration = performance.now() - metric.start;
+>>>>>>> origin/chore/fix-lint-and-merge
     metric.duration = duration;
     metric.end = performance.now();
     
@@ -78,6 +87,10 @@ export class PerformanceMonitor {
     this.thresholds.set(name, threshold);
 
   getMetrics() {
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     for (const [name, metric] of this.metrics) {
       const threshold = this.thresholds.get(name);
       results[name] = {
@@ -198,7 +211,12 @@ export class MemoryCache {
 
   set(key, value, ttl = this.defaultTTL) {
     if (this.cache.size >= this.maxSize) {
+<<<<<<< HEAD
+     ;
+  }
+=======
       const firstKey = this.cache.keys().next().value;
+>>>>>>> origin/chore/fix-lint-and-merge
       this.cache.delete(firstKey);
 
     this.cache.set(key, {
@@ -261,6 +279,17 @@ export class MemoryCache {
       .sort((a, b) => a[1] - b[1])[0][0];
     this.delete(oldestKey);
   }
+<<<<<<< HEAD
+}``  };
+
+  Object.entries(cachingFiles).forEach(([filename, content]) => {
+    }
+    fs.mkdirSync(path.dirname(fullPath), { "recursive": true
+});
+    fs.writeFileSync(fullPath, content);
+    console.log(`Created ${filename}`);`  });
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 export const memoryCache = new MemoryCache();
@@ -293,7 +322,11 @@ export class RateLimiter {
 
   isAllowed(identifier) {
     const now = Date.now();
+<<<<<<< HEAD
+
+=======
     const windowStart = now - this.windowMs;
+>>>>>>> origin/chore/fix-lint-and-merge
     
     if (!this.requests.has(identifier)) {
       this.requests.set(identifier, []);
@@ -309,7 +342,14 @@ export class RateLimiter {
     recentRequests.push(now);
 
   getRemainingRequests(identifier) {
+<<<<<<< HEAD
+    }
+
+
+
+=======
     const userRequests = this.requests.get(identifier) || [];
+>>>>>>> origin/chore/fix-lint-and-merge
     
     return Math.max(0, this.maxRequests - recentRequests.length);
     'api/response-cache.js': `// Response caching middleware;
@@ -320,6 +360,12 @@ export class ResponseCache {
   generateKey(req) {`;
     return \`\${req.method}:\${req.url}:\${JSON.stringify(req.query)}\`;
 
+<<<<<<< HEAD
+  get(key) {
+    }
+    if (!item) return null;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
     if (Date.now() > item.expiry) {
 
@@ -331,8 +377,14 @@ export class ResponseCache {
 
 
   Object.entries(apiFiles).forEach(([filename, content]) => {
+<<<<<<< HEAD
+    }
+    fs.mkdirSync(path.dirname(fullPath), { "recursive": true
+});
+=======
     const fullPath = path.join('/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+>>>>>>> origin/chore/fix-lint-and-merge
     fs.writeFileSync(fullPath, content);
     console.log(`Created ${filename}`);
   });

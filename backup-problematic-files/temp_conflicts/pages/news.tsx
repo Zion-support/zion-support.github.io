@@ -30,8 +30,102 @@ import React from 'react';
       featured:true;
     },;
     {;
+<<<<<<< HEAD
+      }
+      "id":2,;
+      "title":"New Partnership with Global Healthcare Consortium",;"
+      "excerpt":"We're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.",;"
+      "category":"Partnership",;"
+      "author":"Business Development",;"
+      "date":"2025-01-12",;"
+      "readTime":"4 min read",;"
+      "image":"/images/news/healthcare-partnership.jpg",;"
+      "tags":["Healthcare", "Partnership", "AI"];"
+    },;
+    {;
+      }
+      "id":3,;
+      "title":"Breakthrough in Autonomous Cybersecurity Systems",;"
+      "excerpt":"Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.",;"
+      "category":"Research",;"
+      "author":"Research Team",;"
+      "date":"2025-01-10",;"
+      "readTime":"6 min read",;"
+      "image":"/images/news/cybersecurity-breakthrough.jpg",;"
+      "tags":["Cybersecurity", "Research", "Autonomous Systems"];"
+    },;
+    {;
+      }
+      "id":4,;
+      "title":"Space Technology Division Expands Operations",;"
+      "excerpt":"Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.",;"
+      "category":"Company News",;"
+      "author":"Space Technology Team",;"
+      "date":"2025-01-08",;"
+      "readTime":"3 min read",;"
+      "image":"/images/news/space-expansion.jpg",;"
+      "tags":["Space Technology", "Expansion", "Satellites"];"
+    },;
+    {;
+      }
+      "id":5,;
+      "title":"AI Ethics and Governance Framework Released",;"
+      "excerpt":"We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.",;"
+      "category":"Policy",;"
+      "author":"AI Ethics Team",;"
+      "date":"2025-01-05",;"
+      "readTime":"7 min read",;"
+      "image":"/images/news/ai-ethics-framework.jpg",;"
+      "tags":["AI Ethics", "Governance", "Policy"];"
+    },;
+    {;
+      }
+      "id":6,;
+      "title":"Financial Services Innovation Award Winner",;"
+      "excerpt":"Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.",;"
+      "category":"Awards",;"
+      "author":"Marketing Team",;"
+      "date":"2025-01-03",;"
+      "readTime":"3 min read",;"
+      "image":"/images/news/financial-award.jpg",;"
+      "tags":["Awards", "Financial Services", "Quantum Computing"];"
+export default function News() {;
+  }
+    {;
+      }
+      "id":1,;
+      "title":'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',;'
+      "excerpt":'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, optimization, and scientific research.',;'
+      "category":'Company News',;'
+      "author":'Dr. Sarah Chen',;'
+      "date":'2024-01-15',;'
+      "readTime":'5 min read',;'
+      "image":'/api/placeholder/600/400',;'
+      "tags":['AIQuantum Computing', 'Innovation'],;'
+import Head from "Head";"
+;
+export default function NewsPage() {;
+  }
+  const newsArticles = [;
+    {;
+      }
+      "id":1,;
+      "title":"Zion Tech Group Launches New AI-Powered Automation Platform",;"
+      "excerpt":"Our latest innovation brings autonomous decision-making capabilities to enterprise environments, revolutionizing how businesses operate.",;"
+      "date":"2025-01-19",;"
+      "category":"Company News",;"
+      "author":"Zion Tech Group",;"
+      "readTime":"3 min read",;"
+      "image":"",;"
+      "featured":true;
+    },;
+    {;
+      }
+      "id":2,;
+=======
       id:2,;
 
+>>>>>>> origin/chore/fix-lint-and-merge
             </motion.div>;
           </div>;
         </section>;"
@@ -166,6 +260,44 @@ import { ;
 } from 'lucide-react',;
 import Link from 'next/link';
 export default function News() {;
+<<<<<<< HEAD
+  }
+  const [searchTerm, setSearchTerm] = useState(''),;'
+;
+    { "id":'all', "name":'All News', "count":24 },;'
+    { "id":'ai', "name":'AI & Consciousness', "count":8 },;'
+    { "id":'quantum', "name":'Quantum Computing', "count":6 },;'
+    { "id":'enterprise', "name":'Enterprise IT', "count":5 },;'
+    { "id":'research', "name":'Research & Development', "count":3 },;'
+    { "id":'industry', "name":'Industry Insights', "count":2 }'
+  ],;
+;
+    {;
+      }
+      "id":1,;
+      "title":'Zion Tech Group Launches Revolutionary AI Consciousness Platform',;'
+      "excerpt":'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.',;'
+      "category":'ai',;'
+      "author":'Dr. Sarah Chen',;'
+      "date":'2024-01-15',;'
+      "readTime":'5 min read',;'
+      "image":'/images/news/ai-consciousness-launch.jpg',;'
+      "featured":true,;
+      "tags":['AI ConsciousnessPlatform Launch', 'Innovation'];'
+    },;
+    {;
+      }
+      "id":2,;
+      "title":'Quantum Computing "Breakthrough":Achieving 1000+ Qubit Stability',;'
+      "excerpt":'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.',;'
+      "category":'quantum',;'
+      "author":'Prof. Michael Rodriguez',;'
+      "date":'2024-01-12',;'
+      "readTime":'7 min read',;'
+      "image":'/images/news/quantum-breakthrough.jpg',;'
+      "featured":true,;
+      "tags":['Quantum ComputingResearch', 'Breakthrough'];'
+=======
   const [searchTerm, setSearchTerm] = useState(),;
   const [selectedCategory, setSelectedCategory] = useState('all'),;
   const categories = [;
@@ -194,6 +326,7 @@ export default function News() {;
       readTime: '7 min read';,;
       image: '/images/news/quantum-breakthrough.jpg';,;
       tags: ['Quantum ComputingResearch';, 'Breakthrough'];
+>>>>>>> origin/chore/fix-lint-and-merge
     }
   const latestNews = [;
       id: 3;,;
@@ -281,6 +414,64 @@ export default function News() {;
             <div className="flex flex-wrap gap-3 justify-center">;"
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
+<<<<<<< HEAD
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;`                    }
+                    selectedCategory === category.id;
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';'
+                      :'bg-white/10 text-gray-300 "hover":bg-white/20 "hover":text-white';'
+                  }`}`                >;
+                  {category.name} ({category.count});
+                </button>;
+              ))}
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+;
+      {/* Featured News Section */}
+      <section className="py-20 px-4 "sm":px-6 "lg":px-8">;"
+        <div className="max-w-7xl mx-auto">;"
+          <motion.h2 ;
+    'All NewsCompany News',;'
+    'PartnershipsAI & Ethics',;'
+    'Quantum TechnologySpace Technology',;'
+    'Micro SAASIT Services',;'
+    'MetaverseIndustry Insights';'
+  ],;
+;
+    }
+    const date = new Date(dateString),;
+    return date.toLocaleDateString('en-US', {;'
+      }
+      "year":'numeric',;'
+      "month":'long',;'
+      "day":'numeric';'
+    }),;
+  },;
+;
+  return (;
+    <div className="min-h-screen bg-black text-white">;"
+      {/* Hero Section */}
+      <section className="relative py-20 "lg":py-32 overflow-hidden">;"
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/20"></div>;"
+        <div className="relative z-10 max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center">;"
+          <motion.h1 ;
+            initial={{ "opacity":0, "y":20 }}
+            animate={{ "opacity":1, "y":0 }}
+            transition={{ "duration":0.8 }}
+            className="text-5xl "lg":text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-6";"
+          >;
+            Latest News & Insights;
+          </motion.h1>;
+          <motion.p ;
+            initial={{ "opacity":0, "y":20 }}
+            animate={{ "opacity":1, "y":0 }}
+            transition={{ "duration":0.8, "delay":0.2 }}
+            className="text-xl "lg":text-2xl text-gray-300 max-w-4xl mx-auto mb-8";"
+          >;
+            Stay updated with the latest developments in AI, quantum computing, space technology, and more from Zion Tech Group.;
+          </motion.p>;
+=======
           <motion.h2 ;"
     'All NewsCompany News',;
     'PartnershipsAI & Ethics',;
@@ -293,6 +484,7 @@ export default function News() {;
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;"
             className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-6";"
             className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8";"
+>>>>>>> origin/chore/fix-lint-and-merge
           <motion.div ;
             <a href="#featured" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">;"
 </a>

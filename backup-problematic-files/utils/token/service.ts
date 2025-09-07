@@ -16,7 +16,6 @@ export function earnTokens(
 
 ): TokenTransaction {
   if (amount <= 0) throw new Error("Amount must be positive"),
-  const wallet = tokenStore.getWallet(userId)
   const newBalance = wallet.balance + amount
   tokenStore.setWalletBalance(userId, newBalance),
   const tx: TokenTransaction = {
@@ -38,11 +37,9 @@ export function burnTokens(
 
 ): TokenTransaction {
   if (amount <= 0) throw new Error("Amount must be positive"),
-  const wallet = tokenStore.getWallet(userId)
   if (wallet.balance < amount) throw new Error("Insufficient balance"),
   const newBalance = wallet.balance - amount
   tokenStore.setWalletBalance(userId, newBalance),
-  const tx: TokenTransaction = {
     id: randomUUID(),
     userId,
     type: "burn",

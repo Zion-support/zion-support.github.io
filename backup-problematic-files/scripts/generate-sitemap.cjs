@@ -16,6 +16,8 @@ const path = require('path');
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 #!/usr/bin/env node
 const fs = require('fs');
+<<<<<<< HEAD
+=======
 const path = require('path');
 /**
  * Generate sitemap for the website
@@ -97,6 +99,7 @@ if (require.main === module) {
 
 module.exports = SitemapGenerator;
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 /**
  * Generate sitemap for the website
@@ -190,9 +193,90 @@ class SitemapGenerator {
 }
 
 module.exports = SitemapGenerator;
+<<<<<<< HEAD
+/**
+ * Generate sitemap for the website
+ */
+// Static pages that should be included in sitemap;
+  '/about',
+  '/services',
+  '/solutions',
+  '/products',
+  '/pricing',
+  '/contact',
+  '/privacy',
+  '/terms',
+  '/cookies',
+  '/careers',
+  '/blog',
+  '/case-studies',
+  '/whitepapers',
+  '/webinars',
+  '/events',
+  '/news',
+  '/support',
+  '/docs',
+  '/api',
+  '/ai-services',
+  '/it-services',
+  '/micro-saas',
+  '/cybersecurity',
+  '/cloud-services',
+  '/digital-transformation'
+];
+// Dynamic pages patterns;
+  'pages/solutions/*.tsx',
+  'pages/products/*.tsx'
+];
+function generateSitemap() {}
+  // Add static pages;
+  STATIC_PAGES.forEach(page => {})
+    urls.push({})
+      "loc": `${BASE_URL}${page}`,`
+      "lastmod": currentDate,
+      "changefreq": page === '' ? 'daily' : 'weekly',
+      "priority": page === '' ? '1.0' : '0.8'
+    })}
+});
+  // Add dynamic pages;
+  DYNAMIC_PATTERNS.forEach(pattern => {})
+    files.forEach(file => {})
+      // Skip index files and special pages;
+      if (file.includes('index.') || file.includes('_app.') || file.includes('_document.')) {}
+        return};
+      // Convert file path to URL;
+      urls.push({})
+        "loc": url,
+        "lastmod": currentDate,
+        "changefreq": 'monthly',
+        "priority": '0.6'
+      })})}
+});
+  // Generate XML;
+<urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(url => `  <url>`})
+    <loc>${url.loc}</loc>
+    <lastmod>${url.lastmod}</lastmod>
+    <changefreq>${url.changefreq}</changefreq>
+    <priority>${url.priority}</priority>
+  </url>").join('\n')};
+</urlset>";
+  // Write sitemap;
+  fs.writeFileSync(SITEMAP_PATH, sitemap, 'utf8');
+  }
+if (require.main === module) {
+  generateSitemap()}
+module.exports = { generateSitemap };
+  console.log(`✓ Sitemap generated with ${urls.length} URLs`);
+  console.log(`  "Location": ${SITEMAP_PATH}`)};
+if (require.main === module) {}
+  generateSitemap()};
+module.exports = { generateSitemap };
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   const generator = new SitemapGenerator();
   generator.run().catch(console.error);
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 module.exports = SitemapGenerator;

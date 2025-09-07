@@ -42,8 +42,12 @@ export default function EnterpriseBilling() {;
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 export default function EnterpriseBilling() {
+<<<<<<< HEAD
+  }
+=======
   const { user } = useAuth(),
   
+>>>>>>> origin/chore/fix-lint-and-merge
   // Check if user has billing permissions
   const hasBillingAccess = user?.role === "enterprise_admin" || 
                           (user?.permissions && user.permissions.includes('billing_access')),
@@ -51,6 +55,20 @@ export default function EnterpriseBilling() {
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
   }
+<<<<<<< HEAD
+return (;
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer",;"
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { Navigate } from "react-router-dom",;"
+import { SEO } from "@/components/SEO",;"
+import { ProtectedRoute } from "@/components/ProtectedRoute",;"
+export default function EnterpriseBilling() {;
+  }
+  // Check if user has billing permissions;
+                          (user?.permissions && user.permissions.includes('billing_access'));'
+=======
   return (
 
 import React from "react",;
@@ -66,6 +84,7 @@ export default function EnterpriseBilling() {;
   // Check if user has billing permissions;
   const hasBillingAccess = user?.role === "enterprise_admin" ||;
                           (user?.permissions && user.permissions.includes('billing_access'));
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!hasBillingAccess) {;
     return <Navigate to="/unauthorized" />;
   }
@@ -81,6 +100,51 @@ export default function EnterpriseBilling() {;
       <Footer />;
     </ProtectedRoute>;
 
+<<<<<<< HEAD
+}
+  }
+return (;
+import React from './react';'
+import { Header } from '@/components / Header';'
+import { Footer } from '@/components / Footer';'
+import { BillingDashboard } from '@/components / enterprise / billing / BillingDashboard';'
+import { use_auth } from '@/hooks / use_auth';'
+import { Navigate } from './react-router-dom';'
+import { SEO } from '@/components / SEO';'
+import { ProtectedRoute } from '@/components / ProtectedRoute';'
+export default /**
+ * EnterpriseBilling - Function description
+ */
+function EnterpriseBilling() {
+  }
+  const { user } = use_auth ();
+;
+  // Check if user has billing permissions;
+                          (user?.permissions && user.permissions.includes ('billing_access'));'
+;
+  // Check condition,
+if ( {) {
+  $2
+}
+    return <Navigate to="/unauthorized" />;"
+  }
+return (;
+    <ProtectedRoute>;
+      <SEO;
+        title="Enterprise Billing - Zion AI Marketplace";"
+        description="Manage your subscription, view invoice history, and download billing statements.";" />;
+      <Header />;
+      <main className="min - h-screen bg-background">;"
+        <BillingDashboard />;
+      </main>;
+      <Footer />;
+    </ProtectedRoute>);
+}
+  )
+}
+}
+;
+=======
       />
       <Header />
       <main className="min-h-screen bg-background">
@@ -88,3 +152,4 @@ export default function EnterpriseBilling() {;
       </main>
       <Footer />
     </ProtectedRoute>
+>>>>>>> origin/chore/fix-lint-and-merge

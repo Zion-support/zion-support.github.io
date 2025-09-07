@@ -72,6 +72,13 @@ if ( {) {}
     try {}
       setIsLoading (true);
 ;
+<<<<<<< HEAD
+        .from ("job_applications");"
+        .select (`;`          *;
+          "job": jobs (*),
+          "talent_profile":profiles ! talent_id (id, display_name, avatar_url, bio);
+        `);`        .order ("created_at", { "ascending": false });"
+=======
       let query = supabase;"
         .from ("job_applications");`
         .select (`;
@@ -80,6 +87,7 @@ if ( {) {}
           talent_profile:profiles ! talent_id (id, display_name, avatar_url, bio);`
         `);"
         .order ("created_at", { ascending: false });
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
       // Filter by job if job_id is provided;
       // Check condition;
@@ -376,6 +384,17 @@ if ( { // Unique violation) {}
 
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
+<<<<<<< HEAD
+}
+        .from("job_applications")"
+        .update({
+          }
+          "status": "status","
+    "viewed_at": new Date().toISOString()
+        })
+        .eq("id", applicationId)"
+        .is("viewed_at", null), // Only update if not already viewed        )"
+=======
       const { error } = await supabase
 
         .from("job_applications")
@@ -394,6 +413,7 @@ if ( { // Unique violation) {}
           { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app;
         )
 
+>>>>>>> origin/chore/fix-lint-and-merge
       );
 
       // Add the new application to the local state;
@@ -408,12 +428,22 @@ if ( { // Unique violation) {}
 
   }
 ;
+<<<<<<< HEAD
+  const updateApplicationStatus = async ("application_id": string, "status": ApplicationStatus) => {
+    }
+    try {
+      }
+        .from ("job_applications");"
+        .update ({ status });
+        .eq ("id", application_id);"
+=======
   const updateApplicationStatus = async (application_id: string, status: ApplicationStatus) => {}
     try {}
       const { error } = await supabase;"
         .from ("job_applications");
         .update ({ status });"
         .eq ("id", application_id);
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
       // Check condition;
 if (throw error) {}
@@ -432,6 +462,18 @@ if (throw error) {}
     }
   }
 ;
+<<<<<<< HEAD
+  const markApplicationAsViewed = async ("application_id": string) => {
+    }
+    try {
+      }
+        .from ("job_applications");"
+        .update ({
+          }
+          "status": "viewed","
+          "viewed_at": new Date ().toISOString ();
+        });
+=======
   const markApplicationAsViewed = async (application_id: string) => {}
     try {}
       const { error } = await supabase;"
@@ -440,6 +482,7 @@ if (throw error) {}
           status: "viewed",
           viewed_at: new Date ().toISOString ();
         });"
+>>>>>>> origin/chore/fix-lint-and-merge
         .eq ("id", application_id);"
         .is ("viewed_at", null), // Only update if not already viewed;
       // Check condition;

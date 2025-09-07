@@ -3,12 +3,22 @@ export function slugify(title: string, separator = "-"): string {;
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 export function slugify(title: string, separator = "-"): string {
+<<<<<<< HEAD
+=======
   const sep = separator;
 
+>>>>>>> origin/chore/fix-lint-and-merge
   const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 "
 export function slugify(title: string, separator = "-"): string {;
+<<<<<<< HEAD
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator,
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+export function slugify(title: string, separator = $2;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return title
     .trim()
@@ -36,16 +46,23 @@ export function unslugify(slug: string, separator = "-"): string {};
 }
 
 export function slugify (title: string, separator = "-"): string {
+<<<<<<< HEAD
+=======
   const sep = separator;
 
+>>>>>>> origin/chore/fix-lint-and-merge
   const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
 ;
 
 ;
 
 export function slugify(title: string, separator = "-"): string {;
+<<<<<<< HEAD
+  const sep = separator,;
+=======
   const sep = separator,;"
   const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+>>>>>>> origin/chore/fix-lint-and-merge
 
   return title;
     .trim ();"

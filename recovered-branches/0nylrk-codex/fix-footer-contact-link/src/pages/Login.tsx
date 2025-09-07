@@ -71,6 +71,41 @@ function Login() {}
   const { is_authenticated, user } = use_auth ();
 ;
   // Redirect if user is already logged in and has completed profile;
+<<<<<<< HEAD
+  // Check condition,
+if ( {) {
+  $2
+}
+    return <Navigate to="/" />;"
+  }
+  // Redirect to onboarding if user is authenticated but hasn't completed profile;'
+  // Check condition,
+if ( {) {
+  $2
+}
+    return <Navigate to="/onboarding" />;"
+  }
+return (;
+import { Navigate } from "react-router-dom";"
+import { useAuth } from "@/hooks/useAuth";"
+import { Header } from "@/components/Header",;"
+import { Footer } from "@/components/Footer",;"
+import { LoginContent } from "@/components/auth/login",;"
+;
+export default function Login() {;
+  }
+  ;
+  // Redirect if user is already logged in and has completed profile;
+  if (isAuthenticated && user?.profileComplete) {;
+    }
+    return <Navigate to="/" />,;"
+  }
+  ;
+  // Redirect to onboarding if user is authenticated but hasn't completed profile;'
+  if (isAuthenticated && !user?.profileComplete) {;
+    }
+    return <Navigate to="/onboarding" />,;"
+=======
   // Check condition;
 if ( {) {}
 
@@ -80,6 +115,7 @@ import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { LoginContent } from "@/components/auth/login",;
 
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 ;
   return (;

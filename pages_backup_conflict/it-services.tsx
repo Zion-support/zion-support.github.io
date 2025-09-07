@@ -1018,6 +1018,10 @@ export default function ITServices() {;
       "category": 'Excellence Services';
     }
   ];
+<<<<<<< HEAD
+
+
+=======
   const technologies = [{ "name": 'Cloud Platforms', "icon": Cloud, "description": 'AWS, Azure, GCP, DigitalOcean' },;
     { "name": 'Containerization', "icon": Server, "description": 'Docker, Kubernetes, OpenShift' },;
     { "name": 'Security Tools', "icon": Shield, "description": 'SIEM, WAF, IAM, Encryption' },;
@@ -1331,3 +1335,4 @@ export default function ITServices() {;
                   </div>;
                 </div>;
               ))}
+>>>>>>> origin/chore/fix-lint-and-merge

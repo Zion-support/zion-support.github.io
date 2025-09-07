@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+
+console.log(' Starting Analytics Collection...)
+  fs.writeFileSync(analytics-report.json')
+  console.log(' Analytics collected and saved to analytics-report.json)
+    const buildDir = path.join(process.cwd(), .next;'
+    const packageJson = JSON.parse(fs.readFileSync('package.json, utf8')
+  const securityFiles = ['package-lock.json]
+    yarn.lock'
+    '.env.local
+    .env.example'
+
+=======
 
 <<<<<<< HEAD
 
@@ -23,3 +36,4 @@ console.log(' Starting Analytics Collection...')
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -148,4 +148,10 @@ const PWARegistration: React.FC = () => {
 };
 
 export default PWARegistration;
+<<<<<<< HEAD
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -192,9 +192,13 @@ function calculateProfileCompleteness(): any (profile: any) {;
 function calculateProfileCompleteness(): any (profile: any) {;
   if (!profile) return 0;
 
+<<<<<<< HEAD
+    'availability_type';'
+=======
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
 
     'availability_type';
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
 
     }
@@ -219,7 +223,13 @@ function calculateProfileCompleteness() {}
 if (return 0) {}
   $2;
 }
+<<<<<<< HEAD
+if (return 0) {
+  $2
+}
+=======
   const fields = [;'
+>>>>>>> origin/chore/fix-lint-and-merge
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';'
     'availability_type';
   ];

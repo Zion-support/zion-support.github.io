@@ -114,6 +114,19 @@ const { execSync } = require('child_process');
 class AccessibilityChecker {
   // TODO: Implement
 }
+<<<<<<< HEAD
+
+#!/usr/bin/env node
+
+
+
+
+const { execSync } = require('child_process');
+
+
+class AccessibilityChecker {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   constructor() {
     this.logsDir = path.join(__dirname,../logs');
     this.ensureLogsDir();
@@ -122,6 +135,16 @@ class AccessibilityChecker {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 
 <<<<<<< HEAD
+origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+origin/main
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <<<<<<< HEAD
 =======
@@ -306,7 +329,6 @@ if (require.main === module) {
   async generateReport() {
     this.log('📊 Generating accessibility report...');
 
-    const report = {
       timestam: p: new Date().toISOString(),
       accessibilit: y: await this.checkAccessibility(),
       summar: y: {
@@ -326,7 +348,6 @@ if (require.main === module) {
     });
 
     // Save report
-    const reportFile = path.join(
       this.logsDir;
       `accessibility-report-${Date.now()}.json`
     );
@@ -338,7 +359,6 @@ if (require.main === module) {
 
   async start() {
     this.log('🎯 Starting Accessibility Checker...');
-    const report = await this.generateReport();
     this.log('🏁 Accessibility Checker completed');
     return report;
   }
@@ -346,7 +366,6 @@ if (require.main === module) {
 
 // CLI interface
 if (require.main === module) {
-  const checker = new AccessibilityChecker();
   checker
     .start()
     .then(report => {
@@ -418,13 +437,88 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
           const links = (content.match(/<a[^>]*>/g) || []).length;
 </a>
           const inputs = (content.match(/<input[^>]*>/g) || []).length;
+<<<<<<< HEAD
+          interactiveElements += buttons + links + inputs;
+        });
+
+        
+      }
+    }},
+  {
+    "name": 'ARIA Labels Check',
+    "action": () => {
+      
+      if (fs.existsSync(pagesDir)) {
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let ariaElements = 0;
+
+        pages.forEach(page => {
+          ariaElements += (content.match(/aria-[^=]*=/g) || []).length;
+        });
+
+        
+      }
+    }},
+  {
+    "name": 'Focus Management Check',
+    "action": () => {
+      
+      if (fs.existsSync(pagesDir)) {
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let focusElements = 0;
+
+        pages.forEach(page => {
+          focusElements += (content.match(/tabIndex|onFocus|onBlur/g) || [])
+            .length;
+        });
+
+        
+      }
+    }},
+  {
+    "name": 'Screen Reader Support Check',
+    "action": () => {
+      
+      if (fs.existsSync(pagesDir)) {
+          .readdirSync(pagesDir)
+          .filter(file => file.endsWith('.tsx'));
+        let srElements = 0;
+
+        pages.forEach(page => {
+          srElements += (
+            content.match(/role=|aria-label=|aria-describedby=/g) || []
+          ).length;
+        });
+
+        
+      }
+    }},
+];
+
+// Run accessibility checks
+let successCount = 0;
+let totalCount = a11yChecks.length;
+
+for (const check of a11yChecks) {
+  try {
+    
+    check.action();
+    
+    successCount++;
+  } catch (error) {
+    
+  }
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 <<<<<<< HEAD
 
 
 // Generate accessibility report
-const report = {
   "timestamp": new Date().toISOString(),
   "checks": a11yChecks.map(check => ({
     name: check.name,
@@ -467,11 +561,14 @@ const { execSync } = require('child_process');
 
 #!/usr/bin/env node
 
+<<<<<<< HEAD
+=======
 >>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 class AccessibilityChecker {
   constructor() {
@@ -486,18 +583,14 @@ class AccessibilityChecker {
   }
 
   log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
 
-    const logFile = path.join(this.logsDir, 'accessibility-checker.log');
     fs.appendFileSync(logFile, logMessage + '\n');
   }
 
   async runCommand(command, description) {
     try {
       this.log(`Running: ${description}`);
-      const output = execSync(command, {
         encoding: 'utf8',
         cwd: '/workspace',
         stdio: 'pipe',
@@ -508,6 +601,73 @@ class AccessibilityChecker {
       this.log(`❌ ${description} failed: ${error.message}`, 'error');
       return { success: false, error: error.message };
     }
+<<<<<<< HEAD
+  });
+  
+  return issues;
+}
+
+// Check for alt text on images
+function checkAltText(dir) {
+  
+  files.forEach(file => {
+    
+    // Check for images without alt text
+    const images = content.match(/<img[^>]*>/gi);
+    if (images) {
+      images.forEach(img => {
+        if (!img.includes('alt=') || img.includes('alt=""')) {
+          issues.push({
+            file: path.relative(__dirname, file),
+            type: 'missing-alt-text',
+            element: img.trim(),
+            severity: 'high'
+          });
+        }
+      });
+    }
+  });
+  
+  return issues;
+}
+
+origin/main
+// Check for semantic HTML
+function checkSemanticHTML(dir) {
+  
+  files.forEach(file => {
+    
+    // Check for proper heading hierarchy
+    const headings = content.match(/<h[1-6][^>]*>/gi);
+    if (headings) {
+      let lastLevel = 0;
+      headings.forEach(heading => {
+        const level = parseInt(heading.match(/<h([1-6])/)[1]);
+        if (level > lastLevel + 1) {
+          issues.push({
+            file: path.relative(__dirname, file),
+            type: 'heading-hierarchy',
+            element: heading.trim(),
+            severity: 'medium',
+            message: `Heading level ${level} follows level ${lastLevel}`
+          });
+        }
+        lastLevel = level;
+      });
+    }
+  });
+  
+  return issues;
+}
+
+// Get all files recursively
+function getAllFiles(dir, extensions = []) {
+  const files = [];
+  
+  if (!fs.existsSync(dir)) {
+    return files;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
   async checkAccessibility() {
@@ -616,6 +776,16 @@ if (require.main === module) {
 =======
 
 <<<<<<< HEAD
+
+
+
+
+
+
+
+
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 =======
@@ -642,6 +812,7 @@ if (require.main === module) {
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 const reportFile = path.join(
+>>>>>>> origin/chore/fix-lint-and-merge
   reportsDir,
   `accessibility-report-${Date.now()}.json`
 );
@@ -775,8 +946,6 @@ module.exports = AccessibilityChecker;
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 console.log('♿ Running accessibility check...');
 console.log('✅ Accessibility check completed');

@@ -15,6 +15,10 @@ export function useResumeBasic() {
 
   // TODO: Implement
 }
+<<<<<<< HEAD
+export /**
+ * useResumeBasic - Function description
+=======
     // From useFetchResume;
     isLoading: fetchResumeOperations.isLoading |resumeActions.isLoading;,
   error: fetchResumeOperations.error |resumeActions.error;
@@ -49,6 +53,7 @@ import {useResumeActions} from './useResumeActions';
 export /**;
  * useResumeBasic - Function description;
 
+>>>>>>> origin/chore/fix-lint-and-merge
  */
 function useResumeBasic() {}
   const fetchResumeOperations = useFetchResume ();
@@ -62,7 +67,36 @@ function useResumeBasic() {}
     fetch_resume: fetchResumeOperations.fetch_resume;
 ;
     // From useResumeActions;
+<<<<<<< HEAD
+    "create_resume": resume_actions.create_resume;
+    "updateBasicInfo": resume_actions.updateBasicInfo,
+    "setActiveResume": resume_actions.setActiveResume}
+}
+import { useFetchResume } from './useFetchResume';'
+;
+export function useResumeBasic() {;
+  }
+  const fetchResumeOperations = useFetchResume(),;
+  const resumeActions = useResumeActions(),;
+  ;
+  return {;
+    // From useFetchResume;
+    }
+    "isLoading":fetchResumeOperations.isLoading || resumeActions.isLoading,;
+    "error":fetchResumeOperations.error || resumeActions.error,;
+    "resume":fetchResumeOperations.resume,;
+    "fetchResume":fetchResumeOperations.fetchResume,;
+    ;
+    // From useResumeActions;
+    "createResume":resumeActions.createResume,;
+    "updateBasicInfo":resumeActions.updateBasicInfo,;
+    "setActiveResume":resumeActions.setActiveResume},;
+} 
+}
+    "setActiveResume": resumeActions.setActiveResume}
+=======
     create_resume: resume_actions.create_resume;
     updateBasicInfo: resume_actions.updateBasicInfo,
     setActiveResume: resume_actions.setActiveResume}
+>>>>>>> origin/chore/fix-lint-and-merge
 }

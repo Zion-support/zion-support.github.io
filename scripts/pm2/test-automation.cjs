@@ -591,6 +591,8 @@ main
     try {}
       const report = await this.generateReport();
       
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:backup-problematic-files/scripts/pm2/test-automation.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -603,6 +605,7 @@ main
 =======
       const report = await this.generateReport();
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
       if (report.testResults.success) {}
         this.log('Test automation completed successfully');
       } else {}

@@ -49,6 +49,44 @@ export default function MessagingInbox() {}
 
 import React, { useEffect, useState } from 'react';
 
+<<<<<<< HEAD
+
+  useEffect(() => {
+    // Fetch conversations when component mounts
+}
+const loadData = async () => {import {Button} from '@/components / ui / button';'
+import {use_navigate} from 'react-router-dom';'
+export default /**
+ * MessagingInbox - Function description
+ */
+function MessagingInbox() {
+  }
+    }
+    conversations;
+    active_conversation,
+    setActiveConversation,
+    markAsRead;
+    fetch_conversations;
+    is_loading;
+  } = use_messaging ();
+  const is_mobile = useIsMobile ();
+  const navigate = use_navigate ();
+  const [active_call, setActiveCall] = useState < string | null>(null);
+;
+  useEffect (() => {
+    // Fetch conversations when component mounts;
+    }
+    const load_data = async () => {
+      }
+      try {
+        }
+        await fetch_conversations ();
+      } catch (error) {
+        }
+        console.error ("Failed to load "conversations":", error);"
+        toast.error ("Failed to load messages. Please try again.");"
+      }
+=======
 import React, { useEffect, useState } from 'react';
 import {MessageSquare, Video} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
@@ -59,6 +97,7 @@ import {toast} from 'sonner';
 
   useEffect(() => {
     // Fetch conversations when component mounts
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import {use_navigate} from 'react-router-dom';
 export default /**;

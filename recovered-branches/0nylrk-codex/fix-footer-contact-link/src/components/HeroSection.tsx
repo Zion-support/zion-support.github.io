@@ -67,11 +67,19 @@ export function HeroSection() {
 }
 
   )
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button";"
+export function HeroSection() {;
+  }
+  return (;
+    <section className="relative overflow-hidden py-20 "md":py-32">;"
+=======
 import { Button } from "@/components/ui/button",;
 import { GradientHeading } from "@/components/GradientHeading",;
 
 import { Link } from "react-router-dom";
 export function HeroSection() { return null; }
+>>>>>>> origin/chore/fix-lint-and-merge
       {/* Background gradient effect */}
 
       <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-80"></div>;

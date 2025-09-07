@@ -70,9 +70,13 @@ class EnhancedAppOptimizer {
   }
 
   async optimizePerformance() {
+<<<<<<< HEAD
+    this.log('⚡ Optimizing performance...')
+=======
     this.log('⚡ Optimizing performance...');
     
     const optimizations = [
+>>>>>>> origin/chore/fix-lint-and-merge
       {
         name: 'Image Optimization',
         command: 'find src -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" | head -10',
@@ -85,9 +89,15 @@ class EnhancedAppOptimizer {
       }
     ];
 
+<<<<<<< HEAD
+    ]
+  for($2) {
+  if($2) {
+=======
     for (const opt of optimizations) {
       const result = await this.runCommand(opt.command, opt.description);
       if (result.success) {
+>>>>>>> origin/chore/fix-lint-and-merge
         this.optimizations.push({
           type: 'performance',
           name: opt.name,

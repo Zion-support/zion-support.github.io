@@ -3,10 +3,62 @@ import { MapPin  } from './lucide-react';
 import { TalentCardSkills  } from './TalentCardSkills';
 
 interface TalentCardContentProps {
+<<<<<<< HEAD
+  }
+  "summary": string | undefined;
+  "bio": string;
+  "timezone": string | undefined;
+  "skills": string[] | undefined;
+}
+export function TalentCardContent() {
+  }
+  const [isHovering, setIsHovering] = useState(false);
+"skills": string[] | undefined;
+    "skills": string[] | undefined
+}
+return (;
+    <div>
+import React, { useState } from "react";"
+import { MapPin } from "lucide-react";"
+import { TalentCardSkills } from "./TalentCardSkills",;"
+interface TalentCardContentProps {;
+  }
+  "summary": string | undefined,;
+  "bio": string,;
+  "timezone": string | undefined,;
+  "skills": string[] | undefined;
+}
+
+export function TalentCardContent(): any ({ summary, bio, timezone, skills }: TalentCardContentProps) {;
+  }
+
+  return (;
+interface TalentCardContentProps {;
+  }
+  "summary":string | undefined,;
+  "bio":string,;
+  "timezone":string | undefined,;
+  "skills":string[] | undefined;
+}
+;
+export function TalentCardContent() {;
+  }
+  const [isHovering, setIsHovering] = useState(false),;
+;
+  return (;
+
+}      {/* Location */}
+      {timezone && (;
+        <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;"
+          <MapPin className="h-3 w-3" />;"
+          <span>{timezone}</span>;
+        </div>;
+=======
 
   summary: string | undefined;
   bio: string;
   timezone: string | undefined;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React, { useState } from "react";
 import { MapPin } from "lucide-react";

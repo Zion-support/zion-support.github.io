@@ -2,6 +2,9 @@ import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Conversation, ConversationContextData  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
+<<<<<<< HEAD
+import { toast } from '@/hooks/use-toast';// Allow either UserProfile or UserDetails
+=======
 
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
@@ -9,6 +12,7 @@ import {Conversation, ConversationContextData} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
 
 // Allow either UserProfile or UserDetails
+>>>>>>> origin/chore/fix-lint-and-merge
 
 type UserWithProfile = UserProfile | UserDetails | null;
 /**

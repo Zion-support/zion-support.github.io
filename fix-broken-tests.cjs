@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
 const fs = require('fs')
 const path = require('path')
         item.endsWith('.test.tsx')
@@ -18,3 +23,4 @@ const path = require('path')
 
 
 
+>>>>>>> origin/chore/fix-lint-and-merge

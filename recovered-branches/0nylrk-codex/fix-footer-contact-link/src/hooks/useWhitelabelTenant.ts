@@ -14,9 +14,22 @@ export interface WhitelabelTenant {;
 
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
+<<<<<<< HEAD
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+  account_manager_id: string | null;
+import { useState, useEffect  } from 'react';
+export interface WhitelabelTenant {
+  id: string,
+  brand_name: string,
+  subdomain: string,
+  custom_domain: string | null,
+  primary_color: string,
+  logo_url: string | null,
+  theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',
+=======
 
   id: string;
 
@@ -26,6 +39,7 @@ export interface WhitelabelTenant {;
 
   logo_url: string | null;
   theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';',
+>>>>>>> origin/chore/fix-lint-and-merge
   landing_page_copy: {
 
     cta: string;
@@ -211,7 +225,24 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
   return { tenant, isLoading, error }
 }
 
+<<<<<<< HEAD
+export function useTenantAdminStatus(tenantId?: string) {
+  const [isAdmin, setIsAdmin] = useState($2);
+  useEffect(() => {
+      if (!tenantId) {
+        setIsAdmin($2);
+        setIsLoading($2);
+        return
+      }
+      try {
+        const { data: sessionData, error: sessionError} = await supabase.auth.getSession($2);
+        if (sessionError || !sessionData.session) {
+          setIsAdmin($2);
+          return
+        }
+=======
   const [isAdmin, setIsAdmin] = useState(false);
+>>>>>>> origin/chore/fix-lint-and-merge
 
         setIsAdmin(false);
         setIsLoading(false);
@@ -247,13 +278,19 @@ export /**;
  */
 function useTenantAdminStatus() {}
   const [is_admin, setIsAdmin] = useState (false);
-  const [is_loading, setIsLoading] = useState (true);
 ;
+<<<<<<< HEAD
+  useEffect (() => {
+      // Check condition
+if ( {) {
+  $2
+=======
   useEffect (() => {}
     const checkAdminStatus = async () => {}
       // Check condition;
 if ( {) {}
   $2;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
         setIsAdmin (false);
         setIsLoading (false);

@@ -1,8 +1,18 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
-const path = require('path')
+const path = require(path')
 const { execSync } = require('child_process')
+<<<<<<< HEAD
+    console.log( Starting deployment automation...')
+    const deploymentSteps = [{ "name: 'Install Dependencies, cmd"}]
+      { "name: Run Tests', cmd"}
+      { "name: 'Build Project, cmd"}
+      { "name: Lint Check', cmd"}
+        execSync(step.cmd, { "stdio})
+          status"
+
+=======
     console.log(' Starting deployment automation...')
     const deploymentSteps = [{ "name": 'Install Dependencies', "cmd"}]
       { "name": 'Run Tests', "cmd"}
@@ -23,3 +33,4 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

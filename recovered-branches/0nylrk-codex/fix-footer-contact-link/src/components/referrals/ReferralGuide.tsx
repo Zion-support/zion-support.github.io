@@ -1,6 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
 export function ReferralGuide() {
+<<<<<<< HEAD
+  }
+  const steps = [import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";"
+=======
 
   const steps = [import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -13,6 +18,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export function ReferralGuide() {
 
   const steps = [
@@ -156,7 +162,11 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
 export function ReferralGuide() {;
+<<<<<<< HEAD
+  }
+=======
   const steps = [;
+>>>>>>> origin/chore/fix-lint-and-merge
     {;
       title: "Share your referral link",,
   description: "Copy your unique referral link and share it with potential clients or talent"},;

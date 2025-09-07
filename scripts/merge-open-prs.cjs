@@ -17,12 +17,15 @@ const { execSync } = require('child_process');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 // Uses GITHUB_TOKEN if set; otherwise extracts the x-access-token from the origin remote.
 "
+<<<<<<< HEAD
+=======
 const { execSync } = require('child_process');
 <<<<<<< HEAD
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 function getRepoFromGit() {}
 
   const match = remoteUrl.match(/github\.com[:/](.+?)\/(.+?)(?:\.git)?$/);
@@ -59,8 +62,11 @@ async function main() {}
   const prs = await listOpenPRs(owner, repo);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   if (!prs.length) {}
+<<<<<<< HEAD
+=======
 =======
   const prs = await listOpenPRs(owner, repo);
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!prs.length) {}"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     console.log('No open PRs');

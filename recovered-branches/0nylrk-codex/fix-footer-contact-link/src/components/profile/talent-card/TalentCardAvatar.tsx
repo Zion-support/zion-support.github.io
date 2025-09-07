@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 
 import React from "react",;
@@ -153,3 +156,4 @@ pr-12325
 }
 }
 ;
+>>>>>>> origin/chore/fix-lint-and-merge

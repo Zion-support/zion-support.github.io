@@ -86,10 +86,16 @@ if (return false) {}
 }
     try {}
       setIsSubmitting (true),
+<<<<<<< HEAD
+        .from ('project_milestones');'
+        .update (data);
+        .eq ('id', milestone_id);'
+=======
       const { error } = await supabase;'
         .from ('project_milestones');
         .update (data);'
         .eq ('id', milestone_id);
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
       // Check condition;
 if (throw error) {}
@@ -128,8 +134,12 @@ if (throw error) {}
     if (!user) return false;
 
   },
+<<<<<<< HEAD
+    }
+=======
   
   const updateMilestone = async (milestoneId: string, data: Partial<Milestone>) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!user) return false,
 
   return {
@@ -160,7 +170,10 @@ export const useUpdateMilestone = () => {;
     try {;
       setIsSubmitting(true),;
       // Get the current status;
+<<<<<<< HEAD
+=======
       const { data: milestoneData, error: fetchError } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
         .from('project_milestones');'
         .select('status');'
         .eq('id', milestoneId);
@@ -169,10 +182,16 @@ export const useUpdateMilestone = () => {;
       if (!milestoneData) throw new Error("Milestone not found"),;
       const previousStatus = milestoneData.status,;
       // Update the milestone status;
+<<<<<<< HEAD
+        .from('project_milestones');'
+        .update({ "status": newStatus });
+        .eq('id', milestoneId),;'
+=======
       const { error } = await supabase;'
         .from('project_milestones');
         .update({ status: newStatus });'
         .eq('id', milestoneId),;
+>>>>>>> origin/chore/fix-lint-and-merge
       if (error) throw error,;
       // Create activity record;'
       await recordMilestoneActivity(milestoneId, 'status_changed', previousStatus, newStatus, comment),;
@@ -190,10 +209,16 @@ export const useUpdateMilestone = () => {;
     if (!user) return false,;
     try {;
       setIsSubmitting(true),;
+<<<<<<< HEAD
+        .from('project_milestones');'
+        .update(data);
+        .eq('id', milestoneId),;'
+=======
       const { error } = await supabase;'
         .from('project_milestones');
         .update(data);'
         .eq('id', milestoneId),;
+>>>>>>> origin/chore/fix-lint-and-merge
       if (error) throw error,;
       // Create activity record;'
       await recordMilestoneActivity(milestoneId, 'updated', null, 'updatedMilestone details updated'),;"

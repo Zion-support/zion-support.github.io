@@ -30,7 +30,33 @@ import { Sparkles, Search } from "lucide-react",
   onMatchSelect?: (match: any) => void,;
   className?: string;
 }
+<<<<<<< HEAD
+export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;"
+  }
+  const [query, setQuery] = useState("");"
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+  onMatchSelect?: ("match": any) => void,
+import { Textarea } from "@/components/ui/textarea","
+import { Sparkles, Search } from "lucide-react","
+interface AIMatchmakerProps {
+  }
+  serviceType?: string,
+  onMatchSelect?: ("match": any) => void,
+  className?: string
+}
+export function AIMatchmaker() {;"
+  }
+export function AIMatchmaker() {"
+  }
+const [query, setQuery] = useState(""),;"
+const [isMatchmaking, setIsMatchmaking] = useState(false),;
+const [matches, setMatches] = useState([] as MatchResult[]),;
+const [hasSearched, setHasSearched] = useState(false),;
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -78,8 +104,23 @@ interface AIMatchmakerProps {;
   onMatchSelect?: (match: any) => void,;
   className?: string;
 }
+<<<<<<< HEAD
+;
+export function AIMatchmaker() {;"
+  }
+  const handleSearch = async () => {;
+    }
+    if (!query.trim()) {;
+      }
+      toast({;
+        }
+        "title": "Please enter a description",,"
+  "description": "Tell us what you're looking for so we can find matches.",;"
+        "variant": "destructive"}),;"
+=======
 
         variant: "destructive"}),;
+>>>>>>> origin/chore/fix-lint-and-merge
       return;
     }
   }

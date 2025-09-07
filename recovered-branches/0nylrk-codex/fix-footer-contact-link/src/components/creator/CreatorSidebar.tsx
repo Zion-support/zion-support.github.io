@@ -1,8 +1,56 @@
 import {
 
+<<<<<<< HEAD
+}
+
+import {;
+  }
+  Bell,;
+  FileText,;
+  Home,;
+  Mail,;
+  Search,;
+  Settings,;  Bell,
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+
+  Users,;
+} from "lucide-react";  Bell,"
+  FileText,
+  Home,
+  Mail,
+  Search,
+  Settings,
+  Users,;
+} from "lucide-react";"
+  }
+  Sidebar,;
+  SidebarContent,;
+  SidebarGroup,;
+  SidebarMenu,;
+  SidebarMenuItem,;
+  SidebarMenuButton,;
+  SidebarGroupLabel,;
+  SidebarGroupContent,;
+
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
+
+  Bell
+  FileText
+  Home
+  Mail
+  Search
+  Settings
+  Users
+} from "lucide-react";
+=======
 import {
 
 import {
+>>>>>>> origin/chore/fix-lint-and-merge
   Sidebar
   SidebarContent
   SidebarGroup
@@ -56,7 +104,6 @@ import {
 } from "@/components/ui/sidebar";
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",
-import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
@@ -106,9 +153,15 @@ import {
 
   );
 }
+<<<<<<< HEAD
+  )
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";"
+  }
+=======
   )"
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   Sidebar,;
   SidebarContent,;
   SidebarGroup,;

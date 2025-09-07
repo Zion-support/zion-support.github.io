@@ -1,3 +1,70 @@
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+export default function PricingComparisonPage () {
+  const serviceComparisons = [ {
+  service: 'AI Content Generator', zionPricing: {
+  starter: '$19/month', professional: '$49/month', enterprise: '$199/month' 
+}
+competitors: [ ]
+features: [ 'AI-powered content generationMultiple content formatsSEO optimizationTeam collaborationAPI accessCustom templates' ]
+color: 'from-purple-500 to-indigo-600'
+icon: '🤖' 
+}
+{
+  service: 'Cloud Monitoring', zionPricing: {
+  starter: '$29/month', professional: '$99/month', enterprise: '$299/month' 
+}
+competitors: [ ]
+features: [ 'Real-time monitoringMulti-cloud supportAI-powered alertingAdvanced analyticsCustom dashboardsAPI access' ]
+color: 'from-green-500 to-emerald-600'
+icon: '☁️' 
+}
+{
+  service: 'DevOps Automation', zionPricing: {
+  starter: '$39/month', professional: '$129/month', enterprise: '$399/month' 
+}
+competitors: [ ]
+features: [ 'CI/CD pipelinesInfrastructure as CodeSecurity automationMulti-cloud deploymentTeam collaborationCustom integrations' ]
+color: 'from-blue-500 to-cyan-600'
+icon: '🚀' 
+}]
+return (<> <Head> <title>Pricing Comparison - Zion Tech Group | How We Stack Up Against the Competition</title> Pricing Analysis </div> </div> <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight" > How We Compare to the Competition </h1> <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12" > See how Zion's micro SaaS services stack up against market leaders. Get professional-grade features at startup-friendly prices. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Button href="#comparison" variant="primary" size="lg" className="bg-indigo-600 hover:bg-indigo-700 text-white" > View Comparison </Button> <Button href="/pricing" variant="outline" size="lg" className="border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white" > View Our Pricing </Button> </div> </div> </section> Why Choose Zion? </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Key insights that make Zion the smart choice for your business. </p> </div> <Card key= {
+  index 
+}className="text-center group hover:scale-105 transition-transform duration-300" > <div className= {
+  `w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6` 
+}> {
+  insight.icon 
+}</div> <p className= {
+  `text-lg font-semibold $ {
+  insight.color 
+}` 
+}> {
+  insight.insight 
+}</p> </Card>) ) 
+}</div> </div> </section> Detailed Service Comparison </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > See exactly how each service compares in features, pricing, and value. </p> </div> </div> </div> </Card> </div> <Star key= {
+  i 
+}className= {
+  `w-4 h-4 $ {
+  i < Math.floor (parseFloat (competitor.rating) ) ? 'text-yellow-400 fill-current': 'text-gray-400' 
+}` 
+}/>) ) 
+}</div> <div className="space-y-2 mb-4 text-xs" > <div> </li>) ) 
+}</ul> </div> <div> </li>) ) 
+}</ul> </div> </div> </div> </div> </Card> </div>) ) 
+}</div> </div>) ) 
+}</div> </section> <section className="py-24 bg-gradient-to-r from-indigo-600 to-purple-600"> <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8"> text-xl text-indigo-100 mb-12"> Start your free trial today and see why thousands of businesses choose Zion. </p> <div className=" flex flex-col sm:flex-row gap-4 justify-center"> <Button href=" /ai-content-generator"variant=" secondary"size=" lg"className=" bg-white text-indigo-600 hover:bg-gray-100"> Try AI Content Generator </Button> <Button href=" /cloud-monitoring"variant=" secondary"size=" lg"className=" bg-white text-indigo-600 hover:bg-gray-100"> Try Cloud Monitoring </Button> <Button href=" /devops-automation"variant=" secondary"size=" lg"className=" bg-white text-indigo-600 hover:bg-gray-100" > Try DevOps Automation </Button> </div> </div> </section> </div> </>) 
+}
+import Button from '../components/ui/Button';
+import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
+export default function PricingComparisonPage() {
+  const serviceComparisons = $2;
+      zionPricing: {
+        starter: '$19/month',
+        professional: '$49/month',
+        enterprise: '$199/month'
+=======
 import Button from '../components/ui/Button';
 
 import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
@@ -7,10 +74,43 @@ export default function PricingComparisonPage() {
 starter: '$19/month',
   professional: '$49/month',}
         enterprise: '$199/month',}
+>>>>>>> origin/chore/fix-lint-and-merge
       },
       competitors: [
         {
           name: 'Jasper AI',
+<<<<<<< HEAD
+          pricing: '$39/month',
+          rating: '4.8/5',
+          pros: ['Excellent templatesGood AI qualityWide integrations'],
+          cons: ['Higher pricingLimited customizationNo unlimited plan'],
+          savings: 'Save $20/month with Zion'
+        },
+        {
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited wordsGood valueSimple interface'],
+          cons: ['Basic featuresLimited templatesNo advanced SEO'],
+          savings: 'Save $17/month with Zion'
+        },
+        {
+          name: 'Writesonic',
+          pricing: '$19/month',
+          rating: '4.4/5',
+          pros: ['AffordableGood for beginnersBasic features'],
+          cons: ['Limited featuresBasic AI modelsNo team features'],
+          savings: 'Same price, better features'
+        }
+      ],
+      features: [
+        'AI-powered content generationMultiple content formatsSEO optimizationTeam collaborationAPI accessCustom templates'
+      ],
+      color: 'from-purple-500 to-indigo-600',
+      icon: '🤖'
+    },
+
+=======
   pricing: '$39/month',
           rating: '4.8/5',
   pros: ['Excellent templates', 'Good AI quality', 'Wide integrations'],
@@ -112,9 +212,14 @@ starter: '$19/month',
         starter: '$39/month',
   professional: '$129/month',}
         enterprise: '$399/month',}
+>>>>>>> origin/chore/fix-lint-and-merge
       },
       competitors: [
         {
+<<<<<<< HEAD
+
+    }
+=======
           name: 'GitHub Actions',
   pricing: 'Free + $0.008/min',
           rating: '4.6/5',
@@ -154,10 +259,16 @@ starter: '$19/month',
       color: 'from-blue-500 to-cyan-600',
   icon: '🚀',
     },
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
 
 const marketInsights = [
     {
+<<<<<<< HEAD
+
+              >
+                View Our Pricing
+=======
       insight: 'Zion services are 30-60% more affordable than market leaders',
   icon: <DollarSign className='w-6 h-6'    />,}
       color: 'text-green-400',}
@@ -237,11 +348,17 @@ href='/pricing'
                 className='border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white'
                   />
                 View Our Pricing;
+>>>>>>> origin/chore/fix-lint-and-merge
               </Button>
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+              {marketInsights.map((insight, index) => (<Card;
+                  }
+                  key={index}
+=======
         {/* Market Insights *,}
 }
 <section className='py-24 bg-gray-900'    />;
@@ -263,6 +380,7 @@ href='/pricing'
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}
 
                       />
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     {insight.icon}
                   </div>;
@@ -279,6 +397,9 @@ href='/pricing'
 
         {/* Detailed Comparison */}
 
+<<<<<<< HEAD
+
+=======
 <section id='comparison' className='py-24 bg-gray-800'    />
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />
             <div className='text-center mb-20'    />
@@ -306,6 +427,7 @@ className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} 
                       Starter: {' ,}
 }
                       <span className='text-green-400 font-semibold'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                         {service && service.zionPricing.starter}
                   </p>;
                 </Card>))}
@@ -313,6 +435,9 @@ className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} 
           </div>;
         </section>;
         {/* Detailed Comparison */}
+<<<<<<< HEAD
+
+=======
         <section id='comparison' className='py - 24 bg - gray - 800'    />;
           <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'    />;
             <div className='text - center mb - 20'    />;
@@ -334,11 +459,19 @@ className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} 
             </div>;}
             {service_comparisons.map ((service, service_index) => (<div key={service_index} className='mb - 24'    />;
                 <div className='text - center mb - 16'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                   <div;
                     className={`w - 20 h - 20 rounded - 3xl bg - gradient - to - br ${service.color} flex items - center justify - center text - 4xl mx - auto mb - 6`}    />
 
                     {service.icon}
                   </div>;
+<<<<<<< HEAD
+
+                          {service.features.map((feature, featureIndex) => (<div;
+                              }
+                              key={featureIndex}
+
+=======
                   <h3 className='text - 3xl font - bold text - white mb - 4'    />;
                     {service.service}
                   </h3>;
@@ -392,6 +525,7 @@ className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} 
                             Starting at;
                           </p>;
                           <p className='text-2xl font-bold text-white'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                             {service.zionPricing.starter}
                           </p>;
                         </div>;
@@ -399,6 +533,65 @@ className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service && service.color} 
                     </Card>;
                   </div>;
                   {/* Competitors */}
+<<<<<<< HEAD
+
+                            {competitor.name}
+                          ))}
+                              <Star
+                          </div>;
+                          <div className='flex items-center justify-center mb-4>;
+                            {[...Array(5)].map((_, i) => (<Star;
+              </p>
+            </div>
+
+            {serviceComparisons.map((service, serviceIndex) => (
+              <div key={serviceIndex} className=mb-24">
+                <div className="text-center mb-16>
+                  <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${service.color} flex items-center justify-center text-4xl mx-auto mb-6`}>
+                    {service.icon}
+                  </div>
+                  <h3 className=text-3xl font-bold text-white mb-4">{service.service}</h3>
+                  <div className="flex flex-wrap justify-center gap-4 text-lg text-gray-300>
+                    <span>Starter: <span className=text-green-400 font-semibold">{service.zionPricing.starter}</span></span>
+                    <span>Professional: <span className="text-blue-400 font-semibold>{service.zionPricing.professional}</span></span>
+                    <span>Enterprise: <span className=text-purple-400 font-semibold">{service.zionPricing.enterprise}</span></span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8>
+                  {/* Zion Service */}
+                  <div className=lg:col-span-1">
+                    <Card className="h-full border-2 border-green-500 bg-green-500/5>
+                      <div className=text-center p-6">
+                        <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500/20 text-green-400 text-sm font-medium mb-4>
+                          Zion {service.service}
+                        </div>
+                        <h4 className=text-xl font-bold text-white mb-4">Best Value</h4>
+                        <div className="space-y-3 mb-6>
+                          {service.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className=flex items-center text-gray-300">
+                              <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 />
+                              <span className=text-sm">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="text-center>
+                          <p className=text-green-400 font-semibold mb-2">Starting at</p>
+                          <p className="text-2xl font-bold text-white>{service.zionPricing.starter}</p>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+
+                  {/* Competitors */}
+                  {service.competitors.map((competitor, compIndex) => (
+                    <div key={compIndex} className=lg:col-span-1">
+                      <Card className="h-full border border-gray-700>
+                        <div className=text-center p-6">
+                          <div className="inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4>
+                            {competitor.name}
+                          </div>
+=======
                   {service.competitors.map((competitor, compIndex) => (<div key={compIndex} className='lg:col-span-1'    />;
                       <Card className='h-full border border-gray-700'    />;
                         <div className='text-center p-6'    />;
@@ -414,6 +607,7 @@ key={i}
                                     : 'text-gray-400';}
                                 }`}
                                  />;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                             ))}
 
@@ -421,6 +615,29 @@ key={i}
                               {competitor.rating}
                             </span>
                           </div>
+<<<<<<< HEAD
+
+                                    {pro}
+                                  </li>;
+                                ))}</ul>;
+                            </div>;
+                            <div>;
+                              <p className=text-red-400 font-medium mb-1">Cons:</p>;
+                              <ul className="text-gray-300 space-y-1>;
+                                {competitor.cons.map((con, conIndex) => (<li key={conIndex} className=flex items-center">;
+                                    <X className="w-3 h-3 text-red-400 mr-2 flex-shrink-0 />;
+<p className='text-red-400 font-medium mb-1>;
+                                Cons:;
+                              </p>;
+                              <ul className=text-gray-300 space-y-1'>;
+                                {competitor.cons.map((con, conIndex) => (<li;
+                                    key={conIndex}
+                                    className='flex items-center;
+                                  >;
+                                    <X className=w-3 h-3 text-red-400 mr-2 flex-shrink-0' />;
+                                    {pro}
+                                  </li>
+=======
                           <div className='mb-4'    />
                             <p className='text-lg font-semibold text-white'    />
                               {competitor.pricing}
@@ -441,12 +658,15 @@ key={proIndex}
                                     <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0'    />
                                     {pro}
                                   </li>;
+>>>>>>> origin/chore/fix-lint-and-merge
                                 ))}
 
                               </ul>
                             </div>
                             <div    />
 
+<<<<<<< HEAD
+=======
 <p className='text-red-400 font-medium mb-1'    />
                                 Cons:
                               </p>
@@ -458,9 +678,26 @@ key={conIndex}
                                       />
                                     <X className='w-3 h-3 text-red-400 mr-2 flex-shrink-0'    />
 
+>>>>>>> origin/chore/fix-lint-and-merge
                                     {con}
                                   </li>;
                                 ))}
+<<<<<<< HEAD
+                            <p className=text-green-400 font-semibold text-sm">{competitor.savings}</p>
+                              </ul>
+                            </div>
+                          </div>
+                          <div className="text-center>
+                            <p className=text-green-400 font-semibold text-sm">{competitor.savings}</p>
+                          </div>
+                        </div>
+                      </Card>
+                    </div>
+                              </ul>;
+                            </div>;
+                          </div>;
+
+=======
                               </ul>;
                             </div>;
                           </div>;
@@ -469,6 +706,7 @@ key={conIndex}
                               {competitor && competitor.savings}
                             </p>                          </div>                          <div className=\"text-center\"    />;
                             <p className=\"text-green-400 font-semibold text-sm\"    />{competitor && competitor.savings}</p>;
+>>>>>>> origin/chore/fix-lint-and-merge
                           </div>;
                         </div>;
                       </Card>;
@@ -480,6 +718,11 @@ key={conIndex}
           </div>;
         </section>;
         {/* CTA Section */}
+<<<<<<< HEAD
+
+              >
+                Try DevOps Automation
+=======
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'    />;
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />;
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'    />;
@@ -545,12 +788,94 @@ href='/devops-automation'
                 className='bg-white text-indigo-600 hover:bg-gray-100'
                   />
                 Try DevOps Automation;
+>>>>>>> origin/chore/fix-lint-and-merge
               </Button>
             </div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
+    </>
+        {/* CTA Section */}<section className=py - 24 bg - gradient - to - r from - indigo - 600 to - purple - 600'>;
+          <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center>;
+            <h2 className=text - 3xl sm:text - 4xl font - bold text - white mb - 8'>;
+            </h2>;
+            <p className='text - xl text - indigo - 100 mb - 12>;
+              Start your free trial today and see why thousands of businesses;
+              choose Zion.;
+            </p>;<section className=py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>;
+          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center>;
+            <h2 className=text-3xl sm:text-4xl font-bold text-white mb-8'>;
+            </h2>;
+            <p className='text-xl text-indigo-100 mb-12>;
+              Start your free trial today and see why thousands of businesses;
+              choose Zion.;
+            </p>;
+            <div className=flex flex-col sm:flex-row gap-4 justify-center'>;
+              <Button;
+                href='/ai-content-generator;
+                variant=secondary';
+                size='lg;
+                className=bg-white text-indigo-600 hover:bg-gray-100'>;
+                Try AI Content Generator;
+              </Button>;className='bg-white text-indigo-600 hover:bg-gray-100;
+              >;
+                Try AI Content Generator;
+              </Button>;
+              <Button;
+href=/cloud-monitoring';
+                variant='secondary;
+                size=lg';
+                className='bg-white text-indigo-600 hover:bg-gray-100>;
+                Try Cloud Monitoring;
+              </Button>;className=bg-white text-indigo-600 hover:bg-gray-100';
+              >;
+                Try Cloud Monitoring;
+              </Button>;
+              <Button;
+href='/devops-automation;
+                variant=secondary';
+                size='lg;
+                Try DevOps Automation;
+              </Button>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+                className=bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator;
+                variant=secondary";
+                size="lg;
+                className=bg-white text-indigo-600 hover:bg-gray-100";
+                Try AI Content Generator;
+              </Button>;
+                className='bg-white text-indigo-600 hover:bg-gray-100;
+              >;
+                Try DevOps Automation;
+              </Button>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+                Try DevOps Automation
+              </Button>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+                className=bg-white text-indigo-600 hover:bg-gray-100'              >                href="/ai-content-generator
+                variant=secondary"
+                size="lg
+                className=bg-white text-indigo-600 hover:bg-gray-100"
+                Try AI Content Generator
+              </Button>
+
+  )}
+  )
+}
+=======
     <   />
   );
 }
 
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -1,10 +1,47 @@
 import { useState, useEffect, useCallback } from 'react';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface ApiState<T> {
+  data: T | null;
+  loading: boolean;
+  error: string | null;
+}
+
+=======
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
 interface UseApiOptions {
   immediate?: boolean;
 }
 
 interface UseApiResult<T> {
+<<<<<<< HEAD
+  data: T | null;
+  loading: boolean;
+  error: Error | null;
+  execute: () => Promise<void>;
+}
+
+export const useApi = <T>(
+  apiFunction: () => Promise<T>,
+  options: UseApiOptions = {}
+): UseApiResult<T> => {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
+
+  const execute = useCallback(async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      const result = await apiFunction();
+      setData(result);
+    } catch (err) {
+      setError(err instanceof Error ? err : new Error('An error occurred'));
+    } finally {
+      setLoading(false);
+=======
 
 }
 interface UseApiOptions {}
@@ -170,11 +207,22 @@ export function use_api < T>(url: string;, options?: RequestInit) {
         });
       }
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface UseApiOptions {
   immediate?: boolean;
 }
 
 export function useApi<T>(
+<<<<<<< HEAD
+  apiCall: () => Promise<T>;
+  options: UseApiOptions = {}
+): ApiState<T> & { refetch: () => void } {
+  const [data, setData] = useState<T | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const fetchData = useCallback(async () => {
+=======
   apiCall: () => Promise<T>,
   options: UseApiOptions = {}
 
@@ -253,8 +301,25 @@ export default useApi;
 
     try {
 
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
     }
+  }, [apiFunction]);
 
+<<<<<<< HEAD
+  useEffect(() => {
+    if (options.immediate) {
+      execute();
+    }
+  }, [execute, options.immediate]);
+
+  return {
+    data,
+    loading,
+    error,
+    execute
+  };
+};
+=======
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
 
 import { useState,useEffect,useCallback } from &apos;react&apos; interface UseApiOptions<T = unknown> { immediate?: boolean; onSuccess?: (data: T) => void; onError?: (error: Error) => void} export const useApi = <T = unknown>( apiFunction: (...args: unknown[]) => Promise<T>,options: UseApiOptions<T> = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<Error | null>(null); const execute = useCallback(async (...args: unknown[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { const error = err instanceof Error ? err : new Error(String(err)); setError(error); options.onError?.(error); throw error} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
@@ -296,9 +361,37 @@ interface UseApiOptions {}
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null />(null);
   const fetchData = async () => {
+>>>>>>> origin/chore/fix-lint-and-merge
     setLoading(true);
     setError(null);
     try {
+<<<<<<< HEAD
+      }
+      const result = await apiCall();
+      setData(result);
+    } catch (err) {
+
+    } finally {
+      }
+      setLoading(false);
+    }
+  }, [apiCall]);
+
+  useEffect(() => {
+    if (options.immediate !== false) {
+      }
+      fetchData();
+    }
+  }, [fetchData, options.immediate]);
+
+  return {
+    data;
+    loading;
+    error;
+    refetch: fetchData;
+  };
+}
+=======
       const result = await apiCall();}
       setData(result);}
     } catch (err) {}
@@ -347,3 +440,5 @@ if ( {) {
 }
 
 }
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513

@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+=======
             '$1'
           )
           .replace(
@@ -171,3 +176,4 @@ fixer
 
 
 
+>>>>>>> origin/chore/fix-lint-and-merge

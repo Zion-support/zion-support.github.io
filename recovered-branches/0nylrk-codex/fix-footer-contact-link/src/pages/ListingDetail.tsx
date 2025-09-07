@@ -141,9 +141,26 @@ export default function ListingDetail() { return null; }
   const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);
 
   if (!listing) {;
+<<<<<<< HEAD
+}
+return (;
+  // Find the listing from our shared data source - now also checking equipment listings;
+  if (!listing) {;
+}
+return (;
+      <AppLayout>;
+        <div className="min-h-screen bg-zion-blue py-12 px-4">;"
+          <div className="container mx-auto">;"
+            <div className="text-center py-20">;"
+              <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>;"
+              <p className="text-zion-slate-light mb-8">The listing you're looking for doesn't exist or has been removed.</p>;'
+              <Button asChild className="bg-gradient-to-r from-zion-purple to-zion-purple-dark">;"
+                <a href="/marketplace">Back to Marketplace</a>;"
+=======
     return (
 
                 <a href="/marketplace">Back to Marketplace</a>;
+>>>>>>> origin/chore/fix-lint-and-merge
               </Button>;
             </div>;
           </div>;
@@ -158,6 +175,30 @@ export default function ListingDetail() { return null; }
                 <div className="aspect-[16/9] w-full relative">;
                   {listing && listing.images && listing && listing.images.length > 0 ? (;
                     <img
+<<<<<<< HEAD
+}
+src={listing && listing.images[selectedImageIndex]} 
+                      alt={listing && listing.title}                       >;
+                        <img;
+                          src={image} ;
+                          alt={`${listing.title} - image ${index + 1}`} ;`                          className="w-full h-full object-cover";"
+                          onError={(e) => {;
+                            }
+                            target.src = "/placeholder.svg";                        />;"
+                      </div>;
+                    ))}
+                  </div>;
+                )}              {/* Description Section */}
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">;"
+                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>;"
+                <p className="text-zion-slate-light whitespace-pre-line">{listing && listing.description}</p>;"
+                ;
+                {listing.images && listing.images.length > 1 && (;
+                  <div className="flex p-4 gap-2 overflow-x-auto">;"
+                    {listing.images.map((image, index) => (;
+                      <div ;
+                        }
+=======
                       src={listing && listing.images[selectedImageIndex]} 
 
 "
@@ -185,6 +226,7 @@ export default function ListingDetail() { return null; }
                   )}
 
                       <div
+>>>>>>> origin/chore/fix-lint-and-merge
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(;
@@ -287,8 +329,13 @@ export default function ListingDetail() { return null; }
                           alt={`${listing.title} - image ${index + 1}`} ;"
                           className="w-full h-full object-cover";
                           onError={(e) => {;
+<<<<<<< HEAD
+                            }
+                            target.src = "/placeholder.svg",;"
+=======
                             const target = e.target as HTMLImageElement,;"
                             target.src = "/placeholder.svg",;
+>>>>>>> origin/chore/fix-lint-and-merge
                           }}
                         />;
                       </div>;                    ))}
@@ -475,10 +522,15 @@ export default function ListingDetail() { return null; }
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>;
                   )}
+<<<<<<< HEAD
+                          target.src = ""https": //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)                  <Button"
+variant="outline";"
+=======
 
                   <Button
 
                     variant="outline" 
+>>>>>>> origin/chore/fix-lint-and-merge
                     onClick={handleContact}
                     disabled={isLoading}
                     className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">;                        }}

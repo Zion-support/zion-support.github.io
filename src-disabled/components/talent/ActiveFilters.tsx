@@ -1,4 +1,23 @@
+<<<<<<< HEAD
+:src/components/talent/ActiveFilters.tsx
+import React from "react",
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { Button } from "@/components/ui/button";
 import { X } from 'lucide-react'
+interface ActiveFiltersProps {
+  selectedSkills: string[];
+  toggleSkill: (skill: string) => void;
+  selectedAvailability: string[];
+  toggleAvailability: (status: string) => void;
+  selectedRegions: string[];
+  toggleRegion: (region: string) => void;
+  priceRange: [number, number],
+  setPriceRange: (range: [number, number]) => void;
+  experienceRange: [number, number],
+  setExperienceRange: (range: [number, number]) => void;
+=======
+import { X } from 'lucide-react'
+>>>>>>> origin/chore/fix-lint-and-merge
 
   selectedAvailability: string[]
   toggleAvailability: (status: string) => void;
@@ -41,10 +60,6 @@ import { ClickableBadge } from '@/components/ui/clickable-badge';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
 
-import React from "react",
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { Button } from "@/components/ui/button";
-import { X } from 'lucide-react'
 
 interface ActiveFiltersProps {
   selectedSkills: string[];
@@ -76,7 +91,6 @@ export function ActiveFilters({
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
-  const hasActiveFilters = null;
 
   return (
     <div className="mb-6 flex flex-wrap gap-2 items-center">"
@@ -89,7 +103,6 @@ export function ActiveFilters({
 import React from "react",;"
 import { ClickableBadge } from "@/components/ui/clickable-badge",;"
 import { Button } from "@/components/ui/button",;'
-import { X } from 'lucide-react';
 interface ActiveFiltersProps {;
 
   selectedSkills,;
@@ -273,11 +286,9 @@ interface ActiveFiltersProps {;
 
 }
 
-import React from 'react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { Button } from '@/components / ui / button';
 
-import { X } from 'lucide-react';
 interface ActiveFiltersProps {}
   selected_skills: string[];
   toggle_skill: (skill: string) => void;

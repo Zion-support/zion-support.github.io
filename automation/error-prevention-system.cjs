@@ -24,10 +24,13 @@ const { execSync } = require('child_process');
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 =======
 
+<<<<<<< HEAD
+=======
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 class ErrorPreventionSystem {}
   constructor() {}
 
@@ -419,7 +422,6 @@ class ErrorPreventionSystem {}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
     
-    let fixedCount = ;0;
     
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
     try {}
@@ -476,7 +478,6 @@ class ErrorPreventionSystem {}
     const checks = [this.checkBuildErrors(),]
 =======
 
-    let fixedCount = ;0;
       // Fix linting errors;
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

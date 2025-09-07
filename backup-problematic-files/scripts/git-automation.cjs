@@ -26,7 +26,7 @@ async runCommand(command, options = {}) {
         ...options 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       });
-      return { success: true, stdout, stderr };
+      return { success: true, stdout, stderr }
     } catch (error) {
       this.log(`Command failed: ${command} - ${error.message}`);
 <<<<<<< HEAD
@@ -37,8 +37,13 @@ async runCommand(command, options = {}) {
 =======
       return { 
         success: false, 
-        stdout: error.stdout || "", 
+        stdout: error.stdout || ", 
         stderr: error.stderr || error.message 
+<<<<<<< HEAD
+      }
+    }
+  }
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
         ...options;
@@ -53,17 +58,30 @@ async runCommand(command, options = {}) {
         stderr: error.stderr || error.message;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       };
+>>>>>>> origin/chore/fix-lint-and-merge
 
 <<<<<<< HEAD
   async checkGitStatus() {
+<<<<<<< HEAD
+    this.log('Checking git status...);
+    const result = await this.runCommand(git status --porcelain');
+=======
     this.log('Checking git status...');
     const result = await this.runCommand('git status --porcelain');
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (result.success) {
+<<<<<<< HEAD
+      const changes = result.stdout.trim().split('\n).filter(line => line.length > 0);
+      this.log(`Found ${changes.length} changes`);
+      return changes;
+    } else {
+      this.log(Failed to check git status');
+=======
       const changes = result.stdout.trim().split('\n').filter(line => line.length > 0);
 =======
   async checkGitStatus() {"
@@ -75,18 +93,30 @@ async runCommand(command, options = {}) {
   // TODO: Implement
 
       this.log('Failed to check git status');
+>>>>>>> origin/chore/fix-lint-and-merge
       return [];
 
   async addAllChanges() {
+<<<<<<< HEAD
+    this.log('Adding all changes...);
+    const result = await this.runCommand(git add .');
+=======
 <<<<<<< HEAD
     this.log('Adding all changes...');
     const result = await this.runCommand('git add .');
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (result.success) {
+<<<<<<< HEAD
+      this.log('✅ All changes added);
+      return true;
+    } else {
+      this.log(❌ Failed to add changes');
+=======
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -95,27 +125,32 @@ async runCommand(command, options = {}) {
   // TODO: Implement
 
       this.log('❌ Failed to add changes');
+>>>>>>> origin/chore/fix-lint-and-merge
       return false;
 
 <<<<<<< HEAD
   async commitChanges(message) {
     this.log(`Committing changes: ${message}`);
+<<<<<<< HEAD
+    const result = await this.runCommand(`git commit -m ${message}"`);
+=======
     const result = await this.runCommand(`git commit -m "${message}"`);
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (result.success) {
-      this.log('✅ Changes committed');
+      this.log('✅ Changes committed);
       return true;
     } else {
-      this.log('❌ Failed to commit changes');
+      this.log(❌ Failed to commit changes');
       return false;
     }
   }
 
-  async pushChanges(branch = 'main') {
+  async pushChanges(branch = 'main) {
     this.log(`Pushing changes to ${branch}...`);
     const result = await this.runCommand(`git push origin ${branch}`);
 <<<<<<< HEAD
@@ -124,22 +159,56 @@ async runCommand(command, options = {}) {
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (result.success) {
-      this.log('✅ Changes pushed');
+      this.log(✅ Changes pushed');
       return true;
     } else {
-      this.log('❌ Failed to push changes');
+      this.log('❌ Failed to push changes);
       return false;
     }
   }
 
   async mergeToMain() {
+<<<<<<< HEAD
+    this.log(Merging to main branch...');
+=======
     this.log('Merging to main branch...');
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Checkout main branch
+<<<<<<< HEAD
+    const checkoutResult = await this.runCommand('git checkout main);
+    if (!checkoutResult.success) {
+      this.log(❌ Failed to checkout main branch');
+      return false;
+    }
+
+    // Pull latest changes
+    const pullResult = await this.runCommand('git pull origin main);
+    if (!pullResult.success) {
+      this.log(❌ Failed to pull latest changes');
+      return false;
+    }
+
+    // Merge current branch
+    const mergeResult = await this.runCommand('git merge --no-ff -m "Automated merge of automation improvements);
+    if (!mergeResult.success) {
+      this.log(❌ Failed to merge changes');
+      return false;
+    }
+
+    // Push merged changes
+    const pushResult = await this.pushChanges('main);
+    if (!pushResult.success) {
+      this.log(❌ Failed to push merged changes');
+      return false;
+    }
+
+    this.log('✅ Successfully merged to main branch);
+=======
 =======
 
     // Checkout main branch;
@@ -162,35 +231,55 @@ async runCommand(command, options = {}) {
 
 <<<<<<< HEAD
     this.log('✅ Successfully merged to main branch');
+>>>>>>> origin/chore/fix-lint-and-merge
     return true;
   }
 
   async runFullWorkflow() {
+<<<<<<< HEAD
+    this.log(Starting full git automation workflow...');
+=======
     this.log('Starting full git automation workflow...');
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     // Ensure logs directory exists
+<<<<<<< HEAD
+    const logsDir = path.join(__dirname, '.., automation', 'logs);
+=======
     const logsDir = path.join(__dirname, '..', 'automation', 'logs');
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
 
     // Check git status;
     const changes = await this.checkGitStatus();
     if (changes.length === 0) {
+<<<<<<< HEAD
+      this.log(No changes to commit');
+      return true;
+    }
+=======
       this.log('No changes to commit');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
     // Add all changes;
     const added = await this.addAllChanges();
     if (!added) {
 
+<<<<<<< HEAD
+    // Commit changes
+    const committed = await this.commitChanges('Automated improvements and fixes);
+=======
     // Commit changes;
     const committed = await this.commitChanges('Automated improvements and fixes');
+>>>>>>> origin/chore/fix-lint-and-merge
     if (!committed) {
 
     // Push changes;
@@ -201,6 +290,13 @@ async runCommand(command, options = {}) {
     const merged = await this.mergeToMain();
     if (!merged) {
 
+<<<<<<< HEAD
+    this.log(Full git automation workflow completed successfully');
+    return true;
+  }
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 // Handle command line arguments;
 if (require.main === module) {
@@ -208,6 +304,28 @@ if (require.main === module) {
   const command = process.argv[2];
 
   switch (command) {
+<<<<<<< HEAD
+    case status":
+      gitAutomation.checkGitStatus();
+      break;
+    case "add:
+      gitAutomation.addAllChanges();
+      break;
+    case commit":
+      const message = process.argv[3] || 'Automated commit;
+      gitAutomation.commitChanges(message);
+      break;
+    case "push:
+      const branch = process.argv[3] || main';
+      gitAutomation.pushChanges(branch);
+      break;
+    case merge":
+      gitAutomation.mergeToMain();
+      break;
+    case "workflow:
+      gitAutomation.runFullWorkflow().catch(error => {
+        console.error(Git automation failed: ", error);
+=======
     case "status":"
       gitAutomation.checkGitStatus();
       break;"
@@ -219,11 +337,15 @@ if (require.main === module) {
     case "workflow":"
       gitAutomation.runFullWorkflow().catch(error => {)"
         console.error("Git automation failed: ", error);"
+>>>>>>> origin/chore/fix-lint-and-merge
         process.exit(1);
     default:"
       console.log("Usage: node git-automation.cjs [status|add|commit|push|merge|workflow]");"
 
 module.exports = GitAutomation;
+<<<<<<< HEAD
+
+=======
 #!/usr/bin/env node
 /**
  * Git Automation Script;
@@ -266,3 +388,4 @@ const path = require('path')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

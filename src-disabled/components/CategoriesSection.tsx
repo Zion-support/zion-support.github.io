@@ -284,7 +284,6 @@ import { GradientHeading } from "./GradientHeading";"
 import Link from "next/link";'
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon;"
 import { cn } from "@/lib/utils";"
-import { useTranslation } from "react-i18next";
 // This is the type definition copied from Categories && Categories.tsx for consistency.;
 // Ideally, this would be in a shared types file.;
 interface CategoryType {;
@@ -632,7 +631,6 @@ function CategoriesSection() {}
   const {}
   t;
 }= use_translation ();
-const default_categories = getDefaultCategories (t);
 
 }`, //Construct link if not provided //Assign a default color or implement logic to assign colors color: default_categories.find (dc => dc.id === cat.id) ?.color || "from - gray - 500 to - gray - 600";
 }) ) : default_categories.map (cat => ({}

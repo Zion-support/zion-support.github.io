@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import React from './react';'
 import { Button  } from '@/components / ui / button';'
 import { Eye, Info, AlertTriangle, Ban  } from './lucide-react';
@@ -217,12 +219,33 @@ interface ActionButtonsProps {;
       >;
 
         <Ban className="h-4 w-4" />;
+>>>>>>> origin/chore/fix-lint-and-merge
 
         >;
           Ignore;
         </Button>;
       )}
     </div>;
+<<<<<<< HEAD
+  );
+
+  ) => void;
+}
+export const "ActionButtons": React.FC < ActionButtonsProps> = ({
+  }
+  flag_id,
+  status,
+  on_action}) => {
+
+        >;
+          Ignore;
+        </Button>)}
+    </div>);
+}
+
+}
+  )
+=======
 
   on_action: (
     flag_id: string,
@@ -289,6 +312,7 @@ variant=\"ghost\"
 variant=\"ghost\"}
           size=\"sm\"}
           onClick={() = /> onAction(flagId, \"ignore\")}
+>>>>>>> origin/chore/fix-lint-and-merge
 
         >
           Ignore;
@@ -297,9 +321,13 @@ variant=\"ghost\"}
 
 };
 
-};
+}
 
   )
+<<<<<<< HEAD
+}
+    </div>
+=======
 };
 
 import React from './react';''
@@ -417,5 +445,6 @@ pr-12325
         </Button>
 </div>"
 
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 };

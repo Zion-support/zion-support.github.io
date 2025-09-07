@@ -132,7 +132,6 @@ class AutomationRunner {
     if (!auditResult.success) {
       this.results.security.issues.push('Security vulnerabilities found');
       // Try to fix automatically
-      const fixResult = await this.runCommand(
         'npm audit fix',
         'Security fix',
         30000
@@ -151,8 +150,6 @@ class AutomationRunner {
     
     // Create a performance monitoring script
     const performanceScript = `#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 class PerformanceMonitor {
   constructor() {
@@ -234,7 +231,6 @@ console.log('Performance report generated:', reportPath);
 
   generateFinalReport() {
     const duration = Date.now() - this.startTime;
-    const report = {
       timestamp: new Date().toISOString(),
       duration: `${Math.round(duration / 1000)}s`,
       results: this.results,

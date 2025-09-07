@@ -50,9 +50,21 @@ export function DeveloperPortal() {;
   const [activeTab, setActiveTab] = useState<string>("documentation");
 export function DeveloperPortal() {
 
-  const { user } = useAuth();
 
+<<<<<<< HEAD
+
+import { ApiLogs } from "@/components/developers/ApiLogs",
+interface TabDefinition {
+  id: string
+  label: string
+
+  icon: LucideIcon
+}
+export function DeveloperPortal() {
+  const { user } = useAuth($2);
+=======
   const { user } = useAuth(),"
+>>>>>>> origin/chore/fix-lint-and-merge
   const [activeTab, setActiveTab] = useState<string>("documentation"),
 
   // Define the tabs;
@@ -75,7 +87,12 @@ export function DeveloperPortal() {
           Access the Zion API, manage your API keys, and set up webhooks.
         </p>
       </div>
+<<<<<<< HEAD
+  const { user } = useAuth(),
+              return (
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
       {/* Tabs */}
 "
       <div className="border-b border-zinc-800 mb-8">"

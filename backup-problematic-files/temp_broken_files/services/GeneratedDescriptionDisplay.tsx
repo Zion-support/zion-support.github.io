@@ -87,7 +87,11 @@ onSave ;
  } = useToast ();
 const [isEditing, setIsEditing] = useState (false);
 const [editedDescription, setEditedDescription] = useState (description);
+<<<<<<< HEAD
+  }
+=======
 const handleSave = () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   onSave (editedDescription);
 setIsEditing (false);
 

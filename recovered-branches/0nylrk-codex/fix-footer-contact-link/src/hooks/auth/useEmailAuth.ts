@@ -280,6 +280,33 @@ if ( {) {
     } finally {
       setIsLoading(false)
     }
+<<<<<<< HEAD
+  },
+  const resetPassword = async ("email": string) => {
+    }
+    try {
+      }
+      setIsLoading(true)
+      const { error } = await supabase.auth.resetPasswordForEmail(email, {
+        }
+        "redirectTo": `${window.location.origin}/update-password`});`      if (error) {
+        }
+        toast({
+          }
+          "title": "Password reset failed","
+  "description": error.message,
+    }
+    try {
+      }
+      setIsLoading(true),
+      const { error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
+        }
+        "redirectTo": `${window && window.location.origin}/update-password`});`      if (error) {
+        }
+        toast({
+;
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
 ;

@@ -1,6 +1,11 @@
 <<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
+<<<<<<< HEAD
+    this.steps = [git add .']
+      'git commit -m "feat: automated improvements and fixes"
+
+=======
     this.steps = ['git add .']
       'git commit -m ""feat": automated improvements and fixes"
 <<<<<<< HEAD
@@ -16,3 +21,4 @@ const { execSync } = require('child_process')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

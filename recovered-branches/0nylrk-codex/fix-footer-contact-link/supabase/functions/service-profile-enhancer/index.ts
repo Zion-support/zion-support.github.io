@@ -1,10 +1,39 @@
+<<<<<<< HEAD
+import { serve } from '"https": //deno.land / std@0.177.0 / http / server.ts';import {serve} from ""https": //deno && deno.land/std@0 && 0.177.0/http/server ;"
+
+import { serve } from ""https": //deno.land/std@0.177.0/http/server.ts";"
+import { serve } from '"https": //deno.land / std@0.177.0 / http / server.ts';'
+interface ServiceProfileData {
+  }
+  "name": string;
+  "title": string;
+  "bio": string;
+
+import { serve } from ""https": //deno.land/std@0.177.0/http/server.ts","
+import {serve} from ""https": //deno.land/std@0.177.0/http/server.ts";"
+
+=======
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
 
 interface ServiceProfileData {
+<<<<<<< HEAD
+  }
+  "name": string,
+  "title": string,
+  "bio": string,
+  services?: string[],          "error": "Missing required service provider data"}),"
+interface ServiceProfileData {;
+  }
+  "name": string,;
+  "title": string,;
+  "bio": string,;
+  services?: string[],;
+=======
 
   name: string;
   title: string;
@@ -24,6 +53,7 @@ interface ServiceProfileData {
 
   location: string
 
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 serve(async (req) => {}
   try {}

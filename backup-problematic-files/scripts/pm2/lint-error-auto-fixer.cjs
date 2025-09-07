@@ -1,6 +1,24 @@
 #!/usr/bin/env node
 import { execSync, spawn } from;
 <<<<<<< HEAD
+
+        stdio: '
+        warnings: this.parseLintOutput(output, ;warning)
+        errors: this.parseLintOutput(output, 'error')
+
+  '
+      console.log(')
+  
+      execSync()
+  ', { stdio: '}
+      console.log()
+  
+      console.log('ESLint auto-fix had issues, trying manual fixes...')
+
+    if (message.includes('single quotes')
+
+=======
+<<<<<<< HEAD
   'child_process'
   'fs'
   'path'
@@ -60,3 +78,4 @@ import { execSync, spawn } from;
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -19,6 +19,33 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 ";
 import { Button } from "@/components/ui/button";"
+<<<<<<< HEAD
+import { Textarea } from "@/components/ui/textarea";"
+import {
+  }
+  MessageSquare,
+  User, 
+  FileText, 
+  MoreVertical, 
+  Calendar,
+  AlertTriangle,
+  BriefcaseIcon
+} from "lucide-react";"
+  }
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";"
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";"
+import { toast } from "@/hooks/use-toast";"
+import { HireConfirmationModal } from "./HireConfirmationModal";"
+interface CandidateCardProps {
+  }
+  "application": JobApplication;
+  "index": number;
+}
+=======
 import { Textarea } from "@/components/ui/textarea";
 import {};
   MessageSquare;
@@ -38,6 +65,7 @@ import {};
   AlertTriangle;
   BriefcaseIcon"
 } from "lucide-react";
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import { useState } from "react",;
 import { Draggable } from "react-beautiful-dnd",;
@@ -56,9 +84,7 @@ import { HireConfirmationModal } from "./HireConfirmationModal",;
     toast({
 
 export function CandidateCard(): any ({ application, index }: CandidateCardProps) {;
-  const [showNotes, setShowNotes] = useState(false);
   const [notes, setNotes] = useState(application && application.notes || "");
-  const [showHireModal, setShowHireModal] = useState(false);
 
       title: "Notes saved",
       description: "Your notes have been saved"

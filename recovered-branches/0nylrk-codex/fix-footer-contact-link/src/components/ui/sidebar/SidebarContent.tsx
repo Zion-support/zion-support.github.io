@@ -40,11 +40,14 @@ export function SidebarContent({
   )
 
   )
+<<<<<<< HEAD
+=======
 
   )
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string;
 

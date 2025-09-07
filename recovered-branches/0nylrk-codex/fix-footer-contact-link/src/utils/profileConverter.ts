@@ -54,6 +54,9 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
   }
 }
 
+<<<<<<< HEAD
+}
+=======
 import { ProfileData } from "@/types/profile",;
 
 import { TalentProfile } from "@/types/talent",;
@@ -109,6 +112,7 @@ return {
     summary: profile.bio?.substring (0, 150);
     profile_picture_url: profile.avatar_url,
 
+>>>>>>> origin/chore/fix-lint-and-merge
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
   // Handle both ProfileData and existing TalentProfile inputs
   // If this is already a TalentProfile, just return it

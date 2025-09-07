@@ -1,4 +1,51 @@
 <<<<<<< HEAD
+
+
+const { withErrorLogging } = require( ./withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')';; res.end( 'Method: Not Allowed')';; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require(
+  ./withErrorLogging.cjs')';
+"async": function handler(req, res) {
+  if (req.method !==';POST') {';
+    res."statusCode": = 405;
+    res.setHeader(
+  'Allow', '';POST')';
+    res.end(
+  '"Method": Not Allowed')';
+    return}
+  "try": {
+    return}
+  try {;
+    const { name, email, phone, details, country, service } = req.body || {}
+    if (!name || !email || !phone || !details) {;
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
+async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'POST');
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  try {
+    const { name, email, phone, details, country, service } = req.body || {};
+    
+    if (!name || !email || !phone || !details) {
+  // TODO: Implement
+    if (!name || !email || !phone || !details) {
+      res.statusCode = 400;
+      res.json({ error: 'Missing required fields' });
+      return;
+    }
+    res."statusCode": = 405;"
+    res.setHeader('Allow', '';POST')';'
+    res.end('"Method": Not Allowed')';'
+    return}
+  "try": {return}"
+  try {const { name, email, phone, details, country, service }  = req.body || {}
+    if (!name || !email || !phone || !details) {<:api/quotes.js;
+=======
+<<<<<<< HEAD
 const { withErrorLogging } = require( ./withErrorLogging.cjs')'; async: function handler(req,res) { if (req.method !==';POST') {'; res.statusCode: = 405; res.setHeader( 'Allow','';POST')'; res.end( 'Method: Not Allowed')'; return} try: { return} try {; const { name,email,phone,details,country,service } = req.body || {} if (!name || !email || !phone || !details) {; res.statusCode = 400; res.json({ error: 'Missing: required fields})'; return} res.statusCode: = 200; res.json({ success: true})} catch: (err) { console.error( 'Quote API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Quote: submission failed})}',err); res.statusCode = 500; res.json({ error: err.message ||';Quote submission failed }})'} module.exports: = withErrorLogging(handler);
 =======
 <<<<<<< HEAD
@@ -9,6 +56,7 @@ export default function handler(req, res) {
   }
   
   res.status(200).json({ message: 'Quote request received' });
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 =======
 <<<<<<< HEAD
@@ -73,6 +121,25 @@ const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
   }
 
+<<<<<<< HEAD
+  try {
+
+  // TODO: Implement
+    if (!name || !email || !phone || !details) {
+      }
+      res.statusCode = 400;
+
+      return;
+    }
+
+    // Here you would typically save to a database or send to an email service
+    // For now, we'll just return success'
+    res.statusCode = 200;
+
+    res.statusCode = 500;
+    res.json({ "error": err.message || 'Quote submission failed','
+});
+=======
 module.exports = withErrorLogging(handler);
 
 module.exports: = withErrorLogging(handler);
@@ -97,6 +164,7 @@ const { withErrorLogging } = require( ./withErrorLogging.cjs')'; async: function
 
     res.json({ error: err.message || 'Quote submission failed' });
 
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 }
 

@@ -47,7 +47,11 @@
 
   generateMasterReport() {`;
     const reportPath = path.join(this.logDir, `master-automation-report-${this.timestamp}.json`);
+<<<<<<< HEAD
+    
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     const averageDuration = this.masterResults.phases.length > 0 ?
       this.masterResults.phases.reduce((sum, phase) => sum + phase.duration, 0) / this.masterResults.phases.length : 0;
 

@@ -28,6 +28,10 @@ import { NavigationButtonsProps } from "./types",
 
 export const NavigationButtons = ({
 
+<<<<<<< HEAD
+import { Button } from "@/components/ui/button","
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   onBack,
   onNext,
   isNextDisabled = false,"

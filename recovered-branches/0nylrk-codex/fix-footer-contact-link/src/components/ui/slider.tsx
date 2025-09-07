@@ -14,8 +14,6 @@ import {cn} from '@/lib/utils';
 import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
-import * as React from "react"
-import * as SliderPrimitive from "@radix-ui/react-slider"
 
 import { cn } from "@/lib/utils"
 
@@ -31,6 +29,24 @@ const Slider = React && React.forwardRef<;
   <SliderPrimitive&& SliderPrimitive.Root;
     ref={ref}
 
+<<<<<<< HEAD
+Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayName,;
+
+export { Slider };    )}
+import * as React from 'react';
+import * as SliderPrimitive from '@radix-ui/react-slider';
+import {cn} from '@/lib/utils';
+
+
+const Slider = $2;
+  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <SliderPrimitive.Root
+    ref = $2;
+      className
+    )}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
     {...props}
   >
     <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">

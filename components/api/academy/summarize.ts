@@ -1,19 +1,61 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse,
+  from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest;,,
+  res: NextApiResponse;
+=======
+<<<<<<< HEAD
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+
+  if (!apiKey) return fallback();
+  try {}
+    const client = new OpenAI({ apiKey });`
+    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
+        {'
+          role: 'system''
+          content: 'You are a concise, practical course assistant.'
+        }'
+        { role: 'user', content: prompt }
+      ]
+      temperature: 0.3
+    const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini'
+      messages: [
+{
+          role: 'system',
+          content: You are a concise, practical course assistant.},
+        { role: 'user', content: prompt }],
+      temperature: 0.3,
+origin/cursor/automate-test-improve-and-merge-code-2533
+    });
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    return res.status (200).json ({ summary: text.trim () });
+  } catch (err) {
+  }
+    const text = completion.choices?.[0]?.message?.content ?? '';
+  } catch (err) {
+=======
 
 export default async function handler(
   req: NextApiRequest;
 res: NextApiResponse;
+>>>>>>> origin/main
 ) {
   if (req.method !== 'POST')}
-    return res.status(405).json({ error: 'Method not allowed',}
-});
+    return res.status(405).json({ error: 'Method not allowed',
+  },,
+  });
 
 const { moduleTitle, moduleContent } = req.body || {},
   const apiKey = null;
-    res.status(200).json({}
-      summary: `Summary for ${moduleTitl,}
-}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`
+    res.status(200).json({},
+  summary: `Summary for ${moduleTitl,} }: Focus on practical setup governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`
     });
 
   if (!apiKey) return fallback();
@@ -31,11 +73,9 @@ const completion = await client.chat.completions.create({
   content: 'You are a concise, practical course assistant.',}
         },
         { role: 'user',}
-  content: prompt,}
-},
-      ],
-      temperature: 0.3,
-    });
+  content: prompt,],
+      temperature: 0.3,,,
+  });
 
 const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status (200).json ({ summary: text.trim (),}
@@ -47,4 +87,8 @@ const text = completion.choices?.[0]?.message?.content ?? '';
     return fallback()}
 },
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/main

@@ -48,6 +48,40 @@ interface ReviewFormValues {
   would_work_again?: boolean;
   is_anonymous?: boolean;
 }
+<<<<<<< HEAD
+import { useState } from "react","
+import { Star } from "lucide-react","
+import { useForm } from "react-hook-form","
+import { Button } from "@/components/ui/button";"
+import { Textarea } from "@/components/ui/textarea";"
+import {
+  }
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+import { Button } from "@/components/ui/button","
+import { Textarea } from "@/components/ui/textarea","
+  }
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form","
+  }
+  RadioGroup;
+  RadioGroupItem} from "@/components/ui/radio-group","
+import { Switch } from "@/components/ui/switch";"
+import { Review } from "@/types/reviews";"
+import { Switch } from "@/components/ui/switch","
+import { Review } from "@/types/reviews",import { useState } from "react";"
+import { Star } from "lucide-react";"
+import { useForm } from "react-hook-form",;"
+import { Button } from "@/components/ui/button",;"
+import { Textarea } from "@/components/ui/textarea",;"
+=======
 
   rating?: number,
   review_text?: string,
@@ -77,15 +111,23 @@ import { Star } from "lucide-react",;
 import { useForm } from "react-hook-form",;
 
 import { Textarea } from "@/components/ui/textarea",;
+>>>>>>> origin/chore/fix-lint-and-merge
 import {;
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
+<<<<<<< HEAD
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;"
+  }
+  RadioGroup,;
+=======
   FormLabel,;"
   FormMessage} from "@/components/ui/form",;
 import {;
   RadioGroup,;"
+>>>>>>> origin/chore/fix-lint-and-merge
   RadioGroupItem} from "@/components/ui/radio-group",;"
 import { Switch } from "@/components/ui/switch",;"
 import { Review } from "@/types/reviews",;
@@ -168,6 +210,12 @@ interface ReviewFormProps {;
         <FormField;
           control={form && form.control}"
           name="rating""
+<<<<<<< HEAD
+          rules={{ "required": "Rating is required" }}"
+import { useState } from "react",;"
+import { Star } from "lucide-react",;"
+  }
+=======
           rules={{ required: "Rating is required" }}
 
 import { useState } from "react",;
@@ -177,10 +225,18 @@ import { Button } from "@/components/ui/button",;
 
 import { Textarea } from "@/components/ui/textarea",;
 import {;
+>>>>>>> origin/chore/fix-lint-and-merge
   Form,;
   FormControl,;
   FormField,;
   FormItem,;
+<<<<<<< HEAD
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;"
+  }
+  RadioGroup,;
+  RadioGroupItem} from "@/components/ui/radio-group",;"
+=======
   FormLabel,;"
   FormMessage} from "@/components/ui/form",;
 import {;
@@ -188,6 +244,7 @@ import {;
   RadioGroupItem} from "@/components/ui/radio-group",;"
 import { Switch } from "@/components/ui/switch",;"
 import { Review } from "@/types/reviews",;
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface ReviewFormValues {;
   rating?:number,;
@@ -207,6 +264,34 @@ interface ReviewFormProps {;
   isSubmitting:boolean;
 }
 ;
+<<<<<<< HEAD
+export function ReviewForm() {;
+  }
+  ;
+  const form = useForm<ReviewFormValues>({;
+    }
+    "defaultValues":defaultValues ? {;
+      }
+      "rating":defaultValues.rating,;
+      "review_text":defaultValues.review_text,;
+      "communication_rating":defaultValues.communication_rating,;
+      "quality_rating":defaultValues.quality_rating,;
+      "timeliness_rating":defaultValues.timeliness_rating,;
+      "would_work_again":defaultValues.would_work_again,;
+      "is_anonymous":defaultValues.is_anonymous} {;
+      }
+      "rating":0,;
+      "review_text":"",;"
+      "communication_rating":undefined,;
+      "quality_rating":undefined,;
+      "timeliness_rating":undefined,;
+      "would_work_again":undefined,;
+      "is_anonymous":false}
+  }),;
+  ;
+  const handleSubmit = async ("values":ReviewFormValues) => {;
+    }
+=======
 export function ReviewForm() { return null; }
       is_anonymous:defaultValues.is_anonymous} {;
       rating:0,;"
@@ -220,6 +305,7 @@ export function ReviewForm() { return null; }
   ;
   const handleSubmit = async (values:ReviewFormValues) => {;
     const formattedData = {;
+>>>>>>> origin/chore/fix-lint-and-merge
       ...values,;
       project_id:projectId,;
       reviewee_id:revieweeId},;

@@ -124,6 +124,16 @@ export function useInterviews() {}
     } catch (err: any) {
       console && console.error("Error in requestInterview:", err);
       setError(err && err.message);
+<<<<<<< HEAD
+      return null    } finally {import { useState } from 'react';'
+import { supabase } from '@/integrations/supabase/client',;'
+import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',;'
+import { toast } from '@/components/ui/use-toast',;'
+export function useInterviews() {;
+  }
+  const [interviews, setInterviews] = useState<Interview[]>([]),;
+  const [isLoading, setIsLoading] = useState(false),;
+=======
 
 import { useAuth } from "@/hooks/useAuth",;
 import { supabase } from '@/integrations/supabase/client',;
@@ -131,6 +141,7 @@ import { Interview, InterviewRequest, InterviewResponse } from '@/types/intervie
 
 import { toast } from '@/components/ui/use-toast',;
 export function useInterviews() { return null; }
+>>>>>>> origin/chore/fix-lint-and-merge
   const { user } = useAuth(),;
   // Request an interview as a client;
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {;
@@ -151,10 +162,17 @@ export function useInterviews() { return null; }
 ;
     setIsLoading(true),;
     setError(null),;
+<<<<<<< HEAD
+    try {;
+      // Insert the interview into the database;
+      }
+        .from('interviews');'
+=======
     try {;}
       // Insert the interview into the database;}
       const { data, error: insertError } = await supabase;
         .from('interviews');
+>>>>>>> origin/chore/fix-lint-and-merge
         .insert({;
           client_id: interviewRequest.client_id,;
           talent_id: interviewRequest.talent_id,;
@@ -758,6 +776,24 @@ const notifyUserId = interview.client_id === user.id;
     relatedId: string
   ) => {
     try {
+<<<<<<< HEAD
+      // Get the interview first to check permissions and get IDs for notifications
+}
+        .from('interviews')'
+        .select('*')'
+        .eq('id', interviewId)'
+        .single();
+      if (fetchError) {
+        }
+        setError(fetchError.message);
+return false;
+      }
+        "user_id": userId,
+        type,
+        title,
+        message,
+        "related_id": relatedId})
+=======
       await supabase.from('notifications').insert({
 
         user_id: userId;
@@ -765,12 +801,106 @@ const notifyUserId = interview.client_id === user.id;
         title;
         message
         related_id: relatedId})
+>>>>>>> origin/chore/fix-lint-and-merge
     } catch (error) {
       console.error("Error creating notification:", error)
 
     }
 
       }
+<<<<<<< HEAD
+      await supabase.from('notifications').insert({;'
+        }
+        "user_id": userId,;
+        type,;
+        title,;
+        message,;
+        "related_id": relatedId});
+    } catch (error) {;
+      }
+      console.error("Error creating "notification":", error);"
+    }
+  },;
+  // Cancel an interview (either client or talent can cancel);
+  const cancelInterview = async ("interviewId": string): Promise<boolean> => {;
+    }
+    if (!user?.id) return false,;
+    setIsLoading(true),;
+    setError(null),;
+    try {;
+      // Get the interview first to check permissions and get IDs for notifications;
+      }
+        .from('interviews');'
+        .select('*');'
+        .eq('id', interviewId);'
+        .single(),;
+      if (fetchError) {;
+        }
+        setError(fetchError.message),;
+        return false;      // Check if user is part of this interview,
+if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
+        }
+        setError("You don't have permission to cancel this interview");"
+return false;
+      // Determine who to notify,
+const notifyUserId = interview && interview.client_id === user && user.id
+        ? interview && interview.talent_id
+        : interview && interview.client_id;
+
+;
+      // Check if user is part of this interview;
+      if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
+        }
+        setError("You don't have permission to cancel this interview"),;"
+        return false;
+      }
+;
+      // Update the interview status;
+        .from('interviews');'
+        .update({;
+          }
+          "status": 'cancelled',;'
+          "updated_at": new Date().toISOString();
+        });
+        .eq('id', interviewId),;'
+      if (updateError) {;
+        }
+        setError(updateError.message),;
+        return false;
+      }
+      // Determine who to notify,
+const notifyUserId = interview.client_id === user.id
+        ? interview.talent_id
+        : interview.client_id,
+  return {
+    }
+    interviews;
+    is_loading;
+    error;
+    request_interview;
+    }
+  },
+
+  // Cancel an interview (either client or talent can cancel)
+  const cancelInterview = $2;
+    setIsLoading($2);
+    setError($2);
+    try {
+      // Get the interview first to check permissions and get IDs for notifications
+      const { data: interview, error: fetchError} = await supabase
+        .from('interviews')
+        .select('*')
+        .eq('id', interviewId)
+        .single($2);
+      if (fetchError) {
+        setError($2);
+        return false
+      }
+
+      // Check if user is part of this interview
+      if (interview.client_id !== user.id && interview.talent_id !== user.id) {
+        setError($2);
+=======
 
       if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
 
@@ -783,6 +913,7 @@ const notifyUserId = interview.client_id === user.id;
 
         : interview && interview.client_id;
 
+>>>>>>> origin/chore/fix-lint-and-merge
         return false
       }
       // Update the interview status

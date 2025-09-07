@@ -1,6 +1,223 @@
+export default function Revolutionary2028Pricing () {
+  return (<> <Head> <title>2028 Revolutionary Pricing - Zion Tech Group</title> </Head> <UltraFuturisticNavigation2028 /> {
+  /* Hero Section */ 
+}</div> <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div > <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm" > <DollarSign className="w-4 h-4" /> <span>Transparent Pricing</span> </div> <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight" > <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent" > Revolutionary </span> <br /> <span className="text-white" >2028 Pricing</span> </h1> <p className="text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed" > Experience cutting-edge technology at competitive prices. Our transparent pricing model ensures you get maximum value for your investment in the future. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2" > <span>Get Started</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/2028-services-showcase" className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2" > <span>View Services</span> <Rocket className="w-5 h-5" /> </a> </div> </div> <div className="text-center" > <div className="text-3xl font-bold text-blue-400" >99.9%</div> <div className="text-blue-300" >Uptime Guarantee</div> </div> <div className="text-center" > <div className="text-3xl font-bold text-pink-400" >24/7</div> <div className="text-pink-300" >Expert Support</div> </div> <div className="text-center" > <div className="text-3xl font-bold text-cyan-400" >30-Day</div> <div className="text-cyan-300" >Free Trial</div> </div> </div> </motion.div> </div> </section> </h2> <p className="text-xl text-purple-200 max-w-3xl mx-auto" > Flexible pricing plans designed to scale with your business. Start small and grow with us. </p> </div> <motion.div key= {
+  tier.name 
+}initial= {
+  {
+  opacity: 0, y: 30 
+}
+}whileInView= {
+  {
+  opacity: 1, y: 0 
+}
+}transition= {
+  {
+  duration: 0.6, delay: index * 0.1 
+}
+}viewport= {
+  {
+  once: true 
+}
+}className= {
+  `relative $ {
+  tier.popular ? 'scale-105' : '' 
+}` 
+}> <span>Most Popular</span> </div> </div>) 
+}</li>) ) 
+}</ul> <Link href= {
+  tier.href 
+}className= {
+  `block w-full text-center px-6 py-3 bg-gradient-to-r $ {
+  tier.color 
+}text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105` 
+}> </div> </div> </motion.div>) ) 
+}</div> </div> </section> </h2> <p className="text-xl text-purple-200 max-w-3xl mx-auto" > Detailed pricing for our individual services. Mix and match to create your perfect solution. </p> </div> > <div className="relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105" > <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" ></div> </div> </div> <div className="flex items-center justify-between" > <Link </div> </div> </div> </div> </motion.div>) ) 
+}</div> </div>) ) 
+}</div> </section> </h2> <p className="text-xl text-purple-200 max-w-3xl mx-auto" > We offer the best value in the market with transparent pricing and unmatched features. </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-8" > <motion.div > <Target className="w-16 h-16 text-green-400 mx-auto mb-6" /> <h3 className="text-2xl font-bold text-white mb-4" >Competitive Pricing</h3> <p className="text-purple-300 mb-6" > Our prices are 30% lower than market average while providing superior technology and features. </p> <div className="text-3xl font-bold text-green-400" >30%</div> <div className="text-purple-300" >Lower than Market</div> </motion.div> <motion.div > <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" /> <h3 className="text-2xl font-bold text-white mb-4" >No Hidden Costs</h3> <p className="text-blue-300 mb-6" > Transparent pricing with no surprise fees. What you see is what you pay
+with clear value for every dollar. </p> <div className="text-3xl font-bold text-blue-400" >100%</div> <div className="text-blue-300" >Transparent Pricing</div> </motion.div> <motion.div > <Award className="w-16 h-16 text-pink-400 mx-auto mb-6" /> <h3 className="text-2xl font-bold text-white mb-4" >Premium Quality</h3> <p className="text-pink-300 mb-6" > Enterprise-grade technology with premium support and features that justify every penny of investment. </p> <div className="text-3xl font-bold text-pink-400" >5x</div> <div className="text-pink-300" >ROI Guarantee</div> </motion.div> </div> </div> </section> > </h2> <p className="text-xl text-purple-200 max-w-3xl mx-auto" > Join hundreds of companies already leveraging our futuristic services to gain competitive advantages and drive innovation. </p> <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2" > <span>Start Free Trial</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/contact" className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2" > <span>Schedule Demo</span> <Clock className="w-5 h-5" /> </a> </div> <div className="flex items-center justify-center space-x-8 text-purple-300" > <div className="flex items-center space-x-2" > <CheckCircle className="w-5 h-5 text-green-400" /> <span>30-Day Free Trial</span> </div> <div className="flex items-center space-x-2" > <CheckCircle className="w-5 h-5 text-green-400" /> <span>No Credit Card Required</span> </div> <div className="flex items-center space-x-2" > <CheckCircle className="w-5 h-5 text-green-400" /> <span>Cancel Anytime</span> </div> </div> </motion.div> </div> </section> <UltraFuturisticFooter2028 /> </>) 
+}
+import { motion } from 'framer-motion';
+
 
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
+import {
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Phone
+  Zap
+  DollarSign
+  Shield
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Sparkles
+  Globe
+  Atom
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2
+  Crown
+  Award
+  Target
+  Users
+  Clock
+  Globe2;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Crown,
+  Award,
+  Target,
+  Users,
+  Clock,;
+  Globe2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
+  Building, Factory, Camera, Video, Music, Gamepad2;
+  Crown, Award, Target, Users, Clock, Globe2
+
+ } from 'lucide-react';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
+  Building, Factory, Camera, Video, Music, Gamepad2;
+  Crown, Award, Target, Users, Clock, Globe2
+} from 'lucide-react';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+const pricingTiers = [
+  {
+    name: 'Starter',
+    price: '$299',
+    period: '/month',
+    description: 'Perfect for small businesses and startups',
+    features: [
+      'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
+    ];
+    popular: false,
+    color: 'from-blue-600 to-cyan-600',
+    cta: 'Get Started',
+    href: '/contact'
+  };
+  {
+    name: 'Professional',
+    price: '$999',
+    period: '/month',
+    description: 'Ideal for growing businesses and enterprises',
+
+
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Crown,
+  Award,
+  Target,
+  Users,
+  Clock,;
+  Globe2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
+  Building, Factory, Camera, Video, Music, Gamepad2;
+  Crown, Award, Target, Users, Clock, Globe2
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+
+const contactInfo = {
+const pricingTiers = [
+  {
+    ];
+    popular: false
+    color: 'from-blue-600 to-cyan-600'
+    cta: 'Get Started'
+    href: '/contact'
+  }
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
+  Building, Factory, Camera, Video, Music, Gamepad2;
+  Crown, Award, Target, Users, Clock, Globe2
+
+  }
+=======
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
@@ -78,10 +295,14 @@ const pricingTiers = [
   cta: 'Contact Sales',}
     href: '/contact',}
   },
+>>>>>>> origin/chore/fix-lint-and-merge
 ];
 
 const servicePricing = [
   {
+<<<<<<< HEAD
+
+=======
     category: '🚀 2028 Futuristic Innovations',}
   services: futuristic2028Services.slice(0, 6),}
   },
@@ -94,6 +315,7 @@ const servicePricing = [
           s.category.includes('Infrastructure')
       )}
       .slice(0, 4)}
+>>>>>>> origin/chore/fix-lint-and-merge
   }
   {
     category: '⚛️ Quantum & Advanced Tech',
@@ -112,6 +334,11 @@ const servicePricing = [
 export default function Revolutionary2028Pricing() {
   return (
     <>
+<<<<<<< HEAD
+      <Head>
+        <title>2028 Revolutionary Pricing - Zion Tech Group</title>
+
+=======
       <Head><title>2028 Revolutionary Pricing - Zion Tech Group</title>
 <meta;
 name='description'
@@ -172,10 +399,14 @@ className='space-y-8'    />
               <span className='text-white'    />2028 Pricing</span>;
             </h1>;
             <p className='text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               Experience cutting-edge technology at competitive prices. Our;
               transparent pricing model ensures you get maximum value for your;
               investment in the future.;
             </p>;
+<<<<<<< HEAD
+
+=======
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'    />;
               <Link;
                 href='/contact';
@@ -209,12 +440,74 @@ className='space-y-8'    />
               <div className='text-center'    />;
                 <div className='text-3xl font-bold text-cyan-400'    />30-Day</div>;
                 <div className='text-cyan-300'    />Free Trial</div>;
+>>>>>>> origin/chore/fix-lint-and-merge
               </div>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
       {/* Pricing Tiers */}
+<<<<<<< HEAD
+
+              </span>
+              <br />
+              <span className="text-white>2028 Pricing</span>
+            </h1>
+
+            <p className=text-xl md:text-2xl text-purple-200 max-w-4xl mx-auto leading-relaxed">
+              Experience cutting-edge technology at competitive prices. Our transparent pricing model 
+              ensures you get maximum value for your investment in the future.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6>
+              <Link
+                href=/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2
+              >
+                <span>Get Started</span>
+                <ArrowRight className=w-5 h-5" />
+              </Link>
+              <Link
+                href="/2028-services-showcase
+                className=px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
+              >
+                <span>View Services</span>
+                <Rocket className="w-5 h-5 />
+              </Link>
+            </div>
+
+            {/* Pricing Stats */}
+            <div className=grid grid-cols-1 md:grid-cols-4 gap-8 pt-16">
+              <div className="text-center>
+                <div className=text-3xl font-bold text-purple-400">30%</div>
+                <div className="text-purple-300>Lower than Market</div>
+              </div>
+              <div className=text-center">
+                <div className="text-3xl font-bold text-blue-400>99.9%</div>
+                <div className=text-blue-300">Uptime Guarantee</div>
+              </div>
+              <div className="text-center>
+                <div className=text-3xl font-bold text-pink-400">24/7</div>
+                <div className="text-pink-300>Expert Support</div>
+              </div>
+              <div className=text-center">
+                <div className="text-3xl font-bold text-cyan-400>30-Day</div>
+                <div className=text-cyan-300">Free Trial</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Tiers */}
+      <section className="py-20 bg-black/50>
+        <div className=max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16>
+            <h2 className=text-4xl md:text-5xl font-bold text-white mb-6">
+              Choose Your <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent>Plan</span>
+            </h2>
+
+=======
 <section className='py-20 bg-black/50'    />;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />;
           <div className='text-center mb-16'    />;
@@ -240,10 +533,16 @@ key={tier.name}
               </span>;
             </h2>;
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               Flexible pricing plans designed to scale with your business. Start;
               small and grow with us.;
             </p>;
           </div>;
+<<<<<<< HEAD
+
+            {pricingTiers && pricingTiers.map((tier, index) => (<motion&& motion.div;
+                }
+=======
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'    />            {pricingTiers && pricingTiers.map((tier, index) => (            </h2>;
             <p className=\"text-xl text-purple-200 max-w-3xl mx-auto\"    />;
               Flexible pricing plans designed to scale with your business. Start small and grow with us.;
@@ -251,6 +550,7 @@ key={tier.name}
           </div>;
           <div className=\"grid grid-cols-1 md:grid-cols-3 gap-8\"    />;}
             {pricingTiers && pricingTiers.map((tier, index) => (<motion&& motion.div;}
+>>>>>>> origin/chore/fix-lint-and-merge
                 key={tier && tier.name}
                 initial={{ opacity: 0, y: 30 ,}
 }
@@ -260,6 +560,36 @@ key={tier.name}
 
                 viewport={{ once: true }}
 
+<<<<<<< HEAD
+
+                      <span>Most Popular</span>
+                    </div>
+                  </div>
+                )}
+
+
+                          Contact us for custom pricing;
+                        </p>;
+                      )}
+                    </div>;
+
+                      {tier.features.map((feature, featureIndex) => (<li;
+                          }
+                          key={featureIndex}
+                          className='flex items-center space-x-3;
+                        >;
+                          <CheckCircle className=w-5 h-5 text-green-400 flex-shrink-0' />;
+                          <span className='text-purple-200>{feature}</span>;
+                        </li>;
+                <div className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border-2 ${tier.popular ? border-purple-500/60' : 'border-purple-500/30} rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105`}>
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300></div>
+                  
+                  <div className=relative z-10">
+                    <h3 className="text-2xl font-bold text-white mb-2>{tier.name}</h3>
+                    <p className=text-purple-300 mb-6">{tier.description}</p>
+
+
+=======
                 className={`relative ${tier.popular ? 'scale-105' : ''}`}
                   />
                 {tier.popular && (
@@ -301,6 +631,7 @@ className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 bor
                             />
                           <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0'    />
                           <span className='text-purple-200'    />{feature}</span>
+>>>>>>> origin/chore/fix-lint-and-merge
                         </li>
 
                       ))}
@@ -316,6 +647,9 @@ className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 bor
               </motion && motion.div>;
             ))}
       {/* Service Pricing */}
+<<<<<<< HEAD
+
+=======
 <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'    />;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />;
           <div className='text-center mb-16'    />;
@@ -364,9 +698,13 @@ className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 bor
                           </div>;
                         </div>;
                         <div className='flex items-center justify-between'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                           <Link;
                             href={service.link}
 
+<<<<<<< HEAD
+
+=======
                             className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover: from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm'
                               />
                             Learn More;
@@ -376,18 +714,25 @@ className={`relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 bor
                             <div className='text-white font-medium'    />
                               {service.trialDays} days;
                             </div>
+>>>>>>> origin/chore/fix-lint-and-merge
                           </div>
                         </div>
                       </div>
                     </div>
                   </motion.div>
 
+<<<<<<< HEAD
+=======
                 ),
 }
               </div>;
             </div>;
+>>>>>>> origin/chore/fix-lint-and-merge
           ))}
       {/* Value Proposition */}
+<<<<<<< HEAD
+
+=======
 <section className='py-20 bg-black/50'    />;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />;
           <div className='text-center mb-16'    />;
@@ -446,9 +791,13 @@ unmatched features.
                           <div className='text - right'    />;
                             <div className='text - xs text - purple - 300'    />Trial</div>;
                             <div className='text - white font - medium'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                               {service.trial_days} days;
                             </div>                          </div>                {category.services.map ((service, service_index) => (<motion.div;}
                     key={service.id}
+<<<<<<< HEAD
+
+=======
                     initial={{ opacity: 0, coordinate_x: service_index % 2 === 0 ? -30 : 30 ,}
 }
                     whileInView={{ opacity: 1, coordinate_x: 0 ,}
@@ -491,6 +840,7 @@ unmatched features.
                           <div className=\"text - right\"    />;
                             <div className=\"text - xs text - purple - 300\"    />Trial</div>;
                             <div className=\"text - white font - medium\"    />{service.trial_days} days</div>;
+>>>>>>> origin/chore/fix-lint-and-merge
                           </div>;
                         </div>;
                       </div>;
@@ -501,6 +851,9 @@ unmatched features.
         </div>;
       </section>;
       {/* Value Proposition */}
+<<<<<<< HEAD
+
+=======
       <section className='py - 20 bg - black / 50'    />;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'    />;
           <div className='text - center mb - 16'    />;
@@ -511,6 +864,7 @@ unmatched features.
               </span>;
             </h2>;
             <p className='text - xl text - purple - 200 max - w-3xl mx - auto'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               We offer the best value in the market with transparent pricing and;
               unmatched features.;
             </p>;
@@ -524,6 +878,9 @@ unmatched features.
 
 className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
             >
+<<<<<<< HEAD
+
+=======
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6'    />
               <h3 className='text-2xl font-bold text-white mb-4'    />
                 Competitive Pricing;
@@ -556,6 +913,7 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
               </p>;
               <div className=\"text-3xl font-bold text-green-400\"    />30%</div>;
               <div className=\"text-purple-300\"    />Lower than Market</div>;
+>>>>>>> origin/chore/fix-lint-and-merge
             </motion && motion.div>;
               initial={{ opacity: 0, y: 30 ,}
 }
@@ -568,6 +926,9 @@ className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 b
 
 className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
             >
+<<<<<<< HEAD
+
+=======
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6'    />
               <h3 className='text-2xl font-bold text-white mb-4'    />
                 No Hidden Costs;
@@ -603,6 +964,7 @@ className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 bor
               </p>;
               <div className=\"text-3xl font-bold text-blue-400\"    />100%</div>;
               <div className=\"text-blue-300\"    />Transparent Pricing</div>;
+>>>>>>> origin/chore/fix-lint-and-merge
             </motion && motion.div>;
               initial={{ opacity: 0, y: 30 ,}
 }
@@ -614,6 +976,9 @@ className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 bor
 
 className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
             >
+<<<<<<< HEAD
+
+=======
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6'    />
               <h3 className='text-2xl font-bold text-white mb-4'    />
                 Premium Quality;
@@ -625,6 +990,7 @@ that justify every penny of investment.
               <div className='text-3xl font-bold text-pink-400'    />5x</div>
 
               <div className='text-pink-300'    />ROI Guarantee</div>
+>>>>>>> origin/chore/fix-lint-and-merge
             </motion.div>
           </div>
         </div>
@@ -632,6 +998,20 @@ that justify every penny of investment.
       {/* CTA Section *,}
 }
 
+<<<<<<< HEAD
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="space-y-8"
+          >
+            <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>'
+              Ready to{' ,'
+=======
 <section className='py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'    />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />
           <motion.div;
@@ -645,6 +1025,7 @@ className='space-y-8'
               />
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />
               Ready to{' ,}
+>>>>>>> origin/chore/fix-lint-and-merge
 }
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'    />
                 Get Started;
@@ -682,7 +1063,237 @@ href='/contact'
       </section>
       <UltraFuturisticFooter2028    />
 
+<<<<<<< HEAD
+      <UltraFuturisticFooter2028 />
+              viewport={{ once: true }}className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl;
+            >;
+              <Award className=w-16 h-16 text-pink-400 mx-auto mb-6' />;
+              <h3 className='text-2xl font-bold text-white mb-4>;
+                Premium Quality;
+              </h3>;
+              <p className=text-pink-300 mb-6'>;
+                Enterprise-grade technology with premium support and features;
+                that justify every penny of investment.;
+              </p>;
+              <div className='text-3xl font-bold text-pink-400>5x</div>;
+              <div className=text-pink-300'>ROI Guarantee</div>            </motion.div>            >;
+              className=text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl";
+            >;
+              <Award className="w-16 h-16 text-pink-400 mx-auto mb-6 />;
+              <h3 className=text-2xl font-bold text-white mb-4">Premium Quality</h3>;
+              <p className="text-pink-300 mb-6>;
+                Enterprise-grade technology with premium support and features;
+                that justify every penny of investment.;
+              </p>;
+              <div className=text-3xl font-bold text-pink-400">5x</div>;
+              <div className="text-pink-300>ROI Guarantee</div>;
+              <div className='text-pink-300>ROI Guarantee</div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}<section className=py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">;
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center>;
+<section className=py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center>;
+          <motion.div;
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}className=space-y-8';
+          >;
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6>;
+              Ready to{ '}
+              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent>;
+                Get Started;
+              </span>;
+              ?;
+            </h2>;
+            <p className=text-xl text-purple-200 max-w-3xl mx-auto'>;
+              Join hundreds of companies already leveraging our futuristic;
+              services to gain competitive advantages and drive innovation.;
+            </p>;
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6>;
+              <Link;
+                href=/contact';
+                className='px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2;
+              >;
+                <span>Schedule Demo</span>;
+                <Clock className=w-5 h-5' />;
+              </Link>;
+            </div>;
+            <div className='flex items-center justify-center space-x-8 text-purple-300>;
+              <div className=flex items-center space-x-2'>;
+                <CheckCircle className='w-5 h-5 text-green-400 />                <span>30-Day Free Trial</span>;
+              </div>;
+              <div className=flex items-center space-x-2'>;
+                <CheckCircle className='w-5 h-5 text-green-400 />;
+                <span>No Credit Card Required</span>;
+              </div>;
+              <div className=flex items-center space-x-2'>;
+                <CheckCircle className='w-5 h-5 text-green-400 />;
+                <span>Cancel Anytime</span>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <UltraFuturisticFooter2028 />;
+
+              <span className=bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8>            <motion.div            </h2>;
+            <p className=text - xl text - purple - 200 max - w-3xl mx - auto">;
+              We offer the best value in the market with transparent pricing and unmatched features.;
+            </p>;
+          </div>;
+          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8>;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className=text - center p - 8 bg - gradient - to - br from - purple - 900 / 20 to - blue - 900 / 20 border border - purple - 500 / 30 rounded - 2xl';
+            >;
+              <Target className='w - 16 h - 16 text - green - 400 mx - auto mb - 6 />;
+              <h3 className=text - 2xl font - bold text - white mb - 4'>;
+                Competitive Pricing;
+              </h3>;
+              <p className='text - purple - 300 mb - 6>;
+                Our prices are 30% lower than market average while providing;
+                superior technology and features.;
+              </p>;
+              <div className=text - 3xl font - bold text - green - 400'>30%</div>;
+              <div className='text - purple - 300>Lower than Market</div>            </motion.div>            >;
+              <Target className=w - 16 h - 16 text - green - 400 mx - auto mb - 6" />;
+              <h3 className="text - 2xl font - bold text - white mb - 4>Competitive Pricing</h3>;
+              <p className=text - purple - 300 mb - 6">;
+                Our prices are 30% lower than market average while providing;
+                superior technology and features.;
+              </p>;
+              <div className="text - 3xl font - bold text - green - 400>30%</div>;
+              <div className=text - purple - 300">Lower than Market</div>;
+            </motion.div>;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className=text - center p - 8 bg - gradient - to - br from - blue - 900 / 20 to - cyan - 900 / 20 border border - blue - 500 / 30 rounded - 2xl';
+            >;
+              <Shield className='w - 16 h - 16 text - blue - 400 mx - auto mb - 6 />;
+              <h3 className=text - 2xl font - bold text - white mb - 4'>;
+                No Hidden Costs;
+              </h3>;
+              <p className='text - blue - 300 mb - 6>;
+                Transparent pricing with no surprise fees. What you see is what;
+                you pay, with clear value for every dollar.;
+              </p>;
+              <div className=text - 3xl font - bold text - blue - 400'>100%</div>;
+              <div className='text - blue - 300>Transparent Pricing</div>            </motion.div>            >;
+              <Shield className="w - 16 h - 16 text - blue - 400 mx - auto mb - 6 />;
+              <h3 className=text - 2xl font - bold text - white mb - 4">No Hidden Costs</h3>;
+              <p className="text - blue - 300 mb - 6>;
+                Transparent pricing with no surprise fees. What you see is what you pay,with clear value for every dollar.;
+              </p>;
+              <div className=text - 3xl font - bold text - blue - 400">100%</div>;
+              <div className="text - blue - 300>Transparent Pricing</div>;
+            </motion.div>;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
+              className=text - center p - 8 bg - gradient - to - br from - pink - 900 / 20 to - rose - 900 / 20 border border - pink - 500 / 30 rounded - 2xl';
+            >;
+              <Award className='w - 16 h - 16 text - pink - 400 mx - auto mb - 6 />;
+              <h3 className=text - 2xl font - bold text - white mb - 4'>;
+                Premium Quality;
+              </h3>;
+              <p className='text - pink - 300 mb - 6>;
+                Enterprise - grade technology with premium support and features;
+                that justify every penny of investment.;
+              </p>;
+              <div className=text - 3xl font - bold text - pink - 400'>5x</div>;
+              <div className='text - pink - 300>ROI Guarantee</div>            </motion.div>            >;
+              <Award className=w - 16 h - 16 text - pink - 400 mx - auto mb - 6" />;
+              <h3 className="text - 2xl font - bold text - white mb - 4>Premium Quality</h3>;
+              <p className=text - pink - 300 mb - 6">;
+                Enterprise - grade technology with premium support and features;
+                that justify every penny of investment.;
+              </p>;
+              <div className="text - 3xl font - bold text - pink - 400>5x</div>;
+              <div className=text - pink - 300">ROI Guarantee</div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA Section */}
+      <section className=py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center>          <motion.div      <section className="py - 20 bg - gradient - to - r from - purple - 900 / 30 to - blue - 900 / 30>;
+        <div className=max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+                Get Started;
+              </span>;
+              ?;
+            </h2>;
+  )</>;
+)}
+            <p className=text - xl text - purple - 200 max - w-3xl mx - auto'>;
+              Join hundreds of companies already leveraging our futuristic;
+              services to gain competitive advantages and drive innovation.;
+            </p>;
+            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6>;
+              <Link;
+                href=/contact';
+                className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - xl hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl hover:shadow - purple - 500 / 25 flex items - center space - x-2;
+              >;
+                <span > Start Free Trial</span>;
+                <ArrowRight className=w - 5 h - 5' />;
+              </Link>;
+              <Link;
+                href='/contact;
+                className=px - 8 py - 4 border border - purple - 500 / 30 text - purple - 300 rounded - xl hover:bg - purple - 900 / 30 transition - all duration - 300 flex items - center space - x-2';
+              >;
+                <span > Schedule Demo</span>;
+                <Clock className='w - 5 h - 5 />;
+              </Link>;
+            </div>;
+            <div className=flex items - center justify - center space - x-8 text - purple - 300'>;
+              <div className='flex items - center space - x-2>;
+                <CheckCircle className=w - 5 h - 5 text - green - 400' />                <span > 30 - Day Free Trial</span>;
+              </div>;
+              <div className='flex items - center space - x-2>;
+                <CheckCircle className=w - 5 h - 5 text - green - 400' />;
+                <span > No Credit Card Required</span>;
+              </div>;
+              <div className='flex items - center space - x-2>;
+                <CheckCircle className=w - 5 h - 5 text - green - 400' />                <span > Cancel Anytime</span>              <div className="flex items - center space - x-2>;
+                <CheckCircle className=w - 5 h - 5 text - green - 400" />;
+                <span > Cancel Anytime</span>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <UltraFuturisticFooter2028 />;
+    </>);
+
+=======
     <   />
+>>>>>>> origin/chore/fix-lint-and-merge
   );
 }
+<<<<<<< HEAD
+    </>))</>;
+  )</>;
+  )}
+    </>
+  )
+}
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge

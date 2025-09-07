@@ -32,7 +32,29 @@ export function Web3Login() {
       setIsLoading(false);
 
     }
+<<<<<<< HEAD
+export function Web3Login() {
+  const { loginWithWeb3 } = useAuth($2);
+  const [isLoading, setIsLoading] = useState($2);
+    try {
+      setIsLoading($2);
+      // Check if wallet is available
+      const ethereum = $2;
+      if (!ethereum) {
+        toast($2);
+        return
+      }
+      
+      await loginWithWeb3()
+      
+    } catch (error: any) {
+      toast($2);
+      console.error("Web3 login error:", error)
+    } finally {
+      setIsLoading(false)
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
   },

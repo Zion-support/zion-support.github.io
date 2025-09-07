@@ -4,12 +4,24 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
 
 import React from "react";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
+import React from "react",
+import { cn } from "@/lib/utils",
+import {cn} from "@/lib/utils";
+interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLLIElement> {;
+=======
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+>>>>>>> origin/chore/fix-lint-and-merge
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
 
+<<<<<<< HEAD
+
+import { cn } from "@/lib/utils",interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
   className?: string;
   children?: React.ReactNode;
 
@@ -35,6 +47,14 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
 ;
 
 }
+<<<<<<< HEAD
+import React from "react";
+interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
+  className?: string,
+  children?: React.ReactNode
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 export function SidebarMenuItem({
   className
   children

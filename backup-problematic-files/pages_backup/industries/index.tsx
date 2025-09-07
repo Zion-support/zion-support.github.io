@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+import { motion } from 'framer-motion';'
+import Link from 'next/link';'
+import Layout from '../../components/Layout';'
+import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';'
+import React from 'react';'
+import Link from 'next/link';';'
+import { Heart 
+  }
+=======
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -11,6 +21,7 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import Link from 'next/link';';
 import { Heart, 
+>>>>>>> origin/chore/fix-lint-and-merge
   DollarSign, 
   Settings, 
   ShoppingCart, 
@@ -59,6 +70,42 @@ const industries = [
     icon: DollarSign,
 
   Brain;
+<<<<<<< HEAD
+} from 'lucide-react';'
+  Brain;
+} from 'lucide-react';'
+const industries = [;
+  {"name": 'Healthcare',,"description": 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',"icon": Heart,"href": '/industries/healthcare',"features": ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],"color": 'from-red-500 to-pink-500';'
+    }
+    "href": '/industries/healthcare,',"features": ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',"color": 'from-red-500 to-pink-500''},{"name": 'Finance',,"description": 'Secure financial services with blockchain technology, fraud detection, and automated trading systems.',"icon": DollarSign,"href": '/industries/finance',"features": ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],"color": 'from-green-500 to-emerald-500';'
+    }
+    "href": '/industries/finance',"features": ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],"color": 'from-green-500 to-emerald-500';'
+    "href": '/industries/finance',"features": ['Blockchain Solutions', 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],"color": 'from-green-500 to-emerald-500';'
+    "href": '/industries/finance,',"features": ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',"color": 'from-green-500 to-emerald-500''},{"name": 'Manufacturing',,"description": 'Optimize production with IoT sensors, predictive maintenance, and smart factory solutions.',"icon": Settings,"href": '/industries/manufacturing',"features": ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],"color": 'from-blue-500 to-cyan-500';'
+    }
+    "href": '/industries/manufacturing',"features": ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],"color": 'from-blue-500 to-cyan-500';'
+    "href": '/industries/manufacturing',"features": ['IoT Integration', 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],"color": 'from-blue-500 to-cyan-500';'
+    "href": '/industries/manufacturing,',"features": ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',"color": 'from-blue-500 to-cyan-500''},{"name": 'Retail',,"description": 'Enhance customer experience with personalized recommendations, inventory management, and omnichannel solutions.',"icon": ShoppingCart,"href": '/industries/retail',"features": ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],"color": 'from-purple-500 to-violet-500';'
+    }
+    "href": '/industries/retail',"features": ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],"color": 'from-purple-500 to-violet-500';'
+    "href": '/industries/retail',"features": ['Personalization', 'Inventory Management', 'Omnichannel', 'Customer Analytics'],"color": 'from-purple-500 to-violet-500';'
+    "href": '/industries/retail,',"features": ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',"color": 'from-purple-500 to-violet-500''},{"name": 'Education',,"description": 'Revolutionize learning with AI tutoring, virtual classrooms, and personalized education platforms.',"icon": BookOpen,"href": '/industries/education',"features": ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],"color": 'from-orange-500 to-yellow-500';'
+    }
+    "href": '/industries/education',"features": ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],"color": 'from-orange-500 to-yellow-500';'
+    "href": '/industries/education',"features": ['AI Tutoring', 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],"color": 'from-orange-500 to-yellow-500';'
+    "href": '/industries/education,',"features": ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',"color": 'from-orange-500 to-yellow-500''},{"name": 'Government',,"description": 'Modernize public services with secure citizen portals, data analytics, and digital transformation.',"icon": Building,"href": '/industries/government',"features": ['Citizen Portals', 'Data Analytics', 'Digital Services', 'Security Compliance'],"color": 'from-gray-500 to-slate-500';'
+  {;
+    }
+    "name": 'Healthcare',,'
+  "description": 'Transform healthcare delivery with AI-powered diagnostics, telemedicine platforms, and patient management systems.',;'
+    "icon": Heart,;
+    "href": '/industries/healthcare',;'
+    "features": ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],;'
+    "color": 'from-red-500 to-pink-500';'
+    "href": '/industries/healthcare,',;'
+    "features": ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',;'
+    "color": 'from-red-500 to-pink-500'',;'
+=======
 } from 'lucide-react';
   Brain;
 } from 'lucide-react';
@@ -129,6 +176,7 @@ import Layout from '../../components/Layout';';
     href: '/industries/healthcare,',;
     features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',;
     color: 'from-red-500 to-pink-500'',;
+>>>>>>> origin/chore/fix-lint-and-merge
   },;
   {;
 
@@ -215,18 +263,40 @@ const stats = [
     color: 'from-gray-500 to-slate-500'';
   }
 ;];
+<<<<<<< HEAD
+  { "number": '500+, "label": 'Industry Projects' },',;'
+  { "number": '50+, "label": 'Fortune 500 Clients' },',;'
+  { "number": '99 && 99.9%, "label": 'Uptime Guarantee' },',;'
+  { "number": '24/7, "label": 'Industry Support' }',;'
+=======
 
 const stats = [;
   { number: '500+, label: 'Industry Projects' },',
   { number: '50+, label: 'Fortune 500 Clients' },',
   { number: '99.9%, label: 'Uptime Guarantee' },',
   { number: '24/7, label: 'Industry Support' }',
+>>>>>>> origin/chore/fix-lint-and-merge
 ;];
 
 export default function IndustriesPage() {
   return (;
     <Layout);
+<<<<<<< HEAD
+      title="Industry Solutions - Zion Tech Group"";"
+export default function IndustriesPage() {;
+}
+return (;
+    <Layout)
+      title="Industry Solutions - Zion Tech Group"""
+      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."""
+      keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"">;"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";"
+return (;
+    <Layout,
+title="Industry Solutions - Zion Tech Group""
+=======
       title="Industry Solutions - Zion Tech Group"";
+>>>>>>> origin/chore/fix-lint-and-merge
       description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors.""
       keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services""
     >;

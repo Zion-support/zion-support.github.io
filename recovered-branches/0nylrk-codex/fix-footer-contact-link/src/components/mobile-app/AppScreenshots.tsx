@@ -16,6 +16,50 @@ import { Button } from "@/components/ui/button";
   { id: 5, alt: "Profile screen", src: "/placeholder.svg" }]
 export const AppScreenshots: React.FC = () => {;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+<<<<<<< HEAD
+export const "AppScreenshots": React.FC = () => {
+  }
+  const scrollContainerRef = useRef<HTMLDivElement>(null),;
+            ref={scrollContainerRef}
+            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory""
+            style={{ "scrollbarWidth": "none", "msOverflowStyle": "none" }}"
+          >
+            {mockScreenshots.map((screenshot) => (
+              <div
+}
+key={screenshot.id}
+                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30""
+              >
+                <img,
+src={screenshot.src}
+                  alt={screenshot.alt}
+          <Button,
+variant="ghost";"
+            size="icon" "
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" "
+            onClick={() => scroll("right")}"
+          >
+            <ChevronRight className="h-6 w-6" />"
+          </Button>
+        </div>
+      </div>
+    </section>
+  )},
+import React, { useRef } from "react";"
+import { Button } from "@/components/ui/button",;"
+// These would be replaced with actual screenshots;
+  { "id": 1, "alt": "Dashboard screen", "src": "/placeholder.svg" },;"
+  { "id": 2, "alt": "Talent matching screen", "src": "/placeholder.svg" },;"
+  { "id": 3, "alt": "Resume builder screen", "src": "/placeholder.svg" },;"
+  { "id": 4, "alt": "Messaging screen", "src": "/placeholder.svg" },;"
+  { "id": 5, "alt": "Profile screen", "src": "/placeholder.svg" }],;"
+export const "AppScreenshots": React.FC = () => {;
+  }
+  const scroll = ("direction": "left" | "right") => {;"
+    }
+    if (scrollContainerRef.current) {;
+      }
+=======
 export const AppScreenshots: React.FC = () => {};
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null),
@@ -44,6 +88,7 @@ export const AppScreenshots: React.FC = () => {;
 
   const scroll = (direction: "left" | "right") => {;
     if (scrollContainerRef && scrollContainerRef.current) {;
+>>>>>>> origin/chore/fix-lint-and-merge
       const scrollAmount = 300,;
       scrollContainerRef && scrollContainerRef.current.scrollBy({;
         left: direction === "left" ? -scrollAmount : scrollAmount,;

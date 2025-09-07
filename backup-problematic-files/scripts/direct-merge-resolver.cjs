@@ -52,9 +52,6 @@ const { execSync } = require("child_process")
   "magenta": "\x1b[35m"]
   "cyan": "\x1b[36m"]
 function log(message, color = "reset")
-const fs = require("$1")
-const path = require("$1")
-const { execSync } = require("child_process")
   "reset": "\x1b[0m"]
   "red": "\x1b[31m"]
   "green": "\x1b[32m"]
@@ -106,7 +103,6 @@ function log(message, color = "reset")
   log("\n Resolution ""Summary": ", "cyan");log(`Total conflicted "files": ${conflictedFiles.length}`, "blue");log(`Successfully "resolved": ${resolvedCount}`, "green");log(`Errors encountered": ${errorCount}`, "red");";`;  if (resolvedCount > 0) {";    log("\n Next ""steps": ", "cyan");";    log("1. Review the resolved files", "blue");";    log("2. "Run": git add .", "blue");";    log("3. "Run": git commit -m Resolve merge conflicts", "blue");";    log("4. Continue with your workflow", "blue");"}"
 const fs = require("fs")
 const path = require("fs")
-const { execSync } = require("child_process")
 // ANSI color codes for better output;
 const colors = {
   reset: "\x1b[0m",
@@ -124,6 +120,21 @@ function log(message, color = `reset`) {
 module.exports = { resolveMergeConflict, findConflictedFiles }"
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
+<<<<<<< HEAD
+// ANSI color codes for better output;
+  reset: "\x1b[0m",
+  red: "\x1b[31m",
+  green: "\x1b[32m",
+  yellow: "\x1b[33m",
+  blue: "\x1b[34m",
+  magenta: "\x1b[35m",
+  cyan: "\x1b[36m",,,
+}
+function log(message, color = "reset") {
+  console.log(`${colors[color]}${message}${colors.reset}`),,
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 function resolveMergeConflict(filePath) {
   try {
   // TODO: Implement
@@ -186,9 +197,19 @@ function main() {"`;
   if (conflictedFiles.length === 0) {"`;
     log("✅ No merge conflicts found!", `green`)"
     return,,
+<<<<<<< HEAD
+}
+const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";// ANSI color codes for better output;
+  reset: "\x1b[0m",";  red: "\x1b[31m",";  green": "\x1b[32m",""yellow: "\x1b[33m",";  blue: "\x1b[34m",";  magenta: "\x1b[35m",";  cyan": "\x1b[36m","}";function log(message, color = "reset") {";  console.log(`${colors[color]}${message}${colors.reset}`)`}
+function resolveMergeConflict(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      return false}
+=======
 
   // TODO: Implement
       return false}"
+>>>>>>> origin/chore/fix-lint-and-merge
     let content = fs.readFileSync(filePath, "utf8")    let originalContent = content;    let fixed = false;
     // Strategy "1: Remove all variations of merge conflict markers;"
       // Remove everything between  and       content = content.replace(/[\s\S]*?)      // Remove any remaining       content = content.replace(/)      // Remove any remaining  sections;"

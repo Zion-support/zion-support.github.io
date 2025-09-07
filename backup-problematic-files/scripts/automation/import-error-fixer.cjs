@@ -1,18 +1,29 @@
 
 const { execSync } = require('child_process')
-const fs = require('fs')
+const fs = require(fs')
 const path = require('path')
+<<<<<<< HEAD
+const glob = require(glob')
+    this.reportFile = path.join(this.projectRoot, 'import-error-fixer-report.json)
+  log(message, type = info')
+    this.log('Fixing import errors...)
+    const files = glob.sync(src/**/*.{js,jsx,ts,tsx}')
+=======
 const glob = require('glob')
 <<<<<<< HEAD
     this.reportFile = path.join(this.projectRoot, 'import-error-fixer-report.json')
   log(message, type = 'info')
     this.log('Fixing import errors...')
     const files = glob.sync('src/**/*.{js,jsx,ts,tsx}')
+>>>>>>> origin/chore/fix-lint-and-merge
       const content = fs.readFileSync(filePath, 'utf8')
-      const importRegex = /import\s+.*\s+from\s+['"]([^'')]
-        newContent = "
-      const importLines = newContent.match(/import\s+.*\s+from\s+['"][^'')]
+      const importRegex = /import\s+.*\s+from\s+["]([^'')]
+        newContent = 
+      const importLines = newContent.match(/import\s+.*\s+from\s+[][^')]
         this.log(`Remaining "errors"`)
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -26,3 +37,4 @@ const glob = require('glob')
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -22,6 +22,15 @@ export default function IntegrationsPage() {
   return (
 
     <ProtectedRoute adminOnly={true}>;
+<<<<<<< HEAD
+      <SEO,
+title="Integrations - Zion AI Marketplace""
+        description="Connect your Zion account with CRMs and Applicant Tracking Systems.""
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer",;"
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",;"
+import { SEO } from "@/components/SEO",;"
+=======
       <SEO"
         title="Integrations - Zion AI Marketplace""
         description="Connect your Zion account with CRMs and Applicant Tracking Systems."
@@ -42,6 +51,7 @@ import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",;
 import { SEO } from "@/components/SEO",;
 
 import { ProtectedRoute } from "@/components/ProtectedRoute";
+>>>>>>> origin/chore/fix-lint-and-merge
 export default function IntegrationsPage() {;
   return (;
     <ProtectedRoute adminOnly={true}>;

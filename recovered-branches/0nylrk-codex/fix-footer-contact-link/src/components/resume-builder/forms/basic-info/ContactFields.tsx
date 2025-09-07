@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+
+  FormField,
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";"
+import {Input} from "@/components/ui/input";"
+import {Control} from "react-hook-form";"
+import {BasicInfoFormData} from "./schema";"
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form","
+import { Input } from "@/components/ui/input","
+import { Control } from "react-hook-form","
+import { BasicInfoFormData } from "./schema",import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form","
+import { BasicInfoFormData } from "./schema","
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import {
   FormField
   FormItem
@@ -42,11 +56,15 @@ import {
   FormControl,
   FormMessage,";
 } from "@/components/ui/form";"
+<<<<<<< HEAD
+  "control": Control<BasicInfoFormData>;
+=======
 import { Input } from "@/components/ui/input";"
 import { Control } from "react-hook-form";"
 import { BasicInfoFormData } from "./schema";
 interface ContactFieldsProps {}
   control: Control<BasicInfoFormData>;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 
 interface ContactFieldsProps {

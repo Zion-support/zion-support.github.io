@@ -10,6 +10,29 @@ interface ImportMeta {
 declare module 'vitest / config' {
   export { define_config } from 'vite';
 }
+<<<<<<< HEAD
+;
+declare module '@vitejs/plugin-react-swc' {;'
+  }
+  import { Plugin } from 'vite';'
+  export default function reactSWC(): Plugin;
+}
+;
+declare module 'path' {;'
+  }
+  export function resolve(..."paths": string[]): string,;
+  export function join(..."paths": string[]): string,;
+  export function dirname("path": string): string;
+}
+;
+declare module 'lovable-tagger' {;'
+  }
+  export function componentTagger(): Plugin;
+}
+// Add Node.js globals
+
+
+=======
 declare module '@vitejs/plugin-react - swc' {
   import { Plugin } from 'vite',;
   export default function reactSWC (): Plugin;
@@ -20,6 +43,7 @@ declare module 'path' {
 declare module 'lovable - tagger' {
   export function component_tagger (): Plugin;
 // Add Node.js globals;
+>>>>>>> origin/chore/fix-lint-and-merge
 
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
@@ -44,6 +68,11 @@ declare module 'path' {
   export function join (...paths: string[]): string,
   export function dirname (path: string): string;
 }
+<<<<<<< HEAD
+
+declare module 'lovable-tagger' {
+  export function componentTagger(): Plugin
+=======
 declare module 'lovable - tagger' {
   import { Plugin } from 'vite',
   export function component_tagger (): Plugin;
@@ -58,6 +87,7 @@ declare let process: {}
     PORT?: string;
 
 export function componentTagger(): Plugin;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 // Add Node.js globals
   }

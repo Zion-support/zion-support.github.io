@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require(path')
+const { execSync } = require('child_process')
+    this.reportFile = path.join(this.projectRoot, security-fix-report.json')
+    this.log('� Starting Security Fixes)
+      this.log( Security fixes completed')
+    this.log(' Fixing dependency vulnerabilities)
+      execSync(npm audit fix --force')
+        "type
+        action"
+        "status
+        type"
+        "action
+        status"
+=======
 
     this.log('� Starting Security Fixes')
       this.log(' Security fixes completed')
@@ -10,25 +27,29 @@
         "type"
         "action"
         "status"
+>>>>>>> origin/chore/fix-lint-and-merge
             "
-          'dangerouslySetInnerHTML={{"__html"}
+          'dangerouslySetInnerHTML={{__html}
           "type"
-          "file"
+          file
           "action"
-          "status"
+          status
           "type"
-          "file"
+          file
           "action"
-          "status"
+          status
           "type"
-          "file"
+          file
           "action"
-          "status"
+          status
           "type"
-          "file"
+          file
           "action"
-          "status"
+          status
         "successful"
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -42,3 +63,4 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

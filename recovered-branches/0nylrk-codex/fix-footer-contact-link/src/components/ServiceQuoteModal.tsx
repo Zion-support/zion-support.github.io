@@ -1,3 +1,48 @@
+<<<<<<< HEAD
+
+}
+const BUDGET_RANGES = [;
+  { "label": "Less than $5,000", "value": "0-5000" }"
+  { "label": "$5,000 - $10,000", "value": "5000-10000" }"
+  { "label": "$10,000 - $25,000", "value": "10000-25000" }"
+  { "label": "$25,000 - $50,000", "value": "25000-50000" }"
+  { "label": "$50,000+", "value": "50000+" }]"
+const TIMELINE_OPTIONS = [;
+  { "label": "Less than 1 month", "value": "lt-1month" }"
+  { "label": "1-3 months", "value": "1-3months" }"
+  { "label": "3-6 months", "value": "3-6months" }"
+  { "label": "6+ months", "value": "6+months" }]"
+export function ServiceQuoteModal() {
+  }
+  const [formData, setFormData] = useState({
+}
+
+if (throw error) {
+  $2
+}
+      // Show success message;
+      toast ({
+
+    } finally {
+      }
+      setIsSubmitting (false);
+    }
+
+  },
+
+  const nextStep = () => {
+
+    }
+    if (currentStep === 'details') setCurrentStep('timeline');'
+    else if (currentStep === 'timeline') setCurrentStep('contact')'
+  },
+
+
+      setIsSubmitting(false);
+    }
+  }
+
+=======
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";"
 import {Button} from "@/components/ui/button";"
@@ -462,6 +507,7 @@ interface ServiceQuoteModalProps {;
 
                         className="p-3 pointer-events-auto bg-zion-blue-dark text-white";
                       />;
+>>>>>>> origin/chore/fix-lint-and-merge
 
                     </PopoverContent>;
                   </Popover>;
@@ -469,6 +515,12 @@ interface ServiceQuoteModalProps {;
               </div>;
             </div>;
 
+<<<<<<< HEAD
+          )}
+          {/* Step "3": Contact */}                        selected={endDate}
+                        onSelect={setEndDate}
+          )}
+=======
                   value={formData && formData.email}
                   onChange={handleInputChange}
                   placeholder="your@email && email.com"
@@ -502,12 +554,34 @@ interface ServiceQuoteModalProps {;
                     <span className="text-white">{service?.title || "Custom Service"}</span>;
 
                     <span className="text-zion-slate-light">Budget:</span>;
+>>>>>>> origin/chore/fix-lint-and-merge
 
               </div>;
             </div>;
 
           )}
 
+<<<<<<< HEAD
+                </Button>;
+              )}
+  const next_step = () =>: any {
+
+  $2
+}
+    else if (setCurrentStep ('contact')) {'
+  $2
+}
+  }
+  const prev_step = () =>: any {
+
+  $2
+}
+    else if (setCurrentStep ('timeline')) {'
+  $2
+}
+  }
+
+=======
                 </div>
               </div>
             </div>
@@ -606,16 +680,21 @@ className="border-zion-blue-light text-white hover:bg-zion-blue-light"
               </div>;
               <div className=\"space-y-2\" />;
                 <Label html_for=\"budget\" className=\"text-white\" />Estimated Budget</Label>;
+>>>>>>> origin/chore/fix-lint-and-merge
                 <Select;
                   value={form_data.budget}
                   onValueChange={(value) = /> setFormData (prev => ({ ...prev, budget: value }))}
                 >;
+<<<<<<< HEAD
+
+=======
                   <SelectTrigger className=\"bg - zion - blue - dark border - zion - blue - light text-white\" />;
                     <SelectValue placeholder=\"Select your budget range\" />;
                   </SelectTrigger>;
                   <SelectContent className=\"bg - zion - blue - dark border - zion - blue-light\" />;
                     {BUDGET_RANGES.map ((range) => (}
                       <SelectItem key={range.value} value={range.value} className=\"text - white hover:bg - zion - blue-light\" />;
+>>>>>>> origin/chore/fix-lint-and-merge
                         {range.label}
 
             </div>;"
@@ -774,10 +853,29 @@ className="border-zion-blue-light text-white hover:bg-zion-blue-light"
               </div>;
             </div>)}
 
+<<<<<<< HEAD
+                <Select;
+                  }
+                  value={form_data.timeframe}
+                  onValueChange={(value) => setFormData (prev => ({ ...prev, "timeframe": value }))}
+                >;
+
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
                         {option.label}
                       </SelectItem>))}
                   </SelectContent>;
                 </Select>;
+<<<<<<< HEAD
+              </div>;
+
+                        selected={end_date}
+                        on_select={setEndDate}
+                        disabled={(date) => !start_date || date < start_date}
+                        initial_focus;
+
+                      />;
+=======
 
                   <Popover>;
                     <PopoverTrigger as_child>;
@@ -889,12 +987,25 @@ className="border-zion-blue-light text-white hover:bg-zion-blue-light"
                         disabled={(date) => !start_date || date < start_date}
 </Calendar>
 
+>>>>>>> origin/chore/fix-lint-and-merge
                     </PopoverContent>;
                   </Popover>;
                 </div>;
               </div>;
             </div>)}
 
+<<<<<<< HEAD
+                    </div>)}
+                </div>;
+              </div>;
+            </div>)}
+
+              >;
+                Cancel;
+              </Button>;
+              {current_step !== 'contact' ? ('
+                <Button;
+=======
             {current_step !== 'details' && (
               <Button;"
                 type="button";"
@@ -914,10 +1025,15 @@ className="border-zion-blue-light text-white hover:bg-zion-blue-light"
               {current_step !== 'contact' ? (
                 <Button;"
                   type="button";
+>>>>>>> origin/chore/fix-lint-and-merge
 
                 >;
                   Next;
                 </Button>) : (
+<<<<<<< HEAD
+                <Button;
+
+=======
                 <Button;"
                   type="submit";
 
@@ -1405,3 +1521,4 @@ return (<Dialog open= {
   );
 }
 ;
+>>>>>>> origin/chore/fix-lint-and-merge

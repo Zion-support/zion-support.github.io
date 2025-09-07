@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import { cn } from "@/lib/utils";"
+import React from "react","
+import { cn } from "@/lib/utils","
+import {cn} from "@/lib/utils";"
+=======
 import { cn } from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
@@ -5,14 +11,19 @@ import {cn} from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
 
+>>>>>>> origin/chore/fix-lint-and-merge
 interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string,
+<<<<<<< HEAD
+  children?: React.ReactNode,
+=======
   children?: React.ReactNode
 
 import React from "react",
 import { cn } from "@/lib/utils",
 
 import {cn} from "@/lib/utils";
+>>>>>>> origin/chore/fix-lint-and-merge
 interface SidebarGroupContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
 
   className?: string;
@@ -53,11 +64,15 @@ export function SidebarGroupContent({
   )
 
   )
+<<<<<<< HEAD
+import React from "react";"
+=======
 
   )
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {;
   className?: string;
 

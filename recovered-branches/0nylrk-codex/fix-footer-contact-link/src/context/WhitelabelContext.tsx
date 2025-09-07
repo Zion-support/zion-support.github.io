@@ -6,6 +6,60 @@ cta: string
 };
   tenant: WhitelabelTenant | null
 }
+<<<<<<< HEAD
+const "defaultContext": WhitelabelContextType = {
+  }
+  "isWhitelabel": false,
+"primaryColor": '#9b87f5', // Default Zion purple'
+  "logoUrl": null,
+"brandName": "brandName","
+    "themePreset": 'light''
+  "landingPageCopy": {
+    }
+    "headline": 'AI Talent Marketplace''
+    "subtitle": 'Find the best AI talent for your projects''
+    "cta": 'Get Started'}'
+  "tenant": null}
+// The context may be undefined if the provider is not mounted.  By declaring
+// the generic as `WhitelabelContextType | null` we get proper type checking`// without falling back to an empty object which triggers TS2740 errors.
+const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';'
+import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';'
+export interface WhitelabelContextType {
+  }
+  "isWhitelabel": boolean;
+  "primaryColor": string;
+  "logoUrl": string | null;
+  "brandName": string;
+  "themePreset": "light" | "dark" | "neon" | "corporate" | "startup";"
+  "landingPageCopy": {
+    }
+    "headline": string;
+    "subtitle": string;
+    "cta": string
+};
+  "tenant": WhitelabelTenant | null;
+}
+  }
+  "isWhitelabel": false,
+  "primaryColor": "#9b87f5", // Default Zion purple"
+  "logoUrl": null,
+  "brandName": "Zion AI Marketplace","
+  "themePreset": "light","
+  "landingPageCopy": {
+    }
+    "headline": "AI Talent Marketplace","
+    "subtitle": "Find the best AI talent for your projects","
+    "cta": "Get Started","
+  },
+  "tenant": null
+};
+    headline: 'AI Talent Marketplace',
+    subtitle: 'Find the best AI talent for your projects',
+    cta: 'Get Started'},
+  tenant: null},
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const defaultContext: WhitelabelContextType = {
   isWhitelabel: false
@@ -19,6 +73,10 @@ const defaultContext: WhitelabelContextType = {
     cta: 'Get Started'}
   tenant: null}
 // The context may be undefined if the provider is not mounted.  By declaring
+<<<<<<< HEAD
+// the generic as `WhitelabelContextType | null` we get proper type checking`// without falling back to an empty object which triggers TS2740 errors.
+export const useWhitelabel = (): (WhitelabelContextType) => {
+=======
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
@@ -30,6 +88,7 @@ export interface WhitelabelContextType {
     subtitle: string
 
     cta: string
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 
     headline: string,

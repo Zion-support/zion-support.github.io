@@ -7,7 +7,7 @@ class ExecuteAllScripts {
     this.scripts = [
       'comprehensive-automation-suite.cjs',
       'automation-runner.cjs',
-      'comprehensive-app-improvement-suite.cjs',
+      'comprehensive-improvements.cjs',
       'final-automation-suite.cjs'
     ];
   }

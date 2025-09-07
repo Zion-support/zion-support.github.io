@@ -149,15 +149,25 @@ main
 
 
 
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 const fs = require('fs');
 const path = require('path');
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const { exec } = require('child_process');
 const { promisify } = require('util');
 const execAsync = promisify(exec);
 class GitAutomation {}
   constructor() {}
+<<<<<<< HEAD
+    const logMessage = `[${timestamp}] ${message}\n`;
+    );
+    );
+    );
+=======
 <<<<<<< HEAD
     this.logFile = path.join(__dirname, 'logs', 'git-automation.log');
     this.repoPath = process.cwd();
@@ -169,6 +179,7 @@ class GitAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+>>>>>>> origin/chore/fix-lint-and-merge
 
 =======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

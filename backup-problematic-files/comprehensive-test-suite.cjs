@@ -41,7 +41,19 @@ class ComprehensiveTestSuite {
       `);
       return true;
     } catch (error) {
+<<<<<<< HEAD
+      this.testResults.tests.push({
+        name,
+        "status": 'failed',
+        duration,
+        "error": error.message
+      });
+      this.testResults.summary.total++;
+      this.testResults.summary.failed++;
+      : ${error.message}`);
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
       return false;
   async testBuildProcess() {
     return new Promise((resolve, reject) => {

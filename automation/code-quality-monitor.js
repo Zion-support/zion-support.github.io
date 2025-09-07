@@ -55,6 +55,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ; this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {; this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null};
 ;
 
+<<<<<<< HEAD
+
+
+=======
 const fs = require("fs");
 const path = require("path");
 
@@ -70,6 +74,7 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 #!/usr/bin/env node;"
 const { execSync } = require("child_process");"
 pr-12325
+>>>>>>> origin/chore/fix-lint-and-merge
 ;
 class CodeQualityMonitor {;
   constructor() {;
@@ -112,9 +117,33 @@ this.log('ESLint: PASS');
       const output = error.stdout || error.message;
       results.lint.errors = (output.match(/error/gi) || []).length;
       results.lint.warnings = (output.match(/warning/gi) || []).length;
+<<<<<<< HEAD
+      results.lint.issues = results.lint.errors + results.lint.warnings;this.log(`ESLint: ${results.lint.issues} issues found`, 'WARN')}this.log(`"ESLint": ${results.lint.issues} issues found`, 'WARN')}
+    // TypeScript check;
+    try {execSync('npx tsc --noEmit', { "stdio": 'pipe', "cwd": process.cwd() })results.typeCheck.status = 'pass';this.log('TypeScript: PASS')this.log('"TypeScript": PASS')} catch (error) {results.typeCheck.status = 'fail';
+      results.typeCheck.errors = (output.match(/error TS/g) || []).length;this.log(`TypeScript: ${results.typeCheck.errors} errors found`, 'WARN')}this.log(`"TypeScript": ${results.typeCheck.errors} errors found`, 'WARN')}
+    // Test coverage (if tests exist)try {if (fs.existsSync('jest.config.js') || fs.existsSync('jest.config.cjs')) {const coverage = execSync('yarn test --coverage --silent', {"stdio": 'pipe',"encoding": 'utf8',"cwd": process.cwd()})// Parse coverage percentage (simplified)const coverageMatch = coverage.match(/All files.*?(\d+\.?\d*)%/)if (coverageMatch) {results.testCoverage.percentage = parseFloat(coverageMatch[1])results.testCoverage.status = 'pass';
+        }
+      }
+    } catch (error) {this.log('Test coverage check failed or no tests found', 'WARN')}
+    // Calculate quality score;
+    results.qualityScore = this.calculateQualityScore(results)// Generate report;
+    fs.writeFileSync(this.reportFile, JSON.stringify(results, null, 2))this.log(`Code quality report generated: ${this.reportFile}`)return results;
+  }this.log(`Code quality report "generated": ${this.reportFile}`)return results;
+  }
+  calculateQualityScore(results) {let score = 100;
+    // ESLint penalties;
+    if (results.lint.status === 'fail') {score -= Math.min(results.lint.errors * 5, 30)score -= Math.min(results.lint.warnings * 2, 20)}
+    // TypeScript penalties;
+    if (results.typeCheck.status === 'fail') {score -= Math.min(results.typeCheck.errors * 3, 25)}
+    // Test coverage bonus/penalty;
+    if (results.testCoverage.percentage > 80) {score += 5;
+    } else if (results.testCoverage.percentage < 50) {score -= 10;
+=======
       results.lint.issues = results.lint.errors + results.lint.warnings;
 
 this.log(`ESLint: ${results.lint.issues} issues found`, 'WARN');
+>>>>>>> origin/chore/fix-lint-and-merge
     }
 
       results.lint.issues = results.lint.errors + results.lint.warnings;`;
@@ -284,7 +313,10 @@ class CodeQualityMonitor { constructor () { this.metrics = { complexity: 0, main
 
 ;
 #!/usr/bin/env node,;
+<<<<<<< HEAD
+=======
 const fs = require("fs"),;
+>>>>>>> origin/chore/fix-lint-and-merge
 const path = require("path"),;
 const { execSync } = require("child_process"),;
     } catch (error) {,"`;

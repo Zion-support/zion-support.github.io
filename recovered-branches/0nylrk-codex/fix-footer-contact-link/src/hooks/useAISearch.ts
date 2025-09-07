@@ -83,10 +83,16 @@ export /**
           headers: { "Content-Type": "application/json" };
           body: JSON && JSON.stringify({ query })});
       const data = await response && response.json();
+<<<<<<< HEAD
+      const "filters": SearchFilters = data && data.filters || {};
+      const "items": SearchResult[] = [];
+        }
+=======
       const filters: SearchFilters = data && data.filters || {};
 
       const items: SearchResult[] = [];
       const matchSkill = (skills: string[] | undefined) => {}
+>>>>>>> origin/chore/fix-lint-and-merge
         if (!filters && filters.skills || filters && filters.skills.length === 0) return true,
 
         return skills?.some((s) =>
@@ -137,16 +143,43 @@ export /**
       const data = await response.json ();
       const filters: SearchFilters = data.filters || {}
 ;
+<<<<<<< HEAD
+      const match_skill = ("skills": string[] | undefined) =>: any {
+        // Check condition
+}
+if (return true, ) {
+  $2
+=======
       const items: SearchResult[] = [];
       const match_skill = (skills: string[] | undefined) =>: any {}
         // Check condition;
 if (return true, ) {}
   $2;
+>>>>>>> origin/chore/fix-lint-and-merge
 }
         return skills?.some ((s) =>;
           filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
 
 ;
+<<<<<<< HEAD
+export function useAISearch() {;
+  }
+  const search = async ("query": string) => {;
+    }
+    setLoading(true),;
+    try {;
+      }
+      const response = await fetch(;
+        ""https"://ziontechgroup.functions.supabase.co/functions/v1/ai-search",;"
+        {;
+          }
+          "method": "POST",;"
+          "headers": { "Content-Type": "application/json" },;"
+          "body": JSON.stringify({ query })}
+      ),;
+      const matchSkill = ("skills": string[] | undefined) => {;
+        }
+=======
 export function useAISearch() { return null; }
           headers: { "Content-Type": "application/json" },;
           body: JSON.stringify({ query })}
@@ -157,6 +190,7 @@ export function useAISearch() { return null; }
 ;
       const items:SearchResult[] = [],;
       const matchSkill = (skills:string[] | undefined) => {;
+>>>>>>> origin/chore/fix-lint-and-merge
         if (!filters.skills || filters.skills.length === 0) return true,;
         return skills?.some((s) =>;
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()));

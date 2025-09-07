@@ -99,7 +99,10 @@ if ( {) {}
   $2;
 }
       // Direct subdomain lookup;
+<<<<<<< HEAD
+=======
       const { data, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
         .from ('whitelabel_tenants');'
         .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');'
         .eq ('subdomain', subdomain_param);'
@@ -116,7 +119,11 @@ if ( {) {}
       tenant_info = data as TenantInfo;
     } else {}
       // Try matching custom domain first;
+<<<<<<< HEAD
+      }
+=======
       let { data, error } = await supabase;'
+>>>>>>> origin/chore/fix-lint-and-merge
         .from ('whitelabel_tenants');'
         .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');'
         .eq ('custom_domain', hostname);'

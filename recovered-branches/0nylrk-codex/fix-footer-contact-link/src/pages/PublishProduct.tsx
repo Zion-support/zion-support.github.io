@@ -7,8 +7,17 @@ export default function PublishProduct() {};
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 export default function PublishProduct() {
+<<<<<<< HEAD
+  }
+import { Navigate } from "react-router-dom","
+import { SEO } from "@/components/SEO","
+export default function PublishProduct() {
+}
+const { isAuthenticated, isLoading } = useAuth(),;
+=======
   const { isAuthenticated, isLoading } = useAuth(),
 
+>>>>>>> origin/chore/fix-lint-and-merge
   // Show loading while checking authentication;
   if (isLoading) {;
 
@@ -22,6 +31,24 @@ export default function PublishProduct() {
 
         <div className="animate-pulse text-zion-purple text-lg">Loading...</div>
       </div>
+<<<<<<< HEAD
+    )
+  }
+import { Header } from "@/components/Header";"
+import { Footer } from "@/components/Footer",;"
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { Navigate } from "react-router-dom",;"
+import { SEO } from "@/components/SEO",;"
+export default function PublishProduct() {;
+  }
+  // Show loading while checking authentication;
+  if (isLoading) {;
+    }
+    return (;
+      <div className="flex justify-center items-center min-h-screen bg-zion-blue">;"
+        <div className="animate-pulse text-zion-purple text-lg">;"
+=======
     );
   }
 
@@ -55,6 +82,7 @@ import { useAuth } from "@/hooks/useAuth",
     return (
       <div className="flex justify-center items-center min-h-screen bg-zion-blue">;
         <div className="animate-pulse text-zion-purple text-lg">;
+>>>>>>> origin/chore/fix-lint-and-merge
           Loading...;
         </div>;
       </div>;

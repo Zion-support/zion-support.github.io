@@ -10,8 +10,12 @@
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-merge-resolver.cjs
 const fs = require('fs');
-const path = require('path');
+const path = require(path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+console.log(🚀 Comprehensive Merge Conflict Resolver');
+console.log('==);
+=======
 console.log('🚀 Comprehensive Merge Conflict Resolver');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -37,12 +41,33 @@ console.log('=====================================');
 =======
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
 console.log('==');
+>>>>>>> origin/chore/fix-lint-and-merge
 
-console.log('==');
-console.log('=====================================');
+console.log(==');
+console.log('=====================================);
+main
+<<<<<<< HEAD
+
+console.log(==');
+
+console.log('==);
+
+console.log(==');
+
+
+    .replace(/
+    .replace(/
+    .replace(/
+}
+
+console.log('==);
+
+console.log(==');
 main
 =======
+=======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 // Function to remove merge conflict markers
@@ -84,6 +109,10 @@ function removeMergeConflictMarkers(content) {
     .replace(//g, '')
     .replace(/}
 
+<<<<<<< HEAD
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, ')
+    .replace(//g, ')
+=======
 
 
 
@@ -92,10 +121,13 @@ function removeMergeConflictMarkers(content) {
     .replace(/}
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
+>>>>>>> origin/chore/fix-lint-and-merge
     .replace(/}
 
 
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc:scripts/comprehensive-merge-resolver.cjs
 // Function to fix common syntax errors
@@ -150,6 +182,7 @@ function fixSyntaxErrors(content) {
     // Clean up whitespace
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '');
+>>>>>>> origin/chore/fix-lint-and-merge
 }
 // Function to process a file
 =======
@@ -258,8 +291,12 @@ function findFilesWithConflicts() {
 
 
 
+<<<<<<< HEAD
+    if (content.includes(
+=======
     if (content.includes('
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 
@@ -287,14 +324,23 @@ main
       }
     }
   }
+<<<<<<< HEAD
+  
+  searchDirectory('/workspace);
+=======
   searchDirectory('/workspace');
+>>>>>>> origin/chore/fix-lint-and-merge
   return files;
       // Remove any remaining conflict markers;
-      content = content.replace(/\n/g, "")
-      content = content.replace(/\n/g, "")
+      content = content.replace(/\n/g, ")
+      content = content.replace(/\n/g, ")
       if (content !== originalContent) {
-        fs.writeFileSync(filePath, content, "utf8")
+        fs.writeFileSync(filePath, content, "utf8)
         this.resolvedFiles.push(filePath)
+<<<<<<< HEAD
+        this.log(`✅ Resolved conflicts in ${filePath}`),}
+            files.push(fullPath);
+=======
         this.log(`✅ Resolved conflicts in ${filePath}`),,
 }
 <<<<<<< HEAD
@@ -313,22 +359,29 @@ main
 =======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
 
 >>>>>>> 61d39dd026fe5549161165ead85b131541010508
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error resolving ${filePath}: ${error.message}),,
+<<<<<<< HEAD
+  cleanupBuildArtifacts($2) {
+    this.log("🧹 Cleaning up build artifacts...")
+    const artifactsToRemove = [
+=======
 }
   }
 
   cleanupBuildArtifacts() {"
     this.log("🧹 Cleaning up build artifacts...")"
     const artifactsToRemove = ["
+>>>>>>> origin/chore/fix-lint-and-merge
       ".next",
-      "node_modules/.cache",
+      node_modules/.cache,
       "dist",
-      "build",
-      "*.log","]"
+      build,
+      "*.log",]
       "package-lock.json"]"
     for (const artifact of artifactsToRemove) {
 <<<<<<< HEAD
@@ -373,9 +426,15 @@ async function main() {
   // TODO: Implement
 }"
 
+<<<<<<< HEAD
+    const conflictFiles = findFilesWithConflicts()
+  if($2) {
+      console.log(✅ No files with merge conflicts found')
+=======
     const conflictFiles = findFilesWithConflicts();
     if (conflictFiles.length === 0) {
       console.log('✅ No files with merge conflicts found');
+>>>>>>> origin/chore/fix-lint-and-merge
     } else {
 <<<<<<< HEAD
       console.log(`📁 Found ${conflictFiles.length} files with merge conflicts:`);
@@ -436,8 +495,8 @@ main();
     // Try to build;
 
 
-    console.log('\n🎉 Merge conflict resolution completed!');
-    console.error('❌ Error:', error.message);
+    console.log('\n🎉 Merge conflict resolution completed!);
+    console.error(❌ Error:', error.message);
     process.exit(1);
 
 main();

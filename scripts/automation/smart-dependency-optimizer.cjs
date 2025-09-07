@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -11,41 +15,49 @@ const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+>>>>>>> origin/chore/fix-lint-and-merge
       this.projectRoot,logs"
-      "smart-dependency-optimizer.log"
+      smart-dependency-optimizer.log
       this.projectRoot,logs"
-      "dependency-optimizations.json"
-      this.projectRoot,logs"
+      "dependency-optimizations.json
+      this.projectRoot,logs
       "dependency-usage-analysis.json"
-  fs.mkdirSync(logsDir, { "recursive"})
+  fs.mkdirSync(logsDir, { recursive})
           fs.readFileSync(this.optimizationLog, "utf8")
-  "optimizations"
+  optimizations
           "lastRun"
-          "totalSavings"
+          totalSavings
   "optimizations"
-        "lastRun"
+        lastRun
         "totalSavings"
+  log(message, level = INFO)
   log(message, level = "INFO")
-  log(message, level = "INFO")
-  this.log("🧠 Starting Smart Dependency Optimization...")
-    const savings = { "size": 0, "installTime": 0, "buildTime"}
-      this.log( Smart Dependency Optimization "completed": ${appliedOpts.length} optimizations applied")
-      return { "optimizations"}
-  this.log( "Smart Dependency Optimization "failed": ${error.message  }",ERROR")
-  this.log( `Smart Dependency Optimization "failed": ${error.message}",ERROR"`)
+  this.log(🧠 Starting Smart Dependency Optimization...)
+    const savings = { "size": 0, installTime: 0, "buildTime"}
+      this.log( Smart Dependency Optimization completed: ${appliedOpts.length} optimizations applied")
+      return { "optimizations}
+  this.log( Smart Dependency Optimization "failed": ${error.message  },ERROR)
+  this.log( `Smart Dependency Optimization "failed": ${error.message},ERROR`)
   this.log(` Analyzing dependency usage patterns...``)
   "direct"
-      "indirect"
+      indirect
       "unused"
+<<<<<<< HEAD
+
+=======
       "usagePatterns"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
   const depName = dep.split("@")
   const depName = dep.split("@")
+>>>>>>> origin/chore/fix-lint-and-merge
   "name"
-            "version"
+            version
             "usageCount"
-            "files"
+            files
             "lastUsed"
+<<<<<<< HEAD
+
+=======
   this.log(`Dependency usage analysis "failed": ${error.message  }`, "ERROR"`)
   const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
   const sourceDirs = ["src", "components", "pages", "utils", "hooks", "api"]
@@ -58,42 +70,68 @@ const crypto = require("crypto")
   if (line.includes("import") && line.includes("from")
   const importMatch = line.match(/from\s+[""]([^""]+)[""]
               if (packageName && !packageName.startsWith(".")
+>>>>>>> origin/chore/fix-lint-and-merge
   "count"
-                    "files"
+                    files
                     "lastUsed"
-  // Skip files that can"
-  // Skip files that can"
+  // Skip files that can
+  // Skip files that can
     if (importPath.startsWith("@")
+<<<<<<< HEAD
+
+=======
   const parts = importPath.split("/")
   return importPath.split("/")
   const usage = { "count": 0, "files": [], "lastUsed"}
   if (pkg === depName || pkg.startsWith(depName + "/")
+>>>>>>> origin/chore/fix-lint-and-merge
   if (pkg === depName || pkg.startsWith(depName + "/")
+  if (pkg === depName || pkg.startsWith(depName + /)
   "mostUsed"
-      "recentlyUsed"
+      recentlyUsed
       "rarelyUsed"
-      (["", "a"], ["", "b")]
-    patterns.mostUsed = sortedByUsage.slice(0, 10).map((["pkg", "data")]
-  "package"
+      ([, "a"], [, "b")]
+    patterns.mostUsed = sortedByUsage.slice(0, 10).map(([pkg, "data")]
+  package
       "usageCount"
-      "files"
-      ([", "a"], [", "b")]
-    patterns.recentlyUsed = sortedByDate.slice(0, 10).map((["pkg", "data")]
-  "package"
+      files
+      ([", "a], [, "b")]
+    patterns.recentlyUsed = sortedByDate.slice(0, 10).map(([pkg, "data")]
+  package
       "lastUsed"
-      "usageCount"
+      usageCount
   this.log(" Identifying unused dependencies...")
+<<<<<<< HEAD
+
+=======
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
         fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
   const depName = dep.split("@")
+>>>>>>> origin/chore/fix-lint-and-merge
   "name"
-            "version"
+            version
             "type"
-              ? "dependency"
+              ? dependency
               : "devDependency"
-            "reason": "No imports found in source code"
-  this.log(Unused dependency identification "failed": ${error.message  }")
+            reason: "No imports found in source code"
+  this.log(Unused dependency identification failed: ${error.message  }")
+        "ERROR
+  const packageLockPath = path.join(this.projectRoot, package-lock.json")
+          fs.readFileSync(packageLockPath, "utf8)
+          fs.readFileSync(packageLockPath, "utf8)
+  this.log(⚡ Analyzing dependency conflicts...")
+      const packageLockPath = path.join(this.projectRoot, "package-lock.json)
+          fs.readFileSync(packageLockPath, utf8")
+  "type: DUPLICATE_PACKAGE"
+            "package
+            versions"
+            "severity: MEDIUM"
+            "suggestion: Consider using package resolution to avoid duplicates"
+  this.log(Dependency conflict analysis "failed: ${error.message  })
         "ERROR"
+<<<<<<< HEAD
+
+=======
   const packageLockPath = path.join(this.projectRoot, "package-lock.json")
           fs.readFileSync(packageLockPath, "utf8")
   const packageLockPath = path.join(this.projectRoot, "package-lock.json")
@@ -125,16 +163,31 @@ const crypto = require("crypto")
               "required"
               "severity": "HIGH","suggestion": `Install ${peerDep}@${requiredVersion} as a dependency
         "package.json"
+>>>>>>> origin/chore/fix-lint-and-merge
         this.projectRoot,node_modules"
+        package.json
         "package.json"
+<<<<<<< HEAD
+
+=======
         "package.json"
   const pkg = JSON.parse(fs.readFileSync(packageJsonPath, "utf8")
+>>>>>>> origin/chore/fix-lint-and-merge
   this.log("� Checking for outdated dependencies...")
-      // For now, we"
-        fs.readFileSync(path.join(this.projectRoot, "package.json"), "utf8"
+      // For now, we
+        fs.readFileSync(path.join(this.projectRoot, package.json"), "utf8
+  package"
+            "current
+            latest"
+            "severity: LOW"
+            "suggestion: Consider updating to latest version for security and features
+  this.log(`Outdated dependency check "failed": ${error.message  }`, ERROR`)
   "package"
-            "current"
+            current
             "latest"
+<<<<<<< HEAD
+
+=======
             "severity": "LOW"
             "suggestion": Consider updating to latest version for security and features"
   this.log(`Outdated dependency check "failed": ${error.message  }`, "ERROR"`)
@@ -161,100 +214,109 @@ const crypto = require("crypto")
   const distPath = path.join(this.projectRoot, "dist")
     } catch (error) {  this.log(`Bundle size analysis "failed": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(directory, ")
+>>>>>>> origin/chore/fix-lint-and-merge
     usageAnalysis"
-    usageAnalysis"
-  this.log(" Generating optimization recommendations...")
-  "type": "REMOVE_UNUSED"
-        "dependencies"
-        "priority": "HIGH"
-        "impact": "REDUCE_BUNDLE_SIZE"
-        "action": Remove unused dependencies to reduce bundle size and install time"
-  "type": "RESOLVE_CONFLICTS"
+  this.log(" Generating optimization recommendations...)
+  type": "REMOVE_UNUSED
+        dependencies"
+        "priority: HIGH"
+        "impact: REDUCE_BUNDLE_SIZE"
+        "action: Remove unused dependencies to reduce bundle size and install time
+  "type": RESOLVE_CONFLICTS
         "conflicts"
-        "priority": "MEDIUM"
-        "impact": "IMPROVE_STABILITY"
-        "action": "Resolve dependency conflicts to improve build stability"
-  "type": "UPDATE_DEPENDENCIES"
-        "dependencies"
-        "priority": "LOW"
-        "impact": "SECURITY_FEATURES"
-        "action": "Update dependencies for security patches and new features"
-  "type": "OPTIMIZE_BUNDLE"
+        priority: "MEDIUM"
+        impact: "IMPROVE_STABILITY"
+        action: "Resolve dependency conflicts to improve build stability"
+  type: "UPDATE_DEPENDENCIES"
+        dependencies
+        "priority": LOW
+        "impact": SECURITY_FEATURES
+        "action": Update dependencies for security patches and new features
+  "type": OPTIMIZE_BUNDLE
         "opportunities"
-        "priority": "MEDIUM"
-        "impact": "IMPROVE_PERFORMANCE"
-        "action": "Optimize bundle size for better loading performance"
-  "type": "REMOVE_UNUSED"
-        "dependencies"
-        "priority": "HIGH"
-        "impact": "REDUCE_BUNDLE_SIZE"
-        "action": Remove unused dependencies to reduce bundle size and install time"
-  "type": "RESOLVE_CONFLICTS"
-        "conflicts"
-        "priority": "MEDIUM"
-        "impact": "IMPROVE_STABILITY"
-        "action": "Resolve dependency conflicts to improve build stability"
-  "type": "UPDATE_DEPENDENCIES"
-        "dependencies"
-        "priority": "LOW"
-        "impact": "SECURITY_FEATURES"
-        "action": "Update dependencies for security patches and new features"
-  "type": "OPTIMIZE_BUNDLE"
-        "opportunities"
-        "priority": "MEDIUM"
-        "impact": "IMPROVE_PERFORMANCE"
-        "action": "Optimize bundle size for better loading performance"
-  this.log(" Applying safe optimizations...")
-  if (rec.type === "REMOVE_UNUSED" && rec.priority === "HIGH")
-  "type": "REMOVE_UNUSED"
-              "dependencies"
-              "result": "success"
-  this.log(Safe optimization application "failed": ${error.message  }")
+        priority: "MEDIUM"
+        impact: "IMPROVE_PERFORMANCE"
+        action: "Optimize bundle size for better loading performance"
+  type: "REMOVE_UNUSED"
+        dependencies
+        "priority": HIGH
+        "impact": REDUCE_BUNDLE_SIZE
+        "action": Remove unused dependencies to reduce bundle size and install time
+  type": "RESOLVE_CONFLICTS
+        conflicts"
+        "priority: MEDIUM"
+        "impact: IMPROVE_STABILITY"
+        "action: Resolve dependency conflicts to improve build stability"
+  "type: UPDATE_DEPENDENCIES"
+        "dependencies
+        priority": "LOW
+        impact": "SECURITY_FEATURES
+        action": "Update dependencies for security patches and new features
+  type": "OPTIMIZE_BUNDLE
+        opportunities"
+        "priority: MEDIUM"
+        "impact: IMPROVE_PERFORMANCE"
+        "action: Optimize bundle size for better loading performance"
+  this.log(" Applying safe optimizations...)
+  if (rec.type === REMOVE_UNUSED" && rec.priority === "HIGH)
+  type": "REMOVE_UNUSED
+              dependencies"
+              "result: success"
+  this.log(Safe optimization application "failed: ${error.message  })
         "
-  this.log(Safe optimization application "failed": ${error.message}")
+  this.log(Safe optimization application "failed: ${error.message})
         "ERROR"
         if (dep.type === `devDependency``)
-  try {execSync("npm uninstall ${dep.name}")
+  try {execSync(npm uninstall ${dep.name})
   "cwd"
-              "stdio": "pipe"
-            removed.push(dep.name);this.log(" Removed unused dev "dependency": ${dep.name}")} catch (error) {  this.log("Failed to remove ${dep.name  }: ${error.message}", "WARN")
-    } catch (error) {  this.log("Dependency removal "failed": ${error.message  }", "ERROR")
+              stdio: "pipe"
+            removed.push(dep.name);this.log( Removed unused dev dependency": ${dep.name}")} catch (error) {  this.log(Failed to remove ${dep.name  }: ${error.message}, "WARN")
+    } catch (error) {  this.log(Dependency removal failed": ${error.message  }", ERROR)
   this.log(" Measuring optimization results...")
-  "bundleSizeReduction"
+  bundleSizeReduction
       "installTimeReduction"
-      "buildTimeReduction"
+      buildTimeReduction
       "dependencyCountReduction"
-  // Measure bundle size ""before/after""
-      if (fs.existsSync("dist")
+  // Measure bundle size before/after""
+      if (fs.existsSync(dist)
         .filter(opt => opt.type === "REMOVE_UNUSED")
-  this.log(" Measuring optimization results...")
+  this.log( Measuring optimization results...)
   "bundleSizeReduction"
-      "installTimeReduction"
+      installTimeReduction
       "buildTimeReduction"
-      "dependencyCountReduction"
+      dependencyCountReduction
   // Measure bundle size "before/after"
-      if (fs.existsSync("dist")
+      if (fs.existsSync(dist)
         .filter(opt => opt.type === "REMOVE_UNUSED")
-        .reduce((total, opt) => total + opt.dependencies.length, 0)} catch (error) {  this.log("Results measurement "failed": ${error.message  }", "ERROR")
+        .reduce((total, opt) => total + opt.dependencies.length, 0)} catch (error) {  this.log(Results measurement failed": ${error.message  }", ERROR)
   "timestamp"
-      "optimizations"
+      optimizations
       "results"
-      "totalSavings"
+      totalSavings
   "timestamp"
-      "summary"
+      summary
         "bundleSizeReduction"
-        "dependencyCountReduction"
+        dependencyCountReduction
         "totalSavings"
-      "optimizations"
+      optimizations
       "results"
-      "recommendations"
+      recommendations
       "history"
-      this.projectRoot,logs", "dependency-optimization-report-${Date.now()}.json"
+      this.projectRoot,logs, dependency-optimization-report-${Date.now()}.json"
       this.projectRoot,logs"
-      this.projectRoot, "logs"
+      this.projectRoot, logs
 this.log(` Optimization Report "generated"`)
-  this.log(" Smart Dependency Optimizer starting...")
+  this.log( Smart Dependency Optimizer starting...)
 this.log(" Smart Dependency Optimization completed successfully")
+<<<<<<< HEAD
+      this.log(� Total savings: ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
+        " Smart Dependency Optimization failed: ${error.message  }",ERROR"
+
+
+        ` Smart Dependency Optimization failed: ${error.message}"
+
+        ` Smart Dependency Optimization "failed: ${error.message}
+=======
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
 <<<<<<< HEAD
@@ -267,11 +329,16 @@ this.log(" Smart Dependency Optimization completed successfully")
 =======
 <<<<<<< HEAD
         ` Smart Dependency Optimization "failed": ${error.message}"
+>>>>>>> origin/chore/fix-lint-and-merge
 =======
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 =======
         ` Smart Dependency Optimization "failed": ${error.message}"
+<<<<<<< HEAD
+
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 =======
 =======

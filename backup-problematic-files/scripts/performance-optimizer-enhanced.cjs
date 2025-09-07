@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require(path')
+const { execSync } = require('child_process')
+    this.reportFile = path.join(this.projectRoot, performance-optimization-report.json')
+    this.log('⚡ Starting Performance Optimizations)
+      this.log( Performance optimizations completed')
+    this.log('� Optimizing bundle size)
+      execSync(npx depcheck --json')
+      execSync('npm run analyze)
+        "type
+        action"
+        "status
+        type"
+        "action
+        status"
+              "type
+              action"
+              "status
+          type"
+          "action
+          status"
+          "type
+          action"
+          "status
+            /import \* as (\w+) from []([^'')]
+=======
 
     this.log('⚡ Starting Performance Optimizations')
       this.log(' Performance optimizations completed')
@@ -11,37 +39,31 @@
         "type"
         "action"
         "status"
+>>>>>>> origin/chore/fix-lint-and-merge
               "type"
-              "action"
+              action
               "status"
-          "type"
+          type
           "action"
-          "status"
+          status
           "type"
-          "action"
+          action
           "status"
-            /import \* as (\w+) from ['"]([^'')]
-              "type"
-              "action"
-              "status"
-          "type"
-          "action"
-          "status"
-          "type"
-          "action"
-          "status"
-        "event_category"
+        event_category
           "event_category"
-        "type"
+        type
         "file"
-        "action"
+        action
         "status"
-        "type"
+        type
         "file"
-        "action"
+        action
         "status"
-        "successful"
+        successful
         "failed"
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -55,3 +77,4 @@
 =======
 
 >>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+>>>>>>> origin/chore/fix-lint-and-merge

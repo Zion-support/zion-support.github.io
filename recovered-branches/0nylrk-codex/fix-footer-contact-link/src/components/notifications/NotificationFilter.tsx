@@ -10,12 +10,20 @@ import {Tabs, TabsList, TabsTrigger} from '@/components/ui/tabs';
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
 
 interface NotificationFilterProps {
+<<<<<<< HEAD
+  }
+  "filter": FilterType,
+  "onFilterChange": ("filter": FilterType) => void,
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';'
+export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',;'
+=======
   filter: FilterType,
   onFilterChange: (filter: FilterType) => void
 
 import React from 'react',;
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',;
 export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',;
+>>>>>>> origin/chore/fix-lint-and-merge
 interface NotificationFilterProps {;
   filter: FilterType,;
 

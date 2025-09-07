@@ -215,6 +215,11 @@ interface ContractBuilderProps {;
   onContractGenerated?:(contractContent:string) => void;
 }
 ;
+<<<<<<< HEAD
+export function ContractBuilder() {;
+  }
+  const [activeTab, setActiveTab] = useState<string>("form"),;"
+=======
 export function ContractBuilder({;
   isOpen,;
   onClose,;
@@ -224,6 +229,7 @@ export function ContractBuilder({;
 } ContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form"),;
   const [generatedContract, setGeneratedContract] = useState<string | null>(null),;
+>>>>>>> origin/chore/fix-lint-and-merge
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   ),;
@@ -603,6 +609,75 @@ if ( {) {
               onFormValuesChange={setFormValues}
               onContractGenerated={handleContractGenerated}
 
+<<<<<<< HEAD
+            />;
+          </TabsContent>;
+          <TabsContent value="preview" className="pt-4">;"
+            {generatedContract && (;        <TemplateManager
+}
+isOpen={templateManagerOpen}
+          onClose={() => setTemplateManagerOpen(false)}
+          onSelectTemplate={handleLoadTemplate}
+          currentValues={formValues}
+}  ),; interface ContractBuilderProps {
+  }
+  "isOpen": boolean;
+"onClose": () => void;
+"talent": TalentProfile;
+"clientName": string;
+onContractGenerated?: ("contractContent": string) => void
+}export function ContractBuilder() {
+  }
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined> (undefined);
+const [templateManagerOpen, setTemplateManagerOpen] = useState (false);
+const [showSmartContractBuilder, setShowSmartContractBuilder] = useState (false);
+  }
+  if (onContractGenerated) {
+  }
+  onContractGenerated (contract)
+}
+
+};
+return (<SmartContractBuilder isOpen= {
+  }
+  isOpen
+} />)
+}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {"
+  }
+  talent
+}clientName= {
+  }
+  clientName
+}initialValues= {
+  }
+  formValues
+}onFormValuesChange= {
+  }
+  setFormValues
+}onContractGenerated= {
+  }
+  handleContractGenerated
+} /> </TabsContent> />)
+}</TabsContent> </Tabs> <TemplateManager isOpen= {
+  }
+  templateManagerOpen
+}onClose= {
+  () => setTemplateManagerOpen (false)
+}onSelectTemplate= {
+  }
+  handleLoadTemplate
+}currentValues= {
+  }
+  formValues
+}/> </DialogContent> </Dialog>)
+}
+        />
+      </DialogContent>
+    </Dialog>
+  )
+}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
         />;
       </DialogContent>;
     </Dialog>;

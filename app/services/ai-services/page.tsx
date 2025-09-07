@@ -313,3 +313,44 @@ function ContactCTA() {
     </div>
   );
 }
+
+function TechCard({ title,,,
+  icon }) {
+return (}
+    <div className=\"p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow\" />}
+      <div className=\"text-3xl mb-4\" />{icon}</div>
+      <h3 className=\"text-xl font-semibold text-gray-900 mb-3\" />{title}</h3>
+      <div className=\"text-3xl\" />{icon}</div>
+    </div>
+  );
+}
+
+function Plan({ title, description, features, pricing,,,
+  popular = false }) {
+  return (
+    <div className={`bg-white border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow ${}
+      popular ? 'border-blue-500 ring-2 ring-blue-100' : 'border-gray-200'}
+    }`} />
+      {popular && (
+        <div className=\"bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4\" />
+          Most Popular}
+        </div>}
+      )}
+      <h3 className=\"text-2xl font-bold text-gray-900 mb-2\" />{title}</h3>
+      <p className=\"text-gray-600 mb-6\" />{description}</p>
+      <ul className=\"space-y-3 mb-6\" />
+        {features.map((feature,,,
+  index) => (}
+          <li key={index}
+            className=\"flex items-center text-gray-600\" />
+            <span className=\"w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3\" />
+              <span className=\"text-green-600 text-sm\" />✓</span>
+            </span>
+            {feature
+          </li>
+        ))
+      </ul>
+      <div className=\"text-lg font-semibold text-gray-900\" />{pricing}</div>
+    </div>
+  );
+}

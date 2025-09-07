@@ -37,6 +37,30 @@ export function QuickActions() {
     },
 
     {
+<<<<<<< HEAD
+      }
+      "id": "id","
+    "label": "Schedule Interview""
+      "icon": <Calendar className="h-5 w-5 mr-2" />"
+      "description": "Set up candidate interviews""
+      "color": "bg-amber-100 "dark":bg-amber-900/20""
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";"
+import { FileText, Plus, Users, Search, Calendar } from "lucide-react",;"
+      <CardHeader>;
+        <CardTitle>Quick Actions</CardTitle>;
+        <CardDescription>Fast access to common tasks</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="grid grid-cols-1 "sm":grid-cols-2 gap-4">;"
+          {actions && actions.map(action => { return (; }
+            <Button
+}
+key={action && action.id}
+variant="outline";"
+              className={`h-auto justify-start p-4 ${action && action.color}`}>;`
+              <div className="flex flex-col items-start text-left">;"
+                <div className="flex items-center">;"
+=======
       id: "find-talent"
       label: "Find Talent"
       icon: <Search className="h-5 w-5 mr-2" />
@@ -133,6 +157,7 @@ export function QuickActions() {;
               className={`h-auto justify-start p-4 ${action && action.color}`}>;
               <div className="flex flex-col items-start text-left">;
                 <div className="flex items-center">;
+>>>>>>> origin/chore/fix-lint-and-merge
                   {action && action.icon}
                   <span>{action && action.label}</span>;
                 </div>;

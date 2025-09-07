@@ -5,12 +5,23 @@
  */
 
 const { execSync } = require('child_process');
-const fs = require('fs');
+const fs = require(fs');
 const path = require('path');
 class CICDAutomation {}
   constructor() {}
     this.startTime = new Date();
     this.report = {}
+<<<<<<< HEAD
+      "timestamp: this.startTime.toISOString(),
+      status": running',
+      "steps: [],
+      errors": [],
+      "summary: {}
+    }}
+  log(message, type = 'info) {}
+    const timestamp = new Date().toISOString(;);
+
+=======
 
       "summary": {};"
     }};"
@@ -35,14 +46,24 @@ class CICDAutomation {}
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message};;`
     console.log(logMessage);
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge
     this.report.steps.push({})
       timestamp,
       type,
       message;
-    })};
+    })}
   async runCommand(command, description) {}
 <<<<<<< HEAD
     try {}
+<<<<<<< HEAD
+      this.log(`Starting": ${description}`);
+      const output = execSync(command, {})
+        "encoding: utf8', 
+        cwd": '/workspace,
+        "stdio: pipe'
+      });
+      this.log(`Completed": ${description}`, 'success);
+=======
       this.log(`"Starting": ${description}`);
       const output = execSync(command, { })
 <<<<<<< HEAD
@@ -54,9 +75,51 @@ class CICDAutomation {}
         "stdio": 'pipe'
       };);
       this.log(`"Completed": ${description}`, 'success');
+>>>>>>> origin/chore/fix-lint-and-merge
       return output} catch (error) {}
-      this.log(`"Failed": ${description} - ${error.message}`, 'error');
+      this.log(`"Failed: ${description} - ${error.message}`, error');
       this.report.errors.push({})
+<<<<<<< HEAD
+        step": description,
+        "error: error.message,
+        timestamp": new Date().toISOString();
+      }
+});
+      throw error}
+  }
+  async installDependencies() {}
+    await this.runCommand('npm ci, Install dependencies')}
+  async runTests() {}
+    try {}
+      await this.runCommand('npm test, Run tests');
+      this.report.summary.tests = 'passed} catch (error) {}
+      this.report.summary.tests = failed';
+      // Don't throw, continue with other steps;
+    }
+  }
+  async runLinting() {}
+    try {}
+      await this.runCommand(npm run lint, 'Run linting');
+      this.report.summary.linting = passed} catch (error) {}
+      this.report.summary.linting = 'failed';
+      // Dont throw, continue with other steps;
+    }
+  }
+  async buildApplication() {}
+    try {}
+      await this.runCommand(npm run build', 'Build application);
+      this.report.summary.build = success'} catch (error) {}
+      this.report.summary.build = 'failed;
+      throw error}
+  }
+  async generateReport() {}
+    const endTime = new Date;(;);
+    this.report.status = this.report.errors.length === 0 ? success' : 'failed;
+    this.report.duration = endTime - this.startTime;
+    this.report.endTime = endTime.toISOString();
+
+    const reportPath = path.join(/workspace', 'ci-cd-automation-report.json;);
+=======
         "step": description,
         "error": error.message,
         "timestamp": new Date().toISOString();
@@ -72,11 +135,19 @@ class CICDAutomation {}
 
 <<<<<<< HEAD
     const reportPath = path.join('/workspace', 'ci-cd-automation-report.json';);
+>>>>>>> origin/chore/fix-lint-and-merge
     fs.writeFileSync(reportPath, JSON.stringify(this.report, null, 2));
 <<<<<<< HEAD
 
 =======
     
+<<<<<<< HEAD
+    this.log(`Report saved "to: ${reportPath}`)}
+  async run() {}
+    try {}
+      this.log(Starting CI/CD Pipeline Automation');
+      
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     this.log(`Report saved "to": ${reportPath}`)};
 =======
@@ -87,6 +158,7 @@ class CICDAutomation {}
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+>>>>>>> origin/chore/fix-lint-and-merge
       // Install dependencies;
       await this.installDependencies();
 
@@ -101,6 +173,13 @@ class CICDAutomation {}
 
 =======
       
+<<<<<<< HEAD
+      this.log('CI/CD Pipeline completed successfully, success')} catch (error) {}
+      this.log(`CI/CD Pipeline failed": ${error.message}`, 'error')} finally {`}
+      await this.generateReport()}
+  }
+}
+=======
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       // Install dependencies;
@@ -120,11 +199,16 @@ class CICDAutomation {}
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
       await this.generateReport()};
+>>>>>>> origin/chore/fix-lint-and-merge
 // Run the automation;
 if ( {})
   const automation = new CICDAutomation) {}
      {}
   const automation = new CICDAutomation}(;);
+<<<<<<< HEAD
+  automation.run().catch(console.error)}
+
+=======
   automation.run().catch(console.error)};
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -141,3 +225,4 @@ module.exports = CICDAutomation;
 =======
 module.exports = CICDAutomation;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

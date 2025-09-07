@@ -97,10 +97,13 @@ async function main() {
 <
   const patterns = [
     'src/**/*.tsx',
+<<<<<<< HEAD
+=======
   const patterns = ['src/**/*.tsx',
   console.log('🔧 Starting comprehensive syntax fixes...');
   const patterns = [
     'src/**/*.tsx',
+>>>>>>> origin/chore/fix-lint-and-merge
     'src/**/*.ts',
     'components/**/*.tsx',
     'components/**/*.ts',

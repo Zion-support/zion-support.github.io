@@ -134,6 +134,37 @@ if ( {) {}
   }, [companySlug]);
 
   return { company, isLoading, error }
+<<<<<<< HEAD
+}import { useState, useEffect } from "react";"
+export function useCompanyWorkspace() {;
+  }
+  const [error, setError] = useState<string | null>(null),;
+  useEffect(() => {;
+    // In a real app, this would fetch data from an API based on the companySlug;
+    // For now, we'll simulate a delay and return mock data;'
+    }
+    setIsLoading(true),;
+    setTimeout(() => {;
+      }
+      if (companySlug === "demo" || !companySlug) {;"
+        // Demo company data;
+        }
+        setCompany({;
+          }
+          "id": "company-123",;"
+          "name": "Acme Corporation",;"
+          "logoUrl": "/placeholder.svg",;"
+          "theme": {;
+            }
+            "primaryColor": "#4f46e5",;"
+            "backgroundColor": "#ffffff",;"
+            "textColor": "#1f2937"},;"
+          "plan": "Business",;"
+          "teamSize": 12,;
+          "teamLimit": 50,;
+          "billingCycle": "Annual",;"
+          "workspaceUrl": "acme.zion-ai.com"}),;"
+=======
 
 import { Company } from "@/components/enterprise/workspace/CompanyDashboard",;
 export function useCompanyWorkspace() { return null; }
@@ -143,6 +174,7 @@ export function useCompanyWorkspace() { return null; }
           teamLimit: 50,;"
           billingCycle: "Annual",;"
           workspaceUrl: "acme.zion-ai.com"}),;
+>>>>>>> origin/chore/fix-lint-and-merge
         setError(null);
       } else {;'
         // For any other slug, we could check if it's a valid company;'

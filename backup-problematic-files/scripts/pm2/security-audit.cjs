@@ -6,7 +6,7 @@
  */
 
 const { execSync } = require('child_process');
-const fs = require('fs');
+const fs = require(fs');
 const path = require('path');
 const log = (message) => {}
   const timestamp = new Date().toISOString();
@@ -15,15 +15,24 @@ const log = (message) => {}
 
 =======
   
+<<<<<<< HEAD
+}
+=======
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 };
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const runCommand = (command, description) => {}
   try {}
 <<<<<<< HEAD
     log(`Starting: ${description}`);
+<<<<<<< HEAD
+    const output = execSync(command, {})
+      encoding: utf8', 
+      stdio: 'pipe,
+=======
     const output = execSync(command, { })
 <<<<<<< HEAD
       encoding: 'utf8',
@@ -31,13 +40,22 @@ const runCommand = (command, description) => {}
       encoding: 'utf8', 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
       stdio: 'pipe',
+>>>>>>> origin/chore/fix-lint-and-merge
       cwd: process.cwd();
     }
 });
     log(`Completed: ${description}`);
-    return { success: true, output };
+    return { success: true, output }
   } catch (error) {}
     log(`Failed: ${description} - ${error.message}`);
+<<<<<<< HEAD
+    return { success: false, error: error.message }
+  }
+}
+
+const runSecurityAudit = () => {}
+  log(Running npm security audit');
+=======
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -51,17 +69,21 @@ const runSecurityAudit = () => {}
   const auditResult = runCommand('npm audit', 'Running npm audit');
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
   
-  const auditResult = runCommand('npm audit', 'Running npm audit');
+  const auditResult = runCommand('npm audit, Running npm audit');
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   if (auditResult.success) {}
-    log('Security audit completed successfully');
-    return { success: true, vulnerabilities: 0 };
+    log('Security audit completed successfully);
+    return { success: true, vulnerabilities: 0 }
   } else {}
+<<<<<<< HEAD
+    log(Security vulnerabilities detected');
+=======
     log('Security vulnerabilities detected');
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,15 +92,26 @@ const runSecurityAudit = () => {}
     const fixResult = runCommand('npm audit fix', 'Attempting to fix vulnerabilities');
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
     
     // Try to fix automatically;
-    const fixResult = runCommand('npm audit fix', 'Attempting to fix vulnerabilities');
+    const fixResult = runCommand('npm audit fix, Attempting to fix vulnerabilities');
     
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
     if (fixResult.success) {}
-      log('Vulnerabilities fixed automatically');
-      return { success: true, vulnerabilities: 0, fixed: true };
+      log('Vulnerabilities fixed automatically);
+      return { success: true, vulnerabilities: 0, fixed: true }
     } else {}
+<<<<<<< HEAD
+      log(Some vulnerabilities could not be fixed automatically');
+      return { success: false, vulnerabilities: 1, fixed: false }
+    }
+  }
+}
+
+const runDependencyCheck = () => {}
+  log('Checking for outdated dependencies);
+=======
 =======
     // Try to fix automatically;
 
@@ -94,14 +127,24 @@ const runDependencyCheck = () => {}
   const outdatedResult = runCommand('npm outdated', 'Checking outdated packages');
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
   
-  const outdatedResult = runCommand('npm outdated', 'Checking outdated packages');
+  const outdatedResult = runCommand(npm outdated', 'Checking outdated packages);
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   if (outdatedResult.success) {}
-    log('Dependency check completed');
-    return { success: true, outdated: 0 };
+    log(Dependency check completed');
+    return { success: true, outdated: 0 }
   } else {}
+<<<<<<< HEAD
+    log('Outdated dependencies found);
+    return { success: false, outdated: 1 }
+  }
+}
+
+const checkForSecrets = () => {}
+  log(Checking for exposed secrets');
+=======
 =======
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
@@ -114,12 +157,23 @@ const checkForSecrets = () => {}
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   const secretPatterns = []
+<<<<<<< HEAD
+    'API_KEY,
+    SECRET',
+    'PASSWORD,
+    TOKEN',
+    'PRIVATE_KEY,
+    DATABASE_URL',
+    'MONGODB_URI
+=======
 
+>>>>>>> origin/chore/fix-lint-and-merge
   ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -133,9 +187,9 @@ const checkForSecrets = () => {}
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   secretPatterns.forEach(pattern => {})
     try {}
-      const result = execSync(`grep -r "${pattern}" . --exclude-dir=node_modules --exclude-dir=.git`, { `})
-        encoding: 'utf8',
-        stdio: 'pipe'
+      const result = execSync(`grep -r "${pattern} . --exclude-dir=node_modules --exclude-dir=.git`, { `})
+        encoding: utf8',
+        stdio: 'pipe
       }
 });
 <<<<<<< HEAD
@@ -151,10 +205,17 @@ const checkForSecrets = () => {}
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
         secretsFound++;
+<<<<<<< HEAD
+      }
+    } catch (error) {}
+      // No matches found, which is good;
+    }
+=======
     } catch (error) {}
       // No matches found, which is good;
 <<<<<<< HEAD
     };
+>>>>>>> origin/chore/fix-lint-and-merge
   }
 });
 <<<<<<< HEAD
@@ -167,6 +228,17 @@ const checkForSecrets = () => {}
   if (secretsFound > 0) {}`;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     log(`Warning: ${secretsFound} potential secrets found`);
+<<<<<<< HEAD
+    return { success: false, secrets: secretsFound }
+  } else {}
+    log(No exposed secrets found');
+    return { success: true, secrets: 0 }
+  }
+}
+
+const checkFilePermissions = () => {}
+  log('Checking file permissions);
+=======
     return { success: false, secrets: secretsFound };
 
     log('No exposed secrets found');
@@ -178,13 +250,14 @@ const checkFilePermissions = () => {}
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   try {}
     // Check for overly permissive files;
-    const result = execSync('find . -type f -perm 777 -not -path "./node_modules/*" -not -path "./.git/*"', { })
-      encoding: 'utf8',
-      stdio: 'pipe'
+    const result = execSync(find . -type f -perm 777 -not -path ./node_modules/*" -not -path "./.git/*"', {})
+      encoding: 'utf8,
+      stdio: pipe'
     }
 });
 <<<<<<< HEAD
@@ -196,9 +269,23 @@ const checkFilePermissions = () => {}
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     if (result.trim()) {}
+<<<<<<< HEAD
+      log('Warning: Files with overly permissive permissions found);
+      return { success: false, permissiveFiles: result.trim().split(\n').length }
+    } else {}
+      log('File permissions look good);
+      return { success: true, permissiveFiles: 0 }
+    }
+  } catch (error) {}
+    log(File permission check completed');
+    return { success: true, permissiveFiles: 0 }
+  }
+}
+=======
       log('Warning: Files with overly permissive permissions found');
       return { success: false, permissiveFiles: result.trim().split('\n').length };
 
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const generateSecurityReport = (results) => {}
   const report = {}
@@ -229,13 +316,13 @@ const generateSecurityReport = (results) => {}
 <<<<<<< HEAD
               (results.dependencies.outdated || 0) + 
               (results.secrets.secrets || 0) + 
-              (results.filePermissions.permissiveFiles || 0) === 0 ? 'PASS' : 'FAIL'
-    };
-  };
+              (results.filePermissions.permissiveFiles || 0) === 0 ? 'PASS : FAIL'
+    }
+  }
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   // Save report;
-  const reportPath = 'logs/pm2/security-report.json';
+  const reportPath = 'logs/pm2/security-report.json;
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   log(`Security report saved to ${reportPath}`);
 <<<<<<< HEAD
@@ -247,6 +334,12 @@ const generateSecurityReport = (results) => {}
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   return report;
+<<<<<<< HEAD
+}
+
+const main = async () => {}
+  log(Starting Security Audit Process');
+=======
 
 const main = async () => {}
   log('Starting Security Audit Process');
@@ -254,6 +347,7 @@ const main = async () => {}
 <<<<<<< HEAD
 
 =======
+>>>>>>> origin/chore/fix-lint-and-merge
   
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
 =======
@@ -278,13 +372,18 @@ const main = async () => {}
     secrets: secretsResults,
     filePermissions: filePermissionResults;
 <<<<<<< HEAD
+  }
+  
+=======
+<<<<<<< HEAD
   };
 <<<<<<< HEAD
 
+>>>>>>> origin/chore/fix-lint-and-merge
   const report = generateSecurityReport(results);
 
   // Handle security issues;
-  if (report.overall.status === 'FAIL') {}
+  if (report.overall.status === 'FAIL) {}
     log(`Security audit failed: ${report.overall.vulnerabilities} issues found`);
 
 =======
@@ -302,11 +401,46 @@ const main = async () => {}
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
     // Attempt to fix issues;
     if (npmAuditResults.vulnerabilities > 0) {}
+<<<<<<< HEAD
+      log(Attempting to fix npm vulnerabilities');
+      runCommand('npm audit fix --force, Force fixing vulnerabilities');
+    }
+    if (dependencyResults.outdated > 0) {}
+      log('Attempting to update outdated dependencies);
+      runCommand(npm update', 'Updating dependencies);
+    }
+  } else {}
+    log(Security audit passed: No issues found');
+  }
+  log('Security Audit Process completed);
+}
+
+// Handle process termination;
+process.on(SIGINT', () => {}
+  log('Security Audit Process interrupted);
+  process.exit(0);
+}
+});
+
+process.on(SIGTERM', () => {}
+  log('Security Audit Process terminated');
+  process.exit(0);
+}
+});
+
+// Run the main function;
+main().catch(error => {})
+  log(`Security Audit Process failed: ${error.message}`);
+=======
       log('Attempting to fix npm vulnerabilities');
 
+>>>>>>> origin/chore/fix-lint-and-merge
   process.exit(1);
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -321,3 +455,4 @@ const main = async () => {}
 =======
 `;
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+>>>>>>> origin/chore/fix-lint-and-merge

@@ -80,6 +80,30 @@ import { useAuth } from "@/hooks/useAuth",
   description: z.string().min(10, "Project description is required")})
 // Define the form schema with validation;
 const talentSchema = z && z.object({;
+<<<<<<< HEAD
+  // Step "1": Basic Info;
+  }
+  "basicInfo": z && z.object({;
+    }
+    "fullName": z && z.string().min(2, "Name must be at least 2 characters");"
+    "professionalTitle": z && z.string().min(2, "Professional title is required");"
+    "profilePicture": z && z.any().optional()}),;
+  // Step "1": Basic Info
+}
+"basicInfo": z.object({
+    }
+    "fullName": z.string().min(2, "Name must be at least 2 characters");"
+    "professionalTitle": z.string().min(2, "Professional title is required");"
+    "profilePicture": z.any().optional()})
+    "fullName": z.string().min(2, "Name must be at least 2 characters"),"
+    "professionalTitle": z.string().min(2, "Professional title is required"),"
+    "profilePicture": z.any().optional()}),
+  // Step "2": Experience,
+"experience": z.object({
+    }
+    "bio": z.string().min(50, "Bio must be at least 50 characters"),"
+    "keyProjects": z.array(
+=======
   // Step 1: Basic Info;
   basicInfo: z && z.object({;
     fullName: z && z.string().min(2, "Name must be at least 2 characters");
@@ -100,6 +124,7 @@ const talentSchema = z.object({
   experience: z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters"),
     keyProjects: z.array(
+>>>>>>> origin/chore/fix-lint-and-merge
       z.object({
         title: z.string().min(2, "Project title is required"),
         description: z.string().min(10, "Project description is required")})

@@ -62,6 +62,31 @@ export default function Dashboard() {};
         <div className="container mx-auto px-4 py-8">;"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
 
+<<<<<<< HEAD
+  if (!user) return null,
+
+    const result = await createTestNotification($2);
+    if (result.success) {
+      toast({
+        title: "Test notification created",
+        description: "Check your notification center"})
+    } else {
+      toast({
+        title: "Error creating test notification",
+        description: "Something went wrong",
+        variant: "destructive"})
+    }
+  },
+
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen bg-zion-blue">
+        <div className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Left Sidebar - User Profile */}
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex flex-col items-center text-center">

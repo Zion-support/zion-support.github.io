@@ -75,6 +75,22 @@ export async function createHireRequestNotifications({
       actionUrl: '/admin/hire-requests','
       actionText: 'Review Request'
     }),
+<<<<<<< HEAD
+    
+    return {
+      }
+      "success": talentNotification.success && adminNotification.success,
+      talentNotification,
+      adminNotification,
+import { createNotification } from './createNotification';'
+/**;
+ * Creates a hire request notification for admin and talent;
+ */;
+export async function createHireRequestNotifications() {;
+  }
+    ? `${projectType} project`;`    : "project",;"
+    ? `: "${projectSummary}"`;`    : "",;"
+=======
 
 import { createNotification } from './createNotification',;
 
@@ -89,6 +105,7 @@ export async function createHireRequestNotifications() { return null; }`
   const summaryText = projectSummary;"`
     ? `: "${projectSummary}"`;"
     : "",;
+>>>>>>> origin/chore/fix-lint-and-merge
   // Create notification for talent;
   const talentNotification = await createNotification({;
     userId: talentId,;`

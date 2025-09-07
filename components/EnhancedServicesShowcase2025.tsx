@@ -1,5 +1,88 @@
 
 ;
+<<<<<<< HEAD
+
+;
+benefits: [ 'Reduce manual tasks by 80%Improve accuracy by 95%24/7 automated operationsScalable AI infrastructure' ] 
+}
+benefits: [ 'Solve previously impossible problemsExponential speed improvementsFuture-proof technologyResearch and development support' ] 
+}
+benefits: [ 'Reduced latency by 90%Lower bandwidth costsEnhanced privacyScalable edge deployment' ] 
+}
+benefits: [ 'Future-proof securityQuantum-resistant encryptionComprehensive complianceAdvanced threat protection' ] 
+}
+benefits: [ 'Unified data viewReal-time insightsImproved data qualityReduced integration costs' ] 
+}
+benefits: [ 'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability' ] 
+}]
+if (searchTerm) {
+  filtered = filtered.filter (service => service.title.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.technologies.some (tech => tech.toLowerCase () .includes (searchTerm.toLowerCase () ) ) return filtered.sort ( (a, b) => {
+  switch (sortBy) {
+  case 'price': return a.pricing.starter - b.pricing.starter
+case 'category': > <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > 2025 Services Showcase </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed" > Discover our cutting-edge technology solutions designed for the future. From AI-powered automation to quantum computing, we're building tomorrow's innovations today. </p> </motion.div> {
+  /* Search and Filters */ 
+}<motion.div > <div className="flex flex-col md:flex-row gap-4 items-center justify-center" > <div className="relative flex-1 max-w-md" > <input /> <FaSearch className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" /> </div> <select > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="category" >Sort by Category</option> </select> </div> </motion.div> {
+  /* Category Tabs */ 
+}<motion.div > <div className="flex flex-wrap justify-center gap-4" > <button onClick= {
+  () => setSelectedCategory ('all') 
+}className= {
+  `px-6 py-3 rounded-lg font-medium transition-all duration-300 $ {
+  selectedCategory === 'all' ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg' : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20' 
+}` 
+}> All Services </button> {
+  serviceCategories.map ( (category) => (<button key= {
+  category.id 
+}onClick= {
+  () => setSelectedCategory (category.id) 
+}className= {
+  `px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 $ {
+  selectedCategory === category.id ? `bg-gradient-to-r $ {
+  category.color 
+}text-white shadow-lg`: 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20' 
+}` 
+}> {
+  category.icon 
+}{
+  category.name 
+}</button>) ) 
+}</div> </motion.div> {
+  /* Services Grid */ 
+}<motion.div > {
+  filteredServices.map ( (service, index) => (<motion.div key= {
+  service.id 
+}<span key= {
+  tech 
+}className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300" > {
+  tech 
+}</span>) ) 
+}+ {
+  service.technologies.length - 3 
+}more </span>) 
+}</div> </div> <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300" > Learn More </button> </div> </motion.div>) ) 
+}</motion.div> {
+  /* No Results */ 
+}{
+  filteredServices.length === 0 && (<motion.div > <div className="text-6xl mb-4" >🔍</div> <h3 className="text-2xl font-bold text-gray-300 mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search terms or category filters</p> </motion.div>) 
+}</div> {
+  /* Service Detail Modal */ 
+}<AnimatePresence> > <span className="text-2xl" >×</span> </button> </div> </li>) ) 
+}</ul> </div> {
+  /* Benefits */ 
+}<div> </li>) ) 
+}</ul> </div> </div> <span key= {
+  tech 
+}className="px-3 py-2 bg-white/10 rounded-lg text-gray-300" > {
+  tech 
+}</span>) ) 
+}</div> </div> <div key= {
+  plan 
+}className="p-4 bg-white/5 border border-white/20 rounded-lg text-center" > </div> <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300" > Get Started </button> </div>) ) 
+}</div> </div> </motion.div> </motion.div>) 
+}</AnimatePresence> </div>) 
+}
+export default EnhancedServicesShowcase2025
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { FaRocket;
@@ -13,9 +96,15 @@ import { FaRocket;
   FaMobile;
   FaDatabase;
   FaNetworkWired;
+<<<<<<< HEAD
+  FaRobot;
+  FaSearch;
+
+=======
   FaRobot;}
   FaSearch;}
   } from 'react-icons/fa';
+>>>>>>> origin/chore/fix-lint-and-merge
 import { SiNextdotjs;
   SiReact;
   SiTypescript;
@@ -26,9 +115,64 @@ import { SiNextdotjs;
   SiDocker;
   SiKubernetes;
   SiAws;
+<<<<<<< HEAD
+  SiGooglecloud;
+import React, { useState, useEffect, useMemo } from react';
+import { motion, AnimatePresence } from 'framer-motion;
+import { 
+  FaRocket;
+  FaBrain, 
+  FaCloud, 
+  FaShieldAlt, 
+  FaChartLine, 
+  FaCogs;
+  FaLightbulb;
+  FaGlobe;
+  FaMobile;
+  FaDatabase;
+  FaNetworkWired;
+  FaRobot;
+  FaSearch
+} from react-icons/fa';
+  SiNextdotjs;
+  SiReact, 
+  SiTypescript, 
+  SiTailwindcss;
+  SiPrisma;
+  SiSupabase;
+  SiVercel;
+  SiDocker;
+  SiKubernetes;
+  SiAws;
+  SiGooglecloud;
+  SiMicrosoftazure
+} from 'react-icons/si;
+
+interface Service {
+  id: string,
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  category: string,
+  features: string[],
+  pricing: {
+    starter: number,
+    professional: number,
+    enterprise: number
+  }
+  technologies: string[],
+  benefits: string[]
+}
+
+interface ServiceCategory {
+  SiMicrosoftazure;
+  SiMicrosoftazure;
+  } from react-icons/si';
+=======
   SiGooglecloud;}
   SiMicrosoftazure;}
   } from 'react-icons/si';
+>>>>>>> origin/chore/fix-lint-and-merge
   FaBrain;
   FaCloud;
   FaShieldAlt;
@@ -50,6 +194,43 @@ import {SiNextdotjs;
   SiVercel;
   SiDocker;
   SiKubernetes;
+<<<<<<< HEAD
+  SiAws;
+  SiGooglecloud;
+  SiMicrosoftazure;} from 'react-icons/si;
+interface Service  {} from react-icons/si';interface Service  {FaRocket,FaBrain,FaCloud,FaShieldAlt,FaChartLine,FaCogs,FaLightbulb,FaGlobe,FaMobile,FaDatabase,FaNetworkWired,FaRobot,FaSearch,import { SiNextdotjs,SiReact,SiTypescript,SiTailwindcss,SiPrisma,SiSupabase,SiVercel,SiDocker,SiKubernetes,SiAws,SiGooglecloud,SiMicrosoftazure} from 'react-icons/si;
+interface Service  {id: string;
+  title: string;
+  description: string;
+    starter: number;
+    professional: number;enterprise: number;
+  SiMicrosoftazure;
+
+  FaBrain;
+  FaCloud;
+  FaShieldAlt;
+  FaChartLine;
+  FaCogs;
+  FaLightbulb;
+  FaGlobe;
+  FaMobile;
+  FaDatabase;
+  FaNetworkWired;
+  FaRobot;
+  FaSearch;
+  }
+  SiReact;
+  SiTypescript;
+  SiTailwindcss;
+  SiPrisma;
+  SiSupabase;
+  SiVercel;
+  SiDocker;
+  SiKubernetes;
+  SiAws;
+  SiGooglecloud;
+
+=======
   SiAws;}
   SiGooglecloud;}
   SiMicrosoftazure;} from 'react-icons/si';
@@ -307,6 +488,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
   useState('');
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'category'>('name';}
   const filteredServices = useMemo(() => {let filtered  = services;if (selectedCategory !== 'all') {if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory;}
+>>>>>>> origin/chore/fix-lint-and-merge
       )}
     if (searchTerm) {filtered = filtered.filter(service =>;
           service.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
@@ -314,6 +496,13 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
             .toLowerCase().includes(searchTerm.toLowerCase()) |;}
           service.technologies.some(tech =>;}
             tech.toLowerCase().includes(searchTerm.toLowerCase())))}
+<<<<<<< HEAD
+
+          return a.title.localeCompare(b.title)}
+    })}, [selectedCategory, searchTerm, sortBy])const handleServiceSelect = ("service": Service) => {setSelectedService(service)}
+  const closeModal = () => {setSelectedService(null)}
+
+=======
     return filtered.sort((a, b) => {switch (sortBy) {case 'price':;
           return a.pricing.starter - b.pricing.starter;
         case 'category':;}
@@ -398,10 +587,19 @@ const EnhancedServicesShowcase2025: React.FC = () => {const [selectedCategory, s
             Discover our cutting-edge technology solutions designed for the;
             future. From AI-powered automation to quantum computing, we're;
             building tomorrow's innovations today.;
+>>>>>>> origin/chore/fix-lint-and-merge
           </p>;
         </motion.div>;
         {/* Search and Filters */}
         <motion&& motion.div;
+<<<<<<< HEAD
+
+                value={searchTerm}
+            <select;
+              value={sortBy}
+              onChange={e =>;
+
+=======
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.2 }}
 className='mb-12';
@@ -439,6 +637,7 @@ className='mb-12'>
           <p className=\"text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed\"    />;
             Discover our cutting - edge technology solutions designed for the future.;
             From AI - powered automation to quantum computing, we're building tomorrow's innovations today.;
+>>>>>>> origin/chore/fix-lint-and-merge
           </p>;
         </motion.div>;
         {/* Search and Filters */}
@@ -451,6 +650,19 @@ className='mb-12'>
 }
           className='mb - 12'    />
 
+<<<<<<< HEAD
+
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+              />
+              <FaSearch className=absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+            </div>
+            
+            <select
+              value={sortBy}
+
+=======
           <div className='flex flex - col md:flex - row gap - 4 items - center justify - center'    />;
             <div className='relative flex - 1 max - w-md'    />;
               <input;
@@ -496,6 +708,7 @@ className='mb-12'>
               value={sort_by}
               on_change={(e) =    /> setSortBy (e.target.value as 'name' | 'price' | 'category')}
               className=\"px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500\">
+>>>>>>> origin/chore/fix-lint-and-merge
 
               <option value=\"name\"    />Sort by Name</option>;
               <option value=\"price\"    />Sort by Price</option>;
@@ -512,6 +725,9 @@ className='mb-12'>
           </div>;
         </motion.div>;
         {/* Category Tabs */}
+<<<<<<< HEAD
+
+=======
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.4 }}
@@ -533,10 +749,15 @@ className='mb-12'>
               }`}>;
               }`}>
 
+>>>>>>> origin/chore/fix-lint-and-merge
               All Services;
             </button>;
 {serviceCategories.map(category => (<button;}
                 key={category.id}
+<<<<<<< HEAD
+                onClick={() => setSelectedCategory(category.id)}
+
+=======
                 onClick={() =    /> setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${selectedCategory === category.id;}
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`;
@@ -552,8 +773,11 @@ className='mb-12'>
                 {category && category.icon}
                 {category && category.name}
               </button>;
+>>>>>>> origin/chore/fix-lint-and-merge
             ))}
         {/* Services Grid */}
+<<<<<<< HEAD
+=======
         <motion&& motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}transition={{ duration: 0.8, delay: 0.6 }}
@@ -573,9 +797,13 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8';
 }transition={{ duration: 0.8, delay: 0.6 ,}
 }
 className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'    />
+>>>>>>> origin/chore/fix-lint-and-merge
 
           {filteredServices.map((service, index) => (<motion.div;}
               key={service.id}
+<<<<<<< HEAD
+
+=======
               initial={{ opacity: 0, y: 20 ,}
 }
               animate={{ opacity: 1, y: 0 ,}
@@ -601,6 +829,7 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                   </h3>;
                   <p className='text-sm text-gray-400'    />;
                     {serviceCategories && serviceCategories.find(c => c && c.id === service && service.category)?.name;}
+>>>>>>> origin/chore/fix-lint-and-merge
                     }
               key={service.id}
               initial={{ opacity: 0, coordinate_y: 20 ,}
@@ -611,6 +840,9 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
 }
                   </p>;
                 </div>;
+<<<<<<< HEAD
+
+=======
               </div>;<p className='text-gray-300 mb-4 line-clamp-3'    />;
                 {service && service.description}
               </p>;<div className='flex flex-wrap gap-2 mb-4'    />;
@@ -618,17 +850,25 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                     key={tech}{tech}
                   </span    />;
                 ))}className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300';
+>>>>>>> origin/chore/fix-lint-and-merge
                   >;
                 ))}className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'>
 
                     {tech}
                   </span>;
                 ))}
+<<<<<<< HEAD
+
+=======
                 {service.technologies.length > 3 && (<span className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'    />;}
+>>>>>>> origin/chore/fix-lint-and-merge
                     +{service.technologies.length - 3} more;
                   </span>;
                 )}
               </div>;
+<<<<<<< HEAD
+
+=======
                   <span className=\"text-sm text-gray-400 font-normal\"    />/month</span>;
                 </div>;
                 <button className=\"px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300\"    />;
@@ -640,18 +880,26 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                   </span>;
                 </div>;
                 <button className='px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                   Learn More;
                 </button>;
               </div>;
             </motion.div>;
           ))}
         </motion.div>;
+<<<<<<< HEAD
+
+=======
               <div className='flex items-center justify-between'    />;
                 <div className='text-2xl font-bold text-blue-400'    />                  <span className=\"px-2 py-1 bg-white/10 rounded text-xs text-gray-300\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                     +{service && service.technologies.length - 3} more;
                   </span>;
                 )}
               </div>;
+<<<<<<< HEAD
+
+=======
               <div className='flex items-center justify-between'    />;
                 <div className='text-2xl font-bold text-blue-400'    />;
                   ${service && service.pricing.starter}
@@ -664,12 +912,17 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
                   <span className=\"text-sm text-gray-400 font-normal\"    />/month</span>;
                 </div>;
                 <button className=\"px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                   Learn More;
                 </button>;
               </div>;
             </motion && motion.div>;
           ))}
         </motion && motion.div>;{/* No Results */}
+<<<<<<< HEAD
+        {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;
+
+=======
         {filteredServices && filteredServices.length === 0 && (<motion&& motion.div;}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}className='text-center py-16';
@@ -682,11 +935,18 @@ className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cu
               No services found;
             </h3>;
             <p className='text-gray-400'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
               Try adjusting your search terms or category filters;
             </p>;
           </motion.div>;
         )}
       {/* Service Detail Modal */}
+<<<<<<< HEAD
+      <AnimatePresence>;
+        {selectedService && (<motion&& motion.div;
+
+                        )?.name;
+=======
       <AnimatePresence    />;
         {selectedService && (<motion&& motion.div;}
             initial={{ opacity: 0 }}
@@ -720,11 +980,15 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                     <p className='text-gray-400'    />;
                       {serviceCategories.find(c => c.id === selectedService.category;}
                         )?.name;}
+>>>>>>> origin/chore/fix-lint-and-merge
                       }
                     </p>;
                   </div>;
                 </div>;
                 <button;
+<<<<<<< HEAD
+
+=======
                   onClick={closeModal}className='p-2 hover:bg-white/10 rounded-lg transition-colors';
                     />;
                   onClick={closeModal}className='p-2 hover:bg-white/10 rounded-lg transition-colors'>
@@ -759,11 +1023,24 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                 {/* Features */}className='flex items-center gap-2 text-gray-300'>
 
                         <div className='w-2 h-2 bg-blue-500 rounded-full'    /></div>;
+>>>>>>> origin/chore/fix-lint-and-merge
                         {feature}</li>;
                     ))}
                   </ul>;
                 </div>;
                     ))}
+<<<<<<< HEAD
+                {/* Benefits */}<div>;
+
+                    {selectedService && selectedService.benefits.map((benefit, index) => (<li;
+                        }
+                        key={index}
+
+                    {selectedService.benefits.map((benefit, index) => (<li;
+                        }
+                        key={index}
+
+=======
                 {/* Benefits */}<div    />;
                   <h3 className='text-xl font-bold text-white mb-4'    />;
                     Key Benefits;
@@ -788,10 +1065,18 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                         className='flex items-center gap-2 text-gray-300'>
 
                         <div className='w-2 h-2 bg-green-500 rounded-full'    /></div>;
+>>>>>>> origin/chore/fix-lint-and-merge
                         {benefit}
                       </li>;
                     ))}
               {/* Technologies */}
+<<<<<<< HEAD
+
+                  {selectedService.technologies.map((tech) => (<span;
+                      }
+                      key={tech}
+
+=======
 <div className='mt-8'    />;
                 <h3 className='text-xl font-bold text-white mb-4'    />;
                   Technologies;
@@ -807,6 +1092,7 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                        />;
                     >;
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300';
+>>>>>>> origin/chore/fix-lint-and-merge
                     >;
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >>
 
@@ -815,6 +1101,13 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                       {tech}
                     </span>;
                   ))}</div>;
+<<<<<<< HEAD
+
+                  {Object.entries(selectedService.pricing).map(([plan, price]) => (<div;
+                        }
+                        key={plan}
+
+=======
               </div>;{/* Pricing */}<div className='mt-8'    />;
                 <h3 className='text-xl font-bold text-white mb-4'    />;
                   Pricing Plans;
@@ -836,6 +1129,7 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                           </span>;
                         </div>;
                         <button className='w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300'    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                           Get Started;
                         </button>;
                       </div>;
@@ -845,6 +1139,13 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
             </motion.div>;
           </motion.div>;
         )}{/* Technologies */}
+<<<<<<< HEAD
+
+                  {selectedService && selectedService.technologies.map((tech) => (<span;
+                      }
+                      key={tech}
+
+=======
               <div className='mt-8'    />;
                 <h3 className='text-xl font-bold text-white mb-4'    />;
                   Technologies;
@@ -858,10 +1159,18 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                   {selectedService && selectedService.technologies.map((tech) => (<span;}
                       key={tech}
                       className=\'px-3 py-2 bg-white/10 rounded-lg text-gray-300\';
+>>>>>>> origin/chore/fix-lint-and-merge
                       {tech}
                     </span    />;
                   ))}
               {/* Pricing */}
+<<<<<<< HEAD
+
+                  {Object && Object.entries(selectedService && selectedService.pricing).map(([plan, price]) => (<div;
+                        }
+                        key={plan}
+
+=======
               <div className='mt-8'    />;
                 <h3 className='text-xl font-bold text-white mb-4'    />;
                   Pricing Plans;
@@ -884,6 +1193,7 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
                         </button>;
                       </div>;
                     ))}                </div>                      <button className=\"w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover: from-blue-600 hover:to-purple-600 transition-all duration-300\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                         Get Started;
                       </button>;
                     </div>;
@@ -893,6 +1203,9 @@ className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center jus
           </motion && motion.div>;
         )}
 }export default EnhancedServicesShowcase2025;  ))}export default EnhancedServicesShowcase2025;
+<<<<<<< HEAD
+
+=======
               while_hover={{ coordinate_y: -5, scale: 1.02 }}
 }
 
@@ -914,10 +1227,18 @@ export default EnhancedServicesShowcase2025;
                   </h3>;
                   <p className='text - sm text - gray - 400'    />;
                     {service_categories.find (c => c.id === service.category)?.name;}
+>>>>>>> origin/chore/fix-lint-and-merge
                     }
                   </p>;
                 </div>;
               </div>;
+<<<<<<< HEAD
+
+                {service.technologies.slice (0, 3).map ((tech) => (<span;
+                    }
+                    key={tech}
+
+=======
               <p className='text - gray - 300 mb - 4 line - clamp - 3'    />;
                 {service.description}
               </p>;
@@ -963,17 +1284,33 @@ export default EnhancedServicesShowcase2025;
                   <span className=\"text - sm text - gray - 400 font - normal\"    />/month</span>;
                 </div>;
                 <button className=\"px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300\"    />;
+>>>>>>> origin/chore/fix-lint-and-merge
                   Learn More;
                 </button>;
               </div>;
             </motion.div>))}
         </motion.div>;
+<<<<<<< HEAD
+                  <span className=text-sm text-gray-400 font-normal">/month</span>
+                </div>
+                <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300>
+                  Learn More
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* No Results */}
+
+=======
         {/* No Results */}
         {filtered_services.length === 0 && (<motion.div;}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 ,}
 }
             className='text - center py - 16'    />
+>>>>>>> origin/chore/fix-lint-and-merge
 
             <div className='text - 6xl mb - 4'    />🔍</div>;
             <h3 className='text - 2xl font - bold text - gray - 300 mb - 2'    />;
@@ -988,6 +1325,9 @@ export default EnhancedServicesShowcase2025;
             <p className=\"text - gray - 400\"    />Try adjusting your search terms or category filters</p>)}
       </div>;
       {/* Service Detail Modal */}
+<<<<<<< HEAD
+
+=======
       <AnimatePresence    />;
         {selected_service && (<motion.div;}
             initial={{ opacity: 0 }}
@@ -1067,11 +1407,15 @@ export default EnhancedServicesShowcase2025;
                   <ul className=\"space - y-2\"    />;
                     {selected_service.features.map ((feature, index) => (<li key={index} className=\"flex items - center gap - 2 text - gray - 300\"    />;
                         <div className=\"w - 2 h - 2 bg - blue - 500 rounded - full\"    /></div>;
+>>>>>>> origin/chore/fix-lint-and-merge
                         {feature}
                       </li>))}
                   </ul>;
                 </div>;
                 {/* Benefits */}
+<<<<<<< HEAD
+
+=======
                 <div    />;
                   <h3 className='text - xl font - bold text - white mb - 4'    />;
                     Key Benefits;
@@ -1080,6 +1424,7 @@ export default EnhancedServicesShowcase2025;
                     {selected_service.benefits.map ((benefit, index) => (<li;}
                         key={index}
                         className='flex items - center gap - 2 text - gray - 300'    />
+>>>>>>> origin/chore/fix-lint-and-merge
 
                         <div className='w - 2 h - 2 bg - green - 500 rounded - full'    /></div>                        {benefit}                  <h3 className=\"text - xl font - bold text - white mb - 4\"    />Key Benefits</h3>;
                   <ul className=\"space - y-2\"    />;
@@ -1090,6 +1435,9 @@ export default EnhancedServicesShowcase2025;
                 </div>;
               </div>;
               {/* Technologies */}
+<<<<<<< HEAD
+
+=======
               <div className='mt - 8'    />;
                 <h3 className='text - xl font - bold text - white mb - 4'    />;
                   Technologies;
@@ -1103,11 +1451,39 @@ export default EnhancedServicesShowcase2025;
                   {selected_service.technologies.map ((tech) => (<span;}
                       key={tech}
                       className=\'px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300\';
+>>>>>>> origin/chore/fix-lint-and-merge
                       {tech}
                     </span    />))}
                 </div>;
               </div>;
               {/* Pricing */}
+<<<<<<< HEAD
+)}export default EnhancedServicesShowcase2025;
+)}export default EnhancedServicesShowcase2025;
+              <div className="mt-8">
+                <h3 className="text-xl font-bold text-white mb-4">Pricing Plans</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {Object.entries(selectedService.pricing).map(([plan, price]) => (
+                    <div
+                      key={plan}
+                      className="p-4 bg-white/5 border border-white/20 rounded-lg text-center"
+                    >
+                      <h4 className="text-lg font-bold text-white capitalize mb-2">{plan}</h4>
+                      <div className="text-3xl font-bold text-blue-400 mb-2">
+                        ${price}
+                        <span className="text-sm text-gray-400 font-normal">/month</span>
+                      </div>
+                      <button className="w-full px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
+                        Get Started
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+=======
               <div className='mt - 8'    />;
                 <h3 className='text - xl font - bold text - white mb - 4'    />;
                   Pricing Plans;
@@ -1140,6 +1516,7 @@ export default EnhancedServicesShowcase2025;
     </div>)}export default EnhancedServicesShowcase2025)}export default EnhancedServicesShowcase2025;export default EnhancedServicesShowcase2025;}</AnimatePresence>;
     </div>;
 )}export default EnhancedServicesShowcase2025;
+>>>>>>> origin/chore/fix-lint-and-merge
       </AnimatePresence>
     </div>
   );
@@ -1148,6 +1525,8 @@ export default EnhancedServicesShowcase2025;
 export default EnhancedServicesShowcase2025)}
 
 export default EnhancedServicesShowcase2025;
+<<<<<<< HEAD
+=======
 
 export default EnhancedServicesShowcase2025;}</AnimatePresence>;
     </div>;
@@ -1155,3 +1534,4 @@ export default EnhancedServicesShowcase2025;}</AnimatePresence>;
 
 export default EnhancedServicesShowcase2025;
 
+>>>>>>> origin/chore/fix-lint-and-merge

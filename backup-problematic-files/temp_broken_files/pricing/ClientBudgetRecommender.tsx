@@ -96,7 +96,11 @@ const [suggestion, setSuggestion] = useState<PricingSuggestion | null> (null);
 const { ;
   user ;
  } = useAuth ();
+<<<<<<< HEAD
+  }
+=======
 const generateSuggestion = async () => {;
+>>>>>>> origin/chore/fix-lint-and-merge
   if (!jobTitle || !category) {;
   return ;
 }setIsLoading (true);

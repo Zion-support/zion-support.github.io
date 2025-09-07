@@ -21,8 +21,6 @@ const path = require('path')
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
   }
 
   log(message) {
@@ -70,11 +68,14 @@ const path = require('path')
       
 <<<<<<< HEAD
 #!/usr/bin/env node;
+<<<<<<< HEAD
+=======
 const fs = require('fs')
 const path = require('path')
 =======
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+>>>>>>> origin/chore/fix-lint-and-merge
 
 
 

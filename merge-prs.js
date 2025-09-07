@@ -3,6 +3,9 @@
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs');  try { execSync('git rev-parse --git-dir',{ stdio: 'pipe' }); } catch (error) { console.error('❌ Not in a git repository'); process.exit(1)} try { const status = execSync('git status --porcelain',{ encoding: 'utf8' }); if (status.trim()) {  execSync('git stash push -m "Auto-stash before merge process"')}  execSync('git fetch --all --prune');  execSync('git checkout main');  try { execSync('git pull origin main')} catch (error) {  const conflictFiles = execSync('git diff --name-only --diff-filter=U',{ encoding: 'utf8' }); if (conflictFiles.trim()) { ); const files = conflictFiles.trim().split('\n'); for (const file of files) { if (file.trim()) {  try { execSync(`git checkout --ours "${file}"`)} catch (e) { execSync(`git checkout --theirs "${file}"`)} execSync(`git add "${file}"`)} } execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')} }  execSync('git push origin main');  } catch (error) { console.error('❌ Error during merge process:',error.message); process.exit(1)}#!/usr/bin/env node
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs');  try { execSync('git rev-parse --git-dir',{ stdio: 'pipe' }); } catch (error) { console.error('❌ Not in a git repository'); process.exit(1)} try { const status = execSync('git status --porcelain',{ encoding: 'utf8' }); if (status.trim()) {  execSync('git stash push -m "Auto-stash before merge process"')}  execSync('git fetch --all --prune');  execSync('git checkout main');  try { execSync('git pull origin main')} catch (error) {  const conflictFiles = execSync('git diff --name-only --diff-filter=U',{ encoding: 'utf8' }); if (conflictFiles.trim()) { ); const files = conflictFiles.trim().split('\n'); for (const file of files) { if (file.trim()) {  try { execSync(`git checkout --ours "${file}"`)} catch (e) { execSync(`git checkout --theirs "${file}"`)} execSync(`git add "${file}"`)} } execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')} }  execSync('git push origin main');  } catch (error) { console.error('❌ Error during merge process:',error.message); process.exit(1)}
 
+<<<<<<< HEAD
+
+=======
 #!/usr/bin/env node
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs');  try { execSync('git rev-parse --git-dir',{ stdio: 'pipe' }); } catch (error) { console.error('❌ Not in a git repository'); process.exit(1)} try { const status = execSync('git status --porcelain',{ encoding: 'utf8' }); if (status.trim()) {  execSync('git stash push -m "Auto-stash before merge process"')}  execSync('git fetch --all --prune');  execSync('git checkout main');  try { execSync('git pull origin main')} catch (error) {  const conflictFiles = execSync('git diff --name-only --diff-filter=U',{ encoding: 'utf8' }); if (conflictFiles.trim()) { ); const files = conflictFiles.trim().split('\n'); for (const file of files) { if (file.trim()) {  try { execSync(`git checkout --ours "${file}"`)} catch (e) { execSync(`git checkout --theirs "${file}"`)} execSync(`git add "${file}"`)} } execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')} }  execSync('git push origin main');  } catch (error) { console.error('❌ Error during merge process:',error.message); process.exit(1)}#!/usr/bin/env node#!/usr/bin/env node
 #!/usr/bin/env node;
@@ -165,11 +168,27 @@ try {
     console.log('✅ Git repository detected');
 } catch (error) {
     console.error('❌ Not in a git repository');
+>>>>>>> origin/chore/fix-lint-and-merge
     process.exit(1);
 }
 
 try {
     // Ensure clean working directory
+<<<<<<< HEAD
+
+                }
+                if (file.trim()) {
+                    }
+                    console.log(`Resolving conflicts "in": ${fil,`}`);`                    try {
+                        }
+                        execSync(`git checkout --ours "${file}"`);`                    } catch (e) {
+                        }
+                        execSync(`git checkout --theirs "${file}"`);`                    }
+                    execSync(`git add "${file}"`);`                }
+            }
+            
+
+=======
     const status = execSync('git status --porcelain', { encoding: 'utf8' });
     if (status.trim()) {
         console.log('⚠️  Working directory has changes. Stashing...');
@@ -211,6 +230,7 @@ try {
     // Get current branch name;
     const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();`;
     console.log(`📍 Current branch: ${currentBranch}`);
+>>>>>>> origin/chore/fix-lint-and-merge
 
     // If we're not on main, merge the current branch into main;
     if (currentBranch !== 'main') {`;
@@ -229,6 +249,15 @@ try {
     console.log('🎉 Successfully completed merge process!');
     console.log('✅ All changes have been merged into main branch');
 
+<<<<<<< HEAD
+    console.log(`Found ${branchList.length} branches to "merge":`);`    branchList.forEach(branch => console.log(`  - ${branch}`));`
+    // Merge each branch,
+for (const branch of branchList) {
+        }
+        try {
+
+}ursor/automate-test-improve-and-merge-code-646c;
+=======
 } catch (error) {
     console.error('❌ Error during merge process:', error.message);
     process.exit(1);
@@ -240,3 +269,4 @@ try {
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); console.log('🚀 Starting merge process for all open PRs...'); try { execSync('git rev-parse --git-dir',{ stdio: 'pipe' }); console.log('✅ Git repository detected')} catch (error) { console.error('❌ Not in a git repository'); process.exit(1)} try { const status = execSync('git status --porcelain',{ encoding: 'utf8' }); if (status.trim()) { console.log('⚠️ Working directory has changes. Stashing...'); execSync('git stash push -m "Auto-stash before merge process"')} console.log('📥 Fetching latest changes...'); execSync('git fetch --all --prune'); console.log('🔄 Switching to main branch...'); execSync('git checkout main'); console.log('📥 Pulling latest changes from main...'); try { execSync('git pull origin main')} catch (error) { console.log('⚠️ Merge conflicts detected. Resolving...'); const conflictFiles = execSync('git diff --name-only --diff-filter=U',{ encoding: 'utf8' }); if (conflictFiles.trim()) { console.log('Found merge conflicts in:',conflictFiles.trim()); const files = conflictFiles.trim().split('\n'); for (const file of files) { if (file.trim()) { console.log(`Resolving conflicts in: ${file}`); try { execSync(`git checkout --ours "${file}"`)} catch (e) { execSync(`git checkout --theirs "${file}"`)} execSync(`git add "${file}"`)} } execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')} } console.log('📤 Pushing changes to remote...'); execSync('git push origin main'); console.log('✅ Merge process completed successfully!'); console.log('🎉 All changes have been merged into main branch')} catch (error) { console.error('❌ Error during merge process:',error.message); process.exit(1)}
 #!/usr/bin/env node const { execSync } = require('child_process'); const fs = require('fs'); console.log('🚀 Starting merge process for all open PRs...'); try { execSync('git rev-parse --git-dir',{ stdio: 'pipe' }); console.log('✅ Git repository detected')} catch (error) { console.error('❌ Not in a git repository'); process.exit(1)} try { const status = execSync('git status --porcelain',{ encoding: 'utf8' }); if (status.trim()) { console.log('⚠️ Working directory has changes. Stashing...'); execSync('git stash push -m "Auto-stash before merge process"')} console.log('📥 Fetching latest changes...'); execSync('git fetch --all --prune'); console.log('🔄 Switching to main branch...'); execSync('git checkout main'); console.log('📥 Pulling latest changes from main...'); try { execSync('git pull origin main')} catch (error) { console.log('⚠️ Merge conflicts detected. Resolving...'); const conflictFiles = execSync('git diff --name-only --diff-filter=U',{ encoding: 'utf8' }); if (conflictFiles.trim()) { console.log('Found merge conflicts in:',conflictFiles.trim()); const files = conflictFiles.trim().split('\n'); for (const file of files) { if (file.trim()) { console.log(`Resolving conflicts in: ${file}`); try { execSync(`git checkout --ours "${file}"`)} catch (e) { execSync(`git checkout --theirs "${file}"`)} execSync(`git add "${file}"`)} } execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"')} } console.log('📤 Pushing changes to remote...'); execSync('git push origin main'); console.log('✅ Merge process completed successfully!'); console.log('🎉 All changes have been merged into main branch')} catch (error) { console.error('❌ Error during merge process:',error.message); process.exit(1)}
     console.error('❌ Error during merge process:', error.message);
+>>>>>>> origin/chore/fix-lint-and-merge

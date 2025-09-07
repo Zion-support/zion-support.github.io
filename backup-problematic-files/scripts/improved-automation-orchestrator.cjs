@@ -28,6 +28,8 @@ const path = require('path')
 >>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
 #!/usr/bin/env node;
+<<<<<<< HEAD
+=======
 const fs = require('fs')
 const path = require('path')
 =======
@@ -38,6 +40,7 @@ const path = require('path')
 const fs = require('fs')
 const path = require('path')
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+>>>>>>> origin/chore/fix-lint-and-merge
 const { execSync } = require('child_process')
   console.log(' Starting Improved Automation Orchestrator...')
     "overallStatus"

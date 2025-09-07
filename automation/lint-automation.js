@@ -208,10 +208,17 @@ if (require.main === module) {
       process.exit(1);
     }
   }
+<<<<<<< HEAD
+}
+// Run the automation
+if (require.main === module) {
+  automation.run().catch(error => {
+=======
 
   const automation = new LintAutomation();
   automation.run().catch(error => {'"
 
+>>>>>>> origin/chore/fix-lint-and-merge
     console.error('Fatal "error": ', error);
     process.exit(1);
 

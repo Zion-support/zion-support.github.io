@@ -75,17 +75,14 @@ export const EnhancedAbout = ( const compValues = [{ icon: Brain, title: 'Innova
 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
 }
 
-const itemVariants = { hidden: { y: 20, opacity: 0,}
 }, visible: { y: 0, opacity: 1, transition: { duration: 0.6, ease: 'easeOut' },
 };
 }
 
-const cardVariants = { hidden: { scale: 0.9, opacity: 0,}
 }, visible: { scale: 1, opacity: 1, transition: { duration: 0.5,' ease: 'easeOut' },
 }, hover: { scale: 1.02, y: -5, transition: { duration: 0.3,' ease: 'easeOut' } },
 }
 ;
-  const timelineVariants = { hidden: { opacity: 0, x: -50,}
 }, visible: { opacity: 1, x: 0, transition: { duration: 0.8, ' ease: 'easeOut' } },
 }';
   return (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white' /> {}' <section className='py-20 px-4 sm: px-6 lg:px-8' />' <motion.div className='max-w-7xl mx-auto text-center' variants={containerVariants} initial='hidden' whileInView='visible' viewport={{ once: true }} />' <motion.h1 className='text-4xl md:text-6xl font-bold mb-6' variants={itemVariants} /> About{'}' <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400' /> Zion Tech Group </span> </motion.h1>' <motion.p className='text-xl text-gray-300 mb-8 max-w-4xl mx-auto' variants={itemVariant,}

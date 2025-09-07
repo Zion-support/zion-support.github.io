@@ -72,7 +72,9 @@ const Header: React.FC = () => {
         )}
       </AnimatePresence>
     </header>
-  )
+  );
 };
+<<<<<<< HEAD
+=======
 
 export default Header;
