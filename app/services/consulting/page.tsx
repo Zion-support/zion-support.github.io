@@ -301,3 +301,9 @@ function ConsultingPricingPlan({ name, price, duration, features, popular }: {
           </li>
         ))}
       </ul>
+      <button className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+        Get Started
+      </button>
+    </div>
+  );
+}

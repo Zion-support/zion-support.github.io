@@ -1,17 +1,10 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Menu;
-  X;
+  Menu,
+  X,
 } from 'lucide-react';
-
-=======
-import React from 'react';
-import Link from 'next/link';
-import Button from '../ui/Button';
->>>>>>> pr-11992
 const Header: React.FC = () => {
   const [, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,18 +20,11 @@ const Header: React.FC = () => {
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-<<<<<<< HEAD
     { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
-=======
-    { name: 'Resources', href: '/resources' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }],
->>>>>>> pr-11992
 
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">
@@ -89,8 +75,4 @@ const Header: React.FC = () => {
   )
 };
 
-<<<<<<< HEAD
 export default Header;
-=======
-export default Header;
->>>>>>> pr-11992

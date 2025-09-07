@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import type { AppProps } from 'next/app';
-import '../styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-=======
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ErrorBoundary } from '../components/ErrorBoundary';
@@ -21,5 +13,4 @@ export default function App({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
     </ErrorBoundary>
   );
->>>>>>> origin/cursor/merge-conflicts-resolution
 }

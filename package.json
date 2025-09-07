@@ -268,6 +268,7 @@
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
+    "@heroicons/react": "^2.2.0",
     "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -381,10 +382,7 @@
     "@types/react-dom": "^19.1.9",
     "@typescript-eslint/eslint-plugin": "^8.42.0",
     "@typescript-eslint/parser": "^8.42.0",
-<<<<<<< HEAD
-=======
     "audit-ci": "^7.1.0",
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
     "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
     "eslint-config-prettier": "^10.1.8",
@@ -437,14 +435,10 @@
     "zion-tech-group"
   ],
   "author": "Zion Tech Group",
-<<<<<<< HEAD
-  "license": "MIT"
-=======
   "license": "MIT",
   "nextConfig": {
     "compress": true,
     "poweredByHeader": false,
     "generateEtags": false
   }
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 }

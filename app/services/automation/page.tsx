@@ -293,3 +293,44 @@ function AutomationPricingPlan({ name, price, duration, features, popular }: {
           </li>
         ))}
       </ul>
+      <button className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+        Get Started
+      </button>
+    </div>
+  );
+}
+
+// PricingCard component
+const PricingCard = ({ name, price, duration, features, popular = false }: {
+  name: string;
+  price: string;
+  duration: string;
+  features: string[];
+  popular?: boolean;
+}) => {
+  return (
+    <div className={`bg-white border-2 rounded-xl p-6 ${popular ? 'border-blue-500 relative' : 'border-gray-200'}`}>
+      {popular && (
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
+        </div>
+      )}
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>
+      <div className="text-3xl font-bold text-gray-900 mb-1">{price}</div>
+      <div className="text-gray-600 mb-6">{duration}</div>
+      <ul className="space-y-3">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-start">
+            <span className="text-green-500 mr-2 mt-1">✓</span>
+            <span className="text-gray-600">{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <button className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+        Get Started
+      </button>
+    </div>
+  );
+}
