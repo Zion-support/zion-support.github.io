@@ -12,9 +12,9 @@ export default MyApp;
 import type { AppProps } from 'next / app',
 import '../styles / globals.css',
 /**
- * MyApp - Function description
+ * MyApp - Function description;
  */
-function MyApp() {
+function MyApp() {}
   return <Component {...page_props} />;
 
 }

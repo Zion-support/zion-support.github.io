@@ -11,11 +11,11 @@ interface LazyImageProps {
   placeholder?: string;
   threshold?: number;
   width?: number;
-  height?: number;
-
+  height?: number;}
+}
 }
 
-export const LazyImage: React.FC<LazyImageProps> = ({src;
+export const LazyImage: React.FC<LazyImageProps /> = ({src;
   alt;
 
   className;
@@ -24,35 +24,37 @@ const [isLoaded, setIsLoaded] = useState(false);
 
 const [isInView, setIsInView] = useState(false);
 
-const imgRef = useRef<HTMLImageElement>(null);
+const imgRef = useRef<HTMLImageElement />(null);
           setIsInView(true);
-
-observer.disconnect();
+}
+observer.disconnect();}
         }
       },
       { threshold }
     );
-    if (imgRef.current) {
-observer.observe(imgRef.current);
+    if (imgRef.current) {}
+observer.observe(imgRef.current);}
     }
     return () => observer.disconnect ();
   }, [threshold]);
 
-const handleLoad = () => {
-    setIsLoaded(true)
+const handleLoad = (
+    setIsLoaded(true)) => {
+  return $3;}
+}
 };
 
 
   return (
-    <div className={`relative overflow - hidden ${class_name}`}>
+    <div className={`relative overflow - hidden ${class_name}`} />
 
       {/* Placeholder */}
 
-      <img
-        src={placeholder}
+      <img;
+src={placeholder}
 alt=''
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-          isLoaded ? 'opacity-0' : 'opacity-100'
+        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${}
+          isLoaded ? 'opacity-0' : 'opacity-100'}
         }`}
         style={{ width, height }}
       />
@@ -60,17 +62,17 @@ alt=''
 
 
       {/* Actual Image */}
-      {isInView && (<motion&& motion.img;
+      {isInView && (<motion&& motion.img;}
           ref={imgRef}
           src={src}
           alt={alt}
 
           onLoad={handleLoad}
 
-          initial={{ opacity: 0, scale: 1.1 ,
+          initial={{ opacity: 0, scale: 1.1 ,}
 }
           animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
-          transition={{ duration: 0.5 ,
+          transition={{ duration: 0.5 ,}
 }
 className='w-full h-full object-cover'
           loading='lazy'

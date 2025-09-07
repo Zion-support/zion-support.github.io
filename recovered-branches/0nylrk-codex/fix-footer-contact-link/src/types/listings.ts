@@ -1,8 +1,8 @@
 export interface ListingCategory {
   id: string;
   name: string,
-  description: string;
-  icon: string;
+  description: string;}
+  icon: string;}
 }
 }export interface ProductListing {
   id: string;
@@ -12,8 +12,8 @@ export interface ListingCategory {
   subcategory?: string, // Adding optional subcategory field;
 export interface ListingCategory {
 export interface ListingCategory {;
-  id: string;
-  name: string;
+  id: string;}
+  name: string;}
 }
 export interface ProductListing {
   id: string;
@@ -33,8 +33,8 @@ export interface ProductListing {
 export interface ListingCategory {;
   id: string,;
   name: string,,
-  description: string,;
-  icon: string;
+  description: string,;}
+  icon: string;}
 }
 ;
 export interface ProductListing {;
@@ -49,8 +49,8 @@ export interface ProductListing {;
   author: {;
     name: string,;
     id: string,;
-    avatarUrl?: string,;
-    email?: string, // Added optional email property;
+    avatarUrl?: string,;}
+    email?: string, // Added optional email property;}
   },;
   images: string[],;
   createdAt: string,;
@@ -66,8 +66,8 @@ export interface ListingItem {;
   id: string,;
   title: string,;
   category: string,;
-  image?: string,;
-  description?: string;
+  image?: string,;}
+  description?: string;}
 }
 ;
   image?: string,  review_count?: number;
@@ -81,5 +81,5 @@ export interface ListingItem {;
   image?: string;
   description?: string;
 }
-export interface ListingCategory {;
-export type ListingView = 'grid' | 'list';
+export interface ListingCategory {;}
+export type ListingView = 'grid' | 'list';}

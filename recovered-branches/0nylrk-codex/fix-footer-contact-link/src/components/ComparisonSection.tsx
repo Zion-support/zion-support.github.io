@@ -1,28 +1,28 @@
 import {
-  Table
-  TableBody
-  TableCell
-  TableHead
-  TableHeader
-  TableRow
-} from "./ui/table";
+  Table;
+TableBody,
+TableCell;
+TableHead,
+TableHeader;}
+TableRow}
+} from \"./ui/table\";
           </p>
         </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">
-            <Table>
-              <TableHeader>
-                <TableRow className="border-b border-zion-purple/20">
-                  <TableHead className="text-white">Service</TableHead>
-                  <TableHead className="text-white text-center">Traditional Providers</TableHead>
-                  <TableHead className="text-white text-center">With Zion</TableHead>
-                  <TableHead className="text-white text-center">Savings</TableHead>                  <TableHead className="text-white text-center">Traditional Providers</TableHead>
-                  <TableHead className="text-white text-center">With Zion</TableHead>
-                  <TableHead className="text-white text-center">Savings</TableHead>
+        <div className=\"max-w-4xl mx-auto\" />
+          <div className=\"bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden\" />
+            <Table />
+              <TableHeader />
+                <TableRow className=\"border-b border-zion-purple/20\" />
+                  <TableHead className=\"text-white\" />Service</TableHead>
+                  <TableHead className=\"text-white text-center\" />Traditional Providers</TableHead>
+                  <TableHead className=\"text-white text-center\" />With Zion</TableHead>
+                  <TableHead className=\"text-white text-center\" />Savings</TableHead>                  <TableHead className=\"text-white text-center\" />Traditional Providers</TableHead>
+                  <TableHead className=\"text-white text-center\" />With Zion</TableHead>
+                  <TableHead className=\"text-white text-center\" />Savings</TableHead>
                 </TableRow>
               </TableHeader>
-              <TableBody>
-                {[
+              <TableBody />
+                {[}
 import { GradientHeading  } from './GradientHeading';
 import { Button  } from './ui / button';
 import { CheckCircle2  } from './lucide-react';
@@ -31,89 +31,89 @@ import {
   TableBody,
   TableCell,
   TableHead,
-  TableHeader,
-  TableRow,
+  TableHeader,}
+  TableRow,}
 } from './ui / table';
 export /**
- * ComparisonSection - Function description
+ * ComparisonSection - Function description;
  */
 function ComparisonSection() {
   return (
-    <section className="py - 20 bg - zion - blue-dark">;
-      <div className="container mx - auto px - 4 sm:px - 6 lg:px-8">;
-        <div className="text - center mb-12">;
-          <GradientHeading > Compare & Save</GradientHeading>;
-          <p className="mt - 4 text - zion - slate - light text - xl max - w-2xl mx-auto">;
+    <section className=\"py - 20 bg - zion - blue-dark\" />;
+      <div className=\"container mx - auto px - 4 sm:px - 6 lg:px-8\" />;
+        <div className=\"text - center mb-12\" />;
+          <GradientHeading  /> Compare & Save</GradientHeading>;
+          <p className=\"mt - 4 text - zion - slate - light text - xl max - w-2xl mx-auto\" />;
             See how Zion can drastically reduce your IT costs compared to;
             traditional providers;
           </p>;
         </div>;
-        <div className="max - w-4xl mx-auto">;
-          <div className="bg - zion - blue - light rounded - lg border border - zion - purple / 20 overflow-hidden">;
-            <Table>;
-              <TableHeader>;
-                <TableRow className="border - b border - zion-purple / 20">;
-                  <TableHead className="text-white">Service</TableHead>;
-                  <TableHead className="text - white text-center">;
+        <div className=\"max - w-4xl mx-auto\" />;
+          <div className=\"bg - zion - blue - light rounded - lg border border - zion - purple / 20 overflow-hidden\" />;
+            <Table />;
+              <TableHeader />;
+                <TableRow className=\"border - b border - zion-purple / 20\" />;
+                  <TableHead className=\"text-white\" />Service</TableHead>;
+                  <TableHead className=\"text - white text-center\" />;
                     Traditional Providers;
                   </TableHead>;
-                  <TableHead className="text - white text-center">;
+                  <TableHead className=\"text - white text-center\" />;
                     With Zion;
                   </TableHead>;
-                  <TableHead className="text - white text-center">;
+                  <TableHead className=\"text - white text-center\" />;
                     Savings;
                   </TableHead>;
                 </TableRow>;
               </TableHeader>;
-              <TableBody>;
+              <TableBody />;
                 {[;
                   {
-                    service: "Server Hosting",
-                    traditional: "$1, 200 / mo",
-                    zion: "$650 / mo",
-                    savings: "45%",
+                    service: \"Server Hosting\",
+                    traditional: \"$1, 200 / mo\",
+                    zion: \"$650 / mo\",}
+                    savings: \"45%\",}
                   },                      {item.service}
                     </TableCell>;
-                    <TableCell className="text - center text - zion - slate-light">;
+                    <TableCell className=\"text - center text - zion - slate-light\" />;
                       {item.traditional}
                     </TableCell>;
-                    <TableCell className="text - center text - zion - cyan font-semibold">;
+                    <TableCell className=\"text - center text - zion - cyan font-semibold\" />;
                       {item.zion}
                     </TableCell>;
-                    <TableCell className="text - center text - green - 400 font-bold">;
+                    <TableCell className=\"text - center text - green - 400 font-bold\" />;
                       {item.savings}
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap">
-              Calculate Your Savings
+            <Button className=\"bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white whitespace-nowrap\" />
+              Calculate Your Savings;
             </Button>
           </div>
         </div>
       </div>  );
 }
   )
-import { GradientHeading } from "./GradientHeading";
-import { Button } from "./ui/button";
-import { CheckCircle2 } from "lucide-react",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table",;        <div className="max-w-4xl mx-auto">;
-          <div className="bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden">;
-            <Table>;
-              <TableHeader>;
-                <TableRow className="border-b border-zion-purple/20">;
-                  <TableHead className="text-white">Service</TableHead>;
-                  <TableHead className="text-white text-center">;
+import { GradientHeading } from \"./GradientHeading\";
+import { Button } from \"./ui/button\";
+import { CheckCircle2 } from \"lucide-react\",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from \"./ui/table\",;        <div className=\"max-w-4xl mx-auto\" />;
+          <div className=\"bg-zion-blue-light rounded-lg border border-zion-purple/20 overflow-hidden\" />;
+            <Table />;
+              <TableHeader />;
+                <TableRow className=\"border-b border-zion-purple/20\" />;
+                  <TableHead className=\"text-white\" />Service</TableHead>;
+                  <TableHead className=\"text-white text-center\" />;
                     Traditional Providers;
                   </TableHead>;
-                  <TableHead className="text-white text-center">;
+                  <TableHead className=\"text-white text-center\" />;
                     With Zion;
                   </TableHead>;
-                  <TableHead className="text-white text-center">;
+                  <TableHead className=\"text-white text-center\" />;
                     Savings;
                   </TableHead>;                </TableRow>;
               </TableHeader>;
-              <TableBody>;
-                {[;          <div className="mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20">;
-            <div className="flex items-start">;
-              <CheckCircle2 className="mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1" />;
-              <p className="text-white">;                  Results may vary based on specific requirements and service;
+              <TableBody />;
+                {[;          <div className=\"mt-8 flex justify-between items-center bg-zion-blue p-6 rounded-lg border border-zion-purple/20\" />;
+            <div className=\"flex items-start\" />;
+              <CheckCircle2 className=\"mr-2 h-6 w-6 text-green-400 flex-shrink-0 mt-1\" />;
+              <p className=\"text-white\" />;                  Results may vary based on specific requirements and service;
                   levels;
                 </span>;
               </p>;
@@ -121,8 +121,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ".
             </Button>;
           </div>;
         </div>;
-      </div>;
-  );
+      </div>;}
+  );}
 }
 ;
     </section>

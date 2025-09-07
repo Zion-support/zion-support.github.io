@@ -7,40 +7,40 @@ const allIcons = ['ArrowRight','CheckCircle','Star','Users','Zap','Shield','Glob
 let totalFixes = 0;
 let filesProcessed = 0;
 // Find all missing imports in a file;
-function findAllMissingImports() {const missingImports = [];
-  // Check for each icon;
-  allIcons && allIcons.forEach(icon => {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) {// Check if the icon is already imported;
-      const importRegex = new RegExp(`import.*{.*${icon}.*}.*from.*['"]lucide-react['"]`,'g';
+function findAllMissingImports() {const missingImports = [];}
+  // Check for each icon;}
+  allIcons && allIcons.forEach(icon => {const iconRegex = new RegExp(`\\b${icon}\\b`, 'g')const matches = content && content.match(iconRegex)if (matches && matches.length > 0) {// Check if the icon is already imported;}
+      const importRegex = new RegExp(`import.*{.*${icon}.*}.*from.*['\"]lucide-react['\"]`,'g';
       )const existingImport = content && content.match(importRegex)if (!existingImport) {missingImports && missingImports.push(icon)}
     }
   })return [...new Set(missingImports)]; // Remove duplicates;
 // Fix all missing imports in a file;
-function fixAllMissingImports() {const missingImports = findAllMissingImports(content, filePath)if (missingImports && missingImports.length === 0) {return { content, "changes": 0 }}
+function fixAllMissingImports() {const missingImports = findAllMissingImports(content, filePath)if (missingImports && missingImports.length === 0) {return { content, \"changes\": 0 }}
   let fixedContent = content;
   let changes = 0;
   // Find existing lucide-react import;
-    /import\s*{\s*([^}]*)\s*}\s*from\s*['"]lucide-react['"];?/g;
-  const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {// Add missing icons to existing import const existingIcons =;
-      existingImport[0];
+    /import\s*{\s*([^}]*)\s*}\s*from\s*['\"]lucide-react['\"];?/g;
+  const existingImport = fixedContent && fixedContent.match(existingImportRegex)if (existingImport) {// Add missing icons to existing import const existingIcons =;}
+      existingImport[0];}
         .match(/{([^}]*)}/)?.[1];
         .map(icon => icon.trim()) || [];
         .map(icon => icon ;
-    const allIcons = [...new Set([...existingIcons, ...missingImports])].sort()const newImport = `import { ${allIcons ;`;
+    const allIcons = [...new Set([...existingIcons, ...missingImports])].sort()const newImport = `import { ${allIcons ;`;}
     fixedContent = fixedContent && fixedContent.replace(existingImportRegex, newImport)changes++} else {const newImport = `import { ${missingImports.join(', ')} } from 'lucide-react';\n`;
     // Find the best place to insert the import;
     const importIndex = fixedContent.indexOf('import')const newImport = `import { ${missingImports ;\n`;
     // Find the best place to insert the import const importIndex = fixedContent ;
     if (importIndex !== -1) {const nextLineIndex = fixedContent && fixedContent.indexOf('\n', importIndex)fixedContent =;
         fixedContent && fixedContent.slice(0, nextLineIndex) +;
-        '\n' +;
-        newImport +;
+        '\n' +;}
+        newImport +;}
         fixedContent && fixedContent.slice(nextLineIndex)} else {fixedContent = newImport + fixedContent}
     changes++}
-  return { "content": fixedContent, changes }}
+  return { \"content\": fixedContent, changes }}
 // Process individual file;
 function processFile() {try {const content = fs && fs.readFileSync(filePath, 'utf8')const result = fixAllMissingImports(content, filePath)const patterns = ['pages/**/*.{tsx,jsx}','src/**/*.{tsx,jsx}','components/**/*.{tsx,jsx}',];
   const excludeDirs = ['node_modules','.next','build','dist','scripts','automation','automation_backup','src && src.disabled','pages && pages.disabled','components && components.disabled',];
   }
-  console && console.log("\n📊 Comprehensive Missing Imports Fix "Summary": ")console && console.log(`   Files processed: ${filesProcessed}`)console && console.log(`   Total import "fixes": ${totalFixes}`)console && console.log("\n✨ Comprehensive missing imports fix completed!")}
+  console && console.log(\"\n📊 Comprehensive Missing Imports Fix \"Summary\": \")console && console.log(`   Files processed: ${filesProcessed}`)console && console.log(`   Total import \"fixes\": ${totalFixes}`)console && console.log(\"\n✨ Comprehensive missing imports fix completed!\")}
 // Run the script;
 main().catch(console.error)

@@ -1,32 +1,36 @@
 import { GetServerSideProps } from 'next';
 
-const Sitemap = () => {;
-  return nul;
+const Sitemap = (;
+  return nul;) => {
+  return $3;}
+}
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ res   ,
+export const getServerSideProps: GetServerSideProps = async ({ res   ,}
 }) => {
 
 
  const baseUrl = 'https:;
   const staticPages = [ '','/about','/services','/services-catalog','/micro-saas','/ai-services','/it-services','/cloud-devops','/cybersecurity','/quantum-computing','/docs','/pricing','/contact','/faq','/privacy','/terms' ];
-
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${staticPages .map((page) => {;
-  return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url> `}) .join('')} </urlset> `; res.setHeader('Content-Type','text/xml')res.write(sitemap)res.end()return { props: {},
+}
+const sitemap = `<?xml version=\"1.0\" encoding=\"UTF-8\"?> <urlset xmlns=\"http: ${staticPages .map((page) = /> {;}
+  return ` <url /> <loc />${baseUrl}${page}</loc> <lastmod />${new Date().toISOString()}</lastmod> <changefreq />weekly</changefreq> <priority />${page === '' ? '1.0' : '0.8'}</priority> </url> `}) .join('')} </urlset> `; res.setHeader('Content-Type','text/xml')res.write(sitemap)res.end()return { props: {},
 }
 
 export default Sitemap;
 
-const Sitemap = () => {
- ;
+const Sitemap = (
+ ;) => {
+  return $3;}
+}
   return null};
 
-export const "getServerSideProps": GetServerSideProps = async ({ res    }) => {
+export const \"getServerSideProps\": GetServerSideProps = async ({ res    }) => {
 
 
 
  ;
-  const baseUrl = '"https": //ziontechgroup.com';
+  const baseUrl = '\"https\": //ziontechgroup.com';
 
 const staticPages = ['',
     '/about',
@@ -46,43 +50,45 @@ const staticPages = ['',
     '/terms'
   ];
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
-      ${staticPages
+const sitemap = `<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+    <urlset xmlns=\"\"http\": //www.sitemaps.org/schemas/sitemap/0.9\" />
+      ${staticPages;
         .map((page) => {
          ;
-  return `
-            <url>
-              <loc>${baseUrl}${page}</loc>
-              <lastmod>${new Date().toISOString()}</lastmod>
-              <changefreq>weekly</changefreq>
-              <priority>${page === '' ? '1.0' : '0.8'}</priority>
+  return `}
+            <url />}
+              <loc />${baseUrl}${page}</loc>
+              <lastmod />${new Date().toISOString()}</lastmod>
+              <changefreq />weekly</changefreq>
+              <priority />${page === '' ? '1.0' : '0.8'}</priority>
             </url>
-          "})
+          \"})
         .join('')}
     </urlset>
-  ";
+  \";
   res.setHeader('Content-Type', 'text/xml');
   res.write(sitemap);
   res.end();
-  return {
-    "props": {}}};
+  return {}
+    \"props\": {}}};
 
 export default Sitemap;
 import { GetServerSideProps } from 'next';
 
-const Sitemap = () => {;
+const Sitemap = (;) => {
+  return $3;}
+}
   return null};
 
-export const getServerSideProps: GetServerSideProps = async ({ res   ,
+export const getServerSideProps: GetServerSideProps = async ({ res   ,}
 }) => {
 
 
  const baseUrl = 'https:;
   const staticPages = [ '','/about','/services','/services-catalog','/micro-saas','/ai-services','/it-services','/cloud-devops','/cybersecurity','/quantum-computing','/docs','/pricing','/contact','/faq','/privacy','/terms' ];
-
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${staticPages .map((page) => {;
-  return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>${page === '' ? '1.0' : '0.8'}</priority> </url> `}) .join('')} </urlset> `; res.setHeader('Content-Type','text/xml'); res.write(sitemap); res.end(); return { props: {},
+}
+const sitemap = `<?xml version=\"1.0\" encoding=\"UTF-8\"?> <urlset xmlns=\"http: ${staticPages .map((page) = /> {;}
+  return ` <url /> <loc />${baseUrl}${page}</loc> <lastmod />${new Date().toISOString()}</lastmod> <changefreq />weekly</changefreq> <priority />${page === '' ? '1.0' : '0.8'}</priority> </url> `}) .join('')} </urlset> `; res.setHeader('Content-Type','text/xml'); res.write(sitemap); res.end(); return { props: {},
 };
 
 export default Sitemap;
@@ -227,15 +233,15 @@ const allRoutes = [
     ...aiServices,
     ...quantumServices,
     ...networkServices,
-    ...complianceServices
+    ...complianceServices;
   ];
-
-  return allRoutes.map(route => ({
-    url: `${baseUrl}${rout,
+}
+  return allRoutes.map(route => ({}
+    url: `${baseUrl}${rout,}
 }`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: route === '' ? 1 : 0.8
+  priority: route === '' ? 1 : 0.8;
  ,
 }));
 }

@@ -17,9 +17,9 @@
    roi: string;
    innovationLevel: string;
    contactInfo: {  phone: string;
-   email: string;
-   website: string;
+   email: string;}
+   website: string;}
    address: string} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors: string[] marketSize: string growthRate: string rating: number reviews: number customers: numbe,
 }
 
-export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = ['';"";
+export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = ['';\"\";

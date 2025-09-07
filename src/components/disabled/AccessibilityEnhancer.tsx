@@ -6,28 +6,28 @@ import React, { useEffect, useRef, useState, useCallback } from 'react' import {
    highContrastText: boolean;
    increasedSpacing: boolean;
    cursorEnhancement: boolean;
-   keyboardNavigation: boolean;
-   colorBlindnessSupport: boolea,
+   keyboardNavigation: boolean;}
+   colorBlindnessSupport: boolea,}
 }
 
-interface FocusTrapConfig  {containerRef: React.RefObject<HTMLElement>;
-   onEscape?: () => void;
+interface FocusTrapConfig  {containerRef: React.RefObject<HTMLElement />;}
+   onEscape?: () => void;}
    returnFocus?: boolean}
 
 interface AccessibilityAnnouncement {
-  message: string;"";
+  message: string;\"\";
    priority: 'polite' | 'assertive';
-   id: number;
-   timestamp: number
+   id: number;}
+   timestamp: number}
 }
 
-export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { showAccessibilityPanel?: boolean,
-}) { const [features, setFeatures] = useState<AccessibilityFeatures>({ highContrast: false, reducedMotion: false, largeText: false, focusHighlight: true, screenReaderMode: false, highContrastText: false, increasedSpacing: false, cursorEnhancement: false, keyboardNavigation: false, colorBlindnessSupport: false,
-})  const [announcements, setAnnouncements] = useState<AccessibilityAnnouncement[]>([]) const [currentAnnouncement, setCurrentAnnouncement] = useState<string>('') const [isMenuOpen, setIsMenuOpen] =;
+export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { showAccessibilityPanel?: boolean,}
+}) { const [features, setFeatures] = useState<AccessibilityFeatures />({ highContrast: false, reducedMotion: false, largeText: false, focusHighlight: true, screenReaderMode: false, highContrastText: false, increasedSpacing: false, cursorEnhancement: false, keyboardNavigation: false, colorBlindnessSupport: false,}
+})  const [announcements, setAnnouncements] = useState<AccessibilityAnnouncement[] />([]) const [currentAnnouncement, setCurrentAnnouncement] = useState<string />('') const [isMenuOpen, setIsMenuOpen] =;
   useState(false);
   const [activeTab, setActiveTab] = useState<'visual' | 'navigation' | 'audio' | 'advanced'>('visual') const [fontSize, setFontSize] = useState(16);
   const [lineHeight, setLineHeight] = useState(1.5);
   const [letterSpacing, setLetterSpacing] = useState(0);
-  const menuRef = useRef<HTMLDivElement>(null) const buttonRef =;
-  useRef<HTMLButtonElement>(null);
-  const focusableElementsRef = useRef<HTMLElement[]>([]) ';';
+  const menuRef = useRef<HTMLDivElement />(null) const buttonRef =;
+  useRef<HTMLButtonElement />(null);
+  const focusableElementsRef = useRef<HTMLElement[] />([]) ';';

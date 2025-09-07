@@ -2,21 +2,21 @@
 ;
 import React from 'react';
 import { logDebug   } from '@/utils/productionLogger';
-import { Button } from "@/components/ui/button",import { Card, CardContent, CardFooter, CardHeader  } from '@/components/ui/card';
+import { Button } from \"@/components/ui/button\",import { Card, CardContent, CardFooter, CardHeader  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users  } from 'lucide-react';
 
 interface IntegrationCardProps  {title: string;
   description: string;
   icon: React.ReactNode;
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
-  onConnect?: () => void;
+  status?: \"connected\" | \"disconnected\" | \"pending\";
+  href?: string;}
+  onConnect?: () => void;}
 import { Button  } from '@/components/ui/button';
 import { Card;
   CardContent;
-  CardFooter;
-  CardHeader;
+  CardFooter;}
+  CardHeader;}
  } from '@/components/ui/card';
   ArrowRight;
   Check;
@@ -30,8 +30,8 @@ interface IntegrationCardProps  {title: string;
   description: string;
   icon: React.ReactNode;
   status?: 'connected' | 'disconnected' | 'pending';
-  href?: string;
-  onConnect?: () => void;
+  href?: string;}
+  onConnect?: () => void;}
 import {Card,CardContent,CardFooter,CardHeader} from '@/components/ui/card';
   ArrowRight,Check,ExternalLink,Slack,Briefcase,Users} from 'lucide-react';
 }
@@ -43,36 +43,36 @@ interface IntegrationCardProps  {title: string;
   href?: string;
   onConnect?: () => void;
 
-export function IntegrationCard() {return (<Card className='overflow-hidden'>;
-      <CardHeader className='pb-2'>;
-        <div className='flex justify-between items-start'>;
-          <div className='flex items-center gap-3'>;
-            <div className='h-9 w-9 flex items-center justify-center bg-muted rounded-md'>;
+export function IntegrationCard() {return (<Card className='overflow-hidden' />;
+      <CardHeader className='pb-2' />;
+        <div className='flex justify-between items-start' />;
+          <div className='flex items-center gap-3' />;}
+            <div className='h-9 w-9 flex items-center justify-center bg-muted rounded-md' />;}
               {icon}
             </div>;
-            <div>;
-              <h3 className='font-semibold'>{title}</h3>;
+            <div />;
+              <h3 className='font-semibold' />{title}</h3>;
             </div>;
           </div>;
           {status === 'connected' ? (<Badge;
               variant='outline';
-              className='bg-green-100 text-green-800 gap-1'>;
+              className='bg-green-100 text-green-800 gap-1' />;
               <Check className='h-3 && 3.5 w-3 && 3.5' />;
-              <span>Connected</span>;
+              <span />Connected</span>;
             </Badge>;
-          ) : status === 'pending' ? (<Badge variant='outline' className='bg-yellow-100 text-yellow-800'>;
+          ) : status === 'pending' ? (<Badge variant='outline' className='bg-yellow-100 text-yellow-800' />;
               Pending;
-            </Badge>;
-          ) : (<Badge variant='outline'>Not Connected</Badge>;
+            </Badge>;}
+          ) : (<Badge variant='outline' />Not Connected</Badge>;}
           )}
         </div>;
       </CardHeader>;
-      <CardContent className='pb-4'>;
-        <p className='text-sm text-muted-foreground'>{description}</p>;
+      <CardContent className='pb-4' />;
+        <p className='text-sm text-muted-foreground' />{description}</p>;
       </CardContent>;
-      <CardFooter className='pt-0'>;
-        {status === 'connected' ? (<Button variant='outline' className='w-full' asChild>;
-            <a;
+      <CardFooter className='pt-0' />;
+        {status === 'connected' ? (<Button variant='outline' className='w-full' asChild />;}
+            <a;}
               href={href}
               target='_blank';
               rel='noopener noreferrer';
@@ -82,110 +82,110 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  
 interface IntegrationCardProps  {title: string;
   description: string;
   icon: React.ReactNode;
-  status?: "connected" | "disconnected" | "pending";
+  status?: \"connected\" | \"disconnected\" | \"pending\";
   href?: string;
-  onConnect?: () => void;
+  onConnect?: () = /> void;
               className='flex items-center gap-1'>;
-              <span>Manage</span>;
+              <span />Manage</span>;
               <ExternalLink className='h-3 && 3.5 w-3 && 3.5' />;
-            </a>;
-          </Button>;
-        ) : (<Button variant='default' className='w-full' onClick={onConnect}>;
-            <span>Connect</span>;
+            </a>;}
+          </Button>;}
+        ) : (<Button variant='default' className='w-full' onClick={onConnect} />;
+            <span />Connect</span>;
             <ArrowRight className='ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5' />          </Button>;
-            <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;<ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
+            <ArrowRight className=\"ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5\" />;<ArrowRight className=\"ml-1.5 h-3.5 w-3.5\" />;
           </Button>;
-import React from "react",import { logDebug } from '@/utils/productionLogger',import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",import { Badge } from "@/components/ui/badge",interface IntegrationCardProps {
-  title: string,description: string,icon: React && React.ReactNode,status?: "connected" | "disconnected" | "pending";
-  href?: string;
-  onConnect?: () => void;
+import React from \"react\",import { logDebug } from '@/utils/productionLogger',import { Card, CardContent, CardFooter, CardHeader } from \"@/components/ui/card\",import { Badge } from \"@/components/ui/badge\",interface IntegrationCardProps {
+  title: string,description: string,icon: React && React.ReactNode,status?: \"connected\" | \"disconnected\" | \"pending\";
+  href?: string;}
+  onConnect?: () => void;}
 }
 
 export function IntegrationCard(): any ({className='flex items-center gap-1'>
 
-              <span>Manage</span>;
+              <span />Manage</span>;
               <ExternalLink className='h-3.5 w-3.5' />;
-            </a>;
-          </Button>;
-        ) : (<Button variant='default' className='w-full' onClick={onConnect}>;
-            <span>Connect</span>;
+            </a>;}
+          </Button>;}
+        ) : (<Button variant='default' className='w-full' onClick={onConnect} />;
+            <span />Connect</span>;
             <ArrowRight className='ml-1.5 h-3.5 w-3.5' />;
 
-export function IntegrationCard() {return (<Card className="overflow-hidden">;
-      <CardHeader className="pb-2">;
-        <div className="flex justify-between items-start">;
-          <div className="flex items-center gap-3">;
-            <div className="h-9 w-9 flex items-center justify-center bg-muted rounded-md">;
+export function IntegrationCard() {return (<Card className=\"overflow-hidden\" />;
+      <CardHeader className=\"pb-2\" />;
+        <div className=\"flex justify-between items-start\" />;
+          <div className=\"flex items-center gap-3\" />;}
+            <div className=\"h-9 w-9 flex items-center justify-center bg-muted rounded-md\" />;}
               {icon}
             </div>;
-            <div>;
-              <h3 className="font-semibold">{title}</h3>;
+            <div />;
+              <h3 className=\"font-semibold\" />{title}</h3>;
             </div>;
           </div>;
-          {status === "connected" ? (<Badge variant="outline" className="bg-green-100 text-green-800 gap-1">;
-              <Check className="h-3 && 3.5 w-3 && 3.5" />;
-              <span>Connected</span>;
+          {status === \"connected\" ? (<Badge variant=\"outline\" className=\"bg-green-100 text-green-800 gap-1\" />;
+              <Check className=\"h-3 && 3.5 w-3 && 3.5\" />;
+              <span />Connected</span>;
             </Badge>;
-          ) : status === "pending" ? (<Badge variant="outline" className="bg-yellow-100 text-yellow-800">Pending</Badge>;
-          ) : (<Badge variant="outline">Not Connected</Badge>;
+          ) : status === \"pending\" ? (<Badge variant=\"outline\" className=\"bg-yellow-100 text-yellow-800\" />Pending</Badge>;}
+          ) : (<Badge variant=\"outline\" />Not Connected</Badge>;}
           )}</div>;
       </CardHeader>;
-      <CardContent className="pb-4">;
-        <p className="text-sm text-muted-foreground">{description}</p>;
+      <CardContent className=\"pb-4\" />;
+        <p className=\"text-sm text-muted-foreground\" />{description}</p>;
       </CardContent>;
-      <CardFooter className="pt-0">;
-        {status === "connected" ? (<Button variant="outline" className="w-full" asChild>;
-            <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">;
-              <span>Manage</span>;<ExternalLink className="h-3.5 w-3.5" />;</a>;
+      <CardFooter className=\"pt-0\" />;
+        {status === \"connected\" ? (<Button variant=\"outline\" className=\"w-full\" asChild />;}
+            <a href={href} target=\"_blank\" rel=\"noopener noreferrer\" className=\"flex items-center gap-1\" />;
+              <span />Manage</span>;<ExternalLink className=\"h-3.5 w-3.5\" />;</a>;
           </Button>;
-        ) : (<Button variant="default" className="w-full" onClick={onConnect}>;
-            <span>Connect</span>;</div>;
+        ) : (<Button variant=\"default\" className=\"w-full\" onClick={onConnect} />;
+            <span />Connect</span>;</div>;
       </CardHeader>;
-      <CardContent className="pb-4">;
-        <p className="text-sm text-muted-foreground">{description}</p>;
+      <CardContent className=\"pb-4\" />;
+        <p className=\"text-sm text-muted-foreground\" />{description}</p>;
       </CardContent>;
-      <CardFooter className="pt-0">;
-        {status === "connected" ? (<Button variant="outline" className="w-full" asChild>;
-            <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">;
-              <span>Manage</span>;
-              <ExternalLink className="h-3.5 w-3.5" />;
+      <CardFooter className=\"pt-0\" />;
+        {status === \"connected\" ? (<Button variant=\"outline\" className=\"w-full\" asChild />;}
+            <a href={href} target=\"_blank\" rel=\"noopener noreferrer\" className=\"flex items-center gap-1\" />;
+              <span />Manage</span>;
+              <ExternalLink className=\"h-3.5 w-3.5\" />;
             </a>;
           </Button>;
-        ) : (<Button variant="default" className="w-full" onClick={onConnect}>;
-            <span>Connect</span>;
-            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
+        ) : (<Button variant=\"default\" className=\"w-full\" onClick={onConnect} />;
+            <span />Connect</span>;
+            <ArrowRight className=\"ml-1.5 h-3.5 w-3.5\" />;
           </Button>;
-        )}<ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
+        )}<ArrowRight className=\"ml-1.5 h-3.5 w-3.5\" />;
           </Button>;
         )}</CardFooter>;
     </Card>;
   )</CardFooter>;
     </Card>;
-  )export function IntegrationCards() {return (<div className='grid md:grid-cols-3 gap-6'>;
-      <IntegrationCard;
+  )export function IntegrationCards() {return (<div className='grid md:grid-cols-3 gap-6' />;}
+      <IntegrationCard;}
   )}
 
-export function IntegrationCards() {return (<div className="grid md:grid-cols-3 gap-6">;
+export function IntegrationCards() {return (<div className=\"grid md:grid-cols-3 gap-6\" />;
       <IntegrationCard;
-        title="Slack";
-        description="Send notifications and interact with Zion from Slack.";
-        icon={<Slack className="h-5 w-5" />}
+        title=\"Slack\";}
+        description=\"Send notifications and interact with Zion from Slack.\";}
+        icon={<Slack className=\"h-5 w-5\" />}
         onConnect={() => logDebug('Connect Slack clicked')}
       />;
       <IntegrationCard;
-        title="Salesforce";
-        description="Sync leads and opportunities with Salesforce.";
-        icon={<Briefcase className="h-5 w-5" />}onConnect={() => logDebug('Connect Salesforce clicked')}
+        title=\"Salesforce\";
+        description=\"Sync leads and opportunities with Salesforce.\";
+        icon={<Briefcase className=\"h-5 w-5\" />}onConnect={() => logDebug('Connect Salesforce clicked')}
       />;
     </div>;
   )/>;
     </div>;
-  )}        icon={<Briefcase className="h-5 w-5" />}
+  )}        icon={<Briefcase className=\"h-5 w-5\" />}
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />;<IntegrationCard;
-        title="Microsoft Teams";
-        description="Receive updates through Microsoft Teams.";
-        icon={<Users className="h-5 w-5" />}
+        title=\"Microsoft Teams\";
+        description=\"Receive updates through Microsoft Teams.\";
+        icon={<Users className=\"h-5 w-5\" />}
         onConnect={() => logDebug('Connect Teams clicked')}}/>;
     </div>;
   )})}import { Button  } from '@/components / ui / button';
@@ -203,95 +203,95 @@ interface IntegrationCardProps  {title: string;
 export /**;
  * IntegrationCard - Function description;
  */;
-function IntegrationCard() {return (<Card className='overflow - hidden'>;
-      <CardHeader className='pb - 2'>;
-        <div className='flex justify - between items - start'>;
-          <div className='flex items - center gap - 3'>;
-            <div className='h - 9 w - 9 flex items - center justify - center bg - muted rounded - md'>;
+function IntegrationCard() {return (<Card className='overflow - hidden' />;
+      <CardHeader className='pb - 2' />;
+        <div className='flex justify - between items - start' />;
+          <div className='flex items - center gap - 3' />;}
+            <div className='h - 9 w - 9 flex items - center justify - center bg - muted rounded - md' />;}
               {icon}
             </div>;
-            <div>;
-              <h3 className='font - semibold'>{title}</h3>;
+            <div />;
+              <h3 className='font - semibold' />{title}</h3>;
             </div>;
           </div>;
           {status === 'connected' ? (<Badge;
               variant='outline';
-              className='bg - green - 100 text - green - 800 gap - 1'>
+              className='bg - green - 100 text - green - 800 gap - 1' />
 
               <Check className='h - 3.5 w - 3.5' />;
-              <span > Connected</span>;
-            </Badge>) : status === 'pending' ? (<Badge variant='outline' className='bg - yellow - 100 text - yellow - 800'>;
-              Pending;
-            </Badge>) : (<Badge variant='outline'>Not Connected</Badge>)}
+              <span  /> Connected</span>;
+            </Badge>) : status === 'pending' ? (<Badge variant='outline' className='bg - yellow - 100 text - yellow - 800' />;}
+              Pending;}
+            </Badge>) : (<Badge variant='outline' />Not Connected</Badge>)}
         </div>;
       </CardHeader>;
-      <CardContent className='pb - 4'>;
-        <p className='text - sm text - muted - foreground'>{description}</p>;
+      <CardContent className='pb - 4' />;
+        <p className='text - sm text - muted - foreground' />{description}</p>;
       </CardContent>;
-      <CardFooter className='pt - 0'>;
-        {status === 'connected' ? (<Button variant='outline' className='w - full' as_child>;
-            <a;
+      <CardFooter className='pt - 0' />;
+        {status === 'connected' ? (<Button variant='outline' className='w - full' as_child />;}
+            <a;}
               href={href}
               target='_blank';
               rel='noopener noreferrer';
-              className='flex items - center gap - 1'>
+              className='flex items - center gap - 1' />
 
-              <span > Manage</span>;
+              <span  /> Manage</span>;
               <ExternalLink className='h - 3.5 w - 3.5' />;
             </a>;
-          </Button>) : (<Button variant='default' className='w - full' on_click={on_connect}>;
-            <span > Connect</span>;
+          </Button>) : (<Button variant='default' className='w - full' on_click={on_connect} />;
+            <span  /> Connect</span>;
             <ArrowRight className='ml - 1.5 h - 3.5 w - 3.5' />          </Button>;
-            <ArrowRight className="ml - 1.5 h - 3.5 w - 3.5" />;
+            <ArrowRight className=\"ml - 1.5 h - 3.5 w - 3.5\" />;
 
 interface IntegrationCardProps {
-  title: string,description: string,icon: React.ReactNode,status?: "connected" | "disconnected" | "pending";
+  title: string,description: string,icon: React.ReactNode,status?: \"connected\" | \"disconnected\" | \"pending\";
   href?: string;
-  on_connect?: () => void;
-
+  on_connect?: () => void;}
+}
 }
 
 export /**;
  * IntegrationCard - Function description;
  */;
-function IntegrationCard() {return (<Card className="overflow - hidden">;
-      <CardHeader className="pb - 2">;
-        <div className="flex justify - between items - start">;
-          <div className="flex items - center gap - 3">;
-            <div className="h - 9 w - 9 flex items - center justify - center bg - muted rounded - md">;
+function IntegrationCard() {return (<Card className=\"overflow - hidden\" />;
+      <CardHeader className=\"pb - 2\" />;
+        <div className=\"flex justify - between items - start\" />;
+          <div className=\"flex items - center gap - 3\" />;}
+            <div className=\"h - 9 w - 9 flex items - center justify - center bg - muted rounded - md\" />;}
               {icon}
             </div>;
-            <div>;
-              <h3 className="font - semibold">{title}</h3>;
+            <div />;
+              <h3 className=\"font - semibold\" />{title}</h3>;
             </div>;
           </div>;
-          {status === "connected" ? (<Badge variant="outline" className="bg - green - 100 text - green - 800 gap - 1">;
-              <Check className="h - 3.5 w - 3.5" />;
-              <span > Connected</span>;
-            </Badge>) : status === "pending" ? (<Badge variant="outline" className="bg - yellow - 100 text - yellow - 800">Pending</Badge>) : (<Badge variant="outline">Not Connected</Badge>)}
+          {status === \"connected\" ? (<Badge variant=\"outline\" className=\"bg - green - 100 text - green - 800 gap - 1\" />;
+              <Check className=\"h - 3.5 w - 3.5\" />;}
+              <span  /> Connected</span>;}
+            </Badge>) : status === \"pending\" ? (<Badge variant=\"outline\" className=\"bg - yellow - 100 text - yellow - 800\" />Pending</Badge>) : (<Badge variant=\"outline\" />Not Connected</Badge>)}
         </div>;
       </CardHeader>;
-      <CardContent className="pb - 4">;
-        <p className="text - sm text - muted - foreground">{description}</p>;
+      <CardContent className=\"pb - 4\" />;
+        <p className=\"text - sm text - muted - foreground\" />{description}</p>;
       </CardContent>;
-      <CardFooter className="pt - 0">;
-        {status === "connected" ? (<Button variant="outline" className="w - full" as_child>;
-            <a href={href} target="_blank" rel="noopener noreferrer" className="flex items - center gap - 1">;
-              <span > Manage</span>;
-              <ExternalLink className="h - 3.5 w - 3.5" />;
+      <CardFooter className=\"pt - 0\" />;
+        {status === \"connected\" ? (<Button variant=\"outline\" className=\"w - full\" as_child />;}
+            <a href={href} target=\"_blank\" rel=\"noopener noreferrer\" className=\"flex items - center gap - 1\" />;
+              <span  /> Manage</span>;
+              <ExternalLink className=\"h - 3.5 w - 3.5\" />;
             </a>;
-          </Button>) : (<Button variant="default" className="w - full" on_click={on_connect}>;
-            <span > Connect</span>;
-            <ArrowRight className="ml - 1.5 h - 3.5 w - 3.5" />;
+          </Button>) : (<Button variant=\"default\" className=\"w - full\" on_click={on_connect} />;
+            <span  /> Connect</span>;
+            <ArrowRight className=\"ml - 1.5 h - 3.5 w - 3.5\" />;
           </Button>)}
       </CardFooter>;
     </Card>)export /**;
  * IntegrationCards - Function description;
  */;
-function IntegrationCards() {return (<div className='grid md:grid - cols - 3 gap - 6'>;
+function IntegrationCards() {return (<div className='grid md:grid - cols - 3 gap - 6' />;
       <IntegrationCard;
-        title='Slack';
-        description='Send notifications and interact with Zion from Slack.';
+        title='Slack';}
+        description='Send notifications and interact with Zion from Slack.';}
         icon={<Slack className='h - 5 w - 5' />}
         on_connect={() => log_debug ('Connect Slack clicked')}
       />;
@@ -301,9 +301,9 @@ function IntegrationCards() {return (<div className='grid md:grid - cols - 3 gap
         icon={<Briefcase className='h - 5 w - 5' />}
         on_connect={() => log_debug ('Connect Salesforce clicked')}      />;
       <IntegrationCard;
-        title="Salesforce";
-        description="Sync leads and opportunities with Salesforce.";
-        icon = {<Briefcase className="h - 5 w - 5" /> }
+        title=\"Salesforce\";
+        description=\"Sync leads and opportunities with Salesforce.\";
+        icon = {<Briefcase className=\"h - 5 w - 5\" /> }
         on_connect = {() => log_debug ('Connect Salesforce clicked') }
       />;
       <IntegrationCard;
@@ -313,20 +313,20 @@ function IntegrationCards() {return (<div className='grid md:grid - cols - 3 gap
       />
     </div>
   );
-}        icon={<Briefcase className="h - 5 w - 5" />}
+}        icon={<Briefcase className=\"h - 5 w - 5\" />}
         on_connect={() => log_debug ('Connect Salesforce clicked')}
       />;
       <IntegrationCard;
-        title="Microsoft Teams";
-        description="Receive updates through Microsoft Teams.";
-        icon={<Users className="h - 5 w - 5" />}
+        title=\"Microsoft Teams\";
+        description=\"Receive updates through Microsoft Teams.\";
+        icon={<Users className=\"h - 5 w - 5\" />}
         on_connect={() => log_debug ('Connect Teams clicked')}
-        icon = {<Users className="h - 5 w - 5" /> }
+        icon = {<Users className=\"h - 5 w - 5\" /> }
         on_connect = {() => log_debug ('Connect Teams clicked') }
       />
     </div>
   );
-}icon = {<Briefcase className="h-5 w-5" />}
+}icon = {<Briefcase className=\"h-5 w-5\" />}
         onConnect = {() => logDebug('Connect Salesforce clicked')}
       />;
       <IntegrationCard;
@@ -334,7 +334,7 @@ function IntegrationCards() {return (<div className='grid md:grid - cols - 3 gap
         description='Receive updates through Microsoft Teams.';
         icon={<Users className='h-5 w-5' />}
         onConnect={() => logDebug('Connect Teams clicked')}
-        icon = {<Users className="h-5 w-5" />}
+        icon = {<Users className=\"h-5 w-5\" />}
         onConnect = {() => logDebug('Connect Teams clicked')}
       />;
     </div>;

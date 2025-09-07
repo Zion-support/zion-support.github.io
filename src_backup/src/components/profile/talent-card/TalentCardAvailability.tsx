@@ -1,5 +1,5 @@
 
-interface TalentCardAvailabilityProps  {availability_type: string;
+interface TalentCardAvailabilityProps  {availability_type: string;}
 }export /**;
  * TalentCardAvailability - Function description;
  */;
@@ -8,25 +8,27 @@ function TalentCardAvailability() {// Format availability status;
         return 'bg - green - 500 / 20 text - green - 400';
       case 'part - time':;
         return 'bg - yellow - 500 / 20 text - yellow - 400';
-      case 'project - based':;
-        return 'bg - blue - 500 / 20 text - blue - 400',default:;
+      case 'project - based':;}
+        return 'bg - blue - 500 / 20 text - blue - 400',default:;}
         return 'bg - gray - 500 / 20 text - gray - 400';}
   } return 'bg - gray - 500 / 20 text - gray - 400';import { Clock  } from 'lucide-react';
 interface TalentCardAvailabilityProps  {availabilityType: string;
-        return 'bg-blue-500/20 text-blue-400',default:;
-        return 'bg-gray-500/20 text-gray-400';
+        return 'bg-blue-500/20 text-blue-400',default:;}
+        return 'bg-gray-500/20 text-gray-400';}
     }}return 'bg-gray-500/20 text-gray-400';
     }
-  }const getAvailabilityColor = (status: string) => {switch (status) {case 'full-time':;
+  }const getAvailabilityColor = (switch (status) {case 'full-time':;
         return 'bg-green-500/20 text-green-400';
       case 'part-time':;
         return 'bg-yellow-500/20 text-yellow-400';case 'project-based':;
         return 'bg-blue-500/20 text-blue-400';
       default:;
-        return 'bg-gray-500/20 text-gray-400';
+        return 'bg-gray-500/20 text-gray-400';) => {
+  return $3;}
+}
     }
   }// Format availability label;
-  const getAvailabilityLabel = (status: string) => {switch (status) {case 'full-time':;
+  const getAvailabilityLabel = (switch (status) {case 'full-time':;
         return 'Full-time';
       case 'part-time':;
         return 'Part-time';
@@ -35,37 +37,43 @@ interface TalentCardAvailabilityProps  {availabilityType: string;
       default:;
         return status;
 import React from 'react';
-import React from "react",interface TalentCardAvailabilityProps  {availabilityType: string;
+import React from \"react\",interface TalentCardAvailabilityProps  {availabilityType: string;) => {
+  return $3;}
+}
 }export function TalentCardAvailability() {// Format availability status;
-  const getAvailabilityColor = (status: string) => {switch (status) {case 'full-time':;
+  const getAvailabilityColor = (switch (status) {case 'full-time':;
         return 'bg-green-500/20 text-green-400',case 'part-time':;return 'bg-yellow-500/20 text-yellow-400';return 'bg-yellow-500/20 text-yellow-400',case 'project-based':;
         return 'bg-blue-500/20 text-blue-400',default:;
-        return 'bg-gray-500/20 text-gray-400';
+        return 'bg-gray-500/20 text-gray-400';) => {
+  return $3;}
+}
     }
   }return 'bg-gray-500/20 text-gray-400';}
-  }const getAvailabilityLabel = (status: string,) => {switch (status) {case 'full-time':;
+  }const getAvailabilityLabel = (switch (status) {case 'full-time':;
         return 'Full-time',case 'part-time':;
         return 'Part-time',case 'project-based':;
         return 'Project';
-      default:;
+      default:;) => {
+  return $3;}
+}
         return status;}}
   },const getAvailabilityLabel = (status: string, ) =>: any {switch (status) {case 'full - time':;
         return 'Full - time';
       case 'part - time':;
         return 'Part - time';
       case 'project - based':;
-        return 'Project',default:;
-        return status;
+        return 'Project',default:;}
+        return status;}
   }
     >;
       <Clock className='h - 3 w - 3' />;
-      <span>{getAvailabilityLabel (availability_type)}</span>;
+      <span />{getAvailabilityLabel (availability_type)}</span>;
     </div>)}
-  return (<div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
-      <Clock className="h-3 w-3" />;
+  return (<div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`} />;
+      <Clock className=\"h-3 w-3\" />;
   const getAvailabilityColor = null;
-  return (<div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
-      <Clock className="h-3 w-3" />;
-      <span>{getAvailabilityLabel(availabilityType)}</span>;
+  return (<div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`} />;
+      <Clock className=\"h-3 w-3\" />;
+      <span />{getAvailabilityLabel(availabilityType)}</span>;
     </div>;
   )}

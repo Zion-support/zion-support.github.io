@@ -15,10 +15,12 @@ export const TALENT_PROFILES: TalentProfile[] = [;
       'Architects robust LLM applications with retrieval, evaluation, and safety guardrails. Ex-FAANG applied scientist.',;
     hourlyRateUsd: 140,;
     availability: 'Open',;
-    profileImageUrl: 'https://i.pravatar.cc/300?img=1',;
-    portfolio: [;
-      { title: 'RAG Platform Template', url: 'https://example.com/rag' },;
-      { title: 'LLM Evaluation Toolkit', url: 'https://example.com/eval' }],;
+    profileImageUrl: 'https://i.pravatar.cc/300?img=1',;}
+    portfolio: [;}
+      { title: 'RAG Platform Template',}
+  url: 'https://example.com/rag' },;
+      { title: 'LLM Evaluation Toolkit',}
+  url: 'https://example.com/eval' }],;
     verified: true,;
     rating: 4.9,;
     reviewsCount: 28,;
@@ -37,9 +39,10 @@ export const TALENT_PROFILES: TalentProfile[] = [;
     bio: 'Designs scalable, secure multi-account AWS platforms and platform engineering toolchains.',;
     hourlyRateUsd: 120,;
     availability: 'Part-time',;
-    profileImageUrl: 'https://i.pravatar.cc/300?img=2',;
-    portfolio: [;
-      { title: 'Multi-Account AWS Landing Zone', url: 'https://example.com/aws' }],;
+    profileImageUrl: 'https://i.pravatar.cc/300?img=2',;}
+    portfolio: [;}
+      { title: 'Multi-Account AWS Landing Zone',}
+  url: 'https://example.com/aws' }],;
     verified: true,;
     rating: 4.8,;
     reviewsCount: 19,;
@@ -57,9 +60,10 @@ export const TALENT_PROFILES: TalentProfile[] = [;
       'Data scientist delivering measurable outcomes with rigorous evaluation, fast iteration, and pragmatic product sense.',;
     bio: 'Builds data products end-to-end with strong model evaluation and product sense.',;
     hourlyRateUsd: 110,;
-    availability: 'Open',;
-    profileImageUrl: 'https://i.pravatar.cc/300?img=3',;
-    portfolio: [{ title: 'NLP Evaluation Dashboard', url: 'https://example.com/nlp' }],;
+    availability: 'Open',;}
+    profileImageUrl: 'https://i.pravatar.cc/300?img=3',;}
+    portfolio: [{ title: 'NLP Evaluation Dashboard',}
+  url: 'https://example.com/nlp' }],;
     verified: false,;
     rating: 4.7,;
     reviewsCount: 12,;
@@ -77,9 +81,10 @@ export const TALENT_PROFILES: TalentProfile[] = [;
       'Fullstack developer building sleek, performant AI web apps with modern DX, observability, and delightful UX.',;
     bio: 'Delivers sleek, performant AI web apps with modern DX and observability.',;
     hourlyRateUsd: 95,;
-    availability: 'Booked',;
-    profileImageUrl: 'https://i.pravatar.cc/300?img=4',;
-    portfolio: [{ title: 'AI SaaS Starter', url: 'https://example.com/saas' }],;
+    availability: 'Booked',;}
+    profileImageUrl: 'https://i.pravatar.cc/300?img=4',;}
+    portfolio: [{ title: 'AI SaaS Starter',}
+  url: 'https://example.com/saas' }],;
     verified: true,;
     rating: 4.6,;
     reviewsCount: 34,;
@@ -97,9 +102,10 @@ export const TALENT_PROFILES: TalentProfile[] = [;
       'Security engineer who hardens platforms with developerfriendly security programs, practical controls, and measurable impact.',;
     bio: 'Hardens platforms with practical, developerfriendly security programs.',;
     hourlyRateUsd: 130,;
-    availability: 'Open',;
-    profileImageUrl: 'https://i.pravatar.cc/300?img=5',;
-    portfolio: [{ title: 'Zero Trust Rollout Case Study', url: 'https://example.com/zt' }],;
+    availability: 'Open',;}
+    profileImageUrl: 'https://i.pravatar.cc/300?img=5',;}
+    portfolio: [{ title: 'Zero Trust Rollout Case Study',}
+  url: 'https://example.com/zt' }],;
     verified: false,;
     rating: 4.5,;
     reviewsCount: 9;

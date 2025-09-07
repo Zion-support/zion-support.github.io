@@ -1,53 +1,60 @@
 
-import { Droppable } from "react-beautiful-dnd",import { JobApplication } from "@/types/jobs",import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",import { Badge } from "@/components/ui/badge",import { CandidateCard } from "./CandidateCard",interface KanbanColumnProps  {id:string,title:string,,description:string,applications:JobApplication[],count:number;
+import { Droppable } from \"react-beautiful-dnd\",import { JobApplication } from \"@/types/jobs\",import { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\",import { Badge } from \"@/components/ui/badge\",import { CandidateCard } from \"./CandidateCard\",interface KanbanColumnProps  {id:string,title:string,,description:string,applications:JobApplication[],count:number;}
 }export function KanbanColumn() {// Add color based on column type;
-  const getBadgeVariant = (columnId:string) => {switch (columnId) {case "new":return "secondary",case "shortlisted":;
-        return "outline",case "interview":;
-        return "default",case "hired":;
-        return "success",case "rejected":;
-        return "destructive",default:;
-import { Droppable } from "react-beautiful-dnd";
-import { JobApplication } from "@/types/jobs";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import { CandidateCard } from "./CandidateCard",;
+  const getBadgeVariant = (switch (columnId) {case \"new\":return \"secondary\",case \"shortlisted\":;
+        return \"outline\",case \"interview\":;
+        return \"default\",case \"hired\":;
+        return \"success\",case \"rejected\":;
+        return \"destructive\",default:;) => {
+  return $3;}
+}
+import { Droppable } from \"react-beautiful-dnd\";
+import { JobApplication } from \"@/types/jobs\";
+import { Card, CardContent, CardHeader, CardTitle } from \"@/components/ui/card\",;
+import { Badge } from \"@/components/ui/badge\",;
+import { CandidateCard } from \"./CandidateCard\",;
 ;
 interface KanbanColumnProps {;
   id:string,;
   title:string,,
   description:string,;
-  applications:JobApplication[],;
-  count:number;
+  applications:JobApplication[],;}
+  count:number;}
 }
 ;
 export function KanbanColumn({;
   id,;
   title,;
   description,;
-  applications,;
-  count;
+  applications,;}
+  count;}
 } KanbanColumnProps) {;
   // Add color based on column type;
-  const getBadgeVariant = (columnId:string) => {;
+  const getBadgeVariant = (;
     switch (columnId) {;
-      case "new":return "secondary",;
-      case "shortlisted":;
-        return "outline",;
-      case "interview":;
-        return "default",;
-      case "hired":;
-        return "success",;
-      case "rejected":;
-        return "destructive",;
+      case \"new\":return \"secondary\",;
+      case \"shortlisted\":;
+        return \"outline\",;
+      case \"interview\":;
+        return \"default\",;
+      case \"hired\":;
+        return \"success\",;
+      case \"rejected\":;
+        return \"destructive\",;
       default:;
-        return "outline";
+        return \"outline\";) => {
+  return $3;}
+}
     }
   },;
   ;
-  const getColumnBgColor = (columnId:string) => {;
+  const getColumnBgColor = (;
     switch (columnId) {;
-      case "hired":return "bg-green-50",;
-      case "rejected":;
-        return "bg-red-50",;
+      case \"hired\":return \"bg-green-50\",;
+      case \"rejected\":;
+        return \"bg-red-50\",;
       default:;
-        return "bg-muted/30";
+        return \"bg-muted/30\";
+) => {
+  return $3;}
+}

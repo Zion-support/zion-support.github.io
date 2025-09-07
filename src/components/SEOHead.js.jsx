@@ -1,8 +1,8 @@
- const SEOHead = ({ title = 'Zion Tech Group - AI - Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images / zion - tech - group - og.jpg', url = 'https: '''';import { Helmet } from 'react-helmet-async'';
+ const SEOHead = (
 
-const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https: //ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group'    }) => {
-
-
+) => {
+  return $3;}
+}
 }
 '';
 '';
@@ -11,36 +11,36 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
 const siteName = 'Zion Tech Group';
 
 const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
-    return (<Helmet>;
+    return (<Helmet />;
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>;
+      <title />{fullTitle}</title>;
       <meta name='description' content={description}/>'''';
       <meta name='keywords' content={keywords}/>'''';
       <meta name='author' content={author}/>'''';
       <meta name='robots' content='index, follow'/>;
       '''';
       {/* Open Graph Meta Tags */}'''';
-      <meta property='og: title' content={fullTitl,
+      <meta property='og: title' content={fullTitl,}
 }/>'''';
-      <meta property='og: description' content={descriptio,
+      <meta property='og: description' content={descriptio,}
 }/>'''';
-      <meta property='og: image' content={imag,
+      <meta property='og: image' content={imag,}
 }/>'''';
-      <meta property='og: url' content={ur,
+      <meta property='og: url' content={ur,}
 }/>'''';
-      <meta property='og: type' content={typ,
+      <meta property='og: type' content={typ,}
 }/>'''';
-      <meta property='og: site_name' content={siteNam,
+      <meta property='og: site_name' content={siteNam,}
 }/>'''';
       <meta property='og:locale' content='en_US'/>;
       '''';
       {/* Twitter Card Meta Tags */}'''';
       <meta name='twitter:card' content='summary_large_image'/>'''';
-      <meta name='twitter: title' content={fullTitl,
+      <meta name='twitter: title' content={fullTitl,}
 }/>'''';
-      <meta name='twitter: description' content={descriptio,
+      <meta name='twitter: description' content={descriptio,}
 }/>'''';
-      <meta name='twitter: image' content={imag,
+      <meta name='twitter: image' content={imag,}
 }/>'''';
       <meta name='twitter:site' content='@ziontechgroup'/>;
       '''';
@@ -59,7 +59,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'/>;
       '''';
       {/* Structured Data */}'''';
-      <script type='application/ld+json'>;
+      <script type='application/ld+json' />;
         {JSON.stringify({}
 '''';
 '''';
@@ -97,7 +97,7 @@ const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
       </script>;
       '''';
       {/* Article specific structured data */}'''''';
-      {type === 'article' && publishedTime && (<script type='application/ld+json'>;
+      {type === 'article' && publishedTime && (<script type='application/ld+json' />;}
           {JSON.stringify({}
 '''';
 '''';

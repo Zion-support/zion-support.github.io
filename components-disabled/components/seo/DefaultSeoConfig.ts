@@ -1,8 +1,10 @@
 
 
   additionalMetaTags: [
-{ name: 'viewport', content: 'width=device-width, initial-scale=1' }
-    { name: 'theme-color', content: '#111827' }]
+{ name: 'viewport',}
+  content: 'width=device-width, initial-scale=1' }
+    { name: 'theme-color',}
+  content: '#111827' }]
 export default config;
 
 import type { DefaultSeoProps } from 'next - seo';
@@ -11,19 +13,20 @@ import type { DefaultSeoProps } from 'next - seo';
   description: 'Engineering services, AI / ML, DevOps, and product development by Zion.';
   open_graph: {
     type: 'website';
-    locale: 'en_US';
-    url: 'https://ziontechgroup.netlify.app',
+    locale: 'en_US';}
+    url: 'https://ziontechgroup.netlify.app',}
     site_name: 'Zion Tech Solutions'}
   twitter: {
-    handle: '@ziontech';
-    site: '@ziontech',
+    handle: '@ziontech';}
+    site: '@ziontech',}
     card_type: 'summary_large_image'}
   additionalMetaTags: [;
-{ name: 'viewport', content: 'width = device - width, initial - scale = 1' }
-    { name: 'theme - color', content: '#111827' }]}
+{ name: 'viewport',}
+  content: 'width = device - width, initial - scale = 1' }
+    { name: 'theme - color',}
+  content: '#111827' }]}
 ;
 export default config;
 ;
 
-export default config
-
+export default config;

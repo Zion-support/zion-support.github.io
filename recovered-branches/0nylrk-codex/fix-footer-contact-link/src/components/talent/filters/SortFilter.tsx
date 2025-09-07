@@ -2,51 +2,51 @@ import {
   Select,
   SelectContent,
   SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { SortFilterProps } from "@/types/filters";
+  SelectTrigger,}
+  SelectValue,}
+} from \"@/components/ui/select\";
+import { SortFilterProps } from \"@/types/filters\";
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
-    <div className="mb-6">
-      <label className="text-sm font-medium text-zion-slate-light mb-2 block">
-        Sort by
-      </label>
-      <Select value={sortOption} onValueChange={setSortOption}>
-        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
-          <SelectValue placeholder="Sort by" />
+    <div className=\"mb-6\" />
+      <label className=\"text-sm font-medium text-zion-slate-light mb-2 block\" />
+        Sort by}
+      </label>}
+      <Select value={sortOption} onValueChange={setSortOption} />
+        <SelectTrigger className=\"bg-zion-blue border-zion-blue-light text-white\" />
+          <SelectValue placeholder=\"Sort by\" />
         </SelectTrigger>
-        <SelectContent className="bg-zion-blue border-zion-blue-light text-white">
-          <SelectItem value="relevance">Relevance</SelectItem>
-          <SelectItem value="rating">Highest Rating</SelectItem>
-          <SelectItem value="experience">Most Experienced</SelectItem>
-          <SelectItem value="price-low">Price: Low to High</SelectItem>
-          <SelectItem value="price-high">Price: High to Low</SelectItem>
+        <SelectContent className=\"bg-zion-blue border-zion-blue-light text-white\" />
+          <SelectItem value=\"relevance\" />Relevance</SelectItem>
+          <SelectItem value=\"rating\" />Highest Rating</SelectItem>
+          <SelectItem value=\"experience\" />Most Experienced</SelectItem>
+          <SelectItem value=\"price-low\" />Price: Low to High</SelectItem>
+          <SelectItem value=\"price-high\" />Price: High to Low</SelectItem>
         </SelectContent>
       </Select>
     </div>
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import {;
   Select,;
   SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-import { SortFilterProps } from "@/types/filters";
+  SelectItem,;}
+  SelectTrigger,;}
+  SelectValue} from \"@/components/ui/select\",;
+import { SortFilterProps } from \"@/types/filters\";
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
   return (;
-    <div className="mb-6">;
-      <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
-        Sort by;
-      </label>;
-      <Select value={sortOption} onValueChange={setSortOption}>;
-        <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
-          <SelectValue placeholder="Sort by" />;
+    <div className=\"mb-6\" />;
+      <label className=\"text-sm font-medium text-zion-slate-light mb-2 block\" />;
+        Sort by;}
+      </label>;}
+      <Select value={sortOption} onValueChange={setSortOption} />;
+        <SelectTrigger className=\"bg-zion-blue border-zion-blue-light text-white\" />;
+          <SelectValue placeholder=\"Sort by\" />;
         </SelectTrigger>;
-        <SelectContent className="bg-zion-blue border-zion-blue-light text-white">;
-          <SelectItem value="relevance">Relevance</SelectItem>;
-          <SelectItem value="rating">Highest Rating</SelectItem>;
-          <SelectItem value="experience">Most Experienced</SelectItem>;  );
+        <SelectContent className=\"bg-zion-blue border-zion-blue-light text-white\" />;
+          <SelectItem value=\"relevance\" />Relevance</SelectItem>;
+          <SelectItem value=\"rating\" />Highest Rating</SelectItem>;
+          <SelectItem value=\"experience\" />Most Experienced</SelectItem>;  );
 }
 
 }
@@ -59,44 +59,44 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
 } from '@/components / ui / select';
 import { SortFilterProps  } from '@/types / filters';
 export /**
- * SortFilter - Function description
+ * SortFilter - Function description;
  */
 function SortFilter() {
   return (
-    <div className="mb-6">;
-      <label className="text - sm font - medium text - zion - slate - light mb-2 block">;
-        Sort by;
-      </label>;
-      <Select value={sort_option} onValueChange={setSortOption}>;
-        <SelectTrigger className="bg - zion - blue border - zion - blue - light text-white">;
-          <SelectValue placeholder="Sort by" />;
+    <div className=\"mb-6\" />;
+      <label className=\"text - sm font - medium text - zion - slate - light mb-2 block\" />;
+        Sort by;}
+      </label>;}
+      <Select value={sort_option} onValueChange={setSortOption} />;
+        <SelectTrigger className=\"bg - zion - blue border - zion - blue - light text-white\" />;
+          <SelectValue placeholder=\"Sort by\" />;
         </SelectTrigger>;
-        <SelectContent className="bg - zion - blue border - zion - blue - light text-white">;
-          <SelectItem value="relevance">Relevance</SelectItem>;
-          <SelectItem value="rating">Highest Rating</SelectItem>;
-          <SelectItem value="experience">Most Experienced</SelectItem>;
-          <SelectItem value="price - low">Price: Low to High</SelectItem>;
-          <SelectItem value="price - high">Price: High to Low</SelectItem>;
+        <SelectContent className=\"bg - zion - blue border - zion - blue - light text-white\" />;
+          <SelectItem value=\"relevance\" />Relevance</SelectItem>;
+          <SelectItem value=\"rating\" />Highest Rating</SelectItem>;
+          <SelectItem value=\"experience\" />Most Experienced</SelectItem>;
+          <SelectItem value=\"price - low\" />Price: Low to High</SelectItem>;
+          <SelectItem value=\"price - high\" />Price: High to Low</SelectItem>;
         </SelectContent>;
       </Select>;
     </div>);
 }
   )
 
-          <SelectItem value="price-low">Price:Low to High</SelectItem>;
-          <SelectItem value="price-high">Price:High to Low</SelectItem>;
+          <SelectItem value=\"price-low\" />Price:Low to High</SelectItem>;
+          <SelectItem value=\"price-high\" />Price:High to Low</SelectItem>;
         </SelectContent>;
       </Select>;
     </div>;
   );}
- export function SortFilter ({
-  sortOption, setSortOption 
+ export function SortFilter ({}
+  sortOption, setSortOption }
 }: SortFilterProps) {
-  return (<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light mb-2 block" > Sort by </label> <Select value= {
-  sortOption 
-}onValueChange= {
-  setSortOption 
-}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Sort by" /> bg-zion-blue border-zion-blue-light text-white"> <SelectItem value=" relevance">Relevance</SelectItem> <SelectItem value=" rating">Highest Rating</SelectItem> <SelectItem value=" experience">Most Experienced</SelectItem> <SelectItem value=" price-low">Price: Low to High</SelectItem> <SelectItem value=" price-high" >Price: High to Low</SelectItem> </SelectContent> </Select> </div>) 
+  return (<div className=\"mb-6\"  /> <label className=\"text-sm font-medium text-zion-slate-light mb-2 block\"  /> Sort by </label> <Select value= {}
+  sortOption }
+}onValueChange= {}
+  setSortOption }
+} /> <SelectTrigger className=\"bg-zion-blue border-zion-blue-light text-white\"  /> <SelectValue placeholder=\"Sort by\" /> bg-zion-blue border-zion-blue-light text-white\"> <SelectItem value=\" relevance\" />Relevance</SelectItem> <SelectItem value=\" rating\" />Highest Rating</SelectItem> <SelectItem value=\" experience\" />Most Experienced</SelectItem> <SelectItem value=\" price-low\" />Price: Low to High</SelectItem> <SelectItem value=\" price-high\"  />Price: High to Low</SelectItem> </SelectContent> </Select> </div>) 
 }
 );
 }
@@ -108,4 +108,4 @@ function SortFilter() {
 =======
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

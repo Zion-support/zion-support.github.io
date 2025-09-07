@@ -26,15 +26,15 @@ export type DisputeAttachment = {id: string;
   createdAt: Date;
   updatedAt: Date;
   resolution?: string;
-  resolvedAt?: Date;
-
+  resolvedAt?: Date;}
+}
 }
 
 export interface DisputeResolution  {disputeId: string;
   resolution: string;
   resolvedBy: string;
-  resolvedAt: Date;
-  refundAmount?: number;
+  resolvedAt: Date;}
+  refundAmount?: number;}
 }role: 'admin' | 'client' | 'talent';
 }
 }

@@ -4,4 +4,4 @@ import React, { useState, useEffect } from 'react' import { Link } from 'react-r
 const [query, setQuery] = useState(');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const searchSuggestions = generateSearchSuggestions()';"'";
+  const searchSuggestions = generateSearchSuggestions()';\"'\";

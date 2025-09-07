@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 function useDebounce<T>(value: T, delay: number): T {
@@ -17,3 +18,8 @@ function useDebounce<T>(value: T, delay: number): T {
 }
 
 export default useDebounce;
+=======
+import { useState, useEffect } from 'react'  export function useDebounce<T />(value: T, delay: number): T { const [debouncedValue, setDebouncedValue] = useState<>(value)  useEffect(() => {}
+ const handler = setTimeout(() => { setDebouncedValue(value)}, delay)  return () => { clearTimeout(handler)}}, [value, delay]) ;
+  return debouncedValue}\"\";
+>>>>>>> cursor/automate-test-improve-and-merge-code-064d

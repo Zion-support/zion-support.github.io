@@ -1,34 +1,34 @@
 export default function ServicesPage() {import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
 
-export default function ServicesPage() {return (<EnhancedLayout>;
-      <h1 className='text-2xl font-semibold'>Services</h1>;
-      <div className='mt-6 grid md:grid-cols-3 gap-6'>;
+export default function ServicesPage() {return (<EnhancedLayout />;
+      <h1 className='text-2xl font-semibold' />Services</h1>;
+      <div className='mt-6 grid md:grid-cols-3 gap-6' />;
         <section;
           id='mvp';
-          className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
+          className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950' />;
           <Rocket className='h-6 w-6 text-indigo-500' />;
-          <div className='mt-3 text-lg font-semibold'>MVP Acceleration</div>;
-          <p className='mt-1 text-sm opacity-80'>;
+          <div className='mt-3 text-lg font-semibold' />MVP Acceleration</div>;
+          <p className='mt-1 text-sm opacity-80' />;
             Dedicated squads to launch your MVP in weeks with tight feedback;
             cycles.;
           </p>;
         <section;
           id='security';
-          className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
+          className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950' />;
           <ShieldCheck className='h-6 w-6 text-indigo-500' />;
-          <div className='mt-3 text-lg font-semibold'>;
+          <div className='mt-3 text-lg font-semibold' />;
             Security & Compliance;
           </div>;
-          <p className='mt-1 text-sm opacity-80'>;
+          <p className='mt-1 text-sm opacity-80' />;
             Secure architecture, audits, and compliance workflows (SOC2-ready).;
           </p>;
         </section>;
         <section;
           id='ai';
-          className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'>;
+          className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950' />;
           <BadgeCheck className='h-6 w-6 text-indigo-500' />;
-          <div className='mt-3 text-lg font-semibold'>AI Integrations</div>;
-          <p className='mt-1 text-sm opacity-80'>;
+          <div className='mt-3 text-lg font-semibold' />AI Integrations</div>;
+          <p className='mt-1 text-sm opacity-80' />;
             Copilots, agents, vector search, and automation tailored to your;
             product.;
           </p>        </section>;
@@ -39,51 +39,51 @@ export default function ServicesPage() {return (<EnhancedLayout>;
 
 export default function ServicesPage() {
   return (
-    <EnhancedLayout>
+    <EnhancedLayout />
 
-<h1 className='text-2xl font-semibold'>Services</h1>
-      <div className='mt-6 grid md:grid-cols-3 gap-6'>
-        <section
-          id='mvp'
+<h1 className='text-2xl font-semibold' />Services</h1>
+      <div className='mt-6 grid md:grid-cols-3 gap-6' />
+        <section;
+id='mvp'
           className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'
-        >
+         />
           <Rocket className='h-6 w-6 text-indigo-500' />
-          <div className='mt-3 text-lg font-semibold'>MVP Acceleration</div>
-          <p className='mt-1 text-sm opacity-80'>
-            Dedicated squads to launch your MVP in weeks with tight feedback
-            cycles.
+          <div className='mt-3 text-lg font-semibold' />MVP Acceleration</div>
+          <p className='mt-1 text-sm opacity-80' />
+            Dedicated squads to launch your MVP in weeks with tight feedback;
+cycles.
           </p>
-        <section
-          id='security'
+        <section;
+id='security'
           className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'
-        >
+         />
           <ShieldCheck className='h-6 w-6 text-indigo-500' />
-          <div className='mt-3 text-lg font-semibold'>
-            Security & Compliance
+          <div className='mt-3 text-lg font-semibold' />
+            Security & Compliance;
           </div>
-          <p className='mt-1 text-sm opacity-80'>
+          <p className='mt-1 text-sm opacity-80' />
             Secure architecture, audits, and compliance workflows (SOC2-ready).
           </p>
         </section>
-        <section
-          id='ai'
+        <section;
+id='ai'
           className='rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950'
-        >
+         />
           <BadgeCheck className='h-6 w-6 text-indigo-500' />
-          <div className='mt-3 text-lg font-semibold'>AI Integrations</div>
-          <p className='mt-1 text-sm opacity-80'>
-            Copilots, agents, vector search, and automation tailored to your
-            product.
+          <div className='mt-3 text-lg font-semibold' />AI Integrations</div>
+          <p className='mt-1 text-sm opacity-80' />
+            Copilots, agents, vector search, and automation tailored to your;
+product.
           </p>
         </section>
       </div>
     </EnhancedLayout>
-
-
-}        <section id="ai" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950">;
-          <BadgeCheck className="h-6 w-6 text-indigo-500" />;
-          <div className="mt-3 text-lg font-semibold">AI Integrations</div>;
-          <p className="mt-1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>;
+}
+}
+}        <section id=\"ai\" className=\"rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950\" />;
+          <BadgeCheck className=\"h-6 w-6 text-indigo-500\" />;
+          <div className=\"mt-3 text-lg font-semibold\" />AI Integrations</div>;
+          <p className=\"mt-1 text-sm opacity-80\" />Copilots, agents, vector search, and automation tailored to your product.</p>;
       </div>;
     </EnhancedLayout>;
 

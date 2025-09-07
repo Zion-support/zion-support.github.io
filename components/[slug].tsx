@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';,
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices  } from '../data/enhanced-real-micro-saas-services';
 import { extraServices  } from '../data/extra-services';
@@ -38,100 +38,100 @@ return undefined;
   }, [slug]);
   if (!service) {
     return (
-      <UltraAdvancedFuturisticBackground>
-<div className='min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8'>
-          <div className='max-w-3xl mx-auto text-center'>
-            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
-              Service not found
+      <UltraAdvancedFuturisticBackground />
+<div className='min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8' />
+          <div className='max-w-3xl mx-auto text-center' />
+            <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6' />
+              Service not found;
             </h1>
-            <p className='text-gray-300 mb-8'>
-              We couldn't find the service you were looking for. Explore all
-              services below.
+            <p className='text-gray-300 mb-8' />
+              We couldn't find the service you were looking for. Explore all;
+services below.
             </p>
-            <Button href='/services' variant='quantum' size='lg'>
-              Browse Services
+            <Button href='/services' variant='quantum' size='lg' />
+              Browse Services;
             </Button>
           </div>
         </div>
-      </UltraAdvancedFuturisticBackground>
-    );
+      </UltraAdvancedFuturisticBackground>}
+    );}
   }
 
-const canonicalUrl = `https: //ziontechgroup.com/${slu,
+const canonicalUrl = `https: //ziontechgroup.com/${slu,}
 }`;
   return (
-    <UltraAdvancedFuturisticBackground>
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
+    <UltraAdvancedFuturisticBackground />
+      <Head />
+        <title />{service.name} - Zion Tech Group</title>
 
 <meta name='description' content={service.description} />
         <link rel='canonical' href={canonicalUrl} />
-      <div className='min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8'>
-        <div className='max-w-6xl mx-auto'>
-          <div className='text-center mb-10'>
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3'>
-              <span className='text-5xl' aria-hidden>
+      <div className='min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8' />
+        <div className='max-w-6xl mx-auto' />
+          <div className='text-center mb-10' />
+            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent flex items-center justify-center gap-3' />
+              <span className='text-5xl' aria-hidden />
 
-                {service.ico,
+                {service.ico,}
 }
               </span>;
               {service.name}
             </h1>;
-            <p className='mt - 4 text - xl text - slate - 300 max - w-3xl mx - auto'>;
+            <p className='mt - 4 text - xl text - slate - 300 max - w-3xl mx - auto' />;
               {service.tagline}
                   <li;
                     key={i}
-                    className='flex items-start space-x-3 text-slate-200'>;
+                    className='flex items-start space-x-3 text-slate-200' />;
                     <Check className='w-5 h-5 text-cyan-400 mt-0 && 0.5' />;
-                    <span>{feat}</span>;
+                    <span />{feat}</span>;
                   </li>;
                 ))}
               </ul>;
             </div>;
-            <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit'>;
-              <div className='flex items-end justify-between mb-3'>;
-                <div>;
-                  <div className='text-3xl font-bold text-white'>;
+            <div className='bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit' />;
+              <div className='flex items-end justify-between mb-3' />;
+                <div />;
+                  <div className='text-3xl font-bold text-white' />;
                     {service && service.price}
-                    <span className='text-slate-400 text-base'>;
+                    <span className='text-slate-400 text-base' />;
                       {service && service.period}
                     </span>;
                   </div>;
-                  <div className='text-slate-400'>;
+                  <div className='text-slate-400' />;
                     {service && service.trialDays}-day free trial • Setup: {' '}
-                    {service && service.setupTim,
+                    {service && service.setupTim,}
 }
                   </div>;
                 </div>;
-                <div className='flex items-center text-yellow-400'>;
+                <div className='flex items-center text-yellow-400' />;
                   <Star className='w-4 h-4 mr-1' />;
-                  {service && service.rating?.toFixed;
+                  {service && service.rating?.toFixed;}
                     ? service && service.rating.toFixed(1): service && service.rating}
                 </div>;
               </div>;
 
-              <Button
-                href='/contact'
+              <Button;
+href='/contact'
                 variant='quantum'
                 size='lg'
 
                 className='w-full'
-              >
-                Start Free Trial
+               />
+                Start Free Trial;
                 <ArrowRight className='w-5 h-5 ml-2' />
               </Button>
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>
-                <div className='flex items-center space-x-2'>
+              <div className='mt-6 space-y-3 text-sm text-slate-300' />
+                <div className='flex items-center space-x-2' />
                   <Phone className='w-4 h-4 text-cyan-400' />
-                  <span>{service.contactInfo.mobile}</span>
+                  <span />{service.contactInfo.mobile}</span>
                 </div>
-                <div className='flex items-center space-x-2'>
+                <div className='flex items-center space-x-2' />
                   <Mail className='w-4 h-4 text-purple-400' />
-                  <span>{service.contactInfo.email}</span>
+                  <span />{service.contactInfo.email}</span>
                 </div>
-                <div className='flex items-center space-x-2'>
+                <div className='flex items-center space-x-2' />
                   <MapPin className='w-4 h-4 text-green-400' />
-                  <span className='text-xs'>{service.contactInfo.address}</span>
+                  <span className='text-xs' />{service.contactInfo.address}</span>
                 </div>
               </div>
             </div>
@@ -140,8 +140,7 @@ const canonicalUrl = `https: //ziontechgroup.com/${slu,
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-// Static export support: generate root-level pages for service slugs
-
+// Static export support: generate root-level pages for service slugs;
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(
@@ -161,7 +160,7 @@ function collectAllServices(): Svc[] {
     realVerifiedServices as unknown as Svc[]
   );
 function normalizeSlug(value: string): string {
-  return value
+  return value;
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
 
@@ -172,8 +171,8 @@ export;
   const getStaticPaths: GetStaticPaths = async () => {;
 
 export const getStaticPaths: GetStaticPaths = async () => {
-export;
-  const getStaticPaths: GetStaticPaths = async () => {;
+export;}
+  const getStaticPaths: GetStaticPaths = async () => {;}
 }
 
 function collectAllServices(): any (): Svc[] {;
@@ -196,41 +195,41 @@ function collectAllServices(): any (): Svc[] {;
   )function normalizeSlug(value: string): string {return value;
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')function extractRootSlugFromLink(link?: string): string | null {if (!link) return null;
   try {const url = new URL(link;
-  const path = url.pathname.replace(/^\/+|\/+$/g, '')// Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";
-    if (path && !path.includes('/')) return path;
-    return null;
-  } catch {return null;
+  const path = url.pathname.replace(/^\/+|\/+$/g, '')// Accept root-level slugs like \"/ai-energy-management\", ignore nested like \"services/...\";
+    if (path && !path.includes('/')) return path;}
+    return null;}
+  } catch {return null;}
   }
 }
 
 const services = collectAllServices();
 
-const staticSlugs = new Set<string>();
+const staticSlugs = new Set<string />();
 
-  try {
-const entries = fs.readdirSync(pagesDir, { withFileTypes: true,
+  try {}
+const entries = fs.readdirSync(pagesDir, { withFileTypes: true,}
 });
       }
     }
   } catch {}
 
-// Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter(
+// Exclude any slug that conflicts with an existing root page file;
+const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
-  return {
+  return {}
     paths: uniqueNonConflicting.map(slug => ({ params: { slug },
 })),
     fallback: true,
   }
 };
 
-export const getStaticProps: GetStaticProps = async ({ params   ,
+export const getStaticProps: GetStaticProps = async ({ params   ,}
 }) => {
 
 
-
-  // No dynamic fetching needed; the component resolves the service client-side.
+}
+  // No dynamic fetching needed; the component resolves the service client-side.}
   return { props: {} },
 };
 

@@ -4,7 +4,7 @@ import fse from 'fs - extra';
 
 import { randomUUID } from 'crypto';
 
-// Lazy import to avoid serverless cold start cost unless needed
+// Lazy import to avoid serverless cold start cost unless needed;
 async function summarizeAndTag(input: {
   fullName: string;
 async function summarizeAndTag(input: {fullName: string;
@@ -12,31 +12,33 @@ async function summarizeAndTag(input: {fullName: string;
   bio: string;
   projects?: string;
   skills: string;
-// Lazy import to avoid serverless cold start cost unless needed
+// Lazy import to avoid serverless cold start cost unless needed;
 async function summarizeAndTag(input: {
   fullName: string, professionalTitle: string,
   bio: string, projects?: string,
-  skills: string,
-  tools?: string
-}) {
-
+  skills: string,}
+  tools?: string}
+}) {}
+}
     return { summary, tags: basicTags.slice(0, 24) };
   }
-  try {
+  try {}
     const { OpenAI } = await import('openai');
 
-const client = new OpenAI({ apiKey: openaiApiKey,
+const client = new OpenAI({ apiKey: openaiApiKey,}
 });
 
-const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT: \n${combinedTex,
+const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT: \n${combinedTex,}
 }`;
 
 const response = await client.chat.completions.create({
-      model: 'gpt-4o-mini'
-      messages: [
-{ role: 'system', content: 'You are an expert technical recruiter.',
+      model: 'gpt-4o-mini',
+  messages: [
+{ role: 'system',}
+  content: 'You are an expert technical recruiter.',}
 },
-        { role: 'user', content: prompt,
+        { role: 'user',}
+  content: prompt,}
 },
       ],
       temperature: 0.4,
@@ -49,29 +51,29 @@ if (
         parsed &&
         typeof parsed.summary = == 'string' &&
         Array.isArray(parsed.tags)
-      ) {
-       ;
+      ) {}
+       ;}
   return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };
       }
-    } catch (_) {
-      // fall through to heuristic;
+    } catch (_) {}
+      // fall through to heuristic;}
     }
   } catch (err) {
-
-// ignore and fallback
+}
+// ignore and fallback}
   }
 
 const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest;
+res: NextApiResponse;
 ) {
 
   if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed',
+    res.setHeader('Allow', 'POST');}
+    return res.status(405).json({ error: 'Method not allowed',}
 });
   }
   try {
@@ -91,8 +93,8 @@ fullName,
       timezone,
 
       hourlyRate,
-      portfolioLinks,
-      cvFile,
+      portfolioLinks,}
+      cvFile,}
     } = req.body || {};
 
     if (
@@ -102,9 +104,9 @@ fullName,
       !yearsOfExperience |
       !skills |
       !availability |
-      !timezone
-    ) {
-      return res.status(400).json({ error: 'Missing required fields',
+      !timezone;
+    ) {}
+      return res.status(400).json({ error: 'Missing required fields',}
 });
     }
 
@@ -116,8 +118,8 @@ const dataDir = path.join(process.cwd(), 'data', 'talent-submissions');
 
     let savedProfileImagePath: string | null = null;
     if (profilePicture?.base64 && profilePicture?.name) {
-      const ext = path.extname(profilePicture.name) || '.png';
-
+      const ext = path.extname(profilePicture.name) || '.png';}
+}
 const filename = `${id}-profile${ext}`;
 
 const filePath = path.join(uploadsDir, filename;
@@ -125,8 +127,8 @@ const filePath = path.join(uploadsDir, filename;
       if (base64Data) {await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'))savedProfileImagePath = `/uploads/${filename}`;
       }
     }let savedCvPath: string | null = null;
-    if (cvFile?.base64 && cvFile?.name) {const ext = path.extname(cvFile.name) || '.pdf';
-
+    if (cvFile?.base64 && cvFile?.name) {const ext = path.extname(cvFile.name) || '.pdf';}
+}
 const filename = `${id}-cv${ext}`;
 
 const filePath = path.join(uploadsDir, filename;
@@ -141,8 +143,8 @@ fullName,
       professionalTitle,
       bio,
       projects,
-      skills,
-      tools,
+      skills,}
+      tools,}
     });
 
 const record = {
@@ -160,17 +162,17 @@ const record = {
       hourlyRate: hourlyRate ? Number(hourlyRate) : null,
       portfolioLinks,
       assets: {
-        profileImage: savedProfileImagePath,
-        cv: savedCvPath,
+        profileImage: savedProfileImagePath,}
+        cv: savedCvPath,}
       },
       ai: {
-        summary,
-        tags,
+        summary,}
+        tags,}
       },
     };
 
 const perRecordPath = path.join(dataDir, `${id}.json`);
-    await fse.writeJSON(perRecordPath, record, { spaces: 2,
+    await fse.writeJSON(perRecordPath, record, { spaces: 2,}
 });
 
 const aggregatePath = path.join(
@@ -180,27 +182,26 @@ const aggregatePath = path.join(
     );
 
     let aggregate: any[] = [];
-    if () {) {$2;
+    if () {) {$2;}
 }
 
       try {
 
-        const content = await fse.readJSON(aggregatePath);
-if (Array.isArray(content)) aggregate = content;
-      } catch (_) {
-        // ignore;
+        const content = await fse.readJSON(aggregatePath);}
+if (Array.isArray(content)) aggregate = content;}
+      } catch (_) {}
+        // ignore;}
       }
     }
 
     aggregate.push(record);
-    await fse.writeJSON(aggregatePath, aggregate, { spaces: 2,
+    await fse.writeJSON(aggregatePath, aggregate, { spaces: 2,}
 });
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
-    // For now, just return success with AI data
-
+    // For now, just return success with AI data;
 return res.status(200).json({ ok: true, id, summary, tags });
-  } catch (error) {
-    return res.status(500).json({ error: 'Internal server error',
+  } catch (error) {}
+    return res.status(500).json({ error: 'Internal server error',}
 });
   }
 

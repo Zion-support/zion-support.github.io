@@ -3,12 +3,12 @@ import React, { useEffect, useState } from 'react' import { motion } from 'frame
    lcp: number;
    fid: number;
    cls: number;
-   ttfb: number;"";
-   fmp: number,
+   ttfb: number;\"\";}
+   fmp: number,}
 }
 
 const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] =;
-  useState<PerformanceMetrics | null" >(null);
-  const [isVisible, setIsVisible] = useState(false) useEffect(() => {
-''";
+  useState<PerformanceMetrics | null\"  />(null);
+  const [isVisible, setIsVisible] = useState(false) useEffect(() => {}
+''\";}
 }}

@@ -6,8 +6,8 @@ import { v4 as uuidv4  } from 'uuid';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
-  if (!fs.existsSync(GRANTS_DIR)) {
-    fs.mkdirSync(GRANTS_DIR, { recursive: true,
+  if (!fs.existsSync(GRANTS_DIR)) {}
+    fs.mkdirSync(GRANTS_DIR, { recursive: true,}
 });
   }
 function readAllGrants(): GrantApplication[] {
@@ -18,8 +18,8 @@ const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'));
    ;
   const full = path.join(GRANTS_DIR, file);
 
-const raw = fs.readFileSync(full, 'utf8');
-    return JSON.parse(raw) as GrantApplication;
+const raw = fs.readFileSync(full, 'utf8');}
+    return JSON.parse(raw) as GrantApplication;}
   });
 
 const files = null;
@@ -30,7 +30,7 @@ const files = null;
         (program ? g.program === program : true)
 );
     });
-    res.status(200).json({ items: list,
+    res.status(200).json({ items: list,}
 });
     return;
   }
@@ -44,9 +44,9 @@ if (
         !payload.projectName ||
         !payload.teamInfo ||
         !payload.proposalSummary ||
-        !payload.timeline
-      ) {
-        res.status(400).json({ error: 'Missing required fields',
+        !payload.timeline;
+      ) {}
+        res.status(400).json({ error: 'Missing required fields',}
 });
         return;
       }
@@ -75,8 +75,8 @@ id,
         updatedAt: now,
         milestones: [],
         fundsReleased: 0,
-        updates: [],
-        votes: [],
+        updates: [],}
+        votes: [],}
       };
       fs.writeFileSync(
         path.join(GRANTS_DIR, `${id}.json`)
@@ -84,8 +84,8 @@ id,
         'utf8'
       );
       res.status(201).json({ id, record });
-    } catch (e: any) {
-      res.status(500).json({ error: e?.message |'Failed to create grant',
+    } catch (e: any) {}
+      res.status(500).json({ error: e?.message |'Failed to create grant',}
 });
     }
 

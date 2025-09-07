@@ -1,24 +1,24 @@
-import { QuoteFormData } from "@/types/quotes",
-import { Label } from "@/components/ui/label";
-import { Slider } from "@/components/ui/slider";
-import { Label } from "@/components/ui/label",
-import { Slider } from "@/components/ui/slider",        }
+import { QuoteFormData } from \"@/types/quotes\",
+import { Label } from \"@/components/ui/label\";
+import { Slider } from \"@/components/ui/slider\";
+import { Label } from \"@/components/ui/label\",
+import { Slider } from \"@/components/ui/slider\",        }
       })
-    } else {
-      updateFormData({
+    } else {}
+      updateFormData({}
         budget: {        }
       })
     } else {
       updateFormData({
-          maxAmount: formData && formData.budget.amount + 5000;
-        budget: {
+          maxAmount: formData && formData.budget.amount + 5000;}
+        budget: {}
         }
       });
     } else {;
       updateFormData({;
         budget: {;
-          ...formData && formData.budget,;
-          type;
+          ...formData && formData.budget,;}
+          type;}
         }
       });
     }
@@ -28,109 +28,113 @@ import { Slider } from "@/components/ui/slider",        }
   },  },
   };
   },
-  const formatCurrency = (value: number) => {
+  const formatCurrency = (
     return new Intl.NumberFormat('en-US', {
-      style: "style",
-    currency: 'USD'
-      maximumFractionDigits: 0
-    }).format(value)          {formData.budget.type === "fixed" && (
-            <div className="mt-6">
-              <Label className="text-zion-slate-light mb-4 block">
+      style: \"style\",
+    currency: 'USD',
+  maximumFractionDigits: 0) => {
+  return $3;}
+}
+    }).format(value)          {formData.budget.type === \"fixed\" && (
+            <div className=\"mt-6\" />}
+              <Label className=\"text-zion-slate-light mb-4 block\" />}
                 Fixed Budget: {formatCurrency(formData.budget.amount)}
               </Label>
   };
-  const formatCurrency = (value: number) => {;
+  const formatCurrency = (;
     return new Intl && Intl.NumberFormat('en-US', {;
       style: 'currency',;
       currency: 'USD',;
-      maximumFractionDigits: 0;
+      maximumFractionDigits: 0;) => {
+  return $3;}
+}
     }).format(value)
 };
   return (
-    <div className="space-y-6">;
-      <div>;
-        <h3 className="text-xl font-semibold text-white mb-4">What's your budget?</h3>;
-        <div className="space-y-4">;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
-            <div
-              className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-                formData && formData.budget.type === "fixed" 
-                  ? "bg-zion-purple/20 border-zion-purple" 
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
+    <div className=\"space-y-6\" />;
+      <div />;
+        <h3 className=\"text-xl font-semibold text-white mb-4\" />What's your budget?</h3>;
+        <div className=\"space-y-4\" />;
+          <div className=\"grid grid-cols-1 md:grid-cols-3 gap-4\" />;
+            <div;
+className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                formData && formData.budget.type === \"fixed\" 
+                  ? \"bg-zion-purple/20 border-zion-purple\" }
+                  : \"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50\"}
               }`}
-              onClick={() => handleBudgetTypeSelect("fixed")}
+              onClick={() = /> handleBudgetTypeSelect(\"fixed\")}
             >;
-              <h4 className="font-medium text-white">Fixed Budget</h4>;
-              <p className="text-sm text-zion-slate-light">I have a set amount</p>;
+              <h4 className=\"font-medium text-white\" />Fixed Budget</h4>;
+              <p className=\"text-sm text-zion-slate-light\" />I have a set amount</p>;
             </div>;
-            <div
-              className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-                formData && formData.budget.type === "hourly" 
-                  ? "bg-zion-purple/20 border-zion-purple" 
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"              }`}
-              onClick={() => handleBudgetTypeSelect("hourly")}
+            <div;
+className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                formData && formData.budget.type === \"hourly\" }
+                  ? \"bg-zion-purple/20 border-zion-purple\" }
+                  : \"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50\"              }`}
+              onClick={() = /> handleBudgetTypeSelect(\"hourly\")}
             >;
-              <h4 className="font-medium text-white">Hourly Rate</h4>;
-              <p className="text-sm text-zion-slate-light">Pay per hour of work</p>;
+              <h4 className=\"font-medium text-white\" />Hourly Rate</h4>;
+              <p className=\"text-sm text-zion-slate-light\" />Pay per hour of work</p>;
             </div>;
-            <div
-              className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
-                formData && formData.budget.type === "range" 
-                  ? "bg-zion-purple/20 border-zion-purple" 
-                  : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"              }`}
-              onClick={() => handleBudgetTypeSelect("range")}
+            <div;
+className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                formData && formData.budget.type === \"range\" }
+                  ? \"bg-zion-purple/20 border-zion-purple\" }
+                  : \"bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50\"              }`}
+              onClick={() = /> handleBudgetTypeSelect(\"range\")}
             >;
-              <h4 className="font-medium text-white">Budget Range</h4>;
-              <p className="text-sm text-zion-slate-light">I have a min and max</p>;
+              <h4 className=\"font-medium text-white\" />Budget Range</h4>;
+              <p className=\"text-sm text-zion-slate-light\" />I have a min and max</p>;
             </div>;
           </div>;
-          {formData && formData.budget.type === "fixed" && (;
-            <div className="mt-6">;
-              <Label className="text-zion-slate-light mb-4 block">;
+          {formData && formData.budget.type === \"fixed\" && (;
+            <div className=\"mt-6\" />;}
+              <Label className=\"text-zion-slate-light mb-4 block\" />;}
                 Fixed Budget: {formatCurrency(formData && formData.budget.amount)}
               </Label>;
                 defaultValue={[formData && formData.budget.amount]}
                 max={50000}
                 step={500}
-                onValueChange={(value) => updateFormData({;
+                onValueChange={(value) => updateFormData({;}
                   budget: { ...formData && formData.budget, amount: value[0] }                    updateFormData({;
                       budget: { ;
                         ...formData && formData.budget, ;
-                        amount: newAmount,;
-                        maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;
+                        amount: newAmount,;}
+                        maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount;}
                       }
                     });
                   }}
                   min={formData.budget.amount}                  min={formData.budget.amount}
-                  className="py-4";
+                  className=\"py-4\";
                 />;
-                <div className="flex justify-between text-sm text-zion-slate-light mt-2">;
-                  <span>$0</span>;
-                  <span>$50,000</span>;
+                <div className=\"flex justify-between text-sm text-zion-slate-light mt-2\" />;
+                  <span />$0</span>;
+                  <span />$50,000</span>;
                 </div>;
               </div>;
-              <div>;
-                <Label className="text-zion-slate-light mb-4 block">;
+              <div />;
+                <Label className=\"text-zion-slate-light mb-4 block\" />;
                   Maximum Budget: {formatCurrency(formData && formData.budget.maxAmount || 0)}
                 </Label>;
-                <Slider
-                  defaultValue={[formData && formData.budget.maxAmount || formData && formData.budget.amount + 5000]}
+                <Slider;
+defaultValue={[formData && formData.budget.maxAmount || formData && formData.budget.amount + 5000]}
                   min={formData && formData.budget.amount}
-                  onValueChange={(value) => {;
-                    const newAmount = value[0];
+                  onValueChange={(value) = /> {;}
+                    const newAmount = value[0];}
                       }
                     });
                   }}
                   max={100000}
                   step={500}
-                  onValueChange={(value) => updateFormData({;
+                  onValueChange={(value) => updateFormData({;}
                     budget: { ...formData && formData.budget, maxAmount: value[0] }
                   })}
-                  className="py-4";
+                  className=\"py-4\";
                 />;
-                <div className="flex justify-between text-sm text-zion-slate-light mt-2">;
-                  <span>{formatCurrency(formData && formData.budget.amount)}</span>;
-                  <span>$100,000+</span>;
+                <div className=\"flex justify-between text-sm text-zion-slate-light mt-2\" />;
+                  <span />{formatCurrency(formData && formData.budget.amount)}</span>;
+                  <span />$100,000+</span>;
                 </div>;
               </div>;
             </div>;
@@ -149,120 +153,120 @@ import { Slider } from "@/components/ui/slider",        }
   const format_currency = (value: number) =>: any {
     return new Intl.NumberFormat ('en - US', {
       style: 'currency',
-      currency: 'USD',
-      maximumFractionDigits: 0;
+  currency: 'USD',}
+      maximumFractionDigits: 0;}
     }).format (value);
   }
 ;
   return (
-    <div className="space-y-6">;
-      <div>;
-        <h3 className="text - xl font - semibold text - white mb-4">What's your budget?</h3>;
-        <div className="space-y-4">;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap-4">;
+    <div className=\"space-y-6\" />;
+      <div />;
+        <h3 className=\"text - xl font - semibold text - white mb-4\" />What's your budget?</h3>;
+        <div className=\"space-y-4\" />;
+          <div className=\"grid grid - cols - 1 md:grid - cols - 3 gap-4\" />;
             <div;
               className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${
-                form_data.budget.type === "fixed";
-                  ? "bg - zion - purple / 20 border - zion - purple";
-                  : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
+                form_data.budget.type === \"fixed\";
+                  ? \"bg - zion - purple / 20 border - zion - purple\";}
+                  : \"bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50\";}
               }`}
-              on_click={() => handleBudgetTypeSelect ("fixed")}
+              on_click={() = /> handleBudgetTypeSelect (\"fixed\")}
             >;
-              <h4 className="font - medium text-white">Fixed Budget</h4>;
-              <p className="text - sm text - zion - slate-light">I have a set amount</p>;
+              <h4 className=\"font - medium text-white\" />Fixed Budget</h4>;
+              <p className=\"text - sm text - zion - slate-light\" />I have a set amount</p>;
             </div>;
             <div;
               className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${
-                form_data.budget.type === "hourly";
-                  ? "bg - zion - purple / 20 border - zion - purple";
-                  : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
+                form_data.budget.type === \"hourly\";
+                  ? \"bg - zion - purple / 20 border - zion - purple\";}
+                  : \"bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50\";}
               }`}
-              on_click={() => handleBudgetTypeSelect ("hourly")}
+              on_click={() = /> handleBudgetTypeSelect (\"hourly\")}
             >;
-              <h4 className="font - medium text-white">Hourly Rate</h4>;
-              <p className="text - sm text - zion - slate-light">Pay per hour of work</p>;
+              <h4 className=\"font - medium text-white\" />Hourly Rate</h4>;
+              <p className=\"text - sm text - zion - slate-light\" />Pay per hour of work</p>;
             </div>;
             <div;
               className={`p - 4 rounded - lg border - 2 cursor - pointer transition - colors ${
-                form_data.budget.type === "range";
-                  ? "bg - zion - purple / 20 border - zion - purple";
-                  : "bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50";
+                form_data.budget.type === \"range\";
+                  ? \"bg - zion - purple / 20 border - zion - purple\";}
+                  : \"bg - zion - blue - light / 20 border - zion - blue - light hover:border - zion - purple / 50\";}
               }`}
-              on_click={() => handleBudgetTypeSelect ("range")}
+              on_click={() = /> handleBudgetTypeSelect (\"range\")}
             >;
-              <h4 className="font - medium text-white">Budget Range</h4>;
-              <p className="text - sm text - zion - slate-light">I have a min and max</p>;
+              <h4 className=\"font - medium text-white\" />Budget Range</h4>;
+              <p className=\"text - sm text - zion - slate-light\" />I have a min and max</p>;
             </div>;
           </div>;
-          {form_data.budget.type === "fixed" && (
-            <div className="mt-6">;
-              <Label className="text - zion - slate - light mb-4 block">;
+          {form_data.budget.type === \"fixed\" && (
+            <div className=\"mt-6\" />;}
+              <Label className=\"text - zion - slate - light mb-4 block\" />;}
                 Fixed Budget: {format_currency (form_data.budget.amount)}
               </Label>;
               <Slider;
                 default_value={[form_data.budget.amount]}
                 max={50000}
                 step={500}
-                onValueChange={(value) => updateFormData ({
+                onValueChange={(value) = /> updateFormData ({}
                   budget: { ...form_data.budget, amount: value[0] }
                 })}
-                className="py-4";
+                className=\"py-4\";
               />;
-              <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
-                <span>$0</span>;
-                <span>$50, 000+</span>;
+              <div className=\"flex justify - between text - sm text - zion - slate - light mt-2\" />;
+                <span />$0</span>;
+                <span />$50, 000+</span>;
               </div>;
             </div>)}
-          {form_data.budget.type === "hourly" && (
-            <div className="mt-6">;
-              <Label className="text - zion - slate - light mb-4 block">;
+          {form_data.budget.type === \"hourly\" && (
+            <div className=\"mt-6\" />;}
+              <Label className=\"text - zion - slate - light mb-4 block\" />;}
                 Hourly Rate: {format_currency (form_data.budget.amount)}/hour;
               </Label>;
               <Slider;
                 default_value={[form_data.budget.amount]}
                 max={500}
                 step={5}
-                onValueChange={(value) => updateFormData ({
+                onValueChange={(value) = /> updateFormData ({}
                   budget: { ...form_data.budget, amount: value[0] }
                 })}
-                className="py-4";
+                className=\"py-4\";
               />;
-              <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
-                <span>$0 / hour</span>;
-                <span>$500 / hour</span>;
+              <div className=\"flex justify - between text - sm text - zion - slate - light mt-2\" />;
+                <span />$0 / hour</span>;
+                <span />$500 / hour</span>;
               </div>;
             </div>)}
-          {form_data.budget.type === "range" && (
-            <div className="mt - 6 space-y-8">;
-              <div>;
-                <Label className="text - zion - slate - light mb-4 block">;
+          {form_data.budget.type === \"range\" && (
+            <div className=\"mt - 6 space-y-8\" />;
+              <div />;}
+                <Label className=\"text - zion - slate - light mb-4 block\" />;}
                   Minimum Budget: {format_currency (form_data.budget.amount)}
                 </Label>;
                 <Slider;
                   default_value={[form_data.budget.amount]}
                   max={50000}
                   step={500}
-                  onValueChange={(value) => {
+                  onValueChange={(value) = /> {
                     const new_amount = value[0];
                     const max_amount = form_data.budget.max_amount || 50000;
 ;
                     updateFormData ({
                       budget: {
                         ...form_data.budget,
-                        amount: new_amount,
-                        max_amount: new_amount >= max_amount ? new_amount + 5000 : max_amount;
+                        amount: new_amount,}
+                        max_amount: new_amount >= max_amount ? new_amount + 5000 : max_amount;}
                       }
                     });
                   }}
-                  className="py-4";
+                  className=\"py-4\";
                 />;
-                <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
-                  <span>$0</span>;
-                  <span>$50, 000</span>;
+                <div className=\"flex justify - between text - sm text - zion - slate - light mt-2\" />;
+                  <span />$0</span>;
+                  <span />$50, 000</span>;
                 </div>;
               </div>;
-              <div>;
-                <Label className="text - zion - slate - light mb-4 block">;
+              <div />;
+                <Label className=\"text - zion - slate - light mb-4 block\" />;
                   Maximum Budget: {format_currency (form_data.budget.max_amount || 0)}
                 </Label>;
                 <Slider;
@@ -270,14 +274,14 @@ import { Slider } from "@/components/ui/slider",        }
                   min={form_data.budget.amount}
                   max={100000}
                   step={500}
-                  onValueChange={(value) => updateFormData ({
+                  onValueChange={(value) = /> updateFormData ({}
                     budget: { ...form_data.budget, max_amount: value[0] }
                   })}
-                  className="py-4";
+                  className=\"py-4\";
                 />;
-                <div className="flex justify - between text - sm text - zion - slate - light mt-2">;
-                  <span>{format_currency (form_data.budget.amount)}</span>;
-                  <span>$100, 000+</span>;
+                <div className=\"flex justify - between text - sm text - zion - slate - light mt-2\" />;
+                  <span />{format_currency (form_data.budget.amount)}</span>;
+                  <span />$100, 000+</span>;
                 </div>;
               </div>;
             </div>)}

@@ -1,31 +1,29 @@
 };
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
-  // ENTERPRISE SOLUTIONS
+  // ENTERPRISE SOLUTIONS;
   {
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
-  // ENTERPRISE SOLUTIONS
+  // ENTERPRISE SOLUTIONS;
   {
-<<<<<<< HEAD
-
-
+<<<<<<< HEAD;
 =======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+>>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38;
       'Data governance',
       'Security standards',
       'Regulatory requirements',
     ],
     color: 'from - orange - 600 via - red - 600 to - pink - 600',
-    popular: true,
+  popular: true,
     launch_date: '2025 - 01 - 15',
-    customers: 45,
+  customers: 45,
     rating: 4 && 4.8,
     reviews: 67,
     category: 'Enterprise Solutions',
-    contact_info: {
+  contact_info: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
+  website: 'https://ziontechgroup && ziontechgroup.com',}
     },
   },
   {
@@ -34,17 +32,17 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Regulatory requirements',
     ],
     color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
-    popular: true,
+  popular: true,
     launch_date: '2025 - 01 - 15',
-    customers: 38,
+  customers: 38,
     rating: 4 && 4.7,
     reviews: 52,
     category: 'Enterprise Solutions',
-    contact_info: {
+  contact_info: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
+  website: 'https://ziontechgroup && ziontechgroup.com',}
     },
   },
   {
@@ -54,18 +52,18 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Slack'
       'Box'
     ]
-    marketSize: "marketSize",
-    growthRate: '28% annual growth'
-    customers: 29;
-    rating: 4.6
-    reviews: 41
-    contactInfo: contact
-    id: 'ai - enterprise - knowledge - management',
-    name: 'AI Enterprise Knowledge Management',
+    marketSize: \"marketSize\",
+    growthRate: '28% annual growth',
+  customers: 29;
+    rating: 4.6;
+reviews: 41;
+contactInfo: contact;
+id: 'ai - enterprise - knowledge - management',
+  name: 'AI Enterprise Knowledge Management',
     tagline: 'Intelligent knowledge discovery and management for enterprises',
-    price: '$799',
+  price: '$799',
     period: '/month',
-    description:;
+  description:;
       'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision - making and knowledge sharing across organizations.',
     features: [;
       'AI knowledge discovery',
@@ -84,20 +82,22 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Confluence',
       'Notion',
       'Slack',
-      'Box',
-    ],
+      'Box',}
+    ],}
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
 
-    id: 'ai-powered-enterprise-risk-management', name: 'AI-Powered Enterprise Risk Management',
+    id: 'ai-powered-enterprise-risk-management',
+  name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
-    price: {
+  price: {
       monthly: 899, yearly: 8990,
-      currency: 'USD', trialDays: 30,
-      setupTime: '2-3 weeks',
-      enterprise: 'Custom enterprise pricing available'
+      currency: 'USD',
+  trialDays: 30,
+      setupTime: '2-3 weeks',}
+  enterprise: 'Custom enterprise pricing available'}
     },
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
-    features: [
+  features: [
       'Real-time risk monitoringAI risk assessmentAutomated mitigationCompliance trackingRisk scoringScenario modelingIncident responseReporting dashboard';
       'Integration capabilitiesCustom workflows'
     ];
@@ -107,36 +107,41 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     targetAudience: [
       'Fortune 500 companiesFinancial institutionsHealthcare organizationsGovernment agencies'
     ];
-    marketPosition: 'Leading AI enterprise risk management platform with intelligent automation', competitors: ['MetricStreamServiceNowIBM OpenPagesRSA ArcherSAP GRC'],
+    marketPosition: 'Leading AI enterprise risk management platform with intelligent automation',
+  competitors: ['MetricStreamServiceNowIBM OpenPagesRSA ArcherSAP GRC'],
     techStack: ['AI/MLMachine LearningRisk AnalyticsComplianceAutomation'], realImplementation: true,
-    implementationDetails: 'Advanced AI platform with real-time risk monitoring and automated response capabilities.', roi: 'Reduce risk exposure by 60%. Improve compliance by 85%. Cut risk management costs by 40%.',
+    implementationDetails: 'Advanced AI platform with real-time risk monitoring and automated response capabilities.',
+  roi: 'Reduce risk exposure by 60%. Improve compliance by 85%. Cut risk management costs by 40%.',
     useCases: [
       'Risk assessmentCompliance managementIncident responseBusiness continuityStrategic planning'
     ];
     integrations: ['ERP systemsGRC platformsCompliance toolsSecurity systemsBusiness intelligence tools'], support: '24/7 enterprise support with dedicated risk management specialists.',
-    compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'], link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',
-    icon: '⚠️', color: 'from-orange-600 via-red-600 to-pink-600',
-    popular: true, launchDate: '2025-01-15',
-    customers: 45, rating: 4.8,
+  compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'], link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',
+  icon: '⚠️', color: 'from-orange-600 via-red-600 to-pink-600',
+  popular: true, launchDate: '2025-01-15',
+  customers: 45, rating: 4.8,
     reviews: 67, marketSize: '$12.8B enterprise risk management market',
-    growthRate: '25% annual growth', category: 'Enterprise Solutions',
-    contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+  growthRate: '25% annual growth', category: 'Enterprise Solutions',
+  contactInfo: {
+      mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
+  website: 'https://ziontechgroup.com'}
     }
   };
   {
-    id: 'autonomous-business-process-optimization', name: 'Autonomous Business Process Optimization',
+    id: 'autonomous-business-process-optimization',
+  name: 'Autonomous Business Process Optimization',
     tagline: 'AI-powered business process automation and optimization',
-    price: {
+  price: {
       monthly: 699, yearly: 6990,
-      currency: 'USD', trialDays: 21,
-      setupTime: '2-3 weeks',
-      enterprise: 'Custom enterprise pricing available'
+      currency: 'USD',
+  trialDays: 21,
+      setupTime: '2-3 weeks',}
+  enterprise: 'Custom enterprise pricing available'}
     },
     description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',
-    features: [
+  features: [
       'Process analysis AIAutomated optimizationWorkflow automationPerformance monitoringCost optimizationCompliance automationIntegration capabilitiesReal-time analytics';
       'Custom workflowsReporting dashboard'
     ];
@@ -146,30 +151,35 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     targetAudience: [
       'Large enterprisesManufacturing companiesService organizationsGovernment agencies'
     ];
-    marketPosition: 'Leading autonomous business process optimization platform with AI intelligence', competitors: ['UiPathAutomation AnywhereBlue PrismPegaAppian'],
+    marketPosition: 'Leading autonomous business process optimization platform with AI intelligence',
+  competitors: ['UiPathAutomation AnywhereBlue PrismPegaAppian'],
     techStack: ['AI/MLMachine LearningProcess MiningAutomationWorkflow Management'], realImplementation: true,
-    implementationDetails: 'Intelligent platform with AI-powered process optimization and workflow automation.', roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',
+    implementationDetails: 'Intelligent platform with AI-powered process optimization and workflow automation.',
+  roi: 'Improve process efficiency by 70%. Reduce operational costs by 45%. Increase productivity by 60%.',
     useCases: [
       'Process optimizationWorkflow automationCost reductionEfficiency improvementCompliance'
     ];
     integrations: ['ERP systemsCRM platformsBPM toolsWorkflow enginesBusiness intelligence tools'], support: '24/7 enterprise support with process optimization specialists.',
-    compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'], link: 'https://ziontechgroup.com/autonomous-business-process-optimization',
-    icon: '⚙️', color: 'from-blue-600 via-cyan-600 to-teal-600',
-    popular: true, launchDate: '2025-01-15',
-    customers: 38, rating: 4.7,
+  compliance: ['Industry-specific complianceData governanceSecurity standardsRegulatory requirements'], link: 'https://ziontechgroup.com/autonomous-business-process-optimization',
+  icon: '⚙️', color: 'from-blue-600 via-cyan-600 to-teal-600',
+  popular: true, launchDate: '2025-01-15',
+  customers: 38, rating: 4.7,
     reviews: 52, marketSize: '$19.6B business process automation market',
-    growthRate: '31% annual growth', category: 'Enterprise Solutions',
-    contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+  growthRate: '31% annual growth', category: 'Enterprise Solutions',
+  contactInfo: {
+      mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
+  website: 'https://ziontechgroup.com'}
     }
   };
   {
-    id: 'ai-enterprise-knowledge-management', name: 'AI Enterprise Knowledge Management',
-    tagline: 'Intelligent knowledge discovery and management for enterprises', price: '$799',
+    id: 'ai-enterprise-knowledge-management',
+  name: 'AI Enterprise Knowledge Management',
+    tagline: 'Intelligent knowledge discovery and management for enterprises',
+  price: '$799',
     period: '/month',
-    description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',
+  description: 'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision-making and knowledge sharing across organizations.',
     features: [
       'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
 
@@ -178,8 +188,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     popular: true;
     icon: '🧠';
     color: 'from-purple-600 via-violet-600 to-indigo-600';
-    textColor: 'text-purple-400';
-    contact_info: contact,
+    textColor: 'text-purple-400';}
+    contact_info: contact,}
   }, ];      'AI knowledge discovery_intelligent categorization_semantic search_knowledge graphs_collaborative workspaces_version control_access control_analytics dashboard';
       'Integration capabilities_mobile access';
     ];
@@ -189,7 +199,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     text_color: 'text - purple - 400';
     link: 'https://ziontechgroup.com / ai - powered - enterprise - knowledge - management';
     market_position: 'Leading AI enterprise knowledge management platform with intelligent discovery',
-    target_audience: 'Large enterprises, Consulting firms, Research organizations, Government agencies';
+  target_audience: 'Large enterprises, Consulting firms, Research organizations, Government agencies';
     category: 'AI Automation';
     real_service: true;
     technology: ['AI / MLNatural Language ProcessingKnowledge GraphsMachine LearningSemantic Search'];
@@ -199,14 +209,14 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     competitors: ['Microsoft SharePointConfluenceNotionSlackBox'];
     customers: 29;
     rating: 4.6;
-    reviews: 41
-    contactInfo: contact
+    reviews: 41;
+contactInfo: contact;
 import { UnifiedService } from '../types/unified-service-types';
 const contact = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709',;}
+  website: 'https://ziontechgroup.com';}
 },;
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
   // ENTERPRISE SOLUTIONS;
@@ -219,8 +229,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       yearly: 8990,;
       currency: 'USD',;
       trialDays: 30,;
-      setupTime: '2-3 weeks',;
-      enterprise: 'Custom enterprise pricing available';
+      setupTime: '2-3 weeks',;}
+      enterprise: 'Custom enterprise pricing available';}
     },;
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',;
     features: [;
@@ -259,8 +269,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',;}
+      website: 'https://ziontechgroup.com';}
     }
   },;
   {;
@@ -272,8 +282,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       yearly: 6990,;
       currency: 'USD',;
       trialDays: 21,;
-      setupTime: '2-3 weeks',;
-      enterprise: 'Custom enterprise pricing available';
+      setupTime: '2-3 weeks',;}
+      enterprise: 'Custom enterprise pricing available';}
     },;
     description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',;
     features: [;
@@ -312,8 +322,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',;}
+      website: 'https://ziontechgroup.com';}
     }
   },;
   {;
@@ -345,17 +355,17 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     growthRate: '28% annual growth',;
     customers: 29,;
     rating: 4.6,;
-    reviews: 41;
-    contactInfo: contact;
+    reviews: 41;}
+    contactInfo: contact;}
   }
 ];
-    contactInfo: contact
+    contactInfo: contact;
   }
 ];
 ;
     rating: 4.6;
-    reviews: 41
-    contactInfo: contact
+    reviews: 41;
+contactInfo: contact;
   }
 ];
 
@@ -363,8 +373,8 @@ import { UnifiedService } from '../types/unified-service-types',;
 const contact = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008 Middletown DE 19709',;
-  website: 'https://ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709',;}
+  website: 'https://ziontechgroup.com';}
 },;
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
   // ENTERPRISE SOLUTIONS;
@@ -377,8 +387,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       yearly: 8990,;
       currency: 'USD',;
       trialDays: 30,;
-      setupTime: '2-3 weeks',;
-      enterprise: 'Custom enterprise pricing available';
+      setupTime: '2-3 weeks',;}
+      enterprise: 'Custom enterprise pricing available';}
     },;
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',;
     features: [;
@@ -417,8 +427,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',;}
+      website: 'https://ziontechgroup.com';}
     }
   },;
   {;
@@ -430,8 +440,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
       yearly: 6990,;
       currency: 'USD',;
       trialDays: 21,;
-      setupTime: '2-3 weeks',;
-      enterprise: 'Custom enterprise pricing available';
+      setupTime: '2-3 weeks',;}
+      enterprise: 'Custom enterprise pricing available';}
     },;
     description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',;
     features: [;
@@ -470,8 +480,8 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     contactInfo: {;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
-      address: '364 E Main St STE 1008 Middletown DE 19709',;
-      website: 'https://ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',;}
+      website: 'https://ziontechgroup.com';}
     }
   },;
   {;
@@ -503,7 +513,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     growthRate: '28% annual growth',;
     customers: 29,;
     rating: 4.6,;
-    reviews: 41;
-    contactInfo: contact;
+    reviews: 41;}
+    contactInfo: contact;}
   }
 ];

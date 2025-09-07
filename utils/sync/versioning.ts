@@ -2,66 +2,66 @@
 export interface Version {
   major: number;
   minor: number;
-  patch: number;
-  build?: number;
+  patch: number;}
+  build?: number;}
 }
 
 export function parseVersion(versionString: string): Version {
-  const parts = versionString.split(".").map(Number);
+  const parts = versionString.split(\".\").map(Number);
   return {
     major: parts[0] || 0,
     minor: parts[1] || 0,
-    patch: parts[2] || 0,
-    build: parts[3],
+    patch: parts[2] || 0,}
+    build: parts[3],}
   };
 }
 
 }
 export function nextVersionFor(
   state: MultiverseState,
-  entityKey: string
+  entityKey: string;
 ): number {
-  const current = state.latestVersionByEntityId[entityKey] || 0;
-  return current + 1;
+  const current = state.latestVersionByEntityId[entityKey] || 0;}
+  return current + 1;}
 }
 
 export function nextVersionFor(
   currentVersion: string,
-  type: "major" | "minor" | "patch" = "patch",
+  type: \"major\" | \"minor\" | \"patch\" = \"patch\",
 ): string {
   const version = parseVersion(currentVersion);
 
-  switch (type) {
-    case "major":
+  switch (type) {}
+    case \"major\":}
       return versionToString({ major: version.major + 1, minor: 0, patch: 0 });
-    case "minor":
+    case \"minor\":
       return versionToString({
         major: version.major,
-        minor: version.minor + 1,
-        patch: 0,
+        minor: version.minor + 1,}
+        patch: 0,}
       });
-    case "patch":
+    case \"patch\":
     default:
       return versionToString({
         major: version.major,
-        minor: version.minor,
-        patch: version.patch + 1,
+        minor: version.minor,}
+        patch: version.patch + 1,}
       });
   }
 }
 
-export function isVersionGreater(a: string, b: string): boolean {
-  return compareVersions(parseVersion(a), parseVersion(b)) > 0;
+export function isVersionGreater(a: string, b: string): boolean {}
+  return compareVersions(parseVersion(a), parseVersion(b)) > 0;}
 }
 
-export function isVersionEqual(a: string, b: string): boolean {
-  return compareVersions(parseVersion(a), parseVersion(b)) === 0;
+export function isVersionEqual(a: string, b: string): boolean {}
+  return compareVersions(parseVersion(a), parseVersion(b)) === 0;}
 }
 export interface Version {
   major: number;
   minor: number;
-  patch: number;
-  build?: number;
+  patch: number;}
+  build?: number;}
 }
 
 

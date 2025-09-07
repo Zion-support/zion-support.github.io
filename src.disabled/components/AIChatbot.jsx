@@ -1,20 +1,57 @@
 <:src.disabled/components/AIChatbot.jsx;
-"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";
-"export\": const AIChatbot = ({ welcomeMessage = \'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?\',maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ \''\';\"";
-export: const AIChatbot = ({ welcomeMessage = "Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?",maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ """;"";""";
-"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";
-ursor/automate-test-improve-and-merge-code-646c;
-"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";"export\": const AIChatbot = ({ welcomeMessage = \'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?\',maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ \''\';\"";
-export: const AIChatbot = ({ welcomeMessage = "Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?",maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ """;"";""";
-origin/cursor/integrate-build-improve-and-re-verify-c7b5;
-"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";
-"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";
-ursor/add-new-services-and-deploy-updates-0462;
-="export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";
->>>>>>>> main:corrupted_backup/AIChatbot.jsx;
-"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";
-"export\": const AIChatbot = ({ welcomeMessage = \'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?\',maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ \''\';\"";
-export: const AIChatbot = ({ welcomeMessage = "Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?",maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ """;"";""";
-"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";ursor/automate-test-improve-and-merge-code-646c;
-"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";
-"export": const AIChatbot = ({ welcomeMessage = 'Hello ! I&quot;m: Zion Tech Group & quot;s: AI assistant. How can I help you today?,maxMessages = 50,enableSuggestions = true,enableContext = true,responseDelay = 1000 }) => { const { trackEvent } = useAnalytics ({ ''';"";
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";}
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ \''\';\"\";}
+export: const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ \"\"\";\"\";\"\"\";}
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";}
+ursor/automate-test-improve-and-merge-code-646c;}
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ \''\';\"\";}
+export: const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ \"\"\";\"\";\"\"\";}
+origin/cursor/integrate-build-improve-and-re-verify-c7b5;}
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";}
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";}
+ursor/add-new-services-and-deploy-updates-0462;}
+=\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";}
+>>>>>>>> main:corrupted_backup/AIChatbot.jsx;}
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";}
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ \''\';\"\";}
+export: const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ \"\"\";\"\";\"\"\";}
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";ursor/automate-test-improve-and-merge-code-646c;}
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";}
+\"export\": const AIChatbot = ( const { trackEvent ) => {
+  return $3;}
+} = useAnalytics ({ ''';\"\";}
+}

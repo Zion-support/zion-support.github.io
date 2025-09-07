@@ -1,15 +1,19 @@
 import React from 'react';
-const AuthProvider = ({ className }) => {return (<div className={className || ''}>;
-      <h1>AuthProvider</h1>;
-      <p>This component is under development.</p>;
+const AuthProvider = (return (<div className={className || '') = /> {
+  return $3;}
+} />;
+      <h1 />AuthProvider</h1>;
+      <p />This component is under development.</p>;
     </div>;
   )}
 
-const AuthProvider = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>AuthProvider</h1>
-      <p>This component is under development.</p>
+const AuthProvider = (
+  return () => {
+  return $3;}
+}
+    <div className={className || ''} />
+      <h1 />AuthProvider</h1>
+      <p />This component is under development.</p>
     </div>
   )
 }

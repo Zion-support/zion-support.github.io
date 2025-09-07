@@ -1,52 +1,52 @@
-import React from "react";
-import { UseFormReturn } from "react-hook-form";
+import React from \"react\";
+import { UseFormReturn } from \"react-hook-form\";
 import {
-<<<<<<< HEAD
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage} from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
-import { FormValues } from "./useHireRequestForm";
+<<<<<<< HEAD;
+FormField,
+FormItem;
+FormLabel,}
+FormControl;}
+FormMessage} from \"@/components/ui/form\";
+import { Textarea } from \"@/components/ui/textarea\";
+import { FormValues } from \"./useHireRequestForm\";
 interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>
-import React from "react",
-import { UseFormReturn } from "react-hook-form",
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
-import { FormValues } from "./useHireRequestForm",
+  form: UseFormReturn<FormValues />}
+import React from \"react\",}
+import { UseFormReturn } from \"react-hook-form\",
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from \"@/components/ui/form\",
+import { Textarea } from \"@/components/ui/textarea\",
+import { FormValues } from \"./useHireRequestForm\",
 interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>
-import React from "react";
-import { UseFormReturn } from "react-hook-form";
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Textarea } from "@/components/ui/textarea",;  form: UseFormReturn<FormValues>;
+  form: UseFormReturn<FormValues />}
+import React from \"react\";}
+import { UseFormReturn } from \"react-hook-form\";
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from \"@/components/ui/form\",;
+import { Textarea } from \"@/components/ui/textarea\",;  form: UseFormReturn<FormValues />;
 }
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
-  return (
-    <FormField
-      control={form && form.control}
-      name="projectOverview"
+  return (}
+    <FormField;}
+control={form && form.control}
+      name=\"projectOverview\"
 export /**
- * ProjectDetailsField - Function description
+ * ProjectDetailsField - Function description;
  */
 function ProjectDetailsField() {
-  return (
-    <FormField;
+  return (}
+    <FormField;}
       control={form.control}
-      name="project_overview";
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel className="text-white">Project Overview</FormLabel>
-          <FormControl>
-            <Textarea
-              placeholder="Describe your project, goals, and requirements"
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+      name=\"project_overview\";
+      render={({ field }) = /> (
+        <FormItem />
+          <FormLabel className=\"text-white\" />Project Overview</FormLabel>
+          <FormControl />
+            <Textarea;
+placeholder=\"Describe your project, goals, and requirements\"
+              className=\"bg-zion-blue border-zion-blue-light text-white min-h-[120px]\"
               {...field}
             />
           </FormControl>
-          <FormMessage className="text-red-400" />
+          <FormMessage className=\"text-red-400\" />
         </FormItem>
       )}
     />
@@ -55,25 +55,25 @@ function ProjectDetailsField() {
 ;
 }
 export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
-  return (
-    <FormField
-      control={form && form.control}
-      name="projectOverview"
+  return (}
+    <FormField;}
+control={form && form.control}
+      name=\"projectOverview\"
 }
 ;
   ),;}
- interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues> 
-}form 
+ interface ProjectDetailsFieldProps {}
+  form: UseFormReturn<FormValues /> }
+}form;
 }: ProjectDetailsFieldProps) {
-  return (<FormField control= {
-  form.control 
-}<FormItem> <FormLabel className="text-white" >Project Overview</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
+  return (<FormField control= {}
+  form.control }
+}<FormItem /> <FormLabel className=\"text-white\"  />Project Overview</FormLabel> <FormControl /> <Textarea /> </FormControl> <FormMessage className=\"text-red-400\" /> </FormItem>) 
 }/>) 
 }
-import { FormValues } from "./useHireRequestForm";
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>;
+import { FormValues } from \"./useHireRequestForm\";
+interface ProjectDetailsFieldProps {}
+  form: UseFormReturn<FormValues />;}
 }
 =======
   FormField,
@@ -81,39 +81,39 @@ interface ProjectDetailsFieldProps {
   FormLabel,
   FormControl,
   FormMessage,
-} from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
-import { FormValues } from "./useHireRequestForm";
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>;
+} from \"@/components/ui/form\";
+import { Textarea } from \"@/components/ui/textarea\";
+import { FormValues } from \"./useHireRequestForm\";
+interface ProjectDetailsFieldProps {}
+  form: UseFormReturn<FormValues />;}
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
 export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
-  return (
-    <FormField
-      control={form.control}
-      name="projectOverview"
-      render={({ field }) => (
-        <FormItem>
-          <FormLabel className="text-white">Project Overview</FormLabel>
-          <FormControl>
-            <Textarea
-              placeholder="Describe your project, goals, and requirements"
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+  return (}
+    <FormField;}
+control={form.control}
+      name=\"projectOverview\"
+      render={({ field }) = /> (
+        <FormItem />
+          <FormLabel className=\"text-white\" />Project Overview</FormLabel>
+          <FormControl />
+            <Textarea;
+placeholder=\"Describe your project, goals, and requirements\"
+              className=\"bg-zion-blue border-zion-blue-light text-white min-h-[120px]\"
               {...field}
             />
           </FormControl>
-          <FormMessage className="text-red-400" />
+          <FormMessage className=\"text-red-400\" />
         </FormItem>
       )}
     />
   );
 }
-<<<<<<< HEAD
+<<<<<<< HEAD;
   )
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df;
 =======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

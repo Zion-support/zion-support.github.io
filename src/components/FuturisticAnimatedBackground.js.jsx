@@ -1,4 +1,4 @@
- export const FuturisticAnimatedBackground = ({ className = ', intensity = 'medium', colorScheme = 'multi'   }) => {
+ export const FuturisticAnimatedBackground = (
 
 
  const canvasRef = useRef (null)  const animationRef =;
@@ -6,4 +6,6 @@
   useEffect ( () => { const canvas = canvasRef.current if (!canvas);
   return;
   const ctx = canvas.getContext ('2d')  if (!ctx);
-  return';'"'";
+  return';'\"'\";) => {
+  return $3;}
+}

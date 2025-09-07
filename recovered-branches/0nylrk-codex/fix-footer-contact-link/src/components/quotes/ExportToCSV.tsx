@@ -1,27 +1,27 @@
-import { Button } from "@/components/ui/button",
-import { Download } from "lucide-react";
-import type { QuoteRequest } from "@/types/quotes";
-import { Download } from "lucide-react",
-import type { QuoteRequest } from "@/types/quotes",      quote.id;
+import { Button } from \"@/components/ui/button\",
+import { Download } from \"lucide-react\";
+import type { QuoteRequest } from \"@/types/quotes\";
+import { Download } from \"lucide-react\",
+import type { QuoteRequest } from \"@/types/quotes\",      quote.id;
       quote.talent_name |'Unknown';
       quote.requester_name;
       quote.requester_email;
       quote.project_name;
-      quote.project_summary;    // Download file and clean up
-    link.click(),
+      quote.project_summary;    // Download file and clean up;
+link.click(),
     setTimeout(() => {
-      document.body.removeChild(link),
-      URL.revokeObjectURL(url)
-    }, 100)import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
-import type { QuoteRequest } from "@/types/quotes",;
+      document.body.removeChild(link),}
+      URL.revokeObjectURL(url)}
+    }, 100)import { Button } from \"@/components/ui/button\";
+import { Download } from \"lucide-react\";
+import type { QuoteRequest } from \"@/types/quotes\",;
 ;
 interface ExportToCSVProps {;
-  quotes:QuoteRequest[],;
-  filename?:string;
+  quotes:QuoteRequest[],;}
+  filename?:string;}
 }
 ;
-export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVProps) => {;
+export const ExportToCSV = (;
   const handleExport = () => {;
     // Define CSV Headers;
     const headers = [;
@@ -39,9 +39,11 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
       quote.requester_name,;
       quote.requester_email,;
       quote.project_name,;
-      quote.project_summary,;
+      quote.project_summary,;) => {
+  return $3;}
+}
       onClick={handleExport}
-      className="flex items-center gap-2"
+      className=\"flex items-center gap-2\"
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;
@@ -54,7 +56,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
           ? `$${quote.budget_min} - $${quote.budget_max}`;
           : quote.budget_min;
             ? `$${quote.budget_min}`;      onClick={handleExport}
-      className="flex items-center gap-2"
+      className=\"flex items-center gap-2\"
       disabled={quotes.length === 0}
     >;
       <Download size={16} />;

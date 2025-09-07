@@ -1,12 +1,12 @@
-export function AIEnhancementPanel({;
+export function AIEnhancementPanel({;}
 import React, { useState } from 'react';
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
 }
 export function AIEnhancementPanel({;    const result = await enhanceContent(options);
-    if (result) {
-      setGeneratedContent(result)
+    if (result) {}
+      setGeneratedContent(result)}
     }
   }
 };
@@ -22,8 +22,8 @@ interface AIEnhancementPanelProps {;
   defaultOptions: AIEnhancementOptions,;
   onApply: (content: string) => void,;
   onClose?: () => void,;
-  showInstructions?: boolean,;
-  initialContent?: string;
+  showInstructions?: boolean,;}
+  initialContent?: string;}
 }
 ;
 export function AIEnhancementPanel({;
@@ -31,89 +31,89 @@ export function AIEnhancementPanel({;
   defaultOptions,;
   onApply,;
   onClose,;
-  showInstructions = true,;
-  initialContent = '';
+  showInstructions = true,;}
+  initialContent = '';}
 }: AIEnhancementPanelProps) {;
-  const [options, setOptions] = useState<AIEnhancementOptions>({;
-    ...defaultOptions,;
+  const [options, setOptions] = useState<AIEnhancementOptions />({;}
+    ...defaultOptions,;}
     content: initialContent || defaultOptions.content}),;
-  const [generatedContent, setGeneratedContent] = useState<string>(''),;
+  const [generatedContent, setGeneratedContent] = useState<string />(''),;
   const [copied, setCopied] = useState(false),;
   const { enhanceContent, isEnhancing } = useAIContentEnhancer(),;
   const handleGenerate = async () => {;
     const result = await enhanceContent(options);
-    if (result) {;
-      setGeneratedContent(result);
+    if (result) {;}
+      setGeneratedContent(result);}
     }
   },
-    if (result) {;
-      setGeneratedContent(result);
+    if (result) {;}
+      setGeneratedContent(result);}
     }
-  return (      <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <Sparkles className="h-5 w-5 text-primary" />;
+  return (      <CardHeader />;
+        <CardTitle className=\"flex items-center gap-2\" />;
+          <Sparkles className=\"h-5 w-5 text-primary\" />;
           {title}
         </CardTitle>;
       </CardHeader>;
-      <CardContent className="space-y-4">;
+      <CardContent className=\"space-y-4\" />;
         {/* Input area */}
-        <div className="space-y-2">;
-          <label className="text-sm font-medium">Content to enhance</label>;
+        <div className=\"space-y-2\" />;
+          <label className=\"text-sm font-medium\" />Content to enhance</label>;
         {/* Context input */}
-        <div className="space-y-2">;
-          <label className="text-sm font-medium">Context (optional)</label>;
-          <Textarea
-            placeholder="Add any relevant context to guide the AI..."
-            className="min-h-[60px]"
+        <div className=\"space-y-2\" />;
+          <label className=\"text-sm font-medium\" />Context (optional)</label>;
+          <Textarea;
+placeholder=\"Add any relevant context to guide the AI...\"
+            className=\"min-h-[60px]\"
             value={options && options.context}
-            onChange={(e) => handleInputChange(e, 'context')}
+            onChange={(e) = /> handleInputChange(e, 'context')}
           />;
         </div>;
         >
           {isEnhancing ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />
               Enhancing...
             </>
           ) : (
             <>
-              <Sparkles className="mr-2 h-4 w-4" />
-              Generate Enhanced Content
-            </>
+              <Sparkles className=\"mr-2 h-4 w-4\" />
+              Generate Enhanced Content}
+            </>}
           )}
         </Button>
         {/* Output area */}
         {generatedContent && (
-          <div className="space-y-2 mt-4">
-            <div className="flex justify-between items-center">
-              <label className="text-sm font-medium">Generated content</label>
-              <Button
-                variant="ghost"
-                size="sm"
+          <div className=\"space-y-2 mt-4\" />
+            <div className=\"flex justify-between items-center\" />
+              <label className=\"text-sm font-medium\" />Generated content</label>
+              <Button;
+variant=\"ghost\"
+                size=\"sm\"
           {isEnhancing ? (;
-            <>;
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
+            < />;
+              <Loader2 className=\"mr-2 h-4 w-4 animate-spin\" />;
               Enhancing...;
             </>;
           ) : (;
             <>;
-              <Sparkles className="mr-2 h-4 w-4" />;
-              Generate Enhanced Content;
-            </>;
+              <Sparkles className=\"mr-2 h-4 w-4\" />;
+              Generate Enhanced Content;}
+            </>;}
           )}
-        </Button>;                className="min-h-[200px]";
+        </Button>;                className=\"min-h-[200px]\";
               />;
             </div>;
           </div>;
         )}
       </CardContent>;
       {generatedContent && (;
-        <CardFooter className="flex justify-between">;
-          {onClose && (;
-            <Button variant="outline" onClick={onClose}>;
+        <CardFooter className=\"flex justify-between\" />;}
+          {onClose && (;}
+            <Button variant=\"outline\" onClick={onClose} />;
               Cancel;
             </Button>;
-          )}          <Button onClick={handleApply}>;
+          )}          <Button onClick={handleApply} />;
             Apply to Form;
           </Button>;
         </CardFooter>;

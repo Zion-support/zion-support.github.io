@@ -1,23 +1,23 @@
-type Theme = "dark" | "light" | "system"
+type Theme = \"dark\" | \"light\" | \"system\"
 type ThemeProviderProps = {
-  children: React.ReactNode
-  defaultTheme?: Theme
-}    () => (localStorage.getItem("theme") as Theme) || defaultTheme
+  children: React.ReactNode;}
+defaultTheme?: Theme}
+}    () => (localStorage.getItem(\"theme\") as Theme) || defaultTheme;
   )
   useEffect(() => {
-    const root = window.document.documentElement
-    root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
+    const root = window.document.documentElement;
+root.classList.remove(&quot;light&quot;, &quot;dark&quot;)
     if (theme === &quot;system&quot;) {
       const systemTheme = window.matchMedia(&quot;(prefers-color-scheme: dark)&quot;)
-        .matches
+        .matches;
         ? &quot;dark&quot;
-        : &quot;light&quot;      root.classList.add(systemTheme)
-      return
+        : &quot;light&quot;      root.classList.add(systemTheme)}
+      return}
     }
     root.classList.add(theme)
   }, [theme])
   const value = {
-    theme;
-    setTheme: (theme: Theme) => {  return context
+    theme;}
+    setTheme: (theme: Theme) => {  return context}
 }
 }

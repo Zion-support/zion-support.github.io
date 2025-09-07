@@ -1,4 +1,4 @@
-const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedPerformanceMonitor' ,';
+const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedPerformanceMonitor' ,';
 </p>';
 </p>';
 </p>';
@@ -17,7 +17,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 </p>';
 </p>';
 </p>';
-const EnhancedPerformanceMonitor = dynamic(() => import("./EnhancedPerformanceMonitor"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedPerformanceMonitor' ,'
+const EnhancedPerformanceMonitor = dynamic(() => import(\"./EnhancedPerformanceMonitor\"),{'; \"loading\": () => <p />Loading...</p,>}) \"export\": 'default EnhancedPerformanceMonitor' ,'
 </p>'
 </p>'
 </p>'

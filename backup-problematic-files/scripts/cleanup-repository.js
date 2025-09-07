@@ -22,37 +22,37 @@ const KEEP_PATTERNS = [// Keep important config files;
   '__tests__/**','**/*.test.*','**/*.spec.*',// Keep public assets;
   'public/**',// Keep source code;
   'pages/**','components/**','src/**','lib/**','utils/**','hooks/**','types/**','api/**',];
-function shouldKeepFile() {// Check if file matches keep patterns;
+function shouldKeepFile() {// Check if file matches keep patterns;}
   }
   return false}
-function shouldRemoveFile() {// Don't remove files that should be kept;
+function shouldRemoveFile() {// Don't remove files that should be kept;}
   if (shouldKeepFile(filePath)) {return false}
   // Check if file matches cleanup patterns;
   }
   return false}
-function removeFile() {try {const stats = fs.statSync(filePath)if (stats.isDirectory()) {fs.rmSync(filePath, { "recursive": true, "force": true })console.log(`  Removed "directory": ${filePath}`)} else {fs.unlinkSync(filePath)console.log(` Removed "file": ${filePath}`)}
+function removeFile() {try {const stats = fs.statSync(filePath)if (stats.isDirectory()) {fs.rmSync(filePath, { \"recursive\": true, \"force\": true })console.log(`  Removed \"directory\": ${filePath}`)} else {fs.unlinkSync(filePath)console.log(` Removed \"file\": ${filePath}`)}
     return true} catch (error) {console.error(` Error removing ${filePath}:`, error.message)return false}
-function cleanScripts() {const scriptsDir = 'scripts';
+function cleanScripts() {const scriptsDir = 'scripts';}
   if (!fs.existsSync(scriptsDir)) {return}
-  const scriptFiles = glob.sync('scripts/**/*', { "nodir": true })let cleanedCount = 0;
+  const scriptFiles = glob.sync('scripts/**/*', { \"nodir\": true })let cleanedCount = 0;
     }
   }
   console.log(` Cleaned ${cleanedCount} temporary script files`)}
-function cleanRootFiles() {const rootFiles = glob.sync('*', { "nodir": true })let cleanedCount = 0;
+function cleanRootFiles() {const rootFiles = glob.sync('*', { \"nodir\": true })let cleanedCount = 0;
     }
   }
   console.log(` Cleaned ${cleanedCount} temporary root files`)}
-function cleanReportFiles() {const reportFiles = glob.sync('**/*-report.json', { "nodir": true })let cleanedCount = 0;
+function cleanReportFiles() {const reportFiles = glob.sync('**/*-report.json', { \"nodir\": true })let cleanedCount = 0;
     }
   }
   console.log(` Cleaned ${cleanedCount} temporary report files`)}
 function main() {console.log(' Starting repository cleanup...')// Clean scripts first;
   cleanScripts()// Clean root files;
   cleanRootFiles()// Clean report files;
-  cleanReportFiles()// Clean disabled/backup directories;
-  let totalRemoved = 0;
+  cleanReportFiles()// Clean disabled/backup directories;}
+  let totalRemoved = 0;}
       }
     }
   }
-  console.log("\n Cleanup "Summary": ")console.log(`   Total items removed: ${totalRemoved}`)console.log('\n Repository cleanup completed!')console.log('\n Next "steps": ')console.log('   1. Run: npm install')console.log('   2. Run: npm run build')console.log('   3. Test the application')console.log('   4. Commit the changes')}
+  console.log(\"\n Cleanup \"Summary\": \")console.log(`   Total items removed: ${totalRemoved}`)console.log('\n Repository cleanup completed!')console.log('\n Next \"steps\": ')console.log('   1. Run: npm install')console.log('   2. Run: npm run build')console.log('   3. Test the application')console.log('   4. Commit the changes')}
 main()

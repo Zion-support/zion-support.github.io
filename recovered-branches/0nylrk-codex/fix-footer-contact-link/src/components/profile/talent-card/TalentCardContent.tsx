@@ -1,44 +1,44 @@
-<<<<<<< HEAD
+<<<<<<< HEAD;
 import React, { useState } from './react';
 import { MapPin  } from './lucide-react';
 import { TalentCardSkills  } from './TalentCardSkills';
 =======
-import React, { useState } from "react";
-import { MapPin } from "lucide-react";
-import { TalentCardSkills } from "./TalentCardSkills";
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+import React, { useState } from \"react\";
+import { MapPin } from \"lucide-react\";
+import { TalentCardSkills } from \"./TalentCardSkills\";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
-  timezone: string | undefined;
-  skills: string[] | undefined;
+  timezone: string | undefined;}
+  skills: string[] | undefined;}
 }
-<<<<<<< HEAD
+<<<<<<< HEAD;
 =======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;
 export function TalentCardContent({
   summary,
   bio,
-  timezone,
-  skills,
+  timezone,}
+  skills,}
 }: TalentCardContentProps) {
   const [isHovering, setIsHovering] = useState(false);
-<<<<<<< HEAD
-skills: string[] | undefined;
-    skills: string[] | undefined
+<<<<<<< HEAD;
+skills: string[] | undefined;}
+    skills: string[] | undefined}
 }
   const [isHovering, setIsHovering] = useState(false);
   return (
-    <div>
-import React, { useState } from "react";
-import { MapPin } from "lucide-react";
-import { TalentCardSkills } from "./TalentCardSkills",;
+    <div />
+import React, { useState } from \"react\";
+import { MapPin } from \"lucide-react\";
+import { TalentCardSkills } from \"./TalentCardSkills\",;
 interface TalentCardContentProps {;
   summary: string | undefined,;
   bio: string,;
-  timezone: string | undefined,;
-  skills: string[] | undefined;
+  timezone: string | undefined,;}
+  skills: string[] | undefined;}
 }
 export function TalentCardContent(): any ({ summary, bio, timezone, skills }: TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false);
@@ -47,42 +47,42 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
 interface TalentCardContentProps {;
   summary:string | undefined,;
   bio:string,;
-  timezone:string | undefined,;
-  skills:string[] | undefined;
+  timezone:string | undefined,;}
+  skills:string[] | undefined;}
 }
 ;
 export function TalentCardContent({ summary, bio, timezone, skills } TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false),;
-;
-  return (;
+;}
+  return (;}
 }      {/* Location */}
       {timezone && (;
-        <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
-          <MapPin className="h-3 w-3" />;
-          <span>{timezone}</span>;
+        <div className=\"flex items-center gap-2 text-sm text-zion-slate-light mb-3\" />;}
+          <MapPin className=\"h-3 w-3\" />;}
+          <span />{timezone}</span>;
         </div>;
       )}export /**
- * TalentCardContent - Function description
+ * TalentCardContent - Function description;
  */
 function TalentCardContent() {
   const [is_hovering, setIsHovering] = useState (false);
 ;
-  return (
-    <div>;
+  return (}
+    <div />;}
       {/* Location */}
       {timezone && (
-        <div className="flex items - center gap - 2 text - sm text - zion - slate - light mb-3">;
-          <MapPin className="h - 3 w-3" />;
-          <span>{timezone}</span>;
+        <div className=\"flex items - center gap - 2 text - sm text - zion - slate - light mb-3\" />;}
+          <MapPin className=\"h - 3 w-3\" />;}
+          <span />{timezone}</span>;
         </div>)}
       {/* Short bio or summary - longer on hover for desktop */}
       <div;
-        className="overflow - hidden transition - all duration-300";
-        style={{ max_height: is_hovering ? "8rem" : "3rem" }}
-        onMouseEnter={() => setIsHovering (true)}
+        className=\"overflow - hidden transition - all duration-300\";
+        style={{ max_height: is_hovering ? \"8rem\" : \"3rem\" }}
+        onMouseEnter={() = /> setIsHovering (true)}
         onMouseLeave={() => setIsHovering (false)}
       >;
-        <p className="text - zion - slate mb-4">{summary || bio}</p>;
+        <p className=\"text - zion - slate mb-4\" />{summary || bio}</p>;
       </div>;
       {/* Skills */}
       <TalentCardSkills skills={skills} />;
@@ -91,23 +91,23 @@ function TalentCardContent() {
 =======
 
   return (
-    <div>
+    <div />
       {/* Location */}
       {timezone && (
-        <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">
-          <MapPin className="h-3 w-3" />
-          <span>{timezone}</span>
+        <div className=\"flex items-center gap-2 text-sm text-zion-slate-light mb-3\" />}
+          <MapPin className=\"h-3 w-3\" />}
+          <span />{timezone}</span>
         </div>
       )}
 
       {/* Short bio or summary - longer on hover for desktop */}
-      <div
-        className="overflow-hidden transition-all duration-300"
-        style={{ maxHeight: isHovering ? "8rem" : "3rem" }}
-        onMouseEnter={() => setIsHovering(true)}
+      <div;
+className=\"overflow-hidden transition-all duration-300\"
+        style={{ maxHeight: isHovering ? \"8rem\" : \"3rem\" }}
+        onMouseEnter={() = /> setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-        <p className="text-zion-slate mb-4">{summary || bio}</p>
+        <p className=\"text-zion-slate mb-4\" />{summary || bio}</p>
       </div>
 
       {/* Skills */}
@@ -115,4 +115,4 @@ function TalentCardContent() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1;

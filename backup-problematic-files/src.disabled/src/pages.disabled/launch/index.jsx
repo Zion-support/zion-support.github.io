@@ -1,15 +1,19 @@
 import React from 'react';
-const Index = ({ className }) => {return (<div className={className || ''}>;
-      <h1>Index</h1>;
-      <p>This component is under development.</p>;
+const Index = (return (<div className={className || '') = /> {
+  return $3;}
+} />;
+      <h1 />Index</h1>;
+      <p />This component is under development.</p>;
     </div>;
   )}
 
-const Index = ({ className }) => {
-  return (
-    <div className={className || ''}>
-      <h1>Index</h1>
-      <p>This component is under development.</p>
+const Index = (
+  return () => {
+  return $3;}
+}
+    <div className={className || ''} />
+      <h1 />Index</h1>
+      <p />This component is under development.</p>
     </div>
   )
 }
