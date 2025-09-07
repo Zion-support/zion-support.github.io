@@ -1,337 +1,195 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Globe, 
-  Users, 
-  CheckCircle;
-  Star;
-  ChevronRight
-} from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import AnimatedBackground from '../components/ui/AnimatedBackground';
+import Link from 'next/link';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-const Home: React.FC = () => {
+export default function Home() {
   const services = [
     {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI-Powered Solutions",
-      description: "Leverage cutting-edge artificial intelligence to transform your business operations and drive innovation.",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
-    };
+      title: "AI Meeting Assistant",
+      description: "Revolutionary AI meeting platform with real-time transcription and intelligent summaries.",
+      icon: "🤖",
+      link: "/services/ai-meeting-assistant",
+      color: "from-blue-500 to-purple-600"
+    },
     {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Cybersecurity Excellence",
-      description: "Protect your digital assets with our comprehensive security solutions and threat intelligence.",
-      features: ["Threat Detection", "Vulnerability Assessment", "Incident Response", "Compliance Management"]
-    };
+      title: "Smart Invoice Generator",
+      description: "AI-powered invoice automation with smart templates and payment tracking.",
+      icon: "📊",
+      link: "/services/smart-invoice-generator",
+      color: "from-green-500 to-blue-600"
+    },
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Cloud Infrastructure",
-      description: "Scale your business with our robust cloud solutions and infrastructure management services.",
-      features: ["Cloud Migration", "DevOps Automation", "Container Orchestration", "Multi-Cloud Strategy"]
-    };
+      title: "Web Development",
+      description: "Modern, responsive web applications built with cutting-edge technologies.",
+      icon: "💻",
+      link: "/services/web-development",
+      color: "from-purple-500 to-pink-600"
+    },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Digital Transformation",
-      description: "Modernize your organization with our comprehensive digital transformation strategies.",
-      features: ["Process Automation", "Data Analytics", "Workflow Optimization", "Change Management"]
+      title: "Cloud Services",
+      description: "Scalable cloud infrastructure and migration services for optimal performance.",
+      icon: "☁️",
+      link: "#",
+      color: "from-orange-500 to-red-600"
+    },
+    {
+      title: "Mobile Apps",
+      description: "Native and cross-platform mobile applications for iOS and Android.",
+      icon: "📱",
+      link: "#",
+      color: "from-teal-500 to-cyan-600"
+    },
+    {
+      title: "Data Analytics",
+      description: "Advanced data analytics and business intelligence solutions.",
+      icon: "📈",
+      link: "#",
+      color: "from-indigo-500 to-purple-600"
     }
   ];
 
-  const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "99.9%", label: "Uptime Guarantee" },
-    { number: "24/7", label: "Support Available" },
-    { number: "50+", label: "Expert Team Members" }
-  ];
-
-  const testimonials = [
+  const features = [
     {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp";
-      content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%.",
-      rating: 5
-    };
+      title: "Fast Delivery",
+      description: "Quick turnaround times without compromising quality",
+      icon: "⚡"
+    },
     {
-      name: "Michael Chen",
-      role: "CEO, InnovateLabs";
-      content: "Outstanding cybersecurity services. They helped us achieve SOC 2 compliance in record time.",
-      rating: 5
-    };
+      title: "Enterprise Security",
+      description: "Bank-level security and data protection",
+      icon: "🔒"
+    },
     {
-      name: "Emily Rodriguez",
-      role: "VP Engineering, DataFlow";
-      content: "The cloud migration was seamless. Our applications now run 50% faster with better reliability.",
-      rating: 5
+      title: "24/7 Support",
+      description: "Round-the-clock technical support and maintenance",
+      icon: "📞"
+    },
+    {
+      title: "Custom Solutions",
+      description: "Tailored solutions for your specific business needs",
+      icon: "🎯"
     }
   ];
 
   return (
     <>
       <Head>
-        <title>Zion Tech Group - AI-Powered IT Services & Solutions</title>
-        <meta name="description" content="Leading provider of AI-powered IT services, cybersecurity, cloud infrastructure, and digital transformation solutions. Transform your business with cutting-edge technology." />
+        <title>Zion Tech Group - Leading Technology Solutions Provider</title>
+        <meta name="description" content="Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="technology solutions, web development, AI integration, cloud services, mobile apps, data analytics, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="AI services, cybersecurity, cloud infrastructure, digital transformation, IT consulting, machine learning, data analytics" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Zion Tech Group - Technology Solutions" />
+        <meta property="og:description" content="Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services." />
+        <meta property="og:type" content="website" />
       </Head>
       
-      <AnimatedBackground />
-      
-      <main className="relative z-10">
+      <div className="min-h-screen">
+        <Header />
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-4 py-20">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
+        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="relative container mx-auto px-4 py-20 lg:py-32">
+            <div className="text-center max-w-5xl mx-auto">
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+                Welcome to <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Zion Tech Group</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-                Empowering businesses with cutting-edge AI technology, robust cybersecurity, 
-                and innovative cloud solutions for the digital future.
+              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                Leading technology solutions provider specializing in web development, 
+                mobile applications, AI integration, and cloud services. Transform your business with cutting-edge technology.
               </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Button size="lg" className="group">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
                   Get Started Today
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg">
-                  Learn More
-                </Button>
+                </button>
+                <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                  View Our Work
+                </button>
               </div>
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                    {stat.number}
-                  </div>
-                  <div className="text-gray-400 text-sm md:text-base">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Services Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Our <span className="text-cyan-400">Services</span>
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Services</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive IT solutions designed to accelerate your digital transformation journey.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We provide comprehensive technology solutions to help your business thrive in the digital age.
               </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="p-6 h-full">
-                    <div className="text-cyan-400 mb-4">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-xl font-semibold mb-3 text-white">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </Card>
-                </motion.div>
+                <div key={index} className="group bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <span className="text-3xl">{service.icon}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-center mb-4 text-gray-900">{service.title}</h3>
+                  <p className="text-gray-600 text-center mb-6 leading-relaxed">{service.description}</p>
+                  <Link href={service.link}>
+                    <button className={`w-full bg-gradient-to-r ${service.color} text-white font-semibold py-3 px-6 rounded-lg transition duration-300 hover:shadow-lg transform hover:scale-105`}>
+                      Learn More
+                    </button>
+                  </Link>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 bg-slate-900/50">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Why Choose <span className="text-cyan-400">Zion Tech</span>?
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Why Choose <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We combine technical expertise with business acumen to deliver exceptional results.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We combine technical expertise with business acumen to deliver solutions that drive real results.
               </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Zap className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-white">Lightning Fast</h3>
-                <p className="text-gray-300">
-                  Rapid deployment and implementation with minimal downtime to keep your business running smoothly.
-                </p>
-              </motion.div>
-
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-white">Secure & Reliable</h3>
-                <p className="text-gray-300">
-                  Enterprise-grade security measures and 99.9% uptime guarantee to protect your critical data.
-                </p>
-              </motion.div>
-
-              <motion.div
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Brain className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold mb-4 text-white">AI-Powered</h3>
-                <p className="text-gray-300">
-                  Leverage the latest AI technologies to automate processes and gain valuable insights from your data.
-                </p>
-              </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                What Our <span className="text-cyan-400">Clients Say</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what our satisfied clients have to say.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="p-6">
-                    <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-gray-300 mb-6 italic">
-                      "{testimonial.content}"
-                    </p>
-                    <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-cyan-400 text-sm">{testimonial.role}</div>
-                    </div>
-                  </Card>
-                </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-3xl text-white">{feature.icon}</span>
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">{feature.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join hundreds of companies that have already revolutionized their operations with our cutting-edge solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="group">
-                  Start Your Journey
-                  <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg">
-                  Schedule Consultation
-                </Button>
-              </div>
-            </motion.div>
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
+              Let's discuss your project and see how we can help you achieve your goals with cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <button className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg">
+                Start Your Project
+              </button>
+              <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                Schedule Consultation
+              </button>
+            </div>
           </div>
         </section>
-      </main>
+        <Footer />
+      </div>
     </>
   );
-};
-
-export default Home;
+}
