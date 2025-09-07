@@ -373,6 +373,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Contact Information Section */}
       <section className="py-16 bg-gray-50 rounded-lg" aria-labelledby="contact-heading">
@@ -408,6 +409,8 @@ export default function HomePage() {
           />
         </div>
       </section>
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
     </div>
   );
 }

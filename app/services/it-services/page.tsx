@@ -2,7 +2,12 @@ import Link from "next/link";
 
 export const metadata = {
   title: "IT Services | Zion Tech Group",
+<<<<<<< HEAD
   description: "Comprehensive IT services including cloud migration, DevOps, cybersecurity, and infrastructure management for enterprise-scale solutions.",
+=======
+  description: "Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.",
+  keywords: "IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
 };
 
 function FeatureItem({ icon, title, description, benefits }: { icon: string; title: string; description: string; benefits: string[] }) {
@@ -35,51 +40,26 @@ function BenefitCard({ icon, title, description }: { icon: string; title: string
 
 export default function ITServicesPage() {
   return (
+<<<<<<< HEAD
     <div className="animate-fade-in">
+=======
+    <div className="max-w-6xl mx-auto px-4 py-12">
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
           IT Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive IT solutions designed to modernize your infrastructure, enhance security, and drive operational efficiency. From cloud migration to DevOps automation, we deliver enterprise-grade IT services.
+          Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Our IT Solutions</h2>
-          <div className="space-y-4">
-            <FeatureItem
-              icon="☁️"
-              title="Cloud Migration & Management"
-              description="Seamlessly migrate your infrastructure to AWS, Azure, or GCP with zero downtime and optimized performance."
-              benefits={["Zero-downtime migration", "Cost optimization", "Multi-cloud support", "24/7 monitoring"]}
-            />
-            <FeatureItem
-              icon="⚙️"
-              title="DevOps & SRE"
-              description="Implement CI/CD pipelines, infrastructure as code, and site reliability engineering practices."
-              benefits={["Automated deployments", "Infrastructure as Code", "Performance monitoring", "Incident response"]}
-            />
-            <FeatureItem
-              icon="🔒"
-              title="Cybersecurity & Compliance"
-              description="Comprehensive security solutions including threat detection, vulnerability management, and compliance."
-              benefits={["Threat detection", "Security audits", "Compliance management", "Incident response"]}
-            />
-            <FeatureItem
-              icon="🖥️"
-              title="Infrastructure Management"
-              description="End-to-end infrastructure management including servers, networks, and data centers."
-              benefits={["Server management", "Network optimization", "Data center operations", "Capacity planning"]}
-            />
-            <FeatureItem
-              icon="📊"
-              title="IT Consulting & Strategy"
-              description="Strategic IT consulting to align technology with business objectives and drive digital transformation."
-              benefits={["Technology strategy", "Digital transformation", "IT governance", "Change management"]}
-            />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">☁️</span>
           </div>
+<<<<<<< HEAD
         </div>
 
         <div>
@@ -111,3 +91,55 @@ export default function ITServicesPage() {
     </div>
   );
 }
+=======
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Cloud Migration
+          </h3>
+          <p className="text-gray-600">
+            Seamless cloud migration services to modernize your infrastructure.
+          </p>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">🔄</span>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            DevOps
+          </h3>
+          <p className="text-gray-600">
+            Complete DevOps solutions for faster, more reliable software delivery.
+          </p>
+        </div>
+
+        <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+            <span className="text-2xl">🔒</span>
+          </div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">
+            Cybersecurity
+          </h3>
+          <p className="text-gray-600">
+            Advanced cybersecurity solutions to protect your business from threats.
+          </p>
+        </div>
+      </div>
+
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          Ready to Transform Your IT Infrastructure?
+        </h2>
+        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Contact us today to discuss your IT needs and implement comprehensive solutions.
+        </p>
+        <a
+          href="/contact"
+          className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+        >
+          Get Started Today
+        </a>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-17f0
