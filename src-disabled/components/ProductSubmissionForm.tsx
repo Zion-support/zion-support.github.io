@@ -40,7 +40,6 @@ const handleModelChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {
 if (file) {;
 
 const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
-  const file = e.target.files?.[0];
 if (file) {;
   ;
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -74,10 +73,8 @@ imagePublicUrl = publicUrlData && publicUrlData.publicUrl;
 const {;
   data: publicUrlData ';
 }= supabase && supabase.storage.from ('products') .getPublicUrl (videoPath);
-const {;
   error: updateError ';
 }= await supabase .from ('product listings') .from ('products') .upload (modelPath, values && values.model);
-const {;
   data: publicUrlData ';
 }= supabase && supabase.storage.from ('products') .getPublicUrl (modelPath);
 //If we have an image, upload it .from ('products') .upload (imagePath, values.image);
@@ -88,17 +85,13 @@ imagePublicUrl = publicUrlData.publicUrl;
 //Update the product with the image window.URL const {;
   error: updateError ';
 }= await supabase .from ('product listings') .from ('products') .upload (videoPath, values.video);
-const {;
   data: publicUrlData ';
 }= supabase.storage.from ('products') .getPublicUrl (videoPath);
-const {;
   error: updateError ';
 }= await supabase .from ('product listings') .from ('products') .upload (modelPath, values.model);
-const {;
   data: publicUrlData ';
 }= supabase.storage.from ('products') .getPublicUrl (modelPath);
 origin/cursor/automate-test-improve-and-merge-code-2533
-const {;
   error: updateError ';
 }= await supabase .from ('product listings') ;
 }//Send listing to moderation service try {';
@@ -175,7 +168,6 @@ created_at: new Date () .toISOString ();
 }
 data: product_record, error: product_error ';,
 }= await supabase .from ('product listings') .insert ([product_data]) .select ('id') .single ();
-let imagePublicUrl: string | undefined;';
 //If we have an image, upload it .from ('products') .upload (image_path, values.image);
 //Get the public window.URL for the image const {
   data: publicUrlData ';
@@ -187,13 +179,10 @@ imagePublicUrl = publicUrlData.public_url;
 const {
   data: publicUrlData ';
 }= supabase.storage.from ('products') .getPublicUrl (video_path);
-const {
   error: update_error ';
 }= await supabase .from ('product listings') .from ('products') .upload (model_path, values.model);
-const {
   data: publicUrlData ';
 }= supabase.storage.from ('products') .getPublicUrl (model_path);
-const {
   error: update_error ';
 }= await supabase .from ('product listings');
 }//Send listing to moderation service try {';

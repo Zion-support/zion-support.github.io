@@ -43,7 +43,6 @@ export function FeatureHighlights({
       ]
     }
   ]
-  const highlightsData = [
     {
       title: "For Talent Seekers",
       features: [

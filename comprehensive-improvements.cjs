@@ -62,7 +62,6 @@ class ComprehensiveImprovements {
   async improvePerformance() {;
     this.log('⚡ Improving performance...');
 ;
-    const improvements = [;
       { "cmd": 'npm run "performance": analyze', "desc": 'Analyze performance' },
       { "cmd": 'npm run "performance": optimize', "desc": 'Optimize performance' },
       { "cmd": 'npm run "build": analyze', "desc": 'Analyze bundle size' }
@@ -76,7 +75,6 @@ class ComprehensiveImprovements {
   async improveSecurity() {;
     this.log('🔒 Improving security...');
 ;
-    const improvements = [;
       { "cmd": 'npm run "security": scan', "desc": 'Security scan' },
       { "cmd": 'npm run "security": audit', "desc": 'Security audit' },
       { "cmd": 'npm audit fix', "desc": 'Fix security vulnerabilities' }
@@ -90,7 +88,6 @@ class ComprehensiveImprovements {
   async improveAccessibility() {;
     this.log('♿ Improving accessibility...');
 ;
-    const improvements = [;
       { "cmd": 'npm run "automation": accessibility', "desc": 'Accessibility check' },
       { "cmd": 'npm run "test": accessibility', "desc": 'Accessibility tests' }
     ];
@@ -103,7 +100,6 @@ class ComprehensiveImprovements {
   async improveSEO() {;
     this.log('🔍 Improving SEO...');
 ;
-    const improvements = [;
       { "cmd": 'npm run "automation": seo', "desc": 'SEO optimization' },
       { "cmd": 'npm run "sitemap": generate', "desc": 'Generate sitemap' }
     ];
@@ -116,7 +112,6 @@ class ComprehensiveImprovements {
   async improveTesting() {;
     this.log('🧪 Improving testing...');
 ;
-    const improvements = [;
       { "cmd": 'npm run "test": coverage', "desc": 'Test coverage' },
       { "cmd": 'npm run "test": comprehensive', "desc": 'Comprehensive tests' },
       { "cmd": 'npm run "test": ai', "desc": 'AI-powered tests' }

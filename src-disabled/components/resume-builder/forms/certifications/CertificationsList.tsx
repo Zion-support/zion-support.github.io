@@ -42,11 +42,7 @@ interface CertificationsListProps {;
 export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
   if (certifications && certifications.length === 0) {;
 '
-import { Certification } from '@/types/resume';'
-import { Card, CardContent } from '@/components/ui/card';'
-import { Button } from '@/components/ui/button';'
 import { Edit, Trash2 } from 'lucide-react'';
-import { format } from 'date-fns';
 interface CertificationsListProps {}
   certifications: Certification[],
   on_edit: (cert: Certification) => void,

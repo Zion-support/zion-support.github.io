@@ -7,7 +7,6 @@ export default async function handler() { return null; }
   }
   try {}
 ';
-import type { NextApiRequest, NextApiResponse } from 'next';
 
   try {;
     const { name, email, role, country, source } = req.body || {};

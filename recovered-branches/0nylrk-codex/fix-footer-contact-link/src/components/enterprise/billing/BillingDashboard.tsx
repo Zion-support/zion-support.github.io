@@ -1,3 +1,7 @@
+import { BillingHeader } from "./BillingHeader";
+import { CurrentSubscription } from "./CurrentSubscription";
+import { PaymentMethods } from "./PaymentMethods";
+
 import React from "react",
 import { BillingHeader } from "./BillingHeader",
 import { CurrentSubscription } from "./CurrentSubscription",
@@ -30,6 +34,20 @@ export function BillingDashboard() {
         <TabsContent value="invoices" className="space-y-8">
           <InvoiceHistory />
         </TabsContent>
+        </TabsList>        
+        <TabsContent value="subscription" className="space-y-8">
+          <CurrentSubscription />
+        </TabsContent>
+        
+        <TabsContent value="payment" className="space-y-8">
+          <PaymentMethods />
+        </TabsContent>
+        
+        <TabsContent value="invoices" className="space-y-8">
+          <InvoiceHistory />
+        </TabsContent>
+        
+
         <TabsContent value="usage" className="space-y-8">
           <UsageOverview />
         </TabsContent>
@@ -60,6 +78,28 @@ export function BillingDashboard() {;
           <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
           <TabsTrigger value="usage">Usage Overview</TabsTrigger>;
         </TabsList>;
+        <TabsContent value="usage" className="space-y-8">
+          <UsageOverview />
+        </TabsContent>
+      </Tabs>          <TabsTrigger value="payment">Payment Methods</TabsTrigger>;
+          <TabsTrigger value="invoices">Invoice History</TabsTrigger>;
+          <TabsTrigger value="usage">Usage Overview</TabsTrigger>;
+        </TabsList>;
+}
+}
+        ;
+        <TabsContent value="subscription" className="space-y-8">;
+          <CurrentSubscription />;
+        </TabsContent>;
+        ;
+        <TabsContent value="payment" className="space-y-8">;
+          <PaymentMethods />;
+        </TabsContent>;
+        ;
+        <TabsContent value="invoices" className="space-y-8">;
+          <InvoiceHistory />;
+        </TabsContent>;
+        ;
         <TabsContent value="subscription" className="space-y-8">;
           <CurrentSubscription />;
         </TabsContent>;

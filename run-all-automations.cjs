@@ -92,6 +92,7 @@ class AutomationRunner {
       { path: 'scripts/simple-app-improvements.cjs', desc: 'Simple App Improvements' },
       { path: 'scripts/ultimate-automation-orchestrator.cjs', desc: 'Ultimate Automation Orchestrator' }
     ];
+<<<<<<< HEAD
 
     // Also run npm commands
     const npmCommands = [
@@ -104,6 +105,36 @@ class AutomationRunner {
     // Run scripts
     for (const script of automationScripts) {
       await this.runScript(script.path, script.desc);
+=======
+;
+    const results = [];
+    for (const script of scripts) {;
+      const result = await this.runCommand(`npm run ${script}`, `Running ${script}`);
+      results.push({ script, ...result });
+    }
+;
+    return results;
+  }
+;
+  async runCustomScripts() {;
+    this.log('🔧 Running custom automation scripts...');
+;
+      'enhanced-automation-suite.cjs',
+      'app-optimizer.js',
+      'complete-improvement-suite.cjs',
+      'automation/master-orchestrator.cjs';
+    ];
+;
+    for (const script of scripts) {;
+      const scriptPath = path.join(__dirname, script);
+      if (fs.existsSync(scriptPath)) {;
+        const result = await this.runCommand(`node ${script}`, `Running ${script}`);
+        results.push({ script, ...result });
+      } else {;
+        this.log(`⚠️ Script not "found": ${script}`);
+        results.push({ script, "success": false, "error": 'Script not found' });
+      }
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     }
 
     // Run npm commands

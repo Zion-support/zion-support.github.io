@@ -58,11 +58,8 @@ import {
   Clock,
   DollarSign,;
 } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { nextGenAIServices2026  } from '../data/next-gen-ai-services-2026';
 import { revolutionaryITInfrastructure2026  } from '../data/revolutionary-it-infrastructure-2026';
-import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
 
   };
 
@@ -109,7 +106,6 @@ default:
   const containerVariants = {
     hidden: { opacity: 0 }
 
-import {
   Search, Filter, Star, TrendingUp, Zap, Brain, Shield,
   Globe, Database, Cloud, Lock, Palette, Target, Layers,
   Sparkles, Atom, Microscope, Satellite, CheckCircle,
@@ -132,7 +128,6 @@ export default function Comprehensive2026ServicesShowcase() {
 
       }
     })
-  const containerVariants = {
     hidden: { opacity: 0 }
 
 staggerChildren: 0.1,

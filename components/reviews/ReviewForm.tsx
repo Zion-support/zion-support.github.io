@@ -1,8 +1,48 @@
 import React, { useState } from 'react';
+
+
+  categories?: {
+    communication?: number;
+    qualityOfWork?: number;
+    timeliness?: number;
+
+
+
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+ </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
+  submitting ? 'Submitting...' : 'Submit Review' ;
+}</button> </form>) ;
+};
+
+type Props = {;
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {
   projectId: string,
-  fromRole: 'client' | 'talent',
+  fromRole: client' | 'talent,
   fromId: string,
   rating: number,
   text: string,
@@ -11,14 +51,22 @@ export type ReviewFormValues = {
     qualityOfWork?: number;
     timeliness?: number;
     wouldWorkWithAgain?: boolean
-  };
+  }
   anonymous?: boolean
-};
+}
 
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
 };
 
+</div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
+  submitting ? 'Submitting...' : 'Submit Review' 
+}</button> </form>) 
+}
+export default ReviewForm
+import React, { useState } from 'react';
+import StarRating from './StarRating';
+export type ReviewFormValues = any;
 const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [rating, setRating] = useState(0);
   const [text, setText] = useState('');
@@ -61,16 +109,16 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6>
       <div>
-        <label className="block text-sm font-medium mb-2">Overall Rating</label>
+        <label className=block text-sm font-medium mb-2">Overall Rating</label>
         <StarRating value={rating} onChange={setRating} />
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">Your Review</label>
+        <label className="block text-sm font-medium mb-2>Your Review</label>
         <textarea
-          className="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className=w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -128,3 +176,15 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
 };
 
 export default ReviewForm;
+;
+
+      </button>
+
+{message && <p className='text-sm'>{message}</p>}
+    </form>
+  );
+};
+
+export default ReviewForm;
+origin/cursor/automate-test-improve-and-merge-code-2533
+

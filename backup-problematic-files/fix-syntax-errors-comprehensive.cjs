@@ -57,8 +57,6 @@ const glob = require('glob')
  * Comprehensive Syntax Error Fixer for Zion Tech Group
  * Fixes all known syntax errors in the codebase
  */
-const fs = require('fs');
-const path = require('path');
 class SyntaxErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -186,7 +184,6 @@ function fixSyntaxErrors(content, filePath) {
   fixFile(filePath) {
     try {
       this.log(`Fixing: ${filePath}`);
-      let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
       // Apply all fixes
       content = this.fixImportStatements(content);
@@ -234,8 +231,6 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
 
     // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
 
 // Fix index.tsx JSON-LD syntax
 fixFile('pages/index.tsx', 'JSON-LD script syntax', (content) => {
@@ -637,12 +632,10 @@ console.log(`Fixed ${fixedCount} files`);
 fixFile('components/PerformanceMonitor.tsx', 'PerformanceMonitor syntax', (content) => {
     // Replace the entire file with correct syntax
     return `import { useEffect } from 'react';
-const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Largest Contentful Paint (LCP)
-      const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
@@ -655,7 +648,6 @@ const PerformanceMonitor: React.FC = () => {
         // Fallback for browsers that don't support LCP
       }
       // Monitor First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
             console.log('FID:', entry.processingStart - entry.startTime);
@@ -668,8 +660,6 @@ const PerformanceMonitor: React.FC = () => {
         // Fallback for browsers that don't support FID
       }
       // Monitor Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
             clsValue += (entry as any).value;
@@ -713,11 +703,8 @@ console.log('\n🎯 Syntax error fixing completed!');
     }
 
     // Fix missing closing brackets
-    const openBrackets = (content.match(/\[/g) || []).length;
-    const closeBrackets = (content.match(/\]/g) || []).length;
 
     if (openBrackets > closeBrackets) {
-      const missingBrackets = openBrackets - closeBrackets;
       content += ']'.repeat(missingBrackets);
       modified = true;
     }
@@ -726,7 +713,6 @@ console.log('\n🎯 Syntax error fixing completed!');
     const importLines = content
       .split('\n')
       .filter(line => line.trim().startsWith('import'));
-    const uniqueImports = [...new Set(importLines)];
     if (importLines.length !== uniqueImports.length) {
       const nonImportLines = content
         .split('\n')

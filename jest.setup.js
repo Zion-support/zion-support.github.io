@@ -1,13 +1,18 @@
 import '@testing-library/jest-dom';
 
+// Polyfill for TextEncoder/TextDecoder
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Mock Next.js router
-jest.mock("next/router", () => ({
+jest.mock('next/router', () => ({
   useRouter() {
     return {
-      route: "/",
-      pathname: "/",
+      route: '/',
+      pathname: '/',
       query: {},
-      asPath: "/",
+      asPath: '/',
       push: jest.fn(),
       pop: jest.fn(),
       reload: jest.fn(),
@@ -25,18 +30,20 @@ jest.mock("next/router", () => ({
 }));
 
 // Mock Next.js Image component
-jest.mock("next/image", () => {
-  return function MockImage({ src, alt, ...props }) {
-    return <img src={src} alt={alt} {...props} />;
-  };
-});
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props) => {
+    return <img {...props} />;
+  }
+}));
 
 // Mock Next.js Link component
-jest.mock("next/link", () => {
-  return function MockLink({ children, href, ...props }) {
+jest.mock('next/link', () => ({
+  __esModule: true,
+  default: ({ children, href, ...props }) => {
     return <a href={href} {...props}>{children}</a>;
-  };
-});
+  }
+}));
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -45,8 +52,8 @@ Object.defineProperty(window, 'matchMedia', {
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()
@@ -62,14 +69,14 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Mock ResizeObserver
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn(),
-  unobserve: jest.fn(),
-  disconnect: jest.fn(),
-}));
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
 
 // Global test setup
 beforeEach(() => {
-  // Reset all mocks before each test
   jest.clearAllMocks();
 });

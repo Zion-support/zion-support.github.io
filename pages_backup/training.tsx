@@ -20,10 +20,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 export default function Training() {
 
 import React from 'react';
-import React from 'react';
 
 export default function Training() {
-import {
   GraduationCap,
   Users,
   Clock,
@@ -160,7 +158,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   ];
 
-  const allPrograms = [
     // AI Consciousness Programs
     {
       title: 'Zion Tech AI Specialist',

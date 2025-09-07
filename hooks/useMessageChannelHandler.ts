@@ -4,6 +4,9 @@ import { useEffect, useCallback } from 'react';
 interface Event {
   type: string;
   target: EventTarget | null;
+
+}type EventListener = (event: Event) => void;interface EventTarget  {addEventListener(type: string, listener: EventListener): void;
+}type EventListener = (event: Event) => void;interface EventTarget  {addEventListener(type: string, listener: EventListener): void;
 }
 
 interface EventTarget {
@@ -44,9 +47,9 @@ export function useMessageChannelHandler({
   }, [onMessage, onError]);
 
   useEffect(() => {
-    window.addEventListener('message', handleMessage);
+    window.addEventListener('message, handleMessage);
     return () => {
-      window.removeEventListener('message', handleMessage);
-    };
+      window.removeEventListener(message', handleMessage);
+    }
   }, [handleMessage]);
 }

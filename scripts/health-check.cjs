@@ -1,6 +1,21 @@
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+
+
+#!/usr/bin/env node;
+const { execSync } = require('child_process')
+console.log('� Running Health Check...')
+  "status"
+      "status"
+      "status"
+    execSync('npm run build', { "stdio"})
+    execSync('npm run lint', { "stdio"})
+    execSync('npm run type-check', { "stdio"})
+
+console.log('� Overall "status")
+
+#!/usr/bin/env node;
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -9,9 +24,7 @@ const { execSync } = require('child_process');
 
 console.log('🔍 Comprehensive Health Check Starting...');
 
-console.log('� Overall "status")
-console.log('� Overall "status")
-const checks = [
+const checks = [;
   {
     name: 'Package.json exists',
     check: () => fs.existsSync('package.json')
@@ -73,3 +86,5 @@ if (failed === 0) {
   console.log('⚠️  Some health checks failed. Please review the issues.');
   process.exit(1);
 }
+console.log('� Overall "status")
+module.exports = { main, checkPackageJson, checkDependencies, checkBuildOutput };

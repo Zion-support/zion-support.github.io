@@ -12,7 +12,6 @@ class SitemapGenerator {;
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
 
 /**
  * Generate sitemap for the website
@@ -188,10 +187,7 @@ module.exports = SitemapGenerator;
 /**
  * Generate sitemap for the website
  */
-const BASE_URL = '"https": //ziontechgroup.com';
-const SITEMAP_PATH = path.join(process.cwd(), 'public', 'sitemap.xml');
 // Static pages that should be included in sitemap;
-const STATIC_PAGES = ['',]
   '/about',
   '/services',
   '/solutions',
@@ -219,13 +215,10 @@ const STATIC_PAGES = ['',]
   '/digital-transformation'
 ];
 // Dynamic pages patterns;
-const DYNAMIC_PATTERNS = ['pages/services/*.tsx',]
   'pages/solutions/*.tsx',
   'pages/products/*.tsx'
 ];
 function generateSitemap() {}
-  const urls = [];
-  const currentDate = new Date().toISOString();
   // Add static pages;
   STATIC_PAGES.forEach(page => {})
     urls.push({})
@@ -237,14 +230,11 @@ function generateSitemap() {}
 });
   // Add dynamic pages;
   DYNAMIC_PATTERNS.forEach(pattern => {})
-    const files = glob.sync(pattern);
     files.forEach(file => {})
       // Skip index files and special pages;
       if (file.includes('index.') || file.includes('_app.') || file.includes('_document.')) {}
         return};
       // Convert file path to URL;
-      const relativePath = file.replace('pages/', '').replace('.tsx', '').replace('.js', '');
-      const url = `${BASE_URL}/${relativePath}`;`
       urls.push({})
         "loc": url,
         "lastmod": currentDate,
@@ -253,7 +243,6 @@ function generateSitemap() {}
       })})}
 });
   // Generate XML;
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(url => `  <url>`})
     <loc>${url.loc}</loc>

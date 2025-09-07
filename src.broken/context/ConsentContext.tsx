@@ -31,7 +31,6 @@ function loadAnalytics() {
 
 function loadAds() {
   if (document.getElementById('ads-script')) return,
-  const s = document.createElement($2);
   s.src = $2;
   s.async = $2;
   s.id = $2;

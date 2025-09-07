@@ -15,7 +15,6 @@ import {Badge} from "@/components/ui/badge"
 import {Card, CardContent} from "@/components/ui/card"
 type JobPostStep = "details" | "requirements" | "budget" | "preview"
 export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details")
   const goToNextStep = () => {
 import React, { useState } from "react",
 import { MobileHeader } from "@/mobile/components/common/MobileHeader",
@@ -387,7 +386,6 @@ function RequirementsStep() {}
   ]),
   const [newSkill, setNewSkill] = useState(""),
   
-  const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
       setSkills([...skills, newSkill]),
       setNewSkill("")

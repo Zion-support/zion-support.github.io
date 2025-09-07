@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
-<<<<<<< HEAD
   const [email, setEmail] = useState('');
   const [honeypot, setHoneypot] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,19 +43,6 @@ export function FooterNewsletter(): React.ReactElement {
       const data = await res.json().catch(() => ({})), // Ensure data is an object even on parse error
 
       if (res.ok) {
-=======
-  const [email, setEmail] = useState(''),
-  const [honeypot, setHoneypot] = useState(''),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [emailError, setEmailError] = useState(''),
-  const { toast } = useToast(),
-  const handleSubmit = async (e: React.FormEvent) => {
-    try {
-      const res = await fetch('/api/newsletter', {
-        method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: trimmedEmail })
-      }), const data = await res.json().catch(() => ({})), // Ensure data is an object even on parse error,
-  if (res.ok) {
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
         if (data.status === 'already_subscribed') {
           toast.success(data.message || "You're already subscribed!", { id: `${uniqueToastIdBase}-already-subscribed` })
         } else {
@@ -68,17 +51,10 @@ export function FooterNewsletter(): React.ReactElement {
         setEmail('');
         // setEmailError(''), // Already cleared if regex passed
       } else {
-<<<<<<< HEAD
         logErrorToProduction('Newsletter subscription failed:', { data: data }),
         // Use a more specific error message if available from API, otherwise generic
         const errorMessage = data.error || 'Subscription failed. Please try again.';
         toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` })
-=======
-        logErrorToProduction($2);
-        // Use a more specific error message if available from API, otherwise generic,
-  const errorMessage = data.error || 'Subscription failed. Please try again.',
-        toast.error(errorMessage, { id: `${uniqueToastIdBase}-api-error` });
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
       }
     } catch (err: any) {
       logErrorToProduction('Newsletter subscription error:', { data: err }),
@@ -86,12 +62,8 @@ export function FooterNewsletter(): React.ReactElement {
     } finally {
       setIsSubmitting(false)
     }
-<<<<<<< HEAD
   };
 
-=======
-  },
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
   return (
     <form,
   id="footer-newsletter-form"
@@ -113,7 +85,6 @@ export function FooterNewsletter(): React.ReactElement {
         autoComplete="email"
         required
       />
-<<<<<<< HEAD
       {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
@@ -133,21 +104,12 @@ export function FooterNewsletter(): React.ReactElement {
         {isSubmitting ? (
           <>
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-=======
-        {isSubmitting ? (
-          <>
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57
             Subscribing...
           </>
         ) : (
           'Subscribe'
         )}
       </Button>
-<<<<<<< HEAD
     </form>
   )
 } 
-=======
-    </form>
->>>>>>> cursor/automate-test-improve-and-merge-code-6d57

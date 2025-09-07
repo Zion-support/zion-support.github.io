@@ -208,12 +208,9 @@ const successStories = [{ id: 1, client: "TechFlow Solutions"," industry: "FinTe
   label: 'Avg.Delivery Time',}
 } ] const [selectedStory, setSelectedStory] =;
   useState(null);
-  const [hoveredIndustry, setHoveredIndustry] = useState(null);
-  const containerVariants = {hidden: { opacity: 0}
 }, visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
 }
 ;
-  const itemVariants = { hidden: { y: 30, opacity: 0,}
 }, visible: { y: 0, opacity: 1, transition: { duration: 0.6,' ease: 'easeOut' } },
 }';
   return (<section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-purple relative overflow-hidden' /> {}' <div className='absolute inset-0 opacity-5' />' <div className='absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full' /></div>' <div className='absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full' /></div>' <div className='absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full' /></div> </div> ' <div className='container mx-auto px-4 relative z-10' /> {}' <motion.div className='text-center mb-20' initial = { { opacity: 0, y: 20 ,}

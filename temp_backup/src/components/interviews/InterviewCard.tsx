@@ -8,7 +8,6 @@ onRefresh: () => Promise<void> ;
   const {;
   user ;
 }= useAuth ();
-const {;
   respondToInterview, cancelInterview ;
 }= useInterviews ();
 const [isResponseDialogOpen, setIsResponseDialogOpen] = useState (false);

@@ -5,7 +5,6 @@ import type { AccessLevel } from "../../utils/search/filter";"
 import { parseQueryToFilters } from "../../utils/search/parser";"
 import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
 
-    const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
@@ -26,8 +25,6 @@ import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
     const q = (req && req.query.q as string) || "";"
     const access = ((req && req.headers["x-access-level"] as string) ||"
       "public") as AccessLevel;
-    const parsed = await parseQueryToFilters(q);
-    const results = searchAll(parsed, access);
     const keywords = Array && Array.from(
       new Set([...(parsed && parsed.skills || []), ...(parsed && parsed.keywords || [])]),
     );
@@ -46,8 +43,6 @@ function handler() {}
     const q = (req.query.q as string) || "";"
     const access = ((req.headers["x - access - level"] as string) ||;"
       "public") as AccessLevel;
-    const parsed = await parseQueryToFilters(q);
-    const results = searchAll(parsed, access);
 
       ok: true,
       query: q,
@@ -57,35 +52,24 @@ function handler() {}
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 '
-    const q = (req.query.q as string) || '';'
-    const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
 
-import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {}
   try {";
-    const q = (req.query.q as string) || "";"
     const access = ((req.headers["x-access-level"] as string) ||"
       "public") as AccessLevel;
 
-    const parsed = await parseQueryToFilters(q);
-    const results = searchAll(parsed, access);
 
     res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
   }
 }
 
 '
-import type { NextApiRequest, NextApiResponse } from 'next';
 
 '
-    const q = (req.query.q as string) || '';'
-    const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
-    const parsed = await parseQueryToFilters(q);
-    const results = searchAll(parsed, access);
 
   }
 }

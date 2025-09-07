@@ -29,7 +29,6 @@ const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>
 useEffect ( () => {';''
   safeStorage.setItem ('transaction filter', filter) ;
 }, [filter]);
-const {;'
   data: transactions, isLoading,  error, refetch ;''
 }= useQuery ({';''
   queryKey: ['transactions',  user?.id, filter];

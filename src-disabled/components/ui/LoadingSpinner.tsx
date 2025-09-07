@@ -60,7 +60,6 @@ export default LoadingSpinner   import { motion    } from 'framer-motion' interf
 export const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ size = 'md', color = 'primary', text, fullScreen = false    }) => {
 
 
- const sizeClasses = { sm: 'w-4 h-4',
   md: 'w-8 h-8', lg: 'w-12 h-12'}
   xl: 'w-16 h-16';}
 }
@@ -95,12 +94,10 @@ export default LoadingSpinner  import { motion    } from 'framer-motion' interfa
 export const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ size = 'md', color = 'blue', text, className = ''    }) => {
 
 
- const sizeClasses = { sm: 'w-4 h-4',
   md: 'w-8 h-8', lg: 'w-12 h-12'}
   xl: 'w-16 h-16'}
 }
 ;
-  const colorClasses = { blue: 'border-blue-500',
   green: 'border-green-500', purple: 'border-purple-500'}
   red: 'border-red-500', gray: 'border-gray-500'}
 };
@@ -120,12 +117,10 @@ export default LoadingSpinner   import { motion    } from 'framer-motion' interf
 export const LoadingSpinner: React.FC<LoadingSpinnerProps /> = ({ size = 'md', color = 'primary', text, fullScreen = false    }) => {
 
 
- const sizeClasses = { sm: 'w-4 h-4',
   md: 'w-8 h-8', lg: 'w-12 h-12'}
   xl: 'w-16 h-16';}
 }
 
-const colorClasses = { primary: 'border-cyan-500'}
   secondary: 'border-purple-500', white: 'border-white'}
 }
 ;

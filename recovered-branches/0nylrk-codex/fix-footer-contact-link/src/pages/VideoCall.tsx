@@ -1,44 +1,104 @@
-import { useState, useEffect  } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
-import { Button  } from '@/components/ui/button';
-import { toast } from 'sonner';
+import { useState, useEffect  } from 'react';'
+import { useParams, useNavigate  } from 'react-router-dom';'
+import { Header  } from '@/components/Header';'
+import { Footer  } from '@/components/Footer';'
+import { SEO  } from '@/components/SEO';'
+import { VideoCallRoom  } from '@/components/video/VideoCallRoom';'
+import { Button  } from '@/components/ui/button';'
+import { toast } from 'sonner';'
+import {useState, useEffect} from 'react';'
+import {useParams, useNavigate} from 'react-router-dom';'
+import {Header} from '@/components/Header';'
+import {Footer} from '@/components/Footer';'
+import {SEO} from '@/components/SEO';'
+import {VideoCallRoom} from '@/components/video/VideoCallRoom';'
+import {Button} from '@/components/ui/button';'
+import {toast} from 'sonner';'
 export default function VideoCall() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
-  const { roomId } = useParams($2);
-  const navigate = useNavigate($2);
-  const [isJoining, setIsJoining] = useState($2);
-  const [hasJoined, setHasJoined] = useState($2);
-  const [participants, setParticipants] = useState<Array<{
-    id: string,
-    name: string,
-    avatar?: string,
-    isMuted?: boolean,
-    isVideoEnabled?: boolean,
-    isScreenSharing?: boolean,
+  // useParams is typed as `any` in this environment due to missing type`  // definitions, so avoid passing a type argument to prevent TS2347.
+}
+import {use_params, use_navigate} from 'react-router-dom';'
+import {Header} from '@/components / Header';'
+import {Footer} from '@/components / Footer';'
+import {SEO} from '@/components / SEO';'
+import {VideoCallRoom} from '@/components / video / VideoCallRoom';'
+import {Button} from '@/components / ui / button';'
+import {toast} from 'sonner';    avatar?: string;'
+    isMuted?: boolean;
+    isVideoEnabled?: boolean;
+    isScreenSharing?: boolean;
     isHost?: boolean
   }>>([
     {
-      id: 'user-1',
-      name: 'You',
-      isVideoEnabled: true,
-      isMuted: false}
-  ]),
-
-  const handleJoinCall = () => {
-    setIsJoining($2);
-    // Simulate connection delay
-    setTimeout(() => {
-      setHasJoined($2);
-      setIsJoining($2);
-      toast.success("Call joined", {
-        description: `You have joined meeting room ${roomId}`
-      })
-    }, 1500)
+      }
+      "id": "id","
+    "name": 'You''
+      "isVideoEnabled": true;
+    "isMuted": false
+    }
+  ]);
+import { useState, useEffect } from 'react';'
+import { useParams, useNavigate } from 'react-router-dom';'
+import { Header } from '@/components/Header',;'
+import { Footer } from '@/components/Footer',;'
+import { SEO } from '@/components/SEO',;'
+import { VideoCallRoom } from '@/components/video/VideoCallRoom',;'
+import { Button } from '@/components/ui/button',;'
+import { toast } from 'sonner',;'
+export default function VideoCall() {;
+  // useParams is typed as `any` in this environment due to missing type;`  // definitions, so avoid passing a type argument to prevent TS2347.;
+  }
+  const { roomId } = useParams(),;
+  const navigate = useNavigate(),;
+  const [isJoining, setIsJoining] = useState(false),;
+  const [hasJoined, setHasJoined] = useState(false),;
+  const [participants, setParticipants] = useState<Array<{;
+    }
+    "id": string,;
+    "name": string,;
+    avatar?: string,;
+    isMuted?: boolean,;
+    isVideoEnabled?: boolean,;
+    isScreenSharing?: boolean,;
+    isHost?: boolean;
+    "id": string,
+    "name": string,
+    avatar?: string,
+isMuted?: boolean,
+isVideoEnabled?: boolean,
+isScreenSharing?: boolean,
+isHost?: boolean
+  }>>([;
+    {;
+      }
+      "id": 'user-1',;'
+      "name": 'You',;'
+      "isVideoEnabled": true,;
+      "isMuted": false;
+    }
+    setIsJoining(true);
+    // Simulate connection delay;
+    setTimeout(() => {;
+      }
+      setHasJoined(true);
+      setIsJoining(false);
+    setHasJoined(false);
+    toast && toast.info("Call ended", {,"
+  }
+  "description": "You have left the meeting";"
+    });
+  const handleJoinCall = () => {;
+    }
+    setIsJoining(true);
+    // Simulate connection delay;
+    setTimeout(() => {;
+      }
+      setHasJoined(true);
+      setIsJoining(false);
+      toast.success("Call joined", {"
+        }
+        "description": `You have joined meeting room ${roomId}`,`
+      });
   },
 
   const handleLeaveCall = () => {
@@ -86,6 +146,23 @@ export default function VideoCall() {
         ) : (
           <div className="space-y-4">
             <VideoCallRoom
+    }, 1500)
+};
+
+  const handleLeaveCall = () => {;
+    }
+    setHasJoined(false);
+    toast && toast.info("Call ended", {,"
+  }
+  "description": "You have left the meeting";"
+    });
+            {/* This button is just for demo/testing purposes */}
+            <div className="flex justify-center mt-4">"
+              <Button,
+variant="outline";"
+                onClick={simulateUserJoining}
+                className="text-sm""
+              >
               roomId={roomId |''}
               participants={participants}
               onLeave={handleLeaveCall}
@@ -98,6 +175,18 @@ export default function VideoCall() {
             </div>
           </div>
         )}
+      </main>;
+      <Footer />;
+    </>;  );
+}
+      "id": 'user - 1','
+      "name": 'You','
+      "isVideoEnabled": true,
+      "is_muted": false;
+    }
+  ]);
+;
+;
       </main>
       <Footer />
     </>

@@ -30,6 +30,7 @@ import React from 'react';
 interface EducationSolutionsProps {
   // Add props here as needed
 
+
 }
 
 export default function EducationSolutions({ }: EducationSolutionsProps) {
@@ -39,7 +40,27 @@ export default function EducationSolutions({ }: EducationSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+
+}
+
+}
+:src.pages.disabled/EducationSolutions.jsx
 }
 }
 }
 }
+}
+
+
+
+
+
+
+:src.pages.disabled/EducationSolutions.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/EducationSolutions.jsx;

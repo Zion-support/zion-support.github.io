@@ -85,7 +85,6 @@ const AIBusinessIntelligence: React.FC = () => {
     }
   ];
 
-  const benefits = [
     "Increase revenue by 25-40% through data-driven insights",
     "Reduce operational costs by 15-30% with process optimization",
     "Improve customer retention by 20-35% with predictive analytics",

@@ -12,14 +12,14 @@ import { execSync, spawn } from;
     console.log(' Checking TypeScript errors...')
   'Error during TypeScript check: '
   'npx: tsc --noEmit', { stdio: 'pipe})'
-    const lines = output.split('\\n')
+const lines = output.split('\\n');
           type: 'typescript'
-      const content = fs.readFileSync(file, 'utf8')
-      const lines = content.split('\\n')
+const content = fs.readFileSync(file, 'utf8');
+const lines = content.split('\\n');
   '\\n'
           type:';typescript'
-      const content = fs.readFileSync(file, ';utf8')
-      const lines = content.split(')
+const content = fs.readFileSync(file, ';utf8');
+const lines = content.split(');
       '\\n'
         case';TS2304': // Cannot: find name'
         case';TS2307': // Cannot: find module'
@@ -31,15 +31,9 @@ import { execSync, spawn } from;
   '\\n')'
       console.error(')
   '\\n'
-    const nameMatch = message.match(/Cannot find name '(.+?)'
-        React: "
-        useState: "
-        useEffect: "
+const nameMatch = message.match(/Cannot find name '(.+?)';
+        React: "React",
+    useEffect: "
         useRef: "
         FC: "
-        ReactNode: "
-        ReactNode: "
-#!/usr/bin/env node
-import { execSync, spawn } from;
-
-
+    ReactNode: "

@@ -1,7 +1,43 @@
+<<<<<<< HEAD
 #!/usr/bin/env node,
   const fs = require('fs');
 const path = require('path');
+=======
+#!/usr/bin/env node
+
+const fs = require('fs');
+const path = require(path');
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+
+
+    // Check if file has merge conflict markers
+    if (
+
+    ) {
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
+
+    const content = fs.readFileSync(filePath, utf8');
+    
+ursor/automate-test-improve-and-merge-code-85f4
+    // Check if file has merge conflict markers
+    if (
+      content.includes('
+      content.includes() ||
+      content.includes('>>>>>>>')
+ursor/fix-lint-push-and-merge-to-main-28da
+    ) {
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
+
+      // Remove merge conflict markers and keep the content after 
+ursor/fix-lint-push-and-merge-to-main-28da
+      const lines = content.split(\n);
+      const fixedLines = [];
+      let inConflict = false;
+      let keepContent = false;
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
 class MergeConflictResolver {
   constructor() {
     this.projectRoot = process.cwd();
@@ -11,13 +47,23 @@ class MergeConflictResolver {
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
+<<<<<<< HEAD
   getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs']) {
+=======
+
+  getAllFiles(dir, extensions = ['.js', .jsx, '.ts', .tsx, '.cjs', .mjs]) {
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     let files = [];
     const items = fs.readdirSync(dir);
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
+<<<<<<< HEAD
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+=======
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules) {
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
         files = files.concat(this.getAllFiles(fullPath, extensions));
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
@@ -28,8 +74,14 @@ class MergeConflictResolver {
   hasMergeConflicts(filePath) {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
       return content.includes('') || 
              content.includes('>>>>>>>');
+=======
+      return content.includes(<<<<<<< HEAD) || 
+             content.includes('=======') || 
+             content.includes(>>>>>>>);
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     } catch (error) {
       return false;
     }
@@ -38,12 +90,54 @@ class MergeConflictResolver {
     try {
       let content = fs.readFileSync(filePath, 'utf8');
       const originalContent = content;
+<<<<<<< HEAD
+
+        if (line.includes(
+ursor/fix-lint-push-and-merge-to-main-28da
+    
+    // Check if file has merge conflict markers
+    if (
+
+      content.includes('
+      content.includes() ||
+      content.includes('>>>>>>>')
+
+    ) {
+      console.log(`Fixing merge conflicts: in: ${filePath}`);
+
+
+          inConflict = true;
+          keepContent = false;
+          continue;
+        }
+
+          inConflict = false;
+          keepContent = false;
+          continue;
+        }
+
+        if (!inConflict || keepContent) {
+          fixedLines.push(line);
+      // Remove merge conflict markers and keep HEAD version
+      content = content.replace(
+<<<<<<< HEAD
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        '$1'
+=======
       // Remove merge conflict markers and keep HEAD version,
   content = content.replace(
         /\n(.*?)\n        '$1'
+>>>>>>> cursor/integrate-build-improve-and-re-verify-f954
       );
       // Clean up any remaining markers,
   content = content.replace(/\n/g, '');
+=======
+        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n        $1
+      );
+
+      // Clean up any remaining markers
+      content = content.replace(/<<<<<<< HEAD\n/g, '');
+      content = content.replace(/=======\n/g, );
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
       content = content.replace(/
       // Clean up any orphaned markers,
   content = content.replace(/[^]*?      content = content.replace(/[^]*?
@@ -61,7 +155,12 @@ class MergeConflictResolver {
     }
   }
   async run() {
+<<<<<<< HEAD
     this.log('🔧 Starting comprehensive merge conflict resolution...');
+=======
+    this.log(🔧 Starting comprehensive merge conflict resolution...);
+    
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     const files = this.getAllFiles(this.projectRoot);
     this.log(`📁 Found ${files.length} files to check`);
     let conflictCount = 0;
@@ -94,7 +193,12 @@ class MergeConflictResolver {
       failedFiles: this.failedFiles.length,
       fixedFiles: this.fixedFiles.map(f => path.relative(this.projectRoot, f)),
       failedFilesDetails: this.failedFiles
+<<<<<<< HEAD
     };
+=======
+    }
+    
+>>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
     const reportPath = path.join(this.projectRoot, 'merge-conflict-resolution-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📄 Report saved to: ${reportPath}`);

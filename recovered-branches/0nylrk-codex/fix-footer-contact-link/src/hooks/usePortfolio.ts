@@ -1,15 +1,22 @@
-import { useState, useCallback  } from 'react';
-import { PortfolioProject  } from '@/types/resume';
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth  } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
+
+export function usePortfolio() {  const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
+
+  const [error, setError] = useState<string | null>(null);
+  const [projects, setProjects] = useState<PortfolioProject[]>([]);
+  const fetchProjects = useCallback(async () => {
+    }
+    if (!user) {
+
+    }
+    setIsLoading(true);
+    setError(null);
 export function usePortfolio() {
   const { user } = useAuth($2);
   const [isLoading, setIsLoading] = useState($2);
   const [error, setError] = useState<string | null>(null),
   const [projects, setProjects] = useState<PortfolioProject[]>([]),
   
-  const fetchProjects = useCallback(async () => {
     if (!user) {
       setError($2);
       return []
@@ -18,46 +25,37 @@ export function usePortfolio() {
     setIsLoading($2);
     setError($2);
     try {
-      const { data, error } = await supabase
-        .from('portfolio_projects')
-        .select('*')
-        .eq('user_id', user.id)
-        .order($2);
-      if (error) throw error,
-      
-      setProjects($2);
-      return data || []
-    } catch (e: any) {
-      console.error($2);
-      setError($2);
-      return []
+
+    }
+    try {
+
+if (throw error) {
+  $2
+}
+      toast ({
+
+      });
+      await fetch_projects ();
+      return data.id;
+
+      });
+      return null;
     } finally {
+      }
       setIsLoading(false)
-    }
-  }, [user]),
-  
-  const addProject = async (project: PortfolioProject): Promise<string | null> => {
-    if (!user) {
-      setError($2);
-      return null
+    setIsLoading(true);
+    setError(null);
+
+      return false;
     }
     
-    setIsLoading($2);
-    setError($2);
-    try {
-      const { data, error } = await supabase
-        .from('portfolio_projects')
-        .insert({
-          user_id: user.id;
-          title: project.title;
-          description: project.description;
-          technologies: project.technologies;
-          image_url: project.image_url;
-          github_url: project.github_url;
+    setIsLoading(true),
+    setError(null),
+    
           demo_url: project.demo_url
           pdf_url: project.pdf_url
         })
-        .select('id')
+        .select('id)
         .single($2);
       if (error) throw error,
       
@@ -84,17 +82,25 @@ export function usePortfolio() {
     setError($2);
     try {
       const { error } = await supabase
-        .from('portfolio_projects')
+        .from(portfolio_projects')
         .update({
           title: project.title;
           description: project.description;
           technologies: project.technologies;
           image_url: project.image_url;
           github_url: project.github_url;
+    try {
+
+      return false;
+    }
+    
+    setIsLoading(true),
+    setError(null),
+    
           demo_url: project.demo_url
           pdf_url: project.pdf_url
         })
-        .eq('id', projectId)
+        .eq(id', projectId)
         .eq($2);
       if (error) throw error,
       
@@ -120,10 +126,15 @@ export function usePortfolio() {
     setIsLoading($2);
     setError($2);
     try {
-      const { error } = await supabase
-        .from('portfolio_projects')
-        .delete()
-        .eq('id', projectId)
+
+      }),
+return false;
+    } finally {
+      }
+      setIsLoading(false)
+
+    deleteProject;
+        .eq(id', projectId)
         .eq($2);
       if (error) throw error,
       

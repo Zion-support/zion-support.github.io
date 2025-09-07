@@ -85,7 +85,6 @@ export default function SearchFeature() {
 import { Button } from "@/components/ui/button",
 import Link from 'next/link',
 export default function SearchFeature() {
-  const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Advanced Search",

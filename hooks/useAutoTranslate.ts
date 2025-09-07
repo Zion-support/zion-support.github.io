@@ -1,10 +1,21 @@
-import { useEffect, useMemo, useState } from 'react';
-import { translateTextViaAI } from '../utils/translation';
 export type UseAutoTranslateResult = {
-  translations: Record<string, string>,
-  loading: boolean,
-  error?: string
-},
+  translations: Record < string, string>;
+
+
+import { useEffect, useMemo, useState } from 'react';'
+import { translateTextViaAI } from '../utils/translation';'
+};
+
+export function useAutoTranslate(
+  "text": string,
+  "targets": string[],
+  debounceMs = 600
+): UseAutoTranslateResult {
+  }
+  const [translations, setTranslations] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | undefined>(undefined);
+      setTranslations({});
 
 export function useAutoTranslate(text: string, targets: string[], debounceMs = 600): UseAutoTranslateResult {
   const [translations, setTranslations] = useState<Record<string, string>>({}),
@@ -18,26 +29,75 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
       setTranslations($2);
       return
     }
-
-    let cancelled = $2;
-    const timer = setTimeout(async () => {
-      try {
-        setLoading($2);
-        setError($2);
-        const res = await translateTextViaAI($2);
-        if (!cancelled) setTranslations(res)
-      } catch (e: any) {
-        if (!cancelled) setError(e?.message || 'Translation failed')
-      } finally {
-        if (!cancelled) setLoading(false)
+    let cancelled = false;
+    const timer = set_timeout (async () => {
       }
-    }, debounceMs),
+      try {
 
+        }
+
+        setLoading(true);
+        setError(undefined);
+        const res = await translateTextViaAI(text, targets);
+if (!cancelled) setTranslations(res);
+      } catch ("e": any) {
+        }
+        if (set_error (e?.message || 'Translation failed')) {'
+  $2
+}
+      } finally {
+
+        }
+
+        if (!cancelled) setLoading(false);
+      }
+    }, debounceMs);
     return () => {
-      cancelled = $2;
-      clearTimeout(timer)
-    }
-  }, [key, debounceMs]),
+      }
+      cancelled = true;
+clearTimeout(timer);
+    };
+  }, [key, debounceMs]);
 
+  return { translations, loading, error };
+  return { translations, loading, error }
+    }
+  }, [key, debounceMs]);
+  return { translations, loading, error }
+}
+
+;
+export type UseAutoTranslateResult = {translations: Record < string, string>;
+  loading: boolean;
+  error?: string;
+}import { useEffect, useMemo, useState  } from 'react';
+import { translateTextViaAI  } from '../utils/translation';
+}export function useAutoTranslate(text: string,targets: string[],debounceMs = 600;
+): UseAutoTranslateResult {const [translations, setTranslations] = useState<Record<string, string>>({})const [loading, setLoading] = useState(false)const [error, setError] = useState<string | undefined>(undefined)setTranslations({})export function useAutoTranslate (text: string,targets: string[],debounce_ms = 600): UseAutoTranslateResult {  const [translations, set_translations] = useState < Record < string, string>>({})export function useAutoTranslate (text: string, targets: string[], debounce_ms = 600): UseAutoTranslateResult {const [translations, set_translations] = useState < Record < string, string>>({})const [loading, set_loading] = useState (false)const [error, set_error]  = useState < string | undefined>(undefined)const key  = useMemo (() => JSON.stringify ({ text, targets }), [text, targets])useEffect (() => {// Check condition;
+if ( {) {$2;
+}
+      set_translations ({})return;    }      return;
+return;}
+    const timer = set_timeout (async () => {try {set_loading (true)set_error (undefined)const res = await translateTextViaAI (text, targets)if (set_translations (res)) {$2;
+}
+        setLoading(true)setError(undefined)const res = await translateTextViaAI(text, targets)if (!cancelled) setTranslations(res)} catch (e: any) {if (set_error (e?.message || 'Translation failed')) {$2;
+}
+      } finally {if (set_loading (false)) {$2;
+}      }      } catch (e: any) {if (set_error (e?.message || 'Translation failed')) {$2;
+}
+      } finally {if (set_loading (false)) {$2;
+}
+      }}
+  }, [key, debounce_ms])if (!cancelled) setLoading(false)}
+    }, debounceMs)return () => {cancelled = true;
+clearTimeout(timer)}}, [key, debounceMs])return { translations, loading, error }return { translations, loading, error }
+    }
+  }, [key, debounceMs])return { translations, loading, error }
+}
+}
+    }
+  }, [key, debounce_ms])return { translations, loading, error }
+
+}
   return { translations, loading, error }
 }

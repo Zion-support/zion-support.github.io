@@ -1,9 +1,8 @@
+import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
 
-=======
-=======
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -62,8 +61,6 @@ export default function ServicesIndex() {
       </Head>
 
 
-=======
-=======
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}

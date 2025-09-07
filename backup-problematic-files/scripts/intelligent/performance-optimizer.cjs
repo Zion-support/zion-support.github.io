@@ -239,7 +239,6 @@ class PerformanceOptimizer {
         this.metrics[key] = this.metrics[key].slice(-100)}
     })}
   async analyzePerformance() {
-    const analysis = {
       "timestamp": new Date().toISOString(),
       "trends": await this.analyzeTrends(),
       "bottlenecks": await this.identifyBottlenecks(),
@@ -470,8 +469,6 @@ class PerformanceOptimizer {
   }
   async generateOptimizations() {
     const optimizations = [];
-    const trends = await this.analyzeTrends(;);
-    const bottlenecks = await this.identifyBottlenecks(;);
     // CPU optimizations
     if ( {
       optimizations.push({
@@ -553,7 +550,6 @@ class PerformanceOptimizer {
       }
     // Restart processes with high memory usage
     try {
-      const processes = await this.getProcessMetrics(;);
       const highMemoryProcesses = processes.filter(p => p.memory > 100 * 1024 * 1024;); // 100MB
       for (const proc of highMemoryProcesses) {
         execSync(`pm2 restart ${proc.name}`, { "stdio": 'pipe' });
@@ -572,7 +568,6 @@ class PerformanceOptimizer {
   }
   async performDeepAnalysis() {
     try {
-      const analysis = {
         "timestamp": new Date().toISOString(),
         "baseline": this.baseline,
         "currentMetrics": await this.collectCurrentMetrics(),

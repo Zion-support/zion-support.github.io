@@ -1,34 +1,4 @@
 {
-  "timestamp": "2025-09-06T04:57:07.377Z",
-  "duration": "20s",
-  "results": {
-    "tests": {
-      "passed": 0,
-      "failed": 2,
-      "errors": [
-        "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
-      ]
-    },
-    "builds": {
-      "success": false,
-      "errors": [
-        "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
-      ]
-    },
-    "security": {
-      "issues": [],
-      "fixed": 0
-    },
-    "improvements": [
-      "Created performance monitoring script"
-    ]
-  },
-  "summary": {
-    "testsPassed": 0,
-    "testsFailed": 2,
-    "buildSuccess": false,
-    "lintingSuccess": false,
-    "securityIssuesFixed": 0,
-    "improvementsCreated": 1
-  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
 }

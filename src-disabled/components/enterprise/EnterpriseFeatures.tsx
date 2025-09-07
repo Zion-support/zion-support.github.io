@@ -43,7 +43,6 @@ const features = [
 ]
 
 import React from "react";
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
 const features = null;
 
@@ -120,7 +119,6 @@ function EnterpriseFeatures() {}
             </div>
 
 import React from "react",'
-import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
 
     description: "Create a secure, private hiring portal accessible only to your team members.",
     icon: Shield},

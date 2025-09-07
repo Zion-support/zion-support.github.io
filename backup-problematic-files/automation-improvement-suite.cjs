@@ -6,8 +6,6 @@ const { execSync } = require('child_process');
 #!/usr/bin/env node
 
 const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
 class AutomationImprovementSuite {}
   constructor() {}
@@ -29,10 +27,7 @@ class AutomationImprovementSuite {}
     this.log('🔧 Creating Enhanced Automation Scripts');
 
     // 1. Create a comprehensive error fixer
-    const errorFixerScript = "#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
+const errorFixerScript = "#!/usr/bin/env node;
 
 class ComprehensiveErrorFixer {
   constructor() {
@@ -107,8 +102,6 @@ fixer.fixFiles().catch(console.error);
 
     // 2. Create a performance monitor
     const performanceMonitorScript = "#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
 
 // Function to run command and return result
@@ -130,10 +123,7 @@ function runCommand(command, description) {
 
 // Function to create performance monitoring script
 function createPerformanceMonitor() {
-  const script = `#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
+const script = `#!/usr/bin/env node;
 
 class PerformanceMonitor {
   constructor() {
@@ -152,9 +142,7 @@ class PerformanceMonitor {
     this.log('🔍 Analyzing Performance Metrics');
     
     // Count files
-    const srcDir = path.join(this.projectRoot, 'src');
     if (fs.existsSync(srcDir)) {
-      const files = this.getAllFiles(srcDir, ['.tsx', '.ts', '.jsx', '.js']);
       this.metrics.fileCount = files.length}
     
     // Check for common performance issues
@@ -173,6 +161,91 @@ class PerformanceMonitor {
         'Optimize bundle size with tree shaking',
         'Use dynamic imports for heavy components'
       ]
+    fs.writeFileSync('/workspace/performance-data.json', JSON.stringify(performanceData, null, 2));
+  } catch (error) {
+    console.log(\`❌ Build failed: \${error.message}\`);
+main();
+    this.logFile = path.join(this.reportsDir, 'automation-improvement.log');
+    // Ensure reports directory exists;
+    if (!fs.existsSync(this.reportsDir)) {}
+      fs.mkdirSync(this.reportsDir, { recursive: true }
+});
+    };
+  };
+  log(message, level = 'INFO') {}
+    const timestamp = new Date().toISOString();
+const logMessage = `[${timestamp}] [${level}] ${message}`;`;
+    console.log(logMessage);
+    fs.appendFileSync(this.logFile, logMessage + '\n');
+  };
+  fixImportStatements(content) {}
+    // Fix duplicate import statements;
+    content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]/g, 
+      'import { $1, $3 } from \'$2\'');
+    // Fix malformed import statements;
+    content = content.replace(/import\s*{[^}]+}\s*from\s*['"][^'"]+['"]\s*;?\s*['"]/g, )
+      (match) => match.replace(/['"]\s*;?\s*['"]/g, ''));
+    // Fix semicolon issues in strings;
+    content = content.replace(/['"]\s*;\s*['"]/g, '');
+    content = content.replace(/['"]\s*;\s*([^'"]*)\s*['"]/g, '\'$1\'');
+    content = content.replace(/\[\s*['"]\s*;\s*([^'"]*)\s*['"]/g, '[\'$1\'');]
+    content = content.replace(/{\s*['"]\s*;\s*([^'"]*)\s*['"]/g, '{\'$1\'');}
+    content = content.replace(/className\s*=\s*['"]\s*;\s*([^'"]*)\s*['"]/g, 'className=\'$1\'');
+    return content;
+  };
+  getSecurityRecommendations() {}
+    return {}
+      recommendations: []
+        {}
+          name: 'Remove hardcoded secrets',
+          pattern: /(password|secret|key|token)\s*=\s*['"][^'"]+['"]/g,
+          severity: 'high'
+        },
+        {}
+          name: 'Add input validation',
+          severity: 'medium'
+        },
+        {}
+          name: 'Implement proper error handling',
+          severity: 'medium'
+        };
+      ];
+    };
+  };
+  getPerformanceOptimizations() {}
+    return {}
+      optimizations: []
+        {}
+          name: 'Bundle size optimization',
+          command: 'npm run analyze',
+          type: 'build'
+        },
+        {}
+          name: 'Image optimization',
+          command: 'npm run optimize-images',
+          type: 'assets'
+        },
+        {}
+          name: 'Code splitting',
+          command: 'npm run build',
+          type: 'build'
+        },
+        {}
+          name: 'Lazy loading',
+          command: 'npm run build',
+          type: 'build'
+        };
+      ];
+    };
+  };
+  async runOptimization(optimization) {}
+    try {}
+      this.log(`Running: ${optimization.name}`);
+const result = execSync(optimization.command, { });
+        encoding: 'utf8',
+        cwd: this.projectRoot;
+      }
+});
       this.log(`${optimization.name} completed successfully`);
       return { }
         success: true, 
@@ -192,9 +265,6 @@ auditor.auditSecurity().catch(console.error);
     this.log('✅ Created security-audit-enhanced.cjs');
     // 4. Create a comprehensive test runner
     const testRunnerScript = "#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 class ComprehensiveTestRunner {
   constructor() {
     this.projectRoot = process.cwd();
@@ -274,8 +344,6 @@ monitorFileChanges();
 function createSecurityScanner() {
   const script = `#!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔒 Security Scanner Started...');
 
@@ -324,7 +392,6 @@ function scanSecurity() {
   });
   
   // Generate security report
-  const report = {
     timestamp: new Date().toISOString(),
     vulnerabilities,
     totalVulnerabilities: vulnerabilities.length,
@@ -339,7 +406,83 @@ if (require.main === module) {}
   suite.run();
 };
 module.exports = AutomationImprovementSuite;
-  
+console.log('📊 Performance Monitor Started...');
+// Monitor build performance
+function monitorBuildPerformance() {
+  const startTime = Date.now();
+  try {
+    execSync('npm run build', { stdio: 'pipe', cwd: '/workspace' });
+    const endTime = Date.now();
+    const duration = endTime - startTime;
+    console.log(\`✅ Build completed in \${duration}ms\`);
+    // Save performance data
+    const performanceData = {
+      timestamp: new Date().toISOString(),
+      buildDuration: duration,
+      status: 'success'
+    };
+    fs.writeFileSync('/workspace/performance-data.json', JSON.stringify(performanceData, null, 2));
+  } catch (error) {
+    console.log(\`❌ Build failed: \${error.message}\`);
+  }
+}
+// Monitor file changes
+function monitorFileChanges() {
+    ignored: /(^|[\/\\\\])\../, // ignore dotfiles;
+    persistent: true
+  });
+  watcher.on('change', (filePath) => {
+    console.log(\`📝 File changed: \${filePath}\`);
+    // Trigger rebuild or other actions
+  });
+  console.log('👀 Watching for file changes...');
+}
+// Start monitoring
+monitorBuildPerformance();
+monitorFileChanges();
+`;
+  fs.writeFileSync('/workspace/performance-monitor.cjs', script);
+  console.log('✅ Performance monitor script created');
+}
+// Function to create security scanner
+function createSecurityScanner() {
+console.log('🔒 Security Scanner Started...');
+// Scan for security vulnerabilities
+function scanSecurity() {
+  // Check for common security issues
+const filesToCheck = [;
+    '/workspace/package.json',
+    '/workspace/next.config.js',
+    '/workspace/tsconfig.json'
+  ];
+  filesToCheck.forEach(file => {
+    if (fs.existsSync(file)) {
+      // Check for hardcoded secrets
+      if (content.includes('password') || content.includes('secret') || content.includes('key')) {
+        vulnerabilities.push({
+          file,
+          type: 'potential_hardcoded_secret',
+          severity: 'high'
+        });
+      }
+      // Check for insecure configurations
+      if (content.includes('http://') && !content.includes('localhost')) {
+        vulnerabilities.push({
+          file,
+          type: 'insecure_http',
+          severity: 'medium'
+        });
+      }
+    }
+  });
+  // Generate security report
+    timestamp: new Date().toISOString(),
+    vulnerabilities,
+    totalVulnerabilities: vulnerabilities.length,
+    highSeverity: vulnerabilities.filter(v => v.severity === 'high').length,
+    mediumSeverity: vulnerabilities.filter(v => v.severity === 'medium').length,
+    lowSeverity: vulnerabilities.filter(v => v.severity === 'low').length
+  };
   fs.writeFileSync('/workspace/security-report.json', JSON.stringify(report, null, 2));
   console.log(\`🔒 Security scan completed. Found \${vulnerabilities.length} potential issues.\`);
   
@@ -356,16 +499,11 @@ scanSecurity();
 
 // Function to create code quality analyzer
 function createCodeQualityAnalyzer() {
-  const script = `#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
 
 console.log('🔍 Code Quality Analyzer Started...');
 
 // Analyze code quality
 function analyzeCodeQuality() {
-  const issues = [];
   const stats = {
     totalFiles: 0,
     totalLines: 0,
@@ -436,7 +574,6 @@ function analyzeCodeQuality() {
   });
   
   // Generate quality report
-  const report = {
     timestamp: new Date().toISOString(),
     stats,
     issues,
@@ -465,10 +602,6 @@ analyzeCodeQuality();
 
 // Function to create automated testing script
 function createAutomatedTestingScript() {
-  const script = `#!/usr/bin/env node
-
-const fs = require('fs');
-const { execSync } = require('child_process');
 
 console.log('🧪 Automated Testing Script Started...');
 

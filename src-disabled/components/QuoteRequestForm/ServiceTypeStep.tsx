@@ -402,7 +402,6 @@ const fetchServices = async () => {
           </div>
 
 :src/components/QuoteRequestForm/ServiceTypeStep.tsx
-const listingSchema = z.object({
   id: z.string()
   title: z.string()
   category: z.string()

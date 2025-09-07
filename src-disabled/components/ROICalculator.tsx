@@ -38,16 +38,13 @@ const handleInputChange = useCallback((field: string, value: number) => { setInp
 export const ROICalculator: React.FC < ROICalculatorProps> = ({ service, onClose    }) => {
 
 }
- const [inputs, setInputs] = useState ({ initialInvestment: service.price, monthlyRevenue: 0, monthlyCosts: 0, timeFrame: 12, growthRate: 10}
 })   const [results, setResults] = useState ({ totalRevenue: 0, totalCosts: 0, netProfit: 0, roi: 0, paybackPeriod: 0, monthlyROI: 0}
 })   const calculateROI = ( const { initialInvestment, monthlyRevenue, monthlyCosts, timeFrame, growthRate ) => {
   return $3;}
 } = inputs  let totalRevenue = 0 let totalCosts = initialInvestment let currentRevenue = monthlyRevenue  for (let month = 1 month <= timeFrame month++) { totalRevenue += currentRevenue totalCosts += monthlyCosts currentRevenue *= (1 + growthRate / 100)  }
 
-const netProfit = totalRevenue - totalCosts const roi = (netProfit / initialInvestment) * 100 const paybackPeriod = monthlyRevenue > monthlyCosts ? initialInvestment / (monthlyRevenue - monthlyCosts) : 0 const monthlyROI = roi / timeFrame  setResults ({ totalRevenue, totalCosts, netProfit, roi, paybackPeriod, monthlyROI };
 }
 
-const handleInputChange = useCallback((field: string, value: number) => { setInputs (prev => ({ ...prev, [field]: value }) )  }  React;
   useEffect ( () => { calculateROI ()  }, [inputs])   const formatCurrency = (;) => {
   return $3;}
 }
@@ -55,7 +52,6 @@ const handleInputChange = useCallback((field: string, value: number) => { setInp
   currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0 }) .format (amount) 
 }
 ;
-  const formatPercentage = ( return `${value.toFixed (1) ) => {
   return $3;}
 }%`
 } ;

@@ -1,4 +1,4 @@
-import { slugify } from '@/lib/slugify';
+  expect (unslugify ('multi_word_title_')).to_be ('Multi Word Title');import { slugify } from '@/lib/slugify';
 import { unslugify } from '@/lib/slugify';
 it('removes accents from strings', () => {
   expect(slugify('Crème Brûlée')).toBe('creme-brulee')

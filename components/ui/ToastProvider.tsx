@@ -1,23 +1,17 @@
-import React, { createContext, useCallback, useContext, useMemo, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
 
-export type ToastVariant = 'default' | 'success' | 'error' | 'info'
-
-export type Toast = {
-  id: string
-  title?: string
-  description?: string
-  variant?: ToastVariant
-  actionLabel?: string
-  onAction?: () => void
-  durationMs?: number
+  title?: string;
+  description?: string;
+  variant?: ToastVariant;
+  actionLabel?: string;
+  onAction?: () => void;}
+  durationMs?: number;}
 }
 
-export type ToastContextValue = {
-  toasts: Toast[]
-  addToast: (toast: Omit<Toast, 'id'>) => string
-  removeToast: (id: string) => void
-  clearToasts: () => void
+export type ToastContextValue = {"toasts": Toast[];
+  }
+  "addToast": ("toast": Omit<Toast, 'id'>) => string;'
+  "removeToast": ("id": string) => void;
+  "clearToasts": () => void;
 }
 
 const ToastContext = createContext<ToastContextValue | undefined>(undefined)
@@ -81,9 +75,5 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     </ToastContext.Provider>
   )
 }
-
-export function useToast() {
-  const ctx = useContext(ToastContext)
-  if (!ctx) throw new Error('useToast must be used within ToastProvider')
-  return ctx
+              animate={{ "opacity": 1, "y": 0, "scale": 1 
 }

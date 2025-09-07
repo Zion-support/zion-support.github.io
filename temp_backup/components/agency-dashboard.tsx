@@ -60,7 +60,6 @@ priceUsd: Number(pkgPrice)
 
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
-const packages = [
   ...(activeVendor.packages |[])if (!activeVendor;
   return (<div className='text-gray-500' />No vendor found. Please apply first.</div>;
     )async function saveProfile() {e.preventDefault()const formData = new FormData(e.currentTarget;
@@ -80,7 +79,6 @@ const packages = [}
         priceUsd: Number(pkgPrice,
 }function addPackage() {if (!pkgTitle || !pkgPrice || !activeVendor) return;
 
-const packages = [}
   ...(activeVendor && activeVendor.packages || []),{id: `pkg_${Date && Date.now(}
 }`,title: pkgTitle,description: pkgDesc,priceUsd: Number(pkgPrice),},];
     setActiveVendor({ ...activeVendor, packages })setPkgTitle('')setPkgDesc('')setPkgPrice('')}
@@ -298,7 +296,6 @@ const { listVendors,}
 );
 
 export const getServerSideProps: GetServerSideProps<Props /> = async () => {}
-  const { listVendors,}
 } = await import('../utils/vendor-store');
 
 const vendor = listVendors()[0] || null; // tie to auth later;

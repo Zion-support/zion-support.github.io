@@ -58,13 +58,10 @@ function removeUnusedLucideImports(filePath) {
 // Function to fix common syntax errors
 function fixSyntaxErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
     // Fix unterminated string literals
     if (content.includes('"') && !content.match(/"[^"]*$/)) {
-      const lines = content.split('\n');
       for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
         if (line.includes('"') && !line.match(/"[^"]*"$/)) {
           // Try to fix unterminated strings
           lines[i] = line.replace(/"[^"]*$/, '""');

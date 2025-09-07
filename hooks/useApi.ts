@@ -23,17 +23,20 @@ export function useApi<T>(
     setError(null);
     
     try {
+      }
       const result = await apiCall();
       setData(result);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
+
     } finally {
+      }
       setLoading(false);
     }
   }, [apiCall]);
 
   useEffect(() => {
     if (options.immediate !== false) {
+      }
       fetchData();
     }
   }, [fetchData, options.immediate]);

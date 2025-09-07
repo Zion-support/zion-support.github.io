@@ -44,5 +44,4 @@ function fixFile(filePath) {
 // Fix all automation files
 automationFiles.forEach(fixFile);
     .replace(/\(\s*\{\},/g, '({};')
-    const content = fs.readFileSync(filePath, 'utf8')
 console.log('\n� All automation files have been processed!')

@@ -17,6 +17,23 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
         <button
           className="text-xs text-red-500 hover:underline"
           onClick={() => onReport && onReport(review.id)}
+type Props = any;
+export default ReviewCard;
+      <div className='flex items-center justify-between mb-2' />;
+        <div className='flex items-center gap-2' />;
+          <StarRating;
+            value={review.rating}
+            onChange={() =    /> {}}
+            readOnly
+            size={18}
+          />
+          <span className='text-sm text-gray-500    />
+            {new Date(review.createdAt).toLocaleDateString()}
+          </span>
+        </div>
+        <button
+          className=text-xs text-red-500 hover:underline'
+          onClick={() =    /> onReport && onReport(review.id)}
         >
           Report abuse
         </button>

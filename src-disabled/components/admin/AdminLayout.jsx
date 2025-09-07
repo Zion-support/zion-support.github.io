@@ -31,7 +31,6 @@ export { AdminLayout }
 export default AdminLayout ';''";'";
 ";
 
-const navItems = [" { title: "Products", href: "/admin/products",}
 }," { title: "Services", href: "/admin/services",}
 }," { title: "Users", href: "/admin/users",}
 }," { title: "Reports", href: "/admin/reports",}
@@ -45,7 +44,6 @@ export { AdminLayout }
 export default AdminLayout '';
 ';
 
-const navItems = [' {title: 'Products'}
   href: '/admin/products',}
 },' {title: 'Services'}
   href: '/admin/services',}

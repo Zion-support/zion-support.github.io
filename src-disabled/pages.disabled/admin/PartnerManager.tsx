@@ -767,7 +767,6 @@ export default function PartnerManager() {;
   },
 
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {
-    let filtered = partners,
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
@@ -782,7 +781,6 @@ export default function PartnerManager() {;
     }
   },;
   const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
-    let filtered = partners,;
     // Filter by status;
     if (status !== "all") {;
       filtered = filtered.filter(p => p.status === status);
@@ -790,7 +788,6 @@ export default function PartnerManager() {;
 ;
     // Filter by search query;
     if (query) {;
-      const lowerQuery = query.toLowerCase(),;
       filtered = filtered.filter(p =>;
         p.name.toLowerCase().includes(lowerQuery) ||;
         p.niche.toLowerCase().includes(lowerQuery) ||;
@@ -850,7 +847,6 @@ export default function PartnerManager() {;
     }
   },
 
-  const handleSaveSettings = async () => {
     if (!selectedPartner) return,
     try {
       // Update commission rate
@@ -920,7 +916,6 @@ export default function PartnerManager() {;
         variant: "destructive"});
     }
   },;
-  const handleSaveSettings = async () => {;
     if (!selectedPartner) return,;
     try {;
       // Update commission rate;
@@ -1282,7 +1277,6 @@ export default function PartnerManager() {;
     try {
       setIsLoading (true);
       // In a real application, check admin permissions here;
-      const { data, error } = await supabase;
         .from ('partner_profiles');
         .select ('*');
         .order ('created_at', { ascending: false }),
@@ -1447,7 +1441,6 @@ toast ({;
   ;
 
 };
-const getStatusBadge = (status: string) => {;
   switch (status) {';
   case 'pending': ;
 

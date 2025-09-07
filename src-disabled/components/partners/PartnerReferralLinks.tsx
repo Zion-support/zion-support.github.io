@@ -102,7 +102,6 @@ import { Input } from '@/components/ui/input';'
 import { Copy, Download, Link, Plus } from 'lucide-react';'
 import { toast } from '@/hooks/use-toast';'
 import { useReferrals } from '@/hooks/useReferrals';
-import {;
   Dialog,;
   DialogContent,;
   DialogDescription,;
@@ -112,7 +111,6 @@ import {;
   DialogTrigger,;'
 } from '@/components/ui/dialog';'
 import { Label } from '@/components/ui/label';
-import {;
   Select,;
   SelectContent,;
   SelectItem,;
@@ -124,8 +122,6 @@ export function PartnerReferralLinks() { return null; }
   } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);'
   const [selectedCampaign, setSelectedCampaign] = useState<string>('default');'
-  const [customParam, setCustomParam] = useState<string>('');
-  const [generatedLinks, setGeneratedLinks] = useState<;
     { name: string; link: string }[];
   >([]);
 
@@ -194,13 +190,10 @@ import { Button } from "@/components/ui/button","
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card","
 import { Input } from "@/components/ui/input",
 '
-import { Copy, Download, Link, Plus } from 'lucide-react'
 
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Copy, Download, Link, Plus } from 'lucide-react'
 
 import { toast } from "@/hooks/use-toast",
 import { useReferrals } from "@/hooks/useReferrals",
@@ -240,10 +233,8 @@ export function PartnerReferralLinks() {
         url.searchParams.append("source", customParam)
       }
       
-      const newLink = {
       }
       
-      const newLink = {
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,
         link: url.toString(),
       }
@@ -252,15 +243,9 @@ export function PartnerReferralLinks() {
       setCustomParam('')
     }
   }
-  const handleDownloadLinks = () => {
-    const allLinks = [{ name: 'Default', link: baseLink }, ...generatedLinks]
-    const csvContent = [
       'Name,Link',
       ...allLinks.map(l => `${l.name},${l.link}`),
     ].join('\n')
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
-    const url = URL.createObjectURL(blob)
-    const link = document.createElement('a')
     link.setAttribute('href', url)
     link.setAttribute('download', 'zion_referral_links.csv')
     link.style.visibility = 'hidden'
@@ -279,13 +264,11 @@ export function PartnerReferralLinks() {
     }
   },
   
-  const handleDownloadLinks = () => {
     const allLinks = [
       { name: "Default", link: baseLink },
       ...generatedLinks
     ],
     
-    const csvContent = [
       "Name,Link",
       ...allLinks.map(l => `${l.name},${l.link}`)
     ].join("\n"),
@@ -357,13 +340,11 @@ export function PartnerReferralLinks() { return null; }
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),;
   // Get the base referral link;
   const baseLink = getReferralLink(),;
-  const handleCopyLink = (link: string) => {;
     navigator.clipboard.writeText(link),;
 
       variant: "default";
     });
   },;
-  const handleGenerateLink = () => {;
     if (baseLink) {;
       const url = new URL(baseLink),;
       // Add custom campaign parameter if selected;"

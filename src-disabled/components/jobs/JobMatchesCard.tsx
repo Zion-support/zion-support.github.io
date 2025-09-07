@@ -15,7 +15,6 @@ import { JobMatch } from "@/types/jobs";
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface JobMatchCardProps {
 
-import { useState } from 'react';
 import {;
   Card,;
   CardContent,;
@@ -66,7 +65,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
 
-  const job = match.job,
   if (!job) return null,
 
         {match.matched_skills?.length > 0 && (
@@ -192,7 +190,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>;
         )}
 
-import { useState } from 'react';
 import {}
   Card,
   CardContent,

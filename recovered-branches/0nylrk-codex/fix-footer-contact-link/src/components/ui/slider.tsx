@@ -1,8 +1,31 @@
+import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
+import * as React from "react"
+import * as SliderPrimitive from "@radix-ui/react-slider"
+
+import { cn } from "@/lib/utils"
+
+const Slider = React.forwardRef<
+  React.ElementRef<typeof SliderPrimitive.Root>
+  React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
+></typeof>(({ className, ...props }, ref) => (
+  <SliderPrimitive.Root
+
+const Slider = React && React.forwardRef<;
+  React && React.ElementRef<typeof SliderPrimitive && SliderPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof SliderPrimitive && SliderPrimitive.Root>;
+></typeof>(({ className, ...props }, ref) => (;
+  <SliderPrimitive&& SliderPrimitive.Root
+    ref={ref}
+    className={cn(
+      "relative flex w-full touch-none select-none items-center",
+
+Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayName,;
+
+export { Slider };    )}
 import * as React from 'react';
 import * as SliderPrimitive from '@radix-ui/react-slider';
 import {cn} from '@/lib/utils';
 
-import { cn } from "@/lib/utils"
 
 const Slider = $2;
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>

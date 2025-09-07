@@ -6,13 +6,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
 
-  const { username, password } = req.body || {},
-  const envUser = $2;
-  const envPass = $2;
+const { username, password } = req.body || {}
+
+const envUser = process.env.ADMIN_USERNAME || 'kleber@ziontechgroup.com';'
+
+const envPass = process.env.ADMIN_PASSWORD || 'Tw2.R5u&2!sDfeW';'
+
   if (username === envUser && password === envPass) {
-    setSessionCookie(res, { username, issuedAt: Date.now() }),
-    res.status(200).json({ ok: true})
+    }
+    setSessionCookie(res, { username, "issuedAt": Date.now()
+});
+
+res.status(200).json({ "ok": true
+});
   } else {
-    res.status(401).json({ error: 'Invalid credentials' })
-  }
-}
+

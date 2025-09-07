@@ -212,7 +212,6 @@ class IntelligentTestAutomation {
   async generateTestReport() {
     this.log('📋 Generating test report...');
     
-    const testFiles = await this.discoverTestFiles();
     const smokeTests = await this.runSmokeTests();
     const unitTests = await this.runUnitTests();
     const integrationTests = await this.runIntegrationTests();
@@ -247,7 +246,6 @@ class IntelligentTestAutomation {
   async createMissingTests() {
     this.log('🔧 Creating missing tests...');
     
-    const testFiles = await this.discoverTestFiles();
     const sourceFiles = this.getAllSourceFiles();
     
     const missingTests = [];
@@ -293,9 +291,7 @@ class IntelligentTestAutomation {
     
     const findFiles = (dir) => {
       try {
-        const items = fs.readdirSync(dir, { withFileTypes: true });
         for (const item of items) {
-          const fullPath = path.join(dir, item.name);
           if (item.isDirectory() && !skipDirs.includes(item.name)) {
             findFiles(fullPath);
           } else if (item.isFile() && /\.(js|jsx|ts|tsx)$/.test(item.name)) {
@@ -354,11 +350,6 @@ describe('${path.basename(sourceFile, ext)}', () => {
     this.log('🚀 Starting Intelligent Test Automation...');
     
     try {
-      const testFiles = await this.discoverTestFiles();
-      const smokeTests = await this.runSmokeTests();
-      const unitTests = await this.runUnitTests();
-      const integrationTests = await this.runIntegrationTests();
-      const coverage = await this.analyzeTestCoverage();
       const missingTests = await this.createMissingTests();
       
       const report = await this.generateTestReport();

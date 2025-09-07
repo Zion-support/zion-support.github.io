@@ -34,38 +34,58 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('idle');
 
+    // Simulate form submission
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
-      if (response.ok) {
-        setSubmitStatus('success')
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          service: '',
-          budget: '',
-          message: ''
-        })
-      } else {
-        setSubmitStatus('error')
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        service: '',
+        budget: '',
+  message: ''}
       }
-    } catch (error) {
+})
+    } catch {}
+      setSubmitStatus('error');}
+    } finally {}
+      setIsSubmitting(false);}
+        message: ''
+      });
+    } catch {
       setSubmitStatus('error');
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
   return (
-    <div className="max-w-4xl mx-auto">
-      {/* Hero Section */}
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-600">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-center">
+            <span className="text-orange-500 mr-2">•</span> {detail}
+    }
+  }
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow>
+      <h3 className=text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2 text-gray-600>
+        {details.map((detail, index) => (
+          <li key={index} className=flex items-center">
+            <span className="text-orange-500 mr-2>•</span> {detail}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default function ServicePage() {
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
           Get in Touch
@@ -83,7 +103,7 @@ export default function ContactForm() {
             <h2 className="text-2xl font-semibold text-gray-900 mb-6">
               Contact Information
             </h2>
-            
+
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <div>
@@ -91,21 +111,21 @@ export default function ContactForm() {
                   <p className="text-gray-600">+1 302 464 0950</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <div>
                   <p className="font-medium text-gray-900">Email</p>
                   <p className="text-gray-600">kleber@ziontechgroup.com</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <div>
                   <p className="font-medium text-gray-900">Address</p>
                   <p className="text-gray-600">Delaware, United States</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <div>
                   <p className="font-medium text-gray-900">Business Hours</p>
@@ -125,16 +145,57 @@ export default function ContactForm() {
               <h3 className="font-semibold text-blue-900">Quick Response Guarantee</h3>
             </div>
 
-            <div>
-              <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                Project Budget
-              </label>
-              <select
-                id="budget"
-                name="budget"
-                value={formData.budget}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              <div>
+                <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+                  Project Budget
+                </label>
+                <select
+                  id="budget"
+                  name="budget"
+                  value={formData.budget}
+                  onChange={handleInputChange}
+                  className="form-input"
+                >
+                  <option value="">Select budget range</option>
+                  <option value="under-10k">Under $10,000</option>
+                  <option value="10k-25k">$10,000 - $25,000</option>
+                  <option value="25k-50k">$25,000 - $50,000</option>
+                  <option value="50k-100k">$50,000 - $100,000</option>
+                  <option value="over-100k">Over $100,000</option>
+                  <option value="discuss">Prefer to discuss</option>
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  Project Details *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  rows={5}
+                  className="form-input"
+                  placeholder="Tell us about your project, goals, and any specific requirements..."
+                />
+              </div>
+
+              <button
+type=\"submit\"
+                disabled={isSubmitting}
+                className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+                  isSubmitting
+                    ? 'bg-gray-400 cursor-not-allowed'}
+                    : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'}
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+                  isSubmitting
+                    ? 'bg-gray-400 cursor-not-allowed'
+                    : 'btn btn-primary'
+                } transition-colors`}
               >
                 <option value="">Select budget range</option>
                 <option value="under-10k">Under $10,000</option>
@@ -333,5 +394,5 @@ export default function ContactForm() {
         </div>
       </div>
     </div>
-  );
+  )
 }

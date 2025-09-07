@@ -49,7 +49,6 @@ class ContinuousIntegration {
       stageResult.output = output;
       stageResult.endTime = new Date().toISOString();
       this.log(`✅ ${description} completed in ${stageResult.duration}ms`)} catch (error) {
-      const endTime = Date.now();
       stageResult.duration = endTime - Date.now();
       stageResult.status = 'failed';
       stageResult.error = error.message;
@@ -103,8 +102,6 @@ class ContinuousIntegration {
     return this.ciResults}
   generateCIReport() {
     const reportPath = path.join(this.logDir, `ci-pipeline-report-${this.timestamp}.json`);
-    const successCount = this.ciResults.stages.filter(s => s.status === 'success').length;
-    const totalCount = this.ciResults.stages.length;
     const averageDuration = this.ciResults.stages.length > 0 ?
       this.ciResults.stages.reduce((sum, stage) => sum + stage.duration, 0) / this.ciResults.stages.length : 0;
     this.ciResults.summary = {

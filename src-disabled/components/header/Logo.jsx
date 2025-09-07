@@ -37,7 +37,6 @@ export function Logo() {const logoColor = customColor || '#8B5CF6'; // Default Z
   return ( <Link to="/" className={`flex-shrink-0 group ${className}`} />'; <img'" src={customLogo} "';" alt="Logo"';" className="h-8 w-auto" / / / / / / /> </Link>" )'}';
 
 const logoColor = customColor || '#3b82f6'';"`"'";
- import { Link } from 'react-router-dom' import { Zap } from 'lucide-react'  export function Logo({ customLogo, customColor, className = '' }) { if (customLogo) {;}
   return ( <Link to='/' className={`flex-shrink-0 group ${className}`} />'; <img'' src={customLogo} '';' alt='Logo'';' className='h-8 w-auto' / / / / / / /> </Link>' )'}';
 
 const logoColor = customColor || '#3b82f6'';'`"'";

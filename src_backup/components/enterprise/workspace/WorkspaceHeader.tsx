@@ -1,111 +1,158 @@
-import { Bell, Users, Settings } from 'lucide-react';
+import { Bell, Users, Settings } from 'lucide-react;
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { type Company } from "./CompanyDashboard",
+import React from "react,
+import { Button } from @/components/ui/button",
+import { type Company } from "./CompanyDashboard,
 
-import { Bell, Users, Settings } from 'lucide-react'
+import { Bell, Users, Settings } from lucide-react'
 
-interface WorkspaceHeaderProps {};
+interface WorkspaceHeaderProps {}
   company: Company;
 }
 
-              src={company.logoUrl || '/placeholder.svg'}
+              src={company.logoUrl || '/placeholder.svg}
 
               alt={company.name}
-              className='max-h-10 max-w-10'
+              className=max-h-10 max-w-10'
 
-              loading='lazy'            />
+              loading='lazy            />
           </div>
-          <div>'
+          <div>
             <h1 className='text-3xl font-bold tracking-tight'>
 
             </p>
           </div>
-        </div>"
-            <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>"
-            <p className="text-muted-foreground">
+        </div>
+            <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
+            <p className=text-muted-foreground">
 
-import { Bell, Users, Settings } from 'lucide-react'
+import { Bell, Users, Settings } from lucide-react
 ';
-import React from 'react';'
-import { Button } from '@/components / ui / button';'
-import { type Company } from './CompanyDashboard';'
-import { Bell, Users, Settings } from 'lucide-react';
+import React from 'react;
+import { Button } from '@/components / ui / button';
+import { type Company } from ./CompanyDashboard';'
+import { Bell, Users, Settings } from lucide-react;
 interface WorkspaceHeaderProps {}
   company: Company;
 export /**;
  * WorkspaceHeader - Function description;
  */
-function WorkspaceHeader() {}
+import { Button  } from '@/components/ui/button';
+import { type Company  } from ./CompanyDashboard;
+import { Bell, Users, Settings  } from 'lucide-react';
+interface WorkspaceHeaderProps  {company: Company;import React from "react,import { Button } from @/components/ui/button",import { type Company } from "./CompanyDashboard,interface WorkspaceHeaderProps  {company: Company;
+}export function WorkspaceHeader() {return (<div className=space-y-6>;
+      <div className='flex items-center justify-between'>;
+        <div className=flex items-center gap-4>;
+          <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border'>;
+            <img;
+              src={company.logoUrl || /placeholder.svg}alt={company.name}
+              className='max-h-10 max-w-10';
+              loading=lazy            />;
+          </div>;
+          <div>;
+            <h1 className='text-3xl font-bold tracking-tight'>;
+              {company.name} Workspace;
+            </h1>;
+            <p className=text-muted-foreground>              {company.plan} Plan · {company.teamSize} team members;
+            </p>;
+          </div>;
+        </div>;
+            <h1 className=text-3xl font-bold tracking-tight">{company.name} Workspace</h1>;
+            <p className="text-muted-foreground>;
+import { Button  } from '@/components / ui / button';
+interface WorkspaceHeaderProps  {company: Company;
+export /**;
+ * WorkspaceHeader - Function description;
+ */;
+function WorkspaceHeader() {return (<div className=space - y-6>;
+      <div className='flex items - center justify - between'>;
+        <div className=flex items - center gap - 4>;
   return ('
-    <div className='space - y-6'>;'
-      <div className='flex items - center justify - between'>;'
-        <div className='flex items - center gap - 4'>;'
-          <div className='h - 12 w - 12 rounded - lg bg - card flex items - center justify - center border border - border'>;
+    <div className='space - y-6>;
+      <div className='flex items - center justify - between'>;
+        <div className=flex items - center gap - 4'>;'
+          <div className=h - 12 w - 12 rounded - lg bg - card flex items - center justify - center border border - border>;
             <img;'
-              src={company.logo_url || '/placeholder.svg'}
-              alt={company.name}'
-              className='max - h-10 max - w-10';'
-              loading='lazy'            />;
+              src={company.logo_url || '/placeholder.svg}
+              alt={company.name}
+              className='max - h-10 max - w-10';
+              loading=lazy'            />;
           </div>;
           <div>;'
-            <h1 className='text - 3xl font - bold tracking - tight'>;
+            <h1 className=text - 3xl font - bold tracking - tight>;
               {company.name} Workspace;
             </h1>;'
-            <p className='text - muted - foreground'>              {company.plan} Plan · {company.team_size} team members;
+            <p className='text - muted - foreground>              {company.plan} Plan · {company.team_size} team members;
             </p>;
           </div>;
 
   company: Company;
 }
-'
+
               src={company && company.logoUrl || '/placeholder && placeholder.svg'}
-              alt={company && company.name}'
-              className='max-h-10 max-w-10''
-              loading='lazy'            />;
+              alt={company && company.name}
+              className=max-h-10 max-w-10''
+              loading=lazy            />;
           </div>;
           <div>;'
-            <h1 className='text-3xl font-bold tracking-tight'>;
+            <h1 className='text-3xl font-bold tracking-tight>;
               {company && company.name} Workspace;
-            </h1>;'
+            </h1>;
             <p className='text-muted-foreground'>              {company && company.plan} Plan · {company && company.teamSize} team members;
             </p>;
           </div>;
-        </div>;"
-            <h1 className="text-3xl font-bold tracking-tight">{company && company.name} Workspace</h1>;"
-            <p className="text-muted-foreground">;
+interface WorkspaceHeaderProps {
+  company: Company;
+        </div>;
+            <h1 className="text-3xl font-bold tracking-tight">{company && company.name} Workspace</h1>;
+            <p className=text-muted-foreground">;
 
-interface WorkspaceHeaderProps {;
+interface WorkspaceHeaderProps {
   company: Company;
 }
 
-export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
+export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {
 
   return ("
-    <div className="space-y-6">;"
-      <div className="flex items-center justify-between">;"
-        <div className="flex items-center gap-4">;"
-          <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
+    <div className=space-y-6>;"
+      <div className="flex items-center justify-between>;
+        <div className="flex items-center gap-4">;
+          <div className=h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">;
 
-              src={company.logoUrl || "/placeholder.svg"}
-              alt={company.name}"
-              className="max-h-10 max-w-10""
-              loading="lazy"
+              src={company.logoUrl || "/placeholder.svg}
+              alt={company.name}
+              className="max-h-10 max-w-10"
+              loading=lazy"
             />
           </div>
           <div>
+            <img;
+              src={company.logoUrl || "/placeholder.svg}
+              alt={company.name}
+              className=max-h-10 max-w-10";
+              loading="lazy;
+            />;
+          </div>;
+          <div>src={company.logoUrl || /placeholder.svg"}
+              alt={company.name}
+              className="max-h-10 max-w-10"
 "
+              className="max-h-10 max-w-10
+
               src={company.logoUrl || "/placeholder.svg"}
-              alt={company.name}"
-              className="max-h-10 max-w-10""
-              loading="lazy"
+              alt={company.name}
+              className=max-h-10 max-w-10""
+              loading=lazy
             />
           </div>
           <div>
 
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
-            <p className="text-muted-foreground">
+            <p className=text-muted-foreground>
+
+            <p className=text-muted-foreground>
+
             <p className='text-muted-foreground'>
 origin/cursor/automate-test-improve-and-merge-code-2533
               {company.plan} Plan · {company.teamSize} team members
@@ -115,137 +162,231 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="icon" aria-label="Notifications">
+          <Button variant=outline size="icon" aria-label=Notifications>
 
             <Bell className="h-4 w-4" />
 
-<div className='flex items-center gap-2'>
-          <Button variant='outline' size='icon' aria-label='Notifications'>
-            <Bell className='h-4 w-4' />
+<div className=flex items-center gap-2>
+          <Button variant='outline' size=icon aria-label='Notifications'>
+            <Bell className=h-4 w-4 />
 origin/cursor/automate-test-improve-and-merge-code-2533
+
+
+
+
+        
+        <div className=flex items-center gap-2>
+          <Button variant="outline" size=icon aria-label="Notifications">
+            <Bell className=h-4 w-4 />
           </Button>
 
-          <Button variant="outline" size="icon" aria-label="Team members">
+          <Button variant="outline" size=icon aria-label="Team members">
 
-            <Users className="h-4 w-4" />
+            <Users className=h-4 w-4 />
           </Button>"
-          <Button variant="outline" size="icon" aria-label="Workspace settings">"
+          <Button variant="outline size=icon" aria-label="Workspace settings>
             <Settings className="h-4 w-4" />
           </Button>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">
+      <div className=grid grid-cols-1 sm: grid-cols-3 gap-4>
         <div className="bg-card rounded-lg p-4 border border-border">
-          <div className="text-sm text-muted-foreground">Active Job Listings</div>
+          <div className=text-sm text-muted-foreground>Active Job Listings</div>
 
           <div className="text-2xl font-medium">8</div>
-        </div>"
-        <div className="bg-card rounded-lg p-4 border border-border">"
-          <div className="text-sm text-muted-foreground">Candidate Applications</div>"
-          <div className="text-2xl font-medium">47</div>
-        </div>"
-        <div className="bg-card rounded-lg p-4 border border-border">"
-          <div className="text-sm text-muted-foreground">Interviews Scheduled</div>"
-          <div className="text-2xl font-medium">12</div>
         </div>
+        <div className=bg-card rounded-lg p-4 border border-border">"
+          <div className=text-sm text-muted-foreground>Candidate Applications</div>"
+          <div className="text-2xl font-medium>47</div>
+        </div>
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className=text-sm text-muted-foreground">Interviews Scheduled</div>"
+          <div className=text-2xl font-medium>12</div>
+        </div>
+      </div>
+    </div>
+
+  );
+}
+
+export /**
+ * WorkspaceHeader - Function description
+ */
+  return (
+    <div className="space - y-6">;
+              className=max-h-10 max-w-10;
+              loading="lazy";
+            />;
+          </div>;
+          <div>;
+            <h1 className=text-3xl font-bold tracking-tight>{company.name} Workspace</h1>;
+            <p className="text-muted-foreground">;
+            <p className='text-muted-foreground'>;
+              {company.plan} Plan · {company.teamSize} team members;
+            </p>;
+          </div>;
+        </div>;
+        <div className=flex items-center gap-2>;
+          <Button variant="outline" size=icon aria-label="Notifications">;
+            <Bell className=h-4 w-4 />;
+<div className=flex items-center gap-2>;
+          <Button variant='outline' size=icon aria-label='Notifications'>;
+            <Bell className=h-4 w-4 />;
+          </Button>;
+          <Button variant="outline" size=icon aria-label="Team members">;
+            <Users className=h-4 w-4 />;
+          </Button>;
+          <Button variant="outline" size=icon aria-label="Workspace settings">;
+            <Settings className=h-4 w-4 />;
+          </Button>;
+        </div>;
+      </div>;
+      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;
+        <div className=bg-card rounded-lg p-4 border border-border>;
+          <div className="text-sm text-muted-foreground">Active Job Listings</div>;
+          <div className=text-2xl font-medium>8</div>;
+        </div>;
+        <div className="bg-card rounded-lg p-4 border border-border">;
+          <div className=text-sm text-muted-foreground>Candidate Applications</div>;
+          <div className="text-2xl font-medium">47</div>;
+        </div>;
+        <div className=bg-card rounded-lg p-4 border border-border>;
+          <div className="text-sm text-muted-foreground">Interviews Scheduled</div>;
+          <div className=text-2xl font-medium>12</div>;
+        </div>;
+      </div>;
+    </div>;
+}          </Button>;
+          <Button variant="outline" size=icon aria-label="Team members">;
+            <Users className=h-4 w-4 />;
+          </Button>;
+          <Button variant="outline" size=icon aria-label="Workspace settings">;
+            <Settings className=h-4 w-4 />;
+          </Button>;
+        </div>;
+      </div>;
+      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;
+        <div className=bg-card rounded-lg p-4 border border-border>;
+          <div className="text-sm text-muted-foreground">Active Job Listings</div>;
+          <div className=text-2xl font-medium>8</div>;
+        </div>;
+        <div className="bg-card rounded-lg p-4 border border-border">;
+          <div className=text-sm text-muted-foreground>Candidate Applications</div>;
+          <div className="text-2xl font-medium">47</div>;
+        </div>;
+        <div className=bg-card rounded-lg p-4 border border-border>;
+          <div className="text-sm text-muted-foreground">Interviews Scheduled</div>;
+          <div className=text-2xl font-medium>12</div>;
+        </div>;
+      </div>;
+    </div>;
+  )}}
+              src={company && company.logoUrl || "/placeholder && placeholder.svg"}
+              alt={company && company.name}
+              className=max-h-10 max-w-10;
+              loading="lazy";
+            />;
+          </div>;
+          <div>;
+            <h1 className=text-3xl font-bold tracking-tight>{company && company.name} Workspace</h1>;
 
 }          </Button>"
-          <Button variant="outline" size="icon" aria-label="Team members">"
+          <Button variant="outline size=icon" aria-label="Team members>
             <Users className="h-4 w-4" />
-          </Button>"
-          <Button variant="outline" size="icon" aria-label="Workspace settings">"
-            <Settings className="h-4 w-4" />
+          </Button>
+          <Button variant=outline" size="icon aria-label=Workspace settings">"
+            <Settings className=h-4 w-4 />
           </Button>
         </div>
       </div>"
-      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">"
-        <div className="bg-card rounded-lg p-4 border border-border">"
-          <div className="text-sm text-muted-foreground">Active Job Listings</div>"
-          <div className="text-2xl font-medium">8</div>
+      <div className="grid grid-cols-1 sm: grid-cols-3 gap-4>
+        <div className="bg-card rounded-lg p-4 border border-border">
+          <div className=text-sm text-muted-foreground">Active Job Listings</div>"
+          <div className=text-2xl font-medium>8</div>
         </div>"
-        <div className="bg-card rounded-lg p-4 border border-border">"
-          <div className="text-sm text-muted-foreground">Candidate Applications</div>"
-          <div className="text-2xl font-medium">47</div>
+        <div className="bg-card rounded-lg p-4 border border-border>
+          <div className="text-sm text-muted-foreground">Candidate Applications</div>
+          <div className=text-2xl font-medium">47</div>
         </div>"
-        <div className="bg-card rounded-lg p-4 border border-border">"
-          <div className="text-sm text-muted-foreground">Interviews Scheduled</div>"
+        <div className=bg-card rounded-lg p-4 border border-border>"
+          <div className="text-sm text-muted-foreground>Interviews Scheduled</div>
           <div className="text-2xl font-medium">12</div>
         </div>
       </div>
     </div>;
   )
-};
+}
 
-              src={company && company.logoUrl || "/placeholder && placeholder.svg"}
+              src={company && company.logoUrl || /placeholder && placeholder.svg}
               alt={company && company.name}"
-              className="max-h-10 max-w-10""
+              className="max-h-10 max-w-10
               loading="lazy"
             />;
           </div>;
-          <div>;"
-            <h1 className="text-3xl font-bold tracking-tight">{company && company.name} Workspace</h1>;"
-            <p className="text-muted-foreground">;
+          <div>;
+            <h1 className=text-3xl font-bold tracking-tight">{company && company.name} Workspace</h1>;"
+            <p className=text-muted-foreground>;
               {company && company.plan} Plan · {company && company.teamSize} team members;
             </p>;
           </div>;
         </div>;
 '
-        <div className='flex items-center gap-2'>;'
-          <Button variant='outline' size='icon' aria-label='Notifications'>;'
-            <Bell className='h-4 w-4' />;
+        <div className='flex items-center gap-2>;
+          <Button variant='outline' size=icon aria-label='Notifications'>;
+            <Bell className=h-4 w-4' />;
           </Button>;'
-          <Button variant='outline' size='icon' aria-label='Team members'>;'
-            <Users className='h-4 w-4' />;
-          </Button>;'
-          <Button variant='outline' size='icon' aria-label='Workspace settings'>;'
-            <Settings className='h-4 w-4' />;
+          <Button variant=outline size='icon' aria-label=Team members>;'
+            <Users className='h-4 w-4 />;
+          </Button>;
+          <Button variant='outline' size=icon aria-label='Workspace settings'>;
+            <Settings className=h-4 w-4' />;
           </Button>;
         </div>;
       </div>;
 '
-      <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>;'
-        <div className='bg-card rounded-lg p-4 border border-border'>;'
+      <div className=grid grid-cols-1 sm:grid-cols-3 gap-4>;'
+        <div className='bg-card rounded-lg p-4 border border-border>;
           <div className='text-sm text-muted-foreground'>;
             Active Job Listings;
-          </div>;'
-          <div className='text-2xl font-medium'>8</div>;
+          </div>;
+          <div className=text-2xl font-medium'>8</div>;
         </div>;'
-        <div className='bg-card rounded-lg p-4 border border-border'>;'
-          <div className='text-sm text-muted-foreground'>;
+        <div className=bg-card rounded-lg p-4 border border-border>;'
+          <div className='text-sm text-muted-foreground>;
             Candidate Applications;
-          </div>;'
+          </div>;
           <div className='text-2xl font-medium'>47</div>;
-        </div>;'
-        <div className='bg-card rounded-lg p-4 border border-border'>;'
-          <div className='text-sm text-muted-foreground'>;
+        </div>;
+        <div className=bg-card rounded-lg p-4 border border-border'>;'
+          <div className=text-sm text-muted-foreground>;
             Interviews Scheduled;
           </div>;'
-          <div className='text-2xl font-medium'>12</div>        </div>;
+          <div className='text-2xl font-medium>12</div>        </div>;
       </div>;
     </div>;
   );
 
             <Users className="h-4 w-4" />;
-          </Button>;"
-          <Button variant="outline" size="icon" aria-label="Workspace settings">;"
-            <Settings className="h-4 w-4" />;
+          </Button>;
+          <Button variant=outline" size="icon aria-label=Workspace settings">;"
+            <Settings className=h-4 w-4 />;
           </Button>;
         </div>;
       </div>;
 
       <div className="grid grid-cols-1 sm: grid-cols-3 gap-4">;
-        <div className="bg-card rounded-lg p-4 border border-border">;
+        <div className=bg-card rounded-lg p-4 border border-border>;
           <div className="text-sm text-muted-foreground">Active Job Listings</div>;
 
-          <div className="text-2xl font-medium">8</div>;
+          <div className=text-2xl font-medium>8</div>;
         </div>;"
-        <div className="bg-card rounded-lg p-4 border border-border">;"
-          <div className="text-sm text-muted-foreground">Candidate Applications</div>;"
-          <div className="text-2xl font-medium">47</div>;
+        <div className="bg-card rounded-lg p-4 border border-border>;
+          <div className="text-sm text-muted-foreground">Candidate Applications</div>;
+          <div className=text-2xl font-medium">47</div>;
         </div>;"
-        <div className="bg-card rounded-lg p-4 border border-border">;"
-          <div className="text-sm text-muted-foreground">Interviews Scheduled</div>;"
+        <div className=bg-card rounded-lg p-4 border border-border>;"
+          <div className="text-sm text-muted-foreground>Interviews Scheduled</div>;
           <div className="text-2xl font-medium">12</div>;
         </div>;
       </div>;
@@ -257,91 +398,99 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export /**;
  * WorkspaceHeader - Function description;
  */
-function WorkspaceHeader() {}
-  return ("
-    <div className="space - y-6">;"
-      <div className="flex items - center justify - between">;"
-        <div className="flex items - center gap - 4">;"
+  return (
+    <div className=space - y-6">;"
+      <div className=flex items - center justify - between>;"
+        <div className="flex items - center gap - 4>;
           <div className="h - 12 w - 12 rounded - lg bg - card flex items - center justify - center border border - border">;
-            <img;"
-              src={company.logo_url || "/placeholder.svg"}
+            <img;
+              src={company.logo_url || /placeholder.svg"}
               alt={company.name}"
-              className="max - h-10 max - w-10";"
-              loading="lazy";
+              className=max - h-10 max - w-10;"
+              loading="lazy;
             />;
           </div>;
-          <div>;"
-            <h1 className="text - 3xl font - bold tracking - tight">{company.name} Workspace</h1>;"
-            <p className="text - muted - foreground">;
+          <div>;
+            <h1 className="text - 3xl font - bold tracking - tight">{company.name} Workspace</h1>;
+            <p className=text - muted - foreground">;
               {company.plan} Plan · {company.team_size} team members;
             </p>;
           </div>;
-        </div>;'
-        <div className='flex items - center gap - 2'>;'
-          <Button variant='outline' size='icon' aria - label='Notifications'>;'
-            <Bell className='h - 4 w - 4' />;
+        </div>;
+        <div className='flex items - center gap - 2'>;
+          <Button variant=outline' size='icon aria - label=Notifications'>;'
+            <Bell className=h - 4 w - 4 />;
           </Button>;'
-          <Button variant='outline' size='icon' aria - label='Team members'>;'
+          <Button variant='outline size=icon' aria - label='Team members>;
             <Users className='h - 4 w - 4' />;
-          </Button>;'
-          <Button variant='outline' size='icon' aria - label='Workspace settings'>;'
-            <Settings className='h - 4 w - 4' />;
+          </Button>;
+          <Button variant=outline' size='icon aria - label=Workspace settings'>;'
+            <Settings className=h - 4 w - 4 />;
           </Button>;
         </div>;
       </div>;'
-      <div className='grid grid - cols - 1 sm:grid - cols - 3 gap - 4'>;'
-        <div className='bg - card rounded - lg p - 4 border border - border'>;'
-          <div className='text - sm text - muted - foreground'>;
+      <div className='grid grid - cols - 1 sm:grid - cols - 3 gap - 4>;
+        <div className='bg - card rounded - lg p - 4 border border - border'>;
+          <div className=text - sm text - muted - foreground'>;
             Active Job Listings;
           </div>;'
-          <div className='text - 2xl font - medium'>8</div>;
+          <div className=text - 2xl font - medium>8</div>;
         </div>;'
-        <div className='bg - card rounded - lg p - 4 border border - border'>;'
+        <div className='bg - card rounded - lg p - 4 border border - border>;
           <div className='text - sm text - muted - foreground'>;
             Candidate Applications;
-          </div>;'
-          <div className='text - 2xl font - medium'>47</div>;
+          </div>;
+          <div className=text - 2xl font - medium'>47</div>;
         </div>;'
-        <div className='bg - card rounded - lg p - 4 border border - border'>;'
-          <div className='text - sm text - muted - foreground'>;
+        <div className=bg - card rounded - lg p - 4 border border - border>;'
+          <div className='text - sm text - muted - foreground>;
             Interviews Scheduled;
-          </div>;'
+          </div>;
           <div className='text - 2xl font - medium'>12</div>        </div>;
       </div>;
     </div>);
 }          </Button>;"
-          <Button variant="outline" size="icon" aria - label="Team members">;"
-            <Users className="h - 4 w - 4" />;
-          </Button>;"
-          <Button variant="outline" size="icon" aria - label="Workspace settings">;"
-            <Settings className="h - 4 w - 4" />;
+          <Button variant=outline size="icon" aria - label=Team members>;"
+            <Users className="h - 4 w - 4 />;
+          </Button>;
+          <Button variant="outline" size=icon aria - label="Workspace settings">;
+            <Settings className=h - 4 w - 4" />;
           </Button>;
         </div>;
       </div>;"
-      <div className="grid grid - cols - 1 sm: grid - cols - 3 gap - 4">;"
-        <div className="bg - card rounded - lg p - 4 border border - border">;"
-          <div className="text - sm text - muted - foreground">Active Job Listings</div>;"
-          <div className="text - 2xl font - medium">8</div>;
+      <div className=grid grid - cols - 1 sm: grid - cols - 3 gap - 4>;"
+        <div className="bg - card rounded - lg p - 4 border border - border>;
+          <div className="text - sm text - muted - foreground">Active Job Listings</div>;
+          <div className=text - 2xl font - medium">8</div>;
         </div>;"
-        <div className="bg - card rounded - lg p - 4 border border - border">;"
-          <div className="text - sm text - muted - foreground">Candidate Applications</div>;"
+        <div className=bg - card rounded - lg p - 4 border border - border>;"
+          <div className="text - sm text - muted - foreground>Candidate Applications</div>;
           <div className="text - 2xl font - medium">47</div>;
-        </div>;"
-        <div className="bg - card rounded - lg p - 4 border border - border">;"
-          <div className="text - sm text - muted - foreground">Interviews Scheduled</div>;"
+        </div>;
+        <div className=bg - card rounded - lg p - 4 border border - border">;"
+          <div className=text - sm text - muted - foreground>Interviews Scheduled</div>;"
           <div className="text - 2xl font - medium">12</div>;
         </div>;
       </div>;
     </div>);
 }
 
-        <div className='bg-card rounded-lg p-4 border border-border'>
+        <div className=bg-card rounded-lg p-4 border border-border>
           <div className='text-sm text-muted-foreground'>
             Interviews Scheduled
           </div>
-          <div className='text-2xl font-medium'>12</div>
+          <div className=text-2xl font-medium>12</div>
         </div>
       </div>
     </div>
   );
+    </div>)}<div className='bg-card rounded-lg p-4 border border-border'>;
+          <div className=text-sm text-muted-foreground>;
+            Interviews Scheduled;
+          </div>;
+          <div className='text-2xl font-medium'>12</div>;
+        </div>;
+      </div>;
+    </div>;
+  )}
 }

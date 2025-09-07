@@ -1,58 +1,142 @@
-:src/components/resume-builder/portfolio/ProjectForm.tsx
+
 }
       let success = false;
+      // Check condition;
+if ( {) {$2;
+}
+        success = await update_project (project.id, project_data)import { useState   } from 'react';
+import { useForm   } from 'react-hook-form';
+import { zodResolver   } from '@hookform/resolvers/zod';
+import { z   } from 'zod';
+import { Button   } from '@/components/ui/button';
+import { Input   } from '@/components/ui/input';
+import { Textarea   } from '@/components/ui/textarea';
+import { logErrorToProduction } from '@/utils/productionLogger';
+        success = await update_project (project.id, project_data)import { useState   } from 'react;
+import { useForm   } from react-hook-form';
+import { zodResolver   } from '@hookform/resolvers/zod;
+import { z   } from zod';
+import { Button   } from '@/components/ui/button;
+import { Input   } from @/components/ui/input';
+import { Textarea   } from '@/components/ui/textarea;
+import { logErrorToProduction } from @/utils/productionLogger';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage  } from '@/components/ui/form;
+import { Loader2, Link, FileImage, Github, Edit  } from lucide-react';
+import { PortfolioProject   } from '@/types/resume;
+import { usePortfolio   } from @/hooks/usePortfolio';
+import { useAuth  } from '@/hooks/useAuth;
+// Define schema for form validation;
+const projectSchema = null;
+:src/components/resume-builder/portfolio/ProjectForm.tsx
+}
       // Check condition;
 if ( {) {}
   $2;
 }
         success = await update_project (project.id, project_data);
 
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Textarea  } from '@/components/ui/textarea';
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { Form;
+import { useState  } from react';
+import { useForm  } from 'react-hook-form;
+import { zodResolver  } from @hookform/resolvers/zod';
+import { z  } from 'zod;
+import { Button  } from @/components/ui/button';
+import { Input  } from '@/components/ui/input;
+import { Textarea  } from @/components/ui/textarea';
+import { logErrorToProduction } from '@/utils/productionLogger; import {Form;
   FormControl;
   FormField;
   FormItem;
   FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
+  FormMessage;
+} from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
+// Define schema for form validation;
+const projectSchema = z.object({title: z.string().min(1, Project title is required')description: z.string().optional()technologies: z.string().optional()image_url: z.string().optional()github_url: z;
+    .union([z.string().url('Please enter a valid URL), z.literal(')]).optional()demo_url: z;
+    .union([z.string().url('Please enter a valid URL), z.literal(')]).optional()pdf_url: z.string().optional()})type ProjectFormValues = z.infer<typeof projectSchema>;
+interface ProjectFormProps  {project?: PortfolioProject;
+  onSuccess: () => void;
+  onCancel: () => void;
+export function ProjectForm() {const { user } = useAuth()const { addProject, updateProject } = usePortfolio()const [isLoading, setIsLoading] = useState(false)const isEditing = !!project;
+  const form = useForm<ProjectFormValues>({resolver: zodResolver(projectSchema)defaultValues: {title: project?.title |';
+      description: project?.description |';
+      technologies: project?.technologies;
+        ? project.technologies.join(', ): ';
+      image_url: project?.image_url |';
+      github_url: project?.github_url |';
+      demo_url: project?.demo_url |';
+      pdf_url: project?.pdf_url |';
+    }
+  })const onSubmit = async (data: ProjectFormValues) => {if (!user) return;
+    setIsLoading(true)try {const projectData: PortfolioProject = {title: data.title;
+        description: data.description;
+        technologies: data.technologies;
+          ? data.technologies.split(',).map(tech => tech.trim()): [];
+        image_url: data.image_url;
+        github_url: data.github_url |undefined;
+        demo_url: data.demo_url |undefined;
+        pdf_url: data.pdf_url;
+      }
+      let success = false
+      if (isEditing && project?.id) {
+        success = await updateProject(project.id, projectData)
+origin/cursor/automate-test-improve-and-merge-code-2533
+        success = await update_project (project.id, project_data);
+      } else {
+import { useAuth } from @/hooks/useAuth';
 :src/components/resume-builder/portfolio/ProjectForm.tsx
 // Define schema for form validation
-const projectSchema = null;
-import { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { logErrorToProduction } from '@/utils/productionLogger'; import {
+import { useState } from 'react
+import { useForm } from react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod
+import { z } from zod'
+import { Button } from '@/components/ui/button
+import { Input } from @/components/ui/input';
+import { Textarea } from '@/components/ui/textarea;
+import { logErrorToProduction } from @/utils/productionLogger'; import {
   Form
   FormControl
   FormField
   FormItem
   FormLabel
   FormMessage
-} from '@/components/ui/form'; import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
-import { PortfolioProject } from '@/types/resume'
-import { usePortfolio } from '@/hooks/usePortfolio'
-import { useAuth } from '@/hooks/useAuth'
+} from '@/components/ui/form; import { Loader2, Link, FileImage, Github, Edit } from lucide-react'
+import { PortfolioProject } from '@/types/resume
+import { usePortfolio } from @/hooks/usePortfolio'
+import { useAuth } from '@/hooks/useAuth
 // Define schema for form validation
-const projectSchema = null;
 
         const projectId = await addProject(projectData)
         success = !!projectId;
       }
 
+      // Check condition
+if ( {) {
+  $2
+      if (isEditing && project?.id) {success = await updateProject(project.id, projectData)} else {const projectId = await addProject(projectData)success = !!projectId;
+      }// Check condition;
+if ( {) {$2;
+}
+        on_success ()form.reset ()}
+    } catch (error) {logErrorToProduction(Error saving project:', { data: error })} finally {import React from 'react;
+import { logErrorToProduction } from @/utils/productionLogger';import {setIsLoading(false)}
+  }import { useState } from 'react,import { useForm } from react-hook-form',import { zodResolver } from '@hookform/resolvers/zod,import { z } from zod',import { Button } from '@/components/ui/button,import { Input } from @/components/ui/input',import { Textarea } from '@/components/ui/textarea,import {logErrorToProduction} from @/utils/productionLogger',import {Form,FormControl,FormField,FormItem,FormLabel,const form = useForm<ProjectFormValues>({resolver: zodResolver(projectSchema),defaultValues: {title: project?.title || ',description: project?.description || '}
+    } catch (error) {logErrorToProduction('Error saving project:, { data: error })} finally {setIsLoading(false)}},return (<FormField />;<FormField;
+          name=description';
+          render={({ field }: { field: any }) => (            <FormItem>;
+              <FormLabel>Project Description</FormLabel>;
+              <FormControl>;
+                <Textarea;
+                  placeholder='Describe what the project does and your role in it...;
+                  className=min-h-[100px]';
+      setIsLoading (false)}
+  }
       // Check condition;
 if ( {) {}
   $2;
@@ -62,21 +146,21 @@ if ( {) {}
 
       }
     } catch (error) {}
-      logErrorToProduction('Error saving project:', { data: error })
+      logErrorToProduction('Error saving project:, { data: error })
 
-import { logErrorToProduction } from '@/utils/productionLogger';import {;
+import { logErrorToProduction } from @/utils/productionLogger';import {
       setIsLoading(false)
     }
   }
 
 :src/components/resume-builder/portfolio/ProjectForm.tsx
-import { useState } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from '@hookform/resolvers/zod',;
-import { z } from 'zod',;
-import { Button } from '@/components/ui/button',;
-import { Input } from '@/components/ui/input',;
-import { Textarea } from '@/components/ui/textarea',;
+import { useState } from 'react,
+import { useForm } from react-hook-form',
+import { zodResolver } from '@hookform/resolvers/zod,
+import { z } from zod',
+import { Button } from '@/components/ui/button,
+import { Input } from @/components/ui/input',
+import { Textarea } from '@/components/ui/textarea,
 
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import {;
@@ -84,72 +168,73 @@ import {;
   FormControl,;
   FormField,;
   FormItem,;
+  FormLabel,;
+  FormLabel,
 
-import { useAuth } from '@/hooks/useAuth',;
+import { useAuth } from '@/hooks/useAuth,
 // Define schema for form validation;
-const projectSchema = z.object({;'
-  title: z.string().min(1, 'Project title is required'),;
-  description: z.string().optional(),;
-  technologies: z.string().optional(),;
-  image_url: z.string().optional(),;
-  github_url: z;'
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
-    .optional(),;
-  demo_url: z;'
-    .union([z.string().url('Please enter a valid URL'), z.literal('')]);
-    .optional(),;
-  pdf_url: z.string().optional()}),;
-type ProjectFormValues = z.infer<typeof projectSchema>,;
-interface ProjectFormProps {;
-  project?: PortfolioProject,;
-  onSuccess: () => void,;
+const projectSchema = z.object({
+  title: z.string().min(1, 'Project title is required'),
+  description: z.string().optional(),
+  technologies: z.string().optional(),
+  image_url: z.string().optional(),
+  github_url: z;
+    .union([z.string().url(Please enter a valid URL'), z.literal(')]);
+    .optional(),
+  demo_url: z;
+    .union([z.string().url('Please enter a valid URL'), z.literal()]);
+    .optional(),
+  pdf_url: z.string().optional()}),
+type ProjectFormValues = z.infer<typeof projectSchema>,
+interface ProjectFormProps {
+  project?: PortfolioProject,
+  onSuccess: () => void,
   onCancel: () => void;
 }
-;
 export function ProjectForm() { return null; }
-  const { user } = useAuth(),;
-  const { addProject, updateProject } = usePortfolio(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const isEditing = !!project,;
+  const { user } = useAuth(),
+  const { addProject, updateProject } = usePortfolio(),
+  const [isLoading, setIsLoading] = useState(false),
+  const isEditing = !!project,
 
-  const form = useForm<ProjectFormValues>({;
-    resolver: zodResolver(projectSchema),;
+  const form = useForm<ProjectFormValues>({
+    resolver: zodResolver(projectSchema),
 
       pdf_url: project?.pdf_url || ''}
-  }),;
-  const onSubmit = async (data: ProjectFormValues) => {;
-    if (!user) return,;
-    setIsLoading(true),;
-    try {;
-      const projectData: PortfolioProject = {;
-        title: data.title,;
-        description: data.description,;
+  }),
+  const onSubmit = async (data: ProjectFormValues) => {
+    if (!user) return,
+    setIsLoading(true),
+    try {
+      const projectData: PortfolioProject = {
+        title: data.title,
+        description: data.description,
         technologies: data.technologies ?;
-          data.technologies.split().map(tech => tech.trim()) : [],;
-        image_url: data.image_url,;
-        github_url: data.github_url || undefined,;
-        demo_url: data.demo_url || undefined,;
-        pdf_url: data.pdf_url},;
-      let success = false,;
-      if (isEditing && project?.id) {;
+          data.technologies.split().map(tech => tech.trim()) : [],
+        image_url: data.image_url,
+        github_url: data.github_url || undefined,
+        demo_url: data.demo_url || undefined,
+        pdf_url: data.pdf_url},
+      let success = false,
+      if (isEditing && project?.id) {
         success = await updateProject(project.id, projectData);
-      } else {;
-        const projectId = await addProject(projectData),;
+      } else {
+        const projectId = await addProject(projectData),
         success = !!projectId;
       }
-;
-      if (success) {;
+      if (success) {
         onSuccess();
         form.reset();
 
       }
 
-      logErrorToProduction('Error saving project:', { data: error });
-    } finally {;
+      logErrorToProduction(Error saving project:, { data: error });
+    } finally {
       setIsLoading(false);
     }
   },
 
+origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
         <FormField
@@ -159,11 +244,11 @@ export function ProjectForm() { return null; }
           control={form.control}
 :src/components/resume-builder/portfolio/ProjectForm.tsx
           name='title'
-          name='description''
+          name=description'
 
         <FormField
 
-          name='description'
+          name='description
 
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Project Description</FormLabel>
@@ -173,17 +258,18 @@ export function ProjectForm() { return null; }
     }
   }
   return (
-    <Form {...form}>;'
+    <Form {...form}>;
+  return (<Form {...form}>;
+    <Form {...form}>;
       <form on_submit={form.handle_submit (on_submit)} className='space - y-4'>;
         <FormField;
-          control={form.control}'
-          name='title';
-          render={({ field }: { field: any }) => (
-            <FormItem>;
+          control={form.control}
+          name=title';
+          render={({ field }: { field: any }) => (<FormItem>;
               <FormLabel > Project Title</FormLabel>;
               <FormControl>;
                 <Input;'
-                  placeholder='E.g., AI Chatbot, E - commerce Website';
+                  placeholder=E.g., AI Chatbot, E - commerce Website;
                   {...field}                />;
               </FormControl>;
               <FormMessage />;
@@ -191,7 +277,7 @@ export function ProjectForm() { return null; }
         />;
         <FormField;
           control={form.control}'
-          name='description';
+          name='description;
           render={({ field }: { field: any }) => (            <FormItem>;
               <FormLabel > Project Description</FormLabel>;
               <FormControl>;
@@ -199,13 +285,21 @@ export function ProjectForm() { return null; }
                   {...field}
                 />;
               </FormControl>;
+              <FormMessage />;/>;<FormField;
+          name=technologies';
+          render={({ field }: { field: any }) => (<FormItem>;
+              <FormLabel>Technologies Used</FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder='React, Node && Node.js, MongoDB, etc. (comma separated);
+            </FormItem>)}
               <FormMessage />;
         />;
         <FormField
           control={form.control}
-          name='technologies''
+          name=technologies''
 
-          name='technologies'
+          name=technologies
 
           render={({ field }: { field: any }) => (;
             <FormItem>;
@@ -216,19 +310,59 @@ export function ProjectForm() { return null; }
         <FormField;
           control={form.control}'
           name='technologies';
+          control={form.control}name="title";
+          control={form.control}name="title;
+          render={({ field }: { field: any }) => (<FormItem>;
+              <FormLabel>Project Title</FormLabel>;
+              <FormControl>;
+                <Input placeholder=E.g., AI Chatbot, E-commerce Website" {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}/>;
+        <FormField;
+          control={form.control}
+          name="description;
+          render={({ field }: { field: any }) => (<FormItem>;
+              <FormLabel>Project Description</FormLabel>;
+              <FormControl>;
+                <Textarea;
+                  placeholder=Describe what the project does and your role in it...";
+                  className="min-h-[100px];
+                  {...field}/>;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}/>;
+        <FormField;
+          control={form.control}
+          name=technologies";
+          render={({ field }: { field: any }) => (<FormItem>;
+              <FormLabel > Technologies Used</FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder=React, Node.js, MongoDB, etc. (comma separated)';
+                  {...field}
+                />;
+              </FormControl>;
+              <FormMessage />;/>;<div className='grid grid-cols-1 md:grid-cols-2 gap-4>;<FormField;
+            control={form && form.control}
+            name=github_url';
+            render={({ field }: { field: any }) => (              <FormItem>;
+                <FormLabel className='flex items-center gap-2>;
           control={form.control}
 
-          name="title"
+          name="title
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
 :src/components/resume-builder/portfolio/ProjectForm.tsx
                 <Input
-                  placeholder='E.g., AI Chatbot, E-commerce Website'
+                  placeholder=E.g., AI Chatbot, E-commerce Website'
                   {...field}                />
 
-                <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
+                <Input placeholder=E.g., AI Chatbot, E-commerce Website" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -237,20 +371,20 @@ export function ProjectForm() { return null; }
         />
         <FormField
           control={form.control}
-          name='description'
+          name='description
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder='Describe what the project does and your role in it...'
-                  className='min-h-[100px]'
+                  placeholder=Describe what the project does and your role in it...'
+                  className='min-h-[100px]
                   {...field}
 
         />;
         <FormField;
           control={form.control}"
 
-          name="description"
+          name=description
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Description</FormLabel>
@@ -267,12 +401,12 @@ export function ProjectForm() { return null; }
         />
         <FormField
           control={form.control}
-          name='technologies'
+          name=technologies'
 
         />;
         <FormField;
-          control={form.control}"
-          name="technologies"
+          control={form.control}
+          name=technologies"
 
           render={({ field }: { field: any }) => (
 
@@ -282,23 +416,27 @@ export function ProjectForm() { return null; }
               <FormMessage />;
         />;
 
-                  <Github className='h-4 w-4' />;
+                  <Github className='h-4 w-4 />;
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
+                  <Input;
+                    placeholder=https://github && github.com/yourusername/project';
+            </FormItem>)}
+        />;
 
-        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+        <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4>;
           <FormField;
-            control={form.control}'
+            control={form.control}
             name='github_url';
-            render={({ field }: { field: any }) => (              <FormItem>;'
-                <FormLabel className='flex items - center gap - 2'>;'
-                  <Github className='h - 4 w - 4' />;
+            render={({ field }: { field: any }) => (              <FormItem>;
+                <FormLabel className=flex items - center gap - 2'>;'
+                  <Github className=h - 4 w - 4 />;
                   GitHub URL;
                 </FormLabel>;
                 <FormControl>;
                   <Input;'
-                    placeholder='https://github.com / yourusername / project';
+                    placeholder='https://github.com / yourusername / project;
                     {...field}
                   />;
                 </FormControl>;
@@ -306,42 +444,73 @@ export function ProjectForm() { return null; }
               </FormItem>)}
           />;
           <FormField;
-            control={form.control}'
+            control={form.control}
             name='demo_url';
-            render={({ field }: { field: any }) => (              <FormItem>;'
-                <FormLabel className='flex items - center gap - 2'>;'
-                  <Link className='h - 4 w - 4' />;
+            render={({ field }: { field: any }) => (              <FormItem>;
+                <FormLabel className=flex items - center gap - 2'>;'
+                  <Link className=h - 4 w - 4 />;
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
                   <Input;'
-                    placeholder='https://your - project - demo.com';
+                    placeholder='https://your - project - demo.com;
                     {...field}
                   />;
                 </FormControl>;
+                <FormMessage />;/>;<FormField;
+            control={form && form.control}
+            name=demo_url';
+            render={({ field }: { field: any }) => (              <FormItem>;
+                <FormLabel className='flex items-center gap-2>;
                 <FormMessage />;
           />;
 
-            name='demo_url'
+            name=demo_url'
             render={({ field }: { field: any }) => (              <FormItem>;'
-                <FormLabel className='flex items-center gap-2'>;'
+                <FormLabel className=flex items-center gap-2>;'
 
-                  <Link className='h-4 w-4' />;
+                  <Link className='h-4 w-4 />;
                   Demo URL;
                 </FormLabel>;
                 <FormControl>;
+                  <Input;
+                    placeholder=https://your-project-demo && demo.com';
 
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
               </FormItem>;
+            )}GitHub URL;
+                </FormLabel>;
+                <FormControl>;
+                  <Input placeholder="https://github.com/yourusername/project {...field} />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>;
+            )}/>;
+          <FormField;
+            control={form.control}
+            name=demo_url";
+            render={({ field }: { field: any }) => (<FormItem>;
+                <FormLabel className="flex items-center gap-2>;
+                  <Link className=h-4 w-4" />;
+                  Demo URL;
+                </FormLabel>;
+                <FormControl>;
+                  <Input placeholder="https://your-project-demo.com {...field} />;
+                </FormControl>;
+                <FormMessage />;
+              </FormItem>;
+            )}/>;
+        </div>;<FormField;
+          name='image_url;
             )}
                   GitHub URL
                 </FormLabel>
                 <FormControl>
-                  <Input placeholder="https://github.com/yourusername/project" {...field} />"
-          name="technologies"
+                  <Input placeholder=https://github.com/yourusername/project" {...field} />"
+          name=technologies
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Technologies Used</FormLabel>
@@ -353,27 +522,27 @@ export function ProjectForm() { return null; }
           )}
         />
 :src/components/resume-builder/portfolio/ProjectForm.tsx
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <div className=grid grid-cols-1 md:grid-cols-2 gap-4'>
           <FormField
             control={form.control}
-            name='github_url'
+            name='github_url
             render={({ field }: { field: any }) => (              <FormItem>
-                <FormLabel className='flex items-center gap-2'>
-                  <Github className='h-4 w-4' />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <FormLabel className=flex items-center gap-2'>
+                  <Github className='h-4 w-4 />
+        <div className=grid grid-cols-1 md:grid-cols-2 gap-4>
           <FormField
             control={form.control}
             name="github_url"
             render={({ field }: { field: any }) => (
               <FormItem>
-                <FormLabel className="flex items-center gap-2">
+                <FormLabel className=flex items-center gap-2>
                   <Github className="h-4 w-4" />
 
                   GitHub URL
 
                 </FormLabel>
-                <FormControl>"
-                  <Input placeholder="https://github.com/yourusername/project" {...field} />
+                <FormControl>
+                  <Input placeholder=https://github.com/yourusername/project" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -382,58 +551,93 @@ export function ProjectForm() { return null; }
           />
           <FormField
             control={form.control}
-            name='demo_url'
+            name=demo_url'
             render={({ field }: { field: any }) => (              <FormItem>
-                <FormLabel className='flex items-center gap-2'>
-                  <Link className='h-4 w-4' />
+                <FormLabel className='flex items-center gap-2>
+                  <Link className=h-4 w-4' />
                   Demo URL
 
           />;
           <FormField;
             control={form.control}"
 
-            name="demo_url"
+            name=demo_url
             render={({ field }: { field: any }) => (
               <FormItem>"
-                <FormLabel className="flex items-center gap-2">"
+                <FormLabel className="flex items-center gap-2>
                   <Link className="h-4 w-4" />
 
                 </FormLabel>
-                <FormControl>"
-                  <Input placeholder="https://your-project-demo.com" {...field} />
+                <FormControl>
+                  <Input placeholder=https://your-project-demo.com" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
 
-          name='image_url'
+          name='image_url
 :src/components/resume-builder/portfolio/ProjectForm.tsx
           render={({ field }: { field: any }) => (            <FormItem>
-              <FormLabel className='flex items-center gap-2'>
-                <FileImage className='h-4 w-4' />
+              <FormLabel className=flex items-center gap-2'>
+                <FileImage className='h-4 w-4 />
                 Screenshot URL
 
           render={({ field }: { field: any }) => (            <FormItem>;
-              <FormLabel className='flex items-center gap-2'>;
+              <FormLabel className=flex items-center gap-2'>;
 
-                <FileImage className='h-4 w-4' />;
+                <FileImage className='h-4 w-4 />;
                 Screenshot URL;
               </FormLabel>;
               <FormControl>;
+                <Input;
+                  placeholder=https://example && example.com/screenshot && screenshot.jpg';
+              </FormItem>)}
+          />;
+        </div>;
+        <FormField;
+          control={form.control}name="image_url;
+          render={({ field }: { field: any }) => (<FormItem>;
+              <FormLabel className=flex items-center gap-2">;
+                <FileImage className="h-4 w-4 />;
+                Screenshot URL;
+              </FormLabel>;
+              <FormControl>;
+                <Input placeholder=https://example.com/screenshot.jpg" {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}/>;
+        {/* Future file upload field would go here */}<div className="flex justify-end space-x-2 pt-4>;
+          <Button type=button" variant="outline onClick={onCancel}>;
+            Cancel;
+          </Button>;
+          <Button type='submit disabled={isLoading}>;
+            {isLoading && <Loader2 className=mr-2 h-4 w-4 animate-spin' />}
+            {isEditing ? 'Update : Add'} Project;
+          </Button>;
+        </div>;
+      </form>;
+    </Form>;
+  )/>;{/* Future file upload field would go here */}<div className='flex justify-end space-x-2 pt-4>;
+          <Button type=button' variant='outline onClick={onCancel}>;
+            Cancel;
+          </Button>;
+          <Button type=submit' disabled={isLoading}>;
+            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin />}
 
           />;
         </div>;
         <FormField;
           control={form.control}
 
-          name="image_url"
+          name=image_url"
           render={({ field }: { field: any }) => (
             <FormItem>"
-              <FormLabel className="flex items-center gap-2">"
-                <FileImage className="h-4 w-4" />
+              <FormLabel className=flex items-center gap-2>"
+                <FileImage className="h-4 w-4 />
 
               </FormLabel>
-              <FormControl>"
+              <FormControl>
                 <Input placeholder="https://example.com/screenshot.jpg" {...field} />
               </FormControl>
               <FormMessage />
@@ -442,20 +646,20 @@ export function ProjectForm() { return null; }
 :src/components/resume-builder/portfolio/ProjectForm.tsx
         />
         {/* Future file upload field would go here */}
-        <div className='flex justify-end space-x-2 pt-4'>
-          <Button type='button' variant='outline' onClick={onCancel}>
+        <div className=flex justify-end space-x-2 pt-4'>
+          <Button type='button variant=outline' onClick={onCancel}>
 
         />;
         {/* Future file upload field would go here */}
-        "
-        <div className="flex justify-end space-x-2 pt-4">"
-          <Button type="button" variant="outline" onClick={onCancel}>
+        
+        <div className=flex justify-end space-x-2 pt-4">"
+          <Button type=button variant="outline" onClick={onCancel}>
 
             Cancel
           </Button>
-          <Button type='submit' disabled={isLoading}>
-            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
-            {isEditing ? 'Update' : 'Add'} Project
+          <Button type='submit disabled={isLoading}>
+            {isLoading && <Loader2 className=mr-2 h-4 w-4 animate-spin' />}
+            {isEditing ? 'Update : Add'} Project
 
           </Button>
         </div>
@@ -466,17 +670,34 @@ export function ProjectForm() { return null; }
         />;
         {/* Future file upload field would go here */}
 
-            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}'
-            {isEditing ? 'Update' : 'Add'} Project;
+            {isLoading && <Loader2 className='mr-2 h-4 w-4 animate-spin />}
+            {isEditing ? 'Update' : Add} Project;
           </Button>;
         </div>;
       </form>;
     </Form>;
+  );
+}
+}
+    </Form>
+  );
+origin/cursor/automate-test-improve-and-merge-code-2533
+  )}}</Form>;
+  )}
+}}</FormItem>)}
+        />;
+        {/* Future file upload field would go here */}
+        <div className='flex justify - end space - x-2 pt - 4'>;
+          <Button type=button variant='outline' on_click={on_cancel}>;
+            Cancel;
+          </Button>;
+          <Button type=submit disabled={is_loading}>;
+            {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}
   )
-};
+}
 :src/components/resume-builder/portfolio/ProjectForm.tsx
-};
-};
+}
+}
     </Form>
   )
 }
@@ -485,15 +706,17 @@ export function ProjectForm() { return null; }
 
             </FormItem>)}
         />;
-        {/* Future file upload field would go here */}'
-        <div className='flex justify - end space - x-2 pt - 4'>;'
-          <Button type='button' variant='outline' on_click={on_cancel}>;
+        {/* Future file upload field would go here */}
+        <div className=flex justify - end space - x-2 pt - 4'>;'
+          <Button type=button variant='outline' on_click={on_cancel}>;
             Cancel;
 
-            {is_loading && <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />}'
-            {is_editing ? 'Update' : 'Add'} Project;
+            {is_loading && <Loader2 className=mr - 2 h - 4 w - 4 animate - spin />}'
+            {is_editing ? 'Update : Add'} Project;
           </Button>;
         </div>;
       </form>;
+    </Form>)}
+})
     </Form>);
 });

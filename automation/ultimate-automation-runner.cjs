@@ -191,7 +191,6 @@ class UltimateAutomationRunner {
       }
     ];
 
-    const results = [];
     
     for (const check of checks) {
       try {

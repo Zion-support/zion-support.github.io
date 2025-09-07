@@ -63,12 +63,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     return undefined
   }, [isMobile, delay]),
   
-  const dismissBanner = () => {
     setIsVisible(false),
     safeStorage.setItem("smartBannerDismissed", "true")
   },
 
-  const resetBanner = () => {
     safeStorage.removeItem("smartBannerDismissed"),
     setIsVisible(true)
   },

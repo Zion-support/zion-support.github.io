@@ -13,9 +13,7 @@ const allServices = [
   ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
 }
-const allServices = [;
 
-const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
@@ -121,12 +119,10 @@ const cuttingEdgeITInfrastructureServices = [
   }
 ];
 
-const contactInfo = {mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https://ziontechgroup.com';}
 }
 
-const allServices = [
   ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices;
 ];
 
@@ -160,24 +156,20 @@ import { Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check,Brain, Z
 // Import our new service data;
 import { advancedInnovativeServices  } from '../data/2025-advanced-innovative-services-expansion';
 import { advancedITInfrastructureServices2025  } from '../data/2025-advanced-it-infrastructure-services';
-const contactInfo = {mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https://ziontechgroup.com';}
 }const allServices = [;
   ...advancedInnovativeServices,...advancedITInfrastructureServices2025;
 ];const categories = [;
 
-const contactInfo = {mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',}
   website: 'https://ziontechgroup.com';}
 }
 
-const allServices = [
   ...advancedInnovativeServices,...advancedITInfrastructureServices2025;
 ];
 
 
-const categories = [
   {id: 'all',
   name: 'All Services',icon: <LayoutGrid className="w-6 h-6" />,color: 'from-gray-500 to-slate-500',}
   description: 'Complete portfolio of advanced services';}
@@ -213,15 +205,12 @@ const getServiceCategory = (if (service.category);
 }return 'Other';
 }website: 'https://ziontechgroup.com';
 }
-const allServices = [;
 
-const allServices = [
   ...advancedEnterpriseServices2025;
   ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
 
-const cuttingEdgeITInfrastructureServices = [
   {
     id: "infra-1",
     title: "Cloud Infrastructure",
@@ -331,7 +320,6 @@ import {
 // Import our new service data
 import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion'
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services'
-const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',}
@@ -450,12 +438,10 @@ import { motion, AnimatePresence } from "framer-motion"
   website: 'https://ziontechgroup.com',
   website: 'https://ziontechgroup.com',
 
-const allServices = [
   ...advancedEnterpriseServices2025
   ...innovativeMicroSaasExpansion2025
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com',
 
-const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
@@ -532,12 +518,10 @@ const getServiceFeatures = (service: any) => {
 }
 export default function AdvancedServicesShowcase() {
 
-const allServices = [
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,;}
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';}
 }
-const allServices = [
   ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com'
 }const allServices = [
   ...advancedEnterpriseServices2025
@@ -592,7 +576,6 @@ ursor/automate-test-improve-and-merge-code-646c
             .toLowerCase().includes(searchTerm.toLowerCase()) |;}
           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |;}
           getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase()))}setFilteredServices(filtered)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { service: any }) => (<motion.div;
-const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
@@ -615,12 +598,10 @@ export default function AdvancedServicesShowcase() {const allServices = [}
 
 
 export default function AdvancedServicesShowcase() {
-const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;}
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';}
 };
-const allServices = [;
   ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 }const allServices = [;
   ...advancedEnterpriseServices2025;
@@ -666,7 +647,6 @@ ursor/automate-test-improve-and-merge-code-646c;
             .toLowerCase().includes(searchTerm.toLowerCase()) |;}
           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |;}
           getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase()))}setFilteredServices(filtered)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { service: any }) => (<motion.div;
-const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
@@ -675,7 +655,6 @@ ursor/automate-test-improve-and-merge-code-646c;
   return 'Contact for pricing';
 return 'Contact for pricing';}
 
-const getServiceFeatures = (service: any) = /> {if (service.features);
   return service.features;
   if (service.keyFeatures) return service.keyFeatures;}
   return [];}
@@ -705,18 +684,15 @@ const getServiceFeatures = (
 
 
 export default function AdvancedServicesShowcase() {
-const allServices = [
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;}
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com',}
 };
 
 
-const allServices = [
   ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 }
 
-const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
@@ -837,7 +813,6 @@ if (searchTerm) {
             .toLowerCase().includes(searchTerm.toLowerCase()) |;}
           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |;}
           getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase()))}setFilteredServices(filtered)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { service: any }) => (<motion.div
-const allServices = [
   ...advancedEnterpriseServices2025
       ...innovativeMicroSaasExpansion2025
   ...cuttingEdgeITInfrastructureServices
@@ -849,7 +824,6 @@ return 'Contact for pricing';}
   useEffect(() => {
 let filtered  = allServices;// Filter by category
   if($2) {filtered = filtered.filter(service =>
-  const category = getServiceCategory(service).toLowerCase()if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial')if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project')if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge')if (selectedCategory === 'ai-ml') return category.includes('ai') || category.includes('machine learning') || category.includes('nlp') || category.includes('ml')if (selectedCategory === 'quantum') return category.includes('quantum') || category.includes('quantum-resistant';}
   return false;}
       })}// Filter by search term
   if($2) {filtered = filtered.filter(service =>
@@ -1843,7 +1817,6 @@ onClick={() =    /> setViewMode('list')}
                   <List className="w-5 h-5" />
   )
  ;
-  const ServiceList = ({ service }: {service: any}
 }) => (
     <motion.div
         <div className='mb-6'    />
@@ -1896,9 +1869,7 @@ import { motion, AnimatePresence   } from './framer-motion';
   MapPin;
 } from 'lucide-react';
   MapPin} from 'lucide-react';// Mock service data;
-const advancedEnterpriseServices2025 = [;
 
-const advancedEnterpriseServices2025 = [
   {id: "enterprise - 1",title: "Enterprise AI Solutions",description: "Comprehensive AI implementation for large enterprises",category: "enterprise",price: "$50, 000+",rating: 4.9,tags: ["AI", "Machine Learning", "Enterprise"],color: "from - blue - 500 to - purple - 500",icon: "🤖";}
   }
     icon: "🤖";
@@ -1908,7 +1879,6 @@ const advancedEnterpriseServices2025 = [
     icon: "🤖,
 }];
 
-const innovativeMicroSaasExpansion2025 = [
   {id: "micro - 1",title: "Micro SaaS Platform",description: "Lightweight SaaS solutions for small businesses",category: "micro - saas",price: "$99 / month",rating: 4.7,tags: ["SaaS", "Micro Services", "Cloud"],color: "from - green - 500 to - teal - 500",icon: "⚡";}
   }
     icon: "⚡";
@@ -1923,7 +1893,6 @@ const innovativeMicroSaasExpansion2025 = [
     icon: \"⚡\"}];const cuttingEdgeITInfrastructureServices = [
     icon: \"⚡,
 }]
-const cuttingEdgeITInfrastructureServices = [
   {id: "infra - 1",title: "Cloud Infrastructure",description: "Scalable cloud infrastructure solutions",category: "infrastructure",price: "$5, 000 / month",rating: 4.8,tags: ["Cloud", "Infrastructure", "DevOps"],color: "from - orange - 500 to - red - 500",icon: "☁️";}
   }
     icon: "☁️";
@@ -1960,7 +1929,6 @@ import { motion, AnimatePresence  } from './framer-motion'
   MapPin
 } from 'lucide-react'
 // Mock service data
-const advancedEnterpriseServices2025 = [
   {
     id: "enterprise - 1",
     title: "Enterprise AI Solutions",
@@ -1980,7 +1948,6 @@ const advancedEnterpriseServices2025 = [
  ,
 
 ]
-const innovativeMicroSaasExpansion2025 = [
   {
     id: "micro - 1",
     title: "Micro SaaS Platform",
@@ -2000,7 +1967,6 @@ const innovativeMicroSaasExpansion2025 = [
  ,
 
 ]
-const cuttingEdgeITInfrastructureServices = [
   {
     id: "infra - 1",
     title: "Cloud Infrastructure",
@@ -2035,19 +2001,15 @@ const all_services = [
   ...advancedEnterpriseServices2025
       ...innovativeMicroSaasExpansion2025
   ...cuttingEdgeITInfrastructureServices
-const categories = [
   website: 'https://ziontechgroup.com,
 
-const all_services = [
   ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices ];  website: ',
   https://ziontechgroup.com'
   ...cuttingEdgeITInfrastructureServices ];  website: 'https://ziontechgroup.com'
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
-const all_services = [
   ...advancedEnterpriseServices2025
       ...innovativeMicroSaasExpansion2025
   ...cuttingEdgeITInfrastructureServices
-const categories = [
   {id: 'all',
   name: 'All Services',icon: <Grid className='w - 6 h - 6'    />,color: 'from - gray - 500 to - slate - 500',
   description: 'Complete portfolio of advanced services',    color: 'from - gray - 500 to - slate - 500',}
@@ -2190,7 +2152,6 @@ const getServiceCategory = (service: any) =>: any {
   return 'Other';}    description: 'Quantum computing solutions'
 ];const getServiceCategory = (service: any) =>: any {// Check condition
 ]
-const getServiceCategory = (service: any) =>: any {// Check condition;}
   if($2) {$2;}
 
   return 'Other';  return 'Other'
@@ -2602,7 +2563,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 }) = /> (<motion.div;
   );
 
-const ServiceList = ({ service }: {service: any}
 }) = /> (
     <motion.div;
 initial={{ opacity: 0, x: -20 ,}

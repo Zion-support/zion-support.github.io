@@ -122,7 +122,6 @@ if ( {) {}
 }
       setLoginOpen (true);'
       return }    default_values: { subject: '', message: '' }}),
-  const handle_send = async () => {}
     // Check condition;
 if ( {) {}
   $2;

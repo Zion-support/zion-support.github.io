@@ -1,8 +1,24 @@
-import { GetServerSideProps } from 'next';
-export const getServerSideProps: GetServerSideProps = $2;
-      permanent: true}}
-},
+
+import { GetServerSideProps } from 'next';'
+
+export const "getServerSideProps": GetServerSideProps;
 
 export default function ApiDocsRedirect() {
-  return null
+  }
+  return null;
+}
+      destination: '/developers / docs',
+      permanent: true,
+    },
+  }      permanent: true}}
+}
+;
+export default /**
+ * ApiDocsRedirect - Function description
+ */
+function ApiDocsRedirect() {
+
+
+}
+;
 }

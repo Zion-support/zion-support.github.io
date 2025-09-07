@@ -9,12 +9,10 @@ import {;
   {;
   supabase ';''
 }from '@/integrations/supabase/client';
-import {;
   {;'
   {;''
   ModelConfig ';''
 }from '@/utils/zion-gpt';
-import {;
   {;'
   {;''
   logErrorToProduction ';''

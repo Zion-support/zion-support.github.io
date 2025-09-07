@@ -254,7 +254,6 @@ class DeploymentAutomation {
   async deployToStaging() {
     try {
       // Deploy to staging server
-      const deployCommand = "
         rsync -avz --delete .next/ staging-"server": /var/www/ziontechgroup-staging.com/.next/
         rsync -avz --delete public/ staging-server:/var/www/ziontechgroup-staging.com/public/
         rsync -avz package.json staging-server:/var/www/ziontechgroup-staging.com/
@@ -375,7 +374,6 @@ class DeploymentAutomation {
      {
         throw new Error(`Deployment ${deploymentId} not found`)}
       // Find the previous successful deployment
-      const previousDeployment = this.deploymentHistory
         .filter(d => d.environment === environment && d.status === 'completed' && d.id !== deploymentId)
         .sort((a, b) => new Date(b.endTime) - new Date(a.endTime))[0}];
       if ( {
@@ -422,7 +420,6 @@ class DeploymentAutomation {
      {
         execSync('ssh production-server "cd /var/www/ziontechgroup.com && pm2 restart ecosystem.intelligent.cjs"', { "stdio": 'pipe' })} else {
         execSync('ssh staging-server "cd /var/www/ziontechgroup-staging.com && pm2 restart ecosystem.intelligent.cjs"', { "stdio": 'pipe' })}
-      const rollback = {
         "id": "rollback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}",
         deploymentId,
         environment,
@@ -434,7 +431,6 @@ class DeploymentAutomation {
       await this.saveRollbackHistory();
       return rollback} catch (error) {
       console.error("❌ Rollback failed for deployment ${deploymentId}:", error);
-      const rollback = {
         "id": "rollback_${Date.now()}_${Math.random().toString(36).substr(2, 9)}",
         deploymentId,
         environment,
@@ -508,8 +504,6 @@ deploymentAutomation.start().catch(console.error);
       throw new Error(`Step ${stepName} "failed"`)
       const gitStatus = execSync('git status --porcelain', { "encoding"})
       const currentBranch = execSync('git branch --show-current', { "encoding"})
-      const currentBranch = execSync('git branch --show-current', { "encoding"})
-      const lastCommit = execSync('git log -1 --pretty="format": "%H"', { "encoding"})
       const lastCommit = execSync('git log -1 --pretty="format": "%H"', { "encoding"})
         execSync(`cp -r /var/www/ziontechgroup.com ${backupPath}/`, { "stdio"`})
         execSync(`cp -r /var/www/ziontechgroup-staging.com ${backupPath}/`, { "stdio"`})

@@ -172,10 +172,8 @@ class SmartAutoScaler {
     return null;
   }
   async evaluateMemoryScaling(metrics) {
-    const mainAppProcess = metrics.processes.find(p => p.name.includes('main-app'));
     if (!mainAppProcess) return null;
     const avgMemory = this.calculateAverageMemory(metrics);
-    const currentInstances = mainAppProcess.instances;
     if (avgMemory > this.scalingRules.memory.scaleUp && currentInstances < this.scalingLimits.maxInstances) {
       if (this.isInCooldown('memory')) return null;
       return {
@@ -201,10 +199,8 @@ class SmartAutoScaler {
     return null;
   }
   async evaluateResponseTimeScaling(metrics) {
-    const mainAppProcess = metrics.processes.find(p => p.name.includes('main-app'));
     if (!mainAppProcess) return null;
     const avgResponseTime = this.calculateAverageResponseTime();
-    const currentInstances = mainAppProcess.instances;
     if (avgResponseTime > this.scalingRules.responseTime.scaleUp && currentInstances < this.scalingLimits.maxInstances) {
       if (this.isInCooldown('responseTime')) return null;
       return {
@@ -230,10 +226,8 @@ class SmartAutoScaler {
     return null;
   }
   async evaluateErrorRateScaling(metrics) {
-    const mainAppProcess = metrics.processes.find(p => p.name.includes('main-app'));
     if (!mainAppProcess) return null;
     const errorRate = this.calculateErrorRate(metrics);
-    const currentInstances = mainAppProcess.instances;
     if (errorRate > this.scalingRules.errorRate.scaleUp && currentInstances < this.scalingLimits.maxInstances) {
       if (this.isInCooldown('errorRate')) return null;
       return {
@@ -265,7 +259,6 @@ class SmartAutoScaler {
     return totalCpu / mainAppProcesses.length;
   }
   calculateAverageMemory(metrics) {
-    const mainAppProcesses = metrics.processes.filter(p => p.name.includes('main-app'));
     if (mainAppProcesses.length === 0) return 0;
     const totalMemory = mainAppProcesses.reduce((sum, process) => sum + process.memory, 0);
     return totalMemory / mainAppProcesses.length;
@@ -278,7 +271,6 @@ class SmartAutoScaler {
     let totalResponseTime = 0;
     let count = 0;
     for (const metrics of recentMetrics) {
-      const mainAppProcesses = metrics.processes.filter(p => p.name.includes('main-app'));
       for (const process of mainAppProcesses) {
         // Simulate response time based on CPU and memory
         const responseTime = 100 + (process.cpu * 10) + (process.memory / (1024 * 1024 * 1024) * 50);
@@ -289,7 +281,6 @@ class SmartAutoScaler {
     return count > 0 ? totalResponseTime / count : 0;
   }
   calculateErrorRate(metrics) {
-    const mainAppProcesses = metrics.processes.filter(p => p.name.includes('main-app'));
     if (mainAppProcesses.length === 0) return 0;
     const errorCount = mainAppProcesses.filter(p => p.status !== 'online').length;
     return (errorCount / mainAppProcesses.length) * 100;
@@ -401,9 +392,7 @@ class SmartAutoScaler {
     if (this.performanceMetrics.length === 0) return 0;
     const recentMetrics = this.performanceMetrics.slice(-10);
     let totalInstances = 0;
-    let count = 0;
     for (const metrics of recentMetrics) {
-      const mainAppProcess = metrics.processes.find(p => p.name.includes('main-app'));
       if (mainAppProcess) {
         totalInstances += mainAppProcess.instances;
         count++;

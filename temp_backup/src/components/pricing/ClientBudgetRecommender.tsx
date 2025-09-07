@@ -41,7 +41,6 @@ import { useAuth } from '@/hooks/useAuth'
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import {logErrorToProduction} from '@/utils/productionLogger',
-import { 
   getClientBudgetSuggestion,
   PricingSuggestion,
   ClientBudgetParams,
@@ -115,7 +114,6 @@ export const ClientBudgetRecommender: React.FC<
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
-import {;
   getClientBudgetSuggestion,;
   PricingSuggestion,;
   ClientBudgetParams,;
@@ -165,7 +163,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     }
   },
 
-  const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
       

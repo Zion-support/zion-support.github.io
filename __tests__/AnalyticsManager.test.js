@@ -18,13 +18,27 @@ describe('AnalyticsManager', () => {'}
     render(<AnalyticsManager />);,
   });
 });
+});
 import _React from 'react'
-'
-import '@testing-library/jest-dom';
-import AnalyticsManager from '../components/AnalyticsManager';
+''
+import '@testing-library/jest-dom';'
+import AnalyticsManager from '../components/AnalyticsManager';'
 describe('AnalyticsManager', () => {'
   test('renders without crashing', () => {'
-    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();
+    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import AnalyticsManager from '../components/AnalyticsManager';
+
+describe('AnalyticsManager', () => {
+  test('renders without crashing', () => {
+    render(<AnalyticsManager />);
+    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();
+  });
+});
+});
+});

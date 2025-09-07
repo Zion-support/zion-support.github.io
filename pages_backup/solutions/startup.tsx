@@ -1,72 +1,65 @@
 
 =======
-import React from 'react';
-import Link from 'next/link';';
+import React from 'react;
+import Link from next/link';';
 
-import { motion } from 'framer-motion';
+import { motion } from framer-motion;
 
 import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
-import Layout from "../../components/Layout";";
+import Layout from "../../components/Layout;;
 
 
 =======
 
 const features = [;
-  {}'
-    title: 'Rapid Prototyping,','
-    description: 'Quick MVP development to validate your ideas and get to market fast,',
+  {}
+    title: Rapid Prototyping,','
+    description: Quick MVP development to validate your ideas and get to market fast,,
     icon: Zap,'
-    benefits: ['2-4 Week MVPs, 'Agile Development', 'User Feedback Integration', 'Iterative Improvement']',
-  },
+    benefits: ['2-4 Week MVPs, Agile Development, 'User Feedback Integration', Iterative Improvement]'},
   {}'
-    title: 'Cost Optimization,','
-    description: 'Budget-friendly solutions that maximize your startup resources,',
-    icon: DollarSign,'
-    benefits: ['Flexible Pricing, 'Pay-as-you-grow', 'No Hidden Costs', 'ROI Focused']',
-  },
+    title: Cost Optimization,,'
+    description: 'Budget-friendly solutions that maximize your startup resources,,
+    icon: DollarSign,
+    benefits: ['Flexible Pricing, 'Pay-as-you-grow, No Hidden Costs', 'ROI Focused]},
   {}'
-    title: 'Scalable Infrastructure,','
+    title: 'Scalable Infrastructure,,
     description: 'Technology that grows with your startup from day one,',
-    icon: TrendingUp,'
-    benefits: ['Auto-scaling, 'Cloud-native', 'Performance Optimized', 'Future-proof']',
-  },
-  {}'
-    title: 'Expert Guidance,','
-    description: 'Mentorship and technical guidance from experienced entrepreneurs,',
+    icon: TrendingUp,
+    benefits: [Auto-scaling, 'Cloud-native', Performance Optimized, 'Future-proof']},
+  {}
+    title: 'Expert Guidance,',
+    description: Mentorship and technical guidance from experienced entrepreneurs,',
     icon: Users,'
-    benefits: ['Technical Mentorship, 'Best Practices', 'Industry Insights', 'Ongoing Support']',
-  }
-;];
+    benefits: [Technical Mentorship, Best Practices', 'Industry Insights, Ongoing Support']'}];
 
 const services = [;
-  { title: 'MVP Development, description: 'Minimum viable product development in 2-4 weeks' },',
-  { title: 'Tech Stack Selection, description: 'Choose the right technologies for your startup' },',
-  { title: 'UI/UX Design, description: 'User-centered design that converts visitors to customers' },',
-  { title: 'API Development, description: 'Robust APIs for your mobile and web applications' },',
-  { title: 'Cloud Setup, description: 'Scalable cloud infrastructure from day one' },',
+  { title: MVP Development, description: Minimum viable product development in 2-4 weeks' },',
+  { title: Tech Stack Selection, description: Choose the right technologies for your startup' },',
+  { title: UI/UX Design, description: User-centered design that converts visitors to customers' },',
+  { title: API Development, description: Robust APIs for your mobile and web applications' },',
+  { title: Cloud Setup, description: Scalable cloud infrastructure from day one' },',
 
-  { title: 'Growth Hacking, description: 'Technical solutions to accelerate user acquisition' }',
-;];
+  { title: Growth Hacking, description: Technical solutions to accelerate user acquisition' }'];
 
 const stats = [;
-  { number: '100+, label: 'Startups Helped' },',
-  { number: '300+, label: 'Projects Delivered' },',
-  { number: '300%, label: 'Average Growth' },',
+  { number: 100+, label: Startups Helped' },',
+  { number: 300+, label: Projects Delivered' },',
+  { number: 300%, label: Average Growth' },',
 
-  { number: '2-4, label: 'Weeks to MVP' }',
-;];
+  { number: 2-4, label: Weeks to MVP' }'];
 }
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}
 
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}"
-                  className="text-center""
-                >;"
-                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{stat.number}</div>""
-                  <div className="text-gray-600 font-medium">{stat.label}</div>"
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center"
+                >;
+                  <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2">{stat.number}</div>
+                  <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>;
               ))}
             </div>,
@@ -74,50 +67,50 @@ const stats = [;
         </section>;
 
         {/* Features Section */}
-        <section className="py-20 bg-gray-50">"
+        <section className=py-20 bg-gray-50">"
 
-          <div className="container mx-auto px-4">";
+          <div className=container mx-auto px-4>";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
               transition={{ duration: 0.8 }}
 
-              className="text-center mb-16""
+              className="text-center mb-16
             >;"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
-                Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Advantages</span>";
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6>;"
+                Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600>Advantages</span>;
 
               </h2>;
 
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
                 We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently,
               </p>;
             </motion.div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
+            <div className=grid grid-cols-1 md:grid-cols-2 gap-8">";
               {features.map((feature, index) => (,
                 <motion.div}),
                   key={feature.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}"
-                  className="bg-white rounded-2xl shadow-xl p-8""
-                >;"
-                  <div className="flex items-center mb-6">";"
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center mr-4">";"
-                      <feature.icon className="w-8 h-8 text-white" />";
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className=bg-white rounded-2xl shadow-xl p-8""
+                >;
+                  <div className=flex items-center mb-6">";
+                    <div className=w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl flex items-center justify-center mr-4">";
+                      <feature.icon className=w-8 h-8 text-white" />";
                     </div>;
-                    <div>;"
-                      <h3 className="text-2xl font-bold text-gray-900">{feature.title}</h3>""
-                      <p className="text-gray-600">{feature.description}</p>"
+                    <div>;
+                      <h3 className=text-2xl font-bold text-gray-900">{feature.title}</h3>"
+                      <p className=text-gray-600">{feature.description}</p>"
                     </div>;
                   </div>;
 
-                  <ul className="space-y-3">";
+                  <ul className=space-y-3>";
                     {feature.benefits.map((benefit, benefitIndex) => (,"
-                      <li key={benefitIndex} className="flex items-center text-gray-600">""
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />";
+                      <li key={benefitIndex} className=flex items-center text-gray-600>""
+                        <CheckCircle className=w-5 h-5 text-green-500 mr-3 flex-shrink-0 />";
                         {benefit}
                       </li>,
                     ))}
@@ -129,24 +122,24 @@ const stats = [;
         </section>;
 
         {/* Services Section */}
-        <section className="py-20 bg-white">"
+        <section className="py-20 bg-white>
 
-          <div className="container mx-auto px-4">";
+          <div className="container mx-auto px-4">;
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
-              className="text-center mb-16""
-            >;"
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";"
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>";
+              className=text-center mb-16""
+            >;
+              <h2 className=text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
+                Our <span className=text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>";
 
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
+              <p className=text-xl text-gray-600 max-w-3xl mx-auto>";
                 Comprehensive startup services designed to help you build, launch, and scale your business,
               </p>;
             </motion.div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>;
               {services.map((service, index) => (,
                 <motion.div}),
                   key={service.title}
@@ -155,10 +148,10 @@ const stats = [;
 
                   transition={{ duration: 0.8, delay: index * 0.1 }}
 
-                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
-                >;"
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>""
-                  <p className="text-gray-600">{service.description}</p>"
+                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300"
+                >;
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600">{service.description}</p>
                 </motion.div>;
 
               ))}
@@ -167,29 +160,29 @@ const stats = [;
         </section>;
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
+        <section className=py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
 
-          <div className="container mx-auto px-4 text-center">";
+          <div className=container mx-auto px-4 text-center>";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
               </h2>;
 
-              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";
+              <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto>;
                 Let's turn your idea into a successful product with our rapid development and scaling solutions';
               </p>;
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;"
-                  href="/contact"";"
-                  className="px-8 py-4 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+                <Link;
+                  href="/contact";
+                  className="px-8 py-4 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center";
                 >;
-                  Start Your Project;"
-                  <ArrowRight className="ml-2 w-5 h-5" />";
+                  Start Your Project;
+                  <ArrowRight className="ml-2 w-5 h-5" />;
                 </Link>;
-                <Link;"
-                  href="/solutions"";"
+                <Link;
+                  href="/solutions";
                   className="px-8 py-4 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-semibold transition-colors"";
                 >;
 

@@ -13,7 +13,7 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
-
+origin/cursor/automate-test-improve-and-merge-code-2533
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
   referralLink: string;
@@ -64,7 +64,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
-import {
   Card,
   CardContent,
   CardDescription,
@@ -89,7 +88,6 @@ function ReferralLink() {
     set_timeout (() => set_copied (false), 2000);
 
   }
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
   Card,;
@@ -100,7 +98,6 @@ import {;
   CardTitle,;
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
-import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
 interface ReferralLinkProps {;
   referralLink: string;
   onCopy: () => void;

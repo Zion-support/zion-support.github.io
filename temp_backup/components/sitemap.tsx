@@ -89,7 +89,6 @@ export default function SitemapPage() {
     {
 
  ;
-  const links = [}
   { name: "Home", href: "/",}
 },;
     { name: "Services", href: "/services",}
@@ -178,7 +177,6 @@ const links = [
     </div>;
   )}
 
-const links = [
     {name: 'Home'}
   href: '/',}
 },
@@ -246,7 +244,6 @@ function SitemapPage() {const links = [}
 }
 }
 
-const links = [
 		  {name: 'Home'}
   href: '/',}
 },
@@ -309,7 +306,6 @@ export default /**
  * SitemapPage - Function description;
  */
 function SitemapPage() {
-  const links = [}
   { name: "Home", href: "/",}
 },
     { name: "Services", href: "/services",}
@@ -334,7 +330,6 @@ function SitemapPage() {
     { name: "Contact", href: "/contact",}
 },;
 
-const links = [
     { name: "Home", href: "/",}
 }
     { name: "Services", href: "/services",}
@@ -355,7 +350,6 @@ const links = [
     { name: "Contact", href: "/contact",}
 }
 
-const links = [
   { name: "Home", href: "/",}
 },{ name: "Services", href: "/services",}
 },{name: "All Services Showcase",href: "/comprehensive-services-showcase-2025,}
@@ -590,7 +584,6 @@ export default /**
  * SitemapPage - Function description;
  */
 function SitemapPage() {
-  const links = [}
   { name: "Home", href: "/",}
 },
     { name: "Services", href: "/services",}

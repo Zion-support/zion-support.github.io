@@ -21,7 +21,6 @@ export default function MessagingInbox() {
     activeConversation
     setActiveConversation
 
-  const { 
     conversations;
 
     markAsRead;
@@ -70,7 +69,6 @@ export default function MessagingInbox() {
               ) : (
                 <ConversationsList
 
-import React, { useEffect, useState } from 'react',;
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext',;
 import { ProtectedRoute } from '@/components/ProtectedRoute',;
@@ -80,7 +78,6 @@ import { toast } from 'sonner',;
 import { Button } from '@/components/ui/button',;
 import { LoadingSpinner } from '@/components/ui/enhanced-loading-states',;
 import { useRouter } from 'next/router', // Changed from react-router-dom;
-import {logErrorToProduction} from '@/utils/productionLogger',;
 export default function MessagingInbox() {;
   const {;
     conversations,;

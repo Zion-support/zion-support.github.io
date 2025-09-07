@@ -1,9 +1,9 @@
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 #!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
 const { execSync } = require('child_process')
 console.log(' Starting Comprehensive Deployment Automation...')
   "status"

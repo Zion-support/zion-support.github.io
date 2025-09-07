@@ -31,8 +31,6 @@ export function ZapierIntegration() {
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Zap } from 'lucide-react'
 export function ZapierIntegration() {
-  const [copied, setCopied] = useState(false)
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")
   const handleCopyApiKey = () => {
     navigator.clipboard.writeText(apiKey)
     setCopied(true)
@@ -269,10 +267,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
   )
-import React, { useState } from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
 import { toast } from "sonner",;
 import { Check, Copy, ExternalLink } from 'lucide-react';

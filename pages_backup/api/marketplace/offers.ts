@@ -4,7 +4,6 @@ import {}
   assertTalentOrClientForOffer,
   getDemoUser,';
 } from '../../../utils / marketplace / auth';
-import {}
   getOfferById,
   list_offers,
   save_offer,
@@ -117,7 +116,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {}
     }"
     if (req.method === "POST") {}
       // Create an offer (client sends an offer to confirm)
-      const client = assertClient(req);
 
           id: uuidv4(),
           title: `Project with ${existing && existing.talentSlug}`,
@@ -218,9 +216,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "GET") {
       const user = getDemoUser(req);
       if (user.role === "client") {
-        const offers = listOffers({ clientId: user.id });
 
-      const offer: Offer = {
         id: uuidv4(),
         createdAtIso: new Date().toISOString(),
         clientId: client.id,
@@ -312,7 +308,6 @@ if ( {) {}
       if (return bad (res, "Offer not found", 404)) {}
   $2;
 }
-      const user = assertTalentOrClientForOffer (
         req,
         existing,"
         req.headers["x - demo - talent - slug"] as string,
@@ -328,7 +323,6 @@ if ( {) {}
 "
         existing.status = "CONFIRMED";
         // Create a project upon acceptance;
-        const project: Project = {}
   }
 
           id: uuidv4 (),`
