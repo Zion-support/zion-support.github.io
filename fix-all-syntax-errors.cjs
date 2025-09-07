@@ -49,7 +49,7 @@ if (fs.existsSync(apiDocsPath)) {
   
   // Fix the misplaced import
   content = content.replace(
-    /    \]\nimport Head from 'next\/head';\n\n\} from 'lucide-react';\nconst apiEndpoints = \[/,
+    / {4}\]\nimport Head from 'next\/head';\n\n\} from 'lucide-react';\nconst apiEndpoints = \[/,
     '    ]\n  } from \'lucide-react\';\n\nimport Head from \'next/head\';\n\nconst apiEndpoints = ['
   );
   
@@ -64,7 +64,7 @@ if (fs.existsSync(apiDocPath)) {
   
   // Fix the malformed JSX
   content = content.replace(
-    /    <Layout>;\s*<Head>;\s*<title>API Documentation \| Zion Tech Group<\/title>;\s*<link;\s*rel='canonical'\s*'\s*href='https: \/\/ziontechgroup && ziontechgroup.com\/api-documentation'/,
+    / {4}<Layout>;\s*<Head>;\s*<title>API Documentation \| Zion Tech Group<\/title>;\s*<link;\s*rel='canonical'\s*'\s*href='https: \/\/ziontechgroup && ziontechgroup.com\/api-documentation'/,
     `    <Layout>
       <Head>
         <title>API Documentation | Zion Tech Group</title>

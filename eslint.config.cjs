@@ -5,7 +5,34 @@ const typescriptEslint = require('@typescript-eslint/eslint-plugin');
 
 module.exports = [
   {
-    ignores: ['**/*'],
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'coverage/**',
+      'automation_logs/**',
+      'automation-reports/**',
+      'automation-reports/**',
+      'automation/**/logs/**',
+      'temp_backup/**',
+      'temp_components/**',
+      'temp-backup/**',
+      'src_backup/**',
+      'src/**',
+      'utils/**',
+      'supabase/**',
+      'scripts/**',
+      '*.config.ts',
+      'vite.config.*',
+      'start-dev.js',
+      '**/*.disabled/**',
+      'backup/**',
+      'backup-**/**',
+      'corrupted_backup/**',
+      'recovered-branches/**',
+      'cypress/**/.cache/**'
+    ],
   },
   js.configs.recommended,
   {
