@@ -82,7 +82,8 @@ function getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx']) {
 }
 
 function main() {
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
+
+
   const srcDir = path.join(process.cwd(), 'src');
   const pagesDir = path.join(process.cwd(), 'pages');
   
@@ -94,7 +95,7 @@ function main() {
   let filesProcessed = 0;
 
   for (const pattern of patterns) {
-    const files = await glob(pattern);
+    const files = glob.sync(pattern);
     
     for (const file of files) {
       if (shouldProcessFile(file)) {
@@ -113,10 +114,11 @@ function main() {
   } else {
     console.log(`\n✨ No console statements found to remove.`);
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-0033
+
 }
 
 if (require.main === module) {
   main().catch(console.error)}
+
 
 module.exports = { removeConsoleStatements, processFile };

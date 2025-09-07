@@ -23,4 +23,5 @@ console.log(' Starting intelligent TypeScript error fixer...')
       console.log('  Remaining "errors")
       "summary"
       "status"
+
   console.error(' Intelligent TypeScript error fixer failed to "start")

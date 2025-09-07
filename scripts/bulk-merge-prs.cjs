@@ -16,4 +16,5 @@ const path = require('path')
         return { "status": 'merged', "message"}
         return { "status"}
       return { "status"}
+
     console.error('Bulk PR merger "failed")

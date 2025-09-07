@@ -8,4 +8,5 @@ const path = require('path')
       this.log(' Component error fixing logic to be implemented')
         "successRate"
         "version"
+
   console.error('Fatal "error")

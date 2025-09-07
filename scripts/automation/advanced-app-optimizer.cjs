@@ -300,6 +300,7 @@ export class PerformanceMonitor {}
       
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
+
       
       // Log slow operations;
       if ( {})
@@ -487,4 +488,5 @@ if ( {})
      {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
+
 module.exports = AdvancedAppOptimizer;

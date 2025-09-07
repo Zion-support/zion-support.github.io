@@ -121,4 +121,5 @@ class BuildHealthMonitor {}
 };
 ;
 const monitor = new BuildHealthMonitor();
+
 monitor.run().catch(console.error);

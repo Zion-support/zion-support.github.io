@@ -1,3 +1,30 @@
+const fs = require('fs');
+const path = require('path');
+const { execSync, spawn } = require('child_process');
+const { promisify } = require('util');
+
+const execAsync = promisify(require('child_process').exec);
+
+class RunAllAutomations {
+  constructor() {
+    this.results = {
+      success: [],
+      failed: [],
+      warnings: []
+    };
+    this.logFile = path.join(__dirname, '..', 'automation-logs.txt');
+    this.ensureLogFile();
+  }
+
+  ensureLogFile() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
+    }
+  }
+
+  log(message, type = 'info') {
+    const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
@@ -48,17 +75,21 @@
     // Define all automation scripts to run
     const automations = [
       { name: 'Install Dependencies', command: 'npm install' },
-      { name: 'Type Check', command: 'npm run type-check' },
-      { name: 'Lint Fix', command: 'npm run lint:fix' },
+      { name: 'Type Check', command: 'npx tsc --noEmit' },
+      { name: 'Lint Fix', command: 'npm run lint' },
       { name: 'Build Application', command: 'npm run build' },
-      { name: 'Test Smoke', command: 'npm run test:smoke' },
-      { name: 'Security Audit', command: 'npm run security:audit' },
-      { name: 'Performance Monitor', command: 'npm run perf:monitor' },
-      { name: 'SEO Optimizer', command: 'npm run automation:seo' },
-      { name: 'Health Check', command: 'npm run automation:health' },
-      { name: 'Quick Improvements', command: 'node scripts/quick-app-improvements.cjs' },
-      { name: 'Performance Improver', command: 'node scripts/performance-improver.cjs' },
-      { name: 'Security Improver', command: 'node scripts/security-improver.cjs' },
+
+      { name: 'Comprehensive Test Suite', command: 'node scripts/pm2/comprehensive-test-suite.cjs' },
+      { name: 'Security Audit', command: 'npm audit' },
+      { name: 'Performance Monitor', command: 'node scripts/pm2/performance-monitor.cjs' },
+      { name: 'SEO Optimizer', command: 'node scripts/pm2/seo-accessibility.cjs' },
+      { name: 'Health Check', command: 'node scripts/pm2/healthcheck.cjs' },
+      { name: 'Code Quality', command: 'node scripts/pm2/code-quality-monitor.cjs' },
+      { name: 'Security Scanner', command: 'node scripts/pm2/security-scanner.cjs' },
+      { name: 'App Optimizer', command: 'node scripts/pm2/app-optimizer.cjs' },
+      { name: 'Database Optimizer', command: 'node scripts/pm2/database-optimizer.cjs' },
+      { name: 'API Monitor', command: 'node scripts/pm2/api-monitor.cjs' },
+
       { name: 'Git Status', command: 'git status' },
       { name: 'Git Add', command: 'git add .' },
       { name: 'Git Commit', command: 'git commit -m "Automated improvements and fixes"' },
@@ -125,38 +156,6 @@ if (require.main === module) {
   }
 }
 
+
 module.exports = RunAllAutomations;
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.reportsDir = path.join(this.projectRoot, 'all-automations-reports')
-        "encoding"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "name"
-        "script"
-        "type"
-        "priority"
-        "impact"
-        "type"
-        "priority"
-        "message"
-        "impact"
+

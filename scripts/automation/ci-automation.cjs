@@ -264,4 +264,5 @@ if (require.main === module) {}
   console.error("CI automation "failed": ', error);
     process.exit(1)})};
 ;
+
 module.exports = CIAutomation;

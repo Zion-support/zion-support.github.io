@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -9,4 +10,5 @@ console.log('🧪 Running Automated Tests...')
   execSync('npm run lint', { "stdio"})
   execSync('npm run type-check', { "stdio"})
     execSync('npm audit --audit-level=moderate', { "stdio"})
+
 console.log('🧪 Test "Summary")

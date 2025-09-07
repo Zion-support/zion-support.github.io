@@ -1,1 +1,1 @@
- 
+export { CertificationsForm } from \"./certifications\";

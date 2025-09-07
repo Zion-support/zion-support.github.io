@@ -1,12 +1,16 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+
+
+
+
+
+
+
 #!/usr/bin/env node;
+
+
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD
       
       if ( {
         ) {
@@ -173,7 +177,6 @@ const path = require('path')
        } };
         
         i++;
-        while (i < lines.length && !lines[i].includes('>>>>>>>')) {
           conflict.content.push(lines[i]);
           i++}
         
@@ -474,9 +477,9 @@ const path = require('path')
 // Start the Intelligent Git Automation
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+
+
+
       "autoMerge"
       "conflictResolution"
       "branchProtection"
@@ -548,3 +551,7 @@ gitAutomation.start().catch(console.error);
       console.error('Error saving "analysis")
       console.error('Error saving "notification")
       console.error('Error loading "history")
+
+      console.error('Error loading "history")
+
+

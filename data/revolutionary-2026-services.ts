@@ -1,99 +1,117 @@
- 
-}export const revolutionary2026Services: Revolutionary2026Service[] = [ // AI-Powered Business Intelligence & Analytics realImplementation: true;
-implementationDetails: 'Full-stack SaaS platform with real-time data processing, AI model training pipeline, customizable dashboards, and enterprise SSO integration.';
-launchDate: '2026-01-15';
-customers: 1500;
-rating: 4.9;
-reviews: 890 
-};
-// AI-Powered Legal Document Automation realImplementation: true;
-implementationDetails: 'Enterprise-grade legal automation platform with AI-powered document analysis, compliance monitoring, and secure document management.';
-launchDate: '2026-02-01';
-customers: 800;
-rating: 4.8;
-reviews: 450 
-};
-// AI Healthcare Diagnostics Platform realImplementation: true;
-implementationDetails: 'HIPAA-compliant healthcare AI platform with advanced medical imaging analysis, secure patient data handling, and clinical decision support.';
-launchDate: '2026-01-20';
-customers: 300;
-rating: 4.9;
-reviews: 180 
-};
-// AI Metaverse Development Platform realImplementation: true;
-implementationDetails: 'Full-stack metaverse development platform with AI-powered tools, 3D rendering engine, and cross-platform deployment capabilities.';
-launchDate: '2026-02-15';
-customers: 1200;
-rating: 4.7;
-reviews: 680 
-};
-// Quantum-Secure Communication Platform realImplementation: true;
-implementationDetails: 'Enterprise-grade quantum security platform with hardware integration, compliance certifications, and comprehensive security auditing.';
-launchDate: '2026-01-10';
-customers: 200;
-rating: 4.9;
-reviews: 120 
-};
-// Quantum Financial Trading Platform realImplementation: true;
-implementationDetails: 'Enterprise-grade quantum trading platform with real-time market data, advanced analytics, and comprehensive compliance features.';
-launchDate: '2026-01-25';
-customers: 150;
-rating: 4.8;
-reviews: 90 
-};
-// Neuromorphic Computing Platform realImplementation: true;
-implementationDetails: 'Research-grade neuromorphic computing platform with hardware integration, development tools, and comprehensive documentation.';
-launchDate: '2026-02-01';
-customers: 80;
-rating: 4.7;
-reviews: 45 
-};
-// DNA Computing Platform realImplementation: true;
-implementationDetails: 'Research-grade DNA computing platform with laboratory integration, bioinformatics tools, and comprehensive research support.';
-launchDate: '2026-02-10';
-customers: 50;
-rating: 4.8;
-reviews: 30 
-};
-// Photonic Computing Platform realImplementation: true;
-implementationDetails: 'Enterprise-grade photonic computing platform with optical hardware integration, development tools, and performance optimization.';
-launchDate: '2026-02-20';
-customers: 120;
-rating: 4.7;
-reviews: 75 
-};
-// Holographic Display Platform realImplementation: true;
-implementationDetails: 'Full-stack holographic platform with 3D content creation tools, real-time rendering, and multi-device compatibility.';
-launchDate: '2026-02-25';
-customers: 800;
-rating: 4.8;
-reviews: 420 
-};
-// Autonomous Supply Chain Optimization realImplementation: true;
-implementationDetails: 'Enterprise-grade supply chain platform with AI optimization, real-time monitoring, and comprehensive analytics.';
-launchDate: '2026-01-30';
-customers: 950;
-rating: 4.7;
-reviews: 580 
-};
-// Autonomous Manufacturing AI realImplementation: true;
-implementationDetails: 'Industrial-grade manufacturing AI platform with IoT integration, robotic automation, and comprehensive monitoring.';
-launchDate: '2026-02-05';
-customers: 650;
-rating: 4.8;
-reviews: 380 
-};
-// Swarm Robotics Platform realImplementation: true;
-implementationDetails: 'Enterprise-grade swarm robotics platform with robot integration, simulation tools, and comprehensive coordination algorithms.';
-launchDate: '2026-02-15';
-customers: 180;
-rating: 4.7;
-reviews: 95 
-};
-// Quantum Space Mining Platform realImplementation: true;
+
+contactInfo: {
+
+mobile: string, email: string,
+    address: string,}
+    website: string}
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number;
+}
+      'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.'
+    launchDate: \"launchDate\",
+    customers: 45;
+    rating: 4.8;
+reviews: 25;
+  }
+      'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.',
+    launchDate: '2026-03-01',
+  customers: 45,
+    rating: 4.8,
+    reviews: 25;
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true;
 implementationDetails: 'Space-grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.';
-launchDate: '2026-03-01';
-customers: 45;
-rating: 4.8;
-reviews: 25 
-}];
+    launchDate: '2026-03-01';
+    customers: 45;
+    rating: 4.8;
+reviews: 25;
+  }
+];
+import { ServiceVariant } from '../types/service-variants';
+export interface Revolutionary2026Service {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;}
+    website: string;}
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+
+export const revolutionary2026Services: Revolutionary2026Service[] = [
+  // AI-Powered Business Intelligence & Analytics;
+  {
+    id: 'ai-business-intelligence-suite-2026',
+  name: 'AI Business Intelligence Suite 2026',
+    tagline: 'Next-generation AI-powered business analytics and decision intelligence',
+  price: '$299',
+    period: '/month',
+  description: 'Revolutionary AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated decision-making capabilities. Features advanced machine learning algorithms, natural language querying, and real-time dashboard customization.',
+    features: [
+      'AI-powered predictive analyticsNatural language data queryingReal-time data visualizationAutomated anomaly detectionCustom dashboard builderMulti-source data integrationAdvanced reporting automationMobile-first responsive design';
+      'API-first architectureEnterprise-grade security'
+    ];
+    popular: true, icon: '🧠',
+  color: 'from-blue-600 to-indigo-700', textColor: 'text-blue-400',
+  link: 'https://ziontechgroup.com/ai-business-intelligence-suite-2026',
+    marketPosition: 'Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI-powered insights, natural language queries, and predictive analytics.',
+  targetAudience: 'Enterprise businesses, Data analysts, Business intelligence teams, C-level executives, Marketing teams, Sales operations',
+    trialDays: 30, setupTime: '2 hours',
+  category: 'AI & Analytics', realService: true,
+    technology: ['OpenAI GPT-4TensorFlowReactNode.jsPostgreSQLRedisAWSDocker'], integrations: ['SalesforceHubSpotGoogle AnalyticsSlackMicrosoft TeamsZapierTableau'],
+    useCases: ['Sales performance analysisCustomer behavior insightsMarket trend predictionOperational efficiency optimizationFinancial forecastingRisk assessment'], roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.',
+  competitors: ['TableauPower BILookerQlikDomo'], marketSize: '$29.5B market',
+  growthRate: '220% annual growth', variant: 'ai-futuristic',
+  contactInfo: {
+      mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',}
+  website: 'https://ziontechgroup.com';}
+    }
+    real_implementation: true,
+    implementation_details: 'Space - grade quantum platform with satellite integration, mission planning tools, and comprehensive space operations support.';
+    launch_date: '2026 - 03 - 01';
+    customers: 45;
+    rating: 4.8,
+
+    reviews: 25;  }
+];

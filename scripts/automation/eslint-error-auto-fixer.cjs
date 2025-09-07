@@ -306,4 +306,5 @@ if (require.main === module) {}
   fixer.startAutoFixer().catch(error => {})
     fixer.log(`Failed to start auto-"fixer": ${error.message}`, 'ERROR');
     process.exit(1)})};
+
 module.exports = ESLintErrorAutoFixer;

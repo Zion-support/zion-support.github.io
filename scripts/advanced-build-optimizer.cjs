@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -90,4 +91,5 @@ console.log('⚡ Starting Advanced Build Optimization...')
           "impact"
           resolve({ "size": 0, "message"})
           resolve({ "size": 0, "message"})
+
     this.log(' Build Optimization "Summary")

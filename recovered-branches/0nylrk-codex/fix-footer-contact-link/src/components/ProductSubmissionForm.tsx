@@ -1,64 +1,208 @@
- import {
-  Form;
-FormControl;
-FormDescription;
-FormField;
-FormItem;
-FormLabel;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define the form schema with zod image: z.instanceof (File) .optional ();
-tags: z.string () .optional () 
-});
-//Type for our form values type ProductFormValues = z.infer<typeof productSchema>;
-const [isSubmitting, setIsSubmitting] = React.useState (false);
-const [imagePreview, setImagePreview] = React.useState (null as string | null);
-const [activeTab, setActiveTab] = React.useState ("manual");
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Initialize the form //Handle image upload preview const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  const file = e.target.files?.[0];
-if (file) {
-  reader.onloadend = () => {
-  setImagePreview (reader.result as string) 
-};
-reader.readAsDataURL (file) 
-}
-};
-//Apply AI-generated content to the form if (!user) {
-  toast ({
-  return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}setIsSubmitting (true);
-const {
-  data: productRecord, error: productError 
-}= await supabase .from ('product listings') .insert ([productData]) .select ('id') .single ();
-.from ('products') .upload (imagePath, values.image);
-//Get the public window.URL for the image const {
-  data: publicUrlData 
-}= supabase.storage.from ('products') .getPublicUrl (imagePath);
-//Update the product with the image window.URL const {
-  error: updateError 
-}= await supabase .from ('product listings') //Redirect to product page navigate (`/marketplace/listing/$ {
-  productRecord.id 
-}`) 
-}catch (error) {
-  toast ({
-  
-}finally {
-  setIsSubmitting (false) 
-}
-};
-return (<Tabs value= {
-  activeTab 
-}onValueChange= {
-  setActiveTab 
-}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> </FormControl> <FormDescription> Create a compelling title that describes your product </FormDescription> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Description</FormLabel> <FormControl> <Textarea placeholder=" Describe your product in detail..."className="min-h-32" {
-  ...field 
-}/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) 
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <FormField </FormControl> <FormDescription> Set your price in USD </FormDescription> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Category</FormLabel> <FormControl> <select > <option value="">Select a category</option> <option value=" digital product">Digital Product</option> <option value=" service">Service</option> <option value=" ai tool">AI Tool</option> <option value=" course">Course</option> <option value=" template">Template</option> <option value=" other">Other</option> </select> </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <FormField </FormControl> <FormDescription> Add relevant tags to help users find your product (e.g., ai, productivity, design) </FormDescription> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type=" file"accept=" image/*"onChange= {
-  handleImageChange 
-}className=" cursor-pointer"/> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> /> </AspectRatio> </div>) 
-}</FormItem>) 
-}/> <div className=" flex justify-end"> <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value=" ai" > <AIListingGenerator /> </TabsContent> </Tabs>) 
-}
+import React from \"react\";
+import {useForm} from \"react-hook-form\";
+import {zodResolver} from \"@hookform/resolvers/zod\";
+import z from \"zod\";
+import {supabase} from \"@/integrations/supabase/client\";
+import {useAuth} from \"@/hooks/useAuth\";
+import {useToast} from \"@/hooks/use-toast\";
+import {useNavigate} from \"react-router-dom\";
+import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from \"@/components/ui/form\";
+import {Input} from \"@/components/ui/input\";
+import {Button} from \"@/components/ui/button\";
+import {Textarea} from \"@/components/ui/textarea\";
+import {AspectRatio} from \"@/components/ui/aspect-ratio\";
+import {Tabs, TabsList, TabsTrigger, TabsContent} from \"@/components/ui/tabs\";
+import {AIListingGenerator} from \"@/components/listing/AIListingGenerator\";
+import {Sparkles} from \"lucide-react\";
+const productSchema = z.object({
+  title: z.string().min(3, \"Title must be at least 3 characters\"),
+  description: z.string().min(10, \"Description must be at least 10 characters\"),
+  price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+    setIsSubmitting(true),
+    try {
+      // Create the product listing;
+const productData = {
+        title: values.title;
+    description: values.description;
+price: parseFloat(values.price)
+        category: values.category;
+currency: \"USD\", // Default currency;
+tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [];
+        author: {}
+          name: user.displayName |\"Anonymous Creator\"}
+          id: user.id}
+        createdAt: new Date().toISOString()}
+      const { data: productRecord, error: productError } = await supabase;
+        .from('product_listings')
+        .insert([productData])
+        .select('id')
+        }
+      }
+      // Show success message;
+toast({}
+        title: \"title\",}
+    description: \"Your product has been successfully published on Zion.\"})
+      // Redirect to product page;
+navigate(`/marketplace/listing/${productRecord.id}`)
+    } catch (error) {
+      toast({
+        title: \"Publication Failed\"}
+        description: error instanceof Error ? error.message : \"An unknown error occurred\"}
+        variant: \"destructive\"})
+    } finally {
+      setIsSubmitting(false)
+    try {;
+      // Create the product listing;
+      const productData = {;
+        title: values && values.title,,
+  description: values && values.description,;
+        price: parseFloat(values && values.price),;
+        category: values && values.category,;
+        currency: \"USD\", // Default currency;
+        tags: values && values.tags ? values && values.tags.split(',').map(tag => tag && tag.trim()) : [];
+        author: {;}
+          name: user && user.displayName || \"Anonymous Creator\",;}
+          id: user && user.id},;
+        createdAt: new Date().toISOString()},;
+      const { data: productRecord, error: productError } = await supabase;
+        .from('product_listings');
+        .insert([productData]);
+        .select('id');
+        .single();
+      if (productError) {;}
+        throw new Error(productError && productError.message);}
+      }
+      // If we have an image, upload it;
+      if (values && values.image) {;}
+        const imagePath = `product_images/${productRecord && productRecord.id}/${values && values.image.name}`;
+        const { error: uploadError } = await supabase && supabase.storage;
+          .from('products');
+          .upload(imagePath, values && values.image);
+        if (uploadError) {;}
+          throw new Error(uploadError && uploadError.message);}
+        }
+        // Get the public URL for the image;
+        const { data: publicUrlData } = supabase && supabase.storage;
+          .from('products');
+          .getPublicUrl(imagePath);
+        // Update the product with the image URL;
+        const { error: updateError } = await supabase;
+          .from('product_listings');
+          .update({ ;}
+            images: [publicUrlData && publicUrlData.publicUrl];}
+          });
+          .eq('id', productRecord && productRecord.id);
+        if (updateError) {;}
+          throw new Error(updateError && updateError.message);}
+        }
+      }
+      // Show success message;
+      toast({;}
+        title: \"Product Published!\",,}
+  description: \"Your product has been successfully published on Zion.\"}),;
+      // Redirect to product page;
+      navigate(`/marketplace/listing/${productRecord && productRecord.id}`);
+    } catch (error) {;
+      toast({;
+        title: \"Publication Failed\",,}
+  description: error instanceof Error ? error && error.message : \"An unknown error occurred\",;}
+        variant: \"destructive\"});
+    } finally {;}
+      setIsSubmitting(false);}
+    }
+  }    }
+  },
+  return (    <Tabs value={activeTab} onValueChange={setActiveTab} className=\"w-full\" />;
+      <TabsList className=\"grid grid-cols-2 mb-6\" />;
+        <TabsTrigger value=\"manual\" className=\"data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple\" />;
+          Manual Creation;
+        </TabsTrigger>;
+        <TabsTrigger value=\"ai\" className=\"data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple\" />;
+          <Sparkles className=\"h-4 w-4 mr-2\" />;
+          AI-Powered Creation;
+        </TabsTrigger>;
+      </TabsList>;
+            />;
+            <FormField;
+control={form && form.control}
+              name=\"description\"
+      ;
+      <TabsContent value=\"manual\" />;
+        <Form {...form} />;
+          <form onSubmit={form.handleSubmit(onSubmit)} className=\"space-y-6\" />;
+            <FormField;
+              control={form.control}
+              name=\"title\";
+              render={({ field }) = /> (;
+                <FormItem />;
+                  <FormLabel />Product Title</FormLabel>;
+                    <Input placeholder=\"Enter product title\" {...field} />;
+                  </FormControl>;
+                  <FormDescription />;
+                    Create a compelling title that describes your product;
+                  </FormDescription>;
+                  <FormMessage />;
+                </FormItem>;
+            />;
+            <FormField;
+control={form && form.control}
+              name=\"description\"
+              render={({ field }) = /> (;
+                <FormItem />;
+                  <FormLabel />Description</FormLabel>;
+                  <FormControl />;
+                    <Textarea;
+placeholder=\"Describe your product in detail...\" 
+                      className=\"min-h-32\" 
+                      {...field}                     />;
+                  </FormControl>;
+                  <FormDescription />;
+                    Provide a detailed description of what you're offering;
+                  </FormDescription>;
+                  <FormMessage />;
+                </FormItem>)}
+            />;
+            <div className=\"grid grid - cols - 1 md:grid - cols - 2 gap-6\" />;
+              <FormField;
+                control={form.control}
+                name=\"price\";
+                render={({ field }) = /> (
+                  <FormItem />;
+                    <FormLabel  /> Price (USD)</FormLabel>;
+                    <FormControl />;
+                      <Input type=\"number\" min=\"0\" step=\"0.01\" placeholder=\"0.00\" {...field} />;                  <FormControl />;
+                    <Input placeholder=\"Enter tags separated by commas\" {...field} />;
+                  </FormControl>;
+                  <FormDescription />;
+            />;
+            <FormField;
+control={form && form.control}
+              name=\"image\"
+              render={() = /> (;
+                <FormItem />;
+                  <FormLabel />Product Image</FormLabel>;
+                  <FormControl />;
+                    <Input;
+type=\"file\" }
+                      accept=\"image/*\" }
+                      onChange={handleImageChange}
+                      className=\"cursor-pointer\"
+                    />;
+                  </FormControl>;
+                  <FormDescription />;
+                    Upload a high-quality image of your product (recommended size: 1200x800px);
+                  </FormDescription>;
+                  <FormMessage />;
+                  {imagePreview && (;}
+                    <div className=\"mt-2 w-full max-w-md border rounded overflow-hidden\" />;}
+                      <AspectRatio ratio={3/2} />;
+                        <img;
+src={imagePreview} 
+                          alt=\"Preview\" 
+                          className=\"w-full h-full object-cover\"
+                        />;
+                      </AspectRatio>;
+                    </div>;
+                  )}
+                </FormItem>;
+              )}}

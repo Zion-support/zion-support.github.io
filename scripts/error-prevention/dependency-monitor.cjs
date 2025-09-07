@@ -17,6 +17,7 @@ class DependencyMonitor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runDependencyCheck()}, this.interval);
+
     
     console.log('Dependency Monitor started successfully')};
   async runDependencyCheck() {}
@@ -40,6 +41,7 @@ class DependencyMonitor {}
         errorOutput += data.toString()}
 });
 
+
       child.on('close', (code) => {}
         if ( {})
           console.log('Dependency check passed ✓')) {}
@@ -58,6 +60,7 @@ class DependencyMonitor {}
     const outdatedPackages = lines.filter(line => )
       line.includes('→') && !line.includes('Package');
    ;);
+
     
     if ( {})
       console.log('Outdated packages "found": ')) {}
@@ -85,6 +88,7 @@ class DependencyMonitor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+
 
       child.on('close', (code) => {}
         if ( {})
@@ -125,4 +129,5 @@ if ( {})
 });
   
   monitor.start().catch(console.error)};
+
 module.exports = DependencyMonitor;

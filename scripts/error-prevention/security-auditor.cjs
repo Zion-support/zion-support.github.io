@@ -17,6 +17,7 @@ class SecurityAuditor {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runSecurityCheck()}, this.interval);
+
     
     console.log('Security Auditor started successfully')};
   async runSecurityCheck() {}
@@ -38,6 +39,7 @@ class SecurityAuditor {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
+
 
       child.on('close', (code) => {}
         if ( {})
@@ -61,6 +63,7 @@ class SecurityAuditor {}
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
+
 
       child.on('close', (code) => {}
         if ( {})
@@ -100,4 +103,5 @@ if ( {})
 });
   
   auditor.start().catch(console.error)};
+
 module.exports = SecurityAuditor;

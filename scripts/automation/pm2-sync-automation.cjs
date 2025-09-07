@@ -180,4 +180,5 @@ if ( {})
      {}
     const automation = new PM2SyncAutomation}(;);
     automation.run().catch(console.error)};
+
 module.exports = PM2SyncAutomation;

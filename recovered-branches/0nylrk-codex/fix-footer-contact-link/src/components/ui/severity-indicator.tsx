@@ -1,26 +1,58 @@
- 
-}export function SeverityIndicator ({
-  severity;
-showIcon = true;
-showText = true;
-size = "md";
-className 
-}: SeverityIndicatorProps) {
-  const getSeverityIcon = () => {
-  switch (severity) {
-  case 'dangerous': return <AlertCircle className= {
-  cn () 
-}/>;
-case 'suspicious': return <AlertTriangle className= {
-  cn (size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
-"text-amber-500") 
-}/>;
-default: return <CheckCircle className= {
-  cn (size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
-"text-green-500") 
-}/>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+import React from \"react\",
+import { cn } from \"@/lib/utils\";
+import { AlertTriangle, AlertCircle, CheckCircle } from \"lucide-react\";
+interface SeverityIndicatorProps {
+interface SeverityIndicatorProps {;
+  severity: \"safe\" | \"suspicious\" | \"dangerous\",;
+  showIcon?: boolean;
+  showText?: boolean;
+  size?: \"sm\" | \"md\" | \"lg\";}
+  className?: string;}
 }
-};
-return (</div>) 
+import React from \"react\";
+import {cn} from \"@/lib/utils\";
+import {AlertTriangle, AlertCircle, CheckCircle} from \"lucide-react\";
+interface SeverityIndicatorProps {;}
+  severity: \"safe\" | \"suspicious\" | \"dangerous\",;import React from \"react\",}
+import { cn } from \"@/lib/utils\";
+import { AlertTriangle, AlertCircle, CheckCircle } from \"lucide-react\";
+interface SeverityIndicatorProps {
+  severity: \"safe\" | \"suspicious\" | \"dangerous\"
+  showIcon?: boolean;
+  showText?: boolean;
+  size?: \"sm\" | \"md\" | \"lg\";}
+  className?: string;}
+}}: SeverityIndicatorProps) {
+  const getSeverityIcon = (
+    switch (severity) {
+      case 'dangerous':
+        return <AlertCircle className={cn(
+          size === \"sm\" ? \"h-3 w-3\" : size === \"lg\" ? \"h-5 w-5\" : \"h-4 w-4\",
+          \"text-destructive\") = /> {
+  return $3;}
 }
+        )} />,
+      case 'suspicious':
+        return <AlertTriangle className={cn(
+          size === \"sm\" ? \"h-3 w-3\" : size === \"lg\" ? \"h-5 w-5\" : \"h-4 w-4\",
+          \"text-amber-500\"}
+import React from \"react\";}
+import { cn } from \"@/lib/utils\";
+import { AlertTriangle, AlertCircle, CheckCircle } from \"lucide-react\",;
+interface SeverityIndicatorProps {;
+  severity: \"safe\" | \"suspicious\" | \"dangerous\",;
+  showIcon?: boolean,;
+  showText?: boolean,;
+  size?: \"sm\" | \"md\" | \"lg\",;}
+  className?: string;}
+}
+;
+export function SeverityIndicator({;
+  severity,;
+  showIcon = true,;
+  showText = true,;}
+  size = \"md\",;}
+  className;}: SeverityIndicatorProps) {;
+  const getSeverityIcon = () = /> {;
+    switch (severity) {;}
+      case 'dangerous':;}

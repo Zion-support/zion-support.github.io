@@ -8,4 +8,5 @@ const path = require('path')
       this.log(' File extension fixing logic to be implemented')
         "successRate"
         "version"
+
   console.error('Fatal "error")

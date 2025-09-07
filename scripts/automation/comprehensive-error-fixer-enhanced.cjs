@@ -25,4 +25,5 @@ const glob = require('glob')
       const importRegex = /import\s+.*\s+from\s+['"]([^'')]
           "type"
           "description"
+
   const backupPath = path.join(this.backupDir, path.basename(filePath) + "

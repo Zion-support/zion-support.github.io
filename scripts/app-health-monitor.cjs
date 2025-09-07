@@ -25,4 +25,5 @@ const { execSync } = require('child_process')
       "dependencies"
       "codeQuality"
       "performance"
+
       console.error('\n� App Health Monitor "failed")

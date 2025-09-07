@@ -1,7 +1,12 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')

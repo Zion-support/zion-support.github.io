@@ -1,1 +1,0 @@
-// Stub pricing analytics utility - placeholder for missing functionality 

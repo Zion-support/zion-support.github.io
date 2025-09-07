@@ -1,3 +1,4 @@
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -20,4 +21,5 @@ console.log('Code quality improvements "applied")
     "value"
 // console.log('Performance optimizations "applied")
 console.log('SEO improvements "applied")
+
   console.log('\n Comprehensive App Improvement "Summary")

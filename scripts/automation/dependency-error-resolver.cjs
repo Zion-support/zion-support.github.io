@@ -503,4 +503,5 @@ if (require.main === module) {
     resolver.log(`Failed to start "resolver": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
+
 module.exports = DependencyErrorResolver

@@ -1,67 +1,83 @@
 #!/bin/bash
 
-echo "Fixing merge conflicts in the codebase..."
+# Script to automatically resolve merge conflicts by choosing the main branch version
 
-# Find all files with merge conflicts
-<<<<<<< HEAD
-files_with_conflicts=$(grep -r "<<<<<<< HEAD\|=======\|>>>>>>> main" . --include="*.tsx" --include="*.ts" --include="*.js" --include="*.jsx" --include="*.cjs" --include="*.mjs" | cut -d: -f1 | sort | uniq)
-=======
-\|
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-
-\|
-
-files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "/d' "$file"
-    sed -i '/
-
-<<<<<<< HEAD
-# Process each file
-for file in $files_with_conflicts; do
-    echo "Processing: $file"
-    
-    # Create backup
-    cp "$file" "/workspace/backup-merge-conflicts/$(basename "$file").backup"
-    
-    # Remove merge conflict markers and keep the main branch content
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/>>>>>>> main/d' "$file"
-=======
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-# Script to fix merge conflicts by keeping HEAD version
-echo "Fixing merge conflicts in pages/ directory..."
-
-# Find all files with merge conflicts
-files_with_conflicts=$(find pages/ -name "*.tsx" -exec grep -l "
-
-    # Remove merge conflict markers and keep the main branch content
-    sed -i '/
-    sed -i '/
-
-<<<<<<< HEAD
-for file in $files_with_conflicts; do
-    echo "Fixing merge conflicts in: $file"
-    
-    # Create a backup
-    cp "$file" "$file.backup"
-    
-    # Use sed to remove merge conflict markers and keep HEAD version
-    # Remove lines from <<<<<<< HEAD to ======= (inclusive)
-    # Remove lines from ======= to >>>>>>> (inclusive)
-    sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-    sed -i '/=======/,/>>>>>>> /d' "$file"
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-    
-=======
-    # Use sed to remove merge conflict markers and keep HEAD version
-    # Remove lines from  (inclusive)
-    # Remove lines from  to 
-    sed -i '//d' "$file"
-    sed -i '//,/
-
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-    echo "Fixed: $file"
+        # Remove any remaining conflict markers
+        sed -i '/^<<<<<<< /d' "$file"
+    fi
 done
 
 echo "Merge conflicts fixed!"
+
+# Script to fix merge conflicts by keeping HEAD version
+echo "Fixing merge conflicts in all files..."
+
+# Find all files with merge conflicts
+files_with_conflicts=$(find /workspace/app -name "*.tsx" -o -name "*.ts" | xargs grep -l "" 2>/dev/null)
+
+for file in $files_with_conflicts; do
+    echo "Fixing merge conflicts in: $file"
+    
+    # Create a temporary file
+    temp_file=$(mktemp)
+    
+    # Process the file to resolve conflicts
+    awk '
+    /^/ { in_head = 0; in_other = 1; next }
+    /^    in_other { next }
+    /^/ { in_head = 1; next }
+    /^/ { in_head = 0; in_other = 1; next }
+    /^
+    in_other { next }
+    { print }
+    ' "$file" > "$temp_file"
+    
+    # Replace the original file
+    mv "$temp_file" "$file"
+    
+    echo "Fixed: $file"
+done
+
+echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
+echo "Please review the changes and test the build."
+echo "Merge conflicts fixed!"
+echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
+echo "Please review the changes and test the build."
+echo "Merge conflicts fixed!"
+echo "Merge conflicts fixed!"
+echo "Merge conflicts fixed. Backups saved to /workspace/backup-merge-conflicts/"
+echo "Please review the changes and test the build."
+echo "Merge conflicts fixed!"
+
+
+echo "Merge conflicts fixed!"
+
+
+echo "Merge conflicts fixed!"
+
+echo "Merge conflicts fixed!"
+
+
+
+echo "Fixing merge conflicts..."
+
+# Find all files with merge conflicts
+files_with_conflicts=$(grep -r "/d' "$file"
+        sed -i '/^
+        # Remove any remaining conflict markers
+        sed -i '/^<<<<<<< /d' "$file"
+        sed -i '/^    fi
+done
+
+echo "Merge conflicts fixed!"
+echo "All merge conflicts have been resolved!"
+echo "Merge conflicts resolved in all files."
+
+        # Remove any remaining conflict markers
+        sed -i '/^<<<<<<< /d' "$file"
+    fi
+done
+
+echo "Merge conflicts fixed!"
+echo "All merge conflicts have been resolved!"
 

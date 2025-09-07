@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export {};
+
+export {}module.exports = {}
 module.exports = {};
-=======
 module.exports = {};
-=======
-module.exports = {};
+module.exports = {};module.exports = {}
+}
+

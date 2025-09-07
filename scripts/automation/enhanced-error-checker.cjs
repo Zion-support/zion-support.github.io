@@ -49,4 +49,5 @@ class EnhancedErrorChecker {}
 if (require.main === module) {}
   const checker = new EnhancedErrorChecker();
   checker.run().catch(console.error)};
+
 module.exports = EnhancedErrorChecker;

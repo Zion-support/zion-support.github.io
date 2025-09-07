@@ -18,4 +18,5 @@ class HealthMonitor {
     }
   }
 }
+
 new HealthMonitor().runChecks();

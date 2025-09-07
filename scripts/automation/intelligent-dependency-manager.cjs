@@ -183,4 +183,5 @@ if ( {})
      {}
     const manager = new IntelligentDependencyManager}(;);
     manager.run().catch(console.error)};
+
 module.exports = IntelligentDependencyManager;

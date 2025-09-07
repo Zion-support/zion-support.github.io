@@ -1,165 +1,112 @@
-#!/usr/bin/env node
-
 const { execSync } = require('child_process');
 const fs = require('fs');
-const path = require('path');
 
-console.log('🔒 Starting Security Audit...');
+console.log('🔒 Security Audit Starting...');
 
-class SecurityAuditor {
-  constructor() {
-    this.reportFile = path.join(__dirname, '..', 'security-audit-report.json');
-    this.results = {
-      timestamp: new Date().toISOString(),
-      npmAudit: null,
-      dependencyCheck: null,
-      filePermissions: null,
-      environmentVariables: null,
-      overall: { status: 'unknown', score: 0 }
-    };
-  }
-
-  async runCommand(command, description) {
-    try {
-      console.log(`🔍 ${description}...`);
-      const result = execSync(command, { 
-        encoding: 'utf8', 
-        stdio: 'pipe',
-        cwd: path.join(__dirname, '..')
-      });
-      console.log(`✅ ${description} - Success`);
-      return { success: true, result };
-    } catch (error) {
-      console.log(`❌ ${description} - Failed: ${error.message}`);
-      return { success: false, error: error.message };
+const securityChecks = [
+  {
+    name: 'NPM audit check',
+    check: () => {
+      try {
+        console.log('🔍 Running npm audit...');
+        execSync('npm audit --audit-level=moderate', { stdio: 'pipe' });
+        console.log('✅ No security vulnerabilities found');
+        return true;
+      } catch (error) {
+        console.log('⚠️  Security vulnerabilities detected. Run "npm audit fix" to resolve.');
+        return false;
+      }
     }
-  }
-
-  async runNpmAudit() {
-    const result = await this.runCommand('npm audit --json', 'NPM Security Audit');
-    this.results.npmAudit = result;
-  }
-
-  async checkDependencies() {
-    const result = await this.runCommand('npm ls --depth=0', 'Dependency Check');
-    this.results.dependencyCheck = result;
-  }
-
-  async checkFilePermissions() {
-    try {
-      const criticalFiles = [
-        'package.json',
-        'next.config.js',
-        'middleware.ts',
-        '.env.local',
-        '.env.production'
-      ];
+  },
+  {
+    name: 'Environment variables check',
+    check: () => {
+      const envFiles = ['.env', '.env.local', '.env.production'];
+      let hasSecrets = false;
       
-      const permissions = {};
-      for (const file of criticalFiles) {
-        try {
-          const stats = fs.statSync(file);
-          permissions[file] = {
-            exists: true,
-            mode: stats.mode.toString(8),
-            readable: true,
-            writable: true
-          };
-        } catch (error) {
-          permissions[file] = {
-            exists: false,
-            error: error.message
-          };
+      envFiles.forEach(envFile => {
+        if (fs.existsSync(envFile)) {
+          const content = fs.readFileSync(envFile, 'utf8');
+          const lines = content.split('\n');
+          
+          lines.forEach(line => {
+            if (line.includes('password') || line.includes('secret') || line.includes('key')) {
+              if (!line.includes('example') && !line.includes('placeholder')) {
+                console.log(`⚠️  Potential secret in ${envFile}: ${line.split('=')[0]}`);
+                hasSecrets = true;
+              }
+            }
+          });
         }
+      });
+      
+      return !hasSecrets;
+    }
+  },
+  {
+    name: 'Package.json security check',
+    check: () => {
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      
+      // Check for unsafe scripts
+      const scripts = packageJson.scripts || {};
+      const unsafeScripts = Object.keys(scripts).filter(script => 
+        scripts[script].includes('rm -rf') || scripts[script].includes('sudo')
+      );
+      
+      if (unsafeScripts.length > 0) {
+        console.log(`⚠️  Potentially unsafe scripts: ${unsafeScripts.join(', ')}`);
+        return false;
       }
       
-      this.results.filePermissions = { success: true, permissions };
-      console.log('✅ File Permissions Check - Success');
-    } catch (error) {
-      this.results.filePermissions = { success: false, error: error.message };
-      console.log(`❌ File Permissions Check - Failed: ${error.message}`);
+      return true;
     }
-  }
-
-  async checkEnvironmentVariables() {
-    const envVars = {
-      NODE_ENV: process.env.NODE_ENV,
-      NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL,
-      SUPABASE_URL: process.env.SUPABASE_URL,
-      STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY ? '***HIDDEN***' : undefined
-    };
-    
-    this.results.environmentVariables = {
-      success: true,
-      variables: envVars,
-      count: Object.keys(envVars).length
-    };
-    console.log('✅ Environment Variables Check - Success');
-  }
-
-  calculateOverallScore() {
-    let totalScore = 0;
-    let maxScore = 0;
-
-    // NPM Audit (40% weight)
-    if (this.results.npmAudit?.success) {
-      totalScore += 100 * 0.4;
-    }
-    maxScore += 100 * 0.4;
-
-    // Dependency Check (20% weight)
-    if (this.results.dependencyCheck?.success) {
-      totalScore += 100 * 0.2;
-    }
-    maxScore += 100 * 0.2;
-
-    // File Permissions (20% weight)
-    if (this.results.filePermissions?.success) {
-      totalScore += 100 * 0.2;
-    }
-    maxScore += 100 * 0.2;
-
-    // Environment Variables (20% weight)
-    if (this.results.environmentVariables?.success) {
-      totalScore += 100 * 0.2;
-    }
-    maxScore += 100 * 0.2;
-
-    const finalScore = Math.round((totalScore / maxScore) * 100);
-    this.results.overall.score = finalScore;
-    this.results.overall.status = finalScore >= 80 ? 'excellent' : 
-                                 finalScore >= 60 ? 'good' : 
-                                 finalScore >= 40 ? 'fair' : 'poor';
-    
-    return finalScore;
-  }
-
-  async generateReport() {
-    const score = this.calculateOverallScore();
-    
-    fs.writeFileSync(this.reportFile, JSON.stringify(this.results, null, 2));
-    console.log(`📊 Security audit report saved to: ${this.reportFile}`);
-    console.log(`🎯 Overall Security Score: ${score}/100 (${this.results.overall.status})`);
-  }
-
-  async run() {
-    try {
-      console.log('🚀 Starting comprehensive security audit...');
+  },
+  {
+    name: 'File permissions check',
+    check: () => {
+      const sensitiveFiles = ['package.json', 'package-lock.json', '.env'];
+      let hasIssues = false;
       
-      await this.runNpmAudit();
-      await this.checkDependencies();
-      await this.checkFilePermissions();
-      await this.checkEnvironmentVariables();
-      await this.generateReport();
+      sensitiveFiles.forEach(file => {
+        if (fs.existsSync(file)) {
+          const stats = fs.statSync(file);
+          const mode = stats.mode & parseInt('777', 8);
+          
+          if (mode > parseInt('644', 8)) {
+            console.log(`⚠️  ${file} has overly permissive permissions: ${mode.toString(8)}`);
+            hasIssues = true;
+          }
+        }
+      });
       
-      console.log('🎉 Security audit completed successfully!');
-    } catch (error) {
-      console.log(`❌ Security audit failed: ${error.message}`);
-      process.exit(1);
+      return !hasIssues;
     }
   }
+];
+
+let passed = 0;
+let failed = 0;
+
+securityChecks.forEach(check => {
+  try {
+    if (check.check()) {
+      console.log(`✅ ${check.name}`);
+      passed++;
+    } else {
+      console.log(`❌ ${check.name}`);
+      failed++;
+    }
+  } catch (error) {
+    console.log(`❌ ${check.name} - Error: ${error.message}`);
+    failed++;
+  }
+});
+
+console.log(`\n🔒 Security Audit Results: ${passed} passed, ${failed} failed`);
+
+if (failed === 0) {
+  console.log('🎉 All security checks passed!');
+} else {
+  console.log('⚠️  Security issues detected. Please review and fix.');
 }
-
-// Run the security auditor
-const auditor = new SecurityAuditor();
-auditor.run().catch(console.error);

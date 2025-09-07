@@ -1,10 +1,15 @@
- if (!i18n.isInitialized) {
-  i18n .use (Backend) .use (LanguageDetector) .use (initReactI18next) .init ({
-  fallbackLng: 'en', supportedLngs: supportedLocales as unknown as string[], interpolation: {
-  escapeValue: false 
+export const supportedLocales = [\"en\", \"pt\", \"es\", \"ar\"] as const;
+
+}
+}
+export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
+export function isRtl(locale: string): boolean {}
+  return [\"ar\", \"he\", \"fa\", \"ur\"].includes(locale);}
+}
+export const i18n = {
+  language: \"en\",}
+  resolvedLanguage: \"en\",}
 };
-resources;
-ns: ['common'];
-defaultNS: 'common' 
-}as any) 
-}export default i18n;
+}
+}
+}

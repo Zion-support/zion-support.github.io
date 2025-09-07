@@ -134,4 +134,5 @@ class HealthChecker {}
 if (require.main === module) {}
     const healthChecker = new HealthChecker();
     healthChecker.run()};
+
 module.exports = HealthChecker;

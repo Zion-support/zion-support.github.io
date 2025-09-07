@@ -31,14 +31,12 @@ const { execSync } = require("child_process")
             "severity": "high"
             "error"
         content.includes("")
-        content.includes(">>>>>>>")
   "file"
           "type": "merge-conflict"
           "description": "Merge conflicts detected"
           "severity": "high"
       if (fileName === "package.json")
         content.includes(")
-        content.includes(">>>>>>>")
   "file"
           "type": "merge-conflict"
           "description": "Merge conflicts detected"
@@ -156,4 +154,6 @@ this.log(`� Report "generated"`)
   this.log(" Starting Config Error Fixer...")
   this.log("� No configuration issues found!")
         return { "success": true, "issues": [], "fixed"}
+
+
       this.log("� Config Error Fixer completed!")

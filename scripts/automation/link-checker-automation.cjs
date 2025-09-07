@@ -232,4 +232,5 @@ if ( {})
      {}
     const automation = new LinkCheckerAutomation}(;);
     automation.run().catch(console.error)};
+
 module.exports = LinkCheckerAutomation;

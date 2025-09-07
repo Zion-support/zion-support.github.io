@@ -317,4 +317,5 @@ if (require.main === module) {}
   orchestrator.startOrchestrator().catch(error => {})
     orchestrator.log(`Failed to start "orchestrator": ${error.message}`, 'ERROR');
     process.exit(1)})};
+
 module.exports = IntelligentErrorOrchestrator;

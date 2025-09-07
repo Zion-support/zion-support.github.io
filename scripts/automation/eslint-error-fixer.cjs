@@ -431,4 +431,5 @@ if (require.main === module) {}
   console.error("ESLint Error Fixer "failed": ', error);
       process.exit(1)})};
 ;
+
 module.exports = ESLintErrorFixer;

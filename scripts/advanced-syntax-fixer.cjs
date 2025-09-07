@@ -1,10 +1,13 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
-=======
+
+
+
+
+
+
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
   }
-;
-  processDirectory(dirPath);
+  processDirectory(dirPath)
   return { totalFiles, fixedFiles }}
 ;
 function main() {;
@@ -37,7 +40,9 @@ log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProces
 if (require.main === module) {;
   main(),}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+
+
+
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

@@ -1,174 +1,155 @@
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
+
 class SEOOptimizer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.reportFile = path.join(__dirname, '../logs/seo-report.json');
+    this.baseUrl = 'https://zion.app';
+    this.pages = [
+      '/',
+      '/about',
+      '/services',
+      '/solutions',
+      '/contact',
+      '/team',
+      '/careers',
+      '/blog',
+      '/privacy',
+      '/terms'
+    ];
   }
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
+
+  generateSitemap() {
+    console.log('🗺️ Generating sitemap.xml...');
     
+    const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${this.pages
+  .map(page => `  <url>
+    <loc>${this.baseUrl}${page}</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`)
+  .join('\n')}
+</urlset>`;
+
+    fs.writeFileSync(sitemapPath, sitemap);
+    console.log('✅ Generated sitemap.xml');
   }
-  async optimizeSEO() {
-    this.log('🔍 Starting SEO optimization...');
-// File extensions to analyze
-const fileExtensions = ['.js', '.jsx', '.ts', '.tsx'];
-// Analyze a single file for SEO
-function analyzeFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const relativePath = path.relative(process.cwd(), filePat;h;);
-    const files = this.getAllFiles(this.projectRoot, ['.js', '.jsx', '.ts', '.tsx', '.html']);
-    const seoReport = {
-      "timestamp": new Date().toISOString(),
-      "metrics": {
-        totalPages: 0,
-        "pagesWithTitle": 0,
-        "pagesWithMetaDescription": 0,
-        "pagesWithH1": 0,
-        "pagesWithImages": 0,
-        "averageTitleLength": 0,
-        "averageMetaLength": 0
+
+  generateRobotsTxt() {
+    console.log('🤖 Generating robots.txt...');
+    
+    const robotsPath = path.join(process.cwd(), 'public', 'robots.txt');
+    const robotsTxt = `User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: ${this.baseUrl}/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important pages
+Allow: /services/
+Allow: /solutions/
+Allow: /about/
+Allow: /contact/`;
+
+    fs.writeFileSync(robotsPath, robotsTxt);
+    console.log('✅ Generated robots.txt');
+  }
+
+  generateManifest() {
+    console.log('📱 Generating manifest.json...');
+    
+    const manifestPath = path.join(process.cwd(), 'public', 'manifest.json');
+    const manifest = {
+      name: 'Zion Tech Group',
+      short_name: 'Zion',
+      description: 'Advanced AI and automation solutions',
+      start_url: '/',
+      display: 'standalone',
+      background_color: '#ffffff',
+      theme_color: '#000000',
+      icons: [
+        {
+          src: '/icon-192x192.png',
+          sizes: '192x192',
+          type: 'image/png'
+        },
+        {
+          src: '/icon-512x512.png',
+          sizes: '512x512',
+          type: 'image/png'
+        }
+      ]
+    };
+
+    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+    console.log('✅ Generated manifest.json');
+  }
+
+  generateStructuredData() {
+    console.log('📊 Generating structured data...');
+    
+    const structuredData = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: this.baseUrl,
+      logo: `${this.baseUrl}/logo.png`,
+      description: 'Advanced AI and automation solutions for modern businesses',
+      address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'US'
       },
-      "issues": [],
-      "recommendations": []
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-555-0123',
+        contactType: 'customer service'
+      },
+      sameAs: [
+        'https://twitter.com/ziontechgroup',
+        'https://linkedin.com/company/ziontechgroup'
+      ]
     };
-    for (const file of files) {
-      try {
-        const content = fs.readFileSync(file, 'utf8');
-        const analysis = this.analyzeFile(file, content);
-        if (analysis) {
-          seoReport.metrics.totalPages++;
-          this.updateMetrics(seoReport.metrics, analysis);
-          this.checkIssues(seoReport, analysis);
-        }
-      } catch (error) {
-        this.log(`Error analyzing ${file}: ${error.message}`, 'WARN');
-      }
-    }
-    this.generateRecommendations(seoReport);
-    this.saveReport(seoReport);
-    this.log(`✅ SEO optimization completed! Analyzed ${seoReport.metrics.totalPages} pages.`);
-    return seoReport;
+
+    const structuredDataPath = path.join(process.cwd(), 'public', 'structured-data.json');
+    fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
+    console.log('✅ Generated structured data');
   }
-  analyzeFile(filePath, content) {
-    const relativePath = path.relative(this.projectRoot, filePath);
-    const analysis = {
-      "file": relativePath,
-      "hasTitle": false,
-      "hasMetaDescription": false,
-      "hasH1": false,
-      "hasImages": false,
-      "titleLength": 0,
-      "metaLength": 0,
-      "issues": []
-    };
-    // Check for title tag
-    const titleMatch = content.match(/<title[^>]*>([^<]*)<\/title>/i);
-    if (titleMatch) {
-      analysis.hasTitle = true;
-      analysis.titleLength = titleMatch[1].length;
-    }
-    // Check for meta description
-    const metaMatch = content.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i);
-    if (metaMatch) {
-      analysis.hasMetaDescription = true;
-      analysis.metaLength = metaMatch[1].length;
-    }
-    // Check for H1 tag
-    analysis.hasH1 = /<h1[^>]*>.*<\/h1>/i.test(content);
-    // Check for images
-    analysis.hasImages = /<img[^>]*>/i.test(content);
-    return analysis;
-  }
-  updateMetrics(metrics, analysis) {
-    if (analysis.hasTitle) {
-      metrics.pagesWithTitle++;
-      metrics.averageTitleLength += analysis.titleLength;
-    }
-    if (analysis.hasMetaDescription) {
-      metrics.pagesWithMetaDescription++;
-      metrics.averageMetaLength += analysis.metaLength;
-    }
-    if (analysis.hasH1) metrics.pagesWithH1++;
-    if (analysis.hasImages) metrics.pagesWithImages++;
-  }
-  checkIssues(seoReport, analysis) {
-    if (!analysis.hasTitle) {
-      seoReport.issues.push(`${analysis.file}: Missing title tag`);
-    } else if (analysis.titleLength < 30) {
-      seoReport.issues.push(`${analysis.file}: Title too short (${analysis.titleLength} chars)`);
-    } else if (analysis.titleLength > 60) {
-      seoReport.issues.push(`${analysis.file}: Title too long (${analysis.titleLength} chars)`);
-    }
-    if (!analysis.hasMetaDescription) {
-      seoReport.issues.push(`${analysis.file}: Missing meta description`);
-    } else if (analysis.metaLength < 120) {
-      seoReport.issues.push(`${analysis.file}: Meta description too short (${analysis.metaLength} chars)`);
-    } else if (analysis.metaLength > 160) {
-      seoReport.issues.push(`${analysis.file}: Meta description too long (${analysis.metaLength} chars)`);
-    }
-    if (!analysis.hasH1) {
-      seoReport.issues.push(`${analysis.file}: Missing H1 tag`);
-    }
-  }
-  generateRecommendations(seoReport) {
-    const metrics = seoReport.metrics;
-    if (metrics.pagesWithTitle < metrics.totalPages * 0.8) {
-      seoReport.recommendations.push('Add title tags to more pages ("target": 80%+)');
-    }
-    if (metrics.pagesWithMetaDescription < metrics.totalPages * 0.8) {
-      seoReport.recommendations.push('Add meta descriptions to more pages ("target": 80%+)');
-    }
-    if (metrics.pagesWithH1 < metrics.totalPages * 0.9) {
-      seoReport.recommendations.push('Add H1 tags to more pages ("target": 90%+)');
-    }
-    if (metrics.averageTitleLength > 0) {
-      metrics.averageTitleLength = Math.round(metrics.averageTitleLength / metrics.pagesWithTitle);
-    }
-    if (metrics.averageMetaLength > 0) {
-      metrics.averageMetaLength = Math.round(metrics.averageMetaLength / metrics.pagesWithMetaDescription);
-    }
-  }
-  getAllFiles(dir, extensions) {
-    const files = [];
-    try {
-      const items = fs.readdirSync(dir);
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          files.push(...this.getAllFiles(fullPath, extensions));
-        } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-          files.push(fullPath);
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be read
-    }
-    return files;
-  }
-  saveReport(seoReport) {
-    try {
-      fs.writeFileSync(this.reportFile, JSON.stringify(seoReport, null, 2));
-      this.log(`📄 SEO report saved "to": ${this.reportFile}`);
-    } catch (error) {
-      this.log(`Failed to save SEO "report": ${error.message}`, 'ERROR');
-    }
-  }
+
   async run() {
-    try {
-      return await this.optimizeSEO();
-    } catch (error) {
-      this.log(`SEO optimizer "failed": ${error.message}`, 'ERROR');
-      throw error;
+    console.log('🔍 Starting SEO optimization...');
+    
+    // Ensure public directory exists
+    const publicDir = path.join(process.cwd(), 'public');
+    if (!fs.existsSync(publicDir)) {
+      fs.mkdirSync(publicDir, { recursive: true });
     }
+    
+    this.generateSitemap();
+    this.generateRobotsTxt();
+    this.generateManifest();
+    this.generateStructuredData();
+    
+    console.log('✅ SEO optimization completed');
   }
 }
-// Run if called directly
+
+// Main execution
 if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.run().catch(console.error);
 }
+
 module.exports = SEOOptimizer;
