@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "es6", "es2020"],
+    "types": ["react", "react-dom"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmit": true,
-    "incremental": true,
-    "module": "esnext",
     "esModuleInterop": true,
+<<<<<<< HEAD
+    "module": "esnext",
+=======
+    "module": "ESNext",
+>>>>>>> origin/main
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
     "plugins": [
       {
         "name": "next"
@@ -33,41 +35,12 @@
       "@/assets/*": ["./src/assets/*"]
     },
     "allowSyntheticDefaultImports": true,
-    "target": "ES2017",
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "tsBuildInfoFile": ".next/tsconfig.tsbuildinfo"
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "api-backup",
-    "pages.disabled",
-    "backup-pages",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.backup",
-    "**/*.disabled",
-    "src",
-    "src.pages.disabled",
-    "src.pages.disabled.auto",
-    "components.disabled",
-    "src.disabled",
-    "src.pages.disabled"
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "types/**", "netlify/**", "components/**", "components.disabled/**", "components.disabled_full/**", "contracts.disabled/**", "cypress/**", "cypress_backup/**", "data/**", "data_backup/**", "data.disabled/**", "lib_backup/**", "pages.disabled/**", "pages_api.disabled/**", "automation/**", "automation_backup/**", "broken_files_backup/**", "api-disabled/**", "api.disabled/**", "api.disabled.temp/**", "temp_backup/**"]
 }

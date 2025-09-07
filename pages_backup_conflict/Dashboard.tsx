@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 ;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import Head from 'next/head';
 export default function Dashboard() {return (<>;
       <Head>;
@@ -55,11 +48,7 @@ export default function Dashboard() {
     </>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react'; import Head from 'next/head'; export default function Dashboard() { return ( <> <Head> <title>Dashboard | Zion Tech Group</title> <meta name="description" content="Dashboard page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Dashboard</h1> <p className="text-xl text-center text-gray-600 mb-12"> Dashboard information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}
-=======
+
+
 import React from 'react'; import Head from 'next/head'; export default function Dashboard() { return ( <> <Head> <title>Dashboard | Zion Tech Group</title> <meta name="description" content="Dashboard page for Zion Tech Group." /> <link rel="canonical" href="https: </Head> <div className="min-h-screen bg-gray-50"> <div className="max-w-4xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold text-center mb-8">Dashboard</h1> <p className="text-xl text-center text-gray-600 mb-12"> Dashboard information for Zion Tech Group. </p> <div className="text-center"> <a href="mailto:kleber@ziontechgroup.com" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700"> Contact Us </a> </div> </div> </div> </> )}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

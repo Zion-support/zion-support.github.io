@@ -1,5 +1,5 @@
+
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -10,7 +10,6 @@ import { HELP_CATEGORIES } from "./help-content";
 import { AppLayout } from "@/layout/AppLayout";
 import { Search } from "lucide-react";
 export default function HelpCenter() {
-=======
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -35,31 +34,11 @@ import { HelpArticleView } from "./HelpArticleView",
 import { HELP_CATEGORIES } from "./help-content",
 import { AppLayout } from "@/layout/AppLayout",
 import { Search } from "lucide-react",export default function HelpCenter() {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleCategorySelect = (categoryId: string) => {
-<<<<<<< HEAD
-    (setSelectedCategory(categoryId), setSelectedArticle(null));
-  };
-
-  const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
-  };
-
-  const handleBackToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  };
-
-  const handleBackToArticles = () => {
-    setSelectedArticle(null);
-  };
-
-  return (
-=======
     setSelectedCategory(categoryId),
     setSelectedArticle(null)
   },
@@ -77,7 +56,22 @@ import { Search } from "lucide-react",export default function HelpCenter() {
     setSelectedArticle(null)
   },
     return (
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null),
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState($2);
+  const handleCategorySelect = (categoryId: string) => {
+    setSelectedCategory($2);
+    setSelectedArticle(null)
+  },
+  
+  const handleArticleSelect = $2;
+  const handleBackToCategories = () => {
+    setSelectedCategory($2);
+    setSelectedArticle(null)
+  },
+  
+  const handleBackToArticles = $2;
+  return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
@@ -98,34 +92,16 @@ import { Search } from "lucide-react",export default function HelpCenter() {
             />
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
           </div>
-
           <Tabs defaultValue="articles" className="mb-8">
             <TabsList className="w-full grid grid-cols-3 mb-6">
               <TabsTrigger value="articles">Articles</TabsTrigger>
               <TabsTrigger value="faq">FAQ</TabsTrigger>
               <TabsTrigger value="contact">Contact Us</TabsTrigger>
             </TabsList>
-<<<<<<< HEAD
-
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
                 <HelpCategoryList
                   categories={HELP_CATEGORIES}
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-
-            <TabsContent value="articles">
-              {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList
-                  categories={HELP_CATEGORIES}
-                  onCategorySelect={handleCategorySelect}
-                  searchQuery={searchQuery}
-                />
-              )}
-
-=======
 import React, { useState } from "react",;
 import { Input } from "@/components/ui/input",;
 import { Button } from "@/components/ui/button",;
@@ -149,11 +125,11 @@ export default function HelpCenter() {;
   },;
   const handleBackToCategories = () => {;
     setSelectedCategory(null),;
-    setSelectedArticle(null)
-};
+    setSelectedArticle(null);
+  };
   const handleBackToArticles = () => {;
-    setSelectedArticle(null)
-};
+    setSelectedArticle(null);
+  };
   return (;
     <AppLayout>;
       <div className="container mx-auto px-4 py-8">;
@@ -164,7 +140,6 @@ export default function HelpCenter() {;
           <p className="text-zion-slate-light mb-6">;
             Find answers to common questions or get in touch with our support team.;
           </p>;
-          ;
           <div className="relative mb-8">;
             <Input;
               placeholder="Search for help articles...";
@@ -174,7 +149,6 @@ export default function HelpCenter() {;
             />;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
           </div>;
-          ;
           <Tabs defaultValue="articles" className="mb-8">;
             <TabsList className="w-full grid grid-cols-3 mb-6">;
               <TabsTrigger value="articles">Articles</TabsTrigger>;
@@ -183,7 +157,13 @@ export default function HelpCenter() {;
             </TabsList>;
             <TabsContent value="articles">;
               {!selectedCategory && !selectedArticle && (;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+                <HelpCategoryList;
+                  categories={HELP_CATEGORIES} ;
+                  onCategorySelect={handleCategorySelect}
+                  searchQuery={searchQuery}
+                />
+              )}
+
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -197,35 +177,27 @@ export default function HelpCenter() {;
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
-                  />;
-                </>;
+                  />
+                </>
               )}
-
               {selectedArticle && (
                 <>
-
-              {selectedArticle && (;
-                <>;
                   <Button
                     variant="ghost"
                     onClick={handleBackToArticles}
-                    className="mb-4">;
-<<<<<<< HEAD
-                    ← Back to Articles;
-                  </Button>;
-                  <HelpArticleView articleId={selectedArticle} />;
-                </>;
+                    className="mb-4"
+                  >
+                    ← Back to Articles
+                  </Button>
+                  <HelpArticleView articleId={selectedArticle} />
+                </>
               )}
             </TabsContent>
-
             <TabsContent value="faq">
               <div className="bg-zion-blue-light/20 rounded-lg p-6">
                 <h2 className="text-xl font-semibold mb-4">
                   Frequently Asked Questions
                 </h2>
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -233,13 +205,10 @@ export default function HelpCenter() {;
                     </h3>
                     <p className="text-zion-slate-light">
                       Our AI matching algorithm analyzes your requirements and
-<<<<<<< HEAD
-                      preferences to match you with the most compatible talent
-                      or services. The process takes into account skills,
-                      experience, availability, and past performance to ensure
-=======
                       preferences to match you with the most compatible talent                      experience, availability, and past performance to ensure
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+                      preferences to match you with the most compatible talent
+                      or services. The process takes into account skills
+                      experience, availability, and past performance to ensure
                       optimal results.
                     </p>
                   </div>
@@ -255,7 +224,6 @@ export default function HelpCenter() {;
                       protects both parties throughout the engagement.
                     </p>
                   </div>
-
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
                       What are the payment terms?
@@ -282,7 +250,6 @@ export default function HelpCenter() {;
                 </div>
               </div>
             </TabsContent>
-
             <TabsContent value="contact">
               <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
@@ -312,13 +279,10 @@ export default function HelpCenter() {;
                         className="text-zion-cyan hover:underline"
                       >
                         support@ziontechgroup.com
-<<<<<<< HEAD
-                      </a>
-                    </div>
-=======
                       </Link>                    </div>
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+                      </Link>
+                    </div>
                     <div className="flex items-center">
                       <div className="bg-zion-purple/10 p-2 rounded-full mr-3">
                         <svg
@@ -340,7 +304,6 @@ export default function HelpCenter() {;
                     Open Live Chat
                   </Button>
                 </div>
-
                 <div className="bg-zion-blue-light/20 rounded-lg p-6">
                   <h2 className="text-xl font-semibold mb-4">
                     Feedback & Suggestions
@@ -363,7 +326,6 @@ export default function HelpCenter() {;
                         placeholder="Your feedback or suggestion"
                       />
                     </div>
-
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
                       Submit Feedback
                     </Button>
@@ -375,17 +337,8 @@ export default function HelpCenter() {;
         </div>
       </div>
     </AppLayout>
-  );
-}
-<<<<<<< HEAD
-  );
-  );
-}
-    </AppLayout>);
-=======
     </AppLayout>);
 }    </AppLayout>);
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
     </AppLayout>;
   );}
@@ -439,7 +392,12 @@ const handleBackToArticles = () => {
 
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  )
+}
+;
+              {selectedArticle && (;
+                <>;
+                  <Button;
+                    variant="ghost";
+}
+;

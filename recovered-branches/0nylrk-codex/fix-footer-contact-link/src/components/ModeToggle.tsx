@@ -1,35 +1,3 @@
-
-import {Moon, Sun} from "lucide-react"
-import {Button} from "@/components/ui/button"
-// Create a simplified theme hook for offline mode
-const useTheme = () => ({
-  theme: "dark",
-  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),
-});
-
-export function ModeToggle() {;
-
-  const { theme, setTheme } = useTheme();
-
-<<<<<<< HEAD
-
-import {Moon, Sun} from "lucide-react"
-import {Button} from "@/components/ui/button"
-// Create a simplified theme hook for offline mode
-const useTheme = () => ({
-  theme: "dark",
-  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`);
-});
-
-export function ModeToggle() {;
-  const { theme, setTheme } = useTheme();
-import { Moon, Sun } from "lucide-react"
-import { Button } from "@/components/ui/button"
-
-// Create a simplified theme hook for offline mode
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const useTheme = () => ({
   theme: "dark"
   setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
@@ -38,22 +6,11 @@ const useTheme = () => ({
   setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
 }),
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
 
   const { theme, setTheme } = useTheme();
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { theme, setTheme } = useTheme();
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -66,19 +23,21 @@ theme: "dark"
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
 
-<<<<<<< HEAD
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
+// Create a simplified theme hook for offline mode
+const useTheme = $2;
+  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+}),
+
+export function ModeToggle() {
+  const { theme, setTheme } = useTheme($2);
   return (
     <Button
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-
-      <span className="sr-only">Toggle theme</span>;
-    </Button>;
-  );
     >
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {theme === "dark" ? (
         <Sun className="h-5 w-5 text-yellow-300" />
       ) : (
@@ -86,37 +45,23 @@ export function ModeToggle() {
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
-  );
+  )
 }
-import { Moon, Sun  } from './lucide-react';
-import { Button  } from '@/components / ui / button';
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
 // Create a simplified theme hook for offline mode;
-const use_theme = () =>: any ({
-  theme: "dark",
-  set_theme: (theme: string) => console.log (`Theme would change to: ${theme}`),
-});
-;
-export /**
- * ModeToggle - Function description
- */
-function ModeToggle() {
-  const { theme, set_theme } = use_theme ();
-;
-  return (
+const useTheme = () => ({;
+  theme: "dark",;
+  setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`);
+}),;
+export function ModeToggle() {;
+  const { theme, setTheme } = useTheme();
+  return (;
     <Button;
       variant="ghost";
       size="icon";
-      on_click={() => set_theme (theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >;
-<<<<<<< HEAD
-      {theme === "dark" ? (
-        <Sun className="h - 5 w - 5 text - yellow - 300" />) : (
-        <Moon className="h - 5 w - 5 text - slate - 300" />)}
-      <span className="sr - only">Toggle theme</span>;
-    </Button>);
-}
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {theme === "dark" ? (;
         <Sun className="h-5 w-5 text-yellow-300" />;
       ) : (;
@@ -125,23 +70,5 @@ function ModeToggle() {
       <span className="sr-only">Toggle theme</span>;
     </Button>;
   );
-  );
-}
-  ),;}
- export function ModeToggle () {
-  const {
-  theme, setTheme 
-}= useTheme ();
-return (<Button variant="ghost" size="icon" onClick= {
-  () => setTheme (theme === "dark" ? "light" : "dark") 
-}> {
-  theme === "dark" ? (<Sun className="h-5 w-5 text-yellow-300" /> h-5 w-5 text-slate-300"/>) 
-}<span className=" sr-only" >Toggle theme</span> </Button>) 
-}
-);
-}
-}
-;
-
 }
 ;

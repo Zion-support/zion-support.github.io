@@ -1,67 +1,5 @@
-import { useState, useEffect, useCallback  } from 'react';
-interface UseApiOptions  {immediate?: boolean;
-}interface UseApiResult<T>  {data: T | null;
-  loading: boolean;
-  error: Error | null;
-  execute: () => Promise<void>;
-}export const useApi = <T>(apiFunction: () => Promise<T>,options: UseApiOptions = {}
-): UseApiResult<T> => {const [data, setData] = useState<T | null>(null)const [loading, setLoading] = useState(false)const [error, setError]  = useState<Error | null>(null)const execute = useCallback(async () => {setLoading(true)setError(null)try {const result = await apiFunction()setData(result)} catch (err) {setError(err instanceof Error ? err : new Error('An error occurred'))} finally {setLoading(false)}
-  }, [apiFunction])useEffect(() => {if (options.immediate) {execute()}
-  }, [execute, options.immediate])return { data, loading, error, execute }}ursor/fix-website-loading-errors-and-merge-6662;
-      setLoading(false)}return { data, loading, error, execute }}}}}setLoading(false)}
-      set_loading (false)}setLoading(false)}return { data, loading, error, execute }
-}setLoading(false)}return { data, loading, error, execute }}
-}}
-}setLoading(false)}setLoading(false)}return { data, loading, error, execute }}
-}
-}
-}
-ursor/automate-test-improve-and-merge-code-646c;
-}ursor/fix-website-loading-errors-and-merge-6662;
-interface ApiState<T> {}import { useState, useEffect   } from 'react';interface ApiState < T> {}import { useState, useEffect  } from 'react';
-interface ApiState<T> {}interface ApiState<T>  {data: T | null;
-  loading: boolean;
-  error: string | null;
-}
-export function use_api < T>() {loading: true;
-    error: null;
-    data: null,loading: true,error: null})export function use_api < T>() {const [state, set_state] = useState < ApiState < T>>({data: null,loading: true,error: null,data: null,loading: true,error: null})useEffect (() => {const fetch_data = async () => {try {data: null,loading: false,error: error instanceof Error ? error && error.message : 'An error occurred';
-        })}
-          error: error instanceof Error ? error && error.message : 'An error occurred';
-        })}
-}
+      setLoading(false)},
 
-export const useApi = <T>(
-  apiFunction: () => Promise<T>,
-  options: UseApiOptions = {}
-): UseApiResult<T> => {
-  const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<Error | null>(null);
-
-  const execute = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    try {
-      const result = await apiFunction();
-      setData(result);
-    } catch (err) {
-      setError(err instanceof Error ? err : new Error('An error occurred'));
-    } finally {
-      setLoading(false);
-    }
-  }, [apiFunction]);
-
-  useEffect(() => {
-    if (options.immediate) {
-      execute();
-    }
-  }, [execute, options.immediate]);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return { data, loading, error, execute };
 };
       setLoading(false)};
@@ -71,8 +9,6 @@ export const useApi = <T>(
 };
 };
       setLoading(false)};
-<<<<<<< HEAD
-=======
   return { data, loading, error, execute }
 };      setLoading(false)};
 
@@ -81,68 +17,31 @@ export const useApi = <T>(
 }
 };
       setLoading(false)};      setLoading(false)};
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
   return { data, loading, error, execute }}
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
-interface ApiState<T> {}import { useState, useEffect } from 'react';
-;
-interface ApiState < T> {};import { useState, useEffect } from 'react';
-interface ApiState<T> {
-<<<<<<< HEAD
-=======
 }interface ApiState<T> {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   data: T | null;
   loading: boolean;
   error: string | null;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
     data: null
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-    data: null
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     loading: true
     error: null
     data: null,
     loading: true,
     error: null,;
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function use_api < T>(url: string, options?: RequestInit) {
-=======
 =======export function use_api < T>(url: string, options?: RequestInit) {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export function use_api < T>(url: string, options?: RequestInit) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const [state, set_state] = useState < ApiState < T>>({
     data: null,
     loading: true,
     error: null,
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     data: null,
     loading: true,
     error: null,;
@@ -158,14 +57,7 @@ export function use_api < T>(url: string, options?: RequestInit) {
         });
       }
 import { useState, useEffect, useCallback } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 interface UseApiProps  {// Add props here as needed;
 }ursor/fix-website-loading-errors-and-merge-6662;
@@ -200,19 +92,10 @@ interface UseApiProps  {// Add props here as needed;
 import { useState, useEffect  } from 'react';
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null)const [loading,setLoading] = useState(false)const [error,setError] = useState<any>(null)const execute = useCallback(async (...args: any[]) => { try { setLoading(true)setError(null)const result = await apiFunction(...args)setData(result)options.onSuccess?.(result)return result} catch (err) { setError(err)options.onError?.(err)throw err} finally { setLoading(false)} },[apiFunction,options])useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate])return { data,loading,error,execute }}export default useApi;import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null)const [loading,setLoading] = useState(false)const [error,setError] = useState<any>(null)const execute = useCallback(async (...args: any[]) => { try { setLoading(true)setError(null)const result = await apiFunction(...args)setData(result)options.onSuccess?.(result)return result} catch (err) { setError(err)options.onError?.(err)throw err} finally { setLoading(false)} },[apiFunction,options])useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate])return { data,loading,error,execute }}export default useApi;interface ApiState<T>  {data: T | null;
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }, [execute, options && options.immediate]);
   return { data, loading, error, execute }};
 export default useApi;
 ) => {
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const [loading, set_loading] = useState (false);
   const [error, set_error] = useState < any>(null);
   const execute = useCallback (async (...args: any[]) => {
@@ -233,10 +116,6 @@ export default useApi;
       set_loading (false);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   }, [execute, options && options.immediate]);
   return { data, loading, error, execute }};
@@ -252,12 +131,7 @@ interface UseApiProps {
   // Add props here as needed
 }
 import { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
 import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 interface ApiState<T> {
   data: T | null;
@@ -334,18 +208,9 @@ export function useApi<T>(
       execute()}
   }, [execute, options.immediate]);
   return { data, loading, error, execute }};
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default useApi;
-import { useState,useEffect,useCallback } from 'react'; interface UseApiOptions { immediate?: boolean; onSuccess?: (data: any) => void; onError?: (error: any) => void} } export const useApi = <T = any>( apiFunction: (...args: any[]) => Promise<T>,options: UseApiOptions = {} ) => { const [data,setData] = useState<T | null>(null); const [loading,setLoading] = useState(false); const [error,setError] = useState<any>(null); const execute = useCallback(async (...args: any[]) => { try { setLoading(true); setError(null); const result = await apiFunction(...args); setData(result); options.onSuccess?.(result); return result} catch (err) { setError(err); options.onError?.(err); throw err} finally { setLoading(false)} },[apiFunction,options]); useEffect(() => { if (options.immediate) { execute()} },[execute,options.immediate]); return { data,loading,error,execute }}; export default useApi;
-export default function UseApi({ }: UseApiProps) {
-=======
 export default useApi;export default function UseApi({ }: UseApiProps) {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export default useApi;
 export default function UseApi({}: UseApiProps) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
     <div>
       <h1>UseApi</h1>
@@ -353,9 +218,6 @@ export default function UseApi({}: UseApiProps) {
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ursor/add-new-services-and-deploy-updates-0462
 interface ApiState<T> {
   data: T | null, loading: boolean,
@@ -365,9 +227,6 @@ origin/automation-improvements-final
 interface ApiState<T> {
   data: T | null, loading: boolean,
   error: string | null,
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 }
 export function useApi<T>(
@@ -393,24 +252,13 @@ export function useApi<T>(
     }
   }, [fetchData, options.immediate]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
   }, [api_function, options]);
   useEffect (() => {
     // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 }
@@ -421,11 +269,7 @@ if ( {) {
 }
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     if (options.immediate !== false) {fetchData()}
   }, [])return {data,loading,error,refetch: fetchData;
   }}ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+},

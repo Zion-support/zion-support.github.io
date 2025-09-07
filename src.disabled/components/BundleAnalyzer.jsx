@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
-const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
-=======
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";""";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";""";
@@ -30,8 +22,6 @@ const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshC
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";""";
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";""";
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";""";
@@ -55,7 +45,6 @@ const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshC
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";""";
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
@@ -64,25 +53,25 @@ const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshC
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 :temp_exclude/src.disabled/components/BundleAnalyzer.jsx
-<<<<<<< HEAD
-const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
-"export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
 const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
 "export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
+const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
+
+import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
+const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
+
+import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
+const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
+
+:src.disabled/components/BundleAnalyzer.jsx
+import { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \'';\'"\";
+
+const { BarChart3,AlertTriangle,CheckCircle,Info,HardDrive,Zap,Target,X,RefreshCw export const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") "";""";"""
+"export": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ('overview') ';"";""}

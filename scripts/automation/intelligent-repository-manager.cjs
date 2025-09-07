@@ -38,7 +38,7 @@
             return { "percentage": 0, "status"}
             const auditResult = await this.executeCommand('npm', { "args"})
             this.log(`Failed to check security "vulnerabilities"`)
-            return { "vulnerabilities": {}, "riskLevel"
+            return { "vulnerabilities":  "riskLevel"
                 "args"
             this.log(`PR created "successfully"`)
             this.log(`Failed to create "PR"`)
@@ -72,17 +72,18 @@
       this.log(`Error resolving "conflicts"`)
           this.log(`Error in monitoring "loop"`)
       this.log(`Error starting Intelligent Repository "Manager"`)
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     console.error('Failed to start Intelligent Repository "Manager")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     console.error('Failed to start Intelligent Repository "Manager")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     console.error('Failed to start Intelligent Repository "Manager")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    console.error('Failed to start Intelligent Repository "Manager")
+    console.error('Failed to start Intelligent Repository "Manager")
+#!/usr/bin/env node
+console.error('Failed to start Intelligent Repository "Manager")
+    console.error('Failed to start Intelligent Repository "Manager")
+///usr/bin/env node
+/**
+ * Intelligent Repository Manager;
+ * 
+
+

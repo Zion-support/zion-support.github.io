@@ -1,18 +1,4 @@
 
-import type { BookProject } from '../book/bookTypes',export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project,const quotesHtml = visuals.quoteCallouts;
-    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`).join('\n'),import type { BookProject } from '../book/bookTypes';
-export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
   const quotesHtml = visuals.quoteCallouts;
@@ -21,10 +7,6 @@ export function buildPrintableHtml(project: BookProject): string {const { meta, 
     .map ((q) => `<blockquote class="quote"><p>${escape_html (q.text)}</p>${q.attribution ? `<cite>${escape_html (q.attribution)}</cite>` : ''}</blockquote>`).join ('\n'),const chapter_html = chapters;
     .map ((c) => `;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     .join('\n');
 
 
@@ -53,50 +35,22 @@ export function buildPrintableHtml (project: BookProject): string {
     `);
 
     .join('\n\n');
-<<<<<<< HEAD
-=======
     .join('\n');    .join('\n\n');
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   const visualsHtml = [;
     ...visuals.timelineImages;
     ...visuals.daoVoteCharts;
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
-<<<<<<< HEAD
-=======
     .join('\n')const barcode  = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';.join ('\n\n'),const visuals_html = [;
     ...visuals.timeline_images,...visuals.daoVoteCharts,...visuals.ui_screens];
     .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join ('\n'),const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     .join('\n');
 
-<<<<<<< HEAD
-
-
-
-
-  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
-    .join ('\n\n'),
-  const visuals_html = [;
-    ...visuals.timeline_images,
-    ...visuals.daoVoteCharts,
-    ...visuals.ui_screens];
-    .map ((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
-    .join ('\n'),
-  const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '';
-  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
-<<<<<<< HEAD
-=======
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
 =======  const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return `<!doctype html>;
 <html>;
 <head>;
@@ -105,10 +59,6 @@ export function buildPrintableHtml (project: BookProject): string {
 <style>;
 function escapeHtml(s: string): string {return s;@page { margin: 1in   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -117,11 +67,6 @@ function escapeHtml(s: string): string {;
   return s;
 
   @page { margin: 1in   } catch (error) {
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -180,10 +125,6 @@ function escapeHtml(s: string): string {;
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 </style>;
 </head>;
 <body>;
@@ -194,11 +135,6 @@ function escapeHtml(s: string): string {;
     <h3>${escape_html (meta.subtitle || '')}</h3>;
     <div class="by">By ${escape_html (meta.author)}</div>;
 
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     ${barcode}
   </section>;
   ${quotes_html}
@@ -212,13 +148,9 @@ function escapeHtml(s: string): string {;
 function escapeHtml(s: string): string {return s;function escapeHtml(s: string): string {return s;
   @page { margin: 1in   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
     <div>${escapeHtml(meta.publisher || '')}</div>;
@@ -248,20 +180,11 @@ function escapeHtml(s: string): string {return s;function escapeHtml(s: string):
 }
 </body>;
 </html>`;
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -301,11 +224,7 @@ function escape_html (string: string): string {
   }
 
 }
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
-<<<<<<< HEAD
-=======
   .cover h1 { font-size: 40px, margin: 0   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
 }
   .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
@@ -356,4 +275,56 @@ function escape_html (string: string): string {return s;
     .replace (/&/g, '&amp, ').replace (/</g, '<').replace (/>/g, '>').replace (/"/g, '"').replace (/'/g, '&#039, ')}} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}}}
 }}
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+import type { BookProject } from '../book/bookTypes';
+export function buildPrintableHtml(project: BookProject): string {
+  const { meta, chapters, visuals } = project,
+  const quotesHtml = visuals.quoteCallouts
+    .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`)
+    .join($2);
+  const chapterHtml = $2;
+    )
+    .join($2);
+  const visualsHtml = $2;
+    ...visuals.daoVoteCharts,
+    ...visuals.uiScreens]
+    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok
+    .join($2);
+  const barcode = $2;
+  return `<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>${escapeHtml(meta.title)}</title>
+<style>
+  @page { margin: 1in}
+  body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
+  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh}
+  .cover h1 { font-size: 40px, margin: 0}
+  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444 }
+  .cover .by { margin-top: 24px, color: #666 }
+  .barcode { margin-top: 24px, height: 64px}
+  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333 }
+  .quote cite { display: block, margin-top: 6px, color:#666, font-style: normal}
+  .chapter { break-before: page}
+  .chapter h2 { font-size: 28px, margin: 0 0 12px 0 }
+  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap }
+  .visual { break-inside: avoid, margin: 12px 0 }
+  .visual img { max-width: 100%, height: auto}
+</style>
+</head>
+<body>
+  <section class = $2;
+  return text
+    .split(/\n\n+/)
+    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .join('\n')
+}
+
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, '&amp,')
+    .replace(/</g, '&lt,')
+    .replace(/>/g, '&gt,')
+    .replace(/"/g, '&quot,')
+    .replace(/'/g, '&#039,')
+}

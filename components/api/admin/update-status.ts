@@ -1,43 +1,28 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
+    return;
+  }
+  if (!isInternalAgentRequest(req)) {
+    res && res.status(401).json({ error: 'Unauthorized' });
+    return;
+  }
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.status(405).json({ error: 'Method Not Allowed' });
-  res.status(200).json({ ok: true });
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    return;
-  }
-  if (!isInternalAgentRequest(req)) {
-    res && res.status(401).json({ error: 'Unauthorized' });
-    return;
-  }
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    res.status(405).json($2);
     return
   }
   if (!isInternalAgentRequest(req)) {
-    res && res.status(401).json({ error: 'Unauthorized' });
+    res.status(401).json($2);
     return
   }
-<<<<<<< HEAD
-  const body = null;
-  res.status(200).json({ ok: true })
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     return;
   }
   if (!isInternalAgentRequest(req)) {res && res.status(401).json({ error: 'Unauthorized' })return;
   }import { isInternalAgentRequest  } from '../../../utils/adminAuth';
 export default function handler() {if (req.method !== 'POST') {res.status(405).json({ error: 'Method Not Allowed' })res.status(200).json({ ok: true })return;
   }
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (!isInternalAgentRequest(req)) {res && res.status(401).json({ error: 'Unauthorized' })return;
   }const merged = {...existing;
     ...body;
@@ -77,10 +62,6 @@ if ( {) {$2;
     ...body;
     updated_at: new Date ().toISOString ()}
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2))res.status (200).json ({ ok: true })const body = null;
-<<<<<<< HEAD
-  res.status(200).json({ ok: true })}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
   const merged = {
     ...existing;
@@ -153,7 +134,16 @@ if ( {) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   res.status(200).json({ ok: true })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  const body = $2;
+  const dataDir = path.join(process.cwd(), 'dataadmin'),
+  if (!fs.existsSync(dataDir)) fs.mkdirSync($2);
+  const statusPath = path.join($2);
+  const existing = fs.existsSync(statusPath) ? JSON.parse(fs.readFileSync(statusPath, 'utf8')) : { agents: [] },
+
+  const merged = $2;
+    ...body,
+    updatedAt: new Date().toISOString()},
+  fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2)),
+  res.status(200).json({ ok: true})
+}

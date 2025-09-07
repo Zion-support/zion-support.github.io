@@ -1,17 +1,12 @@
+#!/usr/bin/env node;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+#!/usr/bin/env node;
 
-=======
-#!/usr/bin/env node;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-#!/usr/bin/env node;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")
@@ -27,26 +22,26 @@ const { execSync } = require("child_process")
       content = content.replace(/;\s*\[/g, " [")]
       content = content.replace(/;\s*\(/g, " (")
       content = content.replace(/import\s+([^]+);"import\s+/g, "import $1;\nimport "
-      content = content.replace(/""import\s+/g, ";\nimport ")
-      content = content.replace(/""interface\s+/g, ";\ninterface ")
-      content = content.replace(/""const\s+/g, ";\nconst ")
-      content = content.replace(/from\s+"next;$/gm, "from "next"")
-      content = content.replace(/from\s+"react;$/gm, "from "react"")
-      content = content.replace(/from\s+"lucide-react;$/gm, "from "lucide-react"")
+      content = content.replace(/import\s+/g, ";\nimport ")
+      content = content.replace(/interface\s+/g, ";\ninterface ")
+      content = content.replace(/const\s+/g, ";\nconst ")
+      content = content.replace(/from\s+"next;$/gm, "from "next)
+      content = content.replace(/from\s+"react;$/gm, "from "react)
+      content = content.replace(/from\s+"lucide-react;$/gm, "from "lucide-react)
       content = content.replace(/"const": \s*(\w+):\s*(\w+):\s*=\s*\(\s*\)\s*=>\s*,\s*\{/g, "const $"1": $2 = () => {"}
-      content = content.replace(/question:\s*"([^"]*):\s*([^"]*),", "";"/g, ""question": "$1: $2", "
+      content = content.replace(/question:\s*"([^"]*):\s*([^"]*),", ;"/g, question": "$1: $2", "
       content = content.replace(/const\s+(\w+)\s*=\s*\[/g, "const $1 = ["]
       content = content.replace(/{\s*;/g, "{"})
       content = content.replace(/;\s*}/g, "}")
       const lines = content.split("\n")
-        if (!seen.has(trimmed) || trimmed === "" || trimmed.startsWith("//") || trimmed.startsWith("/*")
+        if (!seen.has(trimmed) || trimmed ===  || trimmed.startsWith("//") || trimmed.startsWith("/*")
       content = uniqueLines.join("\n")
         fs.writeFileSync(filePath, content, "utf8")
       this.errors.push({ "file": filePath, "error"})
         if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules"
-          searchInDirectory(fullPath),} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")
+          searchInDirectory(fullPath)} else if (stat.isFile() && (item.endsWith(".tsx") || item.endsWith(".ts") || item.endsWith(".jsx") || item.endsWith(".js")
             const content = fs.readFileSync(fullPath, "utf8")
-            if (content.includes(""import": ")
+            if (content.includes(import": ")
                 content.includes("const:")
                 content.includes("from \"next;")
                 content.includes("from \"react;")
@@ -71,17 +66,11 @@ const { execSync } = require("child_process")
       this.log(` Git operations "failed"`)
     this.log(" Starting Final Automation Fix")
       this.log("� Final Automation Fix completed successfully!")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       this.log(` Final automation fix "failed"`)
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       this.log(` Final automation fix "failed"`)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       this.log(` Final automation fix "failed"`)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      this.log(` Final automation fix "failed"`)
+      this.log(` Final automation fix "failed"`)
+
+

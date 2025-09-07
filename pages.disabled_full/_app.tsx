@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
 const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''";
 import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
@@ -20,7 +18,6 @@ const React from "react"; import type { AppProps } from "next/app"; import Layou
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''";
 ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''"
@@ -33,7 +30,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 
 const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''"
-<<<<<<< HEAD
+
+import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals.css\'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
+const React from "react"; import type { AppProps } from "next/app"; import Layout from "./components/Layout"; import "./styles/globals.css"; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {.pageProps} /> </Layout> )}''"
 import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals.css'; export default function App({ Component,pageProps }: AppProps) { return ( <Layout> <Component {...pageProps} /> </Layout> )}
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+

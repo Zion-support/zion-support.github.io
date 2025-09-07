@@ -1,30 +1,28 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
+  if () {
+    return false) {
+    ) {
+    return false}}
 console.log('🔧 Starting merge conflict resolution...');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+    // Remove conflict markers and keep the newer version (incoming changes)
     // Check if file has merge conflicts
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
     if (!content.includes('
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     if (!content.includes('') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false;
     }
@@ -44,7 +42,7 @@ conflictType = 'incoming';
       }
       
       if (line.includes('')) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
         conflictType = 'incoming';
         continue;
       }
@@ -91,10 +89,6 @@ function findConflictedFiles(dir) {
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             conflictedFiles.push(fullPath);
           }
@@ -108,8 +102,7 @@ function findConflictedFiles(dir) {
   scanDirectory(dir);
   return conflictedFiles;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
           if (content.includes('
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
 class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
@@ -1551,10 +1545,7 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 
 
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+

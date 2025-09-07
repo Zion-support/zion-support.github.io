@@ -7,22 +7,13 @@ function fixFile(filePath) {
     const originalContent = content;
 
     // Remove merge conflict markers
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    content = content.replace(/
-    content = content.replace(/
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     content = content.replace(/[\s\S]*?[\s\S]*?
     content = content.replace(/[\s\S]*?
     content = content.replace(/[\s\S]*?
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     content = content.replace(/
     content = content.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    content = content.replace(/
+    content = content.replace(/
     
     // Fix common syntax issues
     content = content.replace(/\{_/g, '{');

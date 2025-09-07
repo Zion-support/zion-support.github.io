@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 class ErrorFixer {}
   constructor() {}
     this.logFile = 'logs/pm2/error-fixer.log';
@@ -22,13 +24,6 @@ class ErrorFixer {}
     console.log(message);
   };
   error(message) {}
-    const timestamp = new Date().toISOString();
-    const errorMessage = `[${timestamp}] "ERROR": ${message}\n`;`
-    fs.appendFileSync(this.errorFile, errorMessage);
-    console.error(message);
-  };
-  async fixSyntaxErrors() {}
-    this.log('Starting syntax error fixing...');
     
     try {}
       const fixes = [{}]
@@ -51,14 +46,13 @@ class ErrorFixer {}
           "replacement": 'className="$1"',
           "description": 'Fix template literal className attributes'
         };
+
       ];
 
       let totalFixed = 0;
       const files = this.getSourceFiles();
-      
       for (const file of files) {}
-        try {}
-          let content = fs.readFileSync(file, 'utf8');
+
           let fileFixed = false;
           
           for (const fix of fixes) {}
@@ -66,52 +60,28 @@ class ErrorFixer {}
             content = content.replace(fix.pattern, fix.replacement);
             if (content !== before) {}
               fileFixed = true;
-              this.log("Applied fix "${fix.description}" to ${file}");
-            };
-          };
-          if (fileFixed) {}
-            fs.writeFileSync(file, content);
-            totalFixed++;
-          };
-        } catch (err) {}
-          this.error("Error processing ${file}: ${err.message}");
-        };
-      };
-      this.log("Fixed syntax errors in ${totalFixed} files");
-      return totalFixed;
-    } catch (err) {}
-      this.error("Error in "fixSyntaxErrors": ${err.message}");
-      return 0;
-    };
-  };
-  async fixLintingErrors() {}
-    this.log('Starting linting error fixing...');
     
     try {}
       execSync('npm run "lint": fix', { })
         "stdio": 'pipe',
         "cwd": process.cwd();
+              this.log("Applied fix "${fix.description}" to ${file}");"
+
+        "cwd": process.cwd();"
       }
-});
-      this.log('ESLint auto-fix completed');
-      return true;
+});"
+      this.log('ESLint auto-fix completed')
+      return true
     } catch (err) {}
-      this.error("ESLint fix "failed": ${err.message}");
+      this.error("ESLint fix "failed": ${err.message}");"
       return false;
-    };
-  };
-  getSourceFiles() {}
-    const sourceDirs = ['src', 'pages', 'components', '__tests__', 'scripts'];
-    const extensions = ['.ts', '.tsx', '.js', '.jsx'];
+
     const files = [];
     
     for (const dir of sourceDirs) {}
       if (fs.existsSync(dir)) {}
         this.getFilesRecursively(dir, extensions, files);
-      };
-    };
     return files;
-  };
   getFilesRecursively(dir, extensions, files) {}
     const items = fs.readdirSync(dir);
     
@@ -119,15 +89,14 @@ class ErrorFixer {}
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
+    for (const item of items) {}
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
       if (stat.isDirectory()) {}
-        this.getFilesRecursively(fullPath, extensions, files);
+        this.getFilesRecursively(fullPath, extensions, files)
       } else if (extensions.some(ext => item.endsWith(ext))) {}
-        files.push(fullPath);
-      };
-    };
-  };
+        files.push(fullPath)
   async run() {}
-    this.log('Starting error fixing automation...');
     
     try {}
       const syntaxFixed = await this.fixSyntaxErrors();
@@ -136,32 +105,23 @@ class ErrorFixer {}
       this.log("Error fixing "completed": - Syntax errors fixed: ${syntaxFixed} files;)
         - Linting errors "fixed": ${lintingFixed ? 'Yes' : 'No'}");
       
+
       return {}
         syntaxFixed,
-        lintingFixed,
-        "success": true;
-      };
-    } catch (err) {}
-      this.error("Error in "run": ${err.message}`);
-      return { "success": false, "error": err.message };
-    };
-  };
-};
-// Run if called directly;
-if (require.main === module) {}
-  const fixer = new ErrorFixer();
+        lintingFixed,"
+        "success": true;"
+
+// Run if called directly
+  if($2) {}
+  const fixer = new ErrorFixer()
   fixer.run().then(result => {})
-    if (result.success) {}
-      process.exit(0);
+  if($2) {}
+      process.exit(0)
     } else {}
       process.exit(1);
-    };
-  }
-});
-};
-
-<<<<<<< HEAD
-=======
 module.exports = ErrorFixer;
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+module.exports = ErrorFixer;
+module.exports = ErrorFixer;
+
+

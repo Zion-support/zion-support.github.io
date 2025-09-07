@@ -1,58 +1,34 @@
 
-;
-ursor/fix-website-loading-errors-and-merge-6662;
-export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
-module.exports = default function RevenueOpsAI() { return ( <Article title="Revenue Ops Intelligence" subtitle="Forecasting,pipeline health,and pricing guidance powered by AI" price="projects from $12k" bullets={["Win-rate modeling and pipeline risk scoring by buyer segment","Dynamic discount guardrails and pricing recommendations","Anomaly detection on deal slippage and stage aging","Native HubSpot/SFDC integration and dbt/Snowflake support" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'";
-ursor/automate-test-improve-and-merge-code-646c;
-export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
-module.exports = default function RevenueOpsAI() { return ( <Article title="Revenue Ops Intelligence" subtitle="Forecasting,pipeline health,and pricing guidance powered by AI" price="projects from $12k" bullets={["Win-rate modeling and pipeline risk scoring by buyer segment","Dynamic discount guardrails and pricing recommendations","Anomaly detection on deal slippage and stage aging","Native HubSpot/SFDC integration and dbt/Snowflake support" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'";
-module.exports = default function RevenueOpsAI() { return ( <Article title="Revenue Ops Intelligence" subtitle="Forecasting,pipeline health,and pricing guidance powered by AI" price="projects from $12k" bullets={["Win-rate modeling and pipeline risk scoring by buyer segment","Dynamic discount guardrails and pricing recommendations","Anomaly detection on deal slippage and stage aging","Native HubSpot/SFDC integration and dbt/Snowflake support" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'"
 import React from 'react';
+
 interface RevenueopsProps {
   // Add props here as needed
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 import React from 'react';
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-import React from 'react';
-=======
 
 
 interface RevenueopsProps  {// Add props here as needed;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import * as React from 'react';
 interface RevenueopsProps  {// Add props here as needed;
 }export default function Revenueops() {export default function RevenueOpsAI() { return ( <Article title=\"Revenue Ops Intelligence\" subtitle=\"Forecasting,pipeline health,and pricing guidance powered by AI\" price=\"projects from $12k\" bullets={[\'Win-rate modeling and pipeline risk scoring by buyer segment\',\'Dynamic discount guardrails and pricing recommendations\',\'Anomaly detection on deal slippage and stage aging\',\'Native HubSpot/SFDC integration and dbt/Snowflake support\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 module.exports = default function RevenueOpsAI() { return ( <Article title="Revenue Ops Intelligence" subtitle="Forecasting,pipeline health,and pricing guidance powered by AI" price="projects from $12k" bullets={["Win-rate modeling and pipeline risk scoring by buyer segment","Dynamic discount guardrails and pricing recommendations","Anomaly detection on deal slippage and stage aging","Native HubSpot/SFDC integration and dbt/Snowflake support" ]} /> ) } function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Engagement: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: </p> ) }'"'";
 interface RevenueopsProps  {// Add props here as needed;
+import React from 'react';
+interface RevenueopsProps {
+  // Add props here as needed
 }
-export default function Revenueops() {interface RevenueopsProps  {// Add props here as needed;
-export default function Revenueops({}: RevenueopsProps) {
+export default function Revenueops({ }: RevenueopsProps) {
   return (
     <div>
       <h1>Revenueops</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-}
-}
-export default function Revenueops({ }: RevenueopsProps) {
-=======
 }}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 }
 }
 }
 export default function Revenueops({}: RevenueopsProps) {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -79,9 +55,6 @@ export default function Revenueops() {return (<div>;
       <h1>Revenueops</h1>;
       <p>This component is currently under development.</p>;
     </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   )}
 }}
 }export default function Revenueops() {ursor/automate-test-improve-and-merge-code-646c;
@@ -118,14 +91,9 @@ export default function Revenueops(): any ({}: RevenueopsProps) {return (<div>;
 }
 }
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   );
 }
+
 }
 }
-<<<<<<< HEAD
-=======
   );
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

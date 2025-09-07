@@ -1,22 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-import Link from 'next/link';
-import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
-export type OnboardingStep = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export type OnboardingStep = {;
   id: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   label: string;
   completed: boolean
 };
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export type OnboardingStep = {id: string;import React from 'react',import Link from 'next/link';
 import { CheckCircle2, Circle, PartyPopper  } from 'lucide-react';
@@ -25,23 +11,12 @@ export type OnboardingStep = any;label: string;
 }export type OnboardingProgressCardProps = {title: string;
   steps: OnboardingStep[];
   highlightColorClass?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-
-function computePercentage(steps: OnboardingStep[]): number {
-<<<<<<< HEAD
-  if (!steps || steps.length === 0) return 0;
-const completedCount = steps.filter(s => s.completed).length;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
 
 function computePercentage(steps: OnboardingStep[]): number {
   if (!steps |steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return Math.round((completedCount / steps.length) * 100);
   title
   steps
@@ -65,10 +40,6 @@ function computePercentage(steps: OnboardingStep[]): number {
       {/* Progress Bar */}
       <div className='mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden'>
         <div
-<<<<<<< HEAD
-          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}          style={{ width: `${percentage}%` }}
 export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {;
   const percentage = computePercentage(steps);
@@ -83,41 +54,21 @@ function computePercentage(): any (steps: OnboardingStep[]): number {;
   if (!steps || steps && steps.length === 0) return 0;
   const completedCount = steps && steps.filter(s => s && s.completed).length;
   return Math && Math.round((completedCount / steps && steps.length) * 100);  ctaLabel?: string;
+import React from 'react';
+import Link from 'next/link';
+import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
+export type OnboardingStep = $2;
+  label: string,
+  completed: boolean,
+  ctaLabel?: string,
   ctaHref?: string
-};
+},
 
-export type OnboardingProgressCardProps = {;
-  title: string,;
-  steps: OnboardingStep[],;
+export type OnboardingProgressCardProps = $2;
+  steps: OnboardingStep[],
   highlightColorClass?: string
-};
+},
 
-function computePercentage(): any (steps: OnboardingStep[]): number {;
-  if (!steps || steps && steps.length === 0) return 0;
-  const completedCount = steps && steps.filter(s => s && s.completed).length;
-  return Math && Math.round((completedCount / steps && steps.length) * 100);
-
-export default function OnboardingProgressCard(): any ({;
-  title,;
-  steps,;
-  highlightColorClass = 'from-neon-green to-neon-blue',;
-}: OnboardingProgressCardProps) {;
-  const percentage = computePercentage(steps);
-  const allDone = percentage === 100;
-
-  const firstIncomplete = steps && steps.find(;
-    s => !s && s.completed && s && s.ctaHref && s && s.ctaLabel;
-  );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-  return (
-    <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
-      <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <div className="text-sm opacity-75">{percentage}% complete</div>
-      </div>
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }function computePercentage(steps: OnboardingStep[]): number {if (!steps |steps.length === 0) return 0;
   const completedCount  = steps.filter(s => s.completed).length;function computePercentage(steps: OnboardingStep[]): number {if (!steps |steps.length === 0) return 0;
   const completedCount  = steps.filter(s => s.completed).length;if (!steps || steps.length === 0) return 0;
@@ -257,60 +208,52 @@ export default function OnboardingProgressCard() {const percentage = computePerc
             <a className="inline - flex items - center justify - center px - 4 py - 2 rounded - lg text - sm font - medium text - black dark:text - white bg - gradient - to - r from - neon - blue to - neon - green shadow - neon-blue hover:opacity-90 transition">;
               {first_incomplete.cta_label}
             </a>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           </Link>;className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`}return (<div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">;
       <div className="flex items-center justify-between">;
         <h3 className="text-lg font-semibold">{title}</h3>;
         <div className="text-sm opacity-75">{percentage}% complete</div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
           </Link>;
 
+function computePercentage(steps: OnboardingStep[]): number {
+  if (!steps || steps.length = $2;
+  const completedCount = $2;
+  return Math.round((completedCount / steps.length) * 100)
+}
+
+export default function OnboardingProgressCard({ title, steps, highlightColorClass = 'from-neon-green to-neon-blue' }: OnboardingProgressCardProps) {
+  const percentage = computePercentage($2);
+  const allDone = $2;
+  const firstIncomplete = $2;
   return (
     <div className="rounded-xl border border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-black/40 p-5 shadow-sm">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold">{title}</h3>
         <div className="text-sm opacity-75">{percentage}% complete</div>
       </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
       {/* Progress Bar */}
-      <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">;
-        <div;
-          className={`h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`;
+      <div className="mt-3 h-2 w-full rounded-full bg-gray-200 dark:bg-gray-800 overflow-hidden">
+        <div
+          className={
+            `h-2 rounded-full bg-gradient-to-r ${highlightColorClass}`
           }
           style={{ width: `${percentage}%` }}
-<<<<<<< HEAD
-<<<<<<< HEAD
         />
       </div>
+
       {allDone ? (
-<div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>
+        <div className="mt-4 flex items-center gap-2 text-green-600 dark:text-green-400">
           <PartyPopper size={18} />
-          <span className='text-sm'>All steps completed — great job!</span>
+          <span className="text-sm">All steps completed — great job!</span>
         </div>
       ) : null}
-<<<<<<< HEAD
-      {/* Checklist */}
-<ul className='mt-4 space-y-2'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       <ul className='mt-4 space-y-2'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {steps.map(step => (
           <li key={step.id} className='flex items-center justify-between'>
             <div className='flex items-center gap-2'>
                 <CheckCircle2
                   className='text-green-600 dark:text-green-400'
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
       </div>;
       {allDone ? (<div className='mt-4 flex items-center gap-2 text-green-600 dark:text-green-400'>;
@@ -324,64 +267,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex items-center gap-2'>;
                 <CheckCircle2;
                   className='text-green-600 dark:text-green-400';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   size={18}
                 />;
               ) : (<Circle className='text-gray-400' size={18} />;
               )}
               <span className={step.completed ? 'line-through opacity-70' : ''}>;
                 {step.label}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </span>
-            </div>
-            {!step.completed && step.ctaHref && step.ctaLabel ? (
-              <Link href={step.ctaHref}>
-<<<<<<< HEAD
-                <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               </span>;
             </div>;
             {!step.completed && step.ctaHref && step.ctaLabel ? (<Link href={step.ctaHref}>;
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">;
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+      {/* Checklist */}
+      <ul className="mt-4 space-y-2">
+        {steps.map((step) => (
+          <li key={step.id} className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              {step.completed ? (
+                <CheckCircle2 className="text-green-600 dark:text-green-400" size={18} />
+              ) : (
+                <Circle className="text-gray-400" size={18} />
+              )}
+              <span className={step.completed ? 'line-through opacity-70' : ''}>{step.label}</span>
+            </div>
+            {!step.completed && step.ctaHref && step.ctaLabel ? (
+              <Link href={step.ctaHref}>
+                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark: hover: bg-gray-900 transition">
                   {step.ctaLabel}
-                </a>;
-              </Link>;
+                </a>
+              </Link>
             ) : null}
-          </li>;
+          </li>
         ))}
-      </ul>;
+      </ul>
+
       {/* Primary CTA for next step */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {!allDone && firstIncomplete ? (
-<div className='mt-5'>
-          <Link href={firstIncomplete.ctaHref!}>
-            <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {!allDone && firstIncomplete ? (<div className="mt-5">;
           <Link href={firstIncomplete.ctaHref!}>;
             <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">;
 <div className='mt-5'>;
           <Link href={firstIncomplete.ctaHref!}>;
             <a className='inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition'>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
                 <a className='text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition'>                  {step.ctaLabel}                <a className="text-xs px-3 py-1.5 rounded-md border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-900 transition">
 
                   {step.ctaLabel}
@@ -396,24 +323,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="mt-5">
           <Link href={firstIncomplete.ctaHref!}>
             <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      {!allDone && firstIncomplete ? (
+        <div className="mt-5">
+          <Link href={firstIncomplete.ctaHref!}>
+            <a className="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium text-black dark:text-white bg-gradient-to-r from-neon-blue to-neon-green shadow-neon-blue hover:opacity-90 transition">
               {firstIncomplete.ctaLabel}
-            </a>;
-          </Link>;
-        </div>;
+            </a>
+          </Link>
+        </div>
       ) : null}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-  );
-}
-=======
     </div>;
-=======
     </div>
 }
 }
@@ -424,16 +343,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 }
   )}
   )})}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </div>;
 }
 }
   )}
   )})}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    </div>
+  )
+}

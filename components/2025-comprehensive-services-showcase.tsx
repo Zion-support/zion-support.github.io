@@ -1,41 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-<<<<<<< HEAD
 
-import React, { useState } from 'react',
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { Brain, Building, Target, Cpu, Shield;
-  Check, Phone, Mail, MapPin;
-  TrendingUp, Zap, Globe
- } from 'lucide-react';
-// Import our new service data
-import { advancedAIMLServices  } from '../data/2025-advanced-ai-ml-services';
-import { advancedCybersecurityServices  } from '../data/2025-advanced-cybersecurity-services';
-import { advancedCloudDevOpsServices2025  } from '../data/2025-advanced-cloud-devops-services';
-import { industrySpecificSolutions  } from '../data/2025-industry-specific-solutions';
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
-const ComprehensiveServicesShowcase2025 = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-// All services combined const allServices = [ ...advancedAIMLServices;
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import React, { useState } from 'react',import SEO from '../components/SEO';
 import { motion  } from 'framer-motion';
@@ -50,55 +14,114 @@ import { advancedCloudDevOpsServices2025   } from '../data/2025-advanced-cloud-d
 import { industrySpecificSolutions   } from '../data/2025-industry-specific-solutions';
 import { emergingTechnologyServices  } from '../data/2025-emerging-technology-services';
 const ComprehensiveServicesShowcase2025  = null;// All services combined const allServices = [ ...advancedAIMLServices;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+// All services combined const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices = [ ...advancedAIMLServices;
 // All services combined const allServices = [ ...advancedAIMLServices;
- // All services combined const allServices  = [ ...advancedAIMLServices;// All services combined const allServices  = [ ...advancedAIMLServices;...advancedCybersecurityServices;
+ // All services combined const allServices = [ ...advancedAIMLServices;
+
+ // All services combined const allServices = [ ...advancedAIMLServices;
+
+...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
 ...emergingTechnologyServices ];
-  {opacity: 0, y: 20;
-}animate= {{opacity: 1, y: 0;
-}transition= {{}initial= {{}initial= {{opacity: 0, y: 20;
-}animate= {{opacity: 1, y: 0;
-}transition= {{{opacity: 0;
-}animate= {{opacity: 1;
-}exit= {{}initial= {{}initial= {{opacity: 0, y: 20;
-}animate= {{opacity: 1, y: 0;
-}transition= {{}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {{}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {/* Service Header */ ;
-}<divclassName= {`p-6 bg-gradient-to-r $ {service && service.color;
-}text-white`;
-}> <div className="flex items-center justify-between mb-4"> <span className="text-4xl"> {service && service.icon ;
-}</span> {service && service.popular && (<span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold"> POPULAR </span>)}</div> <h3 className="text-xl font-bold mb-2"> {service && service.name ;
-}</h3> <p className="text-blue-100 text-sm"> {service && service.tagline ;
-}</p> {/* Price */ ;
-}<div className="mt-4"> <span className="text-2xl font-bold"> {getServicePricing (service)}</span> </div> </div> {/* Service Content */ ;
-}<div className="p-6"> <p className="text-gray-600 mb-4 line-clamp-3"> {service && service.description ;
-}</p> {/* Price */ ;
-}<div className="mb-4"> <span className="text-3xl font-bold text-gray-900"> {typeof service && service.price === 'string' ? service && service.price : `$$ {service && service.price.monthly ;
+  {
+  opacity: 0, y: 20
+}animate= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+}initial= {
+  {
+  opacity: 0, y: 20
+}animate= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+  {
+  opacity: 0
+}animate= {
+  {
+  opacity: 1
+}exit= {
+  {
+}initial= {
+  {
+  opacity: 0, y: 20
+}animate= {
+  {
+  opacity: 1, y: 0
+}transition= {
+  {
+}className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {;
+  /* Service Header */ ;
+}<divclassName= {
+  `p-6 bg-gradient-to-r $ {
+  service && service.color 
+}text-white` 
+}> <div className="flex items-center justify-between mb-4"> <span className="text-4xl"> {;
+  service && service.icon ;
+}</span> {;
+  service && service.popular && (<span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold"> POPULAR </span>) ;
+}</div> <h3 className="text-xl font-bold mb-2"> {;
+  service && service.name ;
+}</h3> <p className="text-blue-100 text-sm"> {;
+  service && service.tagline ;
+}</p> {;
+  /* Price */ ;
+}<div className="mt-4"> <span className="text-2xl font-bold"> {;
+  getServicePricing (service) ;
+}</span> </div> </div> {;
+  /* Service Content */ ;
+}<div className="p-6"> <p className="text-gray-600 mb-4 line-clamp-3"> {;
+  service && service.description ;
+}</p> {;
+  /* Price */ ;
+}<div className="mb-4"> <span className="text-3xl font-bold text-gray-900"> {;
+  typeof service && service.price === 'string' ? service && service.price : `$$ {;
+  service && service.price.monthly ;
 }/month` ;
-}</span> <span className="text-gray-500"> {typeof service && service.price === 'string' ? (service as any) .period || '/month' : '/month' ;
-}</span> </div> {/* Features */ ;
-}<div className="mb-6"> <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4> <ul className="space-y-1"> {getServiceFeatures (service) .slice (0, 4) .map ( (feature, idx) => (<likey= {idx;
-}className="flex items-center text-sm text-gray-600"> <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /> {feature ;
-}</li>) )}</ul> </div> {/* Category Badge */ ;
-}<div className="mb-4"> <spanclassName= {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r $ {getCategoryColor (service && service.category)}text-white`;
-}> {getCategoryIcon (service && service.category)}<span className="ml-1"> {service && service.category ;
-}</span> </span> </div> {/* Service Info */ ;
-}<div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600"> <div> <span className="font-medium">Setup:</span> {getServiceSetupTime (service)}</div> <div> <span className="font-medium">Trial:</span> {getServiceTrialDays (service)}days </div> </div> {/* ROI and Popularity */ ;
-}<div className="flex items-center justify-between mb-4"> <div className="text-sm"> <span className="text-gray-500">Expected ROI:</span> <span className="text-green-600 font-semibold ml-1"> {service && service.roi.split (' ') [0] ;
-}ROI </span> </div> {service && service.popular && (<div className="flex items-center gap-1 text-yellow-600"> <Star className="w-4 h-4 fill-current" /> <span className="text-sm font-medium">Popular</span> </div>)}{/* Price and Features */ ;
-}<div className="lg:w-1/3"> <div className="text-right mb-4"> <span className="text-3xl font-bold text-gray-900"> {typeof service && service.price === 'string' ? service && service.price : `$$ {service && service.price.monthly ;
+}</span> <span className="text-gray-500"> {;
+  typeof service && service.price === 'string' ? (service as any) .period || '/month' : '/month' ;
+}</span> </div> {;
+  /* Features */ ;
+}<div className="mb-6"> <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4> <ul className="space-y-1"> {;
+  getServiceFeatures (service) .slice (0, 4) .map ( (feature, idx) => (<likey= {
+  idx 
+}className="flex items-center text-sm text-gray-600"> <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /> {;
+  feature ;
+}</li>) ) ;
+}</ul> </div> {;
+  /* Category Badge */ ;
+}<div className="mb-4"> <spanclassName= {
+  `inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r $ {
+  getCategoryColor (service && service.category) 
+}text-white` 
+}> {;
+  getCategoryIcon (service && service.category) ;
+}<span className="ml-1"> {;
+  service && service.category ;
+}</span> </span> </div> {;
+  /* Service Info */ ;
+}<div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600"> <div> <span className="font-medium">Setup:</span> {;
+  getServiceSetupTime (service) ;
+}</div> <div> <span className="font-medium">Trial:</span> {;
+  getServiceTrialDays (service) ;
+}days </div> </div> {;
+  /* ROI and Popularity */ ;
+}<div className="flex items-center justify-between mb-4"> <div className="text-sm"> <span className="text-gray-500">Expected ROI:</span> <span className="text-green-600 font-semibold ml-1"> {;
+  service && service.roi.split (' ') [0] ;
+}ROI </span> </div> {;
+  service && service.popular && (<div className="flex items-center gap-1 text-yellow-600"> <Star className="w-4 h-4 fill-current" /> <span className="text-sm font-medium">Popular</span> </div>) ;
+}{;
+  /* Price and Features */ ;
+}<div className="lg:w-1/3"> <div className="text-right mb-4"> <span className="text-3xl font-bold text-gray-900"> {;
+  typeof service && service.price === 'string' ? service && service.price : `$$ {;
+  service && service.price.monthly ;
 }/month` ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }</span> <span className="text-gray-500"> {;
   typeof service && service.price === 'string' ? (service as any) .period || '/month' : '/month' ;
 }</span> </div> <div className="mb-4"> <h4 className="font-semibold text-gray-900 mb-2">Features:</h4> <ul className="space-y-1 text-sm text-gray-600"> {;
@@ -149,251 +172,278 @@ const ComprehensiveServicesShowcase2025  = null;// All services combined const a
   opacity: 1, y: 0
 }transition= {
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+}</span> <span className="text-gray-500"> {typeof service && service.price === 'string' ? (service as any) .period || '/month' : '/month' ;
+}</span> </div> <div className="mb-4"> <h4 className="font-semibold text-gray-900 mb-2">Features:</h4> <ul className="space-y-1 text-sm text-gray-600"> {service && service.features.slice (0, 4) .map ( (feature, idx) => (<likey= {idx;
+}className="flex items-center"> <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /> {feature ;
+}</li>) )}</ul> </div> {/* Category and Action */ ;
+}<div className="flex flex-col items-end space-y-3"> <spanclassName= {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r $ {getCategoryColor (service && service.category)}text-white`;
+}> {getCategoryIcon (service && service.category)}<span className="ml-1"> {service && service.category ;
+}</span> </span> <ahref= {service && service.link;
+}target=" blank" rel="noopener noreferrer" className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center"> Learn More <ArrowRight className="w-4 h-4 ml-2" /> </a> </div> </div> </div> </div> </motion && motion.div>) )}</motion && motion.div>)}</AnimatePresence> {/* No Results */ ;
+}{filteredServices && filteredServices.length === 0 && (<div className="text-center py-12"> <div className="text-gray-400 mb-4"> <Search className="w-16 h-16 mx-auto" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3> <p className="text-gray-600">Try adjusting your search terms or category filters.</p> </div>)}</div> </section> {/* Why Choose Us */ ;
+}<section className="py-20 bg-white"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> We deliver innovative, enterprise-grade solutions that transform businesses and drive growth </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <motion&& motion.div initial= {{opacity: 0, y: 20;
+}whileInView= {{opacity: 1, y: 0;
+}transition= {{{opacity: 0, y: 20;
+}whileInView= {{opacity: 1, y: 0;
+}transition= {{{opacity: 0, y: 20;
+}whileInView= {{opacity: 1, y: 0;
+}transition= {{}export default ComprehensiveServicesShowcase;
+                  {/* CTA Button */}
+                  <div className="flex flex-col gap-2">;
+                    <a;
+ursor/automate-test-improve-and-merge-code-646c;
+  {}export default ComprehensiveServicesShowcase;
+                  {/* CTA Button */}
+                  <div className="flex flex-col gap-2">;
+                    <a;
 };export default ComprehensiveServicesShowcase;
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">;
                     <a
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-}</span> <span className="text-gray-500"> {typeof service && service.price === 'string' ? (service as any) .period || '/month' : '/month' ;
-}</span> </div> <div className="mb-4"> <h4 className="font-semibold text-gray-900 mb-2">Features:</h4> <ul className="space-y-1 text-sm text-gray-600"> {service && service.features.slice (0, 4) .map ( (feature, idx) => (<likey= {idx;
-}className="flex items-center"> <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /> {feature ;
-}</li>) )}</ul> </div> {/* Category and Action */ ;
-}<div className="flex flex-col items-end space-y-3"> <spanclassName= {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r $ {getCategoryColor (service && service.category)}text-white`;
-}> {getCategoryIcon (service && service.category)}<span className="ml-1"> {service && service.category ;
-}</span> </span> <ahref= {service && service.link;
-}target=" blank" rel="noopener noreferrer" className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center"> Learn More <ArrowRight className="w-4 h-4 ml-2" /> </a> </div> </div> </div> </div> </motion && motion.div>) )}</motion && motion.div>)}</AnimatePresence> {/* No Results */ ;
-}{filteredServices && filteredServices.length === 0 && (<div className="text-center py-12"> <div className="text-gray-400 mb-4"> <Search className="w-16 h-16 mx-auto" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3> <p className="text-gray-600">Try adjusting your search terms or category filters.</p> </div>)}</div> </section> {/* Why Choose Us */ ;
-}<section className="py-20 bg-white"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> We deliver innovative, enterprise-grade solutions that transform businesses and drive growth </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <motion&& motion.div initial= {{opacity: 0, y: 20;
-}whileInView= {{opacity: 1, y: 0;
-}transition= {{{opacity: 0, y: 20;
-}whileInView= {{opacity: 1, y: 0;
-}transition= {{{opacity: 0, y: 20;
-}whileInView= {{opacity: 1, y: 0;
-}transition= {{}export default ComprehensiveServicesShowcase;
-                  {/* CTA Button */}
-                  <div className="flex flex-col gap-2">;
-                    <a;
-ursor/automate-test-improve-and-merge-code-646c;
-  {}export default ComprehensiveServicesShowcase;
-                  {/* CTA Button */}
-                  <div className="flex flex-col gap-2">;
-                    <a;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState } from 'react';
 import SEO from './seo/Seo';
-import { Brain, Building, Circle, Monitor, Shield,Check, Phone, Mail, MapPin,TrendingUp, Zap, Globe;
- } from 'lucide-react';
-// Import our new service data;
-import { advancedAIServices2025  } from '../data/2025-advanced-ai-services';
-import { advancedCybersecurityServices2025  } from '../data/2025-advanced-cybersecurity-services';
-import { advancedITServices2025  } from '../data/2025-advanced-it-services';
-const ComprehensiveServicesShowcase2025 = () => {const [activeTab, setActiveTab]  = useState('all')// Helper function to get service pricing;
-  const getServicePricing = (service: any) => {if (service.pricing?.starter) return service.pricing.starter;
+import { motion } from 'framer-motion';
+import { 
+  Brain, Building, Circle, Monitor, Shield, 
+  Check, Phone, Mail, MapPin,
+  TrendingUp, Zap, Globe
+} from 'lucide-react';
+
+// Import our new service data
+import { advancedAIServices2025 } from '../data/2025-advanced-ai-services';
+import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
+import { advancedITServices2025 } from '../data/2025-advanced-it-services';
+
+const ComprehensiveServicesShowcase2025 = () => {
+  const [activeTab, setActiveTab] = useState('all');
+
+  // Helper function to get service pricing
+  const getServicePricing = (service: any) => {
+    if (service.pricing?.starter) return service.pricing.starter;
     if (service.price?.monthly) return `$${service.price.monthly}/month`;
     if (typeof service.price === 'string') return service.price;
     return 'Contact for pricing';
-  }// Helper function to get service features;
-  const getServiceFeatures = (service: any) => {return service.keyFeatures || service.features || [];
-  }// Helper function to get service setup time;
-  const getServiceSetupTime = (service: any) => {if (service.setupTime) return service.setupTime;
+  };
+
+  // Helper function to get service features
+  const getServiceFeatures = (service: any) => {
+    return service.keyFeatures || service.features || [];
+  };
+
+  // Helper function to get service setup time
+  const getServiceSetupTime = (service: any) => {
+    if (service.setupTime) return service.setupTime;
     if (service.pricing?.setupTime) return service.pricing.setupTime;
     if (service.price?.setupTime) return service.price.setupTime;
     return 'N/A';
-  }// Helper function to get service trial days;
-  const getServiceTrialDays = (service: any) => {if (service.trialDays) return service.trialDays;
+  };
+
+  // Helper function to get service trial days
+  const getServiceTrialDays = (service: any) => {
+    if (service.trialDays) return service.trialDays;
     if (service.pricing?.trialDays) return service.pricing.trialDays;
     if (service.price?.trialDays) return service.price.trialDays;
     return 'N/A';
-  }// All services combined;
-  const allServices = [;
-    ...advancedAIServices2025,...advancedCybersecurityServices2025,...advancedITServices2025;
-  ];const categories = [;
-    { id: 'all', name: 'All Services', icon: <Circle className="w-5 h-5" /> },{ id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> },{ id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> },{ id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> },{ id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },{ id: 'ai-services', name: 'AI Services', icon: <Monitor className="w-5 h-5" /> }
-  ];const filteredServices = activeTab === 'all';
-    ? allServices;
-    : allServices.filter(service => {if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics')if (activeTab === 'ai-automation') return service.category?.includes('AI Automation')if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure')if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS')if (activeTab === 'ai-services') return service.category?.includes('AI Services')return true;
-      })return (<div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">;
-      <SEO;
-        title="2025 Comprehensive Services Showcase - Zion Tech Group";
-        description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting-edge solutions.";
+  };
+
+  // All services combined
+  const allServices = [
+    ...advancedAIServices2025,
+    ...advancedCybersecurityServices2025,
+    ...advancedITServices2025
+  ];
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: <Circle className="w-5 h-5" /> },
+    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5" /> },
+    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5" /> },
+    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5" /> },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5" /> },
+    { id: 'ai-services', name: 'AI Services', icon: <Monitor className="w-5 h-5" /> }
+  ];
+
+  const filteredServices = activeTab === 'all' 
+    ? allServices 
+    : allServices.filter(service => {
+        if (activeTab === 'business-intelligence') return service.category?.includes('Business Intelligence') || service.category?.includes('Analytics');
+        if (activeTab === 'ai-automation') return service.category?.includes('AI Automation');
+        if (activeTab === 'it-infrastructure') return service.category?.includes('IT Infrastructure');
+        if (activeTab === 'micro-saas') return service.category?.includes('Micro SAAS');
+        if (activeTab === 'ai-services') return service.category?.includes('AI Services');
+        return true;
+      });
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <SEO 
+        title="2025 Comprehensive Services Showcase - Zion Tech Group"
+        description="Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, and AI services. Transform your business with cutting-edge solutions."
         keywords={["micro SAAS", "IT services", "AI services", "business intelligence", "automation", "cloud infrastructure"]}
-      />;
+      />
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">;
-        <div className="absolute inset-0 bg-black/20"></div>;
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">;
-          <motion.div;
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center";
-          >;
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">;
-              2025 Comprehensive Services Showcase;
-            </h1>;
-            <p className="text-xl md:text-2xl mb-8 text-blue-100">;
-              Transform your business with our innovative portfolio of micro SAAS, IT infrastructure, and AI services;
-            </p>;
-            <div className="flex flex-wrap justify-center gap-4 text-sm">;
-              <span className="bg-blue-600/20 px-4 py-2 rounded-full border border-blue-400/30">;
-                {allServices.length}+ Services;
-              </span>;
-              <span className="bg-purple-600/20 px-4 py-2 rounded-full border border-purple-400/30">;
-                AI-Powered Solutions;
-              </span>;
-              <span className="bg-green-600/20 px-4 py-2 rounded-full border border-green-400/30">;
-                Enterprise Ready;
-              </span>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              2025 Comprehensive Services Showcase
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              Transform your business with our innovative portfolio of micro SAAS, IT infrastructure, and AI services
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <span className="bg-blue-600/20 px-4 py-2 rounded-full border border-blue-400/30">
+                {allServices.length}+ Services
+              </span>
+              <span className="bg-purple-600/20 px-4 py-2 rounded-full border border-purple-400/30">
+                AI-Powered Solutions
+              </span>
+              <span className="bg-green-600/20 px-4 py-2 rounded-full border border-green-400/30">
+                Enterprise Ready
+              </span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact Banner */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">;
-            <div className="text-center md:text-left">;
-              <h3 className="text-xl font-semibold mb-2">Ready to Transform Your Business?</h3>;
-              <p className="text-blue-100">Get in touch with our experts today</p>;
-            </div>;
-            <div className="flex flex-col sm:flex-row items-center gap-4">;
-              <div className="flex items-center gap-2">;
-                <Phone className="w-4 h-4" />;
-                <span>+1 302 464 0950</span>;
-              </div>;
-              <div className="flex items-center gap-2">;
-                <Mail className="w-4 h-4" />;
-                <span>kleber@ziontechgroup.com</span>;
-              </div>;
-              <div className="flex items-center gap-2">;
-                <MapPin className="w-4 h-4" />;
-                <span>Middletown DE 19709</span>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </section>;
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="text-center md:text-left">
+              <h3 className="text-xl font-semibold mb-2">Ready to Transform Your Business?</h3>
+              <p className="text-blue-100">Get in touch with our experts today</p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-4">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Middletown DE 19709</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Category Tabs */}
-      <section className="py-12 bg-white">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="flex flex-wrap justify-center gap-2">;
-            {categories.map((category) => (<button;
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-2">
+            {categories.map((category) => (
+              <button
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${activeTab === category.id;
-                    ? 'bg-blue-600 text-white border-blue-600';
-                    : 'bg-white text-gray-700 border-gray-300 hover:border-blue-300 hover:text-blue-600';
+                className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all ${
+                  activeTab === category.id
+                    ? 'bg-blue-600 text-white border-blue-600'
+                    : 'bg-white text-gray-700 border-gray-300 hover:border-blue-300 hover:text-blue-600'
                 }`}
-              >;
+              >
                 {category.icon}
                 {category.name}
-              </button>;
+              </button>
             ))}
-          </div>;
-        </div>;
-      </section>;
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
-      <section className="py-16 bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {filteredServices.map((service, index) => (<motion.div;
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";
-              >;
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+              >
                 {/* Service Header */}
-                <div className="p-6 border-b border-gray-100">;
-                  <div className="flex items-start justify-between mb-4">;
-                    <div className="flex-1">;
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">;
+                <div className="p-6 border-b border-gray-100">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {service.name}
-                      </h3>;
-                      <p className="text-gray-600 text-sm mb-3">;
+                      </h3>
+                      <p className="text-gray-600 text-sm mb-3">
                         {service.tagline}
-                      </p>;
-                      <div className="flex items-center gap-2 text-sm text-gray-500">;
-                        <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">;
+                      </p>
+                      <div className="flex items-center gap-2 text-sm text-gray-500">
+                        <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">
                           {service.category}
-                        </span>;
-                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">;
-                          Micro SAAS;
-                        </span>;
-                      </div>;
-                    </div>;
-                  </div>;
-                </div>;
+                        </span>
+                        <span className="px-2 py-1 bg-green-100 text-green-700 rounded-full text-xs font-medium">
+                          Micro SAAS
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Service Content */}
-                <div className="p-6">;
-                  <p className="text-gray-700 mb-4 line-clamp-3">;
+                <div className="p-6">
+                  <p className="text-gray-700 mb-4 line-clamp-3">
                     {service.description}
-                  </p>;
+                  </p>
+
                   {/* Pricing */}
-                  <div className="mb-4">;
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Pricing</h4>;
-                    <div className="space-y-1">;
-                      <div className="flex justify-between text-sm">;
-                        <span className="text-gray-600">Starting at:</span>;
-                        <span className="font-semibold text-green-600">;
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Pricing</h4>
+                    <div className="space-y-1">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-600">Starting at:</span>
+                        <span className="font-semibold text-green-600">
                           {service.pricing ? service.pricing.starter : `${(service as any).price}${(service as any).period}`}
-                        </span>;
-                      </div>;
-                      <div className="text-xs text-gray-500">;
+                        </span>
+                      </div>
+                      <div className="text-xs text-gray-500">
                         {(service as any).trialDays ? `${(service as any).trialDays} days free trial` : ''} • {(service as any).setupTime ? `${(service as any).setupTime} setup` : 'Custom setup'}
-                      </div>;
-                    </div>;
-                  </div>;
+                      </div>
+                    </div>
+                  </div>
+
                   {/* Key Features */}
-                  <div className="mb-4">;
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features</h4>;
-                    <div className="grid grid-cols-2 gap-1">;
-                      {service.features?.slice(0, 6).map((feature, idx) => (<div key={idx} className="flex items-center gap-2 text-sm text-gray-600">;
-                          <Check className="w-3 h-3 text-green-500 flex-shrink-0" />;
-                          <span className="truncate">{feature}</span>;
-                        </div>;
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features</h4>
+                    <div className="grid grid-cols-2 gap-1">
+                      {service.features?.slice(0, 6).map((feature, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                          <Check className="w-3 h-3 text-green-500 flex-shrink-0" />
+                          <span className="truncate">{feature}</span>
+                        </div>
                       ))}
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
+
                   {/* Market Info */}
-                  <div className="mb-4 text-sm">;
-                    <div className="flex justify-between mb-1">;
-                      <span className="text-gray-600">Market Size:</span>;
-                      <span className="font-semibold text-gray-900">{service.marketSize}</span>;
-                    </div>;
-                    <div className="flex justify-between">;
-                      <span className="text-gray-600">Target Audience:</span>;
-                      <span className="font-semibold text-gray-900">{service.targetAudience}</span>;
-                    </div>;
-                  </div>;
+                  <div className="mb-4 text-sm">
+                    <div className="flex justify-between mb-1">
+                      <span className="text-gray-600">Market Size:</span>
+                      <span className="font-semibold text-gray-900">{service.marketSize}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-gray-600">Target Audience:</span>
+                      <span className="font-semibold text-gray-900">{service.targetAudience}</span>
+                    </div>
+                  </div>
+
                   {/* CTA Button */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <div className="flex flex-col gap-2">;
                     <a;
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}// All services combined const allServices = [ ...advancedAIMLServices;
@@ -487,24 +537,11 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
           {/* Services Display */}
           <AnimatePresence mode="wait">;
             {viewMode === 'grid' ? (<motion.div;
-<<<<<<< HEAD
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-                  <div className="flex flex-col gap-2">
-                    <a
-                      href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // All services combined const allServices = [ ...advancedAIMLServices;
-=======
                   <div className="flex flex-col gap-2">;
                     <a;
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}// All services combined const allServices = [ ...advancedAIMLServices;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
  // All services combined const allServices = [ ...advancedAIMLServices;
 // All services combined const allServices = [ ...advancedAIMLServices;
  // All services combined const allServices  = [ ...advancedAIMLServices;// All services combined const allServices  = [ ...advancedAIMLServices;...advancedCybersecurityServices;
@@ -597,47 +634,29 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
             {viewMode === 'grid' ? (<motion.div;
                   <div className="flex flex-col gap-2">
                     <a
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
                   <div className="flex flex-col gap-2">
                     <a
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+                  <div className="flex flex-col gap-2">
+                    <a
+                      href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
+
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Mail className="w-4 h-4" />
                       Get Started
                     </a>
                     <a
-<<<<<<< HEAD
-                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
-                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
-<<<<<<< HEAD
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
                     >
                       <Phone className="w-4 h-4" />
@@ -652,31 +671,20 @@ main
           {/* Services Display */}
           <AnimatePresence mode="wait">
             {viewMode === 'grid' ? (
-<<<<<<< HEAD
-              <motion.div 
-          {/* Services Display */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <AnimatePresence mode="wait">
-            {viewMode === 'grid' ? (
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <motion.div
 
-=======
           <AnimatePresence mode="wait">;
             {viewMode === 'grid' ? (<motion.div;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
           <AnimatePresence mode="wait">;
             {viewMode === 'grid' ? (<motion.div;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+              <motion.div
+
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup && ziontechgroup.com'}?subject=Inquiry about ${service && service.name}`}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">;
                       <Mail className="w-4 h-4" />;
                       Get Started;
                     </a>;
-                    <a;
+                    <a
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">;
                       <Phone className="w-4 h-4" />;
@@ -686,88 +694,19 @@ main
                 </div>;
               </motion && motion.div>;
             ))}
-          </div>;{/* Services Display */}
-          <AnimatePresence mode="wait">;
-            {viewMode === 'grid' ? (<motion&& motion.div;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
+          </div>;
+
           {/* Services Display */}
           <AnimatePresence mode="wait">;
-            {viewMode === 'grid' ? (<motion.div;
-ursor/automate-test-improve-and-merge-code-646c;
-                key="grid";
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
-                    key={service && service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">;
-                    {/* Service Header */}
-                    <div className={`p-6 bg-gradient-to-r ${service && service.color} text-white`}>;
-                      <div className="flex items-center justify-between mb-4">;
-                        <span className="text-4xl">{service && service.icon}</span>;
-                        {service && service.popular && (<span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">;
-                            POPULAR;
-                          </span>;
-                        )}
-                      {/* Price */}
-                      <div className="mt-4">;
-                        <span className="text-2xl font-bold">;
-                          {getServicePricing(service)}{/* Price */}
-                      <div className="mt - 4">;
-                        <span className="text - 2xl font - bold">;
-                          {getServicePricing (service)}
-                        </span>;
-                      </div>;
-                    </div>;
-                    {/* Service Content */}
-                    <div className="p - 6">;
-                      <p className="text - gray - 600 mb - 4 line - clamp - 3">{service.description}</p>;
-                      {/* Price */}
-                      <div className="mb - 4">;
-                        <span className="text - 3xl font - bold text - gray - 900">;
-                          {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
-                      {/* Features */}
-                      <div className="mb-6">;
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>;
-                        <ul className="space-y-1">;
-                          {getServiceFeatures(service).slice(0, 4).map((feature, idx) => (<li key={idx} className="flex items-center text-sm text-gray-600">;
-                              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                              {feature}
-                            </li>;
-                          ))}
-ursor/automate-test-improve-and-merge-code-646c;
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";
-              >;
-                {filteredServices.map((service, index) => (<motion.div;
             {viewMode === 'grid' ? (;
               <motion&& motion.div 
 
-          {/* Services Display */}
-          <AnimatePresence mode="wait">
-            {viewMode === 'grid' ? (
-              <motion.div 
-<<<<<<< HEAD
-=======
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 key="grid"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 {filteredServices && filteredServices.map((service, index) => (;
                   <motion&& motion.div
@@ -815,18 +754,8 @@ main
                               {feature}
                             </li>;
                           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               >
                 {filteredServices.map((service, index) => (
@@ -835,53 +764,53 @@ main
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";
-                  >;
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+                  >
                     {/* Service Header */}
-                    <div className={`p-6 bg-gradient-to-r ${service.color} text-white`}>;
-                      <div className="flex items-center justify-between mb-4">;
-                        <span className="text-4xl">{service.icon}</span>;
-                        {service.popular && (<span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">;
-                            POPULAR;
-                          </span>;
+                    <div className={`p-6 bg-gradient-to-r ${service.color} text-white`}>
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-4xl">{service.icon}</span>
+                        {service.popular && (
+                          <span className="bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">
+                            POPULAR
+                          </span>
                         )}
-                      </div>;
-                      <h3 className="text-xl font-bold mb-2">{service.name}</h3>;
-                      <p className="text-blue-100 text-sm">{service.tagline}</p>;
+                      </div>
+                      <h3 className="text-xl font-bold mb-2">{service.name}</h3>
+                      <p className="text-blue-100 text-sm">{service.tagline}</p>
+                      
                       {/* Price */}
-                      <div className="mt-4">;
-                        <span className="text-2xl font-bold">;
+                      <div className="mt-4">
+                        <span className="text-2xl font-bold">
                           {getServicePricing(service)}
-                        </span>;
-                      </div>;
-                    </div>;
+                        </span>
+                      </div>
+                    </div>
+
                     {/* Service Content */}
-                    <div className="p-6">;
-                      <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>;
+                    <div className="p-6">
+                      <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
+                      
                       {/* Price */}
-                      <div className="mb-4">;
-                        <span className="text-3xl font-bold text-gray-900">;
+                      <div className="mb-4">
+                        <span className="text-3xl font-bold text-gray-900">
                           {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
-                        </span>;
-                        <span className="text-gray-500">;
+                        </span>
+                        <span className="text-gray-500">
                           {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
-                        </span>;
-                      </div>;
+                        </span>
+                      </div>
+
                       {/* Features */}
-                      <div className="mb-6">;
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>;
-                        <ul className="space-y-1">;
-                          {getServiceFeatures(service).slice(0, 4).map((feature, idx) => (<li key={idx} className="flex items-center text-sm text-gray-600">;
-                              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
+                      <div className="mb-6">
+                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                        <ul className="space-y-1">
+                          {getServiceFeatures(service).slice(0, 4).map((feature, idx) => (
+                            <li key={idx} className="flex items-center text-sm text-gray-600">
+                              <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                               {feature}
-                            </li>;
+                            </li>
                           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                         </ul>;
                       </div>;
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -928,21 +857,11 @@ main
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
-<<<<<<< HEAD
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                         </ul>
                       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                         </ul>;
                       </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
                 {filteredServices && filteredServices.map((service, index) => (<motion&& motion.div;
                     key={service && service.id}
@@ -984,142 +903,29 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                               {feature}
                             </li>;
                           ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
                         </ul>
                       </div>
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
                         </ul>
                       </div>
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {/* Category Badge */}
-                      <div className="mb-4">;
-                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>;
+                      <div className="mb-4">
+                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                           {getCategoryIcon(service.category)}
-                          <span className="ml-1">{service.category}</span>;
-                        </span>;
-                      </div>;
-                      {/* Service Info */}{/* Service Info */}
-                      <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
-                        <div>;
-                          <span className="font-medium">Setup:</span> {getServiceSetupTime(service)}
-                      {/* ROI and Popularity */}
-                      <div className="flex items - center justify - between mb - 4">;
-                        <div className="text - sm">;
-                          <span className="text - gray - 500">Expected ROI:</span>;
-                          <span className="text - green - 600 font - semibold ml - 1">;
-                            {service.roi.split (' ')[0]} ROI;
-                          </span>;
-                        </div>;
-                        {service.popular && ({/* Price and Features */}
-                        <div className="lg:w - 1/3">;
-                          <div className="text - right mb - 4">;
-                            <span className="text - 3xl font - bold text - gray - 900">;
-                              {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
                           <span className="ml-1">{service.category}</span>
                         </span>
                       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-=======
-                      {/* Service Info */}
-ursor/automate-test-improve-and-merge-code-646c;
-                      {/* Service Info */}
-                      <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
-                        <div>;
-                          <span className="font-medium">Setup:</span> {getServiceSetupTime(service)}
-                        </div>;
-                        <div>;
-                          <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days;
-                        </div>;
-                      </div>;
-                      {/* ROI and Popularity */}
-                      <div className="flex items-center justify-between mb-4">;
-                        <div className="text-sm">;
-                          <span className="text-gray-500">Expected ROI:</span>;
-                          <span className="text-green-600 font-semibold ml-1">;
-                            {service.roi.split(' ')[0]} ROI;
-                          </span>;
-                        </div>;
-                        {service.popular && (<div className="flex items-center gap-1 text-yellow-600">;
-                            <Star className="w-4 h-4 fill-current" />;
-                            <span className="text-sm font-medium">Popular</span>;
-                          </div>;
-                        </div>;
-                        {/* Price and Features */}
-                        <div className="lg:w-1/3">;
-                          <div className="text-right mb-4">;
-                            <span className="text-3xl font-bold text-gray-900">;
-                              {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
-                            </span>;
-                            <span className="text-gray-500">;
-                              {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
-                            </span>;
-                          </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-                      {/* Service Info */}
-                      <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
-                        <div>;
-                          <span className="font-medium">Setup:</span> {getServiceSetupTime(service)}
-                      {/* ROI and Popularity */}
-                      <div className="flex items - center justify - between mb - 4">;
-                        <div className="text - sm">;
-                          <span className="text - gray - 500">Expected ROI:</span>;
-                          <span className="text - green - 600 font - semibold ml - 1">;
-                            {service.roi.split (' ')[0]} ROI;
-                          </span>;
-                        </div>;
-                        {service.popular && ({/* Price and Features */}
-                        <div className="lg:w - 1/3">;
-                          <div className="text - right mb - 4">;
-                            <span className="text - 3xl font - bold text - gray - 900">;
-                              {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       {/* Service Info */}
 ursor/automate-test-improve-and-merge-code-646c;
                       {/* Service Info */}
@@ -1171,24 +977,6 @@ ursor/automate-test-improve-and-merge-code-646c;
                           <div className="text - right mb - 4">;
                             <span className="text - 3xl font - bold text - gray - 900">;
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-                          <div className="mb-4">;
-                            <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>;
-                            <ul className="space-y-1 text-sm text-gray-600">;
-                              {service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className="flex items-center">;
-                                  <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
-                            </span>
-                          </div>
-                          
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
@@ -1208,21 +996,65 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                           <div className="text - right mb - 4">;
                             <span className="text - 3xl font - bold text - gray - 900">;
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
+
+                      {/* Service Info */}
+                      <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">
+                        <div>
+                          <span className="font-medium">Setup:</span> {getServiceSetupTime(service)}
+                        </div>
+                        <div>
+                          <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days
+                        </div>
+                      </div>
+
+                      {/* ROI and Popularity */}
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-sm">
+                          <span className="text-gray-500">Expected ROI:</span>
+                          <span className="text-green-600 font-semibold ml-1">
+                            {service.roi.split(' ')[0]} ROI
+                          </span>
+                        </div>
+                        {service.popular && (
+                          <div className="flex items-center gap-1 text-yellow-600">
+                            <Star className="w-4 h-4 fill-current" />
+                            <span className="text-sm font-medium">Popular</span>
+                          </div>
+                        </div>
+
+                        {/* Price and Features */}
+                        <div className="lg:w-1/3">
+                          <div className="text-right mb-4">
+                            <span className="text-3xl font-bold text-gray-900">
+                              {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
+                            </span>
+                            <span className="text-gray-500">
+                              {typeof service.price === 'string' ? (service as any).period || '/month' : '/month'}
+                            </span>
+                          </div>
+
+                      {/* Service Info */}
+                      <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
+                        <div>;
+                          <span className="font-medium">Setup:</span> {getServiceSetupTime(service)}
+                      {/* ROI and Popularity */}
+                      <div className="flex items - center justify - between mb - 4">;
+                        <div className="text - sm">;
+                          <span className="text - gray - 500">Expected ROI:</span>;
+                          <span className="text - green - 600 font - semibold ml - 1">;
+                            {service.roi.split (' ')[0]} ROI;
+                          </span>;
+                        </div>;
+                        {service.popular && (
+                        {/* Price and Features */}
+                        <div className="lg:w - 1/3">;
+                          <div className="text - right mb - 4">;
+                            <span className="text - 3xl font - bold text - gray - 900">;
+                              {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
 ursor/fix-netlify-build-and-merge-to-main-9571
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -1234,29 +1066,13 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                             </span>
                           </div>
                           
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
                               {service.features.slice(0, 4).map((feature, idx) => (
                                 <li key={idx} className="flex items-center">
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                                   {feature}
                                 </li>;
                               ))}
@@ -1265,20 +1081,8 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                             </ul>
                           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                         </div>;
                         <div>;
                           <span className="font-medium">Trial:</span> {getServiceTrialDays(service)} days;
@@ -1292,11 +1096,14 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                             {service && service.roi.split(' ')[0]} ROI;
                           </span>;
                         </div>;
-                        {service && service.popular && (<div className="flex items-center gap-1 text-yellow-600">;
+                        {service && service.popular && (;
+                          <div className="flex items-center gap-1 text-yellow-600">;
                             <Star className="w-4 h-4 fill-current" />;
                             <span className="text-sm font-medium">Popular</span>;
                           </div>;
-                        </div>;{/* Price and Features */}
+                        </div>;
+
+                        {/* Price and Features */}
                         <div className="lg:w-1/3">;
                           <div className="text-right mb-4">;
                             <span className="text-3xl font-bold text-gray-900">;
@@ -1305,41 +1112,23 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                             <span className="text-gray-500">;
                               {typeof service && service.price === 'string' ? (service as any).period || '/month' : '/month'}
                             </span>;
-                          </div>;<div className="mb-4">;
+                          </div>;
+
+                          <div className="mb-4">;
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>;
                             <ul className="space-y-1 text-sm text-gray-600">;
-                              {service && service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className="flex items-center">;
+                              {service && service.features.slice(0, 4).map((feature, idx) => (;
+                                <li key={idx} className="flex items-center">;
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;
                                   {feature}
-                                </li>;
+                                </li>
                               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                                   {feature}
                                 </li>;
                               ))}
@@ -1349,70 +1138,16 @@ ursor/automate-test-improve-and-merge-code-646c;
                             </ul>
                           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                           {/* Category and Action */}
-                          <div className="flex flex-col items-end space-y-3">;
-                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>;
+                          <div className="flex flex-col items-end space-y-3">
+                            <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                               {getCategoryIcon(service.category)}
-                              <span className="ml-1">{service.category}</span>;
-                            </span>;
-                            <a;
                               <span className="ml-1">{service.category}</span>
                             </span>
-<<<<<<< HEAD
-                            
-                            <a
-                              href={service.link}
-                              target="_blank";
-                              rel="noopener noreferrer";
-                              className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center";
-                            >;
-                              Learn More;
-                              <ArrowRight className="w-4 h-4 ml-2" />;
-                            </a>;
-                          </div>;
-                        </div>;
-                      </div>;
-                    </div>;
-                  </motion.div>;
-                ))}
-              </motion.div>;
-            )}
-          </AnimatePresence>;
-          {/* No Results */}
-          {filteredServices.length === 0 && (<div className="text-center py-12">;
-              <div className="text-gray-400 mb-4">;
-                <Search className="w-16 h-16 mx-auto" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>;
-              <p className="text-gray-600">Try adjusting your search terms or category filters.</p>;
-            </div>;
-          )}
-        </div>;
-      </section>;
-        </div>
-      </section>
 
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
                             </ul>;
                           </div>;
@@ -1421,10 +1156,12 @@ main
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service && service.category)} text-white`}>;
                               {getCategoryIcon(service && service.category)}
                               <span className="ml-1">{service && service.category}</span>;
-                            </span>;<a;
+                            </span>;
+
+                            <a
                               href={service && service.link}
-                              target="_blank";
-                              rel="noopener noreferrer";
+                              target="_blank"
+                              rel="noopener noreferrer"
                               className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center">;
                               Learn More;
                               <ArrowRight className="w-4 h-4 ml-2" />;
@@ -1436,7 +1173,8 @@ main
                           <div className="mb - 4">;
                             <h4 className="font - semibold text - gray - 900 mb - 2">Features:</h4>;
                             <ul className="space - y-1 text - sm text - gray - 600">;
-                              {service.features.slice (0, 4).map ((feature, idx) => (<li key={idx} className="flex items - center">;
+                              {service.features.slice (0, 4).map ((feature, idx) => (
+                                <li key={idx} className="flex items - center">;
                                   <Check className="w - 4 h - 4 text - green - 500 mr - 2 flex - shrink - 0" />;
                                   {feature}
                                 </li>))}
@@ -1462,7 +1200,8 @@ main
                       </div>;
                     </div>;
           {/* No Results */}
-          {filteredServices && filteredServices.length === 0 && (<div className="text-center py-12">;
+          {filteredServices && filteredServices.length === 0 && (;
+            <div className="text-center py-12">;
               <div className="text-gray-400 mb-4">;
                 <Search className="w-16 h-16 mx-auto" />;
               </div>;
@@ -1470,34 +1209,10 @@ main
               <p className="text-gray-600">Try adjusting your search terms or category filters.</p>;
             </div>;
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
                             <a;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                             
                             <a
                               href={service.link}
@@ -1532,24 +1247,9 @@ ursor/automate-test-improve-and-merge-code-646c;
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1561,16 +1261,9 @@ main
               We deliver innovative, enterprise-grade solutions that transform businesses and drive growth
             </p>
           </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
@@ -1587,16 +1280,9 @@ main
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1612,16 +1298,9 @@ main
                 Bank-grade security and compliance for mission-critical business applications
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1640,16 +1319,9 @@ main
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
@@ -1660,18 +1332,11 @@ main
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Let's discuss how our innovative services can help you achieve your business goals
           </p>
-<<<<<<< HEAD
-          
-          
-<<<<<<< HEAD
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
           
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="text-center">
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />
@@ -1689,34 +1354,14 @@ main
               <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
       {/* Why Choose Us */}
       <section className="py-20 bg-white">;
@@ -1729,109 +1374,9 @@ main
               We deliver innovative, enterprise-grade solutions that transform businesses and drive growth;
             </p>;
           </div>;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-center p-6";
-            >;
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <Brain className="w-8 h-8 text-blue-600" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Innovation</h3>;
-              <p className="text-gray-600">;
-                Cutting-edge AI and machine learning solutions that deliver real business value;
-              </p>;
-            </motion.div>;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-center p-6";
-            >;
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <Shield className="w-8 h-8 text-green-600" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>;
-              <p className="text-gray-600">;
-                Bank-grade security and compliance for mission-critical business applications;
-              </p>;
-            </motion.div>;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-            <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-center p-6";
-            >;
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <Globe className="w-8 h-8 text-purple-600" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Scale</h3>;
-              <p className="text-gray-600">;
-                Cloud-native solutions that scale globally with enterprise-grade reliability;
-              </p>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">;
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-            Ready to Transform Your Business?;
-          </h2>;
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
-            Let's discuss how our innovative services can help you achieve your business goals;
-          </p>;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">;
-            <div className="text-center">;
-              <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />;
-              <h3 className="text-lg font-semibold mb-2">Call Us</h3>;
-              <p className="text-blue-100">+1 302 464 0950</p>;
-            </div>;
-            <div className="text-center">;
-              <Mail className="w-8 h-8 mx-auto mb-4 text-blue-300" />;
-              <h3 className="text-lg font-semibold mb-2">Email Us</h3>;
-              <p className="text-blue-100">kleber@ziontechgroup.com</p>;
-            </div>;
-            <div className="text-center">;
-              <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-300" />;
-              <h3 className="text-lg font-semibold mb-2">Visit Us</h3>;
-              <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>;
-            </div>;
-          </div>;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-      {/* Why Choose Us */}
-      <section className="py-20 bg-white">;
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center mb-16">;
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-              Why Choose Zion Tech Group?;
-            </h2>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              We deliver innovative, enterprise-grade solutions that transform businesses and drive growth;
-            </p>;
-          </div>;<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            <motion&& motion.div;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.5 }}
@@ -1843,7 +1388,9 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               <p className="text-gray-600">;
                 Cutting-edge AI and machine learning solutions that deliver real business value;
               </p>;
-            </motion && motion.div>;<motion&& motion.div;
+            </motion && motion.div>;
+
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.5, delay: 0 && 0.1 }}
@@ -1855,7 +1402,9 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               <p className="text-gray-600">;
                 Bank-grade security and compliance for mission-critical business applications;
               </p>;
-            </motion && motion.div>;<motion&& motion.div;
+            </motion && motion.div>;
+
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.5, delay: 0 && 0.2 }}
@@ -1870,7 +1419,9 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
             </motion && motion.div>;
           </div>;
         </div>;
-      </section>;{/* Contact Section */}
+      </section>;
+
+      {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
           <h2 className="text-3xl md:text-4xl font-bold mb-6">;
@@ -1878,7 +1429,9 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
           </h2>;
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
             Let's discuss how our innovative services can help you achieve your business goals;
-          </p>;<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">;
+          </p>;
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">;
             <div className="text-center">;
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />;
               <h3 className="text-lg font-semibold mb-2">Call Us</h3>;
@@ -1894,21 +1447,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               <h3 className="text-lg font-semibold mb-2">Visit Us</h3>;
               <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
-          </div>;<div className="flex flex-col sm:flex-row gap-4 justify-center">;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
-=======
 ursor/automate-test-improve-and-merge-code-646c;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -1925,26 +1463,15 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2";
             >;
               <Globe className="w-5 h-5" />;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ursor/automate-test-improve-and-merge-code-646c;
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -1963,10 +1490,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               <Globe className="w-5 h-5" />;
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+          </div>;
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
@@ -1975,20 +1502,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               Start Consultation
             </a>
             <a
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               href="https://ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
             >
@@ -2003,33 +1516,18 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 };
 
 export default ComprehensiveServicesShowcase2025;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
               Visit Website;
             </a>;
           </div>;
         </div>;
       </section>;
-    </div>;
-  )}export default ComprehensiveServicesShowcase2025;
-              Visit Website;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-export default ComprehensiveServicesShowcase;</div>)}
+export default ComprehensiveServicesShowcase;
+
+    </div>);
+}
 export default ComprehensiveServicesShowcase;
 }
 }
@@ -2049,43 +1547,8 @@ export default ComprehensiveServicesShowcase;
 }
 }
 }
-}ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-              href="https://ziontechgroup.com";
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2";
-            >;
-              <Globe className="w-5 h-5" />;
-              Visit Website;
-            </a>;
-          </div>;
-        </div>;
-      </section>;
-    </div>;
-  )}export default ComprehensiveServicesShowcase2025;ursor/automate-test-improve-and-merge-code-646c;
-  duration: 0.5, delay: 0.2;
-}className="text-center p-6" > <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"> <Globe className="w-8 h-8 text-purple-600" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Scale</h3> <p className="text-gray-600"> Cloud-native solutions that scale globally with enterprise-grade reliability </p> </motion.div> </div> </div> </section> {/* Contact Section */;
-}<section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl md:text-4xl font-bold mb-6"> Ready to Transform Your Business? </h2> <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"> Let's discuss how our innovative services can help you achieve your business goals </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"> <div className="text-center"> <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Call Us</h3> <p className="text-blue-100">+1 302 464 0950</p> </div> <div className="text-center"> <Mail className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Email Us</h3> <p className="text-blue-100">kleber@ziontechgroup.com</p> </div> <div className="text-center"> <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Visit Us</h3> <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2" > <Mail className="w-5 h-5" /> Start Consultation </a> <a href="https://ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2" > <Globe className="w-5 h-5" /> Visit Website </a> </div> </div> </section> </div>)}export default ComprehensiveServicesShowcase;
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               href="https://ziontechgroup.com"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
             >
@@ -2100,33 +1563,14 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
 };
 
 export default ComprehensiveServicesShowcase2025;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   duration: 0.5, delay: 0.2
 }className="text-center p-6" > <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"> <Globe className="w-8 h-8 text-purple-600" /> </div> <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Scale</h3> <p className="text-gray-600"> Cloud-native solutions that scale globally with enterprise-grade reliability </p> </motion.div> </div> </div> </section> {
   /* Contact Section */ 
 }<section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center"> <h2 className="text-3xl md:text-4xl font-bold mb-6"> Ready to Transform Your Business? </h2> <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto"> Let's discuss how our innovative services can help you achieve your business goals </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8"> <div className="text-center"> <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Call Us</h3> <p className="text-blue-100">+1 302 464 0950</p> </div> <div className="text-center"> <Mail className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Email Us</h3> <p className="text-blue-100">kleber@ziontechgroup.com</p> </div> <div className="text-center"> <MapPin className="w-8 h-8 mx-auto mb-4 text-blue-300" /> <h3 className="text-lg font-semibold mb-2">Visit Us</h3> <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <a href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation" className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2" > <Mail className="w-5 h-5" /> Start Consultation </a> <a href="https://ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2" > <Globe className="w-5 h-5" /> Visit Website </a> </div> </div> </section> </div>) 
 };
 export default ComprehensiveServicesShowcase;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+

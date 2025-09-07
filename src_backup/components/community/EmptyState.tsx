@@ -1,34 +1,23 @@
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 import React from 'react'
 import Link from 'next/link'
 
-
-
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-=======
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
 import React from 'react',
-=======
 
 ;
 import React from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/community/EmptyState.tsx
 import Link from 'next/link';
 import { MessageSquare  } from 'lucide-react';
 import { Button  } from '@/components/ui/button';
 <<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
 import {
   Tooltip
   TooltipContent
@@ -36,7 +25,6 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 interface EmptyStateProps {
 
@@ -64,31 +52,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import Link from 'next/link';
-import { MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import {;
-  Tooltip,;
-  TooltipContent,;
-  TooltipProvider,;
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-import { Button } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-interface EmptyStateProps {;
-import React from 'react';
-import Link from 'next / link';
-import { MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/ button';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/ tooltip';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/ tooltip';
-interface EmptyStateProps {
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
 
   title: string;
   subtitle: string;
@@ -120,7 +83,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
 
 }) => {  return (
     <div className='text-center py-16'>;
-=======
 import React from 'react',import { Button   } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
 import { Tooltip;
@@ -155,7 +117,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({title;
 import { Button } from '@/components/ui/button',import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',interface EmptyStateProps  {title: string,subtitle: string,cta: string,href: string,hasSession: boolean;
 }interface EmptyStateProps  {title: string,subtitle: string,cta: string,href: string,hasSession: boolean;
 const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSession}) => {  return (<div className='text-center py-16'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/community/EmptyState.tsx
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
         <MessageSquare className='h-10 w-10 text-zion-purple' />;
       </div>;
@@ -172,7 +133,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({title,subtitle,cta,href,hasSessi
             ) : (;
               <Button disabled>{cta}</Button>;
 
-=======
   hasSession: boolean
 
 const EmptyState: React.FC<EmptyStateProps> = ({
@@ -190,17 +150,17 @@ const EmptyState: React.FC<EmptyStateProps> = ({
       <p className='text-muted-foreground mb-6'>{subtitle}</p>      <TooltipProvider>      <h2 className="text-xl font-medium mb-2">{title}</h2>
 import React from 'react';
 import Link from 'next/link';
+
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
 interface EmptyStateProps {;
-  title: string,;
-  subtitle: string,;
-  cta: string,;
-  href: string,;
-  hasSession: boolean;
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
+
+  title: string;
+
+  subtitle: string;
+  cta: string;
+  href: string;
 
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
@@ -210,14 +170,10 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>
 
-
       <p className="text-muted-foreground mb-6">{subtitle}</p>
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
   hasSession: boolean
       <p className='text-muted-foreground mb-6'>{subtitle}</p>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
       <TooltipProvider>
         <Tooltip>
           <TooltipTrigger asChild>
@@ -228,14 +184,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ) : (
               <Button disabled>{cta}</Button>
             )}
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
-          </TooltipTrigger>;
-          {!hasSession && <TooltipContent>Login required</TooltipContent>}
+
+        </Tooltip>;
+      </TooltipProvider>;
+    </div>;
+  );
 
 export default EmptyState;
 
 };
-
 
 export default EmptyState;
 
@@ -248,7 +205,6 @@ const EmptyState: React.FC < EmptyStateProps> = ({
   has_session,
 }) => {  return (
     <div className='text - center py - 16'>;
-=======
             ) : (<Button disabled>{cta}</Button>;const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {return (<div className="text-center py-16">;
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex">;
         <MessageSquare className="h-10 w-10 text-zion-purple" />;
@@ -270,7 +226,6 @@ const EmptyState: React.FC < EmptyStateProps> = ({
     </div>;
   )export default EmptyState;}export default EmptyState;has_session: boolean;
 const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_session}) => {  return (<div className='text - center py - 16'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/community/EmptyState.tsx
       <div className='bg - zion - blue / 30 p - 6 rounded - full mb - 6 inline - flex'>;
         <MessageSquare className='h - 10 w - 10 text - zion - purple' />;
       </div>;
@@ -289,11 +244,6 @@ const EmptyState: React.FC < EmptyStateProps> = ({title,subtitle,cta,href,has_se
       </TooltipProvider>;
     </div>)}
 export default EmptyState;
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
-},;
-export default EmptyState;
-
-=======
 
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
@@ -306,20 +256,17 @@ export default EmptyState;
     </div>;
   );
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
+
+},;
+export default EmptyState;
+
         </Tooltip>
       </TooltipProvider>
     </div>
 );
 };
-export default EmptyState;
-<<<<<<< HEAD:src_backup/components/community/EmptyState.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 },export default EmptyState;</Tooltip>;
       </TooltipProvider>;
     </div>;
 )}export default EmptyState;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/community/EmptyState.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/community/EmptyState.tsx
+export default EmptyState;

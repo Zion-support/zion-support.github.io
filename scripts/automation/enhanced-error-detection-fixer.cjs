@@ -57,17 +57,11 @@ console.log(' Starting enhanced error detection and fixing automation...')
     execSync('npm install --force', { "stdio"})
     return { "type": 'peer-dependency', "action"}
     return { "type": 'peer-dependency', "action"}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     console.error(' Enhanced error detection "failed")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     console.error(' Enhanced error detection "failed")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     console.error(' Enhanced error detection "failed")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    console.error(' Enhanced error detection "failed")
+    console.error(' Enhanced error detection "failed")
+
+

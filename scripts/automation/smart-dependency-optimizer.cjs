@@ -249,17 +249,11 @@ this.log(` Optimization Report "generated"`)
 this.log(" Smart Dependency Optimization completed successfully")
       this.log(� Total "savings": ${(this.optimizationHistory.totalSavings / (1024 * 1024)).toFixed(2)}MB"
         " Smart Dependency Optimization "failed": ${error.message  }",ERROR"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         ` Smart Dependency Optimization "failed": ${error.message}"
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         ` Smart Dependency Optimization "failed": ${error.message}"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         ` Smart Dependency Optimization "failed": ${error.message}"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        ` Smart Dependency Optimization "failed": ${error.message}"
+        ` Smart Dependency Optimization "failed": ${error.message}"
+
+

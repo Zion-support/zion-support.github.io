@@ -1,41 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 import { ServiceVariant } from '../types/service-variants';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 ;
 import { ServiceVariant  } from '../types/service-variants';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -242,17 +214,6 @@ import { ServiceVariant  } from '../types/service-variants';
     address: string;
     website?: string;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 ;
 const contact_info = {
@@ -276,278 +237,79 @@ export const marketValidatedServices: MarketValidatedService[] = [;
       'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'RAG over your docs with hybrid search',
       'Guardrails: PII / PHI redaction, jailbreak detection',
       'Human handoff + conversation analytics',
       'Slack / Teams / Widget channels'
     ],
     category: 'AI & Assistants',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 1200,
     trial_days: 14,
     setup_time: '30 minutes',
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Policy and toxicity checks',
       'Latency and cost KPIs',
       'Prompt / version diff and alerts'
     ],
     category: 'AI & MLOps',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 600,
     trial_days: 14,
     setup_time: '1 hour',
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Chunking strategies + citations',
       'Toolformer - style agents',
       'Eval suite and drift monitoring'
     ],
     category: 'AI & Search',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 900,
     trial_days: 14,
     setup_time: '2 hours',
     contact_info
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'OWASP Top 10 tests',
       'CI gate',
       'Fix guidance'
     ],
     category: 'Enterprise IT - Security',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
     link: 'https://ziontechgroup.com / api - security - scanner',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     variant: 'cyberpunk',
     rating: 4 && 4.6,
     customers: 750,
@@ -556,73 +318,22 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'SLOs & error budgets',
       'Alerting',
       'Dashboards'
     ],
     category: 'Enterprise IT - Observability',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
     link: 'https://ziontechgroup.com / api - observability',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     variant: 'holographic',
     rating: 4 && 4.6,
     customers: 640,
@@ -630,17 +341,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '40 minutes',
     contact_info
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // Cloud and Infra;
   {
@@ -653,60 +353,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Auto rightsizing',
       'Idle cleanup',
       'Spot orchestration',
       'Anomaly detection'
     ],
     category: 'Enterprise IT - FinOps',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
     link: 'https://ziontechgroup.com / cloud - cost - optimizer',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     variant: 'quantum',
     rating: 4 && 4.6,
     customers: 820,
@@ -715,17 +378,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'database - performance - monitor',
     name: 'Database Performance Monitor',
@@ -736,77 +388,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Postgres / MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Slow query ranking',
       'AI index advice',
       'Pool tuning',
       'SLA / SLO dashboards'
     ],
     category: 'Enterprise IT - Data',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 560,
     trial_days: 14,
     setup_time: '45 minutes',
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'managed - postgres - ha',
     name: 'Managed Postgres HA',
@@ -845,77 +446,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Global synthetic checks',
       'Error budgets & burn rates',
       'On - call & escalations',
       'Incident runbooks'
     ],
     category: 'Enterprise IT - SRE',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 1100,
     trial_days: 14,
     setup_time: '25 minutes',
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'tls - certificate - monitor',
     name: 'TLS Certificate Monitor',
@@ -926,60 +476,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Monitor certificates across domains and environments, get renewal reminders and failure alerts.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Expiry alerts',
       'Issuer checks',
       'Auto - renew validation',
       'Inventory export'
     ],
     category: 'Enterprise IT - Security',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
     link: 'https://ziontechgroup.com / tls - certificate - monitor',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     variant: 'default',
     rating: 4 && 4.5,
     customers: 2200,
@@ -988,17 +501,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'domain - dns - monitor',
     name: 'Domain & DNS Monitor',
@@ -1009,60 +511,23 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Change detection',
       'Misconfig alerts',
       'TTL insights',
       'Export & audit'
     ],
     category: 'Enterprise IT - Networking',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
     link: 'https://ziontechgroup.com / domain - dns - monitor',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     variant: 'default',
     rating: 4 && 4.4,
     customers: 980,
@@ -1070,89 +535,24 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     setup_time: '15 minutes',
     contact_info
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Watermarks',
       'Async webhooks'
     ],
     category: 'Micro SaaS',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 1300,
     trial_days: 7,
     setup_time: '10 minutes',
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'browser - performance - monitor',
     name: 'Browser Performance Monitor',
@@ -1163,77 +563,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Collect real - user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'RUM collection',
       'CWV dashboards',
       'Waterfall analysis',
       'Alerts & webhooks'
     ],
     category: 'Micro SaaS',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 760,
     trial_days: 14,
     setup_time: '20 minutes',
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'feature - flags - edge',
     name: 'Feature Flags at the Edge',
@@ -1244,77 +593,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Ship features safely with edge - evaluated flags, user targeting, and experimentation without latency.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Edge evaluation',
       'Targeting & segments',
       'Experiments',
       'SDKs & audit'
     ],
     category: 'Micro SaaS',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 430,
     trial_days: 14,
     setup_time: '30 minutes',
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'serverless - cron - manager',
     name: 'Serverless Cron Manager',
@@ -1353,77 +651,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Control mapping',
       'Evidence collection',
       'Change tracking',
       'Export & auditor access'
     ],
     category: 'Enterprise IT - Compliance',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 310,
     trial_days: 7,
     setup_time: '1 day',
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'vendor - risk - automation',
     name: 'Vendor Risk Automation',
@@ -1462,81 +709,26 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Capture & inspect',
       'Replay with backoff',
       'Signature verification',
       'Forwarding rules'
     ],
     category: 'Micro SaaS',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     customers: 1650,
     trial_days: 14,
     setup_time: '10 minutes',
     contact_info
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Managed vector DB'
       'Ingestion pipelines'
       'Metadata filters'
@@ -1553,14 +745,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];import { ServiceVariant  } from "../types/service-variants";
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     id: 'audit-log-vault'
     name: 'Audit Log Vault'
     tagline: 'Tamper-evident logs with retention and export'
@@ -1627,17 +812,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo,
   },
 ];
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-export interface MarketValidatedService {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'audit - log - vault',
     name: 'Audit Log Vault',
@@ -1690,25 +864,12 @@ export interface MarketValidatedService {
 
   // Search and Knowledge;
   {
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 export interface MarketValidatedService {
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 export interface MarketValidatedService {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Deploy a production - grade vector database and APIs',
@@ -1718,25 +879,8 @@ export interface MarketValidatedService {
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
     features: [;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
       'WORM retention',
       'Export APIs',
@@ -1754,51 +898,19 @@ export interface MarketValidatedService {
     setup_time: '1 hour',
     contact_info
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
       'Access controls'
     ],
     category: 'AI & Search',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup.com / vector - search - starter',
 
@@ -1812,20 +924,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export interface MarketValidatedService {
 export interface MarketValidatedService {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 export interface MarketValidatedService {
 export interface MarketValidatedService {;
@@ -1833,13 +934,9 @@ export interface MarketValidatedService {;
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export interface MarketValidatedService {
 export interface MarketValidatedService {;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 export interface MarketValidatedService {
 
@@ -1847,12 +944,9 @@ export interface MarketValidatedService {;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 export interface MarketValidatedService {
 export interface MarketValidatedService {;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 	id: string;
 	name: string;
 	tagline: string;
@@ -1865,68 +959,76 @@ export interface MarketValidatedService {;
 	variant?: ServiceVariant;
 	rating?: number;
 	customers?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-	trialDays?: number;setupTime?: string;}}
 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}}
-=======
 	setupTime?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
   mobile: "+1 302 464 0950",
 	email: "kleber@ziontechgroup && ziontechgroup.com",
 	address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup && ziontechgroup.com";,
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 	setupTime?: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 	trialDays?: number;
 }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import { ServiceVariant } from '../types/service-variants';
+export interface MarketValidatedService {
+	id: string,
+	name: string,
+	tagline: string,
+	price: string,
+	period: string,
+	description: string,
+	features: string[],
+	category: string,
+	link: string,
+	variant?: ServiceVariant,
+	rating?: number,
+	customers?: number,
+	trialDays?: number,
+	setupTime?: string,
 	contactInfo: {
-		mobile: string;
-		email: string;
-		address: string;
-		website?: string;
-	};
+		mobile: string,
+		email: string,
+		address: string,
+		website?: string
+	}
+}
 
-<<<<<<< HEAD
+const contactInfo = $2;
+	email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+},
 
+export const marketValidatedServices: MarketValidatedService[] = [
+	// AI and Assistants
+	{
+		id: 'ai-assistant-pro',
+		name: 'AI Assistant Pro',
+		tagline: 'Branded copilot with RAG, guardrails, and analytics',
+		price: '$149',
+		period: '/month',
+		description: 'Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.',
+		features: [
+			'RAG over your docs with hybrid searchGuardrails: PII/PHI redaction, jailbreak detectionHuman handoff + conversation analyticsSlack/Teams/Widget channels'],
+		category: 'AI & Assistants',
+		link: 'https://ziontechgroup.com/ai-assistant',
+		variant: 'ai-futuristic',
+		rating: 4.8,
+		customers: 1200,
+		trialDays: 14,
+		setupTime: '30 minutes',
 		contactInfo
-=======
-=======
 	trialDays?: number;setupTime?: string;}}
 }}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 	setupTime?: string;mobile: "+1 302 464 0950",email: "kleber@ziontechgroup && ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup && ziontechgroup.com";,contactInfo: {mobile: string;
 		email: string;
 		address: string;
 		website?: string;
 	}}
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const marketValidatedServices: MarketValidatedService[] = [;
 	// AI and Assistants;
 	{id: "ai-assistant-pro",name: "AI Assistant Pro",tagline: "Branded copilot with RAG, guardrails, and analytics",price: "$149",period: "/month",description: "Deploy a secure, branded AI assistant that answers from your docs with citations, observes costs and latency, and hands off to humans when needed.",features[ "RAG over your docs with hybrid search","Guardrails: PII/PHI redaction, jailbreak detection","Human handoff + conversation analytics","Slack/Teams/Widget channels";
@@ -2028,48 +1130,381 @@ export const marketValidatedServices: MarketValidatedService[] = [;
   trial_days: 14;
   setup_time: '2 hours';
   contact_info;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }];;contactInfo;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 	}
 ];ursor/fix-website-loading-errors-and-merge-6662;
 const contactInfo  = null;
 	trialDays?: number;
 }}
-=======
 }];
 ;
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-const contactInfo = null;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   mobile: "+1 302 464 0950",
 	email: "kleber@ziontechgroup && ziontechgroup.com",
 	address: "364 E Main St STE 1008 Middletown DE 19709";
   website: "https://ziontechgroup && ziontechgroup.com";,
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+	},
+	{
+		id: 'ai-evals-observability',
+		name: 'AI Evals & Observability',
+		tagline: 'Regression testing, safety checks, and live metrics for LLM features',
+		price: '$99',
+		period: '/month',
+		description: 'Ship reliable LLM apps with dataset management, prompt diffing, red-teaming, and production KPIs for quality, latency, and costs.',
+		features: [
+			'Eval datasets/versioningPolicy and toxicity checksLatency and cost KPIsPrompt/version diff and alerts'],
+		category: 'AI & MLOps',
+		link: 'https://ziontechgroup.com/ai-evals',
+		variant: 'quantum-holographic',
+		rating: 4.7,
+		customers: 600,
+		trialDays: 14,
+		setupTime: '1 hour',
+		contactInfo
+	},
+	{
+		id: 'agentic-rag-platform',
+		name: 'Agentic RAG Platform',
+		tagline: 'Production RAG with hybrid search, chunking, tools, and evals',
+		price: '$179',
+		period: '/month',
+		description: 'Ingest and index your knowledge with hybrid search + reranking, enable tool-using agents, and validate responses with reference checks and citations.',
+		features: [
+			'Hybrid vector+BM25 + rerankerChunking strategies + citationsToolformer-style agentsEval suite and drift monitoring'],
+		category: 'AI & Search',
+		link: 'https://ziontechgroup.com/agentic-rag',
+		variant: 'quantum-matrix',
+		rating: 4.7,
+		customers: 900,
+		trialDays: 14,
+		setupTime: '2 hours',
+		contactInfo
+	},
+
+	// Security and APIs
+	{
+		id: 'api-security-scanner',
+		name: 'API Security Scanner',
+		tagline: 'OpenAPI/GraphQL scanning, auth/Z checks, dependency audit',
+		price: '$59',
+		period: '/month',
+		description: 'Automatically scan APIs for OWASP issues, auth/z misconfigurations, and dependency CVEs with CI gating and fix guidance.',
+		features: ['Auth/Z misconfig checksOWASP Top 10 testsCI gateFix guidance'],
+		category: 'Enterprise IT - Security',
+		link: 'https://ziontechgroup.com/api-security-scanner',
+		variant: 'cyberpunk',
+		rating: 4.6,
+		customers: 750,
+		trialDays: 14,
+		setupTime: '20 minutes',
+		contactInfo
+	},
+	{
+		id: 'api-observability',
+		name: 'API Observability & SLA Guard',
+		tagline: 'OTel tracing, SLOs, and error budgets for services',
+		price: '$69',
+		period: '/month',
+		description: 'Collect traces/metrics/logs via OpenTelemetry, define SLOs and error budgets, and alert on burn rates with dashboards.',
+		features: ['OTel traces/metrics/logsSLOs & error budgetsAlertingDashboards'],
+		category: 'Enterprise IT - Observability',
+		link: 'https://ziontechgroup.com/api-observability',
+		variant: 'holographic',
+		rating: 4.6,
+		customers: 640,
+		trialDays: 14,
+		setupTime: '40 minutes',
+		contactInfo
+	},
+
+	// Cloud and Infra
+	{
+		id: 'cloud-cost-optimizer-pro',
+		name: 'Cloud Cost Optimizer Pro',
+		tagline: 'Rightsizing, lifecycle, anomaly detection, and k8s bin-packing',
+		price: '$99',
+		period: '/month',
+		description: 'Continuously optimize cloud spend with instance rightsizing, lifecycle policies, anomaly alerts, and container scheduling insights.',
+		features: ['Auto rightsizingIdle cleanupSpot orchestrationAnomaly detection'],
+		category: 'Enterprise IT - FinOps',
+		link: 'https://ziontechgroup.com/cloud-cost-optimizer',
+		variant: 'quantum',
+		rating: 4.6,
+		customers: 820,
+		trialDays: 14,
+		setupTime: '1 hour',
+		contactInfo
+	},
+	{
+		id: 'database-performance-monitor',
+		name: 'Database Performance Monitor',
+		tagline: 'Slow query capture, AI index suggestions, capacity forecasting',
+		price: '$79',
+		period: '/month',
+		description: 'Postgres/MySQL performance insights with slow query ranking, AI tuning suggestions, pool sizing, and SLO dashboards.',
+		features: ['Slow query rankingAI index advicePool tuningSLA/SLO dashboards'],
+		category: 'Enterprise IT - Data',
+		link: 'https://ziontechgroup.com/database-performance-monitor',
+		variant: 'neural-quantum',
+		rating: 4.7,
+		customers: 560,
+		trialDays: 14,
+		setupTime: '45 minutes',
+		contactInfo
+	},
+	{
+		id: 'managed-postgres-ha',
+		name: 'Managed Postgres HA',
+		tagline: 'Highly-available Postgres with backups, failover, and guardrails',
+		price: '$499',
+		period: '/month',
+		description: 'Production-ready Postgres with managed backups, automated failover, performance tuning, and compliance guardrails.',
+		features: ['Automated backupsFailover & replicationPerformance tuningSLA & support'],
+		category: 'Enterprise IT - Data',
+		link: 'https://ziontechgroup.com/managed-postgres-ha',
+		variant: 'holographic-advanced',
+		rating: 4.8,
+		customers: 240,
+		trialDays: 7,
+		setupTime: '1 day',
+		contactInfo
+	},
+
+	// Reliability & Monitoring
+	{
+		id: 'uptime-slo-monitor',
+		name: 'Uptime & SLO Monitor',
+		tagline: 'Synthetic checks, error budgets, and incident automation',
+		price: '$39',
+		period: '/month',
+		description: 'Track uptime, latency, and error budgets with synthetic monitors, alerting, and incident automation.',
+		features: ['Global synthetic checksError budgets & burn ratesOn-call & escalationsIncident runbooks'],
+		category: 'Enterprise IT - SRE',
+		link: 'https://ziontechgroup.com/uptime-slo-monitor',
+		variant: 'quantum-cyberpunk',
+		rating: 4.5,
+		customers: 1100,
+		trialDays: 14,
+		setupTime: '25 minutes',
+		contactInfo
+	},
+	{
+		id: 'tls-certificate-monitor',
+		name: 'TLS Certificate Monitor',
+		tagline: 'Auto-renewal checks and expiry alerts across your fleet',
+		price: '$19',
+		period: '/month',
+		description: 'Monitor certificates across domains and environments, get renewal reminders and failure alerts.',
+		features: ['Expiry alertsIssuer checksAuto-renew validationInventory export'],
+		category: 'Enterprise IT - Security',
+		link: 'https://ziontechgroup.com/tls-certificate-monitor',
+		variant: 'default',
+		rating: 4.5,
+		customers: 2200,
+		trialDays: 14,
+		setupTime: '10 minutes',
+		contactInfo
+	},
+	{
+		id: 'domain-dns-monitor',
+		name: 'Domain & DNS Monitor',
+		tagline: 'Track DNS changes, TTLs, and misconfigurations',
+		price: '$29',
+		period: '/month',
+		description: 'Monitor DNS records and domain settings for unexpected changes and misconfigurations with alerts.',
+		features: ['Change detectionMisconfig alertsTTL insightsExport & audit'],
+		category: 'Enterprise IT - Networking',
+		link: 'https://ziontechgroup.com/domain-dns-monitor',
+		variant: 'default',
+		rating: 4.4,
+		customers: 980,
+		trialDays: 14,
+		setupTime: '15 minutes',
+		contactInfo
+	},
+
+	// Dev & Productivity
+	{
+		id: 'pdf-render-api',
+		name: 'PDF Render API',
+		tagline: 'High-fidelity serverless PDF rendering and watermarking',
+		price: '$49',
+		period: '/month',
+		description: 'Generate pixel-perfect PDFs from HTML/Markdown with headers, footers, and watermarking using a simple API.',
+		features: ['HTML/Markdown to PDFHeaders/footersWatermarksAsync webhooks'],
+		category: 'Micro SaaS',
+		link: 'https://ziontechgroup.com/pdf-render-api',
+		variant: 'holographic-matrix',
+		rating: 4.6,
+		customers: 1300,
+		trialDays: 7,
+		setupTime: '10 minutes',
+		contactInfo
+	},
+	{
+		id: 'browser-performance-monitor',
+		name: 'Browser Performance Monitor',
+		tagline: 'RUM metrics, Core Web Vitals, and UX waterfall analysis',
+		price: '$39',
+		period: '/month',
+		description: 'Collect real-user metrics, analyze CWV, and improve UX with actionable waterfalls and alerting.',
+		features: ['RUM collectionCWV dashboardsWaterfall analysisAlerts & webhooks'],
+		category: 'Micro SaaS',
+		link: 'https://ziontechgroup.com/browser-performance-monitor',
+		variant: 'quantum-holographic',
+		rating: 4.5,
+		customers: 760,
+		trialDays: 14,
+		setupTime: '20 minutes',
+		contactInfo
+	},
+	{
+		id: 'feature-flags-edge',
+		name: 'Feature Flags at the Edge',
+		tagline: 'Targeting, rollouts, and experiments at CDN edge',
+		price: '$69',
+		period: '/month',
+		description: 'Ship features safely with edge-evaluated flags, user targeting, and experimentation without latency.',
+		features: ['Edge evaluationTargeting & segmentsExperimentsSDKs & audit'],
+		category: 'Micro SaaS',
+		link: 'https://ziontechgroup.com/feature-flags-edge',
+		variant: 'quantum-holographic',
+		rating: 4.5,
+		customers: 430,
+		trialDays: 14,
+		setupTime: '30 minutes',
+		contactInfo
+	},
+	{
+		id: 'serverless-cron-manager',
+		name: 'Serverless Cron Manager',
+		tagline: 'Reliable scheduled jobs with retries and observability',
+		price: '$29',
+		period: '/month',
+		description: 'Schedule and monitor serverless jobs with retries, DLQs, and alerting across multiple clouds.',
+		features: ['Cron & schedulesRetries & DLQsLogs & tracesAlerts & webhooks'],
+		category: 'Micro SaaS',
+		link: 'https://ziontechgroup.com/serverless-cron-manager',
+		variant: 'default',
+		rating: 4.4,
+		customers: 1150,
+		trialDays: 14,
+		setupTime: '15 minutes',
+		contactInfo
+	},
+
+	// Compliance & Risk
+	{
+		id: 'soc2-evidence-automation',
+		name: 'SOC 2 Evidence Automation',
+		tagline: 'Collect and map controls with change tracking',
+		price: '$149',
+		period: '/month',
+		description: 'Automate evidence collection and control mapping with integrations to cloud, code, and ticketing systems.',
+		features: ['Control mappingEvidence collectionChange trackingExport & auditor access'],
+		category: 'Enterprise IT - Compliance',
+		link: 'https://ziontechgroup.com/soc2-evidence-automation',
+		variant: 'holographic-neural',
+		rating: 4.6,
+		customers: 310,
+		trialDays: 7,
+		setupTime: '1 day',
+		contactInfo
+	},
+	{
+		id: 'vendor-risk-automation',
+		name: 'Vendor Risk Automation',
+		tagline: 'Automate VRM workflows, DDQs, and risk scoring',
+		price: '$99',
+		period: '/month',
+		description: 'Streamline vendor onboarding, questionnaires, and continuous monitoring with automated risk scoring.',
+		features: ['DDQs and questionnairesRisk scoringContinuous monitoringDashboards & export'],
+		category: 'Enterprise IT - Compliance',
+		link: 'https://ziontechgroup.com/vendor-risk-automation',
+		variant: 'quantum-entanglement',
+		rating: 4.5,
+		customers: 520,
+		trialDays: 14,
+		setupTime: '2 hours',
+		contactInfo
+	},
+
+	// Developer and Ops Utilities
+	{
+		id: 'webhook-relay-replay',
+		name: 'Webhook Relay & Replay',
+		tagline: 'Capture, inspect, and replay webhooks reliably',
+		price: '$19',
+		period: '/month',
+		description: 'Never lose a webhook again. Capture payloads, inspect headers, and replay with backoff and signatures.',
+		features: ['Capture & inspectReplay with backoffSignature verificationForwarding rules'],
+		category: 'Micro SaaS',
+		link: 'https://ziontechgroup.com/webhook-relay-replay',
+		variant: 'cyberpunk-holographic',
+		rating: 4.5,
+		customers: 1650,
+		trialDays: 14,
+		setupTime: '10 minutes',
+		contactInfo
+	},
+	{
+		id: 'audit-log-vault',
+		name: 'Audit Log Vault',
+		tagline: 'Tamper-evident logs with retention and export',
+		price: '$39',
+		period: '/month',
+		description: 'Centralize audit logs with WORM retention, export APIs, and fine-grained access for investigations.',
+		features: ['WORM retentionExport APIsFine-grained accessTamper evidence'],
+		category: 'Enterprise IT - Security',
+		link: 'https://ziontechgroup.com/audit-log-vault',
+		variant: 'quantum-neural',
+		rating: 4.5,
+		customers: 420,
+		trialDays: 14,
+		setupTime: '30 minutes',
+		contactInfo
+	},
+
+	// AI Channels
+	{
+		id: 'ai-phone-agent',
+		name: 'AI Phone Agent',
+		tagline: 'Voice IVR and call handling with CRM handoff',
+		price: '$129',
+		period: '/month',
+		description: 'Handle inbound calls with a natural AI voice, route to agents, and sync transcripts with your CRM.',
+		features: ['Natural TTS/ASRRouting & handoffCRM syncAnalytics'],
+		category: 'AI & Assistants',
+		link: 'https://ziontechgroup.com/ai-phone-agent',
+		variant: 'quantum-holographic-advanced',
+		rating: 4.6,
+		customers: 380,
+		trialDays: 7,
+		setupTime: '1 hour',
+		contactInfo
+	},
+
+	// Search and Knowledge
+	{
+		id: 'vector-search-starter',
+		name: 'Vector Search Starter',
+		tagline: 'Deploy a production-grade vector database and APIs',
+		price: '$89',
+		period: '/month',
+		description: 'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
+		features: ['Managed vector DBIngestion pipelinesMetadata filtersAccess controls'],
+		category: 'AI & Search',
+		link: 'https://ziontechgroup.com/vector-search-starter',
+		variant: 'quantum',
+		rating: 4.6,
+		customers: 410,
+		trialDays: 14,
+		setupTime: '2 hours',
+		contactInfo
+	}],
+

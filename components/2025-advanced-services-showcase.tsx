@@ -1,58 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
   website: 'https://ziontechgroup.com';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
   website: 'https://ziontechgroup.com'
 }
-const allServices = [;
-  ...advancedEnterpriseServices2025;
-  ...innovativeMicroSaasExpansion2025;
-  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
+const allServices = [
+  ...advancedEnterpriseServices2025
+  ...innovativeMicroSaasExpansion2025
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
 }
-const allServices = [;
+const allServices = [
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
-  ...cuttingEdgeITInfrastructureServices;
-    description: 'Complete portfolio of advanced services';
+  ...cuttingEdgeITInfrastructureServices
+    description: 'Complete portfolio of advanced services'
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {id: 'enterprise';
     name: 'Enterprise Solutions';
     icon: <Building className="w-6 h-6" />;
@@ -78,13 +44,6 @@ import React, { useState, useEffect } from 'react',
     description: 'Advanced AI and ML platforms';
   }
   {import React, { useState, useEffect } from 'react',import SEO from '../components/SEO';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
@@ -190,106 +149,52 @@ const allServices = [;
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
 const cuttingEdgeITInfrastructureServices = [
   {
-    id: "infra-1",
-    title: "Cloud Infrastructure",
-    description: "Scalable cloud infrastructure solutions",
-    category: "infrastructure",
-    price: "$5,000/month",
-    rating: 4.8,
-    tags: ["Cloud", "Infrastructure", "DevOps"],
-    color: "from-orange-500 to-red-500",
-    icon: "☁️"}];
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com'};
-
-const allServices = [
-  ...advancedEnterpriseServices2025,
-  ...innovativeMicroSaasExpansion2025,
-  ...cuttingEdgeITInfrastructureServices];
-
-const categories = [
+    id: 'enterprise'
+    name: 'Enterprise Solutions'
+    icon: <Building className="w-6 h-6" />
+    color: 'from-blue-500 to-purple-500'
+    description: 'Enterprise-grade AI and IT solutions'
+  }
   {
-    id: 'all',
-    name: 'All Services',
-icon: <Grid className='w-6 h-6' />,
-    color: 'from-gray-500 to-slate-500',
-<<<<<<< HEAD
-    description: 'Complete portfolio of advanced services',
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     description: 'Complete portfolio of advanced services'},
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+    id: 'micro-saas'
+    name: 'Micro SAAS'
+    icon: <Globe className="w-6 h-6" />
+    color: 'from-green-500 to-emerald-500'
+    description: 'Innovative micro SAAS solutions'
+  }
   {
-    id: 'enterprise',
-    name: 'Enterprise Solutions',
-    icon: <Building className='w-6 h-6' />,
-    color: 'from-blue-500 to-purple-500',
-    description: 'Enterprise-grade AI and IT solutions'},
+    id: 'infrastructure'
+    name: 'IT Infrastructure'
+    icon: <Shield className="w-6 h-6" />
+    color: 'from-orange-500 to-red-500'
+    description: 'Cutting-edge infrastructure services'
+  }
   {
-    id: 'micro-saas',
-    name: 'Micro SAAS',
-    icon: <Globe className='w-6 h-6' />,
-    color: 'from-green-500 to-emerald-500',
-    description: 'Innovative micro SAAS solutions'},
+    id: 'ai-ml'
+    name: 'AI & Machine Learning'
+    icon: <Brain className="w-6 h-6" />
+    color: 'from-purple-500 to-pink-500'
+    description: 'Advanced AI and ML platforms'
+  }
   {
-    id: 'infrastructure',
-    name: 'IT Infrastructure',
-    icon: <Shield className='w-6 h-6' />,
-    color: 'from-orange-500 to-red-500',
-    description: 'Cutting-edge infrastructure services'},
-  {
-    id: 'ai-ml',
-    name: 'AI & Machine Learning',
-    icon: <Brain className='w-6 h-6' />,
-    color: 'from-purple-500 to-pink-500',
-    description: 'Advanced AI and ML platforms'},
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
     id: 'quantum'
     name: 'Quantum Computing'
     icon: <Atom className="w-6 h-6" />
     color: 'from-violet-500 to-indigo-500'
     description: 'Quantum computing solutions'
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from 'react';
 import SEO from './seo/Seo';
 import { motion, AnimatePresence } from 'framer-motion';
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+import React, { useState, useEffect } from 'react';
+import SEO from './seo/Seo';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check;
-  Brain, Zap, Shield, Building, Globe;
+  Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check,
+  Brain, Zap, Shield, Building, Globe,
   Users, TrendingUp, Award, Phone, Mail, MapPin
 } from 'lucide-react';
 
@@ -352,53 +257,17 @@ const categories = [
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
   }
-    id: 'quantum',
-    name: 'Quantum Computing',
-    icon: <Atom className='w-6 h-6' />,
-    color: 'from-violet-500 to-indigo-500',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    description: 'Quantum computing solutions',
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     description: 'Quantum computing solutions'},
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 ];
-=======
     description: 'Quantum computing solutions'}];
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return 'Other';
-};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-=======
   return 'Other';
 };
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   website: 'https://ziontechgroup.com'
 }
 const allServices = [
@@ -406,12 +275,7 @@ const allServices = [
   ...innovativeMicroSaasExpansion2025
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-const allServices = [
-=======
 const allServices = [;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
@@ -447,19 +311,9 @@ const allServices = [;
     color: 'from-violet-500 to-indigo-500';
     description: 'Quantum computing solutions';
   }
-<<<<<<< HEAD
-ursor/fix-netlify-build-and-merge-to-main-9571
-main
-
-
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
-<<<<<<< HEAD
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 return 'Other';
 }const getServicePricing = (service: any) => {if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
@@ -479,61 +333,26 @@ return 'Contact for pricing';}const getServiceFeatures = (service: any) => {if (
   ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return 'Contact for pricing';
 return 'Contact for pricing';
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     description: 'Complete portfolio of advanced services';
   }
   {id: 'enterprise';
@@ -588,48 +407,39 @@ return 'Contact for pricing';}const getServiceFeatures = (service: any) => {if (
   ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+];
+
+const getServiceCategory = (service: any) => {
+  if (service.category) return service.category;
+  return 'Other';
+};
+
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
   return 'Contact for pricing';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
+
+const allServices = [;
+  ...advancedEnterpriseServices2025,;
+  ...innovativeMicroSaasExpansion2025,;
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
+};
+const allServices = [;
+  ...advancedEnterpriseServices2025;
+      ...innovativeMicroSaasExpansion2025;
+  ...cuttingEdgeITInfrastructureServices;
+
   return 'Contact for pricing';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 };
 
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
   if (service.keyFeatures) return service.keyFeatures;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return [];
 };
 
-
-
 export default function AdvancedServicesShowcase() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
@@ -641,25 +451,12 @@ const allServices = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
-<<<<<<< HEAD
-<<<<<<< HEAD
-ursor/fix-netlify-build-and-merge-to-main-9571
-main
-
-
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 return [];
 }export default function AdvancedServicesShowcase() {const [selectedCategory, setSelectedCategory] = useState('all')const [searchTerm, setSearchTerm] = useState('')const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')const [filteredServices, setFilteredServices]  = useState(allServices)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { service: any }) => (<motion&& motion.div;
       initial={{ opacity: 0, y: 20 }}
@@ -699,40 +496,15 @@ ursor/automate-test-improve-and-merge-code-646c;
           getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase()))}setFilteredServices(filtered)}, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { service: any }) => (<motion.div;
 };
 export default function AdvancedServicesShowcase() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
   }, [selectedCategory, searchTerm]);
 
   const ServiceCard = ({ service }: { service: any }) => (;
@@ -741,20 +513,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0 && 0.5 }}
       className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
-          </p>
-        </div>
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   useEffect(() => {
     let filtered = allServices;
@@ -763,55 +522,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         const category = getServiceCategory(service).toLowerCase();
-<<<<<<< HEAD
-if (selectedCategory === 'enterprise')
-          return (
-            category.includes('enterprise') |
-            category.includes('legal') |
-            category.includes('financial')
-          );
-        if (selectedCategory === 'micro-saas')
-          return (
-            category.includes('marketing') |
-            category.includes('social') |
-            category.includes('customer') |
-            category.includes('project')
-          );
-        if (selectedCategory === 'infrastructure')
-          return (
-            category.includes('infrastructure') |
-            category.includes('network') |
-            category.includes('data center') |
-            category.includes('edge')
-          );
-        if (selectedCategory === 'ai-ml')
-          return (
-            category.includes('ai') |
-            category.includes('machine learning') |
-            category.includes('nlp') |
-            category.includes('ml')
-          );
-        if (selectedCategory === 'quantum')
-          return (
-            category.includes('quantum') |
-            category.includes('quantum-resistant')
-          );
-        return false;
-      });
-    }
-    if (searchTerm) {
-      filtered = filtered.filter(
-        service =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
-          service.description
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()) |
-          service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) |
-          getServiceCategory(service)
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase())
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         if (selectedCategory === 'enterprise') return category.includes('enterprise') || category.includes('legal') || category.includes('financial');
         if (selectedCategory === 'micro-saas') return category.includes('marketing') || category.includes('social') || category.includes('customer') || category.includes('project');
         if (selectedCategory === 'infrastructure') return category.includes('infrastructure') || category.includes('network') || category.includes('data center') || category.includes('edge');
@@ -828,7 +538,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.tagline.toLowerCase().includes(searchTerm.toLowerCase()) ||
         getServiceCategory(service).toLowerCase().includes(searchTerm.toLowerCase())
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       );
     }
 
@@ -840,68 +549,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';
+      className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
+        service.popular ? 'ring-2 ring-blue-500' : ''
       }`}
-    >;
-      {service.popular && (<div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">;
-          <Star className="w-4 h-4" />;
-          Popular;
-        </div>;
-      )}<div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>;
-        <span className="text-4xl">{service.icon}</span>;
-      </div>;
-      <div className="p-6">;
-        <div className="flex items-start justify-between mb-3">;
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">;
     >
       {service.popular && (
-<<<<<<< HEAD
-<div className='absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1'>
-          <Star className='w-4 h-4' />
-          Popular
-        </div>
-      )}
-      <div
-        className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}
-      >
-        <span className='text-4xl'>{service.icon}</span>
-      </div>
-      <div className='p-6'>
-        <div className='flex items-start justify-between mb-3'>
-          <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>
-            {service.name}
-          </h3>
-        </div>
-        <p className='text-gray-600 dark:text-gray-300 mb-4 line-clamp-2'>
-          {service.tagline}
-        </p>
-        <div className='flex items-center justify-between mb-4'>
-          <span className='text-2xl font-bold text-gray-900 dark:text-white'>
-            {getServicePricing(service)}
-          </span>
-          <span className='text-sm text-gray-500 dark:text-gray-400'>
-            {service.trialDays} day trial
-          </span>
-        </div>
-        <div className='space-y-3 mb-6'>
-          <div className='flex items-center gap-2'>
-            <CheckCircle className='w-4 h-4 text-green-500' />
-            <span className='text-sm text-gray-600 dark:text-gray-400'>
-              {service.setupTime} setup
-            </span>
-          </div>
-          <div className='flex items-center gap-2'>
-            <Users className='w-4 h-4 text-blue-500' />
-            <span className='text-sm text-gray-600 dark:text-gray-400'>
-              {service.customers ? service.customers.toLocaleString() : '1000'}+
-              customers
-            </span>
-          </div>
-          <div className='flex items-center gap-2'>
-            <Star className='w-4 h-4 text-yellow-500' />
-            <span className='text-sm text-gray-600 dark:text-gray-400'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
           <Star className="w-4 h-4" />
           Popular
@@ -916,184 +568,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
             {service.name}
-          </h3>;
-        </div>;
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">;
+          </h3>
+        </div>
+        
+        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
           {service.tagline}
-        </p>;
-        <div className="flex items-center justify-between mb-4">;
-          <span className="text-2xl font-bold text-gray-900 dark:text-white">;
+        </p>
+        
+        <div className="flex items-center justify-between mb-4">
+          <span className="text-2xl font-bold text-gray-900 dark:text-white">
             {getServicePricing(service)}
-          </span>;
-          <span className="text-sm text-gray-500 dark:text-gray-400">;
-            {service.trialDays} day trial;
-          </span>;
-        </div>;
-        <div className="space-y-3 mb-6">;
-          <div className="flex items-center gap-2">;
-            <CheckCircle className="w-4 h-4 text-green-500" />;
-            <span className="text-sm text-gray-600 dark:text-gray-400">;
-              {service.setupTime} setup;
-            </span>;
-          </div>;
-          <div className="flex items-center gap-2">;
-            <Users className="w-4 h-4 text-blue-500" />;
-            <span className="text-sm text-gray-600 dark:text-gray-400">;
-              {service.customers ? service.customers.toLocaleString() : '1000'}+ customers;
-            </span>;
-          </div>;
-          <div className="flex items-center gap-2">;
-            <Star className="w-4 h-4 text-yellow-500" />;
-            <span className="text-sm text-gray-600 dark:text-gray-400">;
-<div className='absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1'>;
-          <Star className='w-4 h-4' />;
-          Popular;
-        </div>;
-      )}
-      <div;
-        className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}
-      >;
-        <span className='text-4xl'>{service.icon}</span>;
-      </div>;
-      <div className='p-6'>;
-        <div className='flex items-start justify-between mb-3'>;
-          <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>;
-            {service.name}
-          </h3>;
-        </div>;
-        <p className='text-gray-600 dark:text-gray-300 mb-4 line-clamp-2'>;
-          {service.tagline}
-        </p>;
-        <div className='flex items-center justify-between mb-4'>;
-          <span className='text-2xl font-bold text-gray-900 dark:text-white'>;
-            {getServicePricing(service)}
-          </span>;
-          <span className='text-sm text-gray-500 dark:text-gray-400'>;
-            {service.trialDays} day trial;
-          </span>;
-        </div>;
-        <div className='space-y-3 mb-6'>;
-          <div className='flex items-center gap-2'>;
-            <CheckCircle className='w-4 h-4 text-green-500' />;
-            <span className='text-sm text-gray-600 dark:text-gray-400'>;
-              {service.setupTime} setup;
-            </span>;
-          </div>;
-          <div className='flex items-center gap-2'>;
-            <Users className='w-4 h-4 text-blue-500' />;
-            <span className='text-sm text-gray-600 dark:text-gray-400'>;
-              {service.customers ? service.customers.toLocaleString() : '1000'}+;
-              customers;
-            </span>;
-          </div>;
-          <div className='flex items-center gap-2'>;
-            <Star className='w-4 h-4 text-yellow-500' />;
-            <span className='text-sm text-gray-600 dark:text-gray-400'>;
-              {service.rating}/5 ({service.reviews} reviews)</span>;
-          </div>;
-        </div>;
-        <div className="mb-6">;
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>;
-          <div className="space-y-1">;
-            {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (<div key={index} className="flex items-center gap-2">;
-                <Check className="w-3 h-3 text-green-500" />;
-                <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>;
-              </div>;
-            ))}
-            {getServiceFeatures(service).length > 3 && (<span className="text-sm text-gray-500 dark:text-gray-400">;
-<div className='mb-6'>;
-          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
-            Key Features:;
-          </h4>;
-          <div className='space-y-1'>;
-            {getServiceFeatures(service).slice(0, 3).map((feature: string, index: number) => (<div key={index} className='flex items-center gap-2'>;
-                  <Check className='w-3 h-3 text-green-500' />;
-                  <span className='text-sm text-gray-600 dark:text-gray-400'>;
-                    {feature}
-                  </span>;
-                </div>;
-              ))}
-            {getServiceFeatures(service).length > 3 && (<span className='text-sm text-gray-500 dark:text-gray-400'>;
-                +{getServiceFeatures(service).length - 3} more features;
-              </span>;
-            )}
-          </div>;
-        </div>;
-        <div className="mb-6">;
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>;
-          <p className="text-sm text-gray-600 dark:text-gray-400">;
-            {service.roi}
-          </p>;
-        </div>;
-<div className='mb-6'>;
-          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
-            ROI & Benefits:;
-          </h4>;
-          <p className='text-sm text-gray-600 dark:text-gray-400'>;
-            {service.roi}
-          </p>;
-        </div>;
-  }, [selectedCategory, searchTerm])const ServiceCard = ({ service }: { service: any }) => (<motion&& motion.div;
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0 && 0.5 }}
-      className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${</p>;
-        </div>;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-        <div className="mb-6">;
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>;
-          <p className="text-sm text-gray-600 dark:text-gray-400">;
-            {service.marketPosition}
-          </p>;
-        </div>;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-        <div className="flex items-center justify-between">;
-          <a;
-            href={service.link}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";
-          >;
-            Learn More;
-            <ArrowRight className="w-4 h-4" />;
-          </a>;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-          <a;
-            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300";
-ursor/fix-netlify-build-and-merge-to-main-9571;
-          <a;
-            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300";
-        <div className='mb-6'>;
-          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
-            Market Position:;
-          </h4>;
-          <p className='text-sm text-gray-600 dark:text-gray-400'>;
-            {service.marketPosition}
-          </p>;
-        </div>;
-        <div className='flex items-center justify-between'>;
-          <a;
-            href={service.link}
-            className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
-          >;
-            Learn More;
-            <ArrowRight className='w-4 h-4' />;
-          </a>;
-          <a;
-            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300';
-          >;
-            Contact;
-          </a>;
-        </div>;
-      </div>;
-    </motion.div>;
-  )const ServiceList = ({ service }: { service: any }) => (<motion.div;
           </span>
           <span className="text-sm text-gray-500 dark:text-gray-400">
             {service.trialDays} day trial
@@ -1116,31 +600,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
           <div className="flex items-center gap-2">
             <Star className="w-4 h-4 text-yellow-500" />
             <span className="text-sm text-gray-600 dark:text-gray-400">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               {service.rating}/5 ({service.reviews} reviews)
             </span>
           </div>
         </div>
-<<<<<<< HEAD
-<div className='mb-6'>
-          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
-            Key Features:
-          </h4>
-          <div className='space-y-1'>
-            {getServiceFeatures(service)
-              .slice(0, 3)
-              .map((feature: string, index: number) => (
-                <div key={index} className='flex items-center gap-2'>
-                  <Check className='w-3 h-3 text-green-500' />
-                  <span className='text-sm text-gray-600 dark:text-gray-400'>
-                    {feature}
-                  </span>
-                </div>
-              ))}
-            {getServiceFeatures(service).length > 3 && (
-              <span className='text-sm text-gray-500 dark:text-gray-400'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
@@ -1153,26 +616,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             ))}
             {getServiceFeatures(service).length > 3 && (
               <span className="text-sm text-gray-500 dark:text-gray-400">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 +{getServiceFeatures(service).length - 3} more features
               </span>
             )}
           </div>
         </div>
-<<<<<<< HEAD
-<div className='mb-6'>
-          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
-            ROI & Benefits:
-          </h4>
-          <p className='text-sm text-gray-600 dark:text-gray-400'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            {service.roi}
-
-          </p>
-        </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
@@ -1180,44 +628,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             {service.roi}
           </p>
         </div>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         
-<<<<<<< HEAD
-=======
   }, [selectedCategory, searchTerm]);
+        
+        <div className="mb-6">
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            {service.roi}
 
-  const ServiceCard = ({ service }: { service: any }) => (;
-    <motion&& motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0 && 0.5 }}
-      className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 dark:border-gray-700 ${
           </p>
         </div>
-ursor/fix-netlify-build-and-merge-to-main-9571
-main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.marketPosition}
           </p>
         </div>
-<<<<<<< HEAD
-        
-        
-<<<<<<< HEAD
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
         
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
         <div className="flex items-center justify-between">
           <a
             href={service.link}
@@ -1226,111 +658,26 @@ main
             Learn More
             <ArrowRight className="w-4 h-4" />
           </a>
-<<<<<<< HEAD
-          
-          
-<<<<<<< HEAD
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
           
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
-<<<<<<< HEAD
-        <div className='mb-6'>
-          <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
-            Market Position:
-          </h4>
-          <p className='text-sm text-gray-600 dark:text-gray-400'>
-            {service.marketPosition}
-          </p>
-        </div>
-        <div className='flex items-center justify-between'>
-          <a
-            href={service.link}
-            className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'
-          >
-            Learn More
-            <ArrowRight className='w-4 h-4' />
-          </a>
-          <a
-            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+          <a
+            href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
+            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
           >
             Contact
           </a>
         </div>
       </div>
     </motion.div>
-<<<<<<< HEAD
-  );
-
-  const ServiceList = ({ service }: { service: any }) => (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${service.popular ? 'ring-2 ring-blue-500' : '';
-      }`}
-    >;
-      <div className="p-6">;
-        <div className="flex items-start gap-6">;
-          <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>;
-            <span className="text-3xl">{service.icon}</span>;
-          </div>;
-          <div className="flex-1">;
-            <div className="flex items-start justify-between mb-3">;
-              <div>;
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">;
-                  {service.name}
-                  {service.popular && (<span className="ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">;
-<div className='p-6'>;
-        <div className='flex items-start gap-6'>;
-          <div;
-            className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}
-          >;
-            <span className='text-3xl'>{service.icon}</span>;
-          </div>;
-          <div className='flex-1'>;
-            <div className='flex items-start justify-between mb-3'>;
-              <div>;
-                <h3 className='text-xl font-bold text-gray-900 dark:text-white mb-2'>;
-                  {service.name}
-                  {service.popular && (<span className='ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>;
-                      Popular;
-                    </span>;
-                  )}
-                </h3>;
-                <p className="text-gray-600 dark:text-gray-300 mb-3">;
-    >
-      <div className="p-6">
-        <div className="flex items-start gap-6">
-          <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-            <span className="text-3xl">{service.icon}</span>
-          </div>
-          
-          <div className="flex-1">
-            <div className="flex items-start justify-between mb-3">
-              <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  {service.name}
-                  {service.popular && (
-                    <span className="ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 <div className='p-6'>
         <div className='flex items-start gap-6'>
           <div
@@ -1346,26 +693,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {service.popular && (
                     <span className='ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                       Popular
                     </span>
                   )}
                 </h3>
-<<<<<<< HEAD
-<p className='text-gray-600 dark:text-gray-300 mb-3'>
-                  {service.tagline}
-<<<<<<< HEAD
-                </p>
-              </div>
-              <div className='text-right'>
-                <div className='text-2xl font-bold text-gray-900 dark:text-white'>
-=======
                 </p>;
               </div>;
               <div className="text-right">;
                 <div className="text-2xl font-bold text-gray-900 dark:text-white">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   {getServicePricing(service)}
                 </div>;
                 <div className="text-sm text-gray-500 dark:text-gray-400">;
@@ -1430,7 +765,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </div>
                 <div className='text-sm text-gray-500 dark:text-gray-400'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                 <p className="text-gray-600 dark:text-gray-300 mb-3">
                   {service.tagline}
                 </p>;
@@ -1500,33 +834,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     </div>;
                 </div>
                 <div className="text-sm text-gray-500 dark:text-gray-400">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   {service.trialDays} day trial
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-<div className='grid grid-cols-1 md:grid-cols-3 gap-4 mb-4'>
-              <div className='flex items-center gap-2'>
-                <CheckCircle className='w-4 h-4 text-green-500' />
-                <span className='text-sm text-gray-600 dark:text-gray-400'>
-                  {service.setupTime} setup
-                </span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <Users className='w-4 h-4 text-blue-500' />
-                <span className='text-sm text-gray-600 dark:text-gray-400'>
-                  {service.customers
-                    ? service.customers.toLocaleString()
-                    : '1000'}
-                  + customers
-                </span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <Star className='w-4 h-4 text-yellow-500' />
-                <span className='text-sm text-gray-600 dark:text-gray-400'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               <div className="flex items-center gap-2">
@@ -1544,43 +855,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex items-center gap-2">
                 <Star className="w-4 h-4 text-yellow-500" />
                 <span className="text-sm text-gray-600 dark:text-gray-400">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   {service.rating}/5 ({service.reviews} reviews)
                 </span>
               </div>
             </div>
-<<<<<<< HEAD
-<div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-4'>
-              <div>
-                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
-                  Key Features:
-                </h4>
-                <div className='space-y-1'>
-                  {getServiceFeatures(service)
-                    .slice(0, 4)
-                    .map((feature: string, index: number) => (
-                      <div key={index} className='flex items-center gap-2'>
-                        <Check className='w-3 h-3 text-green-500' />
-                        <span className='text-sm text-gray-600 dark:text-gray-400'>
-                          {feature}
-                        </span>
-                      </div>
-                    ))}
-                </div>
-              </div>
-              <div>
-                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
-                  ROI & Benefits:
-                </h4>
-                <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
-                  {service.roi}
-                </p>
-                <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>
-                  Market Position:
-                </h4>
-                <p className='text-sm text-gray-600 dark:text-gray-400'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
               <div>
@@ -1637,15 +915,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 
                 <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   {service.marketPosition}
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
-<div className='flex items-center gap-4'>
-              <a
-=======
             
             <div className="flex items-center gap-4">
               <a
@@ -1660,10 +933,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300";
 <div className='flex items-center gap-4'>;
               <a;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 href={service.link}
                 className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
               >;
@@ -1672,13 +941,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </a>;
               <a;
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300';
               >;
                 Contact Sales;
@@ -1706,7 +968,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           'Zion Tech Group';
         ]}/>;
                 className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               >
                 Contact Sales
               </a>
@@ -1715,23 +976,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
       </div>
     </motion.div>
-<<<<<<< HEAD
-  )
-  return (
-<div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800'>
-      <SEO
-        title='2025 Advanced Services Showcase - Zion Tech Group'
-        description='Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses.'
-        keywords={[
-          'AI services'
-          'micro SAAS'
-          'IT infrastructure'
-          'quantum computing'
-          'enterprise solutions'
-          'Zion Tech Group'
-        ]}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   );
 
   return (
@@ -1740,7 +984,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         title="2025 Advanced Services Showcase - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."
         keywords={["AI services", "micro SAAS", "IT infrastructure", "quantum computing", "enterprise solutions", "Zion Tech Group"]}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       />
       
       {/* Hero Section */}
@@ -1821,14 +1064,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <CheckCircle className="w-5 h-5 text-green-300" />
                 <span>Real Implementations</span>
               </div>
-<<<<<<< HEAD
-              <div className='flex items-center gap-2 text-white'>
-                <CheckCircle className='w-5 h-5 text-green-300' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
               <div className="flex items-center gap-2 text-white">
                 <CheckCircle className="w-5 h-5 text-green-300" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <span>Market Validated</span>
               </div>
             </motion.div>
@@ -1837,45 +1074,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 
       {/* Contact Information Banner */}
-<<<<<<< HEAD
-<div className='bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-          <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
-            <div className='flex items-center gap-6'>
-              <div className='flex items-center gap-2'>
-                <Phone className='w-5 h-5 text-blue-600' />
-                <span className='text-gray-700 dark:text-gray-300'>
-                  {contactInfo.mobile}
-                </span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <Mail className='w-5 h-5 text-blue-600' />
-                <span className='text-gray-700 dark:text-gray-300'>
-                  {contactInfo.email}
-                </span>
-              </div>
-              <div className='flex items-center gap-2'>
-                <MapPin className='w-5 h-5 text-blue-600' />
-                <span className='text-gray-700 dark:text-gray-300'>
-                  {contactInfo.address}
-                </span>
-              </div>
-            </div>
-            <div className='flex items-center gap-4'>
-              <a
-                href={`mailto:${contactInfo.email}?subject=Services Inquiry`}
-                className='inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300'
-              >
-                Get Quote
-                <ArrowRight className='w-4 h-4' />
-              </a>
-              <a
-                href={contactInfo.website}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -1956,7 +1154,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               >
                 Visit Website
               </a>
@@ -1966,12 +1163,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
 
       {/* Main Content */}
-<<<<<<< HEAD
-<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Filters and Search */}
         <div className="mb-8">;
           <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">;
@@ -2010,30 +1202,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <List className="w-5 h-5" />;
   )const ServiceList = ({ service }: { service: any }) => (<motion.div;
                 >
-<<<<<<< HEAD
-                  <Grid className='w-5 h-5' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                   <LayoutGrid className="w-5 h-5" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     viewMode === 'list' 
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
                   }`}
                 >
                   <List className="w-5 h-5" />
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
   )
   const ServiceList = ({ service }: { service: any }) => (
     <motion.div
@@ -2054,13 +1235,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
         </div>;
         <div className='flex items-center justify-between'>;
-          <a;
+          <a
             href={service && service.link}
             className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>;
             Learn More;
             <ArrowRight className='w-4 h-4' />;
           </a>;
-          <a;
+          <a
             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'>            {service && service.roi}
           </p>;
@@ -2072,42 +1253,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </p>;
         </div>;
         <div className="flex items-center justify-between">;
-          <a;
+          <a
             href={service && service.link}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;
             Learn More;
             <ArrowRight className="w-4 h-4" />;
           </a>;
 import React, { useState, useEffect } from './react';
-import { motion, AnimatePresence   } from './framer-motion';
-  Search,Grid,List,Star,CheckCircle,ArrowRight,Check,Brain,Atom,Shield,Building,Globe,Users,TrendingUp,Award,Phone,Mail,MapPin;
-  MapPin;
-} from 'lucide-react';
-  MapPin} from 'lucide-react';// Mock service data;
-const advancedEnterpriseServices2025 = [;
-  {id: "enterprise - 1",title: "Enterprise AI Solutions",description: "Comprehensive AI implementation for large enterprises",category: "enterprise",price: "$50, 000+",rating: 4.9,tags: ["AI", "Machine Learning", "Enterprise"],color: "from - blue - 500 to - purple - 500",icon: "🤖";
-  }
-    icon: "🤖";
-  }
-];
-    icon: "🤖"}];const innovativeMicroSaasExpansion2025 = [;
-  {id: "micro - 1",title: "Micro SaaS Platform",description: "Lightweight SaaS solutions for small businesses",category: "micro - saas",price: "$99 / month",rating: 4.7,tags: ["SaaS", "Micro Services", "Cloud"],color: "from - green - 500 to - teal - 500",icon: "⚡";
-  }
-    icon: "⚡";
-  }
-];
-    icon: "⚡"}];const cuttingEdgeITInfrastructureServices = [;
-  {id: "infra - 1",title: "Cloud Infrastructure",description: "Scalable cloud infrastructure solutions",category: "infrastructure",price: "$5, 000 / month",rating: 4.8,tags: ["Cloud", "Infrastructure", "DevOps"],color: "from - orange - 500 to - red - 500",icon: "☁️";
-  }
-    icon: "☁️";
-  }
-];// Import our new service data;
-    icon: "☁️"}];// Import our new service data;
-import { advancedEnterpriseServices2025  } from '../data / 2025 - advanced - enterprise - services - expansion';
-import { innovativeMicroSaasExpansion2025  } from '../data / 2025 - innovative - micro - saas - expansion';
-import { cuttingEdgeITInfrastructureServices  } from '../data / 2025 - cutting - edge - it - infrastructure';
-  mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
-  website: 'https://ziontechgroup.com';
 import { motion, AnimatePresence  } from './framer-motion';
   Search,
   Grid,
@@ -2126,8 +1278,7 @@ import { motion, AnimatePresence  } from './framer-motion';
   Award,
   Phone,
   Mail,
-  MapPin
-} from 'lucide-react';
+  MapPin} from 'lucide-react';
 ;
 // Mock service data;
 const advancedEnterpriseServices2025 = [;
@@ -2140,9 +1291,7 @@ const advancedEnterpriseServices2025 = [;
     rating: 4.9,
     tags: ["AI", "Machine Learning", "Enterprise"],
     color: "from - blue - 500 to - purple - 500",
-    icon: "🤖"
-  }
-];
+    icon: "🤖"}];
 ;
 const innovativeMicroSaasExpansion2025 = [;
   {
@@ -2154,9 +1303,7 @@ const innovativeMicroSaasExpansion2025 = [;
     rating: 4.7,
     tags: ["SaaS", "Micro Services", "Cloud"],
     color: "from - green - 500 to - teal - 500",
-    icon: "⚡"
-  }
-];
+    icon: "⚡"}];
 ;
 const cuttingEdgeITInfrastructureServices = [;
   {
@@ -2168,101 +1315,98 @@ const cuttingEdgeITInfrastructureServices = [;
     rating: 4.8,
     tags: ["Cloud", "Infrastructure", "DevOps"],
     color: "from - orange - 500 to - red - 500",
-    icon: "☁️"
-  }
-];// Import our new service data;
+    icon: "☁️"}];// Import our new service data;
 import { advancedEnterpriseServices2025 } from '../data / 2025 - advanced - enterprise - services - expansion';
 import { innovativeMicroSaasExpansion2025 } from '../data / 2025 - innovative - micro - saas - expansion';
 import { cuttingEdgeITInfrastructureServices } from '../data / 2025 - cutting - edge - it - infrastructure';
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-}
+  website: 'https://ziontechgroup.com'}
 ;
 const all_services = [;
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
-  ...cuttingEdgeITInfrastructureServices ];  website: 'https://ziontechgroup.com';
-}
-  website: 'https://ziontechgroup.com'}const all_services = [;
-  ...advancedEnterpriseServices2025,...innovativeMicroSaasExpansion2025,...cuttingEdgeITInfrastructureServices ];  website: 'https://ziontechgroup.com';
-  ...cuttingEdgeITInfrastructureServices ];  website: 'https://ziontechgroup.com';
   ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com';
-}const all_services = [;
+}
+;
+const all_services = [;
   ...advancedEnterpriseServices2025;
       ...innovativeMicroSaasExpansion2025;
   ...cuttingEdgeITInfrastructureServices;
 const categories = [;
-  {id: 'all',name: 'All Services',icon: <Grid className='w - 6 h - 6' />,color: 'from - gray - 500 to - slate - 500',description: 'Complete portfolio of advanced services',    color: 'from - gray - 500 to - slate - 500',description: 'Complete portfolio of advanced services';
+  {
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className='w - 6 h - 6' />,
+    color: 'from - gray - 500 to - slate - 500',
+    description: 'Complete portfolio of advanced services',    color: 'from - gray - 500 to - slate - 500',
+    description: 'Complete portfolio of advanced services';
   }
-  {id: 'enterprise',name: 'Enterprise Solutions',icon: <Building className="w - 6 h - 6" />,color: 'from - blue - 500 to - purple - 500',description: 'Enterprise - grade AI and IT solutions';
-  }
-  {id: 'micro - saas',name: 'Micro SAAS',icon: <Globe className="w - 6 h - 6" />,color: 'from - green - 500 to - emerald - 500',description: 'Innovative micro SAAS solutions';
-  }
-  {id: 'infrastructure',name: 'IT Infrastructure',icon: <Shield className="w - 6 h - 6" />,color: 'from - orange - 500 to - red - 500',description: 'Cutting - edge infrastructure services';
-  }
-  {id: 'ai - ml',name: 'AI & Machine Learning',icon: <Brain className="w - 6 h - 6" />,color: 'from - purple - 500 to - pink - 500',description: 'Advanced AI and ML platforms';
-  }
-  {id: 'quantum',name: 'Quantum Computing',icon: <Atom className="w - 6 h - 6" />,color: 'from - violet - 500 to - indigo - 500',description: 'Quantum computing solutions';
-    description: 'Quantum computing solutions';
-  },description: 'Quantum computing solutions'},{id: 'enterprise',name: 'Enterprise Solutions',icon: <Building className='w - 6 h - 6' />,color: 'from - blue - 500 to - purple - 500',description: 'Enterprise - grade AI and IT solutions';
+  {
+    id: 'enterprise',
+    name: 'Enterprise Solutions',
+    icon: <Building className="w - 6 h - 6" />,
+    color: 'from - blue - 500 to - purple - 500',
     description: 'Enterprise - grade AI and IT solutions';
-  },description: 'Enterprise - grade AI and IT solutions'},{id: 'micro - saas',name: 'Micro SAAS',icon: <Globe className='w - 6 h - 6' />,color: 'from - green - 500 to - emerald - 500',description: 'Innovative micro SAAS solutions';
+  }
+  {
+    id: 'micro - saas',
+    name: 'Micro SAAS',
+    icon: <Globe className="w - 6 h - 6" />,
+    color: 'from - green - 500 to - emerald - 500',
     description: 'Innovative micro SAAS solutions';
-  },description: 'Innovative micro SAAS solutions'},{id: 'infrastructure',name: 'IT Infrastructure',icon: <Shield className='w - 6 h - 6' />,color: 'from - orange - 500 to - red - 500',description: 'Cutting - edge infrastructure services';
+  }
+  {
+    id: 'infrastructure',
+    name: 'IT Infrastructure',
+    icon: <Shield className="w - 6 h - 6" />,
+    color: 'from - orange - 500 to - red - 500',
     description: 'Cutting - edge infrastructure services';
-  },description: 'Cutting - edge infrastructure services'},{id: 'ai - ml',name: 'AI & Machine Learning',icon: <Brain className='w - 6 h - 6' />,color: 'from - purple - 500 to - pink - 500',description: 'Advanced AI and ML platforms';
+  }
+  {
+    id: 'ai - ml',
+    name: 'AI & Machine Learning',
+    icon: <Brain className="w - 6 h - 6" />,
+    color: 'from - purple - 500 to - pink - 500',
     description: 'Advanced AI and ML platforms';
-  },description: 'Advanced AI and ML platforms'},{id: 'quantum',name: 'Quantum Computing',icon: <Atom className='w - 6 h - 6' />,color: 'from - violet - 500 to - indigo - 500',description: 'Quantum computing solutions';
-  } ];
-    description: 'Quantum computing solutions';
-  } ];
-    description: 'Quantum computing solutions'}];const getServiceCategory = (service: any) =>: any {// Check condition;
-if (return service.category) {$2;
   }
   {
     id: 'quantum',
     name: 'Quantum Computing',
     icon: <Atom className="w - 6 h - 6" />,
     color: 'from - violet - 500 to - indigo - 500',
-    description: 'Quantum computing solutions'
-  },
+    description: 'Quantum computing solutions'},
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
     icon: <Building className='w - 6 h - 6' />,
     color: 'from - blue - 500 to - purple - 500',
-    description: 'Enterprise - grade AI and IT solutions'
-  },
+    description: 'Enterprise - grade AI and IT solutions'},
   {
     id: 'micro - saas',
     name: 'Micro SAAS',
     icon: <Globe className='w - 6 h - 6' />,
     color: 'from - green - 500 to - emerald - 500',
-    description: 'Innovative micro SAAS solutions'
-  },
+    description: 'Innovative micro SAAS solutions'},
   {
     id: 'infrastructure',
     name: 'IT Infrastructure',
     icon: <Shield className='w - 6 h - 6' />,
     color: 'from - orange - 500 to - red - 500',
-    description: 'Cutting - edge infrastructure services'
-  },
+    description: 'Cutting - edge infrastructure services'},
   {
     id: 'ai - ml',
     name: 'AI & Machine Learning',
     icon: <Brain className='w - 6 h - 6' />,
     color: 'from - purple - 500 to - pink - 500',
-    description: 'Advanced AI and ML platforms'
-  },
+    description: 'Advanced AI and ML platforms'},
   {
     id: 'quantum',
     name: 'Quantum Computing',
     icon: <Atom className='w - 6 h - 6' />,
     color: 'from - violet - 500 to - indigo - 500',
-    description: 'Quantum computing solutions'
-  } ];
+    description: 'Quantum computing solutions'}];
 ;
 const getServiceCategory = (service: any) =>: any {
   // Check condition
@@ -2271,88 +1415,146 @@ if (return service.category) {
 }
   return 'Other';}    description: 'Quantum computing solutions';
   }
-];const getServiceCategory = (service: any) =>: any {// Check condition;
-if (return service.category) {$2;
+];
+;
+const getServiceCategory = (service: any) =>: any {
+  // Check condition
+if (return service.category) {
+  $2
 }
   return 'Other';  return 'Other';
-}const getServicePricing = (service: any) =>: any {// Check condition;
-if (return `${service.price}${service.period}`) {$2;
 }
-  // Check condition;
-if (return service.pricing.starter) {$2;
+;
+const getServicePricing = (service: any) =>: any {
+  // Check condition
+if (return `${service.price}${service.period}`) {
+  $2
 }
-  // Check condition;
-if (return `$${service.pricing.monthly}/month`) {$2;
+  // Check condition
+if (return service.pricing.starter) {
+  $2
+}
+  // Check condition
+if (return `$${service.pricing.monthly}/month`) {
+  $2
 }
   return 'Contact for pricing';}  return 'Contact for pricing';
-}const getServiceFeatures = (service: any) =>: any {// Check condition;
-if (return service.features) {$2;
 }
-  // Check condition;
-if (return service.key_features) {$2;
+;
+const getServiceFeatures = (service: any) =>: any {
+  // Check condition
+if (return service.features) {
+  $2
+}
+  // Check condition
+if (return service.key_features) {
+  $2
 }
   return [];
 }  return [];
-}const [selected_category, setSelectedCategory] = useState ('all')const [search_term, setSearchTerm] = useState ('')const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid')const [filtered_services, setFilteredServices]  = useState (all_services)useEffect (() => {let filtered  = all_services;// Filter by category;
-    // Check condition;
-if ( {) {$2;
 }
-      filtered = filtered.filter (service => {const category = getServiceCategory (service).toLowerCase ()// Check condition;
-if (return () {$2;
+;
+  const [selected_category, setSelectedCategory] = useState ('all');
+  const [search_term, setSearchTerm] = useState ('');
+  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [filtered_services, setFilteredServices] = useState (all_services);
+;
+  useEffect (() => {
+    let filtered = all_services;
+;
+    // Filter by category;
+    // Check condition
+if ( {) {
+  $2
+}
+      filtered = filtered.filter (service => {
+        const category = getServiceCategory (service).toLowerCase ();
+        // Check condition
+if (
+          return () {
+  $2
 }
             category.includes ('enterprise') ||;
             category.includes ('legal') ||;
-            category.includes ('financial'))// Check condition;
-if (return () {$2;
+            category.includes ('financial'));
+        // Check condition
+if (
+          return () {
+  $2
 }
             category.includes ('marketing') ||;
             category.includes ('social') ||;
             category.includes ('customer') ||;
-            category.includes ('project'))// Check condition;
-if (return () {$2;
+            category.includes ('project'));
+        // Check condition
+if (
+          return () {
+  $2
 }
             category.includes ('infrastructure') ||;
             category.includes ('network') ||;
             category.includes ('data center') ||;
-            category.includes ('edge'))// Check condition;
-if (return () {$2;
+            category.includes ('edge'));
+        // Check condition
+if (
+          return () {
+  $2
 }
             category.includes ('ai') ||;
             category.includes ('machine learning') ||;
             category.includes ('nlp') ||;
-            category.includes ('ml'))// Check condition;
-if (return () {$2;
+            category.includes ('ml'));
+        // Check condition
+if (
+          return () {
+  $2
 }
             category.includes ('quantum') ||;
-            category.includes ('quantum - resistant'))return false;
-      })}
-    // Check condition;
-if ( {) {$2;
+            category.includes ('quantum - resistant'));
+        return false;
+      });
+    }
+    // Check condition
+if ( {) {
+  $2
 }
-      filtered = filtered.filter (service =>;
+      filtered = filtered.filter (
+        service =>;
           service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
           service.description;
-            .toLowerCase ().includes (search_term.toLowerCase ()) ||;
+            .toLowerCase ();
+            .includes (search_term.toLowerCase ()) ||;
           service.tagline.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-          getServiceCategory (service).toLowerCase ().includes (search_term.toLowerCase ()))}
-    setFilteredServices (filtered)}, [selected_category, search_term])}
+          getServiceCategory (service);
+            .toLowerCase ();
+            .includes (search_term.toLowerCase ()));
+    }
+    setFilteredServices (filtered);  }, [selected_category, search_term]);    }
     // Filter by search term;
-    // Check condition;
-if ( {) {$2;
+    // Check condition
+if ( {) {
+  $2
 }
       filtered = filtered.filter (service =>;
         service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
         service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
         service.tagline.toLowerCase ().includes (search_term.toLowerCase ()) ||;
-        getServiceCategory (service).toLowerCase ().includes (search_term.toLowerCase ()))}
-    setFilteredServices (filtered)}, [selected_category, search_term])const ServiceCard = ({ service }: { service: any }) =>: any (<motion.div;
+        getServiceCategory (service).toLowerCase ().includes (search_term.toLowerCase ()));
+    }
+    setFilteredServices (filtered);
+  }, [selected_category, search_term]);
+;
+  const ServiceCard = ({ service }: { service: any }) =>: any (
+    <motion.div;
       initial={{ opacity: 0, coordinate_y: 20 }}
       animate={{ opacity: 1, coordinate_y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`relative bg - white dark:bg - gray - 800 rounded - 2xl shadow - lg hover:shadow - 2xl transition - all duration - 300 overflow - hidden border border - gray - 200 dark:border - gray - 700 ${service.popular ? 'ring - 2 ring - blue - 500' : '';
+      className={`relative bg - white dark:bg - gray - 800 rounded - 2xl shadow - lg hover:shadow - 2xl transition - all duration - 300 overflow - hidden border border - gray - 200 dark:border - gray - 700 ${
+        service.popular ? 'ring - 2 ring - blue - 500' : '';
       }`}
     >;
-      {service.popular && (<div className='absolute top - 4 right - 4 bg - blue - 500 text - white px - 3 py - 1 rounded - full text - sm font - semibold flex items - center gap - 1'>;
+      {service.popular && (
+        <div className='absolute top - 4 right - 4 bg - blue - 500 text - white px - 3 py - 1 rounded - full text - sm font - semibold flex items - center gap - 1'>;
           <Star className='w - 4 h - 4' />;
           Popular;
         </div>)}
@@ -2394,7 +1596,8 @@ if ( {) {$2;
           </div>;
           <div className='flex items - center gap - 2'>;
             <Star className='w - 4 h - 4 text - yellow - 500' />;
-            <span className='text - sm text - gray - 600 dark:text - gray - 400'>              {service.rating}/5 ({service.reviews} reviews)</span>;
+            <span className='text - sm text - gray - 600 dark:text - gray - 400'>              {service.rating}/5 ({service.reviews} reviews);
+            </span>;
           </div>;
         </div>          Popular;
         </div>)}
@@ -2434,7 +1637,8 @@ if ( {) {$2;
           <div className="flex items - center gap - 2">;
             <Star className="w - 4 h - 4 text - yellow - 500" />;
             <span className="text - sm text - gray - 600 dark:text - gray - 400">;
-              {service.rating}/5 ({service.reviews} reviews)</span>;
+              {service.rating}/5 ({service.reviews} reviews);
+            </span>;
           </div>;
         </div>;
         <div className='mb - 6'>;
@@ -2442,21 +1646,27 @@ if ( {) {$2;
             Key Features:;
           </h4>;
           <div className='space - y-1'>;
-            {getServiceFeatures (service).slice (0, 3).map ((feature: string, index: number) => (<div key={index} className='flex items - center gap - 2'>;
+            {getServiceFeatures (service);
+              .slice (0, 3);
+              .map ((feature: string, index: number) => (
+                <div key={index} className='flex items - center gap - 2'>;
                   <Check className='w - 3 h - 3 text - green - 500' />;
                   <span className='text - sm text - gray - 600 dark:text - gray - 400'>;
                     {feature}
                   </span>;
                 </div>))}
-            {getServiceFeatures (service).length > 3 && (<span className='text - sm text - gray - 500 dark:text - gray - 400'>                +{getServiceFeatures (service).length - 3} more features;
+            {getServiceFeatures (service).length > 3 && (
+              <span className='text - sm text - gray - 500 dark:text - gray - 400'>                +{getServiceFeatures (service).length - 3} more features;
         <div className="mb - 6">;
           <h4 className="font - semibold text - gray - 900 dark:text - white mb - 2">Key Features:</h4>;
           <div className="space - y-1">;
-            {getServiceFeatures (service).slice (0, 3).map ((feature: string, index: number) => (<div key={index} className="flex items - center gap - 2">;
+            {getServiceFeatures (service).slice (0, 3).map ((feature: string, index: number) => (
+              <div key={index} className="flex items - center gap - 2">;
                 <Check className="w - 3 h - 3 text - green - 500" />;
                 <span className="text - sm text - gray - 600 dark:text - gray - 400">{feature}</span>;
               </div>))}
-            {getServiceFeatures (service).length > 3 && (<span className="text - sm text - gray - 500 dark:text - gray - 400">;
+            {getServiceFeatures (service).length > 3 && (
+              <span className="text - sm text - gray - 500 dark:text - gray - 400">;
               </span>)}
           </div>;
         </div>;
@@ -2522,14 +1732,14 @@ if ( {) {$2;
         <div className='absolute inset-0 bg-black opacity-20'></div>;
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>;
           <div className='text-center'>;
-            <motion&& motion.h1;
+            <motion&& motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               className='text-4xl md:text-6xl font-bold text-white mb-6'>;
               2025 Advanced Services Showcase;
             </motion && motion.h1>;
-            <motion&& motion.p;
+            <motion&& motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -2538,7 +1748,7 @@ if ( {) {$2;
               market-ready solutions. From AI-powered enterprise services to;
               cutting-edge quantum computing platforms.;
             </motion && motion.p>;
-            <motion&& motion.div;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
@@ -2559,18 +1769,9 @@ if ( {) {$2;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               <a;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
               <a;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
               <a;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <a
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Services Inquiry`}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300">;
@@ -2809,13 +2010,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               </div>
             </div>
             <div className="flex items-center gap-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               <a
                 href={`mailto:${contactInfo.email}?subject=Services Inquiry`}
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300";
@@ -2825,14 +2019,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               </a>;
               <a;
                 href={contactInfo.website}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 target="_blank";
                 rel="noopener noreferrer";
                 Visit Website;
@@ -2849,10 +2035,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -2891,22 +2073,12 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
             
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${viewMode === 'grid';
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
                   }`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 >;
                   <LayoutGrid className="w-5 h-5" />;
                 </button>;
@@ -2921,12 +2093,10 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                   <LayoutGrid className="w-5 h-5" />;
                 </button>;
                 <button;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 >
                   <LayoutGrid className="w-5 h-5" />
                 </button>
 
-=======
                 >;
                   <LayoutGrid className="w-5 h-5" />;
                 </button>;
@@ -2944,39 +2114,17 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                 >
                   <LayoutGrid className="w-5 h-5" />
                 </button>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${viewMode === 'list';
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400';
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600';
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  }`}
-<<<<<<< HEAD
-                >
-                  <List className="w-5 h-5" />
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 viewMode === 'list'
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400'
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   }`}
                 >;
                   <List className="w-5 h-5" />;
@@ -3006,63 +2154,69 @@ viewMode === 'list';
               </div>;
             </div>;
           </div>;
-                  key={category.id}
-                  on_click={() => setSelectedCategory (category.id)}
-                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${selected_category === category.id;
-                      ? 'bg - gradient - to - r text - white shadow - lg';
-                      : 'bg - white dark:bg - gray - 800 text - gray - 700 dark:text - gray - 300 border border - gray - 200 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700';
-                  } ${category.color}`}
-                >;
-                  {category.icon}
-                  {category.name}
-              ))}
-        {/* Results Summary */}
-        <div className='mb-8'>;
-          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
-            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>;
-              <div>;
-                <h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-2'>;
-                  {filteredServices && filteredServices.length} Services Found;
-                </h2>;
-                <p className='text-gray-600 dark:text-gray-400'>;
-                  {selectedCategory !== 'all' &&;
-                    `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
-                  {searchTerm && ` • Search: "${searchTerm}"`}
-ursor/automate-test-improve-and-merge-code-646c;
-          {/* Category Filters */}
-          <div className="mt-6">;
-            <div className="flex flex-wrap gap-3">;
-              {categories.map((category) => ({/* Category Filters */}
-          <div className='mt-6'>;
-            <div className='flex flex-wrap gap-3'>;
-              {categories.map(category => (<button;
-                >
-<<<<<<< HEAD
-                  <List className='w-5 h-5' />
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+              <a
+                href={`mailto:${contactInfo.email}?subject=Services Inquiry`}
+                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300"
+              >
+                Get Quote
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href={contactInfo.website}
+                target="_blank"
+                rel="noopener noreferrer"
+
+                <button
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-lg transition-all duration-300 ${
+                    viewMode === 'grid' 
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  }`}
+
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-lg transition-all duration-300 ${
+                    viewMode === 'list' 
+                      ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
+                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'
+                  }`}
+
                 </button>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
+                  key={category.id}
+                  on_click={() => setSelectedCategory (category.id)}
+                  className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
+                    selected_category === category.id;
+                      ? 'bg - gradient - to - r text - white shadow - lg';
+                      : 'bg - white dark:bg - gray - 800 text - gray - 700 dark:text - gray - 300 border border - gray - 200 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700';
+                  } ${category.color}`}
+                >;
+                  {category.icon}
+                  {category.name}
+              ))}
+        {/* Results Summary */}
+        <div className='mb-8'>;
+          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
+            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>;
+              <div>;
+                <h2 className='text-2xl font-bold text-gray-900 dark:text-white mb-2'>;
+                  {filteredServices && filteredServices.length} Services Found;
+                </h2>;
+                <p className='text-gray-600 dark:text-gray-400'>;
+                  {selectedCategory !== 'all' &&;
+                    `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
+                  {searchTerm && ` • Search: "${searchTerm}"`}
+origin/cursor/automate-test-improve-and-merge-code-2533
+                </button>
+              </div>
+            </div>
+          </div>
+
                 >;
                   <List className="w-5 h-5" />;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -3091,7 +2245,6 @@ viewMode === 'list';
               </div>;
             </div>;
           </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${selected_category === category.id;
@@ -3114,16 +2267,7 @@ viewMode === 'list';
                   {selectedCategory !== 'all' &&;
                     `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
                   {searchTerm && ` • Search: "${searchTerm}"`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 ursor/automate-test-improve-and-merge-code-646c;
           {/* Category Filters */}
           <div className="mt-6">;
@@ -3133,68 +2277,35 @@ ursor/automate-test-improve-and-merge-code-646c;
             <div className='flex flex-wrap gap-3'>;
               {categories.map(category => (<button;
                 >
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <List className="w-5 h-5" />
                 </button>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           
+
           {/* Category Filters */}
           <div className="mt-6">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
-{/* Category Filters */}
-          <div className='mt-6'>
-            <div className='flex flex-wrap gap-3'>
-              {categories.map(category => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${selectedCategory === category.id;
-                      ? 'bg-gradient-to-r text-white shadow-lg';
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700';
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+                    selectedCategory === category.id
+                      ? 'bg-gradient-to-r text-white shadow-lg'
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700'
                   } ${category.color}`}
-                >;
+                >
                   {category.icon}
                   {category.name}
-                </button>;
+                </button>
               ))}
-            </div>;
-          </div>;
-        </div>;
+            </div>
+          </div>
+        </div>
+
         {/* Results Summary */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div className='mb-8'>
-          <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>
-            <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-              <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div className="mb-8">;
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">;
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">;
@@ -3206,10 +2317,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700'>;
             <div className='flex flex-col md:flex-row items-start md:items-center justify-between gap-4'>;
               <div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
                   className={`px - 4 py - 2 rounded - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${selected_category === category.id;
@@ -3232,26 +2339,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   {selectedCategory !== 'all' &&;
                     `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
                   {searchTerm && ` • Search: "${searchTerm}"`}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -3265,10 +2354,7 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {filteredServices.length} Services Found
                 </h2>
@@ -3277,20 +2363,13 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              
-              
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571
               
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               
               
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -3298,43 +2377,12 @@ main
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4 text-blue-500" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </p>
-              </div>
-              <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>
-                <div className='flex items-center gap-2'>
-                  <TrendingUp className='w-4 h-4 text-green-500' />
-                  <span>Market Growth: 150%+ YoY</span>
-                </div>
-                <div className='flex items-center gap-2'>
-                  <Award className='w-4 h-4 text-blue-500' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                   <span>4.8+ Average Rating</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-
-        {/* Services Grid/List */}
-        <div className="space-y-6">
-          {filteredServices.length === 0 ? (
-            <div className="text-center py-12">
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                No services found
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 <div className='space-y-6'>
           {filteredServices.length === 0 ? (
             <div className='text-center py-12'>
@@ -3346,25 +2394,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </h3>
               <p className='text-gray-600 dark:text-gray-400'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Try adjusting your search terms or category filters.
               </p>
             </div>
           ) : (
             <AnimatePresence>
               {viewMode === 'grid' ? (
-<<<<<<< HEAD
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                  {filteredServices.map(service => (
-                    <ServiceCard key={service.id} service={service} />
-                  ))}
-                </div>
-              ) : (
-                <div className='space-y-6'>
-                  {filteredServices.map(service => (
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                           {filteredServices.map((service) => (
           <ServiceCard key={service.id} service={service} />
@@ -3373,7 +2408,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               ) : (
                 <div className="space-y-6">
                   {filteredServices.map((service) => (
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     <ServiceList key={service.id} service={service} />
                   ))}
                 </div>
@@ -3383,27 +2417,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </div>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-<div className='mt-16 text-center'>
-          <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>
-            <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 </p>;
               </div>;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -3418,9 +2439,6 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                   <Award className="w-4 h-4 text-blue-500" />;
                 </p>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ursor/fix-netlify-build-and-merge-to-main-9571;
 ursor/automate-test-improve-and-merge-code-646c;
 ursor/fix-netlify-build-and-merge-to-main-9571;
@@ -3433,76 +2451,11 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                   <Award className="w-4 h-4 text-blue-500" />;
                 </p>;
               </div>;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+                </p>;
+              </div>;
+
               <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>;
-                <div className='flex items-center gap-2'>;
-                  <TrendingUp className='w-4 h-4 text-green-500' />;
-                  <span>Market Growth: 150%+ YoY</span>;
-                </div>;
-                <div className='flex items-center gap-2'>;
-                  <Award className='w-4 h-4 text-blue-500' />;
-                  <span>4.8+ Average Rating</span>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-        {/* Services Grid/List */}{/* Services Grid/List */}
-        <div className="space-y-6">;
-          {filteredServices.length === 0 ? (<div className="text-center py-12">;
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>;
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
-                No services found;
-              </h3>;
-              <p className="text-gray-600 dark:text-gray-400">;
-<div className='space-y-6'>;
-          {filteredServices.length === 0 ? (<div className='text-center py-12'>;
-              <div className='text-gray-400 dark:text-gray-500 text-6xl mb-4'>;
-                🔍;
-              </div>;
-              <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>;
-                No services found;
-              </h3>;
-              <p className='text-gray-600 dark:text-gray-400'>;
-                Try adjusting your search terms or category filters.;
-              </p>;
-            </div>;
-          ) : (<AnimatePresence>;
-              {viewMode === 'grid' ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                          {filteredServices.map((service) => (<ServiceCard key={service.id} service={service} />;
-        ))}
-                </div>;
-              ) : (<div className="space-y-6">;
-                  {filteredServices.map((service) => (<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-                  {filteredServices.map(service => (<ServiceCard key={service.id} service={service} />;
-                  ))}
-                </div>;
-              ) : (<div className='space-y-6'>;
-                  {filteredServices.map(service => (<ServiceList key={service.id} service={service} />;
-                  ))}
-                </div>;
-              )}
-            </AnimatePresence>;
-          )}
-        </div>;
-        {/* Call to Action */}
-        <div className="mt-16 text-center">;
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">;
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-        <div className="mt-16 text-center">;
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">;
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-<div className='mt-16 text-center'>;
-          <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>;
-            <h2 className='text-3xl md:text-4xl font-bold mb-6'>;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
-              Our team of experts is ready to help you implement these cutting-edge solutions.;
-                </p>;
-              </div>;<div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>;
                 <div className='flex items-center gap-2'>;
                   <TrendingUp className='w-4 h-4 text-green-500' />;
                   <span>Market Growth: 150%+ YoY</span>;
@@ -3516,7 +2469,9 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
                   {selectedCategory !== 'all' && `Filtered by: ${categories && categories.find(c => c && c.id === selectedCategory)?.name}`}
                   {searchTerm && ` • Search: "${searchTerm}"`}
                 </p>;
-              </div>;<div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">;
+              </div>;
+
+              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">;
                 <div className="flex items-center gap-2">;
                   <TrendingUp className="w-4 h-4 text-green-500" />;
                   <span>Market Growth: 150%+ YoY</span>;
@@ -3587,151 +2542,49 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
               specific needs and discover how we can drive your success.;
             </p>;
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
-              <a;
+              <a
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Business Transformation Consultation`}
                 className='inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105'>;
                 Start Your Transformation;
                 <ArrowRight className='w-5 h-5' />;
               </a>;
-              <a;
-            </h2>;
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
-              Our team of experts is ready to help you implement these cutting-edge solutions.;
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-            </h2>;
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
-              Our team of experts is ready to help you implement these cutting-edge solutions.;
-ursor/fix-netlify-build-and-merge-to-main-9571;
               <a
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions.
+              Our team of experts is ready to help you implement these cutting-edge solutions. 
+main
 
-        {/* Services Grid/List */}
-        <div className="space-y-6">;
-          {filteredServices.length === 0 ? (<div className="text-center py-12">;
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>;
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;
-                No services found;
-              </h3>;
-              <p className="text-gray-600 dark:text-gray-400">;
-                Try adjusting your search terms or category filters.;
-              </p>;
-            </div>;
-          ) : (<AnimatePresence>;
-              {viewMode === 'grid' ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-                          {filteredServices.map((service) => (<ServiceCard key={service.id} service={service} />;
-        ))}
-                </div>;
-              ) : (<div className="space-y-6">;
-                  {filteredServices.map((service) => (<ServiceList key={service.id} service={service} />;
-                  ))}
-                </div>;
-              )}
-            </AnimatePresence>;
-          )}
-        </div>;
-        {/* Call to Action */}
-        <div className="mt-16 text-center">;
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">;
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
-              Our team of experts is ready to help you implement these cutting-edge solutions.;
-ursor/automate-test-improve-and-merge-code-646c;
-            </h2>;
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
-              Our team of experts is ready to help you implement these cutting-edge solutions.;
-              Get in touch today to discuss your specific needs and discover how we can drive your success.;
-            </p>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
-              <a;
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-<<<<<<< HEAD
-                href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105";
-              >;
-                Start Your Transformation;
-                <ArrowRight className="w-5 h-5" />;
-              </a>;
-              <a;
-                href={`tel:${contactInfo.mobile}`}
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300";
-              >;
-                <Phone className="w-5 h-5" />;
-                href={`tel:${contactInfo.mobile}`}
-                className='inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300';
-              >;
-                <Phone className='w-5 h-5' />;
-                Call Now;
-              </a>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  )}
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
-              >
-                <Phone className="w-5 h-5" />
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300'
               >
                 <Phone className='w-5 h-5' />
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Call Now
               </a>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         </div>
       </div>
     </div>
   )
 }
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">;
                 Start Your Transformation;
                 <ArrowRight className="w-5 h-5" />;
               </a>;
-              <a;
+              <a
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300">;
                 <Phone className="w-5 h-5" />;
@@ -3756,37 +2609,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </a>;
             </div>;
           </div>;
-  )<button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;
+  );
+          <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;
             Get Started Today;
           </button>;
         </motion.div>;
       </div>;
-    </div>)</div>;
+    </div>);        </div>;
       </div>;
-    </div>)}
-ursor/fix-netlify-build-and-merge-to-main-9571;
-ursor/automate-test-improve-and-merge-code-646c;
-ursor/fix-netlify-build-and-merge-to-main-9571;
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105";
               >;
@@ -3825,19 +2657,9 @@ ursor/fix-netlify-build-and-merge-to-main-9571;
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
             Get Started Today
           </button>
@@ -3845,14 +2667,5 @@ main
       </div>
     </div>
   );
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+

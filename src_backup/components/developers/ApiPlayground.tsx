@@ -1,16 +1,24 @@
-<<<<<<< HEAD:src_backup/components/developers/ApiPlayground.tsx
-const options: RequestInit = {
-
-      method
+method
       headers: {
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiPlayground.tsx
 
-;
-const options: RequestInit = {method;
-      headers: {Authorization: `Bearer ${apiKey}`,"Content-Type": "application/json"},// Add timeout to prevent hanging;
-      try {options.body = JSON.stringify (JSON.parse (body))} catch {set_loading (true)set_response (null)try {const res = await fetch (url, options)const content_type = res.headers.get ('content - type')let response_text: string;
-      if () {) {$2;
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json"},
+      // Add timeout to prevent hanging
+
+      try {
+        options.body = JSON.stringify (JSON.parse (body));
+      } catch {
+
+    set_loading (true);
+    set_response (null);
+
+    try {
+      const res = await fetch (url, options);
+      const content_type = res.headers.get ('content - type');
+      let response_text: string;
+      if () {) {
+  $2
+
 }
         try {const json_data = await res.json ()response_text = JSON.stringify (json_data, null, 2)} catch {response_text = await res.text ()}
       } else {response_text = await res.text ()}// Format the response with status information;
@@ -19,30 +27,18 @@ const options: RequestInit = {method;
       // Check condition;
 if ( {) {$2;
 }
-        error_message = 'Request timed out (15s)';
-      } else if () {) {$2;
-}
-        error_message =;
-          'Network error - check CORS configuration or API endpoint';
-<<<<<<< HEAD:src_backup/components/developers/ApiPlayground.tsx
-      } else {
 
-
-origin/cursor/automate-test-improve-and-merge-code-2533
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
 
-interface Param {;
-=======
       } else {import { useState  } from 'react';
 import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
 import { Button  } from '@/components/ui/button';
 import CodeBlock from './CodeBlock';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiPlayground.tsx
   name: string;
 type: string;
 required?: boolean;
@@ -96,34 +92,55 @@ required?: boolean ;
 
 
 
+  name: string;
+type: string;
+required?: boolean ;
+}interface ApiPlaygroundProps {;
+  method: string;
+  path: string;
+  params?: Param[];
+
+export function ApiPlayground(): any ({;
+  method,;
+  path,;
+  params = [],;
+}: ApiPlaygroundProps) {;
+  const [apiKey, setApiKey] = useState('demo_key_123');
+  const [paramValues, setParamValues] = useState<Record<string, string>>({});
+  const [body, setBody] = useState('{}');
+  const [response, setResponse] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+;
+export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps) {;
+  const [apiKey, setApiKey] = useState("demo_key_123"),;
+  const [paramValues, setParamValues] = useState<Record<string string>>({}),;
+  const [body, setBody] = useState("{}"),;
+  const [response, setResponse] = useState<string | null>(null),;
+  const [loading, setLoading] = useState(false),;
+  const handleParamChange = (name: string, value: string) => {;
+
+    const options: RequestInit = {;
+      method,;
+      headers: {;
+        Authorization: `Bearer ${apiKey}`,;
 
   return (
+
     <div className='space-y-4'>;
+
       <Input
         value={apiKey}
 
-
         onChange={(e) => setApiKey(e.target.value)}
         placeholder="API Key"
-
 
       />
       {params.map(p => (
         <Input
 
-
           value={paramValues[p.name] || ''}
 
-
-          onChange={e => handleParamChange(p.name, e.target.value)}        />
-          key={p && p.name}
-          value={paramValues[p && p.name] || ''}
-          onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;
-
-      ))}
-      {method !== 'GET' && method !== 'DELETE' && (;
-        <Textarea
-=======
       } else {errorMessage = err && err.message || 'Unknown error occurred';
       }setResponse(`Error: ${errorMessage}\n\nAttempted URL: ${url}\n\nTroubleshooting:\n- Ensure the API endpoint exists\n- Check CORS configuration\n- Verify API key is valid\n- Check network connectivity`;
       )} finally {setLoading(false)}},return (<div className='space-y-4'>;
@@ -137,7 +154,6 @@ required?: boolean ;
           value={paramValues[p && p.name] || ''}
           onChange={e => handleParamChange(p && p.name, e && e.target.value)}        />;))}
       {method !== 'GET' && method !== 'DELETE' && (<Textarea;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiPlayground.tsx
           value={body}
           onChange={e => setBody(e && e.target.value)}
           className='font-mono'        />;
@@ -205,6 +221,10 @@ if (contentType?.includes ('application/json') ) {try {/> {params && params.map 
         />;
       ))}
       {method !== "GET" && method !== "DELETE" && (<Textarea;
+      ))}
+      {method !== "GET" && method !== "DELETE" && (
+
+        <Textarea
           value={body}
           onChange={(e) => setBody(e.target.value)}
           className="font-mono";
@@ -218,12 +238,12 @@ if (contentType?.includes ('application/json') ) {try {/> {params && params.map 
     </div>
   )
 }
+
 ;
 export default ApiPlayground;
 
-interface Param {
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </div>;
   )}export default ApiPlayground;interface Param  {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/developers/ApiPlayground.tsx
+export default ApiPlayground;
+
+interface Param {

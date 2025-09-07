@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -120,93 +110,52 @@ const path = require('path')
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
       return size}}
 
-    totalSize = getDirectorySize(buildDir);
-
-    const recommendations = [];
-    if ( { // > 1MB
+    totalSize = getDirectorySize(buildDir)
+    const recommendations = []
       recommendations.push('Consider code splitting to reduce bundle size')}
-    if (jsSize > 512 * 1024) { // > 512KB
+  if($2) { // > 512KB
       recommendations.push('JavaScript bundle is large, consider optimization')}
-
     return {) {
      { // > 1MB
-      recommendations.push('Consider code splitting to reduce bundle size')}
-    if (jsSize > 512 * 1024) { // > 512KB
-      recommendations.push('JavaScript bundle is large, consider optimization')}
-
-    return {}
-      "totalSize": totalSize,
-      "jsSize": jsSize,
-      "cssSize": cssSize,
-      "recommendations": recommendations
+      "recommendations": recommendations;"
     }}
-}
+  if($2) {
+  const runner = new SimpleAutomationRunner()
+  runner.run().catch(error => {)"
 
-if (require.main === module) {
-  const runner = new SimpleAutomationRunner();
-  runner.run().catch(error => {
-    console.error('Automation failed:', error);
-    process.exit(1);
-  });
-}
-
+    process.exit(1)
+  })
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
 
 module.exports = { runSimpleAutomation }}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
-    "overallStatus"
-        execSync('npx tsc --noEmit', { "stdio"})
-        return { "status": 'success', "message"}
-        return { "status"}
-        execSync('npm run "lint": fix', { "stdio"})
-        return { "status": 'success', "message"}
-        return { "status"}
-        execSync('npm run build', { "stdio"})
-        return { "status": 'success', "message"}
-        return { "status"}
-        execSync('npm test -- --passWithNoTests', { "stdio"})
-        return { "status": 'success', "message"}
-        return { "status"}
-        const result = execSync('npm audit --json', { "encoding": 'utf8', "stdio"})
-          "status"
-        return { "status"}
-          "status"
-        return { "status": 'skipped', "message"}
-    console.error(' Simple automation "failed")
-        "status"
+    "overallStatus"""
+        execSync('npx tsc --noEmit', { "stdio"})""
+        return { "status": 'success', "message"}""
+        return { "status"}""
+        execSync('npm run "lint": fix', { "stdio"})""
+        execSync('npm run build', { "stdio"})""
+        execSync('npm test -- --passWithNoTests', { "stdio"})""
+        const result = execSync('npm audit --json', { "encoding": 'utf8', "stdio"})""
+          "status"""
+        return { "status": 'skipped', "message"}""
+    console.error(' Simple automation "failed")""
+        "status"""`

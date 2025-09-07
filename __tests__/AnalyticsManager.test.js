@@ -1,101 +1,28 @@
-ursor/automate-test-improve-and-merge-code-646c;
-import React from 'react';,';
-import '@testing-library/jest-dom';';
-import AnalyticsManager from '../components/AnalyticsManager';';describe('AnalyticsManager', () => {'}
-  test('renders without crashing', () => {'}
-    render(<AnalyticsManager />),expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument()';
-  }),test('displays correct content', () => {'}
-    render(<AnalyticsManager />)}),test('handles user interactions', () => {'}
-    render(<AnalyticsManager />)}),test('applies correct styling', () => {'}
-    render(<AnalyticsManager />)})ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
+const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import AnalyticsManager from "./components/AnalyticsManager" describe("AnalyticsManager",() => {" test("renders without crashing",() => {" render(<AnalyticsManager / / />) expect(screen.getByTestId("analyticsmanager")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<AnalyticsManager / / />) }) test("handles user interactions",() => {" render(<AnalyticsManager / / />) }) test("applies correct styling",() => {" render(<AnalyticsManager / / />) }) })'"'"
+import _React from 'react';,
 ';
+import '@testing-library/jest-dom';';
+import AnalyticsManager from '../components/AnalyticsManager';';
 describe('AnalyticsManager', () => {'}
   test('renders without crashing', () => {'}
-    render(<AnalyticsManager />),expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument()';
-  }),test('displays correct content', () => {'}
-    render(<AnalyticsManager />)}),test('handles user interactions', () => {'}
-    render(<AnalyticsManager />)}),test('applies correct styling', () => {'}
-    render(<AnalyticsManager />)})})})})ursor/add-new-services-and-deploy-updates-0462;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/fix-syntax-push-and-merge-to-main-40de;
-ursor/automate-test-improve-and-merge-code-646c;
-import _React from 'react';
-'';
-describe('AnalyticsManager', () => {';
-  test('renders without crashing', () => {';
-    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument()';
-  test('displays correct content', () => {';
-  test('handles user interactions', () => {';
-  test('applies correct styling', () => {';
-ursor/automate-test-improve-and-merge-code-646c;
     render(<AnalyticsManager />);,
-    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();';
+    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();';,
   });,
   test('displays correct content', () => {'}
-    render(<AnalyticsManager />);
+    render(<AnalyticsManager />);,
   });,
   test('handles user interactions', () => {'}
-    render(<AnalyticsManager />);
+    render(<AnalyticsManager />);,
   });,
   test('applies correct styling', () => {'}
-    render(<AnalyticsManager />);
-  });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-});
-});
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-});
-});
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-});
-});
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-import _React from 'react'
-''
-import '@testing-library/jest-dom';'
-import AnalyticsManager from '../components/AnalyticsManager';'
-describe('AnalyticsManager', () => {'
-  test('renders without crashing', () => {'
-    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();'
-  test('displays correct content', () => {'
-  test('handles user interactions', () => {'
-  test('applies correct styling', () => {'
-import React from 'react';
-import { render, screen  } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import AnalyticsManager from '../components/AnalyticsManager';
-ursor/automate-test-improve-and-merge-code-646c;
-describe('AnalyticsManager', () => {test('renders without crashing', () => {render(<AnalyticsManager />)expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument()})})})})})describe('AnalyticsManager', () => {'}
-  test('renders without crashing', () => {'}
-    render(<AnalyticsManager />),expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument()';
-  }),test('displays correct content', () => {'}
-    render(<AnalyticsManager />)}),test('handles user interactions', () => {'}
-    render(<AnalyticsManager />)}),test('applies correct styling', () => {'}
-    render(<AnalyticsManager />)})})})})';
-describe('AnalyticsManager', () => {';
-  test('renders without crashing', () => {';
-    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument()test('displays correct content', () => {';
-  test('handles user interactions', () => {';
-  test('applies correct styling', () => {';
-ursor/automate-test-improve-and-merge-code-646c;
-
-describe('AnalyticsManager', () => {
-  test('renders without crashing', () => {
-    render(<AnalyticsManager />);
-    expect(screen.getByTestId('analyticsmanager')).toBeInTheDocument();
+    render(<AnalyticsManager />);,
   });
 });
 });
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+});
+});
+});
 import _React from 'react'
 '
 import '@testing-library/jest-dom';
@@ -106,9 +33,3 @@ describe('AnalyticsManager', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

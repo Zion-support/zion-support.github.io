@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -24,7 +12,6 @@ console.log('✅ Security audit completed');
 
 #!/usr/bin/env node
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -182,323 +169,78 @@ class SecurityAuditor {
       console.log(`❌ Security audit failed: ${error.message}`);
       process.exit(1);
 #!/usr/bin/env node
+#!/usr/bin/env node
+
+/**
+ * Security Audit Script
+ * Performs comprehensive security audit
+ */
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔒 Security Audit');
-console.log('================');
+console.log('🔒 Starting security audit...');
 
-class SecurityAuditor {
-  constructor() {
-    this.vulnerabilities = [];
-    this.recommendations = [];
-    this.startTime = Date.now();
+// Security audit configuration
+const config = {
+  outputDir: path.join(__dirname, '..', 'security-reports'),
+  checks: {
+    npmAudit: true,
+    dependencyCheck: true,
+    filePermissions: true,
+    sensitiveData: true
   }
+};
 
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logEntry);
+// Ensure output directory exists
+if (!fs.existsSync(config.outputDir)) {
+  fs.mkdirSync(config.outputDir, { recursive: true });
+}
+
+// Run npm audit
+function runNpmAudit() {
+  try {
+    console.log('🔍 Running npm audit...');
+    const result = execSync('npm audit --json', { encoding: 'utf8' });
+    return JSON.parse(result);
+  } catch (error) {
+    console.log('⚠️  NPM audit failed:', error.message);
+    return { error: error.message };
   }
+}
 
-  async runNpmAudit() {
-    this.log('🔍 Running npm audit...');
-    
-    try {
-      const result = execSync('npm audit --json', {
-        encoding: 'utf8',
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      
-      const auditData = JSON.parse(result);
-      
-      if (auditData.vulnerabilities) {
-        const vulnCount = Object.keys(auditData.vulnerabilities).length;
-        this.log(`⚠️ Found ${vulnCount} vulnerabilities`, 'warning');
-        
-        for (const [packageName, vuln] of Object.entries(auditData.vulnerabilities)) {
-          this.vulnerabilities.push({
-            package: packageName,
-            severity: vuln.severity,
-            title: vuln.title,
-            description: vuln.description,
-            recommendation: vuln.recommendation,
-            type: 'npm-audit'
-          });
-        }
-      } else {
-        this.log('✅ No npm vulnerabilities found', 'success');
-      }
-      
-      return auditData;
-    } catch (error) {
-      this.log(`⚠️ npm audit failed: ${error.message}`, 'warning');
-      return null;
-    }
-  }
+// Check for sensitive data
+function checkSensitiveData() {
+  const sensitivePatterns = [
+    /password\s*=\s*['"][^'"]+['"]/gi,
+    /api[_-]?key\s*=\s*['"][^'"]+['"]/gi,
+    /secret\s*=\s*['"][^'"]+['"]/gi,
+    /token\s*=\s*['"][^'"]+['"]/gi
+  ];
 
-  async checkEnvironmentFiles() {
-    this.log('🔍 Checking environment files...');
-    
-    const envFiles = ['.env', '.env.local', '.env.production', '.env.development'];
-    const issues = [];
-    
-    for (const envFile of envFiles) {
-      const envPath = path.join(process.cwd(), envFile);
-      
-      if (fs.existsSync(envPath)) {
-        const content = fs.readFileSync(envPath, 'utf8');
-        const lines = content.split('\n');
-        
-        for (let i = 0; i < lines.length; i++) {
-          const line = lines[i].trim();
-          
-          // Check for hardcoded secrets
-          if (line.includes('password') || line.includes('secret') || line.includes('key')) {
-            if (!line.includes('=') || line.split('=')[1].trim() === '') {
-              issues.push({
-                file: envFile,
-                line: i + 1,
-                issue: 'Potential hardcoded secret',
-                severity: 'high'
-              });
-            }
-          }
-          
-          // Check for commented out secrets
-          if (line.startsWith('#') && (line.includes('password') || line.includes('secret'))) {
-            issues.push({
-              file: envFile,
-              line: i + 1,
-              issue: 'Commented secret found',
-              severity: 'medium'
-            });
-          }
-        }
-        
-        this.log(`✅ Checked ${envFile}`, 'success');
-      }
-    }
-    
-    if (issues.length > 0) {
-      this.vulnerabilities.push(...issues.map(issue => ({
-        ...issue,
-        type: 'environment'
-      })));
-    }
-    
-    return issues;
-  }
+  const issues = [];
+  const srcDir = path.join(__dirname, '..', 'src');
 
-  async checkPackageJson() {
-    this.log('🔍 Checking package.json for security issues...');
+  if (fs.existsSync(srcDir)) {
+    const files = getAllFiles(srcDir);
     
-    const packageJsonPath = path.join(process.cwd(), 'package.json');
-    
-    if (!fs.existsSync(packageJsonPath)) {
-      this.log('⚠️ package.json not found', 'warning');
-      return;
-    }
-    
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    const issues = [];
-    
-    // Check for scripts that might be dangerous
-    if (packageJson.scripts) {
-      for (const [scriptName, script] of Object.entries(packageJson.scripts)) {
-        if (script.includes('rm -rf') || script.includes('sudo') || script.includes('chmod 777')) {
+    files.forEach(file => {
+      const content = fs.readFileSync(file, 'utf8');
+      sensitivePatterns.forEach(pattern => {
+        const matches = content.match(pattern);
+        if (matches) {
           issues.push({
-            script: scriptName,
-            issue: 'Potentially dangerous script',
-            severity: 'high',
-            scriptContent: script
+            file: path.relative(__dirname, file),
+            matches: matches.length,
+            pattern: pattern.toString()
           });
         }
-      }
-    }
-    
-    // Check for packages with known security issues
-    const dangerousPackages = ['eval', 'vm', 'child_process'];
-    const allDeps = { ...packageJson.dependencies, ...packageJson.devDependencies };
-    
-    for (const [packageName, version] of Object.entries(allDeps)) {
-      if (dangerousPackages.some(dangerous => packageName.includes(dangerous))) {
-        issues.push({
-          package: packageName,
-          version: version,
-          issue: 'Potentially dangerous package',
-          severity: 'medium'
-        });
-      }
-    }
-    
-    if (issues.length > 0) {
-      this.vulnerabilities.push(...issues.map(issue => ({
-        ...issue,
-        type: 'package-json'
-      })));
-    }
-    
-    return issues;
-  }
-
-  async checkFilePermissions() {
-    this.log('🔍 Checking file permissions...');
-    
-    const sensitiveFiles = [
-      'package.json',
-      'package-lock.json',
-      '.env',
-      '.env.local',
-      'next.config.js',
-      'next.config.cjs'
-    ];
-    
-    const issues = [];
-    
-    for (const file of sensitiveFiles) {
-      const filePath = path.join(process.cwd(), file);
-      
-      if (fs.existsSync(filePath)) {
-        try {
-          const stats = fs.statSync(filePath);
-          const mode = stats.mode;
-          
-          // Check if file is world-writable (dangerous)
-          if (mode & 0o002) {
-            issues.push({
-              file: file,
-              issue: 'File is world-writable',
-              severity: 'high',
-              permissions: mode.toString(8)
-            });
-          }
-          
-          // Check if file is group-writable (potentially dangerous)
-          if (mode & 0o020) {
-            issues.push({
-              file: file,
-              issue: 'File is group-writable',
-              severity: 'medium',
-              permissions: mode.toString(8)
-            });
-          }
-        } catch (error) {
-          // Ignore permission errors
-        }
-      }
-    }
-    
-    if (issues.length > 0) {
-      this.vulnerabilities.push(...issues.map(issue => ({
-        ...issue,
-        type: 'permissions'
-      })));
-    }
-    
-    return issues;
-  }
-
-  generateRecommendations() {
-    const recommendations = [];
-    
-    // Generate recommendations based on vulnerabilities
-    const highSeverity = this.vulnerabilities.filter(v => v.severity === 'high');
-    const mediumSeverity = this.vulnerabilities.filter(v => v.severity === 'medium');
-    
-    if (highSeverity.length > 0) {
-      recommendations.push({
-        priority: 'high',
-        message: `Address ${highSeverity.length} high-severity security issues immediately`,
-        count: highSeverity.length
       });
-    }
-    
-    if (mediumSeverity.length > 0) {
-      recommendations.push({
-        priority: 'medium',
-        message: `Review ${mediumSeverity.length} medium-severity security issues`,
-        count: mediumSeverity.length
-      });
-    }
-    
-    // General recommendations
-    recommendations.push({
-      priority: 'low',
-      message: 'Regularly update dependencies to latest secure versions',
-      action: 'npm update'
     });
-    
-    recommendations.push({
-      priority: 'low',
-      message: 'Use environment variables for all sensitive configuration',
-      action: 'Review .env files'
-    });
-    
-    recommendations.push({
-      priority: 'low',
-      message: 'Implement Content Security Policy (CSP) headers',
-      action: 'Add CSP to next.config.js'
-    });
-    
-    return recommendations;
   }
 
-  async generateReport() {
-    const duration = Date.now() - this.startTime;
-    
-    const report = {
-      timestamp: new Date().toISOString(),
-      duration: `${duration}ms`,
-      vulnerabilities: this.vulnerabilities,
-      recommendations: this.generateRecommendations(),
-      summary: {
-        totalVulnerabilities: this.vulnerabilities.length,
-        highSeverity: this.vulnerabilities.filter(v => v.severity === 'high').length,
-        mediumSeverity: this.vulnerabilities.filter(v => v.severity === 'medium').length,
-        lowSeverity: this.vulnerabilities.filter(v => v.severity === 'low').length
-      }
-    };
-    
-    const reportPath = path.join(process.cwd(), 'security-audit-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
-    this.log(`📄 Report saved to: ${reportPath}`);
-    return report;
-  }
 
-  async run() {
-    this.log('🚀 Starting security audit...');
-    
-    try {
-      await this.runNpmAudit();
-      await this.checkEnvironmentFiles();
-      await this.checkPackageJson();
-      await this.checkFilePermissions();
-      
-      const report = await this.generateReport();
-      
-      this.log('🎉 Security audit completed!');
-      this.log(`📊 Summary: ${report.summary.totalVulnerabilities} vulnerabilities found (${report.summary.highSeverity} high, ${report.summary.mediumSeverity} medium, ${report.summary.lowSeverity} low)`);
-      
-      if (report.recommendations.length > 0) {
-        this.log('💡 Recommendations:');
-        report.recommendations.forEach(rec => {
-          this.log(`  - [${rec.priority.toUpperCase()}] ${rec.message}`, 'info');
-        });
-      }
-      
-      return report;
-    } catch (error) {
-      this.log(`❌ Security audit failed: ${error.message}`, 'error');
-      throw error;
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-=======
-
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("fs")
@@ -516,27 +258,15 @@ function log(msg, level = "INFO")
     log(`Sensitive files "present": ${found.join(", ")}`, "WARN"
     log("No sensitive files found in repo root")
   log(" Security audit completed")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }
 }
 
-<<<<<<< HEAD
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-
-console.log('🔒 Running security audit...');
-console.log('✅ Security audit completed');
-
-main
-=======
 // Run the security auditor
 const auditor = new SecurityAuditor();
 auditor.run().catch(console.error);
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Run the auditor
 if (require.main === module) {
@@ -545,20 +275,77 @@ if (require.main === module) {
 }
 
 module.exports = SecurityAuditor;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  return issues;
+}
+
+// Get all files recursively
+function getAllFiles(dir) {
+  const files = [];
+  const items = fs.readdirSync(dir);
+  
+  items.forEach(item => {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory()) {
+      files.push(...getAllFiles(fullPath));
+    } else if (item.endsWith('.js') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.tsx')) {
+      files.push(fullPath);
+    }
+  });
+  
+  return files;
+}
+
+// Main security audit
+function runSecurityAudit() {
+  const audit = {
+    timestamp: new Date().toISOString(),
+    npmAudit: runNpmAudit(),
+    sensitiveData: checkSensitiveData(),
+    summary: {
+      totalIssues: 0,
+      criticalIssues: 0,
+      warnings: 0
+    }
+  };
+
+  // Calculate summary
+  if (audit.npmAudit.vulnerabilities) {
+    audit.summary.totalIssues += Object.keys(audit.npmAudit.vulnerabilities).length;
+  }
+  
+  audit.summary.totalIssues += audit.sensitiveData.length;
+  audit.summary.warnings = audit.sensitiveData.length;
+
+  return audit;
+}
+
+// Save audit results
+function saveAuditResults(audit) {
+  const filename = `security-audit-${Date.now()}.json`;
+  const filepath = path.join(config.outputDir, filename);
+  
+  fs.writeFileSync(filepath, JSON.stringify(audit, null, 2));
+  console.log(`🔒 Security audit saved to: ${filename}`);
+  
+  // Print summary
+  console.log(`📊 Security Audit Summary:`);
+  console.log(`   Total Issues: ${audit.summary.totalIssues}`);
+  console.log(`   Critical Issues: ${audit.summary.criticalIssues}`);
+  console.log(`   Warnings: ${audit.summary.warnings}`);
+}
+
+// Main execution
+try {
+  const audit = runSecurityAudit();
+  saveAuditResults(audit);
+  console.log('✅ Security audit completed');
+} catch (error) {
+  console.error('❌ Security audit failed:', error.message);
+  process.exit(1);
+}

@@ -1,59 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import Fastify from 'fastify',
 import cors from '@fastify/cors',
 import rateLimit from '@fastify/rate-limit';
-const app = null;
-    cb: (err: Error | null, allow?: boolean) => void
-  ) => {
-    const allowed = (process.env.CORS_ORIGINS |'')
-      .split(',')
-      .map(s => s.trim());
+import { createOpenAIClient, generateJobPost  } from './openai';
+import { withUser  } from './pg';
+import dotenv from 'dotenv';
+dotenv.config($2);
+const app = Fastify($2);
+await app.register(cors, {
+  origin: (origin: string | undefined, cb: (err: Error | null, allow?: boolean) => void) => {
+    const allowed = $2;
     if (!origin || allowed.includes('*') || allowed.includes(origin)) {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Fastify from 'fastify',import cors from '@fastify/cors',const app = null;
     cb: (err: Error | null, allow?: boolean) => void;
   ) => {const allowed = (process.env.CORS_ORIGINS |'').split(',').map(s => s.trim())if (!origin || allowed.includes('*') || allowed.includes(origin)) {cb(null, true)return;
@@ -67,29 +31,11 @@ import Fastify from 'fastify',import cors from '@fastify/cors',const app = null;
   if (!prompt) return reply.code(400).send({ error: 'prompt required' })const completion = await openai.responses.create({model: 'gpt-4o-mini',input: prompt;
   })return { text: completion.output_text }})app && app.post('/jobs/generate', async (req: any, reply: any) => {const body = (req && req.body as any) || {}const role  = (body && body.role as string) || 'Engineer';const userId = getUserId(req)const description  = await generateJobPost(openai, role, body)`INSERT INTO job_post (user_id, title, description, location, tags, status)VALUES ($1, $2, $3, $4, $5, 'draft')`;[userId, role, description, body && body.location || null, body && body.tags || null];
     )app.post ('/jobs / generate', async (req: any, reply: any) => {const body = (req.body as any) || {}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       cb(null, true);
       return;
     }
     cb(new Error('Not allowed'), false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
   });
@@ -100,45 +46,28 @@ import Fastify from 'fastify',import cors from '@fastify/cors',const app = null;
   return { text: completion.output_text }
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 },
   methods: ['GET', 'POST', 'OPTIONS'],
 });
 await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY |'');
-function getUserId(req: any): string | null {
-return (
-    (req.headers['x-user-id'] as string) ||
-    (req.query as any)['user_id'] ||
-    null
-  );
+      cb($2);
+      return
+    }
+    cb(new Error('Not allowed'), false)
+  },
+  methods: ['GETPOSTOPTIONS']
+}),
 
+await app.register($2);
+const openai = createOpenAIClient($2);
+function getUserId(req: any): string | null {
+  return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null
+}
 app.post('/ai/ask', async (req: any, reply: any) => {
-  const body = (req.body as any) |{}
-  const prompt = body.prompt as string;
-  if (!prompt) return reply.code(400).send({ error: 'prompt required' });
-const completion = await openai.responses.create({
-    model: 'gpt-4o-mini',
-    input: prompt,
-  });
-  return { text: completion.output_text };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 });
 
 
@@ -148,14 +77,6 @@ app && app.post('/jobs/generate', async (req: any, reply: any) => {
 
   const userId = getUserId(req);
   const description = await generateJobPost(openai, role, body);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
       `INSERT INTO job_post (user_id, title, description, location, tags, status)
@@ -163,22 +84,8 @@ app && app.post('/jobs/generate', async (req: any, reply: any) => {
 
       [userId, role, description, body && body.location || null, body && body.tags || null]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     )
 ;
 app.post ('/jobs / generate', async (req: any, reply: any) => {
@@ -224,11 +131,6 @@ app.get ('/talent / search', async (req: any, reply: any) => {const q = (req.que
       [user_id, role, description, body.location || null, body.tags || null]);
   });
   return { saved: Boolean (user_id), description }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   if (!userId) return { description };
 await withUser(userId, async client => {
     await client.query(
@@ -240,55 +142,22 @@ await withUser(userId, async client => {
   return { saved: Boolean(userId), description };
 origin/cursor/automate-test-improve-and-merge-code-2533
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 app && app.get('/talent/search', async (req: any, reply: any) => {
   const q = (req && req.query as any).q as string;
   const country = (req && req.query as any).country as string | undefined;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 });
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const rows = await withUser(userId, async client => {    const res = await client && client.query(  const rows = await withUser(userId, async (client) => {
     const res = await client && client.query(
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -296,116 +165,50 @@ const rows = await withUser(userId, async client => {
 origin/cursor/automate-test-improve-and-merge-code-2533
     const res = await client.query(
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
     const res = await client.query(
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
        WHERE ($1::text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' |$2 |'%'
            ))
        ORDER BY created_at DESC
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     );
     return res && res.rows
   });
   return { results: rows }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 LIMIT 25`,
       [country || null, q || null]
     );
     return res.rows;
   });
   return { results: rows };
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-});
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   const name = (req && req.params as any).name as string;
 
   const userId = getUserId(req);
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 });
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const userId = getUserId(req);
   if (!userId) return reply && reply.code(401).send({ error: 'unauthorized' });
   const items = await withUser(userId, async client => {    const res = await client && client.query(
@@ -429,34 +232,14 @@ app.log.error(err);
 });  (process as any).exit(1)
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 });
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 app.get('/notifications', async (req: any, reply: any) => {
   const userId = getUserId(req);
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
@@ -465,56 +248,59 @@ app.get('/notifications', async (req: any, reply: any) => {
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
     );
+  const body = $2;
+  const prompt = $2;
+  if (!prompt) return reply.code(400).send($2);
+  const completion = await openai.responses.create($2);
+  return { text: completion.output_text }
+}),
+
+app.post('/jobs/generate', async (req: any, reply: any) => {
+  const body = $2;
+  const role = $2;
+  const userId = getUserId($2);
+  const description = await generateJobPost($2);
+  if (!userId) return { description },
+  await withUser(userId, async (client) => {
+    await client.query(
+      `INSERT INTO job_post (user_id, title, description, location, tags, status)
+       VALUES ($1, $2, $3, $4, $5, 'draft')`,
+      [userId, role, description, body.location || null, body.tags || null]
+    )
+  }),
+  return { saved: Boolean(userId), description }
+}),
+
+app.get('/talent/search', async (req: any, reply: any) => {
+  const q = $2;
+  const country = $2;
+  const userId = getUserId($2);
+  if (!userId) return reply.code(401).send($2);
+  const rows = await withUser(userId, async (client) => {
+    const res = await client.query(
+      `SELECT id, full_name, country, skills, experience_years FROM talent_profile
+       WHERE ($1::text IS NULL OR country = $2;
+      [country || null, q || null]
+    ),
     return res.rows
-  });
-  return { items }
-});
+  }),
+  return { results: rows}
+}),
 
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-});
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
 const port = Number(process.env.API_PORT || 4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   app.log.error(err);
   (process as any).exit(1)
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 });
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 app.get ('/talent / search', async (req: any, reply: any) => {
   const q = (req.query as any).q as string;
@@ -576,24 +362,12 @@ app.log.error (err);
 });  (process as any).exit (1);
 });
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   if (!userId) return reply.code(401).send({ error: 'unauthorized' });
 const project = await withUser(userId, async client => {
@@ -624,18 +398,32 @@ app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
   app.log.error(err);
 (process as any).exit(1);
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+app.get('/projects/:name/track', async (req: any, reply: any) => {
+  const name = $2;
+  const userId = getUserId($2);
+  if (!userId) return reply.code(401).send($2);
+  const project = await withUser(userId, async (client) => {
+    const res = await client.query($2);
+    return res.rows[0]
+  }),
+  if (!project) return reply.code(404).send($2);
+  return { project }
+}),
+
+app.get('/notifications', async (req: any, reply: any) => {
+  const userId = getUserId($2);
+  if (!userId) return reply.code(401).send($2);
+  const items = await withUser(userId, async (client) => {
+    const res = await client.query($2);
+    return res.rows
+  }),
+  return { items }
+}),
+
+const port = Number($2);
+app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
+  app.log.error($2);
+  (process as any).exit(1)
+}),

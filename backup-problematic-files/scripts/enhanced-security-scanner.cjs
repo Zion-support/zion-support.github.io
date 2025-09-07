@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -40,16 +37,14 @@
     log('error', 'Fatal error in enhanced security scanner', error.message);
     process.exit(1)}
 }
-<<<<<<< HEAD
-main();
-#!/usr/bin/env node;
-=======
 
 main();
 
 #!/usr/bin/env node;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+main();#!/usr/bin/env node;
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

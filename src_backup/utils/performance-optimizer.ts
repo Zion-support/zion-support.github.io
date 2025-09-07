@@ -1,4 +1,3 @@
-
 const images = document && document.querySelectorAll('img');
   images && images.forEach(img => {
     if (!img && img.loading) {
@@ -24,3 +23,17 @@ export const preloadCriticalResources = () => {
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
 
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+
+};
+
+export const optimizeBundleSize = () => {
+  // Dynamic imports for non-critical components
+
+  const loadComponent = componentName => {
+    return import(`./components/${componentName}`);
+  };
+
+  return { loadComponent };
+};

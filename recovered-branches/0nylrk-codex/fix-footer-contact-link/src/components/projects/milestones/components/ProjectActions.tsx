@@ -1,25 +1,12 @@
-
-<<<<<<< HEAD
-
-  projectId: string
-  isUnderDispute: boolean
-  disputeId?: string;
-  isTalent: boolean
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Button} from '@/components/ui/button';
 import {Link} from 'react-router-dom';
 import {ShieldAlert} from "lucide-react";
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
 
-<<<<<<< HEAD
-=======
   projectId: string
   isUnderDispute: boolean
   disputeId?: string;
   isTalent: boolean
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import React from 'react',
 import { Button } from '@/components/ui/button',
@@ -27,9 +14,11 @@ import { Link } from 'react-router-dom',
 import { ShieldAlert } from "lucide-react",
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
 
-<<<<<<< HEAD
-
-
+import React from 'react';
+import { Button  } from '@/components/ui/button';
+import { Link  } from 'react-router-dom';
+import { ShieldAlert } from "lucide-react";
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface ProjectActionsProps {
   projectId: string,
   isUnderDispute: boolean,
@@ -38,7 +27,14 @@ interface ProjectActionsProps {
   onAddMilestone: () => void
 }
 
-export function ProjectActions({;
+interface ProjectActionsProps {
+  projectId: string,
+  isUnderDispute: boolean,
+  disputeId?: string,
+  isTalent: boolean,
+  onAddMilestone: () => void
+}
+export function ProjectActions({
   projectId;
   isUnderDispute;
   disputeId;
@@ -48,14 +44,6 @@ export function ProjectActions({
   isUnderDispute,
   disputeId,
   isTalent,
-
-
-  onAddMilestone
-}: ProjectActionsProps) {
-  return (
-
-  return (
-
   onAddMilestone
 }: ProjectActionsProps) {
   return (
@@ -68,23 +56,16 @@ export function ProjectActions({
           </Link>
         </Button>
       ) : (
-  onAddMilestone
-}: ProjectActionsProps) {
-  return (
-
         <RaiseDisputeButton
           projectId={projectId}
           variant="outline"
         />
-
-=======
   onAddMilestone
 }: ProjectActionsProps) {
   return (        <RaiseDisputeButton
           projectId={projectId}
           variant="outline"
         />
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Link } from 'react-router-dom',;
@@ -104,30 +85,6 @@ export function ProjectActions({;
   disputeId;
   isTalent;
   onAddMilestone;
-<<<<<<< HEAD
-}: ProjectActionsProps) {;
-  return (;
-
-    <div className="flex gap-2">;
-      {isUnderDispute && disputeId ? (;
-        <Button variant="outline" asChild>;
-          <Link to={`/dashboard/disputes/${disputeId}`}>;
-            <ShieldAlert className="h-4 w-4 mr-2" />;
-            View Active Dispute;
-          </Link>;
-        </Button>;
-      ) : (;
-        <RaiseDisputeButton
-          projectId={projectId}
-          variant="outline"
-      ) :(;
-        <RaiseDisputeButton ;
-          projectId={projectId}
-          variant="outline";
-        />;
-
-
-
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
@@ -137,11 +94,6 @@ export function ProjectActions({;
     </div>
   )
 }
-    </div>;
-  );
-}
-import {Button} from '@/components / ui / button';
-=======
 }: ProjectActionsProps) {;        <RaiseDisputeButton
           projectId={projectId}
           variant="outline"        />;
@@ -149,7 +101,6 @@ import {Button} from '@/components / ui / button';
     </div>
   )
 }import {Button} from '@/components / ui / button';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {Link} from 'react-router-dom';
 import { ShieldAlert } from './lucide-react';
 import {RaiseDisputeButton} from '@/components / disputes / RaiseDisputeButton';
@@ -165,19 +116,11 @@ export /**
  */
 function ProjectActions() {
   return (
-<<<<<<< HEAD
-    <div className="flex gap - 2">;
-      {isUnderDispute && dispute_id ? (
-        <Button variant="outline" as_child>;
-          <Link to={`/dashboard / disputes/${dispute_id}`}>;
-            <ShieldAlert className="h - 4 w - 4 mr - 2" />;
-=======
     <div className="flex gap-2">;
       {isUnderDispute && dispute_id ? (
         <Button variant="outline" as_child>;
           <Link to={`/dashboard / disputes/${dispute_id}`}>;
             <ShieldAlert className="h - 4 w - 4 mr-2" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             View Active Dispute;
           </Link>;
         </Button>) : (
@@ -192,35 +135,3 @@ function ProjectActions() {
         </Button>)}
     </div>);
 }
-<<<<<<< HEAD
-    </div>;
-  ),;}
- interface ProjectActionsProps {
-  projectId: string;
-isUnderDispute: boolean;
-disputeId?: string;
-isTalent: boolean;
-onAddMilestone: () => void 
-}export function ProjectActions ({
-  projectId;
-isUnderDispute;
-disputeId;
-isTalent;
-onAddMilestone 
-}: ProjectActionsProps) {
-  return (<div className="flex gap-2" > isUnderDispute && disputeId ? (<Button variant="outline" asChild> <Link to= {
-  `/dashboard/disputes/$ {
-  disputeId 
-}` 
-}> <ShieldAlert className="h-4 w-4 mr-2" /> View Active Dispute </Link> </Button>) : (<RaiseDisputeButton />) 
-}{
-  isTalent && !isUnderDispute && (<Button onClick= {
-  onAddMilestone 
-}> Add Milestone </Button>) 
-}</div>) 
-}
-    </div>
-  )
-}
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

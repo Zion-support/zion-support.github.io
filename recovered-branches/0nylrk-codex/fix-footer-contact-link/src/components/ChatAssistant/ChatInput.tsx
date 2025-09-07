@@ -1,20 +1,3 @@
-  useState,
-  useRef,
-  useEffect,
-  FormEvent,
-  KeyboardEvent,;
-
-import React, {;
-  useState,;
-  useRef,;
-  useEffect,;
-  FormEvent,;
-  KeyboardEvent,;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, {
   useState,
   useRef,
@@ -24,49 +7,12 @@ import React, {
 
 } from "react";
 
-<<<<<<< HEAD
-} from "react";
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 interface ChatInputProps {;
   onSend: (message: string) => void;
   disabled?: boolean
 }
-<<<<<<< HEAD
-
-export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) {;
-  const [message, setMessage] = useState("");
-  const inputRef = useRef<HTMLTextAreaElement>(null);
-
-
-  useEffect(() => {;
-    // Focus input when component mounts;
-    inputRef && inputRef.current?.focus();
-  }, []);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
-    e && e.preventDefault();
-    if (message && message.trim() && !disabled) {;
-      (onSend(message), setMessage(""));
-    }
-  };
-
-  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {;
-    if (e && e.key === "Enter" && !e && e.shiftKey) {;
-      e && e.preventDefault();
-      if (message && message.trim() && !disabled) {;
-
-        (onSend(message), setMessage(""));
-      }
-    }
-
-
-  };
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',
 import { Button } from "@/components/ui/button",
 import { Send } from "lucide-react",
@@ -101,81 +47,57 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {;
       if (message.trim() && !disabled) {;
         onSend(message);
         setMessage('');
+import React, {
+  useState
+  useRef
+  useEffect
+  FormEvent
+  KeyboardEvent
+} from "react";
+
+import { Button } from "@/components/ui/button";
+import { Send } from "lucide-react";
+interface ChatInputProps {
+  onSend: (message: string) => void,
+  disabled?: boolean
+}
+
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
+  const [message, setMessage] = useState($2);
+  const inputRef = $2;
+  useEffect(() => {
+    // Focus input when component mounts
+    inputRef.current?.focus()
+  }, []),
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault($2);
+    if (message.trim() && !disabled) {
+      onSend($2);
+      setMessage('')
+    }
+  },
+
+  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault($2);
+      if (message.trim() && !disabled) {
+        onSend($2);
+        setMessage('')
       }
     }
   },
 
-<<<<<<< HEAD
-
-
-
-  return (
-    <form onSubmit={handleSubmit} className="flex items-end gap-2">;
-  return (
-=======
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;  return (
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <form onSubmit={handleSubmit} className="flex items-end gap-2">;
+  return (
+    <form onSubmit={handleSubmit} className="flex items-end gap-2">
       <textarea
         ref={inputRef}
         className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-white placeholder:text-zion-slate-light"
         placeholder="Type your message..."
-<<<<<<< HEAD
         value={message}
-        onChange={(e) => setMessage(e && e.target.value)}
-        onKeyDown={handleKeyPress}
-        rows={1}
-        disabled={disabled}
-  );
-}
-
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react',;
-import { Button } from "@/components/ui/button",;
-import { Send } from "lucide-react",;
-;
-interface ChatInputProps {;
-  onSend:(message:string) => void,;
-  disabled?:boolean;
-}
-;
-export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
-  const [message, setMessage] = useState(''),;
-  const inputRef = useRef<HTMLTextAreaElement>(null),;
-;
-  useEffect(() => {;
-    // Focus input when component mounts;
-    inputRef.current?.focus(),;
-  }, []),;
-;
-  const handleSubmit = (e:FormEvent<HTMLFormElement>) => {;
-    e.preventDefault(),;
-    if (message.trim() && !disabled) {;
-      onSend(message),;
-      setMessage('');
-    }
-  },;
-;
-  const handleKeyPress = (e:KeyboardEvent<HTMLTextAreaElement>) => {;
-    if (e.key === 'Enter' && !e.shiftKey) {;
-      e.preventDefault(),;
-      if (message.trim() && !disabled) {;
-        onSend(message),;
-        setMessage('');
-      }
-    }
-  },;
-;
-  return (;
-    <form onSubmit={handleSubmit} className="flex items-end gap-2">;
-      <textarea;
-        ref={inputRef}
-        className="flex-1 min-h-[40px] max-h-[120px] px-3 py-2 bg-zion-blue-dark border border-zion-blue-light rounded-md focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent resize-none text-white placeholder:text-zion-slate-light";
-        placeholder="Type your message...";        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        onKeyDown={handleKeyPress}
-        rows={1}
-        disabled={disabled}
         onChange={(e) => setMessage(e.target.value)}
         onKeyDown={handleKeyPress}
         rows={1}
@@ -184,26 +106,16 @@ export function ChatInput({ onSend, disabled = false } ChatInputProps) {;
       <Button 
         type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
-        disabled={!message.trim() || disabled}
+        disabled={!message.trim() |disabled}
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
-);
-  )
-
-  );
-}
-  )
-}
-}
-  )
-}
-=======
         value={message}});
   )
 
 }
   )
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  )
+}

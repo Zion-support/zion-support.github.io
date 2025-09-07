@@ -5,14 +5,6 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 console.log('🚀 Comprehensive Merge Conflict Resolver');
-<<<<<<< HEAD
-console.log('==');
-// Function to remove merge conflict markers
-function removeMergeConflictMarkers(content) {
-  return content
-<<<<<<< HEAD
-    .replace(/[a-f0-9]+/g, '');
-=======
 
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
@@ -23,13 +15,16 @@ function removeMergeConflictMarkers(content) {
     .replace(/
 
     .replace(/
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     .replace(/
     .replace(/
     .replace(/
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
+
+    .replace(/    .replace(//g, '')
+    .replace(/}
 
 // Function to fix common syntax errors
 function fixSyntaxErrors(content) {
@@ -108,14 +103,9 @@ function processFile(filePath) {
     let modified = false;
 
     // Check for merge conflict markers
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
     if (content.includes('
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`🔧 Removing merge conflict markers from ${filePath}`);
       content = removeMergeConflictMarkers(content);
@@ -153,7 +143,6 @@ function findFilesWithConflicts() {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
           if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             files.push(fullPath);
           }
         } catch (error) {
@@ -173,10 +162,7 @@ function findFilesWithConflicts() {
         this.resolvedFiles.push(filePath)
         this.log(`✅ Resolved conflicts in ${filePath}`),,
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     } catch (error) {
       this.errors.push({ file: filePath, error: error.message })
       this.log(`❌ Error resolving ${filePath}: ${error.message}`),,
@@ -200,10 +186,7 @@ function findFilesWithConflicts() {
       } catch (error) {
         this.log(`⚠️ Could not remove ${artifact}: ${error.message}`),,
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 // Main execution
 async function main() {
   try {

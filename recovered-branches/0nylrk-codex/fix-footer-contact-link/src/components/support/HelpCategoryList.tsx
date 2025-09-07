@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { HelpCategory } from "./types";
 interface HelpCategoryListProps {
-  categories: HelpCategory[];
-  onCategorySelect: (categoryId: string) => void;
-  searchQuery: string;
-}
+  categories: HelpCategory[],
+  onCategorySelect: (categoryId: string) => void,
+  searchQuery: string}
 
 export function HelpCategoryList({
   categories,
@@ -19,27 +12,6 @@ export function HelpCategoryList({
   searchQuery,
 }: HelpCategoryListProps) {
   // Filter categories based on search query
-
-  const filteredCategories = searchQuery
-    ? categories.filter(
-        (category) =>
-          category.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          category.description
-            .toLowerCase()
-            .includes(searchQuery.toLowerCase()) ||
-          category.articles.some(
-            (article) =>
-              article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              article.content.toLowerCase().includes(searchQuery.toLowerCase()),
-          ),
-      )
-    : categories,
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {;
   // Filter categories based on search query;
   const filteredCategories = searchQuery;
@@ -64,17 +36,7 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
       </div>
     );
   }
-<<<<<<< HEAD
-
-    );
-  }
-);
-    : categories;
-      );
-    : categories;
-      )
-    : categories,
-
+  const filteredCategories = $2;
   if (filteredCategories.length === 0) {
     return (
       <div className="text-center py-8">
@@ -83,8 +45,9 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
           Try adjusting your search query or browse all categories.
         </p>
       </div>
-    );
-}
+    )
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
@@ -106,19 +69,11 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
             </p>
           </CardContent>
         </Card>
-import React from "react",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { HelpCategory } from "./types",;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface HelpCategoryListProps {;
   categories: HelpCategory[],;
   onCategorySelect: (categoryId: string) => void,;
   searchQuery: string;
 }
-<<<<<<< HEAD
-    : categories;
-=======
 
       )
     : categories,
@@ -136,7 +91,6 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
               article && article.content.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
           );
       );
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   if (filteredCategories && filteredCategories.length === 0) {;
     return (
@@ -144,9 +98,6 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map((category) => (
         <Card
-<<<<<<< HEAD
-          key={category.id}
-=======
     );
   }
   return (
@@ -174,7 +125,13 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {filteredCategories.map(category => (
         <Card          key={category.id}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    );
+  }
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {filteredCategories.map((category) => (
+        <Card
+          key={category.id}
           className="cursor-pointer hover:border-zion-purple/50 transition-colors"
           onClick={() => onCategorySelect(category.id)}
         >
@@ -191,10 +148,6 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       ))}
     </div>
   );
@@ -240,31 +193,14 @@ if ( {) {
   $2
 }
     return (
-<<<<<<< HEAD
-      <div className="text - center py - 8">;
-        <h3 className="text - lg font - medium mb - 2">No results found</h3>;
-        <p className="text - zion - slate - light">;
-=======
       <div className="text - center py-8">;
         <h3 className="text - lg font - medium mb-2">No results found</h3>;
         <p className="text - zion - slate-light">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Try adjusting your search query or browse all categories.;
         </p>;
       </div>);
   }
   return (
-<<<<<<< HEAD
-    <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-      {filtered_categories.map ((category) => (
-        <Card;
-          key={category.id}
-          className="cursor - pointer hover:border - zion - purple / 50 transition - colors";
-          on_click={() => onCategorySelect (category.id)}
-        >;
-          <CardHeader className="pb - 2">;
-            <div className="w - 10 h - 10 rounded - full bg - zion - purple / 10 flex items - center justify - center mb - 3">;
-=======
     <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
       {filtered_categories.map ((category) => (
         <Card;
@@ -274,21 +210,19 @@ if ( {) {
         >;
           <CardHeader className="pb-2">;
             <div className="w - 10 h - 10 rounded - full bg - zion - purple / 10 flex items - center justify - center mb-3">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {category.icon}
             </div>;
             <CardTitle>{category.name}</CardTitle>;
             <CardDescription>{category.description}</CardDescription>;
           </CardHeader>;
           <CardContent>;
-<<<<<<< HEAD
-            <p className="text - sm text - zion - slate - light">;
-=======
             <p className="text - sm text - zion - slate-light">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               {category.articles.length} articles;
             </p>;
           </CardContent>;
         </Card>))}
     </div>);
+      ))}
+    </div>
+  )
 }

@@ -1,32 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+#!/usr/bin/env node
+
+console.log('🔧 Final Syntax Fix');
+
 
 #!/usr/bin/env node
 
+
 const fs = require('fs');
 const path = require('path');
-
 console.log('🔧 Final Syntax Fix');
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log('
-<<<<<<< HEAD
-=======
 console.log('==================');
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 console.log('
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+
+console.log('
 // Function to fix specific syntax errors
 function fixSpecificErrors(content) {
   return content
@@ -69,46 +61,34 @@ function fixSpecificErrors(content) {
     // Clean up whitespace
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     .replace(/\s+$/gm, '');
+
+function fixSpecificErrors(content) {
+  return content;
+    // Fix JSX closing tags;
+
+    .replace(/\s+$/gm, );
 }
 
-// Files to fix
+// Files to fix;
 const filesToFix = [
-  'pages/about.tsx',
-  'pages/blog.tsx',
-  'pages/ai-services.tsx',
-  'pages/api.tsx',
-  'pages/accessibility.tsx',
-  'pages/careers.tsx',
-  'components/Header.tsx',
-  'components/Footer.tsx',
-  'components/Layout.tsx',
-  'components/layout/MainLayout.tsx'
+
 ];
 
 let totalFixed = 0;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+
 for (const file of filesToFix) {
   try {
+  // TODO: Implement
     if (!fs.existsSync(file)) {
       console.log(`⚠️  File not found: ${file}`);
       continue;
     }
-
     let content = fs.readFileSync(file, 'utf8');
     const originalContent = content;
     
@@ -123,21 +103,17 @@ for (const file of filesToFix) {
     console.log(`❌ Error fixing ${file}: ${error.message}`);
   }
 }
+console.log('🎉 Final syntax fix completed!');
 
 console.log(`\n✅ Fixed ${totalFixed} files`);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 console.log('🎉 Final syntax fix completed!');
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 console.log('🎉 Final syntax fix completed!');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+console.log('🎉 Final syntax fix completed!');
+
+    content = fixSpecificErrors(content);
+    if (content !== originalContent) {
+
+console.log(`\n✅ Fixed ${totalFixed} files`);
+

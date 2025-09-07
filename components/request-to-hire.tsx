@@ -1,29 +1,7 @@
-
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
+import { useRouter } from 'next/router';
+import { TALENT_PROFILES } from '../data/talent';
 export default function RequestToHirePage() {
-<<<<<<< HEAD
-  const router = null;
-  });
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<null | { id: string; message: string }>(
-    null
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-  const [error, setError] = useState<string | null>(null);
-      setError('Please fill in name, email, and description.');
-return;
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { useEffect, useMemo, useState  } from 'react';
 export default function RequestToHirePage() {export default function RequestToHirePage() {const router = useRouter()const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent)[talent];
@@ -34,8 +12,6 @@ export default function RequestToHirePage() {export default function RequestToHi
   })const [submitting, setSubmitting] = useState(false)const [result, setResult] = useState<null | { id: string; message: string }>(null;
   )const [error, setError] = useState<string | null>(null)setError('Please fill in name, email, and description.')return;    }      return;
       const data = await res.json()if (!res.ok) throw new Error(data.error |'Failed to submit')setResult({ id: data.id, message: 'Request submitted successfully.' })} catch (err: any) {setError(err.message |'Something went wrong')} finally {setSubmitting(false)}if (result) {return (<div className='max-w-xl mx-auto py-12'>;
-<<<<<<< HEAD
-=======
 
 export default function RequestToHirePage() {;
   const router = useRouter();
@@ -82,19 +58,45 @@ export default function RequestToHirePage() {;
       return;    }      return;
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
+  const router = useRouter($2);
+  const { talent } = router.query as { talent?: string },
+  const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]),
+
+  const [form, setForm] = useState($2);
+  const [submitting, setSubmitting] = useState($2);
+  const [result, setResult] = useState<null | { id: string, message: string}>(null),
+  const [error, setError] = useState<string | null>(null),
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault($2);
+    setError($2);
+    if (!form.name || !form.email || !form.description) {
+      setError($2);
+      return
+    }
+
+    const normalizedBudget = form.budget.replace($2);
+    setSubmitting($2);
+    try {
+      const res = await fetch('/api/requests/create', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...form,
+          budget: normalizedBudget,
+          talentSlug: selected ?.slug || null})}),
+      const data = await res.json($2);
+      if (!res.ok) throw new Error($2);
       setResult({ id: data.id, message: 'Request submitted successfully.' })
     } catch (err: any) {
-      setError(err.message |'Something went wrong')
+      setError(err.message || 'Something went wrong')
     } finally {
       setSubmitting(false)
     }
+  },
 
-  if (result) {;
+  if (result) {
     return (
-      <div className='max-w-xl mx-auto py-12'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <h1 className='text-2xl font-semibold mb-2'>Thanks!</h1>;
         <p className='text-gray-600 mb-4'>;
           We received your request. We will notify the appropriate team.;
@@ -102,12 +104,7 @@ export default function RequestToHirePage() {;
         <div className='text-sm text-gray-500'>;
           Confirmation ID: {result && result.id}
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       </div>;return;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
     const normalizedBudget = form.budget.replace(/[^0-9.\-]/g, '')setSubmitting(true)try {const res = await fetch('/api/requests/create', {method: 'POST';
         headers: { 'Content-Type': 'application/json' }
@@ -120,26 +117,15 @@ export default function RequestToHirePage() {;
         </p>;
         <div className='text-sm text-gray-500'>;
           Confirmation ID: {result.id}
-<<<<<<< HEAD
-        </div>
-      </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     );
   }
   return (
     <div className='max-w-xl mx-auto'>;
-=======
         </div>;
       </div>;
     )}
   return (<div className='max-w-xl mx-auto'>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <h1 className='text-2xl font-semibold mb-4'>;
         Request to Hire{selected ? ` — ${selected && selected.name}` : ''}
       </h1>;
@@ -191,37 +177,53 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           />;
         </div>;
         {error && <div className='text-sm text-red-600'>{error}</div>}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <button
-          disabled={submitting}
-<<<<<<< HEAD
-          className='px-4 py-2 rounded bg-black text-white'
-        >
+      <div className="max-w-xl mx-auto py-12">
+        <h1 className="text-2xl font-semibold mb-2">Thanks!</h1>
+        <p className="text-gray-600 mb-4">We received your request. We will notify the appropriate team.</p>
+        <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="max-w-xl mx-auto">
+      <h1 className="text-2xl font-semibold mb-4">Request to Hire{selected ? ` — ${selected.name}` : ''}</h1>
+      <form className="space-y-4" onSubmit={onSubmit}>
+        <div>
+          <label className="block text-sm font-medium mb-1">Your Name</label>
+          <input className="w-full border rounded px-3 py-2" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">Email</label>
+          <input type="email" className="w-full border rounded px-3 py-2" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">Budget (USD)</label>
+          <input className="w-full border rounded px-3 py-2" placeholder="$5,000" value={form.budget} onChange={(e) => setForm({ ...form, budget: e.target.value })} />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">Timeline</label>
+          <input className="w-full border rounded px-3 py-2" placeholder="2-3 months" value={form.timeline} onChange={(e) => setForm({ ...form, timeline: e.target.value })} />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-1">Project Description</label>
+          <textarea className="w-full border rounded px-3 py-2" rows={5} value={form.description} onChange={(e) => setForm({ ...form, description: e.target.value })} />
+        </div>
+        {error && <div className="text-sm text-red-600">{error}</div>}
+        <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>
       </form>
     </div>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <button;
           disabled={submitting}className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     )}
   return (<div className="max-w-xl mx-auto">;
-<<<<<<< HEAD
-=======
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
   }
   return (
     <div className="max-w-xl mx-auto">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <h1 className="text-2xl font-semibold mb-4">Request to Hire{selected ? ` — ${selected && selected.name}` : ''}</h1>;
       <form className="space-y-4" onSubmit={onSubmit}>;
         <div>;
@@ -352,22 +354,13 @@ if ( {) {$2;
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>;
       </form>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)className='px-4 py-2 rounded bg-black text-white';
         >;
           {submitting ? 'Submitting…' : 'Submit Request'}
         </button>;
       </form>;
     </div>;
-<<<<<<< HEAD
-  )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </div>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  )
+}

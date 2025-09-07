@@ -1,8 +1,8 @@
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceSelector } from "../CountryServiceSelector";
 interface ServiceDetailsSectionProps {
-  selectedCountry: CountryPricing | null;
-  setSelectedCountry: (country: CountryPricing | null) => void;
+  selectedCountry: CountryPricing | null,
+  setSelectedCountry: (country: CountryPricing | null) => void
 }
 
 export function ServiceDetailsSection({
@@ -26,13 +26,14 @@ export function ServiceDetailsSection({
             pricing
           </p>
         </div>
-<<<<<<< HEAD
+      )}
+    </div>
+  )
+}
       )}
     </div>
   );
 }
-;
-=======
   return (
     <div id="service - details" className="mt-12">;
       {selected_country ? (
@@ -50,4 +51,4 @@ export function ServiceDetailsSection({
           </p>;
         </div>)}
     </div>);
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+;

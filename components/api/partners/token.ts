@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import type { NextApiRequest, NextApiResponse } from "next";
 import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -27,14 +18,12 @@ export default async function handler(
   }
   const match = await findPartnerByApiKey(apiKey);
   if (!match) {
-<<<<<<< HEAD
-    return res.status(401).json({ error: 'Invalid API key' });
+import type { NextApiRequest, NextApiResponse } from "next";
+import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
+    res.setHeader($2);
     return res.status(405).json({ error: "Method Not Allowed" })
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
     return res.status(401).json({ error: 'Invalid API key' });  }
   const { partner, apiKey: key } = match;
@@ -47,16 +36,11 @@ export default async function handler(
   if (req.method !== 'POST') {;
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method Not Allowed' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
-  const { apiKey, ttlSeconds } = req.body |{}
+  const { apiKey, ttlSeconds } = req.body || {},
   if (!apiKey) {
-    return res.status(400).json({ error: 'apiKey required' });
+    return res.status(400).json({ error: "apiKey required" })
   }
-<<<<<<< HEAD
-  const match = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   const match = await findPartnerByApiKey(apiKey);
   if (!match) {
     return res.status(401).json({ error: 'Invalid API key' });  }
@@ -79,19 +63,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method Not Allowed" })
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
-<<<<<<< HEAD
-sub: partner.id,
-      apiKeyId: key.id,
-      name: partner.name,
-      entityType: partner.entityType,
-      useCaseType: partner.useCaseType,
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }
   const { partner, api_key: key } = match;
   const token = sign_jwt (
@@ -101,7 +76,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       name: partner && partner.name,
       entityType: partner && partner.entityType,
       useCaseType: partner && partner.useCaseType,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     } as any,
     typeof ttlSeconds === 'number'
       ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds))
@@ -109,15 +83,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
   return res
     .status(200)
-<<<<<<< HEAD
-    .json({ token, partner: { id: partner.id, name: partner.name } });
-  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { findPartnerByApiKey, signJwt  } from '../../../utils/api/partnerAuth';
@@ -153,10 +119,6 @@ export default async function handler() {if (req.method !== 'POST') {res.setHead
       entity_type: partner.entity_type,useCaseType: partner.useCaseType} as any;
     typeof ttl_seconds === "number" ? Math.max (300, Math.min (86400, ttl_seconds)) : 3600)return res.status (200).json ({ token, partner: { id: partner.id, name: partner.name } })}
   const { partner, apiKey: key } = match;
-<<<<<<< HEAD
-  const token = signJwt({.json({ token, partner: { id: partner.id, name: partner.name } })return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
     .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id;
       apiKeyId: key && key.id;
@@ -191,7 +153,18 @@ export default async function handler() {if (req.method !== 'POST') {res.setHead
   const token = signJwt(
     {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   const token = signJwt({.json({ token, partner: { id: partner.id, name: partner.name } })return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  const match = await findPartnerByApiKey($2);
+  if (!match) {
+    return res.status(401).json({ error: "Invalid API key" })
+  }
+  const { partner, apiKey: key} = match,
+  const token = $2;
+      apiKeyId: key.id,
+      name: partner.name,
+      entityType: partner.entityType,
+      useCaseType: partner.useCaseType} as any,
+    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
+  ),
+  return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
+}

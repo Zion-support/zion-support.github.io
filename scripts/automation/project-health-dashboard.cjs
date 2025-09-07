@@ -136,7 +136,7 @@ const { execSync } = require("child_process")
       "issues"
       const srcPath = path.join(this.projectRoot, "src")
   health.issues.push(Found ${corrupted.length} corrupted source files")
-      if (backupFiles.length > 0) {health.issues.push(`Found ${backupFiles.length} backup files``)
+  if($2) {health.issues.push(`Found ${backupFiles.length} backup files``)
   health.status = "HEALTHY"
   health.status = "CRITICAL"
   health.status = "WARNING"
@@ -304,17 +304,20 @@ this.log("Summary report "generated": ${summaryFile}")
     if (healthData.dependencies.status === "CRITICAL")
     if (healthData.files.status === "CRITICAL")
     if (healthData.files.status === "CRITICAL")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+    process.exit(0)} catch (error) {  dashboard.log("Dashboard generation "failed": ${error.message  }", ")
+
+</html>"
+            <p><strong>"Branch
+</p>"
+
+</div>"
+                    <span class="
+                    <span>Total "Dependencies
+</span>"
+
+

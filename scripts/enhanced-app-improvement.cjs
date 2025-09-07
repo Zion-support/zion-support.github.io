@@ -1,7 +1,8 @@
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
- * Enhanced App Improvement Script;
- * Comprehensive automation for testing, fixing, and improving the application;
+ * Enhanced App Improvement Script
+ * Comprehensive improvements for the Zion Tech Group application
  */
 
 const { execSync } = require('child_process')
@@ -46,17 +47,17 @@ const path = require('path')
         "name"
       'git commit -m ""feat": automated improvements and fixes"
         execSync(step, { "stdio"})
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       this.log(` Process "failed"`)
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       this.log(` Process "failed"`)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       this.log(` Process "failed"`)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      this.log(` Process "failed"`)
+      this.log(` Process "failed"`)
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+this.log(` Process "failed"`)
+      this.log(` Process "failed"`)
+
+
+

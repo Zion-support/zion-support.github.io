@@ -1,4 +1,3 @@
-<<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
 import React from 'react';
 import { UseFormReturn } from 'react-hook-form';
 import { AppMetadataValues } from './MetadataManager';
@@ -26,38 +25,14 @@ interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
 }
 
+interface MetadataFormProps {;
+  form: UseFormReturn<AppMetadataValues>;
 
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
-  const { control, register, watch, setValue } = form;
-  const keywords = watch("keywords");
-  const platform = watch("platform");  ;
-  const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>,) => {;
-    if (e && e.key === "Enter" || e && e.key === ",") {;
-      e && e.preventDefault();
-      const value = e && e.currentTarget.value && value.trim();
-
-      if (value && !keywords && keywords.includes(value)) {;
-        setValue("keywords", [...keywords, value]);
-        e && e.currentTarget.value = "";
-      }
-    }
-  };
-
-
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000;
-};  const removeKeyword = (keyword: string,) => {;
-    setValue(;
-      "keywords",;
-      keywords && keywords.filter((k,) => k !== keyword);
-    );
-  },;
-
-  const maxDescriptionLength = platform === "ios" ? 4000 : 4000,;
-  const longDescription = watch("longDescription"),;
-
-
+}
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
   return (
+
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle>App Metadata</CardTitle>
@@ -66,25 +41,12 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
         <Form {...form}>
           <div className="space-y-4">
             <FormField
-              control = {control,}
+              control={control}
               name="appTitle"
 
-              render={({ field }: { field: any },) => (;
-                <FormItem>;
-                  <FormLabel>App Title</FormLabel>;
-                  <FormControl>;
-
-
                     <Input
+
                       placeholder="Enter app title"
-                      maxLength = {platform === "ios" ? 30 : 50,}
-import { Badge } from '@/components/ui/ badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/ card';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/ form';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/ radio - group';
-interface MetadataFormProps {
-  form: UseFormReturn < AppMetadataValues>;
-=======
 
 ;
 interface MetadataFormProps  {form: UseFormReturn<AppMetadataValues>;
@@ -134,7 +96,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage  } from '@/components / ui / form';
 import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
 interface MetadataFormProps  {form: UseFormReturn < AppMetadataValues>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/admin/MetadataForm.tsx
 }
 export const MetadataForm: React.FC < MetadataFormProps> = ({ form }) => {const { control, register, watch, set_value } = form;
   const keywords = watch ("keywords")const platform = watch ("platform")const add_keyword = (e: React.KeyboardEvent < HTMLInputElement>, ) =>: any {// Check condition;
@@ -166,10 +127,8 @@ if ( {) {$2;
                       max_length = {platform === "ios" ? 30 : 50, }
                       {...field}
                     />;
-=======
                       max_length = {platform === "ios" ? 30 : 50 }
                       {...field}/>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/admin/MetadataForm.tsx
                   </FormControl>;
                   <FormDescription>Max {platform === "ios" ? "30" : "50"} characters;
                   </FormDescription>;
@@ -226,16 +185,73 @@ if ( {) {$2;
 
 
                     <Textarea
+                      maxLength={platform === "ios" ? 30 : 50}
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormDescription>
+                    Max {platform === "ios" ? "30" : "50"} characters
+                  </FormDescription>
+                </FormItem>
+import React from "react",;
+import { UseFormReturn } from "react-hook-form",;
+import { AppMetadataValues } from "./MetadataManager",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Badge } from "@/components/ui/badge",;
+import { X } from 'lucide-react';
+interface MetadataFormProps {;
+  form: UseFormReturn<AppMetadataValues>;
+}
+;
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+  const { control, register, watch, setValue } = form,;
+  const keywords = watch("keywords"),;
+  const platform = watch("platform"),;
+  const addKeyword = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+    if (e.key === "Enter" || e.key === ",") {;
+      e.preventDefault(),;
+      const value = e.currentTarget.value.trim(),;
+      if (value && !keywords.includes(value)) {;
+        setValue("keywords", [...keywords, value]),;
+        e.currentTarget.value = "";
+      }
+    }
+
+      <CardHeader>;
+        <CardTitle>App Metadata</CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <div className="space-y-4">;
+            <FormField;
+              control={control}
+              name="appTitle";
+              render={({ field }: { field: any }) => (;
+                <FormItem>;
+                  <FormLabel>App Title</FormLabel>;
+                  <FormControl>;
+                    <Input;
+                      placeholder="Enter app title";
+                      maxLength={platform === "ios" ? 30 : 50}
+                      {...field}
+
+                    />;
+                  </FormControl>;
+                  <FormDescription>;
+                    Max {platform === "ios" ? "30" : "50"} characters;
+                  </FormDescription>;
+
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength = {maxDescriptionLength,}
                 </FormItem>)}
-=======
                   <FormControl>;<Textarea;
                       placeholder="Detailed description of your app";
                       className="min-h-32";
                       maxLength = {maxDescriptionLength}</FormItem>)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/admin/MetadataForm.tsx
             />;
             <FormField;
               control = {control }
@@ -245,37 +261,33 @@ if ( {) {$2;
                   <FormControl>;
                     <Textarea;
                       placeholder="Detailed description of your app";
-                      className="min - h-32";
-                      max_length = {maxDescriptionLength }
+                      className="min-h-32";
+                      max_length = {maxDescriptionLength, }
+
                       {...field}
                     />;
                   </FormControl>;
 <<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
                   <FormDescription>;
 
-            />;
-
-            <div>;
-              <FormLabel htmlFor="keywords">Keywords</FormLabel>;
+                    <Textarea
+                      placeholder="Detailed description of your app"
+                      className="min-h-32"
+                      maxLength = {maxDescriptionLength,}
 
 
               <Input
+
                 id="keywords"
                 placeholder="Add keywords (press Enter or comma to add)"
-                onKeyDown = {addKeyword,}
+                onKeyDown={addKeyword}
                 className="mb-2"
 
-              />;
-
-              <div className="flex flex-wrap gap-2 mt-2">;
-                {keywords && keywords.map((keyword, index,) => (;
-                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">;
-
-
                     {keyword}
+
                     <button
                       type="button"
-                      onClick = {(,) => removeKeyword(keyword),}
+                      onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
                       aria-label="Remove keyword"
                     >
@@ -284,8 +296,6 @@ if ( {) {$2;
                   </Badge>
                 ))}
 
-              </div>;
-=======
                   <FormDescription>;/>;<div>;
               <FormLabel htmlFor="keywords">Keywords</FormLabel>;<Input;
                 id="keywords";
@@ -304,7 +314,6 @@ if ( {) {$2;
                     </button>;
                   </Badge>;
                 ))}</div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/admin/MetadataForm.tsx
               <FormDescription className="mt-2">;
                 Add keywords to improve discoverability (max 100 characters total)</FormDescription>;
             </div>;<FormField;
@@ -316,16 +325,15 @@ if ( {) {$2;
 <<<<<<< HEAD:src_backup/components/mobile-app/admin/MetadataForm.tsx
                     <Input
                       placeholder="e && e.g., 1 && 1.0.0"
+    </Card>);
+},
+;
 
 
                       {...field}
                     />
                   </FormControl>
                 </FormItem>
-              )}
-
-                    {long_description.length}/{maxDescriptionLength} characters;
-=======
                     <Input;
                       placeholder="e && e.g., 1 && 1.0.0";
                       {...field}
@@ -338,7 +346,6 @@ if ( {) {$2;
       </CardContent>;
     </Card>;
   )import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",import { Badge } from "@/components/ui/badge",{long_description.length}/{maxDescriptionLength} characters;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/admin/MetadataForm.tsx
                   </FormDescription>;
                 </FormItem>)}
             />;
@@ -403,10 +410,9 @@ if ( {) {$2;
 };
 '"
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       </CardContent>;</Card>)},;
   )}}/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>)}/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {longDescription.length ;
 }/ {maxDescriptionLength ;
 }characters </FormDescription> </FormItem>)}/> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="mb-2" /> <div className="flex flex-wrap gap-2 mt-2"> > <X className="h-3 w-3" /> </button> </Badge>) ) ";
 }</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 100 characters total) </FormDescription> </div> <FormField <FormItem> <FormLabel>App Version</FormLabel> <FormControl> <Input /> </FormControl> </FormItem>)}/> </div> </Form> </CardContent> </Card>)}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/admin/MetadataForm.tsx
+              )}

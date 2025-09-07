@@ -98,17 +98,11 @@ console.log(� Comprehensive report saved "to": ${reportFile}```)
       "stack"
 const logFile = path.join(this.logsDir, ")
     fs.writeFileSync(logFile")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 console.error(")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 console.error(")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 console.error(")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+console.error(")
+console.error(")
+
+

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import type { GetStaticProps } from 'next';
-import content from '../../../data/docs/content.json';
-export type Section = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
   return {
@@ -96,11 +88,9 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {;
     props: {;
       docs: content as DocsContent}}
     return () => clearTimeout(id);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }, []);
   return (
     <div className='p-8 max-w-4xl mx-auto'>;
-=======
 
 ;
   return {props: {docs: content as DocsContent,},}}import React, { useEffect } from 'react';
@@ -139,46 +129,43 @@ export type Section = {id: string,title: string,html?: string;
 }export const getStaticProps: GetStaticProps<PageProps> = async () => {return {props: {docs: content as DocsContent}}
     return () => clearTimeout(id)import React, { useEffect } from 'react';
 export type Section = any;}, [])return (<div className='p-8 max-w-4xl mx-auto'>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <h1 className='text-3xl font-bold mb-6'>{docs && docs.title}</h1>;
       <div className='space-y-8'>;
         {docs && docs.sections.map(s => (<section key={s && s.id}>;
             <h2 className='text-2xl font-semibold mb-2'>{s && s.title}</h2>;
             {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} />}
             {s && s.code &&;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              s && s.code.map((c, i) => (;
-                <pre
-                  key={i}
-<<<<<<< HEAD
-                  className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'
-                >
-                  {c.content}
-                </pre>
-              ))}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                   className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>;
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
 };
+import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content.json';
+export type Section = $2;
+  title: string,
+  html?: string,
+  code?: { language?: string, content: string}[]
+},
+
+type DocsContent = $2;
+  sections: Section[]
+},
+
+type PageProps = $2;
+export const getStaticProps: GetStaticProps<PageProps> = async () => {
+  return {
+    props: {
+      docs: content as DocsContent}}
+},
+
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
-    const id = setTimeout(() => window.print(), 500);
+    const id = setTimeout(() => window.print(), 500),
     return () => clearTimeout(id)
-  }, []);
+  }, []),
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-  return (
-    <div className="p-8 max-w-4xl mx-auto">;
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               s && s.code.map((c, i) => (<pre;
                   key={i}className='mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap'>;
                   {c && c.content}
@@ -188,68 +175,38 @@ export default function PrintDocs({ docs }: PageProps) {
                   {c.content}
                 </pre>;
               ))}return (<div className="p-8 max-w-4xl mx-auto">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <h1 className="text-3xl font-bold mb-6">{docs && docs.title}</h1>;
       <div className="space-y-8">;
         {docs && docs.sections.map((s) => (<section key={s && s.id}>;
             <h2 className="text-2xl font-semibold mb-2">{s && s.title}</h2>;
             {s && s.html && <div dangerouslySetInnerHTML={{ __html: s && s.html }} />}
             {s && s.code && s && s.code.map((c, i) => (<pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
+  return (
+    <div className="p-8 max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold mb-6">{docs.title}</h1>
+      <div className="space-y-8">
+        {docs.sections.map((s) => (
+          <section key={s.id}>
+            <h2 className="text-2xl font-semibold mb-2">{s.title}</h2>
+            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
+            {s.code && s.code.map((c, i) => (
+              <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c.content}</pre>
             ))}
-}
-export default /**;
- * PrintDocs - Function description;
- */;
-function PrintDocs() {useEffect (() => {const id = set_timeout (() => window.print (), 500)return () => clear_timeout (id)}, [])return (<div className='p - 8 max - w-4xl mx - auto'>;
-      <h1 className='text - 3xl font - bold mb - 6'>{docs.title}</h1>;
-      <div className='space - y-8'>;
-        {docs.sections.map (string => (<section key={s.id}>;
-            <h2 className='text - 2xl font - semibold mb - 2'>{s.title}</h2>;
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
-            {s.code &&;
-              s.code.map ((c, i) => (<pre;
-                  key={i}
-                  className='mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap';
-                >;
-                  {c.content}
-                </pre>))}          </section>  }, [])return (<div className="p - 8 max - w-4xl mx - auto">;
-      <h1 className="text - 3xl font - bold mb - 6">{docs.title}</h1>;
-      <div className="space - y-8">;
-        {docs.sections.map ((s) => (<section key={s.id}>;
-            <h2 className="text - 2xl font - semibold mb - 2">{s.title}</h2>;
-            {s.html && <div dangerouslySetInnerHTML={{ __html: s.html }} />}
-            {s.code && s.code.map ((c, i) => (<pre key={i} className="mt - 4 p - 4 bg - gray - 100 text - xs whitespace - pre - wrap">{c.content}</pre>))}
-          </section>))}
-      </div>;
-    </div>)))}
-          </section>;
+          </section>
         ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
+      </div>;
+    </div>;
+  )})}
+
+  );
+}
+
+
+
+      </div>;
+    </div>;
+  )})}
       </div>
     </div>
-<<<<<<< HEAD
-  );
+  )
 }
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      </div>;
-    </div>;
-  )})}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
-  );
-}
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-      </div>;
-    </div>;
-  )})}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

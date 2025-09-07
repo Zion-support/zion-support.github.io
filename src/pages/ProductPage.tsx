@@ -1,0 +1,89 @@
+import { useRouter } from 'next/router', // Changed from useParams
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import { NEW_PRODUCTS } from '@/data/newProductsData';
+import { useCart } from '@/context/CartContext';
+import { toast } from '@/hooks/use-toast';
+import { SEO } from '@/components/SEO';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function ProductPage() {
+
+  const router = useRouter($2);
+  const { id: rawId} = router.query,
+  const id = $2;
+  const [product, setProduct] = useState(
+    NEW_PRODUCTS.find((p) => p.id = $2;
+  const { items, dispatch } = useCart($2);
+  const [adding, setAdding] = useState($2);
+  useEffect(() => {
+    // Update product if id changes and is available from router.query
+    if (id) {
+      const foundProduct = $2;
+      setProduct(foundProduct || null)
+    }
+  }, [id]),
+
+  useEffect(() => {
+    const fetchProduct = $2;
+      try {
+        const res = await fetch($2);
+        if (res.ok) {
+          const data = await res.json($2);
+          setProduct(data)
+        }
+      } catch (err) {
+        // Fail silently and fall back to local data
+        logErrorToProduction('Error fetching product', { data: err})
+      }
+    },
+
+    // Only fetch if id is available (from router)
+    if (id) {
+      fetchProduct()
+    }
+  }, [id]), // id is now from router.query
+
+  if (!product && !id) { // If no id from router yet, it might still be loading
+    return <div className="p-6 text-white">Loading product details...</div>
+  }
+
+  if (!product) {
+    return <div className="p-6 text-white">Product not found</div>
+  }
+
+  const inCart = items.some($2);
+  const handleAdd = $2;
+    setAdding($2);
+    dispatch($2);
+    toast.success($2);
+    setTimeout(() => setAdding(false), 500)
+  },
+
+  return (
+    <>
+      <SEO
+        title={product.title}
+        description={product.description}
+        ogImage={product.images?.[0]}
+      />
+      <div className="min-h-screen bg-zion-blue p-6 text-white">
+        <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
+        {product.images?.length ? (
+          <div className="mb-4 relative w-full h-64">
+            <Image
+              src={product.images[0] || '/placeholder.svg'}
+              alt={product.title}
+              className="object-cover rounded-md"
+            />
+          </div>
+        ) : null}
+        <p className="mb-6">{product.description}</p>
+        <Button onClick={handleAdd} disabled={adding || inCart}>
+          {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+        </Button>
+      </div>
+    </>
+  )
+}
+;

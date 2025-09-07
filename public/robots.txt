@@ -1,8 +1,6 @@
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
-=======
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Sitemap
@@ -14,20 +12,13 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
->>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
-Disallow: /_next/
-Disallow: /temp_*/
-Disallow: /*.backup.*
+Disallow: /dashboard/
 Disallow: /private/
 
-<<<<<<< HEAD
-Crawl-delay: 1
-=======
 # Allow important pages
 Allow: /services/
 Allow: /ai-services/
@@ -44,7 +35,6 @@ Crawl-delay: 1
 Disallow: /private/
 
 Crawl-delay: 1
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 Disallow: /test/
 Disallow: /temp/
@@ -57,18 +47,10 @@ Allow: /about
 Allow: /contact
 Allow: /blog/
 Allow: /careers/
-<<<<<<< HEAD
-
-Crawl-delay: 1
-
-=======
->>>>>>> origin/main
 Sitemap: https://zion.app/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
@@ -91,9 +73,7 @@ Allow: /blog/
 Allow: /careers/
 Sitemap: https://ziontechgroup.com/sitemap.xml
 ursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 ursor/fix-syntax-push-and-merge-to-main-9381
->>>>>>> origin/main
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -126,9 +106,9 @@ Allow: /guides/
 # Crawl delay
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
->>>>>>> main
 ursor/automate-test-improve-and-merge-code-646c
 
 Crawl-delay: 1
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+Allow: /about/
+Allow: /contact/

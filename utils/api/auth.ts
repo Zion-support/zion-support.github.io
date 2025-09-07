@@ -1,139 +1,74 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 export interface User  {id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 export interface User  {id: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface User {
   id: string;
   email: string;
   role: 'client' | 'talent' | 'admin';
   name?: string;
+import { NextApiRequest, NextApiResponse } from 'next';
+export type CurrentUser = $2;
+  role: 'client' | 'talent' | 'admin'
+},
+
+export function getCurrentUser(req: NextApiRequest): CurrentUser | null {
+  const headerUser = $2;
+  const headerRole = $2;
+  const cookie = $2;
+  const cookieUser = $2;
+  const cookieRole = $2;
+  const userId = $2;
+  const role = $2;
+  if (!userId || !role) return null,
+  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null,
+
+  return { userId, role }
 }
-ursor/automate-test-improve-and-merge-code-646c;
-export interface AuthContext  {user: User | null;
-  login: (email: string, password: string) => Promise<User | null>;
-  logout: () => void;
-  register: (email: string, password: string, role: User['role']) => Promise<User | null>;
-}export function validateUser(userId: string, role: string): User | null {if (!userId || !role) return null;
-  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;return {id: userId,email: '',role: role as User['role'];
-  }}
-import { NextApiRequest, NextApiResponse  } from 'next';
-ursor/fix-website-loading-errors-and-merge-6662;
-ursor/fix-website-loading-errors-and-merge-6662;
-export function getUserFromRequest(req: any): User | null {// Mock implementation - in production, this would extract user from JWT or session;
-  const authHeader = req.headers.authorization;
-  if (!authHeader || !authHeader.startsWith("Bearer ")) {return null;
+
+export function requireUser(
+  req: NextApiRequest,
+  res: NextApiResponse): CurrentUser | null {
+  const user = getCurrentUser($2);
+  if (!user) {
+    res.status(401).json($2);
+    return null
   }
-  return user;
-}return null;
-  }
-  return user;
-}export function getUserFromRequest (req: any): User | null {// Mock implementation - in production, this would extract user from JWT or session;
-}
-
-export function validateUser(userId: string, role: string): User | null {
-  if (!userId || !role) return null;
-  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;
-  
-  return {
-    id: userId,
-    email: '',
-    role: role as User['role']
-  };
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-
-=======
 import { NextApiRequest, NextApiResponse } from "next";
 import { NextApiRequest, NextApiResponse } from "next";
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
 
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 import { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
 
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith("Bearer ")) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return null;
   }
   return user;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     return null;
   }
   return user;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 }
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 export function getUserFromRequest (req: any): User | null {
@@ -146,40 +81,17 @@ export function getUserFromRequest (req: any): User | null {
   return user;
 }ursor/automate-test-improve-and-merge-code-646c;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  return user
+}

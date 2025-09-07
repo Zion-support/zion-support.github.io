@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 ;
 // import { prisma } from "@/lib/prisma",interface InstanceWithCounts  {id: string,name: string,slug: string,domain: string | null,subdomain: string | null,vertical: string,defaultLanguage: string,tokenSystem: string,governanceType: string,isPublic: boolean,region: string | null,country: string | null,createdAt: Date,updatedAt: Date,daoConfig: any | null,_count: {deployments: number,features: number;
@@ -16,10 +10,6 @@
           <p className="text - xl text - white / 70 max - w-2xl mx - auto">;
   return (<div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;  return (<div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 // import { prisma } from "@/lib/prisma";
 interface InstanceWithCounts {id: string;
   name: string;
@@ -44,14 +34,6 @@ interface InstanceWithCounts {id: string;
 export default function InstancesPage() {const instances: any[] = [], // Temporary empty array;
   const error: string | null = null;
   return (;
-<<<<<<< HEAD
-    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
-        {/* Header */}
-        <div className="text - center mb - 12">;
-          <h1 className="text - 4xl font - bold mb - 4">📊 Manage Your Instances</h1>;
-          <p className="text - xl text - white / 70 max - w-2xl mx - auto">;
-=======
   return (;
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;  return (;
@@ -61,44 +43,24 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
         <div className="text - center mb-12">;
           <h1 className="text - 4xl font - bold mb-4">📊 Manage Your Instances</h1>;
           <p className="text - xl text - white / 70 max - w-2xl mx-auto">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
         <div className="text - center mb - 12">;
           <h1 className="text - 4xl font - bold mb - 4">📊 Manage Your Instances</h1>;
           <p className="text - xl text - white / 70 max - w-2xl mx - auto">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             Monitor and manage your deployed digital economies, track performance, and access configuration settings.;
           </p>;
         </div>;
         {/* Error State */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {error && (
-<<<<<<< HEAD
-          <div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text - center">;
-=======
         {error && (<div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text - center">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
         {error && (<div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text - center">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="text - red - 400 mb - 2">⚠️ Database Connection Error</div>;
             <p className="text - white / 70 mb - 4">{error}</p>;
             <p className="text - sm text - white / 50">;
               Please ensure your database is properly configured and the DATABASE_URL environment variable is set.;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </p>;
-        {/* Stats Overview */}
-=======
             </p>;</div>)}{/* Stats Overview */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
             </p>;</div>)}{/* Stats Overview */}
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6 mb - 8">;
           <div className="glass - effect rounded - xl p - 6 text - center">;
             <div className="text - 3xl font - bold text - blue - 400 mb - 2">{instances.length}</div>;
@@ -121,13 +83,7 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
               {instances.reduce ((sum, i) => sum + i._count.features, 0)}
             </div>;
             <div className="text - white / 70">Active Features</div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           <div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text-center">;
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           </div>;
         </div>;
         {/* Instances Grid */}{instances.length > 0 && (<div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
@@ -170,10 +126,6 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
                 <div className="mt - 4 pt - 4 border - t border - white / 10">;
                   <div className="flex gap - 2">;
                     <a;href={`/admin/instances/${inst.id}`}className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";<div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text-center">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="text - red - 400 mb-2">⚠️ Database Connection Error</div>;
             <p className="text - white / 70 mb-4">{error}</p>;
             <p className="text - sm text-white / 50">;
@@ -206,66 +158,13 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
             <div className="text - 3xl font - bold text - orange - 400 mb - 2">;
               {instances.reduce ((sum, i) => sum + i._count.features, 0)}
             </div>;
-<<<<<<< HEAD
-            <div className="text-white / 70">Active Features</div>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <div className="text - white / 70">Active Features</div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           </div>;
         </div>;
         {/* Instances Grid */}
                     }`}></div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <div className="font - semibold text - lg text - white group - hover:text - blue - 400 transition - colors">;
-                      {inst.name}
-                    </div>;
-                  </div>;
-                  <span className="text - xs px - 2 py - 1 rounded - full bg - white / 10 text - white / 70">;
-                    {inst.vertical}
-                  </span>;
-                </div>;
-                <div className="space - y-3 mb - 4">;
-                  <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                    <span className="w - 4 h - 4">🌐</span>;
-                    <span className="truncate">;
-                    </span>;
-                  </div>;
-                  <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                    <span className="w - 4 h - 4">🗳️</span>;
-                    <span > Governance: {getGovernanceLabel (inst.governance_type)}</span>;
-                  </div>;
-                  {inst.region && (<div className="flex items - center gap - 2 text - sm text-white / 70">;
-                      <span className="w - 4 h-4">📍</span>;
-                  {inst.region && (
-                    <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                      <span className="w - 4 h - 4">📍</span>;
-                      <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
-                  <div className="flex items-center gap-2 text-sm text-white/70">;
-                    <span className="w-4 h-4">🔧</span>;
-                    <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
-                  </div>;
-                </div>;
-                <div className="flex items - center justify - between text - xs text - white / 60">;
-                  <div className="flex items - center gap - 4">;
-                    <span>🚀 {inst._count.deployments} deployments</span>;
-                    <span>⚡ {inst._count.features} features</span>;
-                  </div>;
-                  <span className="text - white / 40">;
-                    {new Date (inst.created_at).toLocaleDateString ()}
-                  </span>;
-                </div>;
-                <div className="mt - 4 pt - 4 border - t border - white / 10">;
-                  <div className="flex gap - 2">;
-                    <a;
-                      href={`/admin/instances/${inst.id}`}
-                      className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
-=======
                     <div className="font - semibold text - lg text - white group - hover:text - blue - 400 transition-colors">;
-=======
                     <div className="font - semibold text - lg text - white group - hover:text - blue - 400 transition - colors">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                       {inst.name}
                     </div>;
                   </div>;
@@ -291,11 +190,6 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
                       <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                   <div className="flex items-center gap-2 text-sm text-white/70">;
                     <span className="w-4 h-4">🔧</span>;
-<<<<<<< HEAD
-                    <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;                  <div className="flex items-center gap-2 text-sm text-white/70">;
-                    <span className="w-4 h-4">🔧</span>;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
                   </div>;
                 </div>;
@@ -311,37 +205,20 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
                 <div className="mt - 4 pt - 4 border - t border - white / 10">;
                   <div className="flex gap - 2">;
                     <a;
-<<<<<<< HEAD
-                      className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";                      className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                       href={`/admin/instances/${inst.id}`}
                       className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     >;
                       Manage;
                     </a>;
                     <a;href={`/admin/instances/${inst.id}/deployments`}className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
                     <a;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      href={`/admin/instances/${inst.id}/deployments`}
-                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
-=======
                       className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                       href={`/admin/instances/${inst.id}/deployments`}
                       className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                     >;
                       Deployments;
                     </a>;
                   </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </div>;
-=======
                 </div>;</div>))}
           </div>)}{/* Empty State */}
         {instances.length === 0 && !error && (<div className="text - center py - 16">;
@@ -353,42 +230,24 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
               You haven't deployed any digital economies yet. Start building your first instance to get started.;
             </p>;
             <a href="/multiverse / launch" className="btn - primary">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         {/* Empty State */}
         {instances.length === 0 && !error && (<div className="text - center py-16">;
             <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify-center">;
               <span className="text-4xl">🚀</span>;
         {instances.length === 0 && !error && (
-<<<<<<< HEAD
-          <div className="text - center py - 16">;
-            <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify - center">;
-              <span className="text - 4xl">🚀</span>;
-            </div>;
-            <h3 className="text - 2xl font - semibold mb - 4">No Instances Yet</h3>;
-            <p className="text - white / 70 mb - 8 max - w-md mx - auto">;
-              You haven't deployed any digital economies yet. Start building your first instance to get started.;
-            </p>;
-            <a href="/multiverse / launch" className="btn - primary">;
-=======
           <div className="text - center py-16">;
             <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify-center">;
               <span className="text-4xl">🚀</span>;
-=======
                 </div>;</div>))}
           </div>)}{/* Empty State */}
         {instances.length === 0 && !error && (<div className="text - center py - 16">;
             <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify - center">;
               <span className="text - 4xl">🚀</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             </div>;
             <h3 className="text - 2xl font - semibold mb - 4">No Instances Yet</h3>;
             <p className="text - white / 70 mb - 8 max - w-md mx - auto">;
               You haven't deployed any digital economies yet. Start building your first instance to get started.;
             </p>;
-<<<<<<< HEAD
-            <a href="/multiverse / launch" className="btn-primary">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <a href="/multiverse / launch" className="btn - primary">;
         {/* Empty State */}
         {instances.length === 0 && !error && (<div className="text - center py-16">;
@@ -404,16 +263,11 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
               You haven't deployed any digital economies yet. Start building your first instance to get started.;
             </p>;
             <a href="/multiverse / launch" className="btn - primary">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               🚀 Launch Your First Economy;
             </a>;
           </div>)}
       </div>;
       {/* Stats Overview */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6">;
         <div className="card text - center">;
           <div className="text - 3xl font - bold text - blue - 400 mb - 2">{instances.length}</div>;
@@ -436,13 +290,6 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
             {instances.reduce ((acc, i) => acc + i._count.deployments, 0)}
           </div>;
           <div className="text - white / 60 text - sm">Total Deployments</div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="grid grid - cols - 1 md:grid - cols - 4 gap-6">;
         <div className="card text-center">;
           <div className="text - 3xl font - bold text - blue - 400 mb-2">{instances.length}</div>;
@@ -464,13 +311,7 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
           <div className="text - 3xl font - bold text - orange - 400 mb - 2">;
             {instances.reduce ((acc, i) => acc + i._count.deployments, 0)}
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="text - white / 60 text-sm">Total Deployments</div>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
           <div className="text - white / 60 text - sm">Total Deployments</div>;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         </div>;
       </div>;
       {/* Instances Grid */}
@@ -493,15 +334,11 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
           <h2 className="text - 2xl font - semibold mb-2">No Instances Yet</h2>;
           <p className="text - white / 70 mb-6">;
       {instances.length === 0 ? (
-<<<<<<< HEAD
-        <div className="card text - center py - 12">;
-=======
           <div className="text - white / 60 text - sm">Total Deployments</div>;
         </div>;
       </div>;
       {/* Instances Grid */}
       {instances.length === 0 ? (<div className="card text - center py - 12">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="text - 6xl mb - 4">🚀</div>;
           <h2 className="text - 2xl font - semibold mb - 2">No Instances Yet</h2>;
           <p className="text - white / 70 mb - 6">;
@@ -510,24 +347,13 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
           <a href="/multiverse / launch" className="btn - primary">;
             Launch First Instance;
           </a>;
-<<<<<<< HEAD
-        </div>) : (
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
-          {instances.map ((inst) => (
-            <div key={inst.id} className="card card - hover">;
-              {/* Instance Header */}
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
-                      inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
-=======
         <div className="card text - center py-12">;
-=======
         </div>) : (<div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
           {instances.map ((inst) => (<div key={inst.id} className="card card - hover">;
               {/* Instance Header */}<span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
                       inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
                       'bg-gray-500/20 text-gray-400';<div className="card text - center py-12">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="text - 6xl mb-4">🚀</div>;
           <h2 className="text - 2xl font - semibold mb-2">No Instances Yet</h2>;
           <p className="text - white / 70 mb-6">;
@@ -547,13 +373,6 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
                       inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
                       'bg-gray-500/20 text-gray-400';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======                      inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         </div>) : (
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
           {instances.map ((inst) => (
@@ -561,46 +380,27 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
               {/* Instance Header */}
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
                       inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
                       inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
                       'bg-gray-500/20 text-gray-400';
                     }`}>;
                       {inst.vertical}
                     </span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    {inst.is_public && (
-<<<<<<< HEAD
-                      <span className="px - 2 py - 1 rounded - full text - xs font - medium bg - green - 500 / 20 text - green - 400">;
-=======
                       <span className="px - 2 py - 1 rounded - full text - xs font - medium bg - green - 500 / 20 text - green-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                     {inst.is_public && (<span className="px - 2 py - 1 rounded - full text - xs font - medium bg - green - 500 / 20 text - green - 400">;
                       <span className="px - 2 py - 1 rounded - full text - xs font - medium bg - green - 500 / 20 text - green-400">;
                     {inst.is_public && (
                       <span className="px - 2 py - 1 rounded - full text - xs font - medium bg - green - 500 / 20 text - green - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                         Public;
                       </span>)}
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <div className="w - 8 h - 8 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center">;
                   <span className="text - white font - bold text - xs">Z</span>;
                 </div>;
               </div>;
               {/* Instance Details */}
               <div className="space - y-3 mb - 4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;<span>🌐</span>;<span>{inst.domain || inst.subdomain || inst.slug}</span>;</div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
                 <div className="w - 8 h - 8 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify-center">;
@@ -609,32 +409,20 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
               </div>;
               {/* Instance Details */}
               <div className="space - y-3 mb - 4">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
                 </div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
-=======
-=======
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;<span>🌐</span>;<span>{inst.domain || inst.subdomain || inst.slug}</span>;</div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <div className="w - 8 h - 8 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify-center">;
                   <span className="text - white font - bold text-xs">Z</span>;
                 </div>;
               </div>;
               {/* Instance Details */}
-<<<<<<< HEAD
-              <div className="space - y-3 mb-4">;
-                <div className="flex items - center space - x-2 text - sm text-white / 70">;
-                </div>;
-                <div className="flex items - center space - x-2 text - sm text-white / 70">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <div className="space - y-3 mb - 4">;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
                 </div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <span>🏛️</span>;
                   <span > Governance: {inst.governance_type}</span>;
                 </div>;
@@ -642,33 +430,19 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
                     <span>📍</span>;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;;<div className="flex items-center space-x-2 text-sm text-white/70">;<div className="flex items - center space - x-2 text - sm text-white / 70">;
                 {inst.region && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div className="flex items - center space - x-2 text - sm text - white / 70">;
-                    <span>📍</span>;
-                    <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
-                <div className="flex items-center space-x-2 text-sm text-white/70">;
-=======
                   <div className="flex items - center space - x-2 text - sm text-white / 70">;
                     <span>📍</span>;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                 <div className="flex items-center space-x-2 text-sm text-white/70">;                <div className="flex items-center space-x-2 text-sm text-white/70">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                   <div className="flex items - center space - x-2 text - sm text - white / 70">;
                     <span>📍</span>;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <span>💎</span>;
                   <span > Token: {inst.token_system}</span>;
                 </div>;
               </div>;
               {/* Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div className="grid grid - cols - 2 gap - 4 mb - 4">;
                 <div className="text - center p - 3 rounded - lg bg - white / 5">;
                   <div className="text - lg font - semibold text - blue - 400">{inst._count.deployments}</div>;
@@ -681,9 +455,6 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
               </div>;
               {/* Actions */}
               <div className="flex space - x-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 <a;href={`/admin/instances/${inst.id}`}className="flex-1 btn-secondary text-center text-sm py-2";<div className="grid grid - cols - 2 gap - 4 mb-4">;
                 <div className="text - center p - 3 rounded - lg bg-white / 5">;
                   <div className="text - lg font - semibold text - blue-400">{inst._count.deployments}</div>;
@@ -696,15 +467,11 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
               </div>;
               {/* Actions */}
               <div className="flex space - x-2">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <a;
                   href={`/admin/instances/${inst.id}`}
                   className="flex-1 btn-secondary text-center text-sm py-2";
-=======
               <div className="grid grid - cols - 2 gap - 4 mb-4">;
-=======
                 <a;href={`/admin/instances/${inst.id}`}className="flex-1 btn-secondary text-center text-sm py-2";<div className="grid grid - cols - 2 gap - 4 mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <div className="text - center p - 3 rounded - lg bg-white / 5">;
                   <div className="text - lg font - semibold text - blue-400">{inst._count.deployments}</div>;
                   <div className="text - xs text-white / 60">Deployments</div>;
@@ -717,36 +484,21 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
               {/* Actions */}
               <div className="flex space - x-2">;
                 <a;
-<<<<<<< HEAD
-                  className="flex-1 btn-secondary text-center text-sm py-2";                  className="flex-1 btn-secondary text-center text-sm py-2";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                   href={`/admin/instances/${inst.id}`}
                   className="flex-1 btn-secondary text-center text-sm py-2";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 >;
                   Manage;
                 </a>;
                 <a;href={`/admin/instances/${inst.id}/deployments`}className="flex-1 btn-secondary text-center text-sm py-2";className="flex-1 btn-secondary text-center text-sm py-2";                  className="flex-1 btn-secondary text-center text-sm py-2";
                 <a;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  href={`/admin/instances/${inst.id}/deployments`}
-                  className="flex-1 btn-secondary text-center text-sm py-2";
-=======
                   className="flex-1 btn-secondary text-center text-sm py-2";                  className="flex-1 btn-secondary text-center text-sm py-2";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                   href={`/admin/instances/${inst.id}/deployments`}
                   className="flex-1 btn-secondary text-center text-sm py-2";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 >;
                   Deployments;
                 </a>;
               </div>;
               {/* Created Date */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className="text - xs text - white / 40 mt - 3 pt - 3 border - t border - white / 10">;
                 Created: {new Date (inst.created_at).toLocaleDateString ()}
               </div>;</div>))}
@@ -762,12 +514,6 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
                 Created: {new Date (inst.created_at).toLocaleDateString ()}
               </div>;
       {/* Quick Actions */}
-=======
-              <div className="text - xs text - white / 40 mt - 3 pt - 3 border - t border - white / 10">;
-                Created: {new Date (inst.created_at).toLocaleDateString ()}
-              </div>;</div>))}
-        </div>)}{/* Quick Actions */}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="card text - center py - 8">;
         <h2 className="text - 2xl font - semibold mb - 4">Quick Actions</h2>;
         <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
@@ -775,35 +521,11 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
             🚀 Launch New Instance;
           </a>;
           <a href="/admin / os - deploy" className="btn - secondary">;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-              <div className="text - xs text - white / 40 mt - 3 pt - 3 border - t border-white / 10">;
-                Created: {new Date (inst.created_at).toLocaleDateString ()}
-              </div>;
-      {/* Quick Actions */}
-      <div className="card text - center py - 8">;
-        <h2 className="text - 2xl font - semibold mb - 4">Quick Actions</h2>;
-        <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-          <a href="/multiverse / launch" className="btn - primary">;
-            🚀 Launch New Instance;
-          </a>;
-<<<<<<< HEAD
-          <a href="/admin / os - deploy" className="btn-secondary">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-          <a href="/admin / os - deploy" className="btn - secondary">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             ⚙️ Advanced Deployment;
           </a>;
         </div>;
       </div>;
       {/* Admin Navigation */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 mb - 20">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
           <div className="bg - gradient - to - br from - blue - 900 / 20 to - purple - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -888,13 +610,6 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
               Configure system parameters and customize your AI platform settings.;
             </p>;
             <Link href="/admin / settings" className="text - indigo - 400 hover:text - indigo - 300 font - medium">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 mb-20">;
         <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-8">;
           <div className="bg - gradient - to - br from - blue - 900 / 20 to - purple - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale-105">;
@@ -978,26 +693,14 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
             <p className="text - gray - 300 mb - 4">;
               Configure system parameters and customize your AI platform settings.;
             </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Link href="/admin / settings" className="text - indigo - 400 hover:text - indigo - 300 font-medium">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <Link href="/admin / settings" className="text - indigo - 400 hover:text - indigo - 300 font - medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
             <Link href="/admin / settings" className="text - indigo - 400 hover:text - indigo - 300 font - medium">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               System Settings →;
             </Link>;
           </div>;
         </div>;
       </div>;
       {/* Quick Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 mb - 20">;
         <h2 className="text - 3xl font - bold text - white mb - 8 text - center">System Overview</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6">;
@@ -1020,13 +723,6 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
             <div className="text - 3xl font - bold text - orange - 400 mb - 2">5</div>;
             <div className="text - lg font - semibold text - white mb - 2">Quantum Nodes</div>;
             <p className="text - gray - 300 text - sm">Processing power</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 mb-20">;
         <h2 className="text - 3xl font - bold text - white mb - 8 text-center">System Overview</h2>;
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap-6">;
@@ -1045,32 +741,14 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
             <div className="text - lg font - semibold text - white mb - 2">Monitoring</div>;
             <p className="text - gray - 300 text - sm">Active surveillance</p>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 border border - white / 10 rounded - xl p - 6 text-center">;
-            <div className="text - 3xl font - bold text - orange - 400 mb-2">5</div>;
-            <div className="text - lg font - semibold text - white mb-2">Quantum Nodes</div>;
-            <p className="text - gray - 300 text-sm">Processing power</p>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 900 / 50 border border - white / 10 rounded - xl p - 6 text - center">;
             <div className="text - 3xl font - bold text - orange - 400 mb - 2">5</div>;
             <div className="text - lg font - semibold text - white mb - 2">Quantum Nodes</div>;
             <p className="text - gray - 300 text - sm">Processing power</p>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           </div>;
         </div>;
       </div>;
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;
         <div className="bg - gradient - to - r from - blue - 900 / 20 to - purple - 900 / 20 border border - white / 10 rounded - xl p - 12">;
           <h2 className="text - 3xl font - bold text - white mb - 6">;
@@ -1084,13 +762,6 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
               Contact Support;
             </Link>;
             <Link href="/services" className="border border - white / 20 hover:border - white / 40 text - white px - 8 py - 4 rounded - lg text - lg font - semibold transition - all duration - 200 hover:bg - white / 10">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <div className="max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text-center">;
         <div className="bg - gradient - to - r from - blue - 900 / 20 to - purple - 900 / 20 border border - white / 10 rounded - xl p-12">;
           <h2 className="text - 3xl font - bold text - white mb-6">;
@@ -1103,33 +774,16 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
             <Link href="/contact" className="bg - gradient - to - r from - blue - 600 to - purple - 600 hover:from - blue - 700 hover:to - purple - 700 text - white px - 8 py - 4 rounded - lg text - lg font - semibold transition - all duration - 200 transform hover:scale - 105">;
               Contact Support;
             </Link>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Link href="/services" className="border border - white / 20 hover:border - white / 40 text - white px - 8 py - 4 rounded - lg text - lg font - semibold transition - all duration - 200 hover:bg-white / 10">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <Link href="/services" className="border border - white / 20 hover:border - white / 40 text - white px - 8 py - 4 rounded - lg text - lg font - semibold transition - all duration - 200 hover:bg - white / 10">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
             <Link href="/services" className="border border - white / 20 hover:border - white / 40 text - white px - 8 py - 4 rounded - lg text - lg font - semibold transition - all duration - 200 hover:bg - white / 10">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               View Services;
             </Link>;
           </div>;
         </div>;
       </div>;
       {/* Empty State */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {instances.length === 0 && (
-<<<<<<< HEAD
-        <div className="text - center py - 16">;
-=======
       {instances.length === 0 && (<div className="text - center py - 16">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
       {instances.length === 0 && (<div className="text - center py - 16">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <div className="w - 16 h - 16 mx - auto mb - 4 p - 4 bg - white / 10 rounded - full">;
             <Globe className="w - 8 h - 8 text - white / 40" />;
           </div>;
@@ -1140,13 +794,6 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
             className="inline - flex items - center gap - 2 px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - medium rounded - lg transition - colors duration - 200";
           >;
             <Rocket className="w - 4 h - 4" />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
         <div className="text - center py-16">;
           <div className="w - 16 h - 16 mx - auto mb - 4 p - 4 bg - white / 10 rounded-full">;
             <Globe className="w - 8 h - 8 text-white / 40" />;
@@ -1161,12 +808,7 @@ export default function InstancesPage() {const instances: any[] = [], // Tempora
             href="/admin / os - deploy";
             className="inline - flex items - center gap - 2 px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white font - medium rounded - lg transition - colors duration - 200";
           >;
-<<<<<<< HEAD
-            <Rocket className="w - 4 h-4" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <Rocket className="w - 4 h - 4" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             Deploy First Instance;
           </a>;
         </div>)}
@@ -1184,4 +826,270 @@ function getTokenSystemLabel() {switch (type) {case "SHARED": return "ZION$ Shar
     default: return type;
   }
 }
+// import { prisma } from "@/lib/prisma",
+interface InstanceWithCounts {
+  id: string,
+  name: string,
+  slug: string,
+  domain: string | null,
+  subdomain: string | null,
+  vertical: string,
+  defaultLanguage: string,
+  tokenSystem: string,
+  governanceType: string,
+  isPublic: boolean,
+  region: string | null,
+  country: string | null,
+  createdAt: Date,
+  updatedAt: Date,
+  daoConfig: any | null,
+  _count: {
+    deployments: number,
+    features: number}
+}
+
+export default function InstancesPage() {
+  const instances: any[] = [], // Temporary empty array
+  const error: string | null = $2;
+  return (
+    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4">📊 Manage Your Instances</h1>
+          <p className="text-xl text-white/70 max-w-2xl mx-auto">
+            Monitor and manage your deployed digital economies, track performance, and access configuration settings.
+          </p>
+        </div>
+
+        {/* Error State */}
+        {error && (
+          <div className="mb-8 p-6 bg-red-900/20 border border-red-500/20 rounded-xl text-center">
+            <div className="text-red-400 mb-2">⚠️ Database Connection Error</div>
+            <p className="text-white/70 mb-4">{error}</p>
+            <p className="text-sm text-white/50">
+              Please ensure your database is properly configured and the DATABASE_URL environment variable is set.
+            </p>
+          </div>
+        )}
+
+        {/* Stats Overview */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          <div className="glass-effect rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-blue-400 mb-2">{instances.length}</div>
+            <div className="text-white/70">Total Instances</div>
+          </div>
+          <div className="glass-effect rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-green-400 mb-2">
+              {instances.filter(i => i.isPublic).length}
+            </div>
+            <div className="text-white/70">Public Instances</div>
+          </div>
+          <div className="glass-effect rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-purple-400 mb-2">
+              {instances.reduce((sum, i) => sum + i._count.deployments, 0)}
+            </div>
+            <div className="text-white/70">Total Deployments</div>
+          </div>
+          <div className="glass-effect rounded-xl p-6 text-center">
+            <div className="text-3xl font-bold text-orange-400 mb-2">
+              {instances.reduce((sum, i) => sum + i._count.features, 0)}
+            </div>
+            <div className="text-white/70">Active Features</div>
+          </div>
+        </div>
+
+        {/* Instances Grid */}
+        {instances.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {instances.map((inst) => (
+              <div key={inst.id} className="feature-card group hover-lift">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className={`w-3 h-3 rounded-full ${
+                      inst.isPublic ? 'bg-green-500' : 'bg-yellow-500'
+                    }`}></div>
+                    <div className="font-semibold text-lg text-white group-hover:text-blue-400 transition-colors">
+                      {inst.name}
+                    </div>
+                  </div>
+                  <span className="text-xs px-2 py-1 rounded-full bg-white/10 text-white/70">
+                    {inst.vertical}
+                  </span>
+                </div>
+                
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-center gap-2 text-sm text-white/70">
+                    <span className="w-4 h-4">🌐</span>
+                    <span className="truncate">
+                      {inst.domain || inst.subdomain || inst.slug}
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center gap-2 text-sm text-white/70">
+                    <span className="w-4 h-4">🗳️</span>
+                    <span>Governance: {getGovernanceLabel(inst.governanceType)}</span>
+                  </div>
+                  
+                  {inst.region && (
+                    <div className="flex items-center gap-2 text-sm text-white/70">
+                      <span className="w-4 h-4">📍</span>
+                      <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center gap-2 text-sm text-white/70">
+                    <span className="w-4 h-4">🔧</span>
+                    <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-between text-xs text-white/60">
+                  <div className="flex items-center gap-4">
+                    <span>🚀 {inst._count.deployments} deployments</span>
+                    <span>⚡ {inst._count.features} features</span>
+                  </div>
+                  <span className="text-white/40">
+                    {new Date(inst.createdAt).toLocaleDateString()}
+                  </span>
+                </div>
+                
+                <div className="mt-4 pt-4 border-t border-white/10">
+                  <div className="flex gap-2">
+                    <a 
+                      href={`/admin/instances/${inst.id}`} 
+                      className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                    >
+                      Manage
+                    </a>
+                    <a 
+                      href={`/admin/instances/${inst.id}/deployments`} 
+                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors"
+                    >
+                      Deployments
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Empty State */}
+        {instances.length === 0 && !error && (
+          <div className="text-center py-16">
+            <div className="w-24 h-24 mx-auto mb-6 bg-white/5 rounded-full flex items-center justify-center">
+              <span className="text-4xl">🚀</span>
+            </div>
+            <h3 className="text-2xl font-semibold mb-4">No Instances Yet</h3>
+            <p className="text-white/70 mb-8 max-w-md mx-auto">
+              You haven't deployed any digital economies yet. Start building your first instance to get started.
+            </p>
+            <a href="/multiverse/launch" className="btn-primary">
+              🚀 Launch Your First Economy
+            </a>
+          </div>
+        )}
+      </div>
+
+      {/* Stats Overview */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-blue-400 mb-2">{instances.length}</div>
+          <div className="text-white/60 text-sm">Total Instances</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-green-400 mb-2">
+            {instances.filter(i => i.isPublic).length}
+          </div>
+          <div className="text-white/60 text-sm">Public Instances</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-purple-400 mb-2">
+            {instances.filter(i => i.governanceType !== 'ADMIN').length}
+          </div>
+          <div className="text-white/60 text-sm">DAO Instances</div>
+        </div>
+        <div className="card text-center">
+          <div className="text-3xl font-bold text-orange-400 mb-2">
+            {instances.reduce((acc, i) => acc + i._count.deployments, 0)}
+          </div>
+          <div className="text-white/60 text-sm">Total Deployments</div>
+        </div>
+      </div>
+
+      {/* Instances Grid */}
+      {instances.length === 0 ? (
+        <div className="card text-center py-12">
+          <div className="text-6xl mb-4">🚀</div>
+          <h2 className="text-2xl font-semibold mb-2">No Instances Yet</h2>
+          <p className="text-white/70 mb-6">
+            Get started by launching your first digital economy instance
+          </p>
+          <a href="/multiverse/launch" className="btn-primary">
+            Launch First Instance
+          </a>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {instances.map((inst) => (
+            <div key={inst.id} className="card card-hover">
+              {/* Instance Header */}
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white mb-1">{inst.name}</h3>
+                  <div className="flex items-center space-x-2 mb-2">
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                      inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :
+                      inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :
+                      inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :
+                      inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :
+                      'bg-gray-500/20 text-gray-400'
+                    }`}>
+                      {inst.vertical}
+                    </span>
+                    {inst.isPublic && (
+                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">
+                        Public
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-xs">Z</span>
+                </div>
+              </div>
+
+              {/* Instance Details */}
+              <div className="space-y-3 mb-4">
+                <div className="flex items-center space-x-2 text-sm text-white/70">
+                  <span>🌐</span>
+                  <span>{inst.domain || inst.subdomain || inst.slug}</span>
+                </div>
+                
+                <div className="flex items-center space-x-2 text-sm text-white/70">
+                  <span>🏛️</span>
+                  <span>Governance: {inst.governanceType}</span>
+                </div>
+                
+                {inst.region && (
+                  <div className="flex items-center space-x-2 text-sm text-white/70">
+                    <span>📍</span>
+                    <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>
+                  </div>
+                )}
+                
+                <div className = $2;
+    case "DAO_LITE": return "DAO-lite",
+    case "DAO_FULL": return "Full DAO",
+    default: return type
+  }
+}
+
+function getTokenSystemLabel(type: string) {
+  switch (type) {
+    case "SHARED": return "ZION$ Shared",
+    case "LOCAL": return "Local Token",
+    default: return type
+  }
 }

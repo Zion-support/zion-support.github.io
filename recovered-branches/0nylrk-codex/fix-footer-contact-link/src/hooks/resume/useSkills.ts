@@ -1,97 +1,43 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Skill  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { handleResumeError, showSuccessToast } from './useResumeUtils';
-<<<<<<< HEAD
-export function useSkills() {
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {Skill} from '@/types/resume';
-import {useAuth} from '@/hooks/useAuth';
-import {handleResumeError, showSuccessToast} from './useResumeUtils';
-export function useSkills() {;
-
-
-  const { user } = useAuth();
-=======
 export function useSkills() {  const { user } = useAuth();
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
   const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to add skills')
-<<<<<<< HEAD
+export function useSkills() {
+  const { user } = useAuth($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  
+  const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {
+    if (!user) {
+      setError($2);
       return false
-
-
-
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { Skill } from '@/types/resume',;
-import { useAuth } from '@/hooks/useAuth',;
-import { handleResumeError, showSuccessToast } from './useResumeUtils',;
-export function useSkills() {;
-  const { user } = useAuth(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-  const addSkill = async (resumeId: string, skill: Skill): Promise<boolean> => {;
-    if (!user) {;
-      setError('You must be logged in to add skills'),;
-      return false;
-
-
-
     }
     
-    setIsLoading(true),
-    setError(null),
-    
-    
+    setIsLoading($2);
+    setError($2);
     try {
       const { error } = await supabase
         .from('resume_skills')
-        .insert({
-
-          name: skill && skill.name;
-          proficiency: skill && skill.proficiency;
-          category: skill && skill.category,
-          years_experience: skill && skill.years_experience
-
-        });
-      if (error) throw error;
-          resume_id: resumeId,
-          name: skill.name,
-          proficiency: skill.proficiency,
-          category: skill.category,
-          years_experience: skill.years_experience
-        }),
-      
+        .insert($2);
       if (error) throw error,
       
-
       return showSuccessToast("Skill added", "Your skill has been added to your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not add skill')
     } finally {
       setIsLoading(false)
-
-
-
-;
-=======
       return false    try {
       const { error } = await supabase
         .from('resume_skills')
         .insert({;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setIsLoading(true),;
     setError(null),;
     try {;
@@ -117,116 +63,38 @@ export function useSkills() {;
       setError('You must be logged in to delete skills'),;
       return false;
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }
     
     setIsLoading(true),
     setError(null),
-<<<<<<< HEAD
-    
+    }
+  },
+  
+  const deleteSkill = async (skillId: string): Promise<boolean> => {
+    if (!user) {
+      setError($2);
+      return false
     }
     
-    setIsLoading(true),
-    setError(null),
-    
-
-import { useState } from 'react',;
-import { supabase } from '@/integrations/supabase/client',;
-import { Skill } from '@/types/resume',;
-import { useAuth } from '@/hooks/useAuth',;
-import { handleResumeError, showSuccessToast } from './useResumeUtils',;
-;
-export function useSkills() {;
-  const { user } = useAuth(),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-  ;
-  const addSkill = async (resumeId:string, skill:Skill):Promise<boolean> => {;
-    if (!user) {;
-      setError('You must be logged in to add skills'),;
-      return false;
-    }
-    ;
-    setIsLoading(true),;
-    setError(null),;
-    ;
-    try {;
-      const { error } = await supabase;
-        .from('resume_skills');
-        .insert({;
-          resume_id:resumeId,;
-          name:skill.name,;
-          proficiency:skill.proficiency,;
-          category:skill.category,;
-          years_experience:skill.years_experience;
-        }),;
-      ;
-      if (error) throw error,;
-      ;
-      return showSuccessToast("Skill added", "Your skill has been added to your resume"),;
-    } catch (e:any) {;
-      return handleResumeError(e, 'Could not add skill'),;
-    } finally {;
-      setIsLoading(false),;    }
-  },;
-  ;
-  const deleteSkill = async (skillId:string):Promise<boolean> => {;
-    if (!user) {;
-      setError('You must be logged in to delete skills'),;
-      return false;
-    }
-    ;
-    setIsLoading(true),;
-    setError(null),;
-    ;
-    try {;
-      const { error } = await supabase;
-        .from('resume_skills');
-        .delete();
-        .eq('id', skillId),;
-      ;
-      if (error) throw error,;
-      ;
-      return showSuccessToast("Skill deleted", "Your skill has been removed from your resume"),;
-    } catch (e:any) {;
-      return handleResumeError(e, 'Could not delete skill'),;
-    } finally {;
-      setIsLoading(false),;
-    }
-    
+    setIsLoading($2);
+    setError($2);
     try {
       const { error } = await supabase
         .from('resume_skills')
         .delete()
-
-
-        .eq('id', skillId),
-      
+        .eq($2);
       if (error) throw error,
       
-
-
       return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)
-
-
-
-
-import {useState} from 'react';
-=======
           return showSuccessToast("Skill deleted", "Your skill has been removed from your resume")
     } catch (e: any) {
       return handleResumeError(e, 'Could not delete skill')
     } finally {
       setIsLoading(false)import {useState} from 'react';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {supabase} from '@/integrations / supabase / client';
 import {Skill} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
@@ -243,88 +111,18 @@ function use_skills() {
     // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD
-}
-      set_error ('You must be logged in to add skills'),
-      return false;
     }
+  },
 
-  },;
-  return {;
-    isLoading,;
+  return {
+    isLoading;
     error;
     addSkill;
-    deleteSkill;
 
-
-
-  }
-}
-;
-    try {
-      const { error } = await supabase;
-        .from ('resume_skills');
-        .insert ({
-          resume_id: resume_id;
-          name: skill.name;
-          proficiency: skill.proficiency;
-          category: skill.category,
-          years_experience: skill.years_experience;
-        });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Skill added", "Your skill has been added to your resume");
-    } catch (e: any) {
-      return handleResumeError (e, 'Could not add skill');
-    } finally {
-      setIsLoading (false);
-    }
-  }
-;
-  const delete_skill = async (skill_id: string): Promise < boolean> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to delete skills'),
-      return false;
-    }
-    setIsLoading (true);
-    set_error (null);
-;
-    try {
-      const { error } = await supabase;
-        .from ('resume_skills');
-        .delete ();
-        .eq ('id', skill_id);
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      return showSuccessToast ("Skill deleted", "Your skill has been removed from your resume");
-    } catch (e: any) {
-      return handleResumeError (e, 'Could not delete skill');
-    } finally {
-      setIsLoading (false);
-    }
-  }
-;
-  return {
-    is_loading;
-    error;
-    add_skill;
-    delete_skill;
+    deleteSkill
   }
 }
   }
 }
-    setIsLoading (true);
-    set_error (null);
-;
-=======
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+;

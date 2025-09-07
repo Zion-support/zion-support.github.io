@@ -103,7 +103,7 @@ console.log(""� Starting Enhanced Link Checker Automation...")
       await this.checkLinkBatch(externalLinks, "external")
   console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
     // Check internal links"
-    if (internalLinks.length > 0) {"}
+  if($2) {"}
       console.log(")
       await this.checkLinkBatch(internalLinks, "internal")
   console.log(" Checking external links...")
@@ -172,17 +172,11 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.log("\n All links are working correctly!")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Link checker automation "failed")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(" Link checker automation "failed")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(" Link checker automation "failed")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Link checker automation "failed")
+  console.error(" Link checker automation "failed")
+
+

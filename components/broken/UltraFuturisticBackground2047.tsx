@@ -1,49 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-const UltraFuturisticBackground2047: React.FC;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-<<<<<<< HEAD
-
 const UltraFuturisticBackground2047: React.FC = () => {
+  const [isClient, setIsClient] = useState($2);
+  useEffect(() => {
+    setIsClient(true)
+  }, []),
 
-const UltraFuturisticBackground2047: React.FC = () => {;
-  const [isClient, setIsClient] = useState(false);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-  }, []);
 
-  if (!isClient) {;
+<div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
+    );
+
+  if (!isClient) {
     return (
-<<<<<<< HEAD
-<div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-    );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-<div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-    );
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+    )
   }
+
   return (
     <>
-=======
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 const UltraFuturisticBackground2047: React.FC = () => {const UltraFuturisticBackground2047: React.FC = () => {const [isClient, setIsClient]  = useState(false)import React, { useEffect, useRef, useState } from 'react';
 import { motion  } from 'framer-motion';
 const UltraFuturisticBackground2047: React.FC;}, [])if (!isClient) {return (<div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
     )}
   return (<>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {/* Background Gradient */}
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
   return (<>;
@@ -66,24 +49,13 @@ const UltraFuturisticBackground2047: React.FC;}, [])if (!isClient) {return (<div
             repeat: Infinity as any;
             ease: 'linear';
           }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        >
-          <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />
-        </motion.div>
-=======
         >;
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>;
-=======
         >
 
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         >;
           <div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />        </motion.div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
         >;
           <div className='w - full h - full bg - gradient - to - r from - purple - 500 to - pink - 500 clip - hexagon' />        </motion.div>;
@@ -103,15 +75,8 @@ const UltraFuturisticBackground2047: React.FC;}, [])if (!isClient) {return (<div
             scale: [1, 0 && 0.8, 1]}}
           transition={{repeat: Infinity as any,ease: 'easeInOut',}}>;
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />;
-<<<<<<< HEAD
-<<<<<<< HEAD
         </motion && motion.div>;<div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />;
         </motion.div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-        </motion && motion.div>;<div className='w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon' />;
-        </motion.div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Floating Circles */}
         <motion.div;
 className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10';
@@ -122,16 +87,7 @@ className='absolute bottom-32 left-1/4 w-16 h-16 opacity-10';
             repeat: Infinity as any;
             ease: 'easeInOut';
           }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        >
-          <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />
-        </motion.div>
-        <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         </motion && motion.div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           className='absolute top-1/3 right-1/4 w-20 h-20 opacity-15'
           animate={{
             y: [0, 40, 0]
@@ -147,18 +103,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   d='M 100 0 L 0 0 0 100'
                   fill='none'
                   stroke='cyan'
-<<<<<<< HEAD
-                  strokeWidth='0.5'
-                  opacity='0.3'
-                />
-              </pattern>
-            </defs>
-            <rect width='100%' height='100%' fill='url(#grid)' />
-          </svg>
-        </div>
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         >;
           <div className='w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full' />;
         </motion.div>;
@@ -193,10 +137,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <rect width='100%' height='100%' fill='url(#grid)' />;
           </svg>;
         </div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Floating Data Streams */}
         <motion.div;
 className='absolute top-0 left-0 w-full h-full opacity-20';
@@ -206,14 +146,6 @@ className='absolute top-0 left-0 w-full h-full opacity-20';
             repeat: Infinity as any;
             ease: 'linear';
           }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        >
-          <div className='flex space-x-8 justify-center'>
-            {[...Array(20)].map((_, i) => (
-              <motion.div
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           className="absolute top-1/3 right-1/4 w-20 h-20 opacity-15"
           animate={{
             y: [0, 40, 0]
@@ -226,16 +158,94 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='flex space-x-8 justify-center'>;
             {[...Array(20)].map((_, i) => (;
               <motion&& motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      {/* Background Gradient */}
+      <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+
+      {/* Floating Geometric Shapes */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Animated Hexagons */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 opacity-20"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.2, 1]}}
+          transition = $2;
+            repeat: Infinity as any,
+            ease: "linear"
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-r from-cyan-500 to-blue-500 clip-hexagon" />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-40 right-32 w-24 h-24 opacity-15"
+          animate={{
+            rotate: [360, 0],
+            scale: [1, 0.8, 1]}}
+          transition = $2;
+            repeat: Infinity as any,
+            ease: "linear"
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-r from-purple-500 to-pink-500 clip-hexagon" />
+        </motion.div>
+
+        {/* Floating Circles */}
+        <motion.div
+          className="absolute bottom-32 left-1/4 w-16 h-16 opacity-10"
+          animate={{
+            y: [0, -30, 0],
+            x: [0, 20, 0]}}
+          transition = $2;
+            repeat: Infinity as any,
+            ease: "easeInOut"
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full" />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-20 h-20 opacity-15"
+          animate={{
+            y: [0, 40, 0],
+            x: [0, -30, 0]}}
+          transition = $2;
+            repeat: Infinity as any,
+            ease: "easeInOut"
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-r from-purple-400 to-pink-400 rounded-full" />
+        </motion.div>
+
+        {/* Animated Grid Lines */}
+        <div className="absolute inset-0 opacity-5">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse">
+                <path d="M 100 0 L 0 0 0 100" fill="none" stroke="cyan" strokeWidth="0.5" opacity="0.3"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)" />
+          </svg>
+        </div>
+
+        {/* Floating Data Streams */}
+        <motion.div
+          className="absolute top-0 left-0 w-full h-full opacity-20"
+          animate={{
+            y: [0, -100]}}
+          transition = $2;
+            repeat: Infinity as any,
+            ease: "linear"
+          }}
+        >
+          <div className="flex space-x-8 justify-center">
+            {[...Array(20)].map((_, i) => (
+              <motion.div
                 key={i}
-                className='w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent'
+                className="w-1 h-32 bg-gradient-to-b from-cyan-500 to-transparent"
                 animate={{
                   height: [32, 64, 32],
-<<<<<<< HEAD
-                  opacity: [0.3, 1, 0.3],
-                }}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                   opacity: [0 && 0.3, 1, 0 && 0.3],
                 }}                transition={{
                   duration: 3,
@@ -244,41 +254,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   ease: 'easeInOut',                }}          animate={{
                   ease: 'easeInOut',                }}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 transition={{
                   duration: 3,
                   repeat: Infinity as any,
                   delay: i * 0.1,
-<<<<<<< HEAD
-ease: 'easeInOut',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                   ease: 'easeInOut',                  ease: "easeInOut"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                  opacity: [0.3, 1, 0.3]}}
+                transition = $2;
+                  repeat: Infinity as any,
+                  delay: i * 0.1,
+                  ease: "easeInOut"
                 }}
-
-                }}
-
               />
-              />;
             ))}
           </div>
         </motion.div>
 
         {/* Neon Glow Effects */}
-<<<<<<< HEAD
-<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>
-          <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5">
+          <div className="w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl" />
         </div>
-        <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>
-          <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />
-        </div>
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 opacity-5">
+          <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />
+        </div>
+
         >;
           <div className='flex space-x-8 justify-center'>;
             {[...Array(20)].map((_, i) => (<motion.div;
@@ -349,17 +349,12 @@ ease: 'easeInOut',}}}}/>;
           }}
         {/* Pulse Rings */}
         <motion.div;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';<div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>;
           <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />;
         </div>;
         <div className='absolute top-1/4 right-1/4 w-64 h-64 opacity-5'>;
           <div className='w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl' />;
         </div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Scanning Lines */}
         <motion.div;
 className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30';
@@ -367,25 +362,14 @@ className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent vi
           transition={{duration: 8,repeat: Infinity as any,ease: 'linear',}}
         />;
         {/* Pulse Rings */}
-<<<<<<< HEAD
-        <motion.div
-className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           animate={{
             scale: [1, 20]
             opacity: [1, 0]
-=======
         <motion.div;
 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4';
           animate={{scale: [1, 20];
             opacity: [1, 0];
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }}
           transition={{className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4';
           animate={{scale: [1, 15];
@@ -395,22 +379,14 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
           animate={{scale: [1, 10];
             opacity: [1, 0];
           }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           transition={{
             scale: [1, 20];
             opacity: [1, 0]}}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           transition={{
             duration: 4
             repeat: Infinity as any
             ease: 'easeOut'
             delay: 2
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           transition={{scale: [1, 20];
             opacity: [1, 0]}}
           transition={{duration: 4;
@@ -458,10 +434,6 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
           }}
       {/* CSS for hexagon clip */}
       <style jsx>{`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         .clip-hexagon {}}>;
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />;
         </motion && motion.div>;
@@ -471,25 +443,12 @@ className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
             repeat: Infinity as any;
             ease: 'easeOut';
             delay: 2;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           }}
         >;
           <div className='w-full h-full border-2 border-purple-400 rounded-full' />;
         </motion.div>;
       </div>;
       {/* CSS for hexagon clip */}
-<<<<<<< HEAD
-      <style jsx>{`
-        .clip-hexagon {
-clip-path: polygon(
-            50% 0%,
-            100% 25%,
-            100% 75%,
-            50% 100%,
-            0% 75%,
-            0% 25%
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         .clip-hexagon {;
           clip-path: polygon(;
             50% 0%,;
@@ -498,20 +457,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             50% 100%,;
             0% 75%,;
             0% 25%;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           );
         }
       `}</style>;
     </>;
   );
-<<<<<<< HEAD
-};
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default UltraFuturisticBackground2047;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       <style jsx>{`;
         .clip-hexagon {clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%;
           )}
@@ -528,34 +480,78 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       <style jsx>{`;
         .clip - hexagon {clip - path: polygon (50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%)}
       `}</style>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>)}}export default UltraFuturisticBackground2047;        }
       `}</style>;
     </>;
   )}
 export default UltraFuturisticBackground2047;export default UltraFuturisticBackground2047;
-<<<<<<< HEAD
-export default UltraFuturisticBackground2047;}export default UltraFuturisticBackground2047;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </>);
 }
 
 };
 
 export default UltraFuturisticBackground2047;        }
+        {/* Scanning Lines */}
+        <motion.div
+          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30"
+          animate={{
+            y: [0, 1000]}}
+          transition = $2;
+            repeat: Infinity as any,
+            ease: "linear"
+          }}
+        />
+
+        {/* Pulse Rings */}
+        <motion.div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
+          animate={{
+            scale: [1, 20],
+            opacity: [1, 0]}}
+          transition = $2;
+            repeat: Infinity as any,
+            ease: "easeOut"
+          }}
+        >
+          <div className="w-full h-full border-2 border-cyan-400 rounded-full" />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
+          animate={{
+            scale: [1, 15],
+            opacity: [1, 0]}}
+          transition = $2;
+            repeat: Infinity as any,
+            ease: "easeOut",
+            delay: 1}}
+        >
+          <div className="w-full h-full border-2 border-blue-400 rounded-full" />
+        </motion.div>
+
+        <motion.div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4"
+          animate={{
+            scale: [1, 10],
+            opacity: [1, 0]}}
+          transition = $2;
+            repeat: Infinity as any,
+            ease: "easeOut",
+            delay: 2}}
+        >
+          <div className="w-full h-full border-2 border-purple-400 rounded-full" />
+        </motion.div>
+      </div>
+
+      {/* CSS for hexagon clip */}
+      <style jsx>{`
+        .clip-hexagon {
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)
+        }
       `}</style>
     </>
   )
-}
-export default UltraFuturisticBackground2047;
+},
 
-export default UltraFuturisticBackground2047;
-export default UltraFuturisticBackground2047;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 export default UltraFuturisticBackground2047;}export default UltraFuturisticBackground2047;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+export default UltraFuturisticBackground2047,

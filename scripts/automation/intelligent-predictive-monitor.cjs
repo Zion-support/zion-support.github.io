@@ -47,7 +47,7 @@ const path = require("path")
   console.log(� High failure probability detected - initiating preventive measures")
       "
   console.log(")
-    if (this.predictions.failureProbability > this.mlModel.failureThreshold) {"}
+  if($2) {"}
 // console.log(� High failure probability detected - initiating preventive measures"")
   console.log("⚡ Low performance detected - initiating optimization")
   console.log(� Restarting ${process.name} due to high restart count")
@@ -68,17 +68,11 @@ const path = require("path")
 // console.log(" Intelligent Predictive Monitor initialized successfully")
   console.log(" Intelligent Predictive Monitor initialized successfully")
   console.error(" Intelligent Predictive Monitor "failed": ")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Intelligent Predictive Monitor "failed": ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(" Intelligent Predictive Monitor "failed": ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(" Intelligent Predictive Monitor "failed": ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Intelligent Predictive Monitor "failed": ")
+  console.error(" Intelligent Predictive Monitor "failed": ")
+
+

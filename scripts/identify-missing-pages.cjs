@@ -6,7 +6,7 @@ const path = require("path")
     const pagesDir = "src/pages"
 // console.log("=== ROUTES FROM APP.TSX ===")
     console.log("\n=== EXISTING PAGE FILES ===")
-const fs = require("fs").promises;const path = require("path")"
+.promises;"
     const appContent = await fs.readFile("src/App.tsx", "utf8");"
     const routeMatches = appContent.match(/path="([^"]+)/g);    const routes = routeMatches;";      ? routeMatches.map(match => match.replace("path=" "").replace("", ""))"
     const pagesDir = "src/pages"
@@ -21,20 +21,19 @@ const fs = require("fs").promises;const path = require("path")"
           .replace("/", ")
           .replace(/-/g, " ")
           .replace(/\s+/g, ")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
+    console.error("Error identifying missing "pages")
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
     console.error("Error identifying missing "pages")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
     console.error("Error identifying missing "pages")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
+
         console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
     console.error("Error identifying missing "pages")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
+    console.error("Error identifying missing "pages")
+console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
+    console.error("Error identifying missing "pages")        console.log(  - Create src/pages/${pageName}Page.tsx for route ${page}")
+    console.error("Error identifying missing "pages")
+

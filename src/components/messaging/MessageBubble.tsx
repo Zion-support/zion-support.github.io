@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
   message: Message
   isUserMessage: boolean
 import React from 'react';
@@ -7,22 +5,10 @@ import { format } from 'date-fns';
 import { PaperclipIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Message } from '@/types/messaging';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
   message: Message;
   isUserMessage: boolean;
-<<<<<<< HEAD
-import React from 'react';
-import { format  } from 'date-fns';
-import { PaperclipIcon  } from 'lucide-react';
-import { cn  } from '@/lib/utils';
-import { Message  } from '@/types/messaging';
-interface MessageBubbleProps  {message: Message;
-  isUserMessage: boolean;
-}export function MessageBubble() {return (<div;
-      className={cn('flex',isUserMessage ? 'justify-end' : 'justify-start';
-=======
 }
 
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
@@ -31,7 +17,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       className={cn(
         'flex',
         isUserMessage ? 'justify-end' : 'justify-start'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       )}
     >;
       <div;
@@ -39,44 +24,45 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
             ? 'bg-zion-purple text-white';
             : 'bg-zion-blue-dark text-white';
         )}
-<<<<<<< HEAD
-      >;
-interface MessageBubbleProps  {<div className='text-xs opacity-70 text-right mt-1'>;
-  isUserMessage: boolean;
-}
-export function MessageBubble() {return (<div className;
-        isUserMessage;
-          ? "bg-zion-purple text-white";
-          : "bg-zion-blue-dark text-white";
-      )}>;
-        <div className="whitespace-pre-wrap">{message.content}</div>;
-        {message.attachment_url && (<a;
-=======
       >
         <div className="whitespace-pre-wrap">{message.content}</div>
         
         {message.attachment_url && (
           <a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             href={message.attachment_url}
             target="_blank";
             rel="noopener noreferrer";
             className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30";
           >;
             <PaperclipIcon className="h-3 w-3 mr-1" aria-hidden="true" />;
+
+export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
+  return (
+    <div className = $2;
+      isUserMessage ? "justify-end" : "justify-start"
+    )}>
+      <div className = $2;
+        isUserMessage 
+          ? "bg-zion-purple text-white" 
+          : "bg-zion-blue-dark text-white"
+      )}>
+        <div className="whitespace-pre-wrap">{message.content}</div>
+        
+        {message.attachment_url && (
+          <a 
+            href={message.attachment_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30"
+          >
+            <PaperclipIcon className="h-3 w-3 mr-1" aria-hidden="true" />,
             {message.attachment_name || 'Attachment'}
-<<<<<<< HEAD
-          </a>;
-        )}<div className="text-xs opacity-70 text-right mt-1">;
-          {format(new Date(message.created_at), 'h:mm a')}</div>;
-=======
           </a>
         )}
-
+        
         <div className="text-xs opacity-70 text-right mt-1">
           {format(new Date(message.created_at), 'h:mm a')}
         </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       </div>;
     </div>;
   )}export function MessageBubble(): any ({ message, isUserMessage }: MessageBubbleProps) {return (<divclassName={cn("flex";
@@ -153,15 +139,8 @@ function MessageBubble() {return (<div className={cn ("flex";
           {format (new Date (message.created_at), 'h:mm a')}
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>))}</div>;
-      </div>;
-    </div>;
-  )})
-=======
     </div>));
 }
 
 );
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

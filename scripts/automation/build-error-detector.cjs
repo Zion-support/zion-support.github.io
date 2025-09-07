@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
 #!/""usr/bin/env""
+
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -56,7 +45,7 @@ const { execSync } = require("child_process")
   "line"
           "severity": "error"
           "timestamp"
-          "timestamp": new Date().toISOString()})} catch (fixError) {this.log(` Error fixing build "error": ${fixError.message}`, "ERROR"`)
+          "timestamp": new Date().toISOString()})} catch (fixError) {this.log(` Error fixing build "error": ${fixError.message}, "ERROR"`)
           "fixed"
           "error"
           "timestamp"
@@ -68,14 +57,14 @@ const { execSync } = require("child_process")
   return await this.fixDependencyError()} else if (errorLine.includes("syntax") || errorLine.includes("parse")
   return await this.fixSyntaxError()} else if (errorLine.includes("type") || errorLine.includes("ts")
   this.log(" Fixing memory error...")
-      execSync("rm -rf dist build .next ""node_modules/.cache""")
+      execSync("rm -rf dist build .next node_modules/.cache")
   "cwd"
         "stdio": "pipe"
       execSync("npm install")
   "cwd"
         "stdio": "pipe"
       this.log(" Memory error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix memory "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix memory "error": ${error.message  }, "ERROR"`)
   this.log(" Fixing dependency error...")
       execSync("rm -rf node_modules package-lock.json")
   "cwd"
@@ -92,13 +81,13 @@ const { execSync } = require("child_process")
   "cwd"
         "stdio": "pipe"
       this.log(" Dependency error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix dependency "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix dependency "error": ${error.message  }, "ERROR"`)
   this.log(" Fixing syntax error...")
       execSync("npm run "lint": fix")
   "cwd"
         "stdio": "pipe"
       this.log(" Syntax error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix syntax "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix syntax "error": ${error.message  }, "ERROR"`)
   this.log(" Fixing type error...")
       execSync("npm run type-check")
   "cwd"
@@ -109,14 +98,14 @@ const { execSync } = require("child_process")
   "cwd"
         "stdio": "pipe"
       this.log(" Type error fix applied")
-      return true} catch (error) {  this.log(` Failed to fix type "error": ${error.message  }`, "ERROR"`)
+      return true} catch (error) {  this.log(` Failed to fix type "error": ${error.message  }, "ERROR"`)
   this.log(" Generating build error detection report...")
   "timestamp"
       "summary"
         "fixedErrors"
         "successRate"
       "fixResults"
-      "recommendations": ["Review any remaining build errors manually"", "Check for memory constraints in build process", "Verify all dependencies are properly installed"", "Monitor build performance and optimize if needed", ""]
+      "recommendations": ["Review any remaining build errors manually, "Check for memory constraints in build process", "Verify all dependencies are properly installed, "Monitor build performance and optimize if needed", ]
       this.reportsPath,build-error-detector-report.json"
 this.log("� Report "generated": ${reportFile}")
   this.log(" Starting Build Error Detector...")
@@ -126,21 +115,14 @@ this.log("� Report "generated": ${reportFile}")
   this.log(" Starting Build Error Detector...")
   this.log("� Build check passed successfully!")
         return { "success": true, "errors": [], "fixed"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       this.log("� Build Error Detector completed!")
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
       this.log("� Build Error Detector completed!")
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      this.log("� Build Error Detector completed!")
+      this.log("� Build Error Detector completed!")
+
+
+

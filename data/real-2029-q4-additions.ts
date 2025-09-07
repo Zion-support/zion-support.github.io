@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
       'Intent classification and priority scoring';
@@ -194,12 +179,6 @@
 }export const real2029Q4Additions: RealMarketService[] = [;
 	{id: 'ai-email-triage-copilot', name: 'AI Email Triage Copilot',tagline: 'Auto-categorize, summarize, and draft replies for inbound email',price: '$99', period: '/month',description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',features: [;
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Intent classification and priority scoring'
       'One-click reply drafts with tone controls'
       'Auto-tagging and routing to teams'
@@ -229,59 +208,23 @@
     variant: 'ai-futuristic'
     contactInfo: contact
     realImplementation: true
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Intent classification and priority scoring',
       'One-click reply drafts with tone controls',
       'Auto-tagging and routing to teams',
       'PII redaction and allowlist domains',
       'SLA-aware escalations and summaries',
 
-<<<<<<< HEAD
-      'Intent classification and priority scoring',
-      'One - click reply drafts with tone controls',
-      'Auto - tagging and routing to teams',
-      'PII redaction and allowlist domains',
-      'SLA - aware escalations and summaries',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Analytics: response time, CSAT impact, volume by topic',
-=======
       'Analytics: response time, CSAT impact, volume by topic'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
       'Analytics: response time, CSAT impact, volume by topic'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     ],
     popular: true,
     icon: '✉️',
@@ -296,37 +239,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     trial_days: 14,
     setup_time: '1 day',
     category: 'AI & Data',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365'],
     use_cases: ['Customer support triage', 'Lead routing', 'Internal helpdesk'],
     roi: 'Reduce manual triage time by 60–80% and improve first - response SLAs.',
@@ -344,25 +260,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 74
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Branching logic and progress-save'
       'Question bank: CSAT, NPS, PMF, churn'
       'Anonymous or identified responses'
@@ -385,15 +284,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
       'Branching logic and progress-save',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
@@ -406,22 +296,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
       'Branching logic and progress - save',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Question bank: CSAT, NPS, PMF, churn',
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
@@ -437,51 +314,15 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     ],
     popular: false,
     icon: '📱',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Lightweight alternative to enterprise survey suites; optimized for mobile.',
     target_audience: 'Growth teams, product managers, agencies',
     trial_days: 7,
     setup_time: 'Same day',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
@@ -490,16 +331,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
     category: 'Developer Tools',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
     category: 'Developer Tools',
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       'Lightweight alternative to enterprise survey suites; optimized for mobile.',
     targetAudience: 'Growth teams, product managers, agencies',
     trialDays: 7,
@@ -508,19 +341,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     useCases: [
       'Landing page surveys'
       'In-product polls'
@@ -534,17 +356,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       'Responsive renderer with schema-driven forms and analytics.',
     launchDate: '2029-11-05',
@@ -571,25 +382,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.6,
     reviews: 33,
   },
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-382a
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   {
       'Embeddable agendas and live updates'
     ],
@@ -612,17 +409,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 29
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'oncall - scheduler - pro',
     name: 'OnCall Scheduler Pro',
@@ -634,23 +420,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Flexible rotations and override rules',
       'Escalation policies and schedules',
       'Slack / Teams integration and on - call handoffs',
@@ -680,17 +453,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 19
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'seo - content - optimizer - pro',
     name: 'SEO Content Optimizer Pro',
@@ -702,23 +464,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Keyword clustering and topical maps',
       'Competitor gap analysis',
       'Outline and brief generation',
@@ -746,17 +495,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 54
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'feature - flags - lite',
     name: 'Feature Flags Lite',
@@ -768,23 +506,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Add feature flags to your app with SDKs for React / Node, rule targeting, and environments. Includes audit logs and safe defaulting.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Boolean, multivariate, and JSON flags',
       'User and cohort targeting',
       'Gradual rollouts and percentage splits',
@@ -855,17 +580,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 14
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'rpa - browser - automation',
     name: 'RPA Browser Automation Kit',
@@ -877,23 +591,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Create robotic process automations for web workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Workflow editor and step recorder',
       'Retry logic and backoff policies',
       'Captcha solving hooks and proxies',
@@ -916,17 +617,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 18
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     id: 'redaction - compliance - api',
     name: 'Redaction & Compliance API',
@@ -938,23 +628,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Configurable detectors (SSN, phone, email, credit card)',
       'Context - aware redaction and masking',
       'Audit logs and retention policies',
@@ -963,38 +640,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Export to S3 / R2 and BigQuery'
     ],
     popular: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🧼',
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     roi: 'Reduce compliance risk and review time.',
     competitors: ['Nightfall', 'Very Good Security'],
     market_size: 'Data security $20B+',
@@ -1009,25 +659,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 12
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Goal trees and KPI ownership'
       'Weekly executive summaries'
       'Alerting on thresholds and trends'
@@ -1063,31 +696,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 16
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'kpi - scorecards - studio',
     name: 'KPI Scorecards Studio',
     tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
@@ -1098,33 +711,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     features: [;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -1133,38 +724,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Annotations and change logs'
     ],
     popular: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📊',
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)'],
     use_cases: ['OKRs / scorecards', 'Exec reporting'],
     roi: 'Improve visibility and accountability.',
@@ -1178,18 +742,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     launch_date: '2029 - 10 - 20',
     customers: 36,
     rating: 4 && 4.4,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    reviews: 16
 ];	{
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-];	{
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   },;
 
@@ -1221,64 +774,37 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.4,
     reviews: 16,
   },;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     reviews: 16,
 ];	{
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     reviews: 16
 ];	{
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];	{
 const contact = {
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+import { RealMarketService } from './real-market-services';
+const contact = $2;
+	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-};
+},
+
 export const real2029Q4Additions: RealMarketService[] = [
 	{
-		id: 'ai-email-triage-copilot', name: 'AI Email Triage Copilot',
+		id: 'ai-email-triage-copilot',
+		name: 'AI Email Triage Copilot',
 		tagline: 'Auto-categorize, summarize, and draft replies for inbound email',
-    price: '$99', period: '/month',
+		price: '$99',
+		period: '/month',
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
-    features: [
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
 		popular: true;
@@ -1286,37 +812,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',marketPosition: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.';
 		textColor: 'text-cyan-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-triage-copilot',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		marketPosition: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.';
 		targetAudience: 'Support teams, sales ops, founders';
 		trialDays: 14;
@@ -1349,85 +851,60 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		implementationDetails: 'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.';
 		launchDate: '2029-10-12';
 		customers: 120;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		rating: 4 && 4.8,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		reviews: 74
 	}
+		features: [
+			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
+		],
+		popular: true,
+		icon: '✉️',
+		color: 'from-cyan-600 to-blue-700',
+		textColor: 'text-cyan-300',
+		link: 'https://ziontechgroup.com/services/ai-email-triage-copilot',
+		marketPosition: 'Alternative to basic autoresponders, focuses on triage quality and CRM integration.',
+		targetAudience: 'Support teams, sales ops, founders',
+		trialDays: 14,
+		setupTime: '1 day',
+		category: 'AI & Data',
+		realService: true,
+		technology: ['Next.jsTypeScriptOpenAIPostgreSQL'],
+		integrations: ['ZendeskFreshdeskHubSpotGmailMicrosoft 365'],
+		useCases: ['Customer support triageLead routingInternal helpdesk'],
+		roi: 'Reduce manual triage time by 60–80% and improve first-response SLAs.',
+		competitors: ['Superhuman AIZendesk AIHubSpot AI'],
+		marketSize: 'Helpdesk software $20B+',
+		growthRate: '25% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.',
+		launchDate: '2029-10-12',
+		customers: 120,
+		rating: 4.8,
+		reviews: 74},
 	{
-		id: 'mobile-survey-studio';
-		name: 'Mobile Survey Studio'
-		tagline: 'Conversational, mobile-first surveys with branching logic and realtime dashboards';
-		price: '$59';
-		period: '/month'
-		description: 'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.';
+		id: 'mobile-survey-studio',
+		name: 'Mobile Survey Studio',
+		tagline: 'Conversational, mobile-first surveys with branching logic and realtime dashboards',
+		price: '$59',
+		period: '/month',
+		description: 'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links, export to CSV and data warehouses.',
 		features: [
 			'Branching logic and progress-saveQuestion bank: CSAT, NPS, PMF, churnAnonymous or identified responsesWebhooks and Zapier integrationReal-time charts and cohort filtersGDPR/CCPA consent and deletion tools'
-		];
-		popular: false;
-		icon: '📱';
-		color: 'from-emerald-600 to-teal-700';
-		textColor: 'text-emerald-300';link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',marketPosition: 'Lightweight alternative to enterprise survey suites, optimized for mobile.';
-		textColor: 'text-emerald-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/mobile-survey-studio',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		marketPosition: 'Lightweight alternative to enterprise survey suites, optimized for mobile.';
 		targetAudience: 'Growth teams, product managers, agencies';
 		trialDays: 7;
@@ -1457,86 +934,55 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: [;
 			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates';
 		customers: 60;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		reviews: 33
 	}
+		],
+		popular: false,
+		icon: '📱',
+		color: 'from-emerald-600 to-teal-700',
+		textColor: 'text-emerald-300',
+		link: 'https://ziontechgroup.com/services/mobile-survey-studio',
+		marketPosition: 'Lightweight alternative to enterprise survey suites, optimized for mobile.',
+		targetAudience: 'Growth teams, product managers, agencies',
+		trialDays: 7,
+		setupTime: 'Same day',
+		category: 'Developer Tools',
+		realService: true,
+		technology: ['Next.jsPostgreSQLTailwindVercel Edge'],
+		integrations: ['Google SheetsZapierSegmentBigQuery'],
+		useCases: ['Landing page surveysIn-product pollsExit intent feedback'],
+		roi: 'Increase response rates 2–5x and de-risk product decisions.',
+		competitors: ['TypeformSurveyMonkey'],
+		marketSize: 'Survey market $9B+',
+		growthRate: '14% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Responsive renderer with schema-driven forms and analytics.',
+		launchDate: '2029-11-05',
+		customers: 60,
+		rating: 4.6,
+		reviews: 33},
 	{
-		id: 'event-ops-dashboard';
-		name: 'EventOps Dashboard'
-		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place';
-		price: '$149';
-		period: '/month'
-		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.';
+		id: 'event-ops-dashboard',
+		name: 'EventOps Dashboard',
+		tagline: 'Ticketing, invitations, run-of-show, and post-event analytics in one place',
+		price: '$149',
+		period: '/month',
+		description: 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.',
 		features: [
 			'QR tickets and check-in appSpeaker/sponsor asset managementAutomated reminders and WhatsApp/SMS alertsFeedback/NPS post-event formsBudget tracker and P&L exportsEmbeddable agendas and live updates'
-		];
-		popular: true;
-		icon: '🎟️';
-		color: 'from-purple-600 to-pink-600';
-		textColor: 'text-purple-300';link: 'https://ziontechgroup && ziontechgroup.com/services/event-ops-dashboard';
-		marketPosition: 'Focused micro-SaaS alternative to all-in-one event platforms.',targetAudience: 'Marketing teams, conference organizers, communities';
-		textColor: 'text-purple-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		targetAudience: 'Marketing teams, conference organizers, communities';
 		trialDays: 14;
 		setupTime: '2 days';
@@ -1565,85 +1011,58 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: [;
 			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders';
 		customers: 48;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		rating: 4 && 4.7,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		reviews: 29
 	}
+		],
+		popular: true,
+		icon: '🎟️',
+		color: 'from-purple-600 to-pink-600',
+		textColor: 'text-purple-300',
+		link: 'https://ziontechgroup.com/services/event-ops-dashboard',
+		marketPosition: 'Focused micro-SaaS alternative to all-in-one event platforms.',
+		targetAudience: 'Marketing teams, conference organizers, communities',
+		trialDays: 14,
+		setupTime: '2 days',
+		category: 'Developer Tools',
+		realService: true,
+		technology: ['Next.jsStripeResendPostgreSQL'],
+		integrations: ['StripeResendMailchimpTwilio'],
+		useCases: ['MeetupsWebinarsConferences'],
+		roi: 'Cut ops overhead by 50% and improve attendance by 15–30%.',
+		competitors: ['EventbriteHopin'],
+		marketSize: 'Event tech $6B+',
+		growthRate: '18% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Ticketing service with role-based portals and exportable analytics.',
+		launchDate: '2029-09-23',
+		customers: 48,
+		rating: 4.7,
+		reviews: 29},
 	{
-		id: 'oncall-scheduler-pro';
-		name: 'OnCall Scheduler Pro'
-		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams';
-		price: '$129';
-		period: '/month'
-		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.';
+		id: 'oncall-scheduler-pro',
+		name: 'OnCall Scheduler Pro',
+		tagline: 'Policy-based shift planning, rotations, and escalations with Slack/Teams',
+		price: '$129',
+		period: '/month',
+		description: 'Create and manage on-call schedules with handoff workflows, time-zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.',
 		features: [
 			'Flexible rotations and override rulesEscalation policies and schedulesSlack/Teams integration and on-call handoffsVacation/holiday calendarsIncident reports and postmortem templatesSLO and error budget reminders'
-		];
-		popular: false;
-		icon: '📆';
-		color: 'from-indigo-600 to-blue-700';
-		textColor: 'text-indigo-300';link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',marketPosition: 'Lean alternative for SMBs, complements enterprise incident suites.';
-		textColor: 'text-indigo-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		link: 'https://ziontechgroup && ziontechgroup.com/services/oncall-scheduler-pro',
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		marketPosition: 'Lean alternative for SMBs, complements enterprise incident suites.';
 		targetAudience: 'SRE teams, startups, agencies';
 		trialDays: 14;
@@ -1672,85 +1091,54 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
 		features: [;
 		customers: 32;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		reviews: 19
 	}
+		],
+		popular: false,
+		icon: '📆',
+		color: 'from-indigo-600 to-blue-700',
+		textColor: 'text-indigo-300',
+		link: 'https://ziontechgroup.com/services/oncall-scheduler-pro',
+		marketPosition: 'Lean alternative for SMBs, complements enterprise incident suites.',
+		targetAudience: 'SRE teams, startups, agencies',
+		trialDays: 14,
+		setupTime: '1 day',
+		category: 'Observability',
+		realService: true,
+		technology: ['Next.jsPostgreSQLTwilio'],
+		integrations: ['SlackMicrosoft TeamsTwilio'],
+		useCases: ['On-call managementIncident response'],
+		roi: 'Reduce paging confusion and missed alerts by 30–50%.',
+		competitors: ['PagerDutyOpsgenie'],
+		marketSize: 'Incident management $3B+',
+		growthRate: '20% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Rotations engine and integrations with chat tools.',
+		launchDate: '2029-10-30',
+		customers: 32,
+		rating: 4.5,
+		reviews: 19},
 	{
-		id: 'seo-content-optimizer-pro';
-		name: 'SEO Content Optimizer Pro'
-		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data';
-		price: '$89';
-		period: '/month'
-		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.';
+		id: 'seo-content-optimizer-pro',
+		name: 'SEO Content Optimizer Pro',
+		tagline: 'AI-assisted briefs, outlines, and on-page optimization with live SERP data',
+		price: '$89',
+		period: '/month',
+		description: 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.',
 		features: [
-		];
-		popular: true;
-		icon: '🔎';
-		color: 'from-amber-600 to-orange-700';
-		textColor: 'text-amber-300';link: 'https://ziontechgroup && ziontechgroup.com/services/seo-content-optimizer-pro';
-		marketPosition: 'Practical mid-market tool between basic plugins and enterprise suites.',targetAudience: 'Content teams, agencies, solo founders';
-		textColor: 'text-amber-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		targetAudience: 'Content teams, agencies, solo founders';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -1779,86 +1167,56 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: [;
 			'Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications';
 		customers: 95;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		rating: 4 && 4.6,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		reviews: 54
 	}
+			'Keyword clustering and topical mapsCompetitor gap analysisOutline and brief generationOn-page audit and schema suggestionsRank tracking and change logsCMS export (Markdown/Headless)'
+		],
+		popular: true,
+		icon: '🔎',
+		color: 'from-amber-600 to-orange-700',
+		textColor: 'text-amber-300',
+		link: 'https://ziontechgroup.com/services/seo-content-optimizer-pro',
+		marketPosition: 'Practical mid-market tool between basic plugins and enterprise suites.',
+		targetAudience: 'Content teams, agencies, solo founders',
+		trialDays: 7,
+		setupTime: 'Same day',
+		category: 'Developer Tools',
+		realService: true,
+		technology: ['Next.jsOpenAISerpAPI'],
+		integrations: ['Google Search ConsoleAhrefs (export)Semrush (export)'],
+		useCases: ['Page optimizationContent planningBrief creation'],
+		roi: 'Improve organic traffic 20–50% over 3–6 months.',
+		competitors: ['SurferSEOFraseClearScope'],
+		marketSize: 'SEO software $6B+',
+		growthRate: '16% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'SERP fetchers with caching and AI summarization.',
+		launchDate: '2029-09-10',
+		customers: 95,
+		rating: 4.6,
+		reviews: 54},
 	{
-		id: 'feature-flags-lite';
-		name: 'Feature Flags Lite'
-		tagline: 'Simple kill switches, gradual rollouts, and A/B targeting for web apps';
-		price: '$49';
-		period: '/month'
-		description: 'Add feature flags to your app with SDKs for React/Node, rule targeting, and environments. Includes audit logs and safe defaulting.';
+		id: 'feature-flags-lite',
+		name: 'Feature Flags Lite',
+		tagline: 'Simple kill switches, gradual rollouts, and A/B targeting for web apps',
+		price: '$49',
+		period: '/month',
+		description: 'Add feature flags to your app with SDKs for React/Node, rule targeting, and environments. Includes audit logs and safe defaulting.',
 		features: [
 			'Boolean, multivariate, and JSON flagsUser and cohort targetingGradual rollouts and percentage splitsAudit logs and environment scopingServer and client SDKsWebhook notifications'
-		];
-		popular: false;
-		icon: '🚩';
-		color: 'from-slate-700 to-gray-800';
-		textColor: 'text-slate-300';link: 'https://ziontechgroup && ziontechgroup.com/services/feature-flags-lite';
-		marketPosition: 'Minimal alternative to enterprise flag platforms for SMBs.',targetAudience: 'Startups, agencies, indie devs';
-		textColor: 'text-slate-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		targetAudience: 'Startups, agencies, indie devs';
 		trialDays: 14;
 		setupTime: 'Same day';
@@ -1887,86 +1245,55 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: [;
 			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers';
 		customers: 70;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		reviews: 21
 	}
+		],
+		popular: false,
+		icon: '🚩',
+		color: 'from-slate-700 to-gray-800',
+		textColor: 'text-slate-300',
+		link: 'https://ziontechgroup.com/services/feature-flags-lite',
+		marketPosition: 'Minimal alternative to enterprise flag platforms for SMBs.',
+		targetAudience: 'Startups, agencies, indie devs',
+		trialDays: 14,
+		setupTime: 'Same day',
+		category: 'Developer Tools',
+		realService: true,
+		technology: ['Next.jsEdge KV/Redis'],
+		integrations: ['VercelNetlify'],
+		useCases: ['Kill switchesSafe migrationsCohort experiments'],
+		roi: 'Reduce incident impact and deploy more frequently.',
+		competitors: ['LaunchDarkly (entry)Flagsmith'],
+		marketSize: 'Feature management $1.5B+',
+		growthRate: '22% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Rules engine with SDKs and environment isolation.',
+		launchDate: '2029-10-02',
+		customers: 70,
+		rating: 4.5,
+		reviews: 21},
 	{
-		id: 'sales-lead-enrichment';
-		name: 'Sales Lead Enrichment';
-		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV';
-		price: '$129';
-		period: '/month'
-		description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.';
+		id: 'sales-lead-enrichment',
+		name: 'Sales Lead Enrichment',
+		tagline: 'Firmographics and signals to qualify leads instantly via API and CSV',
+		price: '$129',
+		period: '/month',
+		description: 'Enrich emails or domains with company size, industry, tech stack, and buying signals. Bulk upload CSVs or call the API directly.',
 		features: [
 			'Company/person enrich via email or domainTech stack detection and hiring signalsCSV bulk processing and APICRM enrichment workflowsConfidence scores and data provenanceUsage-based pricing tiers'
-		];
-		popular: true;
-		icon: '🧭';
-		color: 'from-sky-600 to-blue-700';
-		textColor: 'text-sky-300';link: 'https://ziontechgroup && ziontechgroup.com/services/sales-lead-enrichment';
-		marketPosition: 'Affordable enrichment focused on actionable signals.',targetAudience: 'Sales teams, SDRs, growth marketers';
-		textColor: 'text-sky-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		targetAudience: 'Sales teams, SDRs, growth marketers';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -1995,86 +1322,55 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: [;
 			'High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies';
 		customers: 40;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		rating: 4 && 4.4,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		reviews: 17
 	}
+		],
+		popular: true,
+		icon: '🧭',
+		color: 'from-sky-600 to-blue-700',
+		textColor: 'text-sky-300',
+		link: 'https://ziontechgroup.com/services/sales-lead-enrichment',
+		marketPosition: 'Affordable enrichment focused on actionable signals.',
+		targetAudience: 'Sales teams, SDRs, growth marketers',
+		trialDays: 7,
+		setupTime: 'Same day',
+		category: 'Developer Tools',
+		realService: true,
+		technology: ['Next.jsNodeExternal data partners'],
+		integrations: ['HubSpotSalesforce (export)Airtable'],
+		useCases: ['Lead scoringICP matchingOutbound targeting'],
+		roi: 'Improve conversion rates by 10–25%.',
+		competitors: ['ClearbitZoomInfo (export)'],
+		marketSize: 'Sales intelligence $30B+',
+		growthRate: '12% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Data aggregation with caching and scoring heuristics.',
+		launchDate: '2029-11-18',
+		customers: 40,
+		rating: 4.4,
+		reviews: 17},
 	{
-		id: 'invoice-ocr-processor';
-		name: 'Invoice OCR Processor';
-		tagline: 'Extract line items and totals from invoices and receipts to your ERP';
-		price: '$79';
-		period: '/month'
-		description: 'Upload PDFs/images and get structured outputs (vendor, dates, taxes, line items). Human-in-the-loop validation and retraining for edge cases.';
+		id: 'invoice-ocr-processor',
+		name: 'Invoice OCR Processor',
+		tagline: 'Extract line items and totals from invoices and receipts to your ERP',
+		price: '$79',
+		period: '/month',
+		description: 'Upload PDFs/images and get structured outputs (vendor, dates, taxes, line items). Human-in-the-loop validation and retraining for edge cases.',
 		features: [
 			'High-accuracy OCR and field mappingLine item extraction and taxesValidation UI and review queuesExport to CSV, JSON, or webhookERP connectors and retry policiesPII redaction and retention policies'
-		];
-		popular: false;
-		icon: '🧾';
-		color: 'from-rose-600 to-pink-700';
-		textColor: 'text-rose-300';link: 'https://ziontechgroup && ziontechgroup.com/services/invoice-ocr-processor';
-		marketPosition: 'Cost-effective alternative with human review for accuracy.',targetAudience: 'Finance teams, accounting firms, SMBs';
-		textColor: 'text-rose-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		targetAudience: 'Finance teams, accounting firms, SMBs';
 		trialDays: 7;
 		setupTime: '2 days';
@@ -2103,86 +1399,55 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: [;
 			'Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps';
 		customers: 27;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		rating: 4 && 4.5,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		reviews: 14
 	}
+		],
+		popular: false,
+		icon: '🧾',
+		color: 'from-rose-600 to-pink-700',
+		textColor: 'text-rose-300',
+		link: 'https://ziontechgroup.com/services/invoice-ocr-processor',
+		marketPosition: 'Cost-effective alternative with human review for accuracy.',
+		targetAudience: 'Finance teams, accounting firms, SMBs',
+		trialDays: 7,
+		setupTime: '2 days',
+		category: 'AI & Data',
+		realService: true,
+		technology: ['Next.jsTesseract/LLMsPostgreSQL'],
+		integrations: ['QuickBooks (export)Xero (export)SAP (export)'],
+		useCases: ['AP automationExpense processing'],
+		roi: 'Reduce manual data entry by 70–90%.',
+		competitors: ['VeryfiRossum'],
+		marketSize: 'Document AI $5B+',
+		growthRate: '24% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Template-free extraction with feedback loops for edge cases.',
+		launchDate: '2029-12-01',
+		customers: 27,
+		rating: 4.5,
+		reviews: 14},
 	{
-		id: 'rpa-browser-automation';
-		name: 'RPA Browser Automation Kit'
-		tagline: 'Headless browser workflows with queues, retries, and human review';
-		price: '$139';
-		period: '/month'
-		description: 'Create robotic process automations for web workflows: login, scrape, form-fill, download, and upload. Includes scheduling, proxy support, and error screenshots.';
+		id: 'rpa-browser-automation',
+		name: 'RPA Browser Automation Kit',
+		tagline: 'Headless browser workflows with queues, retries, and human review',
+		price: '$139',
+		period: '/month',
+		description: 'Create robotic process automations for web workflows: login, scrape, form-fill, download, and upload. Includes scheduling, proxy support, and error screenshots.',
 		features: [
 			'Workflow editor and step recorderRetry logic and backoff policiesCaptcha solving hooks and proxiesFile storage and PII redactionJob queue, metrics, and alertsHuman approval steps'
-		];
-		popular: true;
-		icon: '🤖';
-		color: 'from-fuchsia-600 to-purple-700';
-		textColor: 'text-fuchsia-300';link: 'https://ziontechgroup && ziontechgroup.com/services/rpa-browser-automation';
-		marketPosition: 'Builder-focused alternative to heavyweight RPA suites.',targetAudience: 'Ops teams, agencies, internal tools';
-		textColor: 'text-fuchsia-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		targetAudience: 'Ops teams, agencies, internal tools';
 		trialDays: 14;
 		setupTime: '3 days';
@@ -2204,89 +1469,55 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 	}
 	{id: 'redaction-compliance-api';
 		customers: 38;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		rating: 4 && 4.4,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		reviews: 18
 	}
+		],
+		popular: true,
+		icon: '🤖',
+		color: 'from-fuchsia-600 to-purple-700',
+		textColor: 'text-fuchsia-300',
+		link: 'https://ziontechgroup.com/services/rpa-browser-automation',
+		marketPosition: 'Builder-focused alternative to heavyweight RPA suites.',
+		targetAudience: 'Ops teams, agencies, internal tools',
+		trialDays: 14,
+		setupTime: '3 days',
+		category: 'Developer Tools',
+		realService: true,
+		technology: ['PlaywrightNext.jsPostgreSQL'],
+		integrations: ['ZapierMake.comS3/R2'],
+		useCases: ['Partner portal automationsData collectionBulk updates'],
+		roi: 'Automate repetitive tasks and cut manual hours by 50–90%.',
+		competitors: ['UiPath (SMB)Robocorp'],
+		marketSize: 'RPA $13B+',
+		growthRate: '20% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Playwright runners with job queues and storage integrations.',
+		launchDate: '2029-11-28',
+		customers: 38,
+		rating: 4.4,
+		reviews: 18},
 	{
-		id: 'redaction-compliance-api';
-		name: 'Redaction & Compliance API';
-		tagline: 'PII detection and redaction for text and documents with audit logs';
-		price: '$79';
-		period: '/month';
-		description: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.';
-		features: [;
-			'Configurable detectors (SSN, phone, email, credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery';
-		description: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.'
+		id: 'redaction-compliance-api',
+		name: 'Redaction & Compliance API',
+		tagline: 'PII detection and redaction for text and documents with audit logs',
+		price: '$79',
+		period: '/month',
+		description: 'Detect and redact sensitive data (PII/PHI/PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
 		features: [
 			'Configurable detectors (SSN, phone, email, credit card)Context-aware redaction and maskingAudit logs and retention policiesBatch processing and streamingWebhook retries and DLQsExport to S3/R2 and BigQuery'
-		];
-		popular: false;
-		icon: '🧼';
-		color: 'from-teal-600 to-cyan-700';
-		textColor: 'text-teal-300';link: 'https://ziontechgroup && ziontechgroup.com/services/redaction-compliance-api';
-		marketPosition: 'Developer-first compliance tooling.',targetAudience: 'Developers, compliance teams';
-		textColor: 'text-teal-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		targetAudience: 'Developers, compliance teams';
 		trialDays: 14;
 		setupTime: 'Same day';
@@ -2315,86 +1546,55 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 		features: [;
 			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs';
 		customers: 22;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 		rating: 4 && 4.3,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		reviews: 12
 	}
+		],
+		popular: false,
+		icon: '🧼',
+		color: 'from-teal-600 to-cyan-700',
+		textColor: 'text-teal-300',
+		link: 'https://ziontechgroup.com/services/redaction-compliance-api',
+		marketPosition: 'Developer-first compliance tooling.',
+		targetAudience: 'Developers, compliance teams',
+		trialDays: 14,
+		setupTime: 'Same day',
+		category: 'Quality & Monitoring',
+		realService: true,
+		technology: ['Next.jsLLMsRegex engines'],
+		integrations: ['S3/R2GCSBigQuery'],
+		useCases: ['Data minimizationCompliance workflowsPII scrubbing'],
+		roi: 'Reduce compliance risk and review time.',
+		competitors: ['NightfallVery Good Security'],
+		marketSize: 'Data security $20B+',
+		growthRate: '18% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Detectors with policy engine and audit export.',
+		launchDate: '2029-12-03',
+		customers: 22,
+		rating: 4.3,
+		reviews: 12},
 	{
-		id: 'kpi-scorecards-studio';
-		name: 'KPI Scorecards Studio'
-		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries';
-		price: '$69';
-		period: '/month'
-		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.';
+		id: 'kpi-scorecards-studio',
+		name: 'KPI Scorecards Studio',
+		tagline: 'OKR/KPI dashboards with goals, alerts, and executive summaries',
+		price: '$69',
+		period: '/month',
+		description: 'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
 		features: [
 			'Goal trees and KPI ownershipWeekly executive summariesAlerting on thresholds and trendsWarehouse connectorsShareable links with permissionsAnnotations and change logs'
-		];
-		popular: false;
-		icon: '📊';
-		color: 'from-green-600 to-emerald-700';
-		textColor: 'text-green-300';link: 'https://ziontechgroup && ziontechgroup.com/services/kpi-scorecards-studio';
-		marketPosition: 'Simple executive dashboards without BI bloat.',targetAudience: 'Founders, execs, ops';
-		textColor: 'text-green-300';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		targetAudience: 'Founders, execs, ops';
 		trialDays: 7;
 		setupTime: 'Same day';
@@ -2422,72 +1622,25 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   price: '$99';
   period: '/month',description: 'An AI - driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.';
 		customers: 36;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];
 ;
 
 	}
 ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 		rating: 4 && 4.4,
 
 		reviews: 16
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 	}
 ];
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: 'ai - email - triage - copilot';
   name: 'AI Email Triage Copilot',
   tagline: 'Auto - categorize, summarize, and draft replies for inbound email';
@@ -3052,17 +2205,7 @@ const contact  = null;
   rating: 4.4,
   reviews: 16;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 		rating: 4.4
 		reviews: 16
 
@@ -3483,12 +2626,6 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		reviews: 16;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-	}
-];
-<<<<<<< HEAD
-=======
 
 	}
 ursor/fix-website-loading-errors-and-merge-6662
@@ -3496,22 +2633,15 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 	}
 ];
 
 ;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { RealMarketService } from './real-market-services',;
-=======
 	}
 ];
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const contact = {;
 	mobile: '+1 302 464 0950',;
 	email: 'kleber@ziontechgroup.com',;
@@ -3925,23 +3055,8 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		customers: 36,;
 		rating: 4.4;
 		reviews: 16;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	}
-];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 import { RealMarketService } from './real-market-services';
 const contact = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 	}
@@ -3952,12 +3067,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 import { RealMarketService } from './real-market-services';
 const contact = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 	}
 ];
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -3966,8 +3077,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 	}
 ];
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+		],
+		popular: false,
+		icon: '📊',
+		color: 'from-green-600 to-emerald-700',
+		textColor: 'text-green-300',
+		link: 'https://ziontechgroup.com/services/kpi-scorecards-studio',
+		marketPosition: 'Simple executive dashboards without BI bloat.',
+		targetAudience: 'Founders, execs, ops',
+		trialDays: 7,
+		setupTime: 'Same day',
+		category: 'Business Intelligence',
+		realService: true,
+		technology: ['Next.jsSupabaseBigQuery'],
+		integrations: ['Google SheetsBigQuerySnowflake (export)'],
+		useCases: ['OKRs/scorecardsExec reporting'],
+		roi: 'Improve visibility and accountability.',
+		competitors: ['GridGrow'],
+		marketSize: 'BI $30B+',
+		growthRate: '11% YoY',
+		variant: 'ai-futuristic',
+		contactInfo: contact,
+		realImplementation: true,
+		implementationDetails: 'Metrics ingestion and templated reporting.',
+		launchDate: '2029-10-20',
+		customers: 36,
+		rating: 4.4,
+		reviews: 16}
+],

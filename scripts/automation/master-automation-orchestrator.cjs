@@ -129,17 +129,11 @@ const { execSync, spawn } = require("child_process")
   process.on("SIGINT")
   console.log("\n� Received SIGINT, shutting down gracefully...")
   process.on("SIGTERM")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.log(")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.log(")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.log(")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.log(")
+  console.log(")
+
+

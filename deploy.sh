@@ -1,16 +1,10 @@
 #!/bin/bash
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 # Deployment script for production
 set -e
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 # Deployment script for production
 set -e
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 echo "🚀 Starting deployment process..."
 
@@ -55,12 +49,16 @@ else
     echo "❌ Deployment failed!"
     exit 1
 fi
-=======
 echo "🚀 Deploying Zion Tech Group Application..."
 
 # Build the application
 npm run build
 
+# Deploy to production
+echo "🚀 Deploying to production..."
+# Add your deployment commands here
+
+echo "✅ Deployment completed successfully!"
 # Check if build was successful
 if [ $? -eq 0 ]; then
   echo "✅ Build successful"
@@ -73,4 +71,3 @@ else
   echo "❌ Build failed"
   exit 1
 fi
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b

@@ -29,9 +29,11 @@ import { execSync, spawn } from;
         execSync(`"npm": install ${moduleName}`, { "stdio"`})
         "replacement"
         "replacement"
-
-<<<<<<< HEAD
-=======
         execSync(`"npm": install ${packageName}`, { "stdio"`})
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+        execSync(`"npm": install ${packageName}`, { "stdio"`})
+        execSync(`"npm": install ${packageName}`, { "stdio"`})
+#!/usr/bin/env node
+import { execSync, spawn } from;
+
+

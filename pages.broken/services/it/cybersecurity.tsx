@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default function ManagedCybersecurity() { return ( <Article title=\"Managed Cybersecurity\" subtitle=\"Threat detection,incident response,and compliance automation\" price=\"from $6k/mo\" bullets={[\'24/7 monitoring with SIEM/SOAR integrations\',\'Identity hardening and zero-trust access policies\',\'Vulnerability scanning and prioritized patching\',\'Compliance \"packs\": \'SOC2\',ISO 27001,HIPAA\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 import React from 'react';
 interface CybersecurityProps {
@@ -37,24 +33,12 @@ interface CybersecurityProps {;
 }
 export default function Cybersecurity(): any ({}: CybersecurityProps) {;
   return (
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div>
       <h1>Cybersecurity</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
@@ -84,3 +68,6 @@ export default function Cybersecurity(): any ({}: CybersecurityProps) {return (<
     </div>;
   )}}}}ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
+
+
+}

@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
         token;
@@ -35,11 +19,8 @@ const { upsert_file } = require ('./_lib / github')const fs = require ('fs')cons
  */;
 function get_latest() {try {const resp = await fetch (`https://registry.npmjs.org/${encodeURIComponent (pkg)}/latest`)// Check condition;
 if (return null) {$2;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const resp = await fetch(;
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`;
-<<<<<<< HEAD
-=======
 
 
 async function getLatest(pkg) {
@@ -47,166 +28,112 @@ async function getLatest(pkg) {
     const resp = await fetch(
       `https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`
 ursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     );
     if (!resp && resp.ok) return null;
     const json = await resp && resp.json();
     return json && json.version || null;
-  } catch (_) {
-    return null;
-  }
-exports && exports.handler = async function () {
-<<<<<<< HEAD
-
-
+const { upsertFile } = require($2);
+const fs = require($2);
+const path = require($2);
+async function getLatest(pkg) {
   try {
-    const pkgPath = path && path.join(process && process.cwd(), 'package && package.json');
-    const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8'));
-    const deps = {
+    const resp = $2;
+    if (!resp.ok) return null,
+    const json = await resp.json($2);
+    return json.version || null
+  } catch (_) {
+    return null
+  }
 
-      ...(pkg && pkg.dependencies || {}),
-      ...(pkg && pkg.devDependencies || {}),
-    };
-
-
-    const entries = [];
-    for (const [name, current] of Object && Object.entries(deps)) {
-      const latest = await getLatest(name);
-      if (!latest) continue;
-
-      entries && entries.push({
-        name,
-        current,
-        latest,
-        outOfDate: current && current.replace(/^[^0-9]*/, '') !== latest,
-      });
-    }
-
-    const report = { updatedAt: Date && Date.now(), entries };
-
-    const owner = process && process.env.GITHUB_OWNER;
-    const repo = process && process.env.GITHUB_REPO;
-    const token = process && process.env.GITHUB_TOKEN;
-
-    if (owner && repo && token) {
-      await upsertFile({
-        owner,
-        repo,
-        path: 'data/reports/deps/weekly-dependencies && dependencies.json',
-        content: JSON && JSON.stringify(report, null, 2),
-        message: 'chore(automation): weekly dependency insights',
-<<<<<<< HEAD
-ursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { upsert_file } = require ('./_lib / github');
 const fs = require ('fs');
+
 const path = require ('path');
 ;
 async /**
- * get_latest - Function description
+ * get_latest - Function description;
  */
-function get_latest() {
-  try {
+function get_latest() {}
+  try {}
     const resp = await fetch (
       `https://registry.npmjs.org/${encodeURIComponent (pkg)}/latest`);
-    // Check condition
-if (return null) {
-  $2
+    // Check condition;
+if (return null) {}
+  $2;
 }
-    const json = await resp.json ()return json.version || null;
-  } catch (_) {return null;
+    const json = await resp.json ();
+    return json.version || null;
+  } catch (_) {}
+    return null;
   }
-exports.handler = async function () {try {const pkg_path = path.join (process.cwd (), 'package.json')const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8'))const deps = {...(pkg.dependencies || {}),...(pkg.dev_dependencies || {})...(pkg.dev_dependencies || {})}const entries = [];
-    for (const [name, current] of Object.entries (deps)) {const latest = await get_latest (name)// Check condition;
-if (continue) {$2;
+exports.handler = async function () {}
+  try {'
+    const pkg_path = path.join (process.cwd (), 'package.json');'
+    const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8'));
+    const deps = {}
+      ...(pkg.dependencies || {}),
+      ...(pkg.dev_dependencies || {}),
+    }
+;
+    const entries = [];
+    for (const [name, current] of Object.entries (deps)) {}
+      const latest = await get_latest (name);
+      // Check condition;
+if (continue) {}
+  $2;
 }
-      entries.push ({name,current,latest,outOfDate: current.replace (/^[^0 - 9]*/, '') !== latest;
-        outOfDate: current.replace (/^[^0 - 9]*/, '') !== latest;
-      })}
-    const report = { updated_at: Date.now (), entries }const owner = process.env.GITHUB_OWNER;
+      entries.push ({}
+        name,
+        current,
+        latest,'
+        outOfDate: current.replace (/^[^0 - 9]*/, '') !== latest,
+      });
+    }
+    const report = { updated_at: Date.now (), entries }
+;
+    const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
-    const token  = process.env.GITHUB_TOKEN;// Check condition;
-if ( {) {$2;
+    const token = process.env.GITHUB_TOKEN;
+;
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      await upsert_file ({owner,repo,path: 'data / reports / deps / weekly - dependencies.json',content: JSON.stringify (report, null, 2),message: 'chore (automation): weekly dependency insights',token;
-      })}
-    return {}token;
-      })}
-    return {}
-}async /**;
- * get_latest - Function description;
- */;
-function get_latest() {try {try {const resp = await fetch(`https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`),if (!resp && resp.ok) return null,const json = await resp && resp.json(),return json && json.version || null;
-    const resp = await fetch (`https://registry.npmjs.org/${encodeURIComponent (pkg)}/latest`),// Check condition;
-if (return null, ) {$2;
-}
-    const json = await resp.json (),return json.version || null;
-const { upsertFile } = require('./_lib/github')const fs = require('fs')const path = require('path')async function getLatest() {try {const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`)if (!resp.ok) return null;
-    const json = await resp.json()}} catch (_) {return null;
-  }
-}exports.handler = async function() {try {const pkgPath = path.join(process.cwd(), 'package.json'),const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'))const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) }const entries = [];
-    for (const [name, current] of Object.entries(deps)) {const latest = await getLatest(name)if (!== latest })}const report = { updatedAt: Date.now(), entries },const owner = process.env.GITHUB_OWNER)const repo = process.env.GITHUB_REPO;
-    const token  = process.env.GITHUB_TOKEN)if (owner && repo && token) {await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies && dependencies.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })}
-  } catch (e) {return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-      await upsert_file ({
+      await upsert_file ({}
         owner,
-        repo,
+        repo,'
         path: 'data / reports / deps / weekly - dependencies.json',
-        content: JSON.stringify (report, null, 2),
+        content: JSON.stringify (report, null, 2),'
         message: 'chore (automation): weekly dependency insights',
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         token,
-=======
         token
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        token,
+
       });
     }
     return {}
+  }
 }async /**
- * get_latest - Function description
+ * get_latest - Function description;
  */
-function get_latest() {
-  try {
-  try {
+function get_latest() {}
+  try {}
+  try {}`
     const resp = await fetch(`https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`),
     if (!resp && resp.ok) return null,
     const json = await resp && resp.json(),
-    return json && json.version || null
+    return json && json.version || null;`
     const resp = await fetch (`https://registry.npmjs.org/${encodeURIComponent (pkg)}/latest`),
-    // Check condition
-if (return null, ) {
-  $2
+    // Check condition;
+if (return null, ) {}
+  $2;
 }
     const json = await resp.json (),
     return json.version || null;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { upsertFile } = require('./_lib/github');
 const fs = require('fs');
 const path = require('path');
@@ -216,66 +143,49 @@ async function getLatest(pkg) {
     if (!resp.ok) return null;
     const json = await resp.json();
 };
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
   } catch (_) {
+
     return null;
+
   }
-exports.handler = async function () {try {const pkg_path = path.join (process.cwd (), 'package.json'),const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8')),const deps = { ...(pkg.dependencies || {}), ...(pkg.dev_dependencies || {}) },const entries = [],for (const [name, current] of Object.entries (deps)) {const latest = await get_latest (name),// Check condition;
-if (continue, ) {$2;
+exports.handler = async function () {try {const pkg_path = path.join (process.cwd (), 'package.json'),const pkg = JSON.parse (fs.readFileSync (pkg_path, 'utf - 8')),const deps = { ...(pkg.dependencies || {}), ...(pkg.dev_dependencies || {}) },const entries = [],for (const [name, current] of Object.entries (deps)) ;
+  const latest = await get_latest (name),// Check condition;
+if (continue, ) {$2;}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 exports.handler = async function() {
   try {
     const pkgPath = path.join(process.cwd(), 'package.json'),
-    const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
-    const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
-    const entries = [];
+    const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8')),
+    const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) },
+
+    const entries = $2;
     for (const [name, current] of Object.entries(deps)) {
-      const latest = await getLatest(name);
-      if (!== latest })
+      const latest = await getLatest($2);
+      if (!latest) continue,
+      entries.push({ name, current, latest, outOfDate: current.replace(/^[^0-9]*/, '') !== latest })
     }
 
     const report = { updatedAt: Date.now(), entries },
 
-    const owner = process.env.GITHUB_OWNER);
-    const repo = process.env.GITHUB_REPO;
-    const token = process.env.GITHUB_TOKEN);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       entries.push ({ name, current, latest, outOfDate: current.replace (/^[^0 - 9]*/, '') !== latest })}
     const report = { updated_at: Date.now (), entries },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,// Check condition;
 if ( {) {$2;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    const owner = $2;
+    const repo = $2;
+    const token = $2;
     if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies && dependencies.json', content: JSON && JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
+      await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })
     }
+
+    return { statusCode: 200, body: JSON.stringify({ ok: true, count: entries.length }) }
   } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 exports.handler = async function () {
   try {
     const pkg_path = path.join (process.cwd (), 'package.json'),
@@ -294,21 +204,6 @@ if (continue, ) {
   }
 },try {const pkgPath = path && path.join(process && process.cwd(), 'package && package.json';
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   try {
     const pkgPath = path && path.join(process && process.cwd(), 'package && package.json';
     const pkg = JSON && JSON.parse(fs && fs.readFileSync(pkgPath, 'utf-8';
@@ -333,35 +228,16 @@ const path = require ('path';
       await upsert_file ({ owner, repo, path: 'data / reports / deps / weekly - dependencies.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly dependency insights';ursor/expand-services-advertise-and-build-project-4b36;
 }
       await upsert_file ({ owner, repo, path: 'data / reports / deps / weekly - dependencies.json', content: JSON.stringify (report, null, 2), message: 'chore (automation): weekly dependency insights';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+},

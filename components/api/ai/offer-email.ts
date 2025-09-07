@@ -1,21 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-) {
-  const method = (req.method |'POST').toUpperCase();
-) {;
-  const method = (req.method || 'POST').toUpperCase();
-
-  if (method !== 'POST')
-<<<<<<< HEAD
-    return res.status(405).json({ error: 'Method not allowed' });
-  const method = null;
-  return res.status(200).json({ email: text })
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ) {const method = (req.method |'POST').toUpperCase()) {const method  = (req.method || 'POST').toUpperCase()if (method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })const auth = authenticateRequest(req, false)if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error })import { Star  } from 'lucide-react';
 export default async function handler() {if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })const auth = authenticateRequest(req, false)if (!auth.ok) return res.status(401).json({ error: auth.error })const {candidateName;
     roleTitle;
@@ -23,8 +6,6 @@ export default async function handler() {if (method !== 'POST') return res.statu
     startDate;
     companyName;
     notes;
-<<<<<<< HEAD
-=======
     return res && res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
@@ -40,9 +21,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     startDate
     companyName
     notes
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   } = req.body |{}
   const prompt =;
     `Draft a professional, friendly job offer email.\n` +    `Candidate: ${candidateName |'Candidate'}\n` +  const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body |{}
@@ -73,12 +51,6 @@ function handler() {const method = (req.method || 'POST').toUpperCase (),if (ret
     `Start Date: ${start_date || 'TBD'}\n` +;
     `Company: ${company_name || 'Your Company'}\n` +;
     `Notes: ${notes || ''}\n` +;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    `Include signature and next steps.`;const text = await generate_text (prompt,'You are a recruiting ops specialist with excellent writing skills.')return res.status (200).json ({ email: text })const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.')return res.status (200).json ({ email: text })return res.status(405).json({ error: 'Method not allowed' })const method = null;
-  return res.status(200).json({ email: text })}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     `Include signature and next steps.`;
 ;
   const text = await generate_text (
@@ -86,8 +58,25 @@ function handler() {const method = (req.method || 'POST').toUpperCase (),if (ret
     'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });  const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.');
   return res.status (200).json ({ email: text });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     `Include signature and next steps.`;const text = await generate_text (prompt,'You are a recruiting ops specialist with excellent writing skills.')return res.status (200).json ({ email: text })const text = await generate_text (prompt, 'You are a recruiting ops specialist with excellent writing skills.')return res.status (200).json ({ email: text })return res.status(405).json({ error: 'Method not allowed' })const method = null;
   return res.status(200).json({ email: text })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+import { authenticateRequest } from '@/utils/auth';
+import { generateText } from '@/utils/ai';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const method = (req.method || 'POST').toUpperCase($2);
+  if (method !== 'POST') return res.status(405).json($2);
+  const auth = authenticateRequest($2);
+  if (!auth.ok) return res.status(401).json($2);
+  const { candidateName, roleTitle, compensation, startDate, companyName, notes } = req.body || {},
+  const prompt = `Draft a professional, friendly job offer email.\n` +
+    `Candidate: ${candidateName || 'Candidate'}\n` +
+    `Role: ${roleTitle || 'Software Engineer'}\n` +
+    `Compensation: ${compensation || 'Competitive'}\n` +
+    `Start Date: ${startDate || 'TBD'}\n` +
+    `Company: ${companyName || 'Your Company'}\n` +
+    `Notes: ${notes || ''}\n` +
+    `Include signature and next steps.`,
+
+  const text = await generateText($2);
+  return res.status(200).json({ email: text})
+}

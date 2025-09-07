@@ -1,45 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-export type Course = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export type Course = {
 
   id: string;
-=======
 
 ;
 import Link from 'next/link';
 export type Course = any;export type Course = {id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 ;
 import Link from 'next/link';
 export type Course = any;export type Course = {id: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: string;
   duration_minutes: number;
   level: string;
   is_free: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  category: string;
-  certificationBadge: string;
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   category: string;certification_badge: string,description?: string;
 export default /**;
  * CourseCard - Function description;
  */;
 function CourseCard() {return (<div className='border rounded - lg p - 4 hover:shadow - md transition'>;
-<<<<<<< HEAD
-=======
   category: string;
   certification_badge: string,
   description?: string;
@@ -49,9 +27,6 @@ export default /**
 function CourseCard() {
   return (
     <div className='border rounded - lg p - 4 hover:shadow - md transition'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className='flex items - center justify - between'>;
         <h3 className='font - semibold text - lg'>{course.title}</h3>;
         <span className='text - xs border px - 2 py - 0.5 rounded bg - green - 50 text - green - 700'>;
@@ -80,12 +55,7 @@ function CourseCard() {
     </div>)}          <a className="text - blue-600 hover: underline text-sm">View course</a>;
         </Link>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>))certificationBadge: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description?: string;
 }export default function CourseCard() {return (<div className='border rounded-lg p-4 hover:shadow-md transition'>;
 export default function CourseCard() {return (<div className='border rounded-lg p-4 hover:shadow-md transition'>;
@@ -103,32 +73,46 @@ export default function CourseCard() {return (<div className='border rounded-lg 
       <div className='mt-3 flex items-center justify-between'>;
         <span className='text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded'>;
           Badge: {course.certificationBadge}
-<<<<<<< HEAD
-        </span>
-        <Link href={`/learn/${course.id}`}>
-          <a className='text-blue-600 hover:underline text-sm'>View course</a>
-        </Link>
-      </div>
-    </div>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         </span>;
         <Link href={`/learn/${course.id}`}>;
           <a className='text-blue-600 hover:underline text-sm'>View course</a>;
         </Link>;
       </div>;
     </div>;
-<<<<<<< HEAD
   )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </div>);
 
   );
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+import Link from 'next/link';
+export type Course = $2;
+  title: string,
+  durationMinutes: number,
+  level: string,
+  isFree: boolean,
+  category: string,
+  certificationBadge: string,
+  description?: string
+},
+
+export default function CourseCard({ course }: { course: Course}) {
+  return (
+    <div className="border rounded-lg p-4 hover:shadow-md transition">
+      <div className="flex items-center justify-between">
+        <h3 className="font-semibold text-lg">{course.title}</h3>
+        <span className="text-xs border px-2 py-0.5 rounded bg-green-50 text-green-700">
+          {course.isFree ? 'Free' : 'Paid'}
+        </span>
+      </div>
+      <div className="text-xs text-gray-500 mt-1">{course.category} • {course.level} • {Math.round(course.durationMinutes / 60)}h</div>
+      <div className="text-sm mt-2 line-clamp-2">{course.description}</div>
+      <div className="mt-3 flex items-center justify-between">
+        <span className="text-xs bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded">Badge: {course.certificationBadge}</span>
+        <Link href={`/learn/${course.id}`}>
+          <a className="text-blue-600 hover: underline text-sm">View course</a>
+        </Link>
+      </div>
+    </div>
+  )
+}

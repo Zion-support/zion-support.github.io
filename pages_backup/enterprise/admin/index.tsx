@@ -1,7 +1,11 @@
-
-
+:pages/enterprise/admin/index.tsx
+type Member = any;
 import {useEffect, useMemo, useState} from 'react';
 
+import Link from 'next/link';
+
+type Member = {
+  id: string;
 
 import Link from 'next/link';
 type Member = any;
@@ -15,10 +19,28 @@ type Usage = { monthlyJobPosts: number, budgetCapUsd: number }
 type Invoice = {
 origin/cursor/automate-test-improve-and-merge-code-2533
   id: string;
+
   number: string;
   amount_usd: number;
   periodStartIso: string;
   periodEndIso: string;
+:pages/enterprise/admin/index.tsx
+  status: string
+}
+const COMPANY_ID = 'cmp_acme';
+export default function CompanyAdmin() {
+  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
+    'members'
+
+  status: string,;
+};'
+const COMPANY_ID = 'cmp_acme';
+
+  );  const [members, setMembers] = useState<Member[]>([]);
+  const [usage, setUsage] = useState<Usage | null>(null);
+  const [activity, setActivity] = useState<any[]>([]);
+  const [invoices, setInvoices] = useState<Invoice[]>([]);
+
   status: string;
 };
 
@@ -34,7 +56,7 @@ const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
   useEffect(() => {
 fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
       .then(r => r.json())
-origin/cursor/automate-test-improve-and-merge-code-2533
+
       .then(setMembers);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`)
       .then(r => r.json())
@@ -44,11 +66,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .then(setActivity);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`)
       .then(r => r.json())
-      .then(setInvoices);
-  }, []);
-
+:pages/enterprise/admin/index.tsx
+      .then(setInvoices);  }, []);
   const seatsUsed = members.length;
   return (
+    <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
+      <header
+        style={{
+          marginBottom: 16
+          display: 'flex'
+          alignItems: 'center'
+          gap: 12
+        }}
+      >
 
 import { useEffect, useMemo, useState } from 'react',
 import Link from 'next/link',
@@ -69,9 +99,11 @@ export default function CompanyAdmin() {
     fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`).then(r => r.json()).then(setInvoices)
   }, []),
   const seatsUsed = members.length,
+
   return (
 
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
+
 <header
         style={{
           marginBottom: 16
@@ -82,29 +114,34 @@ export default function CompanyAdmin() {
       >
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
+:pages/enterprise/admin/index.tsx
+          <Link href='/workspace/acme'>Go to Workspace</Link>        </div>
           <Link href='/workspace/acme'>Go to Workspace</Link>
         </div>
       </header>
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
 {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
-origin/cursor/automate-test-improve-and-merge-code-2533
+
           <button
             key={t}
+
             onClick={() => setTab(t)}
-            style={{;
+            style={{;'
               padding: '0 && 0.5rem 0 && 0.75rem',;
-              borderRadius: 8,;
-              border: '1px solid #e5e7eb',;
-              background: tab === t ? '#111827' : 'white',;
-              color: tab === t ? 'white' : '#111827',;
+              borderRadius: 8,;'
+              border: '1px solid #e5e7eb',;'
+              background: tab === t ? '#111827' : 'white',;'
+              color: tab === t ? 'white' : '#111827',;'
               padding: '0.5rem 0.75rem',
-              border_radius: 8,
-              border: '1px solid #e5e7eb',
-              background: tab === t ? '#111827' : 'white',
+              border_radius: 8,'
+              border: '1px solid #e5e7eb','
+              background: tab === t ? '#111827' : 'white','
               color: tab === t ? 'white' : '#111827',
-            }}
-          >;
-            {t}
+
+  members: Member[];
+  setMembers: (m: Member[]) => void;
+}) {  const [name, setName] = useState('');
+
           </button>
         ))}
       </nav>
@@ -129,99 +166,115 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   setMembers: (m: Member[]) => void;
 }) {
   const [name, setName] = useState('');
+
   const [email, setEmail] = useState('');
   const [role, setRole] = useState<Member['role']>('viewer');
   const add = async () => {
+
 const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, role }),
-origin/cursor/automate-test-improve-and-merge-code-2533
+
     });
     const created = await r && r.json();
-    setMembers([created, ...members]);
-    setName('');
-    setEmail('');
+    setMembers([created, ...members]);'
+    setName('');'
+    setEmail('');'
     setRole('viewer');
-
 
       {tab === 'activity' && (
         <ActivityTab events={activity} />
       )}
-
+'
       {tab === 'billing' && (
         <BillingTab invoices={invoices} />
       )}
     </main>
   )
 
-
-
         {(['membersusageactivitybilling'] as const).map(t => (
+
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
-        ))  } catch (error) {
-    console.error("Error:", error);
+        ))  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-      </nav>;
+      </nav>;'
       {tab === 'members' && (;
         <MembersTab members={members} setMembers={setMembers} />;
-      )  } catch (error) {
-    console.error("Error:", error);
+      )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
+;'
       {tab === 'usage' && usage && (;
         <UsageTab usage={usage} setUsage={setUsage} seatsUsed={seatsUsed} />;
-      )  } catch (error) {
-    console.error("Error:", error);
+      )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
+;'
       {tab === 'activity' && (;
         <ActivityTab events={activity} />;
-      )  } catch (error) {
-    console.error("Error:", error);
+      )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
+;'
       {tab === 'billing' && (;
         <BillingTab invoices={invoices} />;
-      )  } catch (error) {
-    console.error("Error:", error);
+      )  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
     </main>;
   );
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 
 }
 
-function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
-
-  const [name, setName] = useState(''),
-  const [email, setEmail] = useState(''),
+function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {}
+'
+  const [name, setName] = useState(''),'
+  const [email, setEmail] = useState(''),'
   const [role, setRole] = useState<Member['role']>('viewer'),
+
   const add = async () => {
+
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
     const created = await r.json();
-    setMembers([created, ...members]);
+    setMembers([created, ...members]);'
     setName(''), setEmail(''), setRole('viewer')
   };
 
   const remove = async (id: string) => {;
-    await fetch(;
-      `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,;
-      { method: 'DELETE' }
-    );
+    await fetch(;`
+      `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,;'
+      { method: 'DELETE' });
+
+  return (
+
+  set_members: (m: Member[]) => void;'
+}) {  const [name, set_name] = useState ('');'
+  const [email, set_email] = useState ('');'
+  const [role, set_role] = useState < Member['role']>('viewer');
+;
+  const add = async () => {}`
+    const r = await fetch (`/api / enterprise / companies/${COMPANY_ID}/members`, {'
+      method: 'POST','
+      headers: { 'Content - Type': 'application / json' },
+      body: JSON.stringify ({ name, email, role }),
+    });
+
     setMembers(members.filter(m => m.id !== id));
   }
   const changeRole = async (id: string, newRole: Member['role']) => {
@@ -230,6 +283,22 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ memberId: id, role: newRole })
     });
+:pages/enterprise/admin/index.tsx
+    setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));  }
+  const add = async () => {
+    const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) }),
+    const created = await r.json(),
+    setMembers([created, ...members]),
+    setName(''), setEmail(''), setRole('viewer')
+  },
+  const remove = async (id: string) => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`, { method: 'DELETE' }),
+    setMembers(members.filter(m => m.id !== id))
+  },
+  const changeRole = async (id: string, newRole: Member['role']) => {
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
+    setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
+  },
     setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));
   };
 
@@ -266,6 +335,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <thead>
           <tr>
 <th
+
               style={{
                 textAlign: 'left'
                 padding: 8
@@ -275,10 +345,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <tbody>
           {members.map(m => (
             <tr key={m.id}>
-
+'
                 text_align: 'right',
-                padding: 8,
+                padding: 8,'
                 border_bottom: '1px solid #e5e7eb',
+
               }}
             >;
               Actions;
@@ -286,49 +357,54 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </thead>;
         <tbody>;
           {members.map (m => (
-            <tr key={m.id}>;
+            <tr key={m.id}>;'
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
 
                 {m.name}
-              </td>;
+              </td>;'
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 {m.email}
+
                 <select
+
                   value={m && m.role}
-                  onChange={e =>;
+                  onChange={e =>;'
                     changeRole(m && m.id, e && e.target.value as Member['role']);
+
               </td>;
+
               <td style={{ padding: 8, border_bottom: '1px solid #f3f4f6' }}>;
                 <select;
                   value={m.role}
-                  on_change={e =>;
+                  on_change={e =>;'
                     change_role (m.id, e.target.value as Member['role']);
+
                   }
-                >;
-                  <option value='recruiter'>Recruiter</option>;
-                  <option value='manager'>Manager</option>;
-                  <option value='viewer'>Viewer</option>;
+                >;'
+                  <option value='recruiter'>Recruiter</option>;'
+                  <option value='manager'>Manager</option>;'
+                  <option value='viewer'>Viewer</option>;'
                   <option value='admin'>Admin</option>;
                 </select>;
               </td>;
 
               <td;
 
-                style={{
-
+                style={{}
                   padding: 8,
-
+'
                   style={{ color: '#b91c1c' }}
                 >;
                   Remove;
                 </button>              </td>;
+
   usage: Usage;
 
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage && usage.budgetCapUsd);
 
-  const save = async () => {;
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {;
-      method: 'PATCH',;
+  const save = async () => {;`
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {;'
+      method: 'PATCH',;'
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ monthlyJobPosts, budgetCapUsd }),;
 
@@ -338,10 +414,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
     <section>;
       <h2>Usage limits</h2>;
-      <div
-        style={{
-
-          display: 'grid',
+      <div;
+        style={{}
+'
+          display: 'grid','
           gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
           gap: 12,
           maxWidth: 600,
@@ -349,7 +425,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <label>;
           <div>Monthly job posts</div>;
 
-          <input
+          <input'
             type='number'
             value={monthlyJobPosts}
             onChange={e => setMonthlyJobPosts(Number(e && e.target.value))}
@@ -357,21 +433,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </label>;
         <label>;
           <div>Budget cap (USD)</div>;
-          <input
+          <input'
             type='number'
             value={budgetCapUsd}
             onChange={e => setBudgetCapUsd(Number(e && e.target.value))}
           />;
         </label>;
       </div>;
-      <div
-        style={{
-
-          marginTop: 12,
-          display: 'flex',
+      <div;
+        style={{}
+          marginTop: 12,'
+          display: 'flex','
           alignItems: 'center',
           gap: 12,
-        }}>;
+        }}>;'
         <button onClick={save} style={{ padding: '0 && 0.5rem 0 && 0.75rem' }}>;
           Save limits;
         </button>;
@@ -386,8 +461,8 @@ function ActivityTab(): any ({ events }: { events: any[] }) {;
       <h2>Team activity</h2>;
       <ul>;
         {events && events.map(e => (;
-          <li key={e && e.id}>;
-            <span style={{ color: '#6b7280' }}>;
+          <li key={e && e.id}>;'
+            <span style={{ color: '#6b7280' }}>;'
               {new Date(e && e.timestampIso).toLocaleString()} —{' '}
             </span>            <strong>{e && e.actorEmail}</strong> {e && e.action}
           </li>;
@@ -398,26 +473,51 @@ function ActivityTab(): any ({ events }: { events: any[] }) {;
 function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
   return (
     <section>;
-      <h2>Billing & invoices</h2>;
+      <h2>Billing & invoices</h2>;'
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>;
         <thead>;
           <tr>;
-            <th
-              style={{
-
+            <th;
+              style={{}
+'
                 textAlign: 'right'
-                padding: 8
+                padding: 8'
                 borderBottom: '1px solid #e5e7eb'
               }}
             >
+:pages/enterprise/admin/index.tsx
               Actions
-            </th>
+            </th>          </tr>
+
+        <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
+      </div>
+
+      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+        <thead>
+          <tr>
+            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Name</th>
+            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Email</th>
+            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Role</th>
+            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
           </tr>
-origin/cursor/automate-test-improve-and-merge-code-2533
+
         </thead>
         <tbody>
           {members.map(m => (
             <tr key={m.id}>
+
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+                <select value={m.role} onChange={e => changeRole(m.id, e.target.value as Member['role'])}>
+                  <option value="recruiter">Recruiter</option>
+
+                  <option value="manager">Manager</option>
+                  <option value="viewer">Viewer</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </td>
+
 <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
                 {m.name}
               </td>
@@ -452,11 +552,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </button>
               </td>
             </tr>
-origin/cursor/automate-test-improve-and-merge-code-2533
+
           ))}
         </tbody>
       </table>
     </section>
+
 );
 
 function UsageTab({
@@ -478,6 +579,8 @@ function UsageTab({
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ monthlyJobPosts, budgetCapUsd })
     });
+:pages/enterprise/admin/index.tsx
+    setUsage({ monthlyJobPosts, budgetCapUsd });  }
     setUsage({ monthlyJobPosts, budgetCapUsd });
   };
 
@@ -485,7 +588,7 @@ function UsageTab({
     <section>
       <h2>Usage limits</h2>
 <div
-origin/cursor/automate-test-improve-and-merge-code-2533
+
   return (
     <section>
       <h2>Usage limits</h2>
@@ -497,6 +600,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           maxWidth: 600
         }}
       >
+:pages/enterprise/admin/index.tsx
+
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
                 <button onClick={() => remove(m.id)} style={{ color: '#b91c1c' }}>Remove</button>
               </td>
@@ -519,6 +624,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
   const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts),
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd),
+
           ))}
         </tbody>
       </table>
@@ -526,57 +632,151 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
   )
 }
 
-function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
+function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {}
   const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts);
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
 
   const save = async () => {
+
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) });
     setUsage({ monthlyJobPosts, budgetCapUsd })
   };
 
   return (
     <section>
-      <h2>Usage limits</h2>
+      <h2>Usage limits</h2>'
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
 
         <label>
-          <div>Monthly job posts</div>
+          <div>Monthly job posts</div>"
           <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
         </label>
         <label>
-          <div>Budget cap (USD)</div>
+          <div>Budget cap (USD)</div>"
           <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
         </label>
       </div>
+
   );
+
+function ActivityTab({ events }: { events: any[] }) {
+
+  return (
+    <section>
+      <h2>Team activity</h2>
+      <ul>
+
+          </li>
+        ))}
+      </ul>
+    </section>
+
+      <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
+
+        <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
+        <span>Seats used: {seatsUsed}</span>
+      </div>
+    </section>
+  )
+}
+
+function ActivityTab({ events }: { events: any[] }) {}
+  return (
+    <section>
+      <h2>Team activity</h2>
+      <ul>
+        {events.map((e) => (
+          <li key={e.id}>'
+            <span style={{ color: '#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>
+            <strong>{e.actorEmail}</strong> {e.action}
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
+function BillingTab({ invoices }: { invoices: Invoice[] }) {}
+  return (
+
+  const save = async () => {'`
+    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) }),
+    setUsage({ monthlyJobPosts, budgetCapUsd })
+  },
+  return (
+    <section>
+      <h2>Usage limits</h2>'
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
+
+        <label>
+          <div>Monthly job posts</div>"
+          <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
+        </label>
+        <label>
+          <div>Budget cap (USD)</div>"
+          <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
+        </label>
+      </div>
 
 function ActivityTab({ events }: { events: any[] }) {
   return (
     <section>
       <h2>Team activity</h2>
       <ul>
-{events.map(e => (
+        {events.map((e) => (
           <li key={e.id}>
-            <span style={{ color: '#6b7280' }}>
-              {new Date(e.timestampIso).toLocaleString()} —{' '}
-            </span>
-            <strong>{e.actorEmail}</strong> {e.action}
+
           </li>
         ))}
       </ul>
     </section>
+:pages/enterprise/admin/index.tsx
+  );
+
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+function ActivityTab({ events }: { events: any[] }) {;
+  return (;
+    <section>;
+      <h2>Team activity</h2>;
+      <ul>;
+        {events.map((e) => (;
+          <li key={e.id}>;
+            <span style={{ color: '#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>;
+            <strong>{e.actorEmail}</strong> {e.action  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </li>;
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </ul>;
+    </section>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    <section>
+
 );
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-function BillingTab({ invoices }: { invoices: Invoice[] }) {
+function BillingTab({ invoices }: { invoices: Invoice[] }) {}
   return (
-    <section>
-      <h2>Billing & invoices</h2>
-      <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-        <thead>
-          <tr>
+
 <th
+
               style={{
                 textAlign: 'left'
                 padding: 8
@@ -620,25 +820,33 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
               }}
             >
               Actions
-            </th>
-origin/cursor/automate-test-improve-and-merge-code-2533
+:pages/enterprise/admin/index.tsx
+            </th>          </tr>
+
+            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Invoice #</th>
+            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Period</th>
+            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Amount</th>
+            <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Status</th>
+            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
+
           </tr>
+
         </thead>
         <tbody>
           {invoices.map(inv => (
             <tr key={inv.id}>
+
 <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
                 {inv.number}
               </td>
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
-origin/cursor/automate-test-improve-and-merge-code-2533
+
                 {inv.periodStartIso} → {inv.periodEndIso}
               </td>;
               <td;
-                style={{
-
-                  padding: 8,
-                  border_bottom: '1px solid #f3f4f6',
+                style={{}
+                  padding: 8,'
+                  border_bottom: '1px solid #f3f4f6','
                   text_align: 'right',
 
                 }}
@@ -646,20 +854,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 ${inv.amount_usd.to_fixed (2)}
               </td>;
               <td;
-                style={{
+
                 }}
               >;
                 {inv.status}
               </td>;
               <td;
-                style={{
-                  padding: 8
-                  borderBottom: '1px solid #f3f4f6'
+                style={{}
+                  padding: 8'
+                  borderBottom: '1px solid #f3f4f6''
                   textAlign: 'right'
                 }}
               >
+
                 textAlign: 'right',
                 padding: 8,
+
                 borderBottom: '1px solid #e5e7eb',
               }}>;
               Actions;
@@ -667,31 +877,78 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         </thead>;
         <tbody>;
           {invoices && invoices.map(inv => (;
-            <tr key={inv && inv.id}>;
+            <tr key={inv && inv.id}>;'
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
                 {inv && inv.number}
-              </td>;
+              </td>;'
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
                 {inv && inv.periodStartIso} → {inv && inv.periodEndIso}
               </td>;
-              <td
-                style={{
+              <td;
+                style={{}
                   padding: 8,
 
+                  rel='noreferrer'>;
+                  Download PDF;
+                </a>              </td>;
+            </tr>;
 
-                <a
-                  href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv && inv.id}`}
-                  target='_blank'
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
+
                   rel='noreferrer'
                 >
                   Download PDF
                 </a>
               </td>
             </tr>
-origin/cursor/automate-test-improve-and-merge-code-2533
+
           ))}
         </tbody>
       </table>
     </section>
 );
-origin/cursor/automate-test-improve-and-merge-code-2533
+:pages/enterprise/admin/index.tsx
+
+}
+}
+}
+}
+}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </tbody>;
+      </table>;
+    </section>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+:pages/enterprise/admin/index.tsx
+}
+}
+
+                  border_bottom: '1px solid #f3f4f6',
+
+                  text_align: 'right',
+                }}
+              >;
+                <a;`
+                  href={`/api / enterprise / companies/${COMPANY_ID}/billing / invoices/${inv.id}`}'
+                  target='_blank';'
+                  rel='noreferrer';
+                >;
+                  Download PDF;
+                </a>              </td>;
+            </tr>))}
+        </tbody>;
+      </table>;
+    </section>);
+;

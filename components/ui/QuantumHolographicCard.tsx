@@ -1,29 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
 import { motion   } from 'framer-motion';
 import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign  } from 'lucide-react';
 import { motion  } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
-import { motion } from 'framer-motion';
-import {
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Star
   Zap
   Shield
@@ -33,9 +15,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   Check
   Users
   Clock
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Star;
   Zap;
   Shield;
@@ -45,10 +24,6 @@ import { Star;
   Check;
   Users;
   Clock;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   DollarSign;
   Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign,} from 'lucide-react';
 interface QuantumHolographicCardProps  {service: {import {Star,Zap,Shield,TrendingUp,ArrowRight,ExternalLink,Check,Users,Clock,DollarSign,} from 'lucide-react';
@@ -64,16 +39,6 @@ interface QuantumHolographicCardProps  {service: {id: string;
     color: string;
       mobile: string;
       email: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      address: string;
-      website: string
-    },
-    realImplementation: boolean;
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       address: string;website: string;
     }
       opacity: 1,coordinate_y: 0,scale: 1,transition: {duration: 0.6,}
@@ -82,24 +47,10 @@ interface QuantumHolographicCardProps  {service: {id: string;
     }
   }const glow_variants = {initial: { opacity: 0.5, scale: 1 },animate: {website: string;
     },realImplementation: boolean;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    reviews: number
-  },
-  className?: string
-}
-
-const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       address: string;
 
 
@@ -112,36 +63,76 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         duration: 0.6,
       }
     }
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
+interface QuantumHolographicCardProps {
+  service: {
+    id: string,
+    name: string,
+    tagline: string,
+    price: string,
+    period: string,
+    description: string,
+    features: string[],
+    popular: boolean,
+    icon: string,
+    color: string,
+    textColor: string,
+    link: string,
+    marketPosition: string,
+    targetAudience: string,
+    trialDays: number,
+    setupTime: string,
+    category: string,
+    realService: boolean,
+    technology: string[],
+    integrations: string[],
+    useCases: string[],
+    roi: string,
+    competitors: string[],
+    marketSize: string,
+    growthRate: string,
+    variant: string,
+    contactInfo: {
+      mobile: string,
+      email: string,
+      address: string,
+      website: string},
+    realImplementation: boolean,
+    implementationDetails: string,
+    launchDate: string,
+    customers: number,
+    rating: number,
+    reviews: number},
+  className?: string
+}
+
+const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className = '' }) => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    },
     hover: {
-      coordinate_y: -10,
+      y: -10,
       scale: 1.02,
       transition: {
         duration: 0.3,
+        ease: "easeInOut" as const
       }
     }
-  }
-;
-  const glow_variants = {
-    initial: { opacity: 0.5, scale: 1 },
-    animate: {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-  const featureVariants = {
-    hidden: { opacity: 0, x: -20 }
-    visible: (i: number) => ({
-      opacity: 1
-      x: 0
-      transition: {
-<<<<<<< HEAD
-        delay: i * 0.1,
-        duration: 0.5,
-ease: 'easeOut' as const,
-      },
-    }),
-  };
+  },
 
-  
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
+  const glowVariants = {
+    initial: { opacity: 0.5, scale: 1},
+    animate: {
       }
 
     };
@@ -153,14 +144,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ease: 'easeInOut' as const,;
       },;
     },  };        ease: "easeInOut" as const;
-=======
     reviews: number;
   },className?: string;
 }const QuantumHolographicCard: React.FC<QuantumHolographicCardProps>  = ({ service, className;const featureVariants = {hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({opacity: 1;
       x: 0;
       transition: {}}hover: {y: -10,scale: 1 && 1.02,transition: {duration: 0 && 0.3,ease: 'easeInOut' as const,},},  }ease: "easeInOut" as const;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     }
   };
@@ -183,31 +172,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ease: "easeInOut" as const;
       }
     }
-<<<<<<< HEAD
-  const featureVariants = {;
-    hidden: { opacity: 0, x: -20 },;
-    visible: (i: number) => ({;
-      opacity: 1,;
-      x: 0,;
-      transition: {;
-        delay: i * 0 && 0.1,;
-        duration: 0 && 0.5,;
-        ease: 'easeOut' as const,;
-      },;
-    }),;
-  };
+      opacity: [0.5, 1, 0.5],
+      scale: [1, 1.05, 1],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut" as const
+      }
+    }
+  },
 
+  const featureVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
         delay: i * 0.1,
         duration: 0.5,
-        ease: 'easeOut' as const,
-      },
-    }),
+        ease: "easeOut" as const
+      }
+    })
+  },
 
-  };
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-    >
-=======
     reviews: number;
   },className?: string;
 }const QuantumHolographicCard: React.FC<QuantumHolographicCardProps>  = ({ service, className;const featureVariants = {hidden: { opacity: 0, x: -20 }
@@ -222,48 +209,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       }
     }
   const featureVariants = {hidden: { opacity: 0, x: -20 },visible: (i: number) => ({opacity: 1,x: 0,transition: {delay: i * 0 && 0.1,duration: 0 && 0.5,ease: 'easeOut' as const,},}),}delay: i * 0.1,duration: 0.5,ease: 'easeOut' as const,},}),}delay: i * 0.1,duration: 0.5,ease: 'easeOut' as const,},}),}>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   const featureVariants = {hidden: { opacity: 0, x: -20 },visible: (i: number) => ({opacity: 1,x: 0,transition: {delay: i * 0 && 0.1,duration: 0 && 0.5,ease: 'easeOut' as const,},}),}delay: i * 0.1,duration: 0.5,ease: 'easeOut' as const,},}),}delay: i * 0.1,duration: 0.5,ease: 'easeOut' as const,},}),}>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  return (
+    <motion.div
+      className={`relative group cursor-pointer ${className}`}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      whileHover="hover"
+      viewport={{ once: true, margin: "-50px" }}
+    >
       {/* Holographic glow effect */}
-      <motion&& motion.div;
-        className='absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl';
+      <motion.div
+        className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-400/20 via-purple-500/20 to-pink-500/20 blur-xl"
         variants={glowVariants}
-        initial='initial';
-        animate='animate';
+        initial="initial"
+        animate="animate"
+      />
+      
+      {/* Main card */}
+      <div className="relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden">
+        {/* Quantum particle effect background */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+          <div className="absolute top-8 right-6 w-1 h-1 bg-purple-400 rounded-full animate-ping" />
+          <div className="absolute bottom-6 left-8 w-1.5 h-1.5 bg-pink-400 rounded-full animate-bounce" />
+          <div className="absolute bottom-8 right-4 w-1 h-1 bg-yellow-400 rounded-full animate-pulse" />
+        </div>
+
         {/* Header */}
-        <div className='relative z - 10'>;
-          <div className='flex items - start justify - between mb - 4'>;
-            <div className='flex items - center space - x-3'>;
-              <div className='text - 4xl'>{service.icon}</div>;
-              <div>;
-                <h3 className='text - xl font - bold text - white mb - 1'>;
-                  {service.name}
-        {/* Header */}
-        <div className='relative z-10'>;
-          <div className='flex items-start justify-between mb-4'>;
-            <div className='flex items-center space-x-3'>;
-              <div className='text-4xl'>{service && service.icon}</div>;
-              <div>;
-                <h3 className='text-xl font-bold text-white mb-1'>;
-                  {service && service.name}
-                </h3>;
-                <p className='text-gray-300 text-sm'>{service && service.tagline}</p>;
-              </div>;
-            </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {service && service.popular && (;
-              <motion&& motion.div
-                className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold'
-<<<<<<< HEAD
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Star className='w-3 h-3 fill-current' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>;
                 <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
@@ -288,13 +262,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Star className="w-3 h-3 fill-current" />;
                 <span>Popular</span>;
               </motion && motion.div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 <span>Popular</span>
 
               </motion.div>
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             {service && service.popular && (<motion&& motion.div;
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold';
                 whileHover={{ scale: 1 && 1.05 }}
@@ -323,79 +293,34 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Star className='w-3 h-3 fill-current' />;
                 <span>Popular</span>;
               </motion.div>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             )}
           </div>;
             )}
           </div>;
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
+        <div className="relative z-10">
+          <div className="flex items-start justify-between mb-4">
+            <div className="flex items-center space-x-3">
+              <div className="text-4xl">{service.icon}</div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-1">{service.name}</h3>
+                <p className="text-gray-300 text-sm">{service.tagline}</p>
+              </div>
+            </div>
+            
+            {service.popular && (
+              <motion.div
+                className="flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Star className="w-3 h-3 fill-current" />
+                <span>Popular</span>
+              </motion.div>
+            )}
           </div>
 
           {/* Price and trial */}
-<<<<<<< HEAD
-<div className='flex items-center justify-between mb-4'>
-            <div className='flex items-center space-x-2'>
-              <span className='text-3xl font-bold text-white'>
-                {service.price}
-              </span>
-              <span className='text-gray-400'>{service.period}</span>
-            </div>
-            <div className='flex items-center space-x-2 text-sm text-gray-300'>
-              <Clock className='w-4 h-4' />
-              <span>{service.trialDays} days free</span>
-            </div>
-          </div>
-          {/* Description */}
-<p className='text-gray-300 mb-6 leading-relaxed'>
-            {service.description}
-          </p>
-          {/* Key metrics */}
-          <div className='grid grid-cols-2 gap-4 mb-6'>
-            <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>
-              <div className='flex items-center space-x-2 text-sm text-gray-400 mb-1'>
-                <Users className='w-4 h-4' />
-                <span>Customers</span>
-              </div>
-              <div className='text-xl font-bold text-white'>
-                {service.customers.toLocaleString()}+
-              </div>
-            </div>
-            <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>
-              <div className='flex items-center space-x-2 text-sm text-gray-400 mb-1'>
-                <Star className='w-4 h-4 fill-yellow-400 text-yellow-400' />
-                <span>Rating</span>
-              </div>
-              <div className='text-xl font-bold text-white'>
-                {service.rating}/5.0
-              </div>
-            </div>
-          </div>
-          {/* Features */}
-<div className='mb-6'>
-            <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
-              <Zap className='w-4 h-4 text-yellow-400' />
-              <span>Key Features</span>
-            </h4>
-            <div className='space-y-2'>
-              {service.features.slice(0, 4).map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className='flex items-center space-x-2 text-sm text-gray-300'
-                  custom={index}
-                  variants={featureVariants}
-                  initial='hidden'
-                  whileInView='visible'
-                  viewport={{ once: true }}
-                >
-                  <Check className='w-3 h-3 text-green-400 flex-shrink-0' />
-                  <span>{feature}</span>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
               <span className="text-3xl font-bold text-white">{service.price}</span>
@@ -403,8 +328,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Clock className="w-4 h-4" />
+              <span>{service.trialDays} days free</span>
             </div>
-=======
           </div>;
           {/* Price and trial */}<div className="flex items-center justify-between mb-4">;
             <div className="flex items-center space-x-2">;
@@ -414,107 +339,84 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="flex items-center space-x-2 text-sm text-gray-300">;
               <Clock className="w-4 h-4" />;
             </div>;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+          </div>
+
+          {/* Description */}
+          <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+
           {/* Key metrics */}
-          <div className='grid grid-cols-2 gap-4 mb-6'>;
-            <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;
-              <div className='flex items-center space-x-2 text-sm text-gray-400 mb-1'>;
-                <Users className='w-4 h-4' />;
-                <span>Customers</span>;
-              </div>;
-              <div className='text-xl font-bold text-white'>;
-                {service && service.customers.toLocaleString()}+;
-              </div>;
-            </div>;
-            <div className='bg-gray-800/50 rounded-lg p-3 border border-gray-700/50'>;
-              <div className='flex items-center space-x-2 text-sm text-gray-400 mb-1'>;
-                <Star className='w-4 h-4 fill-yellow-400 text-yellow-400' />;
-                <span>Rating</span>;
-              </div>;
-              <div className='text-xl font-bold text-white'>;
-                {service && service.rating}/5 && 5.0;
-              </div>            </div>;
-          </div>;
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="bg-gray-800/50 rounded-lg p-3 border border-gray-700/50">
+              <div className="flex items-center space-x-2 text-sm text-gray-400 mb-1">
+                <Users className="w-4 h-4" />
+                <span>Customers</span>
+              </div>
+              <div className="text-xl font-bold text-white">{service.customers.toLocaleString()}+</div>
+            </div>
+            
+            <div className="bg-gray-800/50 rounded-lg p-3 border border-gray-700/50">
+              <div className="flex items-center space-x-2 text-sm text-gray-400 mb-1">
+                <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                <span>Rating</span>
+              </div>
+              <div className="text-xl font-bold text-white">{service.rating}/5.0</div>
+            </div>
+          </div>
+
           {/* Features */}
-          <div className='mb-6'>;
-            <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
-              <Zap className='w-4 h-4 text-yellow-400' />;
-<<<<<<< HEAD
-          {/* Key metrics */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          <div className="mb-6">
+            <h4 className="text-white font-semibold mb-3 flex items-center space-x-2">
+              <Zap className="w-4 h-4 text-yellow-400" />
+              <span>Key Features</span>
+            </h4>
+            <div className="space-y-2">
+              {service.features.slice(0, 4).map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="flex items-center space-x-2 text-sm text-gray-300"
+                  custom={index}
+                  variants={featureVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true}}
+                >
+                  <Check className="w-3 h-3 text-green-400 flex-shrink-0" />
+                  <span>{feature}</span>
                 </motion.div>
               ))}
             </div>
           </div>
 
           {/* Market data */}
-<<<<<<< HEAD
-<div className='bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30'>
-            <div className='flex items-center justify-between mb-2'>
-              <span className='text-sm font-semibold text-blue-300'>
-                Market Position
-              </span>
-              <TrendingUp className='w-4 h-4 text-green-400' />
-            </div>
-            <p className='text-xs text-gray-300 leading-relaxed'>
-              {service.marketPosition}
-            </p>
-            <div className='flex items-center justify-between mt-2 text-xs'>
-              <span className='text-cyan-300'>{service.marketSize}</span>
-              <span className='text-green-300'>
-                {service.growthRate} growth
-              </span>
-            </div>
-          </div>
-          {/* ROI and competitors */}
-<div className='grid grid-cols-2 gap-4 mb-6'>
-            <div className='bg-green-900/20 rounded-lg p-3 border border-green-700/30'>
-              <div className='text-sm font-semibold text-green-300 mb-1'>
-                ROI
-              </div>
-              <div className='text-xs text-gray-300'>{service.roi}</div>
-            </div>
-            <div className='bg-orange-900/20 rounded-lg p-3 border border-orange-700/30'>
-              <div className='text-sm font-semibold text-orange-300 mb-1'>
-                Competitors
-              </div>
-              <div className='text-xs text-gray-300'>
-                {service.competitors.slice(0, 2).join(', ')}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
             <div className="flex items-center justify-between mb-2">
               <span className="text-sm font-semibold text-blue-300">Market Position</span>
               <TrendingUp className="w-4 h-4 text-green-400" />
             </div>
+            <p className="text-xs text-gray-300 leading-relaxed">{service.marketPosition}</p>
+            <div className="flex items-center justify-between mt-2 text-xs">
+              <span className="text-cyan-300">{service.marketSize}</span>
+              <span className="text-green-300">{service.growthRate} growth</span>
+            </div>
           </div>
+
           {/* ROI and competitors */}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="bg-green-900/20 rounded-lg p-3 border border-green-700/30">
+              <div className="text-sm font-semibold text-green-300 mb-1">ROI</div>
+              <div className="text-xs text-gray-300">{service.roi}</div>
+            </div>
+            
+            <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">
+              <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>
+              <div className="text-xs text-gray-300">
+                {service.competitors.slice(0, 2).join(', ')}
               </div>
             </div>
           </div>
+
           {/* Contact information */}
-<<<<<<< HEAD
-<div className='bg-gray-800/50 rounded-lg p-4 mb-6 border border-gray-700/50'>
-            <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>
-              <Shield className='w-4 h-4 text-blue-400' />
-              <span>Contact & Support</span>
-            </h4>
-            <div className='space-y-2 text-sm text-gray-300'>
-              <div className='flex items-center space-x-2'>
-                <span className='text-blue-400'>📱</span>
-                <span>{service.contactInfo.mobile}</span>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <span className='text-green-400'>✉️</span>
-                <span>{service.contactInfo.email}</span>
-              </div>
-              <div className='flex items-center space-x-2'>
-                <span className='text-purple-400'>📍</span>
-                <span className='text-xs'>{service.contactInfo.address}</span>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
             </h4>
             <div className="space-y-2 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
@@ -528,11 +430,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div className="flex items-center space-x-2">
                 <span className="text-purple-400">📍</span>
                 <span className="text-xs">{service.contactInfo.address}</span>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               </div>
             </div>
           </div>
-=======
           </div>;
           {/* Price and trial */}<div className="flex items-center justify-between mb-4">;
             <div className="flex items-center space-x-2">;
@@ -566,8 +466,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <div className='mb-6'>;
             <h4 className='text-white font-semibold mb-3 flex items-center space-x-2'>;
               <Zap className='w-4 h-4 text-yellow-400' />;
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {/* Key metrics */}<div className='flex items-center justify-between mb-4'>;
             <div className='flex items-center space-x-2'>;
               <span className='text-3xl font-bold text-white'>;
@@ -578,10 +476,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className='flex items-center space-x-2 text-sm text-gray-300'>;
               <Clock className='w-4 h-4' />;
               <span>{service.trialDays} days free</span>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             </div>;
           </div>;
           {/* Description */}
@@ -781,30 +675,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
           {/* CTA Button */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <motion.a
-            href={service.link}
-<<<<<<< HEAD
-className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           <motion.a;
             href={service.link}className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25';
 className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
             className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
           <motion.a;
             href={service.link}className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25';
 className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >;
@@ -823,28 +704,6 @@ className='group relative inline-flex items-center justify-center w-full bg-grad
           {/* CTA Button */}
           {/* Learn more link */}
           <div className='text-center mt-4'>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <a
-              href={service.link}
-              className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300'
-            >
-              <span>Learn more about {service.name}</span>
-              <ExternalLink className='w-3 h-3' />
-            </a>
-          </div>
-        </div>
-      </div>
-    </motion.div>
-);
-};
-
-export default QuantumHolographicCard;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <a;
             whileTap={{ scale: 0.98 }}
           >;
@@ -857,7 +716,6 @@ export default QuantumHolographicCard;  )}
 export default QuantumHolographicCard;export default QuantumHolographicCard;
 export default QuantumHolographicCard;
 }export default QuantumHolographicCard;  )}export default QuantumHolographicCard;
-=======
             <a
             whileTap={{ scale: 0.98 }}
           >
@@ -878,7 +736,6 @@ export default QuantumHolographicCard;  );
 };
 
 export default QuantumHolographicCard;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               className="inline - flex items - center space - x-2 text - sm text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300";
             >;
               <span > Learn more about {service.name}</span>;
@@ -887,10 +744,6 @@ export default QuantumHolographicCard;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </motion.div>)}export default QuantumHolographicCard)}export default QuantumHolographicCard;href={service.link}
               className='inline-flex items-center space-x-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300';
             >;
@@ -901,10 +754,6 @@ export default QuantumHolographicCard;
         </div>;
       </div>;
     </motion.div>;
-<<<<<<< HEAD
-)}export default QuantumHolographicCard;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </motion.div>);
 }
 ;
@@ -913,7 +762,6 @@ export default QuantumHolographicCard);
 ;
 export default QuantumHolographicCard;
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 )}export default QuantumHolographicCard;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+          <div className = $2;
+export default QuantumHolographicCard,

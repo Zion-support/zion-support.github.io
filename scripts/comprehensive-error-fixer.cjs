@@ -1,10 +1,9 @@
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
- * Comprehensive Error Fixer;
- * Automatically fixes common syntax and logical errors in the codebase;
+ * Comprehensive Error Fixer
+ * Automatically fixes common syntax and import errors
  */
-const fs = require("child_process");
-const path = require("child_process");
 const { execSync } = require("child_process");
 class ComprehensiveErrorFixer {}
   constructor() {}
@@ -133,17 +132,11 @@ class ComprehensiveErrorFixer {}
 if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error)};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 module.exports = ComprehensiveErrorFixer;
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 module.exports = ComprehensiveErrorFixer;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 module.exports = ComprehensiveErrorFixer;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+module.exports = ComprehensiveErrorFixer;
+module.exports = ComprehensiveErrorFixer;
+
+

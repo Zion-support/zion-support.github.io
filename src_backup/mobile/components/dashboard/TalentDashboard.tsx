@@ -1,13 +1,10 @@
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx
 
 import React from "react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge";
+:src/mobile/components/dashboard/TalentDashboard.tsx
 import React from 'react'
 import {
   Card
@@ -30,16 +27,12 @@ import React from "react"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+
 import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react'
 import Link from "next/link";
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx
 export function TalentDashboard() {
   return (
-
     <div className="space-y-6 px-4 pb-24">
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -50,7 +43,7 @@ export function TalentDashboard() {
             </Button>
           </Link>
         </div>
-
+        <div className='space-y-3'>
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -75,11 +68,9 @@ export function TalentDashboard() {
               </div>
             </CardContent>
           </Card>
-
-          
-
-          
-
+import React from "react",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
 
           <Card>
             <CardContent className="p-4">
@@ -106,21 +97,56 @@ export function TalentDashboard() {
                   View Details
                 </Button>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
-              <div className="flex gap-2 mt-3">
-
 
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx
+
+              <div className='flex gap-2 mt-3'>
+                <Button size='sm'>Apply Now</Button>
+                <Button size='sm' variant='outline'>
+                  View Details
+:src/mobile/components/dashboard/TalentDashboard.tsx
+                </Button>              </div>              <div className="flex gap-2 mt-3">
+                <Button size="sm">Apply Now</Button>
+                <Button size="sm" variant="outline">View Details</Button>
+                </Button>
+origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
+
+
+      
+
+:src/mobile/components/dashboard/TalentDashboard.tsx
+
+      <section>
+        <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
+        <Card>
+          <CardContent className="p-4">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="text-center p-3 bg-primary/5 rounded-lg">
+                <div className="text-2xl font-bold text-primary">3</div>
+                <div className="text-xs text-muted-foreground">Active Applications</div>
+              </div>
+              <div className="text-center p-3 bg-primary/5 rounded-lg">
+                <div className="text-2xl font-bold text-primary">2</div>
+                <div className="text-xs text-muted-foreground">Interviews Scheduled</div>
+              </div>
+              <div className="text-center p-3 bg-primary/5 rounded-lg">
+                <div className="text-2xl font-bold text-primary">5</div>
+                <div className="text-xs text-muted-foreground">Jobs Saved</div>
+              </div>
+              <div className="text-center p-3 bg-primary/5 rounded-lg">
+                <div className="text-2xl font-bold text-primary">12</div>
+                <div className="text-xs text-muted-foreground">Jobs Viewed</div>
+              </div>
+            </div>
+
+            <Button variant="outline" className="w-full mt-4">
+
 <section>
         <h2 className='text-lg font-medium mb-4'>Application Tracker</h2>
         <Card>
@@ -149,53 +175,131 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>
             <Button variant='outline' className='w-full mt-4'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
-      
-
-
-      <section>
-        <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
-        <Card>
-          <CardContent className="p-4">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="text-center p-3 bg-primary/5 rounded-lg">
-                <div className="text-2xl font-bold text-primary">3</div>
-                <div className="text-xs text-muted-foreground">Active Applications</div>
-              </div>
-              <div className="text-center p-3 bg-primary/5 rounded-lg">
-                <div className="text-2xl font-bold text-primary">2</div>
-                <div className="text-xs text-muted-foreground">Interviews Scheduled</div>
-              </div>
-              <div className="text-center p-3 bg-primary/5 rounded-lg">
-                <div className="text-2xl font-bold text-primary">5</div>
-                <div className="text-xs text-muted-foreground">Jobs Saved</div>
-              </div>
-              <div className="text-center p-3 bg-primary/5 rounded-lg">
-                <div className="text-2xl font-bold text-primary">12</div>
-                <div className="text-xs text-muted-foreground">Jobs Viewed</div>
-              </div>
-            </div>
-
-
-
-
-            <Button variant="outline" className="w-full mt-4">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx
               View All Applications
             </Button>
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/dashboard/TalentDashboard.tsx
+:src/mobile/components/dashboard/TalentDashboard.tsx
+      <section>
+        <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
+        <div className="grid grid-cols-2 gap-4">
+          <Button
+            variant="outline"
+            className="h-auto py-4 flex flex-col gap-1"
+            aria-label="Update Resume"
+          >
+            <FileText className="h-5 w-5 mb-1" aria-hidden="true" />
+            <span>Update Resume</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="h-auto py-4 flex flex-col gap-1"
+            aria-label="View Portfolio"
+          >
+            <Image className="h-5 w-5 mb-1" aria-hidden="true" />
+            <span>Portfolio</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="h-auto py-4 flex flex-col gap-1"
+            aria-label="Set Availability"
+          >
+            <Clock className="h-5 w-5 mb-1" aria-hidden="true" />
+            <span>Availability</span>
+          </Button>
+          <Button
+            variant='outline'
+            className='h-auto py-4 flex flex-col gap-1'
+            aria-label='AI Resume Boost'
+          >
+            <Zap className='h-5 w-5 mb-1' aria-hidden='true' />            <span>AI Resume Boost</span>
+          </Button>
+        </div>
+      </section>      <section>
+        <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
+        <div className="grid grid-cols-2 gap-4">
+          <Button
+            variant="outline"
+            className="h-auto py-4 flex flex-col gap-1"
+            aria-label="Update Resume"
+          >
+            <FileText className="h-5 w-5 mb-1" aria-hidden="true" />
+            <span>Update Resume</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="h-auto py-4 flex flex-col gap-1"
+            aria-label="View Portfolio"
+          >
+            <Image className="h-5 w-5 mb-1" aria-hidden="true" />
+            <span>Portfolio</span>
+          </Button>
+          <Button
+            variant="outline"
+            className="h-auto py-4 flex flex-col gap-1"
+            aria-label="Set Availability"
+          >
+            <Clock className="h-5 w-5 mb-1" aria-hidden="true" />
+            <span>Availability</span>
+          </Button>
+          <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
+            <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
+            <span>AI Resume Boost</span>
+          </Button>
+        </div>
+      </section>
+      <section>
+        <div className='flex items-center justify-between mb-4'>
+          <h2 className='text-lg font-medium'>Learning Hub</h2>
+          <Button variant='ghost' size='sm' className='h-8'>            View all
+          </Button>
+        </div>
+        <Card>
+      <section>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-medium">Learning Hub</h2>
+          <Button variant="ghost" size="sm" className="h-8">
+          </Button>
+        </div>
+        <Card>
+          <CardContent className='p-4'>
+            <div className='flex items-center gap-3'>
+              <div
+                className='bg-primary/10 p-3 rounded-full'
+                aria-hidden='true'
+              >
+                <BookOpen className='h-6 w-6 text-primary' />
+              </div>
+              <div>
+                <h3 className='font-medium'>Improve your profile visibility</h3>
+                <p className='text-sm text-muted-foreground'>
+                  5 tips for getting noticed by clients
+                </p>              </div>          <CardContent className="p-4">
+            <div className="flex items-center gap-3">
+              <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">
+                <BookOpen className="h-6 w-6 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-medium">Improve your profile visibility</h3>
+                <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+    </div>;
+  );
+};
+import React from "react",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react';
+import Link from "next/link";
+export function TalentDashboard() {;
+  return (;
+    <div className="space-y-6 px-4 pb-24">;
 
 ;
 import React from "react",import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",import { Button } from "@/components/ui/button",import { Badge  } from '@/components/ui/badge';
@@ -369,15 +473,30 @@ export function TalentDashboard() {return (<div className="space-y-6 px-4 pb-24"
                     92% match;
                   </div>;
                   <span className='text-xs text-muted-foreground mt-1'>;
-import { Card,CardContent,CardHeader,CardTitle,CardDescription} from '@/components / ui / card';
+import React from 'react';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+  ChevronRight,
+  FileText,
+  Image,
+  Clock,
+  Zap,
+  BookOpen,
+} from 'lucide-react';
+import Link from 'next/link';
+import React from './react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
-  ChevronRight,FileText,Image,Clock,Zap,BookOpen} from 'lucide-react';
-import Link from 'next / link';
-import React from './react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription   } from '@/components / ui / card';
-import { Button   } from '@/components / ui / button';
-import { Badge   } from '@/components / ui / badge';
+
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from 'lucide-react';
 import Link from './next / link';
 export /**;
  * TalentDashboard - Function description;
@@ -414,128 +533,78 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
                   <div className='bg - primary / 10 text - primary font - medium rounded - full px - 2 py - 1 text - xs'>;
                     92% match;
                   </div>;
-                  <span className='text - xs text - muted - foreground mt - 1'>;
-                    2 days ago;
-                  </span>;
+                  <span className="text-xs text-muted-foreground mt-1">2 days ago</span>;
                 </div>;
-              </div>;<div className='flex gap - 2 mt - 3'>;<Button size='sm'>Apply Now</Button>;
-                <Button size='sm' variant='outline'>;
-                  View Details;
-                </Button>              </div>;
+              </div>;
+              <div className="flex gap-2 mt-3">;
+                <Button size="sm">Apply Now</Button>;
+                <Button size="sm" variant="outline">View Details</Button>;
+              </div>;
             </CardContent>;
-          </Card>;<Card>;
-            <CardContent className='p - 4'>;
-              <div className='flex justify - between items - start'>;
-                <div className='space - y-1'>;
-                  <h3 className='font - medium'>UX / UI Designer</h3>;
-                  <div className='text - sm text - muted - foreground'>;
-                    Creative Studios;
+          </Card>;
+          <Card>;
+            <CardContent className="p-4">;
+              <div className="flex justify-between items-start">;
+                <div className="space-y-1">;
+                  <h3 className="font-medium">UX/UI Designer</h3>;
+                  <div className="text-sm text-muted-foreground">Creative Studios</div>;
+                  <div className="flex items-center gap-1 mt-1">;
+                    <Badge variant="secondary" className="text-xs">Hybrid</Badge>;
+                    <Badge variant="secondary" className="text-xs">Contract</Badge>;
                   </div>;
-                  <div className='flex items - center gap - 1 mt - 1'>;
-                    <Badge variant='secondary' className='text - xs'>;
-                      Hybrid;
-                    </Badge>;
-                    <Badge variant='secondary' className='text - xs'>;Contract;
-                    </Badge>;
-                  </div>;
-                </div>;<div className='flex flex - col items - end'>;
-                  <div className='bg - primary / 10 text - primary font - medium rounded - full px - 2 py - 1 text - xs'>;
+                </div>;
+                <div className="flex flex-col items-end">;
+                  <div className="bg-primary/10 text-primary font-medium rounded-full px-2 py-1 text-xs">;
                     87% match;
                   </div>;
-                  <span className='text - xs text - muted - foreground mt - 1'>;4 hours ago;
-                  </span>;
+                  <span className="text-xs text-muted-foreground mt-1">4 hours ago</span>;
                 </div>;
-              </div>;<div className='flex gap - 2 mt - 3'>;
-                <Button size='sm'>Apply Now</Button>;
-                <Button size='sm' variant='outline'>;
-                  View Details;
-                </Button>              </div>              <div className="flex gap - 2 mt - 3">;<Button size="sm">Apply Now</Button>;
+              </div>;
+
+                <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
             </CardContent>;
           </Card>;
         </div>;
-      </section>;<section>;
-        <h2 className='text - lg font - medium mb - 4'>Application Tracker</h2>;
+      </section>;
+      <section>;
+        <h2 className="text-lg font-medium mb-4">Application Tracker</h2>;
         <Card>;
-          <CardContent className='p - 4'>;
-            <div className='grid grid - cols - 2 gap - 4'>;
-              <div className='text - center p - 3 bg - primary / 5 rounded - lg'>;
-                <div className='text - 2xl font - bold text - primary'>3</div>;
-                <div className='text - xs text - muted - foreground'>;
-                  Active Applications;
-                </div>;
+          <CardContent className="p-4">;
+            <div className="grid grid-cols-2 gap-4">;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">3</div>;
+                <div className="text-xs text-muted-foreground">Active Applications</div>;
               </div>;
-              <div className='text - center p - 3 bg - primary / 5 rounded - lg'>;
-                <div className='text - 2xl font - bold text - primary'>2</div>;
-                <div className='text - xs text - muted - foreground'>;
-                  Interviews Scheduled;
-                </div>;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">2</div>;
+                <div className="text-xs text-muted-foreground">Interviews Scheduled</div>;
               </div>;
-              <div className='text - center p - 3 bg - primary / 5 rounded - lg'>;
-                <div className='text - 2xl font - bold text - primary'>5</div>;
-                <div className='text - xs text - muted - foreground'>Jobs Saved</div>;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">5</div>;
+                <div className="text-xs text-muted-foreground">Jobs Saved</div>;
               </div>;
-              <div className='text - center p - 3 bg - primary / 5 rounded - lg'>;
-                <div className='text - 2xl font - bold text - primary'>12</div>;
-                <div className='text - xs text - muted - foreground'>Jobs Viewed</div>;
+              <div className="text-center p-3 bg-primary/5 rounded-lg">;
+                <div className="text-2xl font-bold text-primary">12</div>;
+                <div className="text-xs text-muted-foreground">Jobs Viewed</div>;
               </div>;
             </div>;
-            <Button variant='outline' className='w - full mt - 4'>              View All Applications      <section>;
-        <h2 className="text - lg font - medium mb - 4">Application Tracker</h2>;
-        <Card>;
-          <CardContent className="p - 4">;
-            <div className="grid grid - cols - 2 gap - 4">;
-              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
-                <div className="text - 2xl font - bold text - primary">3</div>;
-                <div className="text - xs text - muted - foreground">Active Applications</div>;
-              </div>;
-              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
-                <div className="text - 2xl font - bold text - primary">2</div>;
-                <div className="text - xs text - muted - foreground">Interviews Scheduled</div>;
-              </div>;
-              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
-                <div className="text - 2xl font - bold text - primary">5</div>;
-                <div className="text - xs text - muted - foreground">Jobs Saved</div>;
-              </div>;
-              <div className="text - center p - 3 bg - primary / 5 rounded - lg">;
-                <div className="text - 2xl font - bold text - primary">12</div>;
-                <div className="text - xs text - muted - foreground">Jobs Viewed</div>;
-              </div>;
-            </div>;
-            <Button variant="outline" className="w - full mt - 4">;View All Applications;
+
+              View All Applications;
             </Button>;
           </CardContent>;
         </Card>;
 <<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
       </section>;
 
-      
-      <section>
-        <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
-        <div className="grid grid-cols-2 gap-4">
-
-          <Button
-            variant="outline"
-            className="h-auto py-4 flex flex-col gap-1"
-            aria-label="Update Resume">;
             <FileText className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Update Resume</span>;
           </Button>;
 
-          <Button
-            variant="outline"
-            className="h-auto py-4 flex flex-col gap-1"
-            aria-label="View Portfolio">;
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       </section>;<section>;
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>;
         <div className="grid grid-cols-2 gap-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/dashboard/TalentDashboard.tsx
           <Button;
             variant="outline";
             className="h-auto py-4 flex flex-col gap-1";
@@ -552,15 +621,19 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
 <<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
           >;
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx
+          <Button;
+            variant="outline";
+            className="h-auto py-4 flex flex-col gap-1";
+            aria-label="Set Availability";
+          >;
+
             <Image className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Portfolio</span>;
           </Button>;
+
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
-
 
             aria-label="Set Availability"
           >
@@ -568,15 +641,9 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             <span>Availability</span>
           </Button>
 
-
-
-
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx
 <section>
         <h2 className='text-lg font-medium mb-4'>Quick Actions</h2>
         <div className='grid grid-cols-2 gap-4'>
@@ -610,10 +677,7 @@ function TalentDashboard() {return (<div className='space - y-6 px - 4 pb - 24'>
             aria-label='AI Resume Boost'
           >
             <Zap className='h-5 w-5 mb-1' aria-hidden='true' />
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx
             <span>AI Resume Boost</span>
           </Button>
         </div>
@@ -624,24 +688,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <h2 className='text-lg font-medium'>Learning Hub</h2>
           <Button variant='ghost' size='sm' className='h-8'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
-      
-
-
-      
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
           <Button variant="ghost" size="sm" className="h-8">
 
+<section>
+        <div className='flex items-center justify-between mb-4'>
+          <h2 className='text-lg font-medium'>Learning Hub</h2>
+          <Button variant='ghost' size='sm' className='h-8'>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx
             View all
           </Button>
         </div>
         <Card>
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
+          <CardContent className="p-4">
+
 <CardContent className='p-4'>
             <div className='flex items-center gap-3'>
               <div
@@ -657,30 +720,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 </p>
               </div>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          <CardContent className="p-4">
-
-
-            <div className="flex items-center gap-3">
-              <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">
-                <BookOpen className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium">Improve your profile visibility</h3>
-                <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>
-
-              </div>
-
-              </div>
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx
             </div>
           </CardContent>
         </Card>
       </section>
 
-
-=======
           >;<Image className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Portfolio</span>;
           </Button>;
@@ -771,8 +815,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </CardContent>;
         </Card>;
       </section>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/dashboard/TalentDashboard.tsx
             aria-label="Set Availability">;
+
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Availability</span>;
           </Button>;
@@ -798,129 +842,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <div>;
                 <h3 className="font-medium">Improve your profile visibility</h3>;
                 <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>;
-      <section>;
-        <h2 className='text - lg font - medium mb - 4'>Quick Actions</h2>;
-        <div className='grid grid - cols - 2 gap - 4'>;
-          <Button;
-            variant='outline';
-            className='h - auto py - 4 flex flex - col gap - 1';
-            aria - label='Update Resume';
-          >;
-            <FileText className='h - 5 w - 5 mb - 1' aria - hidden='true' />;
-            <span > Update Resume</span>;
-          </Button>;
-          <Button;
-            variant='outline';
-            className='h - auto py - 4 flex flex - col gap - 1';
-            aria - label='View Portfolio';
-          >;
-            <Image className='h - 5 w - 5 mb - 1' aria - hidden='true' />;
-            <span > Portfolio</span>;
-          </Button>;
-          <Button;
-            variant='outline';
-            className='h - auto py - 4 flex flex - col gap - 1';
-            aria - label='Set Availability';
-          >;
-            <Clock className='h - 5 w - 5 mb - 1' aria - hidden='true' />;
-            <span > Availability</span>;
-          </Button>;
-          <Button;
-            variant='outline';
-            className='h - auto py - 4 flex flex - col gap - 1';
-            aria - label='AI Resume Boost';
-          >;
-            <Zap className='h - 5 w - 5 mb - 1' aria - hidden='true' />            <span > AI Resume Boost</span>;
-          </Button>;
-        </div>;
-      </section>      <section>;
-        <h2 className="text - lg font - medium mb - 4">Quick Actions</h2>;
-        <div className="grid grid - cols - 2 gap - 4">;
-          <Button;
-            variant="outline";
-            className="h - auto py - 4 flex flex - col gap - 1";
-            aria - label="Update Resume";
-          >;
-            <FileText className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
-            <span > Update Resume</span>;
-          </Button>;
-          <Button;
-            variant="outline";
-            className="h - auto py - 4 flex flex - col gap - 1";
-            aria - label="View Portfolio";
-          >;
-            <Image className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
-            <span > Portfolio</span>;
-          </Button>;
-          <Button;
-            variant="outline";
-            className="h - auto py - 4 flex flex - col gap - 1";
-            aria - label="Set Availability";
-          >;
-            <Clock className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
-            <span > Availability</span>;
-          </Button>;
-          <Button variant="outline" className="h - auto py - 4 flex flex - col gap - 1" aria - label="AI Resume Boost">;
-            <Zap className="h - 5 w - 5 mb - 1" aria - hidden="true" />;
-            <span > AI Resume Boost</span>;
-          </Button>;
-        </div>;
-      </section>;
-      <section>;
-        <div className='flex items - center justify - between mb - 4'>;
-          <h2 className='text - lg font - medium'>Learning Hub</h2>;
-          <Button variant='ghost' size='sm' className='h - 8'>            View all;
-          </Button>;
-        </div>;
-        <Card>;
-      <section>;
-        <div className="flex items - center justify - between mb - 4">;
-          <h2 className="text - lg font - medium">Learning Hub</h2>;
-          <Button variant="ghost" size="sm" className="h - 8">;
-          </Button>;
-        </div>;
-        <Card>;
-          <CardContent className='p - 4'>;
-            <div className='flex items - center gap - 3'>;
-              <div;
-                className='bg - primary / 10 p - 3 rounded - full';
-                aria - hidden='true';
-              >;
-                <BookOpen className='h - 6 w - 6 text - primary' />;
-              </div>;
-              <div>;
-                <h3 className='font - medium'>Improve your profile visibility</h3>;
-                <p className='text - sm text - muted - foreground'>;
-                  5 tips for getting noticed by clients;
-                </p>              </div>          <CardContent className="p - 4">;
-            <div className="flex items - center gap - 3">;
-              <div className="bg - primary / 10 p - 3 rounded - full" aria - hidden="true">;
-                <BookOpen className="h - 6 w - 6 text - primary" />;
-              </div>;
-              <div>;
-                <h3 className="font - medium">Improve your profile visibility</h3>;
-                <p className="text - sm text - muted - foreground">5 tips for getting noticed by clients</p>;
+
             </div>;
           </CardContent>;
         </Card>;
 <<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
       </section>;
-
+    </div>;
   );
+:src/mobile/components/dashboard/TalentDashboard.tsx
 }
-
-    </div>);
+;
 }
-
-    </div>
-<<<<<<< HEAD:src_backup/mobile/components/dashboard/TalentDashboard.tsx
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       </section>;)}</div>)}</div>;
   ))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/mobile/components/dashboard/TalentDashboard.tsx
-=======
   )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/mobile/components/dashboard/TalentDashboard.tsx

@@ -1,22 +1,16 @@
+#!/usr/bin/env node;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+#!/usr/bin/env node;
 
-=======
-#!/usr/bin/env node;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-#!/usr/bin/env node;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
-  const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
     this.logFile = path.join(this.projectRoot, "auto-error-fixer-report.json")
   this.log(" Starting Auto Error Fixer...")
@@ -59,12 +53,14 @@ const { execSync } = require("child_process")
           this.errorsFixed.push({ file, "type": "import_export"})
   const files = this.findFiles(".tsx,.jsx")
   let content = fs.readFileSync(file, "utf8")
-          "<React.Fragment>$1</React.Fragment>"
+          "<React.Fragment>$1</React.Fragment>
+</React>"
         content = content.replace(/<([^>]+)\/>/g, "<$1 />"
         if (content !== fs.readFileSync(file, "utf8")
   const files = this.findFiles(".tsx,.jsx")
   let content = fs.readFileSync(file, "utf8")
-          "<React.Fragment>$1</React.Fragment>"
+          "<React.Fragment>$1</React.Fragment>
+</React>"
         content = content.replace(/<([^>]+)\/>/g, "<$1 />"
         if (content !== fs.readFileSync(file, "utf8")
           this.errorsFixed.push({ file, "type": "jsx_syntax"})
@@ -75,9 +71,9 @@ const { execSync } = require("child_process")
   this.log(` ESLint check "failed"`)
     const files = this.findFiles(".ts,.tsx,.js,.jsx")
   let content = fs.readFileSync(file, "utf8")
-        content = content.replace(/[\t]+$/gm, "")
+        content = content.replace(/[\t]+$/gm, )
         content = content.replace(/([^])\n/g, "$1;\n"
-        content = content.replace(/([^]*)/g, ""$1""
+        content = content.replace(/([^]*)/g, $1
         if (content !== fs.readFileSync(file, "utf8")
   this.log(" Checking ESLint errors...")
   execSync("npm run lint -- --fix", { "stdio": "pipe"})
@@ -88,7 +84,7 @@ const { execSync } = require("child_process")
   let content = fs.readFileSync(file, "utf8")
         content = content.replace(/[\t]+$/gm, ")
         content = content.replace(/([^])\n/g, "$1;\n"
-        content = content.replace(/([^]*)"/g, ""$1""
+        content = content.replace(/([^]*)"/g, $1
         if (content !== fs.readFileSync(file, "utf8")
         if (content !== fs.readFileSync(file, "utf8")
           this.errorsFixed.push({ file, "type": "eslint"})
@@ -162,17 +158,11 @@ const { execSync } = require("child_process")
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   process.on(")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   process.on(")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   process.on(")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  process.on(")
+  process.on(")
+
+

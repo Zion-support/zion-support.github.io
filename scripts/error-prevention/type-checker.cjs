@@ -1,4 +1,5 @@
 #!/usr/bin/env node;
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -8,143 +9,119 @@ class TypeChecker {}
     this.interval = 120000; // 2 minutes;
   };
   async start() {}
-    console.log('Starting Type Checker...');
+
     this.isRunning = true;
     
     // Initial type check;
     await this.runTypeCheck();
     
+    // Initial type check;
+    await this.runTypeCheck();
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runTypeCheck()}, this.interval);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    
+    
+
+
     console.log('Type Checker started successfully')};
   async runTypeCheck() {}
     try {}
       console.log('Running TypeScript type check...');
       
+      
       const child = spawn('npm', ['run', 'type-check'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
+        "cwd": process.cwd();"
       };);
 
+"
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
-});
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
       child.on('close', (code) => {}
         if ( {})
+
           console.log('Type check passed ✓')) {}
      {}
           console.log('Type check passed ✓')}} else {}
           console.log('Type check failed ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
+          
           
           // Log type errors for manual review;
           this.logTypeErrors(output + errorOutput)};
       })} catch (error) {}
       console.error('Error running type "check": ', error.message)};
   };
+
   logTypeErrors(errorOutput) {}
     const lines = errorOutput.split('\n';);
     const typeErrors = lines.filter(line => )
       line.includes('error TS') || line.includes('Type error');
    ;);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if ( {})
+    
+    
+
+
       console.log('TypeScript errors "found": ')) {}
-     {}
       console.log('TypeScript errors found:')};
+      line.includes('error TS') || line.includes('Type error');)
+    if ( {})      console.log('TypeScript errors "found": ')) {}
+      console.log('TypeScript errors found:')}
       typeErrors.forEach(error => {})
         console.log(`  ${error}`)})};
-  };
   stop() {}
     console.log('Stopping Type Checker...');
-    this.isRunning = false;
     
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Type Checker stopped')) {}
-     {}
-      clearInterval(this.intervalId)};
-    console.log('Type Checker stopped')}};
-};
-// Start the checker if run directly;
-if ( {})
+    console.log('Type Checker stopped')}}
+// Start the checker if run directly
   const checker = new TypeChecker) {}
-     {}
   const checker = new TypeChecker}(;);
   
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
-    checker.stop();
+    checker.stop()
     process.exit(0)}
 });
   
   process.on('SIGTERM', () => {}
-    checker.stop();
+    checker.stop()
     process.exit(0)}
 });
+module.exports = TypeChecker;
   
   checker.start().catch(console.error)};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 module.exports = TypeChecker;
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 module.exports = TypeChecker;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 module.exports = TypeChecker;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+module.exports = TypeChecker;
+  // Handle graceful shutdown;
+
+  checker.start().catch(console.error)};
+
+

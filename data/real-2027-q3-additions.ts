@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 export const real2027Q3Additions = [;
@@ -316,17 +312,10 @@ export const real2027Q3Additions = [;
   }
 ];}
 ];
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent'
@@ -334,15 +323,11 @@ export const real2027Q3Additions = [
     tagline: 'Agentless network-wide discovery and enrichment'
     price: '$149'
     period: '/month'
-<<<<<<< HEAD
-id: 'it-asset-discovery-agent',
+export const real2027Q3Additions = $2;
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network-wide discovery and enrichment',
     price: '$149',
     period: '/month',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     description:
       'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
     features: [
@@ -350,14 +335,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'OS, version, and CVE enrichment',
       'CMDB, ServiceNow, and Jira export',
       'Change detection and drift alerts',
+    description: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
+    features: [
+      'Agentless subnet scanning and SaaS discoveryOS, version, and CVE enrichmentCMDB, ServiceNow, and Jira exportChange detection and drift alerts'
     ],
     category: 'Enterprise IT',
     link: '/it-asset-discovery-agent',
     realService: true,
-    roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.',
+    roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'
   },
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
     description:
@@ -372,25 +358,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: '/managed-postgres-ha'
     realService: true
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'managed-postgres-ha',
     name: 'Managed Postgres HA',
     tagline: 'High availability PostgreSQL with SRE runbooks',
     price: '$1,200',
     period: '/month',
-    description:
-      'Turnkey HA architecture with PITR backups, automatic failover, and expert tuning backed by SRE playbooks.',
+    description: 'Turnkey HA architecture with PITR backups, automatic failover, and expert tuning backed by SRE playbooks.',
     features: [
-      'Streaming replication and automatic failover',
-      'PITR backups with retention policies',
-      'Performance tuning and query insights',
-      'Security hardening and auditing',
+      'Streaming replication and automatic failoverPITR backups with retention policiesPerformance tuning and query insightsSecurity hardening and auditing'
     ],
     category: 'Cloud & Infrastructure',
     link: '/managed-postgres-ha',
     realService: true,
-    roi: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.',
+    roi: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.'
   },
   {
     id: 'vector-search-starter',
@@ -398,18 +379,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'Production RAG foundation with evals and ops',
     price: '$89',
     period: '/month',
-    description:
-      'Deploy a proven RAG baseline with embeddings, chunking, evaluation harness, and observability for fast iteration.',
+    description: 'Deploy a proven RAG baseline with embeddings, chunking, evaluation harness, and observability for fast iteration.',
     features: [
-      'Pinecone/Weaviate/Elastic integrations',
-      'Chunking strategies and deduplication',
-      'Eval harness with regression tests',
-      'Tracing, metrics, and dashboards',
+      'Pinecone/Weaviate/Elastic integrationsChunking strategies and deduplicationEval harness with regression testsTracing, metrics, and dashboards'
     ],
     category: 'AI & Data',
     link: '/vector-search-starter',
     realService: true,
-    roi: 'Cut RAG prototyping time from weeks to days while improving answer quality.',
+    roi: 'Cut RAG prototyping time from weeks to days while improving answer quality.'
   },
   {
     id: 'serverless-cron-manager',
@@ -417,18 +394,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'Reliable jobs with retries, idempotency, and alerting',
     price: '$39',
     period: '/month',
-    description:
-      'Schedule and run serverless jobs at scale with observability, concurrency controls, and guaranteed delivery semantics.',
+    description: 'Schedule and run serverless jobs at scale with observability, concurrency controls, and guaranteed delivery semantics.',
     features: [
-      'Idempotent job execution',
-      'Per-job concurrency and rate limits',
-      'DLQ, retries, and exponential backoff',
-      'Metrics, logs, and alerting',
+      'Idempotent job executionPer-job concurrency and rate limitsDLQ, retries, and exponential backoffMetrics, logs, and alerting'
     ],
     category: 'Developer Tools',
     link: '/serverless-cron-manager',
     realService: true,
-    roi: 'Reduce failed job incidents by 70% and engineering toil by 50%.',
+    roi: 'Reduce failed job incidents by 70% and engineering toil by 50%.'
   },
   {
     id: 'domain-dns-monitor',
@@ -436,18 +409,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'Proactive domain health and expiry guardrails',
     price: '$19',
     period: '/month',
-    description:
-      'Monitor WHOIS, DNS records, TLS health, and name server changes with instant alerts and audit trails.',
+    description: 'Monitor WHOIS, DNS records, TLS health, and name server changes with instant alerts and audit trails.',
     features: [
-      'WHOIS expiry and registrar checks',
-      'NS, MX, TXT, and CAA drift detection',
-      'TLS expiry and configuration health',
-      'Slack, Email, and Webhook alerts',
+      'WHOIS expiry and registrar checksNS, MX, TXT, and CAA drift detectionTLS expiry and configuration healthSlack, Email, and Webhook alerts'
     ],
     category: 'Quality & Monitoring',
     link: '/domain-dns-monitor',
     realService: true,
-    roi: 'Avoid costly outages from expired domains and misconfigured DNS.',
+    roi: 'Avoid costly outages from expired domains and misconfigured DNS.'
   },
   {
     id: 'uptime-slo-monitor',
@@ -455,18 +424,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'Synthetic checks with SLOs and error budgets',
     price: '$29',
     period: '/month',
-    description:
-      'Track service uptime with user-centric SLOs, burn rates, and multi-location synthetic checks.',
+    description: 'Track service uptime with user-centric SLOs, burn rates, and multi-location synthetic checks.',
     features: [
-      'SLO templates and burn-rate alerts',
-      'Multi-region synthetic and API checks',
-      'Status pages and dashboards',
-      'Change annotations and incident links',
+      'SLO templates and burn-rate alertsMulti-region synthetic and API checksStatus pages and dashboardsChange annotations and incident links'
     ],
     category: 'Observability',
     link: '/uptime-slo-monitor',
     realService: true,
-    roi: 'Cut false alerts by 60% and align reliability to user impact.',
+    roi: 'Cut false alerts by 60% and align reliability to user impact.'
   },
   {
     id: 'sso-user-lifecycle-automation',
@@ -474,18 +439,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'Provisioning, deprovisioning, and access reviews',
     price: '$199',
     period: '/month',
-    description:
-      'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta/Auth0/WorkOS.',
+    description: 'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta/Auth0/WorkOS.',
     features: [
-      'Just-in-time provisioning',
-      'SCIM connectors and custom mappers',
-      'Access review workflows',
-      'Audit logs and exports',
+      'Just-in-time provisioningSCIM connectors and custom mappersAccess review workflowsAudit logs and exports'
     ],
     category: 'Security & Identity',
     link: '/sso-user-lifecycle-automation',
     realService: true,
-    roi: 'Reduce onboarding time by 80% and access risk by 50%.',
+    roi: 'Reduce onboarding time by 80% and access risk by 50%.'
   },
   {
     id: 'api-observability-starter',
@@ -493,18 +454,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'Traces, metrics, logs for APIs in minutes',
     price: '$49',
     period: '/month',
-    description:
-      'One-click OpenTelemetry setup with golden signals, latency SLOs, and dashboards for REST and gRPC APIs.',
+    description: 'One-click OpenTelemetry setup with golden signals, latency SLOs, and dashboards for REST and gRPC APIs.',
     features: [
-      'Automatic instrumentation presets',
-      'Latency percentiles and error rates',
-      'SLO burn and dependency graphs',
-      'Alert templates and runbooks',
+      'Automatic instrumentation presetsLatency percentiles and error ratesSLO burn and dependency graphsAlert templates and runbooks'
     ],
     category: 'Observability',
     link: '/api-observability-starter',
     realService: true,
-    roi: 'Decrease MTTR by 40% and increase release confidence.',
+    roi: 'Decrease MTTR by 40% and increase release confidence.'
   },
   {
     id: 'kubernetes-rbac-auditor',
@@ -512,18 +469,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'Least-privilege insights and drift detection',
     price: '$79',
     period: '/month',
-    description:
-      'Continuously analyze RBAC bindings, detect excessive privileges, and auto-generate least-privilege policies.',
+    description: 'Continuously analyze RBAC bindings, detect excessive privileges, and auto-generate least-privilege policies.',
     features: [
-      'RBAC graph analysis and reports',
-      'Policy suggestions and PRs',
-      'Audit trails and drift alerts',
-      'Multi-cluster support',
+      'RBAC graph analysis and reportsPolicy suggestions and PRsAudit trails and drift alertsMulti-cluster support'
     ],
     category: 'Security & Identity',
     link: '/kubernetes-rbac-auditor',
     realService: true,
-    roi: 'Reduce lateral movement risk and pass audits faster.',
+    roi: 'Reduce lateral movement risk and pass audits faster.'
   },
   {
     id: 'infrastructure-drift-detector',
@@ -531,22 +484,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'Detect and reconcile infra drift automatically',
     price: '$69',
     period: '/month',
-    description:
-      'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto-remediation.',
+    description: 'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto-remediation.',
     features: [
-<<<<<<< HEAD
-      'Terraform plan diffs as PR comments',
-      'Change approval workflows',
-      'Selective auto-remediation',
-      'Multi-cloud support',
+      'Terraform plan diffs as PR commentsChange approval workflowsSelective auto-remediationMulti-cloud support'
     ],
     category: 'Cloud & Infrastructure',
     link: '/infrastructure-drift-detector',
     realService: true,
-    roi: 'Prevent config drift incidents and reduce compliance toil.',
+    roi: 'Prevent config drift incidents and reduce compliance toil.'
   },
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       'Auto triage and severity suggestion'
       'Channel orchestration (Slack/Teams)'
       'Timeline and comms templates'
@@ -556,29 +502,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: '/incident-copilot'
     realService: true
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'incident-copilot',
     name: 'Incident Copilot',
     tagline: 'AI-assisted incident response and postmortems',
     price: '$99',
     period: '/month',
-    description:
-      'Triage, summarize, and coordinate incidents with auto-generated timelines and draft postmortems.',
+    description: 'Triage, summarize, and coordinate incidents with auto-generated timelines and draft postmortems.',
     features: [
-<<<<<<< HEAD
-      'Auto triage and severity suggestion',
-      'Channel orchestration (Slack/Teams)',
-      'Timeline and comms templates',
-      'Postmortem drafts and actions',
+      'Auto triage and severity suggestionChannel orchestration (Slack/Teams)Timeline and comms templatesPostmortem drafts and actions'
     ],
     category: 'Operations',
     link: '/incident-copilot',
     realService: true,
-    roi: 'Reduce incident resolution time by 30–50% and improve learning capture.',
+    roi: 'Reduce incident resolution time by 30–50% and improve learning capture.'
   },
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       'Web and doc ingestion with citations'
       'Competitor profiles and matrices'
       'Alerts for launches and pricing changes'
@@ -588,29 +526,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: '/ai-market-research'
     realService: true
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'ai-market-research',
     name: 'AI Market Research',
     tagline: 'Automated landscape scans and insight briefs',
     price: '$79',
     period: '/month',
-    description:
-      'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.',
+    description: 'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.',
     features: [
-<<<<<<< HEAD
-      'Web and doc ingestion with citations',
-      'Competitor profiles and matrices',
-      'Alerts for launches and pricing changes',
-      'Export to Slides/Docs',
+      'Web and doc ingestion with citationsCompetitor profiles and matricesAlerts for launches and pricing changesExport to Slides/Docs'
     ],
     category: 'AI & Data',
     link: '/ai-market-research',
     realService: true,
-    roi: 'Save 10–20 analyst hours per week while increasing coverage.',
+    roi: 'Save 10–20 analyst hours per week while increasing coverage.'
   },
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       'Lead enrichment and routing'
       'Multichannel sequences'
       'AI-generated replies with approvals'
@@ -620,25 +550,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: '/ai-sales-automation'
     realService: true
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'ai-sales-automation',
     name: 'AI Sales Automation',
     tagline: 'Sequencing, enrichment, and AI reply drafting',
     price: '$59',
     period: '/month',
-    description:
-      'Automate prospecting, enrichment, and multi-channel outreach with AI-drafted replies and meeting booking.',
+    description: 'Automate prospecting, enrichment, and multi-channel outreach with AI-drafted replies and meeting booking.',
     features: [
-      'Lead enrichment and routing',
-      'Multichannel sequences',
-      'AI-generated replies with approvals',
-      'Pipeline analytics',
+      'Lead enrichment and routingMultichannel sequencesAI-generated replies with approvalsPipeline analytics'
     ],
     category: 'Sales & Marketing',
     link: '/ai-sales-automation',
     realService: true,
-    roi: 'Increase meetings booked by 20–40% with consistent outreach.',
+    roi: 'Increase meetings booked by 20–40% with consistent outreach.'
   },
   {
     id: 'ai-legal-contract-analyzer',
@@ -646,22 +571,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'Clause extraction, risk flags, and playbooks',
     price: '$99',
     period: '/month',
-    description:
-      'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.',
+    description: 'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.',
     features: [
-<<<<<<< HEAD
-      'Smart clause detection and summaries',
-      'Risk scoring and deviations',
-      'Playbook alignment and suggestions',
-      'Export to Word/PDF',
+      'Smart clause detection and summariesRisk scoring and deviationsPlaybook alignment and suggestionsExport to Word/PDF'
     ],
     category: 'Legal & Compliance',
     link: '/ai-legal-contract-analyzer',
     realService: true,
-    roi: 'Cut review cycles from weeks to days and reduce outside counsel spend.',
+    roi: 'Cut review cycles from weeks to days and reduce outside counsel spend.'
   },
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       'Templates and brand voices'
       'SEO scoring and suggestions'
       'Collaboration and approvals'
@@ -671,25 +589,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: '/ai-content-generator'
     realService: true
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   {
     id: 'ai-content-generator',
     name: 'AI Content Generator',
     tagline: 'SEO-optimized content with brand voice',
     price: '$49',
     period: '/month',
-    description:
-      'High-quality SEO content in your brand voice with templates, approvals, and CMS integrations.',
+    description: 'High-quality SEO content in your brand voice with templates, approvals, and CMS integrations.',
     features: [
-      'Templates and brand voices',
-      'SEO scoring and suggestions',
-      'Collaboration and approvals',
-      'WordPress/Shopify integrations',
+      'Templates and brand voicesSEO scoring and suggestionsCollaboration and approvalsWordPress/Shopify integrations'
     ],
     category: 'Content & Marketing',
     link: '/ai-content-generator',
     realService: true,
-    roi: 'Publish 3–5x more content while improving rankings.',
+    roi: 'Publish 3–5x more content while improving rankings.'
   },
   {
     id: 'email-dmarc-analyzer',
@@ -697,19 +610,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'DMARC, DKIM, SPF reporting and policy help',
     price: '$29',
     period: '/month',
-    description:
-      'Aggregate and analyze DMARC reports with actionable guidance to reach enforcement safely.',
+    description: 'Aggregate and analyze DMARC reports with actionable guidance to reach enforcement safely.',
     features: [
-<<<<<<< HEAD
-      'Aggregate and forensic reports',
-      'Source identification and alignment',
-      'Policy simulation and enforcement guides',
-      'Alerts and exports',
+      'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports'
     ],
     category: 'Security & Identity',
     link: '/email-dmarc-analyzer',
     realService: true,
-    roi: 'Improve deliverability and block spoofing/phishing attempts.',
+    roi: 'Improve deliverability and block spoofing/phishing attempts.'
   },
   {
     id: 'api-security-scanner',
@@ -717,11 +625,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     tagline: 'API discovery and vuln scanning with CI gates',
     price: '$199',
     period: '/month',
-    description:
-      'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
+    description: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       'Discovery via traffic/specs'
       'OWASP API Top 10 checks'
       'PR annotations and CI gating'
@@ -732,29 +637,17 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Discovery via traffic/specs',
       'OWASP API Top 10 checks',
       'PR annotations and CI gating',
       'Change detection and drift alerts'
+      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ],
     category: 'Security & Identity',
     link: '/api-security-scanner',
     realService: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    roi: 'Prevent high-severity API incidents and cut MTTR.',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     roi: 'Prevent high-severity API incidents and cut MTTR.'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     roi: 'Prevent high-severity API incidents and cut MTTR.'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   },;
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
@@ -764,59 +657,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export const real2027Q3Additions = [
   {
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',
@@ -1135,17 +987,7 @@ export const real2027Q3Additions = [;
     link: '/api - security - scanner';
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports';
     ],;
     category: 'Security & Identity',;
@@ -1170,35 +1012,18 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 ];
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-  }
-];
-;
-=======
-
-  }
-];
-;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
   }
 ];
 ;
 
-<<<<<<< HEAD
-=======
+  }
+];
+;
+
+  }
+];
+;
+
 
 
 
@@ -1208,16 +1033,9 @@ ursor/fix-website-loading-errors-and-merge-6662
 ;
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const real2027Q3Additions = [;
   {;
     id: 'it-asset-discovery-agent',;
@@ -1473,24 +1291,8 @@ export const real2027Q3Additions = [;
     link: '/api-security-scanner',;
     realService: true,;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  }
-];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   },
 ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
   }
@@ -1502,12 +1304,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 ];
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   }
 ];
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -1517,8 +1315,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   }
 ];
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    roi: 'Prevent high-severity API incidents and cut MTTR.'
+  }
+],

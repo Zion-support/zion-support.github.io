@@ -1,54 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-#!/usr/bin/env node;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 #!/usr/bin/env node;
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 #!/usr/bin/env node;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+
+
+
 const fs = require("fs")";const path = require("path")""
       "seo-optimization-report.json""),"
-    console.log(`[${new Date().toISOString()}] ${message}`);
+    console.log(`[${new Date().toISOString()}] ${message}`)
     this.log("� Checking meta tags");""
       "pages": [],""issues": [],,"
-    const pagesDir = path.join(this.projectRoot, "src", "pages");";    if (!fs.existsSync(pagesDir)) {";      results.issues.push("Pages directory not found");";      return results,"}
-    const files = this.getAllFiles(pagesDir, [".tsx", ".jsx", ".ts", ".js"]);""
-        const content = fs.readFileSync(file, "utf8");";        const pageName = path.basename(file);"
-          "file": pageName,""hasTitle": content.includes("<title>") || content.includes(""title":"),""hasDescription":;";            content.includes("description") ||";            content.includes("meta name="description""),""hasKeywords":;";            content.includes("keywords") ||";            content.includes("meta name="keywords""),""hasOpenGraph":;";            content.includes(""og":") || content.includes("property=""og":"),""hasTwitterCard":;";            content.includes(""twitter":") || content.includes("name=""twitter":"),"};"
-          results.issues.push("${pageName}: Missing title tag");"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    const pagesDir = path.join(this.projectRoot, "src", "pages");";    if (!fs.existsSync(pagesDir)) {";      results.issues.push("Pages directory not found");";      return results,"}
+    const files = this.getAllFiles(pagesDir, [".tsx", ".jsx", ".ts", ".js"])
+        const content = fs.readFileSync(file, "utf8");";        const pageName = path.basename(file);"
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -109,25 +85,28 @@ class SEOOptimizer {
           results.issues.push(`${pageName}: Missing title tag`);
         }
         if (!pageAnalysis.hasDescription) {
-<<<<<<< HEAD
+          results.issues.push(`${pageName}: Missing meta description`);
+          results.issues.push("${pageName}: Missing Open Graph tags");"
+        results.issues.push(`Error reading ${file}: ${error.message}`);
+
+          results.issues.push(`${pageName}: Missing meta description`);
+          results.issues.push("${pageName}: Missing Open Graph tags");"
+        results.issues.push(`Error reading ${file}: ${error.message}`);
+  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
+  .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
+
+
+
+
+
+
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           results.issues.push(`${pageName}: Missing meta description`);
           results.issues.push("${pageName}: Missing Open Graph tags");"
         results.issues.push(`Error reading ${file}: ${error.message}`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           results.issues.push(`${pageName}: Missing meta description`);
           results.issues.push("${pageName}: Missing Open Graph tags");"
         results.issues.push(`Error reading ${file}: ${error.message}`);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-          results.issues.push(`${pageName}: Missing meta description`);
-          results.issues.push("${pageName}: Missing Open Graph tags");"
-        results.issues.push(`Error reading ${file}: ${error.message}`);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     this.log("� Checking sitemap");""
       "exists": false,""valid": false,""issues": [],,"
     const sitemapPath = path.join(this.projectRoot, "public", "sitemap.xml");";    results.exists = fs.existsSync(sitemapPath);"
@@ -151,18 +130,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
       this.log(" SEO optimization check completed");";      return report,"
       this.log(` SEO optimization check "failed"`)
   .then(report => {);    console.log(" SEO optimization check completed successfully");";    process.exit(0),"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   .catch(error => {);    console.error(" SEO optimization check "failed":", error.message);";    process.exit(1),"}
 
       }
@@ -316,20 +285,8 @@ optimizer
     console.error('❌ SEO optimization check failed:', error.message);
     process.exit(1);
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+

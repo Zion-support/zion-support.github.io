@@ -1,28 +1,30 @@
-<<<<<<< HEAD:src_backup/components/ui/ImageWithRetry.tsx
-import React, { useState } from 'react'
-import Image, { type ImageProps } from 'next/image'
-import { cn } from '@/lib/utils';
-interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
-  src: string;  alt?: string
-  /** Source to use if the main src fails */
-  fallbackSrc?: string
-  /** CSS class for the retry button */
-  retryClassName?: string;interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {
+/** CSS class for the retry button */
 
-  src: string,
-  alt?: string;
-  /** Source to use if the main src fails */
+  retryClassName?: string;  retryClassName?: string
+
+import React, { useState } from 'react',;
+import Image, { type ImageProps } from 'next/image',;
+import { cn } from '@/lib/utils',;
+interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
+  src: string,;
+  alt?: string,;
+  /** Source to use if the main src fails */;
+  fallbackSrc?: string,;
+  /** CSS class for the retry button */;
+  retryClassName?: string;
+
+}
+
   fallbackSrc?: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
   /** CSS class for the retry button */
   retryClassName?: string;  retryClassName?: string
 }
+
 /**
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/ImageWithRetry.tsx
 
 ;
 import React, { useState } from 'react';
@@ -150,12 +152,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 export default ImageWithRetry;
 
 
+}: ImageWithRetryProps) {
+  const [currentSrc, setCurrentSrc] = useState(src),
+  const [failed, setFailed] = useState(false),
+
+  const handleError = () => {
+    setFailed(true),
+    setCurrentSrc(fallbackSrc)
+  },
+
+  const handleRetry = () => {
+    setFailed(false),
+    setCurrentSrc(src)
+  },
+
+  const fill = !('width' in props) && !('height' in props),
+
+  const handleRetry = () => {;
+    setFailed(false);
+    setCurrentSrc(src) };    setCurrentSrc(fallbackSrc)
+  }
+  const handleRetry = () => {
+    setFailed(false)
+    setCurrentSrc(src);    setCurrentSrc(src)
+  }
+  const fill = !('width' in props) && !('height' in props)
+  return (
+    <div className='relative inline-block'>      <Image    <div className="relative inline-block">      <Image
+
+      <Image
+
+        {...props}
+        src = {currentSrc,}
+        alt = {alt,}
+        onError = {handleError,}
+        className = {cn(className),}
+        fill = {fill,}
 
   const fill = !('width' in props) && !('height' in props);
+
   return (
     <div className="relative inline-block">
       <Image
-=======
 export function ImageWithRetry(): any ({src,alt = '',fallbackSrc = '/images/image-placeholder && placeholder.svg',className,retryClassName}: ImageWithRetryProps) {const [currentSrc, setCurrentSrc] = useState(src)const [failed, setFailed]  = useState(false)const handleError = () => {setFailed(true)setCurrentSrc(fallbackSrc)}const handleRetry = () => {setFailed(false)setCurrentSrc(src)}setCurrentSrc(fallbackSrc)}const handleRetry = () => {setFailed(false)}const fill  = !('width' in props) && !('height' in props)return (src;
   alt;<Image;
         {...props}
@@ -170,7 +208,6 @@ export function ImageWithRetry(): any ({src,alt = '',fallbackSrc = '/images/imag
     </div>;
   )}export default ImageWithRetry;const fill = !('width' in props) && !('height' in props)return (<div className="relative inline-block">;
       <Image;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/ImageWithRetry.tsx
         {...props}
         src={currentSrc}
         alt={alt}
@@ -180,17 +217,6 @@ export function ImageWithRetry(): any ({src,alt = '',fallbackSrc = '/images/imag
 <<<<<<< HEAD:src_backup/components/ui/ImageWithRetry.tsx
       />
       {failed && (
-        <button
-export default ImageWithRetry;
-
-  src,
-  alt = '',
-  fallbackSrc = '/images/image-placeholder.svg',
-  className,
-  retryClassName,
-
-type='button'
-=======
       />;
       {failed && (<button;
           type="button";
@@ -222,7 +248,6 @@ type='button'
           Retry;
         </button>)}
     </div>)export default ImageWithRetry;export default ImageWithRetry;src,alt = '',fallbackSrc = '/images/image-placeholder.svg',className,retryClassName,type='button';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/ImageWithRetry.tsx
           onClick={handleRetry}
           className={cn('absolute bottom-1 right-1 text-xs underline';
             retryClassName;
@@ -236,7 +261,6 @@ type='button'
   );
 export default ImageWithRetry;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </div>;
   )export default ImageWithRetry;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/ui/ImageWithRetry.tsx
+        <button

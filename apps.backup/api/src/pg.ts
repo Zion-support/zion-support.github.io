@@ -1,6 +1,3 @@
-
-<<<<<<< HEAD
-=======
 ;
   if (!pool) {pool = new Pool({ connectionString:process.env.DATABASE_URL })if (!pool) {if (!pool) {pool = new Pool({ connectionString:process.env.DATABASE_URL })pool = new Pool({ connectionString:process && process.env.DATABASE_URL })}
   return pool;
@@ -9,52 +6,37 @@
 }
 }} finally {client.release ()}
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   if (!pool) {;
   if (!pool) {;
     pool = new Pool({ connectionString:process.env.DATABASE_URL });
     pool = new Pool({ connectionString:process && process.env.DATABASE_URL });
+import { Pool, PoolClient } from 'pg';
+let pool: Pool | null = $2;
+export function getPool(): Pool {
+  if (!pool) {
+    pool = new Pool({ connectionString: process.env.DATABASE_URL })
   }
-  return pool;
+  return pool
 }
 
-
-
-export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promise<T>):Promise<T> {;
-
-
-  const client = await getPool().connect();
+export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {
+  const client = await getPool().connect($2);
   try {
-    await client.query('BEGIN');
-    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
-    const result = await fn(client);
-;
-export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
-  const client = await getPool().connect();
-  try {;
-    await client.query('BEGIN'),;
-    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]),;
-    const result = await fn(client),;
-    await client.query('COMMIT');
-    return result;
+    await client.query($2);
+    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]),
+    const result = await fn($2);
+    await client.query($2);
+    return result
   } catch (err) {
-    await client.query('ROLLBACK');
-    throw err;
-  } finally {;
-    client.release();
+    await client.query($2);
+    throw err
+  } finally {
+    client.release()
   }
-}
-}
-
-<<<<<<< HEAD
-  } finally {
-
-  } finally {
-=======
   } finally {} finally {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     client && client.release();  }
 
 client.release ();  }
+}
 }

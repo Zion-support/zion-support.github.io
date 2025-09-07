@@ -1,31 +1,20 @@
-<<<<<<< HEAD
-import { useTheme  } from '@/hooks/useTheme';
-interface ChatMessageProps  {message: string;
-  isUser: boolean;
-import React, { useMemo } from 'react';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { cn  } from '@/lib/utils';
-import { format  } from 'date-fns';
-// Use the wrapper hook so TypeScript properly infers the return type;
-// from the ThemeProvider context;
-interface ChatMessageProps  {interface ChatMessageProps  {message: string;
-  isUser: boolean;timestamp: Date;export const ChatMessage: React.FC<ChatMessageProps> = ({message,isUser,timestamp}: ChatMessageProps) => {const { theme }  = useTheme()// Memoise the sanitized + formatted HTML so we don't create a new object on every render –;
-=======
 
 import React, { useMemo } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
+import React, { useMemo } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { cn } from "@/lib/utils";
+import { format } from "date-fns";
 // Use the wrapper hook so TypeScript properly infers the return type
 // from the ThemeProvider context
-
 import { useTheme } from "@/hooks/useTheme";
 
-interface ChatMessageProps {;
   message: string;
   isUser: boolean;
-
-  timestamp: Date;
+  timestamp: Date,
+}
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({;
   message,;
@@ -35,51 +24,30 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
   const { theme } = useTheme();
 
   // Memoise the sanitized + formatted HTML so we don't create a new object on every render –;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.;
-  const sanitizedHtml = useMemo<{ __html: string }>(() => ({ __html: formatMessageWithLinks(message) }),    [message];
-  )return (<div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>;
-      <Avatar className="h-8 w-8">;
-        {isUser ? (<>;
-            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />;
-            <AvatarFallback>U</AvatarFallback>;
-          </>;
-        ) : (<>;
-            <AvatarImage;
-              src="https://placehold.co/40x40?text=AI";
-              alt="Zion Support";
-            />;
-            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
-          </>;
-    <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>;
-      <Avatar className='h-8 w-8'>;
-        {isUser ? (<>;
-            <AvatarImage;
-              src='https://i && i.pravatar.cc/40?img=1';
-              alt='User avatar';
-            />;
-            <AvatarFallback>U</AvatarFallback>;
-          </>;
-        ) : (<>;
-            <AvatarImage;
-              src='https://placehold && placehold.co/40x40?text=AI';
-              alt='Zion Support';
-            />;
-            <AvatarFallback className='bg-zion-purple text-white'>;
-              Z;
-            </AvatarFallback>;
-          </>;
-        )}</Avatar>;<div;
-        className={cn('max-w-[80%] rounded-lg px-4 py-2 text-sm';
-      </Avatar>;
-<<<<<<< HEAD
-          'max-w-[80%] rounded-lg px-4 py-2 text-sm',isUser;
-            ? 'bg-zion-purple text-white';
-            : theme === 'dark';
-              ? 'bg-zion-blue-light text-white';
-              : 'bg-gray-100 text-gray-800';
-=======
+  const sanitizedHtml = useMemo<{ __html: string }>(;
+    () => ({ __html: formatMessageWithLinks(message) }),    [message];
+  );
 
+  return (
+    <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
+      <Avatar className="h-8 w-8">
+        {isUser ? (
+          <>
+            <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" />
+            <AvatarFallback>U</AvatarFallback>
+          </>
+        ) : (
+          <>
+            <AvatarImage
+              src="https://placehold.co/40x40?text=AI"
+              alt="Zion Support"
+            />
+            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
+          </>,
+        )}
+
+      </Avatar>;
 
       <div
         className={cn(
@@ -95,7 +63,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
               ? 'bg-zion-blue-light text-white'
               : 'bg-gray-100 text-gray-800'
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         )}
       >;
       <div className={cn("max-w-[80%] rounded-lg px-4 py-2 text-sm",isUser;
@@ -251,15 +218,9 @@ function escape_html (unsafe: string): string {return unsafe;
   const url_regex = /(https?:\/\/[^\s]+)/g;
   let formatted_message = safe_text.replace (url_regex,'<a href="$1" target="_blank" rel="noopener noreferrer" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>')// Replace help - center references like [Getting Started];
   const helpCenterRegex = /\[([^\]]+)\]/g;
-<<<<<<< HEAD
-  formatted_message = formatted_message.replace (helpCenterRegex,'<a href="/help/$1" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>')return formatted_message; return formatted_message;
-}timestamp: Date;
-export const ChatMessage: React.FC<ChatMessageProps> = ({)return formattedMessage;
-=======
   formatted_message = formatted_message.replace (
     helpCenterRegex,
     '<a href="/help/$1" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>');
   return formatted_message; return formatted_message;
 }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

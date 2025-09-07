@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const res = null;
-      setStatus('')
-    }
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error |'Deploy failed');
-      setCid(data.cid);
-      setProvider(data.provider || '');
-setStatus('Deployed successfully');
-    } catch (e: any) {
-      setError(e.message);
-      setStatus('');
-    }
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 export default function OffworldDeploy() {
   const [cid, setCid] = useState<string | null>(null),
@@ -24,68 +8,42 @@ export default function OffworldDeploy() {;
 
 import { useState } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 
+import { useState } from 'react';
+import Head from 'next/head';
 export default function OffworldDeploy() {
   const [cid, setCid] = useState<string | null>(null),
   const [status, setStatus] = useState<string>(''),
-  const [error, setError] = useState<string>('');
-  const [provider, setProvider] = useState<string>('');
+  const [error, setError] = useState<string>(''),
+  const [provider, setProvider] = useState<string>(''),
+
   async function handleDeploy() {
-import {useState} from 'react';
-    setStatus('Exporting and deploying to IPFS...');
-    setError('');
-    setCid(null);
-    setProvider('');
-
-      const res = await fetch('/api/offworld/deploy', { method: 'POST' });      const res = await fetch('/api/offworld/deploy', { method: 'POST' })
-      const data = await res.json();
-      if (!res.ok) throw new Error(data?.error |'Deploy failed');
-      setCid(data.cid);
-      setProvider(data.provider |'');
-    try {;
-      const res = await fetch('/api/offworld/deploy', { method: 'POST' });      const res = await fetch('/api/offworld/deploy', { method: 'POST' }),;
-      const data = await res && res.json();
-      if (!res && res.ok) throw new Error(data?.error || 'Deploy failed');
-      setCid(data && data.cid);
-      setProvider(data && data.provider || '');
-      setStatus('Deployed successfully');
-    } catch (e: any) {;
-      setError(e && e.message);
-      setStatus('');    }
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-  }
-  return (
-    <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
+    setStatus($2);
+    setError($2);
+    setCid($2);
+    setProvider($2);
+    try {
+      const res = await fetch($2);
+      const data = await res.json($2);
+      if (!res.ok) throw new Error($2);
+      setCid($2);
+      setProvider($2);
+      setStatus('Deployed successfully')
     } catch (e: any) {
-      setError(e.message)
+      setError($2);
       setStatus('')
-
-    <div className='min-h-screen p-8'>      setStatus('Deployed successfully');
-    } catch (e: any) {;
-      setError(e && e.message),;
-      setStatus('');
-
+    }
   }
+
   return (
-<div className='min-h-screen p-8'>
+    <div className="min-h-screen p-8">
       <Head>
         <title>Zion Offworld Deploy</title>
       </Head>
-      <h1 className='text-2xl font-bold mb-4'>Zion OS Offworld Deploy</h1>
-      <p className='mb-6'>
-        Export the site and pin it to IPFS for disconnected/offworld use.
-      </p>
-      <button
-        className='px-4 py-2 bg-black text-white rounded'
-=======
 
 ;
 export default function OffworldDeploy() {const [cid, setCid] = useState<string | null>(null),const [status, setStatus] = useState<string>(''),export default function OffworldDeploy() {const [cid, setCid] = useState<string | null>(null)const [status, setStatus]  = useState<string>('')import { useState  } from 'react';
 import Head from 'next/head';
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function OffworldDeploy() {const [cid, setCid] = useState<string | null>(null),const [status, setStatus] = useState<string>(''),const [error, setError] = useState<string>('')const [provider, setProvider] = useState<string>('')async function handleDeploy() {import { useState } from 'react';
     setStatus('Exporting and deploying to IPFS...')setError('')setCid(null)setProvider('')const res = await fetch('/api/offworld/deploy', { method: 'POST' })const res = await fetch('/api/offworld/deploy', { method: 'POST' })const data = await res.json()if (!res.ok) throw new Error(data?.error |'Deploy failed')setCid(data.cid)setProvider(data.provider |'')try {const res = await fetch('/api/offworld/deploy', { method: 'POST' })const res = await fetch('/api/offworld/deploy', { method: 'POST' }),const data = await res && res.json()if (!res && res.ok) throw new Error(data?.error || 'Deploy failed')setCid(data && data.cid)setProvider(data && data.provider || '')setStatus('Deployed successfully')} catch (e: any) {setError(e && e.message)setStatus('')}const res = null;
       setStatus('')}
@@ -101,10 +59,6 @@ export default function OffworldDeploy() {const [cid, setCid] = useState<string 
       </p>;
       <button;
         className='px-4 py-2 bg-black text-white rounded';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         onClick={handleDeploy}>;
         Deploy to IPFS;
       </button>;
@@ -114,22 +68,6 @@ export default function OffworldDeploy() {const [cid, setCid] = useState<string 
           <div>;
             CID: <code className='break-all'>{cid}</code>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          {provider && <div>Provider: {provider}</div>}
-          <div className='text-sm text-gray-600'>
-            You can open via any IPFS gateway or offline node.
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {provider && <div>Provider: {provider}</div>}<div className='text-sm text-gray-600'>;
             You can open via any IPFS gateway or offline node.;
           </div>        </div>;
@@ -163,10 +101,6 @@ function handle_deploy() {set_status ('Exporting and deploying to IPFS...')set_e
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
-  )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
           {provider && <div>Provider: {provider}</div>}
           <div className='text-sm text-gray-600'>;
             You can open via any IPFS gateway or offline node.;
@@ -222,7 +156,19 @@ function handle_deploy() {
   return (
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      <h1 className="text-2xl font-bold mb-4">Zion OS Offworld Deploy</h1>
+      <p className="mb-6">Export the site and pin it to IPFS for disconnected/offworld use.</p>
+      <button className="px-4 py-2 bg-black text-white rounded" onClick={handleDeploy}>Deploy to IPFS</button>
+      {status && <p className="mt-4 text-green-600">{status}</p>}
+      {error && <p className="mt-4 text-red-600">{error}</p>}
+      {cid && (
+        <div className="mt-6 space-y-2">
+          <div>CID: <code className="break-all">{cid}</code></div>
+          {provider && <div>Provider: {provider}</div>}
+          <div className="text-sm text-gray-600">You can open via any IPFS gateway or offline node.</div>
+        </div>
+      )}
+    </div>
+  )
+}

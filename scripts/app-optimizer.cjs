@@ -1,23 +1,13 @@
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-#!/usr/bin/env node;
-const fs = require('fs')
-const path = require('path')
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process')
 console.log(' Starting App Optimizer...')
     // Directory doesn't exist or can'
@@ -36,16 +26,18 @@ console.log('\n App Optimization "Summary")
 console.log(`   - Total "images"`)
 // console.log('\n "Improvements")
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.log('\n "Recommendations")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.log('\n "Recommendations")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.log('\n "Recommendations")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
+
+
+const { execSync } = require('child_process')
+  console.log('\n "Recommendations")
+  console.log('\n "Recommendations")
+
+

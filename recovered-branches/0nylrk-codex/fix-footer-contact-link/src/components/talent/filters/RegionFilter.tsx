@@ -1,4 +1,23 @@
-<<<<<<< HEAD
+import { ChevronDown, ChevronUp } from "lucide-react",
+import { Checkbox } from "@/components/ui/checkbox";
+import { RegionFilterProps } from "@/types/filters";
+
+const REGION_OPTIONS = [
+  { id: "North America", label: "North America" }
+  { id: "Europe", label: "Europe" }
+  { id: "Asia", label: "Asia" }
+  { id: "South America", label: "South America" }
+  { id: "Australia", label: "Australia" }
+  { id: "Africa", label: "Africa" }
+];
+export function RegionFilter({
+  selectedRegions
+  toggleRegion
+  expanded
+  toggleSection
+  isMobileFilterOpen
+}: RegionFilterProps) {
+
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
@@ -8,8 +27,8 @@ const REGION_OPTIONS = [
   { id: "Asia", label: "Asia" },
   { id: "South America", label: "South America" },
   { id: "Australia", label: "Australia" },
-  { id: "Africa", label: "Africa" },
-];
+  { id: "Africa", label: "Africa" }
+],
 
 export function RegionFilter({
   selectedRegions,
@@ -46,16 +65,12 @@ export function RegionFilter({
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-
-import { ChevronDown, ChevronUp } from "lucide-react",;
-=======
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
   { id: "Asia", label: "Asia" }
   { id: "South America", label: "South America" }
   { id: "Australia", label: "Australia" }import { ChevronDown, ChevronUp } from "lucide-react",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Checkbox } from "@/components/ui/checkbox",;
 import { RegionFilterProps } from "@/types/filters",;
 const REGION_OPTIONS = [;
@@ -84,17 +99,6 @@ export function RegionFilter({
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-<<<<<<< HEAD
-
-      </button>;
-
-      {expanded && (;
-        <div className="mt-4 space-y-2">;
-          {REGION_OPTIONS && REGION_OPTIONS.map(region => (;
-            <div key={region && region.id} className="flex items-center">;
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Checkbox
                 id={`region-${region && region.id}`}
                 checked={selectedRegions && selectedRegions.includes(region && region.id)}
@@ -106,28 +110,9 @@ export function RegionFilter({
               </label>
             </div>
           ))}
-        </div>;
+  );
+        </div>
       )}
-<<<<<<< HEAD
-  );
     </div>
-  );
+  )
 }
-import { ChevronDown, ChevronUp  } from './lucide-react';
-import { Checkbox  } from '@/components / ui / checkbox';
-import { RegionFilterProps  } from '@/types / filters';
-const REGION_OPTIONS = [;
-  { id: "North America", label: "North America" },
-  { id: "Europe", label: "Europe" },
-  { id: "Asia", label: "Asia" },
-  { id: "South America", label: "South America" },
-  { id: "Australia", label: "Australia" },
-  { id: "Africa", label: "Africa" },
-];
-;
-
-
-
-=======
-  );
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

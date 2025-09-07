@@ -1,25 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { createMocks, RequestMethod } from 'node-mocks-http'; // RequestMethod can be useful;
 import type { NextApiRequest, NextApiResponse } from 'next';
 import handler from '@/pages/api/auth/reset'; // Adjust path as necessary;
@@ -30,30 +10,8 @@ interface ErrorResponse  {message: string;
 }
 // Define expected success response (if applicable, though this test focuses on errors)// interface SuccessResponse  {//   success: boolean;
 //   message?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-// }
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 // }import { createMocks, RequestMethod  } from 'node-mocks-http';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 // }import { createMocks, RequestMethod  } from 'node-mocks-http';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { createMocks, RequestMethod } from 'node-mocks-http'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import handler from '@/pages/api/auth/reset'
@@ -61,19 +19,10 @@ import { describe, it, expect, vi } from 'vitest'
 describe('/api/auth/reset token validation'
   it('returns 400 if token is missing'
       "method"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       "method"'"body": { token: 'invalid', "newPassword"'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
       "method"'"body": { token: 'invalid', "newPassword"'"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
       "method"'"body": { token: 'invalid', "newPassword"'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import handler from '@/pages/api/auth/reset';
 import { describe, it, expect, vi  } from 'vitest';
 describe('/api/auth/reset token validation';
@@ -111,54 +60,25 @@ describe('/api/auth/reset token validation';
 describe('/api/auth/reset token validation', () => {
   it('returns 400 if token is missing', async () => {
     const { req, res } = createMocks({
-<<<<<<< HEAD
-<<<<<<< HEAD
-      method: 'POST' as RequestMethod,
-      body: { newPassword: 'pass12345' },
-    });
-    // Cast to the specific NextApi types for the handler
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
       "method": 'POST' as RequestMethod,
       "body": { newPassword: 'pass12345' }});
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
       "method": 'POST' as RequestMethod,
       "body": { newPassword: 'pass12345' }});
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     await handler(
       req as unknown as NextApiRequest,
       res as unknown as NextApiResponse
     );
     expect(res._getStatusCode()).toBe(400);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Assuming the response JSON structure is { message: string } for errors
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     expect((res._getJSONData() as ErrorResponse).message).toBe(
       'Token and new password are required.'
     );
   });
   it('returns 400 for invalid token', async () => {
     const { req, res } = createMocks({
-<<<<<<< HEAD
-<<<<<<< HEAD
-      method: 'POST' as RequestMethod,
-      body: { token: 'invalid', newPassword: 'pass12345' },
-    });
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
       "method": 'POST' as RequestMethod,
       "body": { token: 'invalid', "newPassword": 'pass12345' }});
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
       "method": 'POST' as RequestMethod,
       "body": { token: 'invalid', "newPassword": 'pass12345' }});
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     await handler(
       req as unknown as NextApiRequest,
       res as unknown as NextApiResponse
@@ -170,15 +90,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
   });
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       "body": { token: 'invalid', "newPassword"
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -203,21 +114,12 @@ main
   // - prisma.user.update to update the password and clear reset token fields
   // - (Potentially) supabase.auth.admin.updateUserById if Supabase auth password also needs update
 });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-=======
 import { createMocks,RequestMethod } from 'node-mocks-http'; import type { NextApiRequest,NextApiResponse } from 'next'; import handler from '@/pages/api/auth/reset'; import { describe,it,expect,vi } from 'vitest'; interface ErrorResponse { message: string} describe('/api/auth/reset token validation',() => { it('returns 400 if token is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { newPassword: 'pass12345' },}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Token and new password are required.' )}); it('returns 400 for invalid token',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { token: 'invalid',newPassword: 'pass12345' },}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Invalid or expired password reset token.' )})});
 import { createMocks,RequestMethod } from 'node-mocks-http'; import type { NextApiRequest,NextApiResponse } from 'next'; import handler from '@/pages/api/auth/reset'; import { describe,it,expect,vi } from 'vitest'; interface ErrorResponse { message: string} describe('/api/auth/reset token validation',() => { it('returns 400 if token is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { newPassword: 'pass12345' },}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Token and new password are required.' )}); it('returns 400 for invalid token',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { token: 'invalid',newPassword: 'pass12345' },}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Invalid or expired password reset token.' )})});
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 import { createMocks,RequestMethod } from 'node-mocks-http'; import type { NextApiRequest,NextApiResponse } from 'next'; import handler from '@/pages/api/auth/reset'; import { describe,it,expect,vi } from 'vitest'; interface ErrorResponse { message: string} describe('/api/auth/reset token validation',() => { it('returns 400 if token is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { newPassword: 'pass12345' }}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Token and new password are required.' )}); it('returns 400 for invalid token',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { token: 'invalid',newPassword: 'pass12345' }}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Invalid or expired password reset token.' )})});
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 import { createMocks,RequestMethod } from 'node-mocks-http'; import type { NextApiRequest,NextApiResponse } from 'next'; import handler from '@/pages/api/auth/reset'; import { describe,it,expect,vi } from 'vitest'; interface ErrorResponse { message: string} describe('/api/auth/reset token validation',() => { it('returns 400 if token is missing',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { newPassword: 'pass12345' }}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Token and new password are required.' )}); it('returns 400 for invalid token',async () => { const { req,res } = createMocks({ method: 'POST' as RequestMethod,body: { token: 'invalid',newPassword: 'pass12345' }}); await handler( req as unknown as NextApiRequest,res as unknown as NextApiResponse ); expect(res._getStatusCode()).toBe(400); expect((res._getJSONData() as ErrorResponse).message).toBe( 'Invalid or expired password reset token.' )})});
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      "body"
+      "method"
+      "body": { token: 'invalid', "newPassword"

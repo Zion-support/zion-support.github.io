@@ -8,9 +8,6 @@ import { Download } from 'lucide-react';
 import { Resume } from '@/types/resume';
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-interface ResumePreviewCardProps {
-  resume: Resume;
-=======
 
 ;
 import React from 'react';
@@ -27,7 +24,6 @@ interface Resume  {id: string;
   status?: 'draft' | 'published' | 'archived';
 }import { Resume  } from '@/types/resume';
 interface ResumePreviewCardProps  {resume: Resume;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/messaging/resume-selector/ResumePreviewCard.tsx
   isSelected: boolean;
   onSelect: (resume: Resume) => void;
   onDownload: (resume: Resume) => void;
@@ -43,21 +39,21 @@ interface ResumePreviewCardProps  {resume: Resume;
 <<<<<<< HEAD:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
   };
 
+import React from 'react',
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Download } from 'lucide-react'
+import { Resume } from "@/types/resume",
+interface ResumePreviewCardProps {
+  resume: Resume,
+  onDownload: () => void,
+  isLoading: boolean
+}
 
   return (
-    <Card
-      className={`cursor-pointer transition-all duration-200 hover:shadow-md ${
-        isSelected
-          ? 'ring-2 ring-blue-500 border-blue-500'
-          : 'hover:border-gray-300'
-      }`}
-      onClick={() => onSelect(resume)}
-    >
+    <Card className="mt-3 bg-zion-blue-dark/30 border-zion-purple/20">
       <CardContent className="p-4">
-                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'
-              >
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   }return (<Card;
       className={`cursor-pointer transition-all duration-200 hover:shadow-md ${isSelected;
           ? 'ring-2 ring-blue-500 border-blue-500';
@@ -91,7 +87,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs";
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs';
               >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/messaging/resume-selector/ResumePreviewCard.tsx
+
+                className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'
+              >
+origin/cursor/automate-test-improve-and-merge-code-2533
                 {skill.name}
               </Badge>;
             ))}
@@ -104,7 +103,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >
                 +{resume.skills.length - 5} more
               </Badge>
-=======
             {resume.skills.length > 5 && (className='bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs'              >              <Badge;
               <Badge;
                 variant="outline";
@@ -115,7 +113,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               >;
                 +{resume.skills.length - 5} more;
               </Badge>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/messaging/resume-selector/ResumePreviewCard.tsx
             )}
           </div>;
         )}
@@ -125,14 +122,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   );
 };
 }
-        <div className="flex items-start justify-between mb-3">
-          <div className="flex-1">
-            <h3 className="font-semibold text-gray-900 mb-1">
-=======
   )}}<div className="flex items-start justify-between mb-3">;
           <div className="flex-1">;
             <h3 className="font-semibold text-gray-900 mb-1">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/messaging/resume-selector/ResumePreviewCard.tsx
               {resume.title}
             </h3>;
             <p className="text-sm text-gray-600 mb-2">;
@@ -140,43 +132,52 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </p>;
           </div>;
           {resume.status && (<Badge className={getStatusColor(resume.status)}>;
+
+          {resume.status && (
+            <Badge className={getStatusColor(resume.status)}>
               {resume.status}
             </Badge>;
           )}
-        </div>;
-        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">;
-          <span>Modified: {resume.lastModified}</span>;
-          <span>{resume.fileSize}</span>;
-        </div>;
-        <div className="flex items-center space-x-2">;
-          <Button;
-            variant="outline";
-            size="sm";
-            onClick={(e) => {e.stopPropagation()onDownload(resume)}}
-            className="flex-1";
-          >;
-            <Download className="h-4 w-4 mr-2" />;
-            Download;
-          </Button>;
-          <Button;
-            variant={isSelected ? 'default' : 'outline'}
-            size="sm";
-            onClick={(e) => {e.stopPropagation()onSelect(resume)}}
-            className="flex-1";
-          >;
-            {isSelected ? 'Selected' : 'Select'}
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/ResumePreviewCard.tsx
-          </Button>
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           </Button>;
         </div>;
       </CardContent>;
     </Card>;
   )}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/messaging/resume-selector/ResumePreviewCard.tsx
+        </div>
+
+        <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
+          <span>Modified: {resume.lastModified}</span>
+          <span>{resume.fileSize}</span>
+        </div>
+
+        <div className="flex items-center space-x-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={(e) => {
+              e.stopPropagation();
+              onDownload(resume);
+            }}
+            className="flex-1"
+
+          >
+            <Download className="h-4 w-4 text-zion-cyan" />
+            <span className="sr-only">Download Resume</span>
+          </Button>
+        </div>
+
+        {resume.skills && resume.skills.length > 0 && (
+          <div className="flex flex-wrap gap-1 mt-2">
+            {resume.skills.slice(0, 5).map((skill, index) => (
+              <Badge 
+                key={index} 
+                variant="outline"
+                className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"
+
+              <Badge 
+                variant="outline"
+                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs"
+              >
+                +{resume.skills.length - 5} more
+              </Badge>
+            )}

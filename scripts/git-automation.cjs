@@ -1,47 +1,54 @@
   async runCommand(command, options = {}) {
+async runCommand(command, options = {}) {
     try {
-      const { stdout, stderr } = await execAsync(command, { 
+      const { stdout, stderr } = await execAsync(command, {
+        cwd: process.cwd(),
+        timeout: 60000,
+        ...options
+  async runCommand(command, options = {}) {
+    try {
+  // TODO: Implement
+
+      const { stdout, stderr } = await execAsync(command, { )
         cwd: process.cwd(), 
         timeout: 60000, 
-        ...options 
+      return { 
+        ...options;
       });
       return { success: true, stdout, stderr };
     } catch (error) {
-      this.log(`Command failed: ${command} - ${error.message}`);
-      return { 
+      this.log(`Command failed: ${command} - ${error.message});
+      return {
+  // TODO: Implement
         success: false, 
-        stdout: error.stdout || "", 
-        stderr: error.stderr || error.message 
+        stdout: error.stdout || ,"
+        stderr: error.stderr || error.message;
       };
-    }
-  }
 
-  async checkGitStatus() {
-    this.log('Checking git status...');
-    const result = await this.runCommand('git status --porcelain');
-    
-    if (result.success) {
-      const changes = result.stdout.trim().split('\n').filter(line => line.length > 0);
+  async checkGitStatus() {"
+
       this.log(`Found ${changes.length} changes`);
       return changes;
     } else {
+  // TODO: Implement
+
       this.log('Failed to check git status');
       return [];
-    }
-  }
 
   async addAllChanges() {
     this.log('Adding all changes...');
     const result = await this.runCommand('git add .');
     
     if (result.success) {
+
+  async addAllChanges() {
+
       this.log('✅ All changes added');
       return true;
-    } else {
+  // TODO: Implement
+
       this.log('❌ Failed to add changes');
       return false;
-    }
-  }
 
   async commitChanges(message) {
     this.log(`Committing changes: ${message}`);
@@ -150,56 +157,101 @@
 }
 
 // Handle command line arguments
+
+
+    // Checkout main branch;
+    const checkoutResult = await this.runCommand('git checkout main');
+    if (!checkoutResult.success) {
+      this.log('❌ Failed to checkout main branch');
+
+
+    // Pull latest changes;
+    const pullResult = await this.runCommand('git pull origin main');
+    if (!pullResult.success) {
+      this.log('❌ Failed to pull latest changes');
+
+
+    // Push merged changes;
+    const pushResult = await this.pushChanges('main');
+    if (!pushResult.success) {
+      this.log('❌ Failed to push merged changes');
+
+    // Checkout main branch
+    const checkoutResult = await this.runCommand('git checkout main')
+  if($2) {
+      this.log('❌ Failed to checkout main branch')
+    // Pull latest changes
+    const pullResult = await this.runCommand('git pull origin main')
+  if($2) {
+      this.log('❌ Failed to pull latest changes')
+    // Push merged changes
+    const pushResult = await this.pushChanges('main')
+  if($2) {
+      this.log('❌ Failed to push merged changes')
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true })
+    // Check git status
+    const changes = await this.checkGitStatus()
+  if($2) {
+      this.log('No changes to commit')
+    // Add all changes
+    const added = await this.addAllChanges()
+  if($2) {
+
+    // Commit changes
+    const committed = await this.commitChanges('Automated improvements and fixes')
+  if($2) {
+
+// Push changes
+    const pushed = await this.pushChanges()
+  if($2) {
+
+    // Merge to main
+    const merged = await this.mergeToMain()
+  if($2) {
+
+    // Commit changes;
+    const committed = await this.commitChanges('Automated improvements and fixes');
+    if (!committed) {
+
+    // Push changes;
+    const pushed = await this.pushChanges();
+    if (!pushed) {
+
+    // Merge to main;
+    const merged = await this.mergeToMain();
+    if (!merged) {
+
+
+// Handle command line arguments;
 if (require.main === module) {
   const gitAutomation = new GitAutomation();
   const command = process.argv[2];
 
   switch (command) {
-    case "status":
-      gitAutomation.checkGitStatus();
-      break;
-    case "add":
-      gitAutomation.addAllChanges();
-      break;
-    case "commit":
-      const message = process.argv[3] || 'Automated commit';
-      gitAutomation.commitChanges(message);
-      break;
-    case "push":
-      const branch = process.argv[3] || 'main';
-      gitAutomation.pushChanges(branch);
-      break;
-    case "merge":
-      gitAutomation.mergeToMain();
-      break;
-    case "workflow":
-      gitAutomation.runFullWorkflow().catch(error => {
-        console.error("Git automation failed: ", error);
+    case "status":"
+      gitAutomation.checkGitStatus()
+      break;"
+    case "add":"
+      gitAutomation.addAllChanges()
+    case "merge":"
+      gitAutomation.mergeToMain()
+    case "workflow":"
+      gitAutomation.runFullWorkflow().catch(error => {)"
+        console.error("Git automation failed: ", error);"
         process.exit(1);
-      });
-      break;
-    default:
-      console.log("Usage: node git-automation.cjs [status|add|commit|push|merge|workflow]");
-      process.exit(1);
-  }
-}
 
 module.exports = GitAutomation;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
+      console.log("Usage: node git-automation.cjs [status|add|commit|push|merge|workflow]")
+      process.exit(1)
+module.exports = GitAutomation
+///usr/bin/env node
 /**
- * Git Automation Script;
- * Handles git operations, commits, pushes, and merges;
+ * Git Automation Script
+ * Handles git operations, commits, pushes, and merges
  */
 
 const { execSync } = require('child_process')
@@ -224,13 +276,12 @@ const path = require('path')
       return { "success": true, "message"}
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
+      this.log(" Git automation workflow "failed": ${error.message}")
+      this.log(" Git automation workflow "failed": ${error.message}")
 
       this.log(" Git automation workflow "failed": ${error.message}")
-<<<<<<< HEAD
-<<<<<<< HEAD
+    default:"
+      console.log("Usage: node git-automation.cjs [status|add|commit|push|merge|workflow]");"
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+module.exports = GitAutomation;
+

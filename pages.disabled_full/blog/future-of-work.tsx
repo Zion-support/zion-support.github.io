@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from \'react\'; import Head from \'next/head\'; export default function FutureOfWork() {}return null} }
 const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }return null} }''";
 import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}return null} }
@@ -20,22 +18,9 @@ const React from "react"; import Head from "next/head"; export default function 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }return null} }''";
 ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 import React from \'react\'; import Head from \'next/head\'; export default function FutureOfWork() {}; return null} }
 const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }; return null} }''"
 import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}; return null} }
-const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }; return null} }''"
-const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }; return null} }''"
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }; return null} }''"
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
-
-const React from "react"; import Head from "next/head"; export default function FutureOfWork() { return; }; return null} }''"
-<<<<<<< HEAD
-import _React from 'react'; import Head from 'next/head'; export default function FutureOfWork() {}; return null} }
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

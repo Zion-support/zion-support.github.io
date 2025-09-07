@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
 import Link from 'next/link';
 interface ButtonProps  {children: React.ReactNode;
@@ -29,11 +14,6 @@ interface ButtonProps {
   }const sizeClasses = {sm: 'px-3 py-2 text-sm',md: 'px-4 py-2 text-base',lg: 'px-6 py-3 text-lg';
   }const classes  = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;if (href) {return (<Link href={href} className={classes}>;
         {children}
-<<<<<<< HEAD
-      </Link>
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?:
     | 'default'
@@ -41,7 +21,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     | 'outline'
     | 'secondary'
     | 'ghost'
-=======
       </Link>;
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>  {variant?:;
     | 'default';
@@ -49,7 +28,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>  {va
     | 'outline';
     | 'secondary';
     | 'ghost';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
   asChild?: boolean;
@@ -68,10 +46,6 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>  {va
         )}
         ref={ref}
         {...props}
-<<<<<<< HEAD
-      />
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
       />;
     )}return (<button onClick={onClick} className={classes}>;
       {children}
@@ -147,12 +121,6 @@ const Button: React.FC<ButtonProps> = ({primary:;
     </button>;
   )}export default Button;export { Button }
       </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     );
   }
   
@@ -162,23 +130,9 @@ const Button: React.FC<ButtonProps> = ({primary:;
     </button>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react";
 
-import React from 'react';
-import Link from 'next/link';
-import React from "react";
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 import React from "react";
 
@@ -187,15 +141,11 @@ import React from 'react';
 import Link from 'next/link';
 import React from "react";
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'ghost' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
-<<<<<<< HEAD
-
-=======
 interface ButtonProps {;
   children: React && React.ReactNode;
   variant?: "primary" | "secondary" | "outline" | "ghost";
@@ -284,45 +234,7 @@ if ( {) {
       on_click={on_click}
       disabled={disabled}
       type={type}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-
-  onClick?: () => void;
-  className?: string;
-  disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset',
-  icon?: React.ReactNode;
-  iconPosition?: 'left' | 'right',
-  style?: React.CSSProperties
-}
-const Button: React.FC<ButtonProps> = ({
-    primary:
-      'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 border-0',
-    secondary:
-      'bg-gray-800 hover:bg-gray-700 text-white border border-gray-600 hover:border-gray-500 hover:shadow-lg hover:-translate-y-0.5',
-    ghost:
-      'bg-transparent hover:bg-white/5 text-gray-300 hover:text-white hover:shadow-md hover:-translate-y-0.5',
-    outline:
-      'bg-transparent border border-white/20 text-white hover:bg-white/5 hover:border-white/40 hover:shadow-md hover:-translate-y-0.5',
-  };
-  const sizeClasses = {
-    sm: 'px-4 py-2 text-sm',
-    md: 'px-6 py-3 text-base',
-    lg: 'px-8 py-4 text-lg',
-  };
-const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
-
-<<<<<<< HEAD
-export { Button };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   const content = (
     <>
       {/* Shine effect for primary buttons */}
@@ -360,6 +272,4 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 };
 
 export default Button;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+

@@ -1,7 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ;
 export default MyApp,:pages_minimal/_app && _app.tsx;
 export default function App(): any ({ Component, pageProps }: AppProps) {return <Component {...pageProps} />;
@@ -17,7 +13,6 @@ import type { AppProps } from 'next / app',import '../styles / globals.css',/**;
  */;
 function MyApp() {return <Component {...page_props} />;
 }export default MyApp,export default MyApp,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 export default MyApp,
@@ -41,6 +36,15 @@ import '../styles / globals.css',
  */
 function MyApp() {
   return <Component {...page_props} />;
+:pages_minimal/_app.tsx
+export default function App({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />;
+}
+
+import type { AppProps } from 'next/app';
+import '../styles/globals.css';
+function MyApp({ Component, pageProps }: AppProps) {
+  return <Component {...pageProps} />
 }
 
 export default MyApp;
@@ -51,15 +55,3 @@ function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
 export default MyApp
-
-export default MyApp,
-;
-;
-
-export default MyApp,
-
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

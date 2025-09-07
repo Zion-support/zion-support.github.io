@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default function DevOpsAutopilot() { return ( <Article title=\"DevOps Autopilot\" subtitle=\"SLO-aware remediation,cost controls,and deployment guardrails\" price=\"from $15k\" bullets={[\'Automated rollback and canary based on error budgets\',\'Kubernetes policy-as-code with security baselines\',\'FinOps \"guardrails\": right-sizing and scheduled scale-downs\',\'Observability map with RCA suggestions and runbook generation\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 import React from 'react';
 interface DevopsautopilotProps {
@@ -37,24 +33,12 @@ interface DevopsautopilotProps {;
 }
 export default function Devopsautopilot(): any ({}: DevopsautopilotProps) {;
   return (
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     <div>
       <h1>Devopsautopilot</h1>
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
@@ -84,3 +68,6 @@ export default function Devopsautopilot(): any ({}: DevopsautopilotProps) {retur
     </div>;
   )}}}}ursor/fix-syntax-push-and-merge-to-main-40de;
 ursor/automate-test-improve-and-merge-code-646c;
+
+
+}

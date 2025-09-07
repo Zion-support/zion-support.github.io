@@ -1,14 +1,13 @@
 #!/bin/bash
 
 # Find all files with merge conflicts
-<<<<<<< HEAD
-:fix-conflicts.sh
+
+
 files=$(find pages components -name "*.tsx" -o -name "*.ts" | xargs grep -l "")
 
 files=$(find pages components -name "*.tsx" -o -name "*.ts" | xargs grep -l "")
 :backup-problematic-files/fix-conflicts.sh
 :fix-conflicts.sh
-=======
 :backup-problematic-files/fix-conflicts.sh
 :fix-conflicts.sh
 
@@ -20,12 +19,11 @@ files=$(find pages components -name "*.tsx" -o -name "*.ts" | xargs grep -l "")
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 for file in $conflicted_files; do
     echo "Fixing $file..."
     
-<<<<<<< HEAD
+
     # Create a backup
     cp "$file" "$file.backup"
     
@@ -37,10 +35,7 @@ for file in $conflicted_files; do
     sed -i '/^
     sed -i '/^/d' "$file"
     sed -i '/^done
-:backup-problematic-files/fix-conflicts.sh
 
-:fix-conflicts.sh
-=======
     # Create a clean version
     cat > "$file" << 'EOF'
 import React from 'react';
@@ -70,6 +65,5 @@ done
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 echo "Fixed all conflicted files"

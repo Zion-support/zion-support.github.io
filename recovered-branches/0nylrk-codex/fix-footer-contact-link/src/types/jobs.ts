@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-export type JobStatus = "new" | "in_progress" | "filled" | "closed";
-
-export type JobCategory =
-  | "development"
-  | "design"
-  | "marketing"
-  | "content"
-  | "data"
-  | "business"
-  | "other";
-
-export interface JobBudget {;
-
-  min: number;
-=======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
 export type JobCategory =;
@@ -38,33 +22,21 @@ export type JobCategory =
   | 'other';
 
 export interface JobBudget {;  min: number;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   max: number;
   currency: string;
 }
 
-<<<<<<< HEAD
-
-export interface Job {;
-
-export interface Job {
-=======
 export interface Job {;
 
 }
 export interface Job {export interface Job {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 export interface Job {;
 }
 export interface Job {
   id: string;
   client_id: string;
-<<<<<<< HEAD
-  title: string;
-=======
   title: string,
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string;
   category: JobCategory;
   skills: string[];
@@ -75,10 +47,6 @@ export interface Job {
   updated_at: string;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface JobFormData {;
 
   created_at: string
@@ -87,64 +55,6 @@ export interface JobFormData {;
 export interface JobFormData {
 
 export interface JobFormData {;
-<<<<<<< HEAD
-}
-export interface JobFormData {
-  title: string;
-  description: string;
-  category: JobCategory;
-  skills: string;
-  budgetMin: number;
-  budgetMax: number;
-  deadline: Date;
-}
-
-  budget_min: number;
-  budget_max: number,
-  deadline: Date;
-}
-// Add JobMatch interface to be shared across components;
-
-export interface JobMatch {
-  budgetMin: number;
-  budgetMax: number
-  deadline: Date
-}
-// Add JobMatch interface to be shared across components
-export interface JobMatch {;
-  id: string;
-  job_id: string;
-  talent_id: string;
-  match_score: number;
-  matched_skills: string[];
-  status?: "new" | "viewed" | "applied" | "declined";
-  created_at: string;
-  viewed_at?: string;
-  job?: Job;
-  talent_profile?: {
-    id?: string;
-    user_id: string;
-    full_name: string;
-    professional_title: string;
-    profile_picture_url?: string;
-    hourly_rate?: number;
-    bio: string;
-    years_experience: number;
-    key_projects: any[];
-    skills: string[];
-    location?: string;
-    category?: string;
-    company_name?: string;
-  };
-}
-
-
-
-export interface ResumeAttachment {;
-
-
-export interface ResumeAttachment {
-=======
   title: string,
   description: string;
   category: JobCategory;
@@ -153,7 +63,6 @@ export interface ResumeAttachment {
 export interface ResumeAttachment {;
 
 export interface ResumeAttachment {export interface ResumeAttachment {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   id: string;
   title: string;
   type: "ai_resume" | "custom_upload";
@@ -172,24 +81,11 @@ export type ApplicationStatus =
   | "rejected";
 
 export interface JobApplication {
-<<<<<<< HEAD
-;
-
-export interface JobApplication {
-
-export interface JobApplication {
-
-
-export interface JobApplication {;
-
-  summary?: string
-=======
 export interface JobApplication {
 
 export interface JobApplication {;
 
 export interface JobApplication {  summary?: string
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   skills?: string[]
 }
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
@@ -214,23 +110,10 @@ export interface JobApplication {
     professional_title: string;
     profile_picture_url?: string;
     bio: string;
-<<<<<<< HEAD
-    skills: string[];
-  };
-  resume?: ResumeAttachment;
-  // New fields for resume scoring;
-    bio: string
-    skills: string[]
-  }
-  resume?: ResumeAttachment;
-  // New fields for resume scoring
-  }
-=======
     skills: string[]
 };
   resume?: ResumeAttachment;
   // New fields for resume scoring;  }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   resume?: ResumeAttachment;
   // New fields for resume scoring;
   match_score?: number;
@@ -238,25 +121,6 @@ export interface JobApplication {
   match_breakdown?: {
     skills_match?: {
       score: number;
-<<<<<<< HEAD
-      matching: string[];
-      missing: string[];
-    };
-    experience_match?: {
-      score: number;
-      analysis: string;
-    };
-    education_match?: {
-      score: number;
-      analysis: string;
-    };
-  };
-  match_suggestion?: string;
-  scored_at?: string;
-  notes?: string; // New field for client notes
-}
-;
-=======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -363,7 +227,6 @@ export interface JobApplication {;
     skills_match?: {;
       score: number,;
       matching: string[],;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       missing: string[];
     },;
     experience_match?: {;
@@ -381,11 +244,117 @@ export interface JobApplication {;
 }
 ;
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 }
+
+export type JobStatus = $2;
+export type JobCategory = $2;
+export interface JobBudget {
+  min: number,
+  max: number,
+  currency: string}
+
+export interface Job {
+  id: string,
+  client_id: string,
+  title: string,
+  description: string,
+  category: JobCategory,
+  skills: string[],
+  budget: JobBudget,
+  deadline: string,
+  status: JobStatus,
+  created_at: string,
+  updated_at: string}
+
+export interface JobFormData {
+  title: string,
+  description: string,
+  category: JobCategory,
+  skills: string,
+  budgetMin: number,
+  budgetMax: number,
+  deadline: Date}
+
+// Add JobMatch interface to be shared across components
+export interface JobMatch {
+  id: string,
+  job_id: string,
+  talent_id: string,
+  match_score: number,
+  matched_skills: string[],
+  status?: 'new' | 'viewed' | 'applied' | 'declined',
+  created_at: string,
+  viewed_at?: string,
+  job?: Job,
+  talent_profile?: {
+    id?: string,
+    user_id: string,
+    full_name: string,
+    professional_title: string,
+    profile_picture_url?: string,
+    hourly_rate?: number,
+    bio: string,
+    years_experience: number,
+    key_projects: any[],
+    skills: string[],
+    location?: string,
+    category?: string,
+    company_name?: string
+  }
+}
+export interface ResumeAttachment {
+  id: string,
+  title: string,
+  type: 'ai_resume' | 'custom_upload',
+  file_url?: string,
+  resume_id?: string,
+  summary?: string,
+  skills?: string[]
+}
+
+export type ApplicationStatus = $2;
+export interface JobApplication {
+  id: string,
+  job_id: string,
+  talent_id: string,
+  resume_id?: string,
+  status: ApplicationStatus,
+  cover_letter?: string,
+  is_shortlisted: boolean,
+  created_at: string,
+  updated_at?: string,
+  viewed_at?: string,
+  job?: Job,
+  talent_profile?: {
+    id?: string,
+    full_name: string,
+    professional_title: string,
+    profile_picture_url?: string,
+    bio: string,
+    skills: string[]
+  },
+  resume?: ResumeAttachment,
+  // New fields for resume scoring
+  match_score?: number,
+  match_summary?: string,
+  match_breakdown?: {
+    skills_match?: {
+      score: number,
+      matching: string[],
+      missing: string[]
+    },
+    experience_match?: {
+      score: number,
+      analysis: string},
+    education_match?: {
+      score: number,
+      analysis: string}
+  },
+  match_suggestion?: string,
+  scored_at?: string,
+  notes?: string,  // New field for client notes
+}
+}
+;

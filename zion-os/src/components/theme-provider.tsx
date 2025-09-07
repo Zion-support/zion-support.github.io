@@ -1,46 +1,3 @@
-
-"use client",import { create_context, useContext, useEffect, useState  } from './react';,type Theme = "dark" | "light" | "system",type ThemeProviderProps = {children: React.ReactNode,default_theme?: Theme,storage_key?: string;
-},type ThemeProviderState = {theme: Theme,set_theme: (theme: Theme) => void;
-},const initial_state: ThemeProviderState = {theme: "system",set_theme: () => null},const ThemeProviderContext = create_context < ThemeProviderState>(initial_state),export /**;
- * ThemeProvider - Function description;
- */;
-function ThemeProvider() {const [theme, set_theme] = useState < Theme>(default_theme),const [mounted, set_mounted] = useState (false),useEffect (() => {set_mounted (true),// Only access local_storage on the client side;
-    // Check condition;
-if ( {) {$2;
-"use client",import { createContext, useContext, useEffect, useState } from "react",type Theme = "dark" | "light" | "system",type ThemeProviderProps = {$2}
-      const stored_theme = local_storage.get_item (storage_key) as Theme,// Check condition;
-if ( {) {$2;
-"use client",
-import { create_context, useContext, useEffect, useState  } from './react';,
-type Theme = "dark" | "light" | "system",
-type ThemeProviderProps = {
-  children: React.ReactNode,
-  default_theme?: Theme,
-  storage_key?: string;
-},
-type ThemeProviderState = {
-  theme: Theme,
-  set_theme: (theme: Theme) => void;
-},
-const initial_state: ThemeProviderState = {
-  theme: "system",
-  set_theme: () => null},
-const ThemeProviderContext = create_context < ThemeProviderState>(initial_state),
-export /**
- * ThemeProvider - Function description
- */
-function ThemeProvider() {
-  const [theme, set_theme] = useState < Theme>(default_theme),
-  const [mounted, set_mounted] = useState (false),
-  useEffect (() => {
-    set_mounted (true),
-    // Only access local_storage on the client side;
-    // Check condition
-if ( {) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   $2
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
@@ -49,12 +6,7 @@ type ThemeProviderProps = {children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
 }
-<<<<<<< HEAD
-=======
   $2}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
 if ( {) {
@@ -100,22 +52,13 @@ export const use_theme = () =>: any {
   $2
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   return context;
 }
 
 "use client",;
-<<<<<<< HEAD
-=======
   return context;
 }"use client",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
 type ThemeProviderProps = {
@@ -167,14 +110,82 @@ export const useTheme = () => {;
   const context = useContext(ThemeProviderContext),;
   if (context === undefined);
     throw new Error("useTheme must be used within a ThemeProvider");
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return context;
-=======
   return context
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   return context;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
+"use client",
+
+import { createContext, useContext, useEffect, useState } from "react";
+type Theme = $2;
+type ThemeProviderProps = $2;
+  defaultTheme?: Theme,
+  storageKey?: string
+},
+
+type ThemeProviderState = $2;
+  setTheme: (theme: Theme) => void
+},
+
+const initialState: ThemeProviderState = $2;
+  setTheme: () => null},
+
+const ThemeProviderContext = $2;
+export function ThemeProvider({
+  children,
+  defaultTheme = $2;
+  storageKey = $2;
+  ...props
+}: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme>(defaultTheme),
+  const [mounted, setMounted] = useState($2);
+  useEffect(() => {
+    setMounted($2);
+    // Only access localStorage on the client side
+    if (typeof window !== "undefined") {
+      const storedTheme = $2;
+      if (storedTheme) {
+        setTheme(storedTheme)
+      }
+    }
+  }, [storageKey]),
+
+  useEffect(() => {
+    if (!mounted) return,
+
+    const root = $2;
+    root.classList.remove($2);
+    if (theme = $2;
+      root.classList.add($2);
+      return
+    }
+
+    root.classList.add(theme)
+  }, [theme, mounted]),
+
+  const value = $2;
+    setTheme: (theme: Theme) => {
+      if (typeof window !== "undefined") {
+        localStorage.setItem(storageKey, theme)
+      }
+      setTheme(theme)
+    }},
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!mounted) {
+    return <>{children}</>
+  }
+
+  return (
+    <ThemeProviderContext.Provider {...props} value={value}>
+      {children}
+    </ThemeProviderContext.Provider>
+  )
+}
+
+export const useTheme = () => {
+  const context = useContext($2);
+  if (context === undefined)
+    throw new Error($2);
+  return context
+},

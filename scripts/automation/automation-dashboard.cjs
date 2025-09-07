@@ -85,17 +85,15 @@ const Table = require("cli-table3")
     console.log(chalk.gray("  quit               - Exit dashboard")
     console.log(chalk.gray("  help               - Show this help")
   console.error(chalk.red(" Dashboard "error": ")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(chalk.red(" Dashboard "error": ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(chalk.red(" Dashboard "error": ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(chalk.red(" Dashboard "error": ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(chalk.red(" Dashboard "error": ")
+  console.error(chalk.red(" Dashboard "error": ")
+
+      chalk.gray("  restart <process>  - Restart a specific process")"
+</process>"
+// console.log(chalk.gray("  stop <process>     - Stop a specific process")"
+    console.log(chalk.gray("  start <process>    - Start a specific process")"
+

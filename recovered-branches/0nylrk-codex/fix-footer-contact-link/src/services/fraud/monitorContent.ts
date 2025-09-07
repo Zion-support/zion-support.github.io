@@ -1,11 +1,3 @@
-
-
-export const monitorContent = async (;
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
@@ -17,54 +9,11 @@ export const monitorContent = async (;
   
   if (analysis && analysis.isSuspicious) {
     let severity: FraudSeverity = analysis && analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
-<<<<<<< HEAD
-    
-    // If contains highly suspicious phrases, mark as dangerous
-    if (analysis && analysis.reasons.some(r => 
-      r && r.includes('payment') || 
-      r && r.includes('external') || 
-      r && r.includes('bypass')
-
-    )) {
-      severity = 'dangerous'
-
-
-
-// Content monitoring functionality;
-import { FraudFlag, FraudSeverity } from '@/types/fraud',;
-import { analyzeContent } from './analyzeContent',;
-import { flagContent } from './flagContent',;
-/**;
- * Create a monitoring system helper to easily monitor any content;
- */;
-export const monitorContent = async (;
-  userId: string,;
-  userEmail: string | undefined,;
-  contentType: FraudFlag['content_type'],;
-  contentId: string,;
-  content: string;
-): Promise<void> => {;
-  const analysis = analyzeContent(content),;
-  if (analysis.isSuspicious) {;
-    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',;
-    // If contains highly suspicious phrases, mark as dangerous;
-    if (analysis.reasons.some(r =>;
-      r.includes('payment') ||;
-      r.includes('external') ||;
-      r.includes('bypass');
-    )) {;
-      severity = 'dangerous';
-
-
-
-    }
-=======
         // If contains highly suspicious phrases, mark as dangerous
     if (analysis && analysis.reasons.some(r => 
       r && r.includes('payment') || 
       r && r.includes('external') || 
       r && r.includes('bypass')    }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     )) {
       severity = 'dangerous'
@@ -83,10 +32,6 @@ export const monitorContent = async (;
     if (severity === 'dangerous') {
       console && console.log('Auto-hiding dangerous content:', contentId);
       // Code to hide content would go here
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Content monitoring functionality;
 import {FraudFlag, FraudSeverity} from '@/types / fraud';
 import {analyze_content} from './analyze_content';
@@ -124,32 +69,40 @@ if (||) {
       content;
       severity;
       analysis.reasons.join ();
-<<<<<<< HEAD
       undefined // IP address would be added in a real implementation);
-
-
-
-;
-    // If this is a 'dangerous' flag, automatically hide content;
-    // This would be implemented in a real system with appropriate flags;
-    // Check condition
-if ( {) {
-  $2
-}
-      console.log ('Auto - hiding dangerous content:', content_id);
-      // Code to hide content would go here;
+// Content monitoring functionality
+import { FraudFlag, FraudSeverity  } from '@/types/fraud';
+import { analyzeContent  } from './analyzeContent';
+import { flagContent } from './flagContent';
+/**
+ * Create a monitoring system helper to easily monitor any content
+ */
+export const monitorContent = $2;
+  userEmail: string | undefined,
+  contentType: FraudFlag['content_type'],
+  contentId: string,
+  content: string): Promise<void> => {
+  const analysis = analyzeContent($2);
+  if (analysis.isSuspicious) {
+    let severity: FraudSeverity = $2;
+    // If contains highly suspicious phrases, mark as dangerous
+    if (analysis.reasons.some(r =>
+      r.includes('payment') |
+      r.includes('external') |
+      r.includes('bypass')
+    )) {
+      severity = 'dangerous'
+    }
+    
+    await flagContent($2);
+      undefined // IP address would be added in a real implementation
+    ),
+    
+    // If this is a 'dangerous' flag, automatically hide content
+    // This would be implemented in a real system with appropriate flags
+    if (severity === 'dangerous') {
+      console.log($2);
+      // Code to hide content would go here
     }
   }
-}
-;
-}
-};
-    }
-  }
-};
-    }
-  }
-};
-=======
-      undefined // IP address would be added in a real implementation);
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+},

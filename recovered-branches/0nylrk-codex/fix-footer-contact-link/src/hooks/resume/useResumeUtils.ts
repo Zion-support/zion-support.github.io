@@ -1,26 +1,9 @@
-
-
-import {format} from 'date-fns';
-import {toast} from '@/hooks/use-toast';
-// Utility function to format dates for DB operations
-export const formatDateForDB = (date: Date | string | undefined) => {
-  if (!date) return undefined,
-<<<<<<< HEAD
-  return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd');
-=======
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
 
 // Error handling with toast
 export const handleResumeError = (e: any, errorMessage: string) => {;
-<<<<<<< HEAD
-  console.error(`Error: ${errorMessage}`, e);
-
-import { format } from 'date-fns',
-=======
   console.error(`Error: ${errorMessage}`, e);import { format } from 'date-fns',
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { toast } from '@/hooks/use-toast',
 // Utility function to format dates for DB operations
 export const formatDateForDB = (date: Date | string | undefined) => {
@@ -28,157 +11,33 @@ export const formatDateForDB = (date: Date | string | undefined) => {
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
 },
 
-<<<<<<< HEAD
-
-export const formatDateForDB = (date: Date | string | undefined) => {
-  if (!date) return undefined
+import { format  } from 'date-fns';
+import { toast } from '@/hooks/use-toast';
+// Utility function to format dates for DB operations
+export const formatDateForDB = $2;
   return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd')
-}
+},
+
 // Error handling with toast
 export const handleResumeError = (e: any, errorMessage: string) => {
-    title,
-    description
-  }),
-  return true
-},
-import { format } from 'date-fns',;
-import { toast } from '@/hooks/use-toast',;
-// Utility function to format dates for DB operations;
-export const formatDateForDB = (date: Date | string | undefined) => {;
-  if (!date) return undefined,;
-  return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd');
-},;
-// Error handling with toast;
-export const handleResumeError = (e: any, errorMessage: string) => {;
-  console.error(`Error: ${errorMessage}`, e),;
-  toast({;
-    title: "Error",;
-    description: `${errorMessage}: ${e.message}`,;
-    variant: "destructive";
-  }),;
-  return false;
-},;
-// Success notification;
-export const showSuccessToast = (title: string, description: string) => {;
-  toast({;
-    title,;
-    description;
-  });
-  return true
-};
-    variant: "destructive"
-  });
+  console.error($2);
+  toast($2);
   return false
-}
-// Success notification
-export const showSuccessToast = (title: string, description: string) => {
-  toast({
-    title
-    description
-  });
-  return true
-}
-
-import {format} from 'date - fns';
-import {toast} from '@/hooks / use - toast';
-// Utility function to format dates for DB operations;
-export const formatDateForDB = (date: Date | string | undefined) =>: any {
-  // Check condition
-if (return undefined, ) {
-  $2
-}
-  return typeof date === 'string' ? date : format (date, 'yyyy - MM - dd');
-}
-;
-// Error handling with toast;
-export const handleResumeError = (e: any, error_message: string) =>: any {
-  console.error (`Error: ${error_message}`, e);
-  toast ({
-    title: "Error",
-    description: `${error_message}: ${e.message}`;
-    variant: "destructive";
-  });
-  return false;
-}
-;
-// Success notification;
-export const showSuccessToast = (title: string, description: string) =>: any {
-  toast ({
-    title,
-    description;
-  });
-  return true;
-}
-;
-
-
 },
 
-
-// Success notification
-export const showSuccessToast = (title: string, description: string) => {
-  toast({
-
+export const handleResumeError = (e: any, errorMessage: string) => {
   console.error(`Error: ${errorMessage}`, e),
   toast({
     title: "Error"
     description: `${errorMessage}: ${e.message}`;
-    title: "Error",
-    description: `${errorMessage}: ${e.message}`,
     variant: "destructive"
   }),
   return false
 }
-},
-
 // Success notification
-export const showSuccessToast = (title: string, description: string) => {
-  toast({
-    title
-    description
-  }),
-  return true
 }
 
-    title,
-    description
-  }),
+export const showSuccessToast = (title: string, description: string) => {
+  toast($2);
   return true
 },
-import { format } from 'date-fns',;
-import { toast } from '@/hooks/use-toast',;
-// Utility function to format dates for DB operations;
-export const formatDateForDB = (date: Date | string | undefined) => {;
-  if (!date) return undefined,;
-  return typeof date === 'string' ? date : format(date, 'yyyy-MM-dd');
-},;
-// Error handling with toast;
-export const handleResumeError = (e: any, errorMessage: string) => {;
-  console.error(`Error: ${errorMessage}`, e),;
-  toast({;
-    title: "Error",;
-    description: `${errorMessage}: ${e.message}`,;
-    variant: "destructive";
-  }),;
-  return false;
-},;
-// Success notification;
-export const showSuccessToast = (title: string, description: string) => {;
-  toast({;
-    title,;
-    title,
-
-    description;
-  });
-  return true
-};
-
-
-export default UseResumeUtils;
-
-
-export default UseResumeUtils;
-
-export default UseResumeUtils;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const usersPath = path.join(process.cwd(), 'datalearnusers.json')
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+
+import fs from 'fs',;
+import path from 'path',;
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
@@ -20,11 +20,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
-import type { NextApiRequest, NextApiResponse } from 'next'
-import fs from 'fs'
-import path from 'path'
-const users_path = path.join (process.cwd (), 'datalearnusers.json')
-const courses_path = path.join (process.cwd (), 'datalearncourses.json')
+
 /**
  * read_json - Function description
  */
@@ -46,7 +42,4 @@ function handler() {
 if ( {) {
   $2
 }
-res.set_header ('AllowPOST')
-    return res.status (405).end ('Method Not Allowed');
-  }
-};
+

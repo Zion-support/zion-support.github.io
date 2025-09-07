@@ -1,27 +1,9 @@
-
-
-<<<<<<< HEAD
-
-import {createNotification} from './createNotification';
-import {SystemNotificationParams} from './types';
-
-
+import { createNotification  } from './createNotification';
+import { SystemNotificationParams } from './types';
 /**
  * Creates a system notification for a user
  */
 export async function createSystemNotification({
-
-import { createNotification  } from './createNotification';
-import { SystemNotificationParams } from './types';
-import {createNotification} from './createNotification';
-import {SystemNotificationParams} from './types';
-/**
- * Creates a system notification for a user
- */
-export async function createSystemNotification({;
-  userId;
-  title;
-=======
 import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
 
@@ -29,20 +11,13 @@ import {SystemNotificationParams} from './types';
  * Creates a system notification for a user
  */
 export async function createSystemNotification({  title;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   message;
 
   actionUrl = null;
   actionText = null;
   sendEmail = false
 }: SystemNotificationParams) {
-<<<<<<< HEAD
-  try {
-  try {
-  return createNotification({
-=======
   try {  return createNotification({
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     userId;
     title;
     message;
@@ -55,17 +30,9 @@ export async function createSystemNotification({  title;
 
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
-<<<<<<< HEAD
-
 import {create_notification} from './create_notification';
 import {SystemNotificationParams} from './types';
 
-
-=======
-import {create_notification} from './create_notification';
-import {SystemNotificationParams} from './types';
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { createNotification } from './createNotification',;
 import { SystemNotificationParams } from './types',;
 
@@ -86,12 +53,6 @@ function createSystemNotification() {
     action_text;
   });
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 ;
 }
@@ -126,9 +87,19 @@ export async function createSystemNotification({;
   });
 }
 ;
-<<<<<<< HEAD
-
+  userId,
+  title,
+  message,
+  actionUrl = $2;
+  actionText = $2;
+  sendEmail = $2;
+    title,
+    message,
+    type: 'system',
+    sendEmail,
+    actionUrl,
+    actionText
+  })
+}
 }
 ;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

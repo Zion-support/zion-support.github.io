@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
-" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
-=======
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
@@ -47,22 +36,21 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";"";
 " export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
 ' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
 " export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
 ' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
+" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
+
+' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
+" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
+
+' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
+" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
+
+:src.disabled/components/CollaborativeTextEditor.jsx
+' \"export\": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = \',enableAI = true,enableCollaboration = true,enableVersioning = true,className = \',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ \''\';\'"\";
+
+" export: const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ",enableAI = true,enableCollaboration = true,enableVersioning = true,className = ",onSave,onExport }) => { const { trackEvent } = useAnalytics ({ """;""";"""
+' "export": const CollaborativeTextEditor = ({ roomId,userId,userName,initialContent = ',enableAI = true,enableCollaboration = true,enableVersioning = true,className = ',onSave,onExport }) => { const { trackEvent } = useAnalytics ({ "enableTracking": 'tru',e,"enableUserBehaviorTracking": 'true'}) const [editorState,setEditorState] = useState ({ "content": 'initialConten',t,"selection": { start: 0,"end": '0',"text": '},"version": '0',changes[],suggestions[],conflicts[] }) const [showSuggestions] = useState (true) const [showCollaborators,setShowCollaborators] = useState (false) const [isProcessing,setIsProcessing] = useState (false) const [lastSaved,setLastSaved] = useState (null) const editorRef = useRef (null) const collaborationRef = useRef (null) ';"";""

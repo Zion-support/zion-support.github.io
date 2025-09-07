@@ -1,25 +1,8 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
-<<<<<<< HEAD
-export function useResumeList() {
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {Resume} from '@/types/resume';
-import {useAuth} from '@/hooks/useAuth';
-export function useResumeList() {;
-
-
-  const { user } = useAuth();
-=======
 export function useResumeList() {  const { user } = useAuth();
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -36,76 +19,37 @@ export function useResumeList() {  const { user } = useAuth();
       const { data: resumeData, error: resumeError } = await supabase
         .from('talent_resumes')
         .select('*')
-<<<<<<< HEAD
-        .eq('user_id', user && user.id)
-        .order('is_active', { ascending: false })
-        .order('created_at', { ascending: false });
-      if (resumeError) throw resumeError;
-
+export function useResumeList() {
+  const { user } = useAuth($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  const [resumes, setResumes] = useState<Resume[]>([]),
+  
+  const fetchResumes = async () => {
+    if (!user) {
+      setError($2);
+      return []
+    }
+    
+    setIsLoading($2);
+    setError($2);
+    try {
+      // Fetch resume list with basic info for the current user
+      const { data: resumeData, error: resumeError} = await supabase
+        .from('talent_resumes')
+        .select('*')
+        .eq('user_id', user.id)
+        .order('is_active', { ascending: false})
+        .order($2);
+      if (resumeError) throw resumeError,
       
-      if (!resumeData || resumeData && resumeData.length === 0) {
-
-        setResumes([]);
+      if (!resumeData || resumeData.length === 0) {
+        setResumes($2);
         return []
       }
       // Transform data to match Resume type
-      const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({
-        id: resume && resume.id;
-        user_id: resume && resume.user_id;
-    // Check condition
-if ( {) {
-  $2
-}
-        basic_info: {
-
-          id: resume && resume.id;
-          title: resume && resume.title;
-          headline: resume && resume.headline,
-          summary: resume && resume.summary
-        };
-        work_experience: [];
-        education: [];
-        skills: [];
-        certifications: [],
-
-        is_active: resume.is_active;
-      }));
-;
-      set_resumes (transformed_resumes);
-      return transformed_resumes;
-    } catch (e: any) {
-      console.error ('Error fetching resumes:', e);
-      set_error (e.message);
-      return [];
-
-    } finally {
-      setIsLoading (false);
-    }
-  }
-
-;
-  // Fetch resumes when the component mounts;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_resumes ();
-    }
-  }, [user]);
-;
-
-  return {
-    is_loading;
-    error;
-    resumes;
-
-
-  }
-}
-      const transformedResumes: Resume[] = resumeData.map(resume => ({
-        id: resume.id;
-        user_id: resume.user_id;
+      const transformedResumes: Resume[] = resumeData.map(resume = $2;
+        user_id: resume.user_id,
         basic_info: {
           id: resume.id;
           title: resume.title;
@@ -117,14 +61,11 @@ if ( {) {
         skills: [];
         certifications: []
         is_active: resume.is_active
-      }));
-=======
         setResumes([]);
         return []
       }
       // Transform data to match Resume type  }
 }      }));
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setResumes(transformedResumes);
       return transformedResumes
     } catch (e: any) {
@@ -233,5 +174,31 @@ certifications: [];
 is active: resume.is active 
 }) );
 }
+      })),
+      
+      setResumes($2);
+      return transformedResumes
+    } catch (e: any) {
+      console.error($2);
+      setError($2);
+      return []
+    } finally {
+      setIsLoading(false)
+    }
+  },
+  
+  // Fetch resumes when the component mounts
+  useEffect(() => {
+    if (user) {
+      fetchResumes()
+    }
+  }, [user]),
+  
+  return {
+    isLoading;
+    error;
+    resumes;
+
+    fetchResumes
   }
 }

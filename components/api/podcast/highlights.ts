@@ -1,32 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const EPISODES_PATH = null;
-  return res.status(200).json({ episode })
-}
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
 
 function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
+  const dir = path.dirname($2);
+  if (!fs.existsSync(dir)) fs.mkdirSync($2);
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-  ensureStorage();
-  const { episodeId } = req.body |{}
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })if (!fs && fs.existsSync(EPISODES_PATH))fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')export default function handler() {if (req && req.method !== 'POST')return res && res.status(405).json({ error: 'Method not allowed' })ensureStorage()}const highlights = segments.map((t: string, i: number) => ({label: `Highlight ${i + 1}`;
     start: t,end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'}))return res.status(200).json({ episode })}const EPISODES_PATH = path.join (process.cwd (),'data','podcast','episodes.json')/**;
  * ensure_storage - Function description;
@@ -77,10 +60,6 @@ const EPISODES_PATH = path.join(process.cwd()'data';
   'podcast';
   'episodes.json';
 )function ensureStorage() {const dir = path.dirname(EPISODES_PATH)if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true })if (!fs.existsSync(EPISODES_PATH))fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')export default function handler() {if (req.method !== 'POST')return res.status(405).json({ error: 'Method not allowed' })ensureStorage()const { episodeId } = req.body |{}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes.findIndex(e => e.id === episodeId)if (idx === -1) return res.status(404).json({ error: 'Episode not found' })const episode = episodes[idx];
   const segments = episode?.timeMarkers?.segments |[];
@@ -89,16 +68,7 @@ const EPISODES_PATH = path.join(process.cwd()'data';
         ? segments[i + 1];
         : episode?.timeMarkers?.closing || '15:00',}))episode.highlights = highlights;
   episodes[idx] = episode;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
-
-return res.status(200).json({ episode });
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')return res.status(200).json({ episode })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
@@ -201,22 +171,23 @@ return res.status (200).json ({ episode });  return res.status (200).json ({ epi
     end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'})),
 
   episode.highlights = highlights,
+  if (req.method !== 'POST') return res.status(405).json($2);
+  ensureStorage($2);
+  const { episodeId } = req.body || {},
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],
+  const idx = $2;
+  if (idx === -1) return res.status(404).json($2);
+  const episode = $2;
+  const segments = $2;
+  const highlights = segments.map((t: string, i: number) => ({
+    label: `Highlight ${i + 1}`,
+    start: t,
+    end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'})),
+
+  episode.highlights = $2;
   episodes[idx] = episode,
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8'),
 
   return res.status(200).json({ episode })
-
-}
-
-  return res.status(200).json({ episode });
-
-return res.status(200).json({ episode });  return res.status(200).json({ episode })
-}
-
-}
-}
-  return res.status(200).json({ episode });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')return res.status(200).json({ episode })
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+}

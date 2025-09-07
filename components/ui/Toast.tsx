@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
-export type ToastType = any;
-}, [toast.id, toast.duration, onRemove]);
-const getIcon = () => {
-  switch (toast.type) {
-  case 'success':
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   message?: string;
   duration?: number
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 interface ToastProps {
   toast: Toast
   onRemove: (id: string) => void
@@ -33,52 +19,40 @@ const getIcon = () => {;
 interface ToastProps {;
   toast: Toast;
   onRemove: (id: string) => void;
-<<<<<<< HEAD
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { CheckCircle, AlertCircle, X, Info } from 'lucide-react';
+export type ToastType = $2;
+export interface Toast {
   id: string,
   type: ToastType,
-  title: string,;
-
-export interface Toast {;
-  id: string,;
-  type: ToastType,;
-  title: string,;
-  message?: string;
+  title: string,
+  message?: string,
   duration?: number
 }
+
 interface ToastProps {
-  toast: Toast
+  toast: Toast,
   onRemove: (id: string) => void
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState($2);
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(false);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 setTimeout(() => onRemove(toast.id), 300);
     }, toast.duration || 5000);
+      setIsVisible($2);
+      setTimeout(() => onRemove(toast.id), 300)
+    }, toast.duration || 5000),
 
-    return () => clearTimeout(timer);
-  }, [toast.id, toast.duration, onRemove]);
+    return () => clearTimeout(timer)
+  }, [toast.id, toast.duration, onRemove]),
 
-  const getIcon = () => {
-    switch (toast.type) {
-      case 'success':
-return <CheckCircle className='w-5 h-5 text-green-400' />;
+  const getIcon = $2;
       case 'error':
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   message?: string;
   duration?: number;
@@ -103,22 +77,11 @@ interface ToastProps  {toast: Toast;
 }const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {const [isVisible, setIsVisible] = useState(true)useEffect(() => {const timer = setTimeout(() => {setIsVisible(false)setTimeout(() => onRemove(toast.id), 300)}, toast.duration || 5000)return () => clearTimeout(timer)}, [toast.id, toast.duration, onRemove])const getIcon = () => {switch (toast.type) {case 'success':;
 return <CheckCircle className='w-5 h-5 text-green-400' />;
       case 'error':;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return <AlertCircle className='w-5 h-5 text-red-400' />;
       case 'warning':;
         return <AlertCircle className='w-5 h-5 text-yellow-400' />;
       case 'info':;
         return <Info className='w-5 h-5 text-blue-400' />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      default:
-        return <Info className='w-5 h-5 text-blue-400' />;
-    }
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
         return <AlertCircle className='w-5 h-5 text-red-400' />;
       case 'warning':
@@ -127,7 +90,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         return <Info className='w-5 h-5 text-blue-400' />;
       default:
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
 
         return <Info className='w-5 h-5 text-blue-400' />;    }
@@ -140,42 +102,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     switch (toast.type) {
       case 'success':
 
-=======
       default:;
         return <Info className='w-5 h-5 text-blue-400' />;
     }}return <Info className='w-5 h-5 text-blue-400' />;    }}}const getBorderColor = () => {switch (toast.type) {case 'success':;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
       default:;
         return <Info className='w-5 h-5 text-blue-400' />;
     }}return <Info className='w-5 h-5 text-blue-400' />;    }}}const getBorderColor = () => {switch (toast.type) {case 'success':;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return 'border-green-500/20';
       case 'error':;
         return 'border-red-500/20';
       case 'warning':;
         return 'border-yellow-500/20';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      case 'info':
-        return 'border-blue-500/20';
-<<<<<<< HEAD
-default:
-        return 'border-blue-500/20';
-origin/cursor/automate-test-improve-and-merge-code-2533
-    }
-=======
       case 'info':;
         return 'border-blue-500/20';const getBorderColor = () => {switch (toast && toast.type) {case 'success':;
-=======
   const getBorderColor = () => {;
     switch (toast && toast.type) {;
       case 'success':;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       case 'info':;
         return 'border-blue-500/20';const getBorderColor = () => {switch (toast && toast.type) {case 'success':;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return 'border-green-500/20';
       case 'error':;
         return 'border-red-500/20';
@@ -194,41 +138,21 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       case 'info':;
         return 'bg-blue-500/10';
       default:;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return 'bg-blue-500/10';default:;
-        return 'border-blue-500/20';}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
         return 'bg-blue-500/10';
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         return 'bg-blue-500/10';default:;
         return 'border-blue-500/20';}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         return 'bg-green-500/10';
       case 'error':;
         return 'bg-red-500/10';
       case 'warning':;
         return 'bg-yellow-500/10';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      case 'info':
-        return 'bg-blue-500/10';
-<<<<<<< HEAD
-default:
-=======
       case 'info':;
         return 'bg-blue-500/10';return (<motion&& motion.div;
-=======
   return (
     <motion&& motion.div
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       case 'info':;
         return 'bg-blue-500/10';return (<motion&& motion.div;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       initial={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
       animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 300, scale: isVisible ? 1 : 0 && 0.8 }}
       exit={{ opacity: 0, x: 300, scale: 0 && 0.8 }}
@@ -236,12 +160,7 @@ default:
       className={`relative p-4 rounded-xl border ${getBorderColor()} ${getBackgroundColor()} backdrop-blur-xl shadow-2xl max-w-sm`}>;
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0 && 0.5">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {getIcon()}default:;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         return 'bg-blue-500/10';
     }
   }
@@ -252,76 +171,88 @@ default:
           <h4 className='text-sm font-semibold text-white'>{toast.title}</h4>;
           {toast.message && (<p className='mt-1 text-sm text-white/70'>{toast.message}</p>;
           )}
-<<<<<<< HEAD
-        </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
-        <button
-          onClick={() => {;
-            setIsVisible(false);
-setTimeout(() => onRemove(toast.id), 300);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           {getIcon()}
         <button
           onClick={() => {;
             setIsVisible(false);
 
   return (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }}
-=======
         </div>;
         <button;
           onClick={() => {setIsVisible(false)return (setTimeout(() => onRemove(toast.id), 300)}}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-      {/* Progress bar */}
-      <div className='absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden'>;
-        <motion&& motion.div;
-          className={`h-full ${toast && toast.type === 'success';
-              ? 'bg-green-400';
-              : toast && toast.type === 'error';
-                ? 'bg-red-400';
-                : toast && toast.type === 'warning';
-                  ? 'bg-yellow-400';
-                  : 'bg-blue-400';
-          }`}
-          initial={{ width: '100%' }}
-          animate={{ width: '0%' }}
-}) => {transition={{ duration: toast && toast.duration || 5000, ease: 'linear' }}
-        />;
-      </div>;
-    </motion && motion.div>;
-  )}interface ToastContainerProps  {toasts: Toast[];
-  onRemove: (id: string) => void;export const ToastContainer: React.FC<ToastContainerProps> = ({toasts,onRemove,}) => {return (className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200";
-        >;
-          <X className="w-4 h-4 text-white/60 hover:text-white" />;
-        </button>;
-      </div>;
-          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200";
-        >;
-          <X className="w-4 h-4 text-white/60 hover:text-white" />;
-        </button>;
-      </div>;{/* Progress bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">;
-        <motion&& motion.div;
-          className={`h-full ${toast && toast.type === 'success' ? 'bg-green-400' :;
-            toast && toast.type === 'error' ? 'bg-red-400' :;
-            toast && toast.type === 'warning' ? 'bg-yellow-400' :;
-            'bg-blue-400';
-          }`}
-          initial={{ width: '100%' }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          animate={{ width: '0%' }}
+        return <AlertCircle className = $2;
+      case 'warning':
+        return <AlertCircle className = $2;
+      case 'info':
+        return <Info className = $2;
+      default: return <Info className = $2;
+  const getBorderColor = $2;
+      case 'error':
+        return 'border-red-500/20',
+      case 'warning':
+        return 'border-yellow-500/20',
+      case 'info':
+        return 'border-blue-500/20',
+      default: return 'border-blue-500/20'
+    }
+  },
 
-    <div className='fixed top-4 right-4 z-50 space-y-3'>
-      <AnimatePresence>
-<<<<<<< HEAD
-        {toasts.map(toast => (
-=======
+  const getBackgroundColor = $2;
+      case 'error':
+        return 'bg-red-500/10',
+      case 'warning':
+        return 'bg-yellow-500/10',
+      case 'info':
+        return 'bg-blue-500/10',
+      default: return 'bg-blue-500/10'
+    }
+  },
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 300, scale: 0.8 }}
+      animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 300, scale: isVisible ? 1 : 0.8 }}
+      exit={{ opacity: 0, x: 300, scale: 0.8 }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className={`relative p-4 rounded-xl border ${getBorderColor()} ${getBackgroundColor()} backdrop-blur-xl shadow-2xl max-w-sm`}
+    >
+      <div className="flex items-start space-x-3">
+        <div className="flex-shrink-0 mt-0.5">
+          {getIcon()}
+        </div>
+        <div className="flex-1 min-w-0">
+          <h4 className="text-sm font-semibold text-white">
+            {toast.title}
+          </h4>
+          {toast.message && (
+            <p className="mt-1 text-sm text-white/70">
+              {toast.message}
+            </p>
+          )}
+        </div>
+        <button
+          onClick={() => {
+            setIsVisible($2);
+            setTimeout(() => onRemove(toast.id), 300)
+          }}
+          className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
+        >
+          <X className="w-4 h-4 text-white/60 hover:text-white" />
+        </button>
+      </div>
+      
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-white/20 rounded-b-xl overflow-hidden">
+        <motion.div
+          className={`h-full ${
+            toast.type === 'success' ? 'bg-green-400' :
+            toast.type === 'error' ? 'bg-red-400' :
+            toast.type === 'warning' ? 'bg-yellow-400' :
+            'bg-blue-400'
+          }`}
+          initial={{ width: '100%' }}
+          animate={{ width: '0%' }}
         {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
@@ -340,52 +271,58 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
   );
   return (
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>
     </div>
-<<<<<<< HEAD
-);
-};
+          transition={{ duration: toast.duration || 5000, ease: "linear" }}
+        />
+      </div>
+    </motion.div>
+  )
+},
 
+interface ToastContainerProps {
+  toasts: Toast[],
+  onRemove: (id: string) => void
+}
+
+export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
+  return (
+    <div className = $2;
 // Hook for managing toasts
 export const useToast = () => {
-  const [toasts, setToasts] = useState<Toast[]>([]);
-  const addToast = (toast: Omit<Toast, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9);
-    const newToast = { ...toast, id };
-setToasts(prev => [...prev, newToast]);
-  };
+  const [toasts, setToasts] = useState<Toast[]>([]),
 
-  const removeToast = (id: string) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id));
-  }
+  const addToast = (toast: Omit<Toast, 'id'>) => {
+    const id = Math.random().toString(36).substr($2);
+    const newToast = { ...toast, id },
+    setToasts(prev => [...prev, newToast])
+  },
+
+  const removeToast = $2;
   const showSuccess = (title: string, message?: string) => {
-    addToast({ type: 'success', title, message });
-  }
+    addToast({ type: 'success', title, message })
+  },
+
   const showError = (title: string, message?: string) => {
-    addToast({ type: 'error', title, message });
-  }
+    addToast({ type: 'error', title, message })
+  },
+
   const showInfo = (title: string, message?: string) => {
-    addToast({ type: 'info', title, message });
-  }
+    addToast({ type: 'info', title, message })
+  },
+
   const showWarning = (title: string, message?: string) => {
-    addToast({ type: 'warning', title, message });
-  }
+    addToast({ type: 'warning', title, message })
+  },
+
   return {
     toasts,
     showSuccess,
     showError,
     showInfo,
     showWarning,
-    removeToast,
-  };
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           animate={{ width: '0%' }}<div className='fixed top-4 right-4 z-50 space-y-3'>;
       <AnimatePresence>;
         {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />;
@@ -418,7 +355,6 @@ interface ToastContainerProps  {toasts: Toast[],onRemove: (id: string) => void;
         {toasts && toasts.map((toast) => (<ToastItem key={toast && toast.id} toast={toast} onRemove={onRemove} />;
         ))}
 }toasts;
-=======
 
 interface ToastContainerProps {
   toasts: Toast[]
@@ -443,7 +379,6 @@ interface ToastContainerProps {;
           <ToastItem key={toast && toast.id} toast={toast} onRemove={onRemove} />;
         ))}
 };    toasts;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     showSuccess;
     showError;
     showInfo;
@@ -453,11 +388,7 @@ interface ToastContainerProps {;
       <AnimatePresence>;
         {toasts.map (toast => (          <ToastItem key={toast.id} toast={toast} on_remove={on_remove} />))}
       </AnimatePresence>;
-<<<<<<< HEAD
-    </div>)}          }}
-=======
     </div>);}          }}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           className="flex - shrink - 0 ml - 2 p - 1 rounded - lg hover:bg - white / 10 transition-colors duration-200";
         >;
           <X className="w - 4 h - 4 text-white / 60 hover:text-white" />;
@@ -466,12 +397,8 @@ interface ToastContainerProps {;
       {/* Progress bar */}
       <div className="absolute bottom - 0 left - 0 right - 0 h - 1 bg - white / 20 rounded-b-xl overflow-hidden">;
         <motion.div;
-<<<<<<< HEAD
-          className={`h - full ${toast.type === 'success' ? 'bg - green - 400' :;
-=======
           className={`h - full ${
             toast.type === 'success' ? 'bg - green - 400' :;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             toast.type === 'error' ? 'bg - red - 400' :;
             toast.type === 'warning' ? 'bg - yellow - 400' :;
             'bg - blue - 400';
@@ -481,10 +408,6 @@ interface ToastContainerProps {;
           transition={{ duration: toast.duration || 5000, ease: "linear" }}
         />;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </motion.div>)}{toasts.map(toast => (<ToastItem key={toast.id} toast={toast} onRemove={onRemove} />;
         ))}
       </AnimatePresence>;
@@ -495,13 +418,8 @@ export const useToast = () => {const [toasts, setToasts] = useState<Toast[]>([])
   const showError = (title: string, message?: string) => {addToast({ type: 'error', title, message })}
   const showInfo = (title: string, message?: string) => {addToast({ type: 'info', title, message })}
   const showWarning = (title: string, message?: string) => {addToast({ type: 'warning', title, message })}
-<<<<<<< HEAD
-  return {toasts,showSuccess,showError,showInfo,showWarning,removeToast,}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </motion.div>);
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   return {toasts,showSuccess,showError,showInfo,showWarning,removeToast,}}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    removeToast}
+},

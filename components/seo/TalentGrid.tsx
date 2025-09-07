@@ -1,32 +1,26 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-type Props = {
-=======
 
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
 type Props = {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   region?: string;
   service?: string;
 };
 
-<<<<<<< HEAD
+import React from 'react';
+import { TALENT_PROFILES } from '../../data/talent';
+import type { TalentProfile } from '../../data/talent';
+type Props = $2;
+  service?: string
+},
+
 function matchesRegion(profile: TalentProfile, region?: string) {
-  if (!region) return true;
-  const r = region.toLowerCase();
-return profile.location.toLowerCase().includes(r);
+  if (!region) return true,
+  const r = region.toLowerCase($2);
+  return profile.location.toLowerCase().includes(r)
+}
 
 function matchesService(profile: TalentProfile, service?: string) {
-  if (!service) return true;
-  const s = service.toLowerCase();
-return (
-    profile.title.toLowerCase().includes(s) ||
-    profile.skills.some(sk => sk.toLowerCase().includes(s))
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 function matchesRegion(): any (profile: TalentProfile, region?: string) {;
   if (!region) return true;
   if (items && items.length === 0) {;
@@ -100,25 +94,11 @@ if (return true) {
   return (
     profile.title.toLowerCase ().includes (s) ||;
     profile.skills.some ((sk) => sk.toLowerCase ().includes (s)));
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () =>
       TALENT_PROFILES.filter(
-<<<<<<< HEAD
-        p => matchesRegion(p, region) && matchesService(p, service)
-      ),
-    [region, service]
-  );
-  if (items.length === 0) {
-return (
-      <div className='text-sm text-gray-400'>
-        No matching talent found. Try broadening filters.
-      </div>
-    );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   );
 ;
   // Check condition
@@ -129,13 +109,11 @@ if ( {) {
       <div className="text - sm text - gray - 400">;
         No matching talent found. Try broadening filters.;
       </div>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
   return (
     <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
       {items.map ((p) => (
         <div;
-=======
 
 import React from 'react';
 import { TALENT_PROFILES  } from '../../data/talent';
@@ -215,10 +193,6 @@ if ( {) {$2;
     )}
   return (<div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
       {items.map ((p) => (<div;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           key={p.slug}
           className="rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 p - 4";
         >;
@@ -242,10 +216,6 @@ if ( {) {$2;
                 className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300";
               >;
                 {sk}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              </span>
-=======
               </span>))}
           </div>;
           <div className="mt - 3 text - sm">;
@@ -253,7 +223,6 @@ if ( {) {$2;
           </div>;
           <div className="mt - 3 text - sm">;
               </span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             ))}
           </div>;
           <div className="mt-3 text-sm">;
@@ -261,21 +230,47 @@ if ( {) {$2;
           </div>;
         </div>;
       ))}
-<<<<<<< HEAD
-    </div>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </div>;
-<<<<<<< HEAD
   )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
               </span>))}
           </div>;
           <div className="mt - 3 text - sm">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  if (!service) return true,
+  const s = service.toLowerCase($2);
+  return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))
+}
+
+export default function TalentGrid({ region, service }: Props) {
+  const items = React.useMemo(
+    () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
+    [region, service]
+  ),
+
+  if (items.length === 0) {
+    return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>
+  }
+
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {items.map((p) => (
+        <div key={p.slug} className="rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-4">
+          <div className="flex items-start justify-between">
+            <div>
+              <div className="font-semibold">{p.name}</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400">{p.title}</div>
+            </div>
+            <div className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">{p.location}</div>
+          </div>
+          <div className="mt-3 text-sm text-gray-700 dark:text-gray-300">{p.bio}</div>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {p.skills.slice(0, 6).map((sk) => (
+              <span key={sk} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">{sk}</span>
+            ))}
+          </div>
+          <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
+        </div>
+      ))}
+    </div>
+  )
+}

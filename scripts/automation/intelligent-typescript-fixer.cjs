@@ -23,17 +23,12 @@ console.log(' Starting intelligent TypeScript error fixer...')
       console.log('  Remaining "errors")
       "summary"
       "status"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(' Intelligent TypeScript error fixer failed to "start")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(' Intelligent TypeScript error fixer failed to "start")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(' Intelligent TypeScript error fixer failed to "start")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(' Intelligent TypeScript error fixer failed to "start")
+  console.error(' Intelligent TypeScript error fixer failed to "start")
+
+</any>"
+

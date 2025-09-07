@@ -1,29 +1,15 @@
 const fs = require('fs')
 const path = require('path')
-console.log(' Fixing pages syntax errors...')
-const pagesDir = path.join(__dirname, '..', 'pages')
-const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx')
-  let content = fs.readFileSync(filePath, 'utf8')
+
   if (content.includes('import React') && !content.includes('const ') && !content.includes('function ')
     const lines = content.split('\n')
     const importLines = lines.filter(line => line.startsWith('import')
     const otherLines = lines.filter(line => !line.startsWith('import')
-    if (otherLines.length > 0 && otherLines[0].includes('{'})
-      const componentName = file.replace('.tsx', '').replace(/-/g, '')
-      content = importLines.join('\n') + '\n\n'
-        otherLines.join('\n') + '\n'
-        '};\n\n'
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+    if (p1.includes("'") && p2.includes("'") && !p1.includes("'") && !p2.includes(")
+
+

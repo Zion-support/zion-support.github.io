@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-}
-
-import React from 'react';
-interface FilterSidebarProps {
-<<<<<<< HEAD
-=======
 }import React from 'react';
 interface FilterSidebarProps  {class_name?: string;
-=======
   class_name?: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   children?: React.ReactNode;
 }
 export const FilterSidebar: React.FC < FilterSidebarProps> = ({class_name,children;
@@ -91,13 +82,24 @@ function FilterSidebar() {return ()<>;
 }) => {return (<div className={`filter-sidebar ${className || ''}`}>;
       {children}
     </div>;
-<<<<<<< HEAD
-  )}export default FilterSidebar;className?: string;export const FilterSidebar: React.FC<FilterSidebarProps> = ({className;
-  children;
-}) => {return (<div className;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   )
 };
 export default FilterSidebar;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import React from 'react';
+interface FilterSidebarProps {
+  className?: string,
+  children?: React.ReactNode
+}
+
+export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
+  className,
+  children 
+}) => {
+  return (
+    <div className={`filter-sidebar ${className || ''}`}>
+      {children}
+    </div>
+  )
+},
+
+export default FilterSidebar;

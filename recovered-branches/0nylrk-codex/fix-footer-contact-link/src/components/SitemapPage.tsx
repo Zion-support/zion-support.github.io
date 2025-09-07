@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import { completeSitemap, dynamicPaths } from "@/config/sitemap";
-import { Link } from "react-router-dom";
-import { ChevronRight } from "lucide-react";
-import { SEO } from "./SEO";
-import { AppLayout } from "@/layout/AppLayout";
-export const SitemapPage: React.FC = () => {
-  return (
-=======
 import React from './react';
 import { complete_sitemap, dynamic_paths  } from '@/config / sitemap';
 import { Link  } from './react-router-dom';
@@ -28,7 +18,15 @@ import { Link } from 'react-router-dom',
 import { ChevronRight } from 'lucide-react',
 import { SEO } from './SEO',
 import { AppLayout } from '@/layout/AppLayout',  return (
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+import React from 'react';
+import { completeSitemap, dynamicPaths } from '@/config/sitemap';
+import { Link } from 'react-router-dom';
+import { ChevronRight } from 'lucide-react';
+import { SEO } from './SEO';
+import { AppLayout } from '@/layout/AppLayout';
+export const SitemapPage: React.FC = () => {
+  return (
     <AppLayout>
       <SEO
         title="Sitemap | Zion AI Marketplace"
@@ -38,7 +36,6 @@ import { AppLayout } from '@/layout/AppLayout',  return (
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Public Pages */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
@@ -74,8 +71,8 @@ import { AppLayout } from '@/layout/AppLayout',  return (
               {completeSitemap
                 .filter(
                   (route) =>
-                    route.requiredRoles?.includes("jobSeeker") ||
-                    route.requiredRoles?.includes("creator"),
+                    route.requiredRoles?.includes("jobSeeker") |
+                    route.requiredRoles?.includes("creator")
                 )
                 .map((route) => (
                   <li key={route.path}>
@@ -103,8 +100,8 @@ import { AppLayout } from '@/layout/AppLayout',  return (
               {completeSitemap
                 .filter(
                   (route) =>
-                    route.requiredRoles?.includes("employer") ||
-                    route.requiredRoles?.includes("buyer"),
+                    route.requiredRoles?.includes("employer") |
+                    route.requiredRoles?.includes("buyer")
                 )
                 .map((route) => (
                   <li key={route.path}>
@@ -133,7 +130,7 @@ import { AppLayout } from '@/layout/AppLayout',  return (
                 .filter(
                   (route) =>
                     route.requiredAuth &&
-                    (!route.requiredRoles || route.requiredRoles.length === 0),
+                    (!route.requiredRoles |route.requiredRoles.length === 0)
                 )
                 .map((route) => (
                   <li key={route.path}>
@@ -173,7 +170,6 @@ import { AppLayout } from '@/layout/AppLayout',  return (
                 ))}
             </ul>
           </div>
-
           {/* Dynamic Routes */}
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">
@@ -184,24 +180,9 @@ import { AppLayout } from '@/layout/AppLayout',  return (
             </p>
             <ul className="space-y-2">
               {Object.entries(dynamicPaths).map(([key, path]) => (
-                <li key={key}>
-                  <div className="flex items-center text-zion-slate">
-                    <ChevronRight className="h-4 w-4 mr-2" />
-                    {path} <span className="ml-2 text-xs italic">({key})</span>
-                  </div>
-                </li>
-              ))}
-<<<<<<< HEAD
-            </ul>
-          </div>
-        </div>
-      </div>
-    </AppLayout>
-  );
-=======
             </ul>;
           </div>;
         </div>;
       </div>;  )
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
+                <li key = $2;

@@ -19,8 +19,7 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 
 export default function Training() {
 
-
-
+import React from 'react';
 import React from 'react';
 
 export default function Training() {
@@ -996,6 +995,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
+
 }
 };
 }
@@ -1006,9 +1006,6 @@ export default Training;
 ursor/integrate-build-improve-and-re-verify-8f7d
       </div>
     </Layout>
-
-
-
 
   {
   opacity: 0, y: 20 
@@ -1045,7 +1042,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
-
 
 };export default Training;
 
@@ -1087,12 +1083,10 @@ export default Training,
       </div>;
     </Layout>);
 }
-}
-  );
+});
 }
 ;
 export default Training;
-
 
       </div>
     </Layout>
@@ -1152,4 +1146,3 @@ export default Training;
 };export default Training;
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-origin/cursor/automate-test-fix-improve-and-merge-code-7ff0

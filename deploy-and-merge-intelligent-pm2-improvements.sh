@@ -1,15 +1,11 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 # Deploy and Merge Intelligent PM2 Improvements Script
 # This script commits all PM2 automation improvements and merges them with the main branch
-
 # Deploy and Merge Intelligent PM2 Improvements Script
 # This script commits all PM2 automation improvements and merges them with the main branch
 # Deploy and Merge Intelligent PM2 Improvements
 # This script deploys the enhanced PM2 system and merges changes to the main branch
-main
-=======
 # Deploy and Merge Intelligent PM2 Improvements
 # This script deploys the enhanced PM2 system and merges changes to the main branch
 
@@ -18,8 +14,6 @@ main
 
 # Deploy and Merge Intelligent PM2 Improvements
 # This script deploys the enhanced PM2 system and merges changes to the main branch
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-
 
 set -e
 
@@ -30,9 +24,6 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
-<<<<<<< HEAD
-
-=======
 NC='\033[0m' # No Color
 
 # Configuration
@@ -380,7 +371,7 @@ show_final_status() {
     echo "  pm2 web                     - Web interface"
     echo "  ./health-check.sh           - Health check"
     echo "  ./maintenance.sh            - Maintenance"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
 BOLD='\033[1m'
 NC='\033[0m' # No Color
 
@@ -822,7 +813,7 @@ validate_deployment() {
     fi
     
     success "Deployment validation passed"
-<<<<<<< HEAD
+
 NC='\033[0m' # No Color
 
 # Configuration
@@ -1172,15 +1163,11 @@ show_final_status() {
     echo "  ./maintenance.sh            - Maintenance"
 main
 
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 # Main execution
 main() {
-<<<<<<< HEAD
-=======
     print_header "Deploying Enhanced PM2 System"
     
     # Pre-flight checks
@@ -1207,7 +1194,33 @@ main() {
     # Show final status
     show_final_status
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+    print_header "Deploying Enhanced PM2 System"
+    
+    # Pre-flight checks
+    check_git_repo
+    check_git_status
+    
+    # Test the system
+    test_enhanced_system
+    
+    # Git operations
+    create_branch
+    commit_changes
+    push_changes
+    
+    # Create pull request
+    create_pull_request
+    
+    # Merge to main (optional - uncomment if you want automatic merge)
+    # merge_to_main
+    
+    # Create summary
+    create_deployment_summary
+    
+    # Show final status
+    show_final_status
+}
 
     banner "🚀 Deploy and Merge Intelligent PM2 Improvements"
     banner ""
@@ -1278,7 +1291,6 @@ main() {
 # Trap to handle script interruption
 trap 'echo -e "\n${RED}Script interrupted. Current state preserved.${NC}"; exit 1' INT TERM
 
-<<<<<<< HEAD
     print_header "Deploying Enhanced PM2 System"
     
     # Pre-flight checks
@@ -1308,8 +1320,6 @@ trap 'echo -e "\n${RED}Script interrupted. Current state preserved.${NC}"; exit 
 
 main
 
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 # Run main function
 main "$@"

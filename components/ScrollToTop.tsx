@@ -1,46 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 import React, { useState, useEffect } from 'react';
-setIsVisible(true);
-      } else {
-        setIsVisible(false);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-<<<<<<< HEAD
-
 const ScrollToTop: React.FC = () => {
-
-export default function ScrollToTop() {;
-  const [isVisible, setIsVisible] = useState(false);
-
-const ScrollToTop: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState($2);
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-      }
-      behavior: 'smooth'
-    })
-};
-
-    window.addEventListener('scroll', toggleVisibility);
-<<<<<<< HEAD
-return () => window.removeEventListener('scroll', toggleVisibility);
-  }, []);
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-behavior: 'smooth',
-    });
-  };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
   }, []);
   const scrollToTop = () => {
@@ -69,41 +32,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       behavior: 'smooth',;
     })
 };      behavior: 'smooth'});
+    const toggleVisibility = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', toggleVisibility)
+  }, []),
 
+  const scrollToTop = $2;
       behavior: 'smooth'})
-  };
+  },
 
-  if (!isVisible) {
-    return null;
-  }
-
-  return (
-    <button
-      onClick={scrollToTop}
-      className="fixed bottom-8 right-8 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-      aria-label="Scroll to top"
-    >
-      <ChevronUp className="w-6 h-6" />
-    </button>
-  );
-}
-    })
-};      behavior: 'smooth'})
-  }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <>
       {isVisible && (
         <button
-          onClick={scrollToTop}
-<<<<<<< HEAD
-className='fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group'
-          aria-label='Scroll to top'
-        >
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           aria-label='Scroll to top'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <svg
             className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
             fill='none'
@@ -112,10 +54,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <path
               strokeLinecap='round'
               strokeLinejoin='round'
-=======
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 const ScrollToTop: React.FC = () => {export default function ScrollToTop() {const [isVisible, setIsVisible]  = useState(false)const ScrollToTop: React.FC = () => {const [isVisible, setIsVisible] = useState(false)useEffect(() => {const toggleVisibility = () => {if (window.pageYOffset > 300) {setIsVisible(true)} else {setIsVisible(false)import React, { useState, useEffect } from 'react';
 setIsVisible(true)} else {setIsVisible(false)}
@@ -145,36 +84,22 @@ setIsVisible(true)} else {setIsVisible(false)}
             <path;
               strokeLinecap='round';
               strokeLinejoin='round';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               strokeWidth={2}
               d='M5 10l7-7m0 0l7 7m-7-7v18';
             />;
           </svg>;
         </button>;
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>
-);
-=======
     </>
   );
 }
 }
 export default ScrollToTop;
   )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 
 export default ScrollToTop;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </>;
   )}
 }
@@ -230,11 +155,6 @@ if ( {) {$2;
             />;
           </svg>;
         </button>)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </>)}export default ScrollToTop)}export default ScrollToTop;)}export default ScrollToTop;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </>);
 }
 ;
@@ -242,7 +162,6 @@ export default ScrollToTop);
 }
 ;
 export default ScrollToTop;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     </>)}export default ScrollToTop)}export default ScrollToTop;)}export default ScrollToTop;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+          onClick = $2;
+export default ScrollToTop,

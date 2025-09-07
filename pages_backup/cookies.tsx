@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/cookies.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/cookies.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
@@ -24,11 +16,7 @@ export default function CookiesPage() {
       </div>
     </MainLayout>
 <<<<<<< HEAD:pages_backup/cookies.tsx
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
@@ -285,8 +273,6 @@ export default function CookiePolicyPage() {;
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-
-origin/automation-improvements-final
             >;
               <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
                 Questions About Our Cookie Policy?;
@@ -320,14 +306,13 @@ origin/automation-improvements-final
         </section>;
       </div>;
 
-
 import React from 'react',
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-origin/cursor/automate-test-improve-and-merge-code-2533
+
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -359,24 +344,14 @@ export default function CookiesPage() {
 origin/cursor/automate-test-improve-and-merge-code-2533
       </Layout>
     </>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/cookies.tsx
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
   );
       </Layout>
     </>;
   );
 
-
-
   );
 
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
-origin/cursor/automate-test-improve-and-merge-code-2533

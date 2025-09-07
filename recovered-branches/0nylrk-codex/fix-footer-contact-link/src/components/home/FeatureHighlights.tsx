@@ -1,55 +1,13 @@
-
-
-<<<<<<< HEAD
-
-
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Check} from "lucide-react";
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
-import { Check } from "lucide-react",
-export function FeatureHighlights() {
-
-  const highlightsData = [
-    {
-
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Check} from "lucide-react";
-export function FeatureHighlights() {;
-  const highlightsData = [;
-    {;
-      title: "For Talent Seekers",;
-      features: [;
-
-        "AI-powered talent matching based on your specific project requirements";
-        "Verified profiles with skills validation and credential checking";
-        "Transparent pricing and no hidden fees";
-        "Direct communication with potential candidates";
-
-        "Secure payment protection and dispute resolution",;
-        "Post jobs and receive AI-matched applicants";
-      ];
-    };
-    {;
-      title: "For Talent & Service Providers",;
-      features: [;
-
-import React from './react';
-=======
 import { Check } from "lucide-react",        "Post jobs and receive AI-matched applicants";
       ]
 };
     {;
       title: "For Talent & Service Providers",;
       features: [;import React from './react';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Card, CardContent } from '@/components / ui / card';
 import { Check } from './lucide-react';
 export /**
@@ -75,36 +33,21 @@ function FeatureHighlights() {
         "Get matched with relevant projects that fit your expertise";
         "Secure payment processing with on - time disbursements";
         "Build your reputation through client reviews and ratings";
-<<<<<<< HEAD
-
-        "Access to enterprise clients and high-value projects",;
-        "Professional development resources and community support";
-      ];
-    };
-    {;
-      title: "For Enterprise Clients",;
-      features: [;
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         "White-labeled talent portal with your company branding";
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       title: "For Talent Seekers",
 
     {
       title: "For Talent & Service Providers"
       features: [
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card";
+import { Check } from "lucide-react";
+export function FeatureHighlights() {
+  const highlightsData = $2;
       features: [
         "AI-powered talent matching based on your specific project requirements";
         "Verified profiles with skills validation and credential checking";
@@ -114,17 +57,12 @@ function FeatureHighlights() {
         "Post jobs and receive AI-matched applicants"
       ]
     }
-        "AI-powered talent matching based on your specific project requirements",
-        "Verified profiles with skills validation and credential checking",
-        "Transparent pricing and no hidden fees",
-        "Direct communication with potential candidates",
         "Secure payment protection and dispute resolution",
         "Post jobs and receive AI-matched applicants"
       ]
     },
     {
       title: "For Talent & Service Providers"
-<<<<<<< HEAD
       features: [
         "Create a professional profile showcasing your skills and experience";
         "Get matched with relevant projects that fit your expertise";
@@ -134,37 +72,21 @@ function FeatureHighlights() {
         "Professional development resources and community support"
       ]
     }
-
-        "Create a professional profile showcasing your skills and experience",
-        "Get matched with relevant projects that fit your expertise",
-        "Secure payment processing with on-time disbursements",
-        "Build your reputation through client reviews and ratings",
-        "Access to enterprise clients and high-value projects",
-        "Professional development resources and community support"
-      ]
-    },
-
+      features: [        "White-labeled talent portal with your company branding";
     {
       title: "For Enterprise Clients"
       features: [
-
         "White-labeled talent portal with your company branding";
-=======
-      features: [        "White-labeled talent portal with your company branding";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
         "API access for seamless integration with your HR systems"
-<<<<<<< HEAD
-        "White-labeled talent portal with your company branding",
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         "Dedicated account management and priority support",
         "Custom talent pools and preferred provider networks",
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
-<<<<<<< HEAD
+        "Customizable workflow and approval processes"
+      ]
     }
   ],
 
@@ -188,21 +110,9 @@ function FeatureHighlights() {
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
-        "White-labeled talent portal with your company branding",
-        "Dedicated account management and priority support",
-        "Custom talent pools and preferred provider networks",
-        "Advanced analytics and reporting capabilities",
-        "API access for seamless integration with your HR systems",
-
 
         "Customizable workflow and approval processes"
       ]
-        "API access for seamless integration with your HR systems",;
-=======
-
-        "Customizable workflow and approval processes"
-      ]
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         "Customizable workflow and approval processes";
       ];
         "Access to enterprise clients and high - value projects",
@@ -224,20 +134,12 @@ function FeatureHighlights() {
 ;
   return (
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from "lucide-react",;
-<<<<<<< HEAD
-export function FeatureHighlights() {;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const highlightsData = [;
     {;
       title: "For Talent Seekers",;
@@ -274,35 +176,6 @@ export function FeatureHighlights() {;
     }
   ];
   return (;
-<<<<<<< HEAD
-
-    <section className="py-16 bg-zion-blue">;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-12">;
-          <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>;
-          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;
-            Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed;
-          </p>;
-        </div>;
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-          {highlightsData && highlightsData.map((category, index) => (;
-            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">;
-              <CardContent className="p-6">;
-                <h3 className="text-xl font-bold text-white mb-4">{category && category.title}</h3>;
-                <ul className="space-y-3">;
-                  {category && category.features.map((feature, idx) => (;
-                    <li key={idx} className="flex items-start">;
-                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0 && 0.5 flex-shrink-0" />;
-                      <span className="text-zion-slate-light">{feature}</span>;
-                    </li>;
-
-
-
-                  ))}
-                </ul>;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </CardContent>;
             </Card>;
           ))}
@@ -312,27 +185,6 @@ export function FeatureHighlights() {;
     </section>;
   );
 }
-<<<<<<< HEAD
-
-    <section className="py - 16 bg - zion - blue">;
-      <div className="container mx - auto px - 4">;
-        <div className="text - center mb - 12">;
-          <h2 className="text - 3xl font - bold text - white mb - 3">Tailored Solutions for Everyone</h2>;
-          <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
-            Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed;
-          </p>;
-        </div>;
-        <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-          {highlights_data.map ((category, index) => (
-            <Card key={index} className="bg - zion - blue - dark border - zion - blue - light">;
-              <CardContent className="p - 6">;
-                <h3 className="text - xl font - bold text - white mb - 4">{category.title}</h3>;
-                <ul className="space - y-3">;
-                  {category.features.map ((feature, idx) => (
-                    <li key={idx} className="flex items - start">;
-                      <Check className="h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink - 0" />;
-                      <span className="text - zion - slate - light">{feature}</span>;
-=======
     <section className="py - 16 bg - zion-blue">;
       <div className="container mx - auto px-4">;
         <div className="text - center mb-12">;
@@ -351,7 +203,6 @@ export function FeatureHighlights() {;
                     <li key={idx} className="flex items-start">;
                       <Check className="h - 5 w - 5 text - zion - cyan mr - 2 mt - 0.5 flex - shrink-0" />;
                       <span className="text - zion - slate-light">{feature}</span>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     </li>))}
                 </ul>;
               </CardContent>;
@@ -360,51 +211,6 @@ export function FeatureHighlights() {;
       </div>;
     </section>);
 }
-<<<<<<< HEAD
-  ),;}
- export function FeatureHighlights () {
-  const highlightsData = [ {
-  title: "For Talent Seekers";
-features: [ "AI-powered talent matching based on your specific project requirements";
-"Verified profiles with skills validation and credential checking";
-"Transparent pricing and no hidden fees";
-"Direct communication with potential candidates";
-"Secure payment protection and dispute resolution";
-"Post jobs and receive AI-matched applicants" ] 
-};
-{
-  title: "For Talent & Service Providers";
-features: [ "Create a professional profile showcasing your skills and experience";
-"Get matched with relevant projects that fit your expertise";
-"Secure payment processing with on-time disbursements";
-"Build your reputation through client reviews and ratings";
-"Access to enterprise clients and high-value projects";
-"Professional development resources and community support" ] 
-};
-{
-  title: "For Enterprise Clients";
-features: [ "White-labeled talent portal with your company branding";
-"Dedicated account management and priority support";
-"Custom talent pools and preferred provider networks";
-"Advanced analytics and reporting capabilities";
-"API access for seamless integration with your HR systems";
-"Customizable workflow and approval processes" ] 
-}];
-return (<section className="py-16 bg-zion-blue" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <h2 className="text-3xl font-bold text-white mb-3" >Tailored Solutions for Everyone</h2> <p className="text-zion-slate-light text-lg max-w-3xl mx-auto" > Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed </p> </div> <div className="grid grid-cols-1 md:grid-cols-3 gap-6" > {
-  highlightsData.map ( (category, index) => (<Card key= {
-  index 
-}className="bg-zion-blue-dark border-zion-blue-light" > <CardContent className="p-6" > <h3 className="text-xl font-bold text-white mb-4" > {
-  category.title 
-}</h3> <ul className="space-y-3" > {
-  category.features.map ( (feature, idx) => (<li key= {
-  idx 
-}className="flex items-start" > <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" /> <span className="text-zion-slate-light" > {
-  feature 
-}</span> 
-}</ul> </CardContent> </Card>) ) 
-}</div> </div> </section>) 
-}
-                    </li>;
                   ))}
                 </ul>
               </CardContent>
@@ -415,5 +221,3 @@ return (<section className="py-16 bg-zion-blue" > <div className="container mx-a
     </section>
   )
 }
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

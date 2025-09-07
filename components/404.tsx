@@ -1,21 +1,3 @@
-  return (<div className='container mx-auto px-4 py-20 text-center'>;
-      <h1 className='text-3xl font-semibold'>404 - Page Not Found</h1>;
-      <p className='mt-2 text-gray-600 dark:text-gray-300'>;
-        Sorry, we couldn’t find that page.;
-      </p>;
-  return (</div>;
-    </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )export default function NotFoundPage() {return (<div className="container mx-auto px-4 py-20 text-center">;
       <h1 className="text-3xl font-semibold">404 - Page Not Found</h1>;
       <p className="mt-2 text-gray-600 dark:text-gray-300">Sorry, we couldn’t find that page.</p>;
@@ -35,13 +17,14 @@ function NotFoundPage() {return (<div className='container mx - auto px - 4 py -
 function NotFoundPage() {return (<div className="container mx - auto px - 4 py-20 text-center">;
       <h1 className="text-3xl font-semibold">404 - Page Not Found</h1>;
       <p className="mt - 2 text - gray - 600 dark:text-gray-300">Sorry, we couldn’t find that page.</p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
     </div>)})
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </div>)})
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
-    </div>)})
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+import React from 'react';
+export default function NotFoundPage() {
+  return (
+    <div className="container mx-auto px-4 py-20 text-center">
+      <h1 className="text-3xl font-semibold">404 - Page Not Found</h1>
+      <p className="mt-2 text-gray-600 dark:text-gray-300">Sorry, we couldn’t find that page.</p>
+    </div>
+  )
+}

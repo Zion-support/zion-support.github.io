@@ -1,21 +1,4 @@
 
-;
-export interface Branding  {export interface Branding {logoUrl?: string;
-  primaryColor?: string;
-  secondaryColor?: string;
-  subdomain?: string;
-}
-export interface DeployModules {marketplace: boolean;
-export interface Branding  {logoUrl?: string;
-  primaryColor?: string;
-  secondaryColor?: string;
-  subdomain?: string;export interface Branding  {logoUrl?: string,primaryColor?: string,secondaryColor?: string,subdomain?: string;}export interface DeployModules  {marketplace: boolean;gpt: boolean;
-  subdomain?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-
 export interface Branding {;
 
   logoUrl?: string,;
@@ -34,11 +17,6 @@ export interface DeployModules {;
   marketplace: boolean;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -49,9 +27,6 @@ export interface DeployModules {;
   roadmapWhitepaper: boolean;
   apiDocsWiki: boolean;
   zionBrain: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   // Bonus;globalMap?: boolean,franchiseOnboarding?: boolean,referralAmbassadors?: boolean,grantPortal?: boolean,trailer?: boolean,bookStore?: boolean;
   } catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}globalMap?: boolean;
   franchiseOnboarding?: boolean;
@@ -66,7 +41,6 @@ export interface DeployInput {instanceName: string;
   governanceMode: GovernanceMode;
   branding: Branding;
   modules: DeployModules;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   // Bonus;
 
 
@@ -114,12 +88,7 @@ export interface DeployResult {success: boolean;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
   // Bonus;}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 export interface DeployInput {;
   instanceName: string;
@@ -127,14 +96,7 @@ export interface DeployInput {;
   deploymentRegion: string;
   tokenActivation: boolean;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -176,10 +138,6 @@ export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "eve
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 ;
 export interface DeployResult {;
@@ -187,11 +145,6 @@ export interface DeployResult {;
 ;
 export interface DeployResult {;
   success: boolean;
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -201,10 +154,6 @@ export interface DeployResult {;
 export interface DeployModules  {marketplace: boolean,gpt: boolean,academy: boolean,token: boolean,dao: boolean,nation_builder: boolean,launch_kit: boolean,book_builder: boolean,roadmap_whitepaper: boolean,apiDocsWiki: boolean,zion_brain: boolean,// Bonus;
   global_map?: boolean,franchise_onboarding?: boolean,referral_ambassadors?: boolean,grant_portal?: boolean,trailer?: boolean,book_store?: boolean;
   version: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -224,51 +173,20 @@ export interface Branding {
 
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+export type GovernanceMode = $2;
+export interface Branding {
+  logoUrl?: string,
+  primaryColor?: string,
+  secondaryColor?: string,
+  subdomain?: string
+}
+
 export interface DeployModules {
   marketplace: boolean,
   gpt: boolean,
   academy: boolean,
   token: boolean,
   dao: boolean,
-  nation_builder: boolean,
-  launch_kit: boolean,
-  book_builder: boolean,
-  roadmap_whitepaper: boolean,
-  apiDocsWiki: boolean,
-  zion_brain: boolean,
-  // Bonus;
-  global_map?: boolean,
-  franchise_onboarding?: boolean,
-  referral_ambassadors?: boolean,
-  grant_portal?: boolean,
-  trailer?: boolean,
-  book_store?: boolean;
-}
-export interface DeployInput  {instance_name: string,default_language: string,deployment_region: string,token_activation: boolean,governance_mode: GovernanceMode,branding: Branding,modules: DeployModules,requested_routes?: string[];
-}
-export interface DeployLogEntry  {timestamp: string,level: "info" | "warn" | "error",action: string,details?: Record < string unknown> | string;
-}
-export interface GeneratedAsset  {kind: "file" | "page" | "config" | "job" | "event",path: string,description?: string;
-}
-export interface DeployResult  {success: boolean,instance_slug: string,config_path: string,assets: GeneratedAsset[],logs: DeployLogEntry[],summary: string,version: string;
-}
-export interface AccessControlConfig  {allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];adminKeyConfigured: boolean;adminKeyConfigured: boolean;}} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
-}
-}}}export interface AccessControlConfig  {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-  adminKeyConfigured: boolean;adminKeyConfigured: boolean;
-}
-  adminKeyConfigured: boolean;
-export interface AccessControlConfig {
-  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   adminKeyConfigured: boolean;
 
 }
@@ -295,9 +213,55 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
 
   adminKeyConfigured: boolean;
 }
-<<<<<<< HEAD
-=======
   adminKeyConfigured: boolean;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+  nationBuilder: boolean,
+  launchKit: boolean,
+  bookBuilder: boolean,
+  roadmapWhitepaper: boolean,
+  apiDocsWiki: boolean,
+  zionBrain: boolean,
+  // Bonus
+  globalMap?: boolean,
+  franchiseOnboarding?: boolean,
+  referralAmbassadors?: boolean,
+  grantPortal?: boolean,
+  trailer?: boolean,
+  bookStore?: boolean
+}
+
+export interface DeployInput {
+  instanceName: string,
+  defaultLanguage: string,
+  deploymentRegion: string,
+  tokenActivation: boolean,
+  governanceMode: GovernanceMode,
+  branding: Branding,
+  modules: DeployModules,
+  requestedRoutes?: string[]
+}
+
+export interface DeployLogEntry {
+  timestamp: string,
+  level: "info" | "warn" | "error",
+  action: string,
+  details?: Record<string, unknown> | string
+}
+
+export interface GeneratedAsset {
+  kind: "file" | "page" | "config" | "job" | "event",
+  path: string,
+  description?: string
+}
+
+export interface DeployResult {
+  success: boolean,
+  instanceSlug: string,
+  configPath: string,
+  assets: GeneratedAsset[],
+  logs: DeployLogEntry[],
+  summary: string,
+  version: string}
+
+export interface AccessControlConfig {
+  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[],
+  adminKeyConfigured: boolean}

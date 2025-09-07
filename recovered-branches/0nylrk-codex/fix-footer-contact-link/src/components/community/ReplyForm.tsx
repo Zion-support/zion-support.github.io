@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-  Form,
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   FormControl,
   FormField,
   FormItem,
@@ -13,10 +9,6 @@ interface ReplyFormProps {
   parentId?: string;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import {;
   Form,;
   FormControl,;
@@ -31,10 +23,6 @@ interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState  } from './react';
 import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
@@ -43,27 +31,19 @@ import {
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
+import { useState } from "react",
+import { useForm } from "react-hook-form",
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   Form,
   FormControl,
   FormField,
   FormItem,
-<<<<<<< HEAD
-
-
-
-=======
 FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return (
     <Card>;
@@ -97,11 +77,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 ;
   return (
     <Card>;
-<<<<<<< HEAD
-      <CardContent className="pt - 6">;
-=======
       <CardContent className="pt-6">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Form {...form}>;
           <form on_submit={form.handle_submit (handle_submit)}>;
             <FormField;
@@ -116,11 +92,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                           ? "Write your reply...";
                           : "Join the discussion...";
                       }
-<<<<<<< HEAD
-                      className="min - h-[100px] resize - y";
-=======
                       className="min - h-[100px] resize-y";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   FormMessage;
 } from "@/components/ui/form",;
 import { Card, CardContent, CardFooter } from "@/components/ui/card",;
@@ -183,20 +155,10 @@ export const ReplyForm = ({ onSubmit, parentId } ReplyFormProps) => {;
       </CardContent>;
 
 FormMessage,;
-<<<<<<< HEAD
-
-} from "@/components/ui/form";
-
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-
-  };
-
-=======
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 };
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     setIsSubmitting(true);
     try {;
@@ -207,12 +169,6 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 
   },
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <Card>;
       <CardContent className="pt-6">;
@@ -246,11 +202,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 ;
   return (
     <Card>;
-<<<<<<< HEAD
-      <CardContent className="pt - 6">;
-=======
       <CardContent className="pt-6">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Form {...form}>;
           <form on_submit={form.handle_submit (handle_submit)}>;
             <FormField;
@@ -266,11 +218,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
                           ? "Write your reply...";
                           : "Join the discussion...";
                       }
-<<<<<<< HEAD
-                      className="min - h-[100px] resize - y";
-=======
                       className="min - h-[100px] resize-y";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       {...field}
                     />;
                   </FormControl>;
@@ -278,11 +226,7 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 
                 </FormItem>)}
             />;
-<<<<<<< HEAD
-            <div className="mt - 4 flex justify - end">;
-=======
             <div className="mt - 4 flex justify-end">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Button type="submit" disabled={is_submitting}>;
                 {is_submitting ? "Submitting..." : "Post Reply"}
 
@@ -297,30 +241,6 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 ;
 export default ReplyForm;
 ;
-<<<<<<< HEAD
-
-
-                      placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
-
-                      className="min-h-[100px] resize-y"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <div className="mt-4 flex justify-end">
-              <Button type="submit" disabled={isSubmitting}>
-                {isSubmitting ? "Submitting..." : "Post Reply"}
-              </Button>
-            </div>
-          </form>
-        </Form>
-      </CardContent>
-    </Card>
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -397,11 +317,6 @@ import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ReplyFormValues {;
 
   content: string;
@@ -413,12 +328,6 @@ interface ReplyFormValues {;
       setIsSubmitting(false);
     }
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   }
   return (
     <Card>;
@@ -457,10 +366,6 @@ interface ReplyFormValues {;
   )
 },
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     </Card>;
   ),;
 },;
@@ -495,29 +400,36 @@ export default ReplyForm;
   );
 }
 export default ReplyForm;
-<<<<<<< HEAD
-
-  )
-},
-
-
-export default ReplyForm,
 export default ReplyForm;
 export default ReplyForm,
-export default ReplyForm;
-export default ReplyForm,
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
+} from "@/components/ui/form",
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>,
+  parentId?: string
+}
+interface ReplyFormValues {
+  content: string}
 
-                      className="min - h-[100px] resize - y";
-                      {...field}
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-              </Button>;
-            </div>;
-          </form>;
-        </Form>;
-      </CardContent>;
-=======
-export default ReplyForm;
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const form = $2;
+  const handleSubmit = async (values: ReplyFormValues) => {
+    setIsSubmitting($2);
+    try {
+      await onSubmit($2);
+      form.reset()
+    } finally {
+      setIsSubmitting(false)
+    }
+  },
+
+  return (
+    <Card>
+      <CardContent className = $2;
 export default ReplyForm,
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

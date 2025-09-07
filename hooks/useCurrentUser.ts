@@ -1,19 +1,12 @@
 import useSWR from 'swr';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-    user: data?.user || null,
+const fetcher = $2;
+export function useCurrentUser() {
+  const { data, error, mutate } = useSWR($2);
+  return {
+    user: data ?.user || null,
     loading: !data && !error,
     error,
-    mutate,
-  };
     mutate}
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function useCurrentUser() {export function useCurrentUser() {export function useCurrentUser() {const { data, error, mutate } = useSWR('/api/auth/me', fetcher)return {user: data?.user |null;
     loading: !data && !error;
     error;
@@ -32,10 +25,6 @@ function useCurrentUser() {const { data, error, mutate } = useSWR ('/api / auth 
 }
 }
   }mutate}
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 export function useCurrentUser() {
 
 export function useCurrentUser() {;
@@ -56,7 +45,5 @@ export /**
 function useCurrentUser() {
   const { data, error, mutate } = useSWR ('/api / auth / me', fetcher);
   return {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+}

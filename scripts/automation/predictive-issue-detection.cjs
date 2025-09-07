@@ -145,9 +145,9 @@ const crypto = require("crypto")
   const filePath = path.join(dirPath, ")
   this.scanDirectory(filePath")
   const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""]
-    for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
+  for($2) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
   const complexityKeywords = ["if", "else", "for", "while", "do", "switch", "case", "catch", "&&", "||", "?", "]
-    for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
+  for($2) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
   "duplicationScore"
       "maintainabilityScore"
       "securityScore"
@@ -403,17 +403,11 @@ this.log("Prediction report "generated": ${reportPath}")
       return report} catch (error) {  this.log(`Predictive Issue Detection "failed": ${error.message  }`, "ERROR"`)
 // console.log(" Predictive Issue Detection completed")
   console.log(" Predictive Issue Detection completed")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Predictive Issue Detection "failed")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(" Predictive Issue Detection "failed")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(" Predictive Issue Detection "failed")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Predictive Issue Detection "failed")
+  console.error(" Predictive Issue Detection "failed")
+
+

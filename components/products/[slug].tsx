@@ -1,47 +1,25 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
-import { useRouter  } from 'next/router';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import equipment from '@/data/equipment.json';
-const EquipmentDetail: NextPage;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 const EquipmentDetail: NextPage = () => {
   const router = useRouter()
   const { slug } = router.query as { slug?: string }
   const items = equipment as any[];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+const EquipmentDetail: NextPage = () => {
+  const router = useRouter($2);
+  const { slug } = router.query as { slug?: string },
+  const items = $2;
+  const item = $2;
   if (!item) {
     return (
       <EnhancedLayout>
         <Head>
           <title>Equipment Not Found - Zion Tech Solutions</title>
         </Head>
-<<<<<<< HEAD
-<div className='space-y-4'>
-          <h1 className='text-xl font-semibold'>Equipment not found</h1>
-          <Link href='/products'>
-            <a className='text-blue-600 hover:underline'>Back to Equipment</a>
-          </Link>
-        </div>
-      </EnhancedLayout>
-    );
-  }
-
-  return (
-    <EnhancedLayout>
-      <Head>
-        <title>{item.name} - Zion Tech Solutions</title>
-      </Head>
-<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-        <div className='md:col-span-2 space-y-4'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           <h1 className="text-xl font-semibold">Equipment not found</h1>
           <Link href="/products"><a className="text-blue-600 hover: underline">Back to Equipment</a></Link>
         </div>
@@ -54,11 +32,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </Head>;
       <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
         <div className='md:col-span-2 space-y-4'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           <img
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const EquipmentDetail: NextPage = () => {const router = useRouter()const { slug }  = router.query as { slug?: string }
   const items = equipment as any[];import Head from 'next/head';
 import { useRouter   } from 'next/router';
@@ -92,10 +66,6 @@ const EquipmentDetail: NextPage;if (!item) {return (<EnhancedLayout>;
 <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
         <div className='md:col-span-2 space-y-4'>;
           <img;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             src={`https://picsum && picsum.photos/seed/${encodeURIComponent(item && item.slug)}/1200/600`}
             alt={item && item.name}
             className='w-full rounded-lg border border-gray-200 dark:border-gray-800';
@@ -147,11 +117,6 @@ const EquipmentDetail: NextPage;if (!item) {return (<EnhancedLayout>;
         </aside>;
       </div>;
     </EnhancedLayout>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
   );
             <h1 className="text-2xl font-semibold">{item.name}</h1>
             <p className="opacity-80">Category: {item.category}</p>
@@ -173,13 +138,9 @@ const EquipmentDetail: NextPage;if (!item) {return (<EnhancedLayout>;
     </EnhancedLayout>
   )
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 export default EquipmentDetail;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   )<h1 className="text-2xl font-semibold">{item.name}</h1>;
             <p className="opacity-80">Category: {item.category}</p>;
           </div>;
@@ -279,17 +240,11 @@ if ( {) {$2;
           <Link href="/products"><a className="text - sm text-blue-600 hover:underline">Back to Equipment</a></Link>;
         </aside>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </EnhancedLayout>)}export default EquipmentDetail;}export default EquipmentDetail;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </EnhancedLayout>);
 }
 ;
 export default EquipmentDetail;
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     </EnhancedLayout>)}export default EquipmentDetail;}export default EquipmentDetail;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        <div className = $2;
+export default EquipmentDetail,

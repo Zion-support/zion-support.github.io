@@ -1,44 +1,25 @@
+this.style.transform = 'translateY(0) scale(1)'
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)'
-=======
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)'
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 // Zion Tech Group Website JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation Toggle
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById($2);
+    const navMenu = document.getElementById($2);
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
+            navMenu.classList.toggle($2);
             navToggle.classList.toggle('active')
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
         card.addEventListener('mouseleave', function() {this.style.transform = 'translateY(0) scale(1)';
         card.addEventListener('mouseleave', function() {this.style.transform = 'translateY(0) scale(1)';
@@ -119,38 +100,171 @@ function performSearch() {// This would typically make an API call to search you
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)'
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        })
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.nav') && navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove($2);
+            navToggle.classList.remove('active')
+        }
+    }),
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault($2);
+            const target = $2;
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            }
         })
     }),
     
+    // Add scroll effects to elements
+    const observerOptions = $2;
+        rootMargin: '0px 0px -50px 0px'
+    },
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up')
+            }
+        })
+    }, observerOptions),
+    
+    // Observe elements for animation
+    document.querySelectorAll('.service-card, .solution-card, .stat-item').forEach(el = $2;
+    // Header scroll effect
+    const header = document.querySelector($2);
+    let lastScrollTop = $2;
+    window.addEventListener('scroll', function() {
+        const scrollTop = $2;
+        if (scrollTop > 100) {
+            header.classList.add('scrolled')
+        } else {
+            header.classList.remove('scrolled')
+        }
+        
+        lastScrollTop = $2;
+    // Form handling for contact forms
+    const contactForms = document.querySelectorAll($2);
+    contactForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault($2);
+            const formData = new FormData($2);
+            const submitBtn = form.querySelector($2);
+            const originalText = $2;
+            // Show loading state
+            submitBtn.textContent = $2;
+            submitBtn.disabled = $2;
+            // Simulate form submission (replace with actual API call)
+            setTimeout(() => {
+                submitBtn.textContent = $2;
+                submitBtn.style.background = $2;
+                // Reset form
+                form.reset($2);
+                // Reset button after delay
+                setTimeout(() => {
+                    submitBtn.textContent = $2;
+                    submitBtn.disabled = $2;
+                    submitBtn.style.background = ''
+                }, 3000)
+            }, 2000)
+        })
+    }),
+    
+    // Lazy loading for images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry = $2;
+                    img.src = $2;
+                    img.classList.remove($2);
+                    imageObserver.unobserve(img)
+                }
+            })
+        }),
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img)
+        })
+    }
+    
+    // Search functionality
+    const searchInput = document.querySelector($2);
+    if (searchInput) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase($2);
+            const searchResults = document.querySelector($2);
+            if (query.length > 2) {
+                // Perform search (replace with actual search logic)
+                performSearch(query)
+            } else {
+                if (searchResults) {
+                    searchResults.style.display = 'none'
+                }
+            }
+        })
+    }
+    
+    // Newsletter subscription
+    const newsletterForm = document.querySelector($2);
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault($2);
+            const email = $2;
+            const submitBtn = this.querySelector($2);
+            const originalText = $2;
+            // Show loading state
+            submitBtn.textContent = $2;
+            submitBtn.disabled = $2;
+            // Simulate subscription (replace with actual API call)
+            setTimeout(() => {
+                submitBtn.textContent = $2;
+                submitBtn.style.background = $2;
+                // Reset form
+                this.reset($2);
+                // Reset button after delay
+                setTimeout(() => {
+                    submitBtn.textContent = $2;
+                    submitBtn.disabled = $2;
+                    submitBtn.style.background = ''
+                }, 3000)
+            }, 1500)
+        })
+    }
+    
+    // Service card hover effects
+    const serviceCards = document.querySelectorAll($2);
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = $2;
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = $2;
     // Stats counter animation
-    const statNumbers = document.querySelectorAll('.stat-number'),
+    const statNumbers = document.querySelectorAll($2);
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                animateCounter(entry.target),
+                animateCounter($2);
                 statsObserver.unobserve(entry.target)
             }
         })
     }, { threshold: 0.5 }),
     
-    statNumbers.forEach(stat => {
-        statsObserver.observe(stat)
-    }),
-    
+    statNumbers.forEach(stat = $2;
     // Back to top button
-    const backToTopBtn = document.createElement('button'),
-    backToTopBtn.innerHTML = '↑',
-    backToTopBtn.className = 'back-to-top',
-    backToTopBtn.setAttribute('aria-labelBack to top'),
-    document.body.appendChild(backToTopBtn),
-    
+    const backToTopBtn = document.createElement($2);
+    backToTopBtn.innerHTML = $2;
+    backToTopBtn.className = $2;
+    backToTopBtn.setAttribute($2);
+    document.body.appendChild($2);
     backToTopBtn.addEventListener('click', function() {
         window.scrollTo({
             top: 0,
@@ -168,100 +282,40 @@ function performSearch() {// This would typically make an API call to search you
     }),
     
     // Initialize tooltips
-    initializeTooltips(),
-    
+    initializeTooltips($2);
     // Initialize modals
     initializeModals()
 }),
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Search function
 function performSearch(query) {
     // This would typically make an API call to search your content
     // For now, we'll simulate search results
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
     if (searchResults) {
         const results = [
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    const searchResults = document.querySelector($2);
+    if (searchResults) {
+        const results = [
+
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
 
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },
@@ -276,6 +330,7 @@ document.addEventListener('DOMContentLoaded', function() {;
             navToggle.classList.toggle('active');
         });
     }
+pr-12325
 ;
     // Close mobile menu when clicking outside;
     document.addEventListener('click', function(event) {;
@@ -284,9 +339,11 @@ document.addEventListener('DOMContentLoaded', function() {;
             navToggle.classList.remove('active');
         }
     }),
-    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Smooth scrolling for anchor links;
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {')
+pr-12325
         anchor.addEventListener('click', function (e) {
             e.preventDefault(),
             const target = document.querySelector(this.getAttribute('href')),
@@ -297,6 +354,8 @@ document.addEventListener('DOMContentLoaded', function() {;
                 })
             }
         });
+                    block: 'start)
+pr-12325
     }),;
     // Add scroll effects to elements;
     const observerOptions = {;
@@ -314,6 +373,14 @@ document.addEventListener('DOMContentLoaded', function() {;
     document.querySelectorAll('.service-card, .solution-card, .stat-item').forEach(el => {;
         observer.observe(el);
     }),;
+        entries.forEach(entry => {;)
+            if (entry.isIntersecting) {;
+                entry.target.classList.add('fade-in-up');
+    }, observerOptions),;
+    // Observe elements for animation;
+    document.querySelectorAll('.service-card, .solution-card, .stat-item').forEach(el => {;')
+        observer.observe(el);
+pr-12325
     // Header scroll effect;
     const header = document.querySelector('.header'),;
     let lastScrollTop = 0,;
@@ -324,33 +391,33 @@ document.addEventListener('DOMContentLoaded', function() {;
         } else {;
             header.classList.remove('scrolled');
         }
-        
         lastScrollTop = scrollTop
     }),
-    
     // Form handling for contact forms
     const contactForms = document.querySelectorAll('form[data-contact]'),
-    
     contactForms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault(),
-            
+        lastScrollTop = scrollTop;
+    // Form handling for contact forms;
+    const contactForms = document.querySelectorAll('form[data-contact]'),
+    contactForms.forEach(form => {)
+        form.addEventListener('submit', function(e) {
+pr-12325
             const formData = new FormData(form),
             const submitBtn = form.querySelector('button[type="submit"]'),
             const originalText = submitBtn.textContent,
-            
             // Show loading state
+            // Show loading state;
+pr-12325
             submitBtn.textContent = 'Sending...',
             submitBtn.disabled = true,
-            
             // Simulate form submission (replace with actual API call)
             setTimeout(() => {
                 submitBtn.textContent = 'Message Sent!',
                 submitBtn.style.background = '#10b981',
-                
                 // Reset form
                 form.reset(),
-                
                 // Reset button after delay
                 setTimeout(() => {
                     submitBtn.textContent = originalText,
@@ -360,12 +427,23 @@ document.addEventListener('DOMContentLoaded', function() {;
             }, 2000)
         })
     }),
-    
     // Lazy loading for images
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                // Reset form;
+                form.reset(),
+                // Reset button after delay;
+                    submitBtn.textContent = originalText,
+                    submitBtn.disabled = false,
+                    submitBtn.style.background = 
+                }, 3000)
+            }, 2000)
+    // Lazy loading for images;
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+pr-12325
                     const img = entry.target,
                     img.src = img.dataset.src,
                     img.classList.remove('lazy'),
@@ -376,6 +454,10 @@ document.addEventListener('DOMContentLoaded', function() {;
     // Form handling for contact forms;
     const contactForms = document.querySelectorAll('form[data-contact]'),;
     contactForms.forEach(form => {;
+    // Form handling for contact forms;
+    const contactForms = document.querySelectorAll('form[data-contact]'),;
+    contactForms.forEach(form => {;)
+pr-12325
         form.addEventListener('submit', function(e) {;
             e.preventDefault(),;
             const formData = new FormData(form),;
@@ -404,6 +486,15 @@ document.addEventListener('DOMContentLoaded', function() {;
         const imageObserver = new IntersectionObserver((entries, observer) => {;
             entries.forEach(entry => {;
                 if (entry.isIntersecting) {;
+                    submitBtn.textContent = originalText,;
+                    submitBtn.disabled = false,;
+                    submitBtn.style.background = ;
+                }, 3000);
+            }, 2000);
+    // Lazy loading for images;
+    if ('IntersectionObserver' in window) {;
+        const imageObserver = new IntersectionObserver((entries, observer) => {;
+pr-12325
                     const img = entry.target,;
                     img.src = img.dataset.src,;
                     img.classList.remove('lazy'),;
@@ -416,6 +507,9 @@ document.addEventListener('DOMContentLoaded', function() {;
         });
     }
 ;
+        document.querySelectorAll('img[data-src]').forEach(img => {;')
+            imageObserver.observe(img);
+pr-12325
     // Search functionality;
     const searchInput = document.querySelector('.search-input'),;
     if (searchInput) {;
@@ -432,29 +526,23 @@ document.addEventListener('DOMContentLoaded', function() {;
             }
         });
     }
-    
     // Newsletter subscription
     const newsletterForm = document.querySelector('.newsletter-form'),
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault(),
-            
             const email = this.querySelector('input[type="email"]').value,
             const submitBtn = this.querySelector('button[type="submit"]'),
             const originalText = submitBtn.textContent,
-            
             // Show loading state
             submitBtn.textContent = 'Subscribing...',
             submitBtn.disabled = true,
-            
             // Simulate subscription (replace with actual API call)
             setTimeout(() => {
                 submitBtn.textContent = 'Subscribed!',
                 submitBtn.style.background = '#10b981',
-                
                 // Reset form
                 this.reset(),
-                
                 // Reset button after delay
                 setTimeout(() => {
                     submitBtn.textContent = originalText,
@@ -462,8 +550,24 @@ document.addEventListener('DOMContentLoaded', function() {;
                     submitBtn.style.background = ''
                 }, 3000)
             }, 1500)
-        })
-;
+        });
+                if (searchResults) {;
+                    searchResults.style.display = 'none';
+    // Newsletter subscription;
+    const newsletterForm = document.querySelector('.newsletter-form'),
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            const email = this.querySelector('input[type="email"]').value,
+            const submitBtn = this.querySelector('button[type="submit"]'),
+            // Show loading state;
+            submitBtn.textContent = 'Subscribing...',
+            // Simulate subscription (replace with actual API call)
+                submitBtn.textContent = 'Subscribed!',
+                // Reset form;
+                this.reset(),
+                // Reset button after delay;
+            }, 1500)
+pr-12325
     // Newsletter subscription;
     const newsletterForm = document.querySelector('.newsletter-form'),;
     if (newsletterForm) {;
@@ -514,6 +618,32 @@ document.addEventListener('DOMContentLoaded', function() {;
     statNumbers.forEach(stat => {;
         statsObserver.observe(stat);
     }),;
+            const email = this.querySelector('input[type="email"]').value,;
+            const submitBtn = this.querySelector('button[type="submit"]'),;
+            // Show loading state;
+            submitBtn.textContent = 'Subscribing...',;
+            // Simulate subscription (replace with actual API call);
+                submitBtn.textContent = 'Subscribed!',;
+                // Reset form;
+                this.reset(),;
+                // Reset button after delay;
+            }, 1500);
+    // Service card hover effects;
+    const serviceCards = document.querySelectorAll('.service-card'),;
+    serviceCards.forEach(card => {;)
+        card.addEventListener('mouseenter', function() {;
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        card.addEventListener('mouseleave', function() {;
+            this.style.transform = 'translateY(0) scale(1)';
+    // Stats counter animation;
+    const statNumbers = document.querySelectorAll('.stat-number'),;
+    const statsObserver = new IntersectionObserver((entries) => {;
+                animateCounter(entry.target),;
+                statsObserver.unobserve(entry.target);
+    }, { threshold: 0.5 }),;
+    statNumbers.forEach(stat => {;)
+        statsObserver.observe(stat);
+pr-12325
     // Back to top button;
     const backToTopBtn = document.createElement('button'),;
     backToTopBtn.innerHTML = '↑',;
@@ -533,12 +663,20 @@ document.addEventListener('DOMContentLoaded', function() {;
         } else {;
             backToTopBtn.classList.remove('visible');
         }
+
     }),;
+            behavior: 'smooth';')
+    // Show/hide back to top button;
+        if (window.pageYOffset > 300) {;
+            backToTopBtn.classList.add('visible');
+            backToTopBtn.classList.remove('visible');
+pr-12325
     // Initialize tooltips;
     initializeTooltips(),;
     // Initialize modals;
     initializeModals();
 }),;
+pr-12325
 // Search function;
 function performSearch(query) {;
     // This would typically make an API call to search your content;
@@ -549,63 +687,24 @@ function performSearch(query) {;
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },;
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ].filter(item => 
             item && item.title.toLowerCase().includes(query)
         ),
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+        ].filter(item => 
+            item && item.title.toLowerCase().includes(query)
+        ),
+
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
 
-            ).join('')
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     }));
     // Initialize tooltips
     initializeTooltips();
@@ -625,46 +724,24 @@ function performSearch(query) {
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' };
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
-        ].filter(item =>
-            item.title.toLowerCase().includes(query)
-        ));
+        ].filter(item = $2;
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
-            ).join('');
-origin/cursor/automate-test-improve-and-merge-code-2533
+            ).join($2);
+            searchResults.style.display = $2;
             searchResults.style.display = 'block'
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         if (results && results.length > 0) {
             searchResults && searchResults.innerHTML = results && results.map(result => 
                 `<a href="${result && result.url}" class="search-result-item">${result && result.title}</a>`
             ).join(''),
             searchResults && searchResults.style.display = 'block'
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             searchResults.style.display = 'block'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
             searchResults.style.display = 'block'
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
             searchResults.style.display = 'block'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         } else {
             searchResults && searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
             searchResults && searchResults.style.display = 'block'
@@ -674,35 +751,13 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 // Counter animation
 function animateCounter(element) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const timer = setInterval(() => {
 
         current += step
@@ -710,25 +765,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
             current = target
             clearInterval(timer)
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     const target = parseInt(element.textContent.replace(/\D/g, ''))
     const duration = 2000
@@ -738,114 +776,93 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         current += step;
         if ({
             current = target);
+    const target = parseInt(element.textContent.replace(/\D/g, '')),
+    const duration = $2;
+    const step = $2;
+    let current = $2;
+    const timer = $2;
+        if (current >= target) {
+            current = $2;
             clearInterval(timer)
         }
         
-        const suffix = element.textContent.replace(/\d/g, '');
+        const suffix = element.textContent.replace($2);
         element.textContent = Math.floor(current) + suffix
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    }, 16)
+}
+
     }, 16)
 }
 // Tooltip initialization
 function initializeTooltips() {
-<<<<<<< HEAD
-    const tooltipElements = document.querySelectorAll('[data-tooltip]');
+    const tooltipElements = document.querySelectorAll($2);
     tooltipElements.forEach(element => {
         element.addEventListener('mouseenter', function(e) {
-            const tooltip = document.createElement('div');
-            tooltip.className = 'tooltip',
-            tooltip.textContent = this.dataset.tooltip,
-            document.body.appendChild(tooltip);
-            const rect = this.getBoundingClientRect();
-            tooltip.style.left = rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2) + 'px',
-            tooltip.style.top = rect.top - tooltip.offsetHeight - 10 + 'px',
-            
-            this.tooltip = tooltip
-        })
+            const tooltip = document.createElement($2);
+            tooltip.className = $2;
+            tooltip.textContent = $2;
+            document.body.appendChild($2);
+            const rect = this.getBoundingClientRect($2);
+            tooltip.style.left = $2;
+            tooltip.style.top = $2;
+            this.tooltip = $2;
         element.addEventListener('mouseleave', function() {
             if (this.tooltip) {
-                this.tooltip.remove();
+                this.tooltip.remove($2);
                 this.tooltip = null
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             }
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }, 16)
 }
 // Tooltip initialization
 function initializeTooltips() {}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+            }
+        })
+    })
+}
+
+            }
         })
     })
 }
 // Modal initialization
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 function initializeModals() {
-    const modalTriggers = document.querySelectorAll('[data-modal]');
-    const modals = document.querySelectorAll('.modal');
+    const modalTriggers = document.querySelectorAll($2);
+    const modals = document.querySelectorAll($2);
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', function(e) {
-            e.preventDefault();
-            const modalId = this.dataset.modal;
-            const modal = document.getElementById(modalId);
+            e.preventDefault($2);
+            const modalId = $2;
+            const modal = document.getElementById($2);
             if (modal) {
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 function initializeModals() {
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             }
-=======
 function initializeModals() {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         })
     })
     // Close modal on overlay click
-<<<<<<< HEAD
+                modal.classList.add($2);
+                document.body.style.overflow = $2;
+    // Close modal on overlay click
+
     modals.forEach(modal => {
         modal.addEventListener('click', function(e) {
             if (e.target === this) {
-                this.classList.remove('active');
-                document.body.style.overflow = ''
-            }
-        })
+                this.classList.remove($2);
+                document.body.style.overflow = $2;
         // Close modal on close button click
-        const closeBtn = modal.querySelector('.modal-close');
+        const closeBtn = modal.querySelector($2);
         if (closeBtn) {
             closeBtn.addEventListener('click', function() {
-                modal.classList.remove('active');
-                document.body.style.overflow = ''
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 function initializeModals() {}
         })
     })
     // Close modal on overlay click
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
             }
@@ -853,29 +870,10 @@ function initializeModals() {}
         // Close modal on close button click
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             })
         }
     })
     // Close modal on escape key
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
         ].filter(item => 
             item.title.toLowerCase().includes(query)
@@ -992,15 +990,6 @@ function initializeTooltips() {;
         element.addEventListener('mouseleave', function() {;
             if (this.tooltip) {;
                 this.tooltip.remove(),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 //Zion Tech Group Website JavaScript;
@@ -1016,20 +1005,8 @@ function perform_search() {
     // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
         const results = [;
             { title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager' },{ title: 'Quantum Neural Network Platform', url: '/solutions / quantum - neural - network - platform' },{ title: 'AI & Autonomous Systems', url: '/services / ai - autonomous - systems' },{ title: 'Quantum Computing Services', url: '/services / quantum - computing' }
@@ -1075,50 +1052,16 @@ function initializeModals() {const modalTriggers = document.querySelectorAll('[d
     }),// Close modal on escape key;
     document.addEventListener('keydown', function(e) {if (e.key === 'Escape') {modals.forEach(modal => {if (modal.classList.contains('active')) {modal.classList.remove('active'),document.body.style.overflow = '';
                 this.tooltip.remove (),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 this.tooltip = null;
             }
         });
     });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 // Modal initialization;
 /**;
@@ -1316,15 +1259,6 @@ window.addEventListener('load', logPerformance)
                 if (modal.classList.contains('active')) {;
                     modal.classList.remove('active'),;
                     document.body.style.overflow = '';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Modal initialization;
 /**
  * initialize_modals - Function description
@@ -1381,50 +1315,19 @@ if ( {) {
 }
                     modal.class_list.remove ('active'),
                     document.body.style.overflow = '';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                 }
             });
         }
     });
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     modal.classList.remove('active')
 
                 }
@@ -1436,11 +1339,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if ('performance' in window) {
 
         console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
@@ -1448,10 +1346,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
                     modal.classList.remove('active');
                     document.body.style.overflow = ''
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                 }
             })
         }
@@ -1459,124 +1353,70 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 // Performance monitoring
 function logPerformance() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
         // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     if ('performance' in window) {
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if ({
         const perfData = performance.getEntriesByType('navigation')[0]);
         console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
         console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
     if ('performance' in window) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+                modal.classList.remove($2);
+                document.body.style.overflow = $2;
+    // Close modal on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            modals.forEach(modal => {
+                if (modal.classList.contains('active')) {
+                    modal.classList.remove($2);
+                    document.body.style.overflow = $2;
+        console.log($2);
+        console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
     }
 }
 // Error tracking
 window.addEventListener('error', function(e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 ursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if ('performance' in window) {}
 }
 // Error tracking
 window.addEventListener('error', function(e) {}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 // Error tracking
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    console.error($2);
+    // Send to error tracking service
+}),
+
+    }
+
+}
+// Error tracking
 
     console.error('JavaScript Error:', e.error)
 
     console.error('JavaScript Error:', e.error);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
     console.error('JavaScript Error:', e.error)
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
     console.error('JavaScript Error:', e.error)
@@ -1584,70 +1424,35 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     console.error('JavaScript Error:', e.error);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
     console.error('JavaScript Error:', e.error)
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
     // Send to error tracking service
 })
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.log('Event tracked:', eventName, eventData);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Implement your analytics tracking here
 }
 });
-<<<<<<< HEAD
-//Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   entries.forEach (entry => {
   if (entry.isIntersecting) {
   lastScrollTop = scrollTop 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
   entries.forEach (entry => {
   if (entry.isIntersecting) {
   lastScrollTop = scrollTop 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
   entries.forEach (entry => {
   if (entry.isIntersecting) {
   lastScrollTop = scrollTop 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 });
 //Form handling for contact forms submitBtn.disabled = true;
 //Simulate form submission (replace with actual API call) //Reset form form.reset ();
 //Reset button after delay //Lazy loading for images if ('IntersectionObserver' in window) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   entries && entries.forEach (entry => {
   if (entry && entry.isIntersecting) {
@@ -1706,8 +1511,6 @@ function track_event() {
 //Reset button after delay //Initialize tooltips initializeTooltips ();
 //Initialize modals initializeModals () 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
   entries.for_each (entry => {
@@ -1729,34 +1532,18 @@ if ( {) {
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 });
-=======
 
 
     // Implement your analytics tracking here
 }
 });
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {});
 //Form handling for contact forms submitBtn.disabled = true;
 //Simulate form submission (replace with actual API call) //Reset form form.reset ();
 //Reset button after delay //Lazy loading for images if ('IntersectionObserver' in window) {
   const imageObserver = new IntersectionObserver ( (entries, observer) => {});
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }//Newsletter subscription submit_btn.disabled = true;
 //Simulate subscription (replace with actual API call) //Reset form this.reset ();
 //Reset button after delay //Initialize tooltips initialize_tooltips ();
@@ -1767,33 +1554,6 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
  */
 function if() {
   const results = [ {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' 
-};
-{
-  title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' 
-};
-{
-  title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' 
-};
-{
-  title: 'Quantum Computing Services', url: '/services/quantum-computing' 
-}].filter (item => item.title.toLowerCase () .includes (query) );
-
-
-}//Counter animation //Close modal on overlay click modals.forEach (modal => {
-  modal.addEventListener ('click', function (e) {
-  if (e.target === this) {
-  
-
-});
-//Close modal on escape key document.addEventListener ('keydown', function (e) {
-  if (e.key === 'Escape') {
-  modals.forEach (modal => {
-  if (modal.classList.contains ('active') ) {
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
   title: 'Quantum Computing Services', url: '/services/quantum-computing' 
 }].filter (item => item && item.title.toLowerCase () .includes (query) );
@@ -1808,16 +1568,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (e && e.key === 'Escape') {
   modals && modals.forEach (modal => {
   if (modal && modal.classList.contains ('active') ) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   
 
 }) 
 }//Performance monitoring 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
   title: 'Quantum Computing Services', url: '/services/quantum-computing' 
 }].filter (item => item && item.title.toLowerCase () .includes (query) );
@@ -1831,70 +1586,33 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   if (modal && modal.classList.contains ('active') ) {}) 
 }//Performance monitoring 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }//Error tracking window && window.addEventListener ('error', function (e) {
   console && console.error ('JavaScript Error:', e && e.error);
 //Send to error tracking service 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 }//Error tracking window.addEventListener ('error', function (e) {
   console.error ('JavaScript Error:', e.error);
 //Send to error tracking service 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 }//Error tracking window.addEventListener ('error', function (e) {
   console.error ('JavaScript Error:', e.error);
 //Send to error tracking service 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 });
 //Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {
   
 }) {
   //Implement your analytics tracking here 
 }//Track page views trackEvent ('page view', {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   page: window.location.pathname;
 title: document.title 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
   page: window.location.pathname;
 title: document.title 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
   page: window.location.pathname;
 title: document.title 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 });
 //Analytics tracking (replace with your analytics service) function trackEvent (eventName, eventData = {}) {
   //Implement your analytics tracking here
@@ -1902,27 +1620,17 @@ title: document.title
 //Track button clicks document.addEventListener ('click', function (e) {
   if (e.target.matches ('.btn') ) {
   trackEvent ('button click', {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  button text: e.target.textContent;
-button class: e.target.className;
-});
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+    console.log($2);
+    // Implement your analytics tracking here
+}
+
+// Track page views
+trackEvent($2);
 // Track button clicks
 document.addEventListener('click', function(e) {
     if (e.target.matches('.btn')) {
         trackEvent('button_click', {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   page: window && window.location.pathname;
 title: document && document.title 
@@ -1956,27 +1664,18 @@ document && document.addEventListener('click', function(e) {
             button_class: e && e.target.className,
             page: window && window.location.pathname
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            button_text: e.target.textContent,
+            button_class: e.target.className,
+            page: window.location.pathname
         })
     }
-})
+}),
+
 // Log performance when page is fully loaded
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 // Track button clicks
 document.addEventListener('click', function(e) {
@@ -1985,21 +1684,13 @@ document.addEventListener('click', function(e) {
     }
 })
 // Log performance when page is fully loaded
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
 window.addEventListener('load', logPerformance),
 
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager';
 }
 {
@@ -2046,13 +1737,6 @@ document.addEventListener('click', function(e) {;
     }
 }),;
 // Log performance when page is fully loaded;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 {
   title: 'Quantum Computing Services', url: '/services / quantum - computing';
 }].filter (item => item.title.toLowerCase () .includes (query) );
@@ -2117,65 +1801,28 @@ document.addEventListener ('click', function (e) {
 }),
 // Log performance when page is fully loaded;
 window.addEventListener ('load', log_performance),
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
 
 window.addEventListener('load', logPerformance),;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 window.addEventListener('load', logPerformance),;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 window.addEventListener('load', logPerformance);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 window.addEventListener('load', logPerformance);
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 window.addEventListener('load', logPerformance);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+window.addEventListener($2);

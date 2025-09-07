@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-            // Simple conflict resolution - take the incoming change
-=======
 
 
             // Simple conflict resolution - take the incoming change
             const resolved = content.replace(/\n<<<<<<<[\s\S]*?
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+            // Simple conflict resolution - take the incoming change
             fs.writeFileSync(file, resolved);
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
             this.log(`✅ Auto-resolved conflicts in: ${file}`);
@@ -119,16 +116,14 @@ if (require.main === module) {
   const automator = new GitWorkflowAutomator();
   automator.run();
 }
-<<<<<<< HEAD
-module.exports = GitWorkflowAutomator;
-'
-=======
 
 module.exports = GitWorkflowAutomator;
 
 '
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+module.exports = GitWorkflowAutomator;'
+'
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"

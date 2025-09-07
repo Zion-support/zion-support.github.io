@@ -1,30 +1,83 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:pages_backup/solutions.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/solutions.tsx
 import React from 'react';
-<<<<<<< HEAD
+:pages/solutions.tsx
+import React from 'react',
+import Layout from '../components/layout/Layout',
+import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { 
-  Shield, 
-  Cloud, 
-  Zap, 
-  Users, 
-  Brain, 
-  Network, 
-  TrendingUp, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
+import { Target, Brain, Rocket, Shield, Zap, Atom, Cpu;
+  Lock, Cloud, Settings, Eye, Award, Clock, Heart;
+  Lightbulb, Search, Grid, List, TrendingUp;
+  User, ShoppingCart, Bell, HelpCircle, FileText;
+  Video, Headphones, Code, Database, Network, Server;
+  Monitor, Smartphone, Camera, Gamepad2, Palette;
+  Music, Film, BookOpenCheck, Building, MessageCircle;
+  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
+ } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
+const Solutions: NextPage;
+export default function Solutions() {
+  const solutions = [
+    {
+      title: "AI-Powered Business Automation",
+      description: "Streamline your operations with intelligent automation solutions that adapt to your business needs.",
+      features: ["Process Automation", "Intelligent Workflows", "Predictive Analytics", "Real-time Monitoring"],
+      icon: "🤖"
+    },
+    {
+      title: "Cloud Infrastructure Solutions",
+      description: "Scalable, secure, and reliable cloud infrastructure tailored to your organization's requirements.",
+      features: ["Cloud Migration", "Hybrid Cloud", "Security & Compliance", "24/7 Support"],
+      icon: "☁️"
+    },
+    {
+      title: "Data Analytics & Intelligence",
+      description: "Transform your data into actionable insights with advanced analytics and machine learning.",
+      features: ["Data Visualization", "Predictive Modeling", "Real-time Dashboards", "Custom Reports"],
+      icon: "📊"
+    },
+    {
+      title: "Cybersecurity Solutions",
+      description: "Protect your digital assets with comprehensive security solutions and threat monitoring.",
+      features: ["Threat Detection", "Vulnerability Assessment", "Security Audits", "Incident Response"],
+      icon: "🔒"
+    },
+    {
+      title: "Mobile App Development",
+      description: "Create powerful mobile applications that engage users and drive business growth.",
+      features: ["iOS & Android", "Cross-platform", "UI/UX Design", "App Store Optimization"],
+      icon: "📱"
+    },
+    {
+      title: "Micro SaaS Platforms",
+      description: "Build and deploy specialized software solutions that solve specific business challenges.",
+      features: ["Rapid Development", "Scalable Architecture", "API Integration", "Custom Features"],
+      icon: "⚡"
+    }
+  ];
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  return (
+    <>
+      <Head>
+        <title>Solutions - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive technology solutions to transform your business. AI, cloud, security, and more." />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border-b border-gray-800">
+          <div className="max-w-7xl mx-auto px-4 py-16">
+            <div className="text-center">
+              <h1 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Our Solutions
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive technology solutions designed to transform your business and drive innovation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+import React from 'react';
+
 const solutions = [
   {
     title: 'Enterprise Solutions',
@@ -199,9 +252,31 @@ export default function SolutionsPage() {
                 solutions that drive growth, efficiency, and innovation.
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
               </p>
+
             </motion.div>
           </div>
         </section>
+
+        {/* Solutions Grid */}
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {solutions.map((solution, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                      <solution.icon className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">{solution.title}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">{solution.description}</p>
+                  <ul className="space-y-2">
 
         {/* Solutions Overview */}
         <section className="py-20">
@@ -257,39 +332,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Let's discuss how our solutions can help you achieve your technology goals.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-                <a
-                  href="/services"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                >
-                  View All Services
-<<<<<<< HEAD:pages_backup/solutions.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 import React from 'react';
@@ -304,6 +346,7 @@ import {
   Video, Headphones, Code, Database, Network, Server
   Monitor, Smartphone, Camera, Gamepad2, Palette
   Music, Film, BookOpenCheck, Building, MessageCircle
+:pages/solutions.tsx
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -342,7 +385,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
-
 
       id: 'healthcare',
       name: 'Healthcare Solutions',
@@ -402,6 +444,75 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
       popular: false
       icon: <BookOpenCheck className="w-8 h-8" />
     }
+:pages/solutions.tsx
+  ]
+  const solutionCapabilities = [
+    {
+      title: 'Industry Expertise'
+      description: 'Deep domain knowledge across sectors'
+      icon: <Briefcase className="w-6 h-6" />
+    }
+    {
+      title: 'Custom Development'
+      description: 'Tailored solutions for unique needs'
+      icon: <Code className="w-6 h-6" />
+    }
+    {
+      title: 'Integration Services'
+      description: 'Seamless system integration'
+      icon: <Network className="w-6 h-6" />
+    }
+    {
+      title: 'AI & Automation'
+      description: 'Intelligent automation solutions'
+      icon: <Brain className="w-6 h-6" />
+    }
+    {
+      title: 'Cloud & Security'
+      description: 'Secure cloud infrastructure'
+      icon: <Shield className="w-6 h-6" />
+    }
+    {
+      title: 'Analytics & Insights'
+      description: 'Data-driven decision making'
+      icon: <BarChart3 className="w-6 h-6" />
+    }
+  ]
+  const caseStudies = [
+    {
+      title: "Healthcare Provider Digital Transformation"
+      industry: "Healthcare"
+      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency."
+      results: [
+        "30% reduction in administrative overhead"
+        "Improved patient satisfaction scores"
+        "Enhanced data security and compliance"
+      ]
+      technologies: ["React", "Node.js", "PostgreSQL", "AWS"]
+    }
+    {
+      title: "E-commerce Platform Modernization"
+      industry: "Retail"
+      description: "Redesigned and modernized an existing e-commerce platform, resulting in significant improvements in user experience and sales."
+      results: [
+        "45% increase in conversion rates"
+        "60% improvement in page load times"
+        "Enhanced mobile user experience"
+      ]
+      technologies: ["Next.js", "TypeScript", "MongoDB", "Vercel"]
+    }
+    {
+      title: "Manufacturing IoT Integration"
+      industry: "Manufacturing"
+      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency."
+      results: [
+        "25% reduction in unplanned downtime"
+        "15% improvement in production efficiency"
+        "Predictive maintenance cost savings"
+      ]
+      technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
+    }
+  ]
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -438,7 +549,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
       title: 'Analytics & Insights',
       description: 'Data-driven decision making',
       icon: <BarChart3 className="w-6 h-6" />
-    }
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -478,7 +588,6 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
         "Predictive maintenance cost savings"
       ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
-    }
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -492,6 +601,8 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
           <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
           <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
         </Head>
+:pages/solutions.tsx
+        {/* Hero Section */}
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -512,27 +623,19 @@ import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services'
                 Tailored technology solutions designed for your industry's unique challenges and opportunities
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+:pages/solutions.tsx
+                <a
+                  href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Started
                 </a>
-                <a 
-                  href="/contact" 
-                <a
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started
                 </Link>
                 <a
                   href="/contact"
 
-
-
                 <a
                   href="/contact"
-
-
 
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
@@ -684,6 +787,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 >
                   <div className="flex items-center mb-4">
                     <div className="p-2 bg-orange-500/20 rounded-lg mr-3">
+:pages/solutions.tsx
+                      {capability.icon}
                       {capability.icon  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -719,6 +824,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+:pages/solutions.tsx
+                  className={`relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
+                    solution.popular
+                      ? 'border-orange-500 shadow-lg shadow-orange-500/25'
+                      : 'border-gray-700 hover:border-orange-500'
+                  }`}
+                >
                   {solution.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -729,22 +841,12 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                   <div className="text-center mb-6">
                     <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
                       {solution.icon}
-                  )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  <div className="text-center mb-6">
-                    <div className="inline-flex p-3 bg-orange-500/20 rounded-full mb-4">
-                      {solution.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
                     <p className="text-gray-300 mb-4">{solution.description}</p>
                     <div className="text-3xl font-bold text-orange-400 mb-2">
+:pages/solutions.tsx
+                      {solution.price}
                       {solution.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -757,6 +859,13 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+:pages/solutions.tsx
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <a
+                    href="/contact"
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -799,6 +908,8 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
           </motion.div>
         </div>
       </section>
+:pages/solutions.tsx
+        {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -830,55 +941,37 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
                 Partner with us to build industry-specific solutions that drive your business forward
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
-                  Start Your Transformation
-                </a>
-                <a 
-                  href="/contact" 
+:pages/solutions.tsx
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Your Transformation
+                </a>
                 </Link>
                 <a
                   href="/contact"
 
-
-
                 <a
                   href="/contact"
-
-
 
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/solutions.tsx
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
                 </a>
+
               </div>
-            </motion.div>
+            ))}
           </div>
-        </section>
-      </div>
-<<<<<<< HEAD
-    </Layout>
-  );
-}
-<<<<<<< HEAD:pages_backup/solutions.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
     </UltraAdvancedFuturisticBackground>
   )
+:pages/solutions.tsx
+}
+export default Solutions;
+
 
 export default Solutions,;
 ;
@@ -908,14 +1001,16 @@ export default Solutions,
           </div>;
         </section>;
       </div>;
+:pages/solutions.tsx
+    </UltraAdvancedFuturisticBackground>;
+  );
+},;
     </UltraAdvancedFuturisticBackground>);
 },
 export default Solutions,
 ;
 
 },
-
-
 
 import React from 'react',
 import Layout from '../components/layout/Layout',
@@ -933,14 +1028,6 @@ import { Target, Brain, Rocket, Shield, Zap, Atom, Cpu;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
 const Solutions: NextPage;
-export default Solutions;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:pages/solutions.tsx
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+export default Solutions;

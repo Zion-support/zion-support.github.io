@@ -1,10 +1,5 @@
-
-
-<<<<<<< HEAD
-=======
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 
@@ -21,9 +16,6 @@ try {}
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
 	process.exit(1)};
-<<<<<<< HEAD
-
-=======
 
 #!/usr/bin/env node
 
@@ -46,7 +38,7 @@ class AutoFixer {
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: e: true });
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
@@ -60,7 +52,7 @@ class AutoFixer {
         fs.appendFileSync(this.errorFile, logMessage);
       }
     } catch (err) {
-      console.error('Failed to write to log: file:', err.message);
+      console.error('Failed to write to log file:', err.message);
     }
   }
 
@@ -85,7 +77,7 @@ class AutoFixer {
 
       this.log('Auto-fix process completed successfully');
     } catch (error) {
-      this.log(`Auto-fix: failed: ${error.message}`, 'ERROR');
+      this.log(`Auto-fix failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -95,14 +87,14 @@ class AutoFixer {
       this.log('Fixing linting issues...');
 
       // Run ESLint with --fix
-      execSync('npm run: lint:fix', {
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
+      execSync('npm run lint:fix', {
+        stdio: 'pipe',
+        cwd: process.cwd(),
       });
 
       this.log('Linting issues fixed');
     } catch (error) {
-      this.log(`Failed to fix linting: issues: ${error.message}`, 'ERROR');
+      this.log(`Failed to fix linting issues: ${error.message}`, 'ERROR');
     }
   }
 
@@ -112,13 +104,13 @@ class AutoFixer {
 
       // Run TypeScript check
       execSync('npx tsc --noEmit', {
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
+        stdio: 'pipe',
+        cwd: process.cwd(),
       });
 
       this.log('TypeScript check passed');
     } catch (error) {
-      this.log(`TypeScript issues: found: ${error.message}`, 'WARN');
+      this.log(`TypeScript issues found: ${error.message}`, 'WARN');
     }
   }
 
@@ -128,8 +120,8 @@ class AutoFixer {
 
       // Check for outdated dependencies
       const outdated = execSync('npm outdated --json', {
-        stdi: o: 'pipe',
-        cw: d: process.cwd(),
+        stdio: 'pipe',
+        cwd: process.cwd(),
       });
 
       const outdatedDeps = JSON.parse(outdated.toString());
@@ -148,19 +140,19 @@ class AutoFixer {
       this.log('Cleaning up temporary files...');
 
       const tempFiles = [
-        '.next/cache';
-        'node_modules/.cache';
-        '*.log';
-        '*.tmp';
-        '.DS_Store';
-        'Thumbs.db';
+
+
+
+
+
+
       ];
 
       for (const pattern of tempFiles) {
         try {
           execSync(`find . -name "${pattern}" -type f -delete`, {
-            stdi: o: 'pipe',
-            cw: d: process.cwd(),
+            stdio: 'pipe',
+            cwd: process.cwd(),
           });
         } catch (err) {
           // Ignore errors for file cleanup
@@ -169,7 +161,7 @@ class AutoFixer {
 
       this.log('Temporary files cleaned up');
     } catch (error) {
-      this.log(`Failed to cleanup temp: files: ${error.message}`, 'ERROR');
+      this.log(`Failed to cleanup temp files: ${error.message}`, 'ERROR');
     }
   }
 
@@ -181,7 +173,7 @@ class AutoFixer {
       // For now, we'll just log that we're checking
       this.log('Import optimization check completed');
     } catch (error) {
-      this.log(`Failed to optimize: imports: ${error.message}`, 'ERROR');
+      this.log(`Failed to optimize imports: ${error.message}`, 'ERROR');
     }
   }
 }
@@ -194,7 +186,7 @@ async function main() {
     await autoFixer.runAutoFix();
     process.exit(0);
   } catch (error) {
-    autoFixer.log(`Auto-fix: failed: ${error.message}`, 'ERROR');
+    autoFixer.log(`Auto-fix failed: ${error.message}`, 'ERROR');
     process.exit(1);
   }
 }
@@ -204,9 +196,3 @@ if (require.main === module) {
 }
 
 module.exports = AutoFixer;
-ursor/automate-test-improve-and-merge-code-59d5
-
-
-main
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

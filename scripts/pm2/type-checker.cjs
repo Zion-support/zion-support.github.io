@@ -26,29 +26,27 @@ class TypeChecker {}
   error(message) {}
     const timestamp = new Date().toISOString();
     const errorMessage = `[${timestamp}] ERROR: ${message}\n`;`
-    fs.appendFileSync(this.errorFile, errorMessage);
-    console.error(message);
-  };
+    fs.appendFileSync(this.errorFile, errorMessage)
+    console.error(message)
   async runTypeCheck() {}
     try {}
-      this.log('Running TypeScript type check...');
-      execSync('npm run type-check', { })
-        stdio: 'pipe',
+      this.log('Running TypeScript type check...)
+      execSync('npm run type-check, { })
+        stdio: pipe,
         cwd: process.cwd();
       }
-});
       this.log('TypeScript type check completed successfully');
       return { success: true, errors: 0 };
-    } catch (err) {}
-      this.error(`TypeScript type check failed: ${err.message}`);
       
       // Parse TypeScript errors from stderr;
       const errorOutput = err.stderr ? err.stderr.toString() : err.message;
       const errors = this.parseTypeScriptErrors(errorOutput);
       
+
+      // Parse TypeScript errors from stderr;
+      const errorOutput = err.stderr ? err.stderr.toString() : err.message;
+      const errors = this.parseTypeScriptErrors(errorOutput);
       return { success: false, errors: errors.length, errorDetails: errors };
-    };
-  };
   parseTypeScriptErrors(output) {}
     const errors = [];
     const lines = output.split('\n');
@@ -62,77 +60,50 @@ class TypeChecker {}
           column: parseInt(match[3]),
           code: match[4],
           message: match[5];
-        }
-});
-      };
-    };
     return errors;
-  };
-  async fixTypeScriptErrors(errors) {}
+  async fixTypeScriptErrors(errors) {}`;
     this.log(`Attempting to fix ${errors.length} TypeScript errors...`);
     
     let fixedCount = 0;
     const filesToFix = new Set();
     
+    let fixedCount = 0;
+    const filesToFix = new Set();
     // Group errors by file;
     for (const error of errors) {}
       filesToFix.add(error.file);
-    };
     for (const filePath of filesToFix) {}
-      try {}
         if (fs.existsSync(filePath)) {}
-          const fixed = await this.fixFileErrors(filePath, errors.filter(e => e.file === filePath));
-          if (fixed) {}
-            fixedCount++;
-          };
-        };
-      } catch (err) {}
-        this.error(`Error fixing file ${filePath}: ${err.message}`);
-      };
-    };
-    this.log(`Fixed TypeScript errors in ${fixedCount} files`);
-    return fixedCount;
-  };
+          const fixed = await this.fixFileErrors(filePath, errors.filter(e => e.file === filePath))
+  if($2) {}
+            fixedCount++
+    this.log(`Fixed TypeScript errors in ${fixedCount} files`)
+    return fixedCount
   async fixFileErrors(filePath, fileErrors) {}
-    try {}
-      let content = fs.readFileSync(filePath, 'utf8');
+
       let modified = false;
       
       for (const error of fileErrors) {}
         const fix = this.getFixForError(error, content);
         if (fix) {}
           content = fix;
-          modified = true;
-          this.log(`Fixed error in ${filePath} at line ${error.line}: ${error.message}`);
-        };
-      };
+
       if (modified) {}
         fs.writeFileSync(filePath, content);
         return true;
-      };
       return false;
-    } catch (err) {}
-      this.error(`Error fixing file ${filePath}: ${err.message}`);
-      return false;
-    };
-  };
+
   getFixForError(error, content) {}
     const lines = content.split('\n');
     const lineIndex = error.line - 1;
     
     if (lineIndex < 0 || lineIndex >= lines.length) {}
       return null;
-    };
     const line = lines[lineIndex];
     let fixedLine = line;
     
     switch (error.code) {}
-      case '1005': // ';' expected;
-        if (line.trim().endsWith(')') && !line.trim().endsWith(');')) {}
-          fixedLine = line.replace(/\)$/, ');');
-        } else if (line.trim().endsWith('}') && !line.trim().endsWith('};')) {}
-          fixedLine = line.replace(/\}$/, '};');
-        };
+
         break;
         
       case '1435': // Unknown keyword or identifier;
@@ -154,11 +125,14 @@ class TypeChecker {}
         };
         break;
         
+        '
+      case '1435: // Unknown keyword or identifier
+        if (line.includes('with out')) {}
+
       case '1009': // Expression expected;
         if (line.includes('render(<App: />)')) {}
+
           fixedLine = line.replace(/render\(<App:\s*\/>\)/g, 'render(<App />)');
-        };
-        break;
         
       case '1109': // Expression expected;
         if (line.includes('expect(') && line.includes('))')) {}
@@ -167,22 +141,22 @@ class TypeChecker {}
         break;
         
       default:
-        // Generic fixes for common patterns;
-        if (line.includes(';;')) {}
-          fixedLine = line.replace(/;;/g, ';');
+        // Generic fixes for common patterns
+        if (line.includes(';')) {}
+          fixedLine = line.replace(/;/g, ';')
         } else if (line.includes('import') && line.includes('from') && !line.includes(';')) {}
-          fixedLine = line + ';';
+          fixedLine = line + ';'
         } else if (line.includes('interface') && line.includes('{') && !line.includes('}')) {}
-          fixedLine = line + '}';
-        };
-        break;
-    };
-    if (fixedLine !== line) {}
-      lines[lineIndex] = fixedLine;
-      return lines.join('\n');
-    };
-    return null;
-  };
+          fixedLine = line + '}'
+        }
+        break
+    }
+  if($2) {}
+      lines[lineIndex] = fixedLine
+      return lines.join('\n')
+    }
+    return null
+  }
   async fixCommonTypeScriptIssues() {}
     this.log('Fixing common TypeScript issues...');
     
@@ -217,7 +191,7 @@ class TypeChecker {}
             description: 'Fix boolean type quotes'
           },
           {}
-            pattern: /import\s+([^;]+);;\s*import/g,
+            pattern: /import\s+([^;]+);\s*import/g,
             replacement: 'import $1;\nimport',
             description: 'Fix malformed imports'
           },
@@ -225,7 +199,7 @@ class TypeChecker {}
             pattern: /describe\([^)]*\)\s*\{[^}]*\}\s*it\(/g,)
             replacement: (match) => {}
               return match.replace(/\}\s*it\(/g, '}
-});\n  it(');
+});\n  it(')
             },
             description: 'Fix test structure'
           };
@@ -236,17 +210,17 @@ class TypeChecker {}
           if (typeof fix.replacement === 'function') {}
             content = content.replace(fix.pattern, fix.replacement);
           } else {}
-            content = content.replace(fix.pattern, fix.replacement);
-          };
-          if (content !== before) {}
-            modified = true;
-            this.log(`Applied fix "${fix.description}" to ${file}`);
-          };
-        };
-        if (modified) {}
-          fs.writeFileSync(file, content);
-          fixedCount++;
-        };
+            content = content.replace(fix.pattern, fix.replacement)
+          }
+  if($2) {}
+            modified = true
+            this.log(`Applied fix "${fix.description}" to ${file}`)
+          }
+        }
+  if($2) {}
+          fs.writeFileSync(file, content)
+          fixedCount++
+        }
       } catch (err) {}
         this.error(`Error processing ${file}: ${err.message}`);
       };
@@ -308,15 +282,13 @@ class TypeChecker {}
 
     this.watcher;
       .on('add', (filePath) => {}
-        this.log(`New TypeScript file detected: ${filePath}`);
-        this.processFile(filePath);
-      }
-});
+        this.log(`New TypeScript file detected: ${filePath}`)
+        this.processFile(filePath)
+})
       .on('change', (filePath) => {}
-        this.log(`TypeScript file changed: ${filePath}`);
-        this.processFile(filePath);
-      }
-});
+        this.log(`TypeScript file changed: ${filePath}`)
+        this.processFile(filePath)
+})
       .on('error', (error) => {}
         this.error(`TypeScript watcher error: ${error.message}`);
       }
@@ -328,13 +300,12 @@ class TypeChecker {}
     this.log(`Processing TypeScript file: ${filePath}`);
     
     try {}
-      // Run type check on the specific file;
+      // Run type check on the specific file
       execSync(`npx tsc --noEmit "${filePath}"`, { `})
         stdio: 'pipe',
-        cwd: process.cwd();
-      }
-});
-      this.log(`Type check passed for ${filePath}`);
+        cwd: process.cwd()
+})
+      this.log(`Type check passed for ${filePath}`)
     } catch (err) {}
       this.log(`Type check failed for ${filePath}: ${err.message}`);
       
@@ -410,11 +381,9 @@ if (require.main === module) {}
   } else if (command === 'fix') {}
     checker.fixCommonTypeScriptIssues().then(() => {}
       checker.runTypeCheck().then(result => {})
-        process.exit(result.success ? 0 : 1);
-      }
-});
-    }
-});
+        process.exit(result.success ? 0 : 1)
+})
+})
   } else {}
     checker.runTypeCheck().then(result => {})
       process.exit(result.success ? 0 : 1);
@@ -422,9 +391,11 @@ if (require.main === module) {}
 });
   };
 };
-
-<<<<<<< HEAD
-=======
 module.exports = TypeChecker;
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+module.exports = TypeChecker;
+module.exports = TypeChecker;
+
+module.exports = TypeChecker;
+
+

@@ -1,4 +1,5 @@
 #!/usr/bin/env node;
+
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -8,81 +9,69 @@ class BuildMonitor {}
     this.interval = 60000; // 1 minute;
     this.lastBuildTime = null};
   async start() {}
-    console.log('Starting Build Monitor...');
+
     this.isRunning = true;
     
     // Initial build check;
     await this.runBuildCheck();
     
+    // Initial build check;
+    await this.runBuildCheck();
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runBuildCheck()}, this.interval);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    
+    
+
+
     console.log('Build Monitor started successfully')};
   async runBuildCheck() {}
     try {}
       console.log('Running build check...');
       
+      
       const child = spawn('npm', ['run', 'build'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
-        "cwd": process.cwd();
+        "cwd": process.cwd();"
       };);
 
+"
       let output = ;';';
       let errorOutput = ;';';
-
       child.stdout.on('data', (data) => {}
         output += data.toString()}
 });
 
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
-});
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
       child.on('close', (code) => {}
         if ( {})
+
           console.log('Build check passed ✓')) {}
      {}
-          console.log('Build check passed ✓')};
+          console.log('Build check passed ✓')}
           this.lastBuildTime = new Date()} else {}
           console.log('Build check failed ✗');
-          console.log('"Output": ', output);
-          console.log('"Errors": ', errorOutput);
           
           // Attempt to fix common build issues;
           this.attemptBuildFix()};
       })} catch (error) {}
-      console.error('Error running build "check": ', error.message)};
-  };
+      console.error('Error running build "check": ', error.message)}
+  }
   async attemptBuildFix() {}
     try {}
       console.log('Attempting to fix build issues...');
+      
       
       // Clean build directory;
       const cleanChild = spawn('npm', ['run', 'clean'], {})
@@ -90,69 +79,48 @@ class BuildMonitor {}
         "cwd": process.cwd();
       };);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       cleanChild.on('close', (code) => {}
-        if ( {})
           console.log('Clean completed, retrying build...')) {}
-     {}
-          console.log('Clean completed, retrying build...')};
+          console.log('Clean completed, retrying build...')}
           this.runBuildCheck()} else {}
           console.log('Clean failed')};
-      })} catch (error) {}
       console.error('Error running build "fix": ', error.message)};
-  };
   stop() {}
     console.log('Stopping Build Monitor...');
-    this.isRunning = false;
     
     if ( {})
       clearInterval(this.intervalId)};
     console.log('Build Monitor stopped')) {}
-     {}
-      clearInterval(this.intervalId)};
-    console.log('Build Monitor stopped')}};
-};
-// Start the monitor if run directly;
-if ( {})
+    console.log('Build Monitor stopped')}}
+// Start the monitor if run directly
   const monitor = new BuildMonitor) {}
-     {}
   const monitor = new BuildMonitor}(;);
   
   // Handle graceful shutdown;
   process.on('SIGINT', () => {}
-    monitor.stop();
+    monitor.stop()
     process.exit(0)}
 });
   
   process.on('SIGTERM', () => {}
-    monitor.stop();
+    monitor.stop()
     process.exit(0)}
 });
+module.exports = BuildMonitor;
   
   monitor.start().catch(console.error)};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 module.exports = BuildMonitor;
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 module.exports = BuildMonitor;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 module.exports = BuildMonitor;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+module.exports = BuildMonitor;
+  // Handle graceful shutdown;
+
+  monitor.start().catch(console.error)};
+
+

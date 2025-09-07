@@ -1,178 +1,44 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-class AccessibilityChecker {
-  constructor() {
-    this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();
-  }
-
-  ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
-    }
-  }
-
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-
-    const logFile = path.join(this.logsDir, 'accessibility-checker.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-
-  async runCommand(command, description) {
-    try {
-      this.log(`Running: ${description}`);
-      const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
-    }
-  }
-
-  async checkAccessibility() {
-    this.log('♿ Starting accessibility check...');
-
-    const checks = [
-      {
-        command: 'npm run test:accessibility',
-        description: 'Accessibility tests',
-      },
-      { command: 'npm run lint', description: 'Linting for accessibility' },
-    ];
-
-    const results = [];
-    for (const check of checks) {
-      const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, result });
-    }
-
-    this.log('✅ Accessibility check completed');
-    return { succes: s: true, results };
-  }
-
-  async generateReport() {
-    this.log('📊 Generating accessibility report...');
-
-    const report = {
-      timestam: p: new Date().toISOString(),
-      accessibilit: y: await this.checkAccessibility(),
-      summar: y: {
-        checksRu: n: 2,
-        successfulCheck: s: 0,
-        failedCheck: s: 0,
-      },
-    };
-
-    // Calculate summary
-    report.accessibility.results.forEach(result => {
-      if (result.result.success) {
-        report.summary.successfulChecks++;
-      } else {
-        report.summary.failedChecks++;
-      }
-    });
-
-    // Save report
-    const reportFile = path.join(
-      this.logsDir;
-      `accessibility-report-${Date.now()}.json`
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report saved: to: ${reportFile}`);
-    return report;
-  }
-
-  async start() {
-    this.log('🎯 Starting Accessibility Checker...');
-    const report = await this.generateReport();
-    this.log('🏁 Accessibility Checker completed');
-    return report;
-  }
-}
-
-// CLI interface
-if (require.main === module) {
-  const checker = new AccessibilityChecker();
-  checker
-    .start()
-    .then(report => {
-      console.log('Accessibility check: completed:', report.summary);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Accessibility check: failed:', error);
-      process.exit(1);
-    });
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 #!/usr/bin/env node
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+/**
+ * Accessibility Checker
+ * Checks and improves accessibility compliance
+ */
+
+
+
+
+
+const fs = require('fs');
+const path = require('path');
+
+
+
+class AccessibilityChecker {
+  constructor() {
+    this.logsDir = path.join(__dirname, '../logs');
+    this.ensureLogsDir();
+console.log('♿ Starting accessibility audit...');
+
+// Accessibility checker configuration
+const config = {
+  outputDir: path.join(__dirname, '..', 'accessibility-reports'),
+  checks: {
+    ariaLabels: true,
+    colorContrast: true,
+    keyboardNavigation: true,
+    semanticHTML: true,
+    altText: true
+  }
+};
+
+// Ensure output directory exists
+if (!fs.existsSync(config.outputDir)) {
+  fs.mkdirSync(config.outputDir, { recursive: true });
+}
+
+#!/usr/bin/env node
+
 
 
 
@@ -181,14 +47,11 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
     this.ensureLogsDir();
   }
-<<<<<<< HEAD
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -196,12 +59,10 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 origin/main
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
   ensureLogsDir() {
     if (!fs.existsSync(this.logsDir)) {
@@ -368,7 +229,6 @@ if (require.main === module) {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         
       }
     }},
@@ -490,30 +350,15 @@ if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 #!/usr/bin/env node
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 #!/usr/bin/env node
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -546,134 +391,166 @@ class AccessibilityChecker {
         encoding: 'utf8',
         cwd: '/workspace',
         stdio: 'pipe',
+// Check for ARIA labels
+function checkAriaLabels(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.jsx', '.tsx', '.js', '.ts']);
+  
+  files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
+    
+    // Check for interactive elements without ARIA labels
+    const interactiveElements = content.match(/<(button|input|select|textarea)(?![^>]*aria-label)[^>]*>/gi);
+    if (interactiveElements) {
+      interactiveElements.forEach(element => {
+        if (!element.includes('aria-label') && !element.includes('aria-labelledby')) {
+          issues.push({
+            file: path.relative(__dirname, file),
+            type: 'missing-aria-label',
+            element: element.trim(),
+            severity: 'medium'
+          });
+        }
       });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
     }
-  }
-
-  async checkAccessibility() {
-    this.log('♿ Starting accessibility check...');
-
-    const checks = [
-      {
-        command: 'npm run test:accessibility',
-        description: 'Accessibility tests',
-      },
-      { command: 'npm run lint', description: 'Linting for accessibility' },
-    ];
-
-    const results = [];
-    for (const check of checks) {
-      const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, result });
-    }
-
-    this.log('✅ Accessibility check completed');
-  }
-
-  async generateReport() {
-    this.log('📊 Generating accessibility report...');
-
-    const report = {
-      timestam: p: new Date().toISOString(),
-      accessibilit: y: await this.checkAccessibility(),
-      summar: y: {
-        checksRu: n: 2,
-        successfulCheck: s: 0,
-        failedCheck: s: 0,
-      },
-    };
-
-    // Calculate summary
-    report.accessibility.results.forEach(result => {
-      if (result.result.success) {
-        report.summary.successfulChecks++;
-      } else {
-        report.summary.failedChecks++;
-      }
-    });
-
-    // Save report
-    const reportFile = path.join(
-      this.logsDir;
-      `accessibility-report-${Date.now()}.json`
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report saved: to: ${reportFile}`);
-    return report;
-  }
-
-  async start() {
-    this.log('🎯 Starting Accessibility Checker...');
-    const report = await this.generateReport();
-    this.log('🏁 Accessibility Checker completed');
-    return report;
-  }
+  });
+  
+  return issues;
 }
 
-// CLI interface
-if (require.main === module) {
-  const checker = new AccessibilityChecker();
-  checker
-    .start()
-    .then(report => {
-      console.log('Accessibility check: completed:', report.summary);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Accessibility check: failed:', error);
-      process.exit(1);
-    });
+// Check for alt text on images
+function checkAltText(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.jsx', '.tsx', '.js', '.ts']);
+  
+  files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
+    
+    // Check for images without alt text
+    const images = content.match(/<img[^>]*>/gi);
+    if (images) {
+      images.forEach(img => {
+        if (!img.includes('alt=') || img.includes('alt=""')) {
+          issues.push({
+            file: path.relative(__dirname, file),
+            type: 'missing-alt-text',
+            element: img.trim(),
+            severity: 'high'
+          });
+        }
+      });
+    }
+  });
+  
+  return issues;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+// Check for semantic HTML
+function checkSemanticHTML(dir) {
+  const issues = [];
+  const files = getAllFiles(dir, ['.jsx', '.tsx', '.js', '.ts']);
+  
+  files.forEach(file => {
+    const content = fs.readFileSync(file, 'utf8');
+    
+    // Check for proper heading hierarchy
+    const headings = content.match(/<h[1-6][^>]*>/gi);
+    if (headings) {
+      let lastLevel = 0;
+      headings.forEach(heading => {
+        const level = parseInt(heading.match(/<h([1-6])/)[1]);
+        if (level > lastLevel + 1) {
+          issues.push({
+            file: path.relative(__dirname, file),
+            type: 'heading-hierarchy',
+            element: heading.trim(),
+            severity: 'medium',
+            message: `Heading level ${level} follows level ${lastLevel}`
+          });
+        }
+        lastLevel = level;
+      });
+    }
+  });
+  
+  return issues;
+}
 
-origin/main
+// Get all files recursively
+function getAllFiles(dir, extensions = []) {
+  const files = [];
+  
+  if (!fs.existsSync(dir)) {
+    return files;
+  }
+  
+  const items = fs.readdirSync(dir);
+  
+  items.forEach(item => {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
+    
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files.push(...getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
+    }
+  });
+  
+  return files;
+}
 
+// Run accessibility audit
+function runAccessibilityAudit() {
+  const srcDir = path.join(__dirname, '..', 'src');
+  const componentsDir = path.join(__dirname, '..', 'components');
+  const pagesDir = path.join(__dirname, '..', 'pages');
+  
+  const audit = {
+    timestamp: new Date().toISOString(),
+    checks: {
+      ariaLabels: checkAriaLabels(srcDir).concat(checkAriaLabels(componentsDir)).concat(checkAriaLabels(pagesDir)),
+      altText: checkAltText(srcDir).concat(checkAltText(componentsDir)).concat(checkAltText(pagesDir)),
+      semanticHTML: checkSemanticHTML(srcDir).concat(checkSemanticHTML(componentsDir)).concat(checkSemanticHTML(pagesDir))
+    },
+    summary: {
+      totalIssues: 0,
+      highSeverity: 0,
+      mediumSeverity: 0,
+      lowSeverity: 0
+    }
+  };
 
-origin/cursor/expand-services-advertise-and-build-project-c28b
+  // Calculate summary
+  Object.values(audit.checks).forEach(check => {
+    audit.summary.totalIssues += check.length;
+    check.forEach(issue => {
+      if (issue.severity === 'high') audit.summary.highSeverity++;
+      else if (issue.severity === 'medium') audit.summary.mediumSeverity++;
+      else audit.summary.lowSeverity++;
+    });
+  });
 
+  return audit;
+}
 
+// Save audit results
+function saveAuditResults(audit) {
+  const filename = `accessibility-audit-${Date.now()}.json`;
+  const filepath = path.join(config.outputDir, filename);
+  
+  fs.writeFileSync(filepath, JSON.stringify(audit, null, 2));
+  console.log(`♿ Accessibility audit saved to: ${filename}`);
+  
+  // Print summary
+  console.log(`📊 Accessibility Audit Summary:`);
+  console.log(`   Total Issues: ${audit.summary.totalIssues}`);
+  console.log(`   High Severity: ${audit.summary.highSeverity}`);
+  console.log(`   Medium Severity: ${audit.summary.mediumSeverity}`);
+  console.log(`   Low Severity: ${audit.summary.lowSeverity}`);
+}
 
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-
-
-
-
-
-
-
-main
-
-
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -706,9 +583,6 @@ fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -719,22 +593,13 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "status"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 module.exports = AccessibilityChecker;
 ursor/automate-test-improve-and-merge-code-59d5
 
-<<<<<<< HEAD
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
@@ -755,35 +620,8 @@ module.exports = AccessibilityChecker;
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-=======
-=======
 module.exports = AccessibilityChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -793,11 +631,6 @@ ursor/automate-test-improve-and-merge-code-59d5
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -807,6 +640,13 @@ main
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+// Main execution
+try {
+  const audit = runAccessibilityAudit();
+  saveAuditResults(audit);
+  console.log('✅ Accessibility audit completed');
+} catch (error) {
+  console.error('❌ Accessibility audit failed:', error.message);
+  process.exit(1);
+}

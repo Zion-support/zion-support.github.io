@@ -1,66 +1,3 @@
-
-import React from './react';
-import { Clock } from './lucide-react';
-
-interface TalentCardAvailabilityProps {
-  availability_type: string;
-}
-
-import {Clock} from "lucide-react";
-interface TalentCardAvailabilityProps {;
-  availabilityType: string;
-}
-
-export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
-<<<<<<< HEAD
-
-export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
-
-
-  };
-
-import React from "react",
-import { Clock } from "lucide-react",
-interface TalentCardAvailabilityProps {
-  availabilityType: string
-import React from "react",;
-import { Clock } from "lucide-react",;
-interface TalentCardAvailabilityProps {;
-  availabilityType: string;
-}
-;
-export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {;
-
-  // Format availability status;
-  const getAvailabilityColor = (status: string) => {;
-    switch (status) {;
-      case 'full-time':;
-
-      case 'project-based':;
-        return 'bg-blue-500/20 text-blue-400',;
-      default:;
-        return 'bg-gray-500/20 text-gray-400';
-    }
-  };
-
-  // Format availability label;
-  const getAvailabilityLabel = (status: string) => {;
-    switch (status) {;
-      case 'full-time':;
-        return 'Full-time';
-      case 'part-time':;
-        return 'Part-time';
-
-  },;
-  ;
-  // Format availability label;
-  const getAvailabilityLabel = (status:string) => {;
-    switch (status) {;
-      case 'full-time':;
-        return 'Full-time',;
-      case 'part-time':;
-        return 'Part-time',;
-=======
 export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {
 };
   // Format availability status;
@@ -69,27 +6,41 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
       case 'full-time':;        return 'Full-time';
       case 'part-time':;
         return 'Part-time';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case 'project-based':;
         return 'Project',;
       default:;
         return status;
 
     }
-<<<<<<< HEAD
-
   },
+import React from "react";
+import { Clock } from "lucide-react";
+interface TalentCardAvailabilityProps {
+  availabilityType: string}
 
-      case 'part-time':;
-        return 'bg-yellow-500/20 text-yellow-400';
-        return 'Full-time';
-      case 'part-time':;
-        return 'Part-time';
+export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
+  // Format availability status
+  const getAvailabilityColor = $2;
+      case 'part-time':
+        return 'bg-yellow-500/20 text-yellow-400',
+      case 'project-based':
+        return 'bg-blue-500/20 text-blue-400',
+      default:
+        return 'bg-gray-500/20 text-gray-400'
     }
-
-=======
   },
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  
+  // Format availability label
+  const getAvailabilityLabel = $2;
+      case 'part-time':
+        return 'Part-time',
+      case 'project-based':
+        return 'Project',
+      default:
+        return status
+    }
+  },
+
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
@@ -97,40 +48,4 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
     </div>
   )
 }
-  }
-
-  return (
-
-<<<<<<< HEAD
-    <div className={`flex items-center gap-1 px-2 py-0 && 0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>;
-      <Clock className="h-3 w-3" />;
-      <span>{getAvailabilityLabel(availabilityType)}</span>;
-    </div>;
-  );
-
-
 }
-export /**
- * TalentCardAvailability - Function description
- */
-function TalentCardAvailability() {
-  // Format availability status;
-  const getAvailabilityColor = (status: string) =>: any {
-    switch (status) {
-      case 'full - time':;
-        return 'bg - green - 500 / 20 text - green - 400';
-      case 'part - time':;
-        return 'bg - yellow - 500 / 20 text - yellow - 400';
-      case 'project - based':;
-        return 'bg - blue - 500 / 20 text - blue - 400',
-      default:;
-        return 'bg - gray - 500 / 20 text - gray - 400';
-    }
-  }
-;
-
-
-
-=======
-}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

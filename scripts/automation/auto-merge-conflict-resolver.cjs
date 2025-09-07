@@ -70,19 +70,19 @@ this.log(" Resolved conflict in ${filePath}")
       .replace(/\s*\"n/g", ")
   async processBranch(branchName) {this.log("� Processing "branch": ${branchName}")
   // Checkout the branchconst checkoutResult = await this.runCommand("git checkout ${branchName}")
-      if (!checkoutResult.success) {this.log(" Failed to checkout ${branchName}", "ERROR")
+  if($2) {this.log(" Failed to checkout ${branchName}", "ERROR")
       const mergeResult = await this.runCommand("git merge main")
-      if (mergeResult.success) {this.log(" Successfully merged ${branchName} with main")
+  if($2) {this.log(" Successfully merged ${branchName} with main")
   "branch"
           "status": "merged"
           "timestamp"
         await this.runCommand("git add .");const commitResult = await this.runCommand("git commit -m Auto-resolve merge conflicts in ${branchName}")
-        if (commitResult.success) {this.log(" Successfully resolved conflicts in ${branchName}")
+  if($2) {this.log(" Successfully resolved conflicts in ${branchName}")
   "branch"
             "status": "conflicts_resolved"
             "timestamp"
         await this.runCommand("git add .");const commitResult = await this.runCommand("git commit -m Auto-resolve merge conflicts in ${branchName}"")
-        if (commitResult.success) {this.log(" Successfully resolved conflicts in ${branchName}")
+  if($2) {this.log(" Successfully resolved conflicts in ${branchName}")
   "branch"
             "status": "conflicts_resolved"
             "timestamp"
@@ -132,17 +132,11 @@ this.log(" Found ${branches.length} cursor branches to process")
       this.log("� Auto Merge Conflict Resolver completed!");this.log(" "Summary": ");this.log("   - Branches processed: ${report.summary.totalBranches}");this.log("   - Successful "merges": ${report.summary.successfulBranches}");this.log("   - Failed "merges": ${report.summary.failedBranches}");this.log("   - Conflicts "resolved": ${report.summary.totalConflicts}");this.log("   - "Duration": ${Math.round(report.duration / 1000)}s"
       return report} catch (error) {this.log(" Fatal "error": ${error.message}", "ERROR")
   console.log(")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Auto merge conflict resolution "failed": ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(" Auto merge conflict resolution "failed": ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(" Auto merge conflict resolution "failed": ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Auto merge conflict resolution "failed": ")
+  console.error(" Auto merge conflict resolution "failed": ")
+
+

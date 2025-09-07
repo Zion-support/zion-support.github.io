@@ -1,21 +1,13 @@
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
- * Fix Team Page - Targeted fix for team.tsx;
+ * Fix Team Page - Targeted fix for team.tsx
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs')
   const filePath = './pages/team.tsx'
     console.log(' Team page not found')
@@ -97,16 +89,12 @@ const fs = require('fs')
               "display"
               "border"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               "transition"
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               "transition"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
               "transition"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+              "transition"
+
+const fs = require('fs')
+
+

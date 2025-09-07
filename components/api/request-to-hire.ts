@@ -1,28 +1,33 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {};
+  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body || {},
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {
-  const { talentSlug, requesterName, requesterEmail, projectInfo } =
-    req.body |{};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
-  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {
-    return res.status(400).json({ error: 'Missing required fields' });
+    return res.status(400).json({ error: 'Missing required fields' })
   }
+
   try {
-    const timestamp = null;
+    const timestamp = new Date().toISOString($2);
+    console.log($2);
+    // Persist to data/requests as a simple CMS-like log
+    const dir = path.join(process.cwd(), 'datarequests'),
+    if (!fs.existsSync(dir)) fs.mkdirSync($2);
+    const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectInfo },
+    const file = path.join(dir, `request-${timestamp.replace(/[:.]/g, '-')}.json`),
+    fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8'),
+
+    // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
+
+    return res.status(200).json({ ok: true})
+  } catch (err) {
+    console.error($2);
     return res.status(500).json({ error: 'Internal error' })
   }
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
     req.body |{};  if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -59,31 +64,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       requesterName,
       requesterEmail,
       projectInfo,
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     });
     // Persist to data/requests as a simple CMS-like log
     const dir = path.join(process.cwd(), 'data', 'requests');
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     const payload = {
-<<<<<<< HEAD
-      timestamp
-      talentSlug
-      requesterName
-      requesterEmail
-      projectInfo
-    }
-    const file = path.join(
-      dir
-      `request-${timestamp.replace(/[:.]/g, '-')}.json`
-    );
-    fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8');
-    // Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)
-    return res.status(200).json({ ok: true });
-  } catch (err) {
-    console.error('Request-to-hire failed', err);
-return res.status(500).json({ error: 'Internal error' });
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     // Persist to data/requests as a simple CMS-like log
     const dir = path && path.join(process && process.cwd(), 'datarequests');
     if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
@@ -110,11 +95,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
     console.error('Request-to-hire failed', err);
     return res.status(500).json({ error: 'Internal error' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   }
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     req.body |{}if (!talentSlug |!requesterName |!requesterEmail |!projectInfo) {export default async function handler() {}
   const { talentSlug, requesterName, requesterEmail, projectInfo } =;
     req.body |{}const { talentSlug, requesterName, requesterEmail, projectInfo } = req.body |{}
@@ -141,9 +122,5 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     }
     const file = path.join(dir;
       `request-${timestamp.replace(/[:.]/g, '-')}.json`;
-<<<<<<< HEAD
     )fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8')// Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)return res.status(200).json({ ok: true })} catch (err) {console.error('Request-to-hire failed', err)return res.status(500).json({ error: 'Internal error' })}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-    )fs.writeFileSync(file, JSON.stringify(payload, null, 2), 'utf8')// Email hooks could be integrated here (e.g., Resend, SendGrid, Nodemailer)return res.status(200).json({ ok: true })} catch (err) {console.error('Request-to-hire failed', err)return res.status(500).json({ error: 'Internal error' })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+}

@@ -66,17 +66,11 @@ const { execSync } = require("child_process")
     console.log(`⚡ Lazy "components"`)
     console.log(` Optimization "recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       console.log("\n� High Priority "Optimizations")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       console.log("\n� High Priority "Optimizations")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       console.log("\n� High Priority "Optimizations")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      console.log("\n� High Priority "Optimizations")
+      console.log("\n� High Priority "Optimizations")
+
+

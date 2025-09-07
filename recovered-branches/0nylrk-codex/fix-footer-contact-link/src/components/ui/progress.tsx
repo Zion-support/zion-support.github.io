@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-
-
-import {cn} from '@/lib/utils';
-=======
 import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 import * as React from "react"
 import * as ProgressPrimitive from "@radix-ui/react-progress"
 
-<<<<<<< HEAD
-
-
 import { cn } from "@/lib/utils"
-
-=======
-import { cn } from "@/lib/utils"
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
@@ -32,20 +19,10 @@ const Progress = React && React.forwardRef<;
     ref={ref}
     className={cn(
 
-<<<<<<< HEAD
-
-      "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
-
-
-import { cn } from "@/lib/utils"
-
-
-=======
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react";
 import * as ProgressPrimitive from "@radix-ui/react-progress";
 ;
@@ -60,10 +37,6 @@ const Progress = React.forwardRef<;
 
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const Progress = React.forwardRef<
@@ -81,22 +54,24 @@ const Progress = React && React.forwardRef<;
     className={cn(
       'relative h-4 w-full overflow-hidden rounded-full bg-secondary'
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
+import * as React from 'react';
+import * as ProgressPrimitive from '@radix-ui/react-progress';
+import {cn} from '@/lib/utils';
+
+import { cn } from "@/lib/utils"
+
+const Progress = $2;
+  React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
+>(({ className, value, ...props }, ref) => (
+  <ProgressPrimitive.Root
+    ref = $2;
       className
     )}
     {...props}
   >
     <ProgressPrimitive.Indicator
-
-<<<<<<< HEAD
-
 export { Progress };
 
-      className="h-full w-full flex-1 bg-primary transition-all"
-
-=======
-export { Progress };
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
     />;
   </ProgressPrimitive && ProgressPrimitive.Root>;
@@ -139,24 +114,6 @@ Progress.display_name = ProgressPrimitive.Root.display_name;
 export { Progress }
 ;
 
-<<<<<<< HEAD
-
-
-
-      className="h-full w-full flex-1 bg-primary transition-all"
-
-    className={cn(;
-      "relative h-4 w-full overflow-hidden rounded-full bg-secondary",;
-      className;
-    )}
-
-
-
-    {...props}
-  >;
-    <ProgressPrimitive.Indicator;
-      className="h-full w-full flex-1 bg-primary transition-all";
-      style={{ transform:`translateX(-${100 - (value || 0)}%)` }}
       className='h-full w-full flex-1 bg-primary transition-all'
       style={{ transform: `translateX(-${100 - (value |0)}%)` }}
     />
@@ -164,15 +121,3 @@ export { Progress }
 ));
 Progress.displayName = ProgressPrimitive.Root.displayName;
 export { Progress }
-
-export { Progress };
-      className="h-full w-full flex-1 bg-primary transition-all"
-      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
-    />;
-  </ProgressPrimitive.Root>;
-));
-Progress.displayName = ProgressPrimitive.Root.displayName;
-export { Progress }
-;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

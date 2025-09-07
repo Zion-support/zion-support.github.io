@@ -50,7 +50,7 @@ const { execSync } = require("child_process")
   const content = fs.readFileSync(filePath, "utf8")
       if (content.includes(".ts") || content.includes(.ts"")
       const importLines = content.match(/import.*"from/g")
-    if (importIssues > 0) {console.log(⚠  Found ${importIssues} import issues"")
+  if($2) {console.log(⚠  Found ${importIssues} import issues"")
   console.log("" No import issues found")
   const content = fs.readFileSync(filePath, "utf8")
       if (content.includes("any"")
@@ -60,7 +60,7 @@ const { execSync } = require("child_process")
       if (content.includes("any"")
       if (content.includes("<\\w+")
       if (content.includes("\\w+\\w+":")
-    if (syntaxIssues > 0) {console.log("})
+  if($2) {console.log("})
   console.log("" No syntax issues found")
       const result = execSync("npm run lint -- --quiet")
   "cwd"
@@ -68,7 +68,7 @@ const { execSync } = require("child_process")
         "stdio": "pipe"
       const unusedImportCount = (result.match(/""unused/g"")
   console.log("" No syntax issues found")
-      if (this.config.autoFix) {"}
+  if($2) {"}
         await this.autoFixSyntaxIssues();")}")} else {"}
       console.log(" No syntax issues found")
       const result = execSync("npm run lint -- --quiet")
@@ -76,7 +76,7 @@ const { execSync } = require("child_process")
         "encoding": "utf8"
         "stdio": "pipe"
       const unusedImportCount = (result.match(/"unused/g")
-      if (unusedImportCount > 0) {console.log(⚠  Found ${unusedImportCount} unused imports")
+  if($2) {console.log(⚠  Found ${unusedImportCount} unused imports")
 // console.log(" No unused imports found")
       console.log(")
 // console.log(" No unused imports found")
@@ -128,17 +128,11 @@ const { execSync } = require("child_process")
 process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.log("� Received SIGTERM, shutting down gracefully...")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.log("� Received SIGTERM, shutting down gracefully...")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.log("� Received SIGTERM, shutting down gracefully...")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.log("� Received SIGTERM, shutting down gracefully...")
+  console.log("� Received SIGTERM, shutting down gracefully...")
+
+

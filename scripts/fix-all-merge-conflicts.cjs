@@ -1,45 +1,18 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const path = require('path');
-
-console.log('🔧 Fixing all merge conflicts...');
-
-// List of files with known merge conflicts
-const conflictedFiles = [
-  'pages/index.tsx',
-  'pages/about.tsx', 
-  'pages/blog.tsx',
-  'pages/contact.tsx',
-  'pages/services.tsx'
-];
-
-function resolveMergeConflicts(filePath) {
+const fs = require('fs')
+const path = require('path')
+console.log('🔧 Fixing all merge conflicts...')
+// Function to fix merge conflicts in a file
+function fixMergeConflicts(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not found: ${filePath}`);
-      return false;
-    }
-
-    let content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8')
+    // Remove all merge conflict markers
     
-    // Check if file has merge conflicts
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     content = content.replace(/    
 :backup-problematic-files/scripts/fix-all-merge-conflicts.cjs
     content = content.replace(/[^\n]+\n?/g, '');
     
 :scripts/fix-all-merge-conflicts.cjs
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 :backup-problematic-files/scripts/fix-all-merge-conflicts.cjs
 :scripts/fix-all-merge-conflicts.cjs
     content = content.replace(/
@@ -50,10 +23,7 @@ function resolveMergeConflicts(filePath) {
 
     content = content.replace(/
     
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Clean up any double newlines
     content = content.replace(/\n\n\n+/g, '\n\n');
     
@@ -61,26 +31,48 @@ function resolveMergeConflicts(filePath) {
     fs.writeFileSync(filePath, content);
     console.log(`✅ Resolved conflicts in: ${filePath}`);
     return true;
+    // Clean up any remaining conflict markers
     
+    // Clean up extra semicolons and syntax issues
+    content = content.replace(/;{2,}/g, ';')
+    content = content.replace(/export const metadata = {;/g, 'export const metadata = {')
+    content = content.replace(/title: "([^"]*)",;/g, 'title: "$1",')
+    content = content.replace(/description:;/g, 'description:')
+    content = content.replace(/keywords: "([^"]*)",;/g, 'keywords: "$1",')
+    // Fix common syntax issues
+    content = content.replace(/\}\s*\)\s*;/g, '});')
+    content = content.replace(/\}\s*\)\s*expect/g, '});\n    expect')
+    content = content.replace(/\}\s*\)\s*describe/g, '});\n\n  describe')
+    content = content.replace(/\}\s*\)\s*it/g, '});\n\n  it')
+    // Remove empty lines and clean up
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
+    content = content.trim()
+    fs.writeFileSync(filePath, content)
+    console.log(`✅ Fixed: ${filePath}`)
+    return true
   } catch (error) {
-    console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Process all conflicted files
-let resolvedCount = 0;
-for (const file of conflictedFiles) {
-  if (resolveMergeConflicts(file)) {
-    resolvedCount++;
-  }
-}
-
-console.log(`\n🎉 Successfully resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`);
-
-// Verify no more conflicts exist
-console.log('\n🔍 Checking for remaining conflicts...');
-const remainingConflicts = [];
-for (const file of conflictedFiles) {
-  if (fs.existsSync(file)) {
-    const content = fs.readFileSync(file, 'utf8');
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`)
+    return false
+// Function to find all files with merge conflicts
+function findFilesWithConflicts(dir) {
+  const files = []
+  function scanDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir)
+  for($2) {
+      const fullPath = path.join(currentDir, item)
+      let stat
+      try {
+        stat = fs.statSync(fullPath)
+      } catch (error) {
+        // Skip broken symlinks or inaccessible files
+        continue
+      if (stat.isDirectory()) {
+        // Skip node_modules and other problematic directories
+        if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
+          scanDirectory(fullPath)
+      } else if (stat.isFile()) {
+        // Check for common file extensions
+        const ext = path.extname(item)
+        if (['.tsx', '.ts', '.jsx', '.js', '.json', '.css', '.md'].includes(ext)) {
+          try {
+            const content = fs.readFileSync(fullPath, 'utf8');

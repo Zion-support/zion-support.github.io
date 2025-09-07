@@ -251,17 +251,11 @@ this.logError("Performance measurement failed")
   console.error("� Uncaught "exception": ")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     this.logError("Unhandled rejection")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     this.logError("Unhandled rejection")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     this.logError("Unhandled rejection")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    this.logError("Unhandled rejection")
+    this.logError("Unhandled rejection")
+
+

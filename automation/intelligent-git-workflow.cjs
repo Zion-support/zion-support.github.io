@@ -1,94 +1,42 @@
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 class IntelligentGitWorkflow {
   constructor() {
-    this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();
+    this.logFile = path.join(__dirname, 'logs', 'git-workflow.log');
+    this.ensureLogDir();
   }
 
-  ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
+  ensureLogDir() {
+    const logDir = path.dirname(this.logFile);
+    if (!fs.existsSync(logDir)) {
+      fs.mkdirSync(logDir, { recursive: true });
     }
   }
 
-  log(message, type = 'info') {
+  log(message) {
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
+    const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-
-    const logFile = path.join(this.logsDir, 'git-workflow.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + '\n');
   }
 
-  async runCommand(command, description) {
+  runCommand(command) {
     try {
-      this.log(`Running: ${description}`);
-      const output = execSync(command, {
+      const result = execSync(command, { 
         encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
+        cwd: process.cwd(),
+        stdio: 'pipe'
       });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
+      return { success: true, output: result };
     } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
       return { success: false, error: error.message };
     }
   }
 
-  async getGitStatus() {
-    const statusResult = await this.runCommand('git status --porcelain', 'Get git status');
-    if (!statusResult.success) return null;
-
-    const lines = statusResult.output.split('\n').filter(line => line.trim());
-    const changes = {
-      modified: [],
-      added: [],
-      deleted: [],
-      untracked: []
-    };
-
-    lines.forEach(line => {
-      const status = line.substring(0, 2);
-      const file = line.substring(3);
-      
-      if (status.includes('M')) changes.modified.push(file);
-      if (status.includes('A')) changes.added.push(file);
-      if (status.includes('D')) changes.deleted.push(file);
-      if (status.includes('??')) changes.untracked.push(file);
-    });
-
-    return changes;
-  }
-
-  async getCurrentBranch() {
-    const branchResult = await this.runCommand('git branch --show-current', 'Get current branch');
-    return branchResult.success ? branchResult.output.trim() : null;
-  }
-
-  async getRemoteBranches() {
-    const remoteResult = await this.runCommand('git branch -r', 'Get remote branches');
-    if (!remoteResult.success) return [];
-
-    return remoteResult.output
-      .split('\n')
-      .map(line => line.trim())
-      .filter(line => line && !line.includes('HEAD'))
-      .map(line => line.replace('origin/', ''));
-  }
-
-  async checkForConflicts() {
-    const statusResult = await this.runCommand('git status', 'Check for merge conflicts');
-    if (!statusResult.success) return false;
-
-<<<<<<< HEAD
-=======
     return statusResult.output.includes('') || 
            statusResult.output.includes('') || 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
            statusResult.output.includes('>>>>>>>');
   }
 
@@ -128,8 +76,6 @@ class IntelligentGitWorkflow {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       
-<<<<<<< HEAD
-=======
       if (!content.includes('')) {
         return false; // No conflicts in this file
       }
@@ -150,7 +96,6 @@ class IntelligentGitWorkflow {
         }
         
         if (line.includes('')) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           conflictType = 'main';
           continue;
         }
@@ -242,69 +187,101 @@ class IntelligentGitWorkflow {
   }
 
   async runWorkflow() {
+  async executeWorkflow() {
     this.log('🚀 Starting Intelligent Git Workflow...');
-
-    const workflow = {
-      timestamp: new Date().toISOString(),
-      steps: []
-    };
-
-    // Step 1: Check status
-    const status = await this.getGitStatus();
-    workflow.steps.push({ step: 'check_status', success: !!status, data: status });
-
-    // Step 2: Check for conflicts
-    const hasConflicts = await this.checkForConflicts();
-    if (hasConflicts) {
-      this.log('⚠️ Merge conflicts detected, attempting to resolve...');
-      const resolved = await this.autoResolveConflicts();
-      workflow.steps.push({ step: 'resolve_conflicts', success: resolved });
-    }
-
-    // Step 3: Stage changes
-    const staged = await this.stageChanges();
-    workflow.steps.push({ step: 'stage_changes', success: staged });
-
-    // Step 4: Commit if there are changes
-    if (staged && status && (status.modified.length > 0 || status.added.length > 0 || status.deleted.length > 0)) {
-      const commitMessage = `Automated commit: ${new Date().toISOString()}`;
-      const committed = await this.commitChanges(commitMessage);
-      workflow.steps.push({ step: 'commit_changes', success: committed, message: commitMessage });
-
-      // Step 5: Push changes
-      if (committed) {
-        const pushed = await this.pushChanges();
-        workflow.steps.push({ step: 'push_changes', success: pushed });
+    
+    try {
+      // Check git status
+      this.log('📊 Checking git status...');
+      const statusResult = this.runCommand('git status --porcelain');
+      
+      if (!statusResult.success) {
+        this.log('❌ Failed to check git status');
+        return { success: false, error: 'Git status check failed' };
       }
+      
+      const hasChanges = statusResult.output.trim().length > 0;
+      
+      if (!hasChanges) {
+        this.log('✅ No changes to commit');
+        return { success: true, message: 'No changes to commit' };
+      }
+      
+      // Add all changes
+      this.log('📝 Adding all changes...');
+      const addResult = this.runCommand('git add .');
+      
+      if (!addResult.success) {
+        this.log('❌ Failed to add changes');
+        return { success: false, error: 'Git add failed' };
+      }
+      
+      // Generate commit message
+      const commitMessage = this.generateCommitMessage();
+      this.log(`💬 Generated commit message: ${commitMessage}`);
+      
+      // Commit changes
+      this.log('💾 Committing changes...');
+      const commitResult = this.runCommand(`git commit -m "${commitMessage}"`);
+      
+      if (!commitResult.success) {
+        this.log('❌ Failed to commit changes');
+        return { success: false, error: 'Git commit failed' };
+      }
+      
+      // Push changes
+      this.log('🚀 Pushing changes...');
+      const pushResult = this.runCommand('git push');
+      
+      if (!pushResult.success) {
+        this.log('❌ Failed to push changes');
+        return { success: false, error: 'Git push failed' };
+      }
+      
+      this.log('✅ Git workflow completed successfully');
+      
+      const report = {
+        timestamp: new Date().toISOString(),
+        status: 'success',
+        actions: [
+          'Checked git status',
+          'Added all changes',
+          'Generated commit message',
+          'Committed changes',
+          'Pushed to remote'
+        ],
+        commitMessage
+      };
+      
+      const reportFile = path.join(__dirname, 'logs', 'git-workflow-report.json');
+      fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+      
+      this.log(`📄 Workflow report saved to: ${reportFile}`);
+      
+      return { success: true, report };
+      
+    } catch (error) {
+      this.log(`❌ Error during git workflow: ${error.message}`);
+      return { success: false, error: error.message };
     }
-
-    // Step 6: Try to merge to main if on feature branch
-    const currentBranch = await this.getCurrentBranch();
-    if (currentBranch && currentBranch !== 'main' && currentBranch.startsWith('cursor/')) {
-      this.log('🔄 Attempting to merge feature branch to main...');
-      const merged = await this.mergeToMain();
-      workflow.steps.push({ step: 'merge_to_main', success: merged });
-    }
-
-    this.saveWorkflowReport(workflow);
-    this.log('✅ Intelligent Git Workflow completed');
-    return { success: true, workflow };
   }
 
-  saveWorkflowReport(workflow) {
-    const reportFile = path.join(this.logsDir, `git-workflow-${Date.now()}.json`);
-    fs.writeFileSync(reportFile, JSON.stringify(workflow, null, 2));
-    this.log(`📄 Workflow report saved to: ${reportFile}`);
+  generateCommitMessage() {
+    const timestamp = new Date().toISOString().split('T')[0];
+    const time = new Date().toLocaleTimeString();
+    
+    // Try to get the current branch
+    const branchResult = this.runCommand('git branch --show-current');
+    const branch = branchResult.success ? branchResult.output.trim() : 'main';
+    
+    return `feat: Automated commit - ${timestamp} ${time} [${branch}]`;
   }
 }
 
-// CLI interface
-if (require.main === module) {
-  const workflow = new IntelligentGitWorkflow();
-  workflow.runWorkflow().catch(error => {
-    console.error('Git Workflow failed:', error);
+// Run the workflow
+const workflow = new IntelligentGitWorkflow();
+workflow.executeWorkflow().then(result => {
+  if (!result.success) {
     process.exit(1);
-  });
-}
-
-module.exports = IntelligentGitWorkflow;
+  }
+});

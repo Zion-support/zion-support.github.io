@@ -1,15 +1,7 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Master Automation Orchestrator (clean version)
 const fs = require('fs');
 const path = require('path');
@@ -23,10 +15,6 @@ class MasterOrchestrator {
     this.startTime = Date.now();
     this.results = {};
     try {
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 #!/usr/bin/env node
 
@@ -40,13 +28,8 @@ class MasterOrchestrator {
 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       fs.mkdirSync(this.logsDir, { "recursive": true });
     } catch {}
   }
@@ -72,34 +55,20 @@ main
   }
 
   async runAllChecks() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     this.log('Starting comprehensive system check...');
 
     const tasks = [['health', 'node automation/health-check.cjs'],
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     this.log('Starting comprehensive system check.');
     
     const tasks = [
       ['health', 'node automation/health-check.cjs'],
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     this.log('Starting comprehensive system check...');
 
     const tasks = [['health', 'node automation/health-check.cjs'],
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       ['security', 'node automation/security-scanner.cjs'],
       ['performance', 'node automation/performance-optimizer.cjs'],
       ['codeQuality', 'node automation/code-quality-monitor.cjs'],
@@ -123,39 +92,18 @@ main
     const passed = Object.values(this.results).filter(r => r.success).length;
     const total = Object.keys(this.results).length;
     const durationMs = Date.now() - this.startTime;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
 
     
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
-<<<<<<< HEAD
-
-    
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const summary = {
       timestamp: new Date().toISOString(),
       durationMs,
       total,
       passed,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
@@ -202,36 +150,11 @@ console.log('🚀 Starting Master Automation Orchestrator...');
 
 class MasterAutomationOrchestrator {
   constructor() {
-      fs.mkdirSync(this.logsDir, { "recursive": true });
-    } catch {}
-  }
-
-  log(message, level = 'INFO') {
-    const line = `[${new Date().toISOString()}] [${level}] ${message}\n`;
-    try {
-      fs.appendFileSync(this.logFile, line);
-    } catch {}
-    process.stdout.write(line);
-  }
-
-  runCmd(cmd) {
-    try {
-      const out = execSync(cmd, { stdio: 'pipe', encoding: 'utf8' });
-      return { success: true, output: out };
-    } catch (e) {
-      return {
-        success: false,
-        error: e.message,
-        output: e.stdout?.toString?.() || ''
-      };
-        "success": false,
-        "error": e.message,
-        "output": e.stdout?.toString?.() || ''};
     this.logFile = path.join(
       __dirname,
-      '..',
-      'automation-reports',
-      'master-orchestrator.log'
+
+
+
     );
     this.ensureLogDir();
   }
@@ -315,14 +238,18 @@ class MasterAutomationOrchestrator {
 
     const scripts = [
       'enhanced-automation-suite.cjs',
+      'comprehensive-automation-suite.cjs',
       'app-optimizer.cjs',
-      'comprehensive-app-improvement-suite.cjs',
+      'performance-optimizer.cjs',
+      'security-scanner.cjs',
+      'seo-optimizer.cjs',
+      'health-check.cjs'
     ];
 
     for (const script of scripts) {
-      const scriptPath = path.join(__dirname, '..', script);
+      const scriptPath = path.join(__dirname, script);
       if (fs.existsSync(scriptPath)) {
-        await this.runCommand(`node ${script}`, `Running ${script}`);
+        await this.runCommand(`node ${scriptPath}`, `Running ${script}`);
       } else {
         this.log(`⚠️ Script not found: ${script}`);
       }
@@ -334,8 +261,6 @@ class MasterAutomationOrchestrator {
 
     const report = {
       timestamp: new Date().toISOString(),
-      failed: total - passed,
-      status: passed === total ? 'HEALTHY' : passed >= Math.floor(total * 0.8) ? 'WARNING' : 'CRITICAL'
       status: 'completed',
       scripts: {
         linting: 'completed',
@@ -344,13 +269,7 @@ class MasterAutomationOrchestrator {
       },
       summary: 'Master automation orchestrator completed successfully',
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
       "failed": total - passed,
       "status": passed === total
@@ -365,23 +284,13 @@ main
         JSON.stringify({ summary, results: this.results }, null, 2)
       );
     } catch {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-<<<<<<< HEAD
     this.log(
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
     this.log(
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
     return passed === total;
@@ -398,11 +307,12 @@ if (require.main === module) {
       break;
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
+
     const reportPath = path.join(
       __dirname,
-      '..',
-      'automation-reports',
-      'master-orchestrator-report.json'
+
+
+
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);
@@ -425,45 +335,14 @@ if (require.main === module) {
   }
 }
 
-module.exports = MasterOrchestrator;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -604,45 +483,16 @@ class MasterAutomationOrchestrator {
         build: 'completed',
         automation: 'completed'
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       summary: 'Master automation orchestrator completed successfully',
 origin/main
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     };
 
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
-<<<<<<< HEAD
 
     };
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-    };
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
@@ -650,19 +500,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
             ? 'WARNING'
             : 'CRITICAL'};
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     try {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
@@ -670,28 +511,17 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       );
     } catch {}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
-    );
-
-=======
     this.log(
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
 ursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return passed === total;
   }
 }
@@ -704,25 +534,15 @@ if (require.main === module) {
     case 'check':
       orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
       break;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    default:
-      console.log('Usage: node automation/master-orchestrator.cjs check');
-
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
-=======
 
-<<<<<<< HEAD
     "default": 
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const reportPath = path.join(
       __dirname,
       '..',
@@ -745,61 +565,23 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       this.log('🎉 Master automation orchestration completed successfully!');
     } catch (error) {
       this.log(`❌ Master automation orchestration failed: ${error.message}`);
-<<<<<<< HEAD
-origin/main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       process.exit(1);
     }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 module.exports = MasterOrchestrator;
-=======
-<<<<<<< HEAD
-module.exports = MasterOrchestrator;
-=======
 
 module.exports = MasterOrchestrator;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 module.exports = MasterOrchestrator;
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
-<<<<<<< HEAD
-module.exports = MasterOrchestrator;
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -948,93 +730,37 @@ class MasterAutomationOrchestrator {
     }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
 
-<<<<<<< HEAD
-module.exports = MasterOrchestrator;
-<<<<<<< HEAD
-<<<<<<< HEAD
 orchestrator.run().catch(console.error);
-=======
-<<<<<<< HEAD
-orchestrator.run().catch(console.error);
-=======
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 ursor/automate-test-improve-and-merge-code-2480
 origin/automation-improvements-final
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
-<<<<<<< HEAD
-ursor/automate-test-improve-and-merge-code-59d5
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = MasterOrchestrator;
-orchestrator.run().catch(console.error);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+// Run the orchestrator
+const orchestrator = new MasterAutomationOrchestrator();
+orchestrator.run().catch(console.error);

@@ -1,61 +1,40 @@
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
- * Intelligent Auto-Scaler;
- * AI-powered auto-scaling system for PM2 processes;
+ * Intelligent Auto-Scaler
+ * AI-powered auto-scaling system for PM2 processes
  */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const pm2 = require('pm2')
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
     this.logFile = path.join(this.projectRoot, 'logs', 'auto-scaler.log')
     this.configFile = path.join(this.projectRoot, 'logs', 'scaling-config.json')
-      "scalingStrategy"
-      this.log(` Failed to save scaling "config"`)
-          this.log(` Failed to connect to "PM2"`)
-      this.log(` Scaling analysis "failed"`)
-      "action"
-      "reason"
-      "priority"
-      this.log(` Failed to save scaling "history"`)
-      this.log(` Scaling analysis "failed"`)
-      return { "score": 0.5, "message"}
-      "level"
-        "type"
-        "message"
-        "action"
-          "type"
-          "message"
-          "action"
-        "type"
-        "message"
-        "action"
-      this.log(` Strategy optimization "failed"`)
-      "onlineProcesses"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+      this.log(` Fatal "error"`)
       this.log(` Fatal "error"`)
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       this.log(` Fatal "error"`)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
+
       this.log(` Fatal "error"`)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      this.log(` Fatal "error"`)
+      "scalingStrategy"""
+      this.log(` Failed to save scaling "config"`)""`
+          this.log(` Failed to connect to "PM2"`)""`
+      this.log(` Scaling analysis "failed"`)""
+      "action"""
+      "reason"""
+      "priority"""`
+      this.log(` Failed to save scaling "history"`)""`
+      return { "score": 0.5, "message"}""
+      "level"""
+        "type"""
+        "message"""
+        "action"""`
+      this.log(` Strategy optimization "failed"`)""
+      "onlineProcesses"""`;
+

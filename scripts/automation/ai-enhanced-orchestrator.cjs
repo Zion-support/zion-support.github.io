@@ -1,24 +1,16 @@
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
- * AI-Enhanced PM2 Orchestrator;
- * Advanced intelligent system for PM2 process management with ML capabilities;
- * Features: Predictive analytics, auto-scaling, intelligent deployment, security monitoring;
+ * AI-Enhanced PM2 Orchestrator
+ * Advanced intelligent system for PM2 process management with ML capabilities
+ * Features: Predictive analytics, auto-scaling, intelligent deployment, security monitoring
  */
 
-const pm2 = require('pm2')
+
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 const os = require('os')
-    this.logFile = path.join(this.projectRoot, 'logs', 'ai-enhanced-orchestrator.log')
-    this.configFile = path.join(this.projectRoot, 'logs', 'orchestrator-config.json')
-    this.metricsFile = path.join(this.projectRoot, 'logs', 'enhanced-metrics.json')
-      learningEnabled: process.env.LEARNING_ENABLED === 'true'
-      autoScaling: process.env.AUTO_SCALING === 'true'
-      predictiveMode: process.env.PREDICTIVE_MODE === 'true'
-      securityMode: process.env.SECURITY_MODE === 'true'
-      performanceMode: process.env.PERFORMANCE_MODE === 'true'
-      deploymentMode: process.env.DEPLOYMENT_MODE === 'true'
       await fs.mkdir(path.join(this.projectRoot, 'logs')
       console.log('Logs directory already exists')
   log(message, level = 'INFO')
@@ -36,17 +28,11 @@ const os = require('os')
         '1min'
         '5min'
         '15min'
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       const result = execSync('top -bn1 | grep "Cpu(s)"
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       const result = execSync('top -bn1 | grep "Cpu(s)"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       const result = execSync('top -bn1 | grep "Cpu(s)"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+      const result = execSync('top -bn1 | grep "Cpu(s)"
+
+

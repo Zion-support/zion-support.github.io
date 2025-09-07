@@ -2,38 +2,17 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
   log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'SECURITY': '�'
-      'CRITICAL': '�'
-    }[type] || 'ℹ'
-    this.log('Scanning dependencies for vulnerabilities...', 'SECURITY')
-      const auditOutput = execSync('npm audit --json')
-        stdio: 'pipe'
-        encoding: 'utf8'
-          const severity = vuln.severity || 'low'
-            type: 'dependency'
-            description: vuln.description || 'No description available'
-            recommendation: vuln.recommendation || 'Update to latest version'
           this.stats[riskLevel + 'Risk']
       this.log(`Found ${this.stats.vulnerabilitiesFound} dependency vulnerabilities`, 'WARNING'`)
       this.log(`Dependency scan failed: ${error.message}`, 'ERROR'`)
     this.log('Scanning code for security issues...', 'SECURITY')
         pattern: /password\s*=\s*['"][^'']
         pattern: /api[_-]?key\s*=\s*['"][^'']
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         pattern: /secret\s*=\s*['"][^'']
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         pattern: /secret\s*=\s*['"][^'']
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         pattern: /secret\s*=\s*['"][^'']
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        pattern: /secret\s*=\s*['"][^'']
+        pattern: /secret\s*=\s*['"][^'']
+
+

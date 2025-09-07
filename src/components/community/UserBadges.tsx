@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-;
-interface UserBadgesProps  {badges: Badge[];
-}interface UserBadgesProps  {badges: Badge[];
-}const icon_map = {Trophy;
-=======
 
 interface UserBadgesProps {
   badges: Badge[]
@@ -31,26 +25,15 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
   return (
-    <div className="flex flex-wrap gap-2">
-      {badges.map((badge) => {
-        // Get the correct icon component based on the badge's icon name
+
+        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
+export default UserBadges;
+}
+}
+}
+
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         
-
-  MessageSquare,
-};
-export const UserBadges = ({;
-  badges ;
-}: UserBadgesProps) => {;
-  if (!badges?.length) return null;
-
-  return (
-    <div className='flex flex-wrap gap-2'>
-      {badges.map(badge => {
-        // Get the correct icon component based on the badge's icon name
-        const IconComponent =
-          iconMap[badge.icon as keyof typeof iconMap] || Trophy;
-
         return (
           <TooltipProvider key={badge.id}>
             <Tooltip>
@@ -84,34 +67,10 @@ interface UserBadgesProps {;
 
 const iconMap = {;
   Trophy;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Award;
   BadgeCheck;
   Star;
   MessageSquare;
-<<<<<<< HEAD
-}
-export const UserBadges = ({ badges }: UserBadgesProps) =>: any {// Check condition;
-if (return null) {$2;
-}
-const iconMap = {import { Trophy, Award, BadgeCheck, Star, MessageSquare  } from 'lucide-react';
-import { Badge  } from '@/types/community';
-import { Tooltip,TooltipContent,TooltipProvider,TooltipTrigger} from '@/components/ui/tooltip';
-const iconMap = {Trophy,Award,BadgeCheck,Star,MessageSquare;
-},export const UserBadges = ({ badges }: UserBadgesProps) => {if (!badges?.length) return null,return (<div className="flex flex-wrap gap-2">;
-      {badges.map((badge) => {// Get the correct icon component based on the badge's icon name;
-  return (const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
-export default UserBadges;
-}
-}
-}return (<div className="flex flex-wrap gap-2">;
-      {badges.map((badge) => {// Get the correct icon component based on the badge's icon name;
-        const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,MessageSquare}export const UserBadges = ({badges ;
-}: UserBadgesProps) => {if (!badges?.length) return null;return (<div className='flex flex-wrap gap-2'>;
-      {badges.map(badge => {// Get the correct icon component based on the badge's icon name;
-        const IconComponent =;
-          iconMap[badge.icon as keyof typeof iconMap] || Trophy;return (<TooltipProvider key={badge.id}>;
-=======
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null,;
   return (;
@@ -121,7 +80,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,;
         return (;
           <TooltipProvider key={badge.id}>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <Tooltip>;
               <TooltipTrigger asChild>;
                 <div;
@@ -182,18 +140,6 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
           </TooltipProvider>;
         )})}
     </div>;
-<<<<<<< HEAD
-  )}export default UserBadges;}export const UserBadges = ({ badges }: UserBadgesProps) => {if (!badges?.length) return null;
-  return (<div className="flex flex-wrap gap-2">;
-      {badges && badges.map((badge,) => {// Get the correct icon component based on the badge's icon name;
-        const IconComponent  = iconMap[badge && badge.icon as keyof typeof iconMap] || Trophy;<div className="flex flex - wrap gap - 2">;
-      {badges.map ((badge, ) => {// Get the correct icon component based on the badge's icon name;
-        const IconComponent = icon_map[badge.icon as keyof typeof icon_map] || Trophy;
-export default UserBadges;)})}
-    </div>;
-  )}export default UserBadges;
-'";
-=======
   );
 };
 export default UserBadges;
@@ -205,4 +151,4 @@ export default UserBadges;
 };
 export default UserBadges;
 '"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+

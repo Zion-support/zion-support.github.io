@@ -1,18 +1,3 @@
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
-
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
-import { useState } from 'react';
-import { MatchResultItem } from '@/lib / ai - matchmaking';
-import { Card, CardContent } from '@/components/ui/ card';
-import { Badge } from '@/components/ui/ badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/ avatar';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/ tabs';
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
-import Skeleton from '@/components/ui/ skeleton';
-import { cn } from '@/lib / utils';
-interface AIMatchingResultsProps {
-  matches: MatchResultItem[];
-=======
 interface AIMatchingResultsProps  {matches: MatchResultItem[];
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
@@ -32,7 +17,6 @@ import { BarChart3, BriefcaseIcon, Monitor, User  } from 'lucide-react';
 import Skeleton from '@/components / ui / skeleton';
 import { cn  } from '@/lib / utils';
 interface AIMatchingResultsProps  {matches: MatchResultItem[];
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
   onSelectMatch?: (match: MatchResultItem) => void;
   is_loading?: boolean;
   project_description?: string;
@@ -46,7 +30,6 @@ function AIMatchingResults() {
   const [active_tab, setActiveTab] = useState ('all');
   // Group matches by category;
 
-=======
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
@@ -61,7 +44,6 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -72,7 +54,6 @@ interface AIMatchingResultsProps {
       match.category.toLowerCase ().includes ('equipment')),
 
   }
-=======
 export /**;
  * AIMatchingResults - Function description;
  */;
@@ -80,7 +61,6 @@ function AIMatchingResults() {const [active_tab, setActiveTab] = useState ('all'
       match.category.toLowerCase ().includes ('talent')),services: matches.filter (match =>;
       match.category.toLowerCase ().includes ('service')),equipment: matches.filter (match =>;
       match.category.toLowerCase ().includes ('equipment'))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
   // Get the icon for a category;
   const getCategoryIcon = (category: string) =>: any {const lower_category = category.toLowerCase ()if () return User) {$2;
 }
@@ -102,9 +82,7 @@ if ( {) {$2;
       </div>);
   }
 <<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
 
 
 import { useState } from 'react';
@@ -114,13 +92,11 @@ import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
-=======
       </div>)}import { MatchResultItem  } from '@/lib/ai-matchmaking';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Badge  } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
 import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
 import Skeleton from '@/components/ui/skeleton';
 import { cn  } from '@/lib/utils';
 interface AIMatchingResultsProps  {matches: MatchResultItem[];
@@ -157,31 +133,113 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
               <p className='text-sm text-white'>{projectDescription}</p>;
             </div>;
           )}</CardContent>;
+import { useState } from "react";
+import { MatchResultItem } from "@/lib/ai-matchmaking";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import Skeleton from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+interface AIMatchingResultsProps {
+  matches: MatchResultItem[];
+  onSelectMatch?: (match: MatchResultItem) => void;
+  isLoading?: boolean,
+  projectDescription?: string,
+  serviceType?: string
+}
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
+  matches;
+  onSelectMatch;
+  isLoading = false;
+  projectDescription = "";
+export function AIMatchingResults({
+  matches,
+  onSelectMatch,
+  isLoading = false,
+  projectDescription = "",
+  serviceType: _serviceType = "",
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState($2);
+  // Group matches by category
+  const categories = {;
+    all: matches;
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent"));
+    services: matches.filter(match => match.category.toLowerCase().includes("service"));
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment")),
+  },
+  
+  // Get the icon for a category
+  const getCategoryIcon = (category: string) => {,
+    const lowerCategory = category.toLowerCase(),
+    if (lowerCategory.includes("talent")) return User,
+    if (lowerCategory.includes("equipment")) return Monitor,
+    return BriefcaseIcon
+  },
+  
+  if (isLoading) {
+    return (
+      <div className="space-y-4">
+        <Skeleton className="h-10 w-full" />
+        <div className="space-y-3">
+          <Skeleton className="h-[120px] w-full" />
+          <Skeleton className="h-[120px] w-full" />
+          <Skeleton className="h-[120px] w-full" />
+        </div>
+      </div>
+    )
+  }
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
+  if (matches.length === 0) {
+    return (
+      <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">
+        <CardContent className="pt-6">
+          <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />
+          <p className="text-white font-medium mb-2">No matches found</p>
+          <p className="text-zion-slate-light text-sm mb-4">
+            Try adjusting your search criteria or description for better results.
+          </p>
+          {projectDescription && (
+            <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">
+              <p className="text-xs text-zion-slate-light">Your search:</p>,
+              <p className="text-sm text-white">{projectDescription}</p>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    )
+  }
+;
+  if (matches.length === 0) {;
+    return (;
+      <Card className="bg-zion-blue-dark border-zion-blue-light text-center p-6">;
+        <CardContent className="pt-6">;
+          <BarChart3 className="h-12 w-12 mx-auto text-zion-slate-light mb-3" />;
+          <p className="text-white font-medium mb-2">No matches found</p>;
+          <p className="text-zion-slate-light text-sm mb-4">;
+            Try adjusting your search criteria or description for better results.;
+          </p>;
+          {projectDescription && (;
+            <div className="bg-zion-blue-light/20 p-3 rounded-md text-left">;
+              <p className="text-xs text-zion-slate-light">Your search:</p>;
+              <p className="text-sm text-white">{projectDescription}</p>;
+            </div>;
+          )}
+        </CardContent>;
       </Card>;
 <<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
     );
-
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
   }
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/AIMatchingResults.tsx
+
   return (
-    <div className='space-y-4'>;
-      <Tabs
-        defaultValue='all'
-        value={activeTab}
-        onValueChange={setActiveTab}
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
-        className='w-full'>;
-=======
     )}
   return (<div className='space-y-4'>;
       <Tabs;
         defaultValue='all';
         value={activeTab}
         onValueChange={setActiveTab}className='w-full'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
         <TabsList className='bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full'>;
           <TabsTrigger;
             value='all';
@@ -209,8 +267,6 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
                           match && match.category.toLowerCase().includes('talent')
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
                               ? 'bg-zion-purple'
@@ -224,9 +280,7 @@ interface AIMatchingResultsProps  {matches: MatchResultItem[];
                             {match && match.image ? (;
 
 <<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -239,7 +293,6 @@ import { cn } from '@/lib/utils';
 
 interface AIMatchingResultsProps {
   matches: MatchResultItem[];
-=======
                       <div;
                         className={cn('w-2',match && match.category.toLowerCase().includes('talent')? 'bg-zion-cyan';
                             : match && match.category.toLowerCase().includes('service')? 'bg-zion-purple';
@@ -249,7 +302,6 @@ interface AIMatchingResultsProps {
                         <div className='flex items-start gap-4'>;
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (interface AIMatchingResultsProps  {matches: MatchResultItem[];
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
   onSelectMatch?: (match: MatchResultItem) => void;
   isLoading?: boolean;
   projectDescription?: string;
@@ -259,6 +311,37 @@ export function AIMatchingResults({matches;
   onSelectMatch;
   isLoading;
 <<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
+    <div className="space-y-4">
+      <Tabs defaultValue="all" value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <TabsList className="bg-zion-blue-dark border border-zion-blue-light grid grid-cols-4 w-full">
+          <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple/20">
+            All ({categories.all.length})
+          </TabsTrigger>
+          <TabsTrigger value="talent" className="data-[state=active]:bg-zion-purple/20">
+            Talent ({categories.talent.length})
+          </TabsTrigger>
+          <TabsTrigger value="services" className="data-[state=active]:bg-zion-purple/20">
+            Services ({categories.services.length})
+          </TabsTrigger>
+          <TabsTrigger value="equipment" className="data-[state=active]:bg-zion-purple/20">
+            Equipment ({categories.equipment.length})
+          </TabsTrigger>
+        </TabsList>
+        
+        {Object.entries(categories).map(([tab, items]) => (
+          <TabsContent key={tab} value={tab} className="mt-4 space-y-3">
+            {items.length > 0 ? (
+              items.map((match) => {
+                const CategoryIcon = getCategoryIcon($2);
+                return (
+                  <Card 
+                    key={match.id}
+                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer",
+                    onClick={() => onSelectMatch && onSelectMatch(match)}
+                  >
+                    <div className="flex">
+                      <div className={cn(
+                        "w-2", 
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
                         "bg-green-500"
@@ -267,12 +350,7 @@ export function AIMatchingResults({matches;
                         <div className="flex items-start gap-4">
                           <Avatar className="h-12 w-12 border border-zion-blue-light">
                             {match.image ? (
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
                               <AvatarImage
-=======
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" :;
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" :;
                         "bg-green-500";
@@ -281,7 +359,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                         <div className="flex items-start gap-4">;
                           <Avatar className="h-12 w-12 border border-zion-blue-light">;
                             {match.image ? (<AvatarImage;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
                                 src={match && match.image}
                                 alt={match && match.title}
                               />;
@@ -398,53 +475,14 @@ if ( {) {$2;
                               )}
                             </div>
 <<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
-
-                            
                             <div className="mt-2 flex flex-wrap gap-1">
                               <Badge variant="outline">
-=======
                             </div>;
                             <div className="mt-2 flex flex-wrap gap-1">;
                               <Badge variant="outline">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
                                 {match.category}
-                              </Badge>;
-                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (<Badge key={i} variant="outline">;
-                                  {skill}
-                                </Badge>;
-                              ))}
-                            </div>;<div className='mt-2 flex flex-wrap gap-1'>;
-                              <Badge variant='outline'>{match && match.category}</Badge>;
-                              {match && match.skills &&;
-                                match && match.skills;
-                                  .slice(0, 3).map((skill: string, i: number) => (<Badge key={i} variant='outline'>;
-                                      {skill}
-                                    </Badge>;
-                                  ))}                            </div>;
-                                  </div>;
-                                  <div className='text - xs text - zion - slate - light'>;
-                                    {match.category;
-                                      .toLowerCase ().includes ('talent')? '/hour';
-                                      : ''}
-                                  </div>;
-                                </div>)}
-                            </div>;
-                            <div className='mt - 2 flex flex - wrap gap - 1'>;
-                              <Badge variant='outline'>{match.category}</Badge>;
-                              {match.skills &&;
-                                match.skills;
-                                  .slice (0, 3).map ((skill: string, index: number) => (<Badge key={i} variant='outline'>;
-                                      {skill}
-<<<<<<< HEAD:src_backup/components/AIMatchingResults.tsx
-                                    </Badge>))}                            </div>;
-
-                          </div>;
-=======
                                     </Badge>))}                            </div>;</div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
                         </div>;
                       </div>;
                     </div>;)}
@@ -459,12 +497,8 @@ if ( {) {$2;
 
 
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
 }
-=======
         ))}}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
       </Tabs>;
     </div>;
   )}</Card>)})) : (<div className='text - center py - 8 text - zion - slate - light'>;
@@ -481,12 +515,33 @@ if ( {) {$2;
     </div>
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </div>)}</Tabs>;
     </div>;
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/AIMatchingResults.tsx
-=======
 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/AIMatchingResults.tsx
+                              </Badge>
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (,
+                                <Badge key={i} variant="outline">
+                                  {skill}
+                                </Badge>;
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </Card>
+                )
+              })
+            ) : (
+              <div className="text-center py-8 text-zion-slate-light">
+                No {tab} matches found.
+              </div>
+            )}
+          </TabsContent>
+        ))}
+      </Tabs>
+    </div>
+  )
+};

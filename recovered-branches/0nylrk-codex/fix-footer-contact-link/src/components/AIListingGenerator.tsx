@@ -1,11 +1,3 @@
-
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -15,32 +7,6 @@ import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components
 import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
-<<<<<<< HEAD
-import {Badge} from "@/components/ui/badge";
-interface GeneratedContent {;
-  description: string,;
-  tags: string[],;
-  suggestedPrice: {;
-    min: number,;
-    max: number;
-  };
-  keyPoints: string[];
-}
-
-interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent) => void,;
-  initialValues?: {;
-
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string;
-  }
-}
-
-export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
-  const { toast } = useToast();
-
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -52,6 +18,13 @@ import { Sparkles, ArrowRight } from "@/components/icons",
 import { supabase } from "@/integrations/supabase/client";
 import { Badge } from "@/components/ui/badge";
 interface GeneratedContent {
+  description: string,
+  tags: string[],
+  suggestedPrice: {
+    min: number,
+    max: number},
+  keyPoints: string[]
+}
 
   description: string
   tags: string[]
@@ -61,45 +34,7 @@ interface GeneratedContent {
     max: number
   }
   keyPoints: string[]
-interface GeneratedContent {;
-  description: string,;
-  tags: string[],;
-  suggestedPrice: {;
-    min: number,;
-    max: number;
-  };
-  keyPoints: string[];
-}
-
-interface AIListingGeneratorProps {;
-  onApplyGenerated?: (content: GeneratedContent) => void,;
-  initialValues?: {;
-
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
-import { supabase } from "@/integrations/supabase/client",
-import { Badge } from "@/components/ui/badge",
-    targetAudience?: string;
-  }
-}
-
-export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
-  const { toast } = useToast();
-interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number
-  },
-  keyPoints: string[]
-
-import React, { useState } from "react",;
-=======
 import {Badge} from "@/components/ui/badge";import React, { useState } from "react",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -109,11 +44,7 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { Sparkles, ArrowRight } from "@/components/icons",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Badge } from "@/components/ui/badge",;
-<<<<<<< HEAD
-interface GeneratedContent {;
-=======
 interface GeneratedContent {,
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   description: string,;
   tags: string[],;
   suggestedPrice: {;
@@ -164,16 +95,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         setTargetAudience(e.target.value)
         break
     }
-<<<<<<< HEAD
-
-
-  const handleInputChange = (e: { target: { value: string } }, field: string) => {
-    switch(field) {
-      case 'title':
-        setTitle(e.target.value);
-  const [title, setTitle] = useState(initialValues && initialValues.title || "");
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [category, setCategory] = useState(initialValues && initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
   const [targetAudience, setTargetAudience] = useState(initialValues && initialValues.targetAudience || "");
@@ -184,17 +105,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
     switch(field) {;
       case 'title':;
         setTitle(e && e.target.value);
-<<<<<<< HEAD
-  const handleGenerate = async () => {
-    if (!title |!category) {
-      toast({
-        title: "Missing required fields"
-        description: "Please provide at least a title and category."
-        variant: "destructive"
-      });
-        break;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case 'category':;
         setCategory(e && e.target.value);
         break;
@@ -205,29 +115,16 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         setTargetAudience(e && e.target.value),;
         break;
 
-<<<<<<< HEAD
-
   },
 
-
-
-=======
-  },
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleGenerate = async () => {
     if (!title |!category) {
       toast({
         title: "Missing required fields"
         description: "Please provide at least a title and category."
         variant: "destructive"
-<<<<<<< HEAD
-
-      });
-=======
       });
         break;      });
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       return;
     }
     try {
@@ -261,31 +158,14 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       case 'targetAudience':;
         setTargetAudience(e.target.value),;
         break;
-<<<<<<< HEAD
-
-    }
-  };
-
-  const handleGenerate = async () => {;
-    if (!title || !category) {;
-      toast({;
-        title: "Missing required fields",;
-        description: "Please provide at least a title and category.",;
-=======
     if (!title || !category) {;
       toast({;
         title: "Missing required fields",,
   description: "Please provide at least a title and category.",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         variant: "destructive";
       });
       return;
     }
-<<<<<<< HEAD
-
-    setIsLoading(true);
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -357,10 +237,6 @@ if ( {) {
     }
     setIsLoading (true);
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     setIsLoading(true),;
     ;
@@ -373,225 +249,86 @@ if ( {) {
       ;
       if (data.error) {;
         throw new Error(data.error),;
-<<<<<<< HEAD
-      }
-;
-      setGeneratedContent(data.generated),;
-      toast({;
-        title:"Content Generated",;
-        description:"AI has created optimized listing content for you.";
-      }),;
-    } catch (error) {;
-      console.error("Error generating content:", error),;
-      toast({;
-        title:"Generation Failed",;
-        description:error instanceof Error ? error.message :"Failed to generate content. Please try again.",;
-        variant:"destructive";
-      }),;
-    } finally {;
-      setIsLoading(false),;
-    }
-  },;
-;
-  const handleApply = () => {;
-    if (generatedContent && onApplyGenerated) {;
-      onApplyGenerated(generatedContent),;
-      toast({;
-        title:"Content Applied",;
-        description:"The generated content has been applied to your listing.";
-      }),;
-    }
-  },;
-;
-  return (;
-    <div className="space-y-6">;
-      <Card className="border border-zion-blue-light bg-zion-blue-dark">;
-        <CardHeader>;
-          <CardTitle className="flex items-center text-white">;
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
-            AI Listing Optimizer;
-          </CardTitle>;
-          <p className="text-sm text-zion-slate-light">;
-            Provide basic information and let AI generate optimized, SEO-friendly content for your listing;
-          </p>;
-        </CardHeader>;
-        <CardContent className="space-y-4">;
-          <div className="space-y-2">;
-            <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
-            <Input;
-              id="title";
-              value={title}
-              onChange={(e) => handleInputChange(e, 'title')}
-              placeholder="Enter your product or service title";
-              className="bg-zion-blue border border-zion-blue-light text-white";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
-            <Input;
-              id="category";
-              value={category}
-              onChange={(e) => handleInputChange(e, 'category')}
-              placeholder="e.g. AI Tool, Digital Product, Service";
-              className="bg-zion-blue border border-zion-blue-light text-white";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
-            <Textarea;
-              id="keyFeatures";
-              value={keyFeatures}
-              onChange={(e) => handleInputChange(e, 'keyFeatures')}
-              placeholder="Briefly describe the main features or benefits";
-              className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
-            <Input;
-              id="targetAudience";
-              value={targetAudience}
-              onChange={(e) => handleInputChange(e, 'targetAudience')}
-              placeholder="e.g. Developers, Marketers, Startups";
-              className="bg-zion-blue border border-zion-blue-light text-white";}
-}export function AIListingGenerator ({
-  onApplyGenerated, initialValues = {
-  
+}
+interface AIListingGeneratorProps {
+  onApplyGenerated?: (content: GeneratedContent) => void,
+  initialValues?: {
+    title?: string,
+    category?: string,
+    keyFeatures?: string,
+    targetAudience?: string
+  }
 }
 
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
-  const { toast } = useToast(),
-  const [title, setTitle] = useState(initialValues.title || ""),
-  const [category, setCategory] = useState(initialValues.category || ""),
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
-  const [isLoading, setIsLoading] = useState(false),
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),  const [isLoading, setIsLoading] = useState(false);
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null);
-
-  const _handleInputChange = (_e: {_target: { value: string} }, _field: string) => {_switch(field) {
+  const { toast } = useToast($2);
+  const [title, setTitle] = useState($2);
+  const [category, setCategory] = useState($2);
+  const [keyFeatures, setKeyFeatures] = useState($2);
+  const [targetAudience, setTargetAudience] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const [generatedContent, setGeneratedContent] = useState($2);
+  const handleInputChange = (e: { target: { value: string} }, field: string) => {
+    switch(field) {
       case 'title':
-        setTitle(e.target.value),
+        setTitle($2);
         break,
       case 'category':
-        setCategory(e.target.value),
+        setCategory($2);
         break,
       case 'keyFeatures':
-        setKeyFeatures(e.target.value),
+        setKeyFeatures($2);
         break,
       case 'targetAudience':
-        setTargetAudience(e.target.value),
+        setTargetAudience($2);
         break
     }
   },
-  const _handleGenerate = async () => {_if (!title || !category) {
-      toast({
-        title: "Missing required fields",
-        description: "Please provide at least a title and category.",
-        variant: "destructive"
-      }),
-      return      return;
+
+  const handleGenerate = async () => {
+    if (!title || !category) {
+      toast($2);
+      return
     }
 
-    setIsLoading(true),
-    
+    setIsLoading($2);
     try {
-      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
-        body: { title, category, key_features, target_audience }
-      });
-
-;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
-        body: { title, category, keyFeatures, targetAudience }
-      }),;
-      if (error) {;
-        throw new Error(error.message);
-
-
+      const { data, error } = await supabase.functions.invoke($2);
+      if (error) {
+        throw new Error(error.message)
       }
       if (data.error) {
         throw new Error(data.error)
       }
 
-
-
-      setGeneratedContent(data.generated),
-
-
+      setGeneratedContent($2);
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
       })
     } catch (error) {
-      console.error("Error generating content:", error);
+      console.error($2);
       toast({
         title: "Generation Failed"
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
-
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (error.message);
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        throw new Error (data.error);
-      }
-      setGeneratedContent (data.generated);
-      toast ({
-        title: "Content Generated",
-        description: "AI has created optimized listing content for you.";
-      });
-    } catch (error) {
-      console.error ("Error generating content:", error);
-      toast ({
-        title: "Generation Failed",
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
-        variant: "destructive";
-      });
-
-    } finally {
-      setIsLoading (false);
-    }
-  }
-
-    } finally {
-      setIsLoading(false)
-    }
-
-  },
-
-
-
-  const handleApply = () => {
-    if (generatedContent && onApplyGenerated) {
-      onApplyGenerated(generatedContent);
-=======
       }    } finally {
       setIsLoading (false);
     }
   }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+    } finally {
+      setIsLoading(false)
+    }
+  },
+
+  const handleApply = () => {
+    if (generatedContent && onApplyGenerated) {
+      onApplyGenerated($2);
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
       })
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {;
       const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
         body: { title, category, keyFeatures, targetAudience }
@@ -605,12 +342,8 @@ if ( {) {
         throw new Error(data && data.error);
       }
 
-<<<<<<< HEAD
-      setGeneratedContent(data && data.generated);
     }
-
   },
-
 
   return (
     <div className="space-y-6">
@@ -666,100 +399,14 @@ if ( {) {
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
               className="bg-zion-blue border border-zion-blue-light text-white"
-
-          <Button 
-
+              disabled={isLoading}
+            />
+          </div>
           <Button
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
-          <Button 
-
-          <Button 
-
-;
-      setGeneratedContent(data.generated),;
-
-      toast({;
-        title: "Content Generated",;
-        description: "AI has created optimized listing content for you.";
-      });
-    } catch (error) {;
-      console && console.error("Error generating content:", error);
-      toast({;
-        title: "Generation Failed",;
-        description: error instanceof Error ? error && error.message : "Failed to generate content. Please try again.",;
-        variant: "destructive";
-      });
-    } finally {;
-      setIsLoading(false);
-    }
-  };
-
-  const handleApply = () => {;
-    if (generatedContent && onApplyGenerated) {;
-      onApplyGenerated(generatedContent);
-      toast({;
-        title: "Content Applied",;
-        description: "The generated content has been applied to your listing.";
-      });
-    }
-  }
-
-  return (
-    <div className="space-y-6">;
-      <Card className="border border-zion-blue-light bg-zion-blue-dark">;
-        <CardHeader>;
-          <CardTitle className="flex items-center text-white">;
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />;
-            AI Listing Optimizer;
-          </CardTitle>;
-          <p className="text-sm text-zion-slate-light">;
-            Provide basic information and let AI generate optimized, SEO-friendly content for your listing;
-          </p>;
-        </CardHeader>;
-        <CardContent className="space-y-4">;
-          <div className="space-y-2">;
-            <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>;
-            <Input
-              id="title"
-              value={title}
-              onChange={(e) => handleInputChange(e, 'title')}
-              placeholder="Enter your product or service title";
-              className="bg-zion-blue border border-zion-blue-light text-white";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="category" className="text-sm font-medium text-zion-slate-light">Category</label>;
-            <Input
-              id="category"
-              value={category}
-              onChange={(e) => handleInputChange(e, 'category')}
-              placeholder="e && e.g. AI Tool, Digital Product, Service";
-              placeholder="e && e.g. AI Tool, Digital Product, Service";
-              className="bg-zion-blue border border-zion-blue-light text-white";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light">Key Features (Optional)</label>;
-            <Textarea
-              id="keyFeatures"
-              value={keyFeatures}
-              onChange={(e) => handleInputChange(e, 'keyFeatures')}
-              placeholder="Briefly describe the main features or benefits";
-              className="bg-zion-blue border border-zion-blue-light text-white min-h-20";
-              disabled={isLoading}
-            />;
-          </div>;
-          <div className="space-y-2">;
-            <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light">Target Audience (Optional)</label>;
-            <Input
-              id="targetAudience"
-              value={targetAudience}
-              onChange={(e) => handleInputChange(e, 'targetAudience')}
             onClick={handleGenerate}
-            disabled={isLoading |!title |!category}
+            disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
           >
             {isLoading ? (
@@ -783,20 +430,9 @@ if ( {) {
             <div className="flex flex-wrap gap-2">
               {[...Array(5)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
-            />;
-          </div>;
-          <Button
-            onClick={handleGenerate}
-            disabled={isLoading || !title || !category}
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">;
-            {isLoading ? (;
-              <>Generating Optimized Content...</>;
-            ) : (;
-=======
       setGeneratedContent(data && data.generated);    }
 
   },
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <>;
                 <Sparkles className="h-4 w-4 mr-2" />;
                 Generate Optimized Content;
@@ -805,10 +441,6 @@ if ( {) {
           </Button>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       {isLoading && (;
         <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">;
           <CardHeader>;
@@ -819,26 +451,18 @@ if ( {) {
             <div className="flex flex-wrap gap-2">;
               {[...Array(5)].map((_, i) => (;
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />;
-<<<<<<< HEAD
               ))}
-            </div>;
-            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
-            <div className="space-y-2">;
-              {[...Array(3)].map((_, i) => (;
-                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />;
+            </div>
+            <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />
+            <div className="space-y-2">
+              {[...Array(3)].map((_, i) => (
+                <Skeleton key={i} className="h-6 w-full bg-zion-blue-light/20" />
               ))}
-            </div>;
-          </CardContent>;
-        </Card>;
+            </div>
+          </CardContent>
+        </Card>
       )}
-
-
-
-
-
       {generatedContent && !isLoading && (
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Card className="border border-zion-blue-light bg-zion-blue-dark">
           <CardHeader>
             <CardTitle className="text-white">Generated Content</CardTitle>
@@ -864,12 +488,7 @@ if ( {) {
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
               <ul className="list-disc pl-5 text-white space-y-1">
                 {generatedContent.keyPoints.map((point, index) => (
-<<<<<<< HEAD
-                  <li key={index}>{point}</li>
-      {generatedContent && !isLoading && (;
-=======
                   <li key={index}>{point}</li>      {generatedContent && !isLoading && (;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Card className="border border-zion-blue-light bg-zion-blue-dark">;
           <CardHeader>;
             <CardTitle className="text-white">Generated Content</CardTitle>;
@@ -883,12 +502,7 @@ if ( {) {
             <div>;
               <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>;
               <div className="flex flex-wrap gap-2">;
-<<<<<<< HEAD
-                {generatedContent && generatedContent.tags.map((tag, index) => (;
-                  <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>;
-=======
                 {generatedContent && generatedContent.tags.map((tag, index) => (;                  <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 ))}
               </div>;
             </div>;
@@ -903,13 +517,7 @@ if ( {) {
               <ul className="list-disc pl-5 text-white space-y-1">;
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (;
                   <li key={index}>{point}</li>;
-<<<<<<< HEAD
-                ))}
-                ))}
-;
-=======
                 ))};
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handle_apply = () =>: any {
     // Check condition
 if ( {) {
@@ -924,22 +532,6 @@ if ( {) {
   }
 ;
   return (
-<<<<<<< HEAD
-    <div className="space - y-6">;
-      <Card className="border border - zion - blue - light bg - zion - blue - dark">;
-        <CardHeader>;
-          <CardTitle className="flex items - center text - white">;
-            <Sparkles className="h - 5 w - 5 mr - 2 text - zion - cyan" />;
-            AI Listing Optimizer;
-          </CardTitle>;
-          <p className="text - sm text - zion - slate - light">;
-            Provide basic information and let AI generate optimized, SEO - friendly content for your listing;
-          </p>;
-        </CardHeader>;
-        <CardContent className="space - y-4">;
-          <div className="space - y-2">;
-            <label html_for="title" className="text - sm font - medium text - zion - slate - light">Title</label>;
-=======
     <div className="space-y-6">;
       <Card className="border border - zion - blue - light bg - zion - blue-dark">;
         <CardHeader>;
@@ -954,119 +546,63 @@ if ( {) {
         <CardContent className="space-y-4">;
           <div className="space-y-2">;
             <label html_for="title" className="text - sm font - medium text - zion - slate-light">Title</label>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Input;
               id="title";
               value={title}
               on_change={(e) => handleInputChange (e, 'title')}
               placeholder="Enter your product or service title";
-<<<<<<< HEAD
-              className="bg - zion - blue border border - zion - blue - light text - white";
-              disabled={is_loading}
-            />;
-          </div>;
-          <div className="space - y-2">;
-            <label html_for="category" className="text - sm font - medium text - zion - slate - light">Category</label>;
-=======
               className="bg - zion - blue border border - zion - blue - light text-white";
               disabled={is_loading}
             />;
           </div>;
           <div className="space-y-2">;
             <label html_for="category" className="text - sm font - medium text - zion - slate-light">Category</label>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Input;
               id="category";
               value={category}
               on_change={(e) => handleInputChange (e, 'category')}
               placeholder="e.g. AI Tool, Digital Product, Service";
-<<<<<<< HEAD
-              className="bg - zion - blue border border - zion - blue - light text - white";
-              disabled={is_loading}
-            />;
-          </div>;
-          <div className="space - y-2">;
-            <label html_for="key_features" className="text - sm font - medium text - zion - slate - light">Key Features (Optional)</label>;
-=======
               className="bg - zion - blue border border - zion - blue - light text-white";
               disabled={is_loading}
             />;
           </div>;
           <div className="space-y-2">;
             <label html_for="key_features" className="text - sm font - medium text - zion - slate-light">Key Features (Optional)</label>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Textarea;
               id="key_features";
               value={key_features}
               on_change={(e) => handleInputChange (e, 'key_features')}
               placeholder="Briefly describe the main features or benefits";
-<<<<<<< HEAD
-              className="bg - zion - blue border border - zion - blue - light text - white min - h-20";
-              disabled={is_loading}
-            />;
-          </div>;
-          <div className="space - y-2">;
-            <label html_for="target_audience" className="text - sm font - medium text - zion - slate - light">Target Audience (Optional)</label>;
-=======
               className="bg - zion - blue border border - zion - blue - light text - white min-h-20";
               disabled={is_loading}
             />;
           </div>;
           <div className="space-y-2">;
             <label html_for="target_audience" className="text - sm font - medium text - zion - slate-light">Target Audience (Optional)</label>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Input;
               id="target_audience";
               value={target_audience}
               on_change={(e) => handleInputChange (e, 'target_audience')}
               placeholder="e.g. Developers, Marketers, Startups";
-<<<<<<< HEAD
-              className="bg - zion - blue border border - zion - blue - light text - white";
-=======
               className="bg - zion - blue border border - zion - blue - light text-white";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               disabled={is_loading}
             />;
           </div>;
           <Button;
             on_click={handle_generate}
             disabled={is_loading || !title || !category}
-<<<<<<< HEAD
-            className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt - 2";
-=======
             className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white mt-2";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           >;
             {is_loading ? (
               <>Generating Optimized Content...</>) : (
               <>;
-<<<<<<< HEAD
-                <Sparkles className="h - 4 w - 4 mr - 2" />;
-=======
                 <Sparkles className="h - 4 w - 4 mr-2" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 Generate Optimized Content;
               </>)}
           </Button>;
         </CardContent>;
       </Card>;
       {is_loading && (
-<<<<<<< HEAD
-        <Card className="border border - zion - blue - light bg - zion - blue - dark overflow - hidden">;
-          <CardHeader>;
-            <Skeleton className="h - 8 w - 3/4 bg - zion - blue - light / 20" />;
-          </CardHeader>;
-          <CardContent className="space - y-4">;
-            <Skeleton className="h - 32 w - full bg - zion - blue - light / 20" />;
-            <div className="flex flex - wrap gap - 2">;
-              {[...Array (5)].map ((_, i) => (
-                <Skeleton key={i} className="h - 6 w - 16 bg - zion - blue - light / 20" />))}
-            </div>;
-            <Skeleton className="h - 8 w - 1/3 bg - zion - blue - light / 20" />;
-            <div className="space - y-2">;
-              {[...Array (3)].map ((_, i) => (
-                <Skeleton key={i} className="h - 6 w - full bg - zion - blue - light / 20" />))}
-=======
         <Card className="border border - zion - blue - light bg - zion - blue - dark overflow-hidden">;
           <CardHeader>;
             <Skeleton className="h - 8 w - 3/4 bg - zion - blue-light / 20" />;
@@ -1081,67 +617,10 @@ if ( {) {
             <div className="space-y-2">;
               {[...Array (3)].map ((_, i) => (
                 <Skeleton key={i} className="h - 6 w - full bg - zion - blue-light / 20" />))}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             </div>;
           </CardContent>;
         </Card>)}
       {generated_content && !is_loading && (
-<<<<<<< HEAD
-        <Card className="border border - zion - blue - light bg - zion - blue - dark">;
-          <CardHeader>;
-            <CardTitle className="text - white">Generated Content</CardTitle>;
-          </CardHeader>;
-          <CardContent className="space - y-4">;
-            <div>;
-              <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Description</h3>;
-              <p className="text - white">{generated_content.description}</p>;
-            </div>;
-            <div>;
-              <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Tags</h3>;
-              <div className="flex flex - wrap gap - 2">;
-                {generated_content.tags.map ((tag, index) => (
-                  <Badge key={index} className="bg - zion - purple / 20 text - zion - purple hover:bg - zion - purple / 30">{tag}</Badge>))}
-              </div>;
-            </div>;
-            <div>;
-              <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Suggested Price Range</h3>;
-              <p className="text - white">${generated_content.suggested_price.min.to_fixed (2)} - ${generated_content.suggested_price.max.to_fixed (2)}</p>;
-            </div>;
-            <div>;
-              <h3 className="text - sm font - medium text - zion - slate - light mb - 2">Key Selling Points</h3>;
-              <ul className="list - disc pl - 5 text - white space - y-1">;
-                {generated_content.key_points.map ((point, index) => (
-                  <li key={index}>{point}</li>))}
-            ;
-            <div>;
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>;
-              <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>;
-            </div>;
-            ;
-            <div>;
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>;
-              <ul className="list-disc pl-5 text-white space-y-1">;
-                {generatedContent.keyPoints.map((point, index) => (;
-                  <li key={index}>{point}</li>;
-                ))}
-              </ul>;
-            </div>;
-          </CardContent>;
-          <CardFooter>;
-
-            <Button;
-              on_click={handle_apply}
-              className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white";
-            >;
-              Apply to My Listing;
-              <ArrowRight className="ml - 2 h - 4 w - 4" />;
-            </Button>;
-          </CardFooter>;
-        </Card>)}
-    </div>);
-
-}
-=======
         <Card className="border border - zion - blue - light bg - zion - blue-dark">;
           <CardHeader>;
             <CardTitle className="text-white">Generated Content</CardTitle>;
@@ -1171,4 +650,22 @@ if ( {) {
             </div>;
           </CardContent>;
           <CardFooter>;}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button
+              onClick={handleApply}
+              className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
+            >
+              Apply to My Listing
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </CardFooter>
+        </Card>
+      )}
+    </div>
+  )
+}

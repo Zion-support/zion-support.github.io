@@ -1,17 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!requireSuperadminApi(req, res)) return;
-  return res.status(405).json({ error: 'Method not allowed' });
-    return res.status(200).json(offerings)
-  }
-return res.status(405).json({ error: 'Method not allowed' });
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   if (!requireSuperadminApi(req, res)) return;if (req && req.method === 'GET') {const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false })return res && res.status(200).json(offerings)}
     return res.status (200).json (offerings)}
   // Check condition;
@@ -35,10 +22,6 @@ if ( {) {$2;
     const body = req.body || {}
     const offerings = { safe: !!body.safe, equity: !!body.equity, token: !!body.token }
     writeJsonFile ('deal / offerings.json', offerings)return res.status (200).json (offerings)}return res.status(405).json({ error: 'Method not allowed' })}return res.status (405).json ({ error: 'Method not allowed' })return res.status(405).json({ error: 'Method not allowed' })return res.status(200).json(offerings)}
-<<<<<<< HEAD
-return res.status(405).json({ error: 'Method not allowed' })}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false });
@@ -87,7 +70,19 @@ if ( {) {
 }
 
 return res.status (405).json ({ error: 'Method not allowed' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 return res.status(405).json({ error: 'Method not allowed' })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!requireSuperadminApi(req, res)) return,
+  if (req.method === 'GET') {
+    const offerings = readJsonFile($2);
+    return res.status(200).json(offerings)
+  }
+  if (req.method = $2;
+    const offerings = { safe: !!body.safe, equity: !!body.equity, token: !!body.token },
+    writeJsonFile($2);
+    return res.status(200).json(offerings)
+  }
+  return res.status(405).json({ error: 'Method not allowed' })
+}

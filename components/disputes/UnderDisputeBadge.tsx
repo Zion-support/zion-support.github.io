@@ -1,61 +1,31 @@
 import useSWR from 'swr';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fetcher = null;
-<<<<<<< HEAD
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-export function useProjectDisputeStatus(projectId: string): {
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   hasActiveDispute: boolean;
-=======
 const fetcher = (url: string) => fetch(url).then(r => r.json())export function useProjectDisputeStatus(projectId: string): {hasActiveDispute: boolean;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   isLoading: boolean;
 } {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some((d: any) =>;
       d && d.projectId === projectId &&;
-<<<<<<< HEAD
-      (d && d.status === 'Open' || d && d.status === 'Under Review');
-  );
-  return { hasActiveDispute, isLoading: !data && !error };
+const fetcher = $2;
+export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean} {
+  const { data, error } = useSWR($2);
+  const hasActiveDispute = $2;
+  return { hasActiveDispute, isLoading: !data && !error }
+}
 
-export default function UnderDisputeBadge(): any ({;
-  projectId,;
-}: {;
-
-  projectId,
-}: {;
-  projectId: string;
-}) {;
-  const { hasActiveDispute } = useProjectDisputeStatus(projectId);
-  if (!hasActiveDispute) return null;
-  return (
-<<<<<<< HEAD
-    <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>
-      Under Dispute
-    </span>
-  );
+export default function UnderDisputeBadge({ projectId }: { projectId: string}) {
+  const { hasActiveDispute } = useProjectDisputeStatus($2);
+  if (!hasActiveDispute) return null,
   return (
     <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
       Under Dispute
     </span>
-);
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
 const fetcher = null;
 const fetcher = (url: string) => fetch(url).then(r => r.json())export function useProjectDisputeStatus(projectId: string): {hasActiveDispute: boolean;
   isLoading: boolean;
 } {const { data, error }  = useSWR(projectId ? `/api/disputes` : null, fetcher)const hasActiveDispute = !!data?.disputes?.some((d: any) =>;
       d && d.projectId === projectId &&;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       (d && d.status === 'Open' || d && d.status === 'Under Review'))return { hasActiveDispute, isLoading: !data && !error }export default function UnderDisputeBadge(): any ({projectId,}: {projectId,}: {projectId: string;
 }) {const { hasActiveDispute } = useProjectDisputeStatus(projectId)if (!hasActiveDispute) return null;
   return (<span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
@@ -92,10 +62,6 @@ if (return null) {$2;
   )return (<span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">;
       Under Dispute;
     </span>;
-<<<<<<< HEAD
-)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
     <span className='inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs'>;
       Under Dispute;
@@ -156,7 +122,6 @@ if (return null) {
     <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow-300 text-xs">;
       Under Dispute;
     </span>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  )
+}

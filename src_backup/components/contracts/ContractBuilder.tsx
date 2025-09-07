@@ -37,7 +37,6 @@ import { SmartContractBuilder } from './SmartContractBuilder';
 
 interface ContractBuilderProps {
   isOpen: boolean;
-=======
 isOpen;
   onClose;
   talent;
@@ -57,7 +56,6 @@ import { ContractPreview  } from './components/ContractPreview';
 import { TemplateManager  } from './templates/TemplateManager';
 import { SmartContractBuilder  } from './SmartContractBuilder';
 interface ContractBuilderProps  {isOpen: boolean;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/contracts/ContractBuilder.tsx
   onClose: () => void;
   talent: TalentProfile;
   clientName: string;
@@ -80,11 +78,21 @@ export function ContractBuilder({
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
   const handleLoadTemplate = null;
           onClose()
-origin/cursor/automate-test-improve-and-merge-code-2533
+
         }}
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
+
+import { useState } from "react",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from 'lucide-react'
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+
       />
     )
 origin/cursor/automate-test-improve-and-merge-code-2533
@@ -102,33 +110,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
-      />;
-    );
-  }
-
-
-  }
-
-  return (
-
-
-            
-
-
 
             <div className="flex gap-2">
-              <Button
-                variant="outline"
+              <Button 
+                variant="outline" 
                 size="sm"
-                onClick = {(,) => setTemplateManagerOpen(true),}
+                onClick={() => setTemplateManagerOpen(true)}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
                 Templates
-              </Button>
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
-=======
 export function ContractBuilder() {const [activeTab, setActiveTab] = useState<string>("form")const [generatedContract, setGeneratedContract] = useState<string | null>(null)const [formValues, setFormValues] = useState<ContractFormValues | undefined>(undefined;
   ),const [templateManagerOpen, setTemplateManagerOpen] = useState(false)const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false)const handleLoadTemplate = null;
           onClose()}}
@@ -136,7 +129,6 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
         clientName = {clientName}
         onContractGenerated = {onContractGenerated}import { useState } from "react",import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",import { Button } from "@/components/ui/button",import { TalentProfile } from "@/types/talent",import { ContractForm, ContractFormValues } from "./components/ContractForm",import { ContractPreview } from "./components/ContractPreview",/>;
     )}return (<Dialog open={isOpen} onOpenChange={onClose}>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/contracts/ContractBuilder.tsx
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle>Contract Builder</DialogTitle>;
@@ -153,16 +145,15 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
               <Button
 
                 variant="outline" 
+
                 size="sm"
                 onClick = {(,) => setTemplateManagerOpen(true),}
-=======
       />;
     )}}return (<div className="flex gap-2">;
               <Button;
                 variant="outline";
                 size="sm";
                 onClick = {(,) => setTemplateManagerOpen(true)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/contracts/ContractBuilder.tsx
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
@@ -170,16 +161,6 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
               </Button>;
 <<<<<<< HEAD:src_backup/components/contracts/ContractBuilder.tsx
 
-
-
-              
-
-              <Button
-                variant="secondary"
-                size="sm"
-                onClick = {() => setShowSmartContractBuilder(true),}
-
-=======
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
@@ -206,7 +187,6 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
                 variant="secondary";
                 size="sm";
                 onClick={() => setShowSmartContractBuilder(true)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/contracts/ContractBuilder.tsx
               >;
                 Smart Contract Builder;
               </Button>;
@@ -222,13 +202,11 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
 
 
               talent = {talent,}
+
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
               onContractGenerated = {handleContractGenerated,}
-
-            />;
-=======
             <ContractForm;
             <ContractForm;
                 onClick = {() => setShowSmartContractBuilder(true)}>;
@@ -242,7 +220,6 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
               initialValues = {formValues}
               onFormValuesChange = {setFormValues}
               onContractGenerated = {handleContractGenerated}/>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/contracts/ContractBuilder.tsx
           </TabsContent>;
           <TabsContent value="preview" className="pt-4">;
 <<<<<<< HEAD:src_backup/components/contracts/ContractBuilder.tsx
@@ -253,11 +230,11 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
               <ContractPreview 
 
 
+
                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
                 status="ready"
-=======
             {generatedContract && (<ContractPreview;
               <ContractPreview />;
           </TabsContent>;<TabsContent value="preview" className="pt-4">;
@@ -267,7 +244,6 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
                 talent = {talent}
                 onClose = {onClose}
                 status="ready";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/contracts/ContractBuilder.tsx
               />;
             )}
           </TabsContent>;
@@ -277,60 +253,10 @@ export function ContractBuilder() {const [activeTab, setActiveTab] = useState<st
 
 
         <TemplateManager
+
           isOpen = {templateManagerOpen,}
           onClose = {() => setTemplateManagerOpen(false),}
           onSelectTemplate = {handleLoadTemplate,}
-          currentValues = {formValues,}
-
-
-        />;
-      </DialogContent>;
-    </Dialog>;
-  );
-
-  handleContractGenerated;
-}/> </TabsContent> />);
-}</TabsContent> </Tabs> <TemplateManager is_open= {
-  templateManagerOpen;
-}on_close= {
-  () => setTemplateManagerOpen (false);
-}onSelectTemplate= {
-  handleLoadTemplate;
-}current_values= {
-  form_values;
-}/> </DialogContent> </Dialog>);
-}"}
-}
-;
-
-  );
-
-};
-
-}/>) ;
-}</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {;
-  talent ;
-}clientName= {;
-  clientName ;
-}initialValues= {;
-  formValues ;
-}onFormValuesChange= {;
-  setFormValues ;
-}onContractGenerated= {;
-  handleContractGenerated ;
-}/> </TabsContent> />) ;
-}</TabsContent> </Tabs> <TemplateManager isOpen= {;
-  templateManagerOpen ;
-}onClose= {;
-  () => setTemplateManagerOpen (false) ;
-}onSelectTemplate= {;
-  handleLoadTemplate ;
-}currentValues= {;
-  formValues ;
-}/> </DialogContent> </Dialog>) ;
-}"
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
               />;
             )}</TabsContent>;
         </Tabs>;<TemplateManager;
@@ -389,4 +315,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }onClose= {() => setTemplateManagerOpen (false)}onSelectTemplate= {handleLoadTemplate ;
 }currentValues= {formValues ;
 }/> </DialogContent> </Dialog>)}";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/contracts/ContractBuilder.tsx
+          currentValues = {formValues,}

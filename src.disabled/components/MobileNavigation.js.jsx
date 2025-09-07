@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
-const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
-=======
 import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
@@ -34,3 +23,17 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5;
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''";
 :temp_exclude/src.disabled/components/MobileNavigation.js.jsx;
 const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''";
+import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
+const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
+
+import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
+const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
+
+import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
+const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
+
+:src.disabled/components/MobileNavigation.js.jsx
+import React from\';react\' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(\') const location = useLocation() const menuRef = useRef(null)\'';\';
+
+const React from";react" const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(") const location = useLocation() const menuRef = useRef(null)"";";''"
+import _React from';react' const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState(null) const [searchQuery,setSearchQuery] = useState(') const location = useLocation() const menuRef = useRef(null)'';';

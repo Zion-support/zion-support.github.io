@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export interface ApiResponse<T = any> {
-  data: T;
-  message?: string;
-  success: boolean;
-}
-=======
   body?: BodyInit | null;
-=======
 interface File extends Blob  {name: string;
   lastModified: number;
 }
@@ -60,7 +50,6 @@ type ReferrerPolicy =;
   | "strict-origin";
   | "strict-origin-when-cross-origin";
   | "unsafe-url";interface RequestInit  {body?: BodyInit | null;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   cache?: RequestCache;
   credentials?: RequestCredentials;
   headers?: HeadersInit;
@@ -107,27 +96,12 @@ export class ApiClient {private baseURL: string;
       method: 'DELETE';
     })}
 }
-<<<<<<< HEAD
-// Define AbortSignal if not available
-interface AbortSignal extends EventTarget {
-  aborted: boolean;
-  onabort: ((this: AbortSignal, ev: Event) => any) | null;
-
-}
-};
-export const apiClient = new ApiClient();
-export type { ApiResponse, RequestOptions };
-;
-interface ApiResponse<T = unknown> {
-  data?: T;
-=======
 // Define AbortSignal if not available;
 interface AbortSignal extends EventTarget  {aborted: boolean;
   onabort: ((this: AbortSignal, ev: Event) => any) | null;export interface ApiResponse<T = any>  {data: T;
   message?: string;
   success: boolean;}
 }export const apiClient = new ApiClient()export type { ApiResponse, RequestOptions }interface ApiResponse<T = unknown>  {data?: T;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   error?: string;  success: boolean;
 }
 interface RequestOptions extends RequestInit  {timeout?: number;
@@ -135,11 +109,6 @@ interface RequestOptions extends RequestInit  {timeout?: number;
 declare global {interface RequestInit  {timeout?: number;
   }
 }
-<<<<<<< HEAD
-class ApiClient {
-  private baseURL: string;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 class ApiClient {private baseURL: string;constructor(baseURL: string = "", defaultHeaders: HeadersInit = {}) {this.baseURL = baseURL;
     this.default_headers = default_headers;
   }
@@ -183,7 +152,6 @@ export interface ApiResponse<T = any> {
   message?: string;
   success: boolean;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 export interface RequestOptions {
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE';
@@ -223,17 +191,11 @@ class ApiClient {
         success: false,
         message: error instanceof Error ? error.message : 'Unknown error'
       };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
   }
 }
 
 export const apiClient = new ApiClient();
-<<<<<<< HEAD
-=======
     }  }
 }
 
@@ -252,6 +214,10 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 export type { ApiResponse, RequestOptions }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
+},
+
+export const apiClient = new ApiClient($2);
+export type { ApiResponse, RequestOptions },
+,

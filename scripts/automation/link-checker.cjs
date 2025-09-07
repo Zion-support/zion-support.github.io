@@ -3,12 +3,9 @@ const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
 console.log(""� Starting continuous link checker automation...")
-const fs = require("fs")
-const path = require("path")
 const { execSync } = require("child_process")
 console.log(""� Starting continuous link checker automation...")
-// Get automation interval from environment variable ("default")
-// console.log(`"� Building project..."`)
+//
   console.log("� Starting continuous link checker automation...")
 // Get automation interval from environment variable ("default")
     console.log(`"� Building project..."`)
@@ -71,17 +68,11 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Failed to start continuous link "checker": ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(" Failed to start continuous link "checker": ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(" Failed to start continuous link "checker": ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Failed to start continuous link "checker": ")
+  console.error(" Failed to start continuous link "checker": ")
+
+

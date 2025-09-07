@@ -1,35 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
-<<<<<<< HEAD
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export function SidebarContent({
-  className,
-  children,
-  ...props
-}: SidebarContentProps) {
-  return (
-
-    <div className={cn("flex-1 px-2 py-4", className)} {...props}>
-      {children}
-    </div>
-  );
-}
-;
-export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
-  return (;
-
-    <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
-      {children}
-
-    </div>;
-  );
-}
-
-=======
   className?: string,
   children?: React.ReactNode
 
@@ -55,15 +26,10 @@ interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
 };
 export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
   return (;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 ;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
       {children}
 import React from './react';
@@ -82,7 +48,19 @@ function SidebarContent() {
     </div>);
 }
 ;
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+  className?: string,
+  children?: React.ReactNode
+}
+export function SidebarContent({
+  className
+  children
+  ...props
+}: SidebarContentProps) {
+  return (
+    <div className={cn("flex-1 px-2 py-4", className)} {...props}>
+      {children}
+    </div>
+  )
+}
+}
+;

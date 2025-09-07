@@ -9,17 +9,11 @@ const { execSync } = require('child_process')
       { "name": 'Lint Check', "cmd"}
         execSync(step.cmd, { "stdio"})
           "status"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           "status"
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
           "status"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
           "status"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+          "status"
+          "status"
+
+

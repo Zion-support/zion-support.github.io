@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
   if (typeof window === 'undefined' || !window && window.ethereum) {if (typeof window === 'undefined' || !window && window.ethereum) {if (typeof window === 'undefined' || !window.ethereum) {ursor/fix-website-loading-errors-and-merge-6662;
@@ -56,14 +52,8 @@ if ( {) {
   try {
     const accounts = await window.ethereum.request ({
 
-<<<<<<< HEAD
-      method: 'eth_requestAccounts',
-=======
   if (typeof window === 'undefined' || !window && window.ethereum) {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       method: 'eth_requestAccounts'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     });
     return accounts;
   } catch (error) {
@@ -71,51 +61,12 @@ if ( {) {
   }
 }
 
-<<<<<<< HEAD
-export async function getAccounts(): Promise<string[]> {
-  if (typeof window === "undefined" || !window.ethereum) {
-export async function getAccounts(): Promise<string[]> {
-  if (typeof window === "undefined" || !window.ethereum) {
-
-  if (typeof window === 'undefined' || !window && window.ethereum) {
-
-
-  if (typeof window === 'undefined' || !window.ethereum) {;
-
-    return [];
-  }
-  try {
-
-    const accounts = await window && window.ethereum.request({
-export async function get_accounts (): Promise < string[]> {
-  // Check condition
-if ( {) {
-  $2
-}
-    return [];
-  }
-  try {
-      method: 'eth_accounts',
-  if (typeof window === 'undefined' |!window.ethereum) {
-  if (typeof window === 'undefined' || !window.ethereum) {;
-    return [];
-  }
-  try {
-    const accounts = await window.ethereum.request({
-      method: "eth_accounts",
-      method: "eth_accounts"
-    });
-<<<<<<< HEAD
-=======
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
   }
   try {
     const accounts = await window.ethereum.request({
       method: "eth_accounts",    });
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     return accounts;
   } catch (error) {
     return [];
@@ -175,16 +126,8 @@ if ( {) {$2;
 }}}
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export async function getBalance(address: string): Promise<string> {
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
-export async function getBalance(address: string): Promise<string> {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   if (typeof window === "undefined" || !window.ethereum) {
     throw new Error("MetaMask is not installed");
   }
@@ -192,10 +135,6 @@ export async function getBalance(address: string): Promise<string> {
     const balance = await window.ethereum.request({
       method: "eth_getBalance",
       params: [address, "latest"],
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
@@ -229,32 +168,17 @@ if ( {) {
     const balance = await window.ethereum.request ({
 
       method: 'eth_getBalance',
-<<<<<<< HEAD
-      params: [address, 'latest'],
-=======
-=======
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       params: [address, 'latest']
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     });
     return balance;
   } catch (error) {
     throw new Error("Failed to get balance");
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export async function signMessage(
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
-export async function signMessage(
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   message: string,
   address: string,
 ): Promise<string> {
@@ -264,10 +188,6 @@ export async function signMessage(
   try {
     const signature = await window.ethereum.request({
       method: "personal_sign",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
@@ -300,16 +220,9 @@ if ( {) {
     const signature = await window.ethereum.request ({
 
       method: 'personal_sign',
-<<<<<<< HEAD
-      params: [message, address],
-=======
-=======
   if (typeof window === 'undefined' || !window && window.ethereum) {
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       params: [message, address]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     });
     return signature;
   } catch (error) {
@@ -319,27 +232,14 @@ if ( {) {
 
 // Extend Window interface for TypeScript;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 // Extend Window interface for TypeScript;
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
-// Extend Window interface for TypeScript;
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 declare global {
   interface Window {
     ethereum?: {
       request: (args: { method: string; params?: any[] }) => Promise < any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       removeListener: (
         event: string,
         callback: (accounts: string[]) => void,
@@ -355,13 +255,10 @@ declare global {
     };
 
     }
-<<<<<<< HEAD
-=======
     }      removeListener: (
         event: string,
         callback: (accounts: string[]) => void,
       ) => void;
-=======
       remove_listener: (event: string, callback: (accounts: string[]) => void) => void;
 
     }
@@ -374,8 +271,34 @@ declare global {
 
   }
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+  }
+}
+export type WalletProvider = $2;
+export function getEthereumProvider(): WalletProvider | null {
+  if (typeof window = $2;
+  // @ts-ignore
+  const { ethereum } = window,
+  return ethereum ?? null
+}
+
+export async function connectMetaMask(): Promise<string[] | null> {
+  const provider = getEthereumProvider($2);
+  if (!provider) return null,
+  try {
+    const accounts: string[] = await provider.request($2);
+    return accounts
+  } catch (e) {
+    return null
+  }
+}
+
+export async function getAccounts(): Promise<string[] | null> {
+  const provider = getEthereumProvider($2);
+  if (!provider) return null,
+  try {
+    const accounts: string[] = await provider.request($2);
+    return accounts
+  } catch (e) {
+    return null
   }
 }

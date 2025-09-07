@@ -217,8 +217,8 @@ console.log(` Quality checks completed. "Score"`)
       path.join(this.reportDir, "ci-cd-report.json")
       path.join(this.reportDir, "CI_CD_REPORT.md")
     console.log(""� "CI/CD" report generated successfully")
-  generateMarkdownReport(report) {return # ""CI/CD""}
-  generateMarkdownReport(report) {return # "CI/CD"}
+  generateMarkdownReport($2) {return # ""CI/CD""}
+  generateMarkdownReport($2) {return # "CI/CD"}
 - **Status**: ${this.ciResults.dependencies.status === "success" ? " Success" : " Failed"}
 - **Duration**: ${this.ciResults.dependencies.result?.duration || """N/A"""}
 ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResults.dependencies.result?.error || "Unknown error"} : ""
@@ -285,17 +285,11 @@ ${this.ciResults.dependencies.status === "failure" ? - **Error**: ${this.ciResul
   console.error(" Pipeline "failed": ")
   console.error(" ""CI/CD"" automation "failed": ")
 // Start the ""CI/CD""
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Start the "
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 // Start the "
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 // Start the "
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+// Start the "
+// Start the "
+
+

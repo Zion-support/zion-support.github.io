@@ -1,58 +1,41 @@
-<<<<<<< HEAD
 
-import {useState, useEffect} from "react";
-import {Star} from "lucide-react";
-import {ReviewStats} from "@/components/reviews/ReviewStats";
-import {ReviewsList} from "@/components/reviews/ReviewsList";
-import {useReviews} from "@/hooks/useReviews";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import { useState, useEffect } from "react";
+import { Star } from "lucide-react";
+import { ReviewStats } from "@/components/reviews/ReviewStats";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
+import { useReviews } from "@/hooks/useReviews";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 interface ProfileRatingsProps {
-  userId: string;
-  averageRating?: number;
-  ratingCount?: number;
+  userId: string,
+  averageRating?: number,
+  ratingCount?: number
 }
 
-export function ProfileRatings({
-  userId,
-  averageRating = 0,
-  ratingCount = 0,
-}: ProfileRatingsProps) {
-  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
-  const [ratingDistribution, setRatingDistribution] = useState<
-    Record<number, number>
-  >({});
-
+export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {
+  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews($2);
+  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({}),
+  
   // Calculate rating distribution
   useEffect(() => {
     if (reviews.length > 0) {
-      const distribution: Record<number, number> = {
-        1: 0,
-        2: 0,
-        3: 0,
-        4: 0,
-        5: 0,
-      };
-
+      const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0},
+      
       reviews.forEach((review) => {
         if (review.rating >= 1 && review.rating <= 5) {
-          distribution[review.rating] = (distribution[review.rating] || 0) + 1;
+          distribution[review.rating] = (distribution[review.rating] || 0) + 1
         }
-      });
-
-      setRatingDistribution(distribution);
+      }),
+      
+      setRatingDistribution(distribution)
     }
-  }, [reviews]);
-
+  }, [reviews]),
+  
   // Fetch reviews when component mounts
   useEffect(() => {
-    fetchUserReviews(userId);
-  }, [userId]);
-
-  return (
-    <div className="space-y-6">;
-      <div className="flex flex-col md:flex-row gap-6">;
-        <div className="md:w-1/3">;
+    fetchUserReviews(userId)
+  }, [userId]),
+  
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
@@ -65,8 +48,6 @@ export function ProfileRatings({
         </div>
 
         <div className="md:w-2/3">
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Tabs defaultValue="all">
             <TabsList className="mb-4">
               <TabsTrigger value="all">
@@ -75,29 +56,26 @@ export function ProfileRatings({
               <TabsTrigger value="positive">Positive</TabsTrigger>
               <TabsTrigger value="critical">Critical</TabsTrigger>
             </TabsList>
-
             <TabsContent value="all">
               <ReviewsList
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
-<<<<<<< HEAD
               />
             </TabsContent>
 
             <TabsContent value="positive">
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <ReviewsList
                 reviews={reviews && reviews.filter((r) => r && r.rating >= 4)}
+              <ReviewsList
+                reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
-
             <TabsContent value="critical">
               <ReviewsList
-                reviews={reviews && reviews.filter((r) => r && r.rating < 4)}
+                reviews={reviews.filter((r) => r.rating < 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
@@ -106,15 +84,6 @@ export function ProfileRatings({
         </div>
       </div>
     </div>
-  );
-}
-<<<<<<< HEAD
-
-
-}
-
-    </div>;
-=======
 ;
   // Fetch reviews when component mounts;
   useEffect (() => {
@@ -165,7 +134,6 @@ export function ProfileRatings({
           </Tabs>;
         </div>;
       </div>;    </div>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ),; interface ProfileRatingsProps {
   userId: string;
 averageRating?: number;
@@ -226,3 +194,5 @@ reviews.forEach ( (review) => {
 }
 ;
 ;
+  )
+}

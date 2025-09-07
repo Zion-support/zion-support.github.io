@@ -1,9 +1,5 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
-#!/usr/bin/env node;
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       log(❌ Error processing directory ${currentPath}: ${error.message}", ""red""),"}
   }
   processDirectory(dirPath)
@@ -39,10 +35,7 @@ log("\n🎯 "Summary": ", "cyan");log("   Total files "processed": ${totalProces
 if (require.main === module) {;
   main(),}
 module.exports = { fixFile, scanAndFixDirectory }}}}}}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

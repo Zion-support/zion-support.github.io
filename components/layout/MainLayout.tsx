@@ -1,146 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
-;
-}const MainLayout: React.FC<MainLayoutProps> = ({children,title,description,keywords,image,url,type = 'website',noindex = false,nofollow = false,canonical;
-}) => {return (<>;
-      <Head>;
-        <title>{title || 'Zion Tech Group'}</title>;
-        <meta name="description" content={description || 'Leading technology solutions provider'} />;
-        {keywords && <meta name="keywords" content={keywords} />}
-import Layout from './Layout';interface MainLayoutProps  {interface MainLayoutProps  {children: ReactNode, title?: string,  description?: string;
-  keywords?: string;
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
-  type?: string;
-  image?: string;
-  url?: string;}
-const MainLayout: React.FC<MainLayoutProps> = ({children;
-  title = 'Zion Tech Group - Technology Solutions';
-  description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.';
-  keywords = 'technology, web development, mobile apps, AI, cloud services, software solutions';
-  canonical;
-  noindex = false;
-  nofollow = false;
-  type = 'website';
-  image = '/og-image.jpg';
-  url;
-ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
 import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
-interface MainLayoutProps  {title: string;
+
+interface MainLayoutProps {
+  title: string;
   description: string;
   children: React.ReactNode;
   keywords?: string;
   canonical?: string;
-}export default function MainLayout() {ursor/automate-test-improve-and-merge-code-646c;
-  return (<>;
-      <Head>;
-        <title>{title}</title>;
-        <meta name="description" content={description} />;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
-        <link rel="icon" href="/favicon.ico" />;
-        {canonical && <link rel="canonical" href={canonical} />}
-        {noindex && <meta name="robots" content="noindex" />}
-        {nofollow && <meta name="robots" content="nofollow" />}
-        <meta property="og:type" content={type} />;
-        <meta property="og:title" content={title} />;
-        <meta property="og:description" content={description} />;
-  children,title = 'Zion Tech Group - Technology Solutions',description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.',keywords = 'technology, web development, mobile apps, AI, cloud services, software solutions',canonical,noindex = false,nofollow = false,type = 'website',image = '/og - image.jpg',url;
-  return ({image && <meta property="og:image" content={image} />}
-        {url && <meta property="og:url" content={url} />}
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
-        <meta name="twitter:description" content={description} />;
-        {image && <meta name="twitter:image" content={image} />}
-  ogImage = '/og-image.jpg';
-}) => {return (const MainLayout: React.FC<MainLayoutProps> = ({children,title = 'Zion Tech Group - Technology Solutions',description = 'Leading technology solutions provider specializing in web development, mobile applications, AI integration, and cloud services.',keywords = 'technology, web development, mobile apps, AI, cloud services, software solutions',canonical,noindex = false,nofollow = false,type = 'website',image = '/og-image && image.jpg',url;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
-        <link rel="icon" href="/favicon && favicon.ico" />;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
-        <link rel="icon" href="/favicon.ico" />;
-        {canonical && <link rel="canonical" href={canonical} />}
-        {noindex && <meta name="robots" content="noindex" />}
-        {nofollow && <meta name="robots" content="nofollow" />}
-        <meta property="og:type" content={type} />;
-        <meta property="og:title" content={title} />;
-        <meta property="og:description" content={description} />;
-        {image && <meta property="og:image" content={image} />}
-        {url && <meta property="og:url" content={url} />}
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
-        <meta name="twitter:description" content={description} />;
-        {image && <meta name="twitter:image" content={image} />}
-      </Head>;
-        <Header />;
-        <main className="flex-1">;
-          {children}
-        </main>;
-        <Footer />;
-      </div>;
-    </>;
-  )export default MainLayout;
-      </Head>;
-        <Header />;
-        <main className="flex - 1">;
-          {children}
-        </main>;
-        <Footer />;
-      </div>;
-</>)export default MainLayout;
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',description = 'Zion Tech Group provides cutting - edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services',og_image = '/og - image.jpg';
-}) => {return (<>;
-      <Head>;
-        <title>{title}</title>;
-        <meta name="description" content={description} />;
-        <meta name="keywords" content={keywords} />;
-        <meta property="og:title" content={title} />;
-        <meta property="og:description" content={description} />;
-        <meta property="og:image" content={og_image} />;
-        <meta property="og:type" content="website" />;
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
-        <meta name="twitter:description" content={description} />;
-      </Head>;
-      <div className="min - h-screen bg - white">;
-        {children}
-      </div>;
-import React from 'react'; import Head from 'next/head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer'; interface MainLayoutProps { children: React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string} const MainLayout: React.FC<MainLayoutProps> = ({ children,title = 'Zion Tech Group - Leading Technology Solutions Provider',description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture,we help companies transform their digital presence.',keywords = 'technology solutions,AI development,cloud architecture,digital transformation,micro SaaS,IT services',ogImage = '/og-image.jpg'}) => { return ( <> <Head> <title>{title}</title> <meta name="description" content={description} /> <meta name="keywords" content={keywords} /> <meta property="og:title" content={title} /> <meta property="og:description" content={description} /> <meta property="og:image" content={ogImage} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> </Head> <SEOEnhancer title={title} description={description} keywords={keywords} ogImage={ogImage} /> <PerformanceOptimizer preloadImages={[ '/hero-bg.jpg','/services-bg.jpg','/team-bg.jpg']} preloadFonts={[ 'https: ]} /> <AccessibilityEnhancer> <div className='min-h-screen flex flex-col'> <Header /> <main id='main-content' className='flex-grow' role='main'> {children} </main> <Footer /> </div> </AccessibilityEnhancer> </> )}export default MainLayout;
-import React from 'react'; import Head from 'next/head'; import Header from './Header'; import Footer from './Footer'; import PerformanceOptimizer from '../PerformanceOptimizer'; import AccessibilityEnhancer from '../AccessibilityEnhancer'; import SEOEnhancer from '../SEOEnhancer'; interface MainLayoutProps { children: React && React.ReactNode; title?: string; description?: string; keywords?: string; ogImage?: string} const MainLayout: React.FC<MainLayoutProps> = ({ children,title = 'Zion Tech Group - Leading Technology Solutions Provider',description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture,we help companies transform their digital presence.',keywords = 'technology solutions,AI development,cloud architecture,digital transformation,micro SaaS,IT services',ogImage = '/og-image && image.jpg'}) => { return ( <> <Head> <title>{title}</title> <meta name="description" content={description} /> <meta name="keywords" content={keywords} /> <meta property="og:title" content={title} /> <meta property="og:description" content={description} /> <meta property="og:image" content={ogImage} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> </Head> <SEOEnhancer title={title} description={description} keywords={keywords} ogImage={ogImage} /> <PerformanceOptimizer preloadImages={[ '/hero-bg && bg.jpg','/services-bg && bg.jpg','/team-bg && bg.jpg']} preloadFonts={[ 'https: ]} /> <AccessibilityEnhancer> <div className='min-h-screen flex flex-col'> <Header /> <main id='main-content' className='flex-grow' role='main'> {children} </main> <Footer /> </div> </AccessibilityEnhancer> </> )}export default MainLayout;
-    </>)}
-export default MainLayout;
-ursor/automate-test-improve-and-merge-code-646c;
-        <meta name="keywords" content={keywords} />;
-        {canonical && <link rel="canonical" href={canonical} />}
-        <link rel="icon" href="/favicon.ico" />;
-      </Head>;
-import React, { ReactNode } from 'react';
-import Footer from './Footer';
-import SEOHead from '../SEOHead';
-interface MainLayoutProps  {children: ReactNode;
-  title?: string;
-  description?: string;
-}const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description }) => {return (<>;
-      <SEOHead title={title} description={description} />;
-      <div className="min-h-screen flex flex-col">;
-        <Header />;
-        <main className="flex-1">;
-          {children}
-        </main>;
-        <Footer />;
-      </div>;
-    </>;
-  )}}export default MainLayout;ursor/automate-test-improve-and-merge-code-646c;
 }
 
 export default function MainLayout({ 
@@ -150,22 +20,13 @@ export default function MainLayout({
   keywords = "AI solutions, IT services, micro SaaS, technology consulting",
   canonical 
 }: MainLayoutProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {canonical && <link rel="canonical" href={canonical} />}
@@ -272,20 +133,12 @@ import React from 'react'; import Head from 'next/head'; import Header from './H
     </>);
 }
 export default MainLayout;
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
         <meta name="keywords" content={keywords} />
         {canonical && <link rel="canonical" href={canonical} />}
         <link rel="icon" href="/favicon.ico" />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       
 
 interface MainLayoutProps {
@@ -298,12 +151,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
   return (
     <>
       <SEOHead title={title} description={description} />
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-1">
@@ -313,12 +162,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children, title, description })
       </div>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+

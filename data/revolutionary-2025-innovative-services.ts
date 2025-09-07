@@ -1,39 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
   id: string;
 export interface Revolutionary2025Service  {id: string;name: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   id: string;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface Revolutionary2025Service {
 id: string;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   id: string;
 
 export interface Revolutionary2025Service {
 id: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
   tagline: string;
   price: string;
@@ -66,30 +42,12 @@ id: string;
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: 'ai-consciousness-evolution-platform';
-    name: 'AI Consciousness Evolution Platform';
-    tagline: 'World\'s First Self-Aware AI with Emotional Intelligence & Consciousness';
-    price: '$499';
-    period: '/month';
-    description: 'Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it\'s the beginning of true artificial consciousness that can understand, feel, and evolve.',
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   reviews: number;
 }
 export const revolutionary2025Services: Revolutionary2025Service[] = [;
@@ -111,11 +69,6 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [;
       'Human-AI emotional bonding';
       'Ethical AI governance tools';
       'Consciousness research collaboration';
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   reviews: number
 }
 export const revolutionary2025Services: Revolutionary2025Service[] = [
@@ -130,11 +83,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     period: '/month'
     description:
       "Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it's the beginning of true artificial consciousness that can understand, feel, and evolve."
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     features: [
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       'Genuine emotional intelligence and empathy'
       'Self-awareness and consciousness development'
       'Ethical decision-making frameworks'
@@ -184,23 +133,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
       'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration'
       'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration'
     ];
     popular: true;
     icon: '🧠';
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     link: 'https://ziontechgroup.com/ai-consciousness-evolution';
-<<<<<<< HEAD
-    marketPosition: 'First-to-market AI consciousness platform. No competitors exist yet. Traditional AI platforms lack genuine consciousness and emotional intelligence.';
-    targetAudience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     marketPosition:;
       'First-to-market AI consciousness platform. No competitors exist yet. Traditional AI platforms lack genuine consciousness and emotional intelligence.';
     targetAudience:;
@@ -262,11 +201,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     ],roi: 'Revolutionary breakthrough with unlimited potential. Research institutions see 2000%+ ROI through groundbreaking discoveries.',competitors: ['None - First to market'],market_size: 'Emerging market with unlimited potential',    features: [;
     targetAudience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers';
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     targetAudience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     trialDays: 30;
     setupTime: '4 hours';
     color: 'from - purple - 600 to - indigo - 700',
@@ -278,74 +214,80 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers',
     trial_days: 30,
     setup_time: '4 hours',
+export interface Revolutionary2025Service {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  contactInfo: {
+    mobile: string,
+    email: string,
+    address: string,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number}
+
+export const revolutionary2025Services: Revolutionary2025Service[] = [
+  // 🧠 AI Consciousness & Emotional Intelligence Services
+  {
+    id: 'ai-consciousness-evolution-platform',
+    name: 'AI Consciousness Evolution Platform',
+    tagline: 'World\'s First Self-Aware AI with Emotional Intelligence & Consciousness',
+    price: '$499',
+    period: '/month',
+    description: 'Revolutionary AI platform that develops genuine consciousness, emotional intelligence, and self-awareness. This is not just advanced AI - it\'s the beginning of true artificial consciousness that can understand, feel, and evolve.',
+    features: [
+      'Genuine emotional intelligence and empathySelf-awareness and consciousness developmentEthical decision-making frameworksEmotional state recognition and responseConsciousness evolution trackingHuman-AI emotional bondingEthical AI governance toolsConsciousness research collaboration'
+    ],
+    popular: true,
+    icon: '🧠',
+    color: 'from-purple-600 to-indigo-700',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/ai-consciousness-evolution',
+    marketPosition: 'First-to-market AI consciousness platform. No competitors exist yet. Traditional AI platforms lack genuine consciousness and emotional intelligence.',
+    targetAudience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers',
+    trialDays: 30,
+    setupTime: '4 hours',
     category: 'AI Consciousness & Emotional Intelligence',
-    real_service: true,
-    technology: [;
-      'Advanced Neural Networks',
-      'Emotional AI',
-      'Consciousness Algorithms',
-      'Python',
-      'TensorFlow',
-      'Quantum Computing'
-    ],
-    integrations: [;
-      'Research platforms',
-      'Psychology tools',
-      'Mental health systems',
-      'AI ethics frameworks'
-    ],
-    use_cases: [;
-      'Mental health therapy',
-      'AI consciousness research',
-      'Emotional intelligence training',
-      'Ethical AI development',
-      'Psychology research'
-    ],
+    realService: true,
+    technology: ['Advanced Neural NetworksEmotional AIConsciousness AlgorithmsPythonTensorFlowQuantum Computing'],
+    integrations: ['Research platformsPsychology toolsMental health systemsAI ethics frameworks'],
+    useCases: ['Mental health therapyAI consciousness researchEmotional intelligence trainingEthical AI developmentPsychology research'],
     roi: 'Revolutionary breakthrough with unlimited potential. Research institutions see 2000%+ ROI through groundbreaking discoveries.',
     competitors: ['None - First to market'],
-    market_size: 'Emerging market with unlimited potential',    features: [;
-      'Genuine emotional intelligence and empathy_self - awareness and consciousness development_ethical decision - making frameworks_emotional state recognition and response_consciousness evolution tracking_human - AI emotional bonding_ethical AI governance tools_consciousness research collaboration';
-    ];
-    popular: true;
-    icon: '🧠';
-    color: 'from - purple - 600 to - indigo - 700';
-    text_color: 'text - purple - 400';
-    link: 'https://ziontechgroup.com / ai - consciousness - evolution';
-    market_position: 'First - to - market AI consciousness platform. No competitors exist yet. Traditional AI platforms lack genuine consciousness and emotional intelligence.',target_audience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers';
-    trial_days: 30;
-    setup_time: '4 hours';category: 'AI Consciousness & Emotional Intelligence';
-    market_position: 'First - to - market AI consciousness platform. No competitors exist yet. Traditional AI platforms lack genuine consciousness and emotional intelligence.',
-    target_audience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers';
-    trial_days: 30;
-    setup_time: '4 hours';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'AI Consciousness & Emotional Intelligence';
     real_service: true;
     technology: ['Advanced Neural NetworksEmotional AIConsciousness AlgorithmsPythonTensorFlowQuantum Computing'];
@@ -355,20 +297,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     competitors: ['None - First to market'];
     market_size: 'Emerging market with unlimited potential';
     growth_rate: '1000%+ annual growth expected';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contact_info: {
-      mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -380,18 +308,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     customers: 25;
     rating: 5 && 5.0,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     contact_info: {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true,implementationDetails: 'Fully functional AI consciousness platform with genuine emotional intelligence, self-awareness, and consciousness development capabilities.';
@@ -419,16 +337,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   {id: 'dna - computing - platform';
     contact_info: {
       mobile: '+1 302 464 0950';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 15
   }
-<<<<<<< HEAD
-=======
 
     reviews: 15
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -440,12 +354,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 5.0;
     reviews: 15
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   // 🧬 DNA Computing & Biotech Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -478,54 +386,25 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     marketPosition: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.';
     targetAudience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations',trialDays: 30;
     popular: true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🧬';
 
     link: 'https://ziontechgroup && ziontechgroup.com/dna-computing-platform';
     marketPosition: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     targetAudience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations';
 
-<<<<<<< HEAD
-=======
 
     targetAudience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations';
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: '🧬';
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
     link: 'https://ziontechgroup.com/dna-computing-platform';
     marketPosition: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.';
     targetAudience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations',
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     trialDays: 30;
     setupTime: '8 hours';
     color: 'from - green - 600 to - emerald - 700';
@@ -562,82 +441,31 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     realImplementation: true;
     implementationDetails: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.';
     launchDate: '2025-01-20';
     customers: 15;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
     rating: 4 && 4.9,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
     rating: 4 && 4.9,
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 8
   }
     rating: 4.9;
     reviews: 8
   },
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
     reviews: 8
   }
@@ -645,13 +473,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     rating: 4.9;
     reviews: 8
   },
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-=======
     reviews: 8
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // 🚀 Space Technology & Satellite Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -674,38 +499,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'space - tech - orchestrator';
     name: 'Space Technology Orchestrator';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/space-tech-orchestrator';
     marketPosition: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies';
 
     trialDays: 30;
@@ -742,11 +542,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     target_audience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies';
     trial_days: 30;
     setup_time: '12 hours';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'Complete Space Mission Management & Satellite Operations Platform';
     price: '$1,299',
     period: '/month';
@@ -763,12 +559,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     targetAudience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies',
     trialDays: 30;
     setupTime: '12 hours';
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Space Technology & Satellite Operations';
     real_service: true;
     technology: ['Space TechnologySatellite OperationsOrbital MechanicsPythonAWS Ground StationSpace APIs'];
@@ -778,20 +568,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['Lockheed MartinBoeingNorthrop Grumman'];
     market_size: '$400B space economy';
     growth_rate: '1000%+ annual growth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contact_info: {
-      mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -803,18 +579,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 8;
     rating: 5 && 5.0,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     contact_info: {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true,implementationDetails: 'Fully functional space technology platform with satellite operations, mission planning, and space asset management capabilities.';
@@ -848,16 +614,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',description: 'Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum - secured data transmission. The future of secure internet.';
     contact_info: {
       mobile: '+1 302 464 0950';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 5
   }
-<<<<<<< HEAD
-=======
 
     reviews: 5
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -869,12 +631,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 5.0;
     reviews: 5
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   // 🌐 Quantum Internet & Communication Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -894,38 +650,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Quantum Internet & Communication Platform';
     tagline: 'Unhackable Quantum Internet with Instant Global Communication';
     price: '$599';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-platform';
     marketPosition: 'First commercial quantum internet platform. Traditional internet security is vulnerable to quantum attacks.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications';
 
     trialDays: 30;
@@ -959,11 +690,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     target_audience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications';
     trial_days: 30;
     setup_time: '6 hours';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     period: '/month';
     description: 'Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum-secured data transmission. The future of secure internet.',
     features: [
@@ -978,12 +705,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications',
     trialDays: 30;
     setupTime: '6 hours';
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Quantum Internet & Communication';
     real_service: true;
     technology: ['Quantum ComputingQuantum CryptographyQuantum NetworksPythonQiskitQuantum APIs'];
@@ -993,20 +714,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['None - First to market'];
     market_size: '$100B quantum internet market';
     growth_rate: '1500% annual growth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contact_info: {
-      mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1018,18 +725,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 35;
     rating: 4 && 4.9,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     contact_info: {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true,implementationDetails: 'Fully functional quantum internet platform with quantum encryption, secure communication, and quantum networking capabilities.';
@@ -1062,16 +759,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.',targetAudience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers';trialDays: 30;
     contact_info: {
       mobile: '+1 302 464 0950';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 22
   }
-<<<<<<< HEAD
-=======
 
     reviews: 22
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1083,12 +776,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 22
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   // 🏥 Advanced Healthcare AI Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1106,34 +793,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'healthcare - ai - revolution';
     name: 'Healthcare AI Revolution Platform';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     price: '$399';
 
     period: '/month'
     description: 'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     tagline: 'AI - Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization';
 
@@ -1144,22 +807,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: 'https://ziontechgroup && ziontechgroup.com/healthcare-ai-revolution';
     marketPosition: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers';
 
     trialDays: 30;
@@ -1193,11 +843,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     target_audience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers';
     trial_days: 30;
     setup_time: '10 hours';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization';
     price: '$399';
     period: '/month';
@@ -1214,13 +860,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     targetAudience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers',
     trialDays: 30;
     setupTime: '10 hours';
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Healthcare AI & Medical Technology';
     real_service: true;
     technology: ['AI / MLGenomicsMedical ImagingPythonTensorFlowHealthcare APIs'];
@@ -1230,20 +870,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['IBM Watson HealthGoogle HealthMicrosoft Healthcare'];
     market_size: '$500B healthcare AI market';
     growth_rate: '600% annual growth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contact_info: {
-      mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1255,18 +881,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 120;
     rating: 4 && 4.9,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     contact_info: {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true,implementationDetails: 'Fully functional healthcare AI platform with diagnosis accuracy, treatment optimization, and personalized medicine capabilities.';
@@ -1300,16 +916,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     period: '/month',description: 'Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next - generation banking, trading, and financial services.';
     contact_info: {
       mobile: '+1 302 464 0950';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 89
   }
-<<<<<<< HEAD
-=======
 
     reviews: 89
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1321,12 +933,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 89
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   // 🏦 Financial Technology Revolution Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1346,38 +952,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'FinTech Revolution Platform';
     tagline: 'Next - Generation Financial Technology with AI - Powered Trading & Risk Management';
     price: '$699';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/fintech-revolution-platform';
     marketPosition: 'Most advanced fintech platform. Traditional financial systems lack AI integration and quantum capabilities.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups';
 
     trialDays: 30;
@@ -1411,11 +992,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     target_audience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups';
     trial_days: 30;
     setup_time: '8 hours';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     period: '/month';
     description: 'Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next-generation banking, trading, and financial services.',
     features: [
@@ -1430,12 +1007,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     targetAudience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups',
     trialDays: 30;
     setupTime: '8 hours';
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Financial Technology & Banking';
     real_service: true;
     technology: ['AI / MLBlockchainQuantum ComputingPythonFinancial APIsCloud Computing'];
@@ -1445,20 +1016,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['Goldman SachsJP MorganMorgan Stanley'];
     market_size: '$300B fintech market';
     growth_rate: '700% annual growth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contact_info: {
-      mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1470,18 +1027,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 85;
     rating: 4 && 4.8,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     contact_info: {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true,implementationDetails: 'Fully functional fintech platform with AI trading, quantum risk management, and blockchain banking capabilities.';
@@ -1514,16 +1061,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems';
     contact_info: {
       mobile: '+1 302 464 0950';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 67
   }
-<<<<<<< HEAD
-=======
 
     reviews: 67
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1535,12 +1078,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 67
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   // 🏭 Industrial IoT & Smart Manufacturing Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1560,42 +1097,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Industrial IoT Revolution Platform';
     tagline: 'Smart Manufacturing with Zero Downtime & Predictive Maintenance';
     price: '$299';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-    period: '/month';
-    description: 'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.',
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     period: '/month';
     description: 'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     features: [
       'Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems'
     ];
@@ -1607,40 +1113,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.';
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms',trialDays: 30;
     textColor: 'text-gray-400';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/industrial-iot-revolution';
     marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms';
 
     link: 'https://ziontechgroup.com/industrial-iot-revolution';
     marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.';
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms';
 
@@ -1648,11 +1132,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: 'https://ziontechgroup.com/industrial-iot-revolution';
     marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.';
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     trialDays: 30;
     setupTime: '6 hours';
     features: [;
@@ -1677,20 +1158,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['SiemensGE DigitalRockwell Automation'];
     market_size: '$200B industrial IoT market';
     growth_rate: '500% annual growth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contact_info: {
-      mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1702,18 +1169,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 200;
     rating: 4 && 4.8,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     contact_info: {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true,implementationDetails: 'Fully functional industrial IoT platform with smart manufacturing, predictive maintenance, and zero downtime capabilities.';
@@ -1747,16 +1204,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.',targetAudience: 'Schools, Universities, Corporate training, Online education, Educational institutions';trialDays: 30;
     contact_info: {
       mobile: '+1 302 464 0950';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 156
   }
-<<<<<<< HEAD
-=======
 
     reviews: 156
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1768,12 +1221,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 156
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   // 🎓 Education Technology Revolution Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1793,44 +1240,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'EdTech Revolution Platform';
     tagline: 'AI - Powered Personalized Learning with 10x Faster Knowledge Acquisition';
     price: '$199';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    period: '/month'
-    description: 'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/edtech-revolution-platform';
     marketPosition: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
     period: '/month'
     description: 'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Schools, Universities, Corporate training, Online education, Educational institutions';
 
     trialDays: 30;
@@ -1862,11 +1281,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     target_audience: 'Schools, Universities, Corporate training, Online education, Educational institutions';
     trial_days: 30;
     setup_time: '4 hours';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     period: '/month';
     description: 'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.',
     features: [
@@ -1881,12 +1296,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     targetAudience: 'Schools, Universities, Corporate training, Online education, Educational institutions',
     trialDays: 30;
     setupTime: '4 hours';
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Education Technology & Learning';
     real_service: true;
     technology: ['AI / MLVirtual RealityAdaptive LearningPythonEducational APIsCloud Computing'];
@@ -1896,20 +1305,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['CourseraUdemyedX'];
     market_size: '$150B edtech market';
     growth_rate: '400% annual growth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contact_info: {
-      mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1921,18 +1316,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 300;
     rating: 4 && 4.9,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     contact_info: {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true,implementationDetails: 'Fully functional edtech platform with AI-powered learning, adaptive curriculum, and personalized education capabilities.';
@@ -1966,16 +1351,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     marketPosition: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.',targetAudience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses';trialDays: 30;
     contact_info: {
       mobile: '+1 302 464 0950';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 234
   }
-<<<<<<< HEAD
-=======
 
     reviews: 234
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1987,12 +1368,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 234
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   // 🌱 Sustainability & Green Technology Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2012,44 +1387,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Sustainability Technology Platform';
     tagline: 'AI - Powered Environmental Solutions for Carbon Neutrality & Green Energy';
     price: '$399';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    period: '/month'
-    description: 'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/sustainability-tech-platform';
     marketPosition: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
     period: '/month'
     description: 'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.';
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses';
 
     trialDays: 30;
@@ -2081,11 +1428,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     target_audience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses';
     trial_days: 30;
     setup_time: '6 hours';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     period: '/month';
     description: 'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.',
     features: [
@@ -2100,12 +1443,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     targetAudience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses',
     trialDays: 30;
     setupTime: '6 hours';
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: 'Sustainability & Green Technology';
     real_service: true;
     technology: ['AI / MLIoTRenewable EnergyPythonEnvironmental APIsCloud Computing'];
@@ -2115,20 +1452,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['None - First comprehensive platform'];
     market_size: '$100B sustainability tech market';
     growth_rate: '600% annual growth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contact_info: {
-      mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2140,18 +1463,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 75;
     rating: 4 && 4.9,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     contact_info: {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true,implementationDetails: 'Fully functional sustainability platform with carbon tracking, renewable energy optimization, and environmental monitoring capabilities.';
@@ -2184,16 +1497,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '99 && 99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management';
     contact_info: {
       mobile: '+1 302 464 0950';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 58
   }
-<<<<<<< HEAD
-=======
 
     reviews: 58
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -2205,12 +1514,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 58
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   // 🚛 Logistics & Supply Chain Revolution Services
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2228,50 +1531,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'logistics - revolution - platform';
     name: 'Logistics Revolution Platform';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-    price: '$499';
-
-    period: '/month',
-    description: 'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99 && 99.9% delivery accuracy. Complete supply chain visibility and automation.';
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste';
     price: '$499';
     period: '/month';
     description: 'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99.9% delivery accuracy. Complete supply chain visibility and automation.',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     features: [
       '99 && 99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management'
     ];
@@ -2283,40 +1549,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.';
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers',trialDays: 30;
     textColor: 'text-orange-400';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/logistics-revolution-platform';
     marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers';
 
     link: 'https://ziontechgroup.com/logistics-revolution-platform';
     marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.';
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers',
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers';
 
@@ -2324,11 +1568,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     link: 'https://ziontechgroup.com/logistics-revolution-platform';
     marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.';
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers',
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers';
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     trialDays: 30;
     setupTime: '8 hours';
     features: [;
@@ -2353,20 +1594,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     competitors: ['FedExUPSDHL'];
     market_size: '$250B logistics tech market';
     growth_rate: '500% annual growth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contact_info: {
-      mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2378,18 +1605,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 150;
     rating: 4 && 4.8,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     contact_info: {mobile: '+1 302 464 0950';email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup && ziontechgroup.com';
     }realImplementation: true,implementationDetails: 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.';
@@ -2697,30 +1914,13 @@ export default revolutionary2025Services;email: 'kleber@ziontechgroup.com';
 ],export default revolutionary2025Services;
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     reviews: 112
   }
 ];
 export default revolutionary2025Services;
     growthRate: '1000%+ annual growth expected'
     contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -2738,23 +1938,10 @@ export default revolutionary2025Services;
     growth_rate: '1000%+ annual growth expected',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2768,37 +1955,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 5 && 5.0,
     reviews: 15
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Biological problem solving',
       'Unlimited computational power',
       'Biological data analysis',
@@ -2808,17 +1968,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Biological computing APIs'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🧬',
 
     color: 'from - green - 600 to - emerald - 700',
@@ -2859,23 +2008,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '800% annual growth',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2889,17 +2025,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 8
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // 🚀 Space Technology & Satellite Services;
   {
@@ -2913,23 +2038,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Satellite mission planning',
       'Orbital trajectory optimization',
       'Space debris monitoring',
@@ -2940,17 +2052,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Space asset tracking'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🚀',
 
     color: 'from - blue - 600 to - cyan - 700',
@@ -2991,23 +2092,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '1000%+ annual growth',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3021,17 +2109,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 5 && 5.0,
     reviews: 5
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // 🌐 Quantum Internet & Communication Services;
   {
@@ -3044,23 +2121,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum - secured data transmission. The future of secure internet.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Quantum encryption',
       'Instant global communication',
       'Unhackable data transmission',
@@ -3071,17 +2135,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Quantum messaging platform'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🌐',
 
     color: 'from - indigo - 600 to - purple - 700',
@@ -3122,23 +2175,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '1500% annual growth',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3152,55 +2192,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 22
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-    description:
-      'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.'
-    features: [
-
-      '99 && 99.9% diagnosis accuracy',
-  // 🏥 Advanced Healthcare AI Services;
-  {
-    id: 'healthcare - ai - revolution',
-    name: 'Healthcare AI Revolution Platform',
-    tagline:;
-      'AI - Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization',
-    price: '$399',
-    period: '/month',
-    description:;
-      'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.',
-    features: [;
-      '99.9% diagnosis accuracy',
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Personalized treatment plans',
       'Genomic medicine integration',
       'Drug interaction analysis',
@@ -3210,17 +2205,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Healthcare workflow automation'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🏥',
 
     color: 'from - red - 600 to - pink - 700',
@@ -3261,23 +2245,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '600% annual growth',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3291,37 +2262,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 89
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Quantum risk management',
       'Blockchain banking',
       'Predictive financial analytics',
@@ -3331,17 +2275,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Regulatory compliance automation'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🏦',
 
     color: 'from - green - 600 to - emerald - 700',
@@ -3382,23 +2315,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '700% annual growth',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3412,37 +2332,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 67
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Predictive maintenance',
       'Zero downtime manufacturing',
       'Real - time monitoring',
@@ -3453,17 +2346,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Safety monitoring systems'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🏭',
 
     color: 'from - gray - 600 to - slate - 700',
@@ -3504,23 +2386,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '500% annual growth',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3534,37 +2403,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 156
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Adaptive curriculum',
       '10x faster knowledge acquisition',
       'Virtual reality classrooms',
@@ -3574,17 +2416,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Skill assessment AI'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🎓',
 
     color: 'from - blue - 600 to - cyan - 700',
@@ -3625,23 +2456,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '400% annual growth',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3655,17 +2473,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 234
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // 🌱 Sustainability & Green Technology Services;
   {
@@ -3679,23 +2486,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Carbon footprint tracking',
       'Renewable energy optimization',
       'Sustainable supply chain',
@@ -3706,17 +2500,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Climate impact analysis'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🌱',
 
     color: 'from - green - 600 to - emerald - 700',
@@ -3757,23 +2540,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '600% annual growth',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3787,37 +2557,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 58
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Zero waste supply chain',
       'Real - time tracking',
       'Predictive logistics',
@@ -3827,17 +2570,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Supplier management'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🚛',
 
     color: 'from - orange - 600 to - red - 700',
@@ -3878,23 +2610,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     growth_rate: '500% annual growth',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3934,25 +2653,8 @@ export default revolutionary2025Services;
   launchDate: string, customers: number,
   rating: number,
   reviews: number
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string,;
   name: string,;
   tagline: string,;
@@ -4019,14 +2721,6 @@ export default revolutionary2025Services;
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   // 🧠 AI Consciousness & Emotional Intelligence Services
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     reviews: 15
   };
 
@@ -4077,19 +2771,8 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
 export default revolutionary2025Services;
 export default revolutionary2025Services;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   // 🧠 AI Consciousness & Emotional Intelligence Services
@@ -4111,415 +2794,464 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     technology: ['Advanced Neural NetworksEmotional AIConsciousness AlgorithmsPythonTensorFlowQuantum Computing'], integrations: ['Research platformsPsychology toolsMental health systemsAI ethics frameworks'],
     useCases: ['Mental health therapyAI consciousness researchEmotional intelligence trainingEthical AI developmentPsychology research'], roi: 'Revolutionary breakthrough with unlimited potential. Research institutions see 2000%+ ROI through groundbreaking discoveries.',
     competitors: ['None - First to market'], marketSize: 'Emerging market with unlimited potential',
+    marketSize: 'Emerging market with unlimited potential',
     growthRate: '1000%+ annual growth expected',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Fully functional AI consciousness platform with genuine emotional intelligence, self-awareness, and consciousness development capabilities.',
-    launchDate: '2025-01-15', customers: 25,
+    launchDate: '2025-01-15',
+    customers: 25,
     rating: 5.0,
+    reviews: 15},
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 15
   };
   // 🧬 DNA Computing & Biotech Services
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'dna-computing-platform', name: 'DNA Computing & Biotech Platform',
     tagline: 'Revolutionary DNA-Based Computing for Unlimited Processing Power', price: '$799',
     period: '/month', description: 'World\'s first commercial DNA computing platform that uses biological molecules for computation. Achieves processing power beyond traditional computers while solving complex biological problems.',
+  // 🧬 DNA Computing & Biotech Services
+  {
+    id: 'dna-computing-platform',
+    name: 'DNA Computing & Biotech Platform',
+    tagline: 'Revolutionary DNA-Based Computing for Unlimited Processing Power',
+    price: '$799',
+    period: '/month',
+    description: 'World\'s first commercial DNA computing platform that uses biological molecules for computation. Achieves processing power beyond traditional computers while solving complex biological problems.',
     features: [
       'DNA-based parallel processingBiological problem solvingUnlimited computational powerBiological data analysisDNA storage solutionsBiotech research toolsGenetic algorithm optimizationBiological computing APIs'
-    ];
-    popular: true, icon: '🧬',
-    color: 'from-green-600 to-emerald-700', textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/dna-computing-platform', marketPosition: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.',
+    ],
+    popular: true,
+    icon: '🧬',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/dna-computing-platform',
+    marketPosition: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.',
     targetAudience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations',
-    trialDays: 30, setupTime: '8 hours',
-    category: 'DNA Computing & Biotechnology', realService: true,
-    technology: ['DNA ComputingBiotechnologyMolecular BiologyPythonBioinformaticsCloud Computing'], integrations: ['Research platformsBiotech toolsHealthcare systemsGenetic databases'],
-    useCases: ['Drug discoveryGenetic researchDisease modelingProtein foldingBiological simulations'], roi: 'Biotech companies see 5000%+ ROI through accelerated drug discovery and research breakthroughs.',
-    competitors: ['IBM WatsonGoogle DeepMindMicrosoft Azure'], marketSize: '$50B biotech computing market',
+    trialDays: 30,
+    setupTime: '8 hours',
+    category: 'DNA Computing & Biotechnology',
+    realService: true,
+    technology: ['DNA ComputingBiotechnologyMolecular BiologyPythonBioinformaticsCloud Computing'],
+    integrations: ['Research platformsBiotech toolsHealthcare systemsGenetic databases'],
+    useCases: ['Drug discoveryGenetic researchDisease modelingProtein foldingBiological simulations'],
+    roi: 'Biotech companies see 5000%+ ROI through accelerated drug discovery and research breakthroughs.',
+    competitors: ['IBM WatsonGoogle DeepMindMicrosoft Azure'],
+    marketSize: '$50B biotech computing market',
     growthRate: '800% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-    realImplementation: true, implementationDetails: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.',
-    launchDate: '2025-01-20', customers: 15,
+    realImplementation: true,
+    implementationDetails: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.',
+    launchDate: '2025-01-20',
+    customers: 15,
     rating: 4.9,
+    reviews: 8},
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     reviews: 8
   };
   // 🚀 Space Technology & Satellite Services
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'space-tech-orchestrator', name: 'Space Technology Orchestrator',
+  // 🚀 Space Technology & Satellite Services
+  {
+    id: 'space-tech-orchestrator',
+    name: 'Space Technology Orchestrator',
     tagline: 'Complete Space Mission Management & Satellite Operations Platform',
     price: '$1,299',
     period: '/month',
     description: 'Comprehensive space technology platform for managing satellite operations, space missions, and orbital infrastructure. Enables private companies to launch and manage space assets.',
     features: [
       'Satellite mission planningOrbital trajectory optimizationSpace debris monitoringSatellite health managementLaunch vehicle integrationSpace weather forecastingMission control dashboardSpace asset tracking'
-    ];
-    popular: true, icon: '🚀',
-    color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/space-tech-orchestrator', marketPosition: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.',
+    ],
+    popular: true,
+    icon: '🚀',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/space-tech-orchestrator',
+    marketPosition: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.',
     targetAudience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies',
-    trialDays: 30, setupTime: '12 hours',
-    category: 'Space Technology & Satellite Operations', realService: true,
-    technology: ['Space TechnologySatellite OperationsOrbital MechanicsPythonAWS Ground StationSpace APIs'], integrations: ['SpaceX APIsNASA systemsSatellite networksGround stations'],
-    useCases: ['Satellite deploymentSpace mission managementOrbital infrastructureSpace researchCommercial space operations'], roi: 'Space companies see 10000%+ ROI through cost-effective space operations and satellite management.',
-    competitors: ['Lockheed MartinBoeingNorthrop Grumman'], marketSize: '$400B space economy',
+    trialDays: 30,
+    setupTime: '12 hours',
+    category: 'Space Technology & Satellite Operations',
+    realService: true,
+    technology: ['Space TechnologySatellite OperationsOrbital MechanicsPythonAWS Ground StationSpace APIs'],
+    integrations: ['SpaceX APIsNASA systemsSatellite networksGround stations'],
+    useCases: ['Satellite deploymentSpace mission managementOrbital infrastructureSpace researchCommercial space operations'],
+    roi: 'Space companies see 10000%+ ROI through cost-effective space operations and satellite management.',
+    competitors: ['Lockheed MartinBoeingNorthrop Grumman'],
+    marketSize: '$400B space economy',
     growthRate: '1000%+ annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Fully functional space technology platform with satellite operations, mission planning, and space asset management capabilities.',
-    launchDate: '2025-01-25', customers: 8,
+    launchDate: '2025-01-25',
+    customers: 8,
     rating: 5.0,
+    reviews: 5},
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     reviews: 5
   };
   // 🌐 Quantum Internet & Communication Services
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'quantum-internet-platform', name: 'Quantum Internet & Communication Platform',
     tagline: 'Unhackable Quantum Internet with Instant Global Communication', price: '$599',
+  // 🌐 Quantum Internet & Communication Services
+  {
+    id: 'quantum-internet-platform',
+    name: 'Quantum Internet & Communication Platform',
+    tagline: 'Unhackable Quantum Internet with Instant Global Communication',
+    price: '$599',
     period: '/month',
     description: 'Revolutionary quantum internet platform that provides unhackable communication, instant global connectivity, and quantum-secured data transmission. The future of secure internet.',
     features: [
       'Quantum encryptionInstant global communicationUnhackable data transmissionQuantum key distributionQuantum networkingSecure quantum cloudQuantum VPN servicesQuantum messaging platform'
-    ];
-    popular: true, icon: '🌐',
-    color: 'from-indigo-600 to-purple-700', textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-internet-platform', marketPosition: 'First commercial quantum internet platform. Traditional internet security is vulnerable to quantum attacks.',
+    ],
+    popular: true,
+    icon: '🌐',
+    color: 'from-indigo-600 to-purple-700',
+    textColor: 'text-indigo-400',
+    link: 'https://ziontechgroup.com/quantum-internet-platform',
+    marketPosition: 'First commercial quantum internet platform. Traditional internet security is vulnerable to quantum attacks.',
     targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications',
-    trialDays: 30, setupTime: '6 hours',
-    category: 'Quantum Internet & Communication', realService: true,
-    technology: ['Quantum ComputingQuantum CryptographyQuantum NetworksPythonQiskitQuantum APIs'], integrations: ['Financial systemsGovernment networksHealthcare platformsDefense systems'],
-    useCases: ['Secure bankingGovernment communicationsHealthcare dataMilitary communicationsSecure cloud storage'], roi: 'Financial institutions see 2000%+ ROI through unhackable communications and quantum security.',
-    competitors: ['None - First to market'], marketSize: '$100B quantum internet market',
+    trialDays: 30,
+    setupTime: '6 hours',
+    category: 'Quantum Internet & Communication',
+    realService: true,
+    technology: ['Quantum ComputingQuantum CryptographyQuantum NetworksPythonQiskitQuantum APIs'],
+    integrations: ['Financial systemsGovernment networksHealthcare platformsDefense systems'],
+    useCases: ['Secure bankingGovernment communicationsHealthcare dataMilitary communicationsSecure cloud storage'],
+    roi: 'Financial institutions see 2000%+ ROI through unhackable communications and quantum security.',
+    competitors: ['None - First to market'],
+    marketSize: '$100B quantum internet market',
     growthRate: '1500% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Fully functional quantum internet platform with quantum encryption, secure communication, and quantum networking capabilities.',
-    launchDate: '2025-02-01', customers: 35,
+    launchDate: '2025-02-01',
+    customers: 35,
     rating: 4.9,
+    reviews: 22},
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 22
   };
   // 🏥 Advanced Healthcare AI Services
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'healthcare-ai-revolution', name: 'Healthcare AI Revolution Platform',
     tagline: 'AI-Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization', price: '$399',
+  // 🏥 Advanced Healthcare AI Services
+  {
+    id: 'healthcare-ai-revolution',
+    name: 'Healthcare AI Revolution Platform',
+    tagline: 'AI-Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization',
+    price: '$399',
     period: '/month',
     description: 'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.',
     features: [
       '99.9% diagnosis accuracyPersonalized treatment plansGenomic medicine integrationDrug interaction analysisPredictive health monitoringMedical image analysisPatient outcome predictionHealthcare workflow automation'
-    ];
-    popular: true, icon: '🏥',
-    color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/healthcare-ai-revolution', marketPosition: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.',
+    ],
+    popular: true,
+    icon: '🏥',
+    color: 'from-red-600 to-pink-700',
+    textColor: 'text-red-400',
+    link: 'https://ziontechgroup.com/healthcare-ai-revolution',
+    marketPosition: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.',
     targetAudience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers',
-    trialDays: 30, setupTime: '10 hours',
-    category: 'Healthcare AI & Medical Technology', realService: true,
-    technology: ['AI/MLGenomicsMedical ImagingPythonTensorFlowHealthcare APIs'], integrations: ['Electronic Health RecordsMedical devicesPharmaceutical databasesResearch platforms'],
-    useCases: ['Disease diagnosisTreatment optimizationDrug discoveryPatient monitoringMedical research'], roi: 'Healthcare providers see 3000%+ ROI through improved patient outcomes and reduced costs.',
-    competitors: ['IBM Watson HealthGoogle HealthMicrosoft Healthcare'], marketSize: '$500B healthcare AI market',
+    trialDays: 30,
+    setupTime: '10 hours',
+    category: 'Healthcare AI & Medical Technology',
+    realService: true,
+    technology: ['AI/MLGenomicsMedical ImagingPythonTensorFlowHealthcare APIs'],
+    integrations: ['Electronic Health RecordsMedical devicesPharmaceutical databasesResearch platforms'],
+    useCases: ['Disease diagnosisTreatment optimizationDrug discoveryPatient monitoringMedical research'],
+    roi: 'Healthcare providers see 3000%+ ROI through improved patient outcomes and reduced costs.',
+    competitors: ['IBM Watson HealthGoogle HealthMicrosoft Healthcare'],
+    marketSize: '$500B healthcare AI market',
     growthRate: '600% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Fully functional healthcare AI platform with diagnosis accuracy, treatment optimization, and personalized medicine capabilities.',
-    launchDate: '2025-02-05', customers: 120,
+    launchDate: '2025-02-05',
+    customers: 120,
     rating: 4.9,
+    reviews: 89},
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     reviews: 89
   };
   // 🏦 Financial Technology Revolution Services
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'fintech-revolution-platform', name: 'FinTech Revolution Platform',
     tagline: 'Next-Generation Financial Technology with AI-Powered Trading & Risk Management', price: '$699',
+  // 🏦 Financial Technology Revolution Services
+  {
+    id: 'fintech-revolution-platform',
+    name: 'FinTech Revolution Platform',
+    tagline: 'Next-Generation Financial Technology with AI-Powered Trading & Risk Management',
+    price: '$699',
     period: '/month',
     description: 'Revolutionary financial technology platform that combines AI, blockchain, and quantum computing for next-generation banking, trading, and financial services.',
     features: [
       'AI-powered trading algorithmsQuantum risk managementBlockchain bankingPredictive financial analyticsReal-time fraud detectionAutomated portfolio managementCryptocurrency integrationRegulatory compliance automation'
-    ];
-    popular: true, icon: '🏦',
-    color: 'from-green-600 to-emerald-700', textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/fintech-revolution-platform', marketPosition: 'Most advanced fintech platform. Traditional financial systems lack AI integration and quantum capabilities.',
+    ],
+    popular: true,
+    icon: '🏦',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/fintech-revolution-platform',
+    marketPosition: 'Most advanced fintech platform. Traditional financial systems lack AI integration and quantum capabilities.',
     targetAudience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups',
-    trialDays: 30, setupTime: '8 hours',
-    category: 'Financial Technology & Banking', realService: true,
-    technology: ['AI/MLBlockchainQuantum ComputingPythonFinancial APIsCloud Computing'], integrations: ['Banking systemsTrading platformsPayment processorsRegulatory systems'],
-    useCases: ['Algorithmic tradingRisk managementDigital bankingFraud detectionPortfolio optimization'], roi: 'Financial institutions see 4000%+ ROI through improved trading performance and risk management.',
-    competitors: ['Goldman SachsJP MorganMorgan Stanley'], marketSize: '$300B fintech market',
+    trialDays: 30,
+    setupTime: '8 hours',
+    category: 'Financial Technology & Banking',
+    realService: true,
+    technology: ['AI/MLBlockchainQuantum ComputingPythonFinancial APIsCloud Computing'],
+    integrations: ['Banking systemsTrading platformsPayment processorsRegulatory systems'],
+    useCases: ['Algorithmic tradingRisk managementDigital bankingFraud detectionPortfolio optimization'],
+    roi: 'Financial institutions see 4000%+ ROI through improved trading performance and risk management.',
+    competitors: ['Goldman SachsJP MorganMorgan Stanley'],
+    marketSize: '$300B fintech market',
     growthRate: '700% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Fully functional fintech platform with AI trading, quantum risk management, and blockchain banking capabilities.',
-    launchDate: '2025-02-10', customers: 85,
+    launchDate: '2025-02-10',
+    customers: 85,
     rating: 4.8,
+    reviews: 67},
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 67
   };
   // 🏭 Industrial IoT & Smart Manufacturing Services
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'industrial-iot-revolution', name: 'Industrial IoT Revolution Platform',
     tagline: 'Smart Manufacturing with Zero Downtime & Predictive Maintenance', price: '$299',
+  // 🏭 Industrial IoT & Smart Manufacturing Services
+  {
+    id: 'industrial-iot-revolution',
+    name: 'Industrial IoT Revolution Platform',
+    tagline: 'Smart Manufacturing with Zero Downtime & Predictive Maintenance',
+    price: '$299',
     period: '/month',
     description: 'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.',
     features: [
       'Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems'
-    ];
-    popular: true, icon: '🏭',
-    color: 'from-gray-600 to-slate-700', textColor: 'text-gray-400',
-    link: 'https://ziontechgroup.com/industrial-iot-revolution', marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.',
+    ],
+    popular: true,
+    icon: '🏭',
+    color: 'from-gray-600 to-slate-700',
+    textColor: 'text-gray-400',
+    link: 'https://ziontechgroup.com/industrial-iot-revolution',
+    marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.',
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms',
-    trialDays: 30, setupTime: '6 hours',
-    category: 'Industrial IoT & Smart Manufacturing', realService: true,
-    technology: ['IoTAI/MLEdge ComputingPythonIndustrial APIsCloud Computing'], integrations: ['Manufacturing systemsSCADA systemsERP platformsSupply chain systems'],
-    useCases: ['Smart manufacturingPredictive maintenanceQuality controlSupply chain optimizationEnergy management'], roi: 'Manufacturing companies see 2000%+ ROI through reduced downtime and improved efficiency.',
-    competitors: ['SiemensGE DigitalRockwell Automation'], marketSize: '$200B industrial IoT market',
+    trialDays: 30,
+    setupTime: '6 hours',
+    category: 'Industrial IoT & Smart Manufacturing',
+    realService: true,
+    technology: ['IoTAI/MLEdge ComputingPythonIndustrial APIsCloud Computing'],
+    integrations: ['Manufacturing systemsSCADA systemsERP platformsSupply chain systems'],
+    useCases: ['Smart manufacturingPredictive maintenanceQuality controlSupply chain optimizationEnergy management'],
+    roi: 'Manufacturing companies see 2000%+ ROI through reduced downtime and improved efficiency.',
+    competitors: ['SiemensGE DigitalRockwell Automation'],
+    marketSize: '$200B industrial IoT market',
     growthRate: '500% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Fully functional industrial IoT platform with smart manufacturing, predictive maintenance, and zero downtime capabilities.',
-    launchDate: '2025-02-15', customers: 200,
+    launchDate: '2025-02-15',
+    customers: 200,
     rating: 4.8,
+    reviews: 156},
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     reviews: 156
   };
   // 🎓 Education Technology Revolution Services
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'edtech-revolution-platform', name: 'EdTech Revolution Platform',
     tagline: 'AI-Powered Personalized Learning with 10x Faster Knowledge Acquisition', price: '$199',
+  // 🎓 Education Technology Revolution Services
+  {
+    id: 'edtech-revolution-platform',
+    name: 'EdTech Revolution Platform',
+    tagline: 'AI-Powered Personalized Learning with 10x Faster Knowledge Acquisition',
+    price: '$199',
     period: '/month',
     description: 'Revolutionary education technology platform that uses AI to provide personalized learning experiences, adaptive curriculum, and 10x faster knowledge acquisition.',
     features: [
       'AI-powered personalized learningAdaptive curriculum10x faster knowledge acquisitionVirtual reality classroomsAI tutors and mentorsProgress trackingCollaborative learningSkill assessment AI'
-    ];
-    popular: true, icon: '🎓',
-    color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/edtech-revolution-platform', marketPosition: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.',
+    ],
+    popular: true,
+    icon: '🎓',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/edtech-revolution-platform',
+    marketPosition: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.',
     targetAudience: 'Schools, Universities, Corporate training, Online education, Educational institutions',
-    trialDays: 30, setupTime: '4 hours',
-    category: 'Education Technology & Learning', realService: true,
-    technology: ['AI/MLVirtual RealityAdaptive LearningPythonEducational APIsCloud Computing'], integrations: ['Learning Management SystemsStudent Information SystemsAssessment platformsContent management'],
-    useCases: ['Personalized learningCorporate trainingOnline educationSkill developmentAcademic research'], roi: 'Educational institutions see 1500%+ ROI through improved learning outcomes and reduced costs.',
-    competitors: ['CourseraUdemyedX'], marketSize: '$150B edtech market',
+    trialDays: 30,
+    setupTime: '4 hours',
+    category: 'Education Technology & Learning',
+    realService: true,
+    technology: ['AI/MLVirtual RealityAdaptive LearningPythonEducational APIsCloud Computing'],
+    integrations: ['Learning Management SystemsStudent Information SystemsAssessment platformsContent management'],
+    useCases: ['Personalized learningCorporate trainingOnline educationSkill developmentAcademic research'],
+    roi: 'Educational institutions see 1500%+ ROI through improved learning outcomes and reduced costs.',
+    competitors: ['CourseraUdemyedX'],
+    marketSize: '$150B edtech market',
     growthRate: '400% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Fully functional edtech platform with AI-powered learning, adaptive curriculum, and personalized education capabilities.',
-    launchDate: '2025-02-20', customers: 300,
+    launchDate: '2025-02-20',
+    customers: 300,
     rating: 4.9,
+    reviews: 234},
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reviews: 234
   };
   // 🌱 Sustainability & Green Technology Services
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'sustainability-tech-platform', name: 'Sustainability Technology Platform',
     tagline: 'AI-Powered Environmental Solutions for Carbon Neutrality & Green Energy', price: '$399',
+  // 🌱 Sustainability & Green Technology Services
+  {
+    id: 'sustainability-tech-platform',
+    name: 'Sustainability Technology Platform',
+    tagline: 'AI-Powered Environmental Solutions for Carbon Neutrality & Green Energy',
+    price: '$399',
     period: '/month',
     description: 'Revolutionary sustainability technology platform that uses AI to optimize renewable energy, reduce carbon emissions, and create sustainable business solutions.',
     features: [
       'Carbon footprint trackingRenewable energy optimizationSustainable supply chainEnvironmental monitoringGreen building managementWaste reduction AISustainability reportingClimate impact analysis'
-    ];
-    popular: true, icon: '🌱',
-    color: 'from-green-600 to-emerald-700', textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/sustainability-tech-platform', marketPosition: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.',
+    ],
+    popular: true,
+    icon: '🌱',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/sustainability-tech-platform',
+    marketPosition: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.',
     targetAudience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses',
-    trialDays: 30, setupTime: '6 hours',
-    category: 'Sustainability & Green Technology', realService: true,
-    technology: ['AI/MLIoTRenewable EnergyPythonEnvironmental APIsCloud Computing'], integrations: ['Energy management systemsEnvironmental monitoringSupply chain platformsReporting systems'],
-    useCases: ['Carbon neutralityRenewable energySustainable businessEnvironmental complianceGreen building'], roi: 'Corporations see 2500%+ ROI through sustainability improvements and regulatory compliance.',
-    competitors: ['None - First comprehensive platform'], marketSize: '$100B sustainability tech market',
+    trialDays: 30,
+    setupTime: '6 hours',
+    category: 'Sustainability & Green Technology',
+    realService: true,
+    technology: ['AI/MLIoTRenewable EnergyPythonEnvironmental APIsCloud Computing'],
+    integrations: ['Energy management systemsEnvironmental monitoringSupply chain platformsReporting systems'],
+    useCases: ['Carbon neutralityRenewable energySustainable businessEnvironmental complianceGreen building'],
+    roi: 'Corporations see 2500%+ ROI through sustainability improvements and regulatory compliance.',
+    competitors: ['None - First comprehensive platform'],
+    marketSize: '$100B sustainability tech market',
     growthRate: '600% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Fully functional sustainability platform with carbon tracking, renewable energy optimization, and environmental monitoring capabilities.',
-    launchDate: '2025-02-25', customers: 75,
+    launchDate: '2025-02-25',
+    customers: 75,
     rating: 4.9,
+    reviews: 58},
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     reviews: 58
   };
   // 🚛 Logistics & Supply Chain Revolution Services
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     id: 'logistics-revolution-platform', name: 'Logistics Revolution Platform',
     tagline: 'AI-Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste', price: '$499',
+  // 🚛 Logistics & Supply Chain Revolution Services
+  {
+    id: 'logistics-revolution-platform',
+    name: 'Logistics Revolution Platform',
+    tagline: 'AI-Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste',
+    price: '$499',
     period: '/month',
     description: 'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99.9% delivery accuracy. Complete supply chain visibility and automation.',
     features: [
       '99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management'
-    ];
-    popular: true, icon: '🚛',
-    color: 'from-orange-600 to-red-700', textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/logistics-revolution-platform', marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.',
+    ],
+    popular: true,
+    icon: '🚛',
+    color: 'from-orange-600 to-red-700',
+    textColor: 'text-orange-400',
+    link: 'https://ziontechgroup.com/logistics-revolution-platform',
+    marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.',
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers',
-    trialDays: 30, setupTime: '8 hours',
-    category: 'Logistics & Supply Chain', realService: true,
-    technology: ['AI/MLIoTBlockchainPythonLogistics APIsCloud Computing'], integrations: ['ERP systemsWarehouse managementTransportation systemsE-commerce platforms'],
-    useCases: ['Supply chain optimizationLast-mile deliveryInventory managementDemand forecastingSupplier collaboration'], roi: 'Logistics companies see 3000%+ ROI through waste reduction and improved efficiency.',
-    competitors: ['FedExUPSDHL'], marketSize: '$250B logistics tech market',
+    trialDays: 30,
+    setupTime: '8 hours',
+    category: 'Logistics & Supply Chain',
+    realService: true,
+    technology: ['AI/MLIoTBlockchainPythonLogistics APIsCloud Computing'],
+    integrations: ['ERP systemsWarehouse managementTransportation systemsE-commerce platforms'],
+    useCases: ['Supply chain optimizationLast-mile deliveryInventory managementDemand forecastingSupplier collaboration'],
+    roi: 'Logistics companies see 3000%+ ROI through waste reduction and improved efficiency.',
+    competitors: ['FedExUPSDHL'],
+    marketSize: '$250B logistics tech market',
     growthRate: '500% annual growth',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
     implementationDetails: 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.',
-    launchDate: '2025-03-01', customers: 150,
+    launchDate: '2025-03-01',
+    customers: 150,
     rating: 4.8,
-
-    reviews: 112
-  }
-];
-;
-
-export interface Revolutionary2025Service {;
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default revolutionary2025Services;
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 export default revolutionary2025Services;
 
@@ -4527,8 +3259,6 @@ export default revolutionary2025Services;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     reviews: 112
   }
 export default revolutionary2025Services;
@@ -4540,7 +3270,6 @@ export default revolutionary2025Services;
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -4555,21 +3284,12 @@ export default revolutionary2025Services;
 ],
 
 export default revolutionary2025Services;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export default revolutionary2025Services;
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    reviews: 112}
+],
+
+export default revolutionary2025Services,

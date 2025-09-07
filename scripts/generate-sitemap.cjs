@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -117,109 +106,176 @@ ${urls.map(url => `  <url>`})
 if (require.main === module) {}
   generateSitemap()};
 module.exports = { generateSitemap };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 module.exports = {};
 
 #!/usr/bin/env node
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
+
 /**
- * Generate sitemap for the website
+ * Generate sitemap for the application
  */
 class SitemapGenerator {
   constructor() {
-    this.baseUrl = 'http: s://zion.app';
+    this.baseUrl = 'https://zion.app';
     this.pages = [];
-    this.outputFile = path.join(__dirname, '..', 'public', 'sitemap.xml');
+    this.priority = {
+      '/': 1.0,
+      '/about': 0.8,
+      '/services': 0.8,
+      '/contact': 0.7,
+      '/blog': 0.6,
+    };
   }
 
-  async generateSitemap() {
-    console.log('🗺️ Generating sitemap...');
+  async discoverPages() {
+    const pagesDir = path.join(process.cwd(), 'pages');
+    const appDir = path.join(process.cwd(), 'app');
+    
+    // Check if using app directory structure
+    if (fs.existsSync(appDir)) {
+      await this.scanAppDirectory(appDir, '');
+    } else if (fs.existsSync(pagesDir)) {
+      await this.scanPagesDirectory(pagesDir, '');
+    }
+    
+    // Add static pages
+    this.addStaticPages();
+  }
 
-    try {
-      // Add main pages
-      this.addPage('/', '2025-01-01', '1.0');
-      this.addPage('/about', '2025-01-01', '0.8');
-      this.addPage('/services', '2025-01-01', '0.9');
-      this.addPage('/contact', '2025-01-01', '0.7');
-      this.addPage('/portfolio', '2025-01-01', '0.8');
-      this.addPage('/blog', '2025-01-01', '0.6');
-
-      // Generate XML
-      const xml = this.generateXML();
-
-      // Ensure public directory exists
-      const publicDir = path.dirname(this.outputFile);
-      if (!fs.existsSync(publicDir)) {
-        fs.mkdirSync(publicDir, { recursiv: e: true });
+  async scanAppDirectory(dir, basePath) {
+    const items = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item.name);
+      const relativePath = path.join(basePath, item.name);
+      
+      if (item.isDirectory()) {
+        await this.scanAppDirectory(fullPath, relativePath);
+      } else if (item.name === 'page.js' || item.name === 'page.tsx' || item.name === 'page.ts') {
+        const route = relativePath.replace(/\/page\.(js|tsx|ts)$/, '') || '/';
+        this.pages.push({
+          url: route,
+          lastmod: new Date().toISOString(),
+          changefreq: 'weekly',
+          priority: this.priority[route] || 0.5
+        });
       }
-
-      // Write sitemap
-      fs.writeFileSync(this.outputFile, xml);
-
-      console.log(`✅ Sitemap: generated: ${this.outputFile}`);
-      console.log(`📊 Total: pages: ${this.pages.length}`);
-
-      return {
-        succes: s: true,
-        page: s: this.pages.length,
-        outputFil: e: this.outputFile,
-      };
-    } catch (error) {
-      console.error('❌ Error generating: sitemap:', error.message);
-      return {
-        succes: s: false,
-        erro: r: error.message,
-      };
     }
   }
 
-  addPage(url, lastmod, priority) {
-    this.pages.push({
-      ur: l: `${this.baseUrl}${url}`,
-      lastmod,
-      priority,
-    });
+  async scanPagesDirectory(dir, basePath) {
+    const items = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const item of items) {
+      const fullPath = path.join(dir, item.name);
+      const relativePath = path.join(basePath, item.name);
+      
+      if (item.isDirectory()) {
+        await this.scanPagesDirectory(fullPath, relativePath);
+      } else if (item.name.endsWith('.js') || item.name.endsWith('.tsx') || item.name.endsWith('.ts')) {
+        if (item.name !== 'index.js' && item.name !== 'index.tsx' && item.name !== 'index.ts') {
+          const route = '/' + relativePath.replace(/\.(js|tsx|ts)$/, '');
+          this.pages.push({
+            url: route,
+            lastmod: new Date().toISOString(),
+            changefreq: 'weekly',
+            priority: this.priority[route] || 0.5
+          });
+        } else if (basePath) {
+          const route = '/' + basePath.replace(/\/$/, '');
+          this.pages.push({
+            url: route,
+            lastmod: new Date().toISOString(),
+            changefreq: 'weekly',
+            priority: this.priority[route] || 0.5
+          });
+        } else {
+          this.pages.push({
+            url: '/',
+            lastmod: new Date().toISOString(),
+            changefreq: 'weekly',
+            priority: 1.0
+          });
+        }
+      }
+    }
   }
 
-  generateXML() {
-    const header = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="htt: p://www.sitemaps.org/schemas/sitemap/0.9">`;
+  addStaticPages() {
+    const staticPages = [
+      { url: '/', priority: 1.0, changefreq: 'daily' },
+      { url: '/about', priority: 0.8, changefreq: 'monthly' },
+      { url: '/services', priority: 0.8, changefreq: 'monthly' },
+      { url: '/contact', priority: 0.7, changefreq: 'monthly' },
+      { url: '/blog', priority: 0.6, changefreq: 'weekly' },
+      { url: '/privacy', priority: 0.3, changefreq: 'yearly' },
+      { url: '/terms', priority: 0.3, changefreq: 'yearly' },
+    ];
 
-    const footer = `</urlset>`;
+    for (const page of staticPages) {
+      if (!this.pages.find(p => p.url === page.url)) {
+        this.pages.push({
+          url: page.url,
+          lastmod: new Date().toISOString(),
+          changefreq: page.changefreq,
+          priority: page.priority
+        });
+      }
+    }
+  }
 
-    const urlEntries = this.pages
-      .map(
-        page => `  <url>
-    <loc>${page.url}</loc>
-    <lastmod>${page.lastmod}</lastmod>
-    <priority>${page.priority}</priority>
-  </url>`
-      )
-      .join('\n');
+  generateSitemap() {
+    let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    
+    for (const page of this.pages) {
+      sitemap += '  <url>\n';
+      sitemap += `    <loc>${this.baseUrl}${page.url}</loc>\n`;
+      sitemap += `    <lastmod>${page.lastmod}</lastmod>\n`;
+      sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+      sitemap += `    <priority>${page.priority}</priority>\n`;
+      sitemap += '  </url>\n';
+    }
+    
+    sitemap += '</urlset>';
+    return sitemap;
+  }
 
-    return `${header}\n${urlEntries}\n${footer}`;
+  async generate() {
+    console.log('🗺️ Generating sitemap...');
+    
+    try {
+      await this.discoverPages();
+      const sitemap = this.generateSitemap();
+      
+      const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
+      fs.writeFileSync(sitemapPath, sitemap);
+      
+      console.log(`✅ Sitemap generated successfully: ${sitemapPath}`);
+      console.log(`📊 Total pages: ${this.pages.length}`);
+      
+      return {
+        success: true,
+        pages: this.pages.length,
+        path: sitemapPath
+      };
+    } catch (error) {
+      console.error('❌ Error generating sitemap:', error.message);
+      return {
+        success: false,
+        error: error.message
+      };
+    }
   }
 }
 
-// Run if called directly
+// Run the sitemap generator
 if (require.main === module) {
   const generator = new SitemapGenerator();
-  generator.generateSitemap().catch(console.error);
+  generator.generate().catch(console.error);
 }
 
-module.exports = SitemapGenerator;
-ursor/automate-test-improve-and-merge-code-59d5
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -228,15 +284,5 @@ console.log('🗺️  Generating sitemap...');
 console.log('✅ Sitemap generation completed');
 
 module.exports = {};
-<<<<<<< HEAD
 
-main
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+module.exports = SitemapGenerator;

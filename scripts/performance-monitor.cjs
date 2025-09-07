@@ -1,97 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-  log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'PERFORMANCE': '⚡'
-    }[type] || 'ℹ'
-    this.log('Measuring build time...', 'PERFORMANCE')
-      execSync('npm run build')
-        stdio: 'pipe'
-        encoding: 'utf8'
-      this.log(`Build completed in ${this.metrics.buildTime}ms`, 'SUCCESS'`)
-      this.log(`Build failed: ${error.message}`, 'ERROR'`)
-    this.log('Analyzing bundle size...', 'PERFORMANCE')
-      const buildOutput = execSync('npm run build')
-        stdio: 'pipe'
-        encoding: 'utf8'
-      this.log(`Bundle size: ${this.metrics.bundleSize}kB`, 'INFO'`)
-      this.log(`Pages: ${this.metrics.pageCount}`, 'INFO'`)
-      this.log(`Bundle analysis failed: ${error.message}`, 'ERROR'`)
-    this.log('Checking image optimization...', 'PERFORMANCE')
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg']
-    const publicDir = path.join(this.projectRoot, 'public')
-              size: Math.round(stats.size / 1024) + 'KB'
-    this.log(`Found ${imageCount} images (${Math.round(totalImageSize / 1024)}KB total)`, 'INFO'
-        type: 'image_optimization'
-        priority: 'high'
-    this.log('Checking code splitting...', 'PERFORMANCE')
-    const pagesDir = path.join(this.projectRoot, 'pages')
-        if (file.endsWith('.tsx') || file.endsWith('.jsx')
-          const content = fs.readFileSync(file, 'utf8')
-          const lines = content.split('\n')
-    this.log(`Analyzed ${totalPages} pages`, 'INFO'`)
-        type: 'code_splitting'
-        priority: 'medium'
-    this.log('Checking dependencies...', 'PERFORMANCE')
-      const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'package.json'), 'utf8'
-      const largeDeps = ['lodash', 'moment', 'jquery', 'bootstrap']
-          type: 'dependency_optimization'
-          priority: 'medium'
-          message: `Consider replacing large dependencies: ${largeDependencies.join(', '`})
-      this.log(`Dependency check failed: ${error.message}`, 'ERROR'`)
-    this.log('\n Performance Report', 'PERFORMANCE')
-    this.log('=')
-      console.log('\n Recommendations:')
-        const priority = rec.priority === 'high' ? '�' : rec.priority === 'medium' ? '�' : '�'
-          console.log(`      Details: ${rec.details.map(d => d.file || d).join(', '`})
-      this.log('� No performance issues found!', 'SUCCESS')
-    let grade = 'A'
-    if (this.metrics.performanceScore < 90) grade = 'B'
-    if (this.metrics.performanceScore < 80) grade = 'C'
-    if (this.metrics.performanceScore < 70) grade = 'D'
-    if (this.metrics.performanceScore < 60) grade = 'F'
-    this.log(' Starting Performance Monitor', 'PERFORMANCE')
-      this.log(`Error during performance monitoring: ${error.message}`, 'ERROR'`)
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
-
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 #!/usr/bin/env node
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 #!/usr/bin/env node
 
 
@@ -100,22 +10,16 @@ main
 #!/usr/bin/env node
 
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+#!/usr/bin/env node
+
+/**
+ * Performance Monitoring Script
+ * Monitors application performance metrics
+ */
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -133,145 +37,47 @@ class PerformanceMonitor {
 
 const monitor = new PerformanceMonitor();
 monitor.run().catch(console.error);
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-console.log('⚡ Starting performance monitoring...');
+console.log('📊 Starting performance monitoring...');
 
-const performanceMetrics = {
-  timestamp: new Date().toISOString(),
-  bundleSize: {},
-  fileCounts: {},
-  recommendations: []
-};
-
-// Check bundle sizes
-function getDirectorySize(dirPath) {
-  if (!fs.existsSync(dirPath)) return 0;
-  
-  let totalSize = 0;
-  const files = fs.readdirSync(dirPath, { recursive: true });
-  
-  files.forEach(file => {
-    if (typeof file === 'string') {
-      const filePath = path.join(dirPath, file);
-      try {
-        const stats = fs.statSync(filePath);
-        if (stats.isFile()) {
-          totalSize += stats.size;
-        }
-      } catch (error) {
-        // Skip files that can't be accessed
-      }
-    }
-  });
-  
-  return totalSize;
-}
-
-// Check .next directory
-const nextDirSize = getDirectorySize('.next');
-performanceMetrics.bundleSize['.next'] = {
-  size: nextDirSize,
-  sizeMB: (nextDirSize / 1024 / 1024).toFixed(2)
-};
-
-// Check node_modules
-const nodeModulesSize = getDirectorySize('node_modules');
-performanceMetrics.bundleSize['node_modules'] = {
-  size: nodeModulesSize,
-  sizeMB: (nodeModulesSize / 1024 / 1024).toFixed(2)
-};
-
-// Count files by type
-const fileCounts = {
-  '.tsx': 0,
-  '.ts': 0,
-  '.jsx': 0,
-  '.js': 0,
-  '.css': 0,
-  '.json': 0
-};
-
-function countFiles(dirPath) {
-  if (!fs.existsSync(dirPath)) return;
-  
-  const files = fs.readdirSync(dirPath, { recursive: true });
-  files.forEach(file => {
-    if (typeof file === 'string') {
-      const ext = path.extname(file);
-      if (fileCounts.hasOwnProperty(ext)) {
-        fileCounts[ext]++;
-      }
-    }
-  });
-}
-
-['components', 'pages', 'lib', 'styles'].forEach(dir => countFiles(dir));
-performanceMetrics.fileCounts = fileCounts;
-
-// Performance recommendations
-if (nextDirSize > 50 * 1024 * 1024) { // 50MB
-  performanceMetrics.recommendations.push('Consider optimizing bundle size - .next directory is large');
-}
-
-if (fileCounts['.tsx'] + fileCounts['.ts'] > 50) {
-  performanceMetrics.recommendations.push('Consider code splitting - many TypeScript files detected');
-}
-
-if (fileCounts['.css'] > 10) {
-  performanceMetrics.recommendations.push('Consider CSS optimization - multiple CSS files detected');
-}
-
-// Check for large images
-const publicDir = 'public';
-if (fs.existsSync(publicDir)) {
-  const publicFiles = fs.readdirSync(publicDir, { recursive: true });
-  let largeImages = 0;
-  
-  publicFiles.forEach(file => {
-    if (typeof file === 'string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {
-      try {
-        const filePath = path.join(publicDir, file);
-        const stats = fs.statSync(filePath);
-        if (stats.size > 500 * 1024) { // 500KB
-          largeImages++;
-        }
-      } catch (error) {
-        // Skip files that can't be accessed
-      }
-    }
-  });
-  
-  if (largeImages > 0) {
-    performanceMetrics.recommendations.push(`Optimize ${largeImages} large images in public directory`);
+// Performance monitoring configuration
+const config = {
+  outputDir: path.join(__dirname, '..', 'performance-reports'),
+  metrics: {
+    bundleSize: true,
+    loadTime: true,
+    memoryUsage: true,
+    cpuUsage: true
   }
+};
+
+// Ensure output directory exists
+if (!fs.existsSync(config.outputDir)) {
+  fs.mkdirSync(config.outputDir, { recursive: true });
 }
 
-// Display results
-console.log('\n📊 Performance Metrics:');
-console.log(`   - .next bundle size: ${performanceMetrics.bundleSize['.next']?.sizeMB || '0'} MB`);
-console.log(`   - node_modules size: ${performanceMetrics.bundleSize['node_modules']?.sizeMB || '0'} MB`);
-console.log(`   - TypeScript files: ${fileCounts['.tsx'] + fileCounts['.ts']}`);
-console.log(`   - JavaScript files: ${fileCounts['.jsx'] + fileCounts['.js']}`);
-console.log(`   - CSS files: ${fileCounts['.css']}`);
+// Performance metrics collection
+function collectMetrics() {
+  const metrics = {
+    timestamp: new Date().toISOString(),
+    memoryUsage: process.memoryUsage(),
+    uptime: process.uptime(),
+    platform: process.platform,
+    nodeVersion: process.version
+  };
 
-if (performanceMetrics.recommendations.length > 0) {
-  console.log('\n💡 Recommendations:');
-  performanceMetrics.recommendations.forEach(rec => console.log(`   - ${rec}`));
-} else {
-  console.log('\n✅ No performance issues detected');
+  return metrics;
 }
-<<<<<<< HEAD
-=======
+
+// Save metrics to file
+function saveMetrics(metrics) {
+  const filename = `performance-${Date.now()}.json`;
+  const filepath = path.join(config.outputDir, filename);
+  
+  fs.writeFileSync(filepath, JSON.stringify(metrics, null, 2));
+  console.log(`📈 Performance metrics saved to: ${filename}`);
+}
+
 class PerformanceMonitor {
   constructor() {
     this.metrics = {
@@ -292,7 +98,6 @@ monitor.run().catch(console.error);
 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // Save report
 fs.writeFileSync('performance-metrics.json', JSON.stringify(performanceMetrics, null, 2));
@@ -302,22 +107,11 @@ console.log('\n📄 Performance report saved to performance-metrics.json');
 setTimeout(() => {
   process.exit(0);
 }, 1000);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-=======
-=======
 ursor/automate-test-improve-and-merge-code-59d5
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 console.log('⚡ Performance Monitor');
 console.log('=====================');
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
-=======
 class PerformanceMonitor {
   constructor() {
     this.projectRoot = process.cwd();
@@ -547,15 +341,14 @@ if (require.main === module) {
 }
 
 module.exports = PerformanceMonitor;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+// Main execution
+try {
+  const metrics = collectMetrics();
+  saveMetrics(metrics);
+  console.log('✅ Performance monitoring completed');
+} catch (error) {
+  console.error('❌ Performance monitoring failed:', error.message);
+  process.exit(1);
+}

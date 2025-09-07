@@ -1,46 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
-
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 import { Activity, Zap, Clock, TrendingUp, TrendingDown;
@@ -94,55 +61,20 @@ else if (metrics.cls < 0.4) score += 50;else score += 25;
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  showUI;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
 })
-<<<<<<< HEAD
-=======
 
 
   return new Promise ( (resolve) => {
@@ -151,139 +83,81 @@ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {})
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {})
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+interface PerformanceMetrics {
+  loadTime: number,
+  firstContentfulPaint: number,
+  largestContentfulPaint: number,
+  cumulativeLayoutShift: number,
+  firstInputDelay: number,
+  timeToInteractive: number,
+  memoryUsage?: number,
+  networkLatency?: number
+}
+
+const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+
+  return new Promise ( (resolve) => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+  //Wait for page to be fully loaded if (document.readyState === 'complete') {
+})
+
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {;
   return new Promise ( (resolve) => {;
   if (typeof window !== 'undefined' && 'performance' in window) {;
   //Wait for page to be fully loaded if (document && document.readyState === 'complete') {;
 
-}) ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
   
 
 }) 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
   
 
 }) 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
   
 
 }) 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics && newMetrics.loadTime > 3000) {;
   const formatTime = (ms: number) : string => {;
   if (ms === 0) return 'N/A';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 if (ms < 1000) return `$ {
   Math.round (ms) 
 }ms`;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
-};
+  const getScoreColor = $2;
+    if (score >= 70) return 'text-yellow-400',
+    return 'text-red-400'
+  },
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 if (ms < 1000) return `$ {
   Math.round (ms) 
 }ms`;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 };
 
-<<<<<<< HEAD
-
-
-
-};
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 //Get device icon const getDeviceIcon = (deviceType: string) => {
   switch (deviceType) {
   case 'mobile': return Smartphone;
@@ -295,18 +169,6 @@ const getPerformanceScore = () => {
 let totalMetrics = 0;
 //FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
 else if (metrics.fcp < 4000) score += 50;
@@ -328,66 +190,39 @@ else score += 25
 if (metrics.cls < 0.1) score += 100;
 else if (metrics.cls < 0.25) score += 75;
 else if (metrics.cls < 0.4) score += 50;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+    // FID scoring (0-100)
+    if (metrics.fid !== null) {
+      totalMetrics++,
+      if (metrics.fid < 100) score += 100,
+      else if (metrics.fid < 300) score += 75,
+      else if (metrics.fid < 500) score += 50,
+      else score += 25
+    }
+
+    // CLS scoring (0-100)
+    if (metrics.cls !== null) {
+      totalMetrics++,
+      if (metrics.cls < 0.1) score += 100,
+      else if (metrics.cls < 0.25) score += 75,
+      else if (metrics.cls < 0.4) score += 50,
+      else score += 25
+    }
 
 
-else score += 25 
-
-};
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 else score += 25
 }
 else score += 25 
 
 };
 
-<<<<<<< HEAD
-
-
-else score += 25 
-
-};
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 else score += 25 
 
 };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 //Don't render anything in production return (<AnimatePresence> {
   isVisible && (<motion.div </div> <div className="flex items-center space-x-2" > <button > <RefreshCw className= {
   `w-4 h-4 $ {
@@ -409,25 +244,11 @@ else score += 25
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   if (score >= 90) return 'Excellent';
 if (score >= 70) return 'Good';
 if (score >= 50) return 'Needs Improvement';
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default PerformanceMonitor;
 const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
   return new Promise ( (resolve) => {
@@ -581,27 +402,8 @@ if (return `$ {) {$2;
 ;
 export default PerformanceMonitor;
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default PerformanceMonitor;
 }
   Math.round (ms)}ms`;}
@@ -613,32 +415,14 @@ let total_metrics = 0;
 //FCP scoring (0 - 100) // Check condition;
 if ( {) {$2;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 
 
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   total_metrics++;
 // Check condition;
 if (score += 100) {$2;
@@ -708,9 +492,6 @@ if (return 'Needs Improvement') {$2;
 }
 }export default PerformanceMonitor;export default PerformanceMonitor;
 }}}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -719,6 +500,153 @@ if (return 'Needs Improvement') {$2;
 
 };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+export default PerformanceMonitor;
+const getPerformanceMetrics = useCallback (async () : Promise < PerformanceMetrics> => {
+  return new Promise ( (resolve) => {
+  // Check condition
+if ( {) {
+  $2
+}
+  //Wait for page to be fully loaded // Check condition
+if ( {) {
+  $2
+}
+});
+}, []);
+//Check for performance issues and add alerts const new_alerts: string[] = [];
+// Check condition
+if ( {) {
+  $2
+}
+  const format_time = (ms: number) : string => {
+  // Check condition
+if (return 'N / A') {
+  $2
+}
+// Check condition
+if (return `$ {) {
+  $2
+}
+  Math.round (ms);
+}ms`;
+;
+}
+//Get device icon const getDeviceIcon = (device_type: string) =>: any {
+  switch (device_type) {
+  case 'mobile': return Smartphone;
+case 'tablet': return Tablet;
+default: return Laptop;
+;
+}
+const getPerformanceScore = () =>: any {
+  let score = 0;
+let total_metrics = 0;
+//FCP scoring (0 - 100) // Check condition
+if ( {) {
+  $2
+}
+  total_metrics++;
+// Check condition
+if (score += 100) {
+  $2
+}
+else // Check condition
+if (score += 75) {
+  $2
+}
+else // Check condition
+if (score += 50) {
+  $2
+}
+else score += 25;
+}//LCP scoring (0 - 100) // Check condition
+if ( {) {
+  $2
+}
+  total_metrics++;
+// Check condition
+if (score += 100) {
+  $2
+}
+else // Check condition
+if (score += 75) {
+  $2
+}
+else // Check condition
+if (score += 50) {
+  $2
+}
+else score += 25;
+}//FID scoring (0 - 100) // Check condition
+if ( {) {
+  $2
+}
+  total_metrics++;
+// Check condition
+if (score += 100) {
+  $2
+}
+else // Check condition
+if (score += 75) {
+  $2
+}
+else // Check condition
+if (score += 50) {
+  $2
+}
+else score += 25;
+}//CLS scoring (0 - 100) // Check condition
+if ( {) {
+  $2
+}
+  total_metrics++;
+// Check condition
+if (score += 100) {
+  $2
+}
+else // Check condition
+if (score += 75) {
+  $2
+}
+else // Check condition
+if (score += 50) {
+  $2
+}
+else score += 25;
+}
+//Don't render anything in production return (<AnimatePresence> {
+  is_visible && (<motion.div </div> <div className="flex items - center space - x-2" > <button > <RefreshCw className= {
+  `w - 4 h - 4 $ {
+  is_loading ? 'animate - spin': '';
+}`;
+}/> </button> <button > <BarChart3 className="w - 4 h - 4" /> </button> <button > <X className="w - 4 h - 4" /> </button> </div> </div> </div> </div> </div> </div> {
+  /* Expanded View */;
+}<AnimatePresence> {
+  is_expanded && (<motion.div </div>);
+}</div> </div> </div>) );
+}</div> </div>);
+}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>);
+}{
+  getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>);
+}</div> </div> </div> </motion.div>);
+}</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>);
+}
+// Helper functions const getScoreLabel = (score: number) =>: any {
+  // Check condition
+if (return 'Excellent') {
+  $2
+}
+// Check condition
+if (return 'Good') {
+  $2
+}
+// Check condition
+if (return 'Needs Improvement') {
+  $2
+}
+}
+;
+export default PerformanceMonitor;
+;
+

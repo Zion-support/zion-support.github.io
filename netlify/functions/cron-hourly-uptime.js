@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 ;
     const endpoints = [;
@@ -17,34 +14,17 @@
       const t0 = Date && Date.now()try {const resp = await fetch(url)const ms = Date && Date.now() - t0;
         results && results.push({ path: ep, status: resp && resp.status, ms })} catch (e) {const ms = Date && Date.now() - t0;
         results && results.push({path: ep,status: 0,ms,error: String(e && e.message || e)error: String(e && e.message || e)})}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-=======
-<<<<<<< HEAD
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const endpoints = [
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       '/'
       '/learn'
       '/dao'
@@ -60,25 +40,9 @@ exports && exports.handler = async function () {
         const ms = Date && Date.now() - t0;
         results && results.push({ path: ep, status: resp && resp.status, ms });
       } catch (e) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
         const ms = Date && Date.now() - t0;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         const ms = Date && Date.now() - t0;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         results && results.push({
           path: ep,
           status: 0,
@@ -119,23 +83,9 @@ exports && exports.handler = async function () {
     const log = { timestamp: Date && Date.now(), results },const owner = process && process.env.GITHUB_OWNER,const repo = process && process.env.GITHUB_REPO,const token = process && process.env.GITHUB_TOKEN,if (owner && repo && token) {const existingPath = 'data/ops/uptime-log && log.json',// Fetch existing file, append, and trim to last 500 entries;
       try {const existingUrl = `https://raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`,const resp = await fetch(existingUrl),const arr = resp && resp.ok ? await resp && resp.json() : [],arr && arr.push(log),while (arr && arr.length > 500) arr && arr.shift(),const content = JSON && JSON.stringify(arr, null, 2),await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token })} catch (_) {const content = JSON && JSON.stringify([log], null, 2),await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })}
     const token = process && process.env.GITHUB_TOKEN;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     if (owner && repo && token) {
       const existingPath = 'data/ops/uptime-log && log.json';
       // Fetch existing file, append, and trim to last 500 entries
@@ -167,113 +117,50 @@ exports && exports.handler = async function () {
       }
     }
     return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       statusCode: 200,
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       body: JSON && JSON.stringify({ ok: true, count: results && results.length }),
-=======
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, count: results && results.length })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     };
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };  try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
 exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     const endpoints = [
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
     const results = []
     for (const ep of endpoints) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       const url = `${baseUrl}${ep}`,
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       const url = `${baseUrl}${ep}`,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       const t0 = Date && Date.now(),
       try {
         const resp = await fetch(url),
         const ms = Date && Date.now() - t0,
         results && results.push({ path: ep, status: resp && resp.status, ms })
-<<<<<<< HEAD
-<<<<<<< HEAD
-      const url = `${baseUrl}${ep}`;
-      const t0 = Date.now();
+const { upsertFile } = require($2);
+exports.handler = $2;
+    const endpoints = $2;
+    const results = $2;
+    for (const ep of endpoints) {
+      const url = $2;
+      const t0 = Date.now($2);
       try {
-        const resp = await fetch(url);
-        const ms = Date.now() - t0,
+        const resp = await fetch($2);
+        const ms = $2;
         results.push({ path: ep, status: resp.status, ms })
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       } catch (e) {
-        const ms = Date && Date.now() - t0,
-        results && results.push({ path: ep, status: 0, ms, error: String(e && e.message || e) })
+        const ms = $2;
+        results.push({ path: ep, status: 0, ms, error: String(e.message || e) })
       }
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const log = { timestamp: Date && Date.now(), results },
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
@@ -297,13 +184,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, count: results && results.length }) }
 const { upsert_file } = require ('./_lib / github')} catch (e) {return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-<<<<<<< HEAD
-=======
 },const { upsert_file }  = require ('./_lib / github')exports.handler = async function () {try {const base_url = process.env.URL || process.env.DEPLOY_URL || '';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 },
-<<<<<<< HEAD
-=======
 
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
@@ -311,18 +193,7 @@ const { upsert_file } = require ('./_lib / github')} catch (e) {return { statusC
 
 },
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { upsert_file } = require ('./_lib / github');
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 ;
 exports.handler = async function () {
   try {
@@ -381,38 +252,31 @@ if ( {) {$2;
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     const log = { timestamp: Date.now(), results },
 
-    const owner = process.env.GITHUB_OWNER,
-    const repo = process.env.GITHUB_REPO,
-    const token = process.env.GITHUB_TOKEN,
-
-    if ({
-      const existingPath = 'data/ops/uptime-log.json';
+    const owner = $2;
+    const repo = $2;
+    const token = $2;
+    if (owner && repo && token) {
+      const existingPath = $2;
       // Fetch existing file, append, and trim to last 500 entries
       try {
-        const existingUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`);
-        const resp = await fetch(existingUrl);
-        const arr = resp.ok ? await resp.json() : [];
-        arr.push(log);
-        while (arr.length > 500) arr.shift();
-        const content = JSON.stringify(arr, null, 2);
+        const existingUrl = $2;
+        const resp = await fetch($2);
+        const arr = $2;
+        arr.push($2);
+        while (arr.length > 500) arr.shift($2);
+        const content = JSON.stringify($2);
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): hourly uptime log update', token })
       } catch (_) {
-        const content = JSON.stringify([log], null, 2);
+        const content = JSON.stringify($2);
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })
       }
     }
+
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+},

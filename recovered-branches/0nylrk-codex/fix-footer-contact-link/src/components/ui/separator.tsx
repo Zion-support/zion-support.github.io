@@ -1,96 +1,30 @@
-<<<<<<< HEAD
-
-
-import {cn} from '@/lib/utils';
-=======
 import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 ></typeof>(
-<<<<<<< HEAD
-  (
-
-
-    { className, orientation = "horizontal", decorative = true, ...props },
-
-
-    ref
-  ) => (
-    <SeparatorPrimitive.Root
-
-const Separator = React && React.forwardRef<;
-  React && React.ElementRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>,;
-  React && React.ComponentPropsWithoutRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>;
-></typeof>(;
-  (;
-    { className, orientation = 'horizontal', decorative = true, ...props },;
-    ref;
-  ) => (;
-    <SeparatorPrimitive&& SeparatorPrimitive.Root
-import React from 'react';
-=======
   (    ref
   ) => (
     <SeparatorPrimitive.Root
 
 import React from 'react';
 import * as React from 'react';import React from 'react';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from 'react';
       ref={ref}
       decorative={decorative}
       orientation={orientation}
-<<<<<<< HEAD
-      className={cn(
-
-
-        "shrink-0 bg-border",
-        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
-
-
-        className
-      className={cn(;
-        "shrink-0 bg-border",;
-        orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
-        className;
-      )}
-      {...props}
-    />;
-  );
-);
-export { Separator }
-export { Separator }
-;
-
-
-Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
-
-export { Separator }
-;
-
-
-
-=======
       className={cn(        className
 =======      className={cn(;
         "shrink-0 bg-border",;
         orientation === "horizontal" ? "h-[1px] w-full" :"h-full w-[1px]",;
         className;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export { Separator };
 import * as SeparatorPrimitive from '@radix - ui / react - separator';
 ;
@@ -117,37 +51,22 @@ Separator.display_name = SeparatorPrimitive.Root.display_name;
 ;
 export { Separator }
 ;
-<<<<<<< HEAD
-Separator.displayName = SeparatorPrimitive.Root.displayName;
-;
-export { Separator }import * as React from "react" import * as SeparatorPrimitive from "@radix-ui/react-separator" const Separator = React.forwardRef< React.ElementRef<typeof SeparatorPrimitive.Root>;
-React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>) 
-}{
-  ...props 
-}/>) ) Separator.displayName = SeparatorPrimitive.Root.displayName export {
-  Separator 
-}
+import * as React from 'react';
+import * as SeparatorPrimitive from '@radix-ui/react-separator';
+import {cn} from '@/lib/utils';
 
 import { cn } from "@/lib/utils"
 
-const Separator = React.forwardRef<
-  React.ElementRef<typeof SeparatorPrimitive.Root>
+const Separator = $2;
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
 >(
   (
     { className, orientation = 'horizontal', decorative = true, ...props }
-    { className, orientation = "horizontal", decorative = true, ...props },
     ref
   ) => (
     <SeparatorPrimitive.Root
-      ref={ref}
-      decorative={decorative}
-      orientation={orientation}
-      className={cn(
-        'shrink-0 bg-border'
-        orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]'
-        "shrink-0 bg-border",
-        orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]",
+      ref = $2;
+        orientation = $2;
         className
       )}
       {...props}
@@ -156,11 +75,3 @@ const Separator = React.forwardRef<
 );
 Separator.displayName = SeparatorPrimitive.Root.displayName;
 export { Separator }
-export { Separator }
-;
-
-export { Separator };
-export { Separator }
-;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -106,7 +106,7 @@ const glob = require("glob")
             !content.includes("import * as React")
               content.includes("export default")
               content.includes("export {"})
-  content = "import React from "react";
+  content = "import React from "react"
             file.endsWith(".ts")
             content.includes("<")
             content.includes(">")
@@ -140,7 +140,7 @@ const glob = require("glob")
             content.includes("<")
             !content.includes("import React")
             !content.includes("import * as React")
-  content = import React from "react";
+  content = import React from "react"
             /<>\s*<\/>/g,<React.Fragment></React.Fragment>"
             "className={$1}"
             this.fixesApplied.push(""FIXED_REACT")
@@ -198,17 +198,11 @@ const glob = require("glob")
         "totalErrors"
         "success"
     this.log(" Report generated")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   this.log("Remaining "errors": ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   this.log("Remaining "errors": ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   this.log("Remaining "errors": ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  this.log("Remaining "errors": ")
+  this.log("Remaining "errors": ")
+
+

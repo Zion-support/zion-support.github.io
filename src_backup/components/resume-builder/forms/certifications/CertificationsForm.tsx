@@ -12,34 +12,11 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { format } from 'date-fns';
 
 import { useState  } from 'react';
-=======
 
 return (<div className='space-y-6'>;
-=======
 return (
 
-    <div className='space-y-6'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
-      <div>;
-        <h2 className='text-xl font-semibold mb-2'>;
-          Certifications & Licenses;
-        </h2>;
-        <p className='text-muted-foreground'>;
-          Add any professional certifications, licenses, or credentials you have;
-          earned.;
-        </p>;
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
-      </div>;{certifications && certifications.length > 0 && (import { useState  } from 'react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
-import { useForm  } from 'react-hook-form';
-import { Button  } from '@/components/ui/button';
-import { Form  } from '@/components/ui/form';
-import { Certification  } from '@/types/resume';
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
-import { Loader2 } from 'lucide-react'
-=======
 import { Loader2  } from 'lucide-react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
 import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -47,32 +24,91 @@ import { format  } from 'date-fns';
 <<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
 import { CertificationsList  } from './CertificationsList';
 import { CertificationFormFields  } from './CertificationFormFields';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { Button } from '@/components/ui/button';
+import { Form } from '@/components/ui/form';
+import { Certification } from '@/types/resume';
+import { Loader2 } from 'lucide-react'
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
+import { CertificationsList } from './CertificationsList';
+import { CertificationFormFields } from './CertificationFormFields';
 import { CertificationFormValues, certificationSchema } from './types';
 interface CertificationsFormProps {
   resumeId: string;
   certifications: Certification[];
   onComplete: () => void;
-  onBack: () => void
-  };
+      </div>;
+  onBack: () => void,
+}
 
-  const handleEdit = (cert: Certification) => {
-    setEditingId(cert.id!);    form.reset({
-      ...cert
-  }
-  const handleEdit = (cert: Certification) => {
-    setEditingId(cert.id!)
+export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {
+  const { addCertification, updateCertification, deleteCertification, isLoading } = useResume($2);
+  const [editingId, setEditingId] = useState<string | null>(null),
+  const [error, setError] = useState<string | null>(null),
+
+  // Helper function to format dates as strings for form inputs
+  const formatDateValue = (dateValue: string | Date | undefined): string => {,
+    if (!dateValue) return '',
+    if (typeof dateValue === 'string') return dateValue,
+    return format(dateValue, 'yyyy-MM-dd')
+  },
+
+  const form = useForm<CertificationFormValues>({
+    resolver: zodResolver(certificationSchema),
+    defaultValues: {,
+      name: '',
+      issuing_organization: '',
+      issue_date: '',
+      expiration_date: '',
+      credential_id: '',
+      credential_url: ''}}),
+
+  const handleAddOrUpdate = async (data: CertificationFormValues) => {
+    try {,
+      setError(null),
+      let success,
+
+      const certData: Certification = {,
+        name: data.name,
+        issuing_organization: data.issuing_organization,
+        issue_date: data.issue_date || undefined,
+        expiration_date: data.expiration_date || undefined,
+        credential_id: data.credential_id,
+        credential_url: data.credential_url},
+
+      if (editingId) {
+        success = await updateCertification(editingId, certData)
+      } else {
+        success = await addCertification(resumeId, certData)
+      }
+
+      if (success) {
+        form.reset($2);
+        setEditingId(null)
+      }
+    } catch (err: any) {
+      setError(err.message || 'An error occurred'),
+    }
+  },
+
+  const handleEdit = (cert: Certification) => {,
+    setEditingId(cert.id!),
     form.reset({
-...cert,
+      ...cert,
       issue_date: formatDateValue(cert.issue_date),
-      expiration_date: formatDateValue(cert.expiration_date),
-    });
-  };
+      expiration_date: formatDateValue(cert.expiration_date)})
+  },
 
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
-      await deleteCertification(id)
+      await deleteCertification(id),
     }
-  }
+  },
+
   return (
     <div className='space-y-6'>
       <div>
@@ -86,12 +122,6 @@ interface CertificationsFormProps {
       </div>
       {certifications.length > 0 && (
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      </div>;
-
-      {certifications && certifications.length > 0 && (;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
         <CertificationsList
           certifications={certifications}
           onEdit={handleEdit}
@@ -110,6 +140,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
+
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(handleAddOrUpdate)}
@@ -125,21 +156,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 variant='outline'
                 onClick={() => {
                   if (editingId) {
-
-                    setEditingId(null),
-                    setEditingId(null),
-
-                    form.reset({
-<<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
-                      name: ''
-                      issuing_organization: ''
-                      issue_date: ''
-                      expiration_date: ''
-                      credential_id: ''
-                      credential_url: ''
-                    })
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
@@ -148,6 +164,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
                     setEditingId(null),
                     setEditingId(null),
+                    setEditingId($2);
                     form.reset({
                       name: '',
                       issuing_organization: '',
@@ -155,13 +172,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       expiration_date: '',
                       credential_id: '',
                       credential_url: ''})
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
                   } else {
                     onBack()
-
-      <div className='bg-muted/40 p-6 rounded-lg'>;
-        <h3 className='text-md font-medium mb-4'>;
-=======
 import { useState   } from 'react';
 import { useForm   } from 'react-hook-form';
 import { Button   } from '@/components/ui/button';
@@ -200,7 +212,6 @@ interface CertificationsFormProps  {resumeId: string;
           certifications={certifications}onEdit={handleEdit}onDelete={handleDelete}/>;
       )}<div className="bg-muted/40 p-6 rounded-lg">;
         <h3 className="text-md font-medium mb-4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>;
         <Form {...form}>;
@@ -239,6 +250,14 @@ interface CertificationsFormProps  {resumeId: string;
                 {editingId ? 'Cancel' : 'Back'}</Button>;
               <div className="flex gap-2">;
                 <Button type="submit" disabled={isLoading}>;
+                  }
+                }}
+              >;
+                {editingId ? 'Cancel' : 'Back'}
+              </Button>
+
+              <div className="flex gap-2">
+                <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 <<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
                   {editingId ? 'Update' : 'Add'} Certification
@@ -257,16 +276,7 @@ interface CertificationsFormProps  {resumeId: string;
 <<<<<<< HEAD:src_backup/components/resume-builder/forms/certifications/CertificationsForm.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
   );
-=======
   )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
-
-}> {;
-  editingId ? 'Cancel' : 'Back' ;
-}</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
-}'"
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
                   {editingId ? 'Update' : 'Add'} Certification;
                 </Button>;
                 <Button type="button" onClick={onComplete}>;
@@ -359,6 +369,5 @@ if ( {) {$2;
       </div>;
     </div>)}> {editing_id ? 'Cancel' : 'Back';
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>)}'"}}}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/resume-builder/forms/certifications/CertificationsForm.tsx
+}
+;

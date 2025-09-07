@@ -83,7 +83,7 @@ this.log("Dashboard generated successfully at ${htmlPath}")
       reports["console-error-fixer"]
       reports["console-error-fixer"]
   actions.push(Review and remove console.log statements from production code")
-  generateHTMLDashboard(dashboard) {return "}
+  generateHTMLDashboard($2) {return "}
 <html lang="
     <meta name=viewport content=width=device-width, initial-scale=1.0"
     <script src=""https": //cdn.tailwindcss.com"
@@ -221,17 +221,11 @@ this.log("Dashboard generated successfully at ${htmlPath}")
   dashboard.log("Shutting down gracefully...")
   process.on("SIGTERM")
   dashboard.log("Shutting down gracefully...")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+  dashboard.start().catch(error => {dashboard.log(`Fatal "error": ${error.message}`, "ERROR"`)
+
+

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 ;
 {/* Robots Meta */;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps  {title?: string;
@@ -17,19 +13,29 @@ interface SEOProps  {title?: string;
   section?: string;
   tags?: string[],structuredData?: any;
   noindex?: boolean;
-<<<<<<< HEAD
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+interface SEOProps {
+  title?: string,
+  description?: string,
+  keywords?: string | string[],
+  image?: string,
+  url?: string,
+  type?: 'website' | 'article' | 'product',
+  publishedTime?: string,
+  modifiedTime?: string,
+  author?: string,
+  section?: string,
+  tags?: string[],
+  structuredData?: any,
+  noindex?: boolean,
   nofollow?: boolean
 }
 
 const SEO: React.FC<SEOProps> = ({
-  title;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
-<<<<<<< HEAD
 {
   /* Robots Meta */
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }{
   noindex && <meta name="robots" content="noindex" />
 }{
@@ -74,8 +80,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }{
   section && <meta property="article:section" content= {
   section
-=======
-=======
 ;
 {/* Robots Meta */;
 import React, { useEffect } from 'react';
@@ -90,7 +94,6 @@ interface SEOProps  {title?: string;
   section?: string;
   tags?: string[],structuredData?: any;
   noindex?: boolean;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   nofollow?: boolean;
 }const SEO: React.FC<SEOProps> = ({title;}{noindex && <meta name="robots" content="noindex" />;
 }{nofollow && <meta name="robots" content="nofollow" />;
@@ -113,10 +116,6 @@ interface SEOProps  {title?: string;
 }{author && <meta property="article:author" content= {author;
 }/>;
 }{section && <meta property="article:section" content= {section;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 import React from 'react';
  {/* Robots Meta */ ;
@@ -197,22 +196,8 @@ const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Revolutionary AI, Q
     : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http')? url;
     : `https://ziontechgroup.com${url}`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const fullImage = image.startsWith('http')
-    ? image
-<<<<<<< HEAD
-    : `https://ziontechgroup.com${image}`;
-
-  return (
-    <Head>
-=======
   const fullImage = image.startsWith('http')? image;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   const fullImage = image.startsWith('http')? image;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     : `https://ziontechgroup.com${image}`;  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
@@ -222,163 +207,132 @@ const SEO: React.FC<SEOProps> = ({title = 'Zion Tech Group - Revolutionary AI, Q
   author = 'Zion Tech Group';
   section;
   tags = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   structuredData;: `https://ziontechgroup.com${image}`;return (<Head>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>;
 <meta name='description' content={description} />;
       <meta;
         name='keywords';
         content={Array.isArray(keywords) ? keywords.join(', ') : keywords}
-<<<<<<< HEAD
-      />
-      <meta name='author' content={author} />
-      <meta name='robots' content={noindex ? 'noindex' : 'index'} />
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       />;
       <meta name='author' content={author} />;
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   structuredData;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {nofollow && <meta name='robots' content='nofollow' />}
       {noindex && <meta name='robots' content='noindex' />}
       {nofollow && <meta name='robots' content='nofollow' />}
       {!noindex && !nofollow && <meta name='robots' content='index, follow' />}
+  title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.',
+  keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics',
+  image = $2;
+  url = $2;
+  type = $2;
+  publishedTime,
+  modifiedTime,
+  author = $2;
+  section,
+  tags = $2;
+  structuredData,
+  noindex = $2;
+  nofollow = $2;
+  const fullUrl = $2;
+  const fullImage = $2;
+  return (
+    <Head>
+      {/* Basic Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={Array.isArray(keywords) ? keywords.join() : keywords} />
+      <meta name="author" content={author} />
+      <meta name="robots" content={noindex ? 'noindex' : 'index'} />
+      {nofollow && <meta name="robots" content="nofollow" />}
+      
+      {/* Robots Meta */}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
+      
       {/* Open Graph Meta Tags */}
-      {/* Article Specific Meta Tags */}
-      {type === 'article' && (<>;
-          {publishedTime && (<meta property='article:published_time' content={publishedTime} />;
-          )}
-          {modifiedTime && (<meta property='article:modified_time' content={modifiedTime} />;
-          )}
-          {author && <meta property='article:author' content={author} />}
-          {section && <meta property='article:section' content={section} />}
-          {tags && tags.map((tag, index) => (<meta key={index} property='article:tag' content={tag} />;
-          ))}
-        </>;
-      )}
-      {/* Additional Meta Tags */}
-      <meta;
-        name='viewport';
-        content='width=device-width, initial-scale=1, shrink-to-fit=no';
-      <meta property='og:title' content={full_title} />;
-      <meta property='og:description' content={description} />;
-      <meta property='og:type' content={type} />;
-      <meta property='og:url' content={full_url} />;
-      <meta property='og:image' content={full_image} />;
-      <meta property='og:site_name' content='Zion Tech Group' />;
-      <meta property='og:locale' content='en_US' />;
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
       {/* Twitter Card Meta Tags */}
-      <meta name='twitter:card' content='summary_large_image' />;
-      <meta name='twitter:site' content='@ziontechgroup' />;
-      <meta name='twitter:creator' content='@ziontechgroup' />;
-      <meta name='twitter:title' content={full_title} />;
-      <meta name='twitter:description' content={description} />;
-      <meta name='twitter:image' content={full_image} />;
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImage} />
+      
       {/* Article Specific Meta Tags */}
-      {type === 'article' && (<>;
-          {published_time && (<meta property='article:published_time' content={published_time} />)}
-          {modified_time && (<meta property='article:modified_time' content={modified_time} />)}
-          {author && <meta property='article:author' content={author} />}
-          {section && <meta property='article:section' content={section} />}
-          {tags.map ((tag, index) => (<meta key={index} property='article:tag' content={tag} />))}
-        </>)}
-      {/* Additional Meta Tags */}
-      <meta;
-        name='viewport';
-        content='width = device - width, initial - scale = 1, shrink - to - fit = no';
-      />;
-      <meta name='theme - color' content='#000000' />;
-      <meta name='msapplication - TileColor' content='#000000' />;
-      <meta name='apple - mobile - web - app - capable' content='yes' />;
-      <meta;
-        name='apple - mobile - web - app - status - bar - style';
-        content='black - translucent';
-      />;
-      <meta name='apple - mobile - web - app - title' content='Zion Tech Group' />;{/* Structured Data */}
-      <script;
-        type='application / ld + json';
-        dangerouslySetInnerHTML={{contactPoint: {'@type': 'ContactPoint';
-              telephone: '+1-800-ZION-TECH';
-              contactType: 'customer service';
-              availableLanguage: 'English';
-            }
-            address: {'@type': 'PostalAddress';
-              addressCountry: 'US';
-            }
-            hasOfferCatalog: {'@type': 'OfferCatalog';
-              name: 'Technology Services';
-              itemListElement: [;
-                {'@type': 'Offer';
-                  itemOffered: {'@type': 'Service',name: 'AI & Machine Learning Solutions',},},{'@type': 'Offer',itemOffered: {'@type': 'Service',name: 'Quantum Computing Services',},},{'@type': 'Offer',}
-                }
-                {'@type': 'Offer';
-                  itemOffered: {'@type': 'Service';
-                    name: 'Quantum Computing Services';
-                  }
-                }
-                {'@type': 'Offer';
-                  itemOffered: {'@type': 'Service';
-                    name: 'Space Technology Solutions';
-                  }
-                }
-              ];
-            }
-          })}}{/* Favicon and App Icons */}
-      <link rel='icon' href='/favicon.ico' />;
-      <link;
-        rel='apple-touch-icon';
-        sizes='180x180';
-        href='/apple-touch-icon && icon.png';
-      />;
-      <link;
-        rel='icon';
-        type='image/png';
-        sizes='32x32';
-        href='/favicon-32x32 && 32x32.png';
-      />;
-      <link;
-        rel='icon';
-        type='image/png';
-        sizes='16x16';
-      {/* Preconnect to external domains for performance */}
-      <link rel='preconnect' href='https://fonts && fonts.googleapis.com' />;
-      <link;
-        rel='preconnect';
-        href='https://fonts && fonts.gstatic.com';
-        crossOrigin='anonymous';
-      {/* Additional Meta Tags for SEO */}
-      <meta name='google-site-verification' content='your-verification-code' />;
-      <meta name='msvalidate && msvalidate.01' content='your-bing-verification-code' />;
-      <meta;
-        name='yandex-verification';
-        content='your-yandex-verification-code';
-      {/* Custom Meta Tags */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {structuredData && (;
-        <script
-          type='application/ld+json'
-          dangerouslySetInnerHTML={{
-<<<<<<< HEAD
-            __html: JSON.stringify(structuredData),
-origin/cursor/automate-test-improve-and-merge-code-2533
-          }}
-        />;
+      {type === 'article' && (
+        <>
+          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {author && <meta property="article:author" content={author} />}
+          {section && <meta property="article:section" content={section} />}
+          {tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
       )}
-    </Head>
-);
-=======
+      
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit = $2;
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+            "description": description,
+            "foundingDate": "2020",
+            "sameAs": [
+              "https://www.linkedin.com/company/zion-tech-group",
+              "https://twitter.com/ziontechgroup",
+              "https://github.com/Zion-Holdings"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-800-ZION-TECH",
+              "contactType": "customer service",
+              "availableLanguage": "English"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "US"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Technology Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "AI & Machine Learning Solutions"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Quantum Computing Services"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Space Technology Solutions"
+                  }
+                }
+              ]
+            }
             __html: JSON && JSON.stringify(structuredData),          }}
         />;
       )}
@@ -392,14 +346,10 @@ export default SEO;            __html: JSON && JSON.stringify(structuredData);
       )}
   );
 export default SEO;  )
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 
 export default SEO;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {structuredData && (<script;
           type='application/ld+json';
           dangerouslySetInnerHTML={{__html: JSON && JSON.stringify(structuredData),          }}
@@ -458,12 +408,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         />)}
     </Head>)}export default SEO;            __html: JSON.stringify (structured_data)}}
         />)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </Head>)}export default SEO)}export default SEO;</Head>;
-)}export default SEO;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </Head>);
 }
 ;
@@ -472,8 +416,12 @@ export default SEO);
 ;
 export default SEO;
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     </Head>)}export default SEO)}export default SEO;</Head>;
 )}export default SEO;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+          })
+        }}
+      />
+      
+      {/* Canonical URL */}
+      <link rel = $2;
+export default SEO,

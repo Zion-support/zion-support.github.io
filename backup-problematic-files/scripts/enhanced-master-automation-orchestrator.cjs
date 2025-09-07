@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -39,16 +36,13 @@
 }
 
 // Run the enhanced orchestrator
-<<<<<<< HEAD
-main();
-#!/usr/bin/env node;
-=======
 
 main();
 
 #!/usr/bin/env node;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+main();#!/usr/bin/env node;
+#!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')

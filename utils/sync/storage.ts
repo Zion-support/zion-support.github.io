@@ -1,32 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 let state: SyncState = { ...defaultState }
 export function readState(): SyncState {return { ...state }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function updateState(updates: Partial<SyncState>): void {
-  state = { ...state, ...updates }
-};
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
     );
@@ -35,35 +12,26 @@ export function updateState(updates: Partial<SyncState>): void {
   return events;export function resetState(): void {
   state = { ...defaultState }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function updateState(updates: Partial<SyncState>): void {state = { ...state, ...updates }
 })}return events;export function resetState(): void {state = { ...defaultState }}}export function readState(): SyncState {return { ...state }}export function updateState(updates: Partial<SyncState>): void {state = { ...state, ...updates }}
 export function upsertEvent(state: MultiverseState;
   event: SyncEvent;
 ): MultiverseState {if (state.seenEventIds[event.eventId]) return state;
   const entityId = getEntityId(event)const currentVersion = state.latestVersionByEntityId[entityId] |0;
+import fs from "fs";
+import path from "path";
+import { MultiverseState, InstanceConfig, SyncEvent } from "./types";
+const DATA_DIR = path.join(process.cwd(), "data", "multiverse"),
+const STATE_PATH = path.join($2);
+function ensureDataDir(): void {
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true})
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
-<<<<<<< HEAD
-=======
 }
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export function readState(): SyncState {;
   return { ...state };
@@ -117,30 +85,11 @@ export function getEntityId(event: SyncEvent): string {switch (event && event.ty
       return ((event && event.payload as any).subjectId + ':' + (event && event.payload as any).period;
       )default:;
   }
-<<<<<<< HEAD
-export function filterEventsByScope(
-  events: SyncEvent[]
-  scope: InstanceConfig['scope']
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 
 
-<<<<<<< HEAD
-): SyncEvent[] {
-  if (scope === 'full') return events;
-  if (scope === 'dao') {
-    );
-  }
-  if (scope === 'marketplace') {
-    return events && events.filter(
-      e =>
-// Sync storage utilities
-export interface SyncJob {
-  id: string;
-=======
 export function filterEventsByScope(events: SyncEvent[];
   scope: InstanceConfig['scope'];
 }): SyncEvent[] {if (scope === 'full') return events;
@@ -148,7 +97,6 @@ export function filterEventsByScope(events: SyncEvent[];
   if (scope === 'marketplace') {return events && events.filter(e =>;
 // Sync storage utilities;
 export interface SyncJob  {id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   type: 'full' | 'incremental' | 'realtime';
   status: 'pending' | 'running' | 'completed' | 'failed' | 'cancelled';
   source: string;
@@ -180,12 +128,7 @@ export interface SyncJob  {id: string;
   updatedAt: string;
 }export interface SyncMapping  {id: string;
 }
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export interface SyncMapping {
   id: string;
@@ -442,33 +385,12 @@ export function formatDuration(startTime: string, endTime?: string): string {
     return `${seconds}s`;
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -478,35 +400,12 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 }
@@ -519,103 +418,124 @@ const default_state: SyncState = {
   // Check condition
 if ( {) {
   $2
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+function defaultConfig(): InstanceConfig {
+  const instanceId = $2;
+  return {
+    instanceId,
+    optIn: false,
+    paused: false,
+    scope: "full",
+    peers: [],
+    secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0)}
 }
-    state.proposalMerkleById[entity_id] = event.merkle_root;
-  }
-  // Check condition;
-if ( {) {$2;
-}
-    state.latestVersionByEntityId[entity_id] = event.version;
-  }
-  state.events.push (event)state.seenEventIds[event.event_id] = true;
-  state.lastSyncedAt = Math.max (state.lastSyncedAt || 0, event.timestamp || 0)return state;export function getEntityId (event: SyncEvent): string {switch (event.type) {case 'proposal':;
-      return (event.payload as any).proposal_id;
-    case 'token_transfer':;
-      return (event.payload as any).tx_id;
-    case 'talent_mobility':;
-      return ((event.payload as any).person_id + ':' + (event.payload as any).start_date)case 'dao_endorsement':;
-      return (event.payload as any).resolution_id;
-    case 'leaderboard_entry':;
-      return ((event.payload as any).subject_id + ':' + (event.payload as any).period)default:;
-      return (event.payload as any).id || event.event_id;
-  }
-export function filterEventsByScope (events: SyncEvent[],scope: InstanceConfig['scope']): SyncEvent[] {// Check condition;
-if (return events) {$2;
-}// Check condition;
-if ( {) {$2;
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+function defaultState(): MultiverseState {
+  return {
+    config: defaultConfig($2);
+    lastSyncedAt: 0,
+    seenEventIds: {},
+    latestVersionByEntityId: {},
+    proposalMerkleById: {},
+    events: []}
+}
+
+export function readState(): MultiverseState {
+  ensureDataDir($2);
+  if (!fs.existsSync(STATE_PATH)) {
+    const initial = defaultState($2);
+    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2)),
+    return initial
+  }
+  const raw = fs.readFileSync($2);
+  try {
+    const parsed = $2;
+    // Backfill missing fields on upgrade
+    parsed.config.secretConfigured = Boolean($2);
+    parsed.seenEventIds = $2;
+    parsed.latestVersionByEntityId = $2;
+    parsed.proposalMerkleById = $2;
+    parsed.events = $2;
+    return parsed
+  } catch {
+    const initial = defaultState($2);
+    fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2)),
+    return initial
+  }
+  lastSyncedAt: new Date().toISOString()
+}
+
+export function writeState(state: MultiverseState): void {
+  ensureDataDir($2);
+  fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2))
+}
+
+export function upsertEvent(state: MultiverseState, event: SyncEvent): MultiverseState {
+  if (state.seenEventIds[event.eventId]) return state,
+
+  const entityId = getEntityId($2);
+  const currentVersion = $2;
+  const isNewer = $2;
+  if (event.type === "proposal" && event.merkleRoot && isNewer) {
+    state.proposalMerkleById[entityId] = event.merkleRoot
+  }
+  if (isNewer) {
+    state.latestVersionByEntityId[entityId] = event.version
+  }
+
+  state.events.push($2);
+  state.seenEventIds[event.eventId] = true,
+  state.lastSyncedAt = Math.max($2);
+  return state
+}
+
   // Check condition
 if ( {) {
   $2
-=======
     return events.filter (e => e.type === 'proposal' || e.type === 'dao_endorsement')}
   // Check condition;
 if ( {) {$2;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     return events.filter (e => e.type === 'proposal' || e.type === 'dao_endorsement')}
   // Check condition;
 if ( {) {$2;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
     return events.filter (e =>;
         e.type === 'token_transfer' ||;
         e.type === 'talent_mobility' ||;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        e.type === 'leaderboard_entry');
-  }
-  return events;export function reset_state (): void {
-  state = { ...default_state }
-}
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-  return events;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         e.type === 'leaderboard_entry')}
   return events;export function reset_state (): void {state = { ...default_state }
 }return events;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         e.type === 'leaderboard_entry')}
   return events;export function reset_state (): void {state = { ...default_state }
 }return events;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+export function getEntityId(event: SyncEvent): string {
+  switch (event.type) {
+    case "proposal": return (event.payload as any).proposalId,
+    case "token_transfer":
+      return (event.payload as any).txId,
+    case "talent_mobility":
+      return (event.payload as any).personId + ":" + (event.payload as any).startDate,
+    case "dao_endorsement":
+      return (event.payload as any).resolutionId,
+    case "leaderboard_entry":
+      return (event.payload as any).subjectId + ":" + (event.payload as any).period,
+    default: return(event.payload as any).id || event.eventId
+  }
+export function filterEventsByScope(
+  events: SyncEvent[],
+  scope: InstanceConfig["scope"]
+): SyncEvent[] {
+  if (scope = $2;
+  if (scope === "dao") {
+    return events.filter((e) => e.type === "proposal" || e.type === "dao_endorsement")
+  }
+  if (scope === "marketplace") {
+    return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry")
+  }
+  return events
+}

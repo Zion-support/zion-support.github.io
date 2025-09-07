@@ -1,45 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-<<<<<<< HEAD
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-import { ServiceVariant } from '../types/service-variants';
-export interface InnovativeMicroSaasV2 {
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeMicroSaasV2  {id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 import { ServiceVariant } from '../types/service-variants';
 export interface InnovativeMicroSaasV2 {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 ;
 import { ServiceVariant  } from '../types/service-variants';
 export interface InnovativeMicroSaasV2  {id: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   id: string;
   name: string;
   tagline: string;
@@ -385,18 +356,6 @@ export interface InnovativeMicroSaasV2  {id: string, name: string,tagline: strin
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     website: string;
   }
 
@@ -414,22 +373,9 @@ export interface InnovativeMicroSaasV2  {id: string, name: string,tagline: strin
   {
 
       'No-code smart contract creation',
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: 'smart - contract - automation - platform',
     name: 'Smart Contract Automation Platform',
     tagline: 'Automated smart contract creation and management for businesses',
@@ -439,33 +385,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Innovative platform that enables businesses to create, deploy, and manage smart contracts without coding knowledge. Automates business processes, reduces costs, and ensures transparency.',
     features: [;
       'No - code smart contract creation',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Template library (100+ templates)',
       'Automated contract execution',
       'Multi - blockchain support',
@@ -477,17 +402,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24 / 7 contract management'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📋',
 
     color: 'from - green - 600 to - emerald - 700',
@@ -503,23 +417,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     real_service: true,
     technology: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Blockchain',
       'Smart Contracts',
       'React',
@@ -529,17 +430,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Ethereum',
       'Polygon'
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     integrations: [;
       'QuickBooks',
@@ -571,23 +461,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'blockchain - futuristic',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -602,37 +479,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 289
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Automated customer engagement',
       'Upsell and cross - sell automation',
       'Customer health scoring',
@@ -644,38 +494,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24 / 7 customer success monitoring'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🎯',
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -684,17 +507,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Python',
       'TensorFlow'
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     integrations: [;
       'Salesforce',
@@ -727,23 +539,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'customer - success - futuristic',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -758,37 +557,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 423
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Automated workflow creation',
       'Intelligent task routing',
       'Process optimization suggestions',
@@ -800,38 +572,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24 / 7 workflow management'
     ],
     popular: false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '⚙️',
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -840,17 +585,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Python',
       'TensorFlow'
     ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     integrations: [;
       'Slack',
@@ -873,23 +607,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     roi: 'Average business achieves 300% ROI within 3 months through process automation and efficiency improvements.',
     competitors: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Zapier',
       'Make',
       'IFTTT',
@@ -914,37 +635,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     reviews: 678
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Personalized financial planning',
       'Portfolio optimization algorithms',
       'Risk assessment and management',
@@ -956,38 +650,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       '24 / 7 financial monitoring'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '💰',
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'React',
       'Node && Node.js',
       'PostgreSQL',
@@ -995,19 +662,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'AWS',
       'Python',
       'TensorFlow',
-<<<<<<< HEAD
-<<<<<<< HEAD
-      'Financial APIs',
-    ],
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
       'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.',
@@ -1018,27 +672,14 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },;
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       'Financial APIs'
     ]
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       'Financial APIs'
     ]
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1051,17 +692,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     reviews: 912
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -1100,30 +731,9 @@ export interface InnovativeMicroSaasV2 {
 }
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     integrations: [;
       'Plaid',
       'Yodlee',
@@ -1182,46 +792,53 @@ export interface InnovativeMicroSaasV2 {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
+import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeMicroSaasV2 {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string, email: string,
+    mobile: string,
+    email: string,
     address: string,
-    website: string
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
   rating: number,
-  reviews: number
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
+  reviews: number}
 
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
   {
-
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-;
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     id: 'ai-powered-inventory-optimizer', name: 'AI-Powered Inventory Optimizer',
     tagline: 'Intelligent inventory management with predictive analytics', price: '$299',
     period: '/month',
@@ -1238,43 +855,43 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     price: '$299';
     period: '/month';
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     description: 'Revolutionary inventory management platform that uses AI to predict demand, optimize stock levels, and reduce inventory costs by up to 40%. Perfect for e-commerce, retail, and manufacturing businesses.',
     features: [
       'AI-powered demand forecastingReal-time inventory optimizationAutomated reorder managementMulti-location inventory trackingSupplier performance analyticsSeasonal trend analysisCost optimization algorithmsMobile app and dashboard';
       'API for integrations24/7 inventory monitoring'
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     popular: true, icon: '📦',
     color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
+    id: 'ai-powered-inventory-optimizer',
+    name: 'AI-Powered Inventory Optimizer',
+    tagline: 'Intelligent inventory management with predictive analytics',
+    price: '$299',
+    period: '/month',
+    description: 'Revolutionary inventory management platform that uses AI to predict demand, optimize stock levels, and reduce inventory costs by up to 40%. Perfect for e-commerce, retail, and manufacturing businesses.',
+    features: [
+      'AI-powered demand forecastingReal-time inventory optimizationAutomated reorder managementMulti-location inventory trackingSupplier performance analyticsSeasonal trend analysisCost optimization algorithmsMobile app and dashboardAPI for integrations24/7 inventory monitoring'
+    ],
+    popular: true,
+    icon: '📦',
+    color: 'from-blue-600 to-cyan-700',
+    textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-powered-inventory-optimizer',
     marketPosition: 'Competitive with TradeGecko ($99/month), Zoho Inventory ($99/month). Our advantage: AI-powered optimization, predictive analytics, and cost reduction algorithms.',
     targetAudience: 'E-commerce businesses, Retail stores, Manufacturing companies, Wholesale distributors, Food and beverage companies, Healthcare suppliers',
-    trialDays: 14, setupTime: '1 week',
-    category: 'Innovative Micro SaaS & Business', realService: true,
-    technology: ['AI/MLReactNode.jsPostgreSQLRedisAWSPythonTensorFlow'], integrations: ['ShopifyWooCommerceMagentoQuickBooksXeroSalesforceCustom APIs'],
-    useCases: ['Inventory optimizationDemand forecastingCost reductionSupplier managementMulti-location trackingSeasonal planning'], roi: 'Average customer achieves 300% ROI within 4 months through reduced inventory costs and improved stock management.',
-    competitors: ['TradeGeckoZoho InventoryFishbowlSAP Business OneOracle NetSuite'], marketSize: '$8B market',
-    growthRate: '180% annual growth', variant: 'business-futuristic',
+    trialDays: 14,
+    setupTime: '1 week',
+    category: 'Innovative Micro SaaS & Business',
+    realService: true,
+    technology: ['AI/MLReactNode.jsPostgreSQLRedisAWSPythonTensorFlow'],
+    integrations: ['ShopifyWooCommerceMagentoQuickBooksXeroSalesforceCustom APIs'],
+    useCases: ['Inventory optimizationDemand forecastingCost reductionSupplier managementMulti-location trackingSeasonal planning'],
+    roi: 'Average customer achieves 300% ROI within 4 months through reduced inventory costs and improved stock management.',
+    competitors: ['TradeGeckoZoho InventoryFishbowlSAP Business OneOracle NetSuite'],
+    marketSize: '$8B market',
+    growthRate: '180% annual growth',
+    variant: 'business-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
       website: 'https://ziontechgroup.com';
@@ -1293,16 +910,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 ;
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
@@ -1310,14 +917,11 @@ origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     popular: true;
     icon: '📦';
     color: 'from-blue-600 to-cyan-700';
@@ -1341,200 +945,181 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready AI-powered inventory optimization platform with predictive analytics, real-time monitoring, and comprehensive integration capabilities. Includes custom AI model training.',
-    launchDate: '2024-02-01';
-    customers: 456;
-    rating: 4.8;
-    reviews: 567
-  },
+    launchDate: '2024-02-01',
+    customers: 456,
+    rating: 4.8,
+    reviews: 567},
   {
-    id: 'smart-contract-automation-platform';
-    name: 'Smart Contract Automation Platform';
-    tagline: 'Automated smart contract creation and management for businesses';
-    price: '$199';
-    period: '/month';
+    id: 'smart-contract-automation-platform',
+    name: 'Smart Contract Automation Platform',
+    tagline: 'Automated smart contract creation and management for businesses',
+    price: '$199',
+    period: '/month',
     description: 'Innovative platform that enables businesses to create, deploy, and manage smart contracts without coding knowledge. Automates business processes, reduces costs, and ensures transparency.',
     features: [
-      'No-code smart contract creationTemplate library (100+ templates)Automated contract executionMulti-blockchain supportLegal compliance toolsContract monitoring and analyticsIntegration with business systemsMobile app access';
-      'API for developers24/7 contract management'
-    ];
-    popular: true;
-    icon: '📋';
-    color: 'from-green-600 to-emerald-700';
-    textColor: 'text-green-400';
-    link: 'https://ziontechgroup.com/smart-contract-automation-platform';
+      'No-code smart contract creationTemplate library (100+ templates)Automated contract executionMulti-blockchain supportLegal compliance toolsContract monitoring and analyticsIntegration with business systemsMobile app accessAPI for developers24/7 contract management'
+    ],
+    popular: true,
+    icon: '📋',
+    color: 'from-green-600 to-emerald-700',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/smart-contract-automation-platform',
     marketPosition: 'Competitive with OpenZeppelin ($free), ConsenSys ($500+/month). Our advantage: No-code interface, business templates, and automated execution.',
     targetAudience: 'Small businesses, Legal firms, Real estate companies, Supply chain companies, Financial services, Healthcare providers',
-    trialDays: 21;
-    setupTime: '1 week';
-    category: 'Innovative Micro SaaS & Blockchain';
-    realService: true;
-    technology: ['BlockchainSmart ContractsReactNode.jsSolidityWeb3.jsEthereumPolygon'];
-    integrations: ['QuickBooksSalesforceHubSpotStripePayPalCustom business systemsBlockchain networks'];
-    useCases: ['Business automationLegal contractsSupply chain managementPayment automationAsset managementCompliance tracking'];
-    roi: 'Average business achieves 400% ROI within 3 months through process automation and reduced legal costs.';
-    competitors: ['OpenZeppelinConsenSysChainlinkTruffleHardhat'];
-    marketSize: '$3B market';
-    growthRate: '250% annual growth';
-    variant: 'blockchain-futuristic';
+    trialDays: 21,
+    setupTime: '1 week',
+    category: 'Innovative Micro SaaS & Blockchain',
+    realService: true,
+    technology: ['BlockchainSmart ContractsReactNode.jsSolidityWeb3.jsEthereumPolygon'],
+    integrations: ['QuickBooksSalesforceHubSpotStripePayPalCustom business systemsBlockchain networks'],
+    useCases: ['Business automationLegal contractsSupply chain managementPayment automationAsset managementCompliance tracking'],
+    roi: 'Average business achieves 400% ROI within 3 months through process automation and reduced legal costs.',
+    competitors: ['OpenZeppelinConsenSysChainlinkTruffleHardhat'],
+    marketSize: '$3B market',
+    growthRate: '250% annual growth',
+    variant: 'blockchain-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready smart contract automation platform with no-code interface, business templates, and multi-blockchain support. Includes custom contract development services.',
-    launchDate: '2024-01-15';
-    customers: 234;
-    rating: 4.7;
-    reviews: 289
-  },
+    launchDate: '2024-01-15',
+    customers: 234,
+    rating: 4.7,
+    reviews: 289},
   {
-    id: 'ai-powered-customer-success-platform';
-    name: 'AI-Powered Customer Success Platform';
-    tagline: 'Intelligent customer success management with predictive analytics';
-    price: '$399';
-    period: '/month';
+    id: 'ai-powered-customer-success-platform',
+    name: 'AI-Powered Customer Success Platform',
+    tagline: 'Intelligent customer success management with predictive analytics',
+    price: '$399',
+    period: '/month',
     description: 'Advanced customer success platform that uses AI to predict customer churn, identify upsell opportunities, and automate customer engagement. Increases customer lifetime value by 200%.',
     features: [
-      'AI-powered churn predictionAutomated customer engagementUpsell and cross-sell automationCustomer health scoringPersonalized success plansReal-time customer insightsIntegration with CRM systemsMobile app and dashboard';
-      'Advanced analytics and reporting24/7 customer success monitoring'
-    ];
-    popular: true;
-    icon: '🎯';
-    color: 'from-purple-600 to-pink-700';
-    textColor: 'text-purple-400';
-    link: 'https://ziontechgroup.com/ai-powered-customer-success-platform';
+      'AI-powered churn predictionAutomated customer engagementUpsell and cross-sell automationCustomer health scoringPersonalized success plansReal-time customer insightsIntegration with CRM systemsMobile app and dashboardAdvanced analytics and reporting24/7 customer success monitoring'
+    ],
+    popular: true,
+    icon: '🎯',
+    color: 'from-purple-600 to-pink-700',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/ai-powered-customer-success-platform',
     marketPosition: 'Competitive with Gainsight ($500+/month), Totango ($500+/month). Our advantage: AI-powered insights, automated engagement, and predictive analytics.',
     targetAudience: 'SaaS companies, Subscription businesses, E-commerce companies, Service providers, Technology companies, Financial services',
-    trialDays: 21;
-    setupTime: '2 weeks';
-    category: 'Innovative Micro SaaS & Customer Success';
-    realService: true;
-    technology: ['AI/MLReactNode.jsPostgreSQLRedisAWSPythonTensorFlow'];
-    integrations: ['SalesforceHubSpotPipedriveIntercomZendeskSlackMicrosoft TeamsCustom APIs'];
-    useCases: ['Customer success managementChurn preventionRevenue expansionCustomer engagementSuccess planningPerformance analytics'];
-    roi: 'Average SaaS company achieves 500% ROI within 6 months through increased customer lifetime value and reduced churn.';
-    competitors: ['GainsightTotangoClientSuccessPlanhatVitally'];
-    marketSize: '$5B market';
-    growthRate: '200% annual growth';
-    variant: 'customer-success-futuristic';
+    trialDays: 21,
+    setupTime: '2 weeks',
+    category: 'Innovative Micro SaaS & Customer Success',
+    realService: true,
+    technology: ['AI/MLReactNode.jsPostgreSQLRedisAWSPythonTensorFlow'],
+    integrations: ['SalesforceHubSpotPipedriveIntercomZendeskSlackMicrosoft TeamsCustom APIs'],
+    useCases: ['Customer success managementChurn preventionRevenue expansionCustomer engagementSuccess planningPerformance analytics'],
+    roi: 'Average SaaS company achieves 500% ROI within 6 months through increased customer lifetime value and reduced churn.',
+    competitors: ['GainsightTotangoClientSuccessPlanhatVitally'],
+    marketSize: '$5B market',
+    growthRate: '200% annual growth',
+    variant: 'customer-success-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready AI-powered customer success platform with predictive analytics, automated engagement, and comprehensive CRM integration. Includes custom AI model training.',
-    launchDate: '2024-02-15';
-    customers: 345;
-    rating: 4.8;
-    reviews: 423
-  },
+    launchDate: '2024-02-15',
+    customers: 345,
+    rating: 4.8,
+    reviews: 423},
   {
-    id: 'intelligent-workflow-automation';
-    name: 'Intelligent Workflow Automation';
-    tagline: 'AI-powered workflow automation for business processes';
-    price: '$149';
-    period: '/month';
-    description: 'Smart workflow automation platform that uses AI to analyze business processes and automatically create optimized workflows. Reduces manual work by 80% and improves efficiency.';
+    id: 'intelligent-workflow-automation',
+    name: 'Intelligent Workflow Automation',
+    tagline: 'AI-powered workflow automation for business processes',
+    price: '$149',
+    period: '/month',
+    description: 'Smart workflow automation platform that uses AI to analyze business processes and automatically create optimized workflows. Reduces manual work by 80% and improves efficiency.',
     features: [
-      'AI-powered process analysisAutomated workflow creationIntelligent task routingProcess optimization suggestionsIntegration with business toolsReal-time workflow monitoringCustom automation rulesMobile app access';
-      'API for developers24/7 workflow management'
-    ];
-    popular: false;
-    icon: '⚙️';
-    color: 'from-gray-600 to-slate-700';
-    textColor: 'text-gray-400';
-    link: 'https://ziontechgroup.com/intelligent-workflow-automation';
+      'AI-powered process analysisAutomated workflow creationIntelligent task routingProcess optimization suggestionsIntegration with business toolsReal-time workflow monitoringCustom automation rulesMobile app accessAPI for developers24/7 workflow management'
+    ],
+    popular: false,
+    icon: '⚙️',
+    color: 'from-gray-600 to-slate-700',
+    textColor: 'text-gray-400',
+    link: 'https://ziontechgroup.com/intelligent-workflow-automation',
     marketPosition: 'Competitive with Zapier ($20+/month), Make ($9+/month). Our advantage: AI-powered optimization, intelligent routing, and process analysis.',
     targetAudience: 'Small businesses, Operations teams, HR departments, Marketing teams, Sales teams, Administrative staff',
-    trialDays: 14;
-    setupTime: '1 week';
-    category: 'Innovative Micro SaaS & Automation';
-    realService: true;
-    technology: ['AI/MLReactNode.jsPostgreSQLRedisAWSPythonTensorFlow'];
-    integrations: ['SlackMicrosoft TeamsGmailGoogle WorkspaceMicrosoft 365SalesforceHubSpotCustom APIs'];
-    useCases: ['Process automationTask managementWorkflow optimizationTeam collaborationDocument automationApproval processes'];
-    roi: 'Average business achieves 300% ROI within 3 months through process automation and efficiency improvements.';
-    competitors: ['ZapierMakeIFTTTMicrosoft Power AutomateAutomate.io'];
-    marketSize: '$6B market';
-    growthRate: '180% annual growth';
-    variant: 'automation-futuristic';
+    trialDays: 14,
+    setupTime: '1 week',
+    category: 'Innovative Micro SaaS & Automation',
+    realService: true,
+    technology: ['AI/MLReactNode.jsPostgreSQLRedisAWSPythonTensorFlow'],
+    integrations: ['SlackMicrosoft TeamsGmailGoogle WorkspaceMicrosoft 365SalesforceHubSpotCustom APIs'],
+    useCases: ['Process automationTask managementWorkflow optimizationTeam collaborationDocument automationApproval processes'],
+    roi: 'Average business achieves 300% ROI within 3 months through process automation and efficiency improvements.',
+    competitors: ['ZapierMakeIFTTTMicrosoft Power AutomateAutomate.io'],
+    marketSize: '$6B market',
+    growthRate: '180% annual growth',
+    variant: 'automation-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready intelligent workflow automation platform with AI-powered optimization, intelligent routing, and comprehensive business tool integration. Includes custom automation development.',
-    launchDate: '2024-01-20';
-    customers: 567;
-    rating: 4.7;
-    reviews: 678
-  },
+    launchDate: '2024-01-20',
+    customers: 567,
+    rating: 4.7,
+    reviews: 678},
   {
-    id: 'ai-powered-financial-advisor';
-    name: 'AI-Powered Financial Advisor';
-    tagline: 'Personalized financial advice and portfolio management with AI';
-    price: '$99';
-    period: '/month';
+    id: 'ai-powered-financial-advisor',
+    name: 'AI-Powered Financial Advisor',
+    tagline: 'Personalized financial advice and portfolio management with AI',
+    price: '$99',
+    period: '/month',
     description: 'Intelligent financial advisory platform that provides personalized investment advice, portfolio optimization, and financial planning. Uses AI to analyze market trends and optimize investment strategies.',
     features: [
-      'AI-powered investment recommendationsPersonalized financial planningPortfolio optimization algorithmsRisk assessment and managementMarket trend analysisAutomated rebalancingTax optimization strategiesMobile app and dashboard';
-      'Integration with financial accounts24/7 financial monitoring'
-    ];
-    popular: true;
-    icon: '💰';
-    color: 'from-yellow-600 to-orange-700';
-    textColor: 'text-yellow-400';
-    link: 'https://ziontechgroup.com/ai-powered-financial-advisor';
+      'AI-powered investment recommendationsPersonalized financial planningPortfolio optimization algorithmsRisk assessment and managementMarket trend analysisAutomated rebalancingTax optimization strategiesMobile app and dashboardIntegration with financial accounts24/7 financial monitoring'
+    ],
+    popular: true,
+    icon: '💰',
+    color: 'from-yellow-600 to-orange-700',
+    textColor: 'text-yellow-400',
+    link: 'https://ziontechgroup.com/ai-powered-financial-advisor',
     marketPosition: 'Competitive with Betterment ($0.25%/year), Wealthfront ($0.25%/year). Our advantage: AI-powered advice, personalized planning, and comprehensive financial management.',
     targetAudience: 'Individual investors, Small business owners, Financial advisors, Investment firms, Wealth management companies, Financial institutions',
-    trialDays: 30;
-    setupTime: '1 week';
-    category: 'Innovative Micro SaaS & Finance';
-    realService: true;
-    technology: ['AI/MLReactNode.jsPostgreSQLRedisAWSPythonTensorFlow', 'Financial APIs'],
-    integrations: ['PlaidYodleeFinancial institutionsTrading platformsTax softwareAccounting systemsCustom APIs'];
-    useCases: ['Investment managementFinancial planningPortfolio optimizationRisk managementTax optimizationRetirement planning'];
-    roi: 'Average investor achieves 200% ROI within 12 months through optimized investment strategies and reduced fees.';
-    competitors: ['BettermentWealthfrontRobinhoodAcornsPersonal Capital'];
-    marketSize: '$15B market';
-    growthRate: '220% annual growth';
-    variant: 'finance-futuristic';
+    trialDays: 30,
+    setupTime: '1 week',
+    category: 'Innovative Micro SaaS & Finance',
+    realService: true,
+    technology: ['AI/MLReactNode.jsPostgreSQLRedisAWSPythonTensorFlowFinancial APIs'],
+    integrations: ['PlaidYodleeFinancial institutionsTrading platformsTax softwareAccounting systemsCustom APIs'],
+    useCases: ['Investment managementFinancial planningPortfolio optimizationRisk managementTax optimizationRetirement planning'],
+    roi: 'Average investor achieves 200% ROI within 12 months through optimized investment strategies and reduced fees.',
+    competitors: ['BettermentWealthfrontRobinhoodAcornsPersonal Capital'],
+    marketSize: '$15B market',
+    growthRate: '220% annual growth',
+    variant: 'finance-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.',
-    launchDate: '2024-02-01';
-    customers: 789;
-    rating: 4.8;
-    reviews: 912
-  }
-];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    launchDate: '2024-02-01',
+    customers: 789,
+    rating: 4.8,
+    reviews: 912}
+],

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
-=======
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\";const partners = [ { name: "Partner: A,",logo: "https:"""";";'"'";
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\";
@@ -24,10 +15,6 @@ const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",const
 const partners = [ { name: "Partner: A,",logo: "https:"""";",'"'";
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",const partners = [ { name: "Partner: A,",logo: "https:"""";",'"'";
 const partners = [ { name: "Partner: A,",logo: "https:"""";";'"'"
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
@@ -39,21 +26,14 @@ const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 :temp_exclude/src.disabled/components/summit/PartnersSection.js.jsx
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"

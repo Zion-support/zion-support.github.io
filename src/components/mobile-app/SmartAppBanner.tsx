@@ -1,35 +1,22 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import React, { useState, useEffect } from 'react';
 import { safeStorage  } from '@/utils/safeStorage';
 import { X, ArrowRight  } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
-import { useIsMobile  } from '@/hooks/use-mobile';
-import React, { useState, useEffect } from "react",import { safeStorage } from "@/utils/safeStorage",interface SmartAppBannerProps  {appName?: string;
-=======
 import { useIsMobile } from '@/hooks/use-mobile';
 
 import React, { useState, useEffect } from "react",
 import { safeStorage } from "@/utils/safeStorage",
+import React, { useState, useEffect } from "react";
+import { safeStorage } from "@/utils/safeStorage";
 import { X, ArrowRight } from 'lucide-react'
 import Link from "next/link";
-
 import { useIsMobile } from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
   appName?: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-}
-<<<<<<< HEAD
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({}
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({const [isVisible, setIsVisible] = useState(false),const isMobile = useIsMobile(),useEffect(() => {// Only show banner on mobile devices and if it hasn't been dismissed;
-    if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {const timer = setTimeout(() => {setIsVisible(true)return () => clearTimeout(timer)}
-=======
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
 
 }
@@ -144,7 +131,6 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
       }, delay);      ;
       return () => clearTimeout(timer);
     }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     return undefined;
   }, [isMobile, delay])const dismissBanner = () => {setIsVisible(false)safeStorage.setItem("smartBannerDismissed", "true")}
   const resetBanner = () => {safeStorage.removeItem("smartBannerDismissed")setIsVisible(true)// Only render on mobile devices;
@@ -252,11 +238,6 @@ if ( {) {$2;
           </button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>)}}
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-=======
     </div>);
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d

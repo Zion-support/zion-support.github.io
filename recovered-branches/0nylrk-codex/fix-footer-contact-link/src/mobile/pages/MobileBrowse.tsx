@@ -1,15 +1,3 @@
-// Mock data for demonstration
-
-const jobsData = [
-  {
-
-import React, { useState } from "react";
-import {MobileHeader} from "../components/common/MobileHeader";
-import {BottomNavigation} from "../components/common/BottomNavigation";
-import {BrowseFilters} from "../components/browse/BrowseFilters";
-import {BrowseCards} from "../components/browse/BrowseCards";
-import {Button} from "@/components/ui/button";
-import {useAuth} from "@/hooks/useAuth";
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -17,86 +5,8 @@ import { BrowseFilters } from "../components/browse/BrowseFilters",
 import { BrowseCards } from "../components/browse/BrowseCards",
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
 // Mock data for demonstration
-
-const jobsData = [
-  {
-    id: "1"
-    title: "Senior React Developer"
-    subtitle: "TechCorp Inc."
-    description: "Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required."
-    location: "Remote"
-    badges: ["React", "TypeScript", "GraphQL"];
-    price: "$70-90/hr"
-    timePosted: "2 days ago"
-    match: 92
-  }
-  {
-    id: "2"
-    title: "UX/UI Designer"
-    subtitle: "Creative Studios"
-    description: "Seeking a creative UI/UX designer with experience in mobile app design. Portfolio must include at least 3 shipped applications."
-    location: "New York, US (Hybrid)";
-    badges: ["Figma", "Design System", "Mobile Apps"];
-    price: "$60-80/hr"
-    timePosted: "4 hours ago"
-    match: 87
-  }
-  {
-    id: "3"
-    title: "Full Stack Engineer"
-    subtitle: "StartupXYZ"
-    description: "Looking for a full stack engineer who can work with React, Node.js and AWS. Must have experience building scalable applications.";
-    location: "San Francisco, CA";
-    badges: ["React", "Node.js", "AWS"];
-    price: "$75-100/hr"
-    timePosted: "1 week ago"
-    match: 78
-  }
-];
-const talentsData = [
-  {
-    id: "1"
-    title: "Sarah Johnson"
-    subtitle: "UX Designer • 5 years exp"
-    description: "Experienced UX designer specialized in creating intuitive mobile and web experiences. Former lead designer at DesignCorp."
-    location: "London, UK";
-    badges: ["UI/UX", "Figma", "User Testing"];
-    price: "$75/hr"
-    image: ""
-    match: 95
-  }
-  {
-    id: "2"
-    title: "Michael Chen"
-    subtitle: "Full Stack Dev • 8 years exp"
-    description: "Full stack developer with expertise in React, Node.js and AWS. Built multiple applications from ground up.";
-    location: "Remote"
-    badges: ["React", "Node.js", "AWS"];
-    price: "$90/hr"
-    image: ""
-    match: 89
-  }
-  {
-    id: "3"
-    title: "Elena Rodriguez"
-    subtitle: "Project Manager • 10 years exp"
-    description: "PMP certified project manager with experience in leading agile teams. Successfully delivered over 15 large-scale projects."
-    location: "Madrid, Spain";
-    badges: ["Agile", "Scrum", "JIRA"];
-    price: "$85/hr"
-    image: ""
-    match: 82
-  }
-];
-export function MobileBrowse() {
-  const { user } = useAuth();
-  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
-<<<<<<< HEAD
-  const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
-    id: "1",
+const jobsData = $2;
     title: "Senior React Developer",
     subtitle: "TechCorp Inc.",
     description: "Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required.",
@@ -104,8 +14,7 @@ export function MobileBrowse() {
     badges: ["React", "TypeScript", "GraphQL"],
     price: "$70-90/hr",
     timePosted: "2 days ago",
-    match: 92
-  },
+    match: 92},
   {
     id: "2",
     title: "UX/UI Designer",
@@ -115,8 +24,7 @@ export function MobileBrowse() {
     badges: ["Figma", "Design System", "Mobile Apps"],
     price: "$60-80/hr",
     timePosted: "4 hours ago",
-    match: 87
-  },
+    match: 87},
   {
     id: "3",
     title: "Full Stack Engineer",
@@ -126,13 +34,10 @@ export function MobileBrowse() {
     badges: ["React", "Node.js", "AWS"],
     price: "$75-100/hr",
     timePosted: "1 week ago",
-    match: 78
-  }
+    match: 78}
 ],
 
-const talentsData = [
-  {
-    id: "1",
+const talentsData = $2;
     title: "Sarah Johnson",
     subtitle: "UX Designer • 5 years exp",
     description: "Experienced UX designer specialized in creating intuitive mobile and web experiences. Former lead designer at DesignCorp.",
@@ -140,8 +45,7 @@ const talentsData = [
     badges: ["UI/UX", "Figma", "User Testing"],
     price: "$75/hr",
     image: "",
-    match: 95
-  },
+    match: 95},
   {
     id: "2",
     title: "Michael Chen",
@@ -151,8 +55,7 @@ const talentsData = [
     badges: ["React", "Node.js", "AWS"],
     price: "$90/hr",
     image: "",
-    match: 89
-  },
+    match: 89},
   {
     id: "3",
     title: "Elena Rodriguez",
@@ -162,15 +65,7 @@ const talentsData = [
     badges: ["Agile", "Scrum", "JIRA"],
     price: "$85/hr",
     image: "",
-    match: 82
-  }
-],
-
-
-export function MobileBrowse() {;
-=======
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");export function MobileBrowse() {;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const { user } = useAuth();
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
@@ -179,17 +74,19 @@ export function MobileBrowse() {
   const isClient = user?.userType === 'employer' || user?.userType === 'buyer',
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
   
-<<<<<<< HEAD
-  const handleViewDetails = (id: string) => {
-    // // // console.log(`View details for item ${id}`),
-    // Navigate to details page
-  }
+    match: 82}
+],
 
+export function MobileBrowse() {
+  const { user } = useAuth($2);
+  const isClient = $2;
+  const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs"),
+  
+  const handleViewDetails = (id: string) => {
+    console.log($2);
+    // Navigate to details page
   },
   
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (
     <div className="min-h-screen">
       <MobileHeader
@@ -217,67 +114,27 @@ export function MobileBrowse() {
       <BrowseFilters type={browseType} />
       <div className="py-4 px-4">
         <BrowseCards
-<<<<<<< HEAD
-
-          items={browseType === "jobs" ? jobsData : talentsData}
-import React, { useState } from "react",;
-import { MobileHeader } from "../components/common/MobileHeader",;
-import { BottomNavigation } from "../components/common/BottomNavigation",;
-import { BrowseFilters } from "../components/browse/BrowseFilters",;
-import { BrowseCards } from "../components/browse/BrowseCards",;
-import { Button } from "@/components/ui/button",;
-import { useAuth } from "@/hooks/useAuth",;
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Mock data for demonstration;
 const jobsData = [;
   {;
     id: "1",;
     title: "Senior React Developer",;
-<<<<<<< HEAD
-    subtitle: "TechCorp Inc.",;
-    description: "Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required.",;
-=======
     subtitle: "TechCorp Inc.",,
   description: "Looking for a skilled React developer to join our team for a long-term project. Experience with TypeScript and GraphQL required.",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     location: "Remote",;
     badges: ["React", "TypeScript", "GraphQL"];
     price: "$70-90/hr",;
     timePosted: "2 days ago",;
-<<<<<<< HEAD
-    match: 92;
-  };
-  {;
-    id: "2",;
-    title: "UX/UI Designer",;
-    subtitle: "Creative Studios",;
-    description: "Seeking a creative UI/UX designer with experience in mobile app design. Portfolio must include at least 3 shipped applications.",;
-=======
     match: 92
 };  {;
     id: "2",;
     title: "UX/UI Designer",;
     subtitle: "Creative Studios",,
   description: "Seeking a creative UI/UX designer with experience in mobile app design. Portfolio must include at least 3 shipped applications.",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     location: "New York, US (Hybrid)";
     badges: ["Figma", "Design System", "Mobile Apps"];
     price: "$60-80/hr",;
     timePosted: "4 hours ago",;
-<<<<<<< HEAD
-    match: 87;
-  };
-  {;
-    id: "3",;
-    title: "Full Stack Engineer",;
-    subtitle: "StartupXYZ",;
-    description: "Looking for a full stack engineer who can work with React, Node && Node.js and AWS. Must have experience building scalable applications.";
-    location: "San Francisco, CA";
-    badges: ["React", "Node && Node.js", "AWS"];
-    price: "$75-100/hr",;
-=======
     match: 87
 };  {;
     id: "3",;
@@ -286,62 +143,30 @@ const jobsData = [;
   description: "Looking for a full stack engineer who can work with React, Node && Node.js and AWS. Must have experience building scalable applications.";
     location: "San Francisco, CA";
     badges: ["React", "Node && Node.js", "AWS"];    price: "$75-100/hr",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     timePosted: "1 week ago",;
     match: 78;
   }
 ];
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const talentsData = [;
   {;
     id: "1",;
     title: "Sarah Johnson",;
-<<<<<<< HEAD
-    subtitle: "UX Designer • 5 years exp",;
-    description: "Experienced UX designer specialized in creating intuitive mobile and web experiences. Former lead designer at DesignCorp.",;
-=======
     subtitle: "UX Designer • 5 years exp",,
   description: "Experienced UX designer specialized in creating intuitive mobile and web experiences. Former lead designer at DesignCorp.",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     location: "London, UK";
     badges: ["UI/UX", "Figma", "User Testing"];
     price: "$75/hr",;
     image: "",;
-<<<<<<< HEAD
-    match: 95;
-  };
-  {;
-    id: "2",;
-    title: "Michael Chen",;
-    subtitle: "Full Stack Dev • 8 years exp",;
-    description: "Full stack developer with expertise in React, Node && Node.js and AWS. Built multiple applications from ground up.";
-=======
     match: 95
 };  {;
     id: "2",;
     title: "Michael Chen",;
     subtitle: "Full Stack Dev • 8 years exp",,
   description: "Full stack developer with expertise in React, Node && Node.js and AWS. Built multiple applications from ground up.";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     location: "Remote",;
     badges: ["React", "Node && Node.js", "AWS"];
     price: "$90/hr",;
     image: "",;
-<<<<<<< HEAD
-    match: 89;
-  };
-  {;
-    id: "3",;
-    title: "Elena Rodriguez",;
-    subtitle: "Project Manager • 10 years exp",;
-    description: "PMP certified project manager with experience in leading agile teams. Successfully delivered over 15 large-scale projects.",;
-    location: "Madrid, Spain";
-    badges: ["Agile", "Scrum", "JIRA"];
-    price: "$85/hr",;
-=======
     match: 89
 };  {;
     id: "3",;
@@ -350,59 +175,18 @@ const talentsData = [;
   description: "PMP certified project manager with experience in leading agile teams. Successfully delivered over 15 large-scale projects.",;
     location: "Madrid, Spain";
     badges: ["Agile", "Scrum", "JIRA"];    price: "$85/hr",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     image: "",;
     match: 82;
   }
 ];
 
 export function MobileBrowse() {;
-<<<<<<< HEAD
-  const { user } = useAuth();
   const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
   const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
-
-
-  const handleViewDetails = (id: string) => {;
-    console && console.log(`View details for item ${id}`);
-    // Navigate to details page;
-  };
-
-
-  return (
-    <div className="min-h-screen">;
-      <MobileHeader
-        title={browseType === "jobs" ? "Browse Jobs" : "Browse Talents"}
-        showBack
-
-      />;
-
-      <div className="flex justify-center my-3 px-4">;
-        <div className="inline-flex rounded-full border border-border p-1">;
-
-          <Button
-            variant={browseType === "jobs" ? "default" : "ghost"}
-            className="rounded-full"
-          <Button
-            variant={browseType === "jobs" ? "default" : "ghost"}
-            className="rounded-full"
-=======
-  const isClient = user?.userType === 'employer' |user?.userType === 'buyer';
-  const [browseType, setBrowseType] = useState<"jobs" | "talents">(isClient ? "talents" : "jobs");
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             onClick={() => setBrowseType("jobs")}
           >;
             Jobs;
           </Button>;
-<<<<<<< HEAD
-          <Button
-            variant={browseType === "talents" ? "default" : "ghost"}
-            className="rounded-full"
-            onClick={() => setBrowseType("talents")}
-
-import React, { useState } from './react';
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';
 import { BrowseFilters } from '../components / browse / BrowseFilters';
@@ -496,58 +280,29 @@ function MobileBrowse() {
   }
 ;
   return (
-<<<<<<< HEAD
-    <div className="min - h-screen">;
-=======
     <div className="min-h-screen">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <MobileHeader;
         title={browse_type === "jobs" ? "Browse Jobs" : "Browse Talents"}
         show_back;
       />;
-<<<<<<< HEAD
-      <div className="flex justify - center my - 3 px - 4">;
-        <div className="inline - flex rounded - full border border - border p - 1">;
-          <Button;
-            variant={browse_type === "jobs" ? "default" : "ghost"}
-            className="rounded - full";
-=======
       <div className="flex justify - center my - 3 px-4">;
         <div className="inline - flex rounded - full border border - border p-1">;
           <Button;
             variant={browse_type === "jobs" ? "default" : "ghost"}
             className="rounded-full";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             on_click={() => setBrowseType ("jobs")}
           >;
             Jobs;
           </Button>;
           <Button;
             variant={browse_type === "talents" ? "default" : "ghost"}
-<<<<<<< HEAD
-            className="rounded - full";
-            on_click={() => setBrowseType ("talents")}
-
-          >;
-=======
             className="rounded-full";
             on_click={() => setBrowseType ("talents")}          >;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             Talents;
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-
-      <BrowseFilters type={browseType} />;
-      <div className="py-4 px-4">;
-        <BrowseCards;
-
-
-          items={browseType === "jobs" ? jobsData : talentsData}
-=======
         <BrowseCards          items={browseType === "jobs" ? jobsData : talentsData}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           type={browseType}
           onViewDetails={handleViewDetails}
 
@@ -564,11 +319,7 @@ function MobileBrowse() {
           type={browseType}
           onViewDetails={handleViewDetails}
       <BrowseFilters type={browse_type} />;
-<<<<<<< HEAD
-      <div className="py - 4 px - 4">;
-=======
       <div className="py - 4 px-4">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <BrowseCards;
           items={browse_type === "jobs" ? jobs_data : talents_data}
           type={browse_type}
@@ -578,31 +329,6 @@ function MobileBrowse() {
       <BottomNavigation />;
     </div>);
 }
-<<<<<<< HEAD
-      ;
-      <BrowseFilters type={browseType} />;
-      ;
-      <div className="py-4 px-4">;
-        <BrowseCards;
-          items={browseType === "jobs" ? jobsData :talentsData}
-          type={browseType}
-          onViewDetails={handleViewDetails}
-        />;
-      </div>;
-      ;
-      <BottomNavigation />;
-    </div>;
-  ),;}
- };
-return (<div className="min-h-screen" > <MobileHeader title= {
-  browseType === "jobs" ? "Browse Jobs" : "Browse Talents" 
-}> <Button > Jobs </Button> <Button > Talents </Button> </div> </div> <BrowseFilters type= {
-  browseType 
-}/> <div className="py-4 px-4" > <BrowseCards /> </div> <BottomNavigation /> </div>) 
-}
-      <BrowseFilters type={browseType} />;
-      <div className="py-4 px-4">;
-        <BrowseCards;
           items={browseType === "jobs" ? jobsData : talentsData}
           type={browseType}
           onViewDetails={handleViewDetails}
@@ -612,5 +338,3 @@ return (<div className="min-h-screen" > <MobileHeader title= {
     </div>
   )
 }
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

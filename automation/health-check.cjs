@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 #!/usr/bin/env node
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
-=======
 console.log('🏥 Running Health Check...');
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const checks = [
   { name: 'Build Status', command: 'npm run build' },
   { name: 'Test Status', command: 'npm run test:smoke' },
@@ -36,44 +20,18 @@ checks.forEach(check => {
     console.log(`❌ ${check.name}: FAILED`);
   }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": new Date().toISOString(),
-  "checks": {},
-  "status": 'healthy'};
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
-=======
 });
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 #!/usr/bin/env node
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
 const fs = require("fs");
 const path = require("path");
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
@@ -81,15 +39,9 @@ class HealthChecker {
     this.errors = [];
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   log(message) {
     console.log(`🏥 [Health Check] ${message}`);
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 #!/usr/bin/env node
 
 /**
@@ -97,8 +49,6 @@ class HealthChecker {
  * Monitors application health and provides alerts
  */
 
-<<<<<<< HEAD
-=======
 const healthReport = {
     timestamp: new Date().toISOString(),
     status: 'healthy',
@@ -143,7 +93,6 @@ class HealthCheckMonitor {
 
   async runCommand(command, description) {
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     try {
       this.log(`Running: ${description}`);
       const output = execSync(command, {
@@ -158,8 +107,6 @@ class HealthCheckMonitor {
       this.log(`❌ ${description} failed: ${error.message}`, 'ERROR');
       return { success: false, error: error.message };
     }
-<<<<<<< HEAD
-=======
   }
 
   async checkApplicationHealth() {
@@ -183,109 +130,10 @@ class HealthCheckMonitor {
     
     if (healthy) {
       this.log('✅ Application is healthy');
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     } else {
       this.log('❌ Application health issues detected', 'ERROR');
     }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-// Check disk space
-runCheck('Disk Space', () => {
-    try {
-        const stats = execSync('df -h .', { encoding: 'utf8' });
-        const lines = stats.trim().split('\n');
-        const dataLine = lines[lines.length - 1];
-        const parts = dataLine.split(/\s+/);
-        const usage = parseInt(parts[4].replace('%', ''));
-        
-        if (usage < 80) {
-            return {
-                status: 'pass',
-                message: `Disk usage is healthy (${usage}%)`,
-                usage: usage
-            };
-        } else if (usage < 95) {
-            return {
-                status: 'warning',
-                message: `Disk usage is getting high (${usage}%)`,
-                usage: usage
-            };
-        } else {
-            return {
-                status: 'fail',
-                message: `Disk usage is critical (${usage}%)`,
-                usage: usage
-            };
-        }
-    } catch (error) {
-        return {
-            status: 'warning',
-            message: 'Could not check disk space'
-        };
-    }
-});
-
-// Check memory usage
-runCheck('Memory Usage', () => {
-    try {
-        const stats = execSync('free -m', { encoding: 'utf8' });
-        const lines = stats.trim().split('\n');
-        const memLine = lines[1];
-        const parts = memLine.split(/\s+/);
-        const total = parseInt(parts[1]);
-        const used = parseInt(parts[2]);
-        const usage = Math.round((used / total) * 100);
-        
-        if (usage < 80) {
-            return {
-                status: 'pass',
-                message: `Memory usage is healthy (${usage}%)`,
-                usage: usage,
-                total: total,
-                used: used
-            };
-        } else if (usage < 95) {
-            return {
-                status: 'warning',
-                message: `Memory usage is getting high (${usage}%)`,
-                usage: usage,
-                total: total,
-                used: used
-            };
-        } else {
-            return {
-                status: 'fail',
-                message: `Memory usage is critical (${usage}%)`,
-                usage: usage,
-                total: total,
-                used: used
-            };
-        }
-    } catch (error) {
-        return {
-            status: 'warning',
-            message: 'Could not check memory usage'
-        };
-    }
-});
-
-// Determine overall status
-if (healthReport.summary.failed > 0) {
-    healthReport.status = 'unhealthy';
-} else if (healthReport.summary.warnings > 0) {
-    healthReport.status = 'degraded';
-}
-
-// Save health report
-const reportPath = 'health-check-report.json';
-fs.writeFileSync(reportPath, JSON.stringify(healthReport, null, 2));
-
-console.log('\n📊 Health Check Summary');
-console.log('=======================');
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 console.log(`Total Checks: ${healthReport.summary.total}`);
 console.log(`✅ Passed: ${healthReport.summary.passed}`);
 console.log(`⚠️  Warnings: ${healthReport.summary.warnings}`);
@@ -551,7 +399,6 @@ origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
     recommendations.push('Set up automated alerts for critical issues');
     
     return recommendations;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
   }
 
   async check() {
@@ -581,19 +428,12 @@ if (require.main === module) {
   checker.check().catch(console.error);
 }
 
-<<<<<<< HEAD
-module.exports = HealthChecker;
-=======
 module.exports = HealthCheckMonitor;
 
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node
 const { execSync } = require('child_process');
 
 console.log('🏥 Running Health Check...');
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 const checks = [
   { name: 'Build Status', command: 'npm run build' },
@@ -610,44 +450,15 @@ checks.forEach(check => {
     console.log(`❌ ${check.name}: FAILED`);
   }
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
-<<<<<<< HEAD
-main
-=======
-=======
 #!/usr/bin/env node
 const { execSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
->>>>>>> origin/chore/fix-automation-and-build
 
 class HealthChecker {
   constructor() {
     this.projectRoot = process.cwd();
-<<<<<<< HEAD
-    this.checks = [];
-    this.errors = [];
-  }
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-0308
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-=======
     this.issues = [];
     this.fixes = [];
   }
@@ -727,5 +538,3 @@ class HealthChecker {
 
 const checker = new HealthChecker();
 checker.runAllChecks().catch(console.error);
->>>>>>> origin/chore/fix-automation-and-build
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422

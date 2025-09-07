@@ -1,62 +1,3 @@
-<<<<<<< HEAD
-import { Edit, Trash2  } from 'lucide-react';
-import { Button  } from '@/components/ui/button';
-import { EducationItemProps  } from './types';
-import { Button   } from '@/components/ui/button';
-import { Card, CardContent   } from '@/components/ui/card';
-import { Education   } from '@/types/resume';
-export function EducationItem() {export function EducationItem() {import { format  } from 'date-fns';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Education  } from '@/types/resume';
-  return (return (<Card className='bg-muted/40'>;
-      <CardContent className='pt-6'>;
-        <div className='flex justify-between'>;
-          <div>;
-            <h4 className='font-medium'>{education && education.degree}</h4>;
-            <p className='text-sm text-muted-foreground'>;
-              {education && education.institution}
-            </p>;
-            {education && education.field_of_study && (<p className='text-sm text-muted-foreground'>;
-                {education && education.field_of_study}
-              </p>;
-            )}
-            <p className='text-xs text-muted-foreground mt-1'>;
-              {typeof education && education.start_date === 'string';
-                ? education && education.start_date;
-                : format(education && education.start_date, 'MMM yyyy')}{' '}
-              -{' '}
-              {education && education.is_current;
-                ? 'Present';
-                : education && education.end_date;
-                  ? typeof education && education.end_date === 'string';
-                    ? education && education.end_date;
-                    : format(education && education.end_date, 'MMM yyyy'): ''}
-            </p>;
-            {education && education.location && (<p className='text-xs text-muted-foreground'>;
-                {education && education.location}
-              </p>;
-            )}
-          </div>;
-          <div className='flex gap-2'>;
-            <Button;
-              variant='ghost';
-              size='icon';
-              onClick={() => onEdit(education)}
-              aria-label='Edit education'            >;
-              <Edit className='h-4 w-4' />;
-            </Button>;
-            <Button;
-              variant='ghost';
-              size='icon';
-              onClick={() => onDelete(education.id!)}
-              aria-label='Delete education';
-            >;
-              <Trash2 className='h-4 w-4' />;
-            </Button>;
-          </div>;
-        </div>;
-        {education.description && (onClick={() => onDelete(education && education.id!)}
-=======
 import { Edit, Trash2 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -67,10 +8,8 @@ export function EducationItem({
   onDelete
 }: EducationItemProps) {
 
-
 import { format } from 'date-fns';
-import { Edit, Trash2 } from 'lucide-react';
-
+import { Edit, Trash2 } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Education } from '@/types/resume';
@@ -84,7 +23,6 @@ import { EducationItemProps } from './types';
 
 
               onClick={() => onDelete(education && education.id!)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
               aria-label='Delete education'            >;
               <Trash2 className='h-4 w-4' />            </Button>;
           </div>;
@@ -101,24 +39,6 @@ import { EducationItemProps } from './types';
         )}
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-  )}<p className="text-sm mt-3 line-clamp-2">{education.description}</p>;
-<p className='text-sm mt-3 line-clamp-2'>{education.description}</p>;
-        )}
-      </CardContent>;
-    </Card>;
-  )}
-import { format  } from 'date - fns';
-import { Edit, Trash2 } from 'lucide-react'; import { Button  } from '@/components / ui / button';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Education  } from '@/types / resume';
-import { EducationItemProps } from './types'; import { Edit, Trash2  } from 'lucide-react';
-import { Button  } from '@/components / ui / button';
-export /**;
- * EducationItem - Function description;
- */;
-function EducationItem() {return (<Card className='bg - muted / 40'>;
-=======
   );
 
 }
@@ -143,7 +63,6 @@ export /**
 function EducationItem() {
   return (
     <Card className='bg - muted / 40'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <CardContent className='pt - 6'>;
         <div className='flex justify - between'>;
           <div>;
@@ -194,12 +113,9 @@ function EducationItem() {
         </div>;
         {education.description && (<p className='text - sm mt - 3 line - clamp - 2'>{education.description}</p>          <p className="text - sm mt - 3 line - clamp - 2">{education.description}</p>)}
       </CardContent>;
-<<<<<<< HEAD
-    </Card>)}
-}
-=======
     </Card>);
 }
 }
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  return (
+

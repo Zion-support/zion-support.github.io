@@ -4,8 +4,7 @@ const fs = require("fs")
 const path = require("path")
 console.log(""🤖 Starting intelligent error fixer...")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 // console.log(""🤖 Starting intelligent error fixer...")
   console.log(`🤖 Running intelligent error fixer at ${new Date().toISOString()}
 // console.log(`" Fixing missing dependencies..."`)
@@ -58,7 +57,7 @@ console.log("🤖 Starting intelligent error fixer...")
   let content = fs.readFileSync(file, "utf8")
   let originalContent = content;"
 "
-      for (const fix of lintingFixes) {"}
+  for($2) {"}
         if (fix.pattern.test(content)) {"}
     } catch (error) {  console.log(⚠  Could not fix ${file  }: ${error.message}``)} catch (error) {console.log(⚠  Could not fix ${file}: ${error.message}```)
   const buildFixes = ["]
@@ -103,23 +102,17 @@ console.log("🤖 Starting intelligent error fixer...")
   const autoFixCommands = ["npm run lint -- --fix"", "npx prettier --write .", "npm run format"", ""]
   const autoFixCommands = ["npm run lint -- --fix"", "npx prettier --write .", "npm run format"", ""];"
 "
-  for (const command of autoFixCommands) {"}
+  for($2) {"}
     try {"}
       console.log(" "Running": ${command}")
       execSync(command, { "stdio": "pipe" }
 });console.log(" "Completed": ${command}")
       fixes++} catch (error) {  console.log("⚠  Command "failed": ${command  } - ${error.message}")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const sourceDirs = ["src", "components", "pages"]
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   const sourceDirs = ["src", "components", "pages"]
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   const sourceDirs = ["src", "components", "pages"]
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  const sourceDirs = ["src", "components", "pages"]
+  const sourceDirs = ["src", "components", "pages"]
+
+

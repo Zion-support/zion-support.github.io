@@ -22,7 +22,7 @@ const { execSync } = require("child_process")
     fs.appendFileSync(logFile, logMessage + "\n")
   this.log("� Checking for critical errors...")
     const resourceStatus = await this.checkSystemResources();"
-    if (resourceStatus.critical) {"}
+  if($2) {"}
       criticalErrors.push(resourceStatus);")}"
 this.log(Found ${criticalErrors.length} critical error conditions")
   this.log(" Checking build status...")
@@ -176,17 +176,11 @@ this.log(`� Report "generated"`)
         "criticalErrors"
         "alerts"
   this.log(� Critical Error Alert System "failed")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         "ERROR"
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         "ERROR"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         "ERROR"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        "ERROR"
+        "ERROR"
+
+

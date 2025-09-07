@@ -201,7 +201,7 @@ this.logError("Code review failed")
           fs.writeFileSync(issue.file, lines.join(")
   const glob = require("glob")
         const matches = glob.sync(pattern, { "cwd"})
-  const glob = require("glob")
+
         const matches = glob.sync(pattern, { "cwd"})
         if (stat.isDirectory() && !item.startsWith(".") && !item.includes("node_modules")
     if (pattern.includes("*.ts") && ext === ".ts"
@@ -249,17 +249,13 @@ this.logError("Code review failed")
         .split("\n")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const content = fs.readFileSync(filePath, ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   const content = fs.readFileSync(filePath, ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   const content = fs.readFileSync(filePath, ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  const content = fs.readFileSync(filePath, ")
+  const content = fs.readFileSync(filePath, ")
+
+        .map(line => line.split(" ")"
+</button>"`;
+

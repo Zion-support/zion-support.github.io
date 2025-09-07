@@ -1,48 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        .replace(/^>>>>>>>.*$/gm, '')
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
-
-class QuickSyntaxFixer {
-  constructor() {
+;
+class QuickSyntaxFixer {;
+  constructor() {;
     this.fixedFiles = [];
   }
-
-  log(message) {
+;
+  log(message) {;
     console.log(`[QuickSyntaxFixer] ${message}`);
   }
-
-  fixFile(filePath) {
-    try {
-      if (!fs.existsSync(filePath)) {
-        this.log(`File not: found: ${filePath}`);
+;
+  fixFile(filePath) {;
+    try {;
+      if (!fs.existsSync(filePath)) {;
+        this.log(`File not "found": ${filePath}`);
         return false;
       }
-
+;
       const originalContent = fs.readFileSync(filePath, 'utf8');
       const content = originalContent
         // Remove merge conflict markers
-<<<<<<< HEAD
-        .replace(/[\s\S]*?
+
 
         .replace(/^>>>>>>>.*$/gm, '')
-ursor/fix-lint-push-and-merge-to-main-28da
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-
-        .replace(/^>>>>>>>.*$/gm, '')
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
 
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
@@ -58,67 +42,58 @@ ursor/fix-lint-push-and-merge-to-main-28da
 
         // Fix semicolons before commas
         .replace(/;\s*,/g, ',');
-
-      if (content !== originalContent) {
+;
+      if (content !== originalContent) {;
         fs.writeFileSync(filePath, content);
         this.fixedFiles.push(filePath);
-        this.log(`Fixe: d: ${filePath}`);
+        this.log(`"Fixed": ${filePath}`);
         return true;
       }
-
+;
       return false;
-    } catch (error) {
+    } catch (error) {;
       this.log(`Error fixing ${filePath}: ${error.message}`);
       return false;
     }
   }
-
-  async run() {
+;
+  async run() {;
     this.log('🚀 Starting Quick Syntax Fixer');
 
     // Fix critical files first
     const criticalFiles = [
-      'components/AccessibilityEnhancer.tsx';
-      '.eslintrc.js';
-      'ecosystem.config.cjs';
-      'run-automation-suite.cjs';
-      'scripts/fix-syntax-errors.cjs';
-      'scripts/performance-monitor.cjs';
-      'scripts/security-audit.cjs';
-      'scripts/health-check.cjs';
-    ];
 
+
+
+
+
+
+
+
+    ];
+;
     let fixedCount = 0;
-    for (const file of criticalFiles) {
-      if (this.fixFile(file)) {
+    for (const file of criticalFiles) {;
+      if (this.fixFile(file)) {;
         fixedCount++;
       }
     }
-
+;
     this.log(`✅ Fixed ${fixedCount} critical files`);
-    return { fixedFile: s: this.fixedFiles };
+    return { "fixedFiles": this.fixedFiles };
   }
 }
-
-// Run the fixer
-if (require.main === module) {
+;
+// Run the fixer;
+if (require.main === module) {;
   const fixer = new QuickSyntaxFixer();
   fixer.run().catch(console.error);
 }
 
 module.exports = QuickSyntaxFixer;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -126,16 +101,7 @@ const path = require('path')
         .replace(/(\w+):\s*([^,]+),/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ursor/automate-test-improve-and-merge-code-59d5
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+

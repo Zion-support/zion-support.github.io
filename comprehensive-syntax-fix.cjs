@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -15,21 +7,12 @@ const path = require('path')
   // Fix extra commas in style "objects": textAlign: 'center', , -> "textAlign"
   content = content.replace(/(\w+):\s*'[^']*',\s*,/g, '$"1"
   content = content.replace(/(\w+):\s*"[^"]*",\s*,/g, '$"1": "$2"
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-          content = content.replace(/
-=======
 const { execSync } = require('child_process');
 
 class ComprehensiveSyntaxFixer {
@@ -67,13 +50,8 @@ class ComprehensiveSyntaxFixer {
           
           // Remove merge conflict markers
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
           content = content.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 console.log('🔧 Running comprehensive syntax fix...');
 
@@ -328,21 +306,12 @@ for (const fix of fixes) {
 }
 
 console.log(`✅ Fixed ${fixedCount} files`);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ursor/automate-test-improve-and-merge-code-59d5
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const { execSync } = require('child_process');
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
           content = content.replace(/
 
-<<<<<<< HEAD
-=======
   ensureReportsDir() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
@@ -370,11 +339,8 @@ const { execSync } = require('child_process');
           let content = fs.readFileSync(filePath, 'utf8');
           
           // Remove merge conflict markers
-<<<<<<< HEAD
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
           content = content.replace(/[\s\S]*?[\s\S]*?
           content = content.replace(/[\s\S]*?
           
@@ -447,9 +413,7 @@ main
 const fixer = new ComprehensiveSyntaxFixer();
 fixer.run().catch(console.error);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
           content = content.replace(/
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+

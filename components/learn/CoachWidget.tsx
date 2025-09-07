@@ -1,32 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 export default function CoachWidget() {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState($2);
   const [reply, setReply] = useState<string | null>(null),
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState($2);
   async function ask() {
-    if (!input.trim()) return;
-    setLoading(true);
+    if (!input.trim()) return,
+    setLoading($2);
     try {
-      const resp = null;
+      const resp = await fetch('/api/learn/coach', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ prompt: input})
+      }),
+      const data = await resp.json($2);
       setReply(data.text || '')
     } finally {
       setLoading(false)
     }
   }
+
   return (
-<div className='border rounded p-3'>
-      <div className='font-medium mb-2'>ZionGPT Coach</div>
-      <div className='flex gap-2'>
-        <input
-          className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black'
-          placeholder='Ask for help...'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
         body: JSON.stringify({ prompt: input })})const data = await resp.json()setReply(data.text |'')} finally {return (      })const data = await resp.json()setReply(data.text |'')}
   }
@@ -47,7 +40,6 @@ function ask() {if () return) {$2;
   return (      })const data = await resp.json ()set_reply (data.text || '')} finally {set_loading (false)}
   }
   return (<div className='border rounded p - 3'>;
-=======
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
@@ -104,15 +96,10 @@ function ask() {
   }
   return (
     <div className='border rounded p - 3'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className='font - medium mb - 2'>ZionGPT Coach</div>;
       <div className='flex gap - 2'>;
         <input;
           className='flex - 1 border rounded px - 3 py - 2 bg - white dark:bg - black';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           placeholder='Ask for help...';export default function CoachWidget() {const [input, setInput] = useState('')const [reply, setReply] = useState<string | null>(null),const [loading, setLoading] = useState(false)async function ask() {if (!input.trim()) return;
     setLoading(true)try {const resp = null;
       setReply(data.text || '')} finally {setLoading(false)}
@@ -123,10 +110,7 @@ function ask() {
         <input;
           className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black';
           placeholder='Ask for help...';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
           placeholder='Ask for help...';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           value={input}
           on_change={e => set_input (e.target.value)}
         />;
@@ -137,30 +121,12 @@ function ask() {
         >;
           {loading ? '...' : 'Ask'}
         </button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {reply && (
-        <div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200'>;
-          {reply}
-<<<<<<< HEAD
-        </div>
-      )}
-    </div>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {reply && (<div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200'>;
           {reply}</div>)}
     </div>)}
   }</div>;
       )}
     </div>;
-<<<<<<< HEAD
-  )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
         </div>)}
     </div>);
     }
@@ -170,7 +136,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   )
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    <div className="border rounded p-3">
+      <div className="font-medium mb-2">ZionGPT Coach</div>
+      <div className="flex gap-2">
+        <input className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" placeholder="Ask for help..." value={input} onChange={(e) => setInput(e.target.value)} />
+        <button onClick={ask} className="px-3 py-2 bg-blue-600 text-white rounded" disabled={loading}>{loading ? '...' : 'Ask'}</button>
+      </div>
+      {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
+    </div>
+  )
+}

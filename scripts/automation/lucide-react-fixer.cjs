@@ -57,7 +57,7 @@ const { execSync } = require("child_process")
       if (line.trim().startsWith("import ") && line.includes("lucide-react")
         const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react[""]
   const icons = match[1].split(",")
-          if (usedIcons.length > 0) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
+  if($2) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
       } else if (inImportBlock && line.trim() === ""
         newLines.push("")
     return newLines.join("\n")
@@ -72,17 +72,11 @@ const { execSync } = require("child_process")
       .replace(/{\s*}/g, "{}")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const fullPath = path.join(dirPath, ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   const fullPath = path.join(dirPath, ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   const fullPath = path.join(dirPath, ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  const fullPath = path.join(dirPath, ")
+  const fullPath = path.join(dirPath, ")
+
+

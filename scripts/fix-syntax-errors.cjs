@@ -1,34 +1,20 @@
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
+///usr/bin/env node
 /**
- * Syntax Error Fixer;
- * Automatically fixes common syntax errors in the codebase;
+ * Syntax Error Fixer
+ * Automatically fixes common syntax errors in the codebase
  */
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-<<<<<<< HEAD
-const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 
   log(message) {
@@ -53,10 +39,7 @@ main
       return false;
     } catch (error) {
       this.errors.push(`${filePath}: ${error.message}`);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -108,20 +91,11 @@ class SyntaxErrorFixer {
         }
       }
       
-<<<<<<< HEAD
-origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       return false;
     }
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   fixCommonErrors(content) {
     // Fix unterminated strings
     content = content.replace(/'([^']*?)(?=\n|$)/g, (match, str) => {
@@ -142,96 +116,65 @@ origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
     content = content.replace(/([^;}])\n/g, '$1;\n');
     
     // Fix merge conflict markers
-<<<<<<< HEAD
-<<<<<<< HEAD
-    content = content.replace(/
-
-=======
-=======
-    content = content.replace(/[\s\S]*?[\s\S]*?
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-
-
-
-
-    
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-    content = content.replace(/
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Fix common JSX issues
-    content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*\/>/g, '<$1 />');
+
+    // Fix merge conflict markers
+    content = content.replace(/
+
+
+
+
+
     
-    // Fix missing commas in objects
-    content = content.replace(/([^,}])\n\s*}/g, '$1,\n}');
+
+  fixCommonErrors(content) {
+    // Fix unterminated strings;
+
+
+
+
+
+
+
+    content = content.replace(/[\s\S]*?[\s\S]*?
+
+
+
+
     
-    // Fix missing commas in arrays
-    content = content.replace(/([^,])\n\s*]/g, '$1,\n]');
-    
+    content = content.replace(/
+
+    // Fix common JSX issues
+
+    // Fix merge conflict markers;
+    content = content.replace(/
+
+    // Fix common JSX issues;)
+
     return content;
-  }
 
   async fixDirectory(dirPath) {
-    const files = fs.readdirSync(dirPath);
-    
-    for (const file of files) {
-      const filePath = path.join(dirPath, file);
-      const stat = fs.statSync(filePath);
-      
+    const files = fs.readdirSync(dirPath)
+  for($2) {
+      const filePath = path.join(dirPath, file)
+      const stat = fs.statSync(filePath)
       if (stat.isDirectory()) {
-        await this.fixDirectory(filePath);
+        await this.fixDirectory(filePath)
       } else if (file.match(/\.(tsx?|jsx?)$/)) {
-        this.fixFile(filePath);
-      }
-    }
-  }
-
-  generateReport() {
+        this.fixFile(filePath)
+  generateReport($2) {
     const report = {
-      "timestamp": new Date().toISOString(),
-      "fixes": this.fixes,
-      "errors": this.errors,
-      "success": this.errors.length === 0
-   };
 
-    const reportPath = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fix-report.json';);
-    const logDir = path.dirname(reportPath;);
-    
-    if () {
-      fs.mkdirSync(logDir, { "recursive": true })}
-    
+    const logDir = path.dirname(reportPath;)
+  if($2) {
+      fs.mkdirSync(logDir, { "recursive": true })}"
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))) {
-    ) {
-      fs.mkdirSync(logDir, { "recursive": true })}
-    
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
-    this.log(`📄 Report saved "to": ${reportPath}`);
-    
-    return report}
+    ) {"
 
-  async run() {
-    this.log('🚀 Starting syntax error fixing...');
-    
-    try {
-      await this.fixDirectory('components');
-      await this.fixDirectory('pages');
-      await this.fixDirectory('lib');
-      
-      if ( {
-        this.log('🎉 Syntax error fixing completed successfully!')} else {
-        this.log('⚠️ Syntax error fixing completed with some issues')}
-      
-      return report) {
-     {
-        this.log('🎉 Syntax error fixing completed successfully!')} else {
-        this.log('⚠️ Syntax error fixing completed with some issues')}
-      
-      return report}} catch (error) {
-      this.log(`💥 Syntax error fixing "failed": ${error.message}`, 'ERROR');
       throw error}
-  }
-}
+  if($2) {
+  const fixer = new SyntaxErrorFixer()
+  fixer.run().catch(error => {)
 
 if (require.main === module) {
   const fixer = new SyntaxErrorFixer();
@@ -242,10 +185,6 @@ if (require.main === module) {
 }
 
 module.exports = SyntaxErrorFixer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   log(message, level = 'INFO')
     this.log(' Starting syntax error fixing...')
@@ -411,6 +350,8 @@ if (require.main === module) {
 
 module.exports = SyntaxErrorFixer;
 origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+  log(message, level = 'INFO')
+    this.log(' Starting syntax error fixing...')
+      this.log('Running ESLint auto-fix...')

@@ -101,7 +101,7 @@ const glob = require("glob")
     fs.writeFileSync(path.join(this.projectRoot, ".eslintrc.cjs")
     this.improvementsList.push("Enhanced ESLint configuration")
   this.log("� Applying User Experience Enhancements...")
-import React from "react";
+import React from "react"
   size?: "small" | "medium" | "large"
 export const "LoadingSpinner"
   size = "medium"
@@ -216,17 +216,22 @@ export * from "@testing-"library/react""
   const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   "analyzerMode": "static"
           "openAnalyzer"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     fs.writeFileSync(path.join(this.projectRoot, ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     fs.writeFileSync(path.join(this.projectRoot, ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     fs.writeFileSync(path.join(this.projectRoot, ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    fs.writeFileSync(path.join(this.projectRoot, ")
+    fs.writeFileSync(path.join(this.projectRoot, ")
+
+</p>"
+        <div className="min-h-screen flex items-center justify-center bg-gray-50"
+            <h1 className="text-2xl font-bold text-gray-900 mb-4"
+            <p className=text-gray-600 mb-4>We
+</div>"
+  "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]"
+</rootDir>"
+  "moduleNameMapping": {^@/(.*)$": "<rootDir>/src/$1",\\.(css|less|scss|sass)$": "identity-obj-proxy"}"
+
+) => render(ui, { "wrapper"})"
+"`;
+

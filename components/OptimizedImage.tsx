@@ -1,33 +1,16 @@
 
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-
-'use client'
-import React, { useState, useRef, useEffect } from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
 interface OptimizedImageProps {
-'use client, ';''''
-  'import Image from 'next/image
-  ';interface OptimizedImageProps {'
-  src: string
-  alt: string
-  width?: number
-  height?: number
-  className?: string
-  priority?: boolean
+  sr: c: string,
+  al: string,
+  widt: number,
+  heigh: number,
+  className?: string,
+  priority?: boolean,
   quality?: number
-  placeholder?: 'blur' | 'empty'
-  blurDataURL?: string
-  sizes?: string
-  fill?: boolean
-  style?: React.CSSProperties
-  onClick?: () => void
-  onLoad?: () => void
-  onError?: () => void
 }
+
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,

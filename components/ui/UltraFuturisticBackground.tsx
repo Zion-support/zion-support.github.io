@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
-;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react';
-interface UltraFuturisticBackgroundProps  {children: React.ReactNode;className?: string;
-}const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({children,className = '';
-}) => {const getBackgroundClasses = () => {const baseClasses  = 'relative overflow-hidden';switch (variant) {case 'quantum':;
 
 interface UltraFuturisticBackgroundProps {
   children: React.ReactNode;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   variant?: 'quantum' | 'matrix' | 'neon';
   intensity?: 'low' | 'medium' | 'high';
   className?: string;
@@ -59,21 +45,13 @@ export default function UltraFuturisticBackground({
   enableNeonEffects?: boolean;
   enableSpaceTime?: boolean;
   variant?: 'quantum' | 'neon' | 'cyber';
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
   className?: string;
 }
 
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   children,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   intensity = 'medium',
   colorScheme = 'quantum-fusion',
   particleCount = 200,
@@ -83,12 +61,8 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
   enableNeonEffects = true,
   enableSpaceTime = true,
   variant = 'quantum',
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
   className = ''
 }) => {
   const getBackgroundClasses = () => {
@@ -97,44 +71,20 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
     switch (variant) {
       case 'quantum':
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
-      case 'neon':;
+      case 'neon':
         return `${baseClasses} bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900`;
-      case 'cyber':;
-      default:;
-        return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
-    }
-  }<div className="relative z-10">;
-        {children}
-      </div>;
-    </div>;
-  )}export default UltraFuturisticBackground;
       case 'cyber':
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         return `${baseClasses} bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900`;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
       default:
         return `${baseClasses} bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900`;
     }
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     <div className={`${getBackgroundClasses()} ${className}`}>
       <div className="absolute inset-0 bg-black/20" />
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-  return (
-    <div className={`${getBackgroundClasses()} ${className}`}>
-      <div className="absolute inset-0 bg-black/20" />
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <div className="relative z-10">
         {children}
       </div>
@@ -143,10 +93,5 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
 };
 
 export default UltraFuturisticBackground;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+

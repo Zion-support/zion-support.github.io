@@ -1,41 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface TokenSet {
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export type UIKitKind = "ios" | "android" | "web";
 export type UIKitKind = "ios" | "android" | "web";
 export interface TokenSet {
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export interface TokenSet {;
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export interface TokenSet {
 
 
 export interface TokenSet {;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export type DesignMapSection = {
   id: string;
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ursor/automate-test-improve-and-merge-code-646c;
 export type UIKitKind = "ios" | "android" | "web";
@@ -43,10 +17,6 @@ export type UIKitKind = "ios" | "android" | "web";
 export interface TokenSet  {export interface TokenSet  {export interface TokenSet  {export type UIKitKind = "ios" | "android" | "web";
 export type UIKitKind = "ios" | "android" | "web";
 export interface TokenSet  {export interface TokenSet  {export type DesignMapSection = {id: string;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   title: string;
   description?: string;
   items: { id: string; title: string; description?: string }[];
@@ -163,270 +133,9 @@ export type UIKitKind = "ios" | "android" | "web";
 export type UIKitKind = "ios" | "android" | "web";
 export interface TokenSet {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function getZionDesignMap(): DesignMap {
-  return {
-    route: '/design-map',
-    products: {
-      foundations: [
-        {
-          id: 'foundations-colors',
-          title: 'Color system',
-          items: [
-            { id: 'light', title: 'Light' },
-            { id: 'dark', title: 'Dark' },
-          ],
-        },
-        {
-          id: 'foundations-typography',
-          title: 'Typography',
-          items: [
-            { id: 'heading-scale', title: 'Heading scale' },
-            { id: 'body-text', title: 'Body text' },
-            { id: 'mono', title: 'Monospace' },
-          ],
-        },
-        {
-          id: 'foundations-icons',
-          title: 'Icon set',
-          items: [
-            { id: 'system', title: 'System icons' },
-            { id: 'product', title: 'Product icons' },
-          ],
-        },
-        {
-          id: 'foundations-components',
-          title: 'Component library',
-          items: [
-            { id: 'buttons', title: 'Buttons' },
-            { id: 'cards', title: 'Cards' },
-            { id: 'badges', title: 'Badges' },
-            { id: 'tags', title: 'Tags' },
-          ],
-        },
-      ],
-      talent: [
-        {
-          id: 'talent-resume',
-          title: 'Resume builder',
-          items: [
-            { id: 'sections', title: 'Sections' },
-            { id: 'templates', title: 'Templates' },
-            { id: 'export', title: 'Export' },
-          ],
-        },
-        {
-          id: 'talent-apply',
-          title: 'Job application flow',
-          items: [
-            { id: 'job-list', title: 'Job list' },
-            { id: 'apply-form', title: 'Apply form' },
-            { id: 'status', title: 'Status' },
-          ],
-        },
-        {
-          id: 'talent-portfolio',
-          title: 'Portfolio / project cards',
-          items: [
-            { id: 'grid', title: 'Grid' },
-            { id: 'detail', title: 'Detail' },
-          ],
-        },
-        {
-          id: 'talent-interview',
-          title: 'Interview & chat UI',
-          items: [
-            { id: 'chat', title: 'Chat' },
-            { id: 'interview', title: 'Interview' },
-          ],
-        },
-        {
-          id: 'talent-dashboard',
-          title: 'Dashboard with stats',
-          items: [
-            { id: 'overview', title: 'Overview' },
-            { id: 'charts', title: 'Charts' },
-          ],
-        },
-      ],
-      client: [
-        {
-          id: 'client-job-post',
-          title: 'Job post flow',
-          items: [
-            { id: 'draft', title: 'Draft' },
-            { id: 'publish', title: 'Publish' },
-          ],
-        },
-        {
-          id: 'client-team-builder',
-          title: 'Team builder',
-          items: [
-            { id: 'roles', title: 'Roles' },
-            { id: 'invite', title: 'Invite' },
-          ],
-        },
-        {
-          id: 'client-shortlist-offer',
-          title: 'Shortlist + offer page',
-          items: [
-            { id: 'shortlist', title: 'Shortlist' },
-            { id: 'offer', title: 'Offer' },
-          ],
-        },
-        {
-          id: 'client-milestone-quote',
-          title: 'Milestone + quote view',
-          items: [
-            { id: 'milestones', title: 'Milestones' },
-            { id: 'quotes', title: 'Quotes' },
-          ],
-        },
-      ],
-      aiTools: [
-        {
-          id: 'ai-gpt-prompts',
-          title: 'GPT prompt modals',
-          items: [
-            { id: 'prompt-modal', title: 'Prompt modal' },
-            { id: 'history', title: 'History' },
-          ],
-        },
-        {
-          id: 'ai-content-assistant',
-          title: 'Content assistant panels',
-          items: [
-            { id: 'side-panel', title: 'Side panel' },
-            { id: 'inline', title: 'Inline helper' },
-          ],
-        },
-        {
-          id: 'ai-scoring',
-          title: 'Scoring overlays',
-          items: [
-            { id: 'resume-score', title: 'Resume score' },
-            { id: 'job-fit', title: 'Job fit' },
-          ],
-        },
-        {
-          id: 'ai-chat',
-          title: 'Chat-style interaction screens',
-          items: [
-            { id: 'chat', title: 'Chat' },
-            { id: 'agent', title: 'Agent view' },
-          ],
-        },
-      ],
-      dao: [
-        {
-          id: 'dao-voting',
-          title: 'Voting screens',
-          items: [
-            { id: 'list', title: 'Proposals list' },
-            { id: 'vote', title: 'Vote flow' },
-          ],
-        },
-        {
-          id: 'dao-treasury',
-          title: 'Treasury dashboard',
-          items: [
-            { id: 'balances', title: 'Balances' },
-            { id: 'activity', title: 'Activity' },
-          ],
-        },
-        {
-          id: 'dao-proposals',
-          title: 'Proposal submission',
-          items: [
-            { id: 'create', title: 'Create proposal' },
-            { id: 'review', title: 'Review' },
-          ],
-        },
-        {
-          id: 'dao-token',
-          title: 'Token transfer + staking',
-          items: [
-            { id: 'transfer', title: 'Transfer' },
-            { id: 'stake', title: 'Stake' },
-          ],
-        },
-      ],
-      admin: [
-        {
-          id: 'admin-user-metrics',
-          title: 'User metrics',
-          items: [
-            { id: 'cohorts', title: 'Cohorts' },
-            { id: 'funnels', title: 'Funnels' },
-          ],
-        },
-        {
-          id: 'admin-content-approvals',
-          title: 'Content approvals',
-          items: [
-            { id: 'queue', title: 'Queue' },
-            { id: 'policies', title: 'Policies' },
-          ],
-        },
-        {
-          id: 'admin-global-toggles',
-          title: 'Global toggle center',
-          items: [
-            { id: 'flags', title: 'Feature flags' },
-            { id: 'experiments', title: 'Experiments' },
-          ],
-        },
-        {
-          id: 'admin-deployment',
-          title: 'Deployment panel',
-          items: [
-            { id: 'environments', title: 'Environments' },
-            { id: 'releases', title: 'Releases' },
-          ],
-        },
-      ],
-      mobile: [
-        {
-          id: 'mobile-nav',
-          title: 'Navigation tabs',
-          items: [
-            { id: 'tabs', title: 'Tabs' },
-            { id: 'topbar', title: 'Top bar' },
-          ],
-        },
-        {
-          id: 'mobile-flows',
-          title: 'Condensed flows for jobs + chat',
-          items: [
-            { id: 'jobs', title: 'Jobs' },
-            { id: 'chat', title: 'Chat' },
-          ],
-        },
-        {
-          id: 'mobile-onboarding',
-          title: 'App onboarding',
-          items: [
-            { id: 'welcome', title: 'Welcome' },
-            { id: 'permissions', title: 'Permissions' },
-          ],
-        },
-      ],
-    },
-  };
-
-export type TokenSet = {
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 export interface TokenSet {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 export interface TokenSet {;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
@@ -471,12 +180,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
 
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
   tokens: TokenSet;
@@ -502,123 +205,282 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
-=======
   return {}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   return {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     
     return this.props.children;
   }
+export type DesignMapSection = {
+  id: string
+  title: string
+  description?: string
+  items: { id: string, title: string, description?: string }[]
 }
-    components: [],
-    pages: [],
-    styles: []
-  };
 
-export type TokenSet = {
-  colors: Record<string, string>;
-  typography: {
-    fontSizes: Record<string, string>;
-  };
-};
+export type DesignMap = $2;
+    products: {
+      foundations: [
+        {
+          id: 'foundations-colors',
+          title: 'Color system',
+          items: [
+            { id: 'light', title: 'Light' },
+            { id: 'dark', title: 'Dark' }]},
+        {
+          id: 'foundations-typography',
+          title: 'Typography',
+          items: [
+            { id: 'heading-scale', title: 'Heading scale' },
+            { id: 'body-text', title: 'Body text' },
+            { id: 'mono', title: 'Monospace' }]},
+        {
+          id: 'foundations-icons',
+          title: 'Icon set',
+          items: [
+            { id: 'system', title: 'System icons' },
+            { id: 'product', title: 'Product icons' }]},
+        {
+          id: 'foundations-components',
+          title: 'Component library',
+          items: [
+            { id: 'buttons', title: 'Buttons' },
+            { id: 'cards', title: 'Cards' },
+            { id: 'badges', title: 'Badges' },
+            { id: 'tags', title: 'Tags' }]}],
+      talent: [
+        {
+          id: 'talent-resume',
+          title: 'Resume builder',
+          items: [
+            { id: 'sections', title: 'Sections' },
+            { id: 'templates', title: 'Templates' },
+            { id: 'export', title: 'Export' }]},
+        {
+          id: 'talent-apply',
+          title: 'Job application flow',
+          items: [
+            { id: 'job-list', title: 'Job list' },
+            { id: 'apply-form', title: 'Apply form' },
+            { id: 'status', title: 'Status' }]},
+        {
+          id: 'talent-portfolio',
+          title: 'Portfolio / project cards',
+          items: [
+            { id: 'grid', title: 'Grid' },
+            { id: 'detail', title: 'Detail' }]},
+        {
+          id: 'talent-interview',
+          title: 'Interview & chat UI',
+          items: [
+            { id: 'chat', title: 'Chat' },
+            { id: 'interview', title: 'Interview' }]},
+        {
+          id: 'talent-dashboard',
+          title: 'Dashboard with stats',
+          items: [
+            { id: 'overview', title: 'Overview' },
+            { id: 'charts', title: 'Charts' }]}],
+      client: [
+        {
+          id: 'client-job-post',
+          title: 'Job post flow',
+          items: [
+            { id: 'draft', title: 'Draft' },
+            { id: 'publish', title: 'Publish' }]},
+        {
+          id: 'client-team-builder',
+          title: 'Team builder',
+          items: [
+            { id: 'roles', title: 'Roles' },
+            { id: 'invite', title: 'Invite' }]},
+        {
+          id: 'client-shortlist-offer',
+          title: 'Shortlist + offer page',
+          items: [
+            { id: 'shortlist', title: 'Shortlist' },
+            { id: 'offer', title: 'Offer' }]},
+        {
+          id: 'client-milestone-quote',
+          title: 'Milestone + quote view',
+          items: [
+            { id: 'milestones', title: 'Milestones' },
+            { id: 'quotes', title: 'Quotes' }]}],
+      aiTools: [
+        {
+          id: 'ai-gpt-prompts',
+          title: 'GPT prompt modals',
+          items: [
+            { id: 'prompt-modal', title: 'Prompt modal' },
+            { id: 'history', title: 'History' }]},
+        {
+          id: 'ai-content-assistant',
+          title: 'Content assistant panels',
+          items: [
+            { id: 'side-panel', title: 'Side panel' },
+            { id: 'inline', title: 'Inline helper' }]},
+        {
+          id: 'ai-scoring',
+          title: 'Scoring overlays',
+          items: [
+            { id: 'resume-score', title: 'Resume score' },
+            { id: 'job-fit', title: 'Job fit' }]},
+        {
+          id: 'ai-chat',
+          title: 'Chat-style interaction screens',
+          items: [
+            { id: 'chat', title: 'Chat' },
+            { id: 'agent', title: 'Agent view' }]}],
+      dao: [
+        {
+          id: 'dao-voting',
+          title: 'Voting screens',
+          items: [
+            { id: 'list', title: 'Proposals list' },
+            { id: 'vote', title: 'Vote flow' }]},
+        {
+          id: 'dao-treasury',
+          title: 'Treasury dashboard',
+          items: [
+            { id: 'balances', title: 'Balances' },
+            { id: 'activity', title: 'Activity' }]},
+        {
+          id: 'dao-proposals',
+          title: 'Proposal submission',
+          items: [
+            { id: 'create', title: 'Create proposal' },
+            { id: 'review', title: 'Review' }]},
+        {
+          id: 'dao-token',
+          title: 'Token transfer + staking',
+          items: [
+            { id: 'transfer', title: 'Transfer' },
+            { id: 'stake', title: 'Stake' }]}],
+      admin: [
+        {
+          id: 'admin-user-metrics',
+          title: 'User metrics',
+          items: [
+            { id: 'cohorts', title: 'Cohorts' },
+            { id: 'funnels', title: 'Funnels' }]},
+        {
+          id: 'admin-content-approvals',
+          title: 'Content approvals',
+          items: [
+            { id: 'queue', title: 'Queue' },
+            { id: 'policies', title: 'Policies' }]},
+        {
+          id: 'admin-global-toggles',
+          title: 'Global toggle center',
+          items: [
+            { id: 'flags', title: 'Feature flags' },
+            { id: 'experiments', title: 'Experiments' }]},
+        {
+          id: 'admin-deployment',
+          title: 'Deployment panel',
+          items: [
+            { id: 'environments', title: 'Environments' },
+            { id: 'releases', title: 'Releases' }]}],
+      mobile: [
+        {
+          id: 'mobile-nav',
+          title: 'Navigation tabs',
+          items: [
+            { id: 'tabs', title: 'Tabs' },
+            { id: 'topbar', title: 'Top bar' }]},
+        {
+          id: 'mobile-flows',
+          title: 'Condensed flows for jobs + chat',
+          items: [
+            { id: 'jobs', title: 'Jobs' },
+            { id: 'chat', title: 'Chat' }]},
+        {
+          id: 'mobile-onboarding',
+          title: 'App onboarding',
+          items: [
+            { id: 'welcome', title: 'Welcome' },
+            { id: 'permissions', title: 'Permissions' }]}]}}
+}
 
-export async function buildTokenSet(): Promise<TokenSet> {
-  // Dynamically import Tailwind config for color extraction;
-  const tailwindConfig = require('../tailwind && tailwind.config.js');
-  const extendedColors = tailwindConfig?.theme?.extend?.colors || {};
-  const colors: Record<string, string> = {};
-
-  function flattenColors(prefix: string, obj: any) {
-    Object && Object.entries(obj || {}).forEach(([key, value]) => {
-      const newKey = prefix ? `${prefix}.${key}` : key;
-      if (typeof value === 'string') {
-        colors[newKey] = value;
-      } else if (typeof value === 'object') {
-        flattenColors(newKey, value);
-      }
+export function generateReactComponent(node: DesignNode, mapping?: ComponentMapping): string {
+  const componentName = mapping?.componentName || node.name.replace(/[^a-zA-Z0-9]/g, '');
+  const props = mapping?.props || {};
+  
+  let component = `import React from 'react';\n\n`;
+  component += `export const ${componentName}: React.FC = () => {\n`;
+  component += `  return (\n`;
+  component += `    <div className="${mapping?.cssClasses?.join(' ') || ''}">\n`;
+  
+  if (node.children) {
+    node.children.forEach(child => {
+      component += `      <div>${child.name}</div>\n`;
     });
   }
+  
+  component += `    </div>\n`;
+  component += `  );\n`;
+  component += `};\n`;
+  
+  return component;
+}
 
-  flattenColors('', extendedColors);
+export function generateCSSClasses(node: DesignNode): string[] {
+  const classes: string[] = [];
+  
+  // Generate class based on node type and properties
+  if (node.type === 'TEXT') {
+    classes.push('text');
+    if (node.properties.characters) {
+      classes.push('text-content');
+    }
+  } else if (node.type === 'RECTANGLE') {
+    classes.push('rectangle');
+    if (node.properties.cornerRadius) {
+      classes.push('rounded');
+    }
+  } else if (node.type === 'FRAME') {
+    classes.push('frame');
+  }
+
+  flattenColors('', extendedColors)
 
   const typography = {
-    fontSizes: tailwindConfig?.theme?.extend?.fontSize || {}
-  };
+    fontSizes: tailwindConfig ?.theme?.extend?.fontSize || {}}
 
-  return { colors, typography };
+  return { colors, typography }
+}
 
-export type UIKitKind = 'tailwind' | 'chakra' | 'react';
+export type UIKitKind = 'tailwind' | 'chakra' | 'react'
 
 export function buildUIKit(kind: UIKitKind): Record<string, string> {
-  if (kind === 'tailwind') {
-    return {
-      'README && README.md':
-        '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.',
-      'components/Button && Button.tsx':
-        'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
-      'components/Card && Card.tsx':
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }'
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     };
+  if (kind = $2;
+      'components/Card.tsx': "export function Card({ children }: { children: React.ReactNode }) { return <div className=\"rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40\">{children}</div> }"}
   }
   if (kind === 'chakra') {
     return {
-      'README && README.md':
-        '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.',
-      'theme/index && index.ts':
-        "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}});",
-      'components/Button && Button.tsx':
-        'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }'
-    };
+      'README.md': '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.theme/index.ts': "import { extendTheme } from '@chakra-ui/react', export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}}),",
+      'components/Button.tsx': "import { Button as CButton } from '@chakra-ui/react', export function Button(props: any){ return <CButton colorScheme=\"cyan\" {...props} /> }"}
   }
   return {
-    'README && README.md':
-      '# Zion OS React UI Kit\n\nFramework-agnostic React components.',
-    'components/Button && Button.tsx':
-      "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }"
-  };
+    'README.md': '# Zion OS React UI Kit\n\nFramework-agnostic React components.components/Button.tsx': "export function Button({ children }: { children: React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }"}
+}
 
 export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
-  const base = process && process.env.LOVABLE_CMS_URL;
-  if (!base) return null;
-  try {const res = await fetch(`${base && base.replace(/\/$/, '')}/api/design-tokens`)if (!res && res.ok) return null;
-    return (await res && res.json()) as Partial<TokenSet>;
-  } catch {return null;// Design mapping utilities;
-export interface DesignElement  {id: string;
+  const base = process.env.LOVABLE_CMS_URL
+  if (!base) return null
+  try {
+    const res = await fetch(`${base.replace(/\/$/, '')}/api/design-tokens`)
+    if (!res.ok) return null
+    return (await res.json()) as Partial<TokenSet>
   } catch {
-    return null;
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Design mapping utilities
 export interface DesignElement {
   id: string;
@@ -689,31 +551,10 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 }
 
   const tokens = await buildTokenSet(fileId);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     };
   };
 }
@@ -727,20 +568,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if (!designSystem) return false;
   const tokens = await buildTokenSet(fileId);
   return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
 
   const tokens = await buildTokenSet(fileId);
   return {
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     designSystem.components.push(component);
     designSystem.lastUpdated = new Date();
@@ -938,19 +771,10 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
 export async function buildTokenSet (file_id: string): Promise < TokenSet> {
   // Placeholder implementation;
   return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     colors: {
       primary: "#007AFF",
       secondary: "#5856D6",
@@ -969,17 +793,11 @@ main
       md: 16,
       lg: 24,
       xl: 32,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       xl: 32
 }
   };
 
 }
-<<<<<<< HEAD
-=======
       xl: 32;
     }
   }
@@ -995,24 +813,13 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     },
-=======
     }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   };
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export async function buildUIKit(
   fileId: string,
@@ -1024,112 +831,28 @@ export async function buildUIKit(
     components: {
       button: {
         primary: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           backgroundColor: tokens.colors.primary,
-<<<<<<< HEAD
-          padding: tokens.spacing.md,
-        },
-      },
-    },
-    tokens,
-  };
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           backgroundColor: tokens.colors.primary
-=======
           backgroundColor: tokens.colors.primary,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           padding: tokens.spacing.md
         }
       }
     },
     tokens
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-  return { colors, typography };
-
-export type UIKitKind = 'tailwind' | 'chakra' | 'react';
-
-export function buildUIKit(kind: UIKitKind): Record<string, string> {
-  if (kind === 'tailwind') {
-    return {
-      'README.md':
-        '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.',
-      'components/Button.tsx':
-        'export function Button({ children }: { children: React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
-      'components/Card.tsx':
-        'export function Card({ children }: { children: React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
-    };
-  }
-  if (kind === 'chakra') {
-    return {
-      'README.md':
-        '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.',
-      'theme/index.ts':
-        "import { extendTheme } from '@chakra-ui/react'; export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}});",
-      'components/Button.tsx':
-        'import { Button as CButton } from \'@chakra-ui/react\'; export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }',
-    };
-  }
-  return {
-    'README.md':
-      '# Zion OS React UI Kit\n\nFramework-agnostic React components.',
-    'components/Button.tsx':
-      "export function Button({ children }: { children: React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }",
-  };
-
-export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
-  const base = process.env.LOVABLE_CMS_URL;
-  if (!base) return null;
-  try {
-    const res = await fetch(`${base.replace(/\/$/, '')}/api/design-tokens`);
-    if (!res.ok) return null;
-    return (await res.json()) as Partial<TokenSet>;
-  } catch {
-    return null;
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    return null
+  }
+  
+  return classes;
+}

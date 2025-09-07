@@ -1,14 +1,9 @@
-<<<<<<< HEAD:src_backup/components/header/Logo.tsx
 return (
-      <Link href="/" className="flex items - center">;
-        <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
+      <Link href="/" className="flex items-center">;
+        <img src={logoToUse} alt={`${brand_name} Logo`} className="h-8" width={32} height={32} />;
       </Link>);
   }
 
-
-
-  const logoToUse = null;
-origin/cursor/automate-test-improve-and-merge-code-2533
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">
@@ -17,17 +12,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     )
   }
 
-  
-
-  return (
-
-
 interface LogoProps {;
   customLogo?: string;
 
 export function Logo(): any ({ customLogo }: LogoProps) {;
   const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
-
 
   // Use the white-label logo if available and no specific customLogo is provided;
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
@@ -36,13 +25,11 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
   if (logoToUse) {;
     return (
       <Link href="/" className="flex items-center">;
-=======
 
 ;
 return (<Link href="/" className="flex items - center">;
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
       </Link>)}const logoToUse  = null;if (logoToUse) {return (<Link href="/" className="flex items-center">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/header/Logo.tsx
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />;
       </Link>;
     )}return (interface LogoProps  {customLogo?: string;export function Logo(): any ({ customLogo }: LogoProps) {const { isWhitelabel, logoUrl, brandName }  = useWhitelabel()// Use the white-label logo if available and no specific customLogo is provided;
@@ -53,12 +40,17 @@ return (<Link href="/" className="flex items - center">;
     )}return (<Link href="/" className="flex items-center">;
       <img src="/logos/zion-logo && logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
     </Link>;
-  )if (logoToUse) {return (<Link href='/' className='flex items-center'>;
-        <img;
-    <Link href="/" className="flex items - center">;
-      <img src="/logos / zion - logo.png" alt="Zion Logo" className="h - 8" width={32} height={32} />;
-    </Link>)// Check condition;
-if ( {) {$2;
+  );
+  if (logoToUse) {;
+    return (
+      <Link href='/' className='flex items-center'>;
+        <img
+    <Link href="/" className="flex items-center">;
+      <img src="/logos / zion - logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
+    </Link>);
+  // Check condition
+if ( {) {
+  $2
 }
     return (<Link href='/' className='flex items - center'>;
         <img;
@@ -75,16 +67,6 @@ if ( {) {$2;
         alt='Zion Logo';
         className='h-8';
         width={32}
-<<<<<<< HEAD:src_backup/components/header/Logo.tsx
-        height={32}
-
-}
-
-      />
-    </Link>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         height={32}/>;
     </Link>;
   )}/>;
@@ -100,4 +82,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </Link>)}}/>;
     </Link>;
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/header/Logo.tsx
+        height={32}

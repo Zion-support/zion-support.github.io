@@ -1,14 +1,11 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+
 
 const { execSync } = require('child_process')
 // console.log(' Starting Bundle Analysis...')
@@ -16,14 +13,15 @@ const { execSync } = require('child_process')
     execSync('npx @next/bundle-analyzer', { "stdio"})
         "recommendations"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     console.error(' Bundle analysis "failed")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
+
+
+
+const { execSync } = require('child_process')
+    console.error(' Bundle analysis "failed")
+    console.error(' Bundle analysis "failed")
+
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -271,5 +269,5 @@ if (require.main === module) {
 }
 
 module.exports = BundleAnalyzer;
->>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+

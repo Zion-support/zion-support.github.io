@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import * as React from &quot;react & quot;
 import { ChevronLeft, ChevronRight, MoreHorizontal  } from 'lucide-react';
 import { cn } from &quot;@/lib / utils & quot;
@@ -23,27 +20,6 @@ const PaginationContent = React.forwardRef<;
 >(({ class_name, ...props }, ref) => (<ul;
     ref={ref}
     className={cn (&quot;flex flex - row items - center gap - 1&quot;, class_name)}
-<<<<<<< HEAD
-    {...props}
-
-
-PaginationContent.displayName = "PaginationContent"
-
-const PaginationItem = React.forwardRef<
-  HTMLLIElement,
-  React.ComponentProps<"li">
-
->(({ className, ...props }, ref) => (
-
-  <li ref={ref} className={cn("", className)} {...props} />
-
-))
-
-PaginationItem.displayName = "PaginationItem"
-
-type PaginationLinkProps = {
-  isActive?: boolean
-
 
 interface PaginationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -52,19 +28,12 @@ interface PaginationButtonProps
 }
 const PaginationLink = ({
 
-
-  className,
-  isActive,
-
-
   ...props
 }: PaginationLinkProps) => (
   <a
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
-
-
 
         variant: isActive ? "outline" : "ghost",
 
@@ -75,15 +44,6 @@ const PaginationLink = ({
   />
 )
 
-
-PaginationLink.displayName = "PaginationLink"
-
-
-
-const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
-  ({ page, isActive, className, ...props }, ref) => (
-    <button
-=======
     {...props}PaginationContent.displayName = "PaginationContent";
 const PaginationItem = React.forwardRef<;
   HTMLLIElement,React.ComponentProps<"li">;
@@ -103,23 +63,11 @@ const PaginationLink = ({className,isActive,...props;
   />;
 )PaginationLink.displayName = "PaginationLink";
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(({ page, isActive, className, ...props }, ref) => (<button;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       ref={ref}
       type="button";
       aria-label={`Page ${page}`}
       aria-current={isActive ? 'page' : undefined}
-<<<<<<< HEAD
-      className={cn(;
-
-
-        buttonVariants({ variant: 'ghost', size: 'icon' }),;
-        isActive && 'bg-green-600 text-white',;
-
-
-        className;
-=======
       className={cn(buttonVariants({ variant: 'ghost', size: 'icon' }),isActive && 'bg-green-600 text-white',className;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       )}
       {...props}
     >;
@@ -132,17 +80,38 @@ const PaginationPrevious = ({className;
     size="default";
     className={cn("gap-1 pl-2.5", className)}
     {...props}
-<<<<<<< HEAD
+const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
+  ({ page, isActive, className, ...props }, ref) => (
+    <button
+      ref={ref}
+      type="button"
+      aria-label={`Page ${page}`}
+      aria-current={isActive ? 'page' : undefined}
+      className={cn(;
+
+        className;
+      )}
+      {...props}
+    >;
+      {page}
+</button>
+  )
+)
+PaginationButton.displayName = 'PaginationButton'
+const PaginationPrevious = ({
+  className
+  ...props
+}: Omit<PaginationLinkProps 'size'>) => (
+  <PaginationLink
+    aria-label="Go to previous page"
+    size="default"
+    className={cn("gap-1 pl-2.5", className)}
+    {...props}
   >
     <ChevronLeft className="h-4 w-4" />
     <span>Previous</span>
   </PaginationLink>
 )
-
-
-PaginationPrevious.displayName = "PaginationPrevious"
-
-
 
 const PaginationNext = ({
   className
@@ -159,11 +128,6 @@ const PaginationNext = ({
   </PaginationLink>
 )
 
-
-PaginationNext.displayName = "PaginationNext"
-
-
-
 const PaginationEllipsis = ({
   className
   ...props
@@ -178,46 +142,6 @@ const PaginationEllipsis = ({
   </span>
 )
 
-/>));
-PaginationContent.display_name = &quot;PaginationContent & quot;
-;
-const PaginationItem = React.forward_ref<;
-  HTMLLIElement,
-  React.ComponentProps<&quot;li & quot;>;
->(({ class_name, ...props }, ref) => (
-  <li ref={ref} className={cn ("&quot;, class_name)} {...props} />));
-PaginationItem.display_name = &quot;PaginationItem & quot;
-;
-type PaginationLinkProps = {
-  is_active?: boolean;
-  size?: ButtonProps[&quot;size & quot;];
-} & React.ComponentProps<&quot;a & quot;>;
-interface PaginationButtonProps;
-  extends React.ButtonHTMLAttributes < HTMLButtonElement> {
-  page: number;
-  is_active?: boolean;
-}
-const PaginationLink = ({
-  class_name,
-  is_active,
-  size = &quot;icon & quot;,
-  ...props;
-}: PaginationLinkProps) =>: any (
-  <a;
-    aria - current={is_active ? &quot;page" : undefined}
-    className={cn (
-      button_variants ({
-        variant: is_active ? "outline & quot; : &quot;ghost & quot;,
-        size}),
-      class_name)}
-    {...props}
-  />);
-PaginationLink.display_name = &quot;PaginationLink & quot;
-;
-const PaginationButton = React.forward_ref < HTMLButtonElement PaginationButtonProps>(
-  ({ page, is_active, class_name, ...props }, ref) => (
-    <button;
-=======
   >;
     <ChevronLeft className="h-4 w-4" />;
     <span>Previous</span>;
@@ -260,27 +184,10 @@ const PaginationLink = ({class_name,is_active,size = &quot;icon & quot;,...props
     className={cn (button_variants ({variant: is_active ? "outline & quot; : &quot;ghost & quot;,size}),class_name)}
     {...props}
   />)PaginationLink.display_name = &quot;PaginationLink & quot;const PaginationButton = React.forward_ref < HTMLButtonElement PaginationButtonProps>(({ page, is_active, class_name, ...props }, ref) => (<button;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       ref={ref}
       type=&quot;button";
       aria - label={`Page ${page}`}
       aria - current={is_active ? 'page' : undefined}
-<<<<<<< HEAD
-      className={cn (
-        button_variants ({ variant: 'ghost', size: 'icon' }),
-        is_active && 'bg - green - 600 text - white',
-        class_name)}
-      {...props}
-    >;
-      {page}
-</button>));
-PaginationButton.display_name = 'PaginationButton';
-const PaginationPrevious = ({
-  class_name,
-  ...props;
-}: Omit < PaginationLinkProps 'size'>) =>: any (
-  <PaginationLink;
-=======
       className={cn (button_variants ({ variant: 'ghost', size: 'icon' }),is_active && 'bg - green - 600 text - white',class_name)}
       {...props}
     >;
@@ -288,7 +195,6 @@ const PaginationPrevious = ({
 </button>))PaginationButton.display_name = 'PaginationButton';
 const PaginationPrevious = ({class_name,...props;
 }: Omit < PaginationLinkProps 'size'>) =>: any (<PaginationLink;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     aria - label="Go to previous page & quot;
     size=&quot;default";
     className={cn ("gap - 1 pl - 2.5", class_name)}
@@ -296,19 +202,8 @@ const PaginationPrevious = ({class_name,...props;
   >;
     <ChevronLeft className="h - 4 w - 4&quot; />;
     <span > Previous</span>;
-<<<<<<< HEAD
-  </PaginationLink>);
-PaginationPrevious.display_name = &quot;PaginationPrevious & quot;
-;
-const PaginationNext = ({
-  class_name,
-  ...props;
-}: Omit < PaginationLinkProps 'size'>) =>: any (
-  <PaginationLink;
-=======
   </PaginationLink>)PaginationPrevious.display_name = &quot;PaginationPrevious & quot;const PaginationNext = ({class_name,...props;
 }: Omit < PaginationLinkProps 'size'>) =>: any (<PaginationLink;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     aria - label=&quot;Go to next page & quot;
     size=&quot;default";
     className={cn ("gap - 1 pr - 2.5", class_name)}
@@ -316,40 +211,13 @@ const PaginationNext = ({
   >;
     <span > Next</span>;
     <ChevronRight className="h - 4 w - 4&quot; />;
-<<<<<<< HEAD
-  </PaginationLink>);
-PaginationNext.display_name = &quot;PaginationNext & quot;
-;
-const PaginationEllipsis = ({
-  class_name,
-  ...props;
-}: React.ComponentProps<&quot;span">) =>: any (
-  <span;
-=======
   </PaginationLink>)PaginationNext.display_name = &quot;PaginationNext & quot;const PaginationEllipsis = ({class_name,...props;
 }: React.ComponentProps<&quot;span">) =>: any (<span;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     aria - hidden;
     className={cn ("flex h - 9 w - 9 items - center justify - center", class_name)}
     {...props}
   >;
     <MoreHorizontal className="h - 4 w - 4" />;
     <span className="sr - only & quot;>More pages</span>;
-<<<<<<< HEAD
-  </span>);
-PaginationEllipsis.display_name = &quot;PaginationEllipsis";
-
-PaginationEllipsis.displayName = "PaginationEllipsis"
-
-
-export {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationButton,
-=======
   </span>)PaginationEllipsis.display_name = &quot;PaginationEllipsis";PaginationEllipsis.displayName = "PaginationEllipsis";
 export {Pagination,PaginationContent,PaginationEllipsis,PaginationItem,PaginationLink,PaginationButton,
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 :backup-problematic-files/components/docs/ApiDocsPage.tsx
 
 import React, { useMemo, useState } from 'react';
@@ -20,7 +17,6 @@ export default function ApiDocsPage() {
     <div className="min - h-screen bg - high - contrast - primary text - high - contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>;
       <Sidebar;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import {
   ApiDocsSpec,
   EndpointSpec,
@@ -51,9 +47,6 @@ export default function ApiDocsPage() {
   
     >
       <Sidebar
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533:components/docs/ApiDocsPage.tsx
-=======
 
 ;
 import React, { useMemo, useState } from 'react';
@@ -73,10 +66,7 @@ export default function ApiDocsPage() {const spec: ApiDocsSpec = v1; // could sw
   )const activeEndpoint =;
     allEndpoints.find(e => e.id === activeEndpointId) || firstEndpoint;>;
       <Sidebar;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         spec={spec}
         activeEndpointId={active_endpoint?.id}
         onSelectEndpoint={setActiveEndpointId}
@@ -84,78 +74,11 @@ export default function ApiDocsPage() {const spec: ApiDocsSpec = v1; // could sw
 onChangeVersion={v => {setSelectedVersion(v)setActiveEndpointId(undefined)}}
         visibilityFilter={visibility}
         onChangeVisibility={setVisibility}
-<<<<<<< HEAD
-      />
-      <main className='p-6 space-y-6'>
-        <header className='flex items-center justify-between'>
-          <div>
-            <div className='text-2xl font-bold'>Zion OS API Documentation</div>
-            <div className='text-sm text-high-contrast-muted'>
-              Developer-friendly API docs with live testing
-            </div>
-          </div>
-          <div className='flex gap-2'>
-            <a
-              className='px-3 py-1 rounded border border-high-contrast-accent'
-              href='/api/docs/openapi'
-              target='_blank'
-              rel='noreferrer'
-            >
-              OpenAPI
-            </a>
-            <a
-              className='px-3 py-1 rounded border border-high-contrast-accent'
-              href='/api/docs/postman'
-              target='_blank'
-              rel='noreferrer'
-            >
-              Postman
-            </a>
-            <a
-              className='px-3 py-1 rounded border border-high-contrast-accent'
-              href='/api/docs/graphql'
-              target='_blank'
-              rel='noreferrer'
-            >
-              GraphQL
-            </a>
-          </div>
-        </header>
-        {activeEndpoint ? (
-          <EndpointDetail endpoint={activeEndpoint} />
-        ) : (
-<div className='text-sm text-high-contrast-muted'>
-            Select an endpoint from the sidebar
-          </div>
-        )}
-
-        <section className='mt-8'>
-          <div className='text-lg font-semibold mb-2'>Changelog</div>
-          <ChangelogWidget />
-        </section>
-      </main>
-    </div>
-  );
-}
-
-function ChangelogWidget() {
-  const [content, setContent] = useState('')
-  const [message, setMessage] = useState('')
-  async function load() {
-    setMessage('');
-    const res = await fetch('/api/docs/changelog');
-    const data = await res.json();
-    setContent(data.content || '');
-  }
-  async function save() {
-<<<<<<< HEAD
-=======
 :backup-problematic-files/components/docs/ApiDocsPage.tsx
     setMessage('')
     await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) })
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     setMessage('');
 await fetch('/api/docs/changelog', {
       method: 'POST',
@@ -169,7 +92,6 @@ await fetch('/api/docs/changelog', {
     <div className='space-y-2'>
       <div className='flex gap-2'>
         <button
-=======
       />;
       <main className='p-6 space-y-6'>;
         <header className='flex items-center justify-between'>;
@@ -220,7 +142,6 @@ await fetch('/api/docs/changelog', {
   async function save() {setMessage('')await fetch('/api/docs/changelog', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content }) })setMessage('')await fetch('/api/docs/changelog', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({ content }),})setMessage('Saved')}return (<div className='space-y-2'>;
       <div className='flex gap-2'>;
         <button;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           onClick={load}
           className='px-3 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary';
         >;
@@ -239,16 +160,7 @@ await fetch('/api/docs/changelog', {
         className='w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm';
         value={content}
         onChange={e => setContent(e.target.value)}
-<<<<<<< HEAD
-        placeholder='Add changelog entries here...'
-      />
-    </div>
-  );
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533:components/docs/ApiDocsPage.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     setMessage('Saved')
   }
   return (
@@ -256,7 +168,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/docs/ApiDocsP
       <div className="flex gap-2">
         <button onClick={load} className="px-3 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">Load</button>
         <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>
-=======
         placeholder='Add changelog entries here...';
       />;
     </div>;
@@ -265,9 +176,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533:components/docs/ApiDocsP
       <div className="flex gap-2">;
         <button onClick={load} className="px-3 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary">Load</button>;
         <button onClick={save} className="px-3 py-1 rounded bg-high-contrast-accent text-black">Save</button>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {message && <span className="text-xs text-high-contrast-muted">{message}</span>}
       </div>;
       <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />;
     </div>;
   )}
+

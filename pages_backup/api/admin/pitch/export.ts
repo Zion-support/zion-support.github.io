@@ -1,4 +1,4 @@
-  const { allowed } = await ensureAdminFromApi(req);
+const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
   const { slides, format, version } = req.body || {};
@@ -22,9 +22,6 @@ import { ensureAdminFromApi } from '../../../../utils/auth',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { allowed } = await ensureAdminFromApi(req)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' })
-main
-
-
 
     return res.status(200).json({ url })
     const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;

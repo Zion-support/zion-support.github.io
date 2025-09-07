@@ -1,12 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { readLogs } from '@/utils/zionBrain';
 function isAuthorized(req: NextApiRequest): boolean {
-    return res.status(401).json({ error: 'Unauthorized' });
+  const token = $2;
+  const superToken = $2;
+  return !superToken || token === superToken
+}
 
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
@@ -65,31 +64,11 @@ if ( {) {
       entries: entries.filter (
         e => e.status === 'stuck' || e.status === 'laggy'),
   if (!isAuthorized(req)) return res.status(401).json({ error: 'Unauthorized' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const { entries } = readLogs();
   const stuckOnly = req.query.stuck === '1' |req.query.stuck === 'true';
   if (stuckOnly) {
 return res.status(200).json({
       entries: entries.filter(
-<<<<<<< HEAD
-        e => e.status === 'stuck' || e.status === 'laggy'
-      ),
-    });
-  }
-
-  const byModule: Record<string, number> = {};
-  const byType: Record<string, number> = {};
-return res.status(200).json({
-    entries: entries.slice(-200),
-    byModule,
-    byType,
-    total: entries.length,
-  });
-  }
-return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length });
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   const token = req.headers['x-admin-token'] |req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken |token === superToken;
@@ -132,10 +111,7 @@ function isAuthorized(req: NextApiRequest): boolean {return res.status(401).json
 return res.status (200).json ({ entries: entries.slice (-200), by_module, by_type, total: entries.length })}
   const byType: Record<string, number> = {}}const byModule: Record<string, number>  = {}const byModule: Record<string, number>  = {}e => e.status === 'stuck' || e.status === 'laggy';
       ),})}const byModule: Record<string, number> = {}const byType: Record<string, number> = {}return res.status(200).json({entries: entries.slice(-200),byModule,byType,total: entries.length,})}
-<<<<<<< HEAD
 return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length })}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
         e => e.status === 'stuck' |e.status === 'laggy'
       )
     });  }
@@ -169,7 +145,21 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
 
   const byModule: Record<string, number> = {};
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (!isAuthorized(req)) return res.status(401).json($2);
+  const { entries } = readLogs($2);
+  const stuckOnly = $2;
+  if (stuckOnly) {
+    return res.status(200).json({ entries: entries.filter((e) => e.status === 'stuck' || e.status === 'laggy') })
+  }
+
+  const byModule: Record<string, number> = {},
+  const byType: Record<string, number> = {},
+  for (const e of entries) {
+    byModule[e.module] = (byModule[e.module] || 0) + 1,
+    byType[String(e.type)] = (byType[String(e.type)] || 0) + 1
+  }
+
+  return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length })
+}

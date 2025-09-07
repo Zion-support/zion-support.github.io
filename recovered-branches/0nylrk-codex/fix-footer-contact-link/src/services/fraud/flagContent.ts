@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-
-
-import { supabase } from '@/integrations/supabase/client',
-import { FraudSeverity, FraudFlag } from '@/types/fraud',
-import { FlagResult } from './types',
-
-
-/**
- * Flag content for review
- */
-
-=======
 export const flagContent = async (;
   userId: string;
   userEmail: string | undefined;
@@ -24,7 +11,6 @@ export const flagContent = async (
   contentType: FraudFlag['content_type'];
   contentId: string;
   contentExcerpt: string;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 // Content flagging functionality;
 import {supabase} from '@/integrations / supabase / client';
@@ -38,18 +24,14 @@ export const flag_content = async (
   user_email: string | undefined;
   content_type: FraudFlag['content_type'];
   content_id: string;
-<<<<<<< HEAD
-  content_excerpt: string;
-  severity: FraudSeverity;
-export const flagContent = async (
-  userId: string;
-  userEmail: string | undefined;
-  contentType: FraudFlag['content_type'];
-  contentId: string;
-  contentExcerpt: string;
-  severity: FraudSeverity;
-  reason: string
-  userId: string,
+// Content flagging functionality
+import { supabase  } from '@/integrations/supabase/client';
+import { FraudSeverity, FraudFlag  } from '@/types/fraud';
+import { FlagResult } from './types';
+/**
+ * Flag content for review
+ */
+export const flagContent = $2;
   userEmail: string | undefined,
   contentType: FraudFlag['content_type'],
   contentId: string,
@@ -59,27 +41,7 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
-    console.log ('Flagging content for review:', {
-      user_id;
-      content_type;
-      content_id;
-
-      reason;
-      severity;
-    });
-
-    
-    const { error } = await supabase && supabase.from('fraud_flags').insert({
-      user_id: userId;
-      user_email: userEmail;
-      content_type: contentType;
-      content_id: contentId,
-      content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
-
-    // // // console.log('Flagging content for review:', {
-=======
   content_excerpt: string;    // // // console.log('Flagging content for review:', {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       userId,
       contentType,
       contentId,
@@ -87,129 +49,36 @@ export const flagContent = async (
       severity
       reason;
       severity;
-<<<<<<< HEAD
-    });
+    console.log($2);
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId;
       user_email: userEmail;
       content_type: contentType;
       content_id: contentId
       content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
-      severity;
-      reason;
-=======
     });      reason;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       ip_address: ipAddress;
       timestamp: new Date().toISOString()
       status: 'pending'
     });
     if (error) throw error;
     return { success: true }
-<<<<<<< HEAD
-  } catch (error) {
-
-    }
-  }
-}
-
-    }),
-    
-    const { error } = await supabase.from('fraud_flags').insert({
-      user_id: userId,
-      user_email: userEmail,
-      content_type: contentType,
-      content_id: contentId,
-      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
       severity,
       reason,
       ip_address: ipAddress,
-      timestamp: new Date().toISOString(),
+      timestamp: new Date().toISOString($2);
       status: 'pending'
     }),
     
     if (error) throw error,
     
-// Content flagging functionality;
-import { supabase } from '@/integrations/supabase/client',;
-import { FraudSeverity, FraudFlag } from '@/types/fraud',;
-import { FlagResult } from './types',;
-/**;
- * Flag content for review;
- */;
-export const flagContent = async (;
-  userId: string,;
-  userEmail: string | undefined,;
-  contentType: FraudFlag['content_type'],;
-  contentId: string,;
-  contentExcerpt: string,;
-  severity: FraudSeverity,;
-  reason: string,;
-  ipAddress?: string;
-): Promise<FlagResult> => {;
-  try {;
-    // // // console.log('Flagging content for review:', {;
-      userId,;
-      contentType,;
-      contentId,;
-      reason,;
-      severity;
-    }),;
-    const { error } = await supabase.from('fraud_flags').insert({;
-      user_id: userId,;
-      user_email: userEmail,;
-      content_type: contentType,;
-      content_id: contentId,;
-      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length;
-      severity,;
-      reason,;
-      ip_address: ipAddress,;
-      timestamp: new Date().toISOString(),;
-      status: 'pending';
-    }),;
-    if (error) throw error,;
-    return { success: true }
-  } catch (error) {;
-    console.error('Error flagging content:', error),;
-    return {;
-      success: false;
-      error: error instanceof Error ? error.message : 'Unknown error';
-
-      reason;
-      severity;
-    });
-    const { error } = await supabase && supabase.from('fraud_flags').insert({
-      user_id: userId;
-      user_email: userEmail;
-      content_type: contentType;
-      content_id: contentId,
-      content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
-      severity;
-      reason;
-      ip_address: ipAddress;
-      timestamp: new Date().toISOString()
-      status: 'pending'
-    });
-    if (error) throw error;
-    return { success: true }
-  } catch (error) {
-    console && console.error('Error flagging content:', error);
-=======
   } catch (error) {    console && console.error('Error flagging content:', error);
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return { 
       success: false, 
       error: error instanceof Error ? error && error.message : 'Unknown error' 
 
-<<<<<<< HEAD
-    }
-  }
-}
-
-=======
     }  }
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     const { error } = await supabase.from ('fraud_flags').insert ({
       user_id: user_id;
@@ -234,48 +103,9 @@ if (throw error) {
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error';
-<<<<<<< HEAD
-
-  ipAddress?: string
-): Promise<FlagResult> => {
-  try {
-    // // // console.log('Flagging content for review:', {
-      userId,
-      contentType,
-      contentId,
-      reason,
-      severity
-
-    }),
-    
-    const { error } = await supabase.from('fraud_flags').insert({
-      user_id: userId,
-      user_email: userEmail,
-      content_type: contentType,
-      content_id: contentId,
-      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
-      severity,
-      reason,
-      ip_address: ipAddress,
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-    }),
-    
-    if (error) throw error,
-    
-
-    }
-  }
-}
-;
-};
-    }
-  }
-=======
 =======    }
   }
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
     }
   }
@@ -283,3 +113,12 @@ if (throw error) {
     }
   }
 };
+    return { success: true}
+  } catch (error) {
+    console.error($2);
+    return { 
+      success: false, 
+      error: error instanceof Error ? error.message : 'Unknown error' 
+    }
+  }
+},

@@ -1,18 +1,34 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+class PerformanceTracker {
+  constructor() {
+    this.metrics = {
+      "timestamp": new Date().toISOString(),
+      "buildTime": 0,
+      "bundleSize": 0,
+      "pageCount": 0
+    }}
+  trackBuildTime(startTime) {
+    this.metrics.buildTime = Date.now() - startTime}
+  trackBundleSize() {
+    const buildDir = path.join(process.cwd(), '.next;';);
+    if () {
+      const stats = fs.statSync(buildDir) {
+    ) {
+      const stats = fs.statSync(buildDir});
+      this.metrics.bundleSize = stats.size}
+  }
+  saveMetrics() {
+    const reportPath = path.join(process.cwd(), 'performance-metrics.json;';);
+    fs.writeFileSync(reportPath, JSON.stringify(this.metrics, null, 2));
+    }
+}
+module.exports = PerformanceTracker;
     const buildDir = path.join(process.cwd(), '.next;'
     const reportPath = path.join(process.cwd(), 'performance-metrics.json;'
+
     console.log(' Performance metrics saved')
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

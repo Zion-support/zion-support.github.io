@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default function PricingPage() {
   const plans = [
     {
@@ -54,11 +50,6 @@ export default function PricingPage() {
         "Email support",
         "Basic analytics",
         "Monthly reports"
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 ;
 ursor/fix-website-loading-errors-and-merge-6662;
@@ -119,55 +110,20 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">;
             {pricingPlans.map((plan, index) => (<div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">            {pricingPlans.map((plan, index) => (<div;
 
+
+
       ],
       \"popular\": false
     },
     {
-      \"name\": \"Professional\",
-      \"description\": \"Ideal for growing businesses\",
-      \"price\": \"$7,999\",
-      \"period\": \"/month\",
-      \"icon\": Shield,
-      \"color\": \"from-cyan-500 to-blue-500\",
-      \"features\": [\'Advanced website development\',
-        \'Up to 15 pages\',
-        \'Custom functionality\',
-        \'Advanced SEO optimization\',
-        \'Priority support\',
-        \'6 months maintenance included\',
-        \'Analytics integration\',
-        \'Content management system\'
-      "name": 'Professional',
-      "description": 'Ideal for growing businesses',
-      "price": '$5,000',
-      "period": 'per month',
-      "name": "Professional",
-      "description": "Ideal for growing businesses",
-      "price": "$7,999",
-      "period": "/month",
-      "icon": Shield,
-      "color": "from-cyan-500 to-blue-500",
-      "features": ['Advanced website development',
-        'Up to 15 pages',
-        'Custom functionality',
-        'Advanced SEO optimization',
-        'Priority support',
-        '6 months maintenance included',
-        'Analytics integration',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         'Content management system'
 
 
       ],
-<<<<<<< HEAD
-=======
         'Content management system'      ],
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
+      ],
       \"popular\": true
     },
     {
@@ -195,36 +151,19 @@ ursor/automate-test-improve-and-merge-code-646c;
         <title>Pricing - Zion Tech Group</title>
         <meta name=\"description\" content=\"Transparent pricing for our technology services. Choose the plan that fits your business needs.\" />
       </Head>
-      <div className=\"min-h-screen bg-gray-50 py-12\">
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
-          <div className=\"text-center mb-16\">
-            <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
 
 
               Simple, Transparent Pricing
-<<<<<<< HEAD
-=======
             <h1 className="text-4xl font-bold text-gray-900 mb-4">              Simple, Transparent Pricing
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
+              Simple, Transparent Pricing
             </h1>
             <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">
               Choose the plan that fits your business needs.
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
@@ -232,12 +171,7 @@ ursor/automate-test-improve-and-merge-code-646c;
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
             {pricingPlans.map((plan, index) => (
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">            {pricingPlans.map((plan, index) => (
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <div
                 key={plan.name}
                 className={`relative bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? \'ring-2 ring-blue-500 transform scale-105\' : \'';
@@ -276,6 +210,14 @@ export default function PricingPage() {const plans = [;
     }
   ];
   return (<>;
+
+
+            {pricingPlans.map((plan, index) => (
+              <div
+                key={plan.name}
+                className={`relative bg-white rounded-2xl shadow-lg p-8 ${
+                  plan.popular ? \'ring-2 ring-blue-500 transform scale-105\' : \''
+                }`}
               >
                 {plan.popular && (
                   <div className=\"absolute -top-4 left-1/2 transform -translate-x-1/2\">
@@ -284,13 +226,6 @@ export default function PricingPage() {const plans = [;
                     </span>
                   </div>
                 )}
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
-          <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
             {pricingPlans.map((plan, index) => (
 
@@ -498,12 +433,7 @@ ursor/automate-test-improve-and-merge-code-646c;
                     </li>;
                 )}
                 <div className=\"text-center mb-8\">
-<<<<<<< HEAD
-=======
           <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">                <div className=\"text-center mb-8\">
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan.name}</h3>
                   <p className=\"text-gray-600 mb-4\">{plan.description}</p>
                   <div className=\"mb-4\">
@@ -520,77 +450,19 @@ ursor/automate-test-improve-and-merge-code-646c;
                     <span className="text-gray-600 ml-2">{plan.period}</span>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <ul className="space-y-4 mb-8">
 
 
                   {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-=======
                 <ul className="space-y-4 mb-8">                  {plan.features.map((feature, featureIndex) => (
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
+                  {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className=\"flex items-center\">
                       <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />
                       <span className=\"text-gray-600\">{feature}</span>
                     </li>
                   ))}
-                </ul>;
-                <Link;
-                  href=\"/contact\";
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${plan.popular;
-                      ? \'bg-blue-600 text-white \"hover\": bg-blue-700\';
-                      : \'bg-gray-900 text-white hover:bg-gray-800\';
-                  }`}
-                >;
-                  Get Started;
-                  <ArrowRight className=\"w-4 h-4 ml-2 inline\" />;
-                </Link>;
-              </div>;
-            ))}
-          </div>;
-ursor/automate-test-improve-and-merge-code-646c;
-                <div className=\"text-center mb-8\">;
-                  <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan && plan.name}</h3>;
-                  <p className=\"text-gray-600 mb-4\">{plan && plan.description}</p>;
-                  <div className=\"mb-4\">;
-                    <span className=\"text-4xl font-bold text-gray-900\">{plan && plan.price}</span>;
-                    <span className=\"text-gray-600 ml-2\">{plan && plan.period}</span>;
-                  </div>;
-                </div>;
-                <ul className=\"space-y-4 mb-8\">;
-                <div className="text-center mb-8">;
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan && plan.name}</h3>;
-                  <p className="text-gray-600 mb-4">{plan && plan.description}</p>;
-                  <div className="mb-4">;
-                    <span className="text-4xl font-bold text-gray-900">{plan && plan.price}</span>;
-                    <span className="text-gray-600 ml-2">{plan && plan.period}</span>;
-                  </div>;
-                </div>;
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (<li key={featureIndex} className=\"flex items-center\">;
-                      <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />;
-                      <span className=\"text-gray-600\">{feature}</span>;
-                    </li>;
-                  ))}
-                </ul>;
-                <Link;
-                  href=\"/contact\";
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${plan && plan.popular;
-                      ? \'bg-blue-600 text-white \"hover\": bg-blue-700\';
-                      : \'bg-gray-900 text-white hover:bg-gray-800\';
-                  }`}>;
-                  Get Started;
-                  <ArrowRight className=\"w-4 h-4 ml-2 inline\" />;
-                </Link>;
-              </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
             ))}</div>;
           </div>;
 ursor/automate-test-improve-and-merge-code-646c;
@@ -624,19 +496,31 @@ ursor/automate-test-improve-and-merge-code-646c;
       </div>;
     </>;
   )ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             ))}
           <div className=\"text-center\">
             <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Ready to Get Started?
-<<<<<<< HEAD
-=======
             ))}              Ready to Get Started?
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+                </ul>
+                <Link
+                  href=\"/contact\"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                    plan.popular
+                      ? \'bg-blue-600 text-white \"hover\": bg-blue-700\'
+                      : \'bg-gray-900 text-white hover:bg-gray-800\'
+                  }`}
+                >
+                  Get Started
+                  <ArrowRight className=\"w-4 h-4 ml-2 inline\" />
+                </Link>
+              </div>
+            ))}
+          </div>
+
+
+              Ready to Get Started?
             </h2>
             <p className=\"text-xl text-gray-600 mb-8\">
               Contact us today for a free consultation and custom quote.
@@ -660,65 +544,23 @@ ursor/automate-test-improve-and-merge-code-646c;
       </div>
     </>
   );
-          </div>;
-          <div className=\"text-center\">;
-            <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">;
-          <div className="text-center">;
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">;
-              Ready to Get Started?;
-            </h2>;
-            <p className=\"text-xl text-gray-600 mb-8\">;
-              Contact us today for a free consultation and custom quote.;
-            </p>;
-            <div className=\"flex flex-col \"sm\": flex-row gap-4 justify-center\">;
-              <Link;
-                href=\"/contact\";
-                className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors\">;
-                Get Free Consultation;
-              </Link>;
-              <Link;
-                href=\"/services\";
-                className=\"border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors\">;
-                View All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  )ursor/automate-test-improve-and-merge-code-646c;
-}
-<<<<<<< HEAD
-};
-export default PricingPage;
-<<<<<<< HEAD
-=======
-=======
 }export default PricingPage;
 }ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
 }
 }export default PricingPage;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }}
 }export default PricingPage;
 }}export default PricingPage;import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports";}export default PricingPage;ursor/automate-test-improve-and-merge-code-646c;
 }export default PricingPage;
 };
 export default PricingPage;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
 };
 export default PricingPage;
 
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
-<<<<<<< HEAD
-import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
-<<<<<<< HEAD
-import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports";
-import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
-=======
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
 };
 export default PricingPage;
@@ -727,8 +569,7 @@ import React from 'react';  import Head from 'next/head'; import Link from 'next
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports";
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
+import React from 'react';  import Head from 'next/head'; import Link from 'next/link'; import { CheckCircle,ArrowRight,Users,Zap,Shield } from 'lucide-react'; const PricingPage: React.FC = () => { const pricingPlans = [ { name: 'Starter',description: 'Perfect for small businesses and startups',price: '$2,500',period: 'per month',features: [ 'Basic website development','Up to 5 pages','Mobile responsive design','Basic SEO optimization','Email support','3 months maintenance included'  import { Helmet } from 'react-helmet-async'; import { Link } from 'react-router-dom'; import { Check,Star,Zap,Shield,Users,Clock,ArrowRight } from 'lucide-react'; export default function PricingPage() { const plans = [ { name: "Starter",description: "Perfect for small businesses and startups",price: "$2,999",period: "/month",icon: Zap,color: "from-green-500 to-emerald-500",features: [ "Up to 5 users","Basic AI automation","Standard security features","Email support","Basic analytics","Monthly reports"

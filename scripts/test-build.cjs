@@ -7,17 +7,11 @@ const problematicFiles = ['components/ContactForm.tsx']
   'components/PerformanceMonitor.tsx'
   console.log('� Attempting build without problematic files...')
     execSync('npm run build', { "stdio"})
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     console.log(' Build "failed")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     console.log(' Build "failed")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     console.log(' Build "failed")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    console.log(' Build "failed")
+    console.log(' Build "failed")
+
+

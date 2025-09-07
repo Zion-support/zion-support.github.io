@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
 export default function HomePage() {
   return (
     <>
@@ -20,51 +18,7 @@ export default function HomePage() {
         <link rel=\"canonical\" href=\"https://ziontechgroup.com/\"  />
       </Head>
             <p>
-              Mobile: <a className=\"text-blue-700\" href=\"tel:+13024640950\">+1 302 464 0950</a> · Email:{\' \'}
-              <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Address: 364 E
-              Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
-              <a className="text-blue-700" href=""mailto": kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
 
-;
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-export default function HomePage() {return (<>;
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default function HomePage() {
   return (
     <>;
@@ -112,9 +66,6 @@ export default function HomePage() {return (<>;
             <p>;
               Mobile: <a className=\"text-blue-700\" href=\"tel:+13024640950\">+1 302 464 0950</a> · Email:{\' \'}
               <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}Mobile: <a className=\"text-blue-700\" href=\"tel:+13024640950\">+1 302 464 0950</a> · Email:{\' \'}
               <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}ursor/fix-website-loading-errors-and-merge-6662;
@@ -135,7 +86,6 @@ ursor/automate-test-improve-and-merge-code-646c;
       </main>;
     </>;
   )}import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> )<a className="text-blue-700" href=""mailto": kleber@ziontechgroup && ziontechgroup.com">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
               Mobile: <a className=\"text-blue-700\" href=\"tel:+13024640950\">+1 302 464 0950</a> · Email:{\' \'}
               <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
@@ -149,13 +99,11 @@ ursor/automate-test-improve-and-merge-code-646c;
 
               <a className="text-blue-700" href=""mailto": kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
               Main St STE 1008 Middletown DE 19709
-<<<<<<< HEAD
-=======
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}              <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}              Main St STE 1008 Middletown DE 19709
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
+              Main St STE 1008 Middletown DE 19709
             </p>
           </div>
         </section>
@@ -163,10 +111,6 @@ ursor/automate-test-improve-and-merge-code-646c;
     </>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> );
 
               <a className="text-blue-700" href=""mailto": kleber@ziontechgroup && ziontechgroup.com">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
@@ -181,9 +125,5 @@ import React from 'react'; import Link from 'next/link'; import Head from 'next/
 }
   ),;
 }
-<<<<<<< HEAD
-import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> );
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+

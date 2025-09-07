@@ -1,19 +1,3 @@
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
-
-;
-import React from "react",import Link from "next/link",import { ArrowRight, Phone  } from 'lucide-react';
-import { Button  } from '@/components/ui/button';
-import { AppStoreButtons  } from './AppStoreButtons';
-export const MobileAppHero: React.FC;
-}
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
-import React from "react"
-import Link from "next/link"
-import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button"
-import { AppStoreButtons } from "./AppStoreButtons"
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/MobileAppHero.tsx
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -42,22 +26,22 @@ export const MobileAppHero: React.FC = () => {
 <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
 
-=======
 
 <Link href="/open-app">
               <Button variant="outline" size="lg" className="flex gap-2 border-white text-white hover: bg-white/10">
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/MobileAppHero.tsx
+:backup-problematic-files/temp_broken_files/mobile-app/MobileAppHero.tsx
+import React from "react",
+import Link from "next/link",
+import { ArrowRight, Phone } from 'lucide-react'
+
                 Open App
+
                 <ArrowRight size={20} />
               </Button>
             </Link>
           </div>
 
 
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/MobileAppHero.tsx
           
 
 
@@ -66,9 +50,6 @@ export const MobileAppHero: React.FC = () => {
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
-
-=======
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone } from 'lucide-react'import { Button  } from '@/components/ui/button';
@@ -104,7 +85,6 @@ export const MobileAppHero: React.FC = () => {// These would come from environme
             <div className="relative w-64 h-auto">;
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>;
               <Phone className="w-full h-auto text-white" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/MobileAppHero.tsx
   // These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
@@ -142,10 +122,9 @@ export const MobileAppHero: React.FC = () => {// These would come from environme
 <<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
     </section>);
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/MobileAppHero.tsx
 }
 
+}
 
 };
 import React from "react";
@@ -153,10 +132,9 @@ import Link from "next/link";
 import { ArrowRight, Phone } from 'lucide-react'import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
 
-  );
+  )
 };
 ";
-
 
 import React from "react",;
 import Link from "next/link",;
@@ -165,9 +143,7 @@ import { Button } from "@/components/ui/button",;
 import { AppStoreButtons } from "./AppStoreButtons",;
 export const MobileAppHero: React.FC = () => {;
   // These would come from environment variables or a config;
-=======
     </section>)}})}";import { Button } from "@/components/ui/button",import { AppStoreButtons } from "./AppStoreButtons",export const MobileAppHero: React.FC = () => {// These would come from environment variables or a config;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/MobileAppHero.tsx
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
   const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
   return (<section className="relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24">;
@@ -203,23 +179,22 @@ export const MobileAppHero: React.FC = () => {;
         </div>;
       </div>;
     </section>;
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
-  );
+  )}";
+";";
+
+
+
+";
+
+:backup-problematic-files/temp_broken_files/mobile-app/MobileAppHero.tsx
+  ),;
+},; relative bg-gradient-to-r from-zion-blue-dark to-zion-purple py-16 md:py-24"> <div className=" container mx-auto px-4 lg:px-8"> <div className=" flex flex-col md:flex-row items-center gap-8 md:gap-16"> <div className=" flex-1 text-white"> <h1 className=" text-4xl md:text-5xl lg:text-6xl font-bold mb-6"> <span className=" text-zion-cyan">Zion</span> in Your Pocket </h1> </p> <div className=" mb-8"> <AppStoreButtons appStoreUrl= {;
+  appStoreUrl ;
+}googlePlayUrl= {;"  googlePlayUrl ";"}/> </div> <Link href=" /open-app"> <Button variant=" outline"size=" lg"className=" flex gap-2 border-white text-white hover:bg-white/10" > Open App <ArrowRight size= {;
+  20 ;
+}/> </Button> </Link> </div> </div> </div> </div> </div> </section>) ;
+};""
+
 };
 
 "
-<<<<<<< HEAD:src_backup/components/mobile-app/MobileAppHero.tsx
-";
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  )}";
-";";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/mobile-app/MobileAppHero.tsx
-=======
-
-
-
-";
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/mobile-app/MobileAppHero.tsx

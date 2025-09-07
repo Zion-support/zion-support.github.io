@@ -108,6 +108,10 @@ automation/data/*.json
 # Test results
 test-results/
 coverage/
+# Test results
+test-results/
+coverage/
+
 
 # Generated reports
 automation-reports/
@@ -167,3 +171,24 @@ security-scan-report.json
 
 # Core files
 core
+
+
+
+# Additional ignores for better project management
+*.log
+*.tmp
+*.temp
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.vercel
+.netlify
+coverage/
+.nyc_output/
+dist/
+build/
+.cache/
+.parcel-cache/
+.DS_Store
+Thumbs.db

@@ -1,15 +1,34 @@
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
->
-        <Eye className="h-4 w-4" />
-      </Button>
-      <Button
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
+import React from "react",
+import { Button } from "@/components/ui/button";
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
+interface ActionButtonsProps {
+  flagId: string;
+  status: string;
 
+  onAction: (
+    flagId: string
+    action: "warning" | "suspension" | "ban" | "ignore"
+  ) => void;
+}
+export const ActionButtons: React.FC<ActionButtonsProps> = ({
+  flagId
+  status
+  onAction
+}) => {
 
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
 
-=======
+interface ActionButtonsProps {
+  flagId: string,
+  status: string,
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
+}
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
 interface ActionButtonsProps {
+
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
   return (
     <div className="flex space-x-2">
@@ -20,25 +39,27 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         aria-label="View details"
         onClick={() => alert("View details (would open a detailed view)")}
       >
+
+>
+
         <Eye className="h-4 w-4" />
       </Button>
-      <Button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/ActionButtons.tsx
-};
-'"},;
-  );
-};
+      <Button};
 
+'"},;
+  )
+};
 
         variant="ghost"
         size="icon"
         title="Send Warning"
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
+        onClick={() => onAction(flagId, "warning")}
+        disabled={status === "actioned" |status === "ignored"}
         aria-label="Send warning"
         onClick={() => onAction(flagId, 'warning')}
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/ActionButtons.tsx
+
         disabled={status === 'actioned' || status === 'ignored'}
       >
         <Info className="h-4 w-4" />
@@ -47,8 +68,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         variant="ghost"
         size="icon"
         title="Suspend User"
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
+        onClick={() => onAction(flagId, "suspension")}
+        disabled={status === "actioned" |status === "ignored"}
         aria-label="Suspend user"
-=======
 
 ;
 import { Eye, Info, AlertTriangle, Ban  } from 'lucide-react';
@@ -80,17 +103,19 @@ interface ActionButtonsProps  {export const ActionButtons: React.FC<ActionButton
         size="icon";
         title="Suspend User";
         aria-label="Suspend user";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/fraud-detection/ActionButtons.tsx
         onClick={() => onAction(flagId, 'suspension')}
         disabled={status === 'actioned' || status === 'ignored'}
-      >;
-        <AlertTriangle className="h-4 w-4" />;
-      </Button>;
-      <Button;
-        variant="ghost";
-        size="icon";
-        title="Ban User";
-        aria-label="Ban user";
+      >
+        <AlertTriangle className="h-4 w-4" />
+      </Button>
+      <Button
+        variant="ghost"
+        size="icon"
+        title="Ban User"
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
+        onClick={() => onAction(flagId, "ban")}
+        disabled={status === "actioned" |status === "ignored"}
+        aria-label="Ban user"
         onClick={() => onAction(flagId, 'ban')}
         disabled={status === 'actioned' || status === 'ignored'}
 <<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
@@ -101,7 +126,6 @@ interface ActionButtonsProps  {export const ActionButtons: React.FC<ActionButton
         <Button
           variant="ghost"
           size="sm"
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -112,37 +136,32 @@ import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
 interface ActionButtonsProps {
           size='sm'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/ActionButtons.tsx
+
           onClick={() => onAction(flagId, 'ignore')}
         >
           Ignore
         </Button>
       )}
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
-
-    </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
     </div>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/ActionButtons.tsx
   )
 
 
   );
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/admin/fraud-detection/ActionButtons.tsx
+    </div>
+  );
+}
+
 };
-
-
+    </div>
+  );
 
 import React from 'react';
 <<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
 import { Button } from '@/components / ui / button';
-import React from "react",;
-import { Button } from "@/components/ui/button",;
+
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
 interface ActionButtonsProps {;
   flagId: string,;
@@ -153,7 +172,6 @@ interface ActionButtonsProps {;
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {;
   return (;
     <div className="flex space-x-2">;
-=======
       >;
         <Ban className="h-4 w-4" />;
       </Button>;
@@ -171,7 +189,6 @@ interface ActionButtonsProps  {size='sm';
   ))}import { Button  } from '@/components / ui / button';
 import React from "react",import { Button } from "@/components/ui/button",interface ActionButtonsProps  {flagId: string,status: string,onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
 }export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {return (<div className="flex space-x-2">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/fraud-detection/ActionButtons.tsx
       <Button;
         variant="ghost";
         size="icon";
@@ -220,22 +237,11 @@ import React from "react",import { Button } from "@/components/ui/button",interf
         </Button>;
       )}
     </div>;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
-  );
-};
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
-=======
-=======
 import { Button } from '@/components/ui/ button';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452:src/components/admin/fraud-detection/ActionButtons.tsx
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
 interface ActionButtonsProps {
   flag_id: string;
-=======
   )}interface ActionButtonsProps  {flag_id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/fraud-detection/ActionButtons.tsx
   status: string;
   on_action: (flag_id: string,action: 'warning' | 'suspension' | 'ban' | 'ignore') => void;
 export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on_action}) => {  return (<div className='flex space - x-2'>;
@@ -294,17 +300,13 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({flag_id,status,on
 '"},
   );
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/ActionButtons.tsx
 
-);
+}
+
+'"},
+  );
+});
 };
-'"
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/ActionButtons.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </div>)}
 '"},)})}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/fraud-detection/ActionButtons.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/ActionButtons.tsx
+'"

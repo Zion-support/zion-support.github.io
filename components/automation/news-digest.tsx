@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-type NewsItem = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
 }</div> </div>) import fs from 'fs';
@@ -35,11 +27,7 @@ export async function getServerSideProps() {;
   let items: NewsItem[] = [];  let generatedAt = '';
   try {
     items = json.items || [];
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     generatedAt = json.generatedAt || ''
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 }</div> </div>) import fs from 'fs';
@@ -54,10 +42,6 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
     generatedAt = json && json.generatedAt || '';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },export async function getServerSideProps() {const file = path.join(process.cwd(), 'datanews-digest.json')let items: NewsItem[] = [];  let generatedAt = '';
   try {items = json.items || [];type NewsItem = any;generatedAt = json.generatedAt || '';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   } catch {}
   return { props: { items, generatedAt } }
 }export default function NewsDigestPage() {return (<div className="space-y-6">;
@@ -74,37 +58,30 @@ type NewsItem = { source: string, title: string, url: string, summary: string, t
               {n && n.tags?.map(t => (<span key={t} className="text-xs px-2 py-0 && 0.5 rounded bg-gray-100">{t}</span>))}
             </div>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-        ))}
-
-    </div>;
-
-);
-}
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         ))}</div>;)})}export default /**;
  * NewsDigestPage - Function description;
  */;
 function NewsDigestPage() {return (<div className="space-y-6">;
-<<<<<<< HEAD
-=======
   );
+import fs from 'fs';
+import path from 'path';
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
+
+export async function getServerSideProps() {
+  const file = path.join(process.cwd(), 'datanews-digest.json'),
+  let items: NewsItem[] = [],
+  let generatedAt = $2;
+  try {
+    const raw = fs.readFileSync($2);
+    const json = JSON.parse($2);
+    items = $2;
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { items, generatedAt } }
 }
 
-export default /**
- * NewsDigestPage - Function description
- */
-function NewsDigestPage() {
+export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem[], generatedAt: string}) {
   return (
-    <div className="space-y-6">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       <div className="grid grid - cols-1 gap-4">;
@@ -119,14 +96,26 @@ function NewsDigestPage() {
             </div>;
           </div>))}
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>)
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </div>);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     </div>)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">AI Automation: News Digest</h1>
+      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
+      <div className="grid grid-cols-1 gap-4">
+        {items.map((n, idx) => (
+          <div key={idx} className="border rounded p-4 space-y-1">
+            <div className="flex items-center justify-between">
+              <a className="font-medium text-blue-600" href={n.url} target="_blank" rel="noreferrer">{n.title}</a>
+              <div className="text-xs text-gray-500">{n.source}</div>
+            </div>
+            <div className="text-sm text-gray-700">{n.summary}</div>
+            <div className="flex flex-wrap gap-2 pt-1">
+              {n.tags?.map(t => (<span key={t} className="text-xs px-2 py-0.5 rounded bg-gray-100">{t}</span>))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}

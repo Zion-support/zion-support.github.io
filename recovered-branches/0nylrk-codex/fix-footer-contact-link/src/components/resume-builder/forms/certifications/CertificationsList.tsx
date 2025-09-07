@@ -1,13 +1,12 @@
-<<<<<<< HEAD
-import { Certification } from "@/types/resume";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Edit, Trash2 } from "lucide-react";
-import { format } from "date-fns";
+import { Certification  } from '@/types/resume';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Edit, Trash2  } from 'lucide-react';
+import { format } from 'date-fns';
 interface CertificationsListProps {
-  certifications: Certification[];
-  onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void;
+  certifications: Certification[],
+  onEdit: (cert: Certification) => void,
+  onDelete: (id: string) => void
 }
 
 export function CertificationsList({
@@ -16,13 +15,8 @@ export function CertificationsList({
   onDelete,
 }: CertificationsListProps) {
   if (certifications.length === 0) {
-    return null;
+    return null
   }
-
-
-
-
-
   return (
     <div className="space-y-4">
       <h3 className="text-md font-medium">Added Certifications</h3>
@@ -51,7 +45,6 @@ export function CertificationsList({
                         : format(cert.expiration_date, "MMM yyyy")}
                     </>
                   )}
-=======
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -75,65 +68,58 @@ interface CertificationsListProps {;
   certifications: Certification[],;
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;                  )}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </p>;
               </div>;
               <div className="flex gap-2">;
                 <Button
                   variant="ghost"
-<<<<<<< HEAD
-                  size="icon"
-                  onClick={() => onEdit(cert)}
-                >;
-                  <Edit className="h-4 w-4" />;
-                </Button>;
-                <Button
-                  variant="ghost"
-                  size="icon"
-
-                      {typeof cert.expiration_date === "string";
-=======
                   size="icon"                  onClick={() => onEdit(cert)}
                 >;
                   <Edit className="h-4 w-4" />;
                 </Button>;
             {cert.credential_url && (                      {typeof cert.expiration_date === "string";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         ? cert.expiration_date;
                         : format (cert.expiration_date, "MMM yyyy")}
                     </>)}
                 </p>;
               </div>;
-<<<<<<< HEAD
-              <div className="flex gap - 2">;
-=======
               <div className="flex gap-2">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Button;
                   variant="ghost";
                   size="icon";
                   on_click={() => on_edit (cert)}
                 >;
-<<<<<<< HEAD
-                  <Edit className="h - 4 w - 4" />;
-=======
                   <Edit className="h - 4 w-4" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </Button>;
                 <Button;
                   variant="ghost";
                   size="icon";
                   on_click={() => on_delete (cert.id!)}
                 >;
-<<<<<<< HEAD
-                  <Trash2 className="h - 4 w - 4" />;
-=======
                   <Trash2 className="h - 4 w-4" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </Button>;
               </div>;
             </div>;
 
+                </p>
+              </div>
+              <div className="flex gap-2">
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => onEdit(cert)}
+                >
+                  <Edit className="h-4 w-4" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => onDelete(cert.id!)}
+                >
+                  <Trash2 className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
             {cert.credential_url && (
               <p className="text-xs mt-2">
                 <a
@@ -150,33 +136,5 @@ interface CertificationsListProps {;
         </Card>
       ))}
     </div>
-  );
-}
-;
-
-  ),;}
- ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' 
-}{
-  cert.expiration date && (<> · Expires: {
-  typeof cert.expiration date === 'string' ? cert.expiration date : format (cert.expiration date, 'MMM yyyy') 
-}</>) 
-}</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div> <a href= {
-  cert.credential url 
-}target="blank" rel="noopener noreferrer" className="text-primary hover:underline" > View credential </Link> </p>) 
-}</CardContent> </Card>) ) 
-}</div>) 
-}
-  );
-}
-}
-;
-
-  );
-}
   )
 }
-;
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

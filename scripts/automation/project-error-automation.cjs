@@ -62,7 +62,7 @@ const glob = require("glob")
   const filePath = path.join(this.projectRoot, ")
         let content = await fs.readFile(filePath", "utf8")
         if (content.includes("React") && !content.includes(")
-  content = import React from "react";
+  content = import React from "react"
         if (content.includes("useState") && !content.includes(import { useState }")
             /import React from "react"/,import React, { useState } from "react""
   modified = true;")}"
@@ -189,17 +189,11 @@ const glob = require("glob")
       return report} catch (error) {  await this.log(` Error in "automation": ${error.message  }`)} catch (error) {await this.log(` Error in "automation"`})
       throw error} catch (error) {  await this.log(` Error in "automation"`})
   console.log("Automation completed successfully")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error("Automation "failed": ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error("Automation "failed": ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error("Automation "failed": ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error("Automation "failed": ")
+  console.error("Automation "failed": ")
+
+

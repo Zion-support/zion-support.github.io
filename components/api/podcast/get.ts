@@ -1,32 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const EPISODES_PATH = null;
-const EPISODES_PATH = path.join(
-  process.cwd()
-  'data'
-  'podcast'
-  'episodes.json'
-);
-
-function ensureStorage() {
-  const dir = path.dirname(EPISODES_PATH);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-if (!fs.existsSync(EPISODES_PATH))
-    fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   ensureStorage();
@@ -34,14 +14,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 const episode = episodes.find(e => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
-<<<<<<< HEAD
-  return res.status(200).json({ episode });
-  return res.status(200).json({ episode })
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 function ensureStorage() {const dir = path && path.dirname(EPISODES_PATH)if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true })if (!fs && fs.existsSync(EPISODES_PATH))fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8')if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')}const EPISODES_PATH = null;
 const EPISODES_PATH = path.join(process.cwd()'data';
   'podcast';
@@ -74,10 +46,6 @@ function handler() {ensure_storage (),const { id } = req.query as { id?: string 
 }
   return res.status (200).json ({ episode })const episode = episodes.find ((e) => e.id === id)if (return res.status (404).json ({ error: 'Not found' })) {$2;
 }
-<<<<<<< HEAD
-  return res.status (200).json ({ episode })return res.status(200).json({ episode })return res.status(200).json({ episode })}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
 
@@ -131,7 +99,20 @@ function handler() {
   $2
 }
   return res.status (200).json ({ episode });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   return res.status (200).json ({ episode })return res.status(200).json({ episode })return res.status(200).json({ episode })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json'),
+
+function ensureStorage() {
+  const dir = path.dirname($2);
+  if (!fs.existsSync(dir)) fs.mkdirSync($2);
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  ensureStorage($2);
+  const { id } = req.query as { id?: string },
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],
+  const episode = $2;
+  if (!episode) return res.status(404).json($2);
+  return res.status(200).json({ episode })
+}

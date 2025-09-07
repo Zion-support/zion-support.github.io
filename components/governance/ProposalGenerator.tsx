@@ -1,19 +1,5 @@
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import EnhancedLayout from '../layout/EnhancedLayout';
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type ProposalForm = {export type ProposalForm = {import EnhancedLayout from '../layout/EnhancedLayout';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
 export type ProposalForm = any;
 export type ProposalType =;
@@ -21,38 +7,19 @@ export type ProposalType =;
   | 'AI Ethics';
   | 'Digital ID';
   | 'Education';
-<<<<<<< HEAD
-export type ProposalForm = {
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 export type ProposalForm = {;
 
 export type ProposalForm = {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   targetInstitution: string;
 ;
 export type ProposalForm = {
   target_institution: string;
-=======
 export type ProposalForm = {targetInstitution: string;export type ProposalForm = {target_institution: string;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   type: ProposalType;
   regionalScope: string;
   budgetOrGoals: string;
   supportingMultiverses: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  language?: string;
-  customPrompt?: string;
-};
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   language?: string;
   targetInstitution: string,
   type: ProposalType,
@@ -62,7 +29,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   language?: string;
   customPrompt?: string
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function ProposalGenerator() {
   const [form, setForm] = useState<ProposalForm>({
     targetInstitution: 'UNDP'
@@ -72,12 +38,7 @@ export default function ProposalGenerator() {
     supportingMultiverses: ''
     language: 'English'
     customPrompt:
-<<<<<<< HEAD
-'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
-=======
   language?: string;targetInstitution: string,type: ProposalType,regionalScope: string,budgetOrGoals: string,supportingMultiverses: string,language?: string;
   customPrompt?: string;
 }customPrompt?: string;
@@ -88,124 +49,69 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     supportingMultiverses: '';
     language: 'English';
     customPrompt:;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   language?: string;
   customPrompt?: string
 }
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
-<<<<<<< HEAD
-export type ProposalForm = {
-  targetInstitution: string,
-  custom_prompt?: string;}export type ProposalForm = {
-  target_institution: string,
+import EnhancedLayout from '../layout/EnhancedLayout';
+export type ProposalType = $2;
+export type ProposalForm = $2;
   type: ProposalType,
-  regional_scope: string,
+  regionalScope: string,
   budgetOrGoals: string,
-  supporting_multiverses: string,
-  language?: string
-};
-export default function ProposalGenerator() {;
-  const [form, setForm] = useState<ProposalForm>({;
-    targetInstitution: 'UNDP',;
-    type: 'Workforce Dev',;
-    regionalScope: 'Global',;
-    budgetOrGoals: '',;
-    supportingMultiverses: '',;
-    language: 'English',;
-    customPrompt:;
-      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-  });
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [draftMarkdown, setDraftMarkdown] = useState('');
-  const [draftJson, setDraftJson] = useState<any>(null);
-    pdfUrl?: string;
-    jsonUrl?: string;
-    mdUrl?: string;
-  } | null>(null);
-  const [statusMessage, setStatusMessage] = useState('');
-<<<<<<< HEAD
-  function handleChange<K extends keyof ProposalForm>(
-    key: K
-    value: ProposalForm[K]
-  ) {
-    setForm(prev => ({ ...prev, [key]: value }));
+  supportingMultiverses: string,
+  language?: string,
+  customPrompt?: string
+},
+
+export default function ProposalGenerator() {
+  const [form, setForm] = useState<ProposalForm>({
+    targetInstitution: 'UNDP',
+    type: 'Workforce Dev',
+    regionalScope: 'Global',
+    budgetOrGoals: '',
+    supportingMultiverses: '',
+    language: 'English',
+    customPrompt:
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'}),
+  const [isGenerating, setIsGenerating] = useState($2);
+  const [draftMarkdown, setDraftMarkdown] = useState($2);
+  const [draftJson, setDraftJson] = useState<any>(null),
+  const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null),
+  const [statusMessage, setStatusMessage] = useState($2);
+  function handleChange<K extends keyof ProposalForm>(key: K, value: ProposalForm[K]) {
+    setForm((prev) => ({ ...prev, [key]: value }))
   }
+
   async function handleGenerate() {
-    setIsGenerating(true);
-    setStatusMessage('Generating draft...');
+    setIsGenerating($2);
+    setStatusMessage($2);
     try {
       const res = await fetch('/api/proposals/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify(form),
-      });
-      const data = await res.json();
-      setDraftMarkdown(data.markdown |'');
-      setDraftJson(data.json |null);
-      setStatusMessage('Draft ready. You can edit and export.');
-    } catch (e: any) {
-      console.error(e);
-      setStatusMessage('Failed to generate. You can edit manually and export.');
-    } finally {
-      setIsGenerating(false);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
+        body: JSON.stringify(form)}),
+      const data = await res.json($2);
+      setDraftMarkdown($2);
+      setDraftJson($2);
       setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
-      console.error(e);
+      console.error($2);
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-    }
-  }
-    } finally {
-
-      setIsGenerating(false);    }
-
-    }
-  }
-
-  async function handleExport() {
-    setStatusMessage('Exporting to PDF/Markdown/JSON...');
-    try {
-      const res = await fetch('/api/proposals/export', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-<<<<<<< HEAD
-          markdown: draftMarkdown,
-          json: draftJson,
-meta: form,
-        }),
-      });
-      const data = await res.json();
-      setExportLinks({
-        pdfUrl: data.pdfUrl
-        jsonUrl: data.jsonUrl
-        mdUrl: data.mdUrl
-      });
-      setStatusMessage('Exported. Files saved.');
-    } catch (e) {
-      console.error(e);
-      setStatusMessage('Export failed');
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed')
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
       setStatusMessage('Export failed');    }
 
     }
 
-=======
   language?: string;targetInstitution: string,type: ProposalType,regionalScope: string,budgetOrGoals: string,supportingMultiverses: string,language?: string;
   customPrompt?: string;
 }customPrompt?: string;
@@ -220,8 +126,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   customPrompt?: string;
 }
 export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}export type ProposalForm = {target_institution: string,type: ProposalType,regional_scope: string,budgetOrGoals: string,supporting_multiverses: string,language?: string;
 }export default function ProposalGenerator() {const [form, setForm] = useState<ProposalForm>({targetInstitution: 'UNDP',type: 'Workforce Dev',regionalScope: 'Global',budgetOrGoals: '',supportingMultiverses: '',language: 'English',customPrompt:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.','Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',})const [isGenerating, setIsGenerating] = useState(false)const [draftMarkdown, setDraftMarkdown] = useState('')const [draftJson, setDraftJson] = useState<any>(null)pdfUrl?: string;
@@ -240,30 +144,23 @@ export type ProposalForm = {targetInstitution: string,custom_prompt?: string;}ex
       setStatusMessage('Export failed')}}}}
   async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {}
   }async function handleExport() {setStatusMessage('Exporting to PDF/Markdown/JSON...')try {const res = await fetch('/api/proposals/export', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),})const data = await res && res.json()setExportLinks({pdfUrl: data && data.pdfUrl,jsonUrl: data && data.jsonUrl,mdUrl: data && data.mdUrl,})setStatusMessage('Exported. Files saved.')} catch (e) {console && console.error(e)setStatusMessage('Export failed')}      const data = await res && res.json()setExportLinks({ pdfUrl: data && data.pdfUrl, jsonUrl: data && data.jsonUrl, mdUrl: data && data.mdUrl }),setStatusMessage('Exported. Files saved.')} catch (e) {console && console.error(e)setStatusMessage('Export failed')}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   async function handleSubmitBridge() {setStatusMessage('Submitting via bridge (email/IPFS/signature)...')try {const res = await fetch('/api/proposals/submit', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({markdown: draftMarkdown,json: draftJson,meta: form,}),})const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
       )} catch (e) {console && console.error(e)setStatusMessage('Submission failed')}
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  async function handleSubmitBridge() {
-    setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
+      setIsGenerating(false)
+    }
+  }
+
+  async function handleExport() {
+    setStatusMessage($2);
     try {
-      const res = await fetch('/api/proposals/submit', {
-<<<<<<< HEAD
+      const res = await fetch('/api/proposals/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-body: JSON.stringify({
+        body: JSON.stringify({
           markdown: draftMarkdown,
           json: draftJson,
-          meta: form,
-        }),
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     }
   }
 
@@ -278,7 +175,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           json: draftJson,;
           meta: form,;
         }),;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       });
       const data = await res && res.json();
       setExportLinks({;
@@ -313,13 +209,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       setStatusMessage(;
         `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
       );
-<<<<<<< HEAD
+          meta: form})}),
+      const data = await res.json($2);
+      setExportLinks($2);
+      setStatusMessage('Exported. Files saved.')
     } catch (e) {
-      console.error(e);
-      setStatusMessage('Submission failed');
+      console.error($2);
+      setStatusMessage('Export failed')
+    }
+  }
+
+  async function handleSubmitBridge() {
+    setStatusMessage('Submitting via bridge (email/IPFS/signature)...'),
+    try {
+      const res = await fetch('/api/proposals/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form})}),
+      const data = await res.json($2);
+      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
+    } catch (e) {
+      console.error($2);
       setStatusMessage('Submission failed')
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     } catch (e) {;
       console && console.error(e);
       setStatusMessage('Submission failed');    }
@@ -342,18 +253,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       console && console.error(e);
       setStatusMessage('Submission failed');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
-=======
   return (<div className='space-y-4'>      const data = await res.json()setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)} catch (e) {console.error(e)<div className='space-y-4'>      const data = await res.json()setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)} catch (e) {console.error(e)<div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
         <div className='space-y-4'>      const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`)} catch (e) {console && console.error(e)setStatusMessage('Submission failed')} catch (e) {console.error(e)setStatusMessage('Submission failed')setStatusMessage('Submission failed')}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   return (<div className='space-y-4'>      const data = await res.json()setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)} catch (e) {console.error(e)<div className='space-y-4'>      const data = await res.json()setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)} catch (e) {console.error(e)<div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
         <div className='space-y-4'>      const data = await res && res.json()setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`)} catch (e) {console && console.error(e)setStatusMessage('Submission failed')} catch (e) {console.error(e)setStatusMessage('Submission failed')setStatusMessage('Submission failed')}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
   return (<div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -371,15 +277,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div>;
             <label className='block text-sm font-medium'>Type</label>;
-<<<<<<< HEAD
-<<<<<<< HEAD
+    }
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-medium">Target institution</label>
+            <input
+              className="w-full border rounded px-3 py-2"
+              value={form.targetInstitution}
+              onChange={(e) => handleChange('targetInstitution', e.target.value)}
+              placeholder="UNDP / World Bank / ILO"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Type</label>
             <select
-              className='w-full border rounded px-3 py-2'
-<<<<<<< HEAD
+              className="w-full border rounded px-3 py-2"
               value={form.type}
-              onChange={e =>
-                handleChange('type', e.target.value as ProposalType)
-              }
+              onChange={(e) => handleChange('type', e.target.value as ProposalType)}
             >
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
@@ -388,9 +307,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </select>
           </div>
           <div>
-<label className='block text-sm font-medium'>Regional scope</label>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
               value={form && form.type}
               onChange={e =>;
                 handleChange('type', e && e.target.value as ProposalType);
@@ -418,12 +334,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </div>;
           <div>;
             <label className='block text-sm font-medium'>Regional scope</label>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <input
               className='w-full border rounded px-3 py-2'
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <select;
               className='w-full border rounded px-3 py-2';
               value={form && form.type}
@@ -465,10 +377,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <label className='block text-sm font-medium'>Regional scope</label>;
             <input;
               className='w-full border rounded px-3 py-2';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               value={form && form.regionalScope}
               onChange={e => handleChange('regionalScope', e && e.target.value)}
               placeholder='Global / Africa / LATAM / APAC / EU / ...';
@@ -518,28 +426,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
           <div className='flex gap-2'>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <button
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <button;
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input;
             <textarea;
               className="w-full border rounded px-3 py-2 min-h-[80px]";
-<<<<<<< HEAD
-=======
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
             <textarea
               className="w-full border rounded px-3 py-2 min-h-[80px]"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               value={form && form.budgetOrGoals}
               onChange={(e) => handleChange('budgetOrGoals', e && e.target.value)}
               placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc.";
@@ -574,80 +468,97 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>;
           </div>;
           <div className="flex gap-2">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <button;
-              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
             <button
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
             <button;
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+            <label className="block text-sm font-medium">Regional scope</label>
+            <input
+              className="w-full border rounded px-3 py-2"
+              value={form.regionalScope}
+              onChange={(e) => handleChange('regionalScope', e.target.value)}
+              placeholder="Global / Africa / LATAM / APAC / EU / ..."
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Budget / Resolution goals</label>
+            <textarea
+              className="w-full border rounded px-3 py-2 min-h-[80px]"
+              value={form.budgetOrGoals}
+              onChange={(e) => handleChange('budgetOrGoals', e.target.value)}
+              placeholder="$5M for pilot, goals: 10k workers onboarded, 70% female youth, etc."
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium">Supporting multiverse(s)</label>
+            <input
+              className="w-full border rounded px-3 py-2"
+              value={form.supportingMultiverses}
+              onChange={(e) => handleChange('supportingMultiverses', e.target.value)}
+              placeholder="Eg. Zion.ai, Zion.ID, Zion.Work"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium">Language</label>
+              <input
+                className="w-full border rounded px-3 py-2"
+                value={form.language}
+                onChange={(e) => handleChange('language', e.target.value)}
+                placeholder="English / French / Spanish / Arabic / ..."
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium">GPT Prompt Assist</label>
+              <textarea
+                className="w-full border rounded px-3 py-2 min-h-[80px]"
+                value={form.customPrompt}
+                onChange={(e) => handleChange('customPrompt', e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="flex gap-2">
+            <button
+              className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
               onClick={handleGenerate}
-              disabled={isGenerating}>;
+              disabled={isGenerating}
+            >
               {isGenerating ? 'Generating...' : 'Generate Draft'}
-            </button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <button
-className='px-4 py-2 bg-emerald-600 text-white rounded'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
             <button
 
 className='px-4 py-2 bg-emerald-600 text-white rounded'
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            </button>
+            <button
+              className="px-4 py-2 bg-emerald-600 text-white rounded"
               onClick={handleExport}
-              disabled={!draftMarkdown}>;
-              Export (PDF/JSON/MD);
-            </button>;
+              disabled={!draftMarkdown}
+            >
+              Export (PDF/JSON/MD)
+            </button>
             <button
-<<<<<<< HEAD
-className='px-4 py-2 bg-purple-600 text-white rounded'
+              className="px-4 py-2 bg-purple-600 text-white rounded"
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
             >
               Submit Bridge
             </button>
           </div>
-{statusMessage && (
-            <p className='text-sm text-gray-600'>{statusMessage}</p>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <button;
 className='px-4 py-2 bg-emerald-600 text-white rounded';
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD)</button>;
             <button;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             <button;
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD)</button>;
             <button;
-<<<<<<< HEAD
-=======
             <button
 
               onClick={handleExport}
@@ -656,17 +567,10 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
             </button>;
             <button
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               disabled={!draftMarkdown}>;
               Submit Bridge;
             </button>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {statusMessage && (<p className='text-sm text-gray-600'>{statusMessage}</p>;className='px-4 py-2 bg-purple-600 text-white rounded';
               onClick={handleSubmitBridge}
               disabled={!draftMarkdown}
@@ -675,63 +579,38 @@ className='px-4 py-2 bg-emerald-600 text-white rounded';
             </button>;
           </div>;
 {statusMessage && (<p className='text-sm text-gray-600'>{statusMessage}</p>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           )}
           {exportLinks && (<div className='text-sm space-y-1'>;
               {exportLinks && exportLinks.pdfUrl && (<div>;
                   <a;
                     className='text-blue-600 underline';
                     href={exportLinks && exportLinks.pdfUrl}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    PDF
-                  </a>
+          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
+          {exportLinks && (
+            <div className="text-sm space-y-1">
+              {exportLinks.pdfUrl && (
+                <div>
+                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
                 </div>
               )}
               {exportLinks.mdUrl && (
                 <div>
-<a
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    className='text-blue-600 underline'
-                    href={exportLinks && exportLinks.mdUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    Markdown
-                  </a>
+                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
                 </div>
               )}
               {exportLinks.jsonUrl && (
                 <div>
-<a
-origin/cursor/automate-test-improve-and-merge-code-2533
-                    className='text-blue-600 underline'
-                    href={exportLinks && exportLinks.jsonUrl}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    JSON
-                  </a>
+                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
                 </div>
-origin/cursor/automate-test-improve-and-merge-code-2533
               )}
-            </div>;
+            </div>
           )}
         </div>
-<div className='space-y-2'>
-          <label className='block text-sm font-medium'>Draft (Markdown)</label>
+        <div className="space-y-2">
+          <label className="block text-sm font-medium">Draft (Markdown)</label>
           <textarea
-            className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
+            className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
-            onChange={e => setDraftMarkdown(e.target.value)}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           {statusMessage && (;
             <p className='text-sm text-gray-600'>{statusMessage}</p>;
           )}
@@ -798,24 +677,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>;
     </div>;
             onChange={(e) => setDraftMarkdown(e.target.value)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+            onChange={(e) => setDraftMarkdown(e.target.value)}
           />
         </div>
       </div>
     </div>
-  );
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
   );
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                     target='_blank';
                     rel='noreferrer'>;
                     PDF;
@@ -1135,15 +1006,9 @@ function handleSubmitBridge() {setStatusMessage ('Submitting via bridge (email /
           />;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </div>);
 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     </div>)}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  )
+}

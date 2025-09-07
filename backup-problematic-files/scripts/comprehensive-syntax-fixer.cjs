@@ -23,10 +23,7 @@
 
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 
   // Check if file has syntax errors
@@ -52,16 +49,9 @@
     let fixed = content;
     
     // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
-    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
-    // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
-=======
 
     fixed = fixed.replace(/
-=======
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
@@ -225,8 +215,7 @@ class ComprehensiveSyntaxFixer {
         { pattern: /;\s*,/g, replacement: ';' },
         
         // Fix merge conflict markers
-        { pattern: /^<<<<<<< .*$/gm, replacement: '' },
-        
+        { pattern: /^        
         // Fix malformed object literals
         { pattern: /{\s*;\s*name:/g, replacement: '{ name:' },
         { pattern: /{\s*;\s*script:/g, replacement: '{ script:' },
@@ -668,4 +657,3 @@ if (require.main === module) {}
 });
 };
 module.exports = ComprehensiveSyntaxFixer;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

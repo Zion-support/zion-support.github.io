@@ -1,18 +1,7 @@
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/SelectResumeSection.tsx
-import React from 'react';
-import { FileText } from 'lucide-react';
-import { ResumeOption } from '../resume-selector/types';
-import { ResumePreviewCard } from './ResumePreviewCard';
-import { Resume } from '@/types/resume';
-
-import React from 'react';
-import { FileText } from 'lucide-react'
-=======
 
 ;
 export function SelectResumeSection({import React from 'react';
 import { FileText  } from 'lucide-react';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/messaging/resume-selector/SelectResumeSection.tsx
 import { ResumeOption  } from '../resume-selector/types';
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { Resume  } from '@/types/resume';
@@ -29,6 +18,33 @@ export function SelectResumeSection({
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/messaging/resume-selector/SelectResumeSection.tsx
+export function SelectResumeSection({
+
+import React from 'react';
+import { FileText } from 'lucide-react';
+import { ResumeOption } from '../resume-selector/types';
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { Resume } from '@/types/resume';
+interface SelectResumeSectionProps {
+  resumeOptions: ResumeOption[],
+  selectedResume: ResumeOption | null,
+  handleResumeSelect: (resumeId: string) => void,
+  handleDownloadResume: () => void,
+  isLoading: boolean}
+
+  resumeOptions: ResumeOption[]
+  selectedResume: ResumeOption | null
+  handleResumeSelect: (resumeId: string) => void
+  handleDownloadResume: () => void
+
+  isLoading: boolean
+}
+export function SelectResumeSection({
+  resumeOptions,
+  selectedResume,
+  handleResumeSelect,
+  handleDownloadResume,
 origin/cursor/automate-test-improve-and-merge-code-2533
   isLoading
 }: SelectResumeSectionProps) {
@@ -39,8 +55,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       ) : (
         <>
 
-
-
             >
               <div className="flex items-center">
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
@@ -48,18 +62,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </div>
             </button>
           ))}
-          
-
-          
-
-
-          
-
-          
 
           {resumeOptions.map((option) => (
             <button
-=======
   isLoading: boolean;
 export function SelectResumeSection() {return (<div className="space-y-2">;
       {resumeOptions.length === 0 ? (<p className="text-sm text-zion-slate">No saved resumes found.</p>;
@@ -71,7 +76,6 @@ export function SelectResumeSection() {return (<div className="space-y-2">;
               </div>;
             </button>;
           ))}{resumeOptions.map((option) => (<button;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/messaging/resume-selector/SelectResumeSection.tsx
               key={option.id}
               className={`w-full text-left p-3 rounded-md transition ${selectedResume?.id === option.id;
                   ? 'bg-zion-purple/20 border border-zion-purple';
@@ -96,24 +100,8 @@ export function SelectResumeSection() {return (<div className="space-y-2">;
           )}
         </>;
       )}
-<<<<<<< HEAD:src_backup/components/messaging/resume-selector/SelectResumeSection.tsx
-  );
-}};
-};
-
-    </div>;
-  );
-}
-;
-import React from 'react';
-import { FileText } from 'lucide-react';
-
-interface ResumeOption {
-  id: string;
-=======
   )}}}</div>;
   )}interface ResumeOption  {id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/messaging/resume-selector/SelectResumeSection.tsx
   title: string;
   description: string;
   lastModified: string;
@@ -151,7 +139,6 @@ interface ResumeOption {
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     >;
       <div className="flex items-start space-x-3">;
         <FileText className="h-8 w-8 text-gray-400" />;
@@ -198,4 +185,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       )}
     </div>;
   )}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/messaging/resume-selector/SelectResumeSection.tsx
+    </div>
+  )
+}

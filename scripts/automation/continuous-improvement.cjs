@@ -4,15 +4,13 @@ const fs = require("fs")
 const path = require("path")
 console.log("" Starting continuous improvement automation...")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log("" Starting continuous improvement automation...")
 // Get automation interval from environment variable ("default")
   console.log(` Running continuous improvement at ${new Date().toISOString()}
 // console.log(`"� Checking for pending improvements..."`)
 console.log(" Starting continuous improvement automation...")
-// Get automation interval from environment variable ("default")
-// console.log(""� Checking for pending improvements...")
+//
     console.log(" Running quality checks...")
   execSync("npm run lint", { "stdio": "inherit"})
 // console.log(" Linting completed")
@@ -62,17 +60,11 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Failed to start continuous "improvement": ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(" Failed to start continuous "improvement": ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(" Failed to start continuous "improvement": ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Failed to start continuous "improvement": ")
+  console.error(" Failed to start continuous "improvement": ")
+
+

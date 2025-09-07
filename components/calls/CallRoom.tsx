@@ -1,45 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets   } from 'livekit-client';
+import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
-export type StartMode = any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   Room
   RoomEvent
   RemoteParticipant
   LocalParticipant
   createLocalTracks
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { Room;
   RoomEvent;
   RemoteParticipant;
   LocalParticipant;
   createLocalTracks;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   VideoPresets;
   Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit-client';
 export type StartMode = 'video' | 'audio';
@@ -50,59 +26,6 @@ export type StartMode = 'video' | 'audio';
   serverUrl: string;
   token: string;
   startMode: StartMode;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  onLeave?: (durationSec: number) => void;
-
-};
-export default function CallRoom(): any ({;
-  projectId,;
-  userId,;
-  displayName,;
-  roomName,;
-  serverUrl,;
-  token,;
-  startMode,;
-  onLeave,;
-}: Props) {;
-
-  projectId
-  userId
-  displayName
-  roomName
-  serverUrl
-  token
-  startMode
-  onLeave
-}: Props) {
-
-  projectId,
-  userId,
-  displayName,
-  roomName,
-  serverUrl,
-  token,
-  startMode,
-  onLeave,
-}: Props) {;
-
-  projectId,
-  userId,
-  displayName,
-  roomName,
-  serverUrl,
-  token,
-  startMode,
-  onLeave,
-}: Props) {;
-
-  const [room, setRoom] = useState<Room | null>(null);
-<<<<<<< HEAD
-  const [participants, setParticipants] = useState<
-    Array<RemoteParticipant | LocalParticipant>
-  >([]);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
@@ -118,24 +41,34 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
+export type StartMode = $2;
+type Props = $2;
+  userId: string,
+  displayName: string,
+  roomName: string,
+  serverUrl: string,
+  token: string,
+  startMode: StartMode,
+  onLeave?: (durationSec: number) => void
+},
+
+export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
+  const [room, setRoom] = useState<Room | null>(null),
+  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]),
+  const [connectedAt, setConnectedAt] = useState<number | null>(null),
+
   const connect = useCallback(async () => {
-    const r = new Room();
-    r.on(RoomEvent.ParticipantConnected, () => rebuild());
-    r.on(RoomEvent.ParticipantDisconnected, () => rebuild());
-    r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild());
-    r.on(RoomEvent.LocalTrackPublished, () => rebuild());
-    r.on(RoomEvent.TrackSubscribed, () => rebuild());
+    const r = new Room($2);
+    r.on(RoomEvent.ParticipantConnected, () => rebuild()),
+    r.on(RoomEvent.ParticipantDisconnected, () => rebuild()),
+    r.on(RoomEvent.ActiveSpeakersChanged, () => rebuild()),
+    r.on(RoomEvent.LocalTrackPublished, () => rebuild()),
+    r.on(RoomEvent.TrackSubscribed, () => rebuild()),
+
     // create local tracks per start mode
-    let localTracks: any[] = [];
+    let localTracks: any[] = [],
     if (startMode === 'video') {
-<<<<<<< HEAD
-localTracks = await createLocalTracks({
-        audio: true,
-        video: VideoPresets.h720,
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
@@ -156,45 +89,37 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         audio: true,;
         video: VideoPresets && VideoPresets.h720,;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       });
     } else {;
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
-<<<<<<< HEAD
-    await r.connect(serverUrl, token, {
-      autoSubscribe: true
-    });
-    // publish local tracks
+      localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 })
+    } else {
+      localTracks = await createLocalTracks({ audio: true, video: false})
+    }
 
-    setRoom(r);
-    setConnectedAt(Date.now());
-    rebuild(r);
-// eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [serverUrl, token, startMode]);
-  const rebuild = (current?: Room | null) => {
-    const r = current |room;
-    if (!r) return;
-const list: Array<RemoteParticipant | LocalParticipant> = [
-      r.localParticipant,
-      ...Array.from(r.participants.values()),
-    ];
-    setParticipants(list);
-  };
+    await r.connect($2);
+    // publish local tracks
+    for (const t of localTracks) {
+      await r.localParticipant.publishTrack(t)
+    }
+
+    setRoom($2);
+    setConnectedAt(Date.now()),
+    rebuild($2);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [serverUrl, token, startMode]),
+
+  const rebuild = $2;
+    if (!r) return,
+    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())],
+    setParticipants(list)
+  },
 
   useEffect(() => {
-    connect();
+    connect($2);
     return () => {
       if (room) {
-room.disconnect();
-      }
-    };
-  }, [connect]);
-  const handleLeave = () => {
-    if (room) {
-room.disconnect();
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     setConnectedAt(Date && Date.now());
     rebuild(r);
     // eslint-disable-next-line react-hooks/exhaustive-deps  }, [serverUrl, token, startMode]);    } else {;
@@ -211,7 +136,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   }, [connect]);
   const handleLeave = () => {
     if (room) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
   }, [connect]);
 
@@ -222,16 +146,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
       : 0;
-<<<<<<< HEAD
-    onLeave?.(durationSec);
-  };
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-  const gridCols = useMemo(() => {
-    const count = participants.length |1;
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   onLeave?: (durationSec: number) => void;}export default function CallRoom(): any ({projectId,userId,displayName,roomName,serverUrl,token,startMode,onLeave,}: Props) {projectId;
   userId;
   displayName;
@@ -266,32 +180,35 @@ const list: Array<RemoteParticipant | LocalParticipant> = [;
   }, [connect])const handleLeave = () => {if (room) {room && room.disconnect()}
     const durationSec = connectedAt;
       ? Math && Math.round((Date && Date.now() - connectedAt) / 1000): 0;onLeave?.(durationSec)}room && room.disconnect()}onLeave?.(durationSec)}const gridCols = useMemo(() => {const count = participants.length |1;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-    const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
-    onLeave?.(durationSec)const gridCols = useMemo(() => {const count = participants && participants.length || 1;
-    if (count <= 1) return 'grid-cols-1';
-<<<<<<< HEAD
-    if (count === 2) return 'grid-cols-2';
-if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
-    if (count <= 6) return 'grid-cols-2 md:grid-cols-3';
-    return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
-  }, [participants.length]);
+        room.disconnect()
+      }
+    }
+  }, [connect]),
+
+  const handleLeave = $2;
+    onLeave?.(durationSec)
+  },
+
+  const gridCols = $2;
+    if (count <= 1) return 'grid-cols-1',
+    if (count = $2;
+    if (count <= 4) return 'grid-cols-2 md: grid-cols-2',
+    if (count <= 6) return 'grid-cols-2 md:grid-cols-3',
+    return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4'
+  }, [participants.length]),
+
   return (
-    <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col'>
-      <div className='p-4 flex items-center justify-between border-b border-gray-800'>
+    <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">
+      <div className="p-4 flex items-center justify-between border-b border-gray-800">
         <div>
-          <h2 className='text-lg font-semibold'>Project Room: {projectId}</h2>
-          <p className='text-xs text-gray-400'>Room {roomName}</p>
+          <h2 className="text-lg font-semibold">Project Room: {projectId}</h2>
+          <p className="text-xs text-gray-400">Room {roomName}</p>
         </div>
-        <Controls room={room} onLeave={handleLeave} accent='cyan' />
+        <Controls room={room} onLeave={handleLeave} accent="cyan" />
       </div>
+
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
-<ParticipantTile
-            key={String((p as any).sid || (p as any).identity) + idx}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     onLeave?.(durationSec);  };      room && room.disconnect();
     }
 
@@ -481,35 +398,22 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {
         {participants.map ((p, idx) => (
           <ParticipantTile;
             key={String ((p as any).sid || (p as any).identity) + idx}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             participant={p}
             is_local={p instanceof LocalParticipant}
             display_name={
               (p as any).name ||;
               (p instanceof LocalParticipant ? 'You' : undefined);
             }
-<<<<<<< HEAD
-          />
-        ))}
-      </div>
-    </div>
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           />        ))}
       </div>;
     </div>);
 }          <ParticipantTile key={String ((p as any).sid || (p as any).identity) + idx} participant={p} is_local={p instanceof LocalParticipant} display_name={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />))}
       </div>;
     </div>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
-=======
-=======
     const durationSec = connectedAt ? Math && Math.round((Date && Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)const gridCols = useMemo(() => {const count = participants && participants.length || 1;
     if (count <= 1) return 'grid-cols-1';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     if (count === 2) return 'grid-cols-2';Room,RoomEvent,RemoteParticipant,LocalParticipant,createLocalTracks,VideoPresets,} from 'livekit - client';export type StartMode = 'video' | 'audio';type Props = {project_id: string;
   user_id: string;
   display_name: string;
@@ -609,9 +513,10 @@ if (return 'grid - cols - 2 md:grid - cols - 2') {$2;
         ))}
       </div>;
     </div>;
-<<<<<<< HEAD
   )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-  )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+          <ParticipantTile key={String((p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />
+        ))}
+      </div>
+    </div>
+  )
+}

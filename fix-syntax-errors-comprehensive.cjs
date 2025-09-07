@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-// Function to fix common syntax errors
-function fixSyntaxErrors(content, filePath) {
-    let fixes = 0;
-    let originalContent = content;
-=======
-=======
 #!/usr/bin/env node
 
 /**
@@ -21,7 +11,6 @@ const path = require('path');
 console.log('🔧 Comprehensive Syntax Error Fixer');
 console.log('=');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 const fixes = [];
 
 function fixFile(filePath, description, fixFunction) {
@@ -34,18 +23,16 @@ function fixFile(filePath, description, fixFunction) {
     
 console.log('🔧 Starting comprehensive syntax error fixing...');
 
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
-
-function fixSyntaxErrors(filePath) {
-  try {
+;
+function fixSyntaxErrors(filePath) {;
+  try {;
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-
-    // Fix common syntax errors
-
-    // Fix unnecessary escape characters
+;
+    // Fix common syntax errors;
+    // Fix unnecessary escape characters;
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -56,17 +43,7 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\\\(/g, '(');
     content = content.replace(/\\\)/g, ')');
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-
-
-
-
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Function to fix common syntax errors
 function fixSyntaxErrors(content, filePath) {
     let fixes = 0;
@@ -95,7 +72,6 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/<\/HTMLParagraphElement>/g, '');
     content = content.replace(/<\/h3>/g, '');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     // Fix malformed return statements
     content = content.replace(/return\s*\(\s*<div[^>]*>\s*\/\*[^*]*\*\/\s*<div[^>]*>\s*<div[^>]*><\/div>\s*<div[^>]*>\s*<div[^>]*>\s*<h1[^>]*>([^<]*)<\/h1>\s*<\/div>\s*<p[^>]*>([^<]*)<\/p>\s*<p[^>]*>([^<]*)<\/p>\s*<div[^>]*>\s*<Link[^>]*>([^<]*)<\/Link>\s*<\/div>\s*<\/div>\s*<\/div>\s*<\/div>\s*\)/g, (match, title, desc1, desc2, linkText) => {
         fixes++;
@@ -123,18 +99,10 @@ function fixSyntaxErrors(content, filePath) {
         </div>
     );`;
     });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Fix malformed CSS in JSX
     content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
@@ -146,18 +114,9 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
 
     // Fix missing semicolons
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     content = content.replace(/([^;}])\s*$/gm, '$1;');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     // Fix malformed object destructuring
     content = content.replace(/const\s+\{\s*([^}]+)\s*\}\s*=\s*useAuth\(\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(\[\]\);\s*const\s+\[([^\]]+)\]\s*=\s*useState\(true\);\s*const\s+navigate\s*=\s*useNavigate\(\);\s*useEffect\(\(\)\s*=>\s*\{[^}]*\},\s*\[user\]\);\s*const\s+handleRequestHire\s*=\s*\([^)]*\)\s*=>\s*\{[^}]*\};\s*return\s*\(<div[^>]*>([^<]*)<\/div>\);\s*}/g, (match, user, savedTalents, isLoading, content) => {
@@ -191,19 +150,11 @@ fixFile('pages/_app.tsx', 'Button style syntax', (content) => {
     );
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
-=======
-    // Fix missing semicolons at end of statements
-ursor/automate-test-improve-and-merge-code-59d5
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
+    // Fix missing semicolons at end of statements
+
     content = content.replace(/([^;}])\s*$/gm, '$1;');
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
 
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
@@ -211,11 +162,6 @@ ursor/automate-test-improve-and-merge-code-59d5
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-=======
 
 
     // Fix missing semicolons at end of statements
@@ -265,7 +211,6 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
     return { content, fixes };
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 
 // Function to process a single file
@@ -325,14 +270,9 @@ async function main() {
         
 
 
-<<<<<<< HEAD
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
     fixed = fixed.replace(
         /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
         'return this.props.children;\n  }\n}\n\nexport default'
@@ -340,11 +280,6 @@ async function main() {
     
     return fixed;
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 // Fix PerformanceMonitor syntax
 fixFile('components/PerformanceMonitor.tsx', 'PerformanceMonitor syntax', (content) => {
@@ -418,7 +353,6 @@ export default PerformanceMonitor;`;
 
 console.log('\n📊 Fix Summary');
 console.log('=');
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 console.log(`Total fixes applied: ${fixes.length}`);
 
 if (fixes.length > 0) {
@@ -431,130 +365,96 @@ if (fixes.length > 0) {
 }
 
 console.log('\n🎯 Syntax error fixing completed!');
-<<<<<<< HEAD
-origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     if (openBraces > closeBraces) {
       const missingBraces = openBraces - closeBraces;
       content += '\n' + '}'.repeat(missingBraces);
       modified = true;
     }
-
-    // Fix missing closing parentheses
+;
+    // Fix missing closing parentheses;
     const openParens = (content.match(/\(/g) || []).length;
     const closeParens = (content.match(/\)/g) || []).length;
-<<<<<<< HEAD
-ursor/automate-test-improve-and-merge-code-59d5
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
       content += ')'.repeat(missingParens);
       modified = true;
     }
-
-    // Fix missing closing brackets
+;
+    // Fix missing closing brackets;
     const openBrackets = (content.match(/\[/g) || []).length;
     const closeBrackets = (content.match(/\]/g) || []).length;
-
-    if (openBrackets > closeBrackets) {
+;
+    if (openBrackets > closeBrackets) {;
       const missingBrackets = openBrackets - closeBrackets;
       content += ']'.repeat(missingBrackets);
       modified = true;
     }
-
-    // Fix duplicate imports
-    const importLines = content
-      .split('\n')
-      .filter(line => line.trim().startsWith('import'));
+;
+    // Fix duplicate imports;
+    const importLines = content.split('\n').filter(line => line.trim().startsWith('import'));
     const uniqueImports = [...new Set(importLines)];
-    if (importLines.length !== uniqueImports.length) {
-      const nonImportLines = content
-        .split('\n')
-        .filter(line => !line.trim().startsWith('import'));
+    if (importLines.length !== uniqueImports.length) {;
+      const nonImportLines = content.split('\n').filter(line => !line.trim().startsWith('import'));
       content = uniqueImports.join('\n') + '\n' + nonImportLines.join('\n');
       modified = true;
     }
-
-    // Fix missing React import
-    if (content.includes('React') && !content.includes('import React')) {
+;
+    // Fix missing React import;
+    if (content.includes('React') && !content.includes("import React")) {;
       content = "import React from 'react';\n" + content;
       modified = true;
     }
-
-    // Fix semicolons in object properties
-    content = content.replace(/(\w+):\s*([^}]+);/g, '$1: $2,');
-
-    // Fix semicolons in array elements
-    content = content.replace(/([^}]);/g, '$1,');
-
-    // Fix semicolons in function parameters
+;
+    // Fix semicolons in object properties;
+    content = content.replace(/(\w+):\s*([^,}]+);/g, '$"1": $2,');
+;
+    // Fix semicolons in array elements;
+    content = content.replace(/([^,}]);/g, '$1,');
+;
+    // Fix semicolons in function parameters;
     content = content.replace(/(\w+)\s*;\s*\)/g, '$1)');
-
-    // Fix semicolons in JSX
+;
+    // Fix semicolons in JSX;
     content = content.replace(/<(\w+)\s*;\s*>/g, '<$1>');
     content = content.replace(/<\/(\w+)\s*;\s*>/g, '</$1>');
-
-    if (content !== fs.readFileSync(filePath, 'utf8')) {
+;
+    if (content !== fs.readFileSync(filePath, 'utf8')) {;
       fs.writeFileSync(filePath, content, 'utf8');
       modified = true;
     }
-
+;
     return modified;
-  } catch (error) {
+  } catch (error) {;
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 function processDirectory(dirPath) {
   const files = fs.readdirSync(dirPath);
   let fixedCount = 0;
-
-  for (const file of files) {
+;
+  for (const file of files) {;
     const filePath = path.join(dirPath, file);
     const stat = fs.statSync(filePath);
-
-    if (
-      stat.isDirectory() &&
-      !file.startsWith('.') &&
-      file !== 'node_modules'
-    ) {
+;
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {;
       fixedCount += processDirectory(filePath);
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {;
       if (fixSyntaxErrors(filePath)) fixedCount++;
     }
   }
-
+;
   return fixedCount;
 }
-
+;
 console.log('Starting comprehensive syntax error fixes...');
 const fixedCount = processDirectory('.');
 console.log(`Fixed ${fixedCount} files`);
-ursor/automate-test-improve-and-merge-code-59d5
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 console.log('\n🎯 Syntax error fixing completed!');
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

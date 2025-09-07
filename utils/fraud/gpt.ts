@@ -1,39 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  try {
-      return {
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
   try {
       return {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   try {
       return {
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
   try {
       return {
   try {
       return {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
   try {return {try {return {try {return {}
@@ -43,10 +20,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
         confidence: 0.5;
   try {
       return {}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const confidence =
       typeof parsed && parsed.confidence === 'number'
         ? Math && Math.max(0, Math && Math.min(1, parsed && parsed.confidence))
@@ -91,15 +64,6 @@ export interface GptClassification  {label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
   } catch {
     return {
   reasoning: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
         label: 'SUSPICIOUS',
         reason: 'Unrecognized label from GPT',
@@ -120,113 +84,43 @@ export interface GptClassification {
   confidence: number; // 0-100
 
   reasoning: string;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
       confidence: 0.5
     }
   }export interface GptResult {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   }export interface GptResult {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
   }export interface GptResult {;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-  }export interface GptResult {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   label: string;
   confidence: number;
   reasoning: string
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
 }
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   label: string;
   confidence: number;
   reasoning: string
-=======
 
 ursor/fix-website-loading-errors-and-merge-6662
   label: string;
@@ -234,18 +128,13 @@ ursor/fix-website-loading-errors-and-merge-6662
   reasoning: string
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   label: string;
   confidence: number;
   reasoning: string
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   label: string;
   confidence: number;
   reasoning: string
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud');
@@ -256,40 +145,45 @@ ursor/fix-website-loading-errors-and-merge-6662
 
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
 
+import { GptClassification, MonitoredSource } from './types';
+export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {
+  const apiKey = $2;
+  if (!apiKey) {
+    const lower = text.toLowerCase($2);
+    const looksDanger = /(cashapp|paypal\.me|venmo\.com|wa\.me|t\.me|whatsapp|telegram|western union|gift card|crypto only|outside payment)/.test($2);
+    return {
+      label: looksDanger ? 'DANGEROUS' : 'SUSPICIOUS',
+      reason: looksDanger ? 'Heuristic fallback matched high-risk terms' : 'Heuristic fallback matched suspicious language',
+      confidence: looksDanger ? 0.7 : 0.5}
   }
 
+  const { OpenAI } = await import($2);
+  const client = new OpenAI($2);
+  const systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.',
+  const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`,
+
+  const completion = await client.chat.completions.create($2);
+  const content = $2;
+  try {
+    const parsed = JSON.parse($2);
+    const label = $2;
+    if (label !== 'SAFE' && label !== 'SUSPICIOUS' && label !== 'DANGEROUS') {
+      return { label: 'SUSPICIOUS', reason: 'Unrecognized label from GPT', confidence: 0.5 }
+    }
+    const confidence = typeof parsed.confidence === 'number' ? Math.max(0, Math.min(1, parsed.confidence)) : 0.6,
+    return { label, reason: parsed.reason || 'No reason provided', confidence } as GptClassification
+  } catch {
+    return { label: 'SUSPICIOUS', reason: 'Invalid JSON from GPT', confidence: 0.5 }
+  }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
 }
@@ -299,10 +193,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 }
@@ -315,9 +205,39 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
   }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 }
 
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+export async function batchAnalyzeWithGPT(
+  contents: Array<{ content: string; metadata: Record<string, any> }>
+): Promise<Array<GPTAnalysis | null>> {
+  const results: Array<GPTAnalysis | null> = [];
+  
+  // Process in batches to avoid rate limits
+  const batchSize = 5;
+  for (let i = 0; i < contents.length; i += batchSize) {
+    const batch = contents.slice(i, i + batchSize);
+    const batchPromises = batch.map(item => analyzeWithGPT(item.content, item.metadata));
+    const batchResults = await Promise.all(batchPromises);
+    results.push(...batchResults);
+    
+    // Add delay between batches to respect rate limits
+    if (i + batchSize < contents.length) {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+  }
+  
+  return results;
+}
+
+export function isDangerous(analysis: GPTAnalysis): boolean {
+  return analysis.label === 'DANGEROUS' && analysis.confidence > 0.7;
+}
+
+export function isSuspicious(analysis: GPTAnalysis): boolean {
+  return analysis.label === 'SUSPICIOUS' && analysis.confidence > 0.5;
+}
+
+export function isSafe(analysis: GPTAnalysis): boolean {
+  return analysis.label === 'SAFE' && analysis.confidence > 0.5;
+}

@@ -1,25 +1,16 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
 #!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 // console.log(' Fixing All Final Syntax Issues...')
@@ -58,3 +49,9 @@ const problematicFiles = ['pages/docs/integration-examples.tsx']
             <div style={{ "display": 'flex', "gap": '1rem', "justifyContent": 'center', "flexWrap"}
               <Link href="/careers" style={{ "background": 'linear-gradient(135deg, #3b82f6, #8b5cf6)', "color": 'white', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "transition"}
               <Link href="/contact" style={{ "background": 'transparent', "color": '#3b82f6', "padding": '0.75rem 2rem', "borderRadius": '0.5rem', "textDecoration": 'none', "fontWeight": '600', "border": '2px solid #3b82f6', "transition"}
+
+
+
+
+
+

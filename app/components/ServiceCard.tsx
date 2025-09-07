@@ -1,5 +1,4 @@
 'use client';
-
 import React from 'react';
 import Link from 'next/link';
 
@@ -18,7 +17,7 @@ export default function ServiceCard({
   description,
   bullets = [],
   icon,
-  className = '',
+  className = ''
 }: ServiceCardProps) {
   return (
     <Link
@@ -36,7 +35,7 @@ export default function ServiceCard({
         </h3>
       </div>
 
-      <p className='text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300'>
+      <p className="text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300">
         {description}
       </p>
 

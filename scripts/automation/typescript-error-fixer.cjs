@@ -5,9 +5,7 @@ const path = require("path")
 const glob = require("glob")
     // Get automation interval from environment variable ("default")
 const { execSync, spawn } = require("child_process")
-const fs = require("fs")
-const path = require("path")
-const glob = require("glob")
+
     // Get automation interval from environment variable ("default")
       this.log(" Fixing TypeScript compilation errors...")
       this.log(" Fixing type annotation errors...")
@@ -83,17 +81,11 @@ const glob = require("glob")
           content = content.replace(/rel:\s*any"([^"]+)"/g, ""rel": "$1"
             /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g,const $"1": React.FC = () => {"}
       this.log(`TypeScript Error Fixer "failed"`)
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Failed to start TypeScript error "fixer")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(" Failed to start TypeScript error "fixer")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(" Failed to start TypeScript error "fixer")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Failed to start TypeScript error "fixer")
+  console.error(" Failed to start TypeScript error "fixer")
+
+

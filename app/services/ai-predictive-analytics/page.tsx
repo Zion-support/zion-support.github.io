@@ -1,89 +1,61 @@
-export const metadata = {
-  title: 'AI Predictive Analytics | Zion Tech Group',
-  description: 'Advanced AI-powered predictive analytics solutions for forecasting, trend analysis, and data-driven decision making.',
-  keywords: 'AI predictive analytics, forecasting, trend analysis, predictive modeling, business intelligence',
-};
+import React from 'react'
+import { Metadata } from 'next'
 
-function FeatureCard({ title, details }: { title: string; details: string[] }) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition-shadow">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
-        {details.map((detail, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-orange-500 mr-2">•</span> {detail}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+export const metadata: Metadata = {
+  title: 'Ai Predictive Analytics | Zion Tech Group',
+  description: 'Professional ai predictive analytics services for your business needs.',
+  keywords: 'ai predictive analytics, services, business, technology'
 }
 
-export default function AIPredictiveAnalyticsPage() {
+export default function ServicePage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">AI Predictive Analytics</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Advanced AI-powered predictive analytics solutions for forecasting, trend analysis,
-          and data-driven decision making. Anticipate future trends and make informed decisions.
-        </p>
-      </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Predictive Analytics
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ai predictive analytics services for your business needs.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <FeatureCard
-          title="Forecasting Models"
-          details={[
-            'Time series forecasting',
-            'Demand prediction',
-            'Sales forecasting',
-            'Market trend analysis',
-            'Seasonal adjustments',
-          ]}
-        />
-        <FeatureCard
-          title="Machine Learning"
-          details={[
-            'Predictive modeling',
-            'Pattern recognition',
-            'Anomaly detection',
-            'Classification algorithms',
-            'Regression analysis',
-          ]}
-        />
-        <FeatureCard
-          title="Business Intelligence"
-          details={[
-            'Dashboard creation',
-            'Real-time monitoring',
-            'Automated reporting',
-            'Data visualization',
-            'Performance metrics',
-          ]}
-        />
-      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
+          </div>
+        </div>
 
-      <div className="bg-blue-50 rounded-xl p-8 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Predict the Future?</h2>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Transform your data into actionable insights with our AI-powered predictive analytics.
-          Make better decisions and stay ahead of the competition.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Get Started
-          </a>
-          <a
-            href="/services"
-            className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
-          >
-            View All Services
-          </a>
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai predictive analytics services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 ;
 export default function About() {return (<div>;
@@ -12,7 +9,10 @@ import React from './react';export default /**;
 function About() {return (<div>;
       <main>;
         <h1 > About Zion Tech Group</h1>;<p>We are a leading provider of advanced IT solutions and AI services.;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+export default function About() {;
+
+  return (
+
     <div>;
       <main>;
         <h1>About Zion Tech Group</h1>;
@@ -26,12 +26,14 @@ function About() {
     <div>;
       <main>;
         <h1 > About Zion Tech Group</h1>;
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <p>;
           We are a leading provider of advanced IT solutions and AI services.;
         </p>;
       </main>;</div>)}
+
+        <p>;
+          We are a leading provider of advanced IT solutions and AI services.;
+        </p>;
+      </main>;
+
+}

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-;
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 import React, { useState, useEffect } from 'react',import { supabase } from '@/integrations/supabase/client',import {logErrorToProduction} from '@/utils/productionLogger',import {Table,TableBody,TableCell,TableHead,TableHeader,TableRow;
 } from '@/components/ui/table',import { Button } from '@/components/ui/button',DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuTrigger} from '@/components/ui/dropdown-menu',import { Badge } from '@/components/ui/badge',import { toast } from '@/hooks/use-toast',import { WhitelabelTenant } from '@/hooks/useWhitelabelTenant',import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw  } from 'lucide-react';
@@ -19,14 +14,6 @@ import { format } from 'date-fns',export function TenantsList() {const [tenants,
         .from('whitelabel_tenants').update({ dns_verified: true }).eq('id', (tenant as any).id),if (error) throw error,// Update local state;
       setTenants(tenants.map(t =>;
         (t as any).id === (tenant as any).id ? { ...t, dns_verified: true } : t;
-<<<<<<< HEAD
-      )),toast({title: 'DNS verified',description: `Custom domain for ${(tenant as any).brand_name} has been verified.`})} catch (error: any) {logErrorToProduction('Error verifying DNS:', { data: error }),toast({variant: 'destructive',title: 'Failed to verify DNS';
-        description: error.message})}
-  }}.order('created_at', { ascending: false })}.order ('created_at', { ascending: false })}
-}import React, { useState, useEffect } from 'react';
-import { supabase   } from '@/integrations/supabase/client';
-import { logErrorToProduction } from '@/utils/productionLogger';
-=======
       )),;
       toast({;
         title: 'DNS verified',;
@@ -46,7 +33,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import React, { useState, useEffect } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { Table;
   TableBody;
   TableCell;
@@ -76,8 +62,5 @@ export function TenantsList() {const [tenants, setTenants] = useState<Whitelabel
 }</TableCell> <TableCell> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" size="sm" > <MoreHorizontal className="h-4 w-4" /> <span className="sr-only" >Actions</span> </Button> </DropdownMenuTrigger> <DropdownMenuContent align="end" > <DropdownMenuItem> <Edit className="mr-2 h-4 w-4" /> Edit Tenant </DropdownMenuItem> <DropdownMenuItem> <Users className="mr-2 h-4 w-4" /> Manage Admins </DropdownMenuItem> <DropdownMenuItem onClick={() => toggleTenantStatus (tenant)}> {";
   tenant.is active ? (<> <PowerOff className="mr-2 h-4 w-4" /> Disable Tenant </>) : (<> <Power className="mr-2 h-4 w-4" /> Enable Tenant </>)}</DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> </TableCell> </TableRow>) ) )}</TableBody> </Table> </div>)}</div>)}'";
 }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+

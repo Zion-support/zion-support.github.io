@@ -2,11 +2,9 @@
 <<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
-=======
 
 return (<div className='mb-6 border-b border-zion-blue-light pb-6'>;import { Checkbox  } from '@/components/ui/checkbox';
 import { AvailabilityFilterProps  } from '@/types/filters';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/talent/filters/AvailabilityFilter.tsx
 const AVAILABILITY_OPTIONS = null;
 const AVAILABILITY_OPTIONS = [;
   { id: 'full_time', label: 'Full-time' }
@@ -24,95 +22,90 @@ export function AvailabilityFilter({
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/AvailabilityFilter.tsx
+
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
+const AVAILABILITY_OPTIONS = null;
+const AVAILABILITY_OPTIONS = [
+  { id: 'full_time', label: 'Full-time' }
+  { id: 'part_time', label: 'Part-time' }
+  { id: 'project', label: 'Project-based' }
+]
+export function AvailabilityFilter({
+  selectedAvailability
+  toggleAvailability
+  expanded
+  toggleSection
+  isMobileFilterOpen
+}: AvailabilityFilterProps) {
+  return (
+    <div className='mb-6 border-b border-zion-blue-light pb-6'>
+origin/cursor/automate-test-improve-and-merge-code-2533
       <button
+
         onClick={toggleSection}
 
         className="flex w-full items-center justify-between text-white font-medium"
       >
 
         <span>Availability</span>
-        {expanded ? (
+        {expanded ? ("
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
-        ) : (
+        ) : ("
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
-
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from '@/components/ui/ checkbox';
-import { AvailabilityFilterProps } from '@/types/ filters';
-const AVAILABILITY_OPTIONS = [;
-  { id: 'full_time', label: 'Full - time' },
-  { id: 'part_time', label: 'Part - time' },
+'
+import { ChevronDown, ChevronUp } from 'lucide-react';'
+import { Checkbox } from '@/components / ui / checkbox';'
+import { AvailabilityFilterProps } from '@/types / filters';
+const AVAILABILITY_OPTIONS = [;'
+  { id: 'full_time', label: 'Full - time' },'
+  { id: 'part_time', label: 'Part - time' },'
   { id: 'project', label: 'Project - based' },
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/talent/filters/AvailabilityFilter.tsx
 ];
-export function AvailabilityFilter() {return (<div className='mb-6 border-b border-zion-blue-light pb-6'>;
-      <button;
-        onClick={toggleSection}className="flex w-full items-center justify-between text-white font-medium";
-      >;
-        <span>Availability</span>;
-        {expanded ? (<ChevronUp className="h-4 w-4 text-zion-slate-light" />;
-        ) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />;
-        )}import { ChevronDown, ChevronUp  } from 'lucide-react';
-import { Checkbox  } from '@/components / ui / checkbox';
-import { AvailabilityFilterProps  } from '@/types / filters';
-const AVAILABILITY_OPTIONS = [;
-  { id: 'full_time', label: 'Full - time' },{ id: 'part_time', label: 'Part - time' },{ id: 'project', label: 'Project - based' }];
 export /**;
  * AvailabilityFilter - Function description;
- */;
-function AvailabilityFilter() {return (<div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
+ */
+function AvailabilityFilter() {}
+  return ('
+    <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
-        on_click={toggle_section}
+        on_click={toggle_section}'
         className='flex w - full items - center justify - between text - white font - medium'      >;
         <span > Availability</span>;
-<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
-        {expanded ? (
-          <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (
+        {expanded ? ('
+          <ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : ('
           <ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;
 
       {expanded && (
-<<<<<<< HEAD:src_backup/components/talent/filters/AvailabilityFilter.tsx
-=======
+
         <div className='mt - 4 space - y-2'>;
-          {AVAILABILITY_OPTIONS.map (option => (
+          {AVAILABILITY_OPTIONS.map (option => ('
             <div key={option.id} className='flex items - center'>              <Checkbox;
                 id={`availability-${option.id}`}
 
       </button>;
 
-  { id: "full_time", label: "Full-time" },
   { id: "part_time", label: "Part-time" },
 
-      {expanded && (;
+      {expanded && (;'
         <div className='mt-4 space-y-2'>;
-          {AVAILABILITY_OPTIONS && AVAILABILITY_OPTIONS.map(option => (;
-            <div key={option && option.id} className='flex items-center'>              <Checkbox
+          {AVAILABILITY_OPTIONS && AVAILABILITY_OPTIONS.map(option => (;'
+            <div key={option && option.id} className='flex items-center'>              <Checkbox;`
                 id={`availability-${option && option.id}`}
                 checked={selectedAvailability && selectedAvailability.includes(option && option.id)}
-                onCheckedChange={() => toggleAvailability(option && option.id)}
+                onCheckedChange={() => toggleAvailability(option && option.id)}"
             <div key={option && option.id} className="flex items-center">;
-
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from "@/components/ui/checkbox";
+'
+import { ChevronDown, ChevronUp } from 'lucide-react';"
+import { Checkbox } from "@/components/ui/checkbox";"
 import { AvailabilityFilterProps } from "@/types/filters";
-const AVAILABILITY_OPTIONS = [;
-  { id: "full_time", label: "Full-time" },;
-  { id: "part_time", label: "Part-time" },;
-  { id: "project", label: "Project-based" }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/AvailabilityFilter.tsx
 
-export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
-  return (
-    <div className="mb-6 border-b border-zion-blue-light pb-6">
-      <button
-=======
+  { id: "project", label: "Project-based" }
+
         {expanded ? (<ChevronUp className='h - 4 w - 4 text - zion - slate - light' />) : (<ChevronDown className='h - 4 w - 4 text - zion - slate - light' />)}
       </button>;{expanded && (<div className='mt - 4 space - y-2'>;
           {AVAILABILITY_OPTIONS.map (option => (<div key={option.id} className='flex items - center'>              <Checkbox;
@@ -124,7 +117,6 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
             <div key={option && option.id} className="flex items-center">;const AVAILABILITY_OPTIONS = [;
   { id: "full_time", label: "Full-time" },{ id: "part_time", label: "Part-time" },{ id: "project", label: "Project-based" }export function AvailabilityFilter() {return (<div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/talent/filters/AvailabilityFilter.tsx
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium">;
         <span>Availability</span>;
@@ -222,13 +214,10 @@ const AVAILABILITY_OPTIONS = [;
           {AVAILABILITY_OPTIONS.map(option => (
             <div key={option.id} className='flex items-center'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/AvailabilityFilter.tsx
 export function AvailabilityFilter({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
-=======
     </div>)toggle_section;
 }className="flex w - full items - center justify - between text - white font - medium" > <span > Availability</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate - light" />)}</button> {AVAILABILITY OPTIONS.map (option => (<div key= {option.id ";
 }className="flex items - center" > <Checkbox > {option.label;
@@ -241,7 +230,6 @@ import { Checkbox } from "@/components/ui/checkbox",import { AvailabilityFilterP
           {AVAILABILITY_OPTIONS.map(option => (<div key={option.id} className='flex items-center'>;
 export function AvailabilityFilter() {return (<div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/talent/filters/AvailabilityFilter.tsx
         onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium";
       >;
@@ -285,7 +273,6 @@ toggleSection ;
 }</div>) ;
 }"
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple';
               />;
               <label;
@@ -307,13 +294,14 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />)}</button> {AVAILABILITY OPTIONS.map (option => (<div key= {option.id ";
 }className="flex items-center" > <Checkbox > {option.label ;
 }</label> </div>) )}</div>)}</div>)}";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/talent/filters/AvailabilityFilter.tsx
-=======
 
   option.label 
+                htmlFor={`availability-${option.id}`}
+
+  option.label;
 }</label> </div>) ) 
 }</div>) ;
-}</div>) ;
+}</div>) ;"
 }"};
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
@@ -321,11 +309,15 @@ className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[sta
                 {option.label}
               </label>;
             </div>;
+
+                className='ml-2 text-sm text-zion-slate-light cursor-pointer'
+              >
+                {option.label}
+              </label>
+            </div>
+origin/cursor/automate-test-improve-and-merge-code-2533
           ))}
         </div>;
       )}
-    </div>;
+    </div>
   );
-}
-;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/talent/filters/AvailabilityFilter.tsx

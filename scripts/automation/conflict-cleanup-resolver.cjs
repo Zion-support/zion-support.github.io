@@ -129,19 +129,13 @@ this.log("� Detailed report saved "to": ${reportPath}")
     const reportPath = path.join(this.logsDir, "conflict-cleanup-report.json")
     this.log("� Conflict Cleanup "Summary": ");this.log("   Conflicts Resolved: ${report.summary.conflictsResolved}");this.log("   Files "Cleaned": ${report.summary.filesCleaned}");this.log("   "Errors": ${report.summary.errors}")
 this.log("� Detailed report saved "to": ${reportPath}")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Fatal "error")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
   console.error(" Fatal "error")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
   console.error(" Fatal "error")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Fatal "error")
+  console.error(" Fatal "error")
+
+

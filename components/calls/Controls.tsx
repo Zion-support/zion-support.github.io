@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import type { Room } from 'livekit-client';
-type Props = any;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
-<<<<<<< HEAD
 type Props = {;
   room: Room | null;
   onLeave: () => void;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
@@ -18,33 +9,30 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
   const accentClass = accent === 'blue' ? 'bg-blue-600' : 'bg-cyan-600';
   const toggleMic = async () => {
     if (!room) return;
-<<<<<<< HEAD
-const enabled =
-      await room.localParticipant.setMicrophoneEnabled(!micEnabled);
-    setMicEnabled(enabled);
-  };
+import React from 'react';
+import type { Room } from 'livekit-client';
+type Props = $2;
+  onLeave: () => void,
+  accent?: 'blue' | 'cyan'
+},
 
-  const toggleCam = async () => {
-    if (!room) return;
-    const enabled = await room.localParticipant.setCameraEnabled(!camEnabled);
-setCamEnabled(enabled);
-  };
+export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
+  const [micEnabled, setMicEnabled] = React.useState($2);
+  const [camEnabled, setCamEnabled] = React.useState($2);
+  const [sharing, setSharing] = React.useState($2);
+  const accentClass = $2;
+  const toggleMic = $2;
+    const enabled = await room.localParticipant.setMicrophoneEnabled($2);
+    setMicEnabled(enabled)
+  },
 
-  const toggleScreenShare = async () => {
-    if (!room) return;
+  const toggleCam = $2;
+    const enabled = await room.localParticipant.setCameraEnabled($2);
+    setCamEnabled(enabled)
+  },
+
+  const toggleScreenShare = $2;
     try {
-const enabled =
-        await room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
-    } catch (e) {
-      console.warn('Screen share failed', e);
-    }
-  };
-
-  return (
-<div className='flex items-center gap-3'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
   accent?: 'blue' | 'cyan';};type Props = {;
   room: Room | null,;
   onLeave: () => void,;
@@ -85,14 +73,10 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className='flex items-center gap-3'>
       <button
-=======
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 type Props = {room: Room | null;
   onLeave: () => void;import React from 'react';
@@ -112,10 +96,6 @@ type Props = any;export default function Controls() {const [micEnabled, setMicEn
   }return (<div className='flex items-center gap-3'>;
   return (<div className='flex items-center gap-3'>;
       <button;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         onClick={toggleMic}
         className={`px-4 py-2 rounded ${accentClass} text-white`}
       >;
@@ -134,41 +114,21 @@ type Props = any;export default function Controls() {const [micEnabled, setMicEn
       </button>;
       <button;
         onClick={onLeave}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        className='px-4 py-2 rounded bg-red-600 text-white'
-      >
-        Leave
-      </button>
-    </div>
-<<<<<<< HEAD
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         className='px-4 py-2 rounded bg-red-600 text-white';
       >;
-=======
 );
 }
 
+      const enabled = await room.localParticipant.setScreenShareEnabled($2);
+      setSharing(enabled)
+    } catch (e) {
+      console.warn('Screen share failed', e)
     }
-
-  };
-
-  return (      const enabled = await room && room.localParticipant.setScreenShareEnabled(!sharing);
-      setSharing(enabled);
-    } catch (e) {;
-      console && console.warn('Screen share failed', e);
-  };
+  },
 
   return (
-
-        className='px-4 py-2 rounded bg-red-600 text-white'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         className='px-4 py-2 rounded bg-red-600 text-white';
       >;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         Leave;
       </button>;
     </div>;
@@ -219,14 +179,20 @@ if (return) {$2;
       >;
         Leave;
       </button>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>)})
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </div>);
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     </div>)})
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    <div className="flex items-center gap-3">
+      <button onClick={toggleMic} className={`px-4 py-2 rounded ${accentClass} text-white`}>
+        {micEnabled ? 'Mute' : 'Unmute'}
+      </button>
+      <button onClick={toggleCam} className={`px-4 py-2 rounded ${accentClass} text-white`}>
+        {camEnabled ? 'Stop Video' : 'Start Video'}
+      </button>
+      <button onClick={toggleScreenShare} className="px-4 py-2 rounded bg-gray-700 text-white">
+        {sharing ? 'Stop Share' : 'Share Screen'}
+      </button>
+      <button onClick={onLeave} className="px-4 py-2 rounded bg-red-600 text-white">Leave</button>
+    </div>
+  )
+}

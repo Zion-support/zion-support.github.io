@@ -1,71 +1,35 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const localeToFlag: Record<string, string> = {
-  en: 'us';
-  pt: 'br';
-  es: 'es';
-origin/cursor/automate-test-improve-and-merge-code-2533
-  ar: 'sa'},
-const localeLabelKey: Record<string, string> = {
-  en: 'lang.english';
-  pt: 'lang.portuguese';
-  es: 'lang.spanish';
-  ar: 'lang.arabic'},
-
-export default function LanguageSwitcher() {
-  const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
-  const current = null;
-  en: 'us'
-  pt: 'br'
-  es: 'es'
-  ar: 'sa'
-};  ar: 'sa'}
-const localeLabelKey: Record<string, string> = {
-  en: 'lang.english'
-  pt: 'lang.portuguese'
-  es: 'lang.spanish'
-  ar: 'lang.arabic'
-};  ar: 'lang.arabic'}
-export default function LanguageSwitcher() {
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
 const localeToFlag: Record<string, string> = {
 
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../utils/i18n';
+import { supportedLocales, isRtl } from '../../utils/i18n';
+const localeToFlag: Record<string, string> = {
   en: 'us',
   pt: 'br',
   es: 'es',
   ar: 'sa'},
+
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
-  ar: 'lang.arabic',
-};  ar: 'lang.arabic'},
-export default function LanguageSwitcher() {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-  const { t } = useTranslation();
-  const [open, setOpen] = useState(false);
-  const current = i18n.resolvedLanguage |i18n.language |'en';
+  ar: 'lang.arabic'},
+
+export default function LanguageSwitcher() {
+  const { t } = useTranslation($2);
+  const [open, setOpen] = useState($2);
+  const current = $2;
   const changeLanguage = async (lng: string) => {
-    await i18n.changeLanguage(lng)
-    localStorage.setItem('preferredLanguage', lng);
-    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
-    document.documentElement.setAttribute('lang', lng);
-setOpen(false);
-  };
+    await i18n.changeLanguage($2);
+    localStorage.setItem($2);
+    document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr'),
+    document.documentElement.setAttribute($2);
+    setOpen(false)
+  },
 
   return (
-    <div className='relative'>;
-      <button
-        aria-haspopup='listbox'
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 const localeToFlag: Record<string, string> = {en: 'us',pt: 'br',es: 'es',en: 'us';
   pt: 'br';
@@ -87,10 +51,6 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
   const changeLanguage = async (lng: string) => {await i18n.changeLanguage(lng)localStorage.setItem('preferredLanguage', lng)document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr')document.documentElement.setAttribute('lang', lng)setOpen(false)}return (<div className='relative'>;
       <button;
         aria-haspopup='listbox';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         aria-expanded={open}
         className='flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800';
         onClick={() => setOpen(v => !v)}
@@ -110,29 +70,14 @@ export default function LanguageSwitcher() {const { t } = useTranslation()const 
       {open && (<ul;
           role='listbox';
           className='absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50'>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          {supportedLocales && supportedLocales.map(lng => (;
-            <li key={lng}>;
-              <button
-                role='option'
-<<<<<<< HEAD
-                aria-selected={current.startsWith(lng)}
-                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
                 aria-selected={current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
     <div className="relative">;
       <button
         aria-haspopup="listbox"
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           {supportedLocales && supportedLocales.map(lng => (<li key={lng}>;
               <button;
                 role='option';
@@ -141,42 +86,41 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (<div className="relative">;
       <button;
         aria-haspopup="listbox";
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    <div className="relative">
+      <button
+        aria-haspopup="listbox"
         aria-expanded={open}
-        className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-800";
+        className="flex items-center gap-2 px-2 py-1 rounded hover:bg-gray-100 dark: hover: bg-gray-800"
         onClick={() => setOpen((v) => !v)}
-              <button;
-                role="option";
-                aria-selected={current && current.startsWith(lng)}
-                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900";
+      >
+        <span className={`fi fi-${localeToFlag[current] || 'us'}`}></span>
+        <span>{t(localeLabelKey[current] || 'lang.english')}</span>
+        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" className="opacity-70"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.187l3.71-3.955a.75.75 0 011.08 1.04l-4.24 4.52a.75.75 0 01-1.08 0l-4.24-4.52a.75.75 0 01.02-1.06z" clipRule="evenodd" /></svg>
+      </button>
+      {open && (
+        <ul role="listbox" className="absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50">
+          {supportedLocales.map((lng) => (
+            <li key={lng}>
+              <button
+                role="option"
+                aria-selected={current.startsWith(lng)}
+                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark: hover: bg-gray-900"
                 onClick={() => changeLanguage(lng)}
-              >;
-                <span className={`fi fi-${localeToFlag[lng]}`}></span>;
-                <span>{t(localeLabelKey[lng])}</span>;
-              </button>;
-            </li>;
+              >
+                <span className={`fi fi-${localeToFlag[lng]}`}></span>
+                <span>{t(localeLabelKey[lng])}</span>
+              </button>
+            </li>
           ))}
-        </ul>;
+        </ul>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>
-=======
     </div>
 
 );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   );
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
 )}
   )}
@@ -241,13 +185,8 @@ function LanguageSwitcher() {const { t } = use_translation ()const [open, set_op
               </button>;
             </li>))}
         </ul>)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-    </div>))}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     </div>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     </div>))}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    </div>
+  )
+}

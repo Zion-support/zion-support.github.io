@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react";
-import { Skill } from "@/types/resume";
-import { SkillCategory } from "./SkillCategory";
-interface SkillsListProps {
-  skills: Skill[];
-=======
 import { useState, useEffect  } from './react';
 import { Skill  } from '@/types / resume';
 import { SkillCategory  } from './SkillCategory';
@@ -18,7 +11,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) =>: any {
     Record < string, Skill[]>;
   >({});interface SkillsListProps {
   skills: Skill[];
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   onDeleteSkill: (id: string, category: string) => Promise<void>;
 }
 
@@ -31,23 +23,6 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
     // Group skills by category
     const grouped = skills.reduce(
       (acc, skill) => {
-<<<<<<< HEAD
-        const category = skill.category || "Other";
-        if (!acc[category]) {
-          acc[category] = [];
-        }
-        acc[category].push(skill);
-        return acc;
-      },
-      {} as Record<string, Skill[]>,
-    );
-
-    setSkillsByCategory(grouped);
-  }, [skills]);
-
-  if (Object.keys(skillsByCategory).length === 0) {
-    return null;
-=======
     return null
 
 import { useState, useEffect } from 'react',;
@@ -67,7 +42,34 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
       if (!acc[category]) {;
         acc[category] = [];
       }    return null;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+import { useState, useEffect  } from 'react';
+import { Skill  } from '@/types/resume';
+import { SkillCategory } from './SkillCategory';
+interface SkillsListProps {
+  skills: Skill[],
+  onDeleteSkill: (id: string, category: string) => Promise<void>
+}
+
+export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {
+  const [skillsByCategory, setSkillsByCategory] = useState<Record<string, Skill[]>>({}),
+  
+  useEffect(() => {
+    // Group skills by category
+    const grouped = skills.reduce((acc, skill) => {
+      const category = $2;
+      if (!acc[category]) {
+        acc[category] = []
+      }
+      acc[category].push($2);
+      return acc
+    }, {} as Record<string, Skill[]>),
+    
+    setSkillsByCategory(grouped)
+  }, [skills]),
+  
+  if (Object.keys(skillsByCategory).length === 0) {
+    return null
+  }
   }
 
   return (
@@ -76,24 +78,8 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 
       <div className="space-y-4">
         {Object.entries(skillsByCategory).map(([category, categorySkills]) => (
-          <SkillCategory
-            key={category}
-            category={category}
-            skills={categorySkills}
-            onDelete={onDeleteSkill}
-          />
-        ))}
-      </div>
-    </div>
-<<<<<<< HEAD
-  );
-};
-  );
-  );
-=======
   )
 };
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
       },
       {} as Record < string, Skill[]>,
@@ -109,15 +95,9 @@ if (.length === 0) {) {
     return null;
   }
   return (
-<<<<<<< HEAD
-    <div className="space - y-6">;
-      <h3 className="text - md font - medium">Your Skills</h3>;
-      <div className="space - y-4">;
-=======
     <div className="space-y-6">;
       <h3 className="text - md font-medium">Your Skills</h3>;
       <div className="space-y-4">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         {Object.entries (skillsByCategory).map (([category, category_skills]) => (
           <SkillCategory;
             key={category}
@@ -128,42 +108,6 @@ if (.length === 0) {) {
       </div>;
     </div>);
 }
-<<<<<<< HEAD
 ;
-  ),;
-},; setSkillsByCategory (grouped) 
-}, [skills]);
-return (<div className="space-y-6" > <h3 className="text-md font-medium" >Your Skills</h3> <SkillCategory key= {
-  category 
-}category= {
-  category 
-}skills= {
-  categorySkills 
-}onDelete= {
-  onDeleteSkill 
-}/>) ) 
-}</div> </div>) 
-};
-</div>
-    </div>
-
-  );
-}
-
-  );
-
-};
-
-      </div>
-    </div>
-  );
-}
-
-  )
-      </div>;
-    </div>;
-  );
-};
-=======
-;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+          <SkillCategory 
+            key = $2;

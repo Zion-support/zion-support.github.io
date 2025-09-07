@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-      timestamp: this.metrics.timestamp,
-      bundleSize: this.metrics.bundleSize,
-      memoryUsage: this.metrics.memoryUsage,
-      recommendations: []
-    };
-
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -30,16 +18,13 @@ class PerformanceMonitor {
       if (fs.existsSync(buildDir)) {
         const stats = fs.statSync(buildDir);
         this.metrics.bundleSize = stats.size;
-=======
 #!/usr/bin/env node;
 const fs = require("fs")const path = require("path")const fs = require('fs')const path  = require('path')class PerformanceMonitor {constructor() {this.metrics = {bundleSize: 0,loadTime: 0,memoryUsage: 0,timestamp: new Date().toISOString(),timestamp: new Date().toISOString()}}async measureBundleSize() {try {const buildDir = path.join(process.cwd(), ".next")const buildDir = path.join(process.cwd(), '.next')if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)this.metrics.bundleSize = stats.size;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       }
     } catch(error) {
       console.error('Error measuring bundle size:', error);
     }
   }
-<<<<<<< HEAD
 
   async measureMemoryUsage() {
     const usage = process.memoryUsage();
@@ -48,7 +33,12 @@ const fs = require("fs")const path = require("path")const fs = require('fs')cons
 
   generateReport() {
     const report = {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      timestamp: this.metrics.timestamp,
+      bundleSize: this.metrics.bundleSize,
+      memoryUsage: this.metrics.memoryUsage,
+      recommendations: []
+    };
+    
     if (this.metrics.bundleSize > 1000000) {
       report.recommendations.push('Consider code splitting to reduce bundle size');
     }
@@ -66,10 +56,6 @@ monitor.measureMemoryUsage();
 const report = monitor.generateReport();
 const reportPath = path.join(process.cwd(), 'performance-report.json');
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-console.log("Performance report generated:", reportPath);
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 #!/usr/bin/env node;
 const fs = require("fs")const path = require("path")const fs = require('fs')const path  = require('path')class PerformanceMonitor {constructor() {this.metrics = {bundleSize: 0,loadTime: 0,memoryUsage: 0,timestamp: new Date().toISOString(),timestamp: new Date().toISOString()}}async measureBundleSize() {try {const buildDir = path.join(process.cwd(), ".next")const buildDir = path.join(process.cwd(), '.next')if (fs.existsSync(buildDir)) {const stats = fs.statSync(buildDir)this.metrics.bundleSize = stats.size;
       }
@@ -82,10 +68,6 @@ const fs = require("fs")const path = require("path")const fs = require('fs')cons
     if (this.metrics.memoryUsage > 100) {report.recommendations.push('Consider optimizing memory usage')}return report;
   }
 }const monitor = new PerformanceMonitor()monitor.measureBundleSize()monitor.measureMemoryUsage()const report = monitor.generateReport()const reportPath = path.join(process.cwd(), "performance-report.json")fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))console.log("Performance report generated:", reportPath)const reportPath = path.join(process.cwd(), 'performance-report.json')fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))console.log('Performance report generated:', reportPath)console.log("Performance report generated:", reportPath)
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 console.log('Performance report generated:', reportPath);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 }const monitor = new PerformanceMonitor()monitor.measureBundleSize()monitor.measureMemoryUsage()const report = monitor.generateReport()const reportPath = path.join(process.cwd(), "performance-report.json")fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))console.log("Performance report generated:", reportPath)const reportPath = path.join(process.cwd(), 'performance-report.json')fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))console.log('Performance report generated:', reportPath)console.log("Performance report generated:", reportPath)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+console.log('Performance report generated:', reportPath);

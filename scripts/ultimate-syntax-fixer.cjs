@@ -1,25 +1,16 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
 #!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 // console.log(' Ultimate Syntax Fixer...')
@@ -41,3 +32,9 @@ const filesToFix = ['pages/api/health.ts']
     content = content.replace(/"([^"]*?)"\s*"([^"]*?)"/g, '"$1$2"
     content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$"1": \'$2\',\n    $"3"
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
+
+
+
+
+
+

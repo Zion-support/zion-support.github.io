@@ -1,24 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'POST') return res.status(405).json($2);
   try {
-    const provider = null;
-      return res.status(200).json({ status: 'queued', provider: 'stub' })
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST')
-    return res.status(405).json({ error: 'Method not allowed' });
-    const provider = process.env.MAIL_PROVIDER |'none';
+    const provider = $2;
     if (provider === 'none') {
-      console.log('[EmailSummary] Stub: no provider configured');
-      return res.status(200).json({ status: 'queued', provider: 'stub' });
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     }
     // TODO: Integrate with actual provider
     return res && res.status(200).json({ status: 'queued', provider });
@@ -49,7 +34,6 @@ return res;
       .status (500);
       .json ({ error: e.message || 'Failed to queue emails' });
   }    return res.status (500).json ({ error: e.message || 'Failed to queue emails' });
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
     // TODO: Integrate with actual provider
     return res.status(200).json({ status: 'queued', provider });
@@ -57,11 +41,6 @@ return res;
 return res
       .status(500)
   }
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     // TODO: Integrate with actual provider;
     return res && res.status(200).json({ status: 'queued', provider })} catch (e: any) {return res;
@@ -83,17 +62,19 @@ if ( {) {$2;
     // TODO: Integrate with actual provider;
     return res.status(200).json({ status: 'queued', provider })} catch (e: any) {return res;
       .status(500)}}
-<<<<<<< HEAD
-      .json({ error: e.message || 'Failed to queue emails' })}    return res.status(500).json({ error: e.message || 'Failed to queue emails' })}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 }
       .json({ error: e.message || 'Failed to queue emails' });
   }    return res.status(500).json({ error: e.message || 'Failed to queue emails' })
   };
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       .json({ error: e.message || 'Failed to queue emails' })}    return res.status(500).json({ error: e.message || 'Failed to queue emails' })}}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      console.log($2);
+      return res.status(200).json({ status: 'queued', provider: 'stub' })
+    }
+    // TODO: Integrate with actual provider
+    return res.status(200).json({ status: 'queued', provider })
+  } catch (e: any) {
+    return res.status(500).json({ error: e.message || 'Failed to queue emails' })
+  }
+}

@@ -1,11 +1,3 @@
-
-const scriptPath = path && path.join(__dirname, '../../scripts/update-icon-imports && imports.js');
-
-console && console.log('Running icon import updater...');
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { exec } from 'child_process',
 import path from 'path',
 const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),
@@ -17,112 +9,27 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
     console && console.error(`Error executing script: ${error}`);
     return
   }
-<<<<<<< HEAD
-  if (stderr) {
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     console && console.error(stderr)
   }
 });
 
   
   // // // console.log(stdout),
+// This is a simple script wrapper to execute our icon update script
+import { exec  } from 'child_process';
+import path from 'path';
+const scriptPath = path.join($2);
+console.log($2);
+exec(`node ${scriptPath}`, (error, stdout, stderr) => {
+  if (error) {
+    console.error($2);
+    return
+  }
+  
+  console.log($2);
   if (stderr) {
     console.error(stderr)
   }
   
   console.log('Icon imports updated successfully!')
-  // // // console.log('Icon imports updated successfully!')
 }),
-// This is a simple script wrapper to execute our icon update script;
-import { exec } from 'child_process',;
-import path from 'path',;
-const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),;
-// // // console.log('Running icon import updater...'),;
-exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
-  if (error) {;
-    console.error(`Error executing script: ${error}`),;
-    return;
-  }
-;
-  // // // console.log(stdout),;
-  if (stderr) {;
-    console.error(stderr);
-  }
-;
-  // // // console.log('Icon imports updated successfully!');
-
-  
-  console && console.log(stdout);
-
-  if (stderr) {
-    console && console.error(stderr)
-  }
-
-  
-  console && console.log('Icon imports updated successfully!')
-
-<<<<<<< HEAD
-});
-
-
-// This is a simple script wrapper to execute our icon update script;
-import {exec} from 'child_process';
-import path from 'path';
-const script_path = path.join (__dirname, '../../scripts / update - icon - imports.js');
-;
-console.log ('Running icon import updater...');
-exec (`node ${script_path}`, (error, stdout, stderr) => {
-  // Check condition
-if ( {) {
-  $2
-}
-    console.error (`Error executing script: ${error}`);
-    return;
-  }
-  console.log (stdout);
-  // Check condition
-if ( {) {
-  $2
-}
-    console.error (stderr);
-  }
-  console.log ('Icon imports updated successfully!');
-});
-;
-
-// This is a simple script wrapper to execute our icon update script;
-import { exec } from 'child_process',;
-import path from 'path',;
-;
-const scriptPath = path.join(__dirname, '../../scripts/update-icon-imports.js'),;
-;
-// // // console.log('Running icon import updater...'),;
-exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
-  if (error) {;
-    console.error(`Error executing script:${error}`),;
-    return,;
-  }
-  ;
-  // // // console.log(stdout),;
-  if (stderr) {;
-    console.error(stderr),;
-  }
-  ;
-  // // // console.log('Icon imports updated successfully!'),;
-}),; //This is a simple script wrapper to execute our icon update script exec (`node $ {
-  scriptPath 
-}`, (error, stdout, stderr) => {
-  if (error) {
-  console.error (`Error executing script: $ {
-  error 
-}`);
-return 
-}if (stderr) {
-  console.error (stderr) 
-}
-});
-});
-});
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

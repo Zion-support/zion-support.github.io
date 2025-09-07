@@ -1,35 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React, { useEffect, useState } from 'react';
 export default function CloudAutomationsPage() {
-
-export default function CloudAutomationsPage() {;
-  const [data, setData] = useState<any>(null);
-  useEffect(() => {;
-    fetch('/api/cloud-automations-status');
-      .then(r => r && r.json());
-      .then(setData);
-      .catch(() => setData({ ok: false }));  }, []);      .then((r) => r && r.json());
-      .then(setData);
-      .catch(() => setData({ ok: false }));
-export default function CloudAutomationsPage() {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>(null),
   useEffect(() => {
     fetch('/api/cloud-automations-status')
-<<<<<<< HEAD
-  const items = null;
+      .then((r) => r.json())
+      .then(setData)
+      .catch(() => setData({ ok: false}))
+  }, []),
+
+  const items = $2;
   return (
-    <div className='space-y-6'>
-      <h1 className='text-3xl font-bold'>Cloud Automations</h1>
-      <p className='text-gray-600 dark:text-gray-300'>
-        Autonomous agents running in the cloud. No servers to babysit. No manual
-        ops.
-      </p>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+    <div className="space-y-6">
+      <h1 className="text-3xl font-bold">Cloud Automations</h1>
+      <p className="text-gray-600 dark:text-gray-300">Autonomous agents running in the cloud. No servers to babysit. No manual ops.</p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {items.map(([key, value]: any) => (
-          <div
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function CloudAutomationsPage() {export default function CloudAutomationsPage() {const [data, setData] = useState<any>(null)useEffect(() => {fetch('/api/cloud-automations-status').then(r => r && r.json()).then(setData).catch(() => setData({ ok: false }))}, []).then((r) => r && r.json()).then(setData).catch(() => setData({ ok: false }))export default function CloudAutomationsPage() {const [data, setData] = useState<any>(null)useEffect(() => {fetch('/api/cloud-automations-status').then((r) => r.json()).then(setData).catch(() => setData({ ok: false }))}, [])const items  = data?.data ? Object && Object.entries(data && data.data) : [];const items = null;
   return (<div className='space-y-6'>;
       <h1 className='text-3xl font-bold'>Cloud Automations</h1>;
@@ -39,7 +24,6 @@ export default function CloudAutomationsPage() {export default function CloudAut
       </p>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
         {items.map(([key, value]: any) => (<div;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             key={key}
             className='border rounded p-4 bg-gray-50 dark:bg-gray-900';
           >;
@@ -57,18 +41,6 @@ export default function CloudAutomationsPage() {export default function CloudAut
             </p>;
             {value.metrics ? (<pre className='mt-2 text-xs whitespace-pre-wrap'>;
                 {JSON.stringify(value.metrics, null, 2)}
-<<<<<<< HEAD
-              </pre>
-origin/cursor/automate-test-improve-and-merge-code-2533
-            ) : null}
-          </div>;
-        ))}
-      </div>
-    </div>
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
               </pre>;
             ) : null}
           </div>;
@@ -76,7 +48,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <pre className='mt - 2 text - xs whitespace - pre - wrap'>;
                 {JSON.stringify (value.metrics, null, 2)}
               </pre>            ) : null}        {items.map (([key, value]: any) => (<div key={key} className="border rounded p - 4 bg - gray - 50 dark:bg-gray-900">;
-=======
       .then((r) => r.json())
       .then(setData)
       .catch(() => setData({ ok: false }))
@@ -93,27 +64,27 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 {JSON.stringify (value.metrics, null, 2)}
               </pre>            ) : null}        {items.map (([key, value]: any) => (
           <div key={key} className="border rounded p - 4 bg - gray - 50 dark:bg-gray-900">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             <h2 className="text-xl font-semibold">{value.name || key}</h2>;
             <p className="text - sm text-gray-500">Started: {value.started_at || '—'}</p>;
             <p className="text - sm text-gray-500">Finished: {value.finished_at || '—'}</p>;
             <p className={`text - sm ${value.success ? 'text - green - 600' : 'text - red - 600'}`}>{value.success ? 'Success' : 'Failed'}</p>;
-<<<<<<< HEAD
-            {value.metrics ? (<pre className="mt - 2 text - xs whitespace-pre-wrap">{JSON.stringify (value.metrics, null, 2)}</pre>) : null}
-          </div>))}
-      </div>;
-    </div>)</div>;
-    </div>;
-<<<<<<< HEAD
-  )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
             {value.metrics ? (
               <pre className="mt - 2 text - xs whitespace-pre-wrap">{JSON.stringify (value.metrics, null, 2)}</pre>) : null}
           </div>))}
       </div>;
     </div>);
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   )}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+          <div key={key} className="border rounded p-4 bg-gray-50 dark:bg-gray-900">
+            <h2 className="text-xl font-semibold">{value.name || key}</h2>
+            <p className="text-sm text-gray-500">Started: {value.startedAt || '—'}</p>
+            <p className="text-sm text-gray-500">Finished: {value.finishedAt || '—'}</p>
+            <p className={`text-sm ${value.success ? 'text-green-600' : 'text-red-600'}`}>{value.success ? 'Success' : 'Failed'}</p>
+            {value.metrics ? (
+              <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(value.metrics, null, 2)}</pre>
+            ) : null}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}

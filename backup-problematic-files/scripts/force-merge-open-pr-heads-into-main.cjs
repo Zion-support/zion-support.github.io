@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -43,8 +40,6 @@ function autoResolveConflicts() {}
     const src = fs.readFileSync(file, 'utf8');
     // Prefer incoming (theirs) content on conflict;
     const resolved = src;
-      .replace(/<<<<<<<[\s\S]*?([\s\S]*?)>>>>>>>[\t].*\n?/g, (_, theirs) => theirs);
-      .replace(/<<<<<<<[\s\S]*?>>>>>>>[\t].*\n?/g, '');
     fs.writeFileSync(file, resolved);
     sh(`git add -- "${file}"`)};
   const staged = sh('git diff --cached --name-only || true');

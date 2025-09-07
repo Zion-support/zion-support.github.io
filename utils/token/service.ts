@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { randomUUID } from 'crypto';
 import { tokenStore } from './storage';
 import { TokenTransaction, WalletSummary } from './types';
@@ -23,6 +8,15 @@ export function getWalletSummary(userId: string): WalletSummary {
   const transactions = tokenStore.getTransactions(userId);
   const config = tokenStore.getConfig();
   return { wallet, transactions, config };
+import { randomUUID } from "crypto";
+import { tokenStore } from "./storage";
+import { TokenTransaction, WalletSummary } from "./types";
+export function getWalletSummary(userId: string): WalletSummary {
+  const wallet = tokenStore.getWallet($2);
+  const transactions = tokenStore.getTransactions($2);
+  const config = tokenStore.getConfig($2);
+  return { wallet, transactions, config }
+}
 
 export function earnTokens(
   userId: string,
@@ -30,21 +24,21 @@ export function earnTokens(
   reason: string,
   metadata?: Record<string, any>
 ): TokenTransaction {
-  if (amount <= 0) throw new Error('Amount must be positive');
-  const wallet = tokenStore.getWallet(userId);
-  const newBalance = wallet.balance + amount;
-  tokenStore.setWalletBalance(userId, newBalance);
+  if (amount <= 0) throw new Error($2);
+  const wallet = tokenStore.getWallet($2);
+  const newBalance = $2;
+  tokenStore.setWalletBalance($2);
   const tx: TokenTransaction = {
-    id: randomUUID(),
+    id: randomUUID($2);
     userId,
-    type: 'earn',
+    type: "earn",
     amount,
     reason,
     metadata,
-    createdAt: new Date().toISOString(),
-  };
-  tokenStore.addTransaction(tx);
-  return tx;
+    createdAt: new Date().toISOString()},
+  tokenStore.addTransaction($2);
+  return tx
+}
 
 export function burnTokens(
   userId: string,
@@ -52,85 +46,7 @@ export function burnTokens(
   reason: string,
   metadata?: Record<string, any>
 ): TokenTransaction {
-  if (amount <= 0) throw new Error('Amount must be positive');
-  const wallet = tokenStore.getWallet(userId);
-  if (wallet.balance < amount) throw new Error('Insufficient balance');
-  const newBalance = wallet.balance - amount;
-  tokenStore.setWalletBalance(userId, newBalance);
-  const tx: TokenTransaction = {
-    id: randomUUID(),
-    userId,
-    type: 'burn',
-    amount,
-    reason,
-    metadata,
-    createdAt: new Date().toISOString(),
-  };
-  tokenStore.addTransaction(tx);
-  return tx;
-
-export function issueTokens(
-  userId: string,
-  amount: number,
-  reason: string
-): TokenTransaction {
-  const tx = earnTokens(userId, amount, reason);
-  tx.type = 'issue';
-  return tx;
-
-export function revokeTokens(
-  userId: string,
-  amount: number,
-  reason: string
-): TokenTransaction {
-  const tx = burnTokens(userId, amount, reason);
-  tx.type = 'revoke';
-  return tx;
-
-export function handleAction(
-  userId: string,
-  action: string,
-  metadata?: Record<string, any>
-): TokenTransaction {
-  const { earnRules } = tokenStore.getConfig();
-  const amount = earnRules[action];
-  if (!amount) throw new Error('Unknown action');
-  return earnTokens(userId, amount, action, metadata);
-
-export function burnForFeature(
-  userId: string,
-  feature: string,
-  metadata?: Record<string, any>
-): TokenTransaction {
-  const { burnRules } = tokenStore.getConfig();
-  const amount = burnRules[feature];
-  if (!amount) throw new Error('Unknown feature');
-  return burnTokens(userId, amount, feature, metadata);
-
-export function redeemToCredits(
-  userId: string,
-  amount: number
-): { tx: TokenTransaction; usd: number } {
-  const { usdPerToken } = tokenStore.getConfig();
-  const tx = burnTokens(userId, amount, 'redeem_credits');
-  tx.type = 'redeem';
-  const usd = parseFloat((amount * usdPerToken).toFixed(2));
-  return { tx, usd };
-
-export function getAllTransactions() {
-  return tokenStore.getTransactions();
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 import { randomUUID  } from 'crypto';
@@ -153,12 +69,6 @@ export function getWalletSummary(userId: string): WalletSummary {const wallet = 
   const usd = parseFloat((amount * usdPerToken).toFixed(2))return { tx, usd }export function getAllTransactions() {return tokenStore.getTransactions()export function getConfig() {return {tokenName: 'Zion Token',tokenSymbol: 'ZION',decimals: 18,totalSupply: 1000000;
   }export interface TokenTransaction  {id: string;
   userId: string;id: string;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -166,21 +76,11 @@ export function getConfig() {
     decimals: 18,
     totalSupply: 1000000
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface TokenTransaction {;
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export interface TokenTransaction {;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   id: string;
   userId: string;
 
@@ -212,51 +112,28 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   return transaction;id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,userId,amount,reason,timestamp: Date && Date.now()timestamp: Date.now()}// Token service utilities;
 export interface TokenConfig  {id: string;
 let transactions: TokenTransaction[] = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  if (amount <= 0) throw new Error($2);
+  const wallet = tokenStore.getWallet($2);
+  if (wallet.balance < amount) throw new Error($2);
+  const newBalance = $2;
+  tokenStore.setWalletBalance($2);
+  const tx: TokenTransaction = {
+    id: randomUUID($2);
+    userId,
+    type: "burn",
+    amount,
+    reason,
+    metadata,
+    createdAt: new Date().toISOString()},
+  tokenStore.addTransaction($2);
+  return tx
+}
 
 export function issueTokens(
   userId: string,
   amount: number,
-  reason: string,
-): TokenTransaction {
-  const transaction: TokenTransaction = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -264,38 +141,17 @@ export function issueTokens(
     reason
     timestamp: Date.now()
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -303,88 +159,39 @@ main
     reason,
     timestamp: Date.now()
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
   transactions.push(transaction);
   return transaction;
+  reason: string): TokenTransaction {
+  const tx = earnTokens($2);
+  tx.type = $2;
+  return tx
 }
 
-export function redeemTokens(
+export function revokeTokens(
   userId: string,
   amount: number,
-  reason: string,
-): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    userId
-    amount: -amount, // Negative for redemption
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     type: "redeem",
     reason,
     timestamp: Date.now()
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    type: "redeem",
-=======
 
 ;
 export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
@@ -405,97 +212,36 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
     id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
     user_id,
     amount: -amount, // Negative for redemption;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     type: 'redeem',
     reason,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    timestamp: Date.now ();
-  }
-;
-  transactions.push (transaction);
-
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
     type: 'redeem',
 
-=======
-    type: 'redeem',
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     reason,
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
     timestamp: Date.now(),
-=======
-=======
     type: "redeem",
     type: 'redeem',
     reason,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     timestamp: Date.now()
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  transactions.push(transaction);
-  return transaction;
-
-  transactions.push(transaction);
-  return transaction;
-=======
   
 
   transactions.push(transaction);
 ursor/fix-website-loading-errors-and-merge-6662
   return transaction;
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   transactions.push(transaction);
   return transaction;
 
-<<<<<<< HEAD
-
-  transactions.push(transaction);
-
-  return transaction;
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   transactions.push(transaction);
   return transaction;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
     reason,
     timestamp: Date && Date.now()
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     timestamp: Date.now();
   };
 // Token service utilities
@@ -538,28 +284,13 @@ const tokenBalances: TokenBalance[]  = [];export async function createTokenConfi
   const current = tokenStore.getConfig()tokenStore.setConfig({ ...current, ...partial })
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>,
 ): void {
   const current = getConfig();
   // Update the configuration
   Object.assign(current, partial);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export interface TokenBalance {
   address: string;
   balance: string;
@@ -645,20 +376,8 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
 }
   };
   
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   transactions.push(transaction);
   return transaction;
 }
@@ -666,66 +385,27 @@ export async function getAllTokenBalances(address?: string): Promise<TokenBalanc
   const current = tokenStore && tokenStore.getConfig();
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function set_config (
   partial: Partial < ReturnType < typeof get_config>>): void {
   const current = get_config ();
   // Update the configuration;
   Object.assign (current, partial);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 main
 }
 origin/cursor/automate-test-improve-and-merge-code-20a4
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 }
@@ -738,8 +418,45 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  reason: string): TokenTransaction {
+  const tx = burnTokens($2);
+  tx.type = $2;
+  return tx
+}
+
+export function handleAction(userId: string, action: string, metadata?: Record<string, any>): TokenTransaction {
+  const { earnRules } = tokenStore.getConfig($2);
+  const amount = $2;
+  if (!amount) throw new Error($2);
+  return earnTokens(userId, amount, action, metadata)
+}
+
+export function burnForFeature(userId: string, feature: string, metadata?: Record<string, any>): TokenTransaction {
+  const { burnRules } = tokenStore.getConfig($2);
+  const amount = $2;
+  if (!amount) throw new Error($2);
+  return burnTokens(userId, amount, feature, metadata)
+}
+
+export function redeemToCredits(userId: string, amount: number): { tx: TokenTransaction, usd: number} {
+  const { usdPerToken } = tokenStore.getConfig($2);
+  const tx = burnTokens($2);
+  tx.type = $2;
+  const usd = $2;
+  return { tx, usd }
+}
+
+export function getAllTransactions() {
+  return tokenStore.getTransactions()
+}
+
+export function getConfig() {
+  return tokenStore.getConfig()
+}
+
+export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
+  const current = tokenStore.getConfig($2);
+  tokenStore.setConfig({ ...current, ...partial })
+}

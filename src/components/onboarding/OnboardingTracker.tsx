@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-{/* Progress bar */}
-      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-        <div 
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-=======
 
 ;
 {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
         <div;
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step,) => (<div key={step && step.id} className="flex items-center">;
@@ -30,25 +20,49 @@
                 asChild;
                 variant="ghost";
                 size="sm";
+
+
+      {/* Steps list */}
+      <div className="space-y-3">;
+        {steps && steps.map((step,) => (;
+          <div key={step && step.id} className="flex items-center">;
+            <div className="mr-3">;
+              {step && step.completed ? (;
+                <CheckCircle className="h-5 w-5 text-zion-cyan" />;
+              ) : (;
+                <Circle className="h-5 w-5 text-zion-slate-light" />;
+              )}
+
+            </div>;
+            <div className="flex-1">;
+              <div className="text-sm font-medium text-white">{step && step.label}</div>;
+            </div>;
+            {!step && step.completed && step && step.action && (;
+              <Button
+                asChild 
+                variant="ghost" 
+                size="sm" 
                 className="text-zion-purple hover:text-zion-cyan hover:bg-zion-blue">;
                 <Link href={step && step.link}>;
                   {step && step.action} <ArrowRight className="ml-1 h-4 w-4" />;
                 </Link>;
-              </Button>;)}
-          </div>;
-        ))}title = "Complete Your Profile",import React from './react';
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn   } from '@/lib / utils';
-import { Button   } from '@/components / ui / button';
+              </Button>;
+
+            )}
+          </div>
+        ))}
+
+  title = "Complete Your Profile",
+import React from './react';
+import { CheckCircle, Circle, ArrowRight } from 'lucide-react'import { cn  } from '@/lib / utils';
+import { Button  } from '@/components / ui / button';
 import Link from './next / link';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 export interface OnboardingStep {
   id: string,
   label: string,
   completed: boolean,
   link: string,
-  action?: string;
-=======
 import React from "react",import { CheckCircle, Circle, ArrowRight  } from 'lucide-react';
 import { cn } from "@/lib/utils",import { Button  } from '@/components/ui/button';
 import Link from 'next/link';
@@ -70,7 +84,6 @@ interface OnboardingTrackerProps  {steps: OnboardingStep[];
   className?: string;
 }export function OnboardingTracker({steps;
   title;return (<div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
-=======
 
 
 import React from "react",
@@ -118,7 +131,6 @@ export function OnboardingTracker({;
   const progress = Math.round((completedSteps / steps.length) * 100);
   return (;
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
@@ -126,23 +138,9 @@ export function OnboardingTracker({;
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
         <div;
-<<<<<<< HEAD
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";export function OnboardingTracker() {const completedSteps = steps.filter(step => step.completed).length;
-  const progress = Math.round((completedSteps / steps.length) * 100)return (<div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
-      <div className="flex items-center justify-between mb-4">;
-        <h3 className="text-lg font-medium text-white">{title}</h3>;
-        <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
-      </div>;
-      {/* Progress bar */}
-      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
-        <div;
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";action?: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
 
   action?: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 interface OnboardingTrackerProps  {steps: OnboardingStep[],title?: string;
   class_name?: string;
@@ -159,17 +157,6 @@ function OnboardingTracker() {const completed_steps = steps.filter (step => step
       {/* Progress bar */}
       <div className="w - full h - 2 bg - zion - blue rounded - full mb - 5">;
         <div;
-<<<<<<< HEAD
-          className="h - 2 bg - gradient - to - r from - zion - purple to - zion - cyan rounded - full transition - all duration - 500 ease - out";
-          style={{ width: `${progress}%` }}
-        ></div>;
-      </div>;
-      {/* Steps list */}
-<<<<<<< HEAD
-      <div className="space - y-3">;
-        {steps.map ((step, ) => (
-          <div key={step.id} className="flex items - center">;
-=======
           className="h - 2 bg - gradient - to - r from - zion - purple to - zion - cyan rounded - full transition - all duration - 500 ease - out";style={{ width: `${progress}%` }}
         ></div>;
       </div>;
@@ -185,7 +172,6 @@ function OnboardingTracker() {const completed_steps = steps.filter (step => step
             </div>;
             {!step.completed && step.action && (<div className="space - y-3">;
         {steps.map ((step, ) => (<div key={step.id} className="flex items - center">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="mr - 3">;
               {step.completed ? (<CheckCircle className="h - 5 w - 5 text - zion - cyan" />) : (<Circle className="h - 5 w - 5 text - zion - slate - light" />)}
             </div>;
@@ -204,16 +190,6 @@ function OnboardingTracker() {const completed_steps = steps.filter (step => step
               </Button>)}
           </div>))}
       </div>;
-<<<<<<< HEAD
-    </div>);
-
-}></div> </div> {
-  /* Steps list */ "
-}<div className="space-y-3" > {
-  steps.map ( (step) => (<div key= {
-
-
-=======
       <div className="space-y-3">
         {steps.map((step) => (
           <div key={step.id} className="flex items-center">
@@ -228,35 +204,19 @@ function OnboardingTracker() {const completed_steps = steps.filter (step => step
               <div className="text-sm font-medium text-white">{step.label}</div>
             </div>
             {!step.completed && step.action && (
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+      
+      {/* Steps list */}
+
   step.link 
 }> </Link> </Button>) 
 }</div>) ) ;
 }</div> </div>) ;
 }"};
 
-
-      </div>;
-    </div>;
-  );
-<<<<<<< HEAD
-
-
-
-
-  step.id ";
-}className="flex items - center" > <div className="mr - 3" > {";
-  step.completed ? (<CheckCircle className="h - 5 w - 5 text - zion - cyan" /> h - 5 w - 5 text - zion - slate - light"/>);
-}</div> </div> {";
-  !step.completed && step.action && (<Button as_child variant=" ghost"size=" sm"className=" text - zion - purple hover:text - zion - cyan hover:bg - zion - blue" > <Link href= {
-  step.link;
-}> </Link> </Button>);
-}</div>) );
-}</div> </div>);
-}"}
-}
-;
-=======
     </div>)}></div> </div> {/* Steps list */ ";
 }<div className="space-y-3" > {steps.map ( (step) => (<div key= {step.link;
 }> </Link> </Button>)}</div>) )}</div> </div>)}"}</div>;
@@ -276,7 +236,6 @@ function OnboardingTracker() {const completed_steps = steps.filter (step => step
                   {step.action} <ArrowRight className="ml-1 h-4 w-4" />;
                 </Link>;
               </Button>;
-=======
 }
 ;
 
@@ -290,7 +249,6 @@ function OnboardingTracker() {const completed_steps = steps.filter (step => step
                   {step.action} <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </Button>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             )}
           </div>;
         ))}
@@ -299,12 +257,6 @@ function OnboardingTracker() {const completed_steps = steps.filter (step => step
   )}></div> </div> {/* Steps list */ ";
 }<div className="space-y-3" > {steps.map ( (step) => (<div key= {step.id ";
 }className="flex items-center" > <div className="mr-3" > {";
-<<<<<<< HEAD
-  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)}</div> </div> {";
-  !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {step.link ;
-}> </Link> </Button>)}</div>) )}</div> </div>)}";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>) ;
 }</div> </div> {";
   !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {;
@@ -313,4 +265,7 @@ function OnboardingTracker() {const completed_steps = steps.filter (step => step
 }</div>) ) ;
 }</div> </div>) ;
 }"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+      </div>;
+    </div>;
+  );
+

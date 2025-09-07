@@ -1,17 +1,7 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     log('info', `Total "tasks": ${masterReport.summary.totalTasks}`);
     log('info', `"Successful": ${masterReport.summary.successful}`);
     log('info', `"Failed": ${masterReport.summary.failed}`);
@@ -48,14 +38,6 @@ main
 }
 
 // Run the enhanced orchestrator
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-main();
-
-#!/usr/bin/env node;
-=======
 main();#!/usr/bin/env node;
 
 main();
@@ -65,9 +47,17 @@ main();
 main();#!/usr/bin/env node;
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-=======
+main();
+
+#!/usr/bin/env node;
+
+
+
+#!/usr/bin/env node;
+
+main();#!/usr/bin/env node;
+
 main();
 
 
@@ -77,18 +67,6 @@ main();
 
 main();#!/usr/bin/env node;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-main();
-
-
-
-
-#!/usr/bin/env node;
-
-main();#!/usr/bin/env node;
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
@@ -145,3 +123,27 @@ console.log('======')
     const phase5Tasks = [{ name: 'Metrics Generation', "command": 'echo "Generating final metrics..."}]
       { "name": 'Report Generation', "command": 'echo "Generating comprehensive report..."}
       log('info', '"Recommendations")
+main
+    log('info', `Total "tasks": ${masterReport.summary.totalTasks}`)
+    log('info', `"Successful": ${masterReport.summary.successful}`)
+    log('info', `"Failed": ${masterReport.summary.failed}`)
+    log('info', `"Warnings": ${masterReport.summary.warnings}`)
+    log('info', `Skipped (cached): ${masterReport.summary.skipped}`)
+    log('info', `Success "rate": ${masterReport.metrics.successRate}%`)
+    log('info', `Performance "score": ${masterReport.metrics.performanceScore}/100`)
+    log('info', `Total "duration": ${Math.round(masterReport.metrics.totalDuration / 1000)}s`)
+  if($2) {
+
+// Run the enhanced orchestrator
+main();#!/usr/bin/env node
+main()
+///usr/bin/env node
+main();#!/usr/bin/env node
+main
+
+///usr/bin/env node
+main();#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+const { execSync, spawn } = require('child_process')
+const os = require('os')

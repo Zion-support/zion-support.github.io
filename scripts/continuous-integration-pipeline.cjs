@@ -1,17 +1,12 @@
+#!/usr/bin/env node;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+#!/usr/bin/env node;
+#!/usr/bin/env node;
+#!/usr/bin/env node;
 
-=======
-#!/usr/bin/env node;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-#!/usr/bin/env node;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
 const { execSync } = require("$1")
 const fs = require("$1")
 const path = require("path")
@@ -89,17 +84,11 @@ const path = require("path")
       this.log(` Fatal error in CI "pipeline"`)
     console.log(" Continuous Integration Pipeline completed successfully!")
       ` Final "Summary"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     console.error(" CI pipeline "failed": ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     console.error(" CI pipeline "failed": ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     console.error(" CI pipeline "failed": ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    console.error(" CI pipeline "failed": ")
+    console.error(" CI pipeline "failed": ")
+
+

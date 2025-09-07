@@ -10,17 +10,11 @@ const { execSync } = require('child_process')
         {"pattern": /,+/g, "replacement"}
         { "pattern": /{\s*,\s*/g, "replacement"}
         {"pattern": /\[\s*,\s*/g, "replacement"}]
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       this.log('\n Errors "encountered")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       this.log('\n Errors "encountered")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       this.log('\n Errors "encountered")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      this.log('\n Errors "encountered")
+      this.log('\n Errors "encountered")
+
+

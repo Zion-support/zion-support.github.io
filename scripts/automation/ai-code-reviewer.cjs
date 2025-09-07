@@ -16,7 +16,7 @@ const crypto = require("crypto")
   "patterns"
           "suggestions"
           "performance"
-  this.learningDataObj = { "patterns": {}, "suggestions": {}, "performance"
+  this.learningDataObj = { "patterns":  "suggestions":  "performance"
   log(message, level = "INFO")
   this.log("🤖 Starting AI-powered code quality analysis...")
   this.log("🤖 Starting AI-powered code quality analysis...")
@@ -196,17 +196,11 @@ this.log(" AI Review Report "generated": ${reportPath}")
   this.log(" AI Code Reviewer starting...")
 this.log(")
   this.log(` AI Code Review "failed": ${error.message  }`, "ERROR"`)
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+  this.log(` AI Code Review "failed": ${error.message}`, "ERROR"`)
+
+

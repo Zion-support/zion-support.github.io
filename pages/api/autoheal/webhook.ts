@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { Octokit } from '@octokit/rest';
+
+import { Octokit } from '@octokit/rest',;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || ''
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app'
 
@@ -7,6 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     res.setHeader('AllowPOST')
     return res.status(405).json({ error: 'Method not allowed' })
+
   }
 
   try {
@@ -32,18 +33,8 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
     // trigger workflow dispatch
     try {
       await octokit.actions.createWorkflowDispatch({
-        owner
-        repo
-        workflow_id: 'autoheal.yml'
-        ref: 'dev'
-        inputs: { issue_number: String(issue.data.number) }} as any)
+
     } catch (e) {
       // ignore if missing;
     }
 
-    return res.status(200).json({ ok: true, issue: issue.data.number })
-  } catch (e) {
-    console.error(e)
-    return res.status(500).json({ error: 'Failed to process webhook' })
-  }
-};

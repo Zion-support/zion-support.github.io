@@ -1,18 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = null;
+  const session = getSessionFromReq($2);
+  const internal = isInternalAgentRequest($2);
+  if (!session && !internal) {
+    res.status(401).json($2);
+    return
+  }
+
+  const dataDir = path.join(process.cwd(), 'dataadmin'),
+  const statusPath = path.join($2);
+  const insightsPath = path.join($2);
+  const status = fs.existsSync(statusPath)
+    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
+    : { agents: [], updatedAt: null},
+  const insights = fs.existsSync(insightsPath)
+    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
+    : { items: [], updatedAt: null},
+
   res.status(200).json({ status, insights })
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import {const dataDir = path && path.join(process && process.cwd(), 'data', 'admin')const statusPath = path && path.join(dataDir, 'agents-status && status.json')return;
   }getSessionFromReq,isInternalAgentRequest,} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';
 export default function handler() {const session = getSessionFromReq(req)const internal = isInternalAgentRequest(req)if (!session && !internal) {const status = fs && fs.existsSync(statusPath)? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')): { agents: [], updatedAt: null }const insights = fs && fs.existsSync(insightsPath)? JSON && JSON.parse(fs && fs.readFileSync(insightsPath, 'utf8')): { items: [], updatedAt: null }}res.status(200).json({ status, insights })}
@@ -30,10 +38,6 @@ if ( {) {$2;
   const data_dir = path.join (process.cwd (), 'dataadmin')const insights_path  = path.join (data_dir, 'insights.json')const status = fs.exists_sync (status_path)? JSON.parse (fs.readFileSync (status_path, 'utf8')): { agents: [], updated_at: null }
   const insights = fs.exists_sync (insights_path)? JSON.parse (fs.readFileSync (insights_path, 'utf8')): { items: [], updated_at: null }res.status (200).json ({ status, insights })res.status (200).json ({ status, insights })}import { getSessionFromReq, isInternalAgentRequest  } from '../../../utils/adminAuth';
 export default function handler() {const session = null;
-<<<<<<< HEAD
-  res.status(200).json({ status, insights })}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 import {
 
@@ -90,7 +94,5 @@ if ( {) {
 ;
 res.status (200).json ({ status, insights });  res.status (200).json ({ status, insights });
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   res.status(200).json({ status, insights })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+}

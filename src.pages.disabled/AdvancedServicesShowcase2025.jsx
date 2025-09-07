@@ -1,9 +1,4 @@
-const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') const [sortBy,setSortBy] = useState (\'name\') \'';\"";const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}:src.pages.disabled/AdvancedServicesShowcase2025.jsx;
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') const [sortBy,setSortBy] = useState (\'name\') \'';\"";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -18,11 +13,6 @@ const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelected
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
 :src.pages.disabled/AdvancedServicesShowcase2025.jsx
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
 :src.pages.disabled/AdvancedServicesShowcase2025.jsx;
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
@@ -35,10 +25,6 @@ const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelected
 :temp_exclude/src.pages.disabled/AdvancedServicesShowcase2025.jsx;
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}:src.pages.disabled/AdvancedServicesShowcase2025.jsx;
 :temp_exclude/src.pages.disabled/AdvancedServicesShowcase2025.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -49,11 +35,6 @@ const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelected
 
 :src.pages.disabled/AdvancedServicesShowcase2025.jsx
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}

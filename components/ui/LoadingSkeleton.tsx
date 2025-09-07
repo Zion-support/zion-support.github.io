@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
+interface SkeletonProps {
+  className?: string,
+  height?: string,
+  width?: string,
   rounded?: string
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
-  className;
-origin/cursor/automate-test-improve-and-merge-code-2533
-          ))}
-        </div>
-      </div>
-    </div>
-);
-};
-
-export default Skeleton;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 ;
   className?: string;
@@ -58,10 +46,6 @@ interface SkeletonProps  {class_name?: string;
           <Skeleton className="h-14 w-32" />;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>))}interface StatsSkeletonProps  {className?: string;
 }interface StatsSkeletonProps  {class_name?: string;
 }import React from 'react';
@@ -72,32 +56,38 @@ import { motion  } from 'framer-motion';
       </div>;
     </div>;
 }export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {return (<div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>;
-<<<<<<< HEAD
-=======
     </div>);
 
+  className = $2;
+  height = $2;
+  width = $2;
+  rounded = 'rounded' 
+}) => {
+  return (
+    <motion.div
+      className={`bg-white/10 animate-pulse ${height} ${width} ${rounded} ${className}`}
+      animate={{
+        opacity: [0.3, 0.6, 0.3]}}
+      transition = $2;
+        repeat: Infinity,
+        ease: "easeInOut"}}
+    />
   )
-};
+},
 
+interface ServiceCardSkeletonProps {
+  className?: string
+}
+
+export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = $2;
+interface HeroSkeletonProps {
+  className?: string
+}
+
+export const HeroSkeleton: React.FC<HeroSkeletonProps> = ({ className = $2;
 interface StatsSkeletonProps {
   className?: string
-
 }
-;
-interface StatsSkeletonProps {
-  class_name?: string;
-}
-          ))}
-        </div>
-      </div>
-    </div>
-};
-export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ className = '' }) => {;
-  return (
-    <div className={`p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl ${className}`}>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       <div className="flex items-center space-x-4 mb-6">;
         <Skeleton className="w-16 h-16 rounded-2xl" />;
         <div className="flex-1">;
@@ -141,13 +131,14 @@ export const StatsSkeleton: React.FC < StatsSkeletonProps> = ({ class_name = '' 
       </div>;
     </div>)}export default Skeleton)}export default Skeleton;interface SkeletonProps  {className?: string;
   height?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  width?: string;)}export default Skeleton;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   width?: string;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   width?: string;)}export default Skeleton;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) => {
+  return (
+    <div className={`py-20 px-6 ${className}`}>
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[...Array(4)].map((_, index) => (
+            <div key = $2;
+export default Skeleton,

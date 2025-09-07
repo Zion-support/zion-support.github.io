@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 export default function Page() {export default function Page() {return (<div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
@@ -28,45 +17,23 @@ export default function Page() {return (<div className='min-h-screen bg-slate-95
           property='og:description';
           content='An inventive insight derived from autonomous research.';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 export default function Page() {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 export default function Page() {;
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
   return (
     <div className='min-h-screen bg-slate-950 text-white'>;
       <Head>;
         <title>Innovation Insight — 2025-08-14 21-47</title>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import Head from 'next/head';
 export default function Page() {
   return (
@@ -75,14 +42,8 @@ export default function Page() {
         <title>Innovation Insight — 2025-08-14 21-47</title>
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
         <meta
           name='description'
           content='An inventive insight derived from autonomous research.'
@@ -101,40 +62,21 @@ export default function Page() {
         <h1 className='text-3xl font-extrabold'>;
           Innovation Insight — 2025-08-14 21-47;
         </h1>;
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div
           className='mt-4'
           dangerouslySetInnerHTML={{
             __html:
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
 
-=======
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>',;
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
@@ -142,19 +84,11 @@ export default function Page() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
           }}
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         <div;
           className='mt-4';
           dangerouslySetInnerHTML={{__html:;
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>','<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>','<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup && ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>'}}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         />;
         <p className='mt-6 text-white/60 text-sm'>;
           Auto-generated by Cloud Content Factory.;
@@ -176,61 +110,18 @@ export default function Page() {
           Auto-generated by Cloud Content Factory.;
         </p>;
       </main>;
-  )export default function Page() {return (export default function Page() {return (</div>;)export default function Page() {return (export default function Page() {export default function Page() {export default function Page() {return (export default function Page() {export default function Page() {return (}export default function Page() {return (export default function Page() {return (<div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Innovation Insight — 2025-08-14 21-47</title>;
-        <meta name="description" content="An inventive insight derived from autonomous research." />;
-        <meta property="og:title" content="Innovation Insight — 2025-08-14 21-47" />;
-        <meta property="og:description" content="An inventive insight derived from autonomous research." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;
-        <h1 className="text-3xl font-extrabold">Innovation Insight — 2025-08-14 21-47</h1>;
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<ul class=\"list-disc pl-6\"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>" }} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>;
-      </main>;
-    </div>;
-  )}
-export default function Page() {return (import Head from 'next / head';
-export default /**;
- * Page - Function description;
- */;
-function Page() {return (<div className='min - h-screen bg - slate - 950 text - white'>;
     </div>;
   );export default function Page() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
-<<<<<<< HEAD
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>',
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>',
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>'
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -238,11 +129,10 @@ function Page() {return (<div className='min - h-screen bg - slate - 950 text - 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
               '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>'
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>',
+
           }}
         />
         <p className='mt-6 text-white/60 text-sm'>
@@ -260,91 +150,32 @@ export default function Page() {
   );export default function Page() {
   return (
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Page() {
-  return (
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-export default function Page() {
-=======
 export default function Page() {
 origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function Page() {
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export default function Page() {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 export default function Page() {
   return (
 
-<<<<<<< HEAD
-
-export default function Page() {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   return (
 
 }
 
-<<<<<<< HEAD
-export default function Page() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Innovation Insight — 2025-08-14 21-47</title>;
-        <meta name="description" content="An inventive insight derived from autonomous research." />;
-        <meta property="og:title" content="Innovation Insight — 2025-08-14 21-47" />;
-        <meta property="og:description" content="An inventive insight derived from autonomous research." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;
-        <h1 className="text-3xl font-extrabold">Innovation Insight — 2025-08-14 21-47</h1>;
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<ul class=\"list-disc pl-6\"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup && ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup && ziontechgroup.com/newsroom</a></li></ul>" }} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>;
-      </main>;
-    </div>;
-  );
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 export default function Page() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 export default function Page() {
   return (
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import Head from 'next / head';
 export default /**
  * Page - Function description
@@ -374,23 +205,15 @@ function Page() {
         </h1>;
         <div;
           className='mt - 4';
-          dangerouslySetInnerHTML={{__html:;
-              '<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>';
-              '<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>';
-              '<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>';
           dangerouslySetInnerHTML={{
             __html:;
-              '<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>'
+              '<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>',
           }}
         />;
         <p className='mt - 6 text - white / 60 text - sm'>;
           Auto - generated by Cloud Content Factory.;
         </p>;
       </main>;
-    </div>)export default /**;
- * Page - Function description;
- */;
-function Page() {return (<div className="min - h-screen bg - slate - 950 text - white">;
     </div>);export default /**
  * Page - Function description
  */
@@ -409,79 +232,8 @@ function Page() {
         <div className="mt - 4" dangerouslySetInnerHTML={{ __html: "<ul class="list - disc pl - 6"><li > Opportunity: Transform recurring signals into structured guides</li><li > Idea: Build a feature row summarizing value, capability, and link to details</li><li > Source: <a class="text - cyan - 300 underline" href="https://ziontechgroup.com / newsroom" target="_blank" rel="noopener">https://ziontechgroup.com / newsroom</a></li></ul>" }} />;
         <p className="mt - 6 text - white / 60 text - sm">Auto - generated by Cloud Content Factory.</p>;
       </main>;
-    </div>)}<Head>;
-        <title>Innovation Insight — 2025-08-14 21-47</title>;
-        <meta name=&quot;description&quot; content=&quot;An inventive insight derived from autonomous research.&quot; />;
-        <meta property=&quot;og:title&quot; content=&quot;Innovation Insight — 2025-08-14 21-47&quot; />;
-        <meta property=&quot;og:description&quot; content=&quot;An inventive insight derived from autonomous research.&quot; />;
-        <meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot; />;
-      </Head>;
-      <main className='container mx-auto px-6 py-12 prose prose-invert'>;
-        <h1 className='text-3xl font-extrabold'>;
-          Innovation Insight — 2025-08-14 21-47;
-        </h1>;
-        <div;
-          className='mt-4';
-          dangerouslySetInnerHTML={{__html:;
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>';
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>';
-              '<ul class="list-disc pl-6"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></li></ul>';
-          }}
-        />;
-        <p className='mt-6 text-white/60 text-sm'>;
-          Auto-generated by Cloud Content Factory.;
-        </p>;
-      </main>;
-    </div>;
-    </div>;
-  )export default function Page() {return (export default function Page() {return (<div className="min-h-screen bg-slate-950 text-white">;
-      <Head>;
-        <title>Innovation Insight — 2025-08-14 21-47</title>;
-        <meta name="description" content="An inventive insight derived from autonomous research." />;
-        <meta property="og:title" content="Innovation Insight — 2025-08-14 21-47" />;
-        <meta property="og:description" content="An inventive insight derived from autonomous research." />;
-        <meta name="twitter:card" content="summary_large_image" />;
-      </Head>;
-      <main className="container mx-auto px-6 py-12 prose prose-invert">;
-        <h1 className="text-3xl font-extrabold">Innovation Insight — 2025-08-14 21-47</h1>;
-        <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<ul class=\"list-disc pl-6\"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/newsroom</a></li></ul>" }} />;
-        <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>;
-      </main>;
-    </div>;
-  )}ursor/fix-website-loading-errors-and-merge-6662;
-    </div>;
-  )}
-    </div>;
-  )})} catch (error) {console.error("Error:", error)return res.status(500).json({ error: "Internal server error" })}
-})
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-
-=======
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -489,9 +241,12 @@ function Page() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+
+
+
+
 
 
       <Head>
@@ -518,40 +273,20 @@ function Page() {
         </p>
       </main>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     </div>;
   );export default function Page() {
   return (
 
 export default function Page() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     <div className="min-h-screen bg-slate-950 text-white">
       <Head>
         <title>Innovation Insight — 2025-08-14 21-47</title>
@@ -565,99 +300,32 @@ export default function Page() {
         <div className="mt-4" dangerouslySetInnerHTML={{ __html: "<ul class=\"list-disc pl-6\"><li>Opportunity: Transform recurring signals into structured guides</li><li>Idea: Build a feature row summarizing value, capability, and link to details</li><li>Source: <a class=\"text-cyan-300 underline\" href=\"https://ziontechgroup.com/newsroom\" target=\"_blank\" rel=\"noopener\">https://ziontechgroup.com/newsroom</a></li></ul>" }} />
         <p className="mt-6 text-white/60 text-sm">Auto-generated by Cloud Content Factory.</p>
       </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-
-ursor/fix-website-loading-errors-and-merge-6662
-    </div>
-  );
-}
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
     </div>
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>;
   );
 }
 
   )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
   );
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
-<<<<<<< HEAD
 
 
-  );
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-main
+
 import { getServerSupabase } from '../../../../utils/supabase/server',;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = (req.query.code as string)?.toLowerCase()
@@ -26,6 +26,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       .from('referral_events')
       .select('ip_address, created_at')
       .eq('partner_code', code)
+
 .gte(
         'created_at',
         new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString()
@@ -38,13 +39,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 counts.set(key, (counts.get(key) || 0) + 1);
 origin/cursor/automate-test-improve-and-merge-code-2533
     }
+
       .gte('created_at', new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString())
     if (error) return res.status(500).json({ error: error.message })
 
-
-
     const flags: any[] = []
-main
+
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 flags.push({

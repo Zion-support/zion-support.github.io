@@ -10,11 +10,11 @@ import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
 import { FavoriteButton } from "@/components/FavoriteButton";
 import { TalentProfile } from "@/types/talent";
-import { RatingStars  } from '@/components/RatingStars';
-import { useAuth  } from '@/context/auth/AuthProvider';
+import { RatingStars } from '@/components/RatingStars';
+import { useAuth } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
 
 import { TalentProfile } from "@/types/talent",
@@ -47,20 +47,21 @@ export interface TalentCardProps {;
   isAuthenticated: boolean;
 
 }
-const TalentCardComponent = ({
-  talent
-  onViewProfile
-  onRequestHire
+
+const TalentCardComponent = $2;
+  onViewProfile,
+  onRequestHire,
   isAuthenticated
-}: TalentCardProps,) => {
-  const router = useRouter()
+}: TalentCardProps) => {
+  const router = useRouter($2);
   const handleViewProfile = () => {
     // Navigate directly to the talent profile
-    router.push(`/talent/${talent.id}`)
+    router.push($2);
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
+  },
 
   const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
@@ -134,21 +135,15 @@ const TalentCardComponent = ({;
                   {talent.full_name?.charAt(0) || "T"}
 
                 </div>
-                />;
-              ) : (;
-                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
-                  {talent && talent.full_name?.charAt(0) || "T"}
-                </div>;
               )}
-            </div>;
-            {talent && talent.is_verified && (;
-              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;
-                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
-              </div>;
+            </div>
+            {talent.is_verified && (
+              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
+              </div>
             )}
-
-          </div>;
-
+          </div>
+          
           {/* Main Info */}
           <div className="flex-1">;
             <div className="flex justify-between items-start">;
@@ -167,57 +162,36 @@ const TalentCardComponent = ({;
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-
-            </div>;
-          </div>;
-        </div>;
-        {/* Skills */}
-        {skills && skills.length > 0 && (;
-          <div className="mt-4">;
-            <div className="flex flex-wrap gap-2">;
-              {skills && skills.map((skill, index,) => (;
-
-                <span
-                  key = {index,}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
-
               {skills.map((skill, index) => (
                 <span 
                   key={index}
-
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                 >
                   {skill}
-                </span>;
+                </span>
               ))}
-
-              {(talent && talent.skills?.length || 0) > 5 && (;
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent && talent.skills?.length || 0) - 5} more;
-                </span>;
-
+              {(talent.skills?.length || 0) > 5 && (
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
+                  +{(talent.skills?.length || 0) - 5} more
+                </span>
               )}
 
         )}
 
         {/* Hourly Rate & Actions */}
-        <div className="mt-5 flex items-center justify-between">;
-          <div>;
-            {talent && talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
-                ${talent && talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
+        <div className="mt-5 flex items-center justify-between">
+          <div>
+            {talent.hourly_rate ? (
+              <div className="text-white font-bold">
+                ${talent.hourly_rate}
+                <span className="text-zion-slate-light font-normal">/hr</span>
+              </div>
+            ) : (
+              <div className="text-zion-slate-light">Rate not specified</div>
             )}
 
           <div className="flex items-center gap-2">
             {isAuthenticated && (
-          </div>;
-
-          <div className="flex items-center gap-2">;
-            {isAuthenticated && (;
               <Button
                 size="sm"
                 variant="secondary"
@@ -227,7 +201,7 @@ const TalentCardComponent = ({;
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
-              </Button>
+              </Button>,
             )}
             <Button
               size="sm"
@@ -408,14 +382,6 @@ if ( {) {
 
     </Card>);
 },
-export const TalentCard = React.memo (TalentCardComponent),
-TalentCard.display_name = 'TalentCard',
-export const TalentCard = React.memo (TalentCardComponent);
-TalentCard.display_name = 'TalentCard';
-
-export const TalentCard = React.memo(TalentCardComponent),
-TalentCard.displayName = 'TalentCard',
-},
-
-export const TalentCard = React.memo(TalentCardComponent),
+;
+export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard',

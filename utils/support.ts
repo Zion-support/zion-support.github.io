@@ -1,36 +1,12 @@
-  logEvent: (event: any) => null;
-  getArticles: () => [];
-  getArticleById: (id: string) => null;
-}
-  logEvent: (event: any) => null,getArticles: () => [],getArticleById: (id: string) => null;getArticleById: (id: string) => null;
-  getArticleById: (id: string) => null;
-}export const logSupportEventToOperator = (event: any) => {// Add support event logging functionality here;
-  return null;export interface IntentMatch  {intentMatched: boolean;
-  logEvent: (event: any) => null,
-  getArticles: () => [],
-<<<<<<< HEAD
-<<<<<<< HEAD
-  getArticleById: (id: string) => null;
-=======
   getArticleById: (id: string) => null
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   getArticleById: (id: string) => null;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 };
 
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here
   return null;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface IntentMatch {
   intentMatched: boolean;
   matchedArticleIds: string[];
@@ -51,13 +27,6 @@ export interface IntentMatch {
 }export const logSupportEventToOperator = (event: any) => {// Add support event logging functionality here;
   return null;}ursor/automate-test-improve-and-merge-code-646c;
   // Add support functionality here;
-<<<<<<< HEAD
-  log_event: (event: any) => null,
-  get_articles: () => [],
-}
-}
-<<<<<<< HEAD
-=======
   log_event: (event: any) => null,get_articles: () => [],export const logSupportEventToOperator = (event: any) => {// Add support event logging functionality here;
   return null;
   // Add support functionality here;
@@ -66,21 +35,67 @@ export interface IntentMatch {
   get_articles: () => []
 }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
-<<<<<<< HEAD
-=======
 }export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here;
   return null;
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 }
 }export const logSupportEventToOperator = (event: any) => {// Add support event logging functionality here;
   return null;}
+export type HelpArticle = $2;
+  slug: string,
+  title: string,
+  body: string,
+  category: 'Getting Started' | 'Hiring' | 'Profile Setup' | 'Payments' | 'Disputes',
+  updatedAt: string,
+  keywords?: string[]
+},
+
+export type IntentResult = $2;
+  matchedArticleIds: string[]
+},
+
+export function matchIntent(query: string, articles: HelpArticle[]): IntentResult {
+  const q = query.toLowerCase($2);
+  const matched = $2;
+  const keywordToArticle = new Map<string, string[]>(),
+  for (const art of articles) {
+    for (const kw of art.keywords ?? []) {
+      const list = $2;
+      list.push($2);
+      keywordToArticle.set(kw, list)
+    }
+  }
+
+  // Simple heuristics
+  const heuristics: Array<[RegExp, string[]]> = [
+    [/login|log in|sign in|password|2fa|otp|cannot.*sign/i, []],
+    [/hire|post job|find talent|contract/i, []],
+    [/match|matching|get matched/i, []],
+    [/bill|invoice|payment|refund|charge|card/i, []],
+    [/dispute|issue|complaint|chargeback/i, []],
+    [/profile|setup|verification|kyc|tax/i, []]],
+
+  let heuristicHit = $2;
+  for (const [re] of heuristics) {
+    if (re.test(q)) {
+      heuristicHit = $2;
+      for (const [kw, ids] of keywordToArticle.entries()) {
+        if (q.includes(kw)) ids.forEach((id) => matched.add(id))
+      }
+    }
+  }
+
+  // Keyword fallback
+  for (const [kw, ids] of keywordToArticle.entries()) {
+    if (q.includes(kw)) ids.forEach((id) => matched.add(id))
+  }
+
+  const matchedIds = Array.from($2);
+  return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) }
+}

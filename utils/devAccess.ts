@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 ;
 export interface DevIdentity  {export interface DevIdentity  {isAuthenticated: boolean;roles: DevRole[];
@@ -18,83 +7,54 @@ export interface DevIdentity  {export interface DevIdentity  {isAuthenticated: b
 }const gitDir = path && path.join(process && process.cwd(), '.git')if (!fs && fs.existsSync(gitDir)) return { connected: false }const branch = execSync('git rev-parse --abbrev-ref HEAD', {stdio: ['ignore', 'pipe', 'ignore'];
     }).toString().trim()return { connected: true, branch }
   } catch {return { connected: false }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export interface DevIdentity {
 
 export interface DevIdentity {;
   isAuthenticated: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
   roles: DevRole[];
   userId?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     const gitDir = path && path.join(process && process.cwd(), '.git');
     if (!fs && fs.existsSync(gitDir)) return { connected: false };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const branch = execSync('git rev-parse --abbrev-ref HEAD', {
       stdio: ['ignore', 'pipe', 'ignore']
     })
+import fs from "fs";
+import path from "path";
+import { execSync } from "child_process";
+import type { NextApiRequest, NextApiResponse } from "next";
+export type DevRole = $2;
+export interface DevIdentity {
+  isAuthenticated: boolean,
+  roles: DevRole[],
+  userId?: string
+}
+
+export function getGitStatus(): { connected: boolean, branch?: string } {
+  try {
+    const gitDir = path.join(process.cwd(), ".git"),
+    if (!fs.existsSync(gitDir)) return { connected: false},
+    const branch = execSync("git rev-parse --abbrev-ref HEAD", { stdio: ["ignore", "pipe", "ignore"] })
       .toString()
-      .trim();
+      .trim($2);
     return { connected: true, branch }
   } catch {
-    return { connected: false }
+    return { connected: false}
   }
-}export function getDevIdentity(req: NextApiRequest): DevIdentity {// TODO: integrate real auth; for now, check a header and env var for dev;
-  const token = req && req.headers['x-dev-token'] || req && req.headers['x-admin-token'];
-<<<<<<< HEAD
-  const adminToken = process && process.env.ADMIN_TOKEN;
-
-  if (token && adminToken && token === adminToken) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   const adminToken  = process && process.env.ADMIN_TOKEN;if (token && adminToken && token === adminToken) {}
   return { isAuthenticated: false, roles: [] }
 }export function requireRoles() {return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }}
   return { isAuthenticated: false, roles: [] }
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   return { isAuthenticated: false, roles: [] }
 }
@@ -109,128 +69,75 @@ export function requireRoles(req: NextApiRequest;
 ): DevIdentity | undefined {const identity = getDevIdentity(req)if (!identity.isAuthenticated) {res.status(401).json({ error: "Unauthorized" })return undefined;
   const adminToken = process && process.env.ADMIN_TOKEN;
 
-  if (token && adminToken && token === adminToken) {}
-  return { isAuthenticated: false, roles: [] }
-}
-  if (token && adminToken && token === adminToken) {
+  if (config.allowedIPs.includes(ip)) {
+    return true;
+  }
 
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+  if (user && config.allowedUsers.includes(user)) {
+    return true;
+  }
+
+  return false;
+}
+
+export function getDevIdentity(req: NextApiRequest): DevIdentity {
+  // TODO: integrate real auth, for now, check a header and env var for dev
+  const token = $2;
+  const adminToken = $2;
+  if (token && adminToken && token === adminToken) {
   if (token && adminToken && token === adminToken) {
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   }
   return { isAuthenticated: false, roles: [] }
 }
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    return { isAuthenticated: true, roles: ["admin"], userId: "admin" }
   }
   return { isAuthenticated: false, roles: [] }
 }
 
-<<<<<<< HEAD
-  if (token && adminToken && token === adminToken) {
-
-    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
   return { isAuthenticated: false, roles: [] }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function requireRoles(
-  req: NextApiRequest
-  res: NextApiResponse
+  req: NextApiRequest,
+  res: NextApiResponse,
   allowed: DevRole[]
-): DevIdentity | undefined {;
-  const identity = getDevIdentity(req);
+): DevIdentity | undefined {
+  const identity = getDevIdentity($2);
   if (!identity.isAuthenticated) {
-    res.status(401).json({ error: 'Unauthorized' });
-    return undefined;
+    res.status(401).json($2);
+    return undefined
   }
-  const hasRole = identity.roles.some((r) => allowed.includes(r))if (!hasRole) {const identity = getDevIdentity(req)if (!identity.isAuthenticated) {res.status(401).json({ error: 'Unauthorized' })return undefined;
+  const hasRole = $2;
+  if (!hasRole) {
+    res.status(403).json($2);
+    return undefined
   }
-  const hasRole = identity.roles.some(r => allowed.includes(r))if (!hasRole) {res && res.status(403).json({ error: 'Forbidden' })return undefined;
-  }
-  return identity;}// Development access utilities;
-export interface DevAccessConfig  {enabled: boolean;
-  return identity;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 }
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 }
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // Development access utilities
 export interface DevAccessConfig {
   enabled: boolean;
@@ -271,13 +178,7 @@ export function isDevelopmentMode(): boolean {return process.env.NODE_ENV === 'd
 }export function getDevIdentity (req: NextApiRequest): DevIdentity {// TODO: integrate real auth; for now, check a header and env var for dev;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function getDevIdentity (req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev;
   const token = req.headers['x - dev - token'] || req.headers['x - admin - token'];
@@ -302,47 +203,15 @@ if ( {) {$2;
   return identity;
 }ursor/fix-website-loading-errors-and-merge-6662;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
 
-<<<<<<< HEAD
-ursor/fix-website-loading-errors-and-merge-6662
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+  return identity
+}

@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-  return (
-    <div>;
-      <h1>About</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  );
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
   return (<div>;
       <h1>About</h1>;
       <p>This component is currently under development.</p>;
@@ -26,4 +17,6 @@ export default function About({}: AboutProps) {
   );
 }
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+
+
+}

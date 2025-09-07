@@ -1,58 +1,13 @@
 
-
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
-<<<<<<< HEAD
-import {SearchSuggestion} from "@/types/search";
-interface EnhancedSearchInputProps {;
-  value: string,;
-  onChange: (value: string) => void,;
-
-  placeholder?: string;
-  searchSuggestions: SearchSuggestion[];
-}
-
-
-export function EnhancedSearchInput(): any ({ ;
-  value;
-  onChange, ;
-  placeholder = "Search...", ;
-  searchSuggestions ;
-}: EnhancedSearchInputProps) {;
-
-import React, { useState, useEffect, useRef } from "react",
-import { Search, X } from "lucide-react",
-import { Input } from "@/components/ui/input",
+import React, { useState, useEffect, useRef } from "react";
+import { Search, X } from "lucide-react";
+import { Input } from "@/components/ui/input";
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
 import { SearchSuggestion } from "@/types/search";
-interface EnhancedSearchInputProps {
-
-  value: string
-  onChange: (value: string) => void
-
-  placeholder?: string;
-  searchSuggestions: SearchSuggestion[];
-}
-export function EnhancedSearchInput({
-  value;
-
-  onChange
-  placeholder = "Search..."
-  searchSuggestions
-}: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -60,54 +15,26 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[]
 }
 
-
 export function EnhancedSearchInput({ 
   value,
-
   onChange, 
-  placeholder = "Search...", 
+  placeholder = $2;
   searchSuggestions 
 }: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false),
+  const [isFocused, setIsFocused] = useState($2);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
-  const inputRef = useRef<HTMLInputElement>(null),
-  const containerRef = useRef<HTMLDivElement>(null),
-
-
+  const inputRef = $2;
+  const containerRef = $2;
   // Filter suggestions based on input value
   useEffect(() => {
     if (!value) {
       // Show recent searches when input is empty
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
-      return
-
-
-
-
-
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
-      return
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, []);
-  const handleSelectSuggestion = (suggestion: string) => {
-    onChange(suggestion);
-    setIsFocused(false)
-    inputRef.current?.blur()
-  }
-
-import React, { useState, useEffect, useRef } from "react",;
-import { Search, X } from "lucide-react",;
-=======
 import {SearchSuggestion} from "@/types/search";  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);  // Filter suggestions based on input value
   useEffect(() => {
     if (!value) {
       // Show recent searches when input is emptyimport { Search, X } from "lucide-react",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Input } from "@/components/ui/input",;
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",;
 import { SearchSuggestion } from "@/types/search",;
@@ -153,11 +80,6 @@ export function EnhancedSearchInput({;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -166,10 +88,38 @@ export function EnhancedSearchInput({;
   const handleSelectSuggestion = (suggestion: string) => {
     onChange(suggestion);
     setIsFocused(false)
-<<<<<<< HEAD
+      setFilteredSuggestions(searchSuggestions.filter(s = $2;
+      return
+    }
+    
+    const filtered = $2;
+    // Sort suggestions to prioritize those that start with the search term
+    filtered.sort((a, b) => {
+      const aStartsWith = $2;
+      const bStartsWith = $2;
+      return aStartsWith - bStartsWith
+    }),
+    
+    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions
+  }, [value, searchSuggestions]),
+
+  // Handle clicks outside the component to close suggestions
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsFocused(false)
+      }
+    }
+    
+    document.addEventListener($2);
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, []),
+
+  const handleSelectSuggestion = (suggestion: string) => {
+    onChange($2);
+    setIsFocused($2);
     inputRef.current?.blur()
   },
-  
   
   return (
     <div className="relative w-full" ref={containerRef}>
@@ -177,11 +127,7 @@ export function EnhancedSearchInput({;
         <Search
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
-
-  // Filter suggestions based on input value;
-=======
     inputRef.current?.blur()  // Filter suggestions based on input value;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   useEffect(() => {;
     if (!value) {;
       // Show recent searches when input is empty;
@@ -218,13 +164,8 @@ export function EnhancedSearchInput({;
   const handleSelectSuggestion = (suggestion: string) => {;
     onChange(suggestion);
     setIsFocused(false),;
-<<<<<<< HEAD
-    inputRef && inputRef.current?.blur();
-  };
-=======
     inputRef && inputRef.current?.blur()
 };
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   return (
     <div className="relative w-full" ref={containerRef}>;
@@ -235,15 +176,6 @@ export function EnhancedSearchInput({;
         <Input
           ref={inputRef}
           type="text"
-<<<<<<< HEAD
-
-
-
-        <Input
-          ref={inputRef}
-          type="text"
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <Input
           ref={inputRef}
           type="text"
@@ -254,13 +186,8 @@ export function EnhancedSearchInput({;
   const handleSelectSuggestion = (suggestion: string) => {;
     onChange(suggestion),;
     setIsFocused(false);
-<<<<<<< HEAD
-    inputRef.current?.blur();
-  };
-=======
     inputRef.current?.blur()
 };
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (;
     <div className="relative w-full" ref={containerRef}>;
       <div className="relative">;
@@ -270,49 +197,40 @@ export function EnhancedSearchInput({;
         <Input;
           ref={inputRef}
           type="text";
-<<<<<<< HEAD
-
-
-        <Input
-          ref={inputRef}
-=======
         <Input
           ref={inputRef}
           type="text"        <Input
           ref={inputRef}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           type="text"
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
           <button
-<<<<<<< HEAD
+        <Input
+          ref={inputRef}
+          type="text"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          onFocus={() => setIsFocused(true)}
+          placeholder={placeholder}
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+        />
+        {value && (
+          <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
-          >;
-            <X className="h-4 w-4" />;
-          </button>;
+          >
+            <X className="h-4 w-4" />
+          </button>
         )}
-
-      </div>;
-
-
+      </div>
       <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-
-      />;
-    </div>;
-  );
-}
-
-import React, { useState, useEffect, useRef } from './react';
-=======
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"import React, { useState, useEffect, useRef } from './react';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { Search, X } from './lucide-react';
 import { Input } from '@/components / ui / input';
 import { AutocompleteSuggestions } from '@/components / search / AutocompleteSuggestions';
@@ -378,17 +296,10 @@ function handleClickOutside() {
   }
 ;
   return (
-<<<<<<< HEAD
-    <div className="relative w - full" ref={container_ref}>;
-      <div className="relative">;
-        <Search;
-          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
-=======
     <div className="relative w-full" ref={container_ref}>;
       <div className="relative">;
         <Search;
           className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion-slate";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         />;
         <Input;
           ref={input_ref}
@@ -397,16 +308,6 @@ function handleClickOutside() {
           on_change={(e) => on_change (e.target.value)}
           on_focus={() => setIsFocused (true)}
           placeholder={placeholder}
-<<<<<<< HEAD
-          className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion - slate";
-        />;
-        {value && (
-          <button;
-            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";
-            on_click={() => on_change ('')}
-          >;
-            <X className="h - 4 w - 4" />;
-=======
           className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion-slate";
         />;
         {value && (
@@ -415,7 +316,6 @@ function handleClickOutside() {
             on_click={() => on_change ('')}
           >;
             <X className="h - 4 w-4" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </button>)}
       </div>;
       <AutocompleteSuggestions;
@@ -425,49 +325,8 @@ function handleClickOutside() {
         visible={is_focused}
       />;
     </div>);
-<<<<<<< HEAD
-}
-  ),;}
- interface EnhancedSearchInputProps {
-  value: string;
-onChange: (value: string) => void;
-placeholder?: string;
-searchSuggestions: SearchSuggestion[] 
-}export function EnhancedSearchInput ({
-  value;
-onChange;
-placeholder = "Search...";
-searchSuggestions 
-}: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState (false);
-const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]> ([]);
-const inputRef = useRef<HTMLInputElement> (null);
-const containerRef = useRef<HTMLDivElement> (null);
-if (!value) {
-  //Show recent searches when input is empty const filtered = searchSuggestions.filter (suggestion => suggestion.text.toLowerCase () .includes (value.toLowerCase () ) );
-//Sort suggestions to prioritize those that start with the search term setFilteredSuggestions (filtered.slice (0, 8) ), //Limit to 8 suggestions 
-}, [value, searchSuggestions]);
-//Handle clicks outside the component to close suggestions useEffect ( () => {
-  function handleClickOutside (event: MouseEvent) {
-  if (containerRef.current && !containerRef.current.contains (event.target as Node) ) {
-  
-}<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick= {
-  () => onChange ('') 
-}> <X className="h-4 w-4" /> </button>) 
-}</div> <AutocompleteSuggestions suggestions= {
-  filteredSuggestions 
-}searchTerm= {
-  value 
-}onSelectSuggestion= {
-  handleSelectSuggestion 
-}visible= {
-  isFocused 
-}/> </div>) 
-}
       />
     </div>
   )
 }
-=======
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

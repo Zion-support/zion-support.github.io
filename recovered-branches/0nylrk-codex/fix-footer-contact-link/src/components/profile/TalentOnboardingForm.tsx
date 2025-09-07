@@ -1,59 +1,19 @@
-
-
-<<<<<<< HEAD
-
-
-// Define the form schema with validation
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const talentSchema = z.object({
   // Step 1: Basic Info
   basicInfo: z.object({
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
     profilePicture: z.any().optional()}),
   
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Step 2: Experience
   experience: z.object({
     bio: z.string().min(50, "Bio must be at least 50 characters");
     keyProjects: z.array(
       z.object({
-<<<<<<< HEAD
-        title: z.string().min(2, "Project title is required");
-        description: z.string().min(10, "Project description is required")})
-
-import React, { useState } from "react";
-import {useForm, useFieldArray} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {useNavigate} from "react-router-dom";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Button} from "@/components/ui/button";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {Separator} from "@/components/ui/separator";
-import {toast} from "@/components/ui/use-toast";
-import {User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2} from "lucide-react";
-import {useAuth} from "@/hooks/useAuth";
-import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";
-import {supabase} from "@/integrations/supabase/client";
-=======
         title: z.string().min(2, "Project title is required"),
   description: z.string().min(10, "Project description is required")})
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 // Define the form schema with validation;
 const talentSchema = z && z.object({;
   // Step 1: Basic Info;
@@ -70,42 +30,41 @@ const talentSchema = z.object({
     profilePicture: z.any().optional()})
     fullName: z.string().min(2, "Name must be at least 2 characters"),
     professionalTitle: z.string().min(2, "Professional title is required"),
+import React, { useState } from "react",
+import { useForm, useFieldArray } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { useNavigate } from "react-router-dom",
+import { 
+  Form, FormControl, FormField, FormItem, FormLabel, FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+import { 
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
+} from "@/components/ui/select",
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Separator } from "@/components/ui/separator";
+import { toast } from "@/components/ui/use-toast";
+import { 
+  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft;
+  Trash2, Plus, CheckCircle2
+} from "lucide-react",
+import { useAuth } from "@/hooks/useAuth";
+import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer";
+import { supabase } from "@/integrations/supabase/client";
+// Define the form schema with validation
+
+const talentSchema = z.object({
+  // Step 1: Basic Info
+  basicInfo: z.object({
+    fullName: z.string().min($2);
+    professionalTitle: z.string().min($2);
     profilePicture: z.any().optional()}),
   
   // Step 2: Experience
   experience: z.object({
-    bio: z.string().min(50, "Bio must be at least 50 characters"),
-    keyProjects: z.array(
-      z.object({
-        title: z.string().min(2, "Project title is required"),
-        description: z.string().min(10, "Project description is required")})
-    ).min(1, "Add at least one key project");
-    yearsOfExperience: z && z.string().min(1, "Years of experience is required")});
-
-  // Step 3: Skills & Tech Stack;
-  skills: z && z.object({;
-    skillsList: z && z.string().min(2, "Add at least one skill");
-    toolsUsed: z && z.string().optional()}),;
-
-  // Step 4: Availability & Preferences;
-  availability: z && z.object({;
-    availabilityType: z && z.string().min(1, "Select your availability");
-    timezone: z && z.string().min(1, "Timezone is required");
-    hourlyRate: z && z.string().optional(),;
-    portfolioLinks: z && z.array(;
-      z && z.object({;
-        url: z && z.string().url("Must be a valid URL").min(5, "URL is required")});
-    ).optional().default([]);
-    cv: z && z.any().optional()})}),;
-
-type TalentFormValues = z && z.infer<typeof talentSchema>;
-
-export function TalentOnboardingForm() {;
-
-<<<<<<< HEAD
-  
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   // Step 3: Skills & Tech Stack
   skills: z.object({
     skillsList: z.string().min(2, "Add at least one skill");
@@ -130,36 +89,22 @@ export function TalentOnboardingForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     ).min(1, "Add at least one key project"),
+    bio: z.string().min($2);
+    keyProjects: z.array(
+      z.object({
+        title: z.string().min($2);
+        description: z.string().min(10, "Project description is required")})
+    ).min($2);
     yearsOfExperience: z.string().min(1, "Years of experience is required")}),
   
   // Step 3: Skills & Tech Stack
   skills: z.object({
-<<<<<<< HEAD
-    skillsList: z.string().min(2, "Add at least one skill"),
+    skillsList: z.string().min($2);
     toolsUsed: z.string().optional()}),
   
   // Step 4: Availability & Preferences
   availability: z.object({
-    availabilityType: z.string().min(1, "Select your availability"),
-    timezone: z.string().min(1, "Timezone is required"),
-    hourlyRate: z.string().optional(),
-    portfolioLinks: z.array(
-      z.object({
-        url: z.string().url("Must be a valid URL").min(5, "URL is required")})
-    ).optional().default([]),
-    cv: z.any().optional()})}),
-
-type TalentFormValues = z.infer<typeof talentSchema>,
-
-
-
-  const form = useForm<TalentFormValues>({
-=======
     skillsList: z.string().min(2, "Add at least one skill");
     toolsUsed: z.string().optional()})
   // Step 4: Availability & Preferences
@@ -170,13 +115,39 @@ type TalentFormValues = z.infer<typeof talentSchema>,
     portfolioLinks: z.array(
       z.object({
         url: z.string().url("Must be a valid URL").min(5, "URL is required")})  const form = useForm<TalentFormValues>({
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
         fullName: user?.displayName |""
         professionalTitle: ""
         profilePicture: undefined}
+    availabilityType: z.string().min($2);
+    timezone: z.string().min($2);
+    hourlyRate: z.string().optional($2);
+    portfolioLinks: z.array(
+      z.object({
+        url: z.string().url("Must be a valid URL").min(5, "URL is required")})
+    ).optional().default($2);
+    cv: z.any().optional()})}),
+
+type TalentFormValues = $2;
+export function TalentOnboardingForm() {
+  const { user } = useAuth($2);
+  const navigate = useNavigate($2);
+  const [currentStep, setCurrentStep] = useState($2);
+  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),
+  const [cvFileName, setCvFileName] = useState<string | null>(null),
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const [showSuccessScreen, setShowSuccessScreen] = useState($2);
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer($2);
+  const totalSteps = $2;
+  const form = useForm<TalentFormValues>({
+    resolver: zodResolver($2);
+    defaultValues: {
+      basicInfo: {
+        fullName: user ?.displayName || "",
+        professionalTitle: "",
+        profilePicture: undefined},
       experience: {
         bio: ""
         keyProjects: [{ title: "", description: "" }]
@@ -185,135 +156,29 @@ type TalentFormValues = z.infer<typeof talentSchema>,
         skillsList: ""
         toolsUsed: ""}
       availability: {
-        availabilityType: ""
-        timezone: ""
-        hourlyRate: ""
-        portfolioLinks: [{ url: "" }]
-        cv: undefined}}
-    mode: "onChange"})
-  const { fields: projectFields, append: appendProject, remove: removeProject } =
-    useFieldArray({
-      name: "experience.keyProjects"
-      control: form.control})
-  const { fields: linkFields, append: appendLink, remove: removeLink } =
-    useFieldArray({
-      name: "availability.portfolioLinks"
-      control: form.control})
+        availabilityType: "",
+        timezone: "",
+        hourlyRate: "",
+        portfolioLinks: [{ url: "" }],
+        cv: undefined}},
+    mode: "onChange"}),
+  
+  const { fields: projectFields, append: appendProject, remove: removeProject} = 
+    useFieldArray($2);
+  const { fields: linkFields, append: appendLink, remove: removeLink} = 
+    useFieldArray($2);
   // Handle profile picture upload
-<<<<<<< HEAD
-  const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-
-
-    const file = e.target.files?.[0],
+  const handleProfilePictureUpload = $2;
     if (!file) return,
     
-
-
     // Preview the image
-    const reader = new FileReader()
-    reader.onloadend = () => {
-      setProfilePictureUrl(reader.result as string)
-
-
-    },
-    reader.readAsDataURL(file),
-    
+    const reader = new FileReader($2);
+    reader.onloadend = $2;
+    reader.readAsDataURL($2);
     // Store the file in the form data
     form.setValue("basicInfo.profilePicture", file)
   },
 
-
-
-  // Handle CV upload
-  const handleCvUpload = async (file: File) => {
-    const fileName = `cv-${user?.id}-${Date.now()}`;
-    const { error: cvError } = await supabase.storage
-      .from('resumes')
-
-
-      .upload(fileName, file),
-      
-
-
-    if (cvError) {
-      console.error("Error uploading CV:", cvError);
-      throw new Error("Failed to upload CV")
-
-
-  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
-
-  const totalSteps = 4;
-
-
-};
-
-import React, { useState } from "react",;
-import { useForm, useFieldArray } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { useNavigate } from "react-router-dom",;
-import {;
-  Form, FormControl, FormField, FormItem, FormLabel, FormMessage;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Button } from "@/components/ui/button",;
-import {;
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue;
-} from "@/components/ui/select",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { Separator } from "@/components/ui/separator",;
-import { toast } from "@/components/ui/use-toast",;
-import {;
-  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft,;
-  Trash2, Plus, CheckCircle2;
-} from "lucide-react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",;
-import { supabase } from "@/integrations/supabase/client",;
-// Define the form schema with validation;
-const talentSchema = z.object({;
-  // Step 1: Basic Info;
-  basicInfo: z.object({;
-    fullName: z.string().min(2, "Name must be at least 2 characters"),;
-    professionalTitle: z.string().min(2, "Professional title is required"),;
-    profilePicture: z.any().optional()}),;
-  // Step 2: Experience;
-  experience: z.object({;
-    bio: z.string().min(50, "Bio must be at least 50 characters"),;
-    keyProjects: z.array(;
-      z.object({;
-        title: z.string().min(2, "Project title is required"),;
-        description: z.string().min(10, "Project description is required")});
-    ).min(1, "Add at least one key project"),;
-    yearsOfExperience: z.string().min(1, "Years of experience is required")}),;
-  // Step 3: Skills & Tech Stack;
-  skills: z.object({;
-    skillsList: z.string().min(2, "Add at least one skill"),;
-    toolsUsed: z.string().optional()}),;
-  // Step 4: Availability & Preferences;
-  availability: z.object({;
-    availabilityType: z.string().min(1, "Select your availability"),;
-    timezone: z.string().min(1, "Timezone is required"),;
-    hourlyRate: z.string().optional(),;
-    portfolioLinks: z.array(;
-      z.object({;
-        url: z.string().url("Must be a valid URL").min(5, "URL is required")});
-    ).optional().default([]),;
-    cv: z.any().optional()})}),;
-type TalentFormValues = z.infer<typeof talentSchema>,;
-export function TalentOnboardingForm() {;
-  const { user } = useAuth(),;
-  const navigate = useNavigate(),;
-  const [currentStep, setCurrentStep] = useState(1),;
-  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),;
-  const [cvFileName, setCvFileName] = useState<string | null>(null),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [showSuccessScreen, setShowSuccessScreen] = useState(false),;
-  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),;
-  const totalSteps = 4,;
-
-=======
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {    // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
@@ -324,7 +189,6 @@ export function TalentOnboardingForm() {;
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
 
   const totalSteps = 4;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const form = useForm<TalentFormValues>({;
     resolver: zodResolver(talentSchema),;
     defaultValues: {;
@@ -346,148 +210,6 @@ export function TalentOnboardingForm() {;
         portfolioLinks: [{ url: "" }],;
         cv: undefined}},;
     mode: "onChange"}),;
-<<<<<<< HEAD
-
-
-import React, { useState } from "react",;
-import { useForm, useFieldArray } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { useNavigate } from "react-router-dom",;
-import { ;
-  Form, FormControl, FormField, FormItem, FormLabel, FormMessage ;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Button } from "@/components/ui/button",;
-import { ;
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue ;
-} from "@/components/ui/select",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { Separator } from "@/components/ui/separator",;
-import { toast } from "@/components/ui/use-toast",;
-import { ;
-  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, ;
-  Trash2, Plus, CheckCircle2;
-} from "lucide-react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",;
-import { supabase } from "@/integrations/supabase/client",;
-;
-// Define the form schema with validation;
-const talentSchema = z.object({;
-  // Step 1:Basic Info;
-  basicInfo:z.object({;
-    fullName:z.string().min(2, "Name must be at least 2 characters"),;
-    professionalTitle:z.string().min(2, "Professional title is required"),;
-    profilePicture:z.any().optional()}),;
-  ;
-  // Step 2:Experience;
-  experience:z.object({;
-    bio:z.string().min(50, "Bio must be at least 50 characters"),;
-    keyProjects:z.array(;
-      z.object({;
-        title:z.string().min(2, "Project title is required"),;
-        description:z.string().min(10, "Project description is required")});
-    ).min(1, "Add at least one key project"),;
-    yearsOfExperience:z.string().min(1, "Years of experience is required")}),;
-  ;
-  // Step 3:Skills & Tech Stack;
-  skills:z.object({;
-    skillsList:z.string().min(2, "Add at least one skill"),;
-    toolsUsed:z.string().optional()}),;
-  ;
-  // Step 4:Availability & Preferences;
-  availability:z.object({;
-    availabilityType:z.string().min(1, "Select your availability"),;
-    timezone:z.string().min(1, "Timezone is required"),;
-    hourlyRate:z.string().optional(),;
-    portfolioLinks:z.array(;
-      z.object({;
-        url:z.string().url("Must be a valid URL").min(5, "URL is required")});
-    ).optional().default([]),;
-    cv:z.any().optional()})}),;
-;
-type TalentFormValues = z.infer<typeof talentSchema>,;
-;
-export function TalentOnboardingForm() {;
-  const { user } = useAuth(),;
-  const navigate = useNavigate(),;
-  const [currentStep, setCurrentStep] = useState(1),;
-  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),;
-  const [cvFileName, setCvFileName] = useState<string | null>(null),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [showSuccessScreen, setShowSuccessScreen] = useState(false),;
-  ;
-  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),;
-  ;
-  const totalSteps = 4,;
-  ;
-  const form = useForm<TalentFormValues>({;
-    resolver:zodResolver(talentSchema),;
-    defaultValues:{;
-      basicInfo:{;
-        fullName:user?.displayName || "",;
-        professionalTitle:"",;
-        profilePicture:undefined},;
-      experience:{;
-        bio:"",;
-        keyProjects:[{ title:"", description:"" }],;
-        yearsOfExperience:""},;
-      skills:{;
-        skillsList:"",;
-        toolsUsed:""},;
-      availability:{;
-        availabilityType:"",;
-        timezone:"",;
-        hourlyRate:"",;
-        portfolioLinks:[{ url:"" }],;
-        cv:undefined}},;
-    mode:"onChange"}),;
-  ;
-  const { fields:projectFields, append:appendProject, remove:removeProject } = ;
-    useFieldArray({;
-      name:"experience.keyProjects",;
-      control:form.control}),;
-    ;
-  const { fields:linkFields, append:appendLink, remove:removeLink } = ;
-    useFieldArray({;
-      name:"availability.portfolioLinks",;
-      control:form.control}),;
-;
-  // Handle profile picture upload;
-  const handleProfilePictureUpload = async (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    const file = e && e.target.files?.[0];
-    if (!file) return;
-
-    // Preview the image;
-    const reader = new FileReader(),;
-    reader && reader.onloadend = () => {;
-      setProfilePictureUrl(reader && reader.result as string);
-    };
-    reader && reader.readAsDataURL(file);
-
-    // Store the file in the form data;
-    form && form.setValue("basicInfo && basicInfo.profilePicture", file);
-  };
-
-  // Handle CV upload;
-  const handleCvUpload = async (file: File) => {;
-    const fileName = `cv-${user?.id}-${Date && Date.now()}`;
-    const { error: cvError } = await supabase && supabase.storage;
-      .from('resumes');
-      .upload(fileName, file);
-
-    if (cvError) {;
-      console && console.error("Error uploading CV:", cvError);
-      throw new Error("Failed to upload CV");
-    }
-
-    // Get the public URL;
-    const { data: { publicUrl } } = supabase && supabase.storage;
-    const file = e.target.files?.[0],;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (!file) return,;
     ;
     // Preview the image;
@@ -518,22 +240,13 @@ export function TalentOnboardingForm() {;
       .from('resumes');
       .getPublicUrl(fileName);
 
-<<<<<<< HEAD
-    return publicUrl;
-  };
-=======
     return publicUrl
 };
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
 
   return null;
-<<<<<<< HEAD
-import React, { useState } from './react';
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { use_form, useFieldArray } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { z } from './zod';
@@ -562,13 +275,8 @@ const talent_schema = z.object ({
     bio: z.string ().min (50, "Bio must be at least 50 characters");
     key_projects: z.array (
       z.object ({
-<<<<<<< HEAD
-        title: z.string ().min (2, "Project title is required");
-        description: z.string ().min (10, "Project description is required")})).min (1, "Add at least one key project");
-=======
         title: z.string ().min (2, "Project title is required"),
   description: z.string ().min (10, "Project description is required")})).min (1, "Add at least one key project");
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     yearsOfExperience: z.string ().min (1, "Years of experience is required")});
 ;
   // Step 3: Skills & Tech Stack;
@@ -674,189 +382,25 @@ if ( {) {
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
-<<<<<<< HEAD
 }
-
-
-
-}
-
-
-import React, { useState } from "react",;
-import { useForm, useFieldArray } from "react-hook-form",;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod",;
-import { useNavigate } from "react-router-dom",;
-import { ;
-  Form, FormControl, FormField, FormItem, FormLabel, FormMessage ;
-} from "@/components/ui/form",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Button } from "@/components/ui/button",;
-import { ;
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue ;
-} from "@/components/ui/select",;
-import { AspectRatio } from "@/components/ui/aspect-ratio",;
-import { Separator } from "@/components/ui/separator",;
-import { toast } from "@/components/ui/use-toast",;
-import { ;
-  User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, ;
-  Trash2, Plus, CheckCircle2;
-} from "lucide-react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",;
-import { supabase } from "@/integrations/supabase/client",;
-;
-// Define the form schema with validation;
-const talentSchema = z.object({;
-  // Step 1:Basic Info;
-  basicInfo:z.object({;
-    fullName:z.string().min(2, "Name must be at least 2 characters"),;
-    professionalTitle:z.string().min(2, "Professional title is required"),;
-    profilePicture:z.any().optional()}),;
-  ;
-  // Step 2:Experience;
-  experience:z.object({;
-    bio:z.string().min(50, "Bio must be at least 50 characters"),;
-    keyProjects:z.array(;
-      z.object({;
-        title:z.string().min(2, "Project title is required"),;
-        description:z.string().min(10, "Project description is required")});
-    ).min(1, "Add at least one key project"),;
-    yearsOfExperience:z.string().min(1, "Years of experience is required")}),;
-  ;
-  // Step 3:Skills & Tech Stack;
-  skills:z.object({;
-    skillsList:z.string().min(2, "Add at least one skill"),;
-    toolsUsed:z.string().optional()}),;
-  ;
-  // Step 4:Availability & Preferences;
-  availability:z.object({;
-    availabilityType:z.string().min(1, "Select your availability"),;
-    timezone:z.string().min(1, "Timezone is required"),;
-    hourlyRate:z.string().optional(),;
-    portfolioLinks:z.array(;
-      z.object({;
-        url:z.string().url("Must be a valid URL").min(5, "URL is required")});
-    ).optional().default([]),;
-    cv:z.any().optional()})}),;
-;
-type TalentFormValues = z.infer<typeof talentSchema>,;
-;
-export function TalentOnboardingForm() {;
-  const { user } = useAuth(),;
-  const navigate = useNavigate(),;
-  const [currentStep, setCurrentStep] = useState(1),;
-  const [profilePictureUrl, setProfilePictureUrl] = useState<string | null>(null),;
-  const [cvFileName, setCvFileName] = useState<string | null>(null),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const [showSuccessScreen, setShowSuccessScreen] = useState(false),;
-  ;
-  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer(),;
-  ;
-  const totalSteps = 4,;
-  ;
-  const form = useForm<TalentFormValues>({;
-    resolver:zodResolver(talentSchema),;
-    defaultValues:{;
-      basicInfo:{;
-        fullName:user?.displayName || "",;
-        professionalTitle:"",;
-        profilePicture:undefined},;
-      experience:{;
-        bio:"",;
-        keyProjects:[{ title:"", description:"" }],;
-        yearsOfExperience:""},;
-      skills:{;
-        skillsList:"",;
-        toolsUsed:""},;
-      availability:{;
-        availabilityType:"",;
-        timezone:"",;
-        hourlyRate:"",;
-        portfolioLinks:[{ url:"" }],;
-        cv:undefined}},;
-    mode:"onChange"}),;
-  ;
-  const { fields:projectFields, append:appendProject, remove:removeProject } = ;
-    useFieldArray({;
-      name:"experience.keyProjects",;
-      control:form.control}),;
-    ;
-  const { fields:linkFields, append:appendLink, remove:removeLink } = ;
-    useFieldArray({;
-      name:"availability.portfolioLinks",;
-      control:form.control}),;
-;
-  // Handle profile picture upload;
-  const handleProfilePictureUpload = async (e:React.ChangeEvent<HTMLInputElement>) => {;
-    const file = e.target.files?.[0],;
-    if (!file) return,;
-    ;
-    // Preview the image;
-    const reader = new FileReader(),;
-    reader.onloadend = () => {;
-      setProfilePictureUrl(reader.result as string);
-    },;
-    reader.readAsDataURL(file),;
-    ;
-    // Store the file in the form data;
-    form.setValue("basicInfo.profilePicture", file),;
-  },;
-;
-  // Handle CV upload;
-  const handleCvUpload = async (file:File) => {;
-    const fileName = `cv-${user?.id}-${Date.now()}`,;
-    const { error:cvError } = await supabase.storage;
-      .from('resumes');
-      .upload(fileName, file),;
-      ;
-    if (cvError) {;
-      console.error("Error uploading CV:", cvError),;
-      throw new Error("Failed to upload CV"),;
+  // Handle CV upload
+  const handleCvUpload = $2;
+    const { error: cvError} = await supabase.storage
+      .from('resumes')
+      .upload($2);
+    if (cvError) {
+      console.error($2);
+      throw new Error("Failed to upload CV")
     }
-    ;
-    // Get the public URL;
-    const { data:{ publicUrl } } = supabase.storage;
-      .from('resumes');
-      .getPublicUrl(fileName),;
-    ;
-    return publicUrl,;
-  },;
-;
-  // Rest of the file remains unchanged...;
-  // [Previous implementation continues...];
-;
-  return null,;   //Step 1: Basic Info basicInfo: z.object ({
-  ) .optional () .default ([]);
-cv: z.any () .optional () 
-}) 
-});
-type TalentFormValues = z.infer<typeof talentSchema>;
-const form = useForm<TalentFormValues> ({
-  resolver: zodResolver (talentSchema), defaultValues: {
-  basicInfo: {
-  cv: undefined 
+    // Get the public URL
+    const { data: { publicUrl } } = supabase.storage
+      .from('resumes')
+      .getPublicUrl($2);
+    return publicUrl
+  },
+
+  // Rest of the file remains unchanged...
+  // [Previous implementation continues...]
+
+  return null
 }
-};
-//Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-  const file = e.target.files?.[0];
-if (!file) return;
-//Preview the image const reader = new FileReader ();
-reader.onloadend = () => {
-  setProfilePictureUrl (reader.result as string) 
-};
-reader.readAsDataURL (file);
-}data: {
-  publicUrl 
-}
-}= supabase.storage.from ('resumes') .getPublicUrl (fileName);
-return publicUrl;
-};
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
-}
-}
-}
-=======
-}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

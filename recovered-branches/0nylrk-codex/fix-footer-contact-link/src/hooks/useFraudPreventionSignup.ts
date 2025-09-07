@@ -1,124 +1,27 @@
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
-<<<<<<< HEAD
 export function useFraudPreventionSignup() {
-import {useState, useCallback} from 'react';
-import {checkSignupPatterns} from '@/services/fraud/signupCheck';
-import {supabase} from '@/integrations/supabase/client';
-import {toast} from '@/hooks/use-toast';
-export function useFraudPreventionSignup() {;
-
-
-  const [isCheckingFraud, setIsCheckingFraud] = useState(false);
+  const [isCheckingFraud, setIsCheckingFraud] = useState($2);
   // Get the user's IP address (in a real app, you'd do this server-side)
 
   const getIP = async (): Promise<string | undefined> => {
     try {
-
-      const response = await fetch('https: //api && api.ipify.org?format=json');
-      const data = await response && response.json(),
-      return data && data.ip
-
-    } catch (error) {
-      console && console.error('Error getting IP:', error);
-      return undefined
-    }
-
-
-  };
-
-import { useState, useCallback } from 'react',;
-import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
-import { supabase } from '@/integrations/supabase/client',;
-import { toast } from '@/hooks/use-toast',;
-export function useFraudPreventionSignup() {;
-  const [isCheckingFraud, setIsCheckingFraud] = useState(false),;
-  // Get the user's IP address (in a real app, you'd do this server-side);
-  const getIP = async (): Promise<string | undefined> => {;
-    try {;
-      const response = await fetch('https: //api.ipify.org?format=json'),;
-      const data = await response.json(),;
-      return data.ip;
-    } catch (error) {;
-      console.error('Error getting IP:', error),;
-      return undefined;
-    }
-  },
-
-
-
-  
-  }
-  // Check if the signup attempt might be fraudulent
-  const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
-    setIsCheckingFraud(true);
-    try {
-      const ipAddress = await getIP()
-      // Check for suspicious patterns
-
-      
-      if (fraudCheck && fraudCheck.isSuspicious) {
-        console && console.log('Suspicious signup detected:', fraudCheck && fraudCheck.reasons);
-        
-
-        // Create a fraud flag for admin review
-        const { error } = await supabase && supabase.from('fraud_flags').insert({
-        // Create a fraud flag for admin review
-        const { error } = await supabase && supabase.from('fraud_flags').insert({
-          user_email: email;
-=======
 export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   // Get the user's IP address (in a real app, you'd do this server-side)
 
   const getIP = async (): Promise<string | undefined> => {
     try {          user_email: email;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           content_type: 'signup'
           content_id: email, // Using email as content ID for signup attempts
           content_excerpt: `Signup attempt for ${email}`;
           severity: 'suspicious';
-<<<<<<< HEAD
-          reason: fraudCheck && fraudCheck.reasons.join();
-          reason: fraudCheck && fraudCheck.reasons.join();
-          ip_address: ipAddress;
-          timestamp: new Date().toISOString()
-          status: 'pending'
-        });
-      const fraudCheck = await checkSignupPatterns(email, ipAddress),
-      
-      if (fraudCheck.isSuspicious) {
-        // // // console.log('Suspicious signup detected:', fraudCheck.reasons),
-        
-        // Create a fraud flag for admin review
-        const { error } = await supabase.from('fraud_flags').insert({
-          user_email: email,
-          content_type: 'signup',
-          content_id: email, // Using email as content ID for signup attempts
-          content_excerpt: `Signup attempt for ${email}`,
-          severity: 'suspicious',
-          reason: fraudCheck.reasons.join(),
-          ip_address: ipAddress,
-          timestamp: new Date().toISOString(),
-          status: 'pending'
-        }),
-        
-
-        if (error) {
-          console && console.error('Error creating fraud flag:', error)
-=======
           reason: fraudCheck && fraudCheck.reasons.join();          reason: fraudCheck && fraudCheck.reasons.join();
           ip_address: ipAddress;
           timestamp: new Date().toISOString()
           status: 'pending'
         });          console && console.error('Error creating fraud flag:', error)
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         }
         // Depending on how strict we want to be, we could block the signup
         // If the check is very suspicious, block the signup
@@ -129,15 +32,45 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
 
         )) {
           toast({
-<<<<<<< HEAD
-
-            title: "Signup blocked";
-            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
-=======
             title: "Signup blocked",
   description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             variant: "destructive"});
+      const response = await fetch($2);
+      const data = await response.json($2);
+      return data.ip
+    } catch (error) {
+      console.error($2);
+      return undefined
+    }
+  },
+  
+  // Check if the signup attempt might be fraudulent
+  const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
+    setIsCheckingFraud($2);
+    try {
+      const ipAddress = await getIP($2);
+      // Check for suspicious patterns
+      const fraudCheck = await checkSignupPatterns($2);
+      if (fraudCheck.isSuspicious) {
+        console.log($2);
+        // Create a fraud flag for admin review
+        const { error } = await supabase.from('fraud_flags').insert($2);
+          ip_address: ipAddress,
+          timestamp: new Date().toISOString($2);
+          status: 'pending'
+        }),
+        
+        if (error) {
+          console.error('Error creating fraud flag:', error)
+        }
+        // Depending on how strict we want to be, we could block the signup
+        // If the check is very suspicious, block the signup
+        if (fraudCheck.reasons.some(r =>
+          r.includes('Multiple accounts') |
+          r.includes('suspicious email domain')
+        )) {
+          toast($2);
+          return false
         }
         // Otherwise, allow but flag for review
         return true
@@ -145,58 +78,14 @@ export function useFraudPreventionSignup() {  const [isCheckingFraud, setIsCheck
       // No suspicious patterns found
       return true
     } catch (error) {
-      console.error('Error in fraud check:', error);
+      console.error($2);
       // On error, allow the signup but log the error
       return true
     } finally {
       setIsCheckingFraud(false)
     }
-  }, []);
-  return {
-            title: "Signup blocked",
-            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
-            variant: "destructive"}),
-          return false
-  },;
-  // Check if the signup attempt might be fraudulent;
-  const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {;
-    setIsCheckingFraud(true),;
-    try {;
-      const ipAddress = await getIP(),;
-      // Check for suspicious patterns;
-      const fraudCheck = await checkSignupPatterns(email, ipAddress),;
-      if (fraudCheck.isSuspicious) {;
-        // // // console.log('Suspicious signup detected:', fraudCheck.reasons),;
-        // Create a fraud flag for admin review;
-        const { error } = await supabase.from('fraud_flags').insert({;
-          user_email: email,;
-          content_type: 'signup',;
-          content_id: email, // Using email as content ID for signup attempts;
-          content_excerpt: `Signup attempt for ${email}`,;
-          severity: 'suspicious',;
-          reason: fraudCheck.reasons.join(),;
-          ip_address: ipAddress,;
-          timestamp: new Date().toISOString(),;
-          status: 'pending';
-        }),;
-        if (error) {;
-          console.error('Error creating fraud flag:', error);
-        }
-;
-        // Depending on how strict we want to be, we could block the signup;
-        // If the check is very suspicious, block the signup;
-        if (fraudCheck.reasons.some(r =>;
-          r.includes('Multiple accounts') ||;
-          r.includes('suspicious email domain');
-        )) {;
-          toast({;
-<<<<<<< HEAD
-            title: "Signup blocked",;
-            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",;
-=======
             title: "Signup blocked",,
   description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             variant: "destructive"}),;
         if (fraudCheck && fraudCheck.reasons.some(r => 
           r && r.includes('Multiple accounts') || 
@@ -266,16 +155,6 @@ if (||) {
 }
           r.includes ('suspicious email domain'))) {
           toast ({
-<<<<<<< HEAD
-
-            title: "Signup blocked";
-            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
-            variant: "destructive"});
-          return false;
-        }
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         // Otherwise, allow but flag for review;
         return true;
       }
@@ -285,12 +164,6 @@ if (||) {
       console.error ('Error in fraud check:', error);
       // On error, allow the signup but log the error;
       return true;
-<<<<<<< HEAD
-
-          return false;
-        }
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {
       setIsCheckingFraud (false);
     }
@@ -299,21 +172,16 @@ if (||) {
 ;
 
   return {
-<<<<<<< HEAD
-
-=======
   return {  return {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     isCheckingFraud;
 
     checkFraudBeforeSignup}
-<<<<<<< HEAD
-}
-    isCheckingFraud;
-=======
 }    isCheckingFraud;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
+  }, []),
+  
+  return {
+    isCheckingFraud,
     checkFraudBeforeSignup}
 }

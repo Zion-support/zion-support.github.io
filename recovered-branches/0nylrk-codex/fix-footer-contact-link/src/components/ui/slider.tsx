@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-
-
-import {cn} from '@/lib/utils';
-=======
 import {cn} from '@/lib/utils';import {cn} from '@/lib/utils';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 import * as React from "react"
 import * as SliderPrimitive from "@radix-ui/react-slider"
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { cn } from "@/lib/utils"
 
 const Slider = React.forwardRef<
@@ -34,82 +23,20 @@ const Slider = React && React.forwardRef<;
 
 Slider && Slider.displayName = SliderPrimitive && SliderPrimitive.Root.displayName,;
 
-<<<<<<< HEAD
-export { Slider };
-
-      className
-    )}
-    {...props}
-  >
-    <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">
-      <SliderPrimitive.Range className="absolute h-full bg-primary" />
-    </SliderPrimitive.Track>
-    <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
-  </SliderPrimitive.Root>
-export { Slider };
-export { Slider }
-;
-
-import React from 'react';
+export { Slider };    )}
 import * as React from 'react';
-    ref={ref}
-    className={cn(
-      'relative flex w-full touch-none select-none items-center'
-      className
-    )}
-    {...props}>;
-    <SliderPrimitive && SliderPrimitive.Track className='relative h-2 w-full grow overflow-hidden rounded-full bg-secondary'>;
-      <SliderPrimitive && SliderPrimitive.Range className='absolute h-full bg-primary' />;
-    </SliderPrimitive && SliderPrimitive.Track>;
-    <SliderPrimitive && SliderPrimitive.Thumb className='block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50' />;
-  </SliderPrimitive && SliderPrimitive.Root>;
-));
-import * as SliderPrimitive from '@radix - ui / react - slider';
-;
-import {cn} from '@/lib / utils';
-;
-const Slider = React.forward_ref<;
-  React.ElementRef < typeof SliderPrimitive.Root>,
-  React.ComponentPropsWithoutRef < typeof SliderPrimitive.Root>;
-></typeof>(({ class_name, ...props }, ref) => (
-  <SliderPrimitive.Root;
-    ref={ref}
-    className={cn (
-      'relative flex w - full touch - none select - none items - center',
-      class_name)}
-    {...props}
-  >;
-    <SliderPrimitive.Track className='relative h - 2 w - full grow overflow - hidden rounded - full bg - secondary'>;
-      <SliderPrimitive.Range className='absolute h - full bg - primary' />;
-    </SliderPrimitive.Track>;
-    <SliderPrimitive.Thumb className='block h - 5 w - 5 rounded - full border - 2 border - primary bg - background ring - offset - background transition - colors focus - visible: outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:pointer - events - none disabled:opacity - 50' />;
-  </SliderPrimitive.Root>));
-Slider.display_name = SliderPrimitive.Root.display_name,
-export { Slider }
-;
-
-      "relative flex w-full touch-none select-none items-center",
-
-
-      "relative flex w-full touch-none select-none items-center",
-
+import * as SliderPrimitive from '@radix-ui/react-slider';
+import {cn} from '@/lib/utils';
 
 import { cn } from "@/lib/utils"
 
-const Slider = React.forwardRef<
-  React.ElementRef<typeof SliderPrimitive.Root>
+const Slider = $2;
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
 >(({ className, ...props }, ref) => (
   <SliderPrimitive.Root
-    ref={ref}
-    className={cn(
-      'relative flex w-full touch-none select-none items-center'
-      "relative flex w-full touch-none select-none items-center",
+    ref = $2;
       className
     )}
-=======
-export { Slider };    )}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     {...props}
   >
     <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">
@@ -117,41 +44,6 @@ export { Slider };    )}
     </SliderPrimitive.Track>
     <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
   </SliderPrimitive.Root>
-
-))
-Slider.displayName = SliderPrimitive.Root.displayName
-
-<<<<<<< HEAD
-
-    {...props}
-  >;
-    <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">;
-      <SliderPrimitive.Range className="absolute h-full bg-primary" />;
-    </SliderPrimitive.Track>;
-    <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />;
-  </SliderPrimitive.Root>;
-));
-Slider.displayName = SliderPrimitive.Root.displayName;
-;
-export { Slider }import * as React from "react" import * as SliderPrimitive from "@radix-ui/react-slider" const Slider = React.forwardRef< React.ElementRef<typeof SliderPrimitive.Root>;
-React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root> > ( ({
-  className, ...props 
-}, ref) => (<SliderPrimitive.Root) 
-}{
-  ...props 
-}> <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary" > <SliderPrimitive.Range className="absolute h-full bg-primary" /> </SliderPrimitive.Track> <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" /> </SliderPrimitive.Root>) ) Slider.displayName = SliderPrimitive.Root.displayName export {
-  Slider 
-}
 ));
 Slider.displayName = SliderPrimitive.Root.displayName
 export { Slider }
-))
-Slider.displayName = SliderPrimitive.Root.displayName
-
-export { Slider }
-;
-export { Slider };
-export { Slider }
-;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -1,102 +1,12 @@
-'use client';
+import React from 'react'
+import { Metadata } from 'next'
 
-import React, { useState } from 'react';
-import { 
-  DocumentTextIcon,
-  ChartBarIcon,
-  LightBulbIcon,
-  AcademicCapIcon,
-  ArrowRightIcon,
-  CalendarIcon,
-  UserIcon,
-  TagIcon
-} from '@heroicons/react/24/outline';
-
+export const metadata: Metadata = {
+  title: "Research | Zion Tech Group",
+  description: "Explore our cutting-edge research in AI, quantum computing, and autonomous systems."
+}
 
 export default function ResearchPage() {
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', label: 'All Research' },
-    { id: 'ai', label: 'Artificial Intelligence' },
-    { id: 'quantum', label: 'Quantum Computing' },
-    { id: 'blockchain', label: 'Blockchain' },
-    { id: 'automation', label: 'Automation' }
-  ];
-
-  const researchPapers = [
-    {
-      id: 1,
-      title: 'Advanced Neural Architecture Search for Business Process Optimization',
-      authors: ['Dr. Emily Watson', 'Sarah Chen', 'Michael Rodriguez'],
-      date: '2024-01-15',
-      category: 'ai',
-      abstract: 'This paper presents a novel approach to optimizing business processes using advanced neural architecture search techniques, achieving 40% efficiency improvements in real-world applications.',
-      tags: ['Machine Learning', 'Process Optimization', 'Neural Networks'],
-      status: 'Published',
-      journal: 'Journal of AI in Business'
-    },
-    {
-      id: 2,
-      title: 'Quantum-Enhanced Cryptography for Enterprise Security',
-      authors: ['Dr. David Kim', 'Dr. Emily Watson'],
-      date: '2024-01-10',
-      category: 'quantum',
-      abstract: 'We demonstrate how quantum computing principles can be applied to enhance enterprise security systems, providing unprecedented protection against emerging cyber threats.',
-      tags: ['Quantum Computing', 'Cybersecurity', 'Cryptography'],
-      status: 'Under Review',
-      journal: 'Nature Quantum Information'
-    },
-    {
-      id: 3,
-      title: 'Decentralized AI: A Framework for Distributed Machine Learning',
-      authors: ['Michael Rodriguez', 'Sarah Chen'],
-      date: '2024-01-05',
-      category: 'blockchain',
-      abstract: 'This research introduces a novel framework for implementing AI models on blockchain networks, enabling secure and transparent machine learning operations.',
-      tags: ['Blockchain', 'Distributed AI', 'Decentralization'],
-      status: 'Published',
-      journal: 'IEEE Transactions on Blockchain'
-    },
-    {
-      id: 4,
-      title: 'Autonomous Business Process Discovery and Optimization',
-      authors: ['Dr. Emily Watson', 'David Kim'],
-      date: '2023-12-20',
-      category: 'automation',
-      abstract: 'We present an AI system that can automatically discover, analyze, and optimize business processes without human intervention, reducing operational costs by 60%.',
-      tags: ['Process Mining', 'Automation', 'AI'],
-      status: 'Published',
-      journal: 'ACM Transactions on Management Information Systems'
-    },
-    {
-      id: 5,
-      title: 'Federated Learning for Privacy-Preserving Business Intelligence',
-      authors: ['Sarah Chen', 'Dr. Emily Watson'],
-      date: '2023-12-15',
-      category: 'ai',
-      abstract: 'This work explores how federated learning can be applied to business intelligence while maintaining strict privacy requirements and regulatory compliance.',
-      tags: ['Federated Learning', 'Privacy', 'Business Intelligence'],
-      status: 'Under Review',
-      journal: 'Journal of Privacy and Security'
-    },
-    {
-      id: 6,
-      title: 'Quantum Machine Learning for Financial Risk Assessment',
-      authors: ['Dr. David Kim', 'Michael Rodriguez'],
-      date: '2023-12-10',
-      category: 'quantum',
-      abstract: 'We demonstrate quantum machine learning algorithms that can process financial data with exponential speedup, enabling real-time risk assessment for large portfolios.',
-      tags: ['Quantum ML', 'Finance', 'Risk Assessment'],
-      status: 'Published',
-      journal: 'Quantum Finance Review'
-    }
-  ];
-
-  const filteredPapers = activeCategory === 'all' 
-    ? researchPapers 
-    : researchPapers.filter(paper => paper.category === activeCategory);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -110,23 +20,29 @@ export default function ResearchPage() {
           </p>
         </div>
 
-        {/* Research Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
-          <div className="bg-slate-800 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">50+</div>
-            <div className="text-gray-300">Research Papers</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors duration-200">
+            <h3 className="text-xl font-bold text-white mb-4">AI Research</h3>
+            <p className="text-gray-300 mb-4">
+              Advanced machine learning algorithms and neural network architectures.
+            </p>
+            <div className="text-blue-400 font-semibold">25+ Patents Filed</div>
           </div>
-          <div className="bg-slate-800 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">15+</div>
-            <div className="text-gray-300">Patents Filed</div>
+
+          <div className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors duration-200">
+            <h3 className="text-xl font-bold text-white mb-4">Quantum Computing</h3>
+            <p className="text-gray-300 mb-4">
+              Breakthrough research in quantum algorithms and quantum machine learning.
+            </p>
+            <div className="text-blue-400 font-semibold">15+ Publications</div>
           </div>
-          <div className="bg-slate-800 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">25+</div>
-            <div className="text-gray-300">Industry Partnerships</div>
-          </div>
-          <div className="bg-slate-800 rounded-xl p-6 text-center">
-            <div className="text-3xl font-bold text-blue-400 mb-2">$2M+</div>
-            <div className="text-gray-300">Research Funding</div>
+
+          <div className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors duration-200">
+            <h3 className="text-xl font-bold text-white mb-4">Autonomous Systems</h3>
+            <p className="text-gray-300 mb-4">
+              Self-learning systems and autonomous decision-making frameworks.
+            </p>
+            <div className="text-blue-400 font-semibold">10+ Active Projects</div>
           </div>
         </div>
 
@@ -250,5 +166,5 @@ export default function ResearchPage() {
         </div>
       </div>
     </div>
-  );
+  )
 }

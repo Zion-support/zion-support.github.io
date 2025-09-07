@@ -1,4 +1,15 @@
-<<<<<<< HEAD:src_backup/components/header/AvatarMenu.tsx
+import React from 'react';
+
+const AvatarMenu = () => {
+  return (
+    <div>
+      {/* AvatarMenu component */}
+    </div>
+  )
+};
+
+export default AvatarMenu;
+
 import React from 'react';
 
 const AvatarMenu = () => {
@@ -11,9 +22,7 @@ const AvatarMenu = () => {
 
 export default AvatarMenu;
 
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/header/AvatarMenu.tsx
 import React from 'react';
 const AvatarMenu = () => {return (<div>{/* AvatarMenu component */}
     </div>;
@@ -87,9 +96,6 @@ export const AvatarMenu: React.FC = () => {const { user, logout, avatarUrl }  = 
   );
 };
 export default AvatarMenu;
-"
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           className='flex items-center cursor-pointer';
         >;
           <LogOut className='mr-2 h-4 w-4' />;
@@ -99,4 +105,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </DropdownMenu>;
   )}export default AvatarMenu;
 ";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/header/AvatarMenu.tsx
+"

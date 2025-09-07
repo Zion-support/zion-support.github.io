@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 ];
 export default function ServicesPage() {return (<Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}{/* Header */}<div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}<p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}<div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (<li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}{/* CTA */}<Link; href = {service.href}Explore {service.title}<ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}</div>; </div>; </section>; {/* Why Choose Us */}{/* Why Choose Us */}
@@ -24,26 +7,8 @@ export default function ServicesPage() {return (<Layout; title = "Our Services -
   }],,export default function ServicesPage() {,return (,<Layout,title="Our Services - Zion Tech Group",description="Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses.",keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation",>,<div className="min-h-screen bg-gray-50">,{/* Hero Section */}{/* Header */}<div className="flex items-center mb-6">,<div className={`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>,<service.icon className={`w-8 h-8 text-${service.color}-600`} />,</div>,<div>,<h3 className="text-2xl font-semibold text-gray-900">{service.title}</h3>,<p className="text-gray-500">{service.category}</p>,</div>,</div>,{/* Description */}<p className="text-gray-600 mb-6">{service.description}</p>,{/* Services List */}<div className="mb-6">,<h4 className="text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>;
 }
 ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-;
-export default function ServicesPage() {; return (; <Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}; {/* Header */}; <div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}; <p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}; <div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (; <li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}; {/* CTA */}; <Link; href = {service.href}; Explore {service.title}; <ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}; </div>; </div>; </section>; {/* Why Choose Us */};
-;        {/* Why Choose Us */};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function ServicesPage() {return (<Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}{/* Header */}<div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}<p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}<div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (<li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}{/* CTA */}<Link; href = {service.href}Explore {service.title}<ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}</div>; </div>; </section>; {/* Why Choose Us */}{/* Why Choose Us */}
         {/* Why Choose Us */}
 }];export default function ServicesPage() {return (<Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}{/* Header */}<div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}<p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}<div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (<li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}{/* CTA */}<Link; href = {service.href}Explore {service.title}<ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}</div>; </div>; </section>; {/* Why Choose Us */}{/* Why Choose Us */}}];
@@ -76,14 +41,8 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
         {/* Why Choose Us */}}}}{/* Why Choose Us */}}
 ],,export default function ServicesPage() {,return (,<Layout,title="Our Services - Zion Tech Group",description="Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses.",keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation",>,<div className="min-h-screen bg-gray-50">,{/* Hero Section */}{/* Header */}{/* Hero Section */}{/* Header */}{/* Hero Section */}{/* Header */}{/* Hero Section */},{/* Header */},<div className="flex items-center mb-6">,<div className={`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>,<service.icon className={`w-8 h-8 text-${service.color}-600`} />,</div>,<div>,<h3 className="text-2xl font-semibold text-gray-900">{service.title}</h3>,<p className="text-gray-500">{service.category}</p>,</div>,</div>,{/* Description */},<p className="text-gray-600 mb-6">{service.description}</p>,{/* Services List */},<div className="mb-6">,<h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,{/* Description */}<p className="text-gray-600 mb-6">{service.description}</p>,{/* Services List */}<div className="mb-6">,<h4 className="text-sm font-semibold text-gray-900 mb-3">Key:Services:</h4>,<ul className="space-y-2">,{service.services.map((item, idx) => (,<li key={idx} className="flex items-center text-sm text-gray-600">,<CheckCircle className={`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />,{item},{/* CTA */},<Link,href={service.href},Explore {service.title},<ArrowRight className="w-4 h-4 ml-2" />,</Link>,</div>,</motion.div>))},</div>,</div>,</section>,{/* Why Choose Us */}{/* Why Choose Us */}{/* Why Choose Us */}ursor/fix-website-loading-errors-and-merge-6662;
         {/* Why Choose Us */}{item}{/* CTA */}<Link,href={service.href}Explore {service.title}<ArrowRight className="w-4 h-4 ml-2" />,</Link>,</div>,</motion.div>,))}</div>,</div>,</section>,{/* Why Choose Us */}</div>,</section>,{/* Why Choose Us */}{/* Why Choose Us */}{/* Why Choose Us */}{/* Why Choose Us */}{/* Why Choose Us */}{/* Why Choose Us */}}];export default function ServicesPage() {return (<Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}{/* Header */}<div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}<p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}<div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (<li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}{/* CTA */}<Link; href = {service.href}Explore {service.title}<ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}</div>; </div>; </section>; {/* Why Choose Us */}{/* Why Choose Us */}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 ];
@@ -114,83 +73,63 @@ export default function ServicesPage() {,
                     {/* Services List */};
                     <div className="mb-6">,
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>,
-<<<<<<< HEAD
+}
+];
+export default function ServicesPage() {return (; <Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}; {/* Header */}; <div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}; <p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}; <div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (; <li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}; {/* CTA */}; <Link; href = {service.href}; Explore {service.title}; <ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}; </div>; </div>; </section>; {/* Why Choose Us */};        {/* Why Choose Us */}
+        {/* Why Choose Us */}
+};
+];
+;
+export default function ServicesPage() {; return (; <Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}; {/* Header */}; <div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}; <p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}; <div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (; <li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}; {/* CTA */}; <Link; href = {service.href}; Explore {service.title}; <ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}; </div>; </div>; </section>; {/* Why Choose Us */};
+;        {/* Why Choose Us */};
 
-<<<<<<< HEAD
-
-  };
-]
-
-export default function ServicesPage() {
-  return (
-    <Layout
-      title="Our Services - Zion Tech Group"
-      description="Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."
-      keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation"
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */};
-                    {/* Header */};
-                    <div className="flex items-center mb-6">
-                      <div className={`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>
-                        <service.icon className={`w-8 h-8 text-${service.color}-600`} />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-semibold text-gray-900">{service.title}</h3>
-                        <p className="text-gray-500">{service.category}</p>
-                      </div>
-                    </div>
-                    {/* Description */};
-                    <p className="text-gray-600 mb-6">{service.description}</p>
-                    {/* Services List */};
-                    <div className="mb-6">,
-                      <h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <ul className="space-y-2">,
                         {service.services.map((item, idx) => (,
                           <li key={idx} className="flex items-center text-sm text-gray-600">,
                             <CheckCircle className={`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />,
                             {item};
                     {/* CTA */};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  }
+],
+,
+export default function ServicesPage() {,
+  return (,
+    <Layout,
+      title = $2;
+      description="Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses.",
+      keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation",
+    >,
+      <div className = $2;
+        {/* Hero Section */},
+                    {/* Header */},
+                    <div className = $2;
+                      <div className = $2;
+                        <service.icon className = $2;
+                      </div>,
+                      <div>,
+                        <h3 className = $2;
+                        <p className = $2;
+                      </div>,
+                    </div>,
+                    {/* Description */},
+                    <p className = $2;
+                    {/* Services List */},
+                    <div className = $2;
+                      <h4 className = $2;
+                      <ul className = $2;
+                        {service.services.map((item, idx) => (,
+                          <li key = $2;
+                            <CheckCircle className = $2;
+                            {item},
+                    {/* CTA */},
                     <Link,
-                      href={service.href};
-                      Explore {service.title};
-                      <ArrowRight className="w-4 h-4 ml-2" />,
+                      href = $2;
+                      Explore {service.title},
+                      <ArrowRight className = $2;
                     </Link>,
                   </div>,
-                </motion.div>,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Link
                       href={service.href};
                       Explore {service.title};
@@ -198,65 +137,29 @@ export default function ServicesPage() {
                     </Link>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))};
             </div>,
           </div>,
         </section>,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         {/* Why Choose Us */};
 
         {/* Why Choose Us */};
-=======
 
         {/* Why Choose Us */};
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
         {/* Why Choose Us */};
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         {/* Why Choose Us */};
 
         {/* Why Choose Us */};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 ];
 ;
@@ -267,18 +170,11 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
 ;        {/* Why Choose Us */}
         {/* Why Choose Us */}
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 ;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 ;
   }
@@ -292,12 +188,7 @@ function ServicesPage() { return ( <Layout; title = "Our Services - Zion Tech Gr
   }
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ],;
 ,;
 export default function ServicesPage() {,;
@@ -308,24 +199,15 @@ export default function ServicesPage() {,;
       keywords="services, AI services, IT services, micro SaaS, technology solutions, business automation",;
     >,;
       <div className="min-h-screen bg-gray-50">,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Hero Section */};
                     {/* Header */};
-<<<<<<< HEAD
-=======
 
         {/* Hero Section */};
                     {/* Header */};
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
         {/* Hero Section */};
                     {/* Header */};
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         {/* Hero Section */},;
                     {/* Header */},;
                     <div className="flex items-center mb-6">,;
@@ -342,26 +224,13 @@ export default function ServicesPage() {,;
                     {/* Services List */},;
                     <div className="mb-6">,;
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key: Services: </h4>,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
                     {/* Description */};
                     <p className="text-gray-600 mb-6">{service.description}</p>,;
                     {/* Services List */};
                     <div className="mb-6">,;
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key:Services:</h4>,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
                       <ul className="space-y-2">,;
                         {service.services.map((item, idx) => (,;
                           <li key={idx} className="flex items-center text-sm text-gray-600">,;
@@ -378,31 +247,13 @@ export default function ServicesPage() {,;
             </div>,;
           </div>,;
         </section>,;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Why Choose Us */};
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
         {/* Why Choose Us */};
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
         {/* Why Choose Us */};
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {/* Why Choose Us */};
                             {item};
                     {/* CTA */};
@@ -425,48 +276,29 @@ export default function ServicesPage() {,;
         {/* Why Choose Us */};
         {/* Why Choose Us */};
         {/* Why Choose Us */};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Why Choose Us */};
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 
         {/* Why Choose Us */};
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
         {/* Why Choose Us */};
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 ];
 ;
 export default function ServicesPage() {; return (; <Layout; title = "Our Services - Zion Tech Group"; description = "Comprehensive technology services including AI solutions, IT services, and micro SaaS platforms. Expert solutions for modern businesses."; keywords = "services, AI services, IT services, micro SaaS, technology solutions, business automation">; <div className = "min-h-screen bg-gray-50">; {/* Hero Section */}; {/* Header */}; <div className = "flex items-center mb-6">; <div className = {`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mr-4`}>; <service.icon className = {`w-8 h-8 text-${service.color}-600`} />; </div>; <div>; <h3 className = "text-2xl font-semibold text-gray-900">{service.title}</h3>; <p className = "text-gray-500">{service.category}</p>; </div>; </div>; {/* Description */}; <p className = "text-gray-600 mb-6">{service.description}</p>; {/* Services List */}; <div className = "mb-6">; <h4 className = "text-sm font-semibold text-gray-900 mb-3">Key Services: </h4>, <ul className = "space-y-2">, {service.services.map((item, idx) = > (; <li key = {idx} className = "flex items-center text-sm text-gray-600">; <CheckCircle className = {`w-4 h-4 text-${service.color}-500 mr-2 flex-shrink-0`} />; {item}; {/* CTA */}; <Link; href = {service.href}; Explore {service.title}; <ArrowRight className = "w-4 h-4 ml-2" />; </Link>, </div>, </motion.div>))}; </div>; </div>; </section>; {/* Why Choose Us */};
 ;
         {/* Why Choose Us */};
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         {/* Why Choose Us */};
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+                </motion.div>))},
+            </div>,
+          </div>,
+        </section>,
+
+        {/* Why Choose Us */},
+

@@ -1,22 +1,8 @@
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {useToast} from "@/hooks/use-toast";
-import {Checkbox} from "@/components/ui/checkbox";
-export function WaitlistSection() {;
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [role, setRole] = useState("");
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  const { toast } = useToast();
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -24,177 +10,53 @@ import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
 import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useToast } from "@/hooks/use-toast",
-import { Checkbox } from "@/components/ui/checkbox",
-export function WaitlistSection() {
-  const [email, setEmail] = useState(""),
-=======
   const { toast } = useToast();  const [email, setEmail] = useState(""),
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [name, setName] = useState(""),
   const [role, setRole] = useState(""),
   const [agreeTerms, setAgreeTerms] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { toast } = useToast(),
 
-<<<<<<< HEAD
-
-
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email |!name |!role |!agreeTerms) {
-      toast({
-        variant: "destructive"
-        title: "Missing information"
-        description: "Please fill all fields and agree to the terms."})
-      return
-    }
-
-
-
-    setIsSubmitting(true);
-    try {
-      // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     
     setIsSubmitting(true),
     
+export function WaitlistSection() {
+  const [email, setEmail] = useState($2);
+  const [name, setName] = useState($2);
+  const [role, setRole] = useState($2);
+  const [agreeTerms, setAgreeTerms] = useState($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const { toast } = useToast($2);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault($2);
+    if (!email || !name || !role || !agreeTerms) {
+      toast($2);
+      return
+    }
+    
+    setIsSubmitting($2);
     try {
       // Simulating an API call
       await new Promise(resolve => setTimeout(resolve, 1000)),
       
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
       // Reset form
-<<<<<<< HEAD
-      setEmail("");
-      setName("");
-      setRole("");
-      setEmail(""),
-      setName(""),
-=======
       setEmail(""),
       setName(""),
       setRole(""),      setEmail(""),
       setName(""),
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       setRole(""),
       setAgreeTerms(false)
     } catch (error) {
       toast({
         variant: "destructive"
         title: "Something went wrong"
-<<<<<<< HEAD
-        description: "Please try again later."})
-
-import { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Input } from '@/components / ui / input';
-import { Label } from '@/components / ui / label';
-import { use_toast } from '@/hooks / use - toast';
-import { Checkbox } from '@/components / ui / checkbox';
-export /**
- * WaitlistSection - Function description
- */
-function WaitlistSection() {
-  const [email, set_email] = useState ("");
-  const [name, set_name] = useState ("");
-  const [role, set_role] = useState ("");
-  const [agree_terms, setAgreeTerms] = useState (false);
-  const [is_submitting, setIsSubmitting] = useState (false);
-  const { toast } = use_toast ();
-;
-  const handle_submit = async (e: React.FormEvent) => {
-    e.prevent_default (),
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({
-        variant: "destructive",
-        title: "Missing information",
-        description: "Please fill all fields and agree to the terms."}),
-      return;
-    }
-    setIsSubmitting (true);
-;
-    try {
-      // Simulating an API call;
-      await new Promise (resolve => set_timeout (resolve, 1000));
-;
-      toast ({
-        title: "Success!",
-        description: "Thank you for registering with Zion. We'll be in touch soon."}),
-      // Reset form;
-      set_email ("");
-      set_name ("");
-      set_role ("");
-      setAgreeTerms (false);
-    } catch (error) {
-      toast ({
-        variant: "destructive",
-        title: "Something went wrong",
-        description: "Please try again later."});
-
-
-    } finally {
-      setIsSubmitting (false);
-    }
-  }
-
-  const handleSubmit = async (e: React && React.FormEvent) => {;
-    e && e.preventDefault(),;
-
-    if (!email || !name || !role || !agreeTerms) {;
-      toast({;
-        variant: "destructive",;
-        title: "Missing information",;
-        description: "Please fill all fields and agree to the terms."}),;
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {;
-      // Simulating an API call;
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
-      toast({;
-        title: "Success!",;
-        description: "Thank you for registering with Zion. We'll be in touch soon."}),;
-
-      // Reset form;
-      setEmail("");
-      setName("");
-      setRole("");
-      setAgreeTerms(false);
-    } catch (error) {;
-      toast({;
-        variant: "destructive",;
-        title: "Something went wrong",;
-        description: "Please try again later."});
-    } finally {;
-      setIsSubmitting(false);
-    }
-  };
-
-=======
         description: "Please try again later."})    } finally {
       setIsSubmitting (false);
     }
   }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } finally {
       setIsSubmitting(false)
     }
@@ -205,18 +67,9 @@ if ( {) {
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
       {/* Background elements */}
-<<<<<<< HEAD
-
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">;
         <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]"></div>;
         <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]"></div>;
       </div>;
-
-=======
-        <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]"></div>;
-        <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]"></div>;
-      </div>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="container mx-auto px-4 relative z-10">;
         <div className="max-w-3xl mx-auto">;
           <div className="text-center mb-12">;
@@ -229,75 +82,96 @@ if ( {) {
 
           <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20">;
             <div className="space-y-2">;
-<<<<<<< HEAD
-              <Label htmlFor="name">Full Name</Label>;
-
-
+      toast($2);
+      // Reset form
+      setEmail($2);
+      setName($2);
+      setRole($2);
+      setAgreeTerms(false)
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Something went wrong",
+        description: "Please try again later."})
+    } finally {
+      setIsSubmitting(false)
+    }
+  },
+  
   return (
-    <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
+    <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">
       {/* Background elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
+        <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]"></div>
+        <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]"></div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <GradientHeading>Register Now</GradientHeading>
+            <p className="text-zion-slate-light text-lg mt-4">
+              Join our growing community of AI and tech professionals.
+              Complete your registration to access exclusive features and personalized services.
+            </p>
+          </div>
+          <form onSubmit={handleSubmit} className="space-y-6 bg-zion-blue-light p-8 rounded-lg border border-zion-purple/20">
+            <div className="space-y-2">
+              <Label htmlFor="name">Full Name</Label>
               <Input
                 id="name"
                 placeholder="John Smith"
                 value={name}
-
-                onChange={(e) => setName(e && e.target.value)}
-                className="bg-zion-blue-dark border-zion-blue-light";
-              />;
-            </div>;
-
-            <div className="space-y-2">;
-              <Label htmlFor="email">Email Address</Label>;
-
-              <Input
-=======
               <Label htmlFor="name">Full Name</Label>;              <Input
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 id="email"
                 type="email"
                 placeholder="you@company && company.com"
                 value={email}
 
-<<<<<<< HEAD
-                onChange={(e) => setEmail(e && e.target.value)}
-                className="bg-zion-blue-dark border-zion-blue-light";
-              />;
-            </div>;
-
-            <div className="space-y-2">;
-              <Label htmlFor="role">Your Role</Label>;
-
+                onChange={(e) => setName(e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email">Email Address</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="you@company.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="role">Your Role</Label>
               <Input
                 id="role"
                 placeholder="IT Manager, Developer, Business Owner, etc."
                 value={role}
-
-                onChange={(e) => setRole(e && e.target.value)}
-                className="bg-zion-blue-dark border-zion-blue-light";
-              />;
-            </div>;
-
-            <div className="flex items-center space-x-2">;
-              <Checkbox
-                id="terms" 
-
-                checked={agreeTerms}
-                onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
-              />;
-              <Label
-                htmlFor="terms"
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <Button 
               type="submit" 
               disabled={isSubmitting} 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+                onChange={(e) => setRole(e.target.value)}
+                className="bg-zion-blue-dark border-zion-blue-light"
+              />
+            </div>
+            <div className="flex items-center space-x-2">
+              <Checkbox
+                id="terms"
+                checked={agreeTerms}
+                onCheckedChange={(checked) => setAgreeTerms(checked as boolean)}
+              />
+              <Label
+                htmlFor="terms"
+                className="text-sm text-zion-slate font-normal"
+              >
+                I agree to receive updates about Zion and understand I can unsubscribe anytime.
+              </Label>
+            </div>
+            <Button
+              type="submit"
+              disabled={isSubmitting}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -307,10 +181,6 @@ if ( {) {
       </div>
     </section>
   )
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -331,69 +201,6 @@ export function WaitlistSection() {;
     if (!email || !name || !role || !agreeTerms) {;
       toast({;
         variant: "destructive",;
-<<<<<<< HEAD
-        title: "Missing information",;
-        description: "Please fill all fields and agree to the terms."}),;
-      return;
-    }
-
-                className="text-sm text-zion-slate font-normal">;
-                I agree to receive updates about Zion and understand I can unsubscribe anytime.;
-              </Label>;
-            </div>;
-
-
-            <Button
-              type="submit" 
-              disabled={isSubmitting} 
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-              {isSubmitting ? "Processing..." : "Complete Registration"}
-
-
-
-;
-  return (
-    <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
-      {/* Background elements */}
-      <div className="absolute top - 0 left - 0 w - full h - full overflow - hidden opacity - 10">;
-        <div className="absolute -top - 40 -left - 40 w - 80 h - 80 bg - zion - purple rounded - full filter blur-[100px]"></div>;
-        <div className="absolute top - 40 right - 20 w - 60 h - 60 bg - zion - cyan rounded - full filter blur-[100px]"></div>;
-      </div>;
-      <div className="container mx - auto px - 4 relative z - 10">;
-        <div className="max - w-3xl mx - auto">;
-          <div className="text - center mb - 12">;
-            <GradientHeading > Register Now</GradientHeading>;
-            <p className="text - zion - slate - light text - lg mt - 4">;
-              Join our growing community of AI and tech professionals.;
-              Complete your registration to access exclusive features and personalized services.;
-            </p>;
-          </div>;
-          <form on_submit={handle_submit} className="space - y-6 bg - zion - blue - light p - 8 rounded - lg border border - zion - purple / 20">;
-            <div className="space - y-2">;
-              <Label html_for="name">Full Name</Label>;
-              <Input;
-                id="name";
-                placeholder="John Smith";
-                value={name}
-                on_change={(e) => set_name (e.target.value)}
-                className="bg - zion - blue - dark border - zion - blue - light";
-              />;
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for="email">Email Address</Label>;
-              <Input;
-                id="email";
-                type="email";
-                placeholder="you@company.com";
-                value={email}
-                on_change={(e) => set_email (e.target.value)}
-                className="bg - zion - blue - dark border - zion - blue - light";
-              />;
-            </div>;
-            <div className="space - y-2">;
-              <Label html_for="role">Your Role</Label>;
-              <Input;
-=======
         title: "Missing information",,
   description: "Please fill all fields and agree to the terms."}),;
       return
@@ -417,22 +224,14 @@ export function WaitlistSection() {;
                 id="name";
                 placeholder="John Smith";
                 value={name}              <Input;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 id="role";
                 placeholder="IT Manager, Developer, Business Owner, etc.";
                 value={role}
                 on_change={(e) => set_role (e.target.value)}
-<<<<<<< HEAD
-                className="bg - zion - blue - dark border - zion - blue - light";
-              />;
-            </div>;
-            <div className="flex items - center space - x-2">;
-=======
                 className="bg - zion - blue - dark border - zion - blue-light";
               />;
             </div>;
             <div className="flex items - center space-x-2">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Checkbox;
                 id="terms";
                 checked={agree_terms}
@@ -440,70 +239,10 @@ export function WaitlistSection() {;
               />;
               <Label;
                 html_for="terms";
-<<<<<<< HEAD
-                className="text - sm text - zion - slate font - normal";
-              >;
-                I agree to receive updates about Zion and understand I can unsubscribe anytime.;
-              </Label>;
-            </div>;
-            <Button;
-              type="submit";
-              disabled={is_submitting}
-              className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple";
-            >;
-              {is_submitting ? "Processing..." : "Complete Registration"}
-            ;
-            <Button ;
-              type="submit" ;
-              disabled={isSubmitting} ;
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
-            >;
-              {isSubmitting ? "Processing..." :"Complete Registration"}
-            <Button;
-              type="submit";
-              disabled={isSubmitting} ;
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple";
-            >;
-              {isSubmitting ? "Processing..." : "Complete Registration"}
-            </Button>;
-          </form>;
-        </div>;
-      </div>;
-
-
-
-
-}
-    </section>);
-}
-}
-    </section>);
-    </section>;
-  ),; const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault ();
-if (!email || !name || !role || !agreeTerms) {
-  toast ({
-  return;
-}setIsSubmitting (true);
-}finally {
-  setIsSubmitting (false) 
-}
-};
-return (<section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden" > {
-  /* Background elements */ 
-}<div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10" > <div className="absolute -top-40 -left-40 w-80 h-80 bg-zion-purple rounded-full filter blur-[100px]" ></div> <div className="absolute top-40 right-20 w-60 h-60 bg-zion-cyan rounded-full filter blur-[100px]" ></div> container mx-auto px-4 relative z-10"> <div className=" max-w-3xl mx-auto"> <div className=" text-center mb-12"> <GradientHeading>Register Now</GradientHeading> <p className=" text-zion-slate-light text-lg mt-4"> Join our growing community of AI and tech professionals. Complete your registration to access exclusive features and personalized services. </p> </div> /> </div> <div className=" space-y-2"> <Label htmlFor=" email">Email Address</Label> <Input /> </div> <div className=" space-y-2"> <Label htmlFor=" role">Your Role</Label> <Input /> </div> <div className=" flex items-center space-x-2"> <Checkbox /> <Label htmlFor=" terms"className=" text-sm text-zion-slate font-normal" > I agree to receive updates about Zion and understand I can unsubscribe anytime. </Label> </div> <Button </Button> </form> </div> </div> </section>) 
-}
-    </section>;
-  );
-}
-;
-}
-;
-    </section>);
-}
-=======
                 className="text - sm text - zion - slate font-normal";              >;
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.;
               </Label>;
             </div>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+}
+}
+;

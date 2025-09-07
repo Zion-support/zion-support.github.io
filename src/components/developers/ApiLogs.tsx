@@ -1,33 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect  } from './react';
-import { format  } from './date - fns';
-import { List, RefreshCw } from 'lucide-react'import { useApiKeys  } from '@/hooks/ useApiKeys';
-import { Button  } from '@/components/ui/ button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/ card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/ select';
-import { Badge  } from '@/components/ui/ badge';
-import { ApiLogsChart  } from './ApiLogsChart';
-export /**
- * ApiLogs - Function description
- */
-function ApiLogs() {
-  const { logs, total_logs, loading, fetchApiLogs } = useApiKeys ();
-  const [page_size, setPageSize] = useState (25);
-  const [current_page, setCurrentPage] = useState (0);
-  const hasNextPage = current_page < total_pages - 1;
-  const hasPrevPage = current_page > 0);
-}
-  );
-}
-=======
-=======
 
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { List, RefreshCw } from 'lucide-react';
 import { useApiKeys } from '@/hooks/useApiKeys';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
 import { useState, useEffect   } from './react';
@@ -175,11 +150,7 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 }<div className=" overflow-x-auto"> <table className=" w-full border-collapse"> <thead> <tr className=" border-b border-zinc-800"> <th className=" px-4 py-2 text-left font-medium text-zinc-300">Timestamp</th> <th className=" px-4 py-2 text-left font-medium text-zinc-300">Method</th> <th className=" px-4 py-2 text-left font-medium text-zinc-300">Endpoint</th> <th className=" px-4 py-2 text-left font-medium text-zinc-300">Status</th> <th className=" px-4 py-2 text-left font-medium text-zinc-300">Response Time</th> <th className=" px-4 py-2 text-left font-medium text-zinc-300">IP Address</th> </tr> </thead> <tbody> {loading ? (<tr> <td colSpan= {6 '";
 }className=" text-center py-12"> <div className=" flex flex-col items-center"> <div className=" animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-zion-cyan mb-4"></div> <span className=" text-zinc-500">Loading logs...</span> </div> </td> </tr>) : logs.length === 0 ? (<tr> Logs will appear here when you make API requests. </span> </div> </td> </tr> : log.method === 'POST' ? " border-blue-500 text-blue-400": log.method === 'PUT' > {log.method ;
 }</Badge> </td> </tr>) ) ) ";
-<<<<<<< HEAD
-}</tbody> </table> </div> </div> <div className=" flex space-x-2" > <Button > Previous </Button> <Button > Next </Button> </div> </div>)}</CardContent> </Card>)}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 }</tbody> </table> </div> </div> <div className=" flex space-x-2" > <Button > Previous </Button> <Button > Next </Button> </div> </div>) ;
 }</CardContent> </Card>) ;
 }'"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+

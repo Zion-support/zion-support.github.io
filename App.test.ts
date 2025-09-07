@@ -1,56 +1,29 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./src/App"; describe('App', () => { it('renders without crashing', () => { render(<App />)expect(screen.getByRole("main")).toBeInTheDocument()})it('displays correct content', () => { render(<App />)})it('handles user interactions', () => { render(<App />)})})''";
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
-=======
-=======
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./src/App"; describe('App', () => { it('renders without crashing', () => { render(<App />)expect(screen.getByRole("main")).toBeInTheDocument()})it('displays correct content', () => { render(<App />)})it('handles user interactions', () => { render(<App />)})})''";
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./src/App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./src/App"; describe('App', () => { it('renders without crashing', () => { render(<App />)expect(screen.getByRole("main")).toBeInTheDocument()})it('displays correct content', () => { render(<App />)})it('handles user interactions', () => { render(<App />)})})''";
->>>>>>> 470476d15542c973cf650505a68f6472f0b68c9f
 const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./src/App"; describe("App",() => { it("renders without crashing",() => { render(<App />); expect(screen.getByRole("main")).toBeInTheDocument()}); it("displays correct content",() => { render(<App />)}); it("handles user interactions",() => { render(<App />)})});''"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import React from 'react';
-import { render, screen  } from '@testing-library/react';
-import { describe, it, expect  } from 'vitest';
+import { render, screen } from '@testing-library/react';
 import App from './App';
-describe('App', () => {it('renders without crashing', () => {render(<App />)expect(screen.getByText('Zion Tech Group')).toBeInTheDocument()})it('displays correct content', () => {render(<App />)expect(screen.getByText('Zion Tech Group')).toBeInTheDocument()})it('handles user interactions', () => {render(<App />)expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument()})})const { render,screen } from "@testing-library/react"; import { describe,it,expect } from "vitest"; import App from "./src/App"; describe('App', () => { it('renders without crashing', () => { render(ursor/automate-test-improve-and-merge-code-646c;
-})
+
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
-    expect(screen.getByRole('main')).toBeInTheDocument();
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
   });
+
   it('displays correct content', () => {
     render(<App />);
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
   });
+
   it('handles user interactions', () => {
     render(<App />);
+    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 });
-=======
 });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+});

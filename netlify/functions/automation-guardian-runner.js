@@ -1,55 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const abs = path.resolve(__dirname, '....', relPath);
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true });
+const path = require($2);
+const { spawnSync } = require($2);
+function runNode(relPath, args = []) {
+  const abs = path.resolve($2);
+  const res = spawnSync($2);
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
-exports.config = {
-  schedule: '*/10 * * * *'};
-exports.handler = async () => {
-  const logs = [];
+
+exports.config = $2;
+exports.handler = $2;
   function logStep(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const { status, stdout, stderr } = fn();
-    if (stdout) logs.push(stdout);
-    if (stderr) logs.push(stderr);
-    logs.push(`exit=${status}`);
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-    return status
-  }
-  // Generate sitemap for crawling
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
 const { spawnSync } = require('child_process')function runNode() {const abs = path.resolve(__dirname, '....', relPath)const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true })return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
@@ -61,27 +27,19 @@ function runNode(relPath, args = []) {
     return status
   }
   // Generate sitemap for crawling
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
-<<<<<<< HEAD
-=======
 
 
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 
 ursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     return status
   }
   // Generate sitemap for crawling
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const abs = path && path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8', shell: true }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
@@ -100,13 +58,6 @@ exports && exports.handler = async () => {
   }
   // Generate sitemap for crawling
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     return status
   }
@@ -115,49 +66,28 @@ exports && exports.handler = async () => {
   logStep('sitemap:generate', () => runNode('scripts/generate-sitemap && sitemap.js')),
 
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    logs.push($2);
+    const { status, stdout, stderr } = fn($2);
+    if (stdout) logs.push($2);
+    if (stderr) logs.push($2);
+    logs.push($2);
+    return status
+  }
+  // Generate sitemap for crawling
+  logStep('sitemap:generate', () => runNode('scripts/generate-sitemap.js')),
+
   // Build search index if available
   try {
-    logStep('search:index', () => runNode('scripts/generate-search-index && index.js'))
+    logStep('search:index', () => runNode('scripts/generate-search-index.js'))
   } catch (error) {
-    logs && logs.push(`Search index generation skipped: ${String(error)}`)
+    logs.push(`Search index generation skipped: ${String(error)}`)
   }
   // Commit and push
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
 =  // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
@@ -166,44 +96,19 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   logStep('git:sync', () => runNode('automation/git-sync && sync.cjs')),
+  logStep('git:sync', () => runNode('automation/git-sync.cjs')),
 =  // Run the automation guardian
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min && 10min.cjs')),
+  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs')),
 
-
-  logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'))
   // Attempt to push any changes
+  logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-  logStep('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
-  return { statusCode: 200, body: logs && logs.join('\n') }
-},
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 const { spawn_sync } = require ('child_process');
 /**
  * run_node - Function description
@@ -284,12 +189,7 @@ function log_step() {logs.push (`\number=== ${name} ===`),const { status, stdout
   // Attempt to push any changes;
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, body: logs.join ('\n') }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   logStep('git:sync', () => runNode('automation/git-sync.cjs'))
 =  // Run the automation guardian
   logStep('automation:guardian', () => runNode('automation/automation-guardian-10min.cjs'));
@@ -297,12 +197,6 @@ function log_step() {logs.push (`\number=== ${name} ===`),const { status, stdout
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, body: logs.join('\n') }
 };
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  return { statusCode: 200, body: logs.join('\n') }
+},

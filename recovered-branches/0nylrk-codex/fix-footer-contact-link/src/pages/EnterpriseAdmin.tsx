@@ -1,20 +1,17 @@
-import React from "react";
-<<<<<<< HEAD
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 export default function EnterpriseAdmin() {
-  const { user } = useAuth();
-
+  const { user } = useAuth($2);
   // Check if user has enterprise admin role
-  const isEnterpriseAdmin = user?.role === "enterprise_admin";
-
+  const isEnterpriseAdmin = $2;
   if (!isEnterpriseAdmin) {
-    return <Navigate to="/unauthorized" />;
+    return <Navigate to="/unauthorized" />
   }
   return (
     <ProtectedRoute>
@@ -28,12 +25,6 @@ export default function EnterpriseAdmin() {
       </main>
       <Footer />
     </ProtectedRoute>
-  );
-}
-
-
-
-=======
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {AdminDashboard} from "@/components/enterprise/admin/AdminDashboard";
@@ -97,7 +88,6 @@ export default function EnterpriseAdmin() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 }
   }
@@ -132,27 +122,13 @@ if ( {) {
         description="Manage your team's access, roles, and usage on the Zion AI Marketplace.";
       />;
       <Header />;
-<<<<<<< HEAD
-      <main className="min - h-screen bg - background">;
-=======
       <main className="min - h-screen bg-background">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <AdminDashboard />;
       </main>;
       <Footer />;
     </ProtectedRoute>);
 }
-<<<<<<< HEAD
-  ),;}
- export default function EnterpriseAdmin () {
-  const {
-  user 
-}= useAuth ();
-//Check if user has enterprise admin role 
-}Enterprise Admin - Zion AI Marketplace"description=" Manage your team's access, roles, and usage on the Zion AI Marketplace."/> <Header /> <main className=" min-h-screen bg-background" > <AdminDashboard /> </main> <Footer /> </ProtectedRoute>) 
+  )
 }
-  );
 }
 ;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

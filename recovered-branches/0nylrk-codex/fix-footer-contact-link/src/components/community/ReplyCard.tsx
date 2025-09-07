@@ -1,25 +1,3 @@
-import {formatDistanceToNow} from "date-fns";
-import {ThumbsUp, ThumbsDown, CheckCircle} from "@/components/icons";
-import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {ForumReply} from "@/types/community";
-import {cn} from "@/lib/utils";
-interface ReplyCardProps {;
-  reply: ForumReply,;
-<<<<<<< HEAD
-
-  onMarkAnswer?: () => void;
-  canMarkAnswer?: boolean;
-  className?: string;
-}
-
-
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
@@ -29,115 +7,17 @@ import { Badge } from "@/components/ui/badge",
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {
-
-  reply: ForumReply
-
-  onMarkAnswer?: () => void;
-  canMarkAnswer?: boolean;
-  className?: string;
-}
-<<<<<<< HEAD
-
-export const ReplyCard = ({
-  reply;
-  onMarkAnswer
-  canMarkAnswer = false;
-import { ForumReply } from "@/types/community",
-import { cn } from "@/lib/utils",
-interface ReplyCardProps {
   reply: ForumReply,
   onMarkAnswer?: () => void,
   canMarkAnswer?: boolean,
   className?: string
 }
 
-
-export const ReplyCard = ({ 
-  reply,
-
-  onMarkAnswer, 
-  canMarkAnswer = false,
-
-export const ReplyCard = ({ ;
-  reply;
-export const ReplyCard = ({ 
-  reply,
-  onMarkAnswer, 
-  canMarkAnswer = false,
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   className
 }: ReplyCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true })
   return (
-<<<<<<< HEAD
-    <Card className={cn(
-
-export const ReplyCard = ({ ;
-  reply;
-  onMarkAnswer, ;
-  canMarkAnswer = false;
-
-      "transition-shadow",
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
-
-      className
-    )}>
-      <CardHeader className="flex flex-row items-start gap-4 space-y-0">
-        <Avatar className="h-8 w-8">
-          <AvatarImage src={reply.authorAvatar} />
-          <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>
-        </Avatar>
-        <div className="flex-1">
-          <div className="flex items-center">
-            <span className="font-medium">
-              {reply.authorName}
-            </span>
-            {reply.authorRole && (
-              <Badge variant="outline" className="ml-2 text-xs">
-
-import { formatDistanceToNow } from "date-fns",;
-import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ForumReply } from "@/types/community",;
-import { cn } from "@/lib/utils",;
-interface ReplyCardProps {;
-  reply: ForumReply,;
-  onMarkAnswer?: () => void,;
-  canMarkAnswer?: boolean,;
-  className?: string;
-}
-;
-export const ReplyCard = ({;
-  reply,;
-  onMarkAnswer,;
-  canMarkAnswer = false,;
-
-  className;
-}: ReplyCardProps) => {;
-  const timeAgo = formatDistanceToNow(new Date(reply && reply.createdAt), { addSuffix: true }),;
-
-  return (
-    <CardclassName={cn(
-      "transition-shadow"
-      reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
-      className
-  className;
-}: ReplyCardProps) => {;
-  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true }),;
-  return (;
-    <Card className={cn(;
-      "transition-shadow",;
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",;
-      className;
-      className
-    )}>;
-=======
     <Card className={cn(      className    )}>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
         <Avatar className="h-8 w-8">;
           <AvatarImage src={reply && reply.authorAvatar} />;
@@ -156,13 +36,6 @@ export const ReplyCard = ({;
                 Answer
               </Badge>
             )}
-<<<<<<< HEAD
-          </div>
-          <div className="text-xs text-muted-foreground">
-            {timeAgo}
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </div>;
         </div>;
       </CardHeader>;
@@ -190,10 +63,6 @@ export const ReplyCard = ({;
           </Button>;
         )}
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </CardFooter>
     </Card>
   )
@@ -202,139 +71,9 @@ export default ReplyCard;
 
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
-  );
-};
-
-
-
-export default ReplyCard;
-
-import { formatDistanceToNow } from './date - fns';
-import { ThumbsUp, ThumbsDown, CheckCircle } from '@/components / icons';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components / ui / card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { ForumReply } from '@/types / community';
-import { cn } from '@/lib / utils';
-interface ReplyCardProps {
-  reply: ForumReply,
-  onMarkAnswer?: () => void;
-  canMarkAnswer?: boolean;
-  class_name?: string;
-}
-export const ReplyCard = ({
-  reply;
-  onMarkAnswer,
-  canMarkAnswer = false;
-  class_name;
-}: ReplyCardProps) =>: any {
-  const time_ago = formatDistanceToNow (new Date (reply.created_at), { add_suffix: true }),
-  return (
-    <Card className={cn (
-      "transition - shadow";
-      reply.is_answer && "border - green - 500 / 50 bg - green - 50 dark: bg - green - 950 / 20",
-      class_name)}>;
-      <CardHeader className="flex flex - row items - start gap - 4 space - y-0">;
-        <Avatar className="h - 8 w - 8">;
-          <AvatarImage src={reply.author_avatar} />;
-          <AvatarFallback>{reply.author_name.char_at (0)}</AvatarFallback>;
-        </Avatar>;
-        <div className="flex - 1">;
-          <div className="flex items - center">;
-            <span className="font - medium">;
-              {reply.author_name}
-            </span>;
-            {reply.author_role && (
-              <Badge variant="outline" className="ml - 2 text - xs">;
-                {reply.author_role}
-              </Badge>)}
-            {reply.is_answer && (
-              <Badge className="ml - 2 bg - green - 500 text - white">;
-                <CheckCircle className="h - 3 w - 3 mr - 1" />;
-                Answer;
-              </Badge>)}
-          </div>;
-          <div className="text - xs text - muted - foreground">;
-            {time_ago}
-          </div>;
-        </div>;
-      </CardHeader>;
-      <CardContent>;
-        <div>{reply.content}</div>;
-      </CardContent>;
-      <CardFooter className="flex justify - between">;
-        <div className="flex items - center gap - 2">;
-          <Button variant="ghost" size="sm" className="px - 2">;
-            <ThumbsUp className="h - 4 w - 4 mr - 1" />;
-            <span>{reply.upvotes}</span>;
-          </Button>;
-          <Button variant="ghost" size="sm" className="px - 2">;
-            <ThumbsDown className="h - 4 w - 4 mr - 1" />;
-            <span>{reply.downvotes}</span>;
-          </Button>;
-        </div>;
-        {canMarkAnswer && !reply.is_answer && (
-          <Button size="sm" variant="outline" on_click={onMarkAnswer} className="text - green - 600">;
-            <CheckCircle className="h - 4 w - 4 mr - 1" />;
-            Mark as Answer;
-          </Button>)}
-      </CardFooter>;
-    </Card>);
-}
-;
-export default ReplyCard;
-;
-
-import { formatDistanceToNow } from "date-fns",;
-import { ThumbsUp, ThumbsDown, CheckCircle } from "@/components/icons",;
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ForumReply } from "@/types/community",;
-import { cn } from "@/lib/utils",;
-;
-interface ReplyCardProps {;
-  reply:ForumReply,;
-  onMarkAnswer?:() => void,;
-  canMarkAnswer?:boolean,;
-  className?:string;
-}
-;
-export const ReplyCard = ({ ;
-  reply,;
-  onMarkAnswer, ;
-  canMarkAnswer = false,;
-  className;
-} ReplyCardProps) => {;
-  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix:true }),;
-;
-  return (;
-    <Card className={cn(;
-      "transition-shadow",;
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",;
-      className;
-    )}>;
-      <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
-        <Avatar className="h-8 w-8">;
-          <AvatarImage src={reply.authorAvatar} />;
-          <AvatarFallback>{reply.authorName.charAt(0)}</AvatarFallback>;
-        </Avatar>;
-        <div className="flex-1">;
-          <div className="flex items-center">;
-            <span className="font-medium">;
-              {reply.authorName}
-            </span>;
-            {reply.authorRole && (;
-              <Badge variant="outline" className="ml-2 text-xs">;                {reply.authorRole}
-                {reply && reply.authorRole}
-=======
   )
 };
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               </Badge>;
             )}
             {reply && reply.isAnswer && (;
@@ -345,21 +84,23 @@ export const ReplyCard = ({ ;
             )}
       </CardFooter>;
     </Card>;
-<<<<<<< HEAD
-  );
-};
-
-
-
-export default ReplyCard;
-export default ReplyCard;
-export default ReplyCard;
-=======
   )
 };
 
 export default ReplyCard;
 export default ReplyCard;
 export default ReplyCard;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+export const ReplyCard = $2;
+  onMarkAnswer, 
+  canMarkAnswer = $2;
+  className
+}: ReplyCardProps) => {
+  const timeAgo = formatDistanceToNow(new Date(reply.createdAt), { addSuffix: true}),
+
+  return (
+    <Card className = $2;
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20",
+      className
+    )}>
+      <CardHeader className = $2;
+export default ReplyCard,

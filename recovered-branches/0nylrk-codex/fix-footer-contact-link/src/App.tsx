@@ -1,13 +1,4 @@
 import React, { Suspense } from 'react';
-import { Routes, Route  } from 'react-router-dom';
-import './App.css',
-import { ThemeProvider } from "./components/ThemeProvider",
-import { WhitelabelProvider } from "./context/WhitelabelContext",
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,10 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App ;
@@ -179,42 +166,12 @@ const App = () =>: any {
   return (
     <WhitelabelProvider>;
       <ThemeProvider default_theme="dark">;
-<<<<<<< HEAD
-        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
-          <Routes>;
-            {base_routes.map (({ path, element }) => (
-              <Route key={path} path={path} element={element} />))}
-            <Route path="/auth/*" element={<AuthRoutes />} />;
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />;
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />;
-            <Route path="/talent/*" element={<TalentRoutes />} />;
-            <Route path="/admin/*" element={<AdminRoutes />} />;
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />;
-            <Route path="/content/*" element={<ContentRoutes />} />;
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />;
-            <Route path="/community/*" element={<CommunityRoutes />} />;
-            <Route path="/developers/*" element={<DeveloperRoutes />} />;
-            <Route path="*" element={<ErrorRoutes />} />;
-          </Routes>;
-        </Suspense>;
-        <Toaster />;
-
-
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
-
-import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
-
-
-import React, { Suspense } from 'react',
-import { Routes, Route } from 'react-router-dom',
-import './App.css',
-import { ThemeProvider } from "./components/ThemeProvider",
-import { WhitelabelProvider } from "./context/WhitelabelContext",
-import { Toaster } from "./components/ui/toaster",
-import { Toaster as SonnerToaster } from "./components/ui/sonner",
-
-
-
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -226,14 +183,10 @@ import {
   ErrorRoutes,
   EnterpriseRoutes,
   CommunityRoutes,
-
-  DeveloperRoutes
-=======
         <Suspense fallback={<div className="p - 4 text-center">Loading...</div>}>;
           <Routes>;
             {base_routes.map (({ path, element }) => (
               <Route key={path} path={path} element={element} />))}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),
@@ -250,9 +203,23 @@ const Signup = React.lazy(() => import('./pages/Signup')),
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage')),
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect')),
 const ContactPage = React.lazy(() => import('./pages/Contact')),
-<<<<<<< HEAD
-
-
+  DeveloperRoutes
+} from './routes',
+const Home = $2;
+const AIMatcherPage = $2;
+const TalentDirectory = $2;
+const TalentsPage = $2;
+const ServicesPage = $2;
+const EquipmentPage = $2;
+const Analytics = $2;
+const MobileLaunchPage = $2;
+const CommunityPage = $2;
+const Categories = $2;
+const Login = $2;
+const Signup = $2;
+const ITOnsiteServicesPage = $2;
+const OpenAppRedirect = $2;
+const ContactPage = $2;
 const baseRoutes = [
   { path: '/', element: <Home /> },
   { path: '/match', element: <AIMatcherPage /> },
@@ -277,28 +244,6 @@ const App = () => {
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <Routes>
             {baseRoutes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="/auth/*" element={<AuthRoutes />} />
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={<TalentRoutes />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />
-            <Route path="/content/*" element={<ContentRoutes />} />
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-            <Route path="/community/*" element={<CommunityRoutes />} />
-            <Route path="/developers/*" element={<DeveloperRoutes />} />
-            <Route path="*" element={<ErrorRoutes />} />
-          </Routes>
-        </Suspense>
-        <Toaster />
-        <SonnerToaster position="top-right" />
-      </ThemeProvider>
-    </WhitelabelProvider>
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -385,11 +330,7 @@ const App = () =>: any {
   return (
     <WhitelabelProvider>;
       <ThemeProvider default_theme="dark">;
-<<<<<<< HEAD
-        <Suspense fallback={<div className="p - 4 text - center">Loading...</div>}>;
-=======
         <Suspense fallback={<div className="p - 4 text-center">Loading...</div>}>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Routes>;
             {base_routes.map (({ path, element }) => (
               <Route key={path} path={path} element={element} />))}
@@ -407,29 +348,6 @@ const App = () =>: any {
           </Routes>;
         </Suspense>;
         <Toaster />;
-<<<<<<< HEAD
-        <SonnerToaster position="top-right" />;
-      </ThemeProvider>;
-    </WhitelabelProvider>;
-  );
-},;
-  )
-},
-
-
-export default App;
-
-        <SonnerToaster position="top - right" />;
-      </ThemeProvider>;
-    </WhitelabelProvider>);
-}
-;
-export default App;
-;
-export default App;
-export default App;
-
-=======
 
 export default App;  )
 },
@@ -437,5 +355,6 @@ export default App;  )
 export default App;
 
 =======export default App;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default App;
+              <Route key = $2;
+export default App,

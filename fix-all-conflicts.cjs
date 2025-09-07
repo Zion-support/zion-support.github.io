@@ -4,21 +4,40 @@ const path = require('path');
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+)
+    content = content.replace(/[\s\S]*?
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
 
-    // Check if file has merge conflicts
-    if (content.includes('') || content.includes('>>>>>>>')) {
-      console.log(`Fixing merge conflicts in: ${filePath}`);
+// Find all files with merge conflicts
+const { execSync } = require('child_process');
 
-      // Simple merge conflict resolution - take the HEAD version
-      const lines = content.split('\n');
-      const resolvedLines = [];
-      let inConflict = false;
-      let takeHead = true;
+class ConflictResolver {
+  constructor() {
+    this.fixedFiles = [];
+    this.errors = [];
+  }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  fixMergeConflicts(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
 
@@ -32,11 +51,8 @@ function fixMergeConflicts(filePath) {
 
         if (!inConflict || (inConflict && takeHead)) {
           resolvedLines.push(line);
-<<<<<<< HEAD
-=======
       // Remove merge conflict markers
-<<<<<<< HEAD
-=======
+      // Remove merge conflict markers
       content = content.replace(/
       content = content.replace(/
       
@@ -115,45 +131,51 @@ function fixMergeConflicts(filePath) {
       } else if (entry.isFile() && (entry.name.endsWith('.tsx') || entry.name.endsWith('.ts') || entry.name.endsWith('.jsx') || entry.name.endsWith('.js'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ')) {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+          if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ')) {
             files.push(fullPath);
           }
         } catch (error) {
           // Skip files that can't be read
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         }
       }
-      fs.writeFileSync(filePath, resolvedLines.join('\n'), 'utf8');
-      console.log(`Resolved conflicts in: ${filePath}`);
     }
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error);
+    
+    return files;
+  }
+
+  async run() {
+    this.log('Starting conflict resolution...');
+    
+    const filesToFix = this.findFilesWithConflicts('/workspace');
+    this.log(`Found ${filesToFix.length} files with conflicts`);
+    
+    for (const file of filesToFix) {
+      this.fixMergeConflicts(file);
+    }
+    
+    this.log(`Fixed ${this.fixedFiles.length} files`);
+    this.log(`Encountered ${this.errors.length} errors`);
+    
+    if (this.errors.length > 0) {
+      this.log('Errors:');
+      this.errors.forEach(err => this.log(`  ${err.file}: ${err.error}`));
+    }
+    
+    return {
+      fixedFiles: this.fixedFiles,
+      errors: this.errors
+    };
   }
 }
 
-function traverseDirectory(dir) {
-  try {
-    fs.readdirSync(dir).forEach(file => {
-      const fullPath = path.join(dir, file);
-      try {
-        const stats = fs.statSync(fullPath);
-        if (stats.isDirectory()) {
-          traverseDirectory(fullPath);
-        } else if (fullPath.endsWith('.tsx') || fullPath.endsWith('.ts') || fullPath.endsWith('.jsx') || fullPath.endsWith('.js') || fullPath.endsWith('.json') || fullPath.endsWith('.toml') || fullPath.endsWith('.css') || fullPath.endsWith('.html')) {
-          fixMergeConflicts(fullPath);
-        }
-      } catch (error) {
-        // Skip broken symlinks or inaccessible files
-        console.log(`Skipping ${fullPath}: ${error.message}`);
-      }
-    });
-  } catch (error) {
-    console.log(`Skipping directory ${dir}: ${error.message}`);
-  }
-}
+console.log(`Found ${files.length} files with merge conflicts`);
 
-traverseDirectory(path.join(__dirname));
-console.log('All merge conflicts resolved.');
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixMergeConflicts(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);
+console.log('All merge conflicts resolved!');

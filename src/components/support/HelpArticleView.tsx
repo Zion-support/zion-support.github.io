@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 
-=======
-
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { ThumbsUp, ThumbsDown } from 'lucide-react';
-import { toast } from '@/components/ui/use-toast';
-import { HELP_CATEGORIES } from './help-content';
-
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { ThumbsUp, ThumbsDown } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
+import { toast } from "@/components/ui/use-toast";
 import { HELP_CATEGORIES } from "./help-content";
-
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -23,7 +12,6 @@ interface HelpArticleViewProps {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
 
   // Find the article in all categories
-
   let article = null;
   for (const category of HELP_CATEGORIES) {
 
@@ -49,14 +37,15 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
 };
 }
 
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
   
   // Find the article in all categories
   let article,
   for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find(a => a.id === articleId),
+    const found = category.articles.find($2);
     if (found) {
-      article = found,
+      article = $2;
       break
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -67,7 +56,6 @@ import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
   articleId: string;
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 ;
 import React, { useState } from 'react';
 import { Button  } from '@/components/ui/button';
@@ -100,16 +88,6 @@ import { ThumbsUp, ThumbsDown } from 'lucide-react'import { toast   } from '@/co
 import { HELP_CATEGORIES   } from './help - content';
 interface HelpArticleViewProps  {article_id: string;
 }
-<<<<<<< HEAD
-export /**;
- * HelpArticleView - Function description;
- */;
-function HelpArticleView() {const [feedback_given, setFeedbackGiven] = useState<"helpful" | "not - helpful" | null>(null)// Find the article in all categories;
-  let article;
-  for (const category of HELP_CATEGORIES) {}const found = null;
-    day: "numeric";
-  })}
-=======
 
 ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+;

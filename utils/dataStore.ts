@@ -1,10 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 // Data store utilities;
 export const dataStore = {// Add data store functionality here;
   getData: () => [],setData: (data: any) => null,updateData: (id: string, data: any) => null,deleteData: (id: string) => null;
@@ -19,15 +12,10 @@ export const dataStore = {// Add data store functionality here;
 }  id: string;
   title: string,description: string;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   getData: () => []
   setData: (data: any) => null
   updateData: (id: string, data: any) => null
   deleteData: (id: string) => null
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -46,13 +34,8 @@ export const dataStore = {// Add data store functionality here;
 interface Project {
   id: string;
   title: string;
-<<<<<<< HEAD
-=======
 }  id: string;
   title: string,
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   description: string;
   status: string;
   createdAt: Date;
@@ -96,14 +79,7 @@ class DataStore {
     return this.projects.find((project) => project.id === id);
   }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   createProject(data: Partial<Project>): Project {
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-  createProject(data: Partial<Project>): Project {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const project: Project = {
       id: Math.random().toString(36).substr(2, 9),
       title: data.title || "",
@@ -115,15 +91,7 @@ class DataStore {
     this.projects.push(project);
     return project;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   // Review methods
   hasExistingReview(
     projectId: string,
@@ -137,10 +105,6 @@ class DataStore {
         review.fromId === fromId,
     );
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
   upsertReview(data: Partial<Review>): Review {
     const existingIndex = this.reviews.findIndex(
@@ -213,12 +177,7 @@ export const data_store = {
     };
     this.projects.push(project);
     return project;
-<<<<<<< HEAD
-=======
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   }
 
   // Review methods
@@ -305,10 +264,6 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 const store = new DataStore();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export const findProjectById = (id: string) => store && store.findProjectById(id);
 export const createProject = (data: Partial<Project>) => store && store.createProject(data);
 export const hasExistingReview = (projectId: string, fromRole: string, fromId: string) => store && store.hasExistingReview(projectId, fromRole, fromId);
@@ -351,8 +306,63 @@ export const counterpartRole = (role: "client" | "talent") =>
 
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+import fs from 'fs-extra';
+import path from 'path';
+import { Project, Review } from '../types/reviews';
+const DATA_DIR = path.join(process.cwd(), 'data'),
+const PROJECTS_PATH = path.join($2);
+const REVIEWS_PATH = path.join($2);
+async function ensureFilesExist(): Promise<void> {
+  await fs.ensureDir($2);
+  if (!(await fs.pathExists(PROJECTS_PATH))) {
+    await fs.writeJson(PROJECTS_PATH, [], { spaces: 2})
+  }
+  if (!(await fs.pathExists(REVIEWS_PATH))) {
+    await fs.writeJson(REVIEWS_PATH, [], { spaces: 2})
+  }
+}
+
+export async function readProjects(): Promise<Project[]> {
+  await ensureFilesExist($2);
+  return fs.readJson(PROJECTS_PATH)
+}
+
+export async function writeProjects(projects: Project[]): Promise<void> {
+  await fs.writeJson(PROJECTS_PATH, projects, { spaces: 2})
+}
+
+export async function readReviews(): Promise<Review[]> {
+  await ensureFilesExist($2);
+  return fs.readJson(REVIEWS_PATH)
+}
+
+export async function writeReviews(reviews: Review[]): Promise<void> {
+  await fs.writeJson(REVIEWS_PATH, reviews, { spaces: 2})
+}
+
+export async function findProjectById(projectId: string): Promise<Project | undefined> {
+  const projects = await readProjects($2);
+  return projects.find((p) => p.id === projectId)
+}
+
+export async function upsertReview(newReview: Review): Promise<void> {
+  const reviews = await readReviews($2);
+  const idx = $2;
+  if (idx >= 0) {
+    reviews[idx] = newReview
+  } else {
+    reviews.push(newReview)
+  }
+  await writeReviews(reviews)
+}
+
+export async function getProjectReviews(projectId: string): Promise<Review[]> {
+  const reviews = await readReviews($2);
+  return reviews.filter((r) => r.projectId = $2;
+  fromRole: 'client' | 'talent',
+  fromId: string): Promise<boolean> {
+  const reviews = await readReviews($2);
+  return reviews.some(
+    (r) => r.projectId = $2;
+  )
+}

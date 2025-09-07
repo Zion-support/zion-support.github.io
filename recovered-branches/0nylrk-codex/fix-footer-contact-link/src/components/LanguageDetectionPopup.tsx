@@ -1,13 +1,9 @@
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
+import { useState, useEffect  } from 'react';
+import { useTranslation } from 'react-i18next';
+import {
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -15,22 +11,7 @@ import { useTranslation } from "react-i18next";
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-<<<<<<< HEAD
-AlertDialogTitle,;
-AlertDialogTitle,;
-} from "../components/ui/alert-dialog";
-import {
-  useLanguage,
-  SupportedLanguage,
-  LanguageContextType,;
-
-
-} from "../context/LanguageContext";
-export function LanguageDetectionPopup() {
-} from "../context/LanguageContext";
-=======
 AlertDialogTitle,;export function LanguageDetectionPopup() {} from "../context/LanguageContext";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export function LanguageDetectionPopup() {
 import {;
   AlertDialog,;
@@ -40,30 +21,11 @@ import {;
   AlertDialogDescription,;
   AlertDialogFooter,;
   AlertDialogHeader,;
-<<<<<<< HEAD
-  AlertDialogTitle,;
-} from "../components/ui/alert-dialog";
-import {;
-  useLanguage,;
-  SupportedLanguage,;
-  LanguageContextType,;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 } from "../context/LanguageContext";
 
 export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
-<<<<<<< HEAD
-  const { changeLanguage, currentLanguage, supportedLanguages } =;
-    useLanguage() as LanguageContextType;
-  const [detectedLanguage, setDetectedLanguage] =;
-    useState<SupportedLanguage | null>(null);
-
-
-  useEffect(() => {;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     // Check if this is first visit;
     const hasVisited = localStorage && localStorage.getItem("zion_has_visited");
     if (hasVisited) return;
@@ -79,25 +41,13 @@ export function LanguageDetectionPopup() {;
       (lang) => lang && lang.code === browserLang,;
 
     );
-<<<<<<< HEAD
-    if (isSupported && browserLang !== currentLanguage) {;
-    );
-=======
     if (isSupported && browserLang !== currentLanguage) {;    );
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     if (isSupported && browserLang !== currentLanguage) {;
       setDetectedLanguage(browserLang);
       setOpen(true);
     }
   }, []);
-<<<<<<< HEAD
-  if (!detectedLanguage) return null;
-
-
-    await changeLanguage(detectedLanguage);
-=======
   if (!detectedLanguage) return null;    await changeLanguage(detectedLanguage);
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     setOpen(false);
   }
 
@@ -131,29 +81,59 @@ export function LanguageDetectionPopup() {;
     if (isSupported && browserLang !== currentLanguage) {;
       setDetectedLanguage(browserLang),;
       setOpen(true);
+  AlertDialogTitle} from '../components/ui/alert-dialog',
+import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/LanguageContext';
+export function LanguageDetectionPopup() {
+  const [open, setOpen] = useState($2);
+  const { t } = useTranslation($2);
+  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,
+  const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),
+
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  AlertDialog
+  AlertDialogAction
+  AlertDialogCancel
+  AlertDialogContent
+  AlertDialogDescription
+  AlertDialogFooter
+  AlertDialogHeader
+  AlertDialogTitle
+} from "../components/ui/alert-dialog";
+import {
+  useLanguage
+  SupportedLanguage
+  LanguageContextType
+} from "../context/LanguageContext";
+export function LanguageDetectionPopup() {;
+  const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
+  const { changeLanguage, currentLanguage, supportedLanguages } =
+    useLanguage() as LanguageContextType;
+  const [detectedLanguage, setDetectedLanguage] =
+    useState<SupportedLanguage | null>(null);
+  useEffect(() => {
+    // Check if this is first visit
+    const hasVisited = localStorage.getItem($2);
+    if (hasVisited) return,
+
+    // Mark as visited
+    localStorage.setItem($2);
+    // Get browser language
+    const browserLang = navigator.language.substring(0, 2) as SupportedLanguage,
+    
+    // Check if browser language is supported and different from current language
+    const isSupported = supportedLanguages.some($2);
+    if (isSupported && browserLang !== currentLanguage) {
+      setDetectedLanguage($2);
+      setOpen(true)
     }
   }, []),
 
   if (!detectedLanguage) return null,
 
-  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
-
-  const handleAccept = async () => {
-    await changeLanguage(detectedLanguage),
-    setOpen(false)
-  },
-
-<<<<<<< HEAD
-
-            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-          </AlertDialogDescription>
-        </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
-  const languageName =;
-=======
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}  const languageName =;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
     detectedLanguage;
 
@@ -161,166 +141,41 @@ export function LanguageDetectionPopup() {;
 
     await changeLanguage(detectedLanguage);
     setOpen(false);
-<<<<<<< HEAD
-  }
-export function LanguageDetectionPopup() {;
-  const [open, setOpen] = useState(false),;
-  const { t } = useTranslation(),;
-  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,;
-  const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;
-  useEffect(() => {;
-    // Check if this is first visit;
-    const hasVisited = localStorage.getItem('zion_has_visited'),;
-    if (hasVisited) return,;
-    // Mark as visited;
-    localStorage.setItem('zion_has_visitedtrue'),;
-    // Get browser language;
-    const browserLang = navigator.language.substring(0, 2) as SupportedLanguage,;
-    // Check if browser language is supported and different from current language;
-    const isSupported = supportedLanguages.some(lang => lang.code === browserLang),;
-    if (isSupported && browserLang !== currentLanguage) {;
-      setDetectedLanguage(browserLang),;
-      setOpen(true);
-    }
-  }, []),
-
-  if (!detectedLanguage) return null,
-
-  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
-
-
-
+  const languageName = $2;
   const handleAccept = async () => {
-    await changeLanguage(detectedLanguage),
+    await changeLanguage($2);
     setOpen(false)
   },
 
   return (
-
-
-            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-
-
+    <AlertDialog open={open} onOpenChange={setOpen}>
+      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
+        <AlertDialogHeader>
+          <AlertDialogTitle className="text-white">
+            {t('language.switch_to_detected', { language: languageName})}
+          </AlertDialogTitle>
+          <AlertDialogDescription className="text-zion-slate-light">
+            {`${supportedLanguages.find((lang) => lang.code === detectedLanguage)?.flag |""} ${languageName}`}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
-
-      setOpen(true),;
-    }
-  }, []),;
-;
-  if (!detectedLanguage) return null,;
-;
-  const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,;
-;
-  const handleAccept = async () => {;
-    await changeLanguage(detectedLanguage),;
-    setOpen(false),;
-  },;
-;
-  return (;
-    <AlertDialog open={open} onOpenChange={setOpen}>;
-      <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">;
-        <AlertDialogHeader>;
-          <AlertDialogTitle className="text-white">;
-            {t("language && language.switch_to_detected", { language: languageName })}
-          </AlertDialogTitle>;
-          <AlertDialogDescription className="text-zion-slate-light">;
-            {`${supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.flag || ""} ${languageName}`}
-          </AlertDialogDescription>;
-        </AlertDialogHeader>;
-        <AlertDialogFooter>;
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">;
-            {t("general && general.no")}
-          </AlertDialogCancel>;
-
-          <AlertDialogAction
-            onClick={handleAccept}
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
-            {t("general && general.yes")}
-
-);
-
-);
-            {t('general.no')}
-=======
   }export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false),;
   const { t } = useTranslation(),;
   const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,;
   const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),;            {t('general.no')}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </AlertDialogCancel>;
           <AlertDialogAction;
             onClick={handleAccept}
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
             {t('general.yes')}
-<<<<<<< HEAD
-            {t('language.switch_to_detected', { language:languageName })}
-          </AlertDialogTitle>;
-          <AlertDialogDescription className="text-zion-slate-light">;
-            {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
-          </AlertDialogDescription>;
-        </AlertDialogHeader>;
-        <AlertDialogFooter>;
-          <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">;            {t('general.no')}
-          </AlertDialogCancel>;
-          <AlertDialogAction ;
-            onClick={handleAccept}
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark";
-          >;
-            {t('general.yes')}
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
-<<<<<<< HEAD
-  );
-
-import { useState, useEffect  } from './react';
-import { use_translation  } from './react - i18next';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from '../components / ui / alert - dialog';
-import {
-  use_language,
-  SupportedLanguage,
-  LanguageContextType,
-} from '../context / LanguageContext';
-export /**
- * LanguageDetectionPopup - Function description
- */
-function LanguageDetectionPopup() {
-  const [open, set_open] = useState (false);
-  const { t } = use_translation ();
-  const { change_language, current_language, supported_languages } =;
-    use_language () as LanguageContextType;
-  const [detected_language, setDetectedLanguage] =;
-    useState < SupportedLanguage | null>(null);
-;
-  useEffect (() => {
-    // Check if this is first visit;
-    const has_visited = local_storage.get_item ("zion_has_visited");
-    // Check condition
-if (return) {
-  $2
-  );
-}
-    // Mark as visited;
-=======
   );    // Mark as visited;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     local_storage.set_item ("zion_has_visitedtrue");
 ;
     // Get browser language;
@@ -354,50 +209,29 @@ if (return null) {
 ;
   return (
     <AlertDialog open={open} onOpenChange={set_open}>;
-<<<<<<< HEAD
-      <AlertDialogContent className="bg - zion - blue - dark text - white border border - zion - purple / 20">;
-        <AlertDialogHeader>;
-          <AlertDialogTitle className="text - white">;
-            {t ("language.switch_to_detected", { language: language_name })}
-          </AlertDialogTitle>;
-          <AlertDialogDescription className="text - zion - slate - light">;
-=======
       <AlertDialogContent className="bg - zion - blue - dark text - white border border - zion-purple / 20">;
         <AlertDialogHeader>;
           <AlertDialogTitle className="text-white">;
             {t ("language.switch_to_detected", { language: language_name })}
           </AlertDialogTitle>;
           <AlertDialogDescription className="text - zion - slate-light">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {`${supported_languages.find ((lang) => lang.code === detected_language)?.flag || ""} ${language_name}`}
           </AlertDialogDescription>;
         </AlertDialogHeader>;
         <AlertDialogFooter>;
-<<<<<<< HEAD
-          <AlertDialogCancel className="bg - transparent text - white border border - zion - purple / 20 hover:bg - zion - purple / 10">;
-=======
           <AlertDialogCancel className="bg - transparent text - white border border - zion - purple / 20 hover:bg - zion-purple / 10">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {t ("general.no")}
           </AlertDialogCancel>;
           <AlertDialogAction;
             on_click={handle_accept}
-<<<<<<< HEAD
-            className="bg - zion - purple text - white hover:bg - zion - purple - dark";
-=======
             className="bg - zion - purple text - white hover:bg - zion - purple-dark";
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           >;
             {t ("general.yes")}
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>);
-<<<<<<< HEAD
-}
-=======
 }}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   ),; if (!detectedLanguage) return null;
 > {
   t ('general.yes') 
@@ -409,4 +243,17 @@ if (return null) {
 
   );
 }
+}
+            {t("general.no")}
+          </AlertDialogCancel>
+          <AlertDialogAction
+            onClick={handleAccept}
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+          >
+            {t("general.yes")}
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  )
 }

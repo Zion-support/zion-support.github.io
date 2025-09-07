@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-type Outdated = any;
-    generatedAt = json.generatedAt || ''
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 ;
   const file = path.join(process.cwd(), 'datadep-radar.json')let outdated: Outdated[] = [];  let generatedAt = '';
@@ -15,9 +7,6 @@ import fs from 'fs';
 import path from 'path';
 type Outdated = any;
     generatedAt = json.generatedAt || '';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
   const file = path.join(process.cwd(), 'datadep-radar.json');
   let outdated: Outdated[] = [];  let generatedAt = '';
@@ -27,9 +16,6 @@ type Outdated = any;
     outdated = json.outdated |[];
     generatedAt = json.generatedAt |''
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   } catch {}
   return { props: { outdated, generatedAt } }
 }
@@ -54,14 +40,31 @@ function getServerSideProps() {const file = path.join (process.cwd (), 'datadep 
 function DepRadarPage() {return (<div className="space-y-6">;
       <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
       <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {outdated.length === 0 ? (
-=======
       {outdated.length === 0 ? (
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+import fs from 'fs';
+import path from 'path';
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
+
+export async function getServerSideProps() {
+  const file = path.join(process.cwd(), 'datadep-radar.json'),
+  let outdated: Outdated[] = [],
+  let generatedAt = $2;
+  try {
+    const raw = fs.readFileSync($2);
+    const json = JSON.parse($2);
+    outdated = $2;
+    generatedAt = json.generatedAt || ''
+  } catch {}
+  return { props: { outdated, generatedAt } }
+}
+
+export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outdated[], generatedAt: string}) {
+  return (
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>
+      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>
+      {outdated.length === 0 ? (
         <div className="text-sm text-gray-600">All dependencies up to date.</div>
       ) : (
         <div className="overflow-auto border rounded">
@@ -82,9 +85,6 @@ function DepRadarPage() {return (<div className="space-y-6">;
                   <td className="p-2">{o.latest}</td>
                   <td className="p-2">{o.type}</td>
                 </tr>
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       {outdated.length === 0 ? (<div className="text-sm text-gray-600">All dependencies up to date.</div>;
       ) : (<div className="overflow-auto border rounded">;
           <table className="min-w-full text-sm">;
@@ -103,29 +103,15 @@ function DepRadarPage() {return (<div className="space-y-6">;
                   <td className="p-2">{o.latest}</td>;
                   <td className="p-2">{o.type}</td>;
                 </tr>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
               ))}
-            </tbody>;
-          </table>;
-        </div>;
+            </tbody>
+          </table>
+        </div>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
+    </div>;
+)}
+    </div>;
+)}
     </div>
-);
+  )
 }
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    </div>;
-)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
-    </div>;
-)}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,46 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { createServerClient } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const supabase = null;
-  try {
-    const supabase = createServerClient();
-    const clientId = (req.query.clientId as string) |null
+    const supabase = createServerClient($2);
+    const clientId = $2;
     const [jobsR, quotesR] = await Promise.allSettled([
-supabase
-        .from('jobs')
-        .select('id, client_id, status, posted_at, hired_at')
-        .eq('client_id', clientId)
-      supabase
-        .from('quotes')
-        .select('id, job_id, status, created_at')
-        .eq('client_id', clientId)
-    ]);
-    const jobs =
-      jobsR.status === 'fulfilled' && jobsR.value.data
-        ? (jobsR.value.data as any[])
-        : [];
-    const quotes =
-      quotesR.status === 'fulfilled' && quotesR.value.data
-        ? (quotesR.value.data as any[])
-        : [];
-    const jobsData = jobs.length
-      ? jobs
-      : [
-          {
-            id: 11
-            client_id: 'c1'
-            status: 'posted'
-            posted_at: '2025-01-01'
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { createServerClient  } from '../../../utils/supabase/server';
 export default async function handler() {try {const supabase = null;
   try {const supabase = createServerClient()const clientId = (req.query.clientId as string) |null;
@@ -60,10 +25,6 @@ supabase;
             client_id: 'c1';
             status: 'posted';
             posted_at: '2025-01-01';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           }
           {id: 12;
             client_id: 'c1';
@@ -85,53 +46,52 @@ supabase;
           { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }
         ];const jobsPosted = jobsData.length;
     const quotesReceived = quotesData.length;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const filled = jobsData.filter(j => j.status === 'filled');
-    const timeToHireDays = filled.length
-? filled.reduce(
-          (acc, j) =>
-            acc +
-            (new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) /
-              (1000 * 60 * 60 * 24)
-          0
-        ) / filled.length
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const talentViewed = 12; // Placeholder
     const shortlisted = 5; // Placeholder
+      supabase.from('jobs').select('id, client_id, status, posted_at, hired_at').eq($2);
+      supabase.from('quotes').select('id, job_id, status, created_at').eq('client_id', clientId)]),
+
+    const jobs = $2;
+    const quotes = $2;
+    const jobsData = jobs.length ? jobs : [
+      { id: 11, client_id: 'c1', status: 'posted', posted_at: '2025-01-01' },
+      { id: 12, client_id: 'c1', status: 'filled', posted_at: '2025-01-02', hired_at: '2025-01-05' },
+      { id: 13, client_id: 'c1', status: 'filled', posted_at: '2025-01-03', hired_at: '2025-01-06' }],
+
+    const quotesData = quotes.length ? quotes : [
+      { id: 21, job_id: 12, status: 'received', created_at: '2025-01-02' },
+      { id: 22, job_id: 13, status: 'received', created_at: '2025-01-03' }],
+
+    const jobsPosted = $2;
+    const quotesReceived = $2;
+    const filled = jobsData.filter($2);
+    const timeToHireDays = filled.length
+      ? filled.reduce((acc, j) => acc + ((new Date(j.hired_at).getTime() - new Date(j.posted_at).getTime()) / (1000 * 60 * 60 * 24)), 0) / filled.length
+      : 0,
+
+    const talentViewed = 12, // Placeholder
+    const shortlisted = 5, // Placeholder
+
     const funnel = [
-      },
-      { label: 'Hire', value: filled && filled.length },
-    ];
+      { label: 'Post', value: jobsData.length },
+      { label: 'Invite', value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8)) },
+      { label: 'Hire', value: filled.length }],
+
+    res.status(200).json({
+      jobsPosted,
+      quotesReceived,
       timeToHireDays,
-      talent_viewed,
+      talentViewed,
       shortlisted,
-      funnel,
-    });
+      funnel})
   } catch (e) {
-      funnel: [
-        { label: 'Post', value: 3 }
-        { label: 'Invite', value: 2 }
-<<<<<<< HEAD
-        { label: 'Hire', value: 2 }
-      ]
-    });
-  }
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
         { label: 'Hire', value: 2 }]})
   }
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const filled = jobsData.filter(j => j.status === 'filled')const timeToHireDays = filled.length;
 ? filled.reduce((acc, j) =>;
             acc +;
@@ -154,21 +114,22 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       funnel: [;
         { label: 'Post', value: 3 }
         { label: 'Invite', value: 2 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-        { label: 'Hire', value: 2 }]})}{ label: 'Hire', value: 2 }
-      ];
-    })}
-        { label: 'Hire', value: 2 }]})}}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
         { label: 'Hire', value: 2 }]});
   }
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         { label: 'Hire', value: 2 }]})}{ label: 'Hire', value: 2 }
       ];
     })}
         { label: 'Hire', value: 2 }]})}}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    res.status(200).json({
+      jobsPosted: 3,
+      quotesReceived: 2,
+      timeToHireDays: 3.1,
+      talentViewed: 12,
+      shortlisted: 5,
+      funnel: [
+        { label: 'Post', value: 3},
+        { label: 'Invite', value: 2},
+        { label: 'Hire', value: 2}]})
+  }
+}

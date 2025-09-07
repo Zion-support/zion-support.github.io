@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     this.log(`Total improvements: ${this.improvements.length}`);
     this.log(`Total errors: ${this.errors.length}`);
     this.log(`Duration: ${duration}ms`);
@@ -26,11 +23,8 @@
 
 // Run the improvements
 const improvements = new SimpleAppImprovements();
-improvements.runAllImprovements().catch(console.error);
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+improvements.runAllImprovements().catch(console.error);#!/usr/bin/env node;
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

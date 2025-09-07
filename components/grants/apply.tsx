@@ -1,34 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
-;
-import { useState } from 'react';
-
-<<<<<<< HEAD
-import {useState} from 'react';
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -36,90 +6,33 @@ import {useState} from 'react';
 import {useState} from 'react';
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useRouter   } from 'next/router';
-import type { GrantCategory } from '../../types/grants';
-<<<<<<< HEAD
-=======
-import {useState} from 'react';
 
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter   } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
-const categories: GrantCategory[] = [;
-  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants';
-];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {import { useState   } from 'react';
-  'Research Grants';
-];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {'Research Grants';
-];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {ursor/fix-website-loading-errors-and-merge-6662;
-const categories: GrantCategory[] = [;
-  'Ecosystem Tools';
-  'Talent Development';
-  'Regional Expansion';
-  'Research Grants';
-];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
-export default function ApplyGrantPage() {const router  = null;export default function ApplyGrantPage() {const categories: GrantCategory[] = [;
-  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants'];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default function ApplyGrantPage() {const router = useRouter()const [program, setProgram] = useState<'grant' | 'incubator'>('grant')const [projectName, setProjectName] = useState('')const [teamInfo, setTeamInfo] = useState('')const [proposalSummary, setProposalSummary] = useState('')const [timeline, setTimeline] = useState('')const [budgetAmount, setBudgetAmount]  = useState<number>(0)const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC';
-  )const [supportingLinks, setSupportingLinks] = useState<string>('')const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC';
-  )const [supportingLinks, setSupportingLinks] = useState<string>('')const [pitchDeckUrl, setPitchDeckUrl] = useState('')const [region, setRegion] = useState('')const [sector, setSector] = useState<string>('')const [loading, setLoading] = useState(false)const [error, setError]  = useState<string | null>(null)import EnhancedLayout from '../../components / layout / EnhancedLayout';
-import { use_router } from 'next / router';
-import type { GrantCategory } from '../../types / grants';const categories: GrantCategory[] = [;
-  'Ecosystem Tools','Talent Development','Regional Expansion','Research Grants';
-];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],export default /**;
- * ApplyGrantPage - Function description;
- */;
-function ApplyGrantPage() {const router = use_router ()const [program, set_program] = useState<'grant' | 'incubator'>('grant')const [project_name, setProjectName] = useState ('')const [team_info, setTeamInfo] = useState ('')const [proposal_summary, setProposalSummary] = useState ('')const [timeline, set_timeline] = useState ('')const [budget_amount, setBudgetAmount] = useState < number>(0)const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [supporting_links, setSupportingLinks] = useState < string>('')const [budget_currency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC')const [supporting_links, setSupportingLinks] = useState < string>('')const [pitchDeckUrl, setPitchDeckUrl] = useState ('')const [region, set_region] = useState ('')const [sector, set_sector] = useState < string>('')const [loading, set_loading] = useState (false)const [error, set_error]  = useState < string | null>(null)const save = async (submit: boolean) => {try {set_loading (true)set_error (null),const resp = await fetch ('/api / grants', {method: 'POST',headers: { 'Content - Type': 'application / json' },body: JSON.stringify ({program,project_name,team_info,proposal_summary,timeline,budget_amount: Number (budget_amount || 0),budget_currency,supporting_links: supporting_links;
-            .split ('\n').map (string => s.trim ()).filter (Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined,submit;
-        })})const data = await resp.json ()if (throw new Error (data?.error || 'Failed')) {$2;
-}
-      router.push (`/grants/${data.id}`)} catch (e: any) {set_error (e.message)} finally {} catch (e: any) {set_error (e.message)} finally {const save = async (submit: boolean) => {try {setLoading(true)setError(null),const resp = await fetch('/api/grants', {method: 'POST',headers: { 'Content-Type': 'application/json' },body: JSON && JSON.stringify({program,projectName,teamInfo,proposalSummary,timeline,budgetAmount: Number(budgetAmount || 0),budgetCurrency,supportingLinks: supportingLinks;
-            .split('\n').map(s => s && s.trim()).filter(Boolean),pitchDeckUrl,region,sector: (sector as any) || undefined,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message)} finally {setLoading(false)}          budgetAmount: Number(budgetAmount || 0),program;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+import {useState} from 'react';
+
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { useRouter } from 'next/router';
+import type { GrantCategory } from '../../types/grants';
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 
 const categories: GrantCategory[] = [
   'Ecosystem Tools',
   'Talent Development',
   'Regional Expansion',
-  'Research Grants'
+  'Research Grants',
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 export default function ApplyGrantPage() {;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
-=======
 
 import { useState  } from 'react';
 import {useState} from 'react';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { useState  } from 'react';
 import { useRouter  } from 'next/router';
 
@@ -129,32 +42,15 @@ const categories: GrantCategory[] = [
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 export default function ApplyGrantPage() {
   const router = null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'];
 export default function ApplyGrantPage() {
   const router = null;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -162,9 +58,6 @@ const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional 
 export default function ApplyGrantPage() {
   const router = null;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export default function ApplyGrantPage() {
 const categories: GrantCategory[] = [;
   'Ecosystem Tools',;
@@ -173,32 +66,11 @@ const categories: GrantCategory[] = [;
   'Research Grants',;
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
 export default function ApplyGrantPage() {;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
   const [projectName, setProjectName] = useState('');
@@ -206,78 +78,34 @@ export default function ApplyGrantPage() {;
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
 
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
   const [sector, setSector] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 import EnhancedLayout from '../../components / layout / EnhancedLayout';
 import {use_router} from 'next / router';
@@ -340,19 +168,11 @@ function ApplyGrantPage() {
 }
       router.push (`/grants/${data.id}`);
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     } catch (e: any) {
       set_error (e.message);
     } finally {
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   const save = async (submit: boolean) => {;
     try {;
       setLoading(true);
@@ -386,12 +206,6 @@ function ApplyGrantPage() {
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           program;
           projectName;
           teamInfo;
@@ -399,58 +213,25 @@ function ApplyGrantPage() {
           timeline;
           budgetAmount: Number(budgetAmount || 0),budgetCurrency;
           budgetAmount: Number(budgetAmount || 0),
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           budgetCurrency;
           supportingLinks: supportingLinks;
-            .split('\n').map((s) => s && s.trim()).filter(Boolean)set_loading (false)}          budget_amount: Number (budget_amount || 0),budget_currency;
+            .split('\n');
+            .map((s) => s && s.trim());
+            .filter(Boolean);
+      set_loading (false);    }          budget_amount: Number (budget_amount || 0),
+          budget_currency;
           supporting_links: supporting_links;
-            .split ('\n').map ((s) => s.trim ()).filter (Boolean)pitchDeckUrl;
-          region;sector: (sector as any) || undefined,submit})})const data = await resp && resp.json()if (!resp && resp.ok) throw new Error(data?.error || 'Failed')router && router.push(`/grants/${data && data.id}`)} catch (e: any) {setError(e && e.message)} finally {setLoading(false)}}
-    }
-  }<textarea;
-            className='mt-1 w-full border rounded p-2';
             .split ('\n');
             .map ((s) => s.trim ());
             .filter (Boolean);
           pitchDeckUrl;
           region;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
           sector: (sector as any) || undefined,;
           submit})});
@@ -462,23 +243,7 @@ function ApplyGrantPage() {
     } finally {;
       setLoading(false);
 
-<<<<<<< HEAD
-    }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -486,9 +251,6 @@ function ApplyGrantPage() {
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
   }
 
@@ -496,54 +258,27 @@ function ApplyGrantPage() {
             className='mt-1 w-full border rounded p-2'
             rows={3}
             value={teamInfo}
-          <textarea;
-            className='mt-1 w-full border rounded p-2';
+          <textarea
+            className='mt-1 w-full border rounded p-2'
             rows={6}
             value={proposalSummary}
-            <input;
-              type='number';
-              className='mt-1 w-full border rounded p-2';
+            <input
+              type='number'
+              className='mt-1 w-full border rounded p-2'
               value={budgetAmount}
-          <textarea;
-            className='mt-1 w-full border rounded p-2';
+          <textarea
+            className='mt-1 w-full border rounded p-2'
             rows={3}
-            value={supportingLinks}{error && <div className='text-sm text-red-600'>{error}</div>}
-        <div className='flex gap-3'>;
+            value={supportingLinks}
+
+        {error && <div className='text-sm text-red-600'>{error}</div>}
+        <div className='flex gap-3'>
             onChange={e => setSupportingLinks(e && e.target.value)}
           />;
         </label>;
         <label className='text-sm'>;
           Pitch Deck URL;
-          <input;
-            className='mt-1 w-full border rounded p-2';
-            value={pitchDeckUrl}
-          <button;
-            disabled={loading}
-            onClick={() => save(false)}
-            className='px-4 py-2 border rounded disabled:opacity-50';
-          >;
-            Save Draft;
-          </button>;
-          <button;
-            disabled={loading}
-            onClick={() => save(true)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
           >;
             Submit for Review;
@@ -610,21 +345,10 @@ function ApplyGrantPage() {
       setLoading(false)
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   };
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   return (
     <EnhancedLayout>
       <h1 className='text-2xl font-semibold mb-4'>
@@ -745,19 +469,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <button;
           />
         </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
   };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
     }
 
@@ -768,18 +484,11 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return (
 
 
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         {error && <div className='text-sm text-red-600'>{error}</div>}
         <div className='flex gap-3'>
+          <input
+            className='mt-1 w-full border rounded p-2'
+            value={pitchDeckUrl}
           <button
             disabled={loading}
             onClick={() => save(false)}
@@ -787,20 +496,29 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >;
             Save Draft;
           </button>;
-          <button;
+          <button
             disabled={loading}
             onClick={() => save(true)}
-            className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50';
-          >;
-            Submit for Review;
-          </button>        </div>;
-      </div>;
-    </EnhancedLayout>;
-  )</button>;
-        </div>;
-      </div>;
-    </EnhancedLayout>;
-  )<option value="USDC">USDC</option>;
+
+  }
+    }
+
+  };
+
+  return (
+
+        {error && <div className='text-sm text-red-600'>{error}</div>}
+        <div className='flex gap-3'>
+          <button
+            disabled={loading}
+            onClick={() => save(false)}
+            className='px-4 py-2 border rounded disabled:opacity-50'
+          >
+            Save Draft
+          </button>
+          <button
+            disabled={loading}
+            onClick={() => save(true)}
             className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'
           >
             Submit for Review
@@ -808,37 +526,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </div>
     </EnhancedLayout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
-
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+
+
+
+
               <option value="USDC">USDC</option>;
               <option value="ZION$">ZION$</option>;
             </select>;
@@ -847,34 +543,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <input className="mt-1 w-full border rounded p-2" value={region} onChange={(e) => setRegion(e && e.target.value)} placeholder="e && e.g., LATAM, EU, Global" />;
           </label>;
         </div>;
-        <label className="text-sm">Supporting Links (one per line)<textarea className="mt-1 w-full border rounded p-2" rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e && e.target.value)} />;
+        <label className="text-sm">Supporting Links (one per line);
+          <textarea className="mt-1 w-full border rounded p-2" rows={3} value={supportingLinks} onChange={(e) => setSupportingLinks(e && e.target.value)} />;
         </label>;
         <label className="text-sm">Pitch Deck URL;
           <input className="mt-1 w-full border rounded p-2" value={pitchDeckUrl} onChange={(e) => setPitchDeckUrl(e && e.target.value)} />;
-        </label>;))ursor/fix-website-loading-errors-and-merge-6662;
-  )}            </select>;
-          </label>;
-          <label className="text-sm">Sector;
-            <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>;
-              <option value="">Select sector</option>;
         </label>;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
   );
 
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
   );
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 }            </select>
           </label>
@@ -929,41 +611,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
   )}
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   );
 
 );
 }
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 }
   );
@@ -972,10 +628,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 }
@@ -984,9 +636,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 }
   );
 }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+

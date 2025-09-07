@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
 export default function EpisodePage() {export default function EpisodePage() {const router = useRouter()const { id } = router.query as { id?: string }
@@ -52,38 +47,20 @@ if (return <div > Loading…</div>) {$2;
         <h2 className="text-xl font-semibold">Transcript</h2>;
         <pre className="whitespace - pre - wrap bg - gray-50 p-3 rounded">{episode.transcript}</pre>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     </div>)}
     <div className='space-y-4'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 import React, { useEffect, useState } from 'react';
 import { useRouter  } from 'next/router';
   const router = null;
-<<<<<<< HEAD
-  }, [id]);
-  if (!episode) return <div>Loading…</div>;
-  return (
-<div className='space-y-4'>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </div>);
 }
     <div className='space-y-4'>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       <h1 className='text-2xl font-bold'>{episode.title}</h1>
       <p className='text-sm text-gray-600'>
-=======
   }, [id])if (!episode) return <div>Loading…</div>;
   return (<div className='space-y-4'>;
       <h1 className='text-2xl font-bold'>{episode.title}</h1>;
       <p className='text-sm text-gray-600'>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         Guest: {episode.invitee?.name} ·{' '}
         {new Date(episode.createdAt).toLocaleString()}
       </p>;
@@ -95,27 +72,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         <h2 className='text-xl font-semibold'>Transcript</h2>;
         <pre className='whitespace-pre-wrap bg-gray-50 p-3 rounded'>;
           {episode.transcript}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        </pre>
-      </div>
-    </div>
-<<<<<<< HEAD
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
         </pre>;
       </div>;
     </div>;
   )
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
   );
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
         </pre>;
       </div>;
     </div>;
   )
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+export default function EpisodePage() {
+  const router = useRouter($2);
+  const { id } = router.query as { id?: string },
+  const [episode, setEpisode] = useState<any>(null),
+
+  useEffect(() => {
+    if (!id) return,
+    (async () => {
+      const res = await fetch($2);
+      const data = await res.json($2);
+      setEpisode(data.episode)
+    })()
+  }, [id]),
+
+  if (!episode) return <div>Loading…</div>,
+
+  return (
+    <div className="space-y-4">
+      <h1 className="text-2xl font-bold">{episode.title}</h1>
+      <p className="text-sm text-gray-600">Guest: {episode.invitee?.name} · {new Date(episode.createdAt).toLocaleString()}</p>
+      {episode.audio?.mp3Url && (
+        <audio controls className="w-full">
+          <source src={episode.audio.mp3Url} type="audio/mpeg" />
+        </audio>
+      )}
+      <div>
+        <h2 className="text-xl font-semibold">Transcript</h2>
+        <pre className="whitespace-pre-wrap bg-gray-50 p-3 rounded">{episode.transcript}</pre>
+      </div>
+    </div>
+  )
+}

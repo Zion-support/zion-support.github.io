@@ -1,7 +1,3 @@
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Fraud detection types;
 export type AdminActionType =;
   | "ban_user";
@@ -15,7 +11,6 @@ export type AdminActionType =;
   case_id: string;
   type: AdminActionType;export interface AdminAction  {export interface AdminAction  {export interface AdminAction  {id: string;
 export interface AdminAction {  id: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface AdminAction {
 
 
@@ -27,12 +22,7 @@ export interface AdminAction {
 export interface AdminAction {;
 
   id: string;
-<<<<<<< HEAD
-=======
 export interface AdminAction {  id: string;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   case_id: string;
   type: AdminActionType;
   adminId: string;
@@ -40,10 +30,6 @@ export interface AdminAction {  id: string;
   details: Record<string, any>;
   createdAt: string;
   executedAt?: string;
-<<<<<<< HEAD
-  status: "pending" | "executed" | "failed";
-<<<<<<< HEAD
-=======
   status: "pending" | "executed" | "failed";admin_id: string;
   reason: string,details: Record < string, any>;
   created_at: string;
@@ -100,7 +86,6 @@ export interface FraudDetectionConfig  {}export interface FraudDetectionConfig  
 }confidenceThreshold: number;
   }}
   status: "pending" | "executed" | "failed";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export interface FraudDetectionResult {
   is_fraud: boolean;
 }
@@ -115,30 +100,19 @@ export interface FraudDetectionResult {;
   suggestedActions: AdminActionType[];
   metadata: Record<string, any>;
   confidence: number;
-<<<<<<< HEAD
-=======
 }
 
 export interface FraudDetectionResult {;
   isFraud: boolean;
   confidence: number;
   reasons: string[];  confidence: number;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   reasons: string[];
 
   suggested_actions: AdminActionType[],
   metadata: Record < string, any>;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface FraudDetectionConfig {
-}
-=======
 export interface FraudDetectionConfig {}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 export interface FraudDetectionConfig {;
@@ -155,26 +129,10 @@ export interface FraudDetectionConfig {;
       enabled: boolean;
       threshold: number;
     };
-<<<<<<< HEAD
-    fakeProfile: {
-      enabled: boolean;
-      threshold: number;
-    };
-    paymentFraud: {
-      enabled: boolean;
-      threshold: number;
-    };
-    spam: {
-      enabled: boolean;
-      threshold: number;
-    };
-=======
 export interface FraudDetectionConfig {}
 
 export interface FraudDetectionConfig {
 };
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     fakeProfile: {
       enabled: boolean;
       threshold: number;
@@ -185,39 +143,25 @@ export interface FraudDetectionConfig {
     };
     spam: {
       enabled: boolean;
-<<<<<<< HEAD
-      threshold: number
-};
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       threshold: number;
     };
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   };
   autoActions: {
     enabled: boolean;
     actions: AdminActionType[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     confidenceThreshold: number;
   };
     confidenceThreshold: number
   };
 
 }
-=======
     confidenceThreshold: number
 };
     confidenceThreshold: number,
   };
 
 }}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
-<<<<<<< HEAD
-=======
 ursor/fix-website-loading-errors-and-merge-6662;
 ursor/automate-test-improve-and-merge-code-646c;
     confidenceThreshold: number;
@@ -226,4 +170,68 @@ ursor/automate-test-improve-and-merge-code-646c;
 }confidenceThreshold: number;
   }}}
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+export type MonitoredSource = $2;
+export type GptClassificationLabel = $2;
+export interface FraudEvent {
+  id: string,
+  userId: string | null,
+  source: MonitoredSource,
+  content: string | null,
+  metadata: Record<string, unknown> | null,
+  ipAddress: string | null,
+  createdAt: string, // ISO string
+}
+
+export interface HeuristicEvaluation {
+  flagged: boolean,
+  reasons: string[],
+  severity: 'low' | 'medium' | 'high'
+}
+
+export interface GptClassification {
+  label: GptClassificationLabel,
+  reason: string,
+  confidence: number, // 0..1
+}
+
+export type FraudReviewStatus = $2;
+export interface StoredFraudRecord extends FraudEvent {
+  heuristic: HeuristicEvaluation,
+  gpt?: GptClassification,
+  autoHidden: boolean,
+  status: FraudReviewStatus}
+
+export type AdminActionType = $2;
+export interface AdminActionRecord {
+  id: string,
+  fraudId: string,
+  action: AdminActionType,
+  adminId: string | null,
+  reason: string | null,
+  createdAt: string, // ISO
+}
+
+export interface PrivacySettings {
+  userId: string,
+  monitoringContentAnalysisOptOut: boolean,
+  updatedAt: string, // ISO
+}
+
+export interface ListFilters {
+  source?: MonitoredSource,
+  userId?: string,
+  label?: GptClassificationLabel,
+  status?: FraudReviewStatus
+}
+
+export interface MonthlyReport {
+  month: string, // YYYY-MM
+  totals: {
+    all: number,
+    safe: number,
+    suspicious: number,
+    dangerous: number},
+  bySource: Record<MonitoredSource, number>,
+  falsePositives: number, // count of IGNORED actions
+  topReasons: Array<{ reason: string, count: number}>
+}

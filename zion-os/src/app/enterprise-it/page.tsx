@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 
 ;
 import Link from "next/link",export const metadata = {title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services",description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},export default function EnterpriseITPage() {return (<div className="min-h-screen">;{/* Hero Section */}
@@ -14,40 +8,20 @@ import Link from "next/link",export const metadata = {title: "Enterprise IT Solu
           </h1>;
           <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
     <div className="min-h-screen">;    <div className="min-h-screen">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 import Link from "next/link";
 export const metadata = {title: "Enterprise IT Solutions - Zion Tech Group | Digital Transformation Services";
   description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.";
   keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"}
 export default function EnterpriseITPage() {return (;
     <div className="min-h-screen">;
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-7xl mx - auto text - center">;
-          <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
-            <span className="gradient - text">Enterprise IT Solutions</span>;
-          </h1>;
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
-=======
     <div className="min-h-screen">;    <div className="min-h-screen">;
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
             <span className="gradient - text">Enterprise IT Solutions</span>;
           </h1>;
-<<<<<<< HEAD
-          <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading-relaxed">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
           <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             Transform your enterprise with modern, scalable, and secure IT infrastructure.;
             From cloud migration to DevOps automation, we help organizations achieve;
             digital transformation excellence.;
@@ -55,34 +29,21 @@ export default function EnterpriseITPage() {return (;
         </div>;
       </section>;
       {/* Enterprise Overview */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - indigo - 600 / 20 border - blue - 500 / 30">;
             <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
               <div>;
                 <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-<<<<<<< HEAD
-=======
       <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
-=======
                   Modernize Your Enterprise Infrastructure;
                 </h2>;<p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   In today's digital - first world, enterprises need agile, scalable,<section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         <div className="max - w-7xl mx-auto">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - indigo - 600 / 20 border - blue-500 / 30">;
             <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items-center">;
               <div>;
-<<<<<<< HEAD
-                <h2 className="text - 3xl md:text - 4xl font - bold mb-6">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                 <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                   Modernize Your Enterprise Infrastructure;
                 </h2>;<p className="text - gray - 300 text - lg mb - 6 leading - relaxed">;
                   In today's digital - first world, enterprises need agile, scalable,<section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
@@ -97,10 +58,6 @@ export default function EnterpriseITPage() {return (;
                   solutions help organizations modernize their technology stack while;
                   maintaining operational excellence.;
                 </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <div className="space - y-4 mb - 6">;
                   <div className="flex items - center">;
                     <div className="w - 6 h - 6 bg - blue - 500 rounded - full mr - 3"></div>;
@@ -120,13 +77,6 @@ export default function EnterpriseITPage() {return (;
                   </div>;
                 </div>;
                 <Link href="/contact" className="btn - primary">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <div className="space - y-4 mb-6">;
                   <div className="flex items-center">;
                     <div className="w - 6 h - 6 bg - blue - 500 rounded - full mr-3"></div>;
@@ -145,41 +95,21 @@ export default function EnterpriseITPage() {return (;
                     <span className="text - gray - 300">24 / 7 monitoring & support</span>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <Link href="/contact" className="btn-primary">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                 <Link href="/contact" className="btn - primary">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
                 <Link href="/contact" className="btn - primary">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   Transform Your Enterprise;
                 </Link>;
               </div>;
               <div className="relative">;
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="w - full h - 80 bg - gradient - to - br from - blue - 500 / 20 to - indigo - 500 / 20 rounded - xl flex items - center justify - center">;
                   <svg className="w - 32 h - 32 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                     <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
-<<<<<<< HEAD
-=======
-=======
-                <div className="w - full h - 80 bg - gradient - to - br from - blue - 500 / 20 to - indigo - 500 / 20 rounded - xl flex items - center justify - center">;
-                  <svg className="w - 32 h - 32 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <div className="w - full h - 80 bg - gradient - to - br from - blue - 500 / 20 to - indigo - 500 / 20 rounded - xl flex items - center justify-center">;
                   <svg className="w - 32 h - 32 text - blue-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
                 <div className="w - full h - 80 bg - gradient - to - br from - blue - 500 / 20 to - indigo - 500 / 20 rounded - xl flex items - center justify-center">;
                   <svg className="w - 32 h - 32 text - blue-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                   </svg>;
                 </div>;
               </div>;
@@ -188,10 +118,6 @@ export default function EnterpriseITPage() {return (;
         </div>;
       </section>;
       {/* Core Enterprise Services */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -208,16 +134,12 @@ export default function EnterpriseITPage() {return (;
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - blue - 500 / 30">;
                 <svg className="w - 8 h - 8 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1 - 9.999 5.002 5.002 0 10 - 9.78 2.096A4.001 4.001 0 003 15z" />;
-<<<<<<< HEAD
-=======
-=======
                 </svg>;
               </div>;<h3 className="text - xl font - semibold mb - 3">Cloud Migration & Strategy</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Seamless migration to cloud platforms with strategic planning,cost optimization, and performance tuning.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
         <div className="max - w-7xl mx-auto">;
           <div className="text - center mb-16">;
@@ -230,18 +152,10 @@ export default function EnterpriseITPage() {return (;
           </div>;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
             {/* Cloud Migration & Strategy */}
-<<<<<<< HEAD
-            <div className="card group hover:bg - blue - 500 / 10 transition-colors">;
-              <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - blue-500 / 30">;
-                <svg className="w - 8 h - 8 text - blue-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1 - 9.999 5.002 5.002 0 10 - 9.78 2.096A4.001 4.001 0 003 15z" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <div className="card group hover:bg - blue - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - blue - 500 / 30">;
                 <svg className="w - 8 h - 8 text - blue - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1 - 9.999 5.002 5.002 0 10 - 9.78 2.096A4.001 4.001 0 003 15z" />;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 </svg>;
               </div>;<h3 className="text - xl font - semibold mb - 3">Cloud Migration & Strategy</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -268,62 +182,36 @@ export default function EnterpriseITPage() {return (;
               </div>;
                 cost optimization, and performance tuning.;
               </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <li>• Cloud readiness assessment</li>;
                 <li>• Migration planning & execution</li>;
                 <li>• Multi - cloud strategy</li>;
                 <li>• Cost optimization</li>;
               </ul>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Link href="/enterprise - it / cloud - migration" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-<<<<<<< HEAD
-=======
-=======
-              <Link href="/enterprise - it / cloud - migration" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/enterprise - it / cloud - migration" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <Link href="/enterprise - it / cloud - migration" className="text - blue - 400 hover:text - blue - 300 text - sm font-medium">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
             {/* DevOps & Automation */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card group hover:bg - green - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - green - 500 / 30">;
                 <svg className="w - 8 h - 8 text - green - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M10.325 4.317c.426 - 1.756 2.924 - 1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00 - 1.066 2.573c.94 1.543-.826 3.31 - 2.37 2.37a1.724 1.724 0 00 - 2.572 1.065c-.426 1.756 - 2.924 1.756 - 3.35 0a1.724 1.724 0 00 - 2.573 - 1.066c - 1.543.94 - 3.31-.826 - 2.37 - 2.37a1.724 1.724 0 00 - 1.065 - 2.572c - 1.756-.426 - 1.756 - 2.924 0 - 3.35a1.724 1.724 0 001.066 - 2.573c-.94 - 1.543.826 - 3.31 2.37 - 2.37.996.608 2.296.07 2.572 - 1.065z" />;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M15 12a3 3 0 11 - 6 0 3 3 0 016 0z" />;
-<<<<<<< HEAD
-=======
-=======
                 </svg>;
               </div>;<h3 className="text - xl font - semibold mb - 3">DevOps & Automation</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Streamline development and operations with automated CI / CD pipelines,infrastructure as code, and monitoring solutions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card group hover:bg - green - 500 / 10 transition-colors">;
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - green-500 / 30">;
                 <svg className="w - 8 h - 8 text - green-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426 - 1.756 2.924 - 1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00 - 1.066 2.573c.94 1.543-.826 3.31 - 2.37 2.37a1.724 1.724 0 00 - 2.572 1.065c-.426 1.756 - 2.924 1.756 - 3.35 0a1.724 1.724 0 00 - 2.573 - 1.066c - 1.543.94 - 3.31-.826 - 2.37 - 2.37a1.724 1.724 0 00 - 1.065 - 2.572c - 1.756-.426 - 1.756 - 2.924 0 - 3.35a1.724 1.724 0 001.066 - 2.573c-.94 - 1.543.826 - 3.31 2.37 - 2.37.996.608 2.296.07 2.572 - 1.065z" />;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11 - 6 0 3 3 0 016 0z" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </svg>;
               </div>;<h3 className="text - xl font - semibold mb - 3">DevOps & Automation</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -339,60 +227,34 @@ export default function EnterpriseITPage() {return (;
               </div>;
                 infrastructure as code, and monitoring solutions.;
               </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <li>• CI / CD pipeline automation</li>;
                 <li>• Infrastructure as Code (IaC)</li>;
                 <li>• Container orchestration</li>;
                 <li>• Automated testing</li>;
               </ul>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Link href="/enterprise - it / devops - automation" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-<<<<<<< HEAD
-=======
-=======
-              <Link href="/enterprise - it / devops - automation" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/enterprise - it / devops - automation" className="text - green - 400 hover:text - green - 300 text - sm font-medium">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <Link href="/enterprise - it / devops - automation" className="text - green - 400 hover:text - green - 300 text - sm font-medium">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
             {/* Infrastructure Management */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card group hover:bg - purple - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - purple - 500 / 30">;
                 <svg className="w - 8 h - 8 text - purple - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01 - 2 2H5a2 2 0 01 - 2-2v - 6a2 2 0 012 - 2m14 0V9a2 2 0 00 - 2-2M5 11V9a2 2 0 012 - 2m0 0V5a2 2 0 012 - 2h6a2 2 0 012 2v2M7 7h10" />;
-<<<<<<< HEAD
-=======
-=======
                 </svg>;
               </div>;<h3 className="text - xl font - semibold mb - 3">Infrastructure Management</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Comprehensive infrastructure management including server provisioning,network configuration, and performance optimization.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card group hover:bg - purple - 500 / 10 transition-colors">;
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - purple-500 / 30">;
                 <svg className="w - 8 h - 8 text - purple-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01 - 2 2H5a2 2 0 01 - 2-2v - 6a2 2 0 012 - 2m14 0V9a2 2 0 00 - 2-2M5 11V9a2 2 0 012 - 2m0 0V5a2 2 0 012 - 2h6a2 2 0 012 2v2M7 7h10" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </svg>;
               </div>;<h3 className="text - xl font - semibold mb - 3">Infrastructure Management</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -407,60 +269,34 @@ export default function EnterpriseITPage() {return (;
               </div>;
                 network configuration, and performance optimization.;
               </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <li>• Server provisioning</li>;
                 <li>• Network configuration</li>;
                 <li>• Performance optimization</li>;
                 <li>• Capacity planning</li>;
               </ul>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Link href="/enterprise - it / infrastructure - management" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-<<<<<<< HEAD
-=======
-=======
-              <Link href="/enterprise - it / infrastructure - management" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/enterprise - it / infrastructure - management" className="text - purple - 400 hover:text - purple - 300 text - sm font-medium">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <Link href="/enterprise - it / infrastructure - management" className="text - purple - 400 hover:text - purple - 300 text - sm font-medium">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
             {/* Data Management */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card group hover:bg - indigo - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - indigo - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - indigo - 500 / 30">;
                 <svg className="w - 8 h - 8 text - indigo - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M4 7v10c0 2.21 3.582 4 8 4s8 - 1.79 8 - 4V7M4 7c0 2.21 3.582 4 8 4s8 - 1.79 8 - 4M4 7c0 - 2.21 3.582 - 4 8 - 4s8 1.79 8 4m0 5c0 2.21 - 3.582 4 - 8 4s - 8-1.79 - 8-4" />;
-<<<<<<< HEAD
-=======
-=======
                 </svg>;
               </div>;<h3 className="text - xl font - semibold mb - 3">Data Management</h3>;
               <p className="text - gray - 400 mb - 4">;
                 Enterprise data solutions including warehousing, analytics,and business intelligence platforms.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card group hover:bg - indigo - 500 / 10 transition-colors">;
               <div className="w - 16 h - 16 bg - indigo - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - indigo-500 / 30">;
                 <svg className="w - 8 h - 8 text - indigo-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8 - 1.79 8 - 4V7M4 7c0 2.21 3.582 4 8 4s8 - 1.79 8 - 4M4 7c0 - 2.21 3.582 - 4 8 - 4s8 1.79 8 4m0 5c0 2.21 - 3.582 4 - 8 4s - 8-1.79 - 8-4" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </svg>;
               </div>;<h3 className="text - xl font - semibold mb - 3">Data Management</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -475,41 +311,20 @@ export default function EnterpriseITPage() {return (;
               </div>;
                 and business intelligence platforms.;
               </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <li>• Data warehousing</li>;
                 <li>• Business intelligence</li>;
                 <li>• Data analytics</li>;
                 <li>• Master data management</li>;
               </ul>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Link href="/enterprise - it / data - management" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-<<<<<<< HEAD
-=======
-=======
-              <Link href="/enterprise - it / data - management" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/enterprise - it / data - management" className="text - indigo - 400 hover:text - indigo - 300 text - sm font-medium">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <Link href="/enterprise - it / data - management" className="text - indigo - 400 hover:text - indigo - 300 text - sm font-medium">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
             {/* Security & Compliance */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card group hover:bg - red - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - red - 500 / 30">;
                 <svg className="w - 8 h - 8 text - red - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
@@ -522,13 +337,6 @@ export default function EnterpriseITPage() {return (;
                 for SOC2, ISO 27001, and industry - specific regulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="card group hover:bg - red - 500 / 10 transition-colors">;
               <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - red-500 / 30">;
                 <svg className="w - 8 h - 8 text - red-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
@@ -540,61 +348,34 @@ export default function EnterpriseITPage() {return (;
                 Enterprise - grade security solutions with compliance frameworks;
                 for SOC2, ISO 27001, and industry - specific regulations.;
               </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <li>• Security framework implementation</li>;
                 <li>• Compliance management</li>;
                 <li>• Threat detection & response</li>;
                 <li>• Security training</li>;
               </ul>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Link href="/enterprise - it / security - compliance" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-<<<<<<< HEAD
-=======
-=======
-              <Link href="/enterprise - it / security - compliance" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/enterprise - it / security - compliance" className="text - red - 400 hover:text - red - 300 text - sm font-medium">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <Link href="/enterprise - it / security - compliance" className="text - red - 400 hover:text - red - 300 text - sm font-medium">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
             {/* Managed Services */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card group hover:bg - yellow - 500 / 10 transition - colors">;
               <div className="w - 16 h - 16 bg - yellow - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - yellow - 500 / 30">;
                 <svg className="w - 8 h - 8 text - yellow - 400" fill="none" stroke="current_color" view_box="0 0 24 24">;
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M17 20h5v - 2a3 3 0 00 - 5.356 - 1.857M17 20H7m10 0v - 2c0-.656-.126 - 1.283-.356 - 1.857M7 20H2v - 2a3 3 0 015.356 - 1.857M7 20v - 2c0-.656.126 - 1.283.356 - 1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11 - 6 0 3 3 0 016 0zm6 3a2 2 0 11 - 4 0 2 2 0 014 0zM7 10a2 2 0 11 - 4 0 2 2 0 014 0z" />;
-<<<<<<< HEAD
-=======
-=======
                 </svg>;
               </div>;<h3 className="text - xl font - semibold mb - 3">Managed Services</h3>;
               <p className="text - gray - 400 mb - 4">;
                 24 / 7 managed IT services including monitoring, maintenance,and support for enterprise infrastructure.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card group hover:bg - yellow - 500 / 10 transition-colors">;
               <div className="w - 16 h - 16 bg - yellow - 500 / 20 rounded - xl flex items - center justify - center mb - 6 group - hover:bg - yellow-500 / 30">;
                 <svg className="w - 8 h - 8 text - yellow-400" fill="none" stroke="current_color" viewBox="0 0 24 24">;
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v - 2a3 3 0 00 - 5.356 - 1.857M17 20H7m10 0v - 2c0-.656-.126 - 1.283-.356 - 1.857M7 20H2v - 2a3 3 0 015.356 - 1.857M7 20v - 2c0-.656.126 - 1.283.356 - 1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11 - 6 0 3 3 0 016 0zm6 3a2 2 0 11 - 4 0 2 2 0 014 0zM7 10a2 2 0 11 - 4 0 2 2 0 014 0z" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </svg>;
               </div>;<h3 className="text - xl font - semibold mb - 3">Managed Services</h3>;
               <p className="text - gray - 400 mb - 4">;
@@ -609,33 +390,16 @@ export default function EnterpriseITPage() {return (;
               </div>;
                 and support for enterprise infrastructure.;
               </p>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 <li>• 24 / 7 monitoring</li>;
                 <li>• Proactive maintenance</li>;
                 <li>• Help desk support</li>;
                 <li>• Performance optimization</li>;
               </ul>;
-<<<<<<< HEAD
-<<<<<<< HEAD
               <Link href="/enterprise - it / managed - services" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-<<<<<<< HEAD
-=======
-=======
-              <Link href="/enterprise - it / managed - services" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               <Link href="/enterprise - it / managed - services" className="text - yellow - 400 hover:text - yellow - 300 text - sm font-medium">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <Link href="/enterprise - it / managed - services" className="text - yellow - 400 hover:text - yellow - 300 text - sm font-medium">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Learn More →;
               </Link>;
             </div>;
@@ -643,10 +407,6 @@ export default function EnterpriseITPage() {return (;
         </div>;
       </section>;
       {/* Technology Stack */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - blue - 600 / 10 to - indigo - 600 / 10">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -661,13 +421,6 @@ export default function EnterpriseITPage() {return (;
             <div className="card text - center">;
               <h3 className="text - lg font - semibold mb - 4">Cloud Platforms</h3>;
               <div className="space - y-2 text - sm text - gray - 400">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - blue - 600 / 10 to - indigo-600 / 10">;
         <div className="max - w-7xl mx-auto">;
           <div className="text - center mb-16">;
@@ -678,105 +431,55 @@ export default function EnterpriseITPage() {return (;
               Industry - leading technologies and platforms for enterprise solutions;
             </p>;
           </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">;
-            <div className="card text-center">;
-              <h3 className="text - lg font - semibold mb-4">Cloud Platforms</h3>;
-              <div className="space - y-2 text - sm text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
             <div className="card text - center">;
               <h3 className="text - lg font - semibold mb - 4">Cloud Platforms</h3>;
               <div className="space - y-2 text - sm text - gray - 400">;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <div > AWS</div>;
                 <div > Microsoft Azure</div>;
                 <div > Google Cloud</div>;
                 <div > IBM Cloud</div>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="card text - center">;
               <h3 className="text - lg font - semibold mb - 4">DevOps Tools</h3>;
               <div className="space - y-2 text - sm text - gray - 400">;
-<<<<<<< HEAD
-=======
-=======
-            <div className="card text - center">;
-              <h3 className="text - lg font - semibold mb - 4">DevOps Tools</h3>;
-              <div className="space - y-2 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card text-center">;
               <h3 className="text - lg font - semibold mb-4">DevOps Tools</h3>;
               <div className="space - y-2 text - sm text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <div className="card text-center">;
               <h3 className="text - lg font - semibold mb-4">DevOps Tools</h3>;
               <div className="space - y-2 text - sm text - gray-400">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <div > Docker & Kubernetes</div>;
                 <div > Jenkins & GitLab CI</div>;
                 <div > Terraform & Ansible</div>;
                 <div > Prometheus & Grafana</div>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="card text - center">;
               <h3 className="text - lg font - semibold mb - 4">Databases</h3>;
               <div className="space - y-2 text - sm text - gray - 400">;
-<<<<<<< HEAD
-=======
-=======
-            <div className="card text - center">;
-              <h3 className="text - lg font - semibold mb - 4">Databases</h3>;
-              <div className="space - y-2 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card text-center">;
               <h3 className="text - lg font - semibold mb-4">Databases</h3>;
               <div className="space - y-2 text - sm text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <div className="card text-center">;
               <h3 className="text - lg font - semibold mb-4">Databases</h3>;
               <div className="space - y-2 text - sm text - gray-400">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <div > PostgreSQL & MySQL</div>;
                 <div > MongoDB & Redis</div>;
                 <div > Amazon RDS</div>;
                 <div > Snowflake</div>;
               </div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="card text - center">;
               <h3 className="text - lg font - semibold mb - 4">Security</h3>;
               <div className="space - y-2 text - sm text - gray - 400">;
-<<<<<<< HEAD
-=======
-=======
-            <div className="card text - center">;
-              <h3 className="text - lg font - semibold mb - 4">Security</h3>;
-              <div className="space - y-2 text - sm text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="card text-center">;
               <h3 className="text - lg font - semibold mb-4">Security</h3>;
               <div className="space - y-2 text - sm text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <div className="card text-center">;
               <h3 className="text - lg font - semibold mb-4">Security</h3>;
               <div className="space - y-2 text - sm text - gray-400">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 <div > Okta & Auth0</div>;
                 <div > Cloudflare</div>;
                 <div > Qualys & Rapid7</div>;
@@ -787,10 +490,6 @@ export default function EnterpriseITPage() {return (;
         </div>;
       </section>;
       {/* Digital Transformation Process */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -805,14 +504,9 @@ export default function EnterpriseITPage() {return (;
             <div className="text - center">;
               <div className="w - 20 h - 20 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
               </div>;<h3 className="text - xl font - semibold mb - 3">Assessment</h3>;
               <p className="text - gray - 400">;
                 Comprehensive evaluation of current infrastructure,identifying opportunities and challenges.;
-=======
               </div>;<h3 className="text - xl font - semibold mb - 3">Assessment</h3>;
               <p className="text - gray - 400">;
                 Comprehensive evaluation of current infrastructure,identifying opportunities and challenges.;
@@ -840,7 +534,6 @@ export default function EnterpriseITPage() {return (;
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
               </div>;
                 identifying opportunities and challenges.;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
               </p>;
             </div>;
             <div className="text - center">;
@@ -849,7 +542,6 @@ export default function EnterpriseITPage() {return (;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Strategy</h3>;
               <p className="text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 px - 4 sm:px - 6 lg:px-8">;
         <div className="max - w-7xl mx-auto">;
           <div className="text - center mb-16">;
@@ -860,122 +552,62 @@ export default function EnterpriseITPage() {return (;
               Our proven methodology for successful enterprise transformation;
             </p>;
           </div>;
-<<<<<<< HEAD
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap-8">;
-            <div className="text-center">;
-              <div className="w - 20 h - 20 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb-6">;
-                <span className="text - 2xl font - bold text - blue-400">1</span>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
             <div className="text - center">;
               <div className="w - 20 h - 20 bg - blue - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
               </div>;
                 identifying opportunities and challenges.;
               </p>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="text - center">;
-              <div className="w - 20 h - 20 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
-                <span className="text - 2xl font - bold text - green - 400">2</span>;
-              </div>;
-              <h3 className="text - xl font - semibold mb - 3">Strategy</h3>;
-              <p className="text - gray - 400">;
-=======
             <div className="text-center">;
               <div className="w - 20 h - 20 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb-6">;
                 <span className="text - 2xl font - bold text - green-400">2</span>;
               </div>;
               <h3 className="text - xl font - semibold mb-3">Strategy</h3>;
               <p className="text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <div className="text - center">;
               <div className="w - 20 h - 20 bg - green - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
                 <span className="text - 2xl font - bold text - green - 400">2</span>;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Strategy</h3>;
               <p className="text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
                 Develop transformation roadmap with clear milestones;
                 timelines, and success metrics.;
               </p>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="text - center">;
               <div className="w - 20 h - 20 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
                 <span className="text - 2xl font - bold text - purple - 400">3</span>;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Implementation</h3>;
               <p className="text - gray - 400">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="text-center">;
               <div className="w - 20 h - 20 bg - purple - 500 / 20 rounded - full flex items - center justify - center mx - auto mb-6">;
                 <span className="text - 2xl font - bold text - purple-400">3</span>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h3 className="text - xl font - semibold mb-3">Implementation</h3>;
-              <p className="text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <h3 className="text - xl font - semibold mb - 3">Implementation</h3>;
               <p className="text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
               <h3 className="text - xl font - semibold mb - 3">Implementation</h3>;
               <p className="text - gray - 400">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Execute transformation plan with agile methodology;
                 ensuring minimal disruption to operations.;
               </p>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
             <div className="text - center">;
               <div className="w - 20 h - 20 bg - red - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
                 <span className="text - 2xl font - bold text - red - 400">4</span>;
               </div>;
               <h3 className="text - xl font - semibold mb - 3">Optimization</h3>;
               <p className="text - gray - 400">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             <div className="text-center">;
               <div className="w - 20 h - 20 bg - red - 500 / 20 rounded - full flex items - center justify - center mx - auto mb-6">;
                 <span className="text - 2xl font - bold text - red-400">4</span>;
               </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h3 className="text - xl font - semibold mb-3">Optimization</h3>;
-              <p className="text - gray-400">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <h3 className="text - xl font - semibold mb - 3">Optimization</h3>;
               <p className="text - gray - 400">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
               <h3 className="text - xl font - semibold mb - 3">Optimization</h3>;
               <p className="text - gray - 400">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 Continuous monitoring, performance tuning, and;
                 ongoing optimization for sustained success.;
               </p>;
@@ -984,10 +616,6 @@ export default function EnterpriseITPage() {return (;
         </div>;
       </section>;
       {/* Success Metrics */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - gray - 800 / 20 to - gray - 900 / 20">;
         <div className="max - w-7xl mx - auto">;
           <div className="text - center mb - 16">;
@@ -1014,13 +642,6 @@ export default function EnterpriseITPage() {return (;
             <div className="text - center">;
               <div className="text - 4xl font - bold gradient - text mb - 2">3x</div>;
               <div className="text - gray - 400">Faster development cycles</div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 bg - gradient - to - r from - gray - 800 / 20 to - gray-900 / 20">;
         <div className="max - w-7xl mx-auto">;
           <div className="text - center mb-16">;
@@ -1044,31 +665,17 @@ export default function EnterpriseITPage() {return (;
               <div className="text - 4xl font - bold gradient - text mb - 2">99.9%</div>;
               <div className="text - gray - 400">System uptime achieved</div>;
             </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className="text-center">;
-              <div className="text - 4xl font - bold gradient - text mb-2">3x</div>;
-              <div className="text - gray-400">Faster development cycles</div>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
             <div className="text - center">;
               <div className="text - 4xl font - bold gradient - text mb - 2">3x</div>;
               <div className="text - gray - 400">Faster development cycles</div>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
             <div className="text - center">;
               <div className="text - 4xl font - bold gradient - text mb - 2">3x</div>;
               <div className="text - gray - 400">Faster development cycles</div>;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
             </div>;
           </div>;
         </div>;
       </section>;
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       <section className="py - 20 px - 4 sm: px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto text - center">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - indigo - 600 / 20 border - blue - 500 / 30">;
@@ -1084,13 +691,6 @@ export default function EnterpriseITPage() {return (;
                 Start Transformation;
               </Link>;
               <Link href="/case - studies" className="btn - secondary text - lg px - 8 py - 4">;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
       <section className="py - 20 px - 4 sm: px - 6 lg:px-8">;
         <div className="max - w-4xl mx - auto text-center">;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - indigo - 600 / 20 border - blue-500 / 30">;
@@ -1105,16 +705,8 @@ export default function EnterpriseITPage() {return (;
               <Link href="/contact" className="btn - primary text - lg px - 8 py - 4">;
                 Start Transformation;
               </Link>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <Link href="/case - studies" className="btn - secondary text - lg px - 8 py-4">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
               <Link href="/case - studies" className="btn - secondary text - lg px - 8 py - 4">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
               <Link href="/case - studies" className="btn - secondary text - lg px - 8 py - 4">;
->>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
                 View Case Studies;
               </Link>;
             </div>;
@@ -1122,3 +714,205 @@ export default function EnterpriseITPage() {return (;
         </div>;
       </section>;
     </div>)}
+import Link from "next/link";
+export const metadata = $2;
+  description: "Transform your enterprise with Zion Tech Group's comprehensive IT solutions. From cloud migration to DevOps automation, we help organizations modernize their technology infrastructure.",
+  keywords: "enterprise IT, digital transformation, cloud migration, DevOps, infrastructure, Zion Tech Group, enterprise solutions"},
+
+export default function EnterpriseITPage() {
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <span className="gradient-text">Enterprise IT Solutions</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Transform your enterprise with modern, scalable, and secure IT infrastructure. 
+            From cloud migration to DevOps automation, we help organizations achieve 
+            digital transformation excellence.
+          </p>
+        </div>
+      </section>
+
+      {/* Enterprise Overview */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="card bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border-blue-500/30">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                  Modernize Your Enterprise Infrastructure
+                </h2>
+                <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                  In today's digital-first world, enterprises need agile, scalable, 
+                  and secure IT infrastructure to compete and thrive. Our comprehensive 
+                  solutions help organizations modernize their technology stack while 
+                  maintaining operational excellence.
+                </p>
+                <div className = $2;
+                cost optimization, and performance tuning.
+              </p>
+              <ul className = $2;
+                infrastructure as code, and monitoring solutions.
+              </p>
+              <ul className = $2;
+                network configuration, and performance optimization.
+              </p>
+              <ul className="space-y-2 mb-6 text-sm text-gray-400">
+                <li>• Server provisioning</li>
+                <li>• Network configuration</li>
+                <li>• Performance optimization</li>
+                <li>• Capacity planning</li>
+              </ul>
+              <Link href="/enterprise-it/infrastructure-management" className="text-purple-400 hover:text-purple-300 text-sm font-medium">
+                Learn More →
+              </Link>
+            </div>
+            
+            {/* Data Management */}
+            <div className="card group hover:bg-indigo-500/10 transition-colors">
+              <div className="w-16 h-16 bg-indigo-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-500/30">
+                <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Data Management</h3>
+              <p className="text-gray-400 mb-4">
+                Enterprise data solutions including warehousing, analytics, 
+                and business intelligence platforms.
+              </p>
+              <ul className="space-y-2 mb-6 text-sm text-gray-400">
+                <li>• Data warehousing</li>
+                <li>• Business intelligence</li>
+                <li>• Data analytics</li>
+                <li>• Master data management</li>
+              </ul>
+              <Link href="/enterprise-it/data-management" className="text-indigo-400 hover:text-indigo-300 text-sm font-medium">
+                Learn More →
+              </Link>
+            </div>
+            
+            {/* Security & Compliance */}
+            <div className="card group hover:bg-red-500/10 transition-colors">
+              <div className="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-red-500/30">
+                <svg className="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Security & Compliance</h3>
+              <p className="text-gray-400 mb-4">
+                Enterprise-grade security solutions with compliance frameworks 
+                for SOC2, ISO 27001, and industry-specific regulations.
+              </p>
+              <ul className="space-y-2 mb-6 text-sm text-gray-400">
+                <li>• Security framework implementation</li>
+                <li>• Compliance management</li>
+                <li>• Threat detection & response</li>
+                <li>• Security training</li>
+              </ul>
+              <Link href="/enterprise-it/security-compliance" className="text-red-400 hover:text-red-300 text-sm font-medium">
+                Learn More →
+              </Link>
+            </div>
+            
+            {/* Managed Services */}
+            <div className="card group hover:bg-yellow-500/10 transition-colors">
+              <div className="w-16 h-16 bg-yellow-500/20 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-500/30">
+                <svg className="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Managed Services</h3>
+              <p className="text-gray-400 mb-4">
+                24/7 managed IT services including monitoring, maintenance, 
+                and support for enterprise infrastructure.
+              </p>
+              <ul className = $2;
+                identifying opportunities and challenges.
+              </p>
+            </div>
+            
+            <div className = $2;
+                timelines, and success metrics.
+              </p>
+            </div>
+            
+            <div className = $2;
+                ensuring minimal disruption to operations.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-red-400">4</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Optimization</h3>
+              <p className="text-gray-400">
+                Continuous monitoring, performance tuning, and 
+                ongoing optimization for sustained success.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Metrics */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-800/20 to-gray-900/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Transformation Success Metrics
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Measurable improvements our enterprise clients achieve
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold gradient-text mb-2">60%</div>
+              <div className="text-gray-400">Reduction in deployment time</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold gradient-text mb-2">40%</div>
+              <div className="text-gray-400">Cost savings on infrastructure</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold gradient-text mb-2">99.9%</div>
+              <div className="text-gray-400">System uptime achieved</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold gradient-text mb-2">3x</div>
+              <div className="text-gray-400">Faster development cycles</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="card bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border-blue-500/30">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Transform Your Enterprise?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how Zion Tech Group can help modernize your IT infrastructure 
+              and accelerate your digital transformation journey.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="btn-primary text-lg px-8 py-4">
+                Start Transformation
+              </Link>
+              <Link href="/case-studies" className="btn-secondary text-lg px-8 py-4">
+                View Case Studies
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}

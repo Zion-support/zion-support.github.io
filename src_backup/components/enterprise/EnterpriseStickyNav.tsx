@@ -1,5 +1,66 @@
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseStickyNav.tsx
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseStickyNav.tsx
+:src/components/enterprise/EnterpriseStickyNav.tsx
+import { useState } from "react";
+import { Menu } from 'lucide-react'
+import { useState } from "react";
+import { Menu } from 'lucide-react'
+
+import Link from 'next/link'
+  const [ open, setOpen ] = useState(false)
+import { useState } from 'react';
+import { Menu } from 'lucide-react';
+import Link from 'next/link';
+
+  const [ open, setOpen ] = useState(false),;
+
+import { useState } from 'react';
+import { Menu } from 'lucide-react';
+import Link from 'next/link';
+  const [ open, set_open ] = useState (false),
+  return (
+    <nav className='sticky top - 16 z - 40 bg - card border - b border - border'>;
+      <div className='container mx - auto px - 4 md:px - 6'>;
+        <div className='flex items - center justify - between h - 12'>;
+          <button;
+            className='md:hidden p - 2 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary';
+            on_click={() => set_open (!open)}
+            aria - label='Toggle navigation';
+            aria - expanded={open}          >;
+            <Menu className='h - 6 w - 6' />;
+          </button>;
+          <ul;
+            className={`${open ? 'flex' : 'hidden'} flex - col gap - 4 md:flex md:flex - row md:gap - 8 w - full md:w - auto`}
+          >;
+            <li>;
+              <Link;
+                href='#features';
+                className='text - sm font - medium hover:text - primary';
+              >;
+
+                Features;
+              </Link>;
+            </li>;
+            <li>;
+
+              <Link;
+                href='#pricing';
+                className='text - sm font - medium hover:text - primary';
+              >;
+
+                Pricing;
+              </Link>;
+            </li>;
+            <li>;
+
+              <Link;
+                href='#testimonials';
+                className='text - sm font - medium hover:text - primary';
+              >;
+
+                Testimonials;
+              </Link>;
+            </li>;
+            <li>;
+
 import { useState } from "react";
 import { Menu } from 'lucide-react'
 import Link from "next/link";
@@ -51,64 +112,6 @@ import Link from "next/link";
                 Contact Us
               </Link>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
-import Link from 'next/link';
-
-  const [ open, setOpen ] = useState(false),;
-
-
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
-import Link from 'next / link';
-  const [ open, set_open ] = useState (false),
-  return (
-    <nav className='sticky top - 16 z - 40 bg - card border - b border - border'>;
-      <div className='container mx - auto px - 4 md:px - 6'>;
-        <div className='flex items - center justify - between h - 12'>;
-          <button;
-            className='md:hidden p - 2 focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - primary';
-            on_click={() => set_open (!open)}
-            aria - label='Toggle navigation';
-            aria - expanded={open}          >;
-            <Menu className='h - 6 w - 6' />;
-          </button>;
-          <ul;
-            className={`${open ? 'flex' : 'hidden'} flex - col gap - 4 md:flex md:flex - row md:gap - 8 w - full md:w - auto`}
-          >;
-            <li>;
-              <Link;
-                href='#features';
-                className='text - sm font - medium hover:text - primary';
-              >;
-
-                Features;
-              </Link>;
-            </li>;
-            <li>;
-
-              <Link;
-                href='#pricing';
-                className='text - sm font - medium hover:text - primary';
-              >;
-
-                Pricing;
-              </Link>;
-            </li>;
-            <li>;
-
-              <Link;
-                href='#testimonials';
-                className='text - sm font - medium hover:text - primary';
-              >;
-
-                Testimonials;
-              </Link>;
-            </li>;
-            <li>;
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseStickyNav.tsx
 export function EnterpriseStickyNav() {
                 className='text-sm font-medium hover:text-primary'>;
                 Contact Us;
@@ -117,17 +120,11 @@ export function EnterpriseStickyNav() {
 export function EnterpriseStickyNav() {;
   const [open, setOpen] = useState(false);
 
-
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseStickyNav.tsx
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseStickyNav.tsx
 import { useState } from "react",
 import { Menu } from 'lucide-react'
 import Link from "next/link",
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
-
 
   return (
 <<<<<<< HEAD:src_backup/components/enterprise/EnterpriseStickyNav.tsx
@@ -143,11 +140,11 @@ export function EnterpriseStickyNav() {
 
 
 
-=======
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-12">
           <button
+
           </button>
           <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>
             <li>
@@ -159,21 +156,13 @@ export function EnterpriseStickyNav() {
             <li>
               <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>
             </li>
-            <li>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseStickyNav.tsx
+
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
+
             </li>
           </ul>
         </div>
       </div>
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseStickyNav.tsx
-
-
-
-    </nav>
-
-              <Link;
-=======
 
 import { useState  } from 'react';
 import { Menu  } from 'lucide-react';
@@ -275,14 +264,17 @@ export function EnterpriseStickyNav() {const [open, setOpen]  = useState(false)i
               <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>;
             </li>;
             <li>;
-=======
+:src/components/enterprise/EnterpriseStickyNav.tsx
+    </nav>;
+  );
+};
+
 import { useState } from "react",;
 import { Menu } from 'lucide-react';
 import Link from "next/link",;
 export function EnterpriseStickyNav() {;
   const [open, setOpen] = useState(false);
   return (;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseStickyNav.tsx
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
         <div className="flex items-center justify-between h-12">;
@@ -290,24 +282,12 @@ export function EnterpriseStickyNav() {;
             className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation";
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseStickyNav.tsx
-            aria-expanded={open}<Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
-            </li>;
-          </ul>;
-        </div>;
-      </div>;
-export function EnterpriseStickyNav() {const [open, setOpen] = useState(false)return (<nav className="sticky top-16 z-40 bg-card border-b border-border">;
-      <div className="container mx-auto px-4 md:px-6">;
-        <div className="flex items-center justify-between h-12">;
-          <button;
-            className="md:hidden p-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle navigation";
-            aria-expanded={open}</nav>;
-=======
             aria-expanded={open}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseStickyNav.tsx
+
+    </nav>
+
           >;
+
             <Menu className="h-6 w-6" />;
           </button>;
           <ul className={`${open ? "flex" : "hidden"} flex-col gap-4 md:flex md:flex-row md:gap-8 w-full md:w-auto`}>;
@@ -321,15 +301,10 @@ export function EnterpriseStickyNav() {const [open, setOpen] = useState(false)re
               <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>;
             </li>;
             <li>;
-<<<<<<< HEAD:src_backup/components/enterprise/EnterpriseStickyNav.tsx
-              <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;<Link;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/EnterpriseStickyNav.tsx
-=======
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
 
 
               <Link;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseStickyNav.tsx
                 href='#contact';
                 className='text - sm font - medium hover:text - primary';
               >;
@@ -374,21 +349,15 @@ function EnterpriseStickyNav() {const [open, set_open] = useState (false)return 
 
   );
 }
-    </nav>);
-}
-
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
               <Link href="#contact" className="text - sm font - medium hover:text - primary">Contact Us</Link>;</li>;
           </ul>;
         </div>;
       </div>;)}
     </nav>)})}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/enterprise/EnterpriseStickyNav.tsx
-=======
 
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/enterprise/EnterpriseStickyNav.tsx
+:src/components/enterprise/EnterpriseStickyNav.tsx
+;
+    </nav>);
+}

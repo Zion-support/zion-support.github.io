@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 ;
 }}async analyzeFile(filePath) {try {const content = fs && fs.readFileSync(filePath, 'utf8')const stats  = fs && fs.statSync(filePath)const analysis = {file: filePath, size: stats && stats.size, lines: content && content.split('\n').length,issues: []}// Check for common code quality issues; const lines  = content && content.split('\n')lines && lines.forEach((line, index) = > {const lineNum  = index + 1;// Trailing spaces; if (line && line.match(/[ \t]+$/)) {analysis && analysis.issues.push({line: lineNum, type: 'trailing-spaces', message: 'Trailing spaces found',severity: 'low'})}// Long lines (over 120 characters)if (line && line.length > 120) {analysis && analysis.issues.push({line: lineNum, type: 'long-line', message: `Line is ${line && line.length} characters long (max: 120)`,severity: 'medium'})}// Console statements; if (line && line.match(/console\.(log|warn|error|info|debug)/)) {analysis && analysis.issues.push({line: lineNum, type: 'console-statement', message: 'Console statement found - should be removed in production',severity: 'medium'})}// TODO/FIXME comments; if (line && line.match(/TODO|FIXME|HACK|XXX/)) {analysis && analysis.issues.push({line: lineNum, type: 'todo-comment', message: 'TODO/FIXME comment found',severity: 'low'})}// Unused imports (basic check)if (line && line.match(/^import.*from/) && !line && line.includes('//')) {const importMatch = line && line.match(/import\s+(\w+)/)if (importMatch) {const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {analysis && analysis.issues.push({line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}})return analysis} catch (error) {this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`)return null}}async walkDirectory(dir) {const analyses  = [];try {const items  = fs && fs.readdirSync(dir)for (const item of items) {const fullPath = path && path.join(dir, item)const stat  = fs && fs.statSync(fullPath)if (stat && stat.isDirectory()) {if (!fullPath && fullPath.includes('node_modules') &&; !fullPath && fullPath.includes('.git') &&; !fullPath && fullPath.includes('dist') &&; !fullPath && fullPath.includes('build') &&; !fullPath && fullPath.includes('.next') &&; !fullPath && fullPath.includes('coverage') &&; !fullPath && fullPath.includes('logs')) {const subAnalyses = await this && this.walkDirectory(fullPath)analyses && analyses.push(...subAnalyses)}} else if (stat && stat.isFile()) {const ext = path && path.extname(fullPath)if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {const analysis = await this && this.analyzeFile(fullPath)if (analysis) {analyses && analyses.push(analysis)}}}}} catch (error) {this && this.log(`Error walking directory ${dir}: ${error && error.message}`)}return analyses}generateReport(analyses) {const totalFiles = analyses && analyses.length; const totalIssues  = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0)const issuesByType = {}const issuesBySeverity  = { low: 0, medium: 0, high: 0 }analyses && analyses.forEach(analysis = > {analysis && analysis.issues.forEach(issue = > {// Count by type; issuesByType[issue && issue.type] = (issuesByType[issue && issue.type] || 0) + 1;// Count by severity; issuesBySeverity[issue && issue.severity]++})})const report = {timestamp: new Date().toISOString(), summary: {, totalFiles; totalIssues; issuesByType; issuesBySeverity;
@@ -36,10 +20,6 @@ const monitor  = new CodeQualityMonitor()}}async analyzeFile(filePath) {try {con
 const monitor  = new CodeQualityMonitor()monitor.run().catch(error = > {process.exit(1)})}}async analyzeFile(filePath) {try {const content = fs.readFileSync(filePath, 'utf8')const stats  = fs.statSync(filePath)const analysis = {file: filePath; size: stats.size; lines: content.split('\n').length; issues: []}// Check for common code quality issues; const lines  = content.split('\n')lines.forEach((line, index) = > {const lineNum  = index + 1;// Trailing spaces; if (line.match(/[ \t]+$/)) {analysis.issues.push({line: lineNum; type: 'trailing-spaces'; message: 'Trailing spaces found'; severity: 'low'})}// Long lines (over 120 characters)if (line.length > 120) {analysis.issues.push({line: lineNum; type: 'long-line'; message: `Line is ${line.length} characters long (max: 120)`; severity: 'medium'})}// Console statements; if (line.match(/console\.(log|warn|error|info|debug)/)) {analysis.issues.push({line: lineNum; type: 'console-statement'; message: 'Console statement found - should be removed in production'; severity: 'medium'})}// TODO/FIXME comments; if (line.match(/TODO|FIXME|HACK|XXX/)) {analysis.issues.push({line: lineNum; type: 'todo-comment'; message: 'TODO/FIXME comment found'; severity: 'low'})}// Unused imports (basic check)if (line.match(/^import.*from/) && !line.includes('//')) {const importMatch = line.match(/import\s+(\w+)/)if (importMatch) {const importName = importMatch[1]; if (importName ! = = 'React' && !content.includes(importName)) {analysis.issues.push({line: lineNum; type: 'unused-import'; message: `Potentially unused import ${importName}`; severity: 'medium'})}}}})return analysis} catch (error) {this.log(`Error analyzing file ${filePath}: ${error.message}`)return null}}async walkDirectory(dir) {const analyses  = [];try {const items  = fs.readdirSync(dir)for (const item of items) {const fullPath = path.join(dir, item)const stat  = fs.statSync(fullPath)if (stat.isDirectory()) {if (!fullPath.includes('node_modules') &&; !fullPath.includes('.git') &&; !fullPath.includes('dist') &&; !fullPath.includes('build') &&; !fullPath.includes('.next') &&; !fullPath.includes('coverage') &&; !fullPath.includes('logs')) {const subAnalyses = await this.walkDirectory(fullPath)analyses.push(...subAnalyses)}} else if (stat.isFile()) {const ext = path.extname(fullPath)if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {const analysis = await this.analyzeFile(fullPath)if (analysis) {analyses.push(analysis)}}}}} catch (error) {this.log(`Error walking directory ${dir}: ${error.message}`)}return analyses}generateReport(analyses) {const totalFiles = analyses.length; const totalIssues  = analyses.reduce((sum, analysis) = > sum + analysis.issues.length, 0)const issuesByType = {}const issuesBySeverity  = { low: 0, medium: 0, high: 0 }analyses.forEach(analysis = > {analysis.issues.forEach(issue = > {// Count by type; issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1;// Count by severity; issuesBySeverity[issue.severity]++})})const report = {timestamp: new Date().toISOString()summary: {totalFiles; totalIssues; issuesByType; issuesBySeverity}files: analyses.filter(analysis = > analysis.issues.length > 0)recommendations: this.generateRecommendations(issuesByType, totalIssues)}return report}generateRecommendations(issuesByType, totalIssues) {const recommendations  = [];if (issuesByType['trailing-spaces'] > 0) {recommendations.push({type: 'trailing-spaces'; priority: 'low'; message: 'Remove trailing spaces from files'; action: 'Run the lint-fixer to automatically remove trailing spaces'})}if (issuesByType['console-statement'] > 0) {recommendations.push({type: 'console-statement'; priority: 'medium'; message: 'Remove console statements from production code'; action: 'Replace console statements with proper logging or remove them'})}if (issuesByType['unused-import'] > 0) {recommendations.push({type: 'unused-import'; priority: 'medium'; message: 'Remove unused imports'; action: 'Clean up unused imports to reduce bundle size'})}if (totalIssues > 100) {recommendations.push({type: 'general'; priority: 'high'; message: 'High number of code quality issues detected'; action: 'Run comprehensive code cleanup and establish coding standards'})}return recommendations}async saveReport(report) {try {const reportDir = path.dirname(this.reportFile)if (!fs.existsSync(reportDir)) {fs.mkdirSync(reportDir, { recursive: true })}fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))this.log(`Report saved to: ${this.reportFile}`)} catch (error) {this.log(`Error saving report: ${error.message}`)}}async checkGitStatus() {try {const status = execSync('git status --porcelain', {cwd: this.projectRoot; encoding: 'utf8'})if (status.trim()) {this.log('⚠️ Uncommitted changes detected')return false}return true} catch (error) {this.log(`Error checking git status: ${error.message}`)return false}}async run() {this.log('🔍 Starting Code Quality Monitor...')this.log(`Project root: ${this.projectRoot}`)try {// Create logs directory if it doesn't exist; const logsDir = path.dirname(this.logFile)if (!fs.existsSync(logsDir)) {fs.mkdirSync(logsDir, { recursive: true })}// Check git status; const isClean  = await this.checkGitStatus()// Analyze all files; this.log('📁 Analyzing code files...')const analyses  = await this.walkDirectory(this.projectRoot)// Generate report; this.log('📊 Generating quality report...')const report  = this.generateReport(analyses)// Save report; await this.saveReport(report)const duration  = Date.now() - this.startTime;// Log summary; this.log('\n📊 Code Quality Report Summary: ')this.log(`Files analyzed: ${report.summary.totalFiles}`)this.log(`Total issues: ${report.summary.totalIssues}`)this.log(`Duration: ${duration}ms`)if (report.summary.totalIssues > 0) {this.log('\n🚨 Issues by type: ')Object.entries(report.summary.issuesByType).forEach(([type, count]) = > {this.log(` ${type}: ${count}`)})this.log('\n💡 Recommendations: ')report.recommendations.forEach(rec = > {this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`)this.log(` Action: ${rec.action}`)})// If there are many issues and git is clean, suggest running the lint fixer; if (report.summary.totalIssues > 50 && isClean) {this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')}} else {this.log('✨ Excellent! No code quality issues found!')}} catch (error) {this.log(`❌ Error running code quality monitor: ${error.message}`)process.exit(1)}}}// Run the code quality monitor;
 const monitor = new CodeQualityMonitor()monitor.run().catch(error = > {process.exit(1)})}}async analyzeFile(filePath) {try {const content = fs.readFileSync(filePath, 'utf8')const stats  = fs.statSync(filePath)const analysis = {file: filePath;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }};
 ; async analyzeFile(filePath) {; try {; const content = fs && fs.readFileSync(filePath, 'utf8'); const stats = fs && fs.statSync(filePath);
 ; const analysis = {; file: filePath, size: stats && stats.size, lines: content && content.split('\n').length,
@@ -56,28 +36,10 @@ const monitor = new CodeQualityMonitor()monitor.run().catch(error = > {process.e
     severity: 'low'})};
 ; // Unused imports (basic check); if (line && line.match(/^import.*from/) && !line && line.includes('//')) {; const importMatch = line && line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content && content.includes(importName)) {; analysis && analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
 ; return analysis} catch (error) {; this && this.log(`Error analyzing file ${filePath}: ${error && error.message}`); return null}};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ; async walkDirectory(dir) {; const analyses = [];
 ; try {; const items = fs && fs.readdirSync(dir);
 ; for (const item of items) {; const fullPath = path && path.join(dir, item); const stat = fs && fs.statSync(fullPath);
@@ -85,21 +47,6 @@ const monitor = new CodeQualityMonitor()monitor.run().catch(error = > {process.e
 ; return analyses};
 ; generateReport(analyses) {; const totalFiles = analyses && analyses.length; const totalIssues = analyses && analyses.reduce((sum, analysis) = > sum + analysis && analysis.issues.length, 0);
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ; analyses && analyses.forEach(analysis = > {; analysis && analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue && issue.type] = (issuesByType[issue && issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue && issue.severity]++})});
 ; const report = {; timestamp: new Date().toISOString(), summary: {
@@ -136,18 +83,6 @@ const monitor = new CodeQualityMonitor()monitor.run().catch(error = > {process.e
 ; this && this.log('\n💡 Recommendations: '), report && report.recommendations.forEach(rec = > {, this && this.log(` [${rec && rec.priority.toUpperCase()}] ${rec && rec.message}`); this && this.log(` Action: ${rec && rec.action}`)});
 ; // If there are many issues and git is clean, suggest running the lint fixer; if (report && report.summary.totalIssues > 50 && isClean) {; this && this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')}} else {; this && this.log('✨ Excellent! No code quality issues found!')};
 } catch (error) {; this && this.log(`❌ Error running code quality monitor: ${error && error.message}`); process && process.exit(1)}}};
-<<<<<<< HEAD
-
-// Run the code quality monitor;
-const monitor = new CodeQualityMonitor();
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }}; async analyzeFile(filePath) {try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath); const analysis = {; file: filePath, size: stats.size, lines: content.split('\n').length
     issues: []}; // Check for common code quality issues; const lines = content.split('\n'); lines.forEach((line, index) = > {const lineNum = index + 1; // Trailing spaces; if (line.match(/[ \t]+$/)) {; analysis.issues.push({; line: lineNum, type: 'trailing-spaces', message: 'Trailing spaces found'
     severity: 'low'})}; // Long lines (over 120 characters); if (line.length > 120) {analysis.issues.push({; line: lineNum, type: 'long-line', message: `Line is ${line.length} characters long (max: 120)`
@@ -181,8 +116,6 @@ const monitor = new CodeQualityMonitor();
 ; // Count by severity; issuesBySeverity[issue.severity]++})});
 ; const report = {; timestamp: new Date().toISOString(), summary: {
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       , totalFiles; totalIssues; issuesByType; issuesBySeverity
     }
     files: analyses.filter(analysis = > analysis.issues.length > 0)
@@ -195,11 +128,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 } catch (error) {this.log(`❌ Error running code quality monitor: ${error.message}`); process.exit(1)}}}
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 monitor.run().catch(error = > {process.exit(1)});
 }};
 ; async analyzeFile(filePath) {; try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath);
@@ -250,26 +178,10 @@ monitor.run().catch(error = > {process.exit(1)});
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error = > {; process.exit(1)});
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 };
 };
 ;
@@ -322,112 +234,108 @@ if ( {) {$2;
 } this.log ('\n🚨 Issues by type: ')Object.entries (report.summary.issuesByType).for_each (([type, count]) = > { this.log (` ${type}: ${count}`)})this.log ('\n💡 Recommendations: '), report.recommendations.for_each (rec = > {, this.log (` [${rec.priority.toUpperCase ()}] ${rec.message}`)this.log (` Action: ${rec.action}`)})// If there are many issues and git is clean, suggest running the lint fixer; // Check condition;
 if ( {) {$2;
           });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 }};
 monitor && monitor.run().catch(error = > {; process && process.exit(1)});
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 }};
 monitor && monitor.run().catch(error = > {; process && process.exit(1)});
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     };
   };
+}
+},
 ,
   async analyzeFile(filePath) {,
     try {,
-      const content = fs.readFileSync(filePath, 'utf8'),
-      const stats = fs.statSync(filePath),
+      const content = fs.readFileSync($2);
+      const stats = fs.statSync($2);
 ,
-      const analysis = {,
-        file: filePath,
-        size: stats.size,
-        lines: content.split('\n').length,
-        issues: []
-      };
+      const analysis = $2;
+        fil: filePath,
+        siz: stats.size,
+        line: content.split('\n').length,
+        issue: [],
+      ,
 ,
       // Check for common code quality issues,
-      const lines = content.split('\n'),
+      const lines = content.split($2);
 ,
       lines.forEach((line, index) => {,
-        const lineNum = index + 1,
+        const lineNum = $2;
 ,
         // Trailing spaces,
         if (line.match(/[ \t]+$/)) {,
           analysis.issues.push({,
-            line: lineNum,
-            type: 'trailing-spaces',
-            message: 'Trailing spaces found',
-            severity: 'low'
+            lin: lineNum,
+            typ: 'trailing-spaces',
+            messag: 'Trailing spaces found',
+            severit: 'low'
           })
-        };
+        },
 ,
-        // Long lines (over 120 characters),
+        // Long lines($2);
         if (line.length > 120) {,
           analysis.issues.push({,
-            line: lineNum,
-            type: 'long-line',
-            message: `Line is ${line.length} characters long (max: 120)`,
-            severity: 'medium'
+            lin: lineNum,
+            typ: 'long-line',
+            messag: `Line is ${line.length} characters long (ma: x: 120)`,
+            severit: 'medium'
           })
-        };
+        },
 ,
         // Console statements,
         if (line.match(/console\.(log|warn|error|info|debug)/)) {,
           analysis.issues.push({,
-            line: lineNum,
-            type: 'console-statement',
-            message: 'Console statement found - should be removed in production',
-            severity: 'medium'
+            lin: lineNum,
+            typ: 'console-statement',
+            messag: 'Console statement found - should be removed in production',
+            severit: 'medium'
           })
-        };
+        },
 ,
         // TODO/FIXME comments,
         if (line.match(/TODO|FIXME|HACK|XXX/)) {,
           analysis.issues.push({,
-            line: lineNum,
-            type: 'todo-comment',
-            message: 'TODO/FIXME comment found',
-            severity: 'low'
+            lin: lineNum,
+            typ: 'todo-comment',
+            messag: 'TODO/FIXME comment found',
+            severit: 'low'
           })
-        };
+        },
 ,
-        // Unused imports (basic check),
+        // Unused imports($2);
         if (line.match(/^import.*from/) && !line.includes('//')) {,
-          const importMatch = line.match(/import\s+(\w+)/),
+          const importMatch = $2;
           if (importMatch) {,
-            const importName = importMatch[1],
+            const importName = $2;
             if (importName !== 'React' && !content.includes(importName)) {,
               analysis.issues.push({,
-                line: lineNum,
-                type: 'unused-import',
-                message: `Potentially unused import ${importName}`,
-                severity: 'medium'
+                lin: lineNum,
+                typ: 'unused-import',
+                messag: `Potentially unused import ${importName}`,
+                severit: 'medium'
               })
-            };
-          };
-        };
+            }
+          }
+        }
       }),
 ,
       return analysis
     } catch (error) {,
-      this.log(`Error analyzing file ${filePath}: ${error.message}`),
+      this.log($2);
       return null
-    };
-  };
+}
+},
 ,
   async walkDirectory(dir) {,
-    const analyses = [],
+    const analyses = $2;
 ,
     try {,
-      const items = fs.readdirSync(dir),
+      const items = fs.readdirSync($2);
 ,
       for (const item of items) {,
-        const fullPath = path.join(dir, item),
-        const stat = fs.statSync(fullPath),
+        const fullPath = path.join($2);
+        const stat = fs.statSync($2);
 ,
         if (stat.isDirectory()) {,
           if (!fullPath.includes('node_modules') &&,
@@ -437,98 +345,69 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
               !fullPath.includes('.next') &&,
               !fullPath.includes('coverage') &&,
               !fullPath.includes('logs')) {,
-            const subAnalyses = await this.walkDirectory(fullPath),
+            const subAnalyses = await this.walkDirectory($2);
             analyses.push(...subAnalyses)
-          };
+          }
         } else if (stat.isFile()) {,
-          const ext = path.extname(fullPath),
-          if (['.js.jsx', '.ts.tsx'].includes(ext)) {,
-            const analysis = await this.analyzeFile(fullPath),
+          const ext = path.extname($2);
+          if (['.js.jsx.ts.tsx'].includes(ext)) {,
+            const analysis = await this.analyzeFile($2);
             if (analysis) {,
               analyses.push(analysis)
-            };
-          };
-        };
-      };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+            }
+          }
+        }
+      }
     } catch (error) {,
       this.log(`Error walking directory ${dir}: ${error.message}`)
-    };
+},
 ,
     return analyses
-  };
+},
 ,
   generateReport(analyses) {,
-    const totalFiles = analyses.length,
+    const totalFiles = $2;
     const totalIssues = analyses.reduce((sum, analysis) => sum + analysis.issues.length, 0),
 ,
-    const issuesByType = {};
-    const issuesBySeverity = { low: 0, medium: 0, high: 0 };
+    const issuesByType = $2;
+    const issuesBySeverity = { lo: w: 0, mediu: 0, hig: 0,
 ,
-    analyses.forEach(analysis => {,
-      analysis.issues.forEach(issue => {,
+    analyses.forEach(analysis = $2;
+      analysis.issues.forEach(issue = $2;
         // Count by type,
         issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1,
 ,
         // Count by severity,
-<<<<<<< HEAD
-        issuesBySeverity[issue.severity]++,
-      }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
         issuesBySeverity[issue.severity]++
       })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }),
 ,
-    const report = {,
-      timestamp: new Date().toISOString(),
-      summary: {,
+    const report = $2;
+      timestam: new Date().toISOString($2);
+      summar: {,
         totalFiles,
         totalIssues,
         issuesByType,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         issuesBySeverity,
-=======
         issuesBySeverity
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       },
-      files: analyses.filter(analysis => analysis.issues.length > 0),
-      recommendations: this.generateRecommendations(issuesByType, totalIssues)
-    };
+      file: analyses.filter($2);
+      recommendation: this.generateRecommendations(issuesByType, totalIssues)
+},
 ,
-<<<<<<< HEAD
-    return report,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
     return report
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
   };
+},
 ,
   generateRecommendations(issuesByType, totalIssues) {,
-    const recommendations = [],
+    const recommendations = $2;
 ,
     if (issuesByType['trailing-spaces'] > 0) {,
       recommendations.push({,
-        type: 'trailing-spaces',
-        priority: 'low',
-        message: 'Remove trailing spaces from files',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         action: 'Run the lint-fixer to automatically remove trailing spaces',
       }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
         action: 'Run the lint-fixer to automatically remove trailing spaces'
       })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     };
 ,
     if (issuesByType['console-statement'] > 0) {,
@@ -536,16 +415,10 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         type: 'console-statement',
         priority: 'medium',
         message: 'Remove console statements from production code',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         action: 'Replace console statements with proper logging or remove them',
       }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
         action: 'Replace console statements with proper logging or remove them'
       })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     };
 ,
     if (issuesByType['unused-import'] > 0) {,
@@ -553,16 +426,10 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         type: 'unused-import',
         priority: 'medium',
         message: 'Remove unused imports',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         action: 'Clean up unused imports to reduce bundle size',
       }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
         action: 'Clean up unused imports to reduce bundle size'
       })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     };
 ,
     if (totalIssues > 100) {,
@@ -570,46 +437,63 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
         type: 'general',
         priority: 'high',
         message: 'High number of code quality issues detected',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         action: 'Run comprehensive code cleanup and establish coding standards',
       }),
     };
 ,
     return recommendations,
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
         action: 'Run comprehensive code cleanup and establish coding standards'
+        typ: 'trailing-spaces',
+        priorit: 'low',
+        messag: 'Remove trailing spaces from files',
+        actio: 'Run the lint-fixer to automatically remove trailing spaces'
       })
-    };
+},
+,
+    if (issuesByType['console-statement'] > 0) {,
+      recommendations.push({,
+        typ: 'console-statement',
+        priorit: 'medium',
+        messag: 'Remove console statements from production code',
+        actio: 'Replace console statements with proper logging or remove them'
+      })
+},
+,
+    if (issuesByType['unused-import'] > 0) {,
+      recommendations.push({,
+        typ: 'unused-import',
+        priorit: 'medium',
+        messag: 'Remove unused imports',
+        actio: 'Clean up unused imports to reduce bundle size'
+      })
+},
+,
+    if (totalIssues > 100) {,
+      recommendations.push({,
+        typ: 'general',
+        priorit: 'high',
+        messag: 'High number of code quality issues detected',
+        actio: 'Run comprehensive code cleanup and establish coding standards'
+      })
+},
 ,
     return recommendations
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-  };
+},
 ,
   async saveReport(report) {,
     try {,
-      const reportDir = path.dirname(this.reportFile),
+      const reportDir = path.dirname($2);
       if (!fs.existsSync(reportDir)) {,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         fs.mkdirSync(reportDir, { recursive: true }),
-=======
         fs.mkdirSync(reportDir, { recursive: true })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       };
+        fs.mkdirSync(reportDir, { recursiv: true})
+      },
 ,
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
-      this.log(`Report saved to: ${this.reportFile}`)
+      this.log(`Report saved: to: ${this.reportFile}`)
     } catch (error) {,
-<<<<<<< HEAD
-      this.log(`Error saving report: ${error.message}`),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
       this.log(`Error saving report: ${error.message}`)
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     };
   };
 ,
@@ -617,104 +501,93 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
     try {,
       const status = execSync('git status --porcelain', {,
         cwd: this.projectRoot,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         encoding: 'utf8',
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
         encoding: 'utf8'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       }),
+      this.log(`Error saving: report: ${error.message}`)
+}
+},
+,
+  async checkGitStatus() {,
+    try {,
+      const status = execSync($2);
 ,
       if (status.trim()) {,
-        this.log('⚠️  Uncommitted changes detected'),
+        this.log($2);
         return false
-      };
+      },
 ,
       return true
     } catch (error) {,
-      this.log(`Error checking git status: ${error.message}`),
+      this.log($2);
       return false
-    };
-  };
+}
+},
 ,
   async run() {,
-    this.log(`Project root: ${this.projectRoot}`),
+    this.log($2);
+    this.log($2);
 ,
     try {,
       // Create logs directory if it doesn't exist,
-      const logsDir = path.dirname(this.logFile),
+      const logsDir = path.dirname($2);
       if (!fs.existsSync(logsDir)) {,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         fs.mkdirSync(logsDir, { recursive: true }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
         fs.mkdirSync(logsDir, { recursive: true })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       };
+        fs.mkdirSync(logsDir, { recursiv: true})
+      },
 ,
       // Check git status,
-      const isClean = await this.checkGitStatus(),
+      const isClean = await this.checkGitStatus($2);
 ,
       // Analyze all files,
-      const report = this.generateReport(analyses),
+      this.log($2);
+      const analyses = await this.walkDirectory($2);
+,
+      // Generate report,
+      this.log($2);
+      const report = this.generateReport($2);
 ,
       // Save report,
-      await this.saveReport(report),
+      await this.saveReport($2);
 ,
-      const duration = Date.now() - this.startTime,
+      const duration = $2;
 ,
       // Log summary,
-      this.log(`Files analyzed: ${report.summary.totalFiles}`),
-      this.log(`Total issues: ${report.summary.totalIssues}`),
-      this.log(`Duration: ${duration}ms`),
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
 ,
       if (report.summary.totalIssues > 0) {,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
           this.log(`  ${type}: ${count}`),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
         this.log('\n🚨 Issues by type: '),
+        this.log($2);
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
           this.log(`  ${type}: ${count}`)
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         }),
 ,
-        this.log('\n💡 Recommendations: '),
-        report.recommendations.forEach(rec => {,
+        this.log($2);
+        report.recommendations.forEach(rec = $2;
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
-          this.log(`    Action: ${rec.action}`)
+          this.log(`    Actio: ${rec.action}`)
         }),
 ,
         // If there are many issues and git is clean, suggest running the lint fixer,
         if (report.summary.totalIssues > 50 && isClean) {,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
           this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues'),
-=======
           this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         };
+        }
       } else {,
         this.log('✨ Excellent! No code quality issues found!')
-      };
+      }
 
     } catch (error) {,
-      this.log(`❌ Error running code quality monitor: ${error.message}`),
-<<<<<<< HEAD
-      process.exit(1),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
       process.exit(1)
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     };
   };
 };
@@ -722,16 +595,10 @@ monitor && monitor.run().catch(error = > {; process && process.exit(1)});
 // Run the code quality monitor,
 const monitor = new CodeQualityMonitor(),
 monitor.run().catch(error => {,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   process.exit(1),
 }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
   process.exit(1)
 })
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }}
 ; async analyze_file (file_path) { try { const content = fs.readFileSync (file_path, 'utf8'); const stats = fs.stat_sync (file_path);
 ; const analysis = { file: file_path, size: stats.size, lines: content.split ('\n').length,
@@ -851,80 +718,314 @@ const monitor = new CodeQualityMonitor ()monitor.run ().catch (error = > { proce
           })},,// TODO/FIXME comments,if (line.match(/TODO|FIXME|HACK|XXX/)) {,analysis.issues.push({,lin: e: lineNum,typ: e: 'todo-comment',messag: e: 'TODO/FIXME comment found',severit: y: 'low';
           })},,// Unused imports (basic check),if (line.match(/^import.*from/) && !line.includes('//')) {,const importMatch = line.match(/import\s+(\w+)/),if (importMatch) {,const importName = importMatch[1],if (importName !== 'React' && !content.includes(importName)) {,analysis.issues.push({,lin: e: lineNum,typ: e: 'unused-import',messag: e: `Potentially unused import ${importName}`,severit: y: 'medium';
               })}
+      this.log($2);
+      process.exit(1)
+}
+}
+},
+,
+// Run the code quality monitor,
+const monitor = new CodeQualityMonitor($2);
+monitor.run().catch(error = $2;
+  process.exit(1)
+})
+    }
+  },
+,
+  async analyzeFile(filePath) {,
+    try {,
+      const content = fs.readFileSync($2);
+      const stats = fs.statSync($2);
+,
+      const analysis = $2;
+        fil: filePath,
+        siz: stats.size,
+        line: content.split('\n').length,
+        issue: []
+      },
+,
+      // Check for common code quality issues,
+      const lines = content.split($2);
+,
+      lines.forEach((line, index) => {,
+        const lineNum = $2;
+,
+        // Trailing spaces,
+        if (line.match(/[ \t]+$/)) {,
+          analysis.issues.push({,
+            lin: lineNum,
+            typ: 'trailing-spaces',
+            messag: 'Trailing spaces found',
+            severit: 'low'
+          })
+        },
+,
+        // Long lines($2);
+        if (line.length > 120) {,
+          analysis.issues.push({,
+            lin: lineNum,
+            typ: 'long-line',
+            messag: `Line is ${line.length} characters long (ma: x: 120)`,
+            severit: 'medium'
+          })
+        },
+,
+        // Console statements,
+        if (line.match(/console\.(log|warn|error|info|debug)/)) {,
+          analysis.issues.push({,
+            lin: lineNum,
+            typ: 'console-statement',
+            messag: 'Console statement found - should be removed in production',
+            severit: 'medium'
+          })
+        },
+,
+        // TODO/FIXME comments,
+        if (line.match(/TODO|FIXME|HACK|XXX/)) {,
+          analysis.issues.push({,
+            lin: lineNum,
+            typ: 'todo-comment',
+            messag: 'TODO/FIXME comment found',
+            severit: 'low'
+          })
+        },
+,
+        // Unused imports($2);
+        if (line.match(/^import.*from/) && !line.includes('//')) {,
+          const importMatch = $2;
+          if (importMatch) {,
+            const importName = $2;
+            if (importName !== 'React' && !content.includes(importName)) {,
+              analysis.issues.push({,
+                lin: lineNum,
+                typ: 'unused-import',
+                messag: `Potentially unused import ${importName}`,
+                severit: 'medium'
+              })
+            }
           }
         }
-      }),,return analysis;
-    } catch (error) {,this.log(`Error analyzing file ${filePath}: ${error.message}`),return null;
+      }),
+,
+      return analysis
+    } catch (error) {,
+      this.log($2);
+      return null
     }
-  },,async walkDirectory(dir) {,const analyses = [],,try {,const items = fs.readdirSync(dir),,for (const item of items) {,const fullPath = path.join(dir, item),const stat = fs.statSync(fullPath),,if (stat.isDirectory()) {,if (!fullPath.includes('node_modules') &&,!fullPath.includes('.git') &&,!fullPath.includes('dist') &&,!fullPath.includes('build') &&,!fullPath.includes('.next') &&,!fullPath.includes('coverage') &&,!fullPath.includes('logs')) {,const subAnalyses = await this.walkDirectory(fullPath),analyses.push(...subAnalyses)}
-        } else if (stat.isFile()) {,const ext = path.extname(fullPath),if (['.js.jsx.ts.tsx'].includes(ext)) {,const analysis = await this.analyzeFile(fullPath),if (analysis) {,analyses.push(analysis)}
+  },
+,
+  async walkDirectory(dir) {,
+    const analyses = $2;
+,
+    try {,
+      const items = fs.readdirSync($2);
+,
+      for (const item of items) {,
+        const fullPath = path.join($2);
+        const stat = fs.statSync($2);
+,
+        if (stat.isDirectory()) {,
+          if (!fullPath.includes('node_modules') &&,
+              !fullPath.includes('.git') &&,
+              !fullPath.includes('dist') &&,
+              !fullPath.includes('build') &&,
+              !fullPath.includes('.next') &&,
+              !fullPath.includes('coverage') &&,
+              !fullPath.includes('logs')) {,
+            const subAnalyses = await this.walkDirectory($2);
+            analyses.push(...subAnalyses)
+          }
+        } else if (stat.isFile()) {,
+          const ext = path.extname($2);
+          if (['.js.jsx.ts.tsx'].includes(ext)) {,
+            const analysis = await this.analyzeFile($2);
+            if (analysis) {,
+              analyses.push(analysis)
+            }
           }
         }
       }
-    } catch (error) {,this.log(`Error walking directory ${dir}: ${error.message}`)},,return analyses;
-  },,generateReport(analyses) {,const totalFiles = analyses.length,const totalIssues = analyses.reduce((sum, analysis) => sum + analysis.issues.length, 0),,const issuesByType = {},const issuesBySeverity = { lo: w: 0, mediu: m: 0, hig: h: 0 },,analyses.forEach(analysis => {,analysis.issues.forEach(issue => {,// Count by type,issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1,,// Count by severity,issuesBySeverity[issue.severity]++;
-      })}),,const report = {,timestam: p: new Date().toISOString(),summar: y: {,totalFiles,totalIssues,issuesByType,issuesBySeverity;
-      },file: s: analyses.filter(analysis => analysis.issues.length > 0),recommendation: s: this.generateRecommendations(issuesByType, totalIssues)},,return report;
-  },,generateRecommendations(issuesByType, totalIssues) {,const recommendations = [],,if (issuesByType['trailing-spaces'] > 0) {,recommendations.push({,typ: e: 'trailing-spaces',priorit: y: 'low',messag: e: 'Remove trailing spaces from files',actio: n: 'Run the lint-fixer to automatically remove trailing spaces';
-      })},,if (issuesByType['console-statement'] > 0) {,recommendations.push({,typ: e: 'console-statement',priorit: y: 'medium',messag: e: 'Remove console statements from production code',actio: n: 'Replace console statements with proper logging or remove them';
-      })},,if (issuesByType['unused-import'] > 0) {,recommendations.push({,typ: e: 'unused-import',priorit: y: 'medium',messag: e: 'Remove unused imports',actio: n: 'Clean up unused imports to reduce bundle size';
-      })},,if (totalIssues > 100) {,recommendations.push({,typ: e: 'general',priorit: y: 'high',messag: e: 'High number of code quality issues detected',actio: n: 'Run comprehensive code cleanup and establish coding standards';
-      })},,return recommendations;
-  },,async saveReport(report) {,try {,const reportDir = path.dirname(this.reportFile),if (!fs.existsSync(reportDir)) {,fs.mkdirSync(reportDir, { recursiv: e: true })},,fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),this.log(`Report saved: to: ${this.reportFile}`)} catch (error) {,this.log(`Error saving: report: ${error.message}`)}
-  },,async checkGitStatus() {,try {,const status = execSync('git status --porcelain', {,cw: d: this.projectRoot,encodin: g: 'utf8';
-      }),,if (status.trim()) {,this.log('⚠️  Uncommitted changes detected'),return false;
-      },,return true;
-    } catch (error) {,this.log(`Error checking git: status: ${error.message}`),return false;
+    } catch (error) {,
+      this.log(`Error walking directory ${dir}: ${error.message}`)
+    },
+,
+    return analyses
+  },
+,
+  generateReport(analyses) {,
+    const totalFiles = $2;
+    const totalIssues = analyses.reduce((sum, analysis) => sum + analysis.issues.length, 0),
+,
+    const issuesByType = $2;
+    const issuesBySeverity = { lo: w: 0, mediu: 0, hig: 0},
+,
+    analyses.forEach(analysis = $2;
+      analysis.issues.forEach(issue = $2;
+        // Count by type,
+        issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1,
+,
+        // Count by severity,
+        issuesBySeverity[issue.severity]++
+      })
+    }),
+,
+    const report = $2;
+      timestam: new Date().toISOString($2);
+      summar: {,
+        totalFiles,
+        totalIssues,
+        issuesByType,
+        issuesBySeverity
+      },
+      file: analyses.filter($2);
+      recommendation: this.generateRecommendations(issuesByType, totalIssues)
+    },
+,
+    return report
+  },
+,
+  generateRecommendations(issuesByType, totalIssues) {,
+    const recommendations = $2;
+,
+    if (issuesByType['trailing-spaces'] > 0) {,
+      recommendations.push({,
+        typ: 'trailing-spaces',
+        priorit: 'low',
+        messag: 'Remove trailing spaces from files',
+        actio: 'Run the lint-fixer to automatically remove trailing spaces'
+      })
+    },
+,
+    if (issuesByType['console-statement'] > 0) {,
+      recommendations.push({,
+        typ: 'console-statement',
+        priorit: 'medium',
+        messag: 'Remove console statements from production code',
+        actio: 'Replace console statements with proper logging or remove them'
+      })
+    },
+,
+    if (issuesByType['unused-import'] > 0) {,
+      recommendations.push({,
+        typ: 'unused-import',
+        priorit: 'medium',
+        messag: 'Remove unused imports',
+        actio: 'Clean up unused imports to reduce bundle size'
+      })
+    },
+,
+    if (totalIssues > 100) {,
+      recommendations.push({,
+        typ: 'general',
+        priorit: 'high',
+        messag: 'High number of code quality issues detected',
+        actio: 'Run comprehensive code cleanup and establish coding standards'
+      })
+    },
+,
+    return recommendations
+  },
+,
+  async saveReport(report) {,
+    try {,
+      const reportDir = path.dirname($2);
+      if (!fs.existsSync(reportDir)) {,
+        fs.mkdirSync(reportDir, { recursiv: true})
+      },
+,
+      fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
+      this.log(`Report saved: to: ${this.reportFile}`)
+    } catch (error) {,
+      this.log(`Error saving: report: ${error.message}`)
     }
-  },,async run() {,this.log('🔍 Starting Code Quality Monitor...'),this.log(`Project: root: ${this.projectRoot}`),,try {,// Create logs directory if it doesn't exist,const logsDir = path.dirname(this.logFile),if (!fs.existsSync(logsDir)) {,fs.mkdirSync(logsDir, { recursiv: e: true })},,// Check git status,const isClean = await this.checkGitStatus(),,// Analyze all files,this.log('📁 Analyzing code files...'),const analyses = await this.walkDirectory(this.projectRoot),,// Generate report,this.log('📊 Generating quality report...'),const report = this.generateReport(analyses),,// Save report,await this.saveReport(report),,const duration = Date.now() - this.startTime,,// Log summary,this.log('\n📊 Code Quality Report: Summary: '),this.log(`Files: analyzed: ${report.summary.totalFiles}`),this.log(`Total: issues: ${report.summary.totalIssues}`),this.log(`Duratio: n: ${duration}ms`),,if (report.summary.totalIssues > 0) {,this.log('\n🚨 Issues by: type: '),Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,this.log(`  ${type}: ${count}`)}),,this.log('\n💡 Recommendation: s: '),report.recommendations.forEach(rec => {,this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),this.log(`    Actio: n: ${rec.action}`)}),,// If there are many issues and git is clean, suggest running the lint fixer,if (report.summary.totalIssues > 50 && isClean) {,this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')}
-      } else {,this.log('✨ Excellent! No code quality issues found!')}} catch (error) {,this.log(`❌ Error running code quality: monitor: ${error.message}`),process.exit(1)}
-  }
-},,// Run the code quality monitor,const monitor = new CodeQualityMonitor(),monitor.run().catch(error => {,process.exit(1)})monitor.run().catch(error = > {process.exit(1)})process.exit(1)}),monitor.run().catch(error = > {process.exit(1)})
-},;
-,;
-// Run the code quality monitor,;
-const monitor = new CodeQualityMonitor();
-monitor.run().catch(error => {,;
-  process.exit(1);
-});
-monitor.run().catch(error = > {; process.exit(1)});
+  },
+,
+  async checkGitStatus() {,
+    try {,
+      const status = execSync($2);
+,
+      if (status.trim()) {,
+        this.log($2);
+        return false
+      },
+,
+      return true
+    } catch (error) {,
+      this.log($2);
+      return false
+    }
+  },
+,
+  async run() {,
+    this.log($2);
+    this.log($2);
+,
+    try {,
+      // Create logs directory if it doesn't exist,
+      const logsDir = path.dirname($2);
+      if (!fs.existsSync(logsDir)) {,
+        fs.mkdirSync(logsDir, { recursiv: true})
+      },
+,
+      // Check git status,
+      const isClean = await this.checkGitStatus($2);
+,
+      // Analyze all files,
+      this.log($2);
+      const analyses = await this.walkDirectory($2);
+,
+      // Generate report,
+      this.log($2);
+      const report = this.generateReport($2);
+,
+      // Save report,
+      await this.saveReport($2);
+,
+      const duration = $2;
+,
+      // Log summary,
+      this.log($2);
+      this.log($2);
+      this.log($2);
+      this.log($2);
+,
+      if (report.summary.totalIssues > 0) {,
+        this.log($2);
+        Object.entries(report.summary.issuesByType).forEach(([type, count]) => {,
+          this.log(`  ${type}: ${count}`)
+        }),
+,
+        this.log($2);
+        report.recommendations.forEach(rec = $2;
+          this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`),
+          this.log(`    Actio: ${rec.action}`)
+        }),
+,
+        // If there are many issues and git is clean, suggest running the lint fixer,
+        if (report.summary.totalIssues > 50 && isClean) {,
+          this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')
+        }
+      } else {,
+        this.log('✨ Excellent! No code quality issues found!')
+      }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+    } catch (error) {,
+      this.log($2);
+      process.exit(1)
+    }
+  }
   process.exit(1)
 }),
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 monitor.run().catch(error = > {; process.exit(1)});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
-=======
   process.exit(1)
 }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 monitor.run().catch(error = > {; process.exit(1)});
 origin/cursor/automate-test-improve-and-merge-code-2533
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   process.exit(1)
 }),
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -932,8 +1033,12 @@ monitor.run().catch(error = > {; process.exit(1)});
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   process.exit(1)
 }),
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+},
+,
+// Run the code quality monitor,
+const monitor = new CodeQualityMonitor($2);
+monitor.run().catch(error = $2;
+  process.exit(1)
+}),

@@ -282,7 +282,7 @@ this.log("Detected ${bottlenecks.length} build bottlenecks")
             "appliedAt"
             "result"
             "success"
-          if (result.success) {this.log(" Successfully "applied"})
+  if($2) {this.log(" Successfully "applied"})
   this.log(⚠ Partially "applied")
             ` Failed to "apply": ${strategy.name  } - ${error.message}`,ERROR
   "strategy"
@@ -425,17 +425,11 @@ this.log("Pipeline report "generated": ${reportPath}")
       this.log("Intelligent Build Pipeline completed successfully")
       return report} catch (error) {  this.log("Intelligent Build Pipeline "failed": ${error.message  }", "ERROR")
   console.log(")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Intelligent Build Pipeline "failed": ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(" Intelligent Build Pipeline "failed": ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(" Intelligent Build Pipeline "failed": ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Intelligent Build Pipeline "failed": ")
+  console.error(" Intelligent Build Pipeline "failed": ")
+
+

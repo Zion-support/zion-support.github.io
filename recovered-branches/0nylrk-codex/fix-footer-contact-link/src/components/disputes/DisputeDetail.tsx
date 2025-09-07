@@ -1,29 +1,3 @@
-import React, { useState, useEffect } from "react";
-import {useParams, useNavigate} from "react-router-dom";
-import {useDisputes} from "@/hooks/useDisputes";
-import {disputeReasonLabels, DisputeMessage, DisputeStatus} from "@/types/disputes";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Separator} from "@/components/ui/separator";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {format, formatDistanceToNow} from "date-fns";
-import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
-import {ShieldAlert, ArrowDown, Check, X, MessageSquare, Download} from "lucide-react";
-import {useAuth} from "@/hooks/useAuth";
-import {toast} from "sonner";
-export function DisputeDetail() {;
-<<<<<<< HEAD
-  // useParams may be untyped in this environment, so avoid passing a;
-  // type argument and cast the result instead to prevent TS2347 errors.;
-  const { disputeId } = useParams() as { disputeId?: string };
-  const navigate = useNavigate();
-  const { user } = useAuth();
-  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
-
-
 import React, { useState, useEffect } from "react",
 import { useParams, useNavigate } from "react-router-dom",
 import { useDisputes } from "@/hooks/useDisputes",
@@ -43,100 +17,6 @@ import { toast } from "sonner";
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-
-  const { disputeId } = useParams() as { disputeId?: string }
-  const navigate = useNavigate();
-  const { user } = useAuth();
-  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
-
-  const [dispute, setDispute] = useState<any>(null);
-  const [messages, setMessages] = useState<DisputeMessage[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [message, setMessage] = useState("");
-  const [isSending, setIsSending] = useState(false);
-
-  const [resolution, setResolution] = useState({;
-    summary: "",;
-    resolution_type: "compromise"}),;
-  const [activeTab, setActiveTab] = useState("overview");
-
-  // Check if user is admin (placeholder - implement proper admin check);
-  const isAdmin = user?.userType === "admin";
-
-  useEffect(() => {;
-    if (!disputeId) return;
-
-    const loadDisputeData = async () => {;
-
-      setIsLoading(true);
-      try {;
-        const disputeData = await getDisputeById(disputeId);
-        if (!disputeData) {;
-          toast && toast.error("Dispute not found");
-          navigate("/dashboard/disputes");
-          return;
-        }
-        setDispute(disputeData);
-
-
-
-        const messagesData = await getDisputeMessages(disputeId);
-        setMessages(messagesData);
-      } catch (error) {;
-        console && console.error("Error loading dispute data:", error);
-        toast && toast.error("Failed to load dispute");
-      } finally {;
-        setIsLoading(false);
-      }
-
-    };
-
-    loadDisputeData();
-  }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
-
-  const handleStatusChange = async (status: DisputeStatus) => {;
-    if (!disputeId) return,;
-
-
-    const success = await updateDisputeStatus(disputeId, status);
-    if (success && dispute) {;
-      setDispute({ ...dispute, status });
-    }
-
-
-
-    const loadDisputeData = async () => {
-      setIsLoading(true),
-      try {
-        const disputeData = await getDisputeById(disputeId),
-        if (!disputeData) {
-          toast.error("Dispute not found"),
-          navigate("/dashboard/disputes"),
-          return
-        }
-
-        setDispute(disputeData),
-        
-        const messagesData = await getDisputeMessages(disputeId),
-
-        setMessages(messagesData)
-      } catch (error) {
-        console.error("Error loading dispute data:", error),
-        toast.error("Failed to load dispute")
-      } finally {
-        setIsLoading(false)
-
-  };
-
-    }
-  }
-  const handleResolveDispute = async () => {
-    if (!disputeId) return;
-  };
-
-  };
-
-=======
   // useParams may be untyped in this environment, so avoid passing a;  // type argument and cast the result instead to prevent TS2347 errors.;
   const { disputeId } = useParams() as { disputeId?: string };
   const navigate = useNavigate();
@@ -145,7 +25,6 @@ export function DisputeDetail() {
   const handleResolveDispute = async () => {
     if (!disputeId) return
 };
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -213,25 +92,59 @@ export function DisputeDetail() {;
 
   const handleResolveDispute = async () => {
     if (!disputeId) return,
-<<<<<<< HEAD
+  const { disputeId } = useParams() as { disputeId?: string },
+  const navigate = useNavigate($2);
+  const { user } = useAuth($2);
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes($2);
+  const [dispute, setDispute] = useState<any>(null),
+  const [messages, setMessages] = useState<DisputeMessage[]>([]),
+  const [isLoading, setIsLoading] = useState($2);
+  const [message, setMessage] = useState($2);
+  const [isSending, setIsSending] = useState($2);
+  const [resolution, setResolution] = useState($2);
+  const [activeTab, setActiveTab] = useState($2);
+  // Check if user is admin (placeholder - implement proper admin check)
+  const isAdmin = $2;
+  useEffect(() => {
+    if (!disputeId) return,
+
+    const loadDisputeData = async () => {
+      setIsLoading($2);
+      try {
+        const disputeData = await getDisputeById($2);
+        if (!disputeData) {
+          toast.error($2);
+          navigate($2);
+          return
+        }
+        setDispute($2);
+        const messagesData = await getDisputeMessages($2);
+        setMessages(messagesData)
+      } catch (error) {
+        console.error($2);
+        toast.error("Failed to load dispute")
+      } finally {
+        setIsLoading(false)
+      }
+    },
     
+    loadDisputeData()
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]),
+
+  const handleStatusChange = $2;
+    const success = await updateDisputeStatus($2);
+    if (success && dispute) {
+      setDispute({ ...dispute, status })
+    }
+  },
+
+  const handleResolveDispute = $2;
     if (!resolution.summary) {
-      toast.error("Please provide a resolution summary");
+      toast.error($2);
       return
     }
-
-
     
-    const success = await resolveDispute(disputeId, resolution),
-
-
-    if (!resolution.summary) {
-      toast.error("Please provide a resolution summary"),
-      return
-    }
-    const success = await resolveDispute(disputeId, resolution);
-    
-    const success = await resolveDispute(disputeId, resolution),
+    const success = await resolveDispute($2);
     if (success && dispute) {
       setDispute({
         ...dispute
@@ -241,18 +154,6 @@ export function DisputeDetail() {;
         resolved_at: new Date().toISOString()
       })
     }
-
-  };
-
-  },
-
-  const handleSendMessage = async () => {
-    if (!disputeId || !message.trim()) return,
-    
-    setIsSending(true),
-
-    try {
-=======
         if (!resolution.summary) {
       toast.error("Please provide a resolution summary");
       return
@@ -261,38 +162,31 @@ export function DisputeDetail() {;
       toast.error("Please provide a resolution summary"),
       return
     }    try {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
         // Refresh messages
         const updatedMessages = await getDisputeMessages(disputeId),
         setMessages(updatedMessages),
+  },
+
+  const handleSendMessage = $2;
+    setIsSending($2);
+    try {
+      const success = await addDisputeMessage($2);
+      if (success) {
+        // Refresh messages
+        const updatedMessages = await getDisputeMessages($2);
+        setMessages($2);
         setMessage("")
       }
     } catch (error) {
       console.error("Error sending message:", error)
     } finally {
       setIsSending(false)
-  }
-
-<<<<<<< HEAD
-
-  },;
-
-  };
-  const handleResolveDispute = async () => {;
-    if (!disputeId) return;
-    if (!resolution && resolution.summary) {;
-      toast && toast.error("Please provide a resolution summary");
-      return;
-    }
-
-=======
   },
 };
   const handleResolveDispute = async () => {;
     if (!disputeId) return;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {;
       setDispute({;
@@ -303,67 +197,10 @@ export function DisputeDetail() {;
         resolved_at: new Date().toISOString();
       });
     }
-<<<<<<< HEAD
-  };
-
-  const handleSendMessage = async () => {;
-    if (!disputeId || !message && message.trim()) return;
-
-  const handleSendMessage = async () => {;
-    if (!disputeId || !message && message.trim()) return;
-  const handleSendMessage = async () => {;
-    if (!disputeId || !message && message.trim()) return;
-    setIsSending(true);
-    try {;
-      const success = await addDisputeMessage(disputeId, message, isAdmin),;
-      if (success) {;
-        // Refresh messages;
-        const updatedMessages = await getDisputeMessages(disputeId),;
-        setMessages(updatedMessages),;
-        setMessage("");
-      }
-    } catch (error) {;
-      console.error("Error sending message:", error);
-    } finally {;
-      setIsSending(false);
-    }
-
-  };
-
-  if (isLoading) {;
-
-    return (
-      <div className="p-8 text-center">;
-        <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>;
-        <p>Loading dispute details...</p>;
-      </div>;
-    );
-
-
-
-
-  }
-
-
-  }
-
-
-  }
-
-  if (!dispute) {
-
-
-
-
-  }
-
-
-=======
   };  }
 
   }
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     return (
       <div className="p-8 text-center">
         <p>Dispute not found</p>
@@ -375,11 +212,6 @@ export function DisputeDetail() {;
   }
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-<<<<<<< HEAD
-
-      case "open": return "default",
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       case "under_review": return "secondary",
 
       case "resolved": return "outline", // Changed from "success" to "outline"
@@ -389,12 +221,7 @@ export function DisputeDetail() {;
 ;
 
   if (!dispute) {;
-<<<<<<< HEAD
-    return (
-;
-=======
     return (;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   if (!dispute) {;
   }
@@ -402,12 +229,19 @@ export function DisputeDetail() {;
       case "open": return "default";
       case "under_review": return "secondary"
       case "open": return "default",
+    }
+  },
+
+  if (isLoading) {
+    return (
+      <div className = $2;
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline",
       default: return "default"
     }
-  }
+  },
+
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -415,31 +249,10 @@ export function DisputeDetail() {;
           <div className="flex items-center gap-2">
             <h1 className="text-2xl font-bold">Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
-;
-  if (!dispute) {;
-    return (;
-<<<<<<< HEAD
-      <div className="p-8 text-center">;
-        <p>Dispute not found</p>;
-        <Button onClick={() => navigate("/dashboard/disputes")} className="mt-4">;
-          Back to Disputes;
-        </Button>;
-      </div>;
-    );
-  }
-
-
-  const getStatusBadgeVariant = (status: DisputeStatus) => {;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     switch (status) {;
       case "open": return "default";
       case "under_review": return "secondary",;
       case "resolved": return "outline", // Changed from "success" to "outline";
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from './react';
 import { use_params, use_navigate } from './react-router-dom';
 import { use_disputes } from '@/hooks / use_disputes';
@@ -581,13 +394,8 @@ if ( {) {
   $2
 }
     return (
-<<<<<<< HEAD
-      <div className="p - 8 text - center">;
-        <div className="w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded - full"></div>;
-=======
       <div className="p - 8 text-center">;
         <div className="w - 8 h - 8 mx - auto mb - 4 animate - spin border - 4 border - primary border - t-transparent rounded-full"></div>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <p > Loading dispute details...</p>;
       </div>);
   }
@@ -596,15 +404,9 @@ if ( {) {
   $2
 }
     return (
-<<<<<<< HEAD
-      <div className="p - 8 text - center">;
-        <p > Dispute not found</p>;
-        <Button on_click={() => navigate ("/dashboard / disputes")} className="mt - 4">;
-=======
       <div className="p - 8 text-center">;
         <p > Dispute not found</p>;
         <Button on_click={() => navigate ("/dashboard / disputes")} className="mt-4">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           Back to Disputes;
         </Button>;
       </div>);
@@ -618,10 +420,6 @@ if ( {) {
       default: return "default";
     }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import React, { useState, useEffect } from "react",;
 import { useParams, useNavigate } from "react-router-dom",;
 import { useDisputes } from "@/hooks/useDisputes",;
@@ -747,26 +545,17 @@ export function DisputeDetail() {;
       case "closed": return "outline";
       default: return "default";
     }
-<<<<<<< HEAD
-
-  },;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   return (;
     <div className="container mx-auto p-4 space-y-6">;
       <div className="flex flex-wrap items-center justify-between gap-4">;
         <div>;
           <div className="flex items-center gap-2">;
             <h1 className="text-2xl font-bold">Dispute Case</h1>;
-<<<<<<< HEAD
-            <Badge variant={getStatusBadgeVariant(dispute.status)}>;
-
-
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
           <p className="text-muted-foreground">
-            Reported {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
+            Reported {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true})}
           </p>
         </div>
         <div className="flex gap-2">
@@ -780,48 +569,22 @@ export function DisputeDetail() {;
           )}
         </div>
       </div>
-;
-  return (
-    <div className="container mx - auto p - 4 space - y-6">;
-      <div className="flex flex - wrap items - center justify - between gap - 4">;
-        <div>;
-          <div className="flex items - center gap - 2">;
-            <h1 className="text - 2xl font - bold">Dispute Case</h1>;
-            <Badge variant={getStatusBadgeVariant (dispute.status)}>;
-              {dispute.status.replace ('_ ')}
-            </Badge>;
-          </div>;
-          <p className="text - muted - foreground">;
-            Reported {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
-          </p>;
-        </div>;
-        <div className="flex gap - 2">;
-          <Button variant="outline" on_click={() => navigate ("/dashboard / disputes")}>;
-            Back to List;
-          </Button>;
-          {is_admin && dispute.status === "open" && (
-            <Button on_click={() => handleStatusChange ("under_review")}>;
-              Start Review;
-            </Button>)}
-        </div>;
-      </div>;
-      {dispute.status === "resolved" && dispute.resolution_summary && (
-        <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green - 900">;
-          <Check className="h - 4 w - 4" />;
-=======
             <Badge variant={getStatusBadgeVariant(dispute.status)}>;      {dispute.status === "resolved" && dispute.resolution_summary && (
         <Alert className="bg - green - 50 border - green - 200 dark:bg - green - 900 / 20 dark:border - green-900">;
           <Check className="h - 4 w-4" />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <AlertTitle > This dispute has been resolved</AlertTitle>;
           <AlertDescription>;
             {dispute.resolution_summary}
 
-<<<<<<< HEAD
-
-      
-
-
+      {dispute.status === "resolved" && dispute.resolution_summary && (
+        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
+          <Check className="h-4 w-4" />
+          <AlertTitle>This dispute has been resolved</AlertTitle>
+          <AlertDescription>
+            {dispute.resolution_summary}
+          </AlertDescription>
+        </Alert>
+      )}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
@@ -870,13 +633,6 @@ export function DisputeDetail() {;
                           <span>Under review</span>
                         </li>
                       )}
-          </AlertDescription>;
-        </Alert>)}
-      <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
-        <div className="lg:col - span - 2">;
-          <Tabs value={active_tab} onValueChange={setActiveTab}>;
-            <TabsList className="mb - 6">;
-=======
       
           </AlertDescription>;
         </Alert>)}
@@ -884,74 +640,17 @@ export function DisputeDetail() {;
         <div className="lg:col - span-2">;
           <Tabs value={active_tab} onValueChange={setActiveTab}>;
             <TabsList className="mb-6">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <TabsTrigger value="overview">Overview</TabsTrigger>;
               <TabsTrigger value="messages">Messages</TabsTrigger>;
               <TabsTrigger value="attachments">Attachments</TabsTrigger>;
               {is_admin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>;
-<<<<<<< HEAD
-            <TabsContent value="overview" className="space - y-6">;
-=======
             <TabsContent value="overview" className="space-y-6">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
               <Card>;
                 <CardHeader>;
                   <CardTitle > Dispute Details</CardTitle>;
                   <CardDescription > Information about this dispute case</CardDescription>;
                 </CardHeader>;
-<<<<<<< HEAD
-                <CardContent className="space - y-4">;
-                  <div>;
-                    <h3 className="font - medium">Reason</h3>;
-                    <p>{disputeReasonLabels[dispute.reason_code as any] || dispute.reason_code}</p>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - medium">Description</h3>;
-                    <p className="whitespace - pre - wrap">{dispute.description}</p>;
-                  </div>;
-                  <div>;
-                    <h3 className="font - medium">Project</h3>;
-                    <p>{dispute.project?.title || "Unknown Project"}</p>;
-                    <p className="text - sm text - muted - foreground">{dispute.project?.scope_summary}</p>;
-                  </div>;
-                  {dispute.milestone_id && (
-                    <div>;
-                      <h3 className="font - medium">Related Milestone</h3>;
-                      <p className="text - sm">Milestone ID: {dispute.milestone_id}</p>;
-                    </div>)}
-                  <div>;
-                    <h3 className="font - medium">Timeline</h3>;
-                    <ul className="space - y-2 mt - 2">;
-                      <li className="flex gap - 2 items - center">;
-                        <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">1</Badge>;
-                        <span > Created on {format (new Date (dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
-                      </li>;
-                      {dispute.status !== "open" && (
-                        <li className="flex gap - 2 items - center">;
-                          <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">2</Badge>;
-                          <span > Under review</span>;
-                        </li>)}
-                      {dispute.resolved_at && (
-                        <li className="flex gap - 2 items - center">;
-                          <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify - center">;
-                            {dispute.status !== "open" ? "3" : "2"}
-
-    <div className="container mx-auto p-4 space-y-6">;
-      <div className="flex flex-wrap items-center justify-between gap-4">;
-        <div>;
-          <div className="flex items-center gap-2">;
-            <h1 className="text-2xl font-bold">Dispute Case</h1>;
-            <Badge variant={getStatusBadgeVariant(dispute && dispute.status)}>;
-              {dispute && dispute.status.replace('_ ')}
-            </Badge>;
-          </div>;
-          <p className="text-muted-foreground">;
-            Reported {formatDistanceToNow(new Date(dispute && dispute.created_at), { addSuffix: true })}
-          </p>;
-        </div>;
-
-=======
                 <CardContent className="space-y-4">;
                   <div>;
                     <h3 className="font-medium">Reason</h3>;
@@ -986,7 +685,6 @@ export function DisputeDetail() {;
                         <li className="flex gap - 2 items-center">;
                           <Badge variant="outline" className="h - 6 w - 6 rounded - full p - 0 flex items - center justify-center">;
                             {dispute.status !== "open" ? "3" : "2"}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         <div className="flex gap-2">;
           <Button variant="outline" onClick={() => navigate("/dashboard/disputes")}>;
             Back to List;
@@ -998,20 +696,6 @@ export function DisputeDetail() {;
           )}
         </div>;
       </div>;
-<<<<<<< HEAD
-
-      {dispute && dispute.status === "resolved" && dispute && dispute.resolution_summary && (;
-        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">;
-          <Check className="h-4 w-4" />;
-          <AlertTitle>This dispute has been resolved</AlertTitle>;
-          <AlertDescription>;
-            {dispute && dispute.resolution_summary}
-          </AlertDescription>;
-        </Alert>;
-      )}
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
         <div className="lg:col-span-2">;
           <Tabs value={activeTab} onValueChange={setActiveTab}>;
@@ -1021,10 +705,6 @@ export function DisputeDetail() {;
               <TabsTrigger value="attachments">Attachments</TabsTrigger>;
               {isAdmin && <TabsTrigger value="admin">Admin Notes</TabsTrigger>}
             </TabsList>;
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             <TabsContent value="overview" className="space-y-6">;
               <Card>;
                 <CardHeader>;
@@ -1054,10 +734,6 @@ export function DisputeDetail() {;
                       <p className="text-sm">Milestone ID: {dispute && dispute.milestone_id}</p>;
                     </div>;
                   )}
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <div>;
                     <h3 className="font-medium">Timeline</h3>;
                     <ul className="space-y-2 mt-2">;
@@ -1066,12 +742,7 @@ export function DisputeDetail() {;
                         <span>Created on {format(new Date(dispute && dispute.created_at), "MMM d, yyyy 'at' h:mm a")}</span>;
                       </li>;
 
-<<<<<<< HEAD
-                      {dispute && dispute.status !== "open" && (;
-                        <li className="flex gap-2 items-center">;
-=======
                       {dispute && dispute.status !== "open" && (;                        <li className="flex gap-2 items-center">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>;
                           <span>Under review</span>;
                         </li>;
@@ -1082,24 +753,14 @@ export function DisputeDetail() {;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
                             {dispute && dispute.status !== "open" ? "3" : "2"}
                           </Badge>;
-<<<<<<< HEAD
-                          <span>Resolved on {format(new Date(dispute && dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
-                        </li>;
-=======
                           <span>Resolved on {format(new Date(dispute && dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;                        </li>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       )}
                     </ul>;
                   </div>;
                 </CardContent>;
               </Card>;
 
-<<<<<<< HEAD
-              {dispute && dispute.status === "resolved" && (;
-                <Card>;
-=======
               {dispute && dispute.status === "resolved" && (;                <Card>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   <CardHeader>;
                     <CardTitle>Resolution</CardTitle>;
                   </CardHeader>;
@@ -1112,125 +773,23 @@ export function DisputeDetail() {;
                           Resolution: {dispute && dispute.resolution_type.replace('_ ')}
                         </Badge>;
                       </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     )}
                   </CardContent>;
                 </Card>;
               )}
-<<<<<<< HEAD
-
-                          </Badge>;
-                          <span > Resolved on {format (new Date (dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
-                        </li>)}
-                    </ul>;
-                  </div>;
-                </CardContent>;
-              </Card>;
-              {dispute.status === "resolved" && (
-                <Card>;
-                  <CardHeader>;
-                    <CardTitle > Resolution</CardTitle>;
-                  </CardHeader>;
-                  <CardContent>;
-                    <p className="whitespace - pre - wrap">{dispute.resolution_summary}</p>;
-                    {dispute.resolution_type && (
-                      <div className="mt - 4">;
-                        <Badge>;
-                          Resolution: {dispute.resolution_type.replace ('_ ')}
-                        </Badge>;
-                      </div>)}
-                  </CardContent>;
-                </Card>)}
-            </TabsContent>;
-            <TabsContent value="messages" className="space - y-6">;
-              <Card>;
-                <CardHeader>;
-                  <CardTitle > Messages</CardTitle>;
-                  <CardDescription > Communication regarding this dispute</CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <div className="space - y-6 max - h-[600px] overflow - y-auto p - 2">;
-
-                    {messages.length === 0 ? (
-                      <div className="text - center py - 12">;
-                        <MessageSquare className="mx - auto h - 12 w - 12 text - muted - foreground mb - 2" />;
-                        <p className="text - muted - foreground">No messages yet</p>;
-=======
                     {messages.length === 0 ? (
                       <div className="text - center py-12">;
                         <MessageSquare className="mx - auto h - 12 w - 12 text - muted - foreground mb-2" />;
                         <p className="text - muted-foreground">No messages yet</p>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       </div>) : (
                       messages;
                         .filter (msg => !msg.is_admin_note);
                         .map ((msg) => {
-<<<<<<< HEAD
-                          const isCurrentUser = user?.id === msg.user_id;
-            <TabsContent value="messages" className="space-y-6">;
-              <Card>;
-                <CardHeader>;
-                  <CardTitle>Messages</CardTitle>;
-                  <CardDescription>Communication regarding this dispute</CardDescription>;
-                </CardHeader>;
-                <CardContent>;
-                  <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">;
-                    {messages && messages.length === 0 ? (;
-                      <div className="text-center py-12">;
-                        <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />;
-                        <p className="text-muted-foreground">No messages yet</p>;
-                      </div>;
-                    ) : (;
-                      messages;
-                        .filter(msg => !msg && msg.is_admin_note);
-                        .map((msg) => {;
-                          const isCurrentUser = user?.id === msg && msg.user_id;
-                          return (
-
-                                } p-4 rounded-lg`}>;
-                                <div className="flex items-center gap-2 mb-2">;
-                                  <Avatar className="h-6 w-6">;
-                                    <AvatarImage src={msg && msg.user_profile?.avatar_url} />;
-                                    <AvatarFallback>;
-                                      {msg && msg.user_profile?.display_name?.[0] || '?'}
-                                    </AvatarFallback>;
-                                  </Avatar>;
-                                  <span className="text-sm font-medium">;
-                                    {msg && msg.user_profile?.display_name || 'Unknown User'}
-                                  </span>;
-                                  <span className="text-xs opacity-70">;
-                                    {format(new Date(msg && msg.created_at), 'MMM d, h:mm a')}
-                                  </span>;
-                                </div>;
-                                <p className="whitespace-pre-wrap">{msg && msg.message}</p>;
-                              </div>;
-                            </div>;
-                          );
-                        });
-
-                          return (
-                    )}
-=======
                           const isCurrentUser = user?.id === msg.user_id;                    )}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   </div>;
                 </CardContent>;
                 <CardFooter>;
                   <div className="w-full space-y-4">;
-<<<<<<< HEAD
-                    <Textarea
-                      placeholder="Type your message here..."
-                      value={message}
-                      onChange={(e) => setMessage(e && e.target.value)}
-                      className="min-h-[100px]";
-                      disabled={isSending}
-
-                            <div;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               key={msg.id}
                               className={`flex ${isCurrentUser ? 'justify - end' : 'justify - start'}`}
                             >;
@@ -1241,28 +800,13 @@ export function DisputeDetail() {;
                                     : 'bg - muted';
                                 } p - 4 rounded - lg`}
                               >;
-<<<<<<< HEAD
-                                <div className="flex items - center gap - 2 mb - 2">;
-                                  <Avatar className="h - 6 w - 6">;
-=======
                                 <div className="flex items - center gap - 2 mb-2">;
                                   <Avatar className="h - 6 w-6">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                                     <AvatarImage src={msg.user_profile?.avatar_url} />;
                                     <AvatarFallback>;
                                       {msg.user_profile?.display_name?.[0] || '?'}
                                     </AvatarFallback>;
                                   </Avatar>;
-<<<<<<< HEAD
-                                  <span className="text - sm font - medium">;
-                                    {msg.user_profile?.display_name || 'Unknown User'}
-                                  </span>;
-                                  <span className="text - xs opacity - 70">;
-                                    {format (new Date (msg.created_at), 'MMM d, h:mm a')}
-                                  </span>;
-                                </div>;
-                                <p className="whitespace - pre - wrap">{msg.message}</p>;
-=======
                                   <span className="text - sm font-medium">;
                                     {msg.user_profile?.display_name || 'Unknown User'}
                                   </span>;
@@ -1271,38 +815,23 @@ export function DisputeDetail() {;
                                   </span>;
                                 </div>;
                                 <p className="whitespace - pre-wrap">{msg.message}</p>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               </div>;
                             </div>);
                         }))}
                   </div>;
                 </CardContent>;
                 <CardFooter>;
-<<<<<<< HEAD
-                  <div className="w - full space - y-4">;
-=======
                   <div className="w - full space-y-4">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <Textarea;
                       placeholder="Type your message here...";
                       value={message}
                       on_change={(e) => set_message (e.target.value)}
-<<<<<<< HEAD
-                      className="min - h-[100px]";
-                      disabled={is_sending}
-                    />;
-                    <div className="flex justify - end">;
-                      <Button on_click={handleSendMessage} disabled={is_sending || !message.trim ()}>;
-                        {is_sending ? "Sending..." : "Send Message"}
-                      </Button>;
-=======
                       className="min-h-[100px]";
                       disabled={is_sending}
                     />;
                     <div className="flex justify-end">;
                       <Button on_click={handleSendMessage} disabled={is_sending || !message.trim ()}>;
                         {is_sending ? "Sending..." : "Send Message"}                      </Button>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     </div>;
                   </div>;
                 </CardFooter>;
@@ -1315,40 +844,19 @@ export function DisputeDetail() {;
                   <CardDescription > Files related to this dispute</CardDescription>;
                 </CardHeader>;
                 <CardContent>;
-<<<<<<< HEAD
-                  <div className="text - center py - 12">;
-                    <Download className="mx - auto h - 12 w - 12 text - muted - foreground mb - 2" />;
-                    <p className="text - muted - foreground">No attachments available</p>;
-                  </div>;
-=======
                   <div className="text - center py-12">;
                     <Download className="mx - auto h - 12 w - 12 text - muted - foreground mb-2" />;
                     <p className="text - muted-foreground">No attachments available</p>;                  </div>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </CardContent>;
               </Card>;
             </TabsContent>;
             {is_admin && (
-<<<<<<< HEAD
-              <TabsContent value="admin" className="space - y-6">;
-=======
               <TabsContent value="admin" className="space-y-6">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Card>;
                   <CardHeader>;
                     <CardTitle > Admin Actions</CardTitle>;
                     <CardDescription > Handle this dispute as an administrator</CardDescription>;
                   </CardHeader>;
-<<<<<<< HEAD
-                  <CardContent className="space - y-6">;
-                    <div>;
-                      <h3 className="font - medium mb - 2">Change Status</h3>;
-                      <div className="flex gap - 2">;
-                        <Button;
-                          variant="outline";
-                          on_click={() => handleStatusChange ("open")}
-                          disabled={dispute.status === "open"}
-=======
                   <CardContent className="space-y-6">;
                     <div>;
                       <h3 className="font - medium mb-2">Change Status</h3>;
@@ -1356,65 +864,183 @@ export function DisputeDetail() {;
                         <Button;
                           variant="outline";
                           on_click={() => handleStatusChange ("open")}                          disabled={dispute.status === "open"}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         >;
                           Mark as Open;
                         </Button>;
                         <Button;
                           variant="outline";
-<<<<<<< HEAD
-                          on_click={() => handleStatusChange ("under_review")}
-                          disabled={dispute.status === "under_review"}
-=======
                           on_click={() => handleStatusChange ("under_review")}                          disabled={dispute.status === "under_review"}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         >;
                           Mark as Under Review;
                         </Button>;
                         <Button;
                           variant="outline";
-<<<<<<< HEAD
-                          on_click={() => handleStatusChange ("closed")}
-                          disabled={dispute.status === "closed"}
-=======
                           on_click={() => handleStatusChange ("closed")}                          disabled={dispute.status === "closed"}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                         >;
                           Close Dispute;
                         </Button>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-
+                      {dispute.resolved_at && (
+                        <li className="flex gap-2 items-center">
+                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">
+                            {dispute.status !== "open" ? "3" : "2"}
+                          </Badge>
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>
+                        </li>
+                      )}
+                    </ul>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              {dispute.status = $2;
+                          return (
+                            <div
+                              key={msg.id}
+                              className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
+                            >
+                              <div
+                                className={`max-w-[80%] ${
+                                  isCurrentUser
+                                    ? 'bg-primary text-primary-foreground'
+                                    : 'bg-muted'
+                                } p-4 rounded-lg`}
+                              >
+                                <div className="flex items-center gap-2 mb-2">
+                                  <Avatar className="h-6 w-6">
+                                    <AvatarImage src={msg.user_profile?.avatar_url} />
+                                    <AvatarFallback>
+                                      {msg.user_profile?.display_name?.[0] |'?'}
+                                    </AvatarFallback>
+                                  </Avatar>
+                                  <span className="text-sm font-medium">
+                                    {msg.user_profile?.display_name |'Unknown User'}
+                                  </span>
+                                  <span className="text-xs opacity-70">
+                                    {format(new Date(msg.created_at), 'MMM d, h:mm a')}
+                                  </span>
+                                </div>
+                                <p className="whitespace-pre-wrap">{msg.message}</p>
+                              </div>
+                            </div>
+                          )
+                        })
+                    )}
+                  </div>
+                </CardContent>
+                <CardFooter>
+                  <div className="w-full space-y-4">
+                    <Textarea
+                      placeholder="Type your message here..."
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      className="min-h-[100px]"
+                      disabled={isSending}
+                    />
+                    <div className="flex justify-end">
+                      <Button onClick={handleSendMessage} disabled={isSending |!message.trim()}>
+                        {isSending ? "Sending..." : "Send Message"}
+                      </Button>
+                    </div>
+                  </div>
+                </CardFooter>
+              </Card>
+            </TabsContent>
+            <TabsContent value="attachments">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Attachments</CardTitle>
+                  <CardDescription>Files related to this dispute</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-center py-12">
+                    <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
+                    <p className="text-muted-foreground">No attachments available</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
+            {isAdmin && (
+              <TabsContent value="admin" className="space-y-6">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Admin Actions</CardTitle>
+                    <CardDescription>Handle this dispute as an administrator</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div>
+                      <h3 className="font-medium mb-2">Change Status</h3>
+                      <div className="flex gap-2">
+                        <Button
+                          variant="outline"
+                          onClick={() => handleStatusChange("open")}
+                          disabled={dispute.status === "open"}
+                        >
+                          Mark as Open
+                        </Button>
+                        <Button
+                          variant="outline"
+                          onClick={() => handleStatusChange("under_review")}
+                          disabled={dispute.status === "under_review"}
+                        >
+                          Mark as Under Review
+                        </Button>
+                        <Button
+                          variant="outline"
+                          onClick={() => handleStatusChange("closed")}
+                          disabled={dispute.status === "closed"}
+                        >
+                          Close Dispute
+                        </Button>
+                      </div>
+                    </div>
                     {dispute.status !== "resolved" && (
-                      <div>;
-                        <h3 className="font - medium mb - 2">Resolve Dispute</h3>;
-                        <div className="space - y-4">;
-                          <Textarea;
-                            placeholder="Enter resolution summary...";
+                      <div>
+                        <h3 className="font-medium mb-2">Resolve Dispute</h3>
+                        <div className="space-y-4">
+                          <Textarea
+                            placeholder="Enter resolution summary..."
                             value={resolution.summary}
-
-
-;
-                    <div>;
-                      <h3 className="font-medium mb-2">Admin Notes</h3>;
-                      <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">;
-                        {messages;
-                          .filter(msg => msg.is_admin_note);
-                          .map((msg) => (;
-                          <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">;
-                            <div className="flex items-center justify-between mb-2">;
-                              <div className="flex items-center gap-2">;
-                                <Avatar className="h-6 w-6">;
-                                  <AvatarImage src={msg.user_profile?.avatar_url} />;
-                                  <AvatarFallback>;
-                                    {msg.user_profile?.display_name?.[0] || 'A'}
+                            onChange={(e) => setResolution({ ...resolution, summary: e.target.value })}
+                            className="min-h-[100px]"
+                          />
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <label className="text-sm font-medium mb-1 block">Resolution Type</label>
+                              <select
+                                className="w-full p-2 border rounded"
+                                value={resolution.resolution_type}
+                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value })}
+                              >
+                                <option value="client_favor">In Client's Favor</option>
+                                <option value="talent_favor">In Talent's Favor</option>
+                                <option value="compromise">Compromise</option>
+                                <option value="dismissed">Dismissed</option>
+                              </select>
+                            </div>
+                          </div>
+                          <Button onClick={handleResolveDispute}>Resolve Dispute</Button>
+                        </div>
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="font-medium mb-2">Admin Notes</h3>
+                      <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">
+                        {messages
+                          .filter(msg => msg.is_admin_note)
+                          .map((msg) => (
+                          <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">
+                            <div className="flex items-center justify-between mb-2">
+                              <div className="flex items-center gap-2">
+                                <Avatar className="h-6 w-6">
+                                  <AvatarImage src={msg.user_profile?.avatar_url} />
+                                  <AvatarFallback>
+                                    {msg.user_profile?.display_name?.[0] |'A'}
                                   </AvatarFallback>
                                 </Avatar>
                                 <span className="text-sm font-medium">
-                                  {msg.user_profile?.display_name || 'Admin'}
-
-
+                                  {msg.user_profile?.display_name |'Admin'}
                                 </span>
                               </div>
                               <span className="text-xs opacity-70">
@@ -1439,9 +1065,6 @@ export function DisputeDetail() {;
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
-
-                    />;
-=======
                     {dispute.status !== "resolved" && (
                       <div>;
                         <h3 className="font - medium mb-2">Resolve Dispute</h3>;
@@ -1449,7 +1072,6 @@ export function DisputeDetail() {;
                           <Textarea;
                             placeholder="Enter resolution summary...";
                             value={resolution.summary}                    />;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                     <div className="flex justify-end">;
                       <Button onClick={handleSendMessage} disabled={isSending || !message && message.trim()}>;
                         {isSending ? "Sending..." : "Send Message"}
@@ -1534,152 +1156,16 @@ export function DisputeDetail() {;
                               </select>;
                             </div>;
                           </div>;
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                           <Button onClick={handleResolveDispute}>Resolve Dispute</Button>;
                         </div>;
                       </div>;
                     )}
-<<<<<<< HEAD
-
-                    ;
-                    <div>;
-                      <h3 className="font-medium mb-2">Admin Notes</h3>;
-                      <div className="space-y-4 max-h-[300px] overflow-y-auto p-2">;
-                        {messages;
-                          .filter(msg => msg && msg.is_admin_note);
-                          .map((msg) => (;
-                          <div key={msg && msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">;
-                            <div className="flex items-center justify-between mb-2">;
-                              <div className="flex items-center gap-2">;
-                                <Avatar className="h-6 w-6">;
-                                  <AvatarImage src={msg && msg.user_profile?.avatar_url} />;
-                                  <AvatarFallback>;
-                                    {msg && msg.user_profile?.display_name?.[0] || 'A'}
-                                  </AvatarFallback>;
-                                </Avatar>;
-                                <span className="text-sm font-medium">;
-                                  {msg && msg.user_profile?.display_name || 'Admin'}
-                                </span>;
-                              </div>;
-                              <span className="text-xs opacity-70">;
-                                {format(new Date(msg && msg.created_at), 'MMM d, h:mm a')}
-                              </span>;
-                            </div>;
-                            <p className="whitespace-pre-wrap text-sm">{msg && msg.message}</p>;
-                          </div>;
-                        ))}
-
-                                setMessage("")
-                              })
-                                getDisputeMessages(disputeId!).then(setMessages),
-                                setMessage("")
-                              })
-                      </div>;
-                      <div className="mt-4 space-y-4">;
-                        <Textarea;
-                          placeholder="Add an admin note (only visible to administrators)...";
-                          value={message}
-                          onChange={(e) => setMessage(e.target.value)}
-                        />;
-                        <Button;
-                          variant="outline";
-                          onClick={() => {;
-                              addDisputeMessage(disputeId!, message, true).then(() => {;
-                                getDisputeMessages(disputeId!).then(setMessages);
-                                setMessage("");
-                              });
-
-                            on_change={(e) => set_resolution ({ ...resolution, summary: e.target.value })}
-                            className="min - h-[100px]";
-                          />;
-                          <div className="grid grid - cols - 2 gap - 4">;
-                            <div>;
-                              <label className="text - sm font - medium mb - 1 block">Resolution Type</label>;
-                              <select;
-                                className="w - full p - 2 border rounded";
-                                value={resolution.resolution_type}
-                                on_change={(e) => set_resolution ({ ...resolution, resolution_type: e.target.value })}
-                              >;
-                                <option value="client_favor">In Client's Favor</option>;
-                                <option value="talent_favor">In Talent's Favor</option>;
-                                <option value="compromise">Compromise</option>;
-                                <option value="dismissed">Dismissed</option>;
-                              </select>;
-                            </div>;
-                          </div>;
-                          <Button on_click={handleResolveDispute}>Resolve Dispute</Button>;
-                        </div>;
-                      </div>)}
-                    <div>;
-                      <h3 className="font - medium mb - 2">Admin Notes</h3>;
-                      <div className="space - y-4 max - h-[300px] overflow - y-auto p - 2">;
-                        {messages;
-                          .filter (msg => msg.is_admin_note);
-                          .map ((msg) => (
-                          <div key={msg.id} className="bg - yellow - 50 border - l-4 border - yellow - 200 p - 4 dark:bg - yellow - 900 / 20 dark:border - yellow - 900">;
-                            <div className="flex items - center justify - between mb - 2">;
-                              <div className="flex items - center gap - 2">;
-                                <Avatar className="h - 6 w - 6">;
-                                  <AvatarImage src={msg.user_profile?.avatar_url} />;
-                                  <AvatarFallback>;
-                                    {msg.user_profile?.display_name?.[0] || 'A'}
-                                  </AvatarFallback>;
-                                </Avatar>;
-                                <span className="text-sm font-medium">;
-                                  {msg.user_profile?.display_name || 'Admin'}
-                                </span>;
-                              </div>;
-                              <span className="text-xs opacity-70">;
-                                {format(new Date(msg.created_at), 'MMM d, h:mm a')}
-                              </span>;
-                            </div>;
-                            <p className="whitespace - pre - wrap text - sm">{msg.message}</p>;
-                          </div>))}
-                        {!messages.some (msg => msg.is_admin_note) && (
-                          <p className="text - sm text - muted - foreground italic">No admin notes yet</p>)}
-                      </div>;
-                      <div className="mt - 4 space - y-4">;
-                        <Textarea;
-                          placeholder="Add an admin note (only visible to administrators)...";
-                          value={message}
-                          on_change={(e) => set_message (e.target.value)}
-                        />;
-                        <Button;
-                          variant="outline";
-                          on_click={() => {
-                            if () {) {
-  $2
-}
-                              addDisputeMessage (dispute_id!, message, true).then (() => {
-                                getDisputeMessages (dispute_id!).then (set_messages);
-                                set_message ("");
-                              });
-                                getDisputeMessages(disputeId!).then(setMessages);
-
-                                setMessage("")
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                               })
                                 getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
 
-<<<<<<< HEAD
-                            }
-                            <p className="whitespace-pre-wrap text-sm">{msg.message}</p>;
-                          </div>;
-                        ))}
-                        ;
-                        {!messages.some(msg => msg.is_admin_note) && (;
-                          <p className="text-sm text-muted-foreground italic">No admin notes yet</p>;
-                        )}
-                      </div>;
-=======
                             }                      </div>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                       ;
                       <div className="mt-4 space-y-4">;
                         <Textarea;
@@ -1692,6 +1178,9 @@ export function DisputeDetail() {;
                                 setMessage("")
                               })
 
+                                getDisputeMessages(disputeId!).then($2);
+                                setMessage("")
+                              })
                             }
                           }}
                         >
@@ -1770,67 +1259,6 @@ export function DisputeDetail() {;
     </div>
   )
 }
-}
-;
-                            }
-                          .filter(msg => msg.is_admin_note);
-                          .map((msg) => (;
-                          <div key={msg.id} className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900">;
-                            <div className="flex items-center justify-between mb-2">;
-                              <div className="flex items-center gap-2">;
-                                <Avatar className="h-6 w-6">;
-                                  <AvatarImage src={msg.user_profile?.avatar_url} />;
-                                  <AvatarFallback>;
-                                    {msg.user_profile?.display_name?.[0] || 'A'}
-                                  </AvatarFallback>;
-                                </Avatar>;
-                                <span className="text-sm font-medium">;
-                                  {msg.user_profile?.display_name || 'Admin'}
-                                </span>;
-                              </div>;
-                              <span className="text-xs opacity-70">;
-                                {format(new Date(msg.created_at), 'MMM d, h:mm a')}
-                              </span>;
-                            </div>;
-                            <p className="whitespace-pre-wrap text-sm">{msg.message}</p>;
-                          </div>;
-                        ))}
-                        ;
-                        {!messages.some(msg => msg.is_admin_note) && (;
-                          <p className="text-sm text-muted-foreground italic">No admin notes yet</p>;
-                        )}
-                      </div>;
-                      ;
-                      <div className="mt-4 space-y-4">;
-                        <Textarea;
-                          placeholder="Add an admin note (only visible to administrators)...";
-                          value={message}
-                          onChange={(e) => setMessage(e.target.value)}
-                        />;
-                        <Button ;
-                          variant="outline" ;
-                          onClick={() => {;
-                            if (message.trim()) {;
-                              addDisputeMessage(disputeId!, message, true).then(() => {;
-                                getDisputeMessages(disputeId!).then(setMessages),;
-                                setMessage(""),;
-                              }),;                            }
-<<<<<<< HEAD
-                          }}
-                        >;
-                          Add Admin Note;
-                        </Button>;
-                      </div>;
-                    </div>;
-                  </CardContent>;
-                </Card>;
-
-          </Tabs>;
-        </div>;
-
-        <div className="space-y-6">;
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           <Card>;
             <CardHeader>;
               <CardTitle>Parties Involved</CardTitle>;
@@ -1838,12 +1266,7 @@ export function DisputeDetail() {;
             <CardContent className="space-y-6">;
               <div className="flex items-start gap-4">;
                 <Avatar className="h-10 w-10">;
-<<<<<<< HEAD
-                  <AvatarImage src={dispute && dispute.client_profile?.avatar_url} />;
-                  <AvatarFallback>C</AvatarFallback>;
-=======
                   <AvatarImage src={dispute && dispute.client_profile?.avatar_url} />;                  <AvatarFallback>C</AvatarFallback>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </Avatar>;
                 <div>;
                   <p className="font-medium">Client</p>;
@@ -1859,22 +1282,12 @@ export function DisputeDetail() {;
 
               <div className="flex items-start gap-4">;
                 <Avatar className="h-10 w-10">;
-<<<<<<< HEAD
-                  <AvatarImage src={dispute && dispute.talent_profile?.avatar_url} />;
-                  <AvatarFallback>T</AvatarFallback>;
-=======
                   <AvatarImage src={dispute && dispute.talent_profile?.avatar_url} />;                  <AvatarFallback>T</AvatarFallback>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </Avatar>;
                 <div>;
                   <p className="font-medium">Talent</p>;
                   <p className="text-sm text-muted-foreground">;
-<<<<<<< HEAD
-                    {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}
-                  </p>;
-=======
                     {dispute && dispute.talent_profile?.display_name || "Unknown Talent"}                  </p>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 </div>;
               </div>;
             </CardContent>;
@@ -1884,19 +1297,6 @@ export function DisputeDetail() {;
             <CardHeader>;
               <CardTitle > Case Information</CardTitle>;
             </CardHeader>;
-<<<<<<< HEAD
-            <CardContent className="space - y-4 text - sm">;
-              <div className="flex justify - between">;
-                <span className="font - medium">Case ID:</span>;
-                <span className="font - mono">{dispute.id}</span>;
-              </div>;
-              <div className="flex justify - between">;
-                <span className="font - medium">Created:</span>;
-                <span>{format (new Date (dispute.created_at), "MMM d, yyyy")}</span>;
-              </div>;
-              <div className="flex justify - between">;
-                <span className="font - medium">Status:</span>;
-=======
             <CardContent className="space - y-4 text-sm">;
               <div className="flex justify-between">;
                 <span className="font-medium">Case ID:</span>;
@@ -1908,168 +1308,10 @@ export function DisputeDetail() {;
               </div>;
               <div className="flex justify-between">;
                 <span className="font-medium">Status:</span>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                 <Badge variant={getStatusBadgeVariant (dispute.status)}>;
                   {dispute.status.replace ('_ ')}
                 </Badge>;
               </div>;
-<<<<<<< HEAD
-              <div className="flex justify - between">;
-                <span className="font - medium">Raised by:</span>;
-                <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>;
-
-              </div>;
-            </CardContent>;
-          </Card>;
-        </div>;
-      </div>;
-
-    </div>);
-}
-
-    </div>;
-  ),; export function DisputeDetail () {
-  //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. const {
-  disputeId 
-}= useParams () as {
-  disputeId?: string 
-};
-const navigate = useNavigate ();
-const {
-  user 
-}= useAuth ();
-const {
-  getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage 
-}= useDisputes ();
-if (!disputeId) return;
-const loadDisputeData = async () => {
-  setIsLoading (true);
-try {
-  const disputeData = await getDisputeById (disputeId);
-if (!disputeData) {
-  
-}setDispute (disputeData);
-const messagesData = await getDisputeMessages (disputeId);
-setMessages (messagesData) 
-}catch (error) {
-  
-}finally {
-  setIsLoading (false) 
-}
-
-}
-;
-
-};
-}, [disputeId, navigate, getDisputeById, getDisputeMessages]);
-}
-};
-}const success = await resolveDispute (disputeId, resolution);
-if (success && dispute) {
-  setDispute ({
-  ...dispute;
-status: "resolved";
-resolution summary: resolution.summary;
-resolution type: resolution.resolution type;
-resolved at: new Date () .toISOString () 
-}) 
-}
-};
-setIsSending (true);
-try {
-  
-}finally {
-  setIsSending (false) 
-}
-};
-return (<div className="p-8 text-center"> <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div> <p>Loading dispute details...</p> </div> <p>Dispute not found</p> <Button onClick= {
-  () => navigate ("/dashboard/disputes") 
-}className="mt-4" > Back to Disputes </Button> </div>) 
-}
-}
-};
-formatDistanceToNow (new Date (dispute.created at), {
-  addSuffix: true 
-}) 
-}</p> </div> Start Review </Button>) 
-}</div> </div> <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900"> <Check className="h-4 w-4" /> <AlertTitle>This dispute has been resolved</AlertTitle> <AlertDescription> {
-  dispute.resolution summary 
-}</AlertDescription> </Alert>) 
-}<div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> <div className="lg:col-span-2"> </TabsList> <TabsContent value="overview" className="space-y-6"> <Card> <CardHeader> <CardTitle>Dispute Details</CardTitle> <CardDescription>Information about this dispute case</CardDescription> </CardHeader> <CardContent className="space-y-4"> <div> <h3 className="font-medium">Reason</h3> <p> {
-  disputeReasonLabels[dispute.reason code as any] || dispute.reason code 
-}</p> </div> <div> <h3 className="font-medium">Description</h3> <p className="whitespace-pre-wrap"> {
-  dispute.description 
-}</p> </div> <div> </div> {
-  dispute.milestone id && (<div> <h3 className="font-medium">Related Milestone</h3> <p className="text-sm">Milestone ID: {
-  dispute.milestone id 
-}</p> </div>) 
-}<div> <h3 className="font-medium">Timeline</h3> <ul className="space-y-2 mt-2"> <span>Under review</span> </li>) 
-}</li>) 
-}</ul> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Resolution</CardTitle> </CardHeader> <CardContent> <p className="whitespace-pre-wrap"> {
-  dispute.resolution summary 
-}</p> </Badge> </div>) 
-}</CardContent> </Card>) 
-}</TabsContent> <TabsContent value="messages" className="space-y-6"> <Card> <CardHeader> <CardTitle>Messages</CardTitle> <CardDescription>Communication regarding this dispute</CardDescription> </CardHeader> <CardContent> <div className="space-y-6 max-h-[600px] overflow-y-auto p-2"> {
-  messages.length === 0 ? (<div className="text-center py-12"> <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground">No messages yet</p> </div>) : (messages .filter (msg => !msg.is admin note) return (<div key= {
-  msg.id 
-}className= {
-  `flex $ {
-  isCurrentUser ? 'justify-end' : 'justify-start' 
-}` 
-}> <div className= {
-  `max-w-[80%] $ {
-  isCurrentUser ? 'bg-primary text-primary-foreground' : 'bg-muted' 
-}p-4 rounded-lg` 
-}> <div className="flex items-center gap-2 mb-2"> <Avatar className="h-6 w-6"> <AvatarImage src= {
-  msg.user profile?.avatar url 
-}/> <AvatarFallback> {
-  msg.user profile?.display name?.[0] || '?' 
-}</AvatarFallback> </Avatar> <span className="text-sm font-medium"> {
-  msg.user profile?.display name || 'Unknown User' 
-}</span> <span className="text-xs opacity-70"> {
-  format (new Date (msg.created at), 'MMM d, h:mm a') 
-}</span> </div> <p className="whitespace-pre-wrap"> {
-  msg.message 
-}</p> </div> </div>) 
-}) ) 
-}</div> </CardContent> <CardFooter> <div className="w-full space-y-4" > <Textarea className="min-h-[100px]" disabled= {
-  isSending 
-}/> </Button> </div> </div> </CardFooter> </Card> </TabsContent> <TabsContent value="attachments"> <Card> <CardHeader> <CardTitle>Attachments</CardTitle> <CardDescription>Files related to this dispute</CardDescription> </CardHeader> <CardContent> <div className="text-center py-12"> <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground" >No attachments available</p> </div> </CardContent> </Card> </TabsContent> <Card> <CardHeader> <CardTitle>Admin Actions</CardTitle> <CardDescription>Handle this dispute as an administrator</CardDescription> </CardHeader> <CardContent className="space-y-6"> <div> <h3 className="font-medium mb-2">Change Status</h3> <div className="flex gap-2" > <Button > Mark as Open </Button> <Button > Mark as Under Review </Button> <Button > Close Dispute </Button> </div> </div> <h3 className="font-medium mb-2">Resolve Dispute</h3> <div className="space-y-4" > <Textarea placeholder="Enter resolution summary..." value= {
-  resolution.summary 
-}onChange= {
-  (e) => setResolution ({
-  ...resolution, summary: e.target.value 
-}) 
-}className="min-h-[100px]" /> <div className="grid grid-cols-2 gap-4"> <div> <label className="text-sm font-medium mb-1 block">Resolution Type</label> <select > <option value="client favor" >In Client's Favor</option> <option value="talent favor" >In Talent's Favor</option> <option value="compromise" >Compromise</option> <option value="dismissed">Dismissed</option> </select> </div> </div> <Button onClick= {
-  handleResolveDispute 
-}>Resolve Dispute</Button> </div> </div>) 
-}<div> <h3 className="font-medium mb-2">Admin Notes</h3> <div className="space-y-4 max-h-[300px] overflow-y-auto p-2"> {
-  messages .filter (msg => msg.is admin note) .map ( (msg) => (<div key= {
-  msg.id 
-}className="bg-yellow-50 border-l-4 border-yellow-200 p-4 dark:bg-yellow-900/20 dark:border-yellow-900"> <div className="flex items-center justify-between mb-2"> <div className="flex items-center gap-2"> <Avatar className="h-6 w-6"> <AvatarImage src= {
-  msg.user profile?.avatar url 
-}/> <AvatarFallback> {
-  msg.user profile?.display name?.[0] || 'A' 
-}</AvatarFallback> </Avatar> <span className="text-sm font-medium"> {
-  msg.user profile?.display name || 'Admin' 
-}</span> </div> <span className="text-xs opacity-70"> {
-  format (new Date (msg.created at), 'MMM d, h:mm a') 
-}</span> </div> <p className="whitespace-pre-wrap text-sm"> {
-  msg.message 
-}</p> </div>) ) 
-}{
-  !messages.some (msg => msg.is admin note) && (<p className="text-sm text-muted-foreground italic">No admin notes yet</p>) 
-}</div> <div className="mt-4 space-y-4" > <Textarea 
-}
-}
-}> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) 
-}</Tabs> </div> <div className="space-y-6" > <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> </p> </div> </div> <div className="flex justify-center" > <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> </div> </CardContent> </Card> </div> </div> </div>) 
-}
-}
-}
-;
-=======
               <div className="flex justify-between">;
                 <span className="font-medium">Raised by:</span>;
                 <span>{dispute.raised_by === dispute.client_profile?.id ? "Client" : "Talent"}</span>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

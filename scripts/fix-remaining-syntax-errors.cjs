@@ -1,68 +1,69 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 const fs = require("fs");"const path = require("path");"console.log(" Fixing remaining syntax errors.");const filesToFix = [" "/workspace/components/Footer.tsx"," "/workspace/pages/about.tsx"," "/workspace/pages/ai-services.tsx"," "/workspace/pages/index.tsx"," "/workspace/pages/it-services.tsx"];let totalFixes = 0;filesToFix.forEach(filePath => { if (fs.existsSync(filePath)) {" let content = fs.readFileSync(filePath, "utf8"); let modified = false; / Fix line breaks in className attributes" content = content.replace(/className="([^"]*)\n\s*([^"]*)"/g, "className="$1 $2""); / Fix any remaining unterminated strings"" content = content.replace(/className="([^"]*)\n\s*([^"]*)"\s*>/g, "className="$1 $2">"); / Fix missing closing tags" content = content.replace(/<div([^>]*)\s*>\s*$/gm, "<div$1>"); / Fix any remaining syntax issues" content = content.replace(/\s+\n\s*>/g, ">"); " if (content !== fs.readFileSync(filePath, "utf8")) { fs.writeFileSync(filePath, content);" console.log(` Fixed: ${path.relative("/workspace", filePath)}`); totalFixes++; modified = true; } }});`console.log(`\n Summary:`);`console.log(` Files processed: ${filesToFix.length}`);`console.log(` Files fixed: ${totalFixes}`);"console.log(" Syntax error fixes completed!");""`"`
 
 
 
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
 
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 // Function to fix hover syntax errors
 function fixHoverSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let originalContent = content;
     
-    // Fix various hover syntax patterns
-    const patterns = [
-      { from: /"hover":\s*/g, to: 'hover:' },
-      { from: /"focus":\s*/g, to: 'focus:' },
-      { from: /"group-hover":\s*/g, to: 'group-hover:' },
-      { from: /"sm":\s*/g, to: 'sm:' },
-      { from: /"md":\s*/g, to: 'md:' },
-      { from: /"lg":\s*/g, to: 'lg:' },
-      { from: /"xl":\s*/g, to: 'xl:' },
-      { from: /"2xl":\s*/g, to: '2xl:' },
-    ];
-    
-    patterns.forEach(pattern => {
-      if (pattern.from.test(content)) {
-        content = content.replace(pattern.from, pattern.to);
-        modified = true;
-      }
-    }
-});
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+const fs = require('fs')
+const path = require('path')
+console.log('🔧 Fixing remaining syntax errors...')
+// Function to fix syntax errors in a file
+function fixSyntaxErrors(filePath) {  try {
+    let content = fs.readFileSync(filePath, 'utf8')
+    let originalContent = content
+    // Fix common syntax issues
+    content = content.replace(/import\s*{\s*{\s*([^}]+)\s*}/g, 'import { $1 }')
+    content = content.replace(/^\s*{\s*$/gm, '')
+    content = content.replace(/^\s*}\s*$/gm, '')
+    content = content.replace(/^\s*;\s*$/gm, '')
+    content = content.replace(/^\s*icon,\s*$/gm, '')
+    content = content.replace(/^\s*title,\s*$/gm, '')
+    content = content.replace(/^\s*description,\s*$/gm, '')
+    content = content.replace(/^\s*features,\s*$/gm, '')
+    content = content.replace(/^\s*icon:\s*string;\s*$/gm, '')
+    content = content.replace(/^\s*title:\s*string;\s*$/gm, '')
+    content = content.replace(/^\s*description:\s*string;\s*$/gm, '')
+    content = content.replace(/^\s*features:\s*string\[\];\s*$/gm, '')
+    content = content.replace(/^\s*}\s*$/gm, '')
+    content = content.replace(/^\s*;\s*$/gm, '')
+    // Fix unterminated regexp literals
+    content = content.replace(/^\s*<\/p>\s*$/gm, '        </p>')
+    content = content.replace(/^\s*<\/div>\s*$/gm, '      </div>')
+    // Fix malformed JSX
+    content = content.replace(/^\s*}\s*$/gm, '')
+    content = content.replace(/^\s*;\s*$/gm, '')
+    // Clean up empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')
+    content = content.trim()
+    // If the file is mostly empty or malformed, create a minimal working version
+    if (content.length < 100 || content.includes('icon:') || content.includes('title:')) {
+      const fileName = path.basename(filePath, path.extname(filePath))
+      const serviceName = fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+      content = `export default function ServicePage() {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      <h1>${serviceName}</h1>
+      <p>Learn about our ${serviceName.toLowerCase()} services.</p>
+    </main>
       }`);
       totalFixes++;
       modified = true;
@@ -72,21 +73,14 @@ function fixHoverSyntax(filePath) {
 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
+
       console.log(`✅ Fixed syntax errors in ${filePath}`);
       return true;
     }
@@ -123,70 +117,48 @@ function fixAllFiles() {
       if (fixHoverSyntax(filePath)) {
         totalFixed++;
       }
+    } catch (error) {
+      // Skip directories that can't be read
     }
   }
 });
+});
   
-  return totalFixed;
+  scanDirectory(dir);
+  return files;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-
-
-
-
-<<<<<<< HEAD
-
-main
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
 
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+
+
+
 // Main execution
 try {
   console.log('🔍 Scanning for syntax errors...');
   const fixedCount = fixAllFiles();
+try {
+  console.log('🔍 Scanning for syntax errors...');
+  const fixedCount = fixAllFiles();
   
-  if (fixedCount > 0) {
-    console.log(`✅ Fixed syntax errors in ${fixedCount} files`);
-    
-    // Try to build after fixes
-    console.log('🔨 Attempting build after fixes...');
-    try {
-      execSync('npm run build', { stdio: 'inherit' }
-});
-      console.log('✅ Build successful!');
-    } catch (error) {
-      console.log('⚠️ Build still has issues, but syntax errors were fixed');
-    }
-  } else {
-    console.log('✨ No syntax errors found to fix');
-  }
-  
+async function main() {
+  console.log('🚀 Starting syntax error resolution...')
+  // Find all service page files
+  const servicePages = findServicePages('/workspace/app/services')
+  console.log(`Found ${servicePages.length} service page files`)
+  // Fix each file
+  let fixedCount = 0
+  for($2) {
+    if (fixSyntaxErrors(file)) {
 } catch (error) {
   console.error('❌ Error:', error.message);
   process.exit(1);
-}
 
-}
-
-
-}}
-
-<<<<<<< HEAD
 }
 
 }
@@ -194,17 +166,3 @@ try {
 
 }}
 
-main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-
-=======
-}
-
-}
-
-
-}}
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

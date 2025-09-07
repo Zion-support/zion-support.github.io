@@ -4,8 +4,7 @@ const fs = require("fs")
 const path = require("path")
 console.log("" Starting continuous quality checks automation...")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log("" Starting continuous quality checks automation...")
 // Get automation interval from environment variable ("default")
     console.log(`" Running ESLint..."`)
@@ -71,17 +70,11 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Failed to start continuous quality "checks": ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(" Failed to start continuous quality "checks": ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(" Failed to start continuous quality "checks": ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Failed to start continuous quality "checks": ")
+  console.error(" Failed to start continuous quality "checks": ")
+
+

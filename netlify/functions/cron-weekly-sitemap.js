@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 ;
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 exports && exports.handler = async function () {try {const baseUrl  = process && process.env.URL || process && process.env.DEPLOY_URL || '';ursor/expand-services-advertise-and-build-project-4b36;
     const pages = [;
@@ -36,35 +24,19 @@ exports && exports.handler = async function () {try {const baseUrl  = process &&
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const pages = [
       '/'
       '/about'
@@ -80,34 +52,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       `<urlset xmlns="http://www && www.sitemaps.org/schemas/sitemap/0 && 0.9">` +
       pages && pages.map(p => `<url><loc>${baseUrl}${p}</loc></url>`).join('') +
       `</urlset>`;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 ursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
@@ -140,68 +90,25 @@ exports.handler = async function() {try {const baseUrl = process.env.URL || proc
         owner,
         repo,
         path: 'public / sitemap - autogen.xml',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         content: xml,
         message: 'chore (automation): weekly sitemap refresh',
         token
       });
     }
     return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 ursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
@@ -218,16 +125,6 @@ exports.handler = async function() {
 }  try {const base_url = process.env.URL || process.env.DEPLOY_URL || '',const pages = ['//about / learn / dao / certifications / blog / services / talent'],const xml = `<?xml version="1.0" encoding="UTF - 8"?>\n` +;
       `<urlset xmlns="http://www.sitemaps.org / schemas / sitemap / 0.9">` +;
       pages.map ((p) => `<url><loc>${base_url}${p}</loc></url>`).join ('') +;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       statusCode: 200
       body: JSON.stringify({ ok: true, pages: pages.length })
     }
@@ -240,15 +137,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       `</urlset>`,const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,statusCode: 200;
       body: JSON.stringify({ ok: true, pages: pages.length })}
   } catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
@@ -282,37 +170,15 @@ if ( {) {$2;
   } catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       `</urlset>`,
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
       `</urlset>`,
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
@@ -320,14 +186,7 @@ if ( {) {$2;
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     // Check condition
 if ( {) {
   $2
@@ -338,42 +197,18 @@ if ( {) {
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
 
-<<<<<<< HEAD
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 ursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length })
     };
@@ -394,8 +229,6 @@ ursor/expand-services-advertise-and-build-project-4b36
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen && autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }) }
-<<<<<<< HEAD
-=======
 
 
     if (owner && repo && token) {
@@ -406,50 +239,34 @@ ursor/expand-services-advertise-and-build-project-4b36
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: pages && pages.length }) }
 
 ursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 },
-=======
 
 
 },
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     const token = process.env.GITHUB_TOKEN;
+const { upsertFile } = require($2);
+exports.handler = $2;
+    const pages = $2;
+    const xml = $2;
+    const owner = $2;
+    const repo = $2;
+    const token = $2;
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'public/sitemap-autogen.xml', content: xml, message: 'chore(automation): weekly sitemap refresh', token })
     }
+
     return { statusCode: 200, body: JSON.stringify({ ok: true, pages: pages.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-};
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 },
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 },
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+},

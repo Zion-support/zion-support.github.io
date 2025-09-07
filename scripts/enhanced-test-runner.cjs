@@ -1,49 +1,39 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
 
-console.log('🧪 Enhanced Test Runner v2.0');
-console.log('');
 
-const testReport = {}
-  "timestamp": new Date().toISOString(),
-  "sessionId": Date.now().toString(),
-  "tests": [],
-  "summary": {}
-    total: 0,
+
+
+
+
+///usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+const { execSync, spawn } = require('child_process')
+  "summary": {}"
+    total: 0,"
     "passed": 0,
     "failed": 0,
     "skipped": 0,
     "duration": 0,
-    "coverage": 0;
-  },
-  "recommendations": [];
-};
-
+    "coverage": 0;"
+  },"
+  "recommendations": [];"
+}
 function log(level, message) {}
-  const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] [${level.toUpperCase()}] ${message}`)};
 async function runJestTests() {}
   log('info', 'Running Jest tests');
@@ -73,6 +63,31 @@ async function runJestTests() {}
     testReport.summary.duration += endTime - startTime;
     
     if (result.coverageMap) {}
+const timestamp = new Date().toISOString()
+  console.log(`[${timestamp}] [${level.toUpperCase()}] ${message})}
+async function runJestTests() {}"
+
+})
+    const endTime = Date.now()
+    const result = JSON.parse(output)
+    testReport.tests.push({})
+
+      "result": result;"    testReport.summary.total += result.numTotalTests
+    testReport.summary.passed += result.numPassedTests
+    testReport.summary.failed += result.numFailedTests
+    testReport.summary.skipped += result.numPendingTests
+    testReport.summary.duration += endTime - startTime
+  if($2) {}
+
+    testReport.summary.total += result.total
+    testReport.summary.passed += result.passed
+    testReport.summary.failed += result.failed
+      "result": { passed: true, output };"
+    testReport.summary.passed++
+    "
+
+      "result": { passed: false, "error": error.message };"
+    testReport.summary.failed++;"
       testReport.summary.coverage = result.coverageMap.getCoverageSummary().lines.pct};
     log('info', `Jest tests "completed": ${result.numPassedTests}/${result.numTotalTests} passed`)} catch (error) {`}
     log('warn', 'Jest tests failed or not configured', error.message)};
@@ -202,10 +217,9 @@ async function runTypeTests() {}
     log('warn', 'TypeScript type tests failed', error.message)};
 };
 function generateRecommendations() {}
-  const recommendations = [];
-  const { total, passed, failed, coverage } = testReport.summary;
-  
-  if (total === 0) {}
+  const recommendations = []
+  const { total, passed, failed, coverage } = testReport.summary
+  if($2) {}
     recommendations.push({})
       "priority": 'high',
       "message": 'No tests found',
@@ -282,3 +296,14 @@ async function main() {}
     process.exit(1)};
 };
 main();
+await runJestTests()
+    await runPlaywrightTests()
+    await runCypressTests()
+    await runLintTests()
+    await runTypeTests()
+    testReport.summary.total = testReport.tests.reduce((sum, test) => sum + (test.result.total || 1), 0)
+    testReport.recommendations = generateRecommendations()
+    // Display summary
+    process.exit(1)}
+main()
+`

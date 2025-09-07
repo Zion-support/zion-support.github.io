@@ -1,29 +1,39 @@
-
-class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-    }return this.props.children;
+class ErrorBoundary extends React.Component {
+  // TODO: Implement
+}
+pr-12325
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo);'
+pr-12325
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
   }
 }
 import React from 'react';
-interface OnsiteSupportProps  {// Add props here as needed;
-}export default function OnsiteSupport() {return (<div>;
-      <h1>OnsiteSupport</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
-  )}
-:src.pages.disabled/OnsiteSupport.jsx;
+
 interface OnsiteSupportProps {
   // Add props here as needed
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 }
 
-export default function OnsiteSupport({}: OnsiteSupportProps) {
+export default function OnsiteSupport({ }: OnsiteSupportProps) {
   return (
     <div>
       <h1>OnsiteSupport</h1>
@@ -31,32 +41,15 @@ export default function OnsiteSupport({}: OnsiteSupportProps) {
     </div>
   );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-
 
 }
 
-<<<<<<< HEAD
-=======
 }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 :src.pages.disabled/OnsiteSupport.jsx
 }
 }
 }
 }
-}
-}:src.pages.disabled/OnsiteSupport.jsx;
-:temp_exclude/src.pages.disabled/OnsiteSupport.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 
 
@@ -70,9 +63,4 @@ export default function OnsiteSupport({}: OnsiteSupportProps) {
 }
 }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 :temp_exclude/src.pages.disabled/OnsiteSupport.jsx;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c

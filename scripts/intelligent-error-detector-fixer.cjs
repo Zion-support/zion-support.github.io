@@ -55,17 +55,11 @@ const { execSync } = require("child_process")
       this.log(" Starting Intelligent Error Detector & Fixer")
       this.log("� Intelligent Error Detector & Fixer completed successfully")
       return { "success": true, "errors": this.errors, "fixes"}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       this.log(`� Error detection "failed": ${error.message}`, ``)
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
       this.log(`� Error detection "failed": ${error.message}`, ``)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
       this.log(`� Error detection "failed": ${error.message}`, ``)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+      this.log(`� Error detection "failed": ${error.message}`, ``)
+      this.log(`� Error detection "failed": ${error.message}`, ``)
+
+

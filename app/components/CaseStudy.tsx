@@ -13,7 +13,7 @@ export default function CaseStudy({
   industry,
   result,
   description,
-  metrics,
+  metrics
 }: CaseStudyProps) {
   return (
     <div className='bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow'>

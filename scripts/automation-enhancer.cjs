@@ -1,4 +1,5 @@
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**;
  * Automation Enhancer Script;
  * Enhances existing automation scripts and creates new ones;
@@ -52,8 +53,7 @@ echo " Deployment completed successfully!"
     fs.chmodSync(deployScriptPath, "755")
     const monitorScript = "
 const pm2 = require("$1")
-const fs = require("$1")
-const path = require("path")
+
     this.logPath = path.join(__dirname, "..", "logs", "monitoring.log")
     console.log(" Starting advanced monitoring...")
     const logEntry = \"[\${timestamp}] System health check completed\\n\"
@@ -73,8 +73,7 @@ const path = require("path")
     this.enhancements.push("Created advanced monitoring script")
     console.log("⚡ Optimizing automation performance...")
     const perfScript = "
-const fs = require("$1")
-const path = require("path")
+
     this.projectRoot = path.resolve(__dirname, "..")
 // console.log("⚡ Starting performance optimization...")
     console.log(" Performance optimization completed!")
@@ -87,17 +86,11 @@ const path = require("path")
       "timestamp"
       "enhancements"
       "totalEnhancements"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     const reportPath = path.join(this.projectRoot, ")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     const reportPath = path.join(this.projectRoot, ")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     const reportPath = path.join(this.projectRoot, ")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    const reportPath = path.join(this.projectRoot, ")
+    const reportPath = path.join(this.projectRoot, ")
+
+

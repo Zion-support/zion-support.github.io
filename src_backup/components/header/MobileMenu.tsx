@@ -1,11 +1,7 @@
-<<<<<<< HEAD:src_backup/components/header/MobileMenu.tsx
-}
 
               onClose(), // Close mobile menu on any click
-=======
 
               }}onClose(), // Close mobile menu on any click;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/header/MobileMenu.tsx
             }}
           >;
             <div className="relative mr-4">;
@@ -23,13 +19,6 @@
       <div className="mt-6 px-6">
         <ModeToggle />
       </div>
-    </div>
-;
-
-  );
-
-}> {';
-=======
       </nav>;
       <div className="mt-6 px-6">;
         <ModeToggle />;
@@ -38,7 +27,6 @@
   )name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  )}
   )}name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  )}
   )}})}> {';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/header/MobileMenu.tsx
   item.badge > 9 ? '9+' : item.badge ;
 }</span>)}</div> {item.name ;
 }</Link>) ) ";
@@ -46,6 +34,19 @@
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
 }'"
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 }</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>)}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/header/MobileMenu.tsx
+
+    </div>
+
+    name: item && item.key === 'explore' ? t('general && general.explore') : t(`nav.${item && item.key}`)})),  );
+}
+  );
+}
+
+name: item.key === 'explore' ? t ('general.explore') : t (`nav.${item.key}`)})),  );
+}
+  );
+}
+
+}
+

@@ -1,61 +1,22 @@
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
 <<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
-
-
-import {ErrorBoundary, FallbackProps} from 'react - error - boundary';
-import * as Sentry from '@sentry / nextjs';
-import { mutate } from 'swr';
-import { Button } from '@/components/ui/ button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/ alert';
-import { RefreshCcw, AlertCircle } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/ production_logger';
-interface MarketplaceErrorFallbackProps extends FallbackProps {
-  // Additional props if needed;
-/**
- * MarketplaceErrorFallback - Function description
- */
-function MarketplaceErrorFallback() {  const handle_retry = async () => {
-
-    try {
-      // Re - call SWR mutate ('*') to refresh all cached data;
-      await mutate (() => true, undefined, { revalidate: true });
-      resetErrorBoundary ();
-    } catch (retry_error) {
-      logErrorToProduction ('Error during retry:', { data: retry_error });
-      Sentry.capture_exception (retry_error) }
-  }
-  return (/**
- * MarketplaceErrorFallback - Function description
- */
-function MarketplaceErrorFallback() {
-  const handle_retry = async () => {
-    try {
+import React from 'react';
+import { ErrorBoundary, FallbackProps  } from 'react-error-boundary';
+import * as Sentry from '@sentry/nextjs';
 
 function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {
-  const handleRetry = async () => {
-    try {
-      // Re-call SWR mutate('*') to refresh all cached data
-      await mutate(() => true, undefined, { revalidate: true });
+  const handleRetry = null;
+  return (
+    <ErrorBoundary 
 
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
       resetErrorBoundary()
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
@@ -70,8 +31,6 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
   return (
     <ErrorBoundary 
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
     }
   }
   return (
@@ -92,10 +51,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <Button
             onClick={() => window.location.reload()}
             variant='outline'
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
-
-
-=======
             className='w-full'          >
             Reload Page
           </Button>
@@ -103,64 +58,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className="w-full"
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
+
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react';
 <<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
-import { logErrorToProduction } from '@/utils/productionLogger';
-
-interface MarketplaceErrorFallbackProps extends FallbackProps {;
-  // Additional props if needed;
-
-function MarketplaceErrorFallback(): any ({;
-  error,;
-  resetErrorBoundary,;
-}: MarketplaceErrorFallbackProps) {  const handleRetry = async () => {;
-    try {;
-      // Re-call SWR mutate('*') to refresh all cached data;
-      await mutate(() => true, undefined, { revalidate: true });
-      resetErrorBoundary();
-    } catch (retryError) {;
-      logErrorToProduction('Error during retry:', { data: retryError });
-      Sentry && Sentry.captureException(retryError);    }
-    }
-
-  };
-
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
   return (function MarketplaceErrorFallback(): any ({ error, resetErrorBoundary }: MarketplaceErrorFallbackProps) {;
+
   const handleRetry = async () => {;
     try {;
       // Re-call SWR mutate('*') to refresh all cached data;
-      await mutate((,) => true, undefined, { revalidate: true }),;
+      await mutate(() => true, undefined, { revalidate: true }),;
       resetErrorBoundary();
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError }),;
-      Sentry && Sentry.captureException(retryError);
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
-
-
     }
-  }
-  return (
 
-
-
-            onClick={() => window.location.reload()}
-            variant="outline"
-            className="w-full"
-            className='w-full'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-    }
     <div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
@@ -180,36 +95,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <RefreshCcw className="mr-2 h-4 w-4" />
             Retry
           </Button>
-          
-          <Button 
-            onClick={() => window.location.reload()}
+
             variant="outline"
             className="w-full"
-
             className='w-full'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533
           >
             Reload Page
           </Button>
-        </div>
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
 
-        
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
         <div className="text-center text-sm text-muted-foreground">
+
           If the problem persists, please{' '}
           <a
             href="mailto: support@example.com"
             className="text-primary hover:underline"
 
           >
-
-
-        
-        
 
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
@@ -218,10 +120,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             className="text-primary hover:underline"
 
 
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
 <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
           <a
@@ -230,8 +128,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           >
 <<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
             contact support
           </a>
         </div>
@@ -253,9 +149,6 @@ export function MarketplaceErrorBoundary({
     Sentry.withScope(scope => {
       scope.setTag('errorBoundary', 'marketplace')
       scope.setContext('errorInfo', {
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
 
 ;
 import { mutate  } from 'swr';
@@ -400,7 +293,6 @@ export function MarketplaceErrorBoundary() {const handleError = (error: Error, e
     })Sentry.withScope(scope => {scope.setTag('errorBoundary', 'marketplace')scope.setContext('errorInfo', {componentStack: errorInfo.componentStack |undefined;
       })scope.setLevel('error')Sentry.captureException(error)})}
     <ErrorBoundary;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/MarketplaceErrorBoundary.tsx
           >;
             Reload Page;
           </Button>;
@@ -440,7 +332,6 @@ function MarketplaceErrorBoundary() {const handle_error = (error: Error, error_i
     <ErrorBoundary 
 
 
-=======
             className="w - full";
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
@@ -455,21 +346,13 @@ export function MarketplaceErrorBoundary({
     Sentry.withScope(scope => {
       scope.setTag('errorBoundary', 'marketplace')
       scope.setContext('errorInfo', {
-        componentStack: errorInfo.componentStack |undefined
-      })
-      scope.setLevel('error')
-      Sentry.captureException(error)
-    })
-  }
-    <ErrorBoundary 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
+
   },;
+
   return (;
     <div className="flex items-center justify-center min-h-[400px] p-6">;
-=======
   )<ErrorBoundary;
   },return (<div className="flex items-center justify-center min-h-[400px] p-6">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/MarketplaceErrorBoundary.tsx
       <div className="max-w-md w-full space-y-4">;
         <Alert variant="destructive">;
           <AlertCircle className="h-4 w-4" />;
@@ -479,14 +362,8 @@ export function MarketplaceErrorBoundary({
           </AlertDescription>;
 <<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
         </Alert>;
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
-
-        <div className='flex flex-col space-y-2'>;
-=======
         </Alert>;<div className="flex flex-col space-y-2">;
-=======
         <div className="flex flex-col space-y-2">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
           <Button;
             onClick={handleRetry}
             className="w-full";
@@ -498,7 +375,6 @@ export function MarketplaceErrorBoundary({
           <Button;
 <<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
             onClick={() => window.location.reload()}<div className='flex flex-col space-y-2'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/MarketplaceErrorBoundary.tsx
           <Button onClick={handleRetry} className='w-full' variant='default'>;
             <RefreshCcw className='mr-2 h-4 w-4' />;
             Retry;
@@ -513,27 +389,20 @@ export function MarketplaceErrorBoundary({
 <<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
             onClick={() => window && window.location.reload()}
 
-=======
             onClick={() => window.location.reload()}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
             variant="outline";
-=======
             onClick={() => window && window.location.reload()}variant="outline";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/MarketplaceErrorBoundary.tsx
+
+            variant="outline";
+
             className="w-full";
           >;
             Reload Page;
           </Button>;
 <<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
         </div>;
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
-
-        <div className='text-center text-sm text-muted-foreground'>;
-=======
         </div>;<div className="text-center text-sm text-muted-foreground">;
-=======
         <div className="text-center text-sm text-muted-foreground">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
           If the problem persists, please{' '}
           <a;
             href="mailto: support@example.com";
@@ -541,7 +410,6 @@ export function MarketplaceErrorBoundary({
           >;
 <<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
             contact support;<div className='text-center text-sm text-muted-foreground'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/MarketplaceErrorBoundary.tsx
           If the problem persists, please{' '}
           <a;
             href='mailto:support@example && example.com';
@@ -554,22 +422,19 @@ export function MarketplaceErrorBoundary({
             className="text-primary hover:underline"
             contact support
 
-=======
           <a;
             href="mailto: support@example && example.com";
             className="text-primary hover:underline";
             contact support;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/MarketplaceErrorBoundary.tsx
-=======
             contact support;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
+
           </a>;
+
         </div>;
       </div>;
     </div>;
 <<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
   );
-<<<<<<< HEAD:src_backup/components/MarketplaceErrorBoundary.tsx
 
 interface MarketplaceErrorBoundaryProps {;
   children: React && React.ReactNode;
@@ -612,14 +477,6 @@ export function MarketplaceErrorBoundary(): any ({;
   );
 } 
 origin/cursor/automate-test-improve-and-merge-code-2533
-      FallbackComponent={MarketplaceErrorFallback}
-      onError={handleError}>;
-      {children}
-
-
-  return (
-    <ErrorBoundary 
-=======
   )}interface MarketplaceErrorBoundaryProps  {children: React && React.ReactNode;export function MarketplaceErrorBoundary(): any ({children}: MarketplaceErrorBoundaryProps) {const handleError = (error: Error, errorInfo: React && React.ErrorInfo) => {// Log boundary errors to Sentry;
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {componentStack: errorInfo && errorInfo.componentStack})Sentry && Sentry.withScope(scope => {scope && scope.setTag('errorBoundary', 'marketplace')scope && scope.setContext('errorInfo', {componentStack: errorInfo && errorInfo.componentStack || undefined})scope && scope.setLevel('error')Sentry && Sentry.captureException(error)})}>;{children}
     </ErrorBoundary>;
@@ -632,7 +489,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       {children}</ErrorBoundary>;
   )})}interface MarketplaceErrorBoundaryProps  {children: React.ReactNode}export function MarketplaceErrorBoundary() {const handleError = (error: Error, errorInfo: React.ErrorInfo) => {// Log boundary errors to Sentry;
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack })Sentry.withScope((scope) => {scope.setTag('errorBoundarymarketplace')scope.setContext('errorInfo', {componentStack: errorInfo.componentStack || undefined})scope.setLevel('error')Sentry.captureException(error)})}return (<ErrorBoundary;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/MarketplaceErrorBoundary.tsx
     <ErrorBoundary;
       FallbackComponent={MarketplaceErrorFallback}
       on_error={handle_error}
@@ -649,43 +505,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   )
 }
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       {children}}</ErrorBoundary>)}</ErrorBoundary>;
   )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/MarketplaceErrorBoundary.tsx
-=======
 }
 ;
       FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}>;
       {children}
 
-    </ErrorBoundary>;
-  );
-} ;
-
-  );
-}
-
-interface MarketplaceErrorBoundaryProps {
-  children: React.ReactNode,
-}
-
-export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
-    // Log boundary errors to Sentry
-    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack });
-    Sentry.withScope((scope) => {
-      scope.setTag('errorBoundarymarketplace');
-      scope.setContext('errorInfo', {
-        componentStack: errorInfo.componentStack || undefined});
-      scope.setLevel('error');
-      Sentry.captureException(error)
-    })
-  };
-
-
-    </ErrorBoundary>
-  )
-}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/MarketplaceErrorBoundary.tsx
+    <ErrorBoundary;
+      FallbackComponent={MarketplaceErrorFallback}
+      onError={handleError}
+    >;
+      {children}

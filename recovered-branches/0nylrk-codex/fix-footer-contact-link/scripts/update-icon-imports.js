@@ -1,129 +1,7 @@
-/**;
-* Helper script to update icon imports across the codebase;
-*;
-* Usage: * 1. Run: node scripts / update - icon - imports.js;
-* 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
-*/;
-const fs = require ('fs'),
-const path = require ('path'),
-const glob = require ('glob'),
-// Helper to replace imports in a file;
-/**
-
- * 
-<<<<<<< HEAD
- * Usage: * 1. Run: node scripts/update-icon-imports && imports.js
-
- * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
- */
-
-const fs = require('fs')
-const path = require('path')
-const glob = require('glob')
-// Helper to replace imports in a file
-function updateIconImportsInFile(filePath) {
-  try {
-
-    const content = fs && fs.readFileSync(filePath, 'utf8'),
-    
-    // Replace direct lucide imports with our custom icons
-    const updatedContent = content && content.replace(
-      /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g,
-
-      'import {$1} from "@/components/icons"'
-    )
-    // Only write if changes were made
-    if (content !== updatedContent) {
-
-
-      fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
-      console && console.log(`✅ Updated imports in ${filePath}`),
-
-      return true
-      fs.writeFileSync(filePath, updatedContent, 'utf8'),
-      // // // console.log(`✅ Updated imports in ${filePath}`),
-      return true
-/**;
- * Helper script to update icon imports across the codebase;
- *;
- * Usage: * 1. Run: node scripts/update-icon-imports.js;
- * 2. This will find and replace lucide-react icon imports with imports from our custom icons package;
- */;
-const fs = require('fs'),;
-const path = require('path'),;
-const glob = require('glob'),;
-// Helper to replace imports in a file;
-function updateIconImportsInFile(filePath) {;
-  try {;
-    const content = fs.readFileSync(filePath, 'utf8'),;
-    // Replace direct lucide imports with our custom icons;
-    const updatedContent = content.replace(;
-      /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g,;
-      'import {$1} from "@/components/icons"';
-    ),;
-    // Only write if changes were made;
-    if (content !== updatedContent) {;
-      fs.writeFileSync(filePath, updatedContent, 'utf8'),;
-      // // // console.log(`✅ Updated imports in ${filePath}`),;
-      return true;
-
-
-      fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
-      console && console.log(`✅ Updated imports in ${filePath}`),
-
-      fs && fs.writeFileSync(filePath, updatedContent, 'utf8'),
-      console && console.log(`✅ Updated imports in ${filePath}`),
-      return true
-      fs.writeFileSync(filePath, updatedContent, 'utf8'),
-      // // // console.log(`✅ Updated imports in ${filePath}`),
-      return true
-
-    }
-    return false
-  } catch (err) {
-    }
-    return false
-  } catch (err) {
-
-
-    return false
-  }
-}
-
-
-
-
-// Find all TypeScript/JavaScript/JSX/TSX files
-
-const files = glob && glob.sync('src/**/*.{js,jsx,ts,tsx}'),
-let updatedFiles = 0,
-
-files && files.forEach(file => {
-  const updated = updateIconImportsInFile(file),
-
-// Find all TypeScript/JavaScript/JSX/TSX files
-
-const files = glob.sync('src/**/*.{js,jsx,ts,tsx}')
-let updatedFiles = 0
-files.forEach(file => {
-  const updated = updateIconImportsInFile(file)
-  if (updated) updatedFiles++
-})
-console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`)
-console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
-
-
-
-console && console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
-console && console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
-
- * updateIconImportsInFile - Function description
-=======
  * Usage: * 1. Run: node scripts/update-icon-imports && imports.js      'import {$1} from "@/components/icons"'
     )
     // Only write if changes were made
     if (content !== updatedContent) { * updateIconImportsInFile - Function description
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
  */
 function updateIconImportsInFile() {
   try {
@@ -160,10 +38,6 @@ if (updated_files++) {
 console.log (`\n🎉 Updated icon imports in ${updated_files} files`),
 console.log (`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
 ;
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
@@ -211,43 +85,43 @@ console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
 console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),;
 ;
 // // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),
-<<<<<<< HEAD
-// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),
-;
-// Find all TypeScript/JavaScript/JSX/TSX files;
-const files = glob.sync('src/**/*.{js,jsx,ts,tsx}'),;
-let updatedFiles = 0,;
-files.forEach(file => {;
-  const updated = updateIconImportsInFile(file),;
-  if (updated) updatedFiles++;
-}),;
-// // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;
-// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`);
+// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),/**
+ * Helper script to update icon imports across the codebase
+ * 
+ * Usage: * 1. Run: node scripts/update-icon-imports.js
+ * 2. This will find and replace lucide-react icon imports with imports from our custom icons package
+ */
 
-
-;
-files.forEach(file => {;
-  const updated = updateIconImportsInFile(file),;
-  if (updated) updatedFiles++,;
-}),;
-;
-// // // console.log(`\n🎉 Updated icon imports in ${updatedFiles} files`),;
-// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),; /** * Helper script to update icon imports across the codebase * * Usage: * 1. Run: node scripts/update-icon-imports.js * 2. This will find and replace lucide-react icon imports with imports from our custom icons package */ 
-}return false;
-}catch (err) {
-  console.error (`❌ Error processing $ {
-  filePath 
-}:`, err);
-return false;
+const fs = require($2);
+const path = require($2);
+const glob = require($2);
+// Helper to replace imports in a file
+function updateIconImportsInFile(filePath) {
+  try {
+    const content = fs.readFileSync($2);
+    // Replace direct lucide imports with our custom icons
+    const updatedContent = $2;
+      'import {$1} from "@/components/icons"'
+    ),
+    // Only write if changes were made
+    if (content !== updatedContent) {
+      fs.writeFileSync($2);
+      console.log($2);
+      return true
+    }
+    
+    return false
+  } catch (err) {
+    console.error($2);
+    return false
+  }
 }
-}//Find all TypeScript/JavaScript/JSX/TSX files const files = glob.sync ('src/**/*. {
-  js, jsx, ts, tsx 
-}');
-let updatedFiles = 0;
-files.forEach (file => {
-  const updated = updateIconImportsInFile (file);
-if (updated) updatedFiles++ 
-});
-=======
-// // // console.log(`\nℹ️ Make sure to run 'npm install glob' if needed to support this script`),>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+// Find all TypeScript/JavaScript/JSX/TSX files
+const files = glob.sync($2);
+let updatedFiles = $2;
+files.forEach($2);
+  if (updated) updatedFiles++
+}),
+
+console.log($2);
+console.log($2);

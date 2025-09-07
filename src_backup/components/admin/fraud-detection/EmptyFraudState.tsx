@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldAlert } from 'lucide-react'
@@ -7,8 +5,6 @@ import { ShieldAlert } from 'lucide-react'
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
   hasFilters,
   onResetFilters 
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 interface EmptyFraudStateProps {
   hasFilters: boolean
   onResetFilters: () => void
@@ -17,7 +13,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/EmptyFraudState.tsx
 },) => {
   return (
     <div className="text-center py-12">
@@ -39,23 +34,18 @@ import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
 
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
-
-
-=======
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from 'lucide-react'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/EmptyFraudState.tsx
 
 interface EmptyFraudStateProps {
-
-  hasFilters: boolean
+  hasFilters: boolean,
   onResetFilters: () => void
 }
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
-  hasFilters
-  onResetFilters
+
+export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
+  hasFilters,
+  onResetFilters 
 }) => {
   return (
     <div className="text-center py-12">
@@ -69,15 +59,13 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 
-
-
 import React from "react",;
+
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from 'lucide-react';
 interface EmptyFraudStateProps {;
   hasFilters: boolean,;
   onResetFilters: () => void;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -95,7 +83,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
 
-
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
   hasFilters,;
   onResetFilters ;
@@ -103,10 +90,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
 
   return (
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/EmptyFraudState.tsx
     <div className="text-center py-12">;
-=======
 
 interface EmptyFraudStateProps  {hasFilters: boolean;
   onResetFilters: () => void;
@@ -118,7 +102,6 @@ import { Button  } from '@/components/ui/button';
 import { ShieldAlert  } from 'lucide-react';
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({hasFilters,onResetFilters;
 },) => {return (<div className="text-center py-12">;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/fraud-detection/EmptyFraudState.tsx
       <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
       <h3 className="text-lg font-medium">No fraud flags found</h3>;
       <p className="text-muted-foreground mb-6">;
@@ -136,66 +119,39 @@ import { ShieldAlert } from 'lucide-react';
 import React from "react",import { Button } from "@/components/ui/button",interface EmptyFraudStateProps  {hasFilters: boolean;
   onResetFilters: () => void;
 }
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({hasFilters;
+export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
+  has_filters,
+
   onResetFilters;
-}) => {return (<div className="text-center py-12">;
-      <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
-      <h3 className="text-lg font-medium">No fraud flags found</h3>;
-      <p className="text-muted-foreground mb-6">;
-        {hasFilters;
+
           ? "Try adjusting your filters";
           : "You don't have any fraud flags yet"}
       </p>;
-      {hasFilters && (<Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
-interface EmptyFraudStateProps  {hasFilters: boolean,onResetFilters: () => void;interface EmptyFraudStateProps  {hasFilters: boolean,onResetFilters: () => void;
-interface EmptyFraudStateProps  {hasFilters: boolean,onResetFilters: () => void;
-}
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({hasFilters;
-  onResetFilters;
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({hasFilters,onResetFilters ;
-},) => {return (<div className="text-center py-12">;
-      <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
-      <h3 className="text-lg font-medium">No fraud flags found</h3>;
-      <p className="text-muted-foreground mb-6">;
-        {hasFilters;
-          ? "Try adjusting your filters";
-          : "You don't have any fraud flags yet"}
-      </p>;
-      {hasFilters && (<Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
-      )}interface EmptyFraudStateProps  {has_filters: boolean,onResetFilters: () => void;
-}
-export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({has_filters,onResetFilters;
-}, ) => {return (<div className="text - center py - 12">;
-      <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;
-      <h3 className="text - lg font - medium">No fraud flags found</h3>;
-      <p className="text - muted - foreground mb - 6">;
-        {has_filters;
-          ? "Try adjusting your filters";
-          : "You don't have any fraud flags yet"}
-      </p>;
-      {has_filters && (<Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}
-    </div>)}
+      {hasFilters && (;
+        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
+      )}
+    </div>;
+
+};
 '";
-import React from './react';
-import { Button  } from '@/components / ui / button';
-interface EmptyFraudStateProps  {has_filters: boolean,onResetFilters: () => void;
-}
-export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({has_filters,onResetFilters;}) => {</div>;
-  )}'";return (</div>;
-  )}<div className="text - center py - 12">;
-      <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb - 4" />;
-      <h3 className="text - lg font - medium">No fraud flags found</h3>;
-      <p className="text - muted - foreground mb - 6">;
+
+  return (
+
+    </div>;
+  )
+};
+
+    <div className="text - center py-12">;
+      <ShieldAlert className="mx - auto h - 12 w - 12 text - muted - foreground mb-4" />;
+      <h3 className="text - lg font-medium">No fraud flags found</h3>;
+      <p className="text - muted - foreground mb-6">;
         {has_filters;
           ? "Try adjusting your filters";
           : "You don't have any fraud flags yet"}
       </p>;
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
       {has_filters && (
         <Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}
     </div>);
-<<<<<<< HEAD:src_backup/components/admin/fraud-detection/EmptyFraudState.tsx
-}
 
 interface EmptyFraudStateProps {
   hasFilters: boolean;
@@ -207,17 +163,12 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   onResetFilters 
 }) => {
   return (
-    <div className;
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       {has_filters && (<Button variant="outline" on_click={onResetFilters}>Clear Filters</Button>)}
     </div>)}interface EmptyFraudStateProps  {hasFilters: boolean;
   onResetFilters: () => void;
 }export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({hasFilters;
   onResetFilters;
 }) => {return (<div className;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/admin/fraud-detection/EmptyFraudState.tsx
-=======
 
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/admin/fraud-detection/EmptyFraudState.tsx
+    <div className;

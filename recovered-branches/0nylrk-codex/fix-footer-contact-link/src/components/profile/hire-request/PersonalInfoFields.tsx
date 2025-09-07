@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import {
-  FormField,
-
-
-  FormField,
-FormField,
-
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { UseFormReturn } from "react-hook-form";
-import { FormValues } from "./useHireRequestForm";
-interface PersonalInfoFieldsProps {
-  form: UseFormReturn<FormValues>;
-}
-
-export function PersonalInfoFields(): any ({ form }: PersonalInfoFieldsProps) {;
-  return (
-=======
   FormField,
 
   FormField,
@@ -55,7 +31,6 @@ interface PersonalInfoFieldsProps {
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
 import { Input } from "@/components/ui/input",;
 import { UseFormReturn } from "react-hook-form",;  return (
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <>;
       <FormField
         control={form && form.control}
@@ -178,6 +153,19 @@ import { UseFormReturn } from "react-hook-form",;
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+
+import { UseFormReturn } from "react-hook-form";
+import { FormValues } from "./useHireRequestForm";
+interface PersonalInfoFieldsProps {
+  form: UseFormReturn<FormValues>
 }
 export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   return (
@@ -219,12 +207,5 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
         )}
       />
     </>
-  );
-}
   )
 }
-;
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

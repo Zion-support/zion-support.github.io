@@ -1,22 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 interface AmlMatch  {list: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 interface AmlMatch  {list: string;
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 interface AmlMatch {
   list: string;
   name: string;
@@ -54,70 +38,64 @@ export type AmlCheckResult = {}export type AmlCheckResult = {ursor/fix-website-l
   status: 'clear' | 'match' | 'review' | 'unknown';matches: WatchlistMatch[];
   checkedAt: string; // ISO;
 }
+export type WatchlistMatch = $2;
+  name: string,
+  score: number, // 0-1 match confidence
+  referenceId?: string,
+  detailsUrl?: string
+},
 
-interface AmlProvider {
-  checkBusiness(businessName: string): Promise<AmlResult>;
+export type AmlCheckResult = $2;
+  matches: WatchlistMatch[],
+  checkedAt: string, // ISO
+  provider: 'mock' | 'remote'
+},
+
+export interface AmlProvider {
+  checkPerson(input: { fullLegalName: string, country?: string, dob?: string }): Promise<AmlCheckResult>,
+  checkBusiness(input: { businessName: string, country?: string, registrationNumber?: string }): Promise<AmlCheckResult>
 }
 
 class MockAmlProvider implements AmlProvider {
-  async checkBusiness(businessName: string): Promise<AmlResult> {
-    const isSanction = businessName.toLowerCase().includes('sanction');
+  async checkPerson({ fullLegalName }: { fullLegalName: string}): Promise<AmlCheckResult> {
+    const lowered = fullLegalName.toLowerCase($2);
+    const isPep = lowered.includes('minister') || lowered.includes($2);
+    const isOfac = lowered.includes($2);
+    const matches: WatchlistMatch[] = [],
+    if (isPep) matches.push($2);
+    if (isOfac) matches.push($2);
+    return {
+      status: matches.length ? 'review' : 'clear',
+      matches,
+      checkedAt: new Date().toISOString($2);
+      provider: 'mock'}
+  }
+
+  async checkBusiness({ businessName }: { businessName: string}): Promise<AmlCheckResult> {
+    const lowered = businessName.toLowerCase($2);
+    const isSanction = lowered.includes($2);
     return {
       status: isSanction ? 'review' : 'clear',
-      matches: isSanction ? [{
-        list: 'Sanctions',
-        name: businessName,
-        score: 0.8
-      }] : [],
-      checkedAt: new Date().toISOString(),
-      provider: 'mock'
-    };
+      matches: isSanction ? [{ list: 'Sanctions', name: businessName, score: 0.8 }] : [],
+      checkedAt: new Date().toISOString($2);
+      provider: 'mock'}
   }
 }
 
-let provider: AmlProvider = new MockAmlProvider();
-
-export type { AmlProvider, AmlResult, AmlMatch };
-export { provider };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export type WatchlistMatch = {
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
-<<<<<<< HEAD
-  list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
   score: number; // 0-1 match confidence
   referenceId?: string;
   detailsUrl?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 export type WatchlistMatch = {
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
@@ -125,21 +103,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export type WatchlistMatch = {
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   list: "OFAC" | "PEP" | "Sanctions" | "AdverseMedia";
 
 
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
-<<<<<<< HEAD
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   name: string;
 
   score: number; // 0 - 1 match confidence;
@@ -150,10 +118,6 @@ export type WatchlistMatch = {
 
 export type AmlCheckResult = {
   status: "clear" | "match" | "review" | "unknown";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   status: "clear" | "match" | "review" | "unknown";
 };
 
@@ -163,8 +127,6 @@ export type WatchlistMatch = {
   name: string;
 export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown';
-<<<<<<< HEAD
-=======
 
 };
 
@@ -175,15 +137,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   status: 'clear' | 'match' | 'review' | 'unknown';
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
   status: 'clear' | 'match' | 'review' | 'unknown';
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   matches: WatchlistMatch[];
   checkedAt: string; // ISO
   provider: "mock" | "remote";
@@ -205,26 +162,7 @@ class MockAmlProvider implements AmlProvider {async checkPerson(params: {fullLeg
     const name = params.fullLegalName.toLowerCase()if (name.includes("test") || name.includes("demo")) {return { status: "match", details: { reason: "Test name detected" } }// AML (Anti-Money Laundering) utilities;
 export interface AmlCheck  {id: string;
 class MockAmlProvider implements AmlProvider {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async checkPerson(params: {
     fullLegalName: string;
     country: string;
@@ -234,24 +172,7 @@ class MockAmlProvider implements AmlProvider {
     const name = params.fullLegalName.toLowerCase();
     if (name.includes("test") || name.includes("demo")) {
       return { status: "match", details: { reason: "Test name detected" } };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 // AML (Anti-Money Laundering) utilities
 export interface AmlCheck {
   id: string;
@@ -378,77 +299,26 @@ class AmlManager {
     const profile = this.profiles.get(userId);
     if (!profile) {
       throw new Error('Profile not found');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     const name = params && params.fullLegalName.toLowerCase();
     if (name && name.includes('test') || name && name.includes('demo')) {
       return { status: 'match', details: { reason: 'Test name detected' } };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return { status: 'clear' }
   }
   async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }
     return { status: "clear" };
   }
@@ -471,76 +341,23 @@ export function createAmlCheck(userId: string,checkType: AmlCheck['checkType'];
   }}
 export function generateAmlCheckId(): string {return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export function isAmlCheckExpired(check: AmlCheck): boolean {return new Date(check.expiresAt) < new Date()}
 export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {const colors = {low: 'green',medium: 'yellow',high: 'orange',critical: 'red';
   }return colors[riskLevel];
 }
   async check_person (params: { fullLegalName: string; country: string, dob?: string }): Promise < AmlResult> {// Mock implementation - in production, this would call a real AML service;
     const name = params.fullLegalName.toLowerCase ()if (|| name.includes ('demo')) {) {$2;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 export function getAmlProvider(): AmlProvider {
   return provider;
   return new MockAmlProvider();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
@@ -594,40 +411,14 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     }
     return { status: 'clear' }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 export function getAmlProvider (): AmlProvider {return new MockAmlProvider ()}}
 export function getAmlProvider (): AmlProvider {return new MockAmlProvider ()}export function getAmlProvider(): AmlProvider {return provider;
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 export function getAmlProvider(): AmlProvider {
   return provider;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 }
@@ -639,10 +430,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 export function getAmlProvider(): AmlProvider {
   return provider;
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 }
@@ -656,6 +443,11 @@ export function getAmlProvider (): AmlProvider {
 export function getAmlProvider(): AmlProvider {
   return provider;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+let provider: AmlProvider = new MockAmlProvider($2);
+export function setAmlProvider(custom: AmlProvider) {
+  provider = custom
+}
+
+export function getAmlProvider(): AmlProvider {
+  return provider
+}

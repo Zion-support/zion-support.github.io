@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -63,9 +57,6 @@ console.log(`Fixed syntax errors in ${fixedCount} files.`);
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 const fs = require('fs');
 const path = require('path');
@@ -158,23 +149,9 @@ walkDir('/workspace/pages');
 walkDir('/workspace/src');
 
 console.log('Final syntax fix completed!');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
 
 console.log(`Fixed syntax errors in ${fixedCount} files.`);
 ursor/automate-test-improve-and-merge-code-59d5
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
-<<<<<<< HEAD
-
-console.log(`Fixed syntax errors in ${fixedCount} files.`);
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7

@@ -1,62 +1,22 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-echo "Fixing all merge conflicts in the project..."
-
-<<<<<<< HEAD
-# Find all files with merge conflicts
-find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | while read -r file; do
-  if grep -q "<<<<<<< HEAD" "$file"; then
-    echo "Fixing merge conflicts in: $file"
-    
-    # Keep the HEAD version for all conflicts
-    sed -i '/<<<<<<< HEAD/,/>>>>>>>/ { /<<<<<<< HEAD/! { /======/! { />>>>>>>/!d } } }' "$file"
-    sed -i '/<<<<<<< HEAD/,/>>>>>>>/d' "$file"
-    
-    # Remove any remaining conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
-=======
-=======
 echo "Fixing all remaining merge conflicts..."
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+echo "Fixing all remaining merge conflicts..."
+
 # Find all files with merge conflicts and fix them
 find src app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.css" | while read file; do
   if [ -f "$file" ] && grep -q "
     echo "Fixing conflicts in: $file"
     
-    # Remove all merge conflict markers
-
-    sed -i '/^/,/^/d' "$file"
-    sed -i '/^>>>>>>>/d' "$file"
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
->>>>>>> main
-=======
-<<<<<<< HEAD
->>>>>>> 90212cbddaba7c9a204f99fe028e1da1f0847a0f
-=======
->>>>>>> main
->>>>>>> cf471d84bcd2971d126a6b4bee95ebd23948c6f1
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
-    
     # Remove everything from 
+
+
     sed -i '/^
-    
     # Remove any remaining  markers
     sed -i '/^$/d' "$file"
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-    
     echo "Fixed: $file"
   fi
-<<<<<<< HEAD
-done
-
-echo "All merge conflicts have been resolved!"
-=======
 # Script to fix all remaining merge conflict issues
 echo "Fixing all remaining merge conflict issues..."
 
@@ -77,8 +37,7 @@ if [ -n "$files_with_conflicts" ]; then
         awk '
         /^<<<<<<< HEAD/ { in_head = 1; next }
         /^=======/ { in_head = 0; in_other = 1; next }
-        /^>>>>>>> / { in_other = 0; next }
-        in_other { next }
+        /^        in_other { next }
         { print }
         ' "$file" > "$temp_file"
         
@@ -102,9 +61,7 @@ for file in $(find ./app -name "*.tsx" -o -name "*.ts"); do
 done
 
 echo "All merge conflicts and syntax issues resolved."
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 done
 
 echo "All merge conflicts fixed!"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+echo "All merge conflicts fixed!"

@@ -1,7 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+import { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Loader2 } from 'lucide-react'
+import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
@@ -12,28 +15,7 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields";
 import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import {logErrorToProduction} from '@/utils/productionLogger';
-<<<<<<< HEAD
-const formSchema = z && z.object({;
-  projectName: z && z.string().min(1, "Project name is required");
-  scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
-  startDate: z && z.date({;
-    required_error: "Start date is required"}),;
-  endDate: z && z.date().optional(),;
-  paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
-  paymentAmount: z && z.string().min(1, "Payment amount is required");
-  additionalClauses: z && z.array(z && z.string()).optional()}),;
 
-export type ContractFormValues = z && z.infer<typeof formSchema>;
-
-
-
-        values, ;
-        talent, ;
-        clientName, ;
-
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
   );
 }
@@ -75,8 +57,6 @@ export type ContractFormValues = z.infer < typeof form_schema>;
 }
 
 ;
-<<<<<<< HEAD
-=======
 
 ;
 import { Form  } from '@/components/ui/form';
@@ -127,7 +107,6 @@ import { Button } from "@/components/ui/button",import { Form } from "@/componen
           <ProjectDetailsFields;
             form={form}/>;
           <PaymentTermsFields;
-=======
 
 import { useState, useEffect } from "react",
 import { useForm } from "react-hook-form",
@@ -162,7 +141,6 @@ const formSchema = null;
           />
           
           <PaymentTermsFields 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
             form={form}
             handleMilestonesGenerated={handleMilestonesGenerated}
           />;
@@ -201,14 +179,9 @@ const formSchema = null;
 }/> <Button type="submit" className="w-full bg-zion-purple hover:bg-zion-purple-dark" disabled= {isGenerating ;
 }> {";
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Contract... </>) : ("Generate Contract") ";
-<<<<<<< HEAD
-}</Button> </form> </Form> <DialogFooter className="gap-2 flex-wrap mt-4" > <Button > Reset Form </Button> </DialogFooter> </>)}";
-  )}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 }</Button> </form> </Form> <DialogFooter className="gap-2 flex-wrap mt-4" > <Button > Reset Form </Button> </DialogFooter> </>) ;
 }"
   )
 }
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+

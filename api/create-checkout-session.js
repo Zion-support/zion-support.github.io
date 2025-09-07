@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 ;
 export default function handler() {res.status(200).json({ message: "Checkout session created" })}ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' })}
 export default function handler() {res.status(200).json({ "message": 'Checkout session created' })}
@@ -75,13 +68,7 @@ export default function handler(req, res) {
     res.status(500).json({ message: 'Internal server error' });
   }
 }
-<<<<<<< HEAD
-
-export default withErrorLogging(handler);
-<<<<<<< HEAD
-=======
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
@@ -91,10 +78,7 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
       url: session.url
     })
   } catch (err) {,
@@ -107,9 +91,7 @@ export default withErrorLogging(handler),
 }
 
 export default withErrorLogging(handler);
-<<<<<<< HEAD
-=======
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+export default function handler(req, res) {
+  res.status(200).json({ message: 'Checkout session created' });
+}

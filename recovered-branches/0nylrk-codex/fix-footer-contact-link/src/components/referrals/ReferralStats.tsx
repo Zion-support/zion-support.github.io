@@ -1,10 +1,3 @@
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean
@@ -13,11 +6,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
 
   const statCards = [
     {
-<<<<<<< HEAD
-      title: "Total Referrals"
-      value: stats.totalReferrals
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       icon: <Share className="h-5 w-5 text-muted-foreground" />
       description: "People you've invited"
     }
@@ -39,52 +27,6 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       icon: <Award className="h-5 w-5 text-muted-foreground" />
       description: "Credits earned from referrals"
     }
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
-import { ReferralStats, as, ReferralStatsType  } from '@/types / referrals';
-import { Award, Share, Star, TrendingUp  } from './lucide-react';
-interface ReferralStatsProps {
-  stats: ReferralStatsType;
-  is_loading: boolean;
-}
-export /**
- * ReferralStats - Function description
- */
-function ReferralStats() {
-  const stat_cards = [;
-    {
-      title: "Total Referrals",
-      value: stats.total_referrals,
-      icon: <Share className="h - 5 w - 5 text - muted - foreground" />,
-      description: "People you've invited",
-    },
-    {
-      title: "Completed",
-      value: stats.completed_referrals,
-      icon: <Star className="h - 5 w - 5 text - muted - foreground" />,
-      description: "Signed up & completed onboarding",
-    },
-    {
-      title: "Pending",
-      value: stats.pending_referrals,
-      icon: <TrendingUp className="h - 5 w - 5 text - muted - foreground" />,
-      description: "Not yet completed onboarding",
-    },
-    {
-      title: "Total Rewards",
-      value: stats.total_rewards > 0 ? `$${stats.total_rewards.to_fixed (2)}` : "-",
-      icon: <Award className="h - 5 w - 5 text - muted - foreground" />,
-      description: "Credits earned from referrals",
-    },
-  ];
-;
-  return (
-    <div className="grid gap - 4 md:grid - cols - 2 lg:grid - cols - 4">;
-      {stat_cards.map ((card, i) => (
-        <Card key={i}>;
-          <CardHeader className="flex flex - row items - center justify - between space - y-0 pb - 2">;
-            <CardTitle className="text - sm font - medium">{card.title}</CardTitle>;
-=======
 =======  ];
 ;
   return (
@@ -93,22 +35,14 @@ function ReferralStats() {
         <Card key={i}>;
           <CardHeader className="flex flex - row items - center justify - between space - y-0 pb-2">;
             <CardTitle className="text - sm font-medium">{card.title}</CardTitle>;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
             {card.icon}
           </CardHeader>;
           <CardContent>;
             {is_loading ? (
-<<<<<<< HEAD
-              <div className="h - 6 w - 20 bg - muted animate - pulse rounded" />) : (
-              <>;
-                <div className="text - 2xl font - bold">{card.value}</div>;
-                <p className="text - xs text - muted - foreground">;
-=======
               <div className="h - 6 w - 20 bg - muted animate-pulse rounded" />) : (
               <>;
                 <div className="text - 2xl font-bold">{card.value}</div>;
                 <p className="text - xs text - muted-foreground">;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
                   {card.description}
 
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -146,6 +80,33 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       description: "Credits earned from referrals",
     },
   ];
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralStats as ReferralStatsType } from "@/types/referrals";
+import { Award, Share, Star, TrendingUp } from "lucide-react";
+interface ReferralStatsProps {
+  stats: ReferralStatsType,
+  isLoading: boolean}
+
+export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
+  const statCards = $2;
+      value: stats.totalReferrals,
+      icon: <Share className = $2;
+      description: "People you've invited"},
+    {
+      title: "Completed",
+      value: stats.completedReferrals,
+      icon: <Star className = $2;
+      description: "Signed up & completed onboarding"},
+    {
+      title: "Pending",
+      value: stats.pendingReferrals,
+      icon: <TrendingUp className = $2;
+      description: "Not yet completed onboarding"},
+    {
+      title: "Total Rewards",
+      value: stats.totalRewards > 0 ? `$${stats.totalRewards.toFixed(2)}` : "-",
+      icon: <Award className = $2;
+      description: "Credits earned from referrals"}],
 
   return (
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -166,25 +127,9 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
                 </p>
               </>
             )}
-          </CardContent>;
-        </Card>;
+          </CardContent>
+        </Card>
       ))}
-
-    </div>;
-  );
-}
-
-                </p>;
-              </>)}
-          </CardContent>;
-        </Card>))}
-    </div>);
-}
-<<<<<<< HEAD
     </div>
-  );
+  )
 }
-;
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

@@ -3,8 +3,7 @@ const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
       this.projectRoot,merge-conflict-resolver-report.json"
-const fs = require("fs")
-const path = require("path")
+
 const { execSync } = require("child_process")
       this.projectRoot,merge-conflict-resolver-report.json"
   this.log(" Starting Merge Conflict Resolver...")
@@ -69,7 +68,7 @@ const { execSync } = require("child_process")
         .split("\n")
         .filter(line => line.length > 0)} catch (error) {  this.log(" Could not check git "status": ${error.message  }")
         line => line.startsWith("M ") || line.startsWith("A ")
-      if (resolvedFiles.length > 0) {this.log("� Committing ${resolvedFiles.length} resolved files...")
+  if($2) {this.log("� Committing ${resolvedFiles.length} resolved files...")
 const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files resolved";execSync("git commit -m ${message}"", { "stdio": "pipe"})
         this.log(" Conflicts committed successfully")
     } catch (error) {  this.log(" Could not commit resolved "conflicts": ${error.message  }")
@@ -88,17 +87,11 @@ const message = "Auto-resolve merge "conflicts": ${resolvedFiles.length} files r
       "logFile"
   process.on("SIGINT")
   process.on("SIGINT")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   process.on(")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   process.on(")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   process.on(")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  process.on(")
+  process.on(")
+
+

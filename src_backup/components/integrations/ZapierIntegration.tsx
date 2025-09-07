@@ -1,20 +1,40 @@
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
+import React, { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Card
+  CardContent
+  CardFooter
+  CardHeader
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+
+import { toast } from "sonner";
+import { Check, Copy, ExternalLink } from "lucide-react";
+export function ZapierIntegration() {
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
+
+  const handleCopyApiKey = () => {
+    navigator.clipboard.writeText(apiKey);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+    toast.success("API key copied to clipboard");
+  }
+
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
+import { Check, Copy, ExternalLink } from "lucide-react";
 
 <<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
 import React, { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
-import { Input } from "@/components/ui/input";
-import { toast } from "sonner";
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
 import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
 
@@ -44,10 +64,6 @@ export function ZapierIntegration() {;
   const [copied, setCopied] = useState(false);
   const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
 <<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
 
   const handleCopyApiKey = () => {;
     navigator && navigator.clipboard.writeText(apiKey);
@@ -63,7 +79,6 @@ export function ZapierIntegration() {;
 
   return (
     <div className='space-y-6'>;
-=======
 ;
 import React, { useState } from "react",import { Badge } from "@/components/ui/badge",import { Button } from "@/components/ui/button",import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",import { Input  } from '@/components/ui/input';
 import { toast  } from 'sonner';
@@ -75,7 +90,6 @@ import {Card,CardContent,CardFooter,CardHeader} from '@/components/ui/card';
 export function ZapierIntegration() {const [copied, setCopied] = useState(false)const [apiKey] = useState('zap_live_KztCaFieDu4VBnp8eMJZ9x73R')const [apiKey]  = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter  } from '@/components/ui/card';
 import { Zap  } from 'lucide-react';
 export function ZapierIntegration() {const [copied, setCopied] = useState(false)const [apiKey]  = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R")const handleCopyApiKey = () => {navigator && navigator.clipboard.writeText(apiKey)setCopied(true)setTimeout(() => setCopied(false), 2000)toast && toast.success('API key copied to clipboard')navigator && navigator.clipboard.writeText(apiKey),setCopied(true),setTimeout((,) => setCopied(false), 2000),toast && toast.success("API key copied to clipboard")},return (<div className='space-y-6'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/ZapierIntegration.tsx
       <div className='grid md:grid-cols-3 gap-6'>;
         <Card className='md:col-span-2'>;
           <CardHeader>;
@@ -123,9 +137,9 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
 
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
 <<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+
   const handleCopyApiKey = null;
   return (
     <div className='space-y-6'>
@@ -144,12 +158,23 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
               Connect Zion with 3,000+ apps via Zapier. Use your API key below
               to set up integrations.
             </p>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <label className="text-sm font-medium">Your Zion API Key</label>
+                <div className="flex gap-2">
+                  <Input 
+                    value={apiKey} 
+                    readOnly 
+                    className="font-mono text-sm" 
+                  />
+                  <Button size="sm" variant="outline" onClick={handleCopyApiKey}>
+                    {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
             <div className='space-y-4'>
               <div className='space-y-2'>
                 <label className='text-sm font-medium'>Your Zion API Key</label>
                 <div className='flex gap-2'>
                   <Input
-=======
             <p className='text-sm text-muted-foreground mb-4'>;
               Connect Zion with 3,000+ apps via Zapier. Use your API key below;
               to set up integrations.;
@@ -159,7 +184,6 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
                 <label className='text-sm font-medium'>Your Zion API Key</label>;
                 <div className='flex gap-2'>;
                   <Input;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/ZapierIntegration.tsx
                     value={apiKey}
                     readOnly;
                     className='font-mono text-sm'                  />;
@@ -168,6 +192,13 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
                     variant='outline';
                     onClick={handleCopyApiKey}
 <<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
+                    value={apiKey}
+                    readOnly
+                    className='font-mono text-sm'                  />
+                  <Button
+                    size='sm'
+                    variant='outline'
+                    onClick={handleCopyApiKey}
                   >
                     {copied ? (
                       <Check className='h-4 w-4' />
@@ -175,8 +206,6 @@ function ZapierIntegration() {const [copied, set_copied] = useState (false)const
                       <Copy className='h-4 w-4' />
                     )}
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
                   </Button>
                 </div>
               </div>
@@ -195,29 +224,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Button variant='outline' className='gap-2'>
               <ExternalLink className='h-4 w-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
-
 <CardFooter className='flex flex-col items-start'>
             <Button variant='outline' className='gap-2'>
               <ExternalLink className='h-4 w-4' />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533
               Open Zapier Dashboard
             </Button>
           </CardFooter>
         </Card>
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
+
+        <Card>
+
 <Card>
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
-
-
-        
-        <Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
           </CardHeader>
@@ -226,9 +249,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
 <<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
                 <span>Add new Zion contacts to Mailchimp</span>
               </li>
               <li className="flex items-center gap-2">
@@ -239,18 +260,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <Check className="h-4 w-4 text-green-500" />
                 <span>Sync completed projects to accounting</span>
               </li>
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-              <li className='flex items-center gap-2'>
-                <Check className='h-4 w-4 text-green-500' />
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
               <li className="flex items-center gap-2">
 
 
 
                 <Check className="h-4 w-4 text-green-500" />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
+
                 <span>Create calendar events for interviews</span>
+
               </li>
             </ul>
           </CardContent>
@@ -262,32 +279,30 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <Button variant='outline' className='w-full gap-1'>
               <ExternalLink className='h-4 w-4' />
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
             <Button variant="outline" className="w-full gap-1">
 
-
               <ExternalLink className="h-4 w-4" />
-
 <Button variant='outline' className='w-full gap-1'>
               <ExternalLink className='h-4 w-4' />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533
               <span>Explore Zion Zaps</span>
             </Button>
           </CardFooter>
         </Card>
       </div>
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-<Card>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 
       
 
 
       <Card>
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
+
+      <Card>
+
+<Card>
+origin/cursor/automate-test-improve-and-merge-code-2533
         <CardHeader>
           <h3 className='text-lg font-semibold'>Zapier Webhook Triggers</h3>
         </CardHeader>
@@ -297,7 +312,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             Zion account.
           </p>
 
-      
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -306,9 +320,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <p className="text-sm text-muted-foreground mb-4">
             Use these webhook triggers to start Zaps when events happen in your Zion account.
           </p>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 
-
-          
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
@@ -317,55 +330,47 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
-            
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
-
-
 
                 Triggers when a talent applies to your job.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
             </div>
-
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
 
             </div>
           </div>
         </CardContent>
       </Card>;
     </div>;
-  );
+  )
 };
 }
 
-
-            
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
               <p className="text-xs text-muted-foreground mb-3">
                 Triggers when a contract is signed by all parties.
               </p>
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-              <Button size='sm' variant='outline'>
-                Set Up Trigger
-              </Button>
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
               <Button size="sm" variant="outline">Set Up Trigger</Button>
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
             </div>
           </div>
         </CardContent>
       </Card>
     </div>
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/integrations/ZapierIntegration.tsx
+  );
+}
+  );
+}
 
             </p>;
-=======
                   >;
                     {copied ? (<Check className='h-4 w-4' />;
                     ) : (<Copy className='h-4 w-4' />;
@@ -475,7 +480,26 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>;
             <p className='text - sm text - muted - foreground mb - 4'>;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
-              to set up integrations.;import { Input } from "@/components/ui/input",import { toast } from "sonner",export function ZapierIntegration() {const [copied, setCopied] = useState(false),const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),const handleCopyApiKey = () => {navigator.clipboard.writeText(apiKey),setCopied(true),setTimeout(() => setCopied(false), 2000)toast.success("API key copied to clipboard")}return (<div className="space-y-6">;
+              to set up integrations.;
+
+import React, { useState } from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "sonner",;
+import { Check, Copy, ExternalLink } from 'lucide-react';
+export function ZapierIntegration() {;
+  const [copied, setCopied] = useState(false),;
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),;
+  const handleCopyApiKey = () => {;
+    navigator.clipboard.writeText(apiKey),;
+    setCopied(true),;
+    setTimeout(() => setCopied(false), 2000);
+    toast.success("API key copied to clipboard")
+};
+  return (;
+    <div className="space-y-6">;
       <div className="grid md:grid-cols-3 gap-6">;
         <Card className="md:col-span-2">;
           <CardHeader>;
@@ -488,7 +512,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <p className="text-sm text-muted-foreground mb-4">;
 <<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;</p>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/ZapierIntegration.tsx
             <div className='space - y-4'>;
               <div className='space - y-2'>;
                 <label className='text - sm font - medium'>Your Zion API Key</label>;
@@ -508,14 +531,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <Copy className='h - 4 w - 4' />)}                  </Button>                  <Button size="sm" variant="outline" on_click={handleCopyApiKey}>;
                     {copied ? <Check className="h - 4 w - 4" /> : <Copy className="h - 4 w - 4" />}
 
-=======
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
-                  </Button>;
-=======
                     {copied ? (<Check className='h - 4 w - 4' />) : (<Copy className='h - 4 w - 4' />)}                  </Button>                  <Button size="sm" variant="outline" on_click={handleCopyApiKey}>;
                     {copied ? <Check className="h - 4 w - 4" /> : <Copy className="h - 4 w - 4" />}</Button>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/ZapierIntegration.tsx
                 </div>;
               </div>;
             </div>;
@@ -528,85 +546,75 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           <CardFooter className="flex flex - col items - start">;
             <Button variant="outline" className="gap - 2">;
               <ExternalLink className="h - 4 w - 4" />;Open Zapier Dashboard;
+
+                  </Button>;
+
+                </div>;
+              </div>;
+            </div>;
+          </CardContent>;
+
+              Open Zapier Dashboard;
             </Button>;
           </CardFooter>;
 <<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
         </Card>;
 <<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
 
         <Card>;
-=======
         </Card>;<Card>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/ZapierIntegration.tsx
           <CardHeader>;
-            <h3 className='text - lg font - semibold'>Popular Zaps</h3>;
+            <h3 className="text-lg font-semibold">Popular Zaps</h3>;
           </CardHeader>;
           <CardContent>;
-            <ul className='space - y-2 text - sm'>;
-              <li className='flex items - center gap - 2'>;
-                <Check className='h - 4 w - 4 text - green - 500' />                <span > Add new Zion contacts to Mailchimp</span>;
+            <ul className="space-y-2 text-sm">;
+              <li className="flex items-center gap-2">;
+                <Check className="h-4 w-4 text-green-500" />;
+                <span>Add new Zion contacts to Mailchimp</span>;
               </li>;
-              <li className='flex items - center gap - 2'>;
-                <Check className='h - 4 w - 4 text - green - 500' />;
-                <span > Create Slack notifications for new jobs</span>;
+              <li className="flex items-center gap-2">;
+                <Check className="h-4 w-4 text-green-500" />;
+                <span>Create Slack notifications for new jobs</span>;
               </li>;
-              <li className='flex items - center gap - 2'>;
-                <Check className='h - 4 w - 4 text - green - 500' />;
-                <span > Sync completed projects to accounting</span>;
+              <li className="flex items-center gap-2">;
+                <Check className="h-4 w-4 text-green-500" />;
+                <span>Sync completed projects to accounting</span>;
               </li>;
-              <li className='flex items - center gap - 2'>;
-                <Check className='h - 4 w - 4 text - green - 500' />                <span > Create calendar events for interviews</span>              <li className="flex items - center gap - 2">;
-                <Check className="h - 4 w - 4 text - green - 500" />;
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-                <span > Create calendar events for interviews</span>;
 
 <<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
               </li>;
-=======
                 <span > Create calendar events for interviews</span>;</li>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/ZapierIntegration.tsx
             </ul>;
           </CardContent>;
-          <CardFooter>;</Button>;
+          <CardFooter>;
+
+            </Button>;
           </CardFooter>;
         </Card>;
-      </div>;Triggers when a new job is published on your account.;
+      </div>;
+
+                Triggers when a new job is published on your account.;
               </p>;
               <Button size='sm' variant='outline'>;
                 Set Up Trigger;
-              </Button>            </div>;Triggers when a talent applies to your job.;
+              </Button>            </div>;
+
+                Triggers when a talent applies to your job.;
               </p>;
-              <Button size='sm' variant='outline'>;
-                Set Up Trigger;
-              </Button>;
-            </div>;Triggers when a contract is signed by all parties.;
+              <Button size="sm" variant="outline">Set Up Trigger</Button>;
+            </div>;
+
+                Triggers when a contract is signed by all parties.;
               </p>;
-              <Button size='sm' variant='outline'>;
-                Set Up Trigger;
-              </Button>            </div>              <Button size="sm" variant="outline">Set Up Trigger</Button>;
+              <Button size="sm" variant="outline">Set Up Trigger</Button>;
             </div>;
           </div>;
         </CardContent>;
 <<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
       </Card>;
 
-<<<<<<< HEAD:src_backup/components/integrations/ZapierIntegration.tsx
-
-;
-
-  );
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
       </Card>;;)}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/integrations/ZapierIntegration.tsx
-=======
   );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/integrations/ZapierIntegration.tsx
+;

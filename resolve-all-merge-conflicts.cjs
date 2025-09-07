@@ -1,17 +1,9 @@
 #!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 console.log('🔧 Starting comprehensive merge conflict resolution...');
 
 // Function to resolve conflicts in a file
@@ -31,18 +23,13 @@ function resolveConflicts(filePath) {
     console.log(`Resolving conflicts in ${filePath}...`);
     
     // Replace merge conflict markers with incoming changes (choose the incoming version)
-    content = content.replace(/[\s\S]*?([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
-    
+    content = content.replace(/[\s\S]*?([\s\S]*?)    
     // Remove any remaining conflict markers
-    content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
-    content = content.replace(/[\s\S]*?>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(/[\s\S]*?[\s\S]*?    content = content.replace(/[\s\S]*?    content = content.replace(/[\s\S]*?    
     // Clean up any remaining markers
     content = content.replace(//g, '');
     content = content.replace(//g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
-    
+    content = content.replace(/    
     // Write the resolved content back
     fs.writeFileSync(filePath, content);
     
@@ -94,11 +81,6 @@ try {
 }
 
 console.log('🎉 Merge conflict resolution completed!');
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = [];
@@ -230,43 +212,25 @@ const resolver = new MergeConflictResolver();
 resolver.resolveMergeConflicts().catch(console.error);
 module.exports = MergeConflictResolver;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 console.log('🔧 Starting comprehensive merge conflict resolution...');
+
+console.log('🔧 Starting comprehensive merge conflict resolution...\n');
 
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
+    if (!fs.existsSync(filePath)) {
+      return false;
+    }
+
+    const content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers and keep the HEAD version (first part)
-    content = content.replace(/[\s\S]*?
-      // Extract only the HEAD part (before 
-    
-    // Handle incomplete conflicts (missing closing markers)
-    content = content.replace(/[\s\S]*?
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 console.log('🚀 Starting comprehensive merge conflict resolution...');
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
 // Function to resolve content conflicts by choosing main branch version
 function resolveContentConflicts() {
   console.log('📝 Resolving content conflicts...');
@@ -331,31 +295,17 @@ function resolveContentConflicts() {
         let content = fs.readFileSync(file, 'utf8');
         
         // Remove conflict markers and keep main branch version
-<<<<<<< HEAD
-<<<<<<< HEAD
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> main/g, '');
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-=======
         content = content.replace(/
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> main/g, '');
-        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [a-f0-9]+/g, '');
-        
+        content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?[\s\S]*?        
         // Clean up any remaining conflict markers
-        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
-        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [^\n]+/g, '');
-
+        content = content.replace(/[\s\S]*?[\s\S]*?        content = content.replace(/[\s\S]*?[\s\S]*?
         content = content.replace(/
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
         
         // Clean up any remaining conflict markers
         content = content.replace(/
         content = content.replace(/
-=======
         
         // Clean up any remaining conflict markers
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         
         // Write the cleaned content
         fs.writeFileSync(file, content);
@@ -364,48 +314,16 @@ function resolveContentConflicts() {
       } catch (error) {
         console.error(`Error resolving ${file}:`, error.message);
       }
+    // Check if file has merge conflict markers
+    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
+      return false;
     }
-  });
-  
-  return resolvedCount;
-}
 
-// Function to resolve add/add conflicts
-function resolveAddAddConflicts() {
-  console.log('➕ Resolving add/add conflicts...');
-  
-  const addAddFiles = [
-    'zion-os/src/app/admin/deployments/page.tsx',
-    'zion-os/src/app/admin/os-deploy/page.tsx',
-    'zion-os/src/app/api/user/onboarding/route.ts'
-  ];
-  
-  let resolvedCount = 0;
-  
-  addAddFiles.forEach(file => {
-    if (fs.existsSync(file)) {
-      try {
-        console.log(`Resolving add/add conflict in ${file}`);
-        
-        // Read the file content
-        let content = fs.readFileSync(file, 'utf8');
-        
-        // Remove conflict markers and keep both versions
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [a-f0-9]+/g, (match) => {
-          const parts = match.split('=======');
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
           if (parts.length === 2) {
-=======
-        content = content.replace(/[\s\S]*?[\s\S]*?>>>>>>> [a-f0-9]+/g, (match) => {
-          const parts = match.split('');
+        content = content.replace(/[\s\S]*?[\s\S]*?          const parts = match.split('');
           if (parts.length === 2) {
             const headPart = parts[0].replace(/\s*/, '');
-            const mainPart = parts[1].replace(/\s*>>>>>>> [a-f0-9]+/, '');
-            return headPart + mainPart;
+            const mainPart = parts[1].replace(/\s*            return headPart + mainPart;
           }
           return match;
         });
@@ -422,32 +340,85 @@ function resolveAddAddConflicts() {
   
   return resolvedCount;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
 
 
-<<<<<<< HEAD
-main();
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
         content = content.replace(/
           const parts = match.split('
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 ursor/integrate-build-improve-and-re-verify-7ffc
         content = content.replace(/
           const parts = match.split('
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    console.log(`  📝 Resolving conflicts in: ${filePath}`);
+
+    // Strategy: Keep the current branch changes (HEAD) and remove conflict markers
+    let resolvedContent = content
+      // Remove conflict markers and keep HEAD version
+      .replace(/\n([\s\S]*?)\n([\s\S]*?)      // Handle cases where there might be multiple conflict sections
+      .replace(/\n([\s\S]*?)\n([\s\S]*?)      // Clean up any remaining conflict markers
+      .replace(/<<<<<<< [^\n]+\n?/g, '')
+      .replace(/\n?/g, '')
+      .replace(/      // Remove extra empty lines
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      .trim();
+
+    // Write the resolved content back
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    return true;
+  } catch (error) {
+    console.error(`  ❌ Error resolving ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to find all files with merge conflicts
+function findConflictedFiles() {
+  try {
+    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file.length > 0);
+  } catch (error) {
+    console.error('Error finding conflicted files:', error.message);
+    return [];
+  }
+}
+
+// Main execution
+async function main() {
+  console.log('🔍 Finding files with merge conflicts...');
+  const conflictedFiles = findConflictedFiles();
+  
+  if (conflictedFiles.length === 0) {
+    console.log('✅ No merge conflicts found!');
+    return;
+  }
+
+  console.log(`📋 Found ${conflictedFiles.length} files with conflicts:\n`);
+
+  let resolvedCount = 0;
+  let errorCount = 0;
+
+  for (const file of conflictedFiles) {
+    if (resolveMergeConflicts(file)) {
+      resolvedCount++;
+    } else {
+      errorCount++;
+    }
+  }
+
+  console.log(`\n📊 Resolution Summary:`);
+  console.log(`  ✅ Successfully resolved: ${resolvedCount} files`);
+  console.log(`  ❌ Errors: ${errorCount} files`);
+
+  if (resolvedCount > 0) {
+    console.log('\n🔄 Adding resolved files to git...');
+    try {
+      execSync('git add .', { stdio: 'inherit' });
+      console.log('✅ All resolved files added to git');
+    } catch (error) {
+      console.error('❌ Error adding files to git:', error.message);
+    }
+  }
+
+  console.log('\n🎉 Merge conflict resolution completed!');
+}
+
+main().catch(console.error);

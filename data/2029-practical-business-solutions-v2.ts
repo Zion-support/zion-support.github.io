@@ -1,29 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-<<<<<<< HEAD
-import { ServiceVariant } from '../types / service - variants';
 
-export interface PracticalBusinessSolution2029 {
-
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 import { ServiceVariant  } from '../types / service - variants';
 export interface PracticalBusinessSolution2029  {{id: 'ai - business - intelligence - suite',name: 'AI Business Intelligence Suite',tagline:;
@@ -96,7 +72,6 @@ export interface PracticalBusinessSolution2029  {id: string;
       'ROI tracking automation';
       'Market opportunity identification';
       'Competitive intelligence';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     id: 'ai - business - intelligence - suite',
     name: 'AI Business Intelligence Suite',
     tagline:;
@@ -107,17 +82,7 @@ export interface PracticalBusinessSolution2029  {id: string;
       'Comprehensive AI - powered business intelligence platform that provides real - time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
     features: [;
       'Real - time data analytics',
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       'Predictive business modeling',
       'Automated report generation',
       'Custom dashboard creation',
@@ -135,11 +100,6 @@ export interface PracticalBusinessSolution2029  {id: string;
 
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'
     ],    features: [;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { ServiceVariant } from '../types/service-variants';
 export interface PracticalBusinessSolution2029 {
   id: string;
@@ -229,10 +189,6 @@ export interface PracticalBusinessSolution2029 {
       'Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'
     ],    features: [
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
       'Market opportunity identificationCompetitive intelligence'
     ];
@@ -241,23 +197,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     color: 'from-blue-500 via-indigo-500 to-purple-500';
     textColor: 'text-blue-400';
     link: 'https://ziontechgroup.com/services/ai-business-intelligence-suite';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.';
-    targetAudience: 'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies',
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketPosition:;
       'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.';
     targetAudience:;
       'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies';
-=======
 
     marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.'
     targetAudience: 'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     trialDays: 21;
     setupTime: '2-3 weeks';
     category: 'AI Business Intelligence';
@@ -282,19 +228,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
     marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.'
     targetAudience: 'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     trialDays: 21;
     setupTime: '2-3 weeks';
     category: 'AI Business Intelligence';
     realService: true;
-<<<<<<< HEAD
-    technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'],
-    integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'],
-    useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'],
-    roi: 'Average customer sees 350% ROI through improved decision making and business optimization.';
-    competitors: ['Tableau, Power BI, Qlik, Looker, Domo'],
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'];
     integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'];
     useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'];
@@ -383,27 +320,12 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     roi: 'Average customer sees 350% ROI through improved decision making and business optimization.'
     competitors: ['Tableau, Power BI, Qlik, Looker, Domo'];
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     marketSize: '$18B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
 
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     link: 'https://ziontechgroup && ziontechgroup.com/services/ai-business-intelligence-suite';
     marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.',
 
@@ -429,27 +351,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 95;
     rating: 4 && 4.8,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 167
   }
 
-=======
 
     reviews: 167
   }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -461,16 +372,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 167
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     reviews: 167
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Intelligent Customer Experience Platform
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -486,38 +391,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'intelligent - customer - experience - platform';
     name: 'Intelligent Customer Experience Platform';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/intelligent-customer-experience-platform';
     marketPosition: 'Advanced AI customer experience platform. 60% better customer satisfaction than traditional CX tools.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'E-commerce companies, Retail businesses, SaaS companies, Service providers, Hospitality industry';
     trialDays: 14;
     setupTime: '1-2 weeks';
@@ -528,11 +408,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights'];
     roi: 'Average customer sees 450% ROI through improved customer satisfaction and increased revenue.'
     competitors: ['Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered customer journey optimization and personalization';
     price: '$1,899',
     period: '/month';
@@ -557,12 +433,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights'],
     roi: 'Average customer sees 450% ROI through improved customer satisfaction and increased revenue.';
     competitors: ['Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'],
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketSize: '$22B market';
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
@@ -666,18 +536,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -689,27 +547,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 78;
     rating: 4 && 4.9,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 134
   }
 
-=======
 
     reviews: 134
   }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -721,15 +568,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 134
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     reviews: 134
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Smart Supply Chain Optimization
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -745,38 +586,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'smart - supply - chain - optimization';
     name: 'Smart Supply Chain Optimization';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/smart-supply-chain-optimization';
     marketPosition: 'Leading AI supply chain platform. 40% cost reduction compared to traditional supply chain management.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Manufacturing companies, Retail chains, E-commerce businesses, Logistics companies, Distribution networks';
     trialDays: 30;
     setupTime: '3-4 weeks';
@@ -787,11 +603,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Demand forecasting, Inventory management, Cost optimization, Risk management, Performance tracking'];
     roi: 'Average customer sees 500% ROI through cost reduction and efficiency improvements.'
     competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, Blue Yonder, Kinaxis'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered supply chain intelligence and automation';
     price: '$3,999',
     period: '/month';
@@ -816,12 +628,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Demand forecasting, Inventory management, Cost optimization, Risk management, Performance tracking'],
     roi: 'Average customer sees 500% ROI through cost reduction and efficiency improvements.';
     competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, Blue Yonder, Kinaxis'],
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketSize: '$28B market';
     growthRate: '350% annual growth';
     variant: 'ai-futuristic';
@@ -925,18 +731,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -948,27 +742,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 65;
     rating: 4 && 4.8,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 98
   }
 
-=======
 
     reviews: 98
   }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -980,15 +763,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 98
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     reviews: 98
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Intelligent HR Management System
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1004,38 +781,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'intelligent - hr - management - system';
     name: 'Intelligent HR Management System';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/intelligent-hr-management-system';
     marketPosition: 'Advanced AI HR platform. 50% better employee retention than traditional HR systems.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Medium to large companies, HR departments, Recruitment agencies, Consulting firms, Educational institutions';
     trialDays: 21;
     setupTime: '2-3 weeks';
@@ -1046,11 +798,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Recruitment optimization, Employee engagement, Performance management, Training optimization, HR analytics'];
     roi: 'Average customer sees 400% ROI through improved employee retention and HR efficiency.'
     competitors: ['Workday, BambooHR, ADP, Gusto, Zenefits'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered human resources optimization and talent management';
     price: '$1,599',
     period: '/month';
@@ -1075,12 +823,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Recruitment optimization, Employee engagement, Performance management, Training optimization, HR analytics'],
     roi: 'Average customer sees 400% ROI through improved employee retention and HR efficiency.';
     competitors: ['Workday, BambooHR, ADP, Gusto, Zenefits'],
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketSize: '$15B market';
     growthRate: '300% annual growth';
     variant: 'ai-futuristic';
@@ -1184,18 +926,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1207,27 +937,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 112;
     rating: 4 && 4.7,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 189
   }
 
-=======
 
     reviews: 189
   }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1239,15 +958,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.7;
     reviews: 189
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     reviews: 189
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Smart Financial Management Platform
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1263,38 +976,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'smart - financial - management - platform';
     name: 'Smart Financial Management Platform';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/smart-financial-management-platform';
     marketPosition: 'Leading AI financial platform. 45% better financial optimization than traditional financial tools.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Small to medium businesses, Financial departments, Accounting firms, Consulting companies, Startups';
     trialDays: 30;
     setupTime: '2-4 weeks';
@@ -1305,11 +993,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Cash flow management, Financial planning, Risk management, Accounting automation, Tax optimization'];
     roi: 'Average customer sees 380% ROI through improved financial management and cost optimization.'
     competitors: ['QuickBooks, Xero, FreshBooks, Wave, Sage'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered financial planning and business optimization';
     price: '$2,999',
     period: '/month';
@@ -1334,12 +1018,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Cash flow management, Financial planning, Risk management, Accounting automation, Tax optimization'],
     roi: 'Average customer sees 380% ROI through improved financial management and cost optimization.';
     competitors: ['QuickBooks, Xero, FreshBooks, Wave, Sage'],
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketSize: '$20B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
@@ -1443,18 +1121,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1466,27 +1132,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 89;
     rating: 4 && 4.8,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 156
   }
 
-=======
 
     reviews: 156
   }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1498,15 +1153,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 156
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     reviews: 156
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Intelligent Marketing Automation
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1522,38 +1171,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'intelligent - marketing - automation';
     name: 'Intelligent Marketing Automation';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/intelligent-marketing-automation';
     marketPosition: 'Advanced AI marketing platform. 55% better campaign performance than traditional marketing tools.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Marketing agencies, E-commerce businesses, SaaS companies, B2B companies, Retail businesses';
     trialDays: 14;
     setupTime: '1-2 weeks';
@@ -1564,11 +1188,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Campaign optimization, Content personalization, Lead generation, Customer engagement, ROI optimization'];
     roi: 'Average customer sees 420% ROI through improved campaign performance and marketing efficiency.'
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered marketing optimization and campaign automation';
     price: '$1,299',
     period: '/month';
@@ -1593,12 +1213,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Campaign optimization, Content personalization, Lead generation, Customer engagement, ROI optimization'],
     roi: 'Average customer sees 420% ROI through improved campaign performance and marketing efficiency.';
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketSize: '$25B market';
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
@@ -1701,18 +1315,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1724,27 +1326,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 156;
     rating: 4 && 4.9,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 234
   }
 
-=======
 
     reviews: 234
   }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -1756,15 +1347,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.9;
     reviews: 234
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     reviews: 234
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Smart Project Management
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -1782,40 +1367,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     name: 'Smart Project Management';
     tagline: 'AI - powered project optimization and team collaboration';
     price: '$899';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     period: '/month'
     description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.';
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/smart-project-management';
     marketPosition: 'Advanced AI project management platform. 40% better project success rate than traditional tools.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Project managers, Development teams, Consulting firms, Construction companies, Event planners';
     trialDays: 21;
     setupTime: '1-2 weeks';
@@ -1824,25 +1384,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     technology: ['AI optimization, Machine learning, Project analytics, Workflow automation, Risk modeling'];
     integrations: ['Communication tools, File sharing platforms, Time tracking, Reporting tools, Team collaboration'];
     useCases: ['Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     period: '/month';
     description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.',
@@ -1866,21 +1409,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance'],
     roi: 'Average customer sees 350% ROI through improved project success rates and team efficiency.';
     competitors: ['Asana, Monday.com, Trello, Jira, Basecamp'],
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketSize: '$12B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
@@ -1980,18 +1510,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2003,27 +1521,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     customers: 203;
     rating: 4 && 4.8,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     reviews: 312
   }
 
-=======
 
     reviews: 312
   }
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
       website: 'https://ziontechgroup.com'
@@ -2035,15 +1542,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4.8;
     reviews: 312
   },
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     reviews: 312
   }
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   // Intelligent Sales Optimization
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -2059,38 +1560,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'intelligent - sales - optimization';
     name: 'Intelligent Sales Optimization';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
     link: 'https://ziontechgroup && ziontechgroup.com/services/intelligent-sales-optimization';
     marketPosition: 'Advanced AI sales platform. 50% better sales performance than traditional sales tools.',
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     targetAudience: 'Sales teams, B2B companies, SaaS businesses, Real estate, Financial services';
     trialDays: 21;
     setupTime: '2-3 weeks';
@@ -2101,11 +1577,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Lead scoring, Sales optimization, Revenue optimization, Pipeline management, Performance tracking'];
     roi: 'Average customer sees 450% ROI through improved sales performance and revenue optimization.'
     competitors: ['Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales'];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     tagline: 'AI-powered sales intelligence and revenue optimization';
     price: '$1,799',
     period: '/month';
@@ -2130,12 +1602,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     useCases: ['Lead scoring, Sales optimization, Revenue optimization, Pipeline management, Performance tracking'],
     roi: 'Average customer sees 450% ROI through improved sales performance and revenue optimization.';
     competitors: ['Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales'],
-<<<<<<< HEAD
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     marketSize: '$18B market';
     growthRate: '300% annual growth';
     variant: 'ai-futuristic';
@@ -2485,18 +1951,6 @@ import { ServiceVariant } from '../types/service-variants',export interface Prac
     variant: 'ai - futuristic';
     contact_info: {
       mobile: '+1 302 464 0950';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2508,22 +1962,9 @@ import { ServiceVariant } from '../types/service-variants',export interface Prac
     customers: 134;
     rating: 4 && 4.9,
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     reviews: 198
   }
 ];
@@ -2536,16 +1977,8 @@ export const getPopularPracticalBusinessSolutions2029 = () => {
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.category === category)
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular)
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 };
@@ -2554,26 +1987,12 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
   return practicalBusinessSolutions2029.filter(service => service.category === category);
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-=======
 
 
 
@@ -2583,25 +2002,18 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return price >= minPrice && price <= maxPrice;
   });
 }
@@ -2610,41 +2022,16 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     marketSize: '$18B market'
     growthRate: '280% annual growth'
     variant: 'ai-futuristic'
-<<<<<<< HEAD
-<<<<<<< HEAD
-    contactInfo: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     }
-=======
     contactInfo: {}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     contactInfo: {}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     real_implementation: true,
     implementation_details: 'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.';
     launch_date: '2025 - 02 - 01';
@@ -2655,18 +2042,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
 export const getPopularPracticalBusinessSolutions2029 = () => {
-<<<<<<< HEAD
-  return practicalBusinessSolutions2029.filter(service => service.popular);
-<<<<<<< HEAD
-=======
 ];
 
 export const getPopularPracticalBusinessSolutions2029 = () => {;
@@ -2674,16 +2053,9 @@ export const getPopularPracticalBusinessSolutions2029 = () => {;
 origin/cursor/expand-services-advertise-and-build-project-c28b
   return practicalBusinessSolutions2029.filter(service => service.popular);
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   return practicalBusinessSolutions2029.filter(service => service.popular);
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
   return practicalBusinessSolutions2029.filter(service => service.popular);
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 ;
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>: any {
@@ -2716,37 +2088,10 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     rating: 4 && 4.8,
     reviews: 167
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Customer journey mapping',
       'Real - time optimization',
       'Multi - channel integration',
@@ -2758,17 +2103,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Revenue optimization'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🎯',
 
     color: 'from - green - 500 via - emerald - 500 to - teal - 500',
@@ -2800,23 +2134,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'ai - futuristic',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2830,17 +2151,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 134
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // Smart Supply Chain Optimization;
   {
@@ -2853,23 +2163,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and create resilient supply networks that adapt to market changes.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'AI demand forecasting',
       'Inventory optimization',
       'Supply chain risk management',
@@ -2882,17 +2179,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance analytics'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '🚚',
 
     color: 'from - orange - 500 via - red - 500 to - pink - 500',
@@ -2924,23 +2210,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'ai - futuristic',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2954,37 +2227,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 98
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'Employee engagement analytics',
       'Turnover prediction',
       'Performance optimization',
@@ -2996,17 +2242,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'HR analytics dashboard'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '👥',
 
     color: 'from - purple - 500 via - violet - 500 to - indigo - 500',
@@ -3036,23 +2271,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'ai - futuristic',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3066,17 +2288,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.7,
     reviews: 189
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // Smart Financial Management Platform;
   {
@@ -3089,23 +2300,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Intelligent financial management platform that uses AI to optimize cash flow, predict financial risks, automate accounting, and provide real - time financial insights for better business decisions.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'AI cash flow optimization',
       'Financial risk prediction',
       'Automated accounting',
@@ -3118,17 +2316,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance analytics'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '💼',
 
     color: 'from - emerald - 500 via - teal - 500 to - cyan - 500',
@@ -3158,23 +2345,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'ai - futuristic',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3188,17 +2362,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 156
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // Intelligent Marketing Automation;
   {
@@ -3211,23 +2374,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Revolutionary marketing automation platform that uses AI to optimize campaigns, personalize content, predict customer behavior, and automate marketing workflows for maximum ROI.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'AI campaign optimization',
       'Content personalization',
       'Customer behavior prediction',
@@ -3240,17 +2390,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance analytics'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📢',
 
     color: 'from - pink - 500 via - rose - 500 to - red - 500',
@@ -3280,23 +2419,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'ai - futuristic',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3310,17 +2436,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.9,
     reviews: 234
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // Smart Project Management;
   {
@@ -3333,23 +2448,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'AI workflow optimization',
       'Project risk prediction',
       'Task automation',
@@ -3362,38 +2464,11 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Performance analytics'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '📋',
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3407,17 +2482,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     rating: 4 && 4.8,
     reviews: 312
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   // Intelligent Sales Optimization;
   {
@@ -3430,23 +2494,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'Revolutionary sales optimization platform that uses AI to predict customer behavior, optimize sales processes, automate lead scoring, and maximize revenue through intelligent sales strategies.',
     features: [;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       'AI lead scoring',
       'Customer behavior prediction',
       'Sales process optimization',
@@ -3459,17 +2510,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
       'ROI analytics'
     ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     icon: '💰',
 
     color: 'from - yellow - 500 via - orange - 500 to - red - 500',
@@ -3499,23 +2539,10 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     variant: 'ai - futuristic',
     contact_info: {
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -3532,17 +2559,8 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ];
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -3551,117 +2569,55 @@ export const getPopularPracticalBusinessSolutions2029 = () => {;
 
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular);
 };
 
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
 ) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
     service => service && service.category === category
-=======
   return practicalBusinessSolutions2029.filter(
     service => service.category === category;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
     service => service && service.category === category
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
   return practicalBusinessSolutions2029.filter(
     service => service.category === category;
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
     service => service && service.category === category
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
     service => service && service.category === category
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   );
 }
 export const getPracticalBusinessSolutions2029ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
-=======
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
     const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     return price >= minPrice && price <= maxPrice;
   });
 };export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
@@ -3672,18 +2628,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 ;
 export const getPracticalBusinessSolutions2029ByCategory = (
@@ -3691,23 +2636,6 @@ export const getPracticalBusinessSolutions2029ByCategory = (
   return practicalBusinessSolutions2029.filter (
     service => service.category === category);
 }
-<<<<<<< HEAD
-;
-export const getPracticalBusinessSolutions2029ByPriceRange = (
-  min_price: number,
-  max_price: number) =>: any {
-  return practicalBusinessSolutions2029.filter (service => {
-    const price = parse_int (service.price.replace (/[^0 - 9]/g, ''));
-    return price >= min_price && price <= max_price;
-  });
-}export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
-  // AI - Powered Business Intelligence;
-  {
-    id: "ai - business - intelligence - suite",
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     name: "AI Business Intelligence Suite",
     tagline: "Intelligent insights and predictive analytics for business growth",
     price: "$2, 499",
@@ -3724,10 +2652,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
       "Market opportunity identification",
       "Competitive intelligence" ],
     popular: true,
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     icon: "📊",
 
     color: "from - blue - 500 via - indigo - 500 to - purple - 500",
@@ -3738,10 +2663,6 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
     trial_days: 21,
     setup_time: "2 - 3 weeks",
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "AI Business Intelligence",
     real_service: true,
     technology["Machine learning, Predictive analytics, Data processing, Business intelligence, Real - time analytics"],
@@ -3758,123 +2679,112 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup && ziontechgroup.com";,
 },
-<<<<<<< HEAD
-
-  id: string, name: string,
-  tagline: string, price: string,
-  period: string, description: string,
-  features: string[], popular: boolean,
-  icon: string, color: string,
-  textColor: string, link: string,
-  marketPosition: string, targetAudience: string,
-  trialDays: number, setupTime: string,
-  category: string, realService: boolean,
-  technology: string[], integrations: string[],
-  useCases: string[], roi: string,
-  competitors: string[], marketSize: string,
-  growthRate: string, variant: ServiceVariant,
+import { ServiceVariant } from '../types/service-variants';
+export interface PracticalBusinessSolution2029 {
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: ServiceVariant,
   contactInfo: {
-    mobile: string, email: string,
+    mobile: string,
+    email: string,
     address: string,
-    website: string
-    },
-    realImplementation: boolean, implementationDetails: string,
-  launchDate: string, customers: number,
+    website: string},
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
   rating: number,
-  reviews: number
+  reviews: number}
 
-}
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
   {
-
-    id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
+    id: 'ai-business-intelligence-suite',
+    name: 'AI Business Intelligence Suite',
     tagline: 'Intelligent insights and predictive analytics for business growth',
     price: '$2,499',
     period: '/month',
     description: 'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.',
     features: [
-      'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automation';
-      'Market opportunity identificationCompetitive intelligence'
-    ];
-    popular: true, icon: '📊',
-    color: 'from-blue-500 via-indigo-500 to-purple-500', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/services/ai-business-intelligence-suite', marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.',
+      'Real-time data analyticsPredictive business modelingAutomated report generationCustom dashboard creationData visualization toolsBusiness trend analysisPerformance benchmarkingROI tracking automationMarket opportunity identificationCompetitive intelligence'
+    ],
+    popular: true,
+    icon: '📊',
+    color: 'from-blue-500 via-indigo-500 to-purple-500',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/services/ai-business-intelligence-suite',
+    marketPosition: 'Leading AI-powered BI platform. 50% more accurate predictions than traditional BI tools.',
     targetAudience: 'Medium to large businesses, Data-driven companies, Consulting firms, Financial institutions, Marketing agencies',
-    trialDays: 21, setupTime: '2-3 weeks',
-    category: 'AI Business Intelligence', realService: true,
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'];
     integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'];
     useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'];
     roi: 'Average customer sees 350% ROI through improved decision making and business optimization.',
     competitors: ['Tableau, Power BI, Qlik, Looker, Domo'];
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
     marketSize: '$18B market', growthRate: '280% annual growth',
+    trialDays: 21,
+    setupTime: '2-3 weeks',
+    category: 'AI Business Intelligence',
+    realService: true,
+    technology: ['Machine learning, Predictive analytics, Data processing, Business intelligence, Real-time analytics'],
+    integrations: ['ERP systems, CRM platforms, Financial systems, Marketing tools, Social media platforms'],
+    useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'],
+    roi: 'Average customer sees 350% ROI through improved decision making and business optimization.',
+    competitors: ['Tableau, Power BI, Qlik, Looker, Domo'],
+    marketSize: '$18B market',
+    growthRate: '280% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     realImplementation: true,
-    implementationDetails: "Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.",
-    launchDate: "2024-07-01",
-    real_implementation: true,
-    implementation_details: "Production - ready AI business intelligence platform with predictive analytics, automated reporting, and real - time insights.",
-    launch_date: "2024 - 07 - 01",
+    implementationDetails: 'Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.',
+    launchDate: '2024-07-01',
     customers: 95,
-    rating: 4 && 4.8,
-    reviews: 167;
-},
-  // Intelligent Customer Experience Platform;
+    rating: 4.8,
+    reviews: 167},
+  // Intelligent Customer Experience Platform
   {
-    id: "intelligent - customer - experience - platform",
-    name: "Intelligent Customer Experience Platform",
-    tagline: "AI - powered customer journey optimization and personalization",
-    price: "$1, 899",
-    period: "/month",
-    description: "Revolutionary customer experience platform that uses AI to optimize every touchpoint, personalize interactions, and create seamless customer journeys that drive loyalty and revenue.",
-    features[ "AI - powered personalization",
-      "Customer journey mapping",
-      "Real - time optimization",
-      "Multi - channel integration",
-      "Behavioral analytics",
-      "Predictive customer insights",
-      "Automated A / B testing",
-      "Customer sentiment analysis",
-      "Loyalty program optimization",
-      "Revenue optimization" ],
+    id: 'intelligent-customer-experience-platform',
+    name: 'Intelligent Customer Experience Platform',
+    tagline: 'AI-powered customer journey optimization and personalization',
+    price: '$1,899',
+    period: '/month',
+    description: 'Revolutionary customer experience platform that uses AI to optimize every touchpoint, personalize interactions, and create seamless customer journeys that drive loyalty and revenue.',
+    features: [
+      'AI-powered personalizationCustomer journey mappingReal-time optimizationMulti-channel integrationBehavioral analyticsPredictive customer insightsAutomated A/B testingCustomer sentiment analysisLoyalty program optimizationRevenue optimization'
+    ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: "🎯",
 
     color: "from - green - 500 via - emerald - 500 to - teal - 500",
@@ -3885,12 +2795,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 14,
     setup_time: "1 - 2 weeks",
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: "Customer Experience",
     real_service: true,
     technology["AI personalization, Machine learning, Customer analytics, Journey mapping, Behavioral analysis"],
@@ -3933,13 +2837,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Compliance automation",
       "Performance analytics" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: "🚚",
 
     color: "from - orange - 500 via - red - 500 to - pink - 500",
@@ -3950,10 +2848,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 30,
     setup_time: "3 - 4 weeks",
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Supply Chain Management",
     real_service: true,
     technology["AI forecasting, Machine learning, Supply chain analytics, Risk modeling, Optimization algorithms"],
@@ -3996,10 +2890,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Employee sentiment analysis",
       "HR analytics dashboard" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: "👥",
 
     color: "from - purple - 500 via - violet - 500 to - indigo - 500",
@@ -4010,12 +2900,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 21,
     setup_time: "2 - 3 weeks",
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: "Human Resources",
     real_service: true,
     technology["AI recruitment, Machine learning, HR analytics, Predictive modeling, Sentiment analysis"],
@@ -4058,13 +2942,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Compliance monitoring",
       "Performance analytics" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: "💼",
 
     color: "from - emerald - 500 via - teal - 500 to - cyan - 500",
@@ -4075,10 +2953,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 30,
     setup_time: "2 - 4 weeks",
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Financial Management",
     real_service: true,
     technology["AI financial modeling, Machine learning, Financial analytics, Risk modeling, Automation"],
@@ -4121,10 +2995,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Lead scoring automation",
       "Performance analytics" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: "📢",
 
     color: "from - pink - 500 via - rose - 500 to - red - 500",
@@ -4135,12 +3005,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 14,
     setup_time: "1 - 2 weeks",
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     category: "Marketing Automation",
     real_service: true,
     technology["AI marketing, Machine learning, Marketing analytics, Automation, Personalization"],
@@ -4183,13 +3047,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Communication optimization",
       "Performance analytics" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: "📋",
 
     color: "from - cyan - 500 via - blue - 500 to - indigo - 500",
@@ -4200,20 +3058,12 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 21,
     setup_time: "1 - 2 weeks",
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Project Management",
     real_service: true,
     technology["AI optimization, Machine learning, Project analytics, Workflow automation, Risk modeling"],
     integrations["Communication tools, File sharing platforms, Time tracking, Reporting tools, Team collaboration"],
     use_cases["Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance"],
     roi: "Average customer sees 350% ROI through improved project success rates and team efficiency.",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
     competitors["Asana, Monday.com, Trello, Jira, Basecamp"],
     market_size: "$12B market",
@@ -4221,12 +3071,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     variant: "ai - futuristic",
     contact_info: {
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -4258,13 +3102,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
       "Performance tracking",
       "ROI analytics" ],
     popular: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     icon: "💰",
 
     color: "from - yellow - 500 via - orange - 500 to - red - 500",
@@ -4275,10 +3113,6 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     trial_days: 21,
     setup_time: "2 - 3 weeks",
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     category: "Sales Optimization",
     real_service: true,
     technology["AI sales intelligence, Machine learning, Sales analytics, Predictive modeling, Automation"],
@@ -4303,27 +3137,12 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 198;
 ]}}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 };
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 import { ServiceVariant } from '../types/service-variants',;
 export interface PracticalBusinessSolution2029 {;
   id: string,;
@@ -4408,320 +3227,290 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     useCases: ['Business analytics, Performance tracking, Market analysis, Financial planning, Strategic decision making'];
     roi: 'Average customer sees 350% ROI through improved decision making and business optimization.',
     competitors: ['Tableau, Power BI, Qlik, Looker, Domo'];
+    icon: '🎯',
+    color: 'from-green-500 via-emerald-500 to-teal-500',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/services/intelligent-customer-experience-platform',
+    marketPosition: 'Advanced AI customer experience platform. 60% better customer satisfaction than traditional CX tools.',
+    targetAudience: 'E-commerce companies, Retail businesses, SaaS companies, Service providers, Hospitality industry',
+    trialDays: 14,
+    setupTime: '1-2 weeks',
+    category: 'Customer Experience',
+    realService: true,
+    technology: ['AI personalization, Machine learning, Customer analytics, Journey mapping, Behavioral analysis'],
+    integrations: ['E-commerce platforms, CRM systems, Marketing tools, Social media, Customer support platforms'],
+    useCases: ['Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights'],
+    roi: 'Average customer sees 450% ROI through improved customer satisfaction and increased revenue.',
+    competitors: ['Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk'],
+    marketSize: '$22B market',
+    growthRate: '320% annual growth',
+    variant: 'ai-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
     realImplementation: true,
-    implementationDetails: "Production-ready AI business intelligence platform with predictive analytics, automated reporting, and real-time insights.",
-    launchDate: "2024-07-01",
-    real_implementation: true,
-    implementation_details: "Production - ready AI business intelligence platform with predictive analytics, automated reporting, and real - time insights.",
-    launch_date: "2024 - 07 - 01",
-    customers: 95,
-    rating: 4 && 4.8,
-    reviews: 167;
-},
-  // Intelligent Customer Experience Platform;
-  {
-    id: "intelligent - customer - experience - platform",
-    name: "Intelligent Customer Experience Platform",
-    tagline: "AI - powered customer journey optimization and personalization",
-    price: "$1, 899",
-    period: "/month",
-    description: "Revolutionary customer experience platform that uses AI to optimize every touchpoint, personalize interactions, and create seamless customer journeys that drive loyalty and revenue.",
-    features[ "AI - powered personalization",
-      "Customer journey mapping",
-      "Real - time optimization",
-      "Multi - channel integration",
-      "Behavioral analytics",
-      "Predictive customer insights",
-      "Automated A / B testing",
-      "Customer sentiment analysis",
-      "Loyalty program optimization",
-      "Revenue optimization" ],
-    popular: true,
-    category: "Customer Experience",
-    real_service: true,
-    technology["AI personalization, Machine learning, Customer analytics, Journey mapping, Behavioral analysis"],
-    integrations["E - commerce platforms, CRM systems, Marketing tools, Social media, Customer support platforms"],
-    use_cases["Customer personalization, Journey optimization, Customer retention, Revenue optimization, Customer insights"],
-    roi: "Average customer sees 450% ROI through improved customer satisfaction and increased revenue.",
-    competitors["Adobe Experience Cloud, Salesforce Customer 360, HubSpot, Intercom, Zendesk"],
-    market_size: "$22B market",
-    growth_rate: "320% annual growth",
-    variant: "ai - futuristic",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";
-},
-    real_implementation: true,
-    implementation_details: "Production customer experience platform with AI personalization, journey optimization, and behavioral analytics.",
-    launch_date: "2024 - 08 - 15",
+    implementationDetails: 'Production customer experience platform with AI personalization, journey optimization, and behavioral analytics.',
+    launchDate: '2024-08-15',
     customers: 78,
-    rating: 4 && 4.9,
-    reviews: 134;
-},
-  // Smart Supply Chain Optimization;
+    rating: 4.9,
+    reviews: 134},
+  // Smart Supply Chain Optimization
   {
-    id: "smart - supply - chain - optimization",
-    name: "Smart Supply Chain Optimization",
-    tagline: "AI - powered supply chain intelligence and automation",
-    price: "$3, 999",
-    period: "/month",
-    description: "Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and create resilient supply networks that adapt to market changes.",
-    features[ "AI demand forecasting",
-      "Inventory optimization",
-      "Supply chain risk management",
-      "Real - time monitoring",
-      "Cost optimization",
-      "Supplier performance tracking",
-      "Logistics optimization",
-      "Sustainability tracking",
-      "Compliance automation",
-      "Performance analytics" ],
+    id: 'smart-supply-chain-optimization',
+    name: 'Smart Supply Chain Optimization',
+    tagline: 'AI-powered supply chain intelligence and automation',
+    price: '$3,999',
+    period: '/month',
+    description: 'Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and create resilient supply networks that adapt to market changes.',
+    features: [
+      'AI demand forecastingInventory optimizationSupply chain risk managementReal-time monitoringCost optimizationSupplier performance trackingLogistics optimizationSustainability trackingCompliance automationPerformance analytics'
+    ],
     popular: true,
-    category: "Supply Chain Management",
-    real_service: true,
-    technology["AI forecasting, Machine learning, Supply chain analytics, Risk modeling, Optimization algorithms"],
-    integrations["ERP systems, WMS platforms, TMS systems, Supplier portals, Financial systems"],
-    use_cases["Demand forecasting, Inventory management, Cost optimization, Risk management, Performance tracking"],
-    roi: "Average customer sees 500% ROI through cost reduction and efficiency improvements.",
-    competitors["SAP Supply Chain, Oracle SCM, Manhattan Associates, Blue Yonder, Kinaxis"],
-    market_size: "$28B market",
-    growth_rate: "350% annual growth",
-    variant: "ai - futuristic",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";
-},
-    real_implementation: true,
-    implementation_details: "Advanced supply chain optimization platform with AI forecasting, risk management, and cost optimization.",
-    launch_date: "2024 - 09 - 01",
+    icon: '🚚',
+    color: 'from-orange-500 via-red-500 to-pink-500',
+    textColor: 'text-orange-400',
+    link: 'https://ziontechgroup.com/services/smart-supply-chain-optimization',
+    marketPosition: 'Leading AI supply chain platform. 40% cost reduction compared to traditional supply chain management.',
+    targetAudience: 'Manufacturing companies, Retail chains, E-commerce businesses, Logistics companies, Distribution networks',
+    trialDays: 30,
+    setupTime: '3-4 weeks',
+    category: 'Supply Chain Management',
+    realService: true,
+    technology: ['AI forecasting, Machine learning, Supply chain analytics, Risk modeling, Optimization algorithms'],
+    integrations: ['ERP systems, WMS platforms, TMS systems, Supplier portals, Financial systems'],
+    useCases: ['Demand forecasting, Inventory management, Cost optimization, Risk management, Performance tracking'],
+    roi: 'Average customer sees 500% ROI through cost reduction and efficiency improvements.',
+    competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, Blue Yonder, Kinaxis'],
+    marketSize: '$28B market',
+    growthRate: '350% annual growth',
+    variant: 'ai-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Advanced supply chain optimization platform with AI forecasting, risk management, and cost optimization.',
+    launchDate: '2024-09-01',
     customers: 65,
-    rating: 4 && 4.8,
-    reviews: 98;
-},
-  // Intelligent HR Management System;
+    rating: 4.8,
+    reviews: 98},
+  // Intelligent HR Management System
   {
-    id: "intelligent - hr - management - system",
-    name: "Intelligent HR Management System",
-    tagline: "AI - powered human resources optimization and talent management",
-    price: "$1, 599",
-    period: "/month",
-    description: "Next - generation HR management system that uses AI to optimize recruitment, improve employee engagement, predict turnover, and create data - driven HR strategies that drive business success.",
-    features[ "AI - powered recruitment",
-      "Employee engagement analytics",
-      "Turnover prediction",
-      "Performance optimization",
-      "Skills gap analysis",
-      "Training recommendations",
-      "Diversity and inclusion tracking",
-      "Compliance automation",
-      "Employee sentiment analysis",
-      "HR analytics dashboard" ],
+    id: 'intelligent-hr-management-system',
+    name: 'Intelligent HR Management System',
+    tagline: 'AI-powered human resources optimization and talent management',
+    price: '$1,599',
+    period: '/month',
+    description: 'Next-generation HR management system that uses AI to optimize recruitment, improve employee engagement, predict turnover, and create data-driven HR strategies that drive business success.',
+    features: [
+      'AI-powered recruitmentEmployee engagement analyticsTurnover predictionPerformance optimizationSkills gap analysisTraining recommendationsDiversity and inclusion trackingCompliance automationEmployee sentiment analysisHR analytics dashboard'
+    ],
     popular: true,
-    category: "Human Resources",
-    real_service: true,
-    technology["AI recruitment, Machine learning, HR analytics, Predictive modeling, Sentiment analysis"],
-    integrations["ATS platforms, Payroll systems, Learning management systems, Performance tools, Communication platforms"],
-    use_cases["Recruitment optimization, Employee engagement, Performance management, Training optimization, HR analytics"],
-    roi: "Average customer sees 400% ROI through improved employee retention and HR efficiency.",
-    competitors["Workday, BambooHR, ADP, Gusto, Zenefits"],
-    market_size: "$15B market",
-    growth_rate: "300% annual growth",
-    variant: "ai - futuristic",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";
-},
-    real_implementation: true,
-    implementation_details: "Production HR management system with AI recruitment, employee analytics, and performance optimization.",
-    launch_date: "2024 - 10 - 01",
+    icon: '👥',
+    color: 'from-purple-500 via-violet-500 to-indigo-500',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/services/intelligent-hr-management-system',
+    marketPosition: 'Advanced AI HR platform. 50% better employee retention than traditional HR systems.',
+    targetAudience: 'Medium to large companies, HR departments, Recruitment agencies, Consulting firms, Educational institutions',
+    trialDays: 21,
+    setupTime: '2-3 weeks',
+    category: 'Human Resources',
+    realService: true,
+    technology: ['AI recruitment, Machine learning, HR analytics, Predictive modeling, Sentiment analysis'],
+    integrations: ['ATS platforms, Payroll systems, Learning management systems, Performance tools, Communication platforms'],
+    useCases: ['Recruitment optimization, Employee engagement, Performance management, Training optimization, HR analytics'],
+    roi: 'Average customer sees 400% ROI through improved employee retention and HR efficiency.',
+    competitors: ['Workday, BambooHR, ADP, Gusto, Zenefits'],
+    marketSize: '$15B market',
+    growthRate: '300% annual growth',
+    variant: 'ai-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Production HR management system with AI recruitment, employee analytics, and performance optimization.',
+    launchDate: '2024-10-01',
     customers: 112,
-    rating: 4 && 4.7,
-    reviews: 189;
-},
-  // Smart Financial Management Platform;
+    rating: 4.7,
+    reviews: 189},
+  // Smart Financial Management Platform
   {
-    id: "smart - financial - management - platform",
-    name: "Smart Financial Management Platform",
-    tagline: "AI - powered financial planning and business optimization",
-    price: "$2, 999",
-    period: "/month",
-    description: "Intelligent financial management platform that uses AI to optimize cash flow, predict financial risks, automate accounting, and provide real - time financial insights for better business decisions.",
-    features[ "AI cash flow optimization",
-      "Financial risk prediction",
-      "Automated accounting",
-      "Real - time financial insights",
-      "Budget optimization",
-      "Expense tracking automation",
-      "Financial forecasting",
-      "Tax optimization",
-      "Compliance monitoring",
-      "Performance analytics" ],
+    id: 'smart-financial-management-platform',
+    name: 'Smart Financial Management Platform',
+    tagline: 'AI-powered financial planning and business optimization',
+    price: '$2,999',
+    period: '/month',
+    description: 'Intelligent financial management platform that uses AI to optimize cash flow, predict financial risks, automate accounting, and provide real-time financial insights for better business decisions.',
+    features: [
+      'AI cash flow optimizationFinancial risk predictionAutomated accountingReal-time financial insightsBudget optimizationExpense tracking automationFinancial forecastingTax optimizationCompliance monitoringPerformance analytics'
+    ],
     popular: true,
-    category: "Financial Management",
-    real_service: true,
-    technology["AI financial modeling, Machine learning, Financial analytics, Risk modeling, Automation"],
-    integrations["Accounting software, Banking systems, Payment processors, Tax software, ERP systems"],
-    use_cases["Cash flow management, Financial planning, Risk management, Accounting automation, Tax optimization"],
-    roi: "Average customer sees 380% ROI through improved financial management and cost optimization.",
-    competitors["QuickBooks, Xero, FreshBooks, Wave, Sage"],
-    market_size: "$20B market",
-    growth_rate: "280% annual growth",
-    variant: "ai - futuristic",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";
-},
-    real_implementation: true,
-    implementation_details: "Advanced financial management platform with AI optimization, risk prediction, and automated accounting.",
-    launch_date: "2024 - 11 - 15",
+    icon: '💼',
+    color: 'from-emerald-500 via-teal-500 to-cyan-500',
+    textColor: 'text-emerald-400',
+    link: 'https://ziontechgroup.com/services/smart-financial-management-platform',
+    marketPosition: 'Leading AI financial platform. 45% better financial optimization than traditional financial tools.',
+    targetAudience: 'Small to medium businesses, Financial departments, Accounting firms, Consulting companies, Startups',
+    trialDays: 30,
+    setupTime: '2-4 weeks',
+    category: 'Financial Management',
+    realService: true,
+    technology: ['AI financial modeling, Machine learning, Financial analytics, Risk modeling, Automation'],
+    integrations: ['Accounting software, Banking systems, Payment processors, Tax software, ERP systems'],
+    useCases: ['Cash flow management, Financial planning, Risk management, Accounting automation, Tax optimization'],
+    roi: 'Average customer sees 380% ROI through improved financial management and cost optimization.',
+    competitors: ['QuickBooks, Xero, FreshBooks, Wave, Sage'],
+    marketSize: '$20B market',
+    growthRate: '280% annual growth',
+    variant: 'ai-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Advanced financial management platform with AI optimization, risk prediction, and automated accounting.',
+    launchDate: '2024-11-15',
     customers: 89,
-    rating: 4 && 4.8,
-    reviews: 156;
-},
-  // Intelligent Marketing Automation;
+    rating: 4.8,
+    reviews: 156},
+  // Intelligent Marketing Automation
   {
-    id: "intelligent - marketing - automation",
-    name: "Intelligent Marketing Automation",
-    tagline: "AI - powered marketing optimization and campaign automation",
-    price: "$1, 299",
-    period: "/month",
-    description: "Revolutionary marketing automation platform that uses AI to optimize campaigns, personalize content, predict customer behavior, and automate marketing workflows for maximum ROI.",
-    features[ "AI campaign optimization",
-      "Content personalization",
-      "Customer behavior prediction",
-      "Marketing workflow automation",
-      "ROI optimization",
-      "Multi - channel campaign management",
-      "A / B testing automation",
-      "Customer segmentation",
-      "Lead scoring automation",
-      "Performance analytics" ],
+    id: 'intelligent-marketing-automation',
+    name: 'Intelligent Marketing Automation',
+    tagline: 'AI-powered marketing optimization and campaign automation',
+    price: '$1,299',
+    period: '/month',
+    description: 'Revolutionary marketing automation platform that uses AI to optimize campaigns, personalize content, predict customer behavior, and automate marketing workflows for maximum ROI.',
+    features: [
+      'AI campaign optimizationContent personalizationCustomer behavior predictionMarketing workflow automationROI optimizationMulti-channel campaign managementA/B testing automationCustomer segmentationLead scoring automationPerformance analytics'
+    ],
     popular: true,
-    category: "Marketing Automation",
-    real_service: true,
-    technology["AI marketing, Machine learning, Marketing analytics, Automation, Personalization"],
-    integrations["CRM systems, Email platforms, Social media, Advertising platforms, Analytics tools"],
-    use_cases["Campaign optimization, Content personalization, Lead generation, Customer engagement, ROI optimization"],
-    roi: "Average customer sees 420% ROI through improved campaign performance and marketing efficiency.",
-    competitors["HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit"],
-    market_size: "$25B market",
-    growth_rate: "320% annual growth",
-    variant: "ai - futuristic",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";
-},
-    real_implementation: true,
-    implementation_details: "Production marketing automation platform with AI optimization, personalization, and workflow automation.",
-    launch_date: "2024 - 12 - 01",
+    icon: '📢',
+    color: 'from-pink-500 via-rose-500 to-red-500',
+    textColor: 'text-pink-400',
+    link: 'https://ziontechgroup.com/services/intelligent-marketing-automation',
+    marketPosition: 'Advanced AI marketing platform. 55% better campaign performance than traditional marketing tools.',
+    targetAudience: 'Marketing agencies, E-commerce businesses, SaaS companies, B2B companies, Retail businesses',
+    trialDays: 14,
+    setupTime: '1-2 weeks',
+    category: 'Marketing Automation',
+    realService: true,
+    technology: ['AI marketing, Machine learning, Marketing analytics, Automation, Personalization'],
+    integrations: ['CRM systems, Email platforms, Social media, Advertising platforms, Analytics tools'],
+    useCases: ['Campaign optimization, Content personalization, Lead generation, Customer engagement, ROI optimization'],
+    roi: 'Average customer sees 420% ROI through improved campaign performance and marketing efficiency.',
+    competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],
+    marketSize: '$25B market',
+    growthRate: '320% annual growth',
+    variant: 'ai-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Production marketing automation platform with AI optimization, personalization, and workflow automation.',
+    launchDate: '2024-12-01',
     customers: 156,
-    rating: 4 && 4.9,
-    reviews: 234;
-},
-  // Smart Project Management;
+    rating: 4.9,
+    reviews: 234},
+  // Smart Project Management
   {
-    id: "smart - project - management",
-    name: "Smart Project Management",
-    tagline: "AI - powered project optimization and team collaboration",
-    price: "$899",
-    period: "/month",
-    description: "Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.",
-    features[ "AI workflow optimization",
-      "Project risk prediction",
-      "Task automation",
-      "Team collaboration tools",
-      "Resource optimization",
-      "Timeline prediction",
-      "Quality assurance automation",
-      "Progress tracking",
-      "Communication optimization",
-      "Performance analytics" ],
+    id: 'smart-project-management',
+    name: 'Smart Project Management',
+    tagline: 'AI-powered project optimization and team collaboration',
+    price: '$899',
+    period: '/month',
+    description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, automate task management, and improve team collaboration for successful project delivery.',
+    features: [
+      'AI workflow optimizationProject risk predictionTask automationTeam collaboration toolsResource optimizationTimeline predictionQuality assurance automationProgress trackingCommunication optimizationPerformance analytics'
+    ],
     popular: true,
-    category: "Project Management",
-    real_service: true,
-    technology["AI optimization, Machine learning, Project analytics, Workflow automation, Risk modeling"],
-    integrations["Communication tools, File sharing platforms, Time tracking, Reporting tools, Team collaboration"],
-    use_cases["Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance"],
-    roi: "Average customer sees 350% ROI through improved project success rates and team efficiency.",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";
-},
-    real_implementation: true,
-    implementation_details: "Advanced project management platform with AI optimization, risk prediction, and workflow automation.",
-    launch_date: "2025 - 01 - 01",
+    icon: '📋',
+    color: 'from-cyan-500 via-blue-500 to-indigo-500',
+    textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/services/smart-project-management',
+    marketPosition: 'Advanced AI project management platform. 40% better project success rate than traditional tools.',
+    targetAudience: 'Project managers, Development teams, Consulting firms, Construction companies, Event planners',
+    trialDays: 21,
+    setupTime: '1-2 weeks',
+    category: 'Project Management',
+    realService: true,
+    technology: ['AI optimization, Machine learning, Project analytics, Workflow automation, Risk modeling'],
+    integrations: ['Communication tools, File sharing platforms, Time tracking, Reporting tools, Team collaboration'],
+    useCases: ['Workflow optimization, Risk management, Team collaboration, Resource management, Quality assurance'],
+    roi: 'Average customer sees 350% ROI through improved project success rates and team efficiency.',
+    competitors: ['Asana, Monday.com, Trello, Jira, Basecamp'],
+    marketSize: '$12B market',
+    growthRate: '280% annual growth',
+    variant: 'ai-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Advanced project management platform with AI optimization, risk prediction, and workflow automation.',
+    launchDate: '2025-01-01',
     customers: 203,
-    rating: 4 && 4.8,
-    reviews: 312;
-},
-  // Intelligent Sales Optimization;
+    rating: 4.8,
+    reviews: 312},
+  // Intelligent Sales Optimization
   {
-    id: "intelligent - sales - optimization",
-    name: "Intelligent Sales Optimization",
-    tagline: "AI - powered sales intelligence and revenue optimization",
-    price: "$1, 799",
-    period: "/month",
-    description: "Revolutionary sales optimization platform that uses AI to predict customer behavior, optimize sales processes, automate lead scoring, and maximize revenue through intelligent sales strategies.",
-    features[ "AI lead scoring",
-      "Customer behavior prediction",
-      "Sales process optimization",
-      "Revenue optimization",
-      "Pipeline management",
-      "Forecasting automation",
-      "Customer insights",
-      "Sales training optimization",
-      "Performance tracking",
-      "ROI analytics" ],
+    id: 'intelligent-sales-optimization',
+    name: 'Intelligent Sales Optimization',
+    tagline: 'AI-powered sales intelligence and revenue optimization',
+    price: '$1,799',
+    period: '/month',
+    description: 'Revolutionary sales optimization platform that uses AI to predict customer behavior, optimize sales processes, automate lead scoring, and maximize revenue through intelligent sales strategies.',
+    features: [
+      'AI lead scoringCustomer behavior predictionSales process optimizationRevenue optimizationPipeline managementForecasting automationCustomer insightsSales training optimizationPerformance trackingROI analytics'
+    ],
     popular: true,
-    category: "Sales Optimization",
-    real_service: true,
-    technology["AI sales intelligence, Machine learning, Sales analytics, Predictive modeling, Automation"],
-    integrations["CRM systems, Email platforms, Communication tools, Analytics platforms, Marketing tools"],
-    use_cases["Lead scoring, Sales optimization, Revenue optimization, Pipeline management, Performance tracking"],
-    roi: "Average customer sees 450% ROI through improved sales performance and revenue optimization.",
-    competitors["Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales"],
-    market_size: "$18B market",
-    growth_rate: "300% annual growth",
-    variant: "ai - futuristic",
-    contact_info: {
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup && ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup && ziontechgroup.com";
-},
-    real_implementation: true,
-    implementation_details: "Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.",
-    launch_date: "2025 - 02 - 01",
+    icon: '💰',
+    color: 'from-yellow-500 via-orange-500 to-red-500',
+    textColor: 'text-yellow-400',
+    link: 'https://ziontechgroup.com/services/intelligent-sales-optimization',
+    marketPosition: 'Advanced AI sales platform. 50% better sales performance than traditional sales tools.',
+    targetAudience: 'Sales teams, B2B companies, SaaS businesses, Real estate, Financial services',
+    trialDays: 21,
+    setupTime: '2-3 weeks',
+    category: 'Sales Optimization',
+    realService: true,
+    technology: ['AI sales intelligence, Machine learning, Sales analytics, Predictive modeling, Automation'],
+    integrations: ['CRM systems, Email platforms, Communication tools, Analytics platforms, Marketing tools'],
+    useCases: ['Lead scoring, Sales optimization, Revenue optimization, Pipeline management, Performance tracking'],
+    roi: 'Average customer sees 450% ROI through improved sales performance and revenue optimization.',
+    competitors: ['Salesforce, HubSpot Sales, Pipedrive, Zoho CRM, Freshsales'],
+    marketSize: '$18B market',
+    growthRate: '300% annual growth',
+    variant: 'ai-futuristic',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Advanced sales optimization platform with AI intelligence, lead scoring, and revenue optimization.',
+    launchDate: '2025-02-01',
     customers: 134,
-    rating: 4 && 4.9,
-    reviews: 198;
-]}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
   {;
@@ -5088,16 +3877,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     return price >= minPrice && price <= maxPrice;
   });
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 };
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 
 
@@ -5108,16 +3888,7 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
       email: 'kleber@ziontechgroup.com';
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -5125,6 +3896,15 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       email: 'kleber@ziontechgroup.com';
 };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    rating: 4.9,
+    reviews: 198}
+],
+
+export const getPopularPracticalBusinessSolutions2029 = $2;
+export const getPracticalBusinessSolutions2029ByCategory = $2;
+export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
+  return practicalBusinessSolutions2029.filter(service => {
+    const price = parseInt(service.price.replace(/[^0-9]/g, '')),
+    return price >= minPrice && price <= maxPrice
+  })
+},

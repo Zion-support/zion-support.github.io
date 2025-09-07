@@ -1,168 +1,69 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ProviderConnection, SyncLogEntry } from './types';
-import { v4 as uuidv4 } from 'uuid';
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 
 
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
-=======
 
 
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 async function mockProviderCall<T>(
   connection: ProviderConnection
   action: string
   details: Record<string, any>
 ): Promise<{ log: SyncLogEntry; result: T }> {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-<<<<<<< HEAD
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 
 async function callProvider<T>(
   connection: ProviderConnection,
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+export async function simulateAction<T = $2;
   action: string,
-  details: Record<string, any>
-): Promise<{ log: SyncLogEntry; result: T }> {
+  details: Record<string, any> = {}
+): Promise<{ log: SyncLogEntry, result: T}> {
   const log: SyncLogEntry = {
-    id: uuidv4(),
-    timestamp: Date.now(),
+    id: uuidv4($2);
+    timestamp: Date.now($2);
     providerId: connection.providerId,
     level: 'info',
     action,
-    details,
-  };
+    details},
   // In a real implementation, call provider SDK/API here using connection.accessToken
-  return { log, result: { ok: true } as unknown as T };
+  return { log, result: { ok: true} as unknown as T }
 }
 
 // CRM actions
 export const crm = {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async syncContact(
     connection: ProviderConnection
     contact: Record<string, any>
@@ -184,22 +85,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }
 // ATS actions
 export const ats = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   const log: SyncLogEntry = {
     id: uuidv4(),
     timestamp: Date.now(),
@@ -272,30 +158,12 @@ export const email = {async sendNotification(connection: ProviderConnection,noti
     return simulateAction(connection, 'ats.updateStatus', { change })}
 }
 export const crm = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -303,13 +171,9 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
@@ -317,67 +181,44 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
 
 };
 
 // ATS actions
 export const ats = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   async pushApplicant($2) {
     return simulateAction($3);
+  async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
+    return simulateAction(connection, 'crm.syncContact', { contact })
   },
-  async uploadResume($2) {
-    return simulateAction($3);
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+    return simulateAction(connection, 'crm.addProjectNote', { note })
+  },
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+    return simulateAction(connection, 'crm.addEmailTouchpoint', { touch })
+  }},
+
+// ATS actions
+export const ats = {
+  async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
+    return simulateAction(connection, 'ats.pushApplicant', { applicant })
+  },
+  async uploadResume(connection: ProviderConnection, resume: Record<string, any>) {
+    return simulateAction(connection, 'ats.uploadResume', { resumeMeta: { name: resume ?.name } })
   },
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
     return simulateAction(connection, 'ats.updateStatus', { change })
-  }};
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 async pushApplicant(
     connection: ProviderConnection,
     applicant: Record<string, any>
@@ -392,55 +233,19 @@ async pushApplicant(
       resumeMeta: { name: resume?.name },
     });
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   async updateStatus(
     connection: ProviderConnection
     status: Record<string, any>
   ) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     connection: ProviderConnection,
     status: Record<string, any>,
   ) {;
     return mockProviderCall(connection, "update_status", { status });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
   async sync_contact (
     connection: ProviderConnection,
     contact: Record < string, any>,
@@ -458,12 +263,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     note: Record < string, any>,
   ) {
     return mockProviderCall (connection, "add_project_note", { note });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  },
-<<<<<<< HEAD
-=======
   const log: SyncLogEntry = {
     id: uuidv4()
     timestamp: Date.now()
@@ -476,11 +275,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   return { log, result: { ok: true } as unknown as T }
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
   },
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }
 ;
 // ATS actions;
@@ -492,19 +289,7 @@ export const ats = {
     return mockProviderCall (connection, "update_status", { status });
   },
 }
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
-;
-origin/cursor/automate-test-improve-and-merge-code-20a4
-
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
   }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 }
 ;
 // ATS actions;
@@ -517,21 +302,6 @@ export const ats = {
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 }
 ;
 // ATS actions;
@@ -544,17 +314,9 @@ export const ats = {
   }
 }
 ;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -562,9 +324,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
   async createCandidate(
     connection: ProviderConnection,
@@ -574,37 +333,12 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   }
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
 // Email actions
 export const email = {
   async sendNotification(
@@ -615,26 +349,9 @@ export const email = {
   }
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
     return simulateAction(connection, 'ats.updateStatus', { change });
   },
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 ursor/fix-website-loading-errors-and-merge-6662
 origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -643,10 +360,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
   },
 };
 origin/cursor/automate-test-improve-and-merge-code-2533
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -656,6 +369,4 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   },
 };
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  }},

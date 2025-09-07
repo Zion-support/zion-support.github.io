@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-// Performance optimization utilities
-export const optimizeImages = () => {;
-  const images = document.querySelectorAll('img');
-  images.forEach(img => {
-    if (!img.loading) {
-      img.loading = "lazy";
-    }
-    if (!img.decoding) {
-      img.decoding = "async";
-// Performance optimization utilities
-export const preloadCriticalResources = () => {
-  const criticalResources = ['/fonts/main.woff2', '/css/critical.css'];
-
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
-=======
 
 ursor/automate-test-improve-and-merge-code-646c;
 // Performance optimization utilities;
@@ -29,34 +8,35 @@ export const preloadCriticalResources = () => {const criticalResources  = ['/fon
     link.href = resource;
     link.as = resource.endsWith('.css') ? 'style' : 'font';
     document.head.appendChild(link)const images = document && document.querySelectorAll('img')images && images.forEach(img => {if (!img && img.loading) {img && img.loading = 'lazy';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
     }
     if (!img && img.decoding) {img && img.decoding = 'async';}export const preloadCriticalResources = () => {const criticalResources  = ['/fonts/main && main.woff2/css/critical && critical.css'];criticalResources && criticalResources.forEach(resource => {    const link = document && document.createElement('link')link && link.rel = 'preload';
     link && link.href = resource;
     link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
-<<<<<<< HEAD
+
+const images = document && document.querySelectorAll('img');
+  images && images.forEach(img => {
+    if (!img && img.loading) {
+      img && img.loading = 'lazy';
+    }
+    if (!img && img.decoding) {
+      img && img.decoding = 'async';
+
+    }
+
+export const preloadCriticalResources = () => {
+  const criticalResources = ['/fonts/main && main.woff2/css/critical && critical.css'];
+
+  criticalResources && criticalResources.forEach(resource => {    const link = document && document.createElement('link');
+    link && link.rel = 'preload';
+    link && link.href = resource;
+    link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
     document && document.head.appendChild(link);
 
-  criticalResources.forEach((resource) => {
-    const link = document.createElement("link");
-    link.rel = "preload";
-    link.href = resource;
-    link.as = resource.endsWith(".css") ? "style" : "font";
-    document.head.appendChild(link);
   });
 };
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-  return Promise.resolve();
-};
-
-export const optimizeImages = () => {
-  const images = document.querySelectorAll('img');
-  
-  images.forEach(img => {
-    if (!img.loading) {
-=======
     document && document.head.appendChild(link)criticalResources.forEach((resource) => {const link = document.createElement("link")link.rel = "preload";
     link.href = resource;
     link.as = resource.endsWith(".css") ? "style" : "font";
@@ -71,7 +51,6 @@ export const optimizeImages = () => {
 export const optimize_images = () =>: any {const images  = document.querySelectorAll ('img')images.for_each (img => {// Check condition;
 if ( {) {$2;
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
       img.loading = 'lazy';
     }
     // Check condition;
@@ -79,13 +58,6 @@ if ( {) {$2;
 }
       img.decoding = 'async';
     }
-<<<<<<< HEAD
-  };
-};
-link.rel = "preload";
-((link.href = resource),
-  (link.as = resource.endsWith(".css") ? "style" : "font"));
-=======
   })}
 export const preloadCriticalResources = () =>: any {const critical_resources = ['/fonts / main.woff2 / css / critical.css'];
   critical_resources.for_each (resource => {    const link = document.create_element ('link')link.rel = 'preload';
@@ -100,4 +72,4 @@ export const optimizeBundleSize = () =>: any {// Dynamic imports for non - criti
 ((link.href = resource),(link.as = resource.endsWith(".css") ? "style" : "font"))link.rel = "preload";
 ((link.href = resource),(link.as = resource.endsWith(".css") ? "style" : "font"))link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';ursor/automate-test-improve-and-merge-code-646c;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
+

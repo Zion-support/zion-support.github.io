@@ -1,11 +1,6 @@
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-body: string
-=======
 
 ;
   id: number,author: string,avatar?: string,time: string,body: string;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CommunityDiscussion.tsx
 import React, { useState } from 'react';
 import { MessageCircle  } from 'lucide-react';
 import { Button  } from '@/components / ui / button';
@@ -27,91 +22,40 @@ const initial_posts: DiscussionPost[] = [;
 
   title: string,
   body: string;
-=======
   id: number,
+id: number,
   author: string,
   avatar?: string,
   time: string,
-  title: string,
-  body: string;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
+body: string
 import React, { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Avatar, AvatarFallback } from '@/components/ui/avatar';
-import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { Avatar, AvatarFallback } from '@/components / ui / avatar';
+import { Card, CardContent } from '@/components / ui / card';
+import { Separator } from '@/components / ui / separator';
 interface DiscussionPost {
+  id: number;
+  author: string;
+  avatar?: string;
+  time: string;
+  title: string;
   body: string;
-
-const initialPosts: DiscussionPost[] = [
+const initial_posts: DiscussionPost[] = [;
   {
-    id: 1,
-author: 'Anna Zhou',
-    time: '2h ago',
-    title: 'What AI trends are you most excited for in 2025?',
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
-  },
-  {
-    id: 2,
-    author: 'David Kim',
-    time: '50m ago',
-    title: 'Quick tip: How to rank your Zion listing higher',
-    body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',
-  },
-];
+    id: 1,  time: string,
 
-export const CommunityDiscussion: React.FC = () => {
-  const [posts, setPosts] = useState(initialPosts);
-  const [showNew, setShowNew] = useState(false);
-  const [newTitle, setNewTitle] = useState('');
-  const [newBody, setNewBody] = useState('');
-
+  title: string,
   body: string
 <<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
 }
 const initial_posts: DiscussionPost[] = [;
 
-=======
 }
-const initialPosts: DiscussionPost[] = [
-  {
-    author: "Anna Zhou",
-    time: "2h ago",
-    title: "What AI trends are you most excited for in 2025?",
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
-  {
-
-    id: 1,
-    author: 'Anna Zhou',
-    time: '2h ago',
-    title: 'What AI trends are you most excited for in 2025?',
-    body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?",
-  },
-    id: 2,
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-    author: 'David Kim',
-    time: '50m ago',
-    title: 'Quick tip: How to rank your Zion listing higher',
-    body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.',
-  },
-];
-export const CommunityDiscussion: React.FC = () => {
-  const [posts, set_posts] = useState (initial_posts);
-  const [show_new, setShowNew] = useState (false);
-  const [new_title, setNewTitle] = useState ('');
-  const [new_body, setNewBody] = useState ('');  const [new_title, setNewTitle] = useState ("");
-  const [new_body, setNewBody] = useState ("");
-  const handleAddPost = () =>: any {
-    if (|| !new_body.trim ()) return) {
-  $2
-=======
   {id: 1,  time: string,title: string,body: string;import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Textarea  } from '@/components/ui/textarea';
@@ -123,7 +67,6 @@ interface DiscussionPost  {body: string;const initialPosts: DiscussionPost[] = [
 }const initialPosts: DiscussionPost[] = [;
   {author: "Anna Zhou",time: "2h ago",title: "What AI trends are you most excited for in 2025?",body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},const initial_posts: DiscussionPost[]  = [;{id: 1,author: 'Anna Zhou',time: '2h ago',title: 'What AI trends are you most excited for in 2025?',body: "Let's spark some ideas! I'm excited to see multi - modal models and open - source AI tools grow. What are you watching?"},id: 2,export const CommunityDiscussion: React.FC = () => {author: 'David Kim',time: '50m ago',title: 'Quick tip: How to rank your Zion listing higher',body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.'}];
 export const CommunityDiscussion: React.FC = () => {const [posts, set_posts] = useState (initial_posts)const [show_new, setShowNew] = useState (false)const [new_title, setNewTitle] = useState ('')const [new_body, setNewBody] = useState ('')const [new_title, setNewTitle] = useState ("")const [new_body, setNewBody] = useState ("")const handleAddPost = () =>: any {if (|| !new_body.trim ()) return) {$2;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CommunityDiscussion.tsx
 }
     set_posts ([;
       {id: Date.now (),author: 'You',time: 'Now',title: new_title,body: new_body},...posts])setNewTitle ('')setNewBody ('')setShowNew (false)}
@@ -155,9 +98,7 @@ const initialPosts: DiscussionPost[] = [;
 ];
 
 
-=======
 export const CommunityDiscussion: React.FC = () => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
 export const CommunityDiscussion: React.FC = () => {;
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
@@ -179,11 +120,9 @@ export const CommunityDiscussion: React.FC = () => {;
       ...posts,;
     ]);
     id: 1;
-=======
   {id: 1,author: 'Anna Zhou',time: '2h ago',title: 'What AI trends are you most excited for in 2025?',body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},id: 2,author: 'David Kim',time: '50m ago',title: 'Quick tip: How to rank your Zion listing higher',body: 'Fill out every profile detail, add strong tags, and post weekly! See results in a month.'}];export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts)const [showNew, setShowNew] = useState(false)const [newTitle, setNewTitle]  = useState('')export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts),const [showNew, setShowNew] = useState(false),const [newTitle, setNewTitle] = useState(""),const [newBody, setNewBody] = useState(""),const handleAddPost = () => {const [newBody, setNewBody] = useState('')const [newTitle, setNewTitle] = useState("")const [newBody, setNewBody]  = useState("")const handleAddPost = () => {if (!newTitle && newTitle.trim() || !newBody && newBody.trim()) return;
     setPosts([;
       {id: Date && Date.now(),author: 'You',time: 'Now',title: newTitle,body: newBody},...posts])id: 1;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CommunityDiscussion.tsx
     author: "Anna Zhou";
     time: "2h ago";
     title: "What AI trends are you most excited for in 2025?";
@@ -208,7 +147,6 @@ author: 'You',
       ...posts,
     ]);
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
 
 export const CommunityDiscussion: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts),
@@ -216,7 +154,6 @@ export const CommunityDiscussion: React.FC = () => {
   const [newTitle, setNewTitle] = useState(""),
   const [newBody, setNewBody] = useState(""),
   const handleAddPost = () => {
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
     setNewTitle('');
     setNewBody('');
     setShowNew(false);
@@ -281,19 +218,20 @@ export const CommunityDiscussion: React.FC = () => {
           className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale'
           size='sm'
           onClick={() => setShowNew(v => !v)}        >
-=======
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],export const CommunityDiscussion: React.FC;
   const handleAddPost = () => {if (!newTitle.trim() |!newBody.trim()) return;
     setPosts([;
       {id: Date.now(),author: 'You',time: 'Now',title: newTitle,body: newBody},...posts])setNewTitle('')setNewBody('')setShowNew(false)}return (className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]'        title: newTitle,body: newBody},...posts])setNewTitle("")setNewBody("")setShowNew(false)<div className='w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in'>;
-=======
         body: newBody},
       ...posts])
     setNewTitle("")
     setNewBody("")
+
+    id: 1,
+
     setShowNew(false)
+
     <div className='w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in'>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
       <div className='flex items - center gap - 3 mb - 4'>;
         <MessageCircle size={28} className='text - zion - cyan' />;
         <span className='font - bold text - 2xl text - white tracking - tight'>;
@@ -347,7 +285,6 @@ export const CommunityDiscussion: React.FC = () => {
       {showNew && (<Card className="mb-6 animate-scale-in">;
           <CardContent className="py-5">;
             <Input;
-=======
               className='mb - 4 bg - zion - blue - light text - black placeholder:text - zion - slate min - h-[70px]'        title: new_title,
         body: new_body},
       ...posts]);
@@ -356,18 +293,12 @@ export const CommunityDiscussion: React.FC = () => {
     setShowNew (false);
   }
 
-
-
   return (
-
 
     id: 1,
 
-
-
-
-
   const handleAddPost = () => {
+
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -383,7 +314,6 @@ export const CommunityDiscussion: React.FC = () => {
       <div className="mb-4 flex justify-end">
         <Button
 
-
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale"
           size="sm"
           onClick={() => setShowNew((v) => !v)}
@@ -396,48 +326,11 @@ export const CommunityDiscussion: React.FC = () => {
         <Card className="mb-6 animate-scale-in">
           <CardContent className="py-5">
             <Input
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
-          onClick={() => setShowNew((v) => !v)}
-        >;
-          {showNew ? "Cancel" : "New Post"}
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-        </Button>;
-      </div>;
-      {showNew && (<Card className="mb-6 animate-scale-in">;
-          <CardContent className="py-5">;
-            <Input;
-              placeholder="Title (e.g., Share an AI tool, Ask for help...)";
-              className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate";
-              value={newTitle}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}<div className='w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in'>;
-      <div className='flex items-center gap-3 mb-4'>;
-        <MessageCircle size={28} className='text-zion-cyan' />;
-        <span className='font-bold text-2xl text-white tracking-tight'>;
-          Community Discussion;
-        </span>;
-        <span className='ml-auto text-xs text-zion-slate-light bg-zion-purple/20 rounded-full px-2 py-0.5'>;
-          {posts.length} posts;
-        </span>;
-      </div>;
-      <Separator className='mb-6' />;
-      <div className='mb-4 flex justify-end'>;
-        <Button;
-          className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale';
-          size='sm';
-          onClick={() => setShowNew(v => !v)}        >;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CommunityDiscussion.tsx
-=======
-        </Button>
-      </div>
-      {showNew && (
-        <Card className="mb-6 animate-scale-in">
-          <CardContent className="py-5">
-            <Input
               placeholder="Title (e.g., Share an AI tool, Ask for help...)"
+
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
               value={newTitle}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTitle(e.target.value)}
-
     <div className='w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in'>
       <div className='flex items-center gap-3 mb-4'>
         <MessageCircle size={28} className='text-zion-cyan' />
@@ -454,7 +347,6 @@ export const CommunityDiscussion: React.FC = () => {
           className='bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale'
           size='sm'
           onClick={() => setShowNew(v => !v)}        >
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
           {showNew ? 'Cancel' : 'New Post'}
         </Button>;
       </div>;
@@ -468,23 +360,6 @@ export const CommunityDiscussion: React.FC = () => {
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setNewTitle(e.target.value)
               }
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-              maxLength={80}
-            />
-            <Textarea
-              placeholder="What's on your mind?"
-
-
-              maxLength={80}
-            />;
-            <Textarea
-              placeholder="What's on your mind?"
-
-
-
-className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]'
-=======
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>;
                 setNewTitle(e.target.value)}maxLength={80}/>;
             <Textarea;
@@ -494,7 +369,6 @@ import React, { useState } from "react",import { Button } from "@/components/ui/
 }const initialPosts: DiscussionPost[] = [;
   {id: 1,author: "Anna Zhou",time: "2h ago",title: "What AI trends are you most excited for in 2025?",body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},{id: 2,author: "David Kim",time: "50m ago",title: "Quick tip: How to rank your Zion listing higher",body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],export const CommunityDiscussion: React.FC = () => {const [posts, setPosts] = useState(initialPosts),const [showNew, setShowNew] = useState(false),const [newTitle, setNewTitle] = useState(""),const [newBody, setNewBody] = useState(""),const handleAddPost = () => {if (!newTitle.trim() || !newBody.trim()) return,setPosts([;
       {id: Date.now(),author: "You",time: "Now",title: newTitle,body: newBody},...posts]),setNewTitle(""),setNewBody(""),setShowNew(false)}return (<div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
-=======
               maxLength={80}
 
             />
@@ -552,7 +426,6 @@ export const CommunityDiscussion: React.FC = () => {;
   };
   return (;
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
       <div className="flex items-center gap-3 mb-4">;
         <MessageCircle size={28} className="text-zion-cyan" />;
         <span className="font-bold text-2xl text-white tracking-tight">;
@@ -567,36 +440,31 @@ export const CommunityDiscussion: React.FC = () => {;
           className="bg-zion-purple text-white hover:bg-zion-purple-light transition hover-scale";
 <<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
           size="sm";onClick={() => setShowNew((v) => !v)}
-=======
           size="sm";
 
 
+origin/cursor/automate-test-improve-and-merge-code-2533
+              maxLength={80}
+
           onClick={() => setShowNew((v) => !v)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
         >;
           {showNew ? "Cancel" : "New Post"}
         </Button>;
       </div>;
       {showNew && (<Card className="mb-6 animate-scale-in">;
           <CardContent className="py-5">;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-            <Input;
-              placeholder="Title (e && e.g., Share an AI tool, Ask for help...)";
-              className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate";
-              value={newTitle}maxLength={80}
-            />;
-            <Textarea;
-              placeholder="What's on your mind?";
-className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]';
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CommunityDiscussion.tsx
-=======
             <Input
               placeholder="Title (e && e.g., Share an AI tool, Ask for help...)"
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate"
+            <Input;
+              placeholder="Title (e.g., Share an AI tool, Ask for help...)";
+              className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate";
               value={newTitle}
 
+              maxLength={80}
+            />;
+
 className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-[70px]'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>;
                 setNewBody(e.target.value)}
@@ -609,11 +477,9 @@ className='mb-4 bg-zion-blue-light text-black placeholder:text-zion-slate min-h-
                 size='sm'
                 className='bg-zion-blue text-white hover:bg-zion-blue-dark'
                 onClick={() => setShowNew(false)}
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
+
               >
+
                 Cancel
               </Button>
               <Button
@@ -628,21 +494,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 size='sm'
                 className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-
 
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
-
 size='sm'
                 className='bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale'
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
-                onClick={handleAddPost}
-
-                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}
-                onClick = {handleAddPost,}
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-                disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim(),}>;
-=======
               rows={3}            />;
             <div className='flex gap-3 justify-end'>;
               <Button;
@@ -665,7 +520,10 @@ size='sm';
                 <AvatarFallback>;
                   {post.author;
                     .split(" ").map((s) => s[0]).join("").toUpperCase().slice(0, 2)}disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CommunityDiscussion.tsx
+origin/cursor/automate-test-improve-and-merge-code-2533
+                onClick={handleAddPost}
+
+                disabled = {!newTitle && newTitle.trim() || !newBody && newBody.trim(),}>;
     <div className="w - full max - w-2xl mx - auto mt - 8 p - 6 bg - zion - blue - light rounded - 2xl shadow - xl animate - fade - in">;
       <div className="flex items - center gap - 3 mb - 4">;
         <MessageCircle size={28} className="text - zion - cyan" />;
@@ -686,7 +544,8 @@ size='sm';
           {show_new ? "Cancel" : "New Post"}
         </Button>;
       </div>;
-      {show_new && (<Card className="mb - 6 animate - scale - in">;
+      {show_new && (
+        <Card className="mb - 6 animate - scale - in">;
           <CardContent className="py - 5">;
             <Input;
               placeholder="Title (e.g., Share an AI tool, Ask for help...)";
@@ -700,7 +559,8 @@ size='sm';
               className='mb - 4 bg - zion - blue - light text - black placeholder:text - zion - slate min - h-[70px]';
               value={new_body}
               on_change={(e: React.ChangeEvent < HTMLTextAreaElement>) =>;
-                setNewBody (e.target.value)}
+                setNewBody (e.target.value);
+              }
               max_length={400}
               rows={3}            />;
             <div className='flex gap - 3 justify - end'>;
@@ -711,35 +571,15 @@ size='sm';
                 variant="secondary";
                 size="sm";
                 className="bg - zion - blue text - white hover:bg - zion - blue - dark";
-                on_click = {() => setShowNew (false) }
+          </CardContent>;🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
+                on_click = {() => setShowNew (false), }
+
               >;
-                Cancel;
-              </Button>;
-              <Button;
-                size='sm';
-                className='bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale'                on_click={handleAddPost}                size="sm";
-                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
-                on_click={handleAddPost}
-                disabled={!new_title.trim () || !new_body.trim ()}
-                on_click = {handleAddPost }
-                disabled = {!new_title.trim () || !new_body.trim () }
-              >;Post;
+                Post;
               </Button>;
             </div>;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
           </CardContent>;
 
-
-        🚀 Stay engaged! Top contributors are regularly featured on the homepage.
-      </div>
-    </div>
-  )
-
-
-=======
-          </CardContent>;🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CommunityDiscussion.tsx
-=======
       <div className="flex flex-col gap-6">
         {posts.map((post) => (
           <Card key={post.id} className="bg-zion-blue border-zion-slate-dark shadow-lg">
@@ -751,11 +591,9 @@ size='sm';
                     .map((s) => s[0])
                     .join("")
                     .toUpperCase()
-                    .slice(0, 2)}
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
+
       </div>;
-    </div>;
-  )</div>;
+
       <div className='mt-8 text-xs text-zion-slate-dark text-center'>;
         🚀 Stay engaged! Top contributors are regularly featured on the;
         homepage.;
@@ -763,9 +601,7 @@ size='sm';
 <<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
     </div>;
 <<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-=======
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
                 disabled = {!newTitle.trim() |!newBody.trim(),}
               >
                 Post
@@ -773,7 +609,6 @@ size='sm';
             </div>
           </CardContent>
         </Card>
-=======
     </div>;disabled = {!newTitle.trim() |!newBody.trim()}
               >;
                 Post;
@@ -781,7 +616,6 @@ size='sm';
             </div>;
           </CardContent>;
         </Card>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CommunityDiscussion.tsx
       )}
 <div className='flex flex-col gap-6'>;
         {posts.map(post => (<Card;
@@ -820,28 +654,20 @@ size='sm';
         homepage.
       </div>
     </div>
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
   );
+
 };
   newTitle ;
 }onChange= {;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
+  (e: React && React.ChangeEvent<HTMLInputElement>) => setNewTitle (e && e.target.value) ;
   (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;
 origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-  (e: React && React.ChangeEvent<HTMLInputElement>) => setNewTitle (e && e.target.value) ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
 }maxLength= {;
   80 ";
 }/> <Textarea /> <div className=" flex gap-3 justify-end"> <Button > Cancel </Button> <Button > Post </Button> </div> </CardContent> </Card>) ";
 }.join ("") .toUpperCase () .slice (0, 2) ";
 }</AvatarFallback> </Avatar> <div> <div className="flex gap-2 items-center"> <span className="font-semibold text-white"> {;
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-                <div className='flex gap - 2 items - center'>;
-=======
       </div>;
 <div className='mt-8 text-xs text-zion-slate-dark text-center'>;
         🚀 Stay engaged! Top contributors are regularly featured on the;
@@ -856,7 +682,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</span> <span className="text-xs text-zion-slate-light"> {post && post.time ";
 }</span> </div> <h3 className="text-lg font-bold text-zion-cyan mt-1"> {post && post.title ";
 }</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {post && post.body ;
-=======
   post && post.author ";
 }</span> <span className="text-xs text-zion-slate-light"> {;
   post && post.time ";
@@ -864,7 +689,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   post && post.title ";
 }</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {;
   post && post.body ;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
 }</p> </div> </CardContent> </Card>) ) ";
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>)}'"      <div className="mt-8 text-xs text-zion-slate-dark text-center">;
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
@@ -890,10 +714,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               </Avatar>;
 <<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
               <div>;<div className="flex gap-2 items-center">;
-=======
               <div>;
                 <div className="flex gap-2 items-center">;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
                   <span className="font-semibold text-white">{post.author}</span>;
                   <span className="text-xs text-zion-slate-light">{post.time}</span>;
                 </div>;
@@ -905,7 +727,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         ))}
 <<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
       </div>;<div className='flex gap - 2 items - center'>;
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CommunityDiscussion.tsx
                   <span className='font - semibold text - white'>;
                     {post.author}
                   </span>;
@@ -926,6 +747,8 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                 <p className="text - zion - slate - light mt - 1 whitespace - pre - line">{post.body}</p>;
             </CardContent>;
           </Card>))}
+
+        🚀 Stay engaged! Top contributors are regularly featured on the homepage.;
       </div>;
       <div className='mt - 8 text - xs text - zion - slate - dark text - center'>;
         🚀 Stay engaged! Top contributors are regularly featured on the;
@@ -948,9 +771,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 <<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
     </div>);
 }
-=======
       </div>;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
 
   post.author ";
 }</span> <span className="text-xs text-zion-slate-light"> {;
@@ -962,16 +783,10 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 }</p> </div> </CardContent> </Card>) ) ";
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) ;
 };
-'"
-<<<<<<< HEAD:src_backup/components/CommunityDiscussion.tsx
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     </div>)}post.author ";
 }</span> <span className="text-xs text-zion-slate-light"> {post.time ";
 }</span> </div> <h3 className="text-lg font-bold text-zion-cyan mt-1"> {post.title ";
 }</h3> <p className="text-zion-slate-light mt-1 whitespace-pre-line"> {post.body ;
 }</p> </div> </CardContent> </Card>) ) ";
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>)}'";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c:src/components/CommunityDiscussion.tsx
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d:src/components/CommunityDiscussion.tsx
+'"

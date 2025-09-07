@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     log('info', `Total "files": ${qualityReport.summary.totalFiles}`);
     log('info', `Total "lines": ${qualityReport.summary.totalLines}`);
     log('info', `Total "issues": ${qualityReport.summary.totalIssues}`);
@@ -47,33 +40,35 @@
 
 main();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 // console.log(' Comprehensive Code Quality Analyzer v2.0')
-console.log('')
+console.log()
     const content = fs.readFileSync(filePath, 'utf8')
     const lines = content.split('\n')
     const codeLines = lines.filter(line => line.trim() && !line.trim().startsWith('//')
     const commentLines = lines.filter(line => line.trim().startsWith('//')
     log('warn')
+"severity"""
+      "message"""
+      "recommendation"""
+      "pattern": /password\s*=\s*['"][^]
+      "pattern": /api[_-]?key\s*=\s*['"][^]
+          "type"""
+          "line"""
+      "priority"""
+      "action"""
+      log('warn', 'Issues "found")""
       "severity"
       "message"
       "recommendation"
@@ -157,3 +152,4 @@ console.log('')
     "action"
       log('warn', 'Issues "found")
       log('info', 'Quality "Recommendations")
+      log('info', 'Quality "Recommendations")""`

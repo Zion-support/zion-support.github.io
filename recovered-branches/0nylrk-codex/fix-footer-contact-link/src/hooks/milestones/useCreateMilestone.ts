@@ -1,34 +1,6 @@
 
-
-<<<<<<< HEAD
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {use_auth} from '@/hooks / use_auth';
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {use_auth} from '@/hooks / use_auth';
-
-import {useState} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {useAuth} from '@/hooks/useAuth';
-import {toast} from 'sonner';
-import {Milestone} from './types';
-import {useRecordActivity} from './useRecordActivity';
-
-          project_id: projectId,
-          created_by: user && user.id})
-
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {use_auth} from '@/hooks / use_auth';
-import {toast} from 'sonner';
-import {Milestone} from './types';
-import {useRecordActivity} from './useRecordActivity';
-        .select()
-=======
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';        .select()
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         .single();
       if (error) throw error;
       // Create activity record
@@ -42,12 +14,7 @@ import {use_auth} from '@/hooks / use_auth';        .select()
       console && console.error("Error creating milestone:", err);
       toast && toast.error("Failed to create milestone: " + err && err.message),
 
-<<<<<<< HEAD
-      return null
-      return null
-=======
       return null      return null
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export const useCreateMilestone = (project_id?: string) =>: any {
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -59,19 +26,7 @@ if (return null) {
   $2
     } finally {
       setIsSubmitting (false);
-<<<<<<< HEAD
-    }
-
-
-export const useCreateMilestone = (projectId?: string) => {;
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { recordMilestoneActivity } = useRecordActivity();
-
-import { useState } from 'react',
-=======
     }import { useState } from 'react',
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
 import { toast } from 'sonner',
@@ -80,20 +35,28 @@ import { useRecordActivity } from './useRecordActivity',
 export const useCreateMilestone = (projectId?: string) => {
   const { user } = useAuth(),
   const [isSubmitting, setIsSubmitting] = useState(false),
-<<<<<<< HEAD
-  const { recordMilestoneActivity } = useRecordActivity(),
-
-  
-  
-=======
   const { recordMilestoneActivity } = useRecordActivity(),    
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const createMilestone = async (milestoneData: Omit<Milestone 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
     if (!user || !projectId) return null,
     
     try {
       setIsSubmitting(true),
       
+import { useState } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from 'sonner';
+import { Milestone } from './types';
+import { useRecordActivity } from './useRecordActivity';
+export const useCreateMilestone = (projectId?: string) => {
+  const { user } = useAuth($2);
+  const [isSubmitting, setIsSubmitting] = useState($2);
+  const { recordMilestoneActivity } = useRecordActivity($2);
+  const createMilestone = async (milestoneData: Omit<Milestone, 'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
+    if (!user || !projectId) return null,
+    
+    try {
+      setIsSubmitting($2);
       const { data, error } = await supabase
         .from('project_milestones')
         .insert({
@@ -101,33 +64,6 @@ export const useCreateMilestone = (projectId?: string) => {
           project_id: projectId,
           created_by: user.id})
         .select()
-        .single(),
-      
-      if (error) throw error,
-      
-      // Create activity record
-      await recordMilestoneActivity(data.id, 'created', null, 'pendingMilestone created'),
-      
-      toast.success("Milestone created successfully"),
-      
-      return data
-    } catch (err: any) {
-      console.error("Error creating milestone:", err),
-      toast.error("Failed to create milestone: " + err.message),
-      return null
-    } finally {
-      setIsSubmitting(false)
-
-<<<<<<< HEAD
-
-    }
-  };
-  
-  return {
-    createMilestone;
-    isSubmitting
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -174,14 +110,26 @@ export const useCreateMilestone = (projectId?: string) => {;
     is_submitting;
   }
 }
-<<<<<<< HEAD
-;
-  }
-};
-  }
-};
-  }
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 };
+        .single($2);
+      if (error) throw error,
+      
+      // Create activity record
+      await recordMilestoneActivity($2);
+      toast.success($2);
+      return data
+    } catch (err: any) {
+      console.error($2);
+      toast.error($2);
+      return null
+    } finally {
+      setIsSubmitting(false)
+    }
+  },
+  
+  return {
+    createMilestone,
+    isSubmitting
+  }
+},

@@ -9,8 +9,7 @@ console.log(""🧪 Starting Adaptive Test Generator...")
       "testSuggestions"
       "testPatterns"
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log(""🧪 Starting Adaptive Test Generator...")
 // Get automation interval from environment variable ("default")
 console.log("🧪 Starting Adaptive Test Generator...")
@@ -202,14 +201,14 @@ console.log(")
     return match ? match[1] : "UnknownHook"
     return match ? match[1] : "UnknownType"
     return match ? match[1] : "UnknownService"
-  generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react"""
+  generateComponentTest($2) {return import { render, screen  } from "@testing-";"library/react"""
 import { describe, it, expect } from "
 import ${component.name} from `./${path.basename(component.path, path.extname(component.path"))}"
   it("renders without crashing")
-  generateComponentTest(component) {return import { render, screen  } from "@testing-";library/react""
+  generateComponentTest($2) {return import { render, screen  } from "@testing-";library/react""
 import { describe, it, expect  } from "vitest"}"
 "
-  generateComponentTest(component) {return import { render, screen  } from "@testing-";"library/react""";"
+  generateComponentTest($2) {return import { render, screen  } from "@testing-";"library/react""";"
 import { describe, it, expect  } from "vitest";"
 import ${component.name} from "./${path.basename(component.path, path.extname(component.path`))}
 describe("${component.name}")
@@ -264,17 +263,11 @@ process.on("SIGINT")
   console.log("� Received SIGINT, shutting down gracefully...")
 process.on("SIGTERM")
   console.log("� Received SIGTERM, shutting down gracefully...")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(" Failed to start adaptive test "generator")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error(" Failed to start adaptive test "generator")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error(" Failed to start adaptive test "generator")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error(" Failed to start adaptive test "generator")
+  console.error(" Failed to start adaptive test "generator")
+
+

@@ -36,7 +36,7 @@ const path = require("path")
           "success"
           "timestamp"
           "output"
-        if (result.success) {await this.log(" ${process.name} completed successfully")} else {await this.log(" ${process.name} failed")
+  if($2) {await this.log(" ${process.name} completed successfully")} else {await this.log(" ${process.name} failed")
   "process"
             "error"
             "timestamp"
@@ -56,7 +56,7 @@ const path = require("path")
   "name"
           "success"
           "timestamp"
-        if (result.success) {await this.log(" ${check.name} passed")} else {await this.log(" ${check.name} failed")
+  if($2) {await this.log(" ${check.name} passed")} else {await this.log(" ${check.name} failed")
   "check"
             "error"
             "timestamp"
@@ -119,7 +119,7 @@ const path = require("path")
     await fs.writeFile(this.coordinationReportFile, JSON.stringify(report, null, 2));await this.log(" Coordination report "generated": ${this.coordinationReportFile}")
   await this.log("� Restarting failed processes...")
   try {await this.log("� Restarting ${process.name}...");const restartResult = await this.runCommand("pm2 restart ${process.name}", { "silent"})
-        if (restartResult.success) {await this.log(" ${process.name} restarted successfully")} else {await this.log(" Failed to restart ${process.name}")
+  if($2) {await this.log(" ${process.name} restarted successfully")} else {await this.log(" Failed to restart ${process.name}")
       } catch (error) {  await this.log(" Error restarting ${process.name  }: ${error.message}")
   await this.log(" Starting Master Error Coordinator")
   await this.log(" Starting Master Error Coordinator")
@@ -127,17 +127,11 @@ const path = require("path")
       return report} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")} catch (error) {await this.log(" Master Error Coordinator "failed": ${error.message}")
       throw error} catch (error) {  await this.log(" Master Error Coordinator "failed": ${error.message  }")
   console.log("Master error coordinator completed successfully")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error("Master error coordinator "failed")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.error("Master error coordinator "failed")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.error("Master error coordinator "failed")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.error("Master error coordinator "failed")
+  console.error("Master error coordinator "failed")
+
+

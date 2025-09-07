@@ -1,123 +1,59 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
 }},
 }},
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 
 }},
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
+
+}},
+}},
+}},
 
 }},
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+
+
+
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 // Code quality checks
 const qualityChecks = [{
-    "name": 'TypeScript Type Checking',
-    "action": () => {
+
+    "action": () => {"
       try {
-        execSync('npx tsc --noEmit', { "stdio": 'pipe' });
+  // TODO: Implement
+}"
+
       } catch (error) {
       }
     },
-  },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+main
 
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    }},
+
+main
+
+
+
     }},
   {
     "name": 'ESLint Code Analysis',
     "action": () => {
-      
       try {
-        execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { "stdio": 'pipe' });
-        
+        execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { "stdio": 'pipe' })
       } catch (error) {
-        
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    },
-  },
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    },
-  },
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    },
-  },
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -125,73 +61,75 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
-
-
-
-
-
-
+  {
+    "name": 'ESLint Code Analysis',
+  // TODO: Implement
+        execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { "stdio": 'pipe' });
+    },
+  },
+    },
+  },
+    },
+  },
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+
+
+
+
+
+
+    }},
+  {
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+main
+
+
+
+
+
+
+
+
+
+
     }},
   {
     "name": 'Prettier Code Formatting',
     "action": () => {
       
+    "name": ESLint Code Analysis,
+    "action": () => {"
       try {
-        execSync('npx prettier --check .', { "stdio": 'pipe' });
-        
+  // TODO: Implement
+}"
+        execSync('npx eslint . --ext .ts,.tsx,.js,.jsx, { "stdio": pipe});
       } catch (error) {
-        
-      }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     },
   },
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
   },
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
   },
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
+
+
+
+
+
+
+
+
+
+
+    }},
+  {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -199,23 +137,28 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
-
-
-
-
+    "name": Prettier Code Formatting,
+    "action": () => {"
+      try {
+  // TODO: Implement
+}"
+        execSync('npx prettier --check ., { "stdio": pipe});
+      } catch (error) {
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+
+
+
+
+
+
+
+
     }},
   {
     "name": 'Code Complexity Analysis',
@@ -226,46 +169,13 @@ main
 
       let totalLines = 0;
       let totalFiles = 0;
-
-      [pagesDir, componentsDir].forEach(dir => {
+]
+      [pagesDir, componentsDir].forEach(dir => {)
         if (fs.existsSync(dir)) {
-          const files = fs
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
             .readdirSync(dir, { recursive: true })
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
             .readdirSync(dir, { recursive: true })
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
             .readdirSync(dir, { recursive: true })
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -273,11 +183,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -287,84 +192,41 @@ main
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
             .readdirSync(dir, { "recursive": true })
             .filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
 
-          files.forEach(file => {
-            const filePath = path.join(dir, file);
-            const content = fs.readFileSync(filePath, 'utf8');
+
+
+
+
+
+
+
+
             const lines = content.split('\n').length;
             totalLines += lines;
             totalFiles++;
           });
-        }
-      });
 
       const avgLinesPerFile =
         totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
       console.log(`Average lines per file: ${avgLinesPerFile}`);
       console.log(`Total files analyzed: ${totalFiles}`);
     },
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       
       
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -372,128 +234,50 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
       
       
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
-
-<<<<<<< HEAD
 
 
-      
-      
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     }},
   {
-    "name": 'Import/Export Analysis',
+    "name": Import/Export Analysis,
     "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
+      const pagesDir = path.join(process.cwd(),pages');
+
       if (fs.existsSync(pagesDir)) {
-        const pages = fs
+        const pages = fs;
           .readdirSync(pagesDir)
           .filter(file => file.endsWith('.tsx'));
         let importCount = 0;
         let exportCount = 0;
 
-        pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+
+        pages.forEach(page => {)
+
           importCount += (content.match(/^import\s+/gm) || []).length;
           exportCount += (content.match(/^export\s+/gm) || []).length;
-        });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
         console.log(`Total imports: ${importCount}`);
         console.log(`Total exports: ${exportCount}`);
       }
     },
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-<<<<<<< HEAD
-        
-        
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-        
-        
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -502,120 +286,66 @@ main
         
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        
+        
+
       }
     }},
   {
     "name": 'Dead Code Detection',
     "action": () => {
-      
-      const pagesDir = path.join(process.cwd(), 'pages');
+      const pagesDir = path.join(process.cwd(), 'pages')
       if (fs.existsSync(pagesDir)) {
         const pages = fs
           .readdirSync(pagesDir)
-          .filter(file => file.endsWith('.tsx'));
-        let unusedImports = 0;
-
+          .filter(file => file.endsWith('.tsx'))
+        let unusedImports = 0
         pages.forEach(page => {
-          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8');
+          const content = fs.readFileSync(path.join(pagesDir, page), 'utf8')
           const imports =
-            content.match(/^import\s+.*from\s+['"][^'"]+['"]/gm) || [];
-
+            content.match(/^import\s+.*from\s+['"][^'"]+['"]/gm) || []
           imports.forEach(importLine => {
             const importName = importLine.match(/import\s+{([^}]+)}/);
             if (importName) {
               const names = importName[1].split(',').map(name => name.trim());
+
+
+
+
+
+
+
+        console.log(`Total exports: ${exportCount}`);
+
               names.forEach(name => {
-                if (
+                if ()
                   !content.includes(name) ||
                   content.indexOf(name) === content.lastIndexOf(name)
                 ) {
                   unusedImports++;
-                }
-              });
-            }
-          });
-        });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
         console.log(`Potential unused imports: ${unusedImports}`);
       }
     },
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
-<<<<<<< HEAD
-        
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-        
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -623,18 +353,27 @@ main
         
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+        
+
       }
     }},
+]
+// Run quality checks
+
+
+
+
+
+
+
+        console.log(`Potential unused imports: ${unusedImports}`);
+
 ];
 
-// Run quality checks
+// Run quality checks;
 let successCount = 0;
 let totalCount = qualityChecks.length;
-
 for (const check of qualityChecks) {
   try {
     
@@ -647,84 +386,33 @@ for (const check of qualityChecks) {
 }
 
 // Generate quality report
-const report = {
-  "timestamp": new Date().toISOString(),
-  "checks": qualityChecks.map(check => ({
-    name: check.name,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
+  // TODO: Implement
+    check.action();
+    successCount++;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
+
+const report = {
+
+  "checks": qualityChecks.map(check => ({"
+    name: check.name,
+
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     status: 'completed',
   })),
-  summary: {
-    total: totalCount,
+  summary: {,
+  total: totalCount,
     successful: successCount,
     failed: totalCount - successCount,
   },
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -732,11 +420,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -746,139 +429,58 @@ main
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
     "status": 'completed'})),
   "summary": {
     total: totalCount,
     "successful": successCount,
     "failed": totalCount - successCount}};
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
+    "status": 'completed'})),
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
 main
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-
-
-
-<<<<<<< HEAD
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
 const reportsDir = path.join(process.cwd(), 'automation-reports');
 if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
 }
-
 const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+console.log(`📄 Quality report saved to: ${reportFile}`);
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");"console.log(" Code Quality Checker Starting.\n");/ Code quality checksconst qualityChecks = [{" name: "TypeScript Type Checking"," action: () => {" console.log(" Running TypeScript type checking."); try {"" execSync("npx tsc --noEmit", { stdio: "pipe" });" console.log(" TypeScript type checking passed"); } catch (error) {" console.log(" TypeScript type checking found issues"); } }}, {"" name: "ESLint Code Analysis"," action: () => {" console.log(" Running ESLint analysis."); try {"" execSync("npx eslint . --ext .ts,.tsx,.js,.jsx", { stdio: "pipe" });" console.log(" ESLint analysis passed"); } catch (error) {" console.log(" ESLint found code quality issues"); } }}, {"" name: "Prettier Code Formatting"," action: () => {" console.log(" Checking code formatting."); try {"" execSync("npx prettier --check .", { stdio: "pipe" });" console.log(" Code formatting is consistent"); } catch (error) {" console.log(" Code formatting issues found"); } }}, {"" name: "Code Complexity Analysis"," action: () => {" console.log(" Analyzing code complexity.");" const pagesDir = path.join(process.cwd(), "pages");" const componentsDir = path.join(process.cwd(), "components"); let totalLines = 0; let totalFiles = 0; [pagesDir, componentsDir].forEach(dir => { if (fs.existsSync(dir)) { const files = fs" .readdirSync(dir, { recursive: true })" .filter(file => file.endsWith(".tsx") | file.endsWith(".ts")); files.forEach(file => { const filePath = path.join(dir, file);" const content = fs.readFileSync(filePath, "utf8");" const lines = content.split("\n").length; totalLines += lines; totalFiles++; }); } }); const avgLinesPerFile totalFiles > 0 ? Math.round(totalLines / totalFiles) : 0;" console.log(`Average lines per file: ${avgLinesPerFile}`);"` console.log(`Total files analyzed: ${totalFiles}`); }}, {"" name: "Import/Export Analysis"," action: () => {" console.log(" Analyzing imports and exports.");" const pagesDir = path.join(process.cwd(), "pages"); if (fs.existsSync(pagesDir)) { const pages = fs .readdirSync(pagesDir)" .filter(file => file.endsWith(".tsx")); let importCount = 0; let exportCount = 0; pages.forEach(page => {" const content = fs.readFileSync(path.join(pagesDir, page), "utf8"); importCount += (content.match(/^import\s+/gm) | []).length; exportCount += (content.match(/^export\s+/gm) | []).length; });"` console.log(`Total imports: ${importCount}`);"` console.log(`Total exports: ${exportCount}`); } }}, {"" name: "Dead Code Detection"," action: () => {" console.log(" Checking for dead code.");" const pagesDir = path.join(process.cwd(), "pages"); if (fs.existsSync(pagesDir)) { const pages = fs .readdirSync(pagesDir)" .filter(file => file.endsWith(".tsx")); let unusedImports = 0; pages.forEach(page => {" const content = fs.readFileSync(path.join(pagesDir, page), "utf8"); const imports ="" content.match(/^import\s+.*from\s+[""][^""]+[""]/gm) | []; imports.forEach(importLine => { const importName = importLine.match(/import\s+{([^}]+)}/); if (importName) {" const names = importName[1].split(",").map(name => name.trim()); names.forEach(name => { if ( !content.includes(name) content.indexOf(name) === content.lastIndexOf(name) ) { unusedImports++; } }); } }); });"` console.log(`Potential unused imports: ${unusedImports}`); } }},];/ Run quality checkslet successCount = 0;let totalCount = qualityChecks.length;for (const check of qualityChecks) { try {` console.log(`\n ${check.name}.`); check.action();` console.log(` ${check.name} completed`); successCount++; } catch (error) {"` console.log(` ${check.name} failed: ${error.message}`); }}"console.log("\n Code Quality Check Complete!");"`console.log(` Successfully completed: ${successCount}/${totalCount} checks`);/ Generate quality reportconst report = {" timestamp: new Date().toISOString()," checks: qualityChecks.map(check => ({ name: check.name,"" status: "completed"}))," summary: { total: totalCount," successful: successCount," failed: totalCount - successCount}};"const reportsDir = path.join(process.cwd(), "automation-reports");if (!fs.existsSync(reportsDir)) {" fs.mkdirSync(reportsDir, { recursive: true });}`const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));"`console.log(` Quality report saved to: ${reportFile}`);'"`'"`
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
-<<<<<<< HEAD
-=======
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
+  "summary": {"
+    total: totalCount,"
+    "successful": successCount,""
+    "failed": totalCount - successCount}};""
+const reportsDir = path.join(process.cwd(), 'automation-reports');
 
+if (!fs.existsSync(reportsDir)) {
+  fs.mkdirSync(reportsDir, { "recursive": true });"
+const reportFile = path.join(reportsDir, `quality-report-${Date.now()}.json`);
+fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
-
-
-
-<<<<<<< HEAD
-main
-
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -886,66 +488,23 @@ main
 
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 console.log(' Code Quality Checker Starting...\n')
-    "name"
-        execSync('npx tsc --noEmit', { "stdio"})
-    "name"
-        execSync('npx eslint . --ext .ts,.tsx,.js,.jsx', { "stdio"})
-    "name"
-        execSync('npx prettier --check .', { "stdio"})
-    "name"
-    "name"
-    "name"
-            content.match(/^import\s+.*from\s+['"][^'')]
     "status"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
     "status"
     "status"
     "status"
 
     "status"
     "status"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
     "status"
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
 
     "status"
     "status"
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-8452
-=======
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
     "status"
@@ -955,10 +514,6 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
 main
 
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
 
 
 
@@ -969,11 +524,18 @@ main
 
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
     "status"
     "status"
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+
+    "status"
+    "status"
+
+    "status"
+
+
+
+
+

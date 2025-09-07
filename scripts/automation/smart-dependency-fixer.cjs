@@ -4,8 +4,7 @@ const fs = require("fs")
 const path = require("path")
 console.log(""� Starting smart dependency fixer automation...")
 const { execSync } = require("child_process")
-const fs = require("fs")
-const path = require("path")
+
 console.log(""� Starting smart dependency fixer automation...")
 // Get automation interval from environment variable ("default")
   console.log(`� Running smart dependency fixer at ${new Date().toISOString()}
@@ -133,17 +132,15 @@ console.log(`� Starting smart dependency fixer automation...``)
 // console.log(" Missing packages resolved")
   console.log("⚠  Some missing packages remain")
 // console.log(" No missing packages found")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.log(" No missing packages found")
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
   console.log(" No missing packages found")
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   console.log(" No missing packages found")
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+  console.log(" No missing packages found")
+  console.log(" No missing packages found")
+
+// Get automation interval from environment variable ("default")"
+  console.log(`� Running smart dependency fixer at ${new Date().toISOString()}`
+console.log(`� Starting smart dependency fixer automation...``)"
+
+

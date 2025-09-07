@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -276,11 +274,10 @@ monitor.run().catch(error => {
 
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 #!/usr/bin/env node,"}),"
 ,"}),"
-const fs = require(,"}),"
+,"
         "lines"
             "message"
             "severity"
@@ -312,8 +309,6 @@ const fs = require(,"}),"
                 "type"
                 "severity"
         "type"
-<<<<<<< HEAD
-=======
         "message"        "message"
         "message"        "message"
 
@@ -326,5 +321,7 @@ const fs = require(,"}),"
         "message"        "message"
 
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+
+
+        "message"
 

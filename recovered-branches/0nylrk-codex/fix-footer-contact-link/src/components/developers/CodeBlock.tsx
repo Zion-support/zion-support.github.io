@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   code: string
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
@@ -12,41 +8,11 @@ interface CodeBlockProps {;
   language?: string;
   showLineNumbers?: boolean;
   className?: string;
-<<<<<<< HEAD
-}
-
-
-export function CodeBlock(): any ({ ;
-
-  code;
-  language = 'bash';
-  showLineNumbers = false;
-  className;
-}: CodeBlockProps) {;
-  const [copied, setCopied] = useState(false);
-import { useState } from 'react',
-import { Check, Copy } from 'lucide-react',
-import { cn } from "@/lib/utils",
-
-
-
-
 import { useState  } from 'react';
 import { Check, Copy  } from 'lucide-react';
 import { cn } from "@/lib/utils";
 interface CodeBlockProps {
-
-  code: string
-
-  language?: string;
-  showLineNumbers?: boolean;
-  className?: string
-}
-export function CodeBlock({
-  code;
-=======
 }  code;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
   language = 'bash';
   showLineNumbers = false;
@@ -54,114 +20,65 @@ export function CodeBlock({
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
 
-<<<<<<< HEAD
-
-
-import {useState} from 'react';
-import {Check, Copy} from 'lucide-react';
-import {cn} from "@/lib/utils";
-
-interface CodeBlockProps {
   code: string,
   language?: string,
   showLineNumbers?: boolean,
   className?: string
 }
-
-
-export function CodeBlock({ 
-  code,
-  language = 'bash',
-  showLineNumbers = false,
-
-=======
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";export function CodeBlock({ 
   code,
   language = 'bash',
   showLineNumbers = false,
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   className
 }: CodeBlockProps) {
   const [copied, setCopied] = useState(false),
 
-<<<<<<< HEAD
-  const handleCopyClick = async () => {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => {
-      setCopied(false)
-    }, 2000)
-  const handleCopyClick = async () => {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-  const handleCopyClick = async () => {
-    await navigator.clipboard.writeText(code),
-    setCopied(true),
-    setTimeout(() => {
-      setCopied(false)
-    }, 2000)
-
-
-
   },
 
-
-  return (
-=======
-  },
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <div className={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
       className
     )}>
       <pre className={cn(
         "p-4 overflow-auto",
+export function CodeBlock({
+  code;
+
+export function CodeBlock({ 
+  code,
+  language = $2;
+  showLineNumbers = $2;
+  className
+}: CodeBlockProps) {
+  const [copied, setCopied] = useState($2);
+  const handleCopyClick = async () => {
+    await navigator.clipboard.writeText($2);
+    setCopied($2);
+    setTimeout(() => {
+      setCopied(false)
+    }, 2000)
+  },
+
+  return (
+    <div className = $2;
+      className
+    )}>
+      <pre className = $2;
         showLineNumbers && "pl-12 relative"
       )}>
         {showLineNumbers && (
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">
             {code.split('\n').map((_, i) => (
-              <div key={i} className="h-6 leading-6">
-<<<<<<< HEAD
-
-import { useState } from 'react',;
-import { Check, Copy } from 'lucide-react',;
-import { cn } from "@/lib/utils",;
-interface CodeBlockProps {;
-  code: string,;
-  language?: string,;
-  showLineNumbers?: boolean,;
-  className?: string;
-}
-;
-export function CodeBlock({;
-  code,;
-  language = 'bash',;
-  showLineNumbers = false,;
-  className;
-}: CodeBlockProps) {;
-  const [copied, setCopied] = useState(false),;
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const handleCopyClick = async () => {;
     await navigator && navigator.clipboard.writeText(code);
     setCopied(true);
     setTimeout(() => {;
       setCopied(false);
-<<<<<<< HEAD
-    }, 2000);
-  };
-
-  return (
-=======
     }, 2000)
 };
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
     <divclassName={cn(
       "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto"
       className
@@ -175,20 +92,6 @@ export function CodeBlock({;
             {code && code.split('\n').map((_, i) => (;
               <div key={i} className="h-6 leading-6">;
                 {i + 1}
-<<<<<<< HEAD
-              </div>;
-            ))}
-          </div>;
-        )}
-        <code className="language-javascript">{code}</code>;
-      </pre>;
-      <button
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"
-        onClick={handleCopyClick}
-        aria-label="Copy code">;
-        {copied ? <Check size={16} /> : <Copy size={16} />}
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       </button>;
       {language && (;
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">;
@@ -198,20 +101,9 @@ export function CodeBlock({;
     </div>;
   );
 }
-<<<<<<< HEAD
-  );
-}
-
-
 
 ;
 
-
-=======
-
-;
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export default CodeBlock;
 
 import {useState} from 'react';
@@ -229,85 +121,5 @@ export /**
 function CodeBlock() {
   const [copied, set_copied] = useState (false);
 ;
-<<<<<<< HEAD
 export default CodeBlock;
-;
-  ),;}
-;
-export default CodeBlock,;
- interface CodeBlockProps {
-  code: string;
-language?: string;
-showLineNumbers?: boolean;
-className?: string 
-}export function CodeBlock ({
-  code;
-language = 'bash';
-showLineNumbers = false;
-className 
-}: CodeBlockProps) {
-  const [copied, setCopied] = useState (false);
-const handleCopyClick = async () => {
-  await navigator.clipboard.writeText (code);
-setCopied (true);
-setTimeout ( () => {
-  setCopied (false) 
-}, 2000) 
-};
-return (<div className= {
-  cn ("relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto";
-className) 
-}> <pre className= {
-  cn ("p-4 overflow-auto";
-showLineNumbers && "pl-12 relative") 
-}> {
-  showLineNumbers && (<div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500" > {
-  code.split ('\n') .map ( (, i) => (<div key= {
-  i 
-}className="h-6 leading-6" > {
-  i + 1 
-}
-}</div>) 
-}> {
-  copied ? <Check size= {
-  16 
-}/> : <Copy size= {
-  16 
-}/> 
-}</button> {
-  language 
-}</div>) 
-}</div>) 
-}export default CodeBlock;
-              <div key={i} className="h-6 leading-6">;
-                {i + 1}
-              </div>
-            ))}
-          </div>
-        )}
-        <code className="language-javascript">{code}</code>
-      </pre>
-      <button
-        className="absolute top-2 right-2 p-2 rounded-md hover:bg-zinc-800 transition-colors"
-        onClick={handleCopyClick}
-        aria-label="Copy code"
-      >
-        {copied ? <Check size={16} /> : <Copy size={16} />}
-      </button>
-      {language && (
-        <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
-          {language}
-        </div>
-      )}
-    </div>
-  )
-}
-
-;
-export default CodeBlock;
-
-;
-export default CodeBlock;
-=======
-export default CodeBlock;
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+              <div key = $2;

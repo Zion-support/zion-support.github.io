@@ -1,102 +1,66 @@
-
-import {useState, useEffect} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-
-<<<<<<< HEAD
-export interface WhitelabelTenant {
-export interface WhitelabelTenant {
-=======
 export interface WhitelabelTenant {export interface WhitelabelTenant {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
-<<<<<<< HEAD
-
-import { useState, useEffect  } from 'react';
-=======
 export interface WhitelabelTenant {import { useState, useEffect  } from 'react';
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
-<<<<<<< HEAD
-export interface WhitelabelTenant {
-  id: string;
-  brand_name: string;
-  subdomain: string;
-  custom_domain: string | null;
-  primary_color: string;
-  logo_url: string | null;
-  theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-  landing_page_copy: {
-    headline: string;
-
-    subtitle: string,
-    cta: string;
-  }
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   is_active: boolean;
   created_at: string;
   updated_at: string;
   account_manager_id: string | null;
-<<<<<<< HEAD
-
-
-
-export function useWhitelabelTenant(externalSubdomain?: string) {;
-  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
-
-
-export function useWhitelabelTenant(externalSubdomain?: string) {;
-  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
-
-
-  const [isLoading, setIsLoading] = useState(true);
+import { useState, useEffect  } from 'react';
+import { supabase } from '@/integrations/supabase/client';
+export interface WhitelabelTenant {
+  id: string,
+  brand_name: string,
+  subdomain: string,
+  custom_domain: string | null,
+  primary_color: string,
+  logo_url: string | null,
+  theme_preset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',
+  landing_page_copy: {
+    headline: string,
+    subtitle: string,
+    cta: string},
+  is_active: boolean,
+  created_at: string,
+  updated_at: string,
+  account_manager_id: string | null,
+  dns_verified: boolean,
+  email_template_override: Record<string, any> | null
+}
+export function useWhitelabelTenant(externalSubdomain?: string) {
+  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null),
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
 
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const loadTenant = async () => {
-      setIsLoading(true);
-      setError(null);
+      setIsLoading($2);
+      setError($2);
       // If running in the browser, bail out early when offline
-      if (typeof navigator !== 'undefined' && !navigator && navigator.onLine) {
-      if (typeof navigator !== 'undefined' && !navigator && navigator.onLine) {
-        setError('No internet connection');
-        setTenant(null);
-        setIsLoading(false);
+      if (typeof navigator !== 'undefined' && !navigator.onLine) {
+        setError($2);
+        setTenant($2);
+        setIsLoading($2);
         return
       }
       try {
         // Get the current hostname, fallback to localhost if not available
-
-        const hostname = window && window.location.hostname || 'localhost';
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         const functionName = 'tenant-detector';
         // Build the query parameters
         const params = externalSubdomain
           ? `?subdomain=${encodeURIComponent(externalSubdomain)}`
           : `?host=${encodeURIComponent(hostname)}`;
 
-<<<<<<< HEAD
-
-        const { data, error: functionError } = await supabase && supabase.functions.invoke(
-
-          `${functionName}${params}`;
-  dns_verified: boolean,
-  email_template_override: Record < string, any> | null;
-}
-=======
         const { data, error: functionError } = await supabase && supabase.functions.invoke(
           `${functionName}${params}`;}
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 export /**
  * useWhitelabelTenant - Function description
  */
@@ -129,62 +93,43 @@ if ( {) {
           {
             headers: {
               'Content - Type': 'application / json'}}
-<<<<<<< HEAD
-        );
-
-;
-        if (!data) {;
-          console.warn('No tenant data received'),;
-          setTenant(null),;
-          return;
+        const hostname = $2;
+        const functionName = $2;
+        // Build the query parameters
+        const params = $2;
+        const { data, error: functionError} = await supabase.functions.invoke($2);
+        if (functionError) {
+          console.error($2);
+          setError($2);
+          setTenant($2);
+          return
+        }
+        if (!data) {
+          console.warn($2);
+          setTenant($2);
+          return
         }
         if (data.tenant) {
           setTenant(data.tenant)
-
-        if (data && data.tenant) {
-          setTenant(data && data.tenant)
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          console.error ('Edge Function error:', function_error);
-          set_error ('Failed to load tenant configuration. Please try again later.');
-          set_tenant (null);
-          return;
-        }
         } else {
-          set_tenant (null);
+          setTenant(null)
         }
-
-        console && console.error('Error loading tenant:', err);
-        let message = err && err.message || 'An unexpected error occurred while loading tenant configuration';
-        if (
-          message && message.includes('Failed to send a request to the Edge Function') ||
-          message && message.includes('Failed to connect to Supabase') ||
-          message && message.includes('No internet connection')
-
       } catch (err: any) {
+        console.error($2);
+        let message = $2;
+        if (
+          message.includes('Failed to send a request to the Edge Function') |
+          message.includes('Failed to connect to Supabase') |
+          message.includes('No internet connection')
         ) {
           message = 'Unable to reach the server. Please check your internet connection and try again.'
         }
-        setError(message);
+        setError($2);
         setTenant(null)
       } finally {
         setIsLoading(false)
       }
-    }
-    loadTenant()
-  }, [externalSubdomain]);
-  return { tenant, isLoading, error }
-}
-// Hook to check if current user is a tenant admin
-export function useTenantAdminStatus(tenantId?: string) {
-export function useTenantAdminStatus(tenantId?: string) {;
-  const [isAdmin, setIsAdmin] = useState(false);
-=======
         );  const [isAdmin, setIsAdmin] = useState(false);
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const checkAdminStatus = async () => {
@@ -201,31 +146,41 @@ export function useTenantAdminStatus(tenantId?: string) {;
           return
         }
 
-<<<<<<< HEAD
-        const userId = sessionData && sessionData.session.user && user.id;
+    },
 
+    loadTenant()
+  }, [externalSubdomain]),
+
+  return { tenant, isLoading, error }
+}
+
+export function useTenantAdminStatus(tenantId?: string) {
+  const [isAdmin, setIsAdmin] = useState($2);
+  const [isLoading, setIsLoading] = useState($2);
+  useEffect(() => {
+    const checkAdminStatus = async () => {
+      if (!tenantId) {
+        setIsAdmin($2);
+        setIsLoading($2);
+        return
+      }
+      try {
+        const { data: sessionData, error: sessionError} = await supabase.auth.getSession($2);
+        if (sessionError || !sessionData.session) {
+          setIsAdmin($2);
+          return
+        }
+
+        const userId = $2;
         const { data, error } = await supabase
           .from('tenant_administrators')
           .select('*')
           .eq('tenant_id', tenantId)
           .eq('user_id', userId)
-          .single();
-        setIsAdmin(!!data && !error)
-      } catch (err) {
-        console && console.error('Error checking tenant admin status:', err);
-        setIsAdmin(false)
-      } finally {
-        setIsLoading (false);
-      }
-    }
-
-
-=======
         const userId = sessionData && sessionData.session.user && user.id;      } finally {
         setIsLoading (false);
       }
     }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       } catch (err: any) {;
         console.error('Error loading tenant:', err),;
         let message = err.message || 'An unexpected error occurred while loading tenant configuration',;
@@ -246,11 +201,6 @@ export function useTenantAdminStatus(tenantId?: string) {;
   }, [externalSubdomain]),;
   return { tenant, isLoading, error }
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 ;
     load_tenant ();
   }, [external_subdomain]);
@@ -299,14 +249,18 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-<<<<<<< HEAD
+          .single($2);
+        setIsAdmin(!!data && !error)
+      } catch (err) {
+        console.error($2);
+        setIsAdmin(false)
+      } finally {
+        setIsLoading(false)
+      }
+    },
 
-    };
-    checkAdminStatus();
-  }, [tenantId]);
-
+    checkAdminStatus()
+  }, [tenantId]),
 
   return { isAdmin, isLoading }
 }
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc

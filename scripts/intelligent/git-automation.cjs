@@ -1,26 +1,15 @@
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node;
-
-=======
-
 
 
 #!/usr/bin/env node;
 
 main
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
-<<<<<<< HEAD
-=======
-=======
 
 
 
@@ -32,8 +21,6 @@ const path = require('path')
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
 
 
@@ -45,9 +32,7 @@ const path = require('path')
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
       
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       if ( {
         ) {
      {
@@ -504,52 +489,49 @@ const path = require('path')
 const gitAutomation = new IntelligentGitAutomation;(;);
 gitAutomation.start().catch(console.error);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
 
 
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+
+#!/usr/bin/env node;
+const { execSync, spawn } = require('child_process')
+const fs = require('fs')
+const path = require('path')
+
       "autoMerge"
+
       "conflictResolution"
       "branchProtection"
       "mergeStrategy"
       console.error(' Failed to start Git "Automation")
       console.error('Error scanning "repositories")
-      const remoteUrl = execSync('git remote get-url origin', { "encoding"})
-      const currentBranch = execSync('git branch --show-current', { "encoding"})
-      const lastCommit = execSync('git log -1 --pretty="format": "%H|%s|%an|%ad"', { "encoding"})
-      const status = execSync('git status --porcelain', { "encoding"})
+      const remoteUrl = execSync('git remote get-url origin, { "encoding"})
+      const currentBranch = execSync('git branch --show-current, { "encoding"})
+      const lastCommit = execSync('git log -1 --pretty="format": "%H|%s|%an|%ad", { "encoding"})
+      const status = execSync('git status --porcelain, { "encoding"})
         "name"
         "lastCommit"
         "status"
       console.error('Error getting repository "info")
         console.error('Error in continuous "monitoring")
         console.error('Error in full "analysis")
-      execSync('git fetch origin', { "stdio"})
-      const branches = execSync('git branch -r', { "encoding"})
+      execSync('git fetch origin, { "stdio"})
+      const branches = execSync('git branch -r, { "encoding"})
       console.error('Error checking pull "requests")
       console.error('Error checking pull "requests")
-      const mergeBase = execSync(`git merge-base main ${branch}`, { "encoding"`})
-      const branchCommits = execSync(`git rev-list --count ${mergeBase}..${branch}`, { "encoding"`})
-      const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}`, { "encoding"`})
-      execSync('git checkout main', { "stdio"})
-      execSync('git checkout main', { "stdio"})
-      execSync('git pull origin main', { "stdio"})
-        execSync(`git merge --squash origin/${branchName}`, { "stdio"`})
-        execSync(`git merge --squash origin/${branchName}`, { "stdio"`})
-        execSync(`git commit -m "Merge branch '${branchName}' into main"`, { "stdio"`})
-        execSync(`git merge origin/${branchName}`, { "stdio"`})
-        execSync('git push origin main', { "stdio"})
-        execSync('git push origin main', { "stdio"})
+      const mergeBase = execSync(`git merge-base main ${branch}, { "encoding"`})
+      const branchCommits = execSync(`git rev-list --count ${mergeBase}..${branch}, { "encoding"`})
+      const conflictCheck = execSync(`git merge-tree ${mergeBase} main ${branch}, { "encoding"`})
+      execSync('git checkout main, { "stdio"})
+      execSync('git checkout main, { "stdio"})
+      execSync('git pull origin main, { "stdio"})
+        execSync(`git merge --squash origin/${branchName}, { "stdio"`})
+        execSync(`git merge --squash origin/${branchName}, { "stdio"`})
+        execSync(`git commit -m "Merge branch '${branchName} into main"`, { "stdio"`})
+        execSync(`git merge origin/${branchName}, { "stdio"`})
+        execSync('git push origin main, { "stdio"})
+        execSync('git push origin main, { "stdio"})
       "strategy"
         "default"
       "modified"
@@ -557,10 +539,10 @@ gitAutomation.start().catch(console.error);
       "deleted"
       "renamed"
     console.log(' Change "summary")
-      execSync('git add .', { "stdio"})
+      execSync('git add ., { "stdio"})
       execSync(`git commit -m "${commitMessage}"`, { "stdio"`})
-        execSync('git push origin main', { "stdio"})
-        execSync('git push origin main', { "stdio"})
+        execSync('git push origin main, { "stdio"})
+        execSync('git push origin main, { "stdio"})
       console.error(' Auto-commit "failed")
       console.error('Error in full "analysis")
           "type"
@@ -578,12 +560,12 @@ gitAutomation.start().catch(console.error);
           "priority"
           "action"
       execSync(`git stash push -m "Backup before ${name}"`, { "stdio"`})
-      execSync(`cp -r . ${backupPath}`, { "stdio"`})
+      execSync(`cp -r . ${backupPath}, { "stdio"`})
       console.error('Error creating "backup")
         execSync("git reset --hard HEAD", { "stdio"})
         execSync("git clean -fd", { "stdio"})
       console.error('Error restoring "backup")
-      execSync(`git push origin --delete ${branchName}`, { "stdio"`})
+      execSync(`git push origin --delete ${branchName}, { "stdio"`})
     console.log('Resolution "details")
       "status"
       console.error('Error saving "analysis")
@@ -592,15 +574,7 @@ gitAutomation.start().catch(console.error);
 
       console.error('Error loading "history")
 
-<<<<<<< HEAD
-      console.error('Error loading "history")
+
 main
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
 
-      console.error('Error loading "history")
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
 

@@ -1,11 +1,9 @@
 #!/usr/bin/env node;
+#!/usr/bin/env node
 /**
- * Content Generator Script;
- * Generates meaningful content for placeholder pages;
+ * Content Generator Script
+ * Generates meaningful content for placeholder pages
  */
-const fs = require("child_process")
-const path = require("path")
-    this.projectRoot = path.resolve(__dirname, "..")
     console.log(" Starting Content Generation...")
       const reportPath = path.join(this.projectRoot, "website-analysis-report.json")
         const report = JSON.parse(fs.readFileSync(reportPath, "utf8")
@@ -27,17 +25,11 @@ const path = require("path")
         "
     const report = {"timestamp": new Date().toISOString(),"generatedContent": Object.fromEntries(this.generatedContent),"totalPages"}
     const reportPath = path.join(this.projectRoot, "content-generation-report.json")
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     console.log(`� Report saved "to"`)
 
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
-=======
     console.log(`� Report saved "to"`)
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
     console.log(`� Report saved "to"`)
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+    console.log(`� Report saved "to"`)
+    console.log(`� Report saved "to"`)
+
+

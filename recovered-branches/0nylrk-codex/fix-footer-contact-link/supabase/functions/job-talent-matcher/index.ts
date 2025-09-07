@@ -1,40 +1,11 @@
 
-<<<<<<< HEAD
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {processJobMatching, storeMatchResults} from "./job-matching ;
 
-
-
-const corsHeaders = {
-  "Access-Control-Allow-Origin": "*";
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-// Initialize the Supabase client
-
-const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
-const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
-
-const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
-import {processJobMatching, storeMatchResults} from "./job-matching.ts";
-
-=======
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
-import {processJobMatching, storeMatchResults} from "./job-matching ;
-
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { processJobMatching, storeMatchResults } from "./job-matching.ts",
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -42,37 +13,7 @@ const corsHeaders = {
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",
 const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",
-<<<<<<< HEAD
-const supabase = createClient(supabaseUrl, supabaseAnonKey),
-
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-
-    const { jobId } = await req && req.json();
-    
-
-
-    const { jobId } = await req.json(),
-    
-
-    const { jobId } = await req && req.json();
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders })
-  }
-  try {
-    const { jobId } = await req.json();
-    const { jobId } = await req.json(),
-    
-    if (!jobId) {
-=======
 const supabase = createClient(supabaseUrl, supabaseAnonKey),    if (!jobId) {
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       throw new Error("Job ID is required")
     }
     // 1. Retrieve job details
@@ -91,80 +32,19 @@ const supabase = createClient(supabaseUrl, supabaseAnonKey),    if (!jobId) {
       throw new Error(`Failed to fetch talent profiles: ${talentsError && talentsError.message}`)
     }
 
-<<<<<<< HEAD
-
-    if (!talents || talents && talents.length === 0) {
-
-      return new Response(
-        JSON && JSON.stringify({ message: "No talent profiles found" });
-      return new Response(
-=======
     if (!talents || talents && talents.length === 0) {
 
       return new Response(
         JSON && JSON.stringify({ message: "No talent profiles found" });      return new Response(
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
         JSON && JSON.stringify({ message: "No talent profiles found" });
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
-<<<<<<< HEAD
-    // 3. Use AI to normalize skills and find matches
-
-    await storeMatchResults(jobId, matchedTalents, job && job.title);
-    const matchedTalents = await processJobMatching(job, talents),
-    
-    // 4. Store matches in database and create notifications
-    await storeMatchResults(jobId, matchedTalents, job.title),
-
-
-    return new Response(
-      JSON && JSON.stringify({ 
-        message: "Job matching completed", 
-
-    console && console.error("Error in job-talent-matcher:", error);
-        matches: matchedTalents.length 
-      }),
-
-      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    )
-  } catch (error) {
-
-    console.error("Error in job-talent-matcher:", error),
-
-    
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
-import { processJobMatching, storeMatchResults } from "./job-matching.ts",;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin": "*",;
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
-
-    
-    const matchedTalents = await processJobMatching(job, talents);
-    // 4. Store matches in database and create notifications
-    await storeMatchResults(jobId, matchedTalents, job && job.title);
-    return new Response(
-      JSON && JSON.stringify({ 
-        message: "Job matching completed", 
-        matches: matchedTalents && matchedTalents.length 
-      });
-      { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    )
-  } catch (error) {
-    console && console.error("Error in job-talent-matcher:", error);
-    return new Response(
-=======
     // 3. Use AI to normalize skills and find matches    return new Response(
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
       JSON && JSON.stringify({ error: error && error.message });
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<< HEAD
-
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
 import { processJobMatching, storeMatchResults } from './job - matching.ts';
@@ -251,95 +131,69 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }
 
       }
-<<<<<<< HEAD
-    );
-  }
-=======
     );  }
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
 });
 
 ;
 
-<<<<<<< HEAD
-      }
-    );
-  }
-});
-;
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2";
+import { processJobMatching, storeMatchResults } from "./job-matching.ts";
+const corsHeaders = $2;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts",;
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2",;
-import { processJobMatching, storeMatchResults } from "./job-matching.ts",;
-;
-const corsHeaders = {;
-  "Access-Control-Allow-Origin":"*",;
-  "Access-Control-Allow-Headers":"authorization, x-client-info, apikey, content-type"},;
-;
-// Initialize the Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
-const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
-const supabase = createClient(supabaseUrl, supabaseAnonKey),;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === "OPTIONS") {;
-    return new Response(null, { headers: corsHeaders });
+// Initialize the Supabase client
+const supabaseUrl = $2;
+const supabaseAnonKey = $2;
+const supabase = createClient($2);
+serve(async (req) => {
+  // Handle CORS preflight requests
+  if (req.method === "OPTIONS") {
+    return new Response(null, { headers: corsHeaders})
   }
-;
-  try {;
-    const { jobId } = await req.json(),;
-    if (!jobId) {;
-      throw new Error("Job ID is required");
+  try {
+    const { jobId } = await req.json($2);
+    if (!jobId) {
+      throw new Error("Job ID is required")
     }
-;
-    // 1. Retrieve job details;
-    const { data: job, error: jobError } = await supabase;
-      .from("jobs");
-      .select("*");
-      .eq("id", jobId);
-      .single(),;
-    if (jobError) {;
-      throw new Error(`Failed to fetch job: ${jobError.message}`);
+    // 1. Retrieve job details
+    const { data: job, error: jobError} = await supabase
+      .from("jobs")
+      .select("*")
+      .eq("id", jobId)
+      .single($2);
+    if (jobError) {
+      throw new Error(`Failed to fetch job: ${jobError.message}`)
     }
-;
-    // 2. Retrieve all talent profiles;
-    const { data: talents, error: talentsError } = await supabase;
-      .from("talent_profiles");
-      .select("*");
-      .eq("is_published", true),;
-    if (talentsError) {;
-      throw new Error(`Failed to fetch talent profiles: ${talentsError.message}`);
+    // 2. Retrieve all talent profiles
+    const { data: talents, error: talentsError} = await supabase
+      .from("talent_profiles")
+      .select("*")
+      .eq($2);
+    if (talentsError) {
+      throw new Error(`Failed to fetch talent profiles: ${talentsError.message}`)
     }
-;
-    if (!talents || talents.length === 0) {;
-      return new Response(;
-        JSON.stringify({ message: "No talent profiles found" }),;
+
+    if (!talents || talents.length === 0) {
+      return new Response($2);
         { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-      );
+      )
     }
-;
-    // 3. Use AI to normalize skills and find matches;
-    const matchedTalents = await processJobMatching(job, talents),;
-    // 4. Store matches in database and create notifications;
-    await storeMatchResults(jobId, matchedTalents, job.title),;
-    return new Response(;
-      JSON.stringify({;
-        message: "Job matching completed",;
-        matches: matchedTalents.length;
-      }),;
+    // 3. Use AI to normalize skills and find matches
+    const matchedTalents = await processJobMatching($2);
+    // 4. Store matches in database and create notifications
+    await storeMatchResults($2);
+    return new Response($2);
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
-    );
-  } catch (error) {;
-    console.error("Error in job-talent-matcher:", error),;
-    return new Response(;
-      JSON.stringify({ error: error.message }),;
-      {;
-        status: 500,;
-        headers: { ...corsHeaders, "Content-Type": "application/json" } ;
+    )
+    
+  } catch (error) {
+    console.error($2);
+    return new Response($2);
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, "Content-Type": "application/json" } 
       }
-    );
+    )
   }
-});
-=======
-=======
->>>>>>> 54ad2b1038c082a23519987b245e26e888b5a5dc
+}),

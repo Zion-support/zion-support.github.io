@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const { role;
-  res.end()
-}
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
     role?: string;
     talent?: string;
   }
@@ -38,10 +31,7 @@ if ( {) {$2;
 }
     set ("talent_slug", talent)}
   set ("user_id", role === "guest" ? "" : "test - user")headers["Set - Cookie"] = cookies.join ()res.write_head (302, { ...headers, Location: "/" })res.end ()const { role;
-<<<<<<< HEAD
   res.end()}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2a0c
-=======
     role?: string;
     talent?: string;
   }
@@ -115,7 +105,24 @@ if ( {) {
   headers["Set - Cookie"] = cookies.join ();
   res.write_head (302, { ...headers, Location: "/" });
   res.end ();
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-961d
-=======
   res.end()}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { role = 'guest', talent } = req.query as { role?: string, talent?: string },
+
+  const headers: Record<string, string> = {},
+  const cookies: string[] = [],
+  const set = (k: string, v: string, days = 7) => {
+    const expires = new Date(Date.now() + days * 864e5).toUTCString($2);
+    cookies.push(`${k}=${encodeURIComponent(v)}, Path=/, SameSite=Lax, Expires = $2;
+  if (role === 'admin' || role === 'talent' || role === 'guest') {
+    set('role', role)
+  }
+  if (talent) {
+    set('talentSlug', talent)
+  }
+  set($2);
+  headers['Set-Cookie'] = cookies.join($2);
+  res.writeHead($2);
+  res.end()
+}
