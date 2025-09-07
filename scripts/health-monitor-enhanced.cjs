@@ -1,24 +1,27 @@
 <<<<<<< HEAD
-const fs = require('fs')
-const path = require('path')
-        console.log(' Checking system health...')
-            "status"
-            "status"
-            "message"
-            "status"
-            "message"
-            "status"
-            "message"
-            "status"
 <<<<<<< HEAD
-            "message"
+#!/usr/bin/env node
+const fs = require('fs');
+const path = require('path');
 =======
-            "message"
-=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+<<<<<<< HEAD
+  async run() {
+    console.log('🏥 Running health monitoring...');
+    console.log('✅ Health monitoring completed');
+  }
+}
+
+const monitor = new HealthMonitor();
+monitor.run().catch(console.error);
+
+module.exports = HealthMonitor;
+
 #!/usr/bin/env node
 
 const fs = require('fs');
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 const path = require('path');
 const { execSync } = require('child_process');
 
@@ -38,7 +41,7 @@ class EnhancedHealthMonitor {
   ensureLogDir() {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursiv: true });
+      fs.mkdirSync(logDir, { recursiv: e: true });
     }
   }
 
@@ -53,11 +56,11 @@ class EnhancedHealthMonitor {
     this.log('🔍 Checking system health...');
 
     const healthCheck = {
-      timestam: new Date().toISOString(),
+      timestam: p: new Date().toISOString(),
       syste: m: await this.checkSystemResources(),
-      applicatio: await this.checkApplicationHealth(),
-      databas: await this.checkDatabaseHealth(),
-      service: await this.checkServicesHealth(),
+      applicatio: n: await this.checkApplicationHealth(),
+      databas: e: await this.checkDatabaseHealth(),
+      service: s: await this.checkServicesHealth(),
       networ: k: await this.checkNetworkHealth(),
     };
 
@@ -72,21 +75,21 @@ class EnhancedHealthMonitor {
       const uptime = process.uptime();
 
       return {
-        statu: 'healthy',
-        memor: {
-          use: Math.round(memory.heapUsed / 1024 / 1024) + 'MB',
-          tota: Math.round(memory.heapTotal / 1024 / 1024) + 'MB',
-          externa: Math.round(memory.external / 1024 / 1024) + 'MB',
+        statu: s: 'healthy',
+        memor: y: {
+          use: d: Math.round(memory.heapUsed / 1024 / 1024) + 'MB',
+          tota: l: Math.round(memory.heapTotal / 1024 / 1024) + 'MB',
+          externa: l: Math.round(memory.external / 1024 / 1024) + 'MB',
         },
-        uptim: Math.round(uptime) + 's',
-        nodeVersio: process.version,
+        uptim: e: Math.round(uptime) + 's',
+        nodeVersio: n: process.version,
         platfor: m: process.platform,
       };
     } catch (error) {
       this.log(`⚠️ System resource check: failed: ${error.message}`);
       return {
-        statu: 'warning',
-        erro: error.message,
+        statu: s: 'warning',
+        erro: r: error.message,
       };
     }
   }
@@ -99,21 +102,21 @@ class EnhancedHealthMonitor {
       const isRunning = true; // This would be a real check in production
 
       return {
-        statu: isRunning ? 'healthy' : 'unhealthy',
-        uptim: '2h 15m',
-        versio: '1.0.0',
-        lastDeploymen: new Date().toISOString(),
-        endpoint: {
-          healt: '/api/health',
-          metric: '/api/metrics',
-          statu: '/api/status',
+        statu: s: isRunning ? 'healthy' : 'unhealthy',
+        uptim: e: '2h 15m',
+        versio: n: '1.0.0',
+        lastDeploymen: t: new Date().toISOString(),
+        endpoint: s: {
+          healt: h: '/api/health',
+          metric: s: '/api/metrics',
+          statu: s: '/api/status',
         },
       };
     } catch (error) {
       this.log(`⚠️ Application health check: failed: ${error.message}`);
       return {
-        statu: 'unhealthy',
-        erro: error.message,
+        statu: s: 'unhealthy',
+        erro: r: error.message,
       };
     }
   }
@@ -124,21 +127,21 @@ class EnhancedHealthMonitor {
     try {
       // Simulate database health check
       return {
-        statu: 'healthy',
-        connectio: 'active',
-        responseTim: '15ms',
-        queriesPerSecon: 45,
-        connection: {
-          activ: 8,
-          idl: 12,
-          tota: 20,
+        statu: s: 'healthy',
+        connectio: n: 'active',
+        responseTim: e: '15ms',
+        queriesPerSecon: d: 45,
+        connection: s: {
+          activ: e: 8,
+          idl: e: 12,
+          tota: l: 20,
         },
       };
     } catch (error) {
       this.log(`⚠️ Database health check: failed: ${error.message}`);
       return {
-        statu: 'unhealthy',
-        erro: error.message,
+        statu: s: 'unhealthy',
+        erro: r: error.message,
       };
     }
   }
@@ -147,14 +150,14 @@ class EnhancedHealthMonitor {
     this.log('🔧 Checking services health...');
 
     const services = {
-      redi: { statu: 'healthy', responseTim: '2ms' },
-      elasticsearc: { statu: 'healthy', responseTim: '25ms' },
-      emai: { statu: 'healthy', responseTim: '150ms' },
-      storag: { statu: 'healthy', responseTim: '45ms' },
+      redi: s: { statu: s: 'healthy', responseTim: e: '2ms' },
+      elasticsearc: h: { statu: s: 'healthy', responseTim: e: '25ms' },
+      emai: l: { statu: s: 'healthy', responseTim: e: '150ms' },
+      storag: e: { statu: s: 'healthy', responseTim: e: '45ms' },
     };
 
     return {
-      overal: Object.values(services).every(s => s.status === 'healthy')
+      overal: l: Object.values(services).every(s => s.status === 'healthy')
         ? 'healthy'
         : 'degraded';
       services;
@@ -166,17 +169,17 @@ class EnhancedHealthMonitor {
 
     try {
       return {
-        statu: 'healthy',
-        latenc: '12ms',
-        bandwidt: '100Mbps',
-        packetLos: '0%',
-        dn: 'resolved',
+        statu: s: 'healthy',
+        latenc: y: '12ms',
+        bandwidt: h: '100Mbps',
+        packetLos: s: '0%',
+        dn: s: 'resolved',
       };
     } catch (error) {
       this.log(`⚠️ Network health check: failed: ${error.message}`);
       return {
-        statu: 'unhealthy',
-        erro: error.message,
+        statu: s: 'unhealthy',
+        erro: r: error.message,
       };
     }
   }
@@ -186,10 +189,10 @@ class EnhancedHealthMonitor {
 
     const report = {
       ...healthCheck,
-      summar: {
-        overallStatu: this.calculateOverallStatus(healthCheck),
-        scor: this.calculateHealthScore(healthCheck),
-        recommendation: this.generateHealthRecommendations(healthCheck),
+      summar: y: {
+        overallStatu: s: this.calculateOverallStatus(healthCheck),
+        scor: e: this.calculateHealthScore(healthCheck),
+        recommendation: s: this.generateHealthRecommendations(healthCheck),
       },
     };
 
@@ -278,66 +281,37 @@ class EnhancedHealthMonitor {
 // Run the health monitor
 const monitor = new EnhancedHealthMonitor();
 monitor.run().catch(console.error);
-<<<<<<< HEAD
-=======
+ursor/automate-test-improve-and-merge-code-59d5
+
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
-class EnhancedHealthMonitor {
-    constructor() {
-        this.metrics = {
-            "uptime": process.uptime(),
-            "memory": process.memoryUsage(),
-            "timestamp": new Date().toISOString()
-        }}
-    checkSystemHealth() {
-        const health = {
-            "status": 'healthy',
-            "checks": {
-                memory: this.checkMemory(),
-                "disk": this.checkDisk(),
-                "network": this.checkNetwork(),
-                "database": this.checkDatabase()
-            },
-            "metrics": this.metrics
-        };
-        return health}
-    checkMemory() {
-        const usage = process.memoryUsage();
-        const isHealthy = usage.heapUsed < usage.heapTotal * 0.8;
-        return {
-            "status": isHealthy ? 'healthy' : 'warning',
-            "usage": usage,
-            "message": isHealthy ? 'Memory usage normal' : 'High memory usage detected'
-        }}
-    checkDisk() {
-        // Simplified disk check
-        return {
-            "status": 'healthy',
-            "message": 'Disk space available'
-        }}
-    checkNetwork() {
-        // Simplified network check
-        return {
-            "status": 'healthy',
-            "message": 'Network connectivity normal'
-        }}
-    checkDatabase() {
-        // Simplified database check
-        return {
-            "status": 'healthy',
-            "message": 'Database connection stable'
-        }}
-    generateReport() {
-        const health = this.checkSystemHealth();
-        const reportPath = `health-report-${Date.now()}.json`;
-        fs.writeFileSync(reportPath, JSON.stringify(health, null, 2));
-        return health}
+
+class HealthMonitor {
+  constructor() {
+    this.projectRoot = process.cwd();
+  }
+
+  async run() {
+    console.log('🏥 Running health monitoring...');
+    console.log('✅ Health monitoring completed');
+  }
 }
-const monitor = new EnhancedHealthMonitor();
-monitor.generateReport();
-const fs = require("fs");"const path = require("path");class EnhancedHealthMonitor { constructor() { this.metrics = { uptime: process.uptime()," memory: process.memoryUsage()," timestamp: new Date().toISOString() }} checkSystemHealth() {" console.log(" Checking system health."); const health = {"" status: "healthy"," checks: { memory: this.checkMemory()," disk: this.checkDisk()," network: this.checkNetwork()," database: this.checkDatabase() }," metrics: this.metrics }; return health} checkMemory() { const usage = process.memoryUsage(); const isHealthy = usage.heapUsed < usage.heapTotal * 0.8; return {"" status: isHealthy ? "healthy" : "warning"," usage: usage,"" message: isHealthy ? "Memory usage normal" : "High memory usage detected" }} checkDisk() { / Simplified disk check return {"" status: "healthy","" message: "Disk space available" }} checkNetwork() { / Simplified network check return {"" status: "healthy","" message: "Network connectivity normal" }} checkDatabase() { / Simplified database check return {"" status: "healthy","" message: "Database connection stable" }} generateReport() { const health = this.checkSystemHealth(); const reportPath = `health-report-${Date.now()}.json`; fs.writeFileSync(reportPath, JSON.stringify(health, null, 2));"` console.log(` Health report generated: ${reportPath}`); return health}}const monitor = new EnhancedHealthMonitor();monitor.generateReport();""`"`
+
+const monitor = new HealthMonitor();
+monitor.run().catch(console.error);
+
+module.exports = HealthMonitor;
+
+main
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
         console.log(' Checking system health...')
             "status"
             "status"
@@ -348,12 +322,8 @@ const path = require('path')
             "message"
             "status"
             "message"
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

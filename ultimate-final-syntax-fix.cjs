@@ -26,7 +26,7 @@ for (const filePath of syntaxErrorFiles) {
     console.log(`🔧 Fixing ${filePath}...`);
     
     let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
+    const originalContent = content;
     
     // Fix common syntax issues
     

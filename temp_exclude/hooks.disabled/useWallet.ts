@@ -1,7 +1,13 @@
 import React from 'react';
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:temp_exclude/hooks.disabled/useWallet.ts
 interface UseWalletProps {
   // Add props here as needed
 }
+
 export default function UseWallet({ }: UseWalletProps) {
   return (
     <div>
@@ -9,17 +15,11 @@ export default function UseWallet({ }: UseWalletProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:hooks.disabled/useWallet.ts
 }
+}
+}
+
+
+>>>>>>> 2fd4a6abb4445cd2c95fbe3f38b233c555a73159
 =======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/hooks.disabled/useWallet.ts
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-}
-}
-}
-}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2

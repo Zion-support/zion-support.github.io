@@ -1,19 +1,46 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
 function cleanupMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
     
-    // Remove merge conflict markers and their content
-    content = content
-      .replace(/[\s\S]*?[\s\S]*?      .replace(/[\s\S]*?      .replace(/[\s\S]*?    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Cleaned merge conflicts in: ${filePath}`);
+    // Remove merge conflict markers and keep the "ours" version (HEAD)
+    const lines = content.split('\n');
+    const cleanedLines = [];
+    let inConflict = false;
+    let keepLines = false;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.includes('        inConflict = true;
+        keepLines = true;
+        continue;
+      } else if (line.includes('')) {
+        keepLines = false;
+        continue;
+      } else if (line.includes('>>>>>>>')) {
+        inConflict = false;
+        keepLines = false;
+        continue;
+      }
+      
+      if (!inConflict || keepLines) {
+        cleanedLines.push(line);
+      }
+    }
+    
+    const cleanedContent = cleanedLines.join('\n');
+    
+    if (cleanedContent !== content) {
+      fs.writeFileSync(filePath, cleanedContent, 'utf8');
+      console.log(`Cleaned: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -30,11 +57,12 @@ function processDirectory(dirPath) {
     const stat = fs.statSync(fullPath);
     
     if (stat.isDirectory()) {
-      // Skip node_modules and other common directories
-      if (!['node_modules', '.git', '.next', 'dist', 'build'].includes(item)) {
-        cleanedCount += processDirectory(fullPath);
+      // Skip node_modules, .git, and other common directories
+      if (['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+        continue;
       }
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
+      cleanedCount += processDirectory(fullPath);
+    } else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.json') || item.endsWith('.css') || item.endsWith('.html'))) {
       if (cleanupMergeConflicts(fullPath)) {
         cleanedCount++;
       }
@@ -46,4 +74,4 @@ function processDirectory(dirPath) {
 
 console.log('Starting merge conflict cleanup...');
 const cleanedCount = processDirectory('/workspace');
-console.log(`Cleanup complete. Cleaned ${cleanedCount} files.`);
+console.log(`Cleanup complete. Processed ${cleanedCount} files.`);

@@ -1,50 +1,157 @@
 import React from 'react';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { ContactSection } from '@/components/ContactSection';
-import Link from 'next/link';
+import { motion } from 'framer-motion';
+import Card from '../components/Card';
 
-export default function About() {
-  const team = [
+const About: React.FC = () => {
+  const teamMembers = [
     {
-      name: 'Alex Johnson',
-      role: 'CEO',
-      image: 'https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=300&q=80',
-      bio: "Alex Johnson leads Zion as CEO, driving the company's vision to democratize AI globally. With over a decade of experience in technology startups, Alex previously built enterprise platforms adopted by Fortune 500 companies. At Zion, he focuses on building partnerships and ensuring that innovation benefits everyone. Alex believes in open collaboration and empowers the team to push boundaries while upholding transparency. Outside work, he mentors young entrepreneurs and enjoys exploring new cultures. He loves hiking, reading science fiction, and cooking."
+      name: 'Dr. Sarah Chen',
+      role: 'Chief Technology Officer',
+      expertise: 'AI & Machine Learning',
+      image: '👩‍💼',
+      description:
+        'Leading our AI initiatives with 15+ years of experience in machine learning and data science.',
     },
     {
-      name: 'Maria Chen',
-      role: 'CTO',
-      image: 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80',
-      bio: "Maria Chen, Zion's CTO, oversees the platform's technical strategy and architecture. She has led engineering teams at several AI-focused startups, delivering scalable solutions that power millions of users. At Zion, Maria champions a culture of experimentation and rigorous security, ensuring the marketplace remains reliable and cutting-edge. She collaborates closely with open-source communities and mentors young developers in her spare time. Maria holds a master's in computer science and enjoys painting landscapes when she's not coding. She also loves robotics projects."
+      name: 'Michael Rodriguez',
+      role: 'Head of Engineering',
+      expertise: 'Cloud Architecture',
+      image: '👨‍💻',
+      description:
+        'Expert in scalable cloud solutions and microservices architecture with a track record of successful enterprise deployments.',
     },
     {
-      name: 'Sam Lee',
-      role: 'Head of Community',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80',
-      bio: "Sam Lee serves as Zion's Head of Community, cultivating relationships with developers, partners, and customers worldwide. He previously launched multiple tech communities that grew from small meetups into thriving networks. At Zion, Sam orchestrates events, online forums, and mentorship programs that encourage collaboration and knowledge sharing. His empathetic approach helps newcomers feel welcomed while promoting an inclusive culture. Sam studied communications and has a background in user advocacy. In his downtime, he enjoys photography and traveling with his family."
-    }
+      name: 'Emily Johnson',
+      role: 'Security Director',
+      expertise: 'Cybersecurity',
+      image: '👩‍🔬',
+      description:
+        'Cybersecurity expert with extensive experience in threat detection, incident response, and compliance frameworks.',
+    },
+  ];
+
+  const values = [
+    {
+      title: 'Innovation',
+      description: 'We continuously push the boundaries of technology to deliver cutting-edge solutions.',
+      icon: '🚀',
+    },
+    {
+      title: 'Excellence',
+      description: 'We maintain the highest standards in everything we do, from code quality to customer service.',
+      icon: '⭐',
+    },
+    {
+      title: 'Collaboration',
+      description: 'We believe in the power of teamwork and work closely with our clients to achieve their goals.',
+      icon: '🤝',
+    },
+    {
+      title: 'Integrity',
+      description: 'We conduct business with honesty, transparency, and ethical practices.',
+      icon: '🛡️',
+    },
   ];
 
   return (
-    <>
-      <SEO 
-        title="About Us - Zion Tech Group"
-        description="Learn about Zion Tech Group's mission, values, and commitment to delivering cutting-edge technology solutions."
-      />
-      <div className="min-h-screen bg-white py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">About Zion Tech Group</h1>
-          <p className="text-lg text-gray-600 mb-6">
-            Zion Tech Group is a leading technology solutions provider dedicated to helping 
-            organizations transform their digital infrastructure and achieve their business goals.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Hero Section */}
+        <motion.div
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h1 className="text-5xl font-bold text-white mb-6">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            We are a leading technology solutions provider specializing in AI, 
+            cybersecurity, cloud infrastructure, and digital transformation services.
           </p>
-          <p className="text-lg text-gray-600">
-            Our team of experts specializes in AI, cybersecurity, cloud infrastructure,
-            and digital transformation services.
-          </p>
-        </div>
+        </motion.div>
+
+        {/* Mission Section */}
+        <motion.div
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <Card className="text-center p-12 bg-slate-800/50 backdrop-blur-sm">
+            <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              To empower businesses with cutting-edge technology solutions that drive 
+              innovation, enhance security, and accelerate digital transformation. We 
+              believe in the power of technology to solve complex challenges and create 
+              opportunities for growth and success.
+            </p>
+          </Card>
+        </motion.div>
+
+        {/* Values Section */}
+        <motion.div
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <Card key={index} className="text-center p-6 bg-slate-800/50 backdrop-blur-sm">
+                <div className="text-4xl mb-4">{value.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
+                <p className="text-gray-300">{value.description}</p>
+              </Card>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Team Section */}
+        <motion.div
+          className="mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <Card key={index} className="text-center p-8 bg-slate-800/50 backdrop-blur-sm">
+                <div className="text-6xl mb-4">{member.image}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
+                <p className="text-cyan-400 font-medium mb-2">{member.role}</p>
+                <p className="text-blue-200 text-sm mb-4">{member.expertise}</p>
+                <p className="text-gray-300 text-sm">{member.description}</p>
+              </Card>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <Card className="bg-gradient-to-r from-cyan-600 to-blue-600 p-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Work With Us?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Let's discuss how we can help transform your business with our technology solutions.
+            </p>
+            <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Get In Touch
+            </button>
+          </Card>
+        </motion.div>
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default About;

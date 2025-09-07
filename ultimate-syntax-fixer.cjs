@@ -2,130 +2,141 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🔧 Starting ultimate syntax fixer...');
+console.log('🔧 Ultimate Syntax Fixer - Fixing all remaining syntax errors...\n');
 
-// Fix the v1.ts file structure - ultimate fix
-function fixV1ApiDocs() {
-  const filePath = '/workspace/data/api-docs/v1.ts';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix the structure by properly closing all brackets
-    content = content.replace(
-      /versions: \['v1'\]\}\]\}\]\s*\}\s*\]\s*\};/,
-      "versions: ['v1']}]}]\n    }\n  ]\n};"
-    );
-    
-    // Alternative fix if the above doesn't work
-    content = content.replace(
-      /versions: \['v1'\]\}\]\}\]\s*\}\s*\]/,
-      "versions: ['v1']}]}]\n    }\n  ]"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed v1.ts structure');
-  } catch (error) {
-    console.log('⚠️ Could not fix v1.ts:', error.message);
-  }
+// Function to fix specific syntax patterns
+function fixSyntaxPatterns(content) {
+  let fixed = false;
+
+  // Fix unterminated strings
+  content = content.replace(/\"[^"]*$/gm, (match) => {
+    if (!match.endsWith('"')) {
+      fixed = true;
+      return match + '"';
+    }
+    return match;
+  });
+
+  // Fix broken JSX return statements
+  content = content.replace(/return\s*\(\s*\"[^"]*$/gm, (match) => {
+    fixed = true;
+    return match.replace(/return\s*\(\s*\"[^"]*$/, 'return (');
+  });
+
+  // Fix broken JSX elements
+  content = content.replace(/<(\w+)\s*\"[^"]*$/gm, (match) => {
+    fixed = true;
+    return match.replace(/<(\w+)\s*\"[^"]*$/, '<$1');
+  });
+
+  // Fix trailing quotes in JSX
+  content = content.replace(/className=\"[^"]*\"\s*\"[^"]*$/gm, (match) => {
+    fixed = true;
+    return match.replace(/\"[^"]*$/, '');
+  });
+
+  // Fix broken function endings
+  content = content.replace(/}\s*\"[^"]*$/gm, (match) => {
+    fixed = true;
+    return match.replace(/\s*\"[^"]*$/, '');
+  });
+
+  // Fix broken metadata objects
+  content = content.replace(/description:\s*'[^']*'\s*}\s*keywords:\s*'[^']*'\s*}/gm, (match) => {
+    fixed = true;
+    return match.replace(/}\s*keywords:/, ',\n  keywords:');
+  });
+
+  // Fix broken Link elements
+  content = content.replace(/<Link\s*\"[^"]*$/gm, (match) => {
+    fixed = true;
+    return match.replace(/<Link\s*\"[^"]*$/, '<Link');
+  });
+
+  // Fix broken closing tags
+  content = content.replace(/<\/\w+>\s*\"[^"]*$/gm, (match) => {
+    fixed = true;
+    return match.replace(/\s*\"[^"]*$/, '');
+  });
+
+  // Fix broken return statements
+  content = content.replace(/return\s*\(\s*\"[^"]*$/gm, (match) => {
+    fixed = true;
+    return match.replace(/return\s*\(\s*\"[^"]*$/, 'return (');
+  });
+
+  // Fix broken JSX attributes
+  content = content.replace(/className=\"[^"]*\"\s*\"[^"]*$/gm, (match) => {
+    fixed = true;
+    return match.replace(/\s*\"[^"]*$/, '');
+  });
+
+  // Fix broken closing braces
+  content = content.replace(/}\s*\"[^"]*$/gm, (match) => {
+    fixed = true;
+    return match.replace(/\s*\"[^"]*$/, '');
+  });
+
+  return { content, fixed };
 }
 
-// Fix pitch generate file
-function fixPitchGenerate() {
-  const filePath = '/workspace/pages/api/admin/pitch/generate.ts';
+// Function to fix a single file
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    const result = fixSyntaxPatterns(content);
     
-    // Fix syntax errors
-    content = content.replace(
-      /if \(!body\) return '',/,
-      "if (!body) return '';"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed pitch generate syntax');
+    if (result.fixed) {
+      fs.writeFileSync(filePath, result.content);
+      console.log(`✅ Fixed syntax errors in ${filePath}`);
+      return true;
+    }
   } catch (error) {
-    console.log('⚠️ Could not fix pitch generate:', error.message);
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
   }
+  return false;
 }
 
-// Fix pitch rewrite file
-function fixPitchRewrite() {
-  const filePath = '/workspace/pages/api/admin/pitch/rewrite.ts';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix syntax errors
-    content = content.replace(
-      /if \(!slide\) return res\.status\(400\)\.json\(\{ error: 'Missing slide' \}\),/,
-      "if (!slide) return res.status(400).json({ error: 'Missing slide' });"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed pitch rewrite syntax');
-  } catch (error) {
-    console.log('⚠️ Could not fix pitch rewrite:', error.message);
+// Function to find and fix all problematic files
+function fixAllFiles() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'pages/**/*.tsx',
+    'pages/**/*.ts'
+  ];
+
+  let totalFixed = 0;
+
+  for (const pattern of patterns) {
+    try {
+      const files = execSync(`find . -path "./${pattern}" -type f 2>/dev/null || true`, { 
+        cwd: '/workspace', 
+        encoding: 'utf8' 
+      }).trim().split('\n').filter(f => f);
+
+      for (const file of files) {
+        if (fs.existsSync(file)) {
+          if (fixFile(file)) {
+            totalFixed++;
+          }
+        }
+      }
+    } catch (error) {
+      console.log(`⚠️  Error processing pattern ${pattern}: ${error.message}`);
+    }
   }
+
+  return totalFixed;
 }
 
-// Fix tokens config file
-function fixTokensConfig() {
-  const filePath = '/workspace/pages/api/admin/tokens/config.ts';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix syntax errors
-    content = content.replace(
-      /const body = req\.body \|\| \{\},/,
-      "const body = req.body || {};"
-    );
-    
-    content = content.replace(
-      /const updated = \{ \.\.\.current, \.\.\.body \},/,
-      "const updated = { ...current, ...body };"
-    );
-    
-    content = content.replace(
-      /return res\.status\(200\)\.json\(updated\)/,
-      "return res.status(200).json(updated);"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed tokens config syntax');
-  } catch (error) {
-    console.log('⚠️ Could not fix tokens config:', error.message);
-  }
+// Main execution
+try {
+  const totalFixed = fixAllFiles();
+  console.log(`\n🎉 Fixed syntax errors in ${totalFixed} files`);
+} catch (error) {
+  console.error('💥 Error during syntax fixing:', error.message);
+  process.exit(1);
 }
-
-// Fix tokens index file
-function fixTokensIndex() {
-  const filePath = '/workspace/pages/api/admin/tokens/index.ts';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix syntax errors
-    content = content.replace(
-      /const \{ userId \} = req\.query,/,
-      "const { userId } = req.query;"
-    );
-    
-    content = content.replace(
-      /res\.status\(200\)\.json\(\{ transactions: filtered \}\)/,
-      "res.status(200).json({ transactions: filtered });"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed tokens index syntax');
-  } catch (error) {
-    console.log('⚠️ Could not fix tokens index:', error.message);
-  }
-}
-
-// Run all fixes
-fixV1ApiDocs();
-fixPitchGenerate();
-fixPitchRewrite();
-fixTokensConfig();
-fixTokensIndex();
-
-console.log('🎉 Ultimate syntax fixing completed!');

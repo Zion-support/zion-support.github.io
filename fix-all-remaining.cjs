@@ -1,19 +1,31 @@
 <<<<<<< HEAD
-#!/usr/bin/env node
-=======
-#!/usr/bin/env node;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+#!/usr/bin/env node
+
+origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
 const fs = require('fs');
 const path = require('path');
 
 console.log('🔧 Fixing all remaining syntax errors...');
 
-<<<<<<< HEAD
 // Fix help.tsx
-=======
-// Fix help.tsx;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
 const helpContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { BookOpen, MessageCircle, Phone, Mail, Search, ChevronRight } from 'lucide-react';
@@ -49,64 +61,16 @@ const helpCategories = [
       "API documentation",
       "Integration guides"
     ]
+=======
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
   }
-];
+}
 
-const popularArticles = [
-  {
-    titl: "How to get started with our AI solutions",
-    categor: "Getting Started",
-    readTim: "5 min"
-  },
-  {
-    titl: "Setting up cloud migration",
-    categor: "Technical Support",
-    readTim: "10 min"
-  },
-  {
-    titl: "Understanding your billing",
-    categor: "Account & Billing",
-    readTim: "3 min"
-  }
-];
 
-export default function Help() {
-  return (
-    <Layout>
-      <Head>
-        <title>Help Center - Zion Tech Group</title>
-        <meta name="description" content="Find answers to your questions and get help with our services." />
-      </Head>
 
-      <main>
-        <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center"
-              initial={{ opacit: 0, y: 30 }}
-              animate={{ opacit: 1, y: 0 }}
-              transition={{ duratio: 0.8 }}
-            >
-              <h1 className="text-4xl: md:text-6xl font-bold mb-6">
-                Help Center
-              </h1>
-              <p className="text-xl: md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Find answers to your questions and get the support you need.
-              </p>
-              <div className="max-w-2xl mx-auto">
-                <div className="relative">
-                  <input
-                    type="text"
-                    placeholder="Search for help articles..."
-                    className="w-full px-6 py-4 pr-12 rounded-lg text-gray-900"
-                  />
-                  <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400" />
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
 
+<<<<<<< HEAD
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -217,11 +181,7 @@ export default function Help() {
 fs.writeFileSync('/workspace/pages/help.tsx', helpContent);
 console.log('✅ Fixed help.tsx');
 
-<<<<<<< HEAD
 // Fix industries/education.tsx
-=======
-// Fix industries/education.tsx;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-625a
 const educationContent = `import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -405,3 +365,6 @@ fs.writeFileSync('/workspace/pages/industries/education.tsx', educationContent);
 console.log('✅ Fixed industries/education.tsx');
 
 console.log('🎉 All remaining syntax errors fixed!');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a

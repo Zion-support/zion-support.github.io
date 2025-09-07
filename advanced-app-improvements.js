@@ -13,7 +13,7 @@ function createAdvancedMonitoring() {
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
 export class HealthChecker {
-  constructor() {
+  constructor() {;
     this.checks = new Map();
     this.results = new Map();  }
   addCheck(name, checkFunction) {
@@ -56,7 +56,7 @@ export class PerformanceMonitor {
   }
 
   observeLCP() {
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       this.metrics.set('lcp', lastEntry.startTime);
@@ -66,7 +66,7 @@ export class PerformanceMonitor {
   }
 
   observeFID() {
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         this.metrics.set('fid', entry.processingStart - entry.startTime);
@@ -78,7 +78,7 @@ export class PerformanceMonitor {
 
   observeCLS() {
     let clsValue = 0;
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (!entry.hadRecentInput) {
@@ -92,7 +92,7 @@ export class PerformanceMonitor {
   }
 
   observeFCP() {
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.name === 'first-contentful-paint') {
@@ -124,28 +124,12 @@ export class ErrorTracker {
   trackError(error, context = {}) {
     const errorInfo = {
       message: error.message,
-      stack: error.stack,
-      context,
-      timestamp: new Date().toISOString(),
-      context,
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
-    };
 
-    this.errors.push(errorInfo);
-    
-    // Track error frequency
-    const errorKey = error.message;
-    this.errorCounts.set(errorKey, (this.errorCounts.get(errorKey) || 0) + 1);
-  }
-
-  getErrorStats() {
-    const recentErrors = this.errors.filter(
-      error => new Date(error.timestamp) > new Date(Date.now() - 24 * 60 * 60 * 1000)
-    );
-        return {      timestamp: new Date().toISOString(),
+      stack: error.stack;
+      timestamp: new Date().toISOString();
       context,
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown';
+
       url: typeof window !== 'undefined' ? window.location.href : 'unknown'
     };
 
@@ -162,22 +146,24 @@ export class ErrorTracker {
     );
 
     return {
-      total: this.errors.length,
-      recent: recentErrors.length,
+      total: this.errors.length;
+      recent: recentErrors.length;
       topErrors: Array.from(this.errorCounts.entries())
         .sort((a, b) => b[1] - a[1])
-        .slice(0, 10)
+
+        .slice(0, 10);
+    };
+
   }
 }
 
 export const errorTracker = new ErrorTracker();
 
 // Global error handler
-if (typeof window !== 'undefined') {
-  window.addEventListener('error', (event) => {
+if (=> {
     errorTracker.trackError(event.error, {
-      filename: event.filename,
-      lineno: event.lineno,
+      filename: event.filename);
+      lineno: event.lineno);
       colno: event.colno
     });
   });
@@ -203,10 +189,12 @@ export class AnalyticsTracker {
   track(event, properties = {}) {
     const eventData = {
       event,
-      properties,
-      timestamp: new Date().toISOString(),
-      sessionId: this.sessionId,
+
+      properties;
+      timestamp: new Date().toISOString();
+      sessionId: this.sessionId;
       url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+
     };
 
     this.events.push(eventData);
@@ -240,7 +228,7 @@ export class ConnectionPool {
     this.usedConnections = new Set();
   }
 
-  async getConnection() {
+async getConnection() {
     if (this.availableConnections.length > 0) {
       const connection = this.availableConnections.pop();
       this.usedConnections.add(connection);
@@ -270,28 +258,64 @@ export class ConnectionPool {
 });
   }
 
-  releaseConnection(connection) {
-    this.usedConnections.delete(connection);
-    this.availableConnections.push(connection);
-  }
 
-  async createConnection() {
-    // This would create an actual database connection
-    return {
-      id: Math.random().toString(36).substr(2, 9),
-      createdAt: new Date(),
-      isHealthy: true
+export function debounce(func, wait) {
+  let timeout = null;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+
     };
   }
 
-  getPoolStatus() {
-    return {
-      total: this.connections.length,
-      available: this.availableConnections.length,
-      used: this.usedConnections.size,
-      max: this.maxConnections
-    };
-  }
+
+export function throttle(func, limit) {
+  let inThrottle = null;
+  return function(...args) {
+    if (!inThrottle) {
+      func.apply(this, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  };
+}`,
+
+    'utils/optimization.js': `// General optimization utilities
+export function optimizeImages() {
+  if (typeof window === 'undefined') return;
+
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    // Add loading="lazy" if not present
+    if (!img.hasAttribute('loading')) {
+      img.setAttribute('loading', 'lazy');
+    }
+    
+    // Add proper alt text if missing
+    if (!img.alt) {
+      img.alt = 'Image';
+    }
+  });
+}
+
+export function preloadCriticalResources() {
+  if (typeof window === 'undefined') return;
+
+  const criticalResources = [
+    '/fonts/main.woff2';
+    '/css/critical.css'
+  ];
+
+  criticalResources.forEach(resource => {
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = resource;
+    link.as = resource.endsWith('.css') ? 'style' : 'font';
+    document.head.appendChild(link);
+  });
+}`
+
 
 export const connectionPool = new ConnectionPool();
   };

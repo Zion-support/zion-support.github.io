@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
@@ -175,3 +176,30 @@ export default defineConfig({
     },
   },
 });
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    host: true
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: true
+  },
+  resolve: {
+    alias: {
+      '@': '/workspace/src'
+    }
+  },
+  css: {
+    postcss: {
+      plugins: []
+    }
+  }
+})
+>>>>>>> db9cf4227efbedeeb7625bb65c8a05924d3d2398

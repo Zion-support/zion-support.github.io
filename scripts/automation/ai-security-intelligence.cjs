@@ -1,442 +1,191 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node;
-/**
- * AI-Powered Security Intelligence System;
- * Advanced security analysis with machine learning threat detection;
- */
-
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.logFile = path.join(this.projectRoot, 'logs', 'ai-security.log')
-    this.reportFile = path.join(this.projectRoot, 'logs', 'security-report.json')
-    this.scoreFile = path.join(this.projectRoot, 'logs', 'security-score.txt')
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
-      console.log('Logs directory already exists')
-  log(message, level = 'INFO')
-    fs.appendFile(this.logFile, logMessage + '\n')
-    this.log(' Analyzing dependency vulnerabilities...')
-      const auditResult = execSync('npm audit --json 2>/dev/null || echo "{}")
-        'password\\s*=\\s*["\'][^"\']+[']
-        'api_key\\s*=\\s*["\'][^"\']+[']
-        'secret\\s*=\\s*["\'][^"\']+[']
-        'token\\s*=\\s*["\'][^"\']+[']
-          const result = execSync(`grep -r -i "${pattern}"`)
-        const sqlResult = execSync(`grep -r -i "query.*\\$\\{"`})
-        const xssResult = execSync(`grep -r -i "dangerouslySetInnerHTML"`)
-        const httpsCheck = execSync(`grep -r -i "https"`)
-        const headersCheck = execSync(`grep -r -i "Content-Security-Policy\\|X-Frame-Options\\|X-Content-Type-Options"`)
-<<<<<<< HEAD
-        const validationCheck = execSync(`grep -r -i "validate\\|sanitize"`)
-=======
-        const validationCheck = execSync(`grep -r -i "validate\\|sanitize"`)
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔒 Starting AI Security Intelligence...');
-
 class AISecurityIntelligence {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation-reports', 'ai-security.log');
-    this.reportFile = path.join(this.projectRoot, 'automation-reports', 'ai-security-report.json');
-    this.ensureLogDir();
+    this.workspaceRoot = '/workspace';
+    this.reportFile = path.join(this.workspaceRoot,automation_logs,ai-security-report.json');
+    this.ensureLogDirectory();
   }
 
-  ensureLogDir() {
-    const logDir = path.dirname(this.logFile);
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.reportFile);
     if (!fs.existsSync(logDir)) {
-<<<<<<< HEAD
-      fs.mkdirSync(logDir, { recursiv: true });
-=======
       fs.mkdirSync(logDir, { recursive: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-    }
-  }
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
+  log(message) {
 
-  async runSecurityScan() {
-    this.log('🔍 Running security scan...');
 
-    const securityAnalysis = {
-<<<<<<< HEAD
-      timestam: new Date().toISOString(),
-      vulnerabilitie: await this.scanVulnerabilities(),
-      dependencie: await this.scanDependencies(),
-      codeSecurit: await this.scanCodeSecurity(),
-      configuratio: await this.scanConfiguration(),
-      recommendation: this.generateSecurityRecommendations(),
-=======
+  async runSecurityAnalysis() {
+    this.log('Starting AI-powered security analysis...);
+    const analysis = {
       timestamp: new Date().toISOString(),
-      vulnerabilities: await this.scanVulnerabilities(),
-      dependencies: await this.scanDependencies(),
-      codeSecurity: await this.scanCodeSecurity(),
-      configuration: await this.scanConfiguration(),
-      recommendations: this.generateSecurityRecommendations(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-    };
+      vulnerabilities: [],
+      securityIssues: [],
+      recommendations: [],
+      riskScore: 0,
 
-    return securityAnalysis;
-  }
-
-  async scanVulnerabilities() {
-    this.log('🔍 Scanning for vulnerabilities...');
 
     try {
-<<<<<<< HEAD
       // Run npm audit
-      const auditResult = execSync('npm audit --json', { encodin: 'utf8' });
-      const audit = JSON.parse(auditResult);
+      await this.runNpmAudit(analysis);
+      // Analyze environment variables
+      await this.analyzeEnvironmentVariables(analysis);
+      // Analyze dependencies
+      await this.analyzeDependencies(analysis);
+      // Analyze code for security issues
+      await this.analyzeCodeSecurity(analysis);
+      // Analyze configuration files
+      await this.analyzeConfigurationFiles(analysis);
+      // Calculate risk score
+      analysis.riskScore = this.calculateRiskScore(analysis);
+      analysis.status = this.determineSecurityStatus(analysis.riskScore);
+      // Generate recommendations
+      this.generateSecurityRecommendations(analysis);
+      // Save report
+      fs.writeFileSync(this.reportFile, JSON.stringify(analysis, null, 2));
 
-      return {
-        scor: audit.metadata.vulnerabilities.total === 0
-            ? 10: 0: Math.max(0, 100 - audit.metadata.vulnerabilities.total * 10),
-        tota: audit.metadata.vulnerabilities.total,
-        hig: audit.metadata.vulnerabilities.high,
-        moderat: audit.metadata.vulnerabilities.moderate,
-        lo: audit.metadata.vulnerabilities.low,
-        inf: audit.metadata.vulnerabilities.info,
-        advisorie: audit.advisories || {},
-=======
-      const auditResult = execSync('npm audit --json 2>/dev/null || echo "{}"', { encoding: 'utf8' });
-      const audit = JSON.parse(auditResult);
+      analysis.error = error.message;
 
-      return {
-        score: audit.metadata?.vulnerabilities?.total === 0 ? 100 : Math.max(0, 100 - (audit.metadata?.vulnerabilities?.total || 0) * 10),
-        total: audit.metadata?.vulnerabilities?.total || 0,
-        high: audit.metadata?.vulnerabilities?.high || 0,
-        moderate: audit.metadata?.vulnerabilities?.moderate || 0,
-        low: audit.metadata?.vulnerabilities?.low || 0,
-        info: audit.metadata?.vulnerabilities?.info || 0,
-        advisories: audit.advisories || {},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-      };
+  async runNpmAudit(analysis) {
+    this.log('Running npm audit...);
+
+      const auditData = JSON.parse(auditResult);
+      if (auditData.vulnerabilities) {
+        Object.entries(auditData.vulnerabilities).forEach(([name, vuln]) => {
+          analysis.vulnerabilities.push({
+            package: name,
+            severity: vuln.severity,
+            title: vuln.title,
+            description: vuln.description,
+            recommendation: vuln.recommendation
+      analysis.metrics = {
+        totalVulnerabilities: auditData.metadata?.vulnerabilities?.total || 0,
+        high: auditData.metadata?.vulnerabilities?.high || 0,
+        moderate: auditData.metadata?.vulnerabilities?.moderate || 0,
+        low: auditData.metadata?.vulnerabilities?.low || 0,
+        info: auditData.metadata?.vulnerabilities?.info || 0
     } catch (error) {
-      this.log(`⚠️ NPM audit failed: ${error.message}`);
-      return {
-<<<<<<< HEAD
-        scor: 75,
-        tota: 0,
-        hig: 0,
-        moderat: 0,
-        lo: 0,
-        inf: 0,
-        advisorie: {},
-=======
-        score: 75,
-        total: 0,
-        high: 0,
-        moderate: 0,
-        low: 0,
-        info: 0,
-        advisories: {},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-      };
-    }
-  }
+      this.log('npm audit failed or no vulnerabilities found');
+      analysis.metrics = { totalVulnerabilities: 0, high: 0, moderate: 0, low: 0, info: 0 };
 
-  async scanDependencies() {
-    this.log('📦 Scanning dependencies...');
+  async analyzeEnvironmentVariables(analysis) {
+    this.log('Analyzing environment variables...);
+    const envFiles = [.env,.env.local,.env.production,.env.development];
+    const envIssues = [];
+    envFiles.forEach(envFile => {
+      const envPath = path.join(this.workspaceRoot, envFile);
+      if (fs.existsSync(envPath)) {
+        const content = fs.readFileSync(envPath,utf8);
+        const lines = content.split('\n');
+        lines.forEach((line, index) => {
+          if (line.includes('PASSWORD') || line.includes('SECRET') || line.includes('KEY')) {
+            if (line.includes('=') && !line.includes('=')) {
+              envIssues.push({
+                file: envFile,
+                line: index + 1,
 
-<<<<<<< HEAD
-    const dependencies = {
-      scor: 85,
-      outdate: 12,
-      deprecate: 3,
-      suggestion: [
-        'Update React to latest stable version',
-        'Replace deprecated packages',
-        'Review third-party dependencies for security',
-      ],
-    };
-=======
-    try {
-      const outdatedResult = execSync('npm outdated --json 2>/dev/null || echo "{}"', { encoding: 'utf8' });
-      const outdated = JSON.parse(outdatedResult);
-      const outdatedCount = Object.keys(outdated).length;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
+    analysis.securityIssues = analysis.securityIssues.concat(envIssues);
 
-      return {
-        score: Math.max(50, 100 - outdatedCount * 5),
-        outdated: outdatedCount,
-        deprecated: 0, // Would need additional analysis
-        suggestions: [
-          'Update React to latest stable version',
-          'Replace deprecated packages',
-          'Review third-party dependencies for security',
-        ],
-      };
-    } catch (error) {
-      this.log(`Warning: Could not scan dependencies: ${error.message}`);
-      return {
-        score: 85,
-        outdated: 12,
-        deprecated: 3,
-        suggestions: ['Run npm outdated regularly'],
-      };
-    }
-  }
+  async analyzeDependencies(analysis) {
+    this.log('Analyzing dependencies...);
+    const packageJsonPath = path.join(this.workspaceRoot,package.json');
+    if (!fs.existsSync(packageJsonPath)) {
+      return;
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath,utf8));
+    const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
+    const suspiciousPackages = [];
 
-  async scanCodeSecurity() {
-    this.log('🔍 Scanning code for security issues...');
+    Object.keys(dependencies).forEach(dep => {
+      if (knownVulnerablePackages.includes(dep)) {
+        suspiciousPackages.push({
+          package: dep,
+          version: dependencies[dep],
 
-<<<<<<< HEAD
-    const codeSecurity = {
-      scor: 78,
-      issue: [
-        'Potential XSS vulnerability in user input',
-        'Missing input validation',
-        'Hardcoded secrets in configuration',
-        'Insecure random number generation',
-      ],
-      suggestion: [
-=======
-    const patterns = [
-      'password\\s*=\\s*["\'][^"\']+[\'"]',
-      'api_key\\s*=\\s*["\'][^"\']+[\'"]',
-      'secret\\s*=\\s*["\'][^"\']+[\'"]',
-      'token\\s*=\\s*["\'][^"\']+[\'"]',
-    ];
+    analysis.securityIssues = analysis.securityIssues.concat(suspiciousPackages);
 
-    let issues = [];
-    let score = 100;
+  async analyzeCodeSecurity(analysis) {
+    this.log('Analyzing code for security issues...);
+    const srcDir = path.join(this.workspaceRoot,src');
+    if (!fs.existsSync(srcDir)) {
+    const codeFiles = this.findFiles(srcDir, [.ts,.tsx,.js,.jsx]);
+    const codeIssues = [];
+    codeFiles.forEach(file => {
+      const content = fs.readFileSync(file,utf8);
+      // Check for dangerous patterns
+      if (content.includes('eval(') || content.includes('Function(')) {
+        codeIssues.push({
+          file: path.relative(this.workspaceRoot, file),
 
-    for (const pattern of patterns) {
-      try {
-        const result = execSync(`grep -r -i "${pattern}" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
-        if (result.trim()) {
-          issues.push(`Hardcoded secrets found: ${pattern}`);
-          score -= 20;
-        }
-      } catch (error) {
-        // Pattern not found, which is good
-      }
-    }
+    analysis.securityIssues = analysis.securityIssues.concat(codeIssues);
 
-    // Check for SQL injection patterns
-    try {
-      const sqlResult = execSync(`grep -r -i "query.*\\$\\{" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
-      if (sqlResult.trim()) {
-        issues.push('Potential SQL injection vulnerability');
-        score -= 15;
-      }
-    } catch (error) {
-      // No SQL injection patterns found
-    }
+  async analyzeConfigurationFiles(analysis) {
+    this.log('Analyzing configuration files...);
 
-    // Check for XSS patterns
-    try {
-      const xssResult = execSync(`grep -r -i "dangerouslySetInnerHTML" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
-      if (xssResult.trim()) {
-        issues.push('Potential XSS vulnerability with dangerouslySetInnerHTML');
-        score -= 10;
-      }
-    } catch (error) {
-      // No XSS patterns found
-    }
+    const configIssues = [];
+    configFiles.forEach(configFile => {
+      const configPath = path.join(this.workspaceRoot, configFile);
+      if (fs.existsSync(configPath)) {
+        const content = fs.readFileSync(configPath,utf8);
+        // Check for security-related configurations
+        if (content.includes('cors') && !content.includes('origin')) {
+          configIssues.push({
+            file: configFile,
 
-    return {
-      score: Math.max(0, score),
-      issues: issues.length > 0 ? issues : ['No obvious security issues found'],
-      suggestions: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-        'Implement input sanitization',
-        'Add comprehensive input validation',
-        'Use environment variables for secrets',
-        'Use crypto.randomBytes for secure random generation',
-      ],
-    };
-  }
+    analysis.securityIssues = analysis.securityIssues.concat(configIssues);
 
-  async scanConfiguration() {
-    this.log('⚙️ Scanning security configuration...');
+  findFiles(dir, extensions) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        files = files.concat(this.findFiles(fullPath, extensions));
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+    return files;
 
-<<<<<<< HEAD
-    const configuration = {
-      scor: 82,
-      issue: [
-        'Missing Content Security Policy',
-        'Insecure CORS configuration',
-        'Missing security headers',
-        'Insecure session configuration',
-      ],
-      suggestion: [
-=======
-    let score = 100;
-    const issues = [];
+  calculateRiskScore(analysis) {
+    let score = 0;
+    // Add points for vulnerabilities
+    analysis.vulnerabilities.forEach(vuln => {
+      switch (vuln.severity) {
+        case 'high:
+          score += 20;
+          break;
+        case 'moderate:
+          score += 10;
 
-    // Check for HTTPS usage
-    try {
-      const httpsCheck = execSync(`grep -r -i "https" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
-      if (!httpsCheck.trim()) {
-        issues.push('No HTTPS usage detected');
-        score -= 10;
-      }
-    } catch (error) {
-      // HTTPS check failed
-    }
+          score += 1;
+    // Add points for security issues
+    analysis.securityIssues.forEach(issue => {
+      switch (issue.severity) {
 
-    // Check for security headers
-    try {
-      const headersCheck = execSync(`grep -r -i "Content-Security-Policy\\|X-Frame-Options\\|X-Content-Type-Options" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
-      if (!headersCheck.trim()) {
-        issues.push('Missing security headers');
-        score -= 15;
-      }
-    } catch (error) {
-      // Headers check failed
-    }
+          score += 3;
+    return Math.min(100, score);
 
-    // Check for input validation
-    try {
-      const validationCheck = execSync(`grep -r -i "validate\\|sanitize" . --exclude-dir=node_modules --exclude-dir=.git 2>/dev/null || true`, { encoding: 'utf8' });
-      if (!validationCheck.trim()) {
-        issues.push('No input validation detected');
-        score -= 10;
-      }
-    } catch (error) {
-      // Validation check failed
-    }
+  determineSecurityStatus(riskScore) {
+    if (riskScore >= 70) return 'critical';
+    if (riskScore >= 40) return 'high';
+    if (riskScore >= 20) return 'medium';
+    if (riskScore >= 5) return 'low';
+    return 'safe';
 
-    return {
-      score: Math.max(0, score),
-      issues: issues.length > 0 ? issues : ['Security configuration looks good'],
-      suggestions: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-        'Implement CSP headers',
-        'Configure CORS properly',
-        'Add security headers middleware',
-        'Use secure session configuration',
-      ],
-    };
-  }
+  generateSecurityRecommendations(analysis) {
+    if (analysis.metrics?.high > 0) {
+      analysis.recommendations.push({
 
-  generateSecurityRecommendations() {
-    this.log('💡 Generating security recommendations...');
+    const highSeverityIssues = analysis.securityIssues.filter(issue => issue.severity ===high');
+    if (highSeverityIssues.length > 0) {
 
-    return [
-      'Implement automated security scanning in CI/CD',
-      'Set up dependency vulnerability monitoring',
-      'Add security headers middleware',
-      'Implement rate limiting',
-      'Add input validation and sanitization',
-      'Use HTTPS everywhere',
-      'Implement proper authentication and authorization',
-      'Add security logging and monitoring',
-      'Regular security audits and penetration testing',
-      'Implement secure coding practices',
-    ];
-  }
 
-  generateReport(analysis) {
-    this.log('📊 Generating security intelligence report...');
+// CLI interface
+if (require.main === module) {
+  const security = new AISecurityIntelligence();
+  security.runSecurityAnalysis().catch(console.error);
 
-    const report = {
-      ...analysis,
-<<<<<<< HEAD
-      summar: {
-        overallScor: this.calculateOverallScore(analysis),
-        riskLeve: this.getRiskLevel(analysis),
-        priorit: this.getPriority(analysis),
-=======
-      summary: {
-        overallScore: this.calculateOverallScore(analysis),
-        riskLevel: this.getRiskLevel(analysis),
-        priority: this.getPriority(analysis),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-      },
-    };
-
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${this.reportFile}`);
-
-    return report;
-  }
-
-  calculateOverallScore(analysis) {
-    const weights = {
-<<<<<<< HEAD
-      vulnerabilitie: 0.4,
-      dependencie: 0.2,
-      codeSecurit: 0.25,
-      configuratio: 0.15,
-=======
-      vulnerabilities: 0.4,
-      dependencies: 0.2,
-      codeSecurity: 0.25,
-      configuration: 0.15,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-    };
-
-    return Math.round(
-      analysis.vulnerabilities.score * weights.vulnerabilities +
-      analysis.dependencies.score * weights.dependencies +
-      analysis.codeSecurity.score * weights.codeSecurity +
-      analysis.configuration.score * weights.configuration
-    );
-  }
-
-  getRiskLevel(analysis) {
-    const overallScore = this.calculateOverallScore(analysis);
-    if (overallScore >= 90) return 'low';
-    if (overallScore >= 80) return 'medium';
-    if (overallScore >= 70) return 'high';
-    return 'critical';
-  }
-
-  getPriority(analysis) {
-    if (analysis.vulnerabilities.high > 0) return 'critical';
-    if (analysis.vulnerabilities.moderate > 5) return 'high';
-    if (analysis.vulnerabilities.total > 10) return 'high';
-    return 'medium';
-  }
-
-  async run() {
-    try {
-      this.log('🎯 Starting AI security intelligence analysis...');
-
-      const analysis = await this.runSecurityScan();
-      const report = this.generateReport(analysis);
-
-<<<<<<< HEAD
-      this.log(
-        `🎉 AI security intelligence completed! Overall: Score: ${report.summary.overallScore}/100`
-      );
-      this.log(
-        `📊 Risk: Level: ${report.summary.riskLevel} | Priorit: ${report.summary.priority}`
-      );
-=======
-      this.log(`🎉 AI security intelligence completed! Overall Score: ${report.summary.overallScore}/100`);
-      this.log(`📊 Risk Level: ${report.summary.riskLevel} | Priority: ${report.summary.priority}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-    } catch (error) {
-      this.log(`❌ AI security intelligence failed: ${error.message}`);
-      process.exit(1);
-    }
-  }
-}
-
-// Run the security intelligence
-const security = new AISecurityIntelligence();
-<<<<<<< HEAD
-security.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
-security.run().catch(console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+module.exports = AISecurityIntelligence;`;

@@ -1,7 +1,107 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    return this.props.children;
+  }
+}
+import React, { useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+  Search
+  HelpCircle
+  BookOpen
+  MessageCircle
+  Phone
+  Mail
+  FileText
+  Video
+  Download
+  ExternalLink
+  ChevronDown
+  Cloud
+
+
+import {
+
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
+  ChevronDown,
+  Cloud,;
+
+} from "lucide-react";
+
+const helpArticles = [
+  {
+    id: "overview"
+    title: "Understanding Our Services"
+    description: "Overview of all available services and solutions"
+    readTime: "7 min read"
+    type: "Overview"
+  }
+  {
+    id: "ai-services"
+    title: "AI Services"
+    description: "Everything about our AI and machine learning solutions."
+    icon: HelpCircle
+    color: "green"
+    articles: [
+      {
+title: "AI Implementation Guide"
+        description: "How to implement AI solutions in your business"
+        readTime: "10 min read"
+        type: "Guide"
+      }
+      {
+        title: "Machine Learning Models"
+        description: "Understanding different ML models and their applications"
+        readTime: "8 min read"
+        type: "Technical"
+      }
+
+import React, { useState } from './react';
+import Head from './next / head';
+import Link from './next / link';
+import { motion, AnimatePresence  } from './framer-motion';
 import {
   Search,
   HelpCircle,
@@ -14,36 +114,44 @@ import {
   Download,
   ExternalLink,
   ChevronDown,
-  Cloud
-} from 'lucide-react';
-
-const helpArticles = [
+  Cloud,
+} from './lucide-react';
+;
+const help_articles = [;
   {
-    id: 'overview',
-    title: 'Understanding Our Services',
-    description: 'Overview of all available services and solutions',
-    readTime: '7 min read',
-    type: 'Overview'
+    id: "overview",
+    title: "Understanding Our Services",
+    description: "Overview of all available services and solutions",
+    read_time: "7 min read",
+    type: "Overview",
+      {
+        title: "AI Best Practices",
+        description: "Tips and best practices for AI development",
+        readTime: "6 min read",
+        type: "Best Practice",
+      },
+    ],
   },
   {
-    id: 'ai-services',
-    title: 'AI Services',
-    description: 'Everything about our AI and machine learning solutions.',
+    id: "ai - services",
+    title: "AI Services",
+    description: "Everything about our AI and machine learning solutions.",
     icon: HelpCircle,
-    color: 'green',
-    articles: [
+    color: "green",
+    articles: [;
       {
-        title: 'AI Implementation Guide',
-        description: 'How to implement AI solutions in your business',
-        readTime: '10 min read',
-        type: 'Guide'
+        title: "AI Implementation Guide",
+        description: "How to implement AI solutions in your business",
+        read_time: "10 min read",
+        type: "Guide",
       },
       {
-        title: 'Machine Learning Models',
-        description: 'Understanding different ML models and their applications',
-        readTime: '8 min read',
-        type: 'Technical'
+        title: "Machine Learning Models",
+        description: "Understanding different ML models and their applications",
+        read_time: "8 min read",
+        type: "Technical",
       },
+
       {
         title: 'AI Best Practices',
         description: 'Tips and best practices for AI development',
@@ -53,19 +161,45 @@ const helpArticles = [
     ]
   },
   {
-    id: 'cloud-services',
+id: 'cloud-services',
     title: 'Cloud Services',
     description: 'Cloud infrastructure and deployment solutions.',
+
     icon: Cloud,
-    color: 'blue',
+    color: "blue",
+
+      {
+
+        title: "AI Best Practices"
+        description: "Tips and best practices for AI development"
+        readTime: "6 min read"
+        type: "Best Practice"
+      }
+    ]
+  }
+  {
+    id: "cloud-services"
+    title: "Cloud Services"
+    description: "Cloud infrastructure and deployment solutions."
+    icon: Cloud
+    color: "blue"
     articles: [
       {
-        title: 'Cloud Migration Guide',
-        description: 'Step-by-step guide to migrating to the cloud',
-        readTime: '12 min read',
-        type: 'Guide'
-      },
+        title: "Cloud Migration Guide"
+        description: "Step-by-step guide to migrating to the cloud"
+        readTime: "12 min read"
+        type: "Guide"
+      }
+articles: [;
       {
+        title: "Cloud Migration Guide",
+        description: "Step - by - step guide to migrating to the cloud",
+        read_time: "12 min read",
+        type: "Guide",
+      },
+
+      {
+
         title: 'Cloud Security',
         description: 'Best practices for securing your cloud infrastructure',
         readTime: '9 min read',
@@ -73,27 +207,149 @@ const helpArticles = [
       }
     ]
   }
+
+      {
+        title: "Cloud Security"
+        description: "Best practices for securing your cloud infrastructure"
+        readTime: "9 min read"
+        type: "Security"
+      }
+    ]
+  }
+];
+];
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+;
+const help_categories = [;
+
+  {
+
+    title: "Getting Started"
+    description: "New to our platform? Start here."
+    icon: BookOpen
+    color: "blue"
+    articles: helpArticles
+  }
+
 ];
 
-const helpCategories = [
-  {
-    title: 'Getting Started',
-    description: 'New to our platform? Start here.',
-    icon: BookOpen,
     color: 'blue',
     articles: helpArticles
   }
 ];
 
-export default function HelpPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
+export default function HelpPage() {;
 
+
+import {;
+  Search,;
+  HelpCircle,;
+  BookOpen,;
+  MessageCircle,;
+  Phone,;
+  Mail,;
+  FileText,;
+  Video,;
+  Download,;
+  ExternalLink,;
+  ChevronDown,;
+  Cloud,;
+} from "lucide-react";
+
+const helpArticles = [;
+  {;
+    id: "overview",;
+    title: "Understanding Our Services",;
+    description: "Overview of all available services and solutions",;
+    readTime: "7 min read",;
+    type: "Overview",;
+  },;
+  {;
+    id: "ai-services",;
+    title: "AI Services",;
+    description: "Everything about our AI and machine learning solutions.",;
+    icon: HelpCircle,;
+    color: "green",;
+    articles: [;
+      {;
+        title: "AI Implementation Guide",;
+        description: "How to implement AI solutions in your business",;
+        readTime: "10 min read",;
+        type: "Guide",;
+      },;
+      {;
+        title: "Machine Learning Models",;
+        description: "Understanding different ML models and their applications",;
+        readTime: "8 min read",;
+        type: "Technical",;
+      },;
+      {;
+        title: "AI Best Practices",;
+        description: "Tips and best practices for AI development",;
+        readTime: "6 min read",;
+        type: "Best Practice",;
+      },;
+    ],;
+  },;
+  {;
+    id: "cloud-services",;
+    title: "Cloud Services",;
+    description: "Cloud infrastructure and deployment solutions.",;
+    icon: Cloud,;
+    color: "blue",;
+    articles: [;
+      {;
+        title: "Cloud Migration Guide",;
+        description: "Step-by-step guide to migrating to the cloud",;
+        readTime: "12 min read",;
+        type: "Guide",;
+      },;
+      {;
+        title: "Cloud Security",;
+        description: "Best practices for securing your cloud infrastructure",;
+        readTime: "9 min read",;
+        type: "Security",;
+      },;
+    ],;
+  },;
+];
+
+const helpCategories = [;
+  {;
+    title: "Getting Started",;
+    description: "New to our platform? Start here.",;
+    icon: BookOpen,;
+    color: "blue",;
+    articles: helpArticles,;
+  },;
+];
+
+export default function HelpPage() {;
+  const [searchTerm, setSearchTerm] = useState("");
+
+export default function HelpPage() {
+
+  const toggleCategory = (index: number) => {;
+
+    setExpandedCategory(expandedCategory === index ? null : index);
+
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
   const toggleCategory = (index: number) => {
     setExpandedCategory(expandedCategory === index ? null : index);
-  };
+  }
+  const filteredCategories = helpCategories
+    .map((category) => ({
+      ...category
+      articles: category.articles.filter(
+        (article) =>
+          article.title.toLowerCase().includes(searchTerm.toLowerCase()) |
+          article.description.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    }))
+    .filter((category) => category.articles.length > 0);
 
-  const filteredCategories = helpCategories.map(category => ({
+const filteredCategories = helpCategories.map(category => ({
     ...category,
     articles: category.articles.filter(article =>
       article.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -101,44 +357,591 @@ export default function HelpPage() {
     )
   })).filter(category => category.articles.length > 0);
 
+  const filteredCategories = helpCategories;
+    .map((category) => ({;
+      ...category,;
+      articles: category && category.articles.filter(;
+        (article) =>;
+          article && article.title.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+          article && article.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()),;
+      ),;
+    }));
+    .filter((category) => category && category.articles.length > 0);
   return (
-    <>
-      <Head>
-        <title>Help Center - Zion Tech Group</title>
-        <meta name="description" content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources." />
-        <meta name="keywords" content="help, support, documentation, FAQ, tutorials, guides" />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+    <>;
+      <Head>;
+        <title>Help Center - Zion Tech Group</title>;
+        <meta
+          name="description"
+          content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources."
+        />;
+        <meta
+          name="keywords"
+          content="help, support, documentation, FAQ, tutorials, guides"
+/>;
+      </Head>;
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">;
         {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
+        <section className="relative py-20 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Help <span className="text-blue-600">Center</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Find answers, get support, and learn how to make the most of our services.
-              </p>
-              <div className="relative max-w-md mx-auto">
-                <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+              transition={{ duration: 0 && 0.6 }}
+              className="text-center max-w-4xl mx-auto">;
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;
+                Help <span className="text-blue-600">Center</span>;
+              </h1>;
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+                Find answers, get support, and learn how to make the most of our;
+                services.;
+              </p>;
+              <div className="relative max-w-md mx-auto">;
+                <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />;
                 <input
                   type="text"
                   placeholder="Search help articles..."
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
+                  onChange={(e) => setSearchTerm(e && e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500";
+                />;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
   );
+;
+export default /**
+ * HelpPage - Function description
+ */
+function HelpPage() {
+  const [search_term, setSearchTerm] = useState ("");
+  const [expanded_category, setExpandedCategory] = useState < number | null>(null);
+;
+  const toggle_category = (index: number) =>: any {
+    setExpandedCategory (expanded_category === index ? null : index);
+  }
+;
+  const filtered_categories = help_categories;
+    .map ((category) => ({
+      ...category,
+      articles: category.articles.filter (
+        (article) =>;
+          article.title.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+          article.description.toLowerCase ().includes (search_term.toLowerCase ()),
+      ),
+    }));
+    .filter ((category) => category.articles.length > 0);
+;
+  return (
+    <>;
+      <Head>;
+        <title > Help Center - Zion Tech Group</title>;
+        <meta;
+          name="description";
+          content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources.";
+        />;
+        <meta;
+          name="keywords";
+          content="help, support, documentation, FAQ, tutorials, guides";
+        />;
+      </Head>;
+      <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - blue - 50">;
+        {/* Hero Section */}
+        <section className="relative py - 20 px - 4">;
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text - center max - w-4xl mx - auto";
+            >;
+              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
+                Help <span className="text - blue - 600">Center</span>;
+              </h1>;
+              <p className="text - xl text - gray - 600 mb - 8 max - w-3xl mx - auto">;
+                Find answers, get support, and learn how to make the most of our;
+                services.;
+              </p>;
+              <div className="relative max - w-md mx - auto">;
+                <Search className="w - 5 h - 5 absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400" />;
+                <input;
+                  type="text";
+                  placeholder="Search help articles...";
+                  value={search_term}
+                  on_change={(e) => setSearchTerm (e.target.value)}
+                  className="w - full pl - 10 pr - 4 py - 3 rounded - lg border border - gray - 300 focus:outline - none focus:ring - 2 focus:ring - blue - 500";
+                />;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>);
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+import React from 'react';
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function HelpPage() {
+  return (
+    <MainLayout title="Help & Support">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8">Help & Support</h1>
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the help page.
+        </p>
+      </div>
+    </MainLayout>
+  );
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
+import React, { useState } from "react";
+import Head from "next/head";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+  Search
+  HelpCircle
+  BookOpen
+  MessageCircle
+  Phone
+  Mail
+  FileText
+  Video
+  Download
+  ExternalLink
+  ChevronDown
+  Cloud
+
+import {
+=======
+
+import React, { useState } from "react";"
+import Head from "next/head";"
+import Link from "next/link";"
+import { motion, AnimatePresence } from "framer-motion";
+
+import React, { useState } from 'react';'
+import Head from 'next/head';'
+import Link from 'next/link';'
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+  Search;
+  HelpCircle;
+  BookOpen;
+  MessageCircle;
+  Phone;
+  Mail;
+  FileText;
+  Video;
+  Download;
+  ExternalLink;
+  ChevronDown;
+  Cloud;
+import {}
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageCircle,
+  Phone,
+  Mail,
+  FileText,
+  Video,
+  Download,
+  ExternalLink,
+  ChevronDown,;
+  Cloud,;
+<<<<<<< HEAD
+=======
+
+"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+} from "lucide-react";
+
+const helpArticles = []
+  {"
+    id: "overview""
+    title: "Understanding Our Services""
+    description: "Overview of all available services and solutions""
+    readTime: "7 min read""
+    type: "Overview"
+  }
+  {"
+    id: "ai-services""
+    title: "AI Services""
+    description: "Everything about our AI and machine learning solutions."
+    icon: HelpCircle"
+    color: "green"
+<<<<<<< HEAD
+    articles: [
+      {
+        title: 'AI Best Practices',
+        description: 'Tips and best practices for AI development',
+        readTime: '6 min read',
+=======
+    articles: []
+      {}
+  },
+  {"
+    id: "ai - services","
+    title: "AI Services","
+    description: "Everything about our AI and machine learning solutions.",
+    icon: HelpCircle,"
+    color: "green",
+    articles: [;
+      {"
+        title: "AI Implementation Guide","
+        description: "How to implement AI solutions in your business","
+        read_time: "10 min read","
+        type: "Guide",
+      },
+      {"
+        title: "Machine Learning Models","
+        description: "Understanding different ML models and their applications","
+        read_time: "8 min read","
+        type: "Technical",
+      },
+
+      {}
+'
+        title: 'AI Best Practices','
+        description: 'Tips and best practices for AI development','
+        readTime: '6 min read','
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        type: 'Best Practice'
+      }
+    ]
+  },
+<<<<<<< HEAD
+  {
+    articles: [
+      {
+        title: "Cloud Migration Guide"
+        description: "Step-by-step guide to migrating to the cloud"
+        readTime: "12 min read"
+        type: "Guide"
+      }
+        title: "Cloud Security"
+        description: "Best practices for securing your cloud infrastructure"
+        readTime: "9 min read"
+=======
+  {}
+    articles: []
+      {"
+        title: "Cloud Migration Guide""
+        description: "Step-by-step guide to migrating to the cloud""
+        readTime: "12 min read""
+        type: "Guide"
+      }
+
+"
+        title: "Cloud Security""
+        description: "Best practices for securing your cloud infrastructure""
+        readTime: "9 min read""
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+        type: "Security"
+      }
+    ]
+  }
+];
+<<<<<<< HEAD
+];
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+];
+
+=======
+
+
+];
+
+
+'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+    color: 'blue',
+    articles: helpArticles;
+  }
+];
+
+<<<<<<< HEAD
+export default function HelpPage() {;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+
+import {;
+  Search,;
+  HelpCircle,;
+  BookOpen,;
+  MessageCircle,;
+  Phone,;
+  Mail,;
+  FileText,;
+  Video,;
+  Download,;
+  ExternalLink,;
+  ChevronDown,;
+  Cloud,;"
+} from "lucide-react";
+
+const helpArticles = [;
+  {;"
+    id: "overview",;"
+    title: "Understanding Our Services",;"
+    description: "Overview of all available services and solutions",;"
+    readTime: "7 min read",;"
+    type: "Overview",;
+  },;
+  {;"
+    id: "ai-services",;"
+    title: "AI Services",;"
+    description: "Everything about our AI and machine learning solutions.",;
+    icon: HelpCircle,;"
+    color: "green",;
+    articles: [;
+      {;"
+        title: "AI Implementation Guide",;"
+        description: "How to implement AI solutions in your business",;"
+        readTime: "10 min read",;"
+        type: "Guide",;
+      },;
+      {;"
+        title: "Machine Learning Models",;"
+        description: "Understanding different ML models and their applications",;"
+        readTime: "8 min read",;"
+        type: "Technical",;
+      },;
+      {;"
+        title: "AI Best Practices",;"
+        description: "Tips and best practices for AI development",;"
+        readTime: "6 min read",;"
+        type: "Best Practice",;
+      },;
+    ],;
+  },;
+  {;"
+    id: "cloud-services",;"
+    title: "Cloud Services",;"
+    description: "Cloud infrastructure and deployment solutions.",;
+    icon: Cloud,;"
+    color: "blue",;
+    articles: [;
+      {;"
+        title: "Cloud Migration Guide",;"
+        description: "Step-by-step guide to migrating to the cloud",;"
+        readTime: "12 min read",;"
+        type: "Guide",;
+      },;
+      {;"
+        title: "Cloud Security",;"
+        description: "Best practices for securing your cloud infrastructure",;"
+        readTime: "9 min read",;"
+        type: "Security",;
+      },;
+    ],;
+  },;
+];
+
+const helpCategories = [;
+  {;"
+    title: "Getting Started",;"
+    description: "New to our platform? Start here.",;
+    icon: BookOpen,;"
+    color: "blue",;
+    articles: helpArticles,;
+  },;
+];
+
+<<<<<<< HEAD
+export default function HelpPage() {;
+  const [searchTerm, setSearchTerm] = useState("");
+
+=======
+export default function HelpPage() { return null; }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  }
+  const filteredCategories = helpCategories;
+    .map((category) => ({}
+      ...category;
+      articles: category.articles.filter(
+        (article) =>
+          article.title.toLowerCase().includes(searchTerm.toLowerCase()) |
+          article.description.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+    }))
+    .filter((category) => category.articles.length > 0);
+
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+  return (
+    <>;
+      <Head>;
+        <title>Help Center - Zion Tech Group</title>;
+        <meta"
+          name="description""
+          content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources."
+        />;
+        <meta"
+          name="keywords""
+          content="help, support, documentation, FAQ, tutorials, guides"
+<<<<<<< HEAD
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">;
+=======
+
+        {/* Hero Section */}"
+        <section className="relative py-20 px-4">;"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div;
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.6 }}"
+              className="text-center max-w-4xl mx-auto">;"
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">;"
+                Help <span className="text-blue-600">Center</span>;
+              </h1>;"
+              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
+                Find answers, get support, and learn how to make the most of our;
+                services.;
+              </p>;"
+              <div className="relative max-w-md mx-auto">;"
+                <Search className="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />;
+                <input"
+                  type="text""
+                  placeholder="Search help articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e && e.target.value)}"
+                  className="w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500";
+                />;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  );
+;
+export default /**;
+ * HelpPage - Function description;
+ */
+function HelpPage() { return null; }
+  const toggle_category = (index: number) =>: any {}
+    setExpandedCategory (expanded_category === index ? null : index);
+  }
+;
+  const filtered_categories = help_categories;
+    .map ((category) => ({}
+      ...category,
+      articles: category.articles.filter (
+        (article) =>;
+          article.title.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+          article.description.toLowerCase ().includes (search_term.toLowerCase ()),
+      ),
+    }));
+    .filter ((category) => category.articles.length > 0);
+;
+  return (
+    <>;
+      <Head>;
+        <title > Help Center - Zion Tech Group</title>;
+        <meta;"
+          name="description";"
+          content="Get help with Zion Tech Group services. Find documentation, tutorials, and support resources.";
+        />;
+        <meta;"
+          name="keywords";"
+          content="help, support, documentation, FAQ, tutorials, guides";
+        />;
+      </Head>;"
+      <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - blue - 50">;
+        {/* Hero Section */}"
+        <section className="relative py - 20 px - 4">;"
+          <div className="max - w-7xl mx - auto">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.6 }}"
+              className="text - center max - w-4xl mx - auto";
+            >;"
+              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;"
+                Help <span className="text - blue - 600">Center</span>;
+              </h1>;"
+              <p className="text - xl text - gray - 600 mb - 8 max - w-3xl mx - auto">;
+                Find answers, get support, and learn how to make the most of our;
+                services.;
+              </p>;"
+              <div className="relative max - w-md mx - auto">;"
+                <Search className="w - 5 h - 5 absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400" />;
+                <input;"
+                  type="text";"
+                  placeholder="Search help articles...";
+                  value={search_term}
+                  on_change={(e) => setSearchTerm (e.target.value)}"
+                  className="w - full pl - 10 pr - 4 py - 3 rounded - lg border border - gray - 300 focus:outline - none focus:ring - 2 focus:ring - blue - 500";
+                />;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </>);
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+import React from 'react';
+=======
+'
+import React from 'react';'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+import MainLayout from '../src/components/layout/MainLayout';
+
+export default function HelpPage() {}
+  return ("
+    <MainLayout title="Help & Support">"
+      <div className="container mx-auto px-4 py-16">"
+        <h1 className="text-4xl font-bold mb-8">Help & Support</h1>"
+        <p className="text-lg text-gray-700">
+          This is a placeholder for the help page.
+        </p>
+      </div>
+    </MainLayout>;
+  );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1dc5
 }
+=======
+
+}'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934

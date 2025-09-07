@@ -1,76 +1,98 @@
 
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent } from "@/components/ui/card";
-import { Loader2, Globe } from 'lucide-react'import { useTranslation } from "react-i18next";
-import { useTranslationService } from "@/hooks/useTranslationService";
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
-import { toast } from "@/components/ui/use-toast";
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface TranslatableJobFormProps {
-  onSubmit: (formData: any) => void;
-  isSubmitting?: boolean;}
 
-export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
-  const { t } = useTranslation();
-  const { translateContent, isTranslating } = useTranslationService();
-  const { supportedLanguages, currentLanguage } = useLanguage();
-  
-  const [activeTab, setActiveTab] = useState<SupportedLanguage>(currentLanguage);
-  
-  // Form fields with translations
-  const [title, setTitle] = useState<Record<SupportedLanguage, string>>({
-    en: "",
-    es: "",
-    fr: "",
-    pt: "",
-    ar: ""
-  });
-    ar: ""
-  });
-  
-    
-    let sourceLanguage: SupportedLanguage = 'en';
-    let content = '';
-    
-        content = title[lang];
-        sourceLanguage = lang;
-        break;      } else if (field === 'description' && description[lang]) {
-        content = description[lang];
-        sourceLanguage = lang;
-        break;
-      } else if (field === 'requirements' && requirements[lang]) {
-        content = requirements[lang];
-        sourceLanguage = lang;
-        break;
-        title: t('translation.no_content'),
-        description: t('translation.add_content_first'),
-        variant: "destructive"
-      });
-      return;
-          variant: "destructive"
-      });
-      return;
-        title: t('translation.translation_success'),
-        description: t('translation.content_translated')
-      });
-    } catch (error) {
-      logErrorToProduction('Error translating ${field}:', { data: error });
-      toast({
-        title: t('translation.translation_failed'),
-        description: error instanceof Error ? error.message : t('translation.unknown_error'),
-        variant: "destructive"
-      });
-    }
-  };
-  
-  // Ensure all translations are available
-  const ensureAllTranslations = async () => {
-    const promises = [];
-    
-}
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent } from "@/components/ui/card",
+import { Loader2, Globe } from 'lucide-react'
+import { useTranslation } from "react-i18next",
+import { useTranslationService } from "@/hooks/useTranslationService",
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
+
+          {t('jobs.post_job_description')}
+        </p>
+      </div>
+      <div className="space-y-4">
+        <div className="space-y-2">
+          <div className="flex justify-between items-center">
+            <label htmlFor="title" className="text-lg font-medium">
+              {t('jobs.job_title')}
+            </label>
+            <Button
+              type="button"
+              size="sm"
+              variant="outline"
+              onClick={() => autoTranslate('title')}
+              disabled={isTranslating || (!title.en && !title.es && !title.fr && !title.pt && !title.ar)}
+
+            ))}
+          </Tabs>
+        </div>
+        <div className="space-y-2">
+          <div className="flex justify-between items-center">
+            <label htmlFor="description" className="text-lg font-medium">
+              {t('jobs.job_description')}
+            </label>
+            <Button
+              type="button"
+              size="sm"
+              variant="outline"
+              onClick={() => autoTranslate('description')}
+              disabled={isTranslating || (!description.en && !description.es && !description.fr && !description.pt && !description.ar)}
+
+            ))}
+          </Tabs>
+        </div>
+        <div className="space-y-2">
+          <div className="flex justify-between items-center">
+            <label htmlFor="requirements" className="text-lg font-medium">
+              {t('jobs.skills_required')}
+            </label>
+            <Button
+              type="button"
+              size="sm"
+              variant="outline"
+              onClick={() => autoTranslate('requirements')}
+              disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.fr && !requirements.pt && !requirements.ar)}
+
+            ))}
+          </Tabs>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-1">
+            <label htmlFor="budget" className="text-lg font-medium">
+              {t('jobs.budget')}
+            </label>
+            <Input
+              id="budget"
+              value={budget}
+              onChange={(e) => setBudget(e.target.value)}
+              placeholder="$1000 - $2000"
+              className="w-full"
+            />
+          </div>
+          <div className="space-y-1">
+            <label htmlFor="deadline" className="text-lg font-medium">
+              {t('jobs.deadline')}
+            </label>
+            <Input
+              id="deadline"
+              type="date"
+              value={deadline}
+              onChange={(e) => setDeadline(e.target.value)}
+              className="w-full"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="pt-4">
+        <Button
+          type="submit"
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
+          disabled={isSubmitting || isTranslating}
+
   );
 }
+;

@@ -1,417 +1,179 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-#!/usr/bin/env node;
-/**
- * AI-Powered Code Quality Analyzer;
- * Advanced code quality analysis with machine learning insights;
- */
+#!/usr/bin/env node
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-const fs = require('fs')
-const path = require('path')
-const { execSync } = require('child_process')
-    this.logFile = path.join(this.projectRoot, 'logs', 'ai-code-quality.log')
-    this.reportFile = path.join(this.projectRoot, 'logs', 'quality-report.json')
-    this.scoreFile = path.join(this.projectRoot, 'logs', 'quality-score.txt')
-      await fs.mkdir(path.join(this.projectRoot, 'logs')
-      console.log('Logs directory already exists')
-  log(message, level = 'INFO')
-    fs.appendFile(this.logFile, logMessage + '\n')
-    this.log('🧠 Analyzing code complexity...')
-      const complexityResult = execSync('npx eslint . --format json --no-eslintrc --config .eslintrc.complexity.json 2>/dev/null || echo "[]")
-          const result = execSync(`npx eslint . --rule "no-unused-vars: error" --format json 2>/dev/null || echo "[]"`)
-        const jsdocResult = execSync('find src -name "*.js" -o -name "*.ts" | xargs grep -l "/\\*\\*")
-        const bundleSize = execSync('du -sh .next/static 2>/dev/null | cut -f1 || echo "0")
-        const auditResult = execSync('npm audit --json 2>/dev/null || echo "{}")
-      const result = execSync('find . -name "*.test.js" -o -name "*.test.ts" -o -name "*.spec.js" -o -name "*.spec.ts")
-      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-      const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-<<<<<<< HEAD
-      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
-      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
 #!/usr/bin/env node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🤖 Starting AI Code Quality Analyzer...');
-
 class AICodeQualityAnalyzer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation-reports', 'ai-code-quality.log');
-    this.reportFile = path.join(this.projectRoot, 'automation-reports', 'ai-code-quality-report.json');
-    this.ensureLogDir();
+    this.workspaceRoot = '/workspace';
+    this.reportFile = path.join(this.workspaceRoot,automation_logs,ai-quality-report.json');
+    this.ensureLogDirectory();
   }
 
-  ensureLogDir() {
-    const logDir = path.dirname(this.logFile);
+  ensureLogDirectory() {
+    const logDir = path.dirname(this.reportFile);
     if (!fs.existsSync(logDir)) {
-<<<<<<< HEAD
-      fs.mkdirSync(logDir, { recursiv: true });
-=======
       fs.mkdirSync(logDir, { recursive: true });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-    }
+
+  log(message) {
+
   }
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
 
-  analyzeCodeQuality() {
-    this.log('🔍 Analyzing code quality...');
-
+  async analyzeCodeQuality() {
+    this.log('Starting AI-powered code quality analysis...);
     const analysis = {
-<<<<<<< HEAD
-      timestam: new Date().toISOString(),
-      metric: {
-        complexit: this.analyzeComplexity(),
-        maintainabilit: this.analyzeMaintainability(),
-        testCoverag: this.analyzeTestCoverage(),
-        codeDuplicatio: this.analyzeCodeDuplication(),
-        securityIssue: this.analyzeSecurityIssues(),
-      },
-      recommendation: this.generateRecommendations(),
-=======
       timestamp: new Date().toISOString(),
-      metrics: {
-        complexity: this.analyzeComplexity(),
-        maintainability: this.analyzeMaintainability(),
-        testCoverage: this.analyzeTestCoverage(),
-        codeDuplication: this.analyzeCodeDuplication(),
-        securityIssues: this.analyzeSecurityIssues(),
-      },
-      recommendations: this.generateRecommendations(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
+      metrics: {},
+      issues: [],
+      recommendations: [],
+      score: 0
     };
 
-    return analysis;
-  }
-
-  analyzeComplexity() {
-    this.log('📊 Analyzing code complexity...');
-
-<<<<<<< HEAD
-    // Simulate complexity analysis
-    return {
-      scor: 85,
-      issue: [
-        'High cyclomatic complexity in Header component',
-        'Nested loops detected in data processing functions',
-      ],
-      suggestion: [
-        'Refactor complex functions into smaller ones',
-        'Use early returns to reduce nesting',
-      ],
-    };
-=======
     try {
-      const complexityResult = execSync('npx eslint . --format json --no-eslintrc --config .eslintrc.complexity.json 2>/dev/null || echo "[]"', { encoding: 'utf8' });
-      const complexity = JSON.parse(complexityResult);
-      
-      return {
-        score: 85,
-        issues: complexity.length > 0 ? complexity.map(issue => issue.message) : ['No complexity issues found'],
-        suggestions: [
-          'Refactor complex functions into smaller ones',
-          'Use early returns to reduce nesting',
-        ],
-      };
+      // Analyze TypeScript files
+      await this.analyzeTypeScriptFiles(analysis);
+      // Analyze React components
+      await this.analyzeReactComponents(analysis);
+      // Analyze performance patterns
+      await this.analyzePerformancePatterns(analysis);
+      // Analyze accessibility
+      await this.analyzeAccessibility(analysis);
+      // Calculate overall score
+      analysis.score = this.calculateQualityScore(analysis);
+      // Generate recommendations
+      this.generateRecommendations(analysis);
+      // Save report
+      fs.writeFileSync(this.reportFile, JSON.stringify(analysis, null, 2));
+
+      analysis.error = error.message;
+
+  async analyzeTypeScriptFiles(analysis) {
+    this.log('Analyzing TypeScript files...);
+      // Run TypeScript compiler check
+      const tscResult = execSync('npx tsc --noEmit, { 
+        encoding: utf8, 
+        cwd: this.workspaceRoot,
+
+      analysis.metrics.typescriptErrors = 0;
+      analysis.metrics.typescriptWarnings = 0;
     } catch (error) {
-      this.log(`Warning: Could not analyze complexity: ${error.message}`);
-      return {
-        score: 85,
-        issues: ['Complexity analysis unavailable'],
-        suggestions: ['Enable ESLint complexity rules'],
-      };
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-  }
-
-  analyzeMaintainability() {
-    this.log('🔧 Analyzing maintainability...');
+      const errorOutput = error.stdout || error.stderr || ;
+      const errorCount = (errorOutput.match(/error/g) || []).length;
+      const warningCount = (errorOutput.match(/warning/g) || []).length;
+      analysis.metrics.typescriptErrors = errorCount;
+      analysis.metrics.typescriptWarnings = warningCount;
+      if (errorCount > 0) {
+        analysis.issues.push({
+          type: typescript,
+          severity: error,
+          count: errorCount,
 
 <<<<<<< HEAD
-    return {
-      scor: 78,
-      issue: [
-        'Large component files (>500 lines)',
-        'Missing JSDoc comments',
-        'Inconsistent naming conventions',
-      ],
-      suggestion: [
-        'Split large components into smaller ones',
-        'Add comprehensive documentation',
-        'Standardize naming conventions',
-      ],
-    };
+main
 =======
-    try {
-      const result = execSync(`npx eslint . --rule "no-unused-vars: error" --format json 2>/dev/null || echo "[]"`, { encoding: 'utf8' });
-      const issues = JSON.parse(result);
-      
-      return {
-        score: 78,
-        issues: issues.length > 0 ? issues.map(issue => issue.message) : ['No maintainability issues found'],
-        suggestions: [
-          'Split large components into smaller ones',
-          'Add comprehensive documentation',
-          'Standardize naming conventions',
-        ],
-      };
-    } catch (error) {
-      this.log(`Warning: Could not analyze maintainability: ${error.message}`);
-      return {
-        score: 78,
-        issues: ['Maintainability analysis unavailable'],
-        suggestions: ['Enable ESLint maintainability rules'],
-      };
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-  }
 
-  analyzeTestCoverage() {
-    this.log('🧪 Analyzing test coverage...');
-
-<<<<<<< HEAD
-    return {
-      scor: 65,
-      coverag: {
-        statement: 65,
-        branche: 58,
-        function: 72,
-        line: 68,
-      },
-      suggestion: [
-        'Add unit tests for utility functions',
-        'Increase integration test coverage',
-        'Add E2E tests for critical user flows',
-      ],
-    };
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
-    try {
-      const testFiles = execSync('find . -name "*.test.js" -o -name "*.test.ts" -o -name "*.spec.js" -o -name "*.spec.ts"', { encoding: 'utf8' });
-      const sourceFiles = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx"', { encoding: 'utf8' });
-      
-      const testCount = testFiles.split('\n').filter(f => f.trim()).length;
-      const sourceCount = sourceFiles.split('\n').filter(f => f.trim()).length;
-      const coverage = sourceCount > 0 ? Math.min(100, (testCount / sourceCount) * 100) : 0;
-      
-      return {
-        score: Math.round(coverage),
-        coverage: {
-          statements: Math.round(coverage),
-          branches: Math.round(coverage * 0.9),
-          functions: Math.round(coverage * 1.1),
-          lines: Math.round(coverage),
-        },
-        suggestions: [
-          'Add unit tests for utility functions',
-          'Increase integration test coverage',
-          'Add E2E tests for critical user flows',
-        ],
-      };
-    } catch (error) {
-      this.log(`Warning: Could not analyze test coverage: ${error.message}`);
-      return {
-        score: 65,
-        coverage: { statements: 65, branches: 58, functions: 72, lines: 68 },
-        suggestions: ['Set up test coverage reporting'],
-      };
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-  }
 
-  analyzeCodeDuplication() {
-    this.log('🔄 Analyzing code duplication...');
+  async analyzeReactComponents(analysis) {
+    this.log('Analyzing React components...);
+    const srcDir = path.join(this.workspaceRoot,src');
+    if (!fs.existsSync(srcDir)) {
+      this.log('No src directory found, skipping React analysis');
+      return;
 
-    return {
-<<<<<<< HEAD
-      scor: 82,
-      duplicatedLine: 45,
-      suggestion: [
-=======
-      score: 82,
-      duplicatedLines: 45,
-      suggestions: [
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-        'Extract common utility functions',
-        'Create shared components for repeated UI patterns',
-        'Use higher-order components for common logic',
-      ],
-    };
-  }
+    const componentFiles = this.findFiles(srcDir, [.tsx,.jsx]);
+    analysis.metrics.totalComponents = componentFiles.length;
+    let issuesFound = 0;
+    componentFiles.forEach(file => {
+      const content = fs.readFileSync(file,utf8);
 
-  analyzeSecurityIssues() {
-    this.log('🔒 Analyzing security issues...');
+    analysis.metrics.reactIssues = issuesFound;
 
-<<<<<<< HEAD
-    return {
-      scor: 90,
-      issue: [
-        'Potential XSS vulnerability in user input handling',
-        'Missing CSRF protection',
-      ],
-      suggestion: [
-        'Implement input sanitization',
-        'Add CSRF tokens to forms',
-        'Use Content Security Policy headers',
-      ],
-    };
-=======
-    try {
-      const auditResult = execSync('npm audit --json 2>/dev/null || echo "{}"', { encoding: 'utf8' });
-      const audit = JSON.parse(auditResult);
-      const vulnerabilities = audit.vulnerabilities || {};
-      const vulnCount = Object.keys(vulnerabilities).length;
-      
-      return {
-        score: vulnCount === 0 ? 90 : Math.max(50, 90 - vulnCount * 10),
-        issues: vulnCount > 0 ? [`${vulnCount} security vulnerabilities found`] : ['No security issues found'],
-        suggestions: [
-          'Implement input sanitization',
-          'Add CSRF tokens to forms',
-          'Use Content Security Policy headers',
-        ],
-      };
-    } catch (error) {
-      this.log(`Warning: Could not analyze security: ${error.message}`);
-      return {
-        score: 90,
-        issues: ['Security analysis unavailable'],
-        suggestions: ['Run npm audit regularly'],
-      };
-    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-  }
+  async analyzePerformancePatterns(analysis) {
+    this.log('Analyzing performance patterns...);
 
-  generateRecommendations() {
-    this.log('💡 Generating recommendations...');
 
-    return [
-      'Implement automated code quality checks in CI/CD',
-      'Set up pre-commit hooks for linting and formatting',
-      'Add code review guidelines and templates',
-      'Create performance monitoring dashboard',
-      'Implement automated security scanning',
-      'Set up code coverage reporting',
-      'Add dependency vulnerability scanning',
-    ];
-  }
+    const jsFiles = this.findFiles(srcDir, [.ts,.tsx,.js,.jsx]);
+    let performanceIssues = 0;
+    jsFiles.forEach(file => {
 
-  generateReport(analysis) {
-    this.log('📊 Generating AI code quality report...');
+      // Check for performance anti-patterns
+      if (content.includes('document.querySelector') && !content.includes('useRef')) {
+        performanceIssues++;
 
-    const report = {
-      ...analysis,
-<<<<<<< HEAD
-      summar: {
-        overallScor: this.calculateOverallScore(analysis.metrics),
-        statu: this.getStatus(analysis.metrics),
-        priorit: this.getPriority(analysis.metrics),
-=======
-      summary: {
-        overallScore: this.calculateOverallScore(analysis.metrics),
-        status: this.getStatus(analysis.metrics),
-        priority: this.getPriority(analysis.metrics),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-      },
-    };
+    analysis.metrics.performanceIssues = performanceIssues;
 
-    fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${this.reportFile}`);
+  async analyzeAccessibility(analysis) {
+    this.log('Analyzing accessibility...);
 
-    return report;
-  }
+      // Check for accessibility issues
+      if (content.includes('<img') && !content.includes('alt=')) {
+        a11yIssues++;
 
-  calculateOverallScore(metrics) {
-    const weights = {
-<<<<<<< HEAD
-      complexit: 0.25,
-      maintainabilit: 0.25,
-      testCoverag: 0.2,
-      codeDuplicatio: 0.15,
-      securityIssue: 0.15,
-=======
-      complexity: 0.25,
-      maintainability: 0.25,
-      testCoverage: 0.2,
-      codeDuplication: 0.15,
-      securityIssues: 0.15,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-    };
+    analysis.metrics.accessibilityIssues = a11yIssues;
 
-    return Math.round(
-      metrics.complexity.score * weights.complexity +
-      metrics.maintainability.score * weights.maintainability +
-      metrics.testCoverage.score * weights.testCoverage +
-      metrics.codeDuplication.score * weights.codeDuplication +
-      metrics.securityIssues.score * weights.securityIssues
-    );
-  }
+  findFiles(dir, extensions) {
+    let files = [];
+    const items = fs.readdirSync(dir);
+    items.forEach(item => {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
+        files = files.concat(this.findFiles(fullPath, extensions));
+      } else if (extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+    return files;
 
-  getStatus(metrics) {
-    const overallScore = this.calculateOverallScore(metrics);
-    if (overallScore >= 90) return 'excellent';
-    if (overallScore >= 80) return 'good';
-    if (overallScore >= 70) return 'fair';
-    return 'needs-improvement';
-  }
+  calculateQualityScore(analysis) {
+    let score = 100;
+    // Deduct points for issues
+    analysis.issues.forEach(issue => {
+      switch (issue.severity) {
+        case 'error:
+          score -= 10;
+          break;
+        case 'warning:
+          score -= 5;
 
-  getPriority(metrics) {
-    const issues = [];
-    if (metrics.complexity.score < 70) issues.push('high');
-    if (metrics.securityIssues.score < 80) issues.push('critical');
-    if (metrics.testCoverage.score < 60) issues.push('high');
-    if (metrics.maintainability.score < 70) issues.push('medium');
+          score -= 2;
+    // Deduct points for TypeScript errors
+    if (analysis.metrics.typescriptErrors) {
+      score -= analysis.metrics.typescriptErrors * 5;
+    return Math.max(0, Math.min(100, score));
 
-    if (issues.includes('critical')) return 'critical';
-    if (issues.includes('high')) return 'high';
-    if (issues.includes('medium')) return 'medium';
-    return 'low';
-  }
+  generateRecommendations(analysis) {
+    if (analysis.metrics.typescriptErrors > 0) {
+      analysis.recommendations.push({
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
-  async run() {
-    try {
-      this.log('🎯 Starting AI code quality analysis...');
-
-      const analysis = this.analyzeCodeQuality();
-      const report = this.generateReport(analysis);
-
-<<<<<<< HEAD
-      this.log(
-        `🎉 AI code quality analysis completed! Overall: Score: ${report.summary.overallScore}/100`
-      );
-      this.log(
-        `📊 Statu: ${report.summary.status} | Priorit: ${report.summary.priority}`
-      );
-=======
-      this.log(`🎉 AI code quality analysis completed! Overall Score: ${report.summary.overallScore}/100`);
-      this.log(`📊 Status: ${report.summary.status} | Priority: ${report.summary.priority}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-    } catch (error) {
-      this.log(`❌ AI code quality analysis failed: ${error.message}`);
-      process.exit(1);
     }
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+const analyzer = new AICodeQualityAnalyzer();
+analyzer.analyzeCodeQuality();
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+<<<<<<< HEAD
+main
+=======
 // Run the analyzer
 const analyzer = new AICodeQualityAnalyzer();
-<<<<<<< HEAD
 analyzer.run().catch(console.error);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> aaab064a7a1e0805f280c1c5c0c14b6814bfc295
 =======
-analyzer.run().catch(console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-8943
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+

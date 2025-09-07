@@ -1,8 +1,57 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+export function middleware(_request: NextRequest) {
+
+  return NextResponse.next();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
+
   const response = NextResponse.next();
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+  // Security headers
+    "camera=(), microphone=(), geolocation=()",
+  );
+;
+  // CSP header;
+  response.headers.set (
+    "Content - Security - Policy",
+    "default - src 'self'; script - src 'self' 'unsafe - eval' 'unsafe - inline'; style - src 'self' 'unsafe - inline'; img - src 'self' data: https:; font - src 'self' data:; connect - src 'self' https:;",
+  );
+
+<<<<<<< HEAD
+  return response;
+    return response;
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   // Security headers
@@ -17,75 +66,119 @@ export function middleware(request: NextRequest) {
     "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   );
   
-=======
+  return response;
 
-  // Security Headers
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
-  response.headers.set('X-XSS-Protection', '1; mode=block');
-  
+>>>>>>> origin/automation-improvements-final
+
+=======
+return response;
+}
+
+  matcher: ["/((?!api|_next/static|_next/image|favicon && favicon.ico).*)"],
+};
+
+=======
+=======
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+export function middleware(request: NextRequest) {
+  return NextResponse.next();
+>>>>>>> main
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+=======
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+export function middleware(_request: NextRequest) {
+=======
+export function middleware(request: NextRequest) {
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
+=======
+export function middleware(request: NextRequest) {
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+  const response = NextResponse.next();
+  return response;
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b54f
+=======
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+=======
+>>>>>>> c554ecc8e69d10c1910127259eb72d6f61ca1955
+=======
+>>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
+=======
   // Content Security Policy
   const csp = [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-    "font-src 'self' https://fonts.gstatic.com",
-    "img-src 'self' data: https: blob:",
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com",
-    "frame-src 'none'",
-    "object-src 'none'",
-    "base-uri 'self'",
-    "form-action 'self'",
-    "frame-ancestors 'none'",
-    "upgrade-insecure-requests"
+    "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline'",
+    "img-src 'self' data: https:",
+    "font-src 'self'",
+    "connect-src 'self'",
+    "frame-ancestors 'none'"
   ].join('; ');
-  
+
   response.headers.set('Content-Security-Policy', csp);
-  
-  // Strict Transport Security
-  response.headers.set(
-    'Strict-Transport-Security',
-    'max-age=31536000; includeSubDomains; preload'
-  );
-  
-  // Permissions Policy
-  response.headers.set(
-    'Permissions-Policy',
-    'camera=(), microphone=(), geolocation=(), interest-cohort=()'
-  );
-  
-  // Cache Control for static assets
-  if (request.nextUrl.pathname.startsWith('/_next/static/')) {
-    response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
-  }
-  
-  // Cache Control for images
-  if (request.nextUrl.pathname.match(/\.(jpg|jpeg|png|gif|ico|svg|webp)$/)) {
-    response.headers.set('Cache-Control', 'public, max-age=86400');
-  }
-  
-  // Rate limiting headers (basic implementation)
-  const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown';
-  response.headers.set('X-RateLimit-Limit', '100');
-  response.headers.set('X-RateLimit-Remaining', '99');
-  response.headers.set('X-RateLimit-Reset', new Date(Date.now() + 3600000).toISOString());
-  
-  // CORS headers
-  response.headers.set('Access-Control-Allow-Origin', request.nextUrl.origin);
-  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  
-  // Remove server information
-  response.headers.delete('X-Powered-By');
-  response.headers.delete('Server');
-  
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
   return response;
+
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 }
 
 export const config = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+=======
+}
+
+export const config = {
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
   matcher: [
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
+<<<<<<< HEAD
 };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+export const config = {
+  matcher: ["/((?!api | _next / static | _next / image | favicon.ico).*)"],
+}
+;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+  matcher: [
+    '/((?!api|_next/static|_next/image|favicon.ico).*)'
+  ],
+};
+<<<<<<< HEAD
+>>>>>>> main
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
+=======
+
+}
+
+return response;
+}
+export const config = {};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
