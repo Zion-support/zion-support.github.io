@@ -1,74 +1,79 @@
 {
-  "timestamp": "2025-09-07T08:22:53.900Z",
-  "totalDuration": 124459,
-  "successfulTasks": 3,
-  "totalTasks": 8,
+  "timestamp": "2025-09-07T08:49:03.885Z",
+  "totalDuration": 100814,
+  "successfulTasks": 7,
+  "totalTasks": 10,
   "results": {
     "dependencyFix": {
       "success": true,
-      "duration": 10975,
+      "duration": 3549,
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
-      "duration": 65729,
+      "duration": 60991,
       "errors": [
-        "Command failed: npx tsc --noEmit --skipLibCheck\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n<--- Last few GCs --->\n\n[3002:0x17f18000]    57604 ms: Mark-Compact 4050.5 (4132.3) -> 4035.4 (4133.0) MB, pooled: 0 MB, 932.69 / 0.00 ms  (average mu = 0.057, current mu = 0.012) allocation failure; scavenge might not succeed\n[3002:0x17f18000]    58554 ms: Mark-Compact 4051.1 (4133.0) -> 4036.0 (4133.5) MB, pooled: 0 MB, 939.51 / 0.00 ms  (average mu = 0.034, current mu = 0.011) allocation failure; scavenge might not succeed\n\n\n<--- JS stacktrace --->\n\nFATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory\n----- Native stack trace -----\n\n 1: 0xe13fde node::OOMErrorHandler(char const*, v8::OOMDetails const&) [node]\n 2: 0x11d5070 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [node]\n 3: 0x11d5347 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [node]\n 4: 0x1402c05  [node]\n 5: 0x1402c33  [node]\n 6: 0x141bd0a  [node]\n 7: 0x141eed8  [node]\n 8: 0x1c84ba1  [node]\nAborted (core dumped)\n",
-        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3244) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+        "Command failed: npx tsc --noEmit --skipLibCheck\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\n<--- Last few GCs --->\n\n[11896:0x2e3b6000]    51021 ms: Scavenge (interleaved) 4051.4 (4124.7) -> 4046.2 (4141.9) MB, pooled: 0 MB, 8.18 / 0.00 ms  (average mu = 0.653, current mu = 0.427) allocation failure; \n[11896:0x2e3b6000]    52908 ms: Mark-Compact 4060.8 (4142.2) -> 4048.2 (4145.4) MB, pooled: 0 MB, 1871.96 / 0.01 ms  (average mu = 0.353, current mu = 0.066) allocation failure; scavenge might not succeed\n\n\n<--- JS stacktrace --->\n\nFATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory\n----- Native stack trace -----\n\n 1: 0xe13fde node::OOMErrorHandler(char const*, v8::OOMDetails const&) [node]\n 2: 0x11d5070 v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [node]\n 3: 0x11d5347 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::OOMDetails const&) [node]\n 4: 0x1402c05  [node]\n 5: 0x141c499 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [node]\n 6: 0x13f0b48 v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]\n 7: 0x13f1a75 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath(int, v8::internal::AllocationType, v8::internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]\n 8: 0x13ca74e v8::internal::Factory::NewFillerObject(int, v8::internal::AllocationAlignment, v8::internal::AllocationType, v8::internal::AllocationOrigin) [node]\n 9: 0x182bd6c v8::internal::Runtime_AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [node]\n10: 0x7f2953eac476 \nAborted (core dumped)\n",
+        "Command failed: npx eslint . --max-warnings 1000\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:12182) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
       ],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
-      "duration": 941,
+      "duration": 1183,
       "errors": [],
       "warnings": []
     },
     "buildOptimization": {
-      "success": false,
-      "duration": 344,
-      "errors": [
-        "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n✘ [ERROR] Expected string in JSON but found \"<<\"\n\n    tsconfig.json:3:0:\n      3 │ <<<<<<< HEAD\n        ╵ ~~\n\n✘ [ERROR] Unexpected \"<<\"\n\n    vite.config.js:5:0:\n      5 │ <<<<<<< HEAD\n        ╵ ~~\n\nfailed to load config from /workspace/vite.config.js\nerror during build:\nError: Build failed with 2 errors:\ntsconfig.json:3:0: ERROR: Expected string in JSON but found \"<<\"\nvite.config.js:5:0: ERROR: Unexpected \"<<\"\n    at failureErrorWithLog (/workspace/node_modules/esbuild/lib/main.js:1467:15)\n    at /workspace/node_modules/esbuild/lib/main.js:926:25\n    at runOnEndCallbacks (/workspace/node_modules/esbuild/lib/main.js:1307:45)\n    at buildResponseToResult (/workspace/node_modules/esbuild/lib/main.js:924:7)\n    at /workspace/node_modules/esbuild/lib/main.js:951:16\n    at responseCallbacks.<computed> (/workspace/node_modules/esbuild/lib/main.js:603:9)\n    at handleIncomingPacket (/workspace/node_modules/esbuild/lib/main.js:658:12)\n    at Socket.readFromStdout (/workspace/node_modules/esbuild/lib/main.js:581:7)\n    at Socket.emit (node:events:518:28)\n    at addChunk (node:internal/streams/readable:561:12)\n"
-      ],
+      "success": true,
+      "duration": 8632,
+      "errors": [],
       "warnings": []
     },
     "seoOptimization": {
-      "success": false,
-      "duration": 38,
-      "errors": [
-        "Command failed: node scripts/generate-sitemap.cjs\n/workspace/scripts/generate-sitemap.cjs:1\n<<<<<<< HEAD\n^^\n\nSyntaxError: Unexpected token '<<'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n",
-        "Command failed: node scripts/generate-search-index.cjs\n/workspace/scripts/generate-search-index.cjs:12\n  constructor() {\n                ^\n\nSyntaxError: Unexpected token '{'\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
-      ],
+      "success": true,
+      "duration": 42,
+      "errors": [],
       "warnings": []
     },
     "accessibilityImprovements": {
       "success": false,
-      "duration": 575,
+      "duration": 663,
       "errors": [
-        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:3485) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+        "Command failed: npx eslint . --rule \"jsx-a11y/alt-text: warn\" --rule \"jsx-a11y/aria-role: warn\"\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n(node:12412) ESLintIgnoreWarning: The \".eslintignore\" file is no longer supported. Switch to using the \"ignores\" property in \"eslint.config.js\": https://eslint.org/docs/latest/use/configure/migration-guide#ignoring-files\n(Use `node --trace-warnings ...` to show where the warning was created)\n\nOops! Something went wrong! :(\n\nESLint: 9.35.0\n\nSyntaxError: Unexpected token '<<'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
       ],
       "warnings": []
     },
     "performanceOptimization": {
-      "success": false,
-      "duration": 269,
-      "errors": [
-        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"build:analyze\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-07T08_22_08_082Z-debug-0.log\n"
-      ],
+      "success": true,
+      "duration": 16966,
+      "errors": [],
       "warnings": []
     },
     "deployment": {
       "success": true,
-      "duration": 45582,
+      "duration": 3476,
       "errors": [],
+      "warnings": []
+    },
+    "testing": {
+      "success": true,
+      "duration": 1789,
+      "errors": [],
+      "warnings": []
+    },
+    "documentation": {
+      "success": false,
+      "duration": 3518,
+      "errors": [
+        "Command failed: npx storybook build --output-dir docs/storybook\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\u001b[38;2;241;97;97mSB_CORE-SERVER_0006 (MainFileMissingError): No configuration files have been found in your configDir: ./.storybook.\nStorybook needs a \"main.js\" file, please add it.\n\nYou can pass a --config-dir flag to tell Storybook, where your main.js file is located at.\n\nMore info: https://storybook.js.org/docs/configure?ref=error\n\u001b[39m\n    at validateConfigurationFiles (/home/ubuntu/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/common/index.cjs:23416:11)\n    at async loadMainConfig (/home/ubuntu/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/common/index.cjs:26294:3)\n    at async buildStaticStandalone (/home/ubuntu/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/core-server/index.cjs:39685:11)\n    at async withTelemetry (/home/ubuntu/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/core-server/index.cjs:42279:12)\n    at async build (/home/ubuntu/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/cli/bin/index.cjs:5849:3)\n    at async r.<anonymous> (/home/ubuntu/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/cli/bin/index.cjs:6036:7)\n/home/ubuntu/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/bin/index.cjs:23\n  throw error;\n  ^\n\nSB_CORE-SERVER_0006 (MainFileMissingError): No configuration files have been found in your configDir: /workspace/.storybook.\nStorybook needs a \"main.js\" file, please add it.\n\nYou can pass a --config-dir flag to tell Storybook, where your main.js file is located at.\n\nMore info: https://storybook.js.org/docs/configure?ref=error\n\n    at validateConfigurationFiles (/home/ubuntu/.npm/_npx/6fe9a9991b157df1/node_modules/storybook/dist/common/index.cjs:23416:11) {\n  data: { location: '/workspace/.storybook' },\n  fromStorybook: true,\n  category: 'CORE-SERVER',\n  documentation: 'https://storybook.js.org/docs/configure?ref=error',\n  code: 6\n}\n\nNode.js v22.16.0\n"
+      ],
       "warnings": []
     }
   },
   "recommendations": [
     "Review and fix code quality issues",
-    "Optimize application performance",
-    "Improve SEO optimization",
     "Enhance accessibility features"
   ]
 }
