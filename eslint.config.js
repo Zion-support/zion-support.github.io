@@ -169,8 +169,7 @@ export default [
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin
+      'react-hooks': reactHooks
       // '@next/next': nextPlugin, // Not needed for Vite project
     },
     rules: {
@@ -212,9 +211,6 @@ export default [
       }
     },
     rules: {
-      'no-console': 'off'
-    }
-  }
       'no-console': 'off'
     }
   }
