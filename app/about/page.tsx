@@ -1,14 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-=======
 
 export const metadata = {
   title: 'About | Zion Tech Group',
   description: 'Learn about Zion Tech Group\'s mission to deliver enterprise-grade AI, micro SaaS, and IT solutions that drive real business results.'
 };
->>>>>>> 1b0ff75f26ae1bc706319f2d3337325807103eaa
 
 export default function AboutPage() {
   return (
@@ -60,15 +57,15 @@ export default function AboutPage() {
                 <div className="flex items-start">
                   <span className="w-3 h-3 bg-purple-500 rounded-full mr-3 mt-2"></span>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Integrity</h4>
-                    <p className="text-gray-600">Building trust through transparency and honest communication</p>
+                    <h4 className="font-semibold text-gray-900">Partnership</h4>
+                    <p className="text-gray-600">Building long-term relationships based on trust and mutual success</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="w-3 h-3 bg-orange-500 rounded-full mr-3 mt-2"></span>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Collaboration</h4>
-                    <p className="text-gray-600">Working closely with clients as partners in their success</p>
+                    <h4 className="font-semibold text-gray-900">Excellence</h4>
+                    <p className="text-gray-600">Striving for the highest standards in everything we do</p>
                   </div>
                 </div>
               </div>
@@ -77,82 +74,72 @@ export default function AboutPage() {
 
           {/* Team Section */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Expertise</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Team</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">🤖</span>
+                <div className="w-32 h-32 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl">👨‍💼</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI & Machine Learning</h3>
-                <p className="text-gray-600">Advanced AI solutions and custom ML models</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Leadership Team</h3>
+                <p className="text-gray-600">Experienced executives with decades of technology and business expertise</p>
               </div>
               <div className="text-center">
-                <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">🚀</span>
+                <div className="w-32 h-32 bg-gradient-to-br from-green-100 to-green-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl">👨‍💻</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Micro SaaS</h3>
-                <p className="text-gray-600">Scalable software-as-a-service solutions</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Development Team</h3>
+                <p className="text-gray-600">Skilled developers and engineers specializing in modern technologies</p>
               </div>
               <div className="text-center">
-                <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">☁️</span>
+                <div className="w-32 h-32 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl">👩‍🔬</span>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud Infrastructure</h3>
-                <p className="text-gray-600">Enterprise cloud solutions and DevOps</p>
-              </div>
-              <div className="text-center">
-                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-3xl">🔒</span>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Cybersecurity</h3>
-                <p className="text-gray-600">Comprehensive security solutions</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Specialists</h3>
+                <p className="text-gray-600">Experts in machine learning, data science, and artificial intelligence</p>
               </div>
             </div>
           </div>
 
           {/* Stats Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-12 text-white mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">Our Impact</h2>
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">By the Numbers</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">1000+</div>
-                <div className="text-blue-100">Projects Delivered</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">1000+</div>
+                <div className="text-gray-600">Projects Delivered</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">50+</div>
-                <div className="text-blue-100">Enterprise Clients</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">50+</div>
+                <div className="text-gray-600">Team Members</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">99.9%</div>
-                <div className="text-blue-100">Uptime Guarantee</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">5+</div>
+                <div className="text-gray-600">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold mb-2">24/7</div>
-                <div className="text-blue-100">Support Available</div>
+                <div className="text-4xl font-bold text-orange-600 mb-2">99%</div>
+                <div className="text-gray-600">Client Satisfaction</div>
               </div>
             </div>
           </div>
 
           {/* CTA Section */}
-          <div className="text-center bg-white rounded-xl shadow-lg p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
-              Ready to Work With Us?
-            </h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's discuss your project and see how we can help transform your business
-              with innovative technology solutions.
+          <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-12 text-white">
+            <h2 className="text-3xl font-bold mb-6">Ready to Work With Us?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Let's discuss how we can help transform your business with our innovative solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
               >
                 Get In Touch
                 <ArrowRightIcon className="h-5 w-5 ml-2" />
               </Link>
               <Link
                 href="/services"
-                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Our Services
               </Link>

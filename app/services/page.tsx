@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -11,39 +10,30 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Services | Zion Tech Group',
     description: 'Comprehensive AI solutions, micro SaaS development, and enterprise IT services.',
-=======
-import ComprehensiveServicesShowcase2025 from '../../components/ComprehensiveServicesShowcase2025';
-
-export const metadata = {
-  title: 'Comprehensive Services 2025 | Zion Tech Group - AI, Micro SaaS & IT Solutions',
-  description: 'Explore our extensive portfolio of 20+ innovative micro SAAS solutions, AI services, and IT solutions. From AI customer insights to blockchain solutions, we deliver enterprise-grade services that drive business transformation.',
-  keywords: 'micro saas, ai services, it solutions, business automation, cloud infrastructure, cybersecurity, data analytics, project management, e-commerce, healthcare, edtech, blockchain, fintech, enterprise solutions',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Comprehensive Services 2025 | Zion Tech Group',
-    description: 'Explore our extensive portfolio of innovative micro SAAS solutions, AI services, and IT solutions designed to transform your business.',
->>>>>>> 1b0ff75f26ae1bc706319f2d3337325807103eaa
     type: 'website',
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
   twitter: {
     card: 'summary_large_image',
-<<<<<<< HEAD
     title: 'Services | Zion Tech Group',
     description: 'Comprehensive AI solutions, micro SaaS development, and enterprise IT services.',
   },
 };
 
 // ServiceCard component
-function ServiceCard({ title, description, bullets, icon }: {
+function ServiceCard({ title, description, bullets, icon, href }: {
   title: string;
   description: string;
   bullets: string[];
   icon: string;
+  href: string;
 }) {
   return (
-    <div className="group block p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-2 hover:scale-105">
+    <Link
+      href={href}
+      className="group block p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-2 hover:scale-105"
+    >
       <div className="flex items-center mb-4">
         <span className="text-3xl mr-4 group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
           {icon}
@@ -63,148 +53,170 @@ function ServiceCard({ title, description, bullets, icon }: {
           </li>
         ))}
       </ul>
-    </div>
+      <div className="mt-4 text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors duration-300">
+        Learn more →
+      </div>
+    </Link>
   );
 }
 
 export default function ServicesPage() {
   const services = [
     {
-      title: "Micro SaaS Solutions",
-      description: "Scalable, secure micro SaaS products that solve specific business challenges with modern architecture.",
+      title: 'AI Services',
+      description: 'Cutting-edge artificial intelligence solutions to transform your business operations.',
+      icon: '🤖',
+      href: '/services/ai-services',
       bullets: [
-        "Custom web applications",
-        "API development",
-        "Database design",
-        "User authentication",
-        "Payment integration"
-      ],
-      icon: "🚀"
+        'AI Chatbot Builder',
+        'AI Content Generator',
+        'AI Customer Support',
+        'AI Data Analytics',
+        'AI Marketing Automation'
+      ]
     },
     {
-      title: "AI & Machine Learning",
-      description: "Intelligent automation, predictive analytics, and custom AI models tailored to your business needs.",
+      title: 'Micro SaaS Solutions',
+      description: 'Scalable micro SaaS applications built for modern businesses.',
+      icon: '🚀',
+      href: '/services/micro-saas',
       bullets: [
-        "Custom AI models",
-        "Predictive analytics",
-        "Natural language processing",
-        "Computer vision",
-        "Process automation"
-      ],
-      icon: "🤖"
+        'Custom Web Applications',
+        'API Development',
+        'Database Design',
+        'User Authentication',
+        'Payment Integration'
+      ]
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions, DevOps, and infrastructure management for enterprise applications.",
+      title: 'IT Services',
+      description: 'Comprehensive IT services and infrastructure solutions.',
+      icon: '💻',
+      href: '/services/it-services',
       bullets: [
-        "AWS/Azure/GCP migration",
-        "Container orchestration",
-        "CI/CD pipelines",
-        "Monitoring & logging",
-        "Cost optimization"
-      ],
-      icon: "☁️"
+        'System Administration',
+        'Network Security',
+        'Cloud Migration',
+        'DevOps Automation',
+        'Technical Support'
+      ]
     },
     {
-      title: "Blockchain Solutions",
-      description: "Smart contracts, DeFi platforms, and blockchain integration for secure, transparent operations.",
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions to protect your digital assets.',
+      icon: '🔒',
+      href: '/services/cybersecurity',
       bullets: [
-        "Smart contract development",
-        "DeFi protocols",
-        "NFT marketplaces",
-        "Token economics",
-        "Security auditing"
-      ],
-      icon: "⛓️"
+        'Security Audits',
+        'Penetration Testing',
+        'Compliance Consulting',
+        'Incident Response',
+        'Security Training'
+      ]
     },
     {
-      title: "Data Analytics",
-      description: "Transform raw data into actionable insights with advanced analytics and visualization tools.",
+      title: 'Cloud Solutions',
+      description: 'Scalable cloud infrastructure and management services.',
+      icon: '☁️',
+      href: '/services/cloud-solutions',
       bullets: [
-        "Data warehousing",
-        "Business intelligence",
-        "Real-time dashboards",
-        "Predictive modeling",
-        "Data visualization"
-      ],
-      icon: "📊"
+        'AWS/Azure/GCP Migration',
+        'Container Orchestration',
+        'CI/CD Pipelines',
+        'Monitoring & Logging',
+        'Cost Optimization'
+      ]
     },
     {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets and ensure compliance.",
+      title: 'Blockchain Solutions',
+      description: 'Smart contracts and blockchain integration services.',
+      icon: '⛓️',
+      href: '/services/blockchain-solutions',
       bullets: [
-        "Security audits",
-        "Penetration testing",
-        "Compliance consulting",
-        "Incident response",
-        "Security training"
-      ],
-      icon: "🔒"
+        'Smart Contract Development',
+        'DeFi Protocols',
+        'NFT Marketplaces',
+        'Token Economics',
+        'Security Auditing'
+      ]
+    },
+    {
+      title: 'Data Analytics',
+      description: 'Transform raw data into actionable business insights.',
+      icon: '📊',
+      href: '/services/data-analytics',
+      bullets: [
+        'Data Warehousing',
+        'Business Intelligence',
+        'Real-time Dashboards',
+        'Predictive Modeling',
+        'Data Visualization'
+      ]
+    },
+    {
+      title: 'DevOps Automation',
+      description: 'Streamline your development and deployment processes.',
+      icon: '⚙️',
+      href: '/services/devops-automation',
+      bullets: [
+        'CI/CD Pipeline Setup',
+        'Infrastructure as Code',
+        'Automated Testing',
+        'Monitoring Solutions',
+        'Performance Optimization'
+      ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Our Services
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive AI solutions, micro SaaS development, and enterprise IT services 
-            that drive business transformation and growth.
+            Comprehensive AI solutions, micro SaaS development, and enterprise IT services
+            designed to transform your business and drive growth.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
-            <ServiceCard key={index} {...service} />
+            <ServiceCard
+              key={index}
+              title={service.title}
+              description={service.description}
+              bullets={service.bullets}
+              icon={service.icon}
+              href={service.href}
+            />
           ))}
         </div>
 
-        <div className="text-center bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-12">
+        <div className="text-center bg-white rounded-xl shadow-lg p-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
             Ready to Get Started?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project and create a custom solution that drives real business value.
+            Let's discuss your project and discover how our services can help transform your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
             >
               Contact Us
             </Link>
             <Link
-              href="/about"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200"
+              href="/solutions"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
             >
-              Learn More About Us
+              View Solutions
             </Link>
           </div>
         </div>
       </div>
     </div>
   );
-=======
-    title: 'Comprehensive Services 2025 | Zion Tech Group',
-    description: 'Explore our extensive portfolio of innovative micro SAAS solutions, AI services, and IT solutions designed to transform your business.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
-
-export default function ServicePage() {
-  return <ComprehensiveServicesShowcase2025 />;
->>>>>>> 1b0ff75f26ae1bc706319f2d3337325807103eaa
 }
