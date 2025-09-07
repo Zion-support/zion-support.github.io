@@ -3,20 +3,10 @@ import MainLayout from '../../components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import { 
   Code, 
-  ArrowRight, 
   CheckCircle, 
-  ExternalLink,
   Shield,
   Zap,
-  Globe,
-  Database,
-  Settings,
-  BookOpen,
-  Terminal,
   Lock,
-  Clock,
-  Users,
-  BarChart3,
   Copy,
   Play
 } from 'lucide-react';
