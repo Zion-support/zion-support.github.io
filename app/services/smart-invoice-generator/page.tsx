@@ -4,7 +4,10 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export const metadata = {
   title: 'Smart Invoice Generator - Zion Tech Group',
   description: 'Professional smart invoice generator solutions for your business needs.',
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 };
 
 export default function SmartInvoiceGeneratorPage() {

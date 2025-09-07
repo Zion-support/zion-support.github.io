@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const fs = require('fs')
 const path = require('path')
@@ -63,135 +64,112 @@ const { execSync } = require('child_process')
 #!/usr/bin/env node
 >>>>>>> 566d12e4e87c285827c8c1f36f24d2818c9f5bb8
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-console.log('⚡ Starting performance monitoring...');
+console.log('📊 Performance Monitor Starting...');
 
-const performanceMetrics = {
-  timestamp: new Date().toISOString(),
-  bundleSize: {},
-  fileCounts: {},
-  recommendations: []
-};
-
-// Check bundle sizes
-function getDirectorySize(dirPath) {
-  if (!fs.existsSync(dirPath)) return 0;
-  
-  let totalSize = 0;
-  const files = fs.readdirSync(dirPath, { recursive: true });
-  
-  files.forEach(file => {
-    if (typeof file === 'string') {
-      const filePath = path.join(dirPath, file);
-      try {
-        const stats = fs.statSync(filePath);
-        if (stats.isFile()) {
-          totalSize += stats.size;
+// Check for performance issues
+const performanceChecks = [
+  {
+    name: 'Large bundle size check',
+    check: () => {
+      const nextDir = '.next/static';
+      if (!fs.existsSync(nextDir)) return true;
+      
+      const files = fs.readdirSync(nextDir, { recursive: true });
+      let totalSize = 0;
+      
+      files.forEach(file => {
+        const filePath = path.join(nextDir, file);
+        if (fs.statSync(filePath).isFile()) {
+          totalSize += fs.statSync(filePath).size;
         }
-      } catch (error) {
-        // Skip files that can't be accessed
-      }
+      });
+      
+      const sizeInMB = totalSize / (1024 * 1024);
+      console.log(`📦 Total bundle size: ${sizeInMB.toFixed(2)} MB`);
+      
+      return sizeInMB < 10; // Alert if over 10MB
     }
-  });
-  
-  return totalSize;
-}
-
-// Check .next directory
-const nextDirSize = getDirectorySize('.next');
-performanceMetrics.bundleSize['.next'] = {
-  size: nextDirSize,
-  sizeMB: (nextDirSize / 1024 / 1024).toFixed(2)
-};
-
-// Check node_modules
-const nodeModulesSize = getDirectorySize('node_modules');
-performanceMetrics.bundleSize['node_modules'] = {
-  size: nodeModulesSize,
-  sizeMB: (nodeModulesSize / 1024 / 1024).toFixed(2)
-};
-
-// Count files by type
-const fileCounts = {
-  '.tsx': 0,
-  '.ts': 0,
-  '.jsx': 0,
-  '.js': 0,
-  '.css': 0,
-  '.json': 0
-};
-
-function countFiles(dirPath) {
-  if (!fs.existsSync(dirPath)) return;
-  
-  const files = fs.readdirSync(dirPath, { recursive: true });
-  files.forEach(file => {
-    if (typeof file === 'string') {
-      const ext = path.extname(file);
-      if (fileCounts.hasOwnProperty(ext)) {
-        fileCounts[ext]++;
-      }
-    }
-  });
-}
-
-['components', 'pages', 'lib', 'styles'].forEach(dir => countFiles(dir));
-performanceMetrics.fileCounts = fileCounts;
-
-// Performance recommendations
-if (nextDirSize > 50 * 1024 * 1024) { // 50MB
-  performanceMetrics.recommendations.push('Consider optimizing bundle size - .next directory is large');
-}
-
-if (fileCounts['.tsx'] + fileCounts['.ts'] > 50) {
-  performanceMetrics.recommendations.push('Consider code splitting - many TypeScript files detected');
-}
-
-if (fileCounts['.css'] > 10) {
-  performanceMetrics.recommendations.push('Consider CSS optimization - multiple CSS files detected');
-}
-
-// Check for large images
-const publicDir = 'public';
-if (fs.existsSync(publicDir)) {
-  const publicFiles = fs.readdirSync(publicDir, { recursive: true });
-  let largeImages = 0;
-  
-  publicFiles.forEach(file => {
-    if (typeof file === 'string' && /\.(jpg|jpeg|png|gif|webp)$/i.test(file)) {
-      try {
+  },
+  {
+    name: 'Image optimization check',
+    check: () => {
+      const publicDir = 'public';
+      if (!fs.existsSync(publicDir)) return true;
+      
+      const files = fs.readdirSync(publicDir, { recursive: true });
+      const imageFiles = files.filter(file => 
+        /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
+      );
+      
+      console.log(`🖼️  Found ${imageFiles.length} image files`);
+      
+      // Check for unoptimized images
+      const largeImages = imageFiles.filter(file => {
         const filePath = path.join(publicDir, file);
         const stats = fs.statSync(filePath);
-        if (stats.size > 500 * 1024) { // 500KB
-          largeImages++;
-        }
-      } catch (error) {
-        // Skip files that can't be accessed
+        return stats.size > 500000; // 500KB
+      });
+      
+      if (largeImages.length > 0) {
+        console.log(`⚠️  Large images found: ${largeImages.join(', ')}`);
+        return false;
       }
+      
+      return true;
     }
-  });
-  
-  if (largeImages > 0) {
-    performanceMetrics.recommendations.push(`Optimize ${largeImages} large images in public directory`);
+  },
+  {
+    name: 'Dependencies check',
+    check: () => {
+      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+      const deps = Object.keys(packageJson.dependencies || {});
+      const devDeps = Object.keys(packageJson.devDependencies || {});
+      
+      console.log(`📦 Dependencies: ${deps.length}, Dev Dependencies: ${devDeps.length}`);
+      
+      // Check for potentially problematic packages
+      const problematicPackages = deps.filter(dep => 
+        dep.includes('lodash') || dep.includes('moment') || dep.includes('jquery')
+      );
+      
+      if (problematicPackages.length > 0) {
+        console.log(`⚠️  Consider replacing heavy packages: ${problematicPackages.join(', ')}`);
+      }
+      
+      return true;
+    }
   }
-}
+];
 
-// Display results
-console.log('\n📊 Performance Metrics:');
-console.log(`   - .next bundle size: ${performanceMetrics.bundleSize['.next']?.sizeMB || '0'} MB`);
-console.log(`   - node_modules size: ${performanceMetrics.bundleSize['node_modules']?.sizeMB || '0'} MB`);
-console.log(`   - TypeScript files: ${fileCounts['.tsx'] + fileCounts['.ts']}`);
-console.log(`   - JavaScript files: ${fileCounts['.jsx'] + fileCounts['.js']}`);
-console.log(`   - CSS files: ${fileCounts['.css']}`);
+let passed = 0;
+let failed = 0;
 
-if (performanceMetrics.recommendations.length > 0) {
-  console.log('\n💡 Recommendations:');
-  performanceMetrics.recommendations.forEach(rec => console.log(`   - ${rec}`));
+performanceChecks.forEach(check => {
+  try {
+    if (check.check()) {
+      console.log(`✅ ${check.name}`);
+      passed++;
+    } else {
+      console.log(`❌ ${check.name}`);
+      failed++;
+    }
+  } catch (error) {
+    console.log(`❌ ${check.name} - Error: ${error.message}`);
+    failed++;
+  }
+});
+
+console.log(`\n📊 Performance Check Results: ${passed} passed, ${failed} failed`);
+
+if (failed === 0) {
+  console.log('🎉 All performance checks passed!');
 } else {
+<<<<<<< HEAD
   console.log('\n✅ No performance issues detected');
 }
 
@@ -445,3 +423,7 @@ module.exports = PerformanceMonitor;
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+  console.log('⚠️  Some performance issues detected. Consider optimization.');
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd

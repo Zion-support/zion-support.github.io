@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -545,6 +546,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     reviews: 52;
   }
 ];
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
       'Quantum communication protocols',
 =======
 'Quantum communication protocols',
@@ -556,13 +559,13 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       'Bandwidth optimization',
       'Network redundancy systems',
       'Real - time monitoring',
-      'Emergency communication channels'
+      'Emergency communication channels',
     ],
     popular: true,
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     real_implementation: true,
     implementation_details:;
@@ -583,7 +586,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
       'Power grid management',
       'Energy demand forecasting',
       'Storage optimization',
-      'Backup power systems'
+      'Backup power systems',
     ],
     popular: true,
     icon: '⚡',
@@ -596,7 +599,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
     launchDate: '2029-03-01',
     customers: 18,
     rating: 4.8,
-    reviews: 52
+    reviews: 52,
   },;
   id: string, name: string,
   tagline: string, price: string,
@@ -611,7 +614,8 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [;
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {},
+  contactInfo: {
+    },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
@@ -787,7 +791,7 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
       'Power grid management',
       'Energy demand forecasting',
       'Storage optimization',
-      'Backup power systems'
+      'Backup power systems',
     ],
     popular: true,
     icon: '⚡',
@@ -909,9 +913,13 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   {
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 import { ServiceVariant } from '../types/service-variants';
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+import { ServiceVariant } from '../types/service-variants',;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 export interface SpaceColonization2029Service {;
   id: string,;
   name: string,;

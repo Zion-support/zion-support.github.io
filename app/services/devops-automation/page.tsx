@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 export const metadata = {
   title: 'Devops Automation - Zion Tech Group',
   description: 'Professional devops automation solutions for your business needs.',

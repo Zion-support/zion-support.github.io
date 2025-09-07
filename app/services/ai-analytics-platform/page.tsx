@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export const metadata = {
   title: 'Ai Analytics Platform | Zion Tech Group',
@@ -45,3 +46,5 @@ export default function ServicePage() {
   );
 }
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -353,13 +354,15 @@ import { ServiceVariant } from '../types/service-variants',export interface Inno
     reviews: 167;
   }
 ];
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
       mobile: '+1 302 464 0950',
 =======
 mobile: '+1 302 464 0950',
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup && ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     real_implementation: true,
     implementation_details:;

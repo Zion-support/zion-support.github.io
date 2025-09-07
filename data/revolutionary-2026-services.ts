@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -384,6 +385,8 @@ import { ServiceVariant } from '../types/service-variants',export interface Revo
     reviews: 25;
   }
 ];
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   contactInfo: {
       
 =======
@@ -408,7 +411,7 @@ contactInfo: {
     launchDate: '2026-03-01',
     customers: 45,
     rating: 4.8,
-    reviews: 25
+    reviews: 25,
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -503,6 +506,7 @@ export const revolutionary2026Services: Revolutionary2026Service[] = [
     rating: 4.8,
 <<<<<<< HEAD
     reviews: 25;
+import { ServiceVariant } from '../types/service-variants',;
 export interface Revolutionary2026Service {;
   id: string,;
   name: string,;

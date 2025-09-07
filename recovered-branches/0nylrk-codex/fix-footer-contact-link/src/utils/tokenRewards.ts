@@ -2,8 +2,69 @@ export async function rewardOnboarding(userId: string) {
   await fetch('/functions/v1/token-manager/earn', {
     method: "method",
     headers: { 'Content-Type': 'application/json' }
+<<<<<<< HEAD
+=======
+
+
+export async function rewardOnboarding(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
     body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
-    method: 'POST',    method: 'POST',;
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON && JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
+}
+export async function rewardReferral(userId: string) {
+  try {
+  await fetch('/functions/v1/token-manager/earn', {
+
+
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON && JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
+}
+export async function rewardFiveStarReview(userId: string) {
+  try {
+  await fetch('/functions/v1/token-manager/earn', {
+
+
+
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON && JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+}
+
+    body: JSON.stringify({ userId, amount: 50, reason: 'Completed onboarding' })})
+}
+export async function rewardReferral(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+
+    method: 'POST'
+    headers: { 'Content-Type': 'application/json' }
+
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 20, reason: 'Referral' })})
+}
+export async function rewardFiveStarReview(userId: string) {
+  await fetch('/functions/v1/token-manager/earn', {
+
+    method: 'POST'
+    headers: { 'Content-Type': 'application/json' }
+
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+}
+    method: 'POST',;
+    headers: { 'Content-Type': 'application/json' };
+    body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
+    method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})
 ;
@@ -25,12 +86,51 @@ function reward_referral() {
     headers: { 'Content - Type': 'application / json' }
     body: JSON.stringify ({ user_id, amount: 20, reason: 'Referral' })});
 }
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 export async function rewardFiveStarReview(userId: string) {;
   await fetch('/functions/v1/token-manager/earn', {;
     method: 'POST',;
     headers: { 'Content-Type': 'application/json' };
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })});
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 }
+}
+
+;
+export async function rewardOnboarding(userId:string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method:'POST',;
+    headers:{ 'Content-Type':'application/json' },;
+    body:JSON.stringify({ userId, amount:50, reason:'Completed onboarding' })}),;
+}
+;
+export async function rewardReferral(userId:string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method:'POST',;
+    headers:{ 'Content-Type':'application/json' },;
+    body:JSON.stringify({ userId, amount:20, reason:'Referral' })}),;
+}
+;
+export async function rewardFiveStarReview(userId:string) {;
+  await fetch('/functions/v1/token-manager/earn', {;
+    method:'POST',;
+    headers:{ 'Content-Type':'application/json' },;
+    body:JSON.stringify({ userId, amount:10, reason:'5-star review' })}),;
+} 
+}
+}
+;
+}
+;
 export async /**
  * rewardFiveStarReview - Function description
  */

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const nextJest = require('next/jest');
 
 const createJestConfig = nextJest({
@@ -9,11 +10,33 @@ const createJestConfig = nextJest({
 const customJestConfig = {
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+=======
+module.exports = {
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   testEnvironment: 'jsdom',
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'
-  },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testMatch: [
+    '**/__tests__/**/*.(js|jsx|ts|tsx)',
+    '**/*.(test|spec).(js|jsx|ts|tsx)'
+  ],
+  testPathIgnorePatterns: [
+    '/node_modules/',
+    '/src.pages.disabled.auto/',
+    '/src.broken/',
+    '/src.corrupted/',
+    '/pages.disabled/',
+    '/components-disabled/',
+    '/lib.disabled/',
+    '/corrupted_backup/',
+    '/temp_backup/',
+    '/temp_components/',
+    '/temp_conflicted_files/',
+    '/temp_exclude/',
+    '/test_build/',
+    '/test-next/',
+    '/lint-target/',
+    '/node_modules_bak_*/'
+  ],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', {
       presets: [
@@ -23,6 +46,7 @@ const customJestConfig = {
       ]
     }]
   },
+<<<<<<< HEAD
   testMatch: [
     '<rootDir>/__tests__/**/*.smoke.(js|jsx|ts|tsx)',
     '<rootDir>/**/*.smoke.test.(js|jsx|ts|tsx)'
@@ -141,3 +165,18 @@ module.exports = createJestConfig(config);
 
 module.exports = createJestConfig(customJestConfig);
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1'
+  },
+  collectCoverageFrom: [
+    'components/**/*.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+    'app/**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+  ],
+  passWithNoTests: true,
+  verbose: true
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd

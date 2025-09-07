@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
   {'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS';
@@ -13,6 +14,8 @@ export interface EmergingTechService  {id: string;name: string;
     setupTime: string;
     enterprise: number;
   },features: string[];
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   id: string;
 =======
 id: string;
@@ -51,6 +54,7 @@ id: string;
   customers: number;
   rating: number;
   reviews: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
     implementationDetails:;
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.';
@@ -293,6 +297,8 @@ id: string;
       'Asteroid miningResource extractionSpace logisticsResource processingMarket analysisRegulatory compliance';
     ];
     integrations: ['Satellite systems, Ground stations, Space hardware, Monitoring tools, Business applications'],support: '24/7 space operations support, dedicated space engineer, training programs, and quarterly mission reviews.',compliance: ['Space regulations, International treaties, Safety standards, Industry regulations'],link: 'https://ziontechgroup.com/space-mining-platform';
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
     implementationDetails:
       'Comprehensive space mining platform with automated operations, resource management, and logistics coordination. Includes ground control systems and space hardware.'
 =======
@@ -319,7 +325,7 @@ id: string;
     launch_date: '2024 - 01 - 05',
     customers: 120,
     rating: 4 && 4.9,
-    reviews: 45
+    reviews: 45,
   },
   {
     implementationDetails:
@@ -347,7 +353,7 @@ id: string;
     rating: 4 && 4.8,
     reviews: 85,
     market_size: '$12B quantum bio - computing market',
-    growth_rate: '65% annually'
+    growth_rate: '65% annually',
   },
   {
     implementationDetails:
@@ -374,7 +380,7 @@ id: string;
     rating: 4 && 4.7,
     reviews: 120,
     market_size: '$18B BCI market',
-    growth_rate: '55% annually'
+    growth_rate: '55% annually',
   },
   {
     implementationDetails:
@@ -401,7 +407,7 @@ id: string;
     rating: 4 && 4.8,
     reviews: 95,
     market_size: '$25B quantum energy market',
-    growth_rate: '45% annually'
+    growth_rate: '45% annually',
   },
   {
     implementationDetails:
@@ -421,7 +427,7 @@ id: string;
     support:
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
+      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     icon: '🚗',
@@ -432,7 +438,7 @@ id: string;
     rating: 4.9,
     reviews: 65,
     marketSize: '$35B autonomous vehicle market',
-    growthRate: '75% annually'
+    growthRate: '75% annually',
   },;
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
@@ -467,58 +473,6 @@ id: string;
     rating: 4.9;
     reviews: 45;
     marketSize: '$3.5B space mining market';
-    growthRate: '85% annually';
-  },{id: 'quantum-bio-computing-platform';
-    name: 'Quantum Bio-Computing Platform';
-    tagline: 'Quantum computing meets biological systems';
-    description: 'Revolutionary platform that combines quantum computing with biological processing to solve complex biological problems, drug discovery, and genetic analysis.',category: 'Quantum & Emerging Tech';price: {monthly: 799,yearly: 7990,currency: 'USD',trial_days: 14,setup_time: '12 hours',enterprise: 2999;
-    },enterprise: 2999;
-    },features: [;
-      'Advanced computer vision','Real - time decision making','Safety systems','Path planning algorithms','Traffic prediction','Weather adaptation','Fleet management','Performance monitoring','Custom AI models','API for vehicles';
-      'API for vehicles';
-    ],benefits: [;
-      'Enable autonomous transportation','Improve road safety','Reduce transportation costs','Optimize fleet operations','Advance mobility technology';
-      'Advance mobility technology';
-    ],target_audience: [;
-      'Automotive manufacturers','Transportation companies','Logistics providers','Ride - sharing platforms','Government agencies','Technology companies';
-      'Technology companies';
-    ],market_position:;
-      'Competitive with Waymo ($1000+), Tesla Autopilot ($200+), and specialized AV platforms ($800+). Our advantage: Advanced AI, comprehensive safety, and fleet optimization.',competitors: [;
-      'Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms';
-    ],tech_stack: [;
-      'Advanced AI / ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems';
-      'Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms';
-    ],tech_stack: [;
-      'Advanced AI / ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems';
-    ],real_implementation: true,implementation_details:;
-      'Advanced autonomous vehicle platform with AI perception, decision - making, and safety systems. Includes vehicle integration and fleet management tools.',roi: 'Average customer sees 600% ROI within 18 months through improved safety and operational efficiency.',use_cases: [;
-      'Autonomous driving','Fleet management','Safety systems','Traffic optimization','Transportation logistics','Research and development';
-    ],integrations: [;
-      'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications';
-      'Research and development';
-    ],integrations: [;
-      'Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications';
-    ],support:;
-      '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',compliance: [;
-      'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards';
-    ],link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',enterprise: 2999;
-    },'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards';
-    ],link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform',icon: '🚗',color: 'from - red - 500 to - pink - 600',popular: true,launch_date: '2024 - 01 - 25',customers: 180,rating: 4 && 4.9,reviews: 65,market_size: '$35B autonomous vehicle market',growth_rate: '75% annually';
-  },growth_rate: '75% annually';
-  },growth_rate: '75% annually';
-  }
-    ];
-    ];
-    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.',compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'],link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform';
-    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
-    support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
-    link: 'https://ziontechgroup.com / autonomous - vehicle - ai - platform';id: string, name: string,tagline: string, description: string,category: string,price: {monthly: number, yearly: number,currency: string, trialDays: number,setupTime: string,enterprise: number;
-    },features: string[], benefits: string[],targetAudience: string[], marketPosition: string,competitors: string[], techStack: string[],realImplementation: boolean, implementationDetails: string,roi: string, useCases: string[],integrations: string[], support: string,compliance: string[], link: string,icon: string, color: string,popular: boolean, launchDate: string,customers: number, rating: number,reviews: number, marketSize: string,growthRate: string;
-}];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
-    ];integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
-    support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];icon: '🚗';
     growthRate: '85% annually'
   },
   {
@@ -533,7 +487,7 @@ id: string;
       currency: 'USD',
       trial_days: 14,
       setup_time: '12 hours',
-      enterprise: 2999
+      enterprise: 2999,
     },
     icon: '🚗',
     color: 'from - red - 500 to - pink - 600',
@@ -543,8 +497,8 @@ id: string;
     rating: 4 && 4.9,
     reviews: 65,
     market_size: '$35B autonomous vehicle market',
-    growth_rate: '75% annually'
-  }
+    growth_rate: '75% annually',
+  },
     ];
     ];
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'],
@@ -563,19 +517,6 @@ id: string;
     rating: 4 && 4.9;
     reviews: 65;
   }
-  }market_size: '$35B autonomous vehicle market',growth_rate: '75% annually';}];id: string,name: string,tagline: string,description: string,category: string,price: {monthly: number,yearly: number,currency: string,trialDays: number,setupTime: string,enterprise: number;
-  },features: string[],benefits: string[],targetAudience: string[],marketPosition: string,competitors: string[],techStack: string[],realImplementation: boolean,implementationDetails: string,roi: string,useCases: string[],integrations: string[],support: string,compliance: string[],link: string,icon: string,color: string,popular: boolean,launchDate: string,customers: number,rating: number,reviews: number,marketSize: string,growthRate: string;
-}export interface EmergingTechService  {id: string,name: string,tagline: string,description: string,category: string,price: {monthly: number,yearly: number,currency: string,trialDays: number,setupTime: string,enterprise: number;
-  },features: string[],benefits: string[],targetAudience: string[],marketPosition: string,competitors: string[],techStack: string[],realImplementation: boolean,implementationDetails: string,roi: string,useCases: string[],integrations: string[],support: string,compliance: string[],link: string,icon: string,color: string,popular: boolean,launchDate: string,customers: number,rating: number,reviews: number,marketSize: string,growthRate: string;
-}}
-];;
-export interface EmergingTechService  {}
-];
-ursor/fix-website-loading-errors-and-merge-6662;
-    marketSize: '$35B autonomous vehicle market';
-    growthRate: '75% annually';
-  }
-];
   id: string,;
   name: string,;
   tagline: string,;

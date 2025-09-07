@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export default function ContactPage() {

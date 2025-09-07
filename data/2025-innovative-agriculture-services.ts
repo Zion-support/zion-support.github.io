@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   customers: number;
 =======
@@ -248,6 +249,8 @@ export interface InnovativeAgricultureService  {id: string;
     integrations: ['Climate control systems, IoT devices, Lighting systems, Analytics platforms'];
     useCases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization'];
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%';
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   customers: number;
   rating: number;
   reviews: number;
@@ -255,7 +258,11 @@ export interface InnovativeAgricultureService  {id: string;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 <<<<<<< HEAD
+<<<<<<< HEAD
   website: 'https://ziontechgroup.com'};
+=======
+  website: 'https://ziontechgroup.com',};
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 
@@ -267,7 +274,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com' }
+  website: 'https://ziontechgroup.com', }
 ;
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
 <<<<<<< HEAD
@@ -284,7 +291,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup && ziontechgroup.com'};
+  website: 'https://ziontechgroup && ziontechgroup.com',};
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
 
@@ -309,12 +316,12 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Cost optimization',
       'Efficiency analysis',
       'Regulatory compliance',
-      'Multi - crop support'
+      'Multi - crop support',
     ],
     popular: false,
     icon: '⚡',
 
-      'Crop planning, Resource allocation, Efficiency optimization, Cost reduction'
+      'Crop planning, Resource allocation, Efficiency optimization, Cost reduction',
     ],
     roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
     competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
@@ -336,13 +343,13 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     category: 'Agriculture & Food Technology',
     real_service: true,
     technology: [;
-      'Quantum computing, Agriculture optimization, Resource allocation, Planning algorithms, Python'
+      'Quantum computing, Agriculture optimization, Resource allocation, Planning algorithms, Python',
     ],
     integrations: [;
-      'Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms'
+      'Agricultural databases, Weather systems, Soil analysis tools, Analytics platforms',
     ],
     use_cases: [;
-      'Crop planning, Resource allocation, Efficiency optimization, Cost reduction'
+      'Crop planning, Resource allocation, Efficiency optimization, Cost reduction',
     ],
     roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
     competitors: ['D - Wave, Rigetti, IBM Quantum, Google Quantum'],
@@ -357,7 +364,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     launch_date: '2025 - 01 - 15',
     customers: 34,
     rating: 4 && 4.6,
-    reviews: 26
+    reviews: 26,
   },
   {
       'Quality monitoring',
@@ -367,16 +374,16 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Integration capabilities',
       'Custom monitoring rules',
       'Multi - facility support',
-      'Compliance management'
+      'Compliance management',
     ],
     popular: true,
-      'Contamination detection, Quality monitoring, Safety compliance, Risk assessment'
+      'Contamination detection, Quality monitoring, Safety compliance, Risk assessment',
     ],
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
     competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
     customers: 189,
     rating: 4 && 4.7,
-    reviews: 145
+    reviews: 145,
   },
   {
       'Supply chain transparency',
@@ -386,10 +393,10 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Performance analytics',
       'Multi - party collaboration',
       'API integration',
-      'Mobile app support'
+      'Mobile app support',
     ],
     popular: false,
-      'Food tracking, Supply chain transparency, Product authentication, Compliance management'
+      'Food tracking, Supply chain transparency, Product authentication, Compliance management',
     ],
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
     competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
@@ -397,7 +404,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     launch_date: '2025 - 01 - 26',
     customers: 89,
     rating: 4 && 4.5,
-    reviews: 67
+    reviews: 67,
   },
   {
       'Crop growth monitoring',
@@ -407,13 +414,13 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Integration capabilities',
       'Custom growing protocols',
       'Multi - tier support',
-      'Compliance management'
+      'Compliance management',
     ],
     popular: true,
-      'Climate control, Crop monitoring, Environmental optimization, Yield maximization'
+      'Climate control, Crop monitoring, Environmental optimization, Yield maximization',
     ],
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
-    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens']
+    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
       'Compliance management'
     ];
@@ -549,11 +556,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     realImplementation: true;
     implementationDetails: 'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
     launchDate: '2025-02-02';
-    customers: 123;rating: 4 && 4.6,reviews: 89;
-  }
-];rating: 4.6;
-    reviews: 89;
-ursor/fix-website-loading-errors-and-merge-6662;
     customers: 123;
   }
 ];
@@ -567,14 +569,6 @@ ursor/fix-website-loading-errors-and-merge-6662;
     color: 'from - orange - 600 to - red - 700';
     text_color: 'text - orange - 400';
     link: 'https://ziontechgroup.com / ai - powered - vertical - farming';
-    market_position: 'Leading AI - powered vertical farming platform for climate control and crop optimization.',target_audience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers';
-    trial_days: 30;
-    setup_time: '1 month';
-    category: 'Agriculture & Food Technology';
-    real_service: true,technology: ['AI / ML, Vertical farming, Climate control, IoT sensors, Machine learning'];
-    integrations: ['Climate control systems, IoT devices, Lighting systems, Analytics platforms'];
-    use_cases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization'];
-    roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'];
     market_position: 'Leading AI - powered vertical farming platform for climate control and crop optimization.',
     target_audience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers';
     trial_days: 30;
@@ -594,6 +588,7 @@ ursor/fix-website-loading-errors-and-merge-6662;
     implementation_details: 'AI - powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
     launch_date: '2025 - 02 - 02';
     customers: 123;
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.6,reviews: 89;
   }
@@ -629,6 +624,8 @@ import { ServiceVariant } from '../types/service-variants',export interface Inno
       'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.',launchDate: '2025-02-02',customers: 123,rating: 4.6,reviews: 89;
   }
 ];
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
     rating: 4.6,
     reviews: 89;
   }

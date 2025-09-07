@@ -86,5 +86,9 @@ export default function ItServicesPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd

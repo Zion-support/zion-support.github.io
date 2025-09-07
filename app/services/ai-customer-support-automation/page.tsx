@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 export const metadata = {
@@ -13,6 +14,17 @@ interface FeatureProps {
 }
 
 function Feature({ title, description, icon }: FeatureProps) {
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'Ai Customer Support Automation - Zion Tech Group',
+  description: 'Professional ai customer support automation solutions for your business needs.',
+};
+
+export default function AiCustomerSupportAutomationPage() {
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-3xl mb-4">{icon}</div>
@@ -20,6 +32,7 @@ function Feature({ title, description, icon }: FeatureProps) {
       <p className="text-gray-600">{description}</p>
     </div>
   );
+<<<<<<< HEAD
 }
 
 interface PricingTierProps {
@@ -378,3 +391,6 @@ export default function AICustomerSupportAutomationPage() {
     </div>
   );
 }
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd

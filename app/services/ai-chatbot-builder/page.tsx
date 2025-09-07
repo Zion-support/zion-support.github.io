@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export const metadata = {
   title: 'Ai Chatbot Builder | Zion Tech Group',
@@ -9,6 +10,20 @@ export default function ServicePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 py-16">
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'Ai Chatbot Builder - Zion Tech Group',
+  description: 'Professional ai chatbot builder solutions for your business needs.',
+};
+
+export default function AiChatbotBuilderPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Ai Chatbot Builder
@@ -25,6 +40,7 @@ export default function ServicePage() {
               Tailored ai chatbot builder solutions designed for your specific business requirements.
             </p>
           </div>
+<<<<<<< HEAD
           
           <div className="bg-gray-800 rounded-lg p-6">
             <h3 className="text-xl font-bold text-white mb-4">Advanced Technology</h3>
@@ -40,6 +56,8 @@ export default function ServicePage() {
             </p>
           </div>
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
         </div>
       </div>
     </div>

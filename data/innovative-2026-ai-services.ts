@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -181,6 +182,8 @@ export interface Innovative2026AIService  {{contactInfo: {id: string, name: stri
     reviews: 950;
   }
 ];
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   contactInfo: {
       
 =======
@@ -205,7 +208,7 @@ contactInfo: {
     customers: 1900,
     rating: 4.8,
     reviews: 950,;
-  }];
+  },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'

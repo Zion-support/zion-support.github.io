@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 
 export const metadata = {
   title: 'Ai Customer Support | Zion Tech Group',
@@ -41,6 +44,24 @@ export default function ServicePage() {
             <p className="text-gray-300">
               Round-the-clock support to ensure your ai customer support solutions run smoothly.
             </p>
+<<<<<<< HEAD
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
+              >
+                Get Started
+                <ArrowRightIcon className="h-5 w-5 ml-2" />
+              </Link>
+              <Link
+                href="/services"
+                className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:border-blue-400 hover:text-blue-600 transition-colors"
+              >
+                View All Services
+              </Link>
+            </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
           </div>
         </div>
       </div>

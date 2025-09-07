@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   contactInfo: {contactInfo: {import { ServiceVariant  } from '../types / service - variants';
 export interface AdvancedAIAutomationService  {{}
@@ -341,6 +342,10 @@ export interface AdvancedAIAutomationService  {{}
 =======
 contactInfo: {    },
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+  contactInfo: {
+    },
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
@@ -554,7 +559,7 @@ contactInfo: {    },
     customers: 89
     rating: 4.8
     reviews: 38
-  }];
+  },];
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'

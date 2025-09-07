@@ -1,7 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
-import App from './App.simple';
+import App from './App';
 
 describe('App Smoke Test', () => {
   it('renders without crashing', () => {

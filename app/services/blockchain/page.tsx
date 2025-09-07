@@ -2,18 +2,31 @@ import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const metadata = {
+<<<<<<< HEAD
   title: 'Blockchain Solutions | Zion Tech Group',
   description: 'Professional blockchain development services including smart contracts, DeFi, NFTs, and Web3 applications.',
   keywords: 'blockchain, smart contracts, DeFi, NFTs, Web3, cryptocurrency, ethereum, polygon'
+=======
+  title: 'Blockchain - Zion Tech Group',
+  description: 'Professional blockchain solutions for your business needs.',
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 };
 
 export default function BlockchainPage() {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Blockchain Solutions
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Blockchain
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Transform your business with cutting-edge blockchain technology. We build secure, scalable, and innovative blockchain solutions.

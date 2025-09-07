@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 
 import Link from 'next/link';
 
+=======
+
+import Link from 'next/link';
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 
 interface CardProps {
   title: string;

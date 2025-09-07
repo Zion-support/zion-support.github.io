@@ -1,17 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 import React from 'react';
 import Head from 'next/head';
-interface LayoutProps  {children: React.ReactNode;
-  title?: string;
-  description?: string;
-}export default function Layout() {class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}
-  static getDerivedStateFromError(error) {return { hasError: true }}
-  componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}
-  render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
-}
 
+<<<<<<< HEAD
 export default function Layout({ children, title = "Zion Tech Group", description = "Leading technology solutions provider" }: LayoutProps) {
 
 
@@ -202,56 +198,14 @@ interface LayoutProps {
   ogTitle?: string;
   ogDescription?: string;
   ogUrl?: string;
+=======
+interface LayoutProps {
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   children: React.ReactNode;
-}export default function Layout() {const [sidebarOpen, setSidebarOpen]  = useState(false)ursor/automate-test-improve-and-merge-code-646c;
-  return (<>;
-      <Head>;
-        <title>{title}</title>;
-        <meta name="description" content={description} />;
-        <meta name="viewport" content="width=device-width, initial-scale=1" />;
-        <link rel="icon" href="/favicon.ico" />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-        {children}
-      </div>;
-    </>;
-  )}
-        <meta name="keywords" content={keywords} />;
-        <meta property="og:title" content={ogTitle || title} />;
-        <meta property="og:description" content={ogDescription || description} />;
-        <meta property="og:image" content={ogImage} />;
-        <meta property="og:url" content={ogUrl || "https://ziontechgroup.com"} />;
-        <meta property="og:type" content="website" />;
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={ogTitle || title} />;
-        <meta name="twitter:description" content={ogDescription || description} />;
-        <meta name="twitter:image" content={ogImage} />;
-        <link rel="icon" href="/favicon.ico" />;
-        <link rel="canonical" href={ogUrl || "https://ziontechgroup.com"} />;
-      </Head>;
-      <div className="min-h-screen flex flex-col bg-gray-50">;
-        <Header />;
-        <main className="flex-1">;
-          {children}
-        </main>;
-        <Footer />;
-        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />;
-      </div>;
-    </>;
-  )}interface LayoutProps  {children: ReactNode;
-}const Layout: React.FC<LayoutProps> = ({ children }) => {return (<main className="min-h-screen">;
-      {children}
-    </main>;
-    <main className="min-h-screen">;
-      {children}
-    </main>;
-    <div className="min-h-screen flex flex-col">;
-      <Navigation />;
-      <main className="flex-1">{children}</main>;
-      <Footer />;
-    </div>;
-  )}export default Layout;ursor/automate-test-improve-and-merge-code-646c;
+  title?: string;
+  description?: string;
 }
+<<<<<<< HEAD
 export default function Layout({ 
   children, 
   title = "Zion Tech Group - Leading AI & Technology Solutions",
@@ -269,6 +223,15 @@ export default function Layout({
         <title>{title}</title>
 <<<<<<< HEAD
         <meta name="description" content={description} />
+=======
+
+export default function Layout({ children, title, description }: LayoutProps) {
+  return (
+    <>
+      <Head>
+        <title>{title || 'Zion Tech Group'}</title>
+        <meta name="description" content={description || 'Leading provider of AI-powered solutions and digital transformation services.'} />
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -277,7 +240,11 @@ export default function Layout({
       </div>
     </>
   );
+<<<<<<< HEAD
 }
 =======
         <meta name="description" content={description} />
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd

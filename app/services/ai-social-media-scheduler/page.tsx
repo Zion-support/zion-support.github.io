@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 
@@ -381,12 +382,38 @@ export default function AISocialMediaSchedulerPage() {
           >
             Call +1 302 464 0950
           </a>
+=======
+import Link from 'next/link';
+import { ArrowRightIcon } from '@heroicons/react/24/outline';
+
+export const metadata = {
+  title: 'Ai Social Media Scheduler - Zion Tech Group',
+  description: 'Professional ai social media scheduler solutions for your business needs.',
+};
+
+export default function AiSocialMediaSchedulerPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Ai Social Media Scheduler
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional ai social media scheduler solutions designed to meet your business requirements 
+            and drive growth. Our expert team delivers high-quality, scalable solutions.
+          </p>
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
         </div>
         <div className="mt-8 text-sm">
           <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           <p>Email: kleber@ziontechgroup.com</p>
         </div>
+<<<<<<< HEAD
       </section>
+=======
+      </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
     </div>
   );
 }

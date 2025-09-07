@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 ;
 export const real2036ITServices = [;
   {id: 'quantum-cloud-infrastructure-platform';
@@ -661,6 +662,8 @@ export const real2036ITServices = [;
     ],useCases: [;
 =======
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 export const real2036ITServices = [
   {
     id: "id",
@@ -1352,7 +1355,7 @@ export const real2036ITServices = [;
       'Quantum resource management',
       'Quantum networking',
       'Quantum security protocols',
-      'Scalable quantum infrastructure'
+      'Scalable quantum infrastructure',
     ],
     popular: true,
     category: 'Quantum Cloud',
@@ -1362,14 +1365,14 @@ export const real2036ITServices = [;
       'Access to quantum computing power',
       'Hybrid classical - quantum processing',
       'Future - proof cloud infrastructure',
-      'Quantum advantage in the cloud'
+      'Quantum advantage in the cloud',
     ],
     use_cases: [;
       'Scientific research computing',
       'Financial modeling',
       'Drug discovery',
-      'Climate simulation'
-    ]
+      'Climate simulation',
+    ],
   },
   {
     id: 'ai - powered - devops - platform',
@@ -1385,7 +1388,7 @@ export const real2036ITServices = [;
       'Predictive infrastructure scaling',
       'Automated incident response',
       'Smart resource optimization',
-      'Continuous learning algorithms'
+      'Continuous learning algorithms',
     ],
     popular: true,
     category: 'DevOps & AI',
@@ -1395,14 +1398,14 @@ export const real2036ITServices = [;
       '90% faster deployment cycles',
       'Intelligent infrastructure management',
       'Predictive scaling',
-      'Automated incident resolution'
+      'Automated incident resolution',
     ],
     use_cases: [;
       'Continuous deployment',
       'Infrastructure automation',
       'Testing automation',
-      'Monitoring and alerting'
-    ]
+      'Monitoring and alerting',
+    ],
   },
   {
     id: 'quantum - cybersecurity - platform',
@@ -1418,7 +1421,7 @@ export const real2036ITServices = [;
       'Quantum encryption',
       'Quantum key distribution',
       'Future - proof security',
-      'Real - time threat analysis'
+      'Real - time threat analysis',
     ],
     popular: true,
     category: 'Quantum Security',
@@ -1428,14 +1431,14 @@ export const real2036ITServices = [;
       'Quantum - resistant security',
       'Future - proof protection',
       'Advanced threat detection',
-      'Military - grade security'
+      'Military - grade security',
     ],
     use_cases: [;
       'Government security',
       'Financial institutions',
       'Healthcare data protection',
-      'Critical infrastructure'
-    ]
+      'Critical infrastructure',
+    ],
   },
   {
     id: 'edge - computing - orchestration - platform',
@@ -1451,7 +1454,7 @@ export const real2036ITServices = [;
       'Edge AI processing',
       'Latency optimization',
       'Edge resource management',
-      'Distributed data processing'
+      'Distributed data processing',
     ],
     popular: true,
     category: 'Edge Computing',
@@ -1461,14 +1464,14 @@ export const real2036ITServices = [;
       'Ultra - low latency processing',
       'Distributed computing power',
       'Edge AI capabilities',
-      'Scalable edge infrastructure'
+      'Scalable edge infrastructure',
     ],
     use_cases: [;
       'IoT applications',
       'Real - time analytics',
       'Edge AI processing',
-      'Distributed computing'
-    ]
+      'Distributed computing',
+    ],
   },
   {
     id: 'quantum - database - platform',
@@ -1484,7 +1487,7 @@ export const real2036ITServices = [;
       'Quantum search algorithms',
       'Quantum data indexing',
       'Quantum data analytics',
-      'Hybrid quantum - classical storage'
+      'Hybrid quantum - classical storage',
     ],
     popular: true,
     category: 'Quantum Database',
@@ -1494,14 +1497,14 @@ export const real2036ITServices = [;
       '1000x faster database queries',
       'Quantum data compression',
       'Advanced search capabilities',
-      'Future - proof data management'
+      'Future - proof data management',
     ],
     use_cases: [;
       'Big data analytics',
       'Real - time search',
       'Data warehousing',
-      'Business intelligence'
-    ]
+      'Business intelligence',
+    ],
   },
   {
     id: 'ai - powered - network - security',
@@ -1517,7 +1520,7 @@ export const real2036ITServices = [;
       'Behavioral analysis',
       'Anomaly detection',
       'Automated threat response',
-      'Predictive security analytics'
+      'Predictive security analytics',
     ],
     popular: true,
     category: 'Network Security',
@@ -1527,14 +1530,14 @@ export const real2036ITServices = [;
       'Proactive threat detection',
       'Automated security response',
       'Intelligent network protection',
-      'Reduced false positives'
+      'Reduced false positives',
     ],
     use_cases: [;
       'Enterprise network security',
       'Cloud security',
       'IoT security',
-      'Remote work security'
-    ]
+      'Remote work security',
+    ],
   },
   {
     id: 'quantum - internet - protocols',
@@ -1550,7 +1553,7 @@ export const real2036ITServices = [;
       'Quantum entanglement distribution',
       'Quantum network optimization',
       'Quantum network security',
-      'Quantum internet standards'
+      'Quantum internet standards',
     ],
     popular: false,
     category: 'Quantum Internet',
@@ -1560,14 +1563,14 @@ export const real2036ITServices = [;
       'Unbreakable quantum communication',
       'Quantum network optimization',
       'Future internet protocols',
-      'Quantum internet infrastructure'
+      'Quantum internet infrastructure',
     ],
     use_cases: [;
       'Government communications',
       'Financial networks',
       'Research networks',
-      'Quantum internet backbone'
-    ]
+      'Quantum internet backbone',
+    ],
   },
   {
     id: 'ai - powered - infrastructure - monitoring',
@@ -1583,7 +1586,7 @@ export const real2036ITServices = [;
       'Intelligent alerting',
       'Performance optimization',
       'Automated monitoring',
-      'Resource optimization'
+      'Resource optimization',
     ],
     popular: true,
     category: 'Infrastructure Monitoring',
@@ -1593,14 +1596,14 @@ export const real2036ITServices = [;
       'Proactive issue detection',
       'Automated monitoring',
       'Performance optimization',
-      'Reduced downtime'
+      'Reduced downtime',
     ],
     use_cases: [;
       'Server monitoring',
       'Network monitoring',
       'Application monitoring',
-      'Cloud infrastructure'
-    ]
+      'Cloud infrastructure',
+    ],
   },
   {
     id: 'quantum - storage - platform',
@@ -1616,7 +1619,7 @@ export const real2036ITServices = [;
       'Quantum storage algorithms',
       'Quantum data optimization',
       'Hybrid quantum - classical storage',
-      'Quantum storage security'
+      'Quantum storage security',
     ],
     popular: true,
     category: 'Quantum Storage',
@@ -1626,14 +1629,14 @@ export const real2036ITServices = [;
       '100x data compression',
       'Quantum data encoding',
       'Advanced storage optimization',
-      'Future - proof storage technology'
+      'Future - proof storage technology',
     ],
     use_cases: [;
       'Big data storage',
       'Data archiving',
       'Cloud storage',
-      'Data backup'
-    ]
+      'Data backup',
+    ],
   },
   {
     id: 'ai - powered - disaster - recovery',
@@ -1649,7 +1652,7 @@ export const real2036ITServices = [;
       'Automated recovery procedures',
       'Predictive recovery planning',
       'Automated testing',
-      'Backup optimization'
+      'Backup optimization',
     ],
     popular: true,
     category: 'Disaster Recovery',
@@ -1659,15 +1662,20 @@ export const real2036ITServices = [;
       'Automated recovery procedures',
       'Intelligent backup management',
       'Predictive recovery planning',
-      'Reduced recovery time'
+      'Reduced recovery time',
     ],
     use_cases: [;
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',
 <<<<<<< HEAD
+<<<<<<< HEAD
       'Business continuity'
     ]
+=======
+      'Business continuity',
+    ],
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 
 =======
       'Business continuity',
@@ -1690,8 +1698,8 @@ export const real2036ITServices = [
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',
-      'Business continuity'
-    ]
+      'Business continuity',
+    ],
 
   },;
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
@@ -1916,6 +1924,7 @@ export const real2036ITServices = [;
     ];
   }
 ];
+<<<<<<< HEAD
       'Big data storage','Data archiving','Cloud storage','Data backup';
     ];
   },{id: 'ai-powered-disaster-recovery',name: 'AI-Powered Disaster Recovery',tagline: 'Intelligent recovery automation',description:;
@@ -1932,3 +1941,5 @@ export const real2036ITServices = [;
 ;  }
 ];
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd

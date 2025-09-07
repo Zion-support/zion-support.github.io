@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 import { ServiceVariant  } from '../types / service - variants';
@@ -247,6 +248,8 @@ import { ServiceVariant } from '../types/service-variants',export interface Emer
     reviews: 45;
   }
 ];
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
   contactInfo: {
       
 =======
@@ -271,7 +274,7 @@ contactInfo: {
     launchDate: '2026-06-15',
     customers: 65,
     rating: 4.9,
-    reviews: 45
+    reviews: 45,
   },;
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
@@ -367,6 +370,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9,
 <<<<<<< HEAD
     reviews: 45;
+import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV2 {;
   id: string,;
   name: string,;

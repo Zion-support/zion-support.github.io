@@ -5,7 +5,10 @@ import { ArrowRightIcon } from '@heroicons/react/24/outline';
 export const metadata = {
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, a leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 };
 
 export default function AboutPage() {

@@ -1,90 +1,72 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
 const fs = require('fs');
 const path = require('path');
-const http = require('http');
-const https = require('https');
+const { execSync } = require('child_process');
 
-// Colors for console output
-const colors = {
-  reset: '\x1b[0m',
-  bright: '\x1b[1m',
-  red: '\x1b[31m',
-  green: '\x1b[32m',
-  yellow: '\x1b[33m',
-  blue: '\x1b[34m',
-  magenta: '\x1b[35m',
-  cyan: '\x1b[36m'
-};
+console.log('🔍 Comprehensive Health Check Starting...');
 
-function log(message, color = 'reset') {
-  console.log(`${colors[color]}${message}${colors.reset}`);
-}
-
-function checkFileExists(filePath, description) {
-  if (fs.existsSync(filePath)) {
-    log(`${colors.green}✅ ${description}: ${filePath}${colors.reset}`);
-    return true;
-  } else {
-    log(`${colors.red}❌ ${description}: ${filePath} (missing)${colors.reset}`, 'red');
-    return false;
+const checks = [
+  {
+    name: 'Package.json exists',
+    check: () => fs.existsSync('package.json')
+  },
+  {
+    name: 'Node modules installed',
+    check: () => fs.existsSync('node_modules')
+  },
+  {
+    name: 'Next.js config exists',
+    check: () => fs.existsSync('next.config.ts') || fs.existsSync('next.config.js')
+  },
+  {
+    name: 'TypeScript config exists',
+    check: () => fs.existsSync('tsconfig.json')
+  },
+  {
+    name: 'ESLint config exists',
+    check: () => fs.existsSync('eslint.config.js')
+  },
+  {
+    name: 'Jest config exists',
+    check: () => fs.existsSync('jest.config.smoke.cjs')
+  },
+  {
+    name: 'App component exists',
+    check: () => fs.existsSync('App.tsx')
+  },
+  {
+    name: 'Components directory exists',
+    check: () => fs.existsSync('components') || fs.existsSync('src/components')
   }
-}
+];
 
-function checkFileSize(filePath, maxSizeMB = 10) {
+let passed = 0;
+let failed = 0;
+
+checks.forEach(check => {
   try {
-    const stats = fs.statSync(filePath);
-    const sizeMB = (stats.size / (1024 * 1024)).toFixed(2);
-    
-    if (stats.size > maxSizeMB * 1024 * 1024) {
-      log(`${colors.yellow}⚠️  ${filePath}: ${sizeMB}MB (larger than ${maxSizeMB}MB)${colors.reset}`);
-      return false;
+    if (check.check()) {
+      console.log(`✅ ${check.name}`);
+      passed++;
     } else {
-      log(`${colors.green}✅ ${filePath}: ${sizeMB}MB${colors.reset}`);
-      return true;
+      console.log(`❌ ${check.name}`);
+      failed++;
     }
   } catch (error) {
-    log(`${colors.red}❌ Error checking ${filePath}: ${error.message}${colors.reset}`, 'red');
-    return false;
+    console.log(`❌ ${check.name} - Error: ${error.message}`);
+    failed++;
   }
-}
+});
 
-function checkPackageJson() {
-  log(`\n${colors.blue}📦 Checking package.json...${colors.reset}`);
-  
-  try {
-    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-    
-    // Check required fields
-    const requiredFields = ['name', 'version', 'scripts', 'dependencies'];
-    const missingFields = requiredFields.filter(field => !packageJson[field]);
-    
-    if (missingFields.length > 0) {
-      log(`${colors.red}❌ Missing required fields: ${missingFields.join(', ')}${colors.reset}`, 'red');
-      return false;
-    }
-    
-    log(`${colors.green}✅ package.json structure is valid${colors.reset}`);
-    
-    // Check scripts
-    const requiredScripts = ['build', 'test', 'start'];
-    const missingScripts = requiredScripts.filter(script => !packageJson.scripts[script]);
-    
-    if (missingScripts.length > 0) {
-      log(`${colors.yellow}⚠️  Missing scripts: ${missingScripts.join(', ')}${colors.reset}`);
-    } else {
-      log(`${colors.green}✅ Required scripts found${colors.reset}`);
-    }
-    
-    return true;
-  } catch (error) {
-    log(`${colors.red}❌ Error parsing package.json: ${error.message}${colors.reset}`, 'red');
-    return false;
-  }
-}
+console.log(`\n📊 Health Check Results: ${passed} passed, ${failed} failed`);
 
+<<<<<<< HEAD
 function checkBuildOutput() {
   log(`\n${colors.blue}🏗️  Checking build output...${colors.reset}`);
   
@@ -300,3 +282,12 @@ console.log('� Running Health Check...')
 <<<<<<< HEAD
 console.log('� Overall "status")
 >>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
+=======
+if (failed === 0) {
+  console.log('🎉 All health checks passed!');
+  process.exit(0);
+} else {
+  console.log('⚠️  Some health checks failed. Please review the issues.');
+  process.exit(1);
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-0ffd
