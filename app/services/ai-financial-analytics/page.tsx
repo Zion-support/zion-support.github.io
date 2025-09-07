@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9451
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 

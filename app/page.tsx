@@ -165,7 +165,6 @@ export default function HomePage() {
       </div>
 
       {/* Why Choose Us */}
-<<<<<<< HEAD
       <div className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -301,7 +300,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
->>>>>>> 5e681e2219508d3428abd320b27556dbdc787262
 
       {/* CTA Section */}
       <div className="py-20 bg-blue-600">
@@ -309,16 +307,9 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business?
           </h2>
-<<<<<<< HEAD
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Join hundreds of companies already using our AI-powered solutions to drive innovation and growth.
             Let's build something amazing together.
-=======
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto animate-slide-up">
-            Let&apos;s discuss your project and create a custom solution that drives
-            real business value. Our team has delivered 1000+ successful
-            projects across various industries.
->>>>>>> 5e681e2219508d3428abd320b27556dbdc787262
           </p>
           <Link
             href="/contact"
@@ -327,11 +318,7 @@ export default function HomePage() {
             Get Started Today
           </Link>
         </div>
-<<<<<<< HEAD
       </div>
-=======
-      </section>
->>>>>>> 5e681e2219508d3428abd320b27556dbdc787262
     </div>
   );
 }
