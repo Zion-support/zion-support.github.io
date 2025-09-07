@@ -1,23 +1,47 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
 
-export default function community() {
+export default function CommunityPage() {
   return (
-    <Layout>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Head>
-        <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Community solutions and services." />
+        <title>Community | Zion Tech Group</title>
+        <meta name="description" content="Professional community solutions for your business." />
       </Head>
       
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Community</h1>
-          <p className="text-lg text-gray-600">
-            Professional community solutions tailored to your business needs.
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Community
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional community solutions for your business.
           </p>
         </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 1</h3>
+            <p className="text-gray-300">
+              Professional solutions for your business needs.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 2</h3>
+            <p className="text-gray-300">
+              Advanced technology solutions.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Feature 3</h3>
+            <p className="text-gray-300">
+              Scalable and reliable solutions.
+            </p>
+          </div>
+        </div>
       </div>
-    </Layout>
+    </div>
   );
 }

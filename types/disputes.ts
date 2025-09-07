@@ -1,63 +1,61 @@
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
-export type DisputeReason =
+
+export type DisputeReason = 
   | 'Scope Disagreement'
   | 'Quality Issues'
   | 'Delivery Delay'
   | 'Payment Issue'
   | 'Communication Breakdown'
   | 'Other';
-export type DisputeReason =;
-  | 'Scope Disagreement';
-  | 'Quality Issues';
-  | 'Delivery Delay';
-  | 'Payment Issue';
-  | 'Communication Breakdown';
-  | 'Other',;
-export type DisputeAttachment = {
+
+export interface DisputeCase {
   id: string;
-  fileName: string;
-  fileSize: number;
-  mimeType: string;
-  path: string; // server-side storage path
-  uploadedAt: string;
-  uploadedByUserId: string;
-}
-export type DisputeMessage = {
-  id: string;
-  authorUserId: string;
-  authorRole: 'client' | 'talent' | 'admin';
-  body: string;
-  createdAt: string;
-}
-export type DisputeCase = {
-  id: string; // case id like DSP-YYYYMMDD-XXXX
-  projectId: string;
-  entityType?: 'milestone' | 'contract' | 'thread';
-  entityId?: string;
-  clientUserId: string;
-  talentUserId: string;
-  createdAt: string;
-  updatedAt: string;
+  talentId?: string;
+  clientId?: string;
+  clientUserId?: string;
+  talentUserId?: string;
+  projectId?: string;
   status: DisputeStatus;
   reason: DisputeReason;
   reasonDetails?: string;
-  description: string;
-  attachments: DisputeAttachment[];
-  messages: DisputeMessage[];
+  createdAt: string;
+  updatedAt?: string;
+  attachments?: DisputeAttachment[];
+  messages?: DisputeMessage[];
   adminNotes?: string;
   resolvedAt?: string;
   resolutionSummary?: string;
+  refundAmount?: number;
+  resolution?: string;
 }
-export type DisputeListItem = Pick<
-  DisputeCase
-  'id' | 'projectId' | 'createdAt' | 'status'
-> & {
+
+export type DisputeListItem = Pick<DisputeCase, 'id' | 'status' | 'reason' | 'createdAt'> & {
   talentName: string;
   clientName: string;
   projectName?: string;
-}
+};
+
 export type UserSummary = {
   id: string;
   name: string;
-  role: 'admin' | 'client' | 'talent';
+  email: string;
+};
+
+export interface DisputeAttachment {
+  id: string;
+  filename: string;
+  url: string;
+  uploadedAt: string;
 }
+
+export type DisputeMessage = {
+  id: string;
+  disputeId: string;
+  senderId: string;
+  senderType: 'talent' | 'client' | 'admin';
+  content: string;
+  timestamp: string;
+  attachments?: DisputeAttachment[];
+  entityType?: 'milestone' | 'contract' | 'thread';
+  entityId?: string;
+};

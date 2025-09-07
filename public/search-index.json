@@ -4,87 +4,19 @@
   "pages": [
     {
       "url": "/",
-      "title": "Zion Tech Group - AI-Powered Solutions",
-      "description": "Leading AI and technology solutions provider",
-      "keywords": [
-        "zion",
-        "tech",
-        "group",
-        "ai-powered",
-        "solutions",
-        "leading",
-        "technology",
-        "provider"
-      ],
-      "lastModified": "2025-09-07T10:14:52.994Z"
+      "title": "Home",
+      "description": "Zion Tech Group - Homepage"
     },
     {
       "url": "/about",
-      "title": "About Us - Zion Tech Group",
-      "description": "Learn about our mission and team",
-      "keywords": [
-        "zion",
-        "tech",
-        "group",
-        "learn",
-        "mission",
-        "team"
-      ],
-      "lastModified": "2025-09-07T10:14:52.995Z"
-    },
-    {
-      "url": "/services",
-      "title": "Our Services - AI Solutions",
-      "description": "Comprehensive AI and technology services",
-      "keywords": [
-        "services",
-        "solutions",
-        "comprehensive",
-        "technology"
-      ],
-      "lastModified": "2025-09-07T10:14:52.995Z"
+      "title": "About",
+      "description": "About Zion Tech Group"
     },
     {
       "url": "/contact",
-      "title": "Contact Us - Zion Tech Group",
-      "description": "Get in touch with our team",
-      "keywords": [
-        "contact",
-        "zion",
-        "tech",
-        "group",
-        "touch",
-        "team"
-      ],
-      "lastModified": "2025-09-07T10:14:52.995Z"
-    },
-    {
-      "url": "/portfolio",
-      "title": "Portfolio - Our Work",
-      "description": "View our successful projects and case studies",
-      "keywords": [
-        "portfolio",
-        "view",
-        "successful",
-        "projects",
-        "case",
-        "studies"
-      ],
-      "lastModified": "2025-09-07T10:14:52.995Z"
-    },
-    {
-      "url": "/blog",
-      "title": "Blog - Tech Insights",
-      "description": "Latest insights and updates from our team",
-      "keywords": [
-        "blog",
-        "tech",
-        "insights",
-        "latest",
-        "updates",
-        "team"
-      ],
-      "lastModified": "2025-09-07T10:14:52.995Z"
+      "title": "Contact",
+      "description": "Contact Zion Tech Group"
     }
-  ]
+  ],
+  "generatedAt": "2025-09-07T08:40:22.346Z"
 }

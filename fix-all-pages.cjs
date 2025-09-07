@@ -1,79 +1,100 @@
+#!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
-const corruptedFiles = [
-  'pages/docs.tsx',
-  'pages/support.tsx',
-  'pages/automation.tsx',
-  'pages/resources.tsx',
-  'pages/api-docs.tsx',
-  'pages/calendar.tsx',
-  'pages/sitemap.xml.tsx',
-  'pages/guides.tsx',
-  'pages/api-documentation.tsx',
-  'pages/blockchain-solutions.tsx'
-];
+console.log('🔧 Fixing all pages...');
 
-const basicPageTemplate = (title, description, keywords) => `import React from 'react';
-import { Metadata } from 'next';
+// Get all page files
+const pagesDir = 'pages';
+const files = fs.readdirSync(pagesDir).filter(file => file.endsWith('.tsx') || file.endsWith('.ts'));
 
-export const metadata: Metadata = {
-  title: '${title} - Zion Tech Group',
-  description: '${description}',
-  keywords: '${keywords}'
-};
+console.log(`Found ${files.length} page files to fix`);
 
-export default function ${title.replace(/\s+/g, '')}Page() {
-  return (
-    <div className="max-w-6xl mx-auto px-4 py-12">
-      <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          ${title}
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          ${description}
-        </p>
-      </div>
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-          Coming Soon
-        </h2>
-        <p className="text-lg text-gray-600 text-center">
-          This page is currently under development. Please contact us for more information.
-        </p>
-      </div>
-      <div className="text-center">
-        <a
-          href="mailto:kleber@ziontechgroup.com?subject=${title} Inquiry"
-          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-        </a>
-      </div>
-    </div>
-  );
-}`;
-
-corruptedFiles.forEach(filePath => {
-  const fullPath = path.join(__dirname, filePath);
-  const dir = path.dirname(fullPath);
-  
-  // Ensure directory exists
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+files.forEach(file => {
+  const filePath = path.join(pagesDir, file);
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix common syntax errors
+    if (content.includes("import React from 'react';'")) {
+      content = content.replace("import React from 'react';'", "import React from 'react';");
+      modified = true;
+    }
+    
+    if (content.includes("import Head from 'next / head';")) {
+      content = content.replace("import Head from 'next / head';", "import Head from 'next/head';");
+      modified = true;
+    }
+    
+    if (content.includes("import type { NextPage } from 'next',")) {
+      content = content.replace("import type { NextPage } from 'next',", "import type { NextPage } from 'next';");
+      modified = true;
+    }
+    
+    if (content.includes("import type { NextPage } from 'next','")) {
+      content = content.replace("import type { NextPage } from 'next','", "import type { NextPage } from 'next';");
+      modified = true;
+    }
+    
+    // Fix malformed imports
+    content = content.replace(/import\s*\{\s*\}\s*from\s*['"][^'"]+['"];?\s*\n\s*import\s*\{\s*[^}]+/g, (match) => {
+      const lines = match.split('\n');
+      const importLines = lines.filter(line => line.trim().startsWith('import'));
+      const otherLines = lines.filter(line => !line.trim().startsWith('import'));
+      
+      if (importLines.length > 1) {
+        const firstImport = importLines[0];
+        const secondImport = importLines[1];
+        
+        // Extract the from part from the first import
+        const fromMatch = firstImport.match(/from\s*['"]([^'"]+)['"]/);
+        if (fromMatch) {
+          const fromPart = fromMatch[0];
+          // Extract the imports from the second import
+          const importsMatch = secondImport.match(/\{\s*([^}]+)\s*\}/);
+          if (importsMatch) {
+            const imports = importsMatch[1];
+            return `import { ${imports} } ${fromPart};\n${otherLines.join('\n')}`;
+          }
+        }
+      }
+      return match;
+    });
+    
+    // Fix unterminated strings
+    content = content.replace(/<meta'\s*name='description'\s*content='[^']*$/gm, (match) => {
+      return match.replace(/'$/, '');
+    });
+    
+    // Fix JSX syntax errors
+    content = content.replace(/<div[^>]*>;\s*<Head>;\s*<title>[^<]*<\/title>;\s*<meta[^>]*>;?\s*<\/Head>;?\s*<\/div>;?/g, (match) => {
+      return match.replace(/;/g, '').replace(/'/g, '"');
+    });
+    
+    // Fix missing semicolons in imports
+    content = content.replace(/import\s+.*?from\s+['"][^'"]+['"]\s*(?=\n|$)/g, (match) => {
+      if (!match.endsWith(';')) {
+        return match + ';';
+      }
+      return match;
+    });
+    
+    // Fix duplicate imports
+    const importLines = content.split('\n').filter(line => line.trim().startsWith('import'));
+    const uniqueImports = [...new Set(importLines)];
+    if (importLines.length !== uniqueImports.length) {
+      content = content.replace(importLines.join('\n'), uniqueImports.join('\n'));
+      modified = true;
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, content);
+      console.log(`✅ Fixed pages/${file}`);
+    }
+  } catch (error) {
+    console.log(`⚠️  Could not fix pages/${file}: ${error.message}`);
   }
-  
-  // Extract page name from path
-  const pageName = path.basename(filePath, '.tsx').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-  
-  const content = basicPageTemplate(
-    pageName,
-    `Professional ${pageName.toLowerCase()} services to help your business grow and succeed.`,
-    `${pageName.toLowerCase()}, business solutions, professional services`
-  );
-  
-  fs.writeFileSync(fullPath, content);
-  console.log(`Fixed: ${filePath}`);
 });
 
-console.log('All corrupted pages have been fixed!');
+console.log('🎉 All pages fixed!');

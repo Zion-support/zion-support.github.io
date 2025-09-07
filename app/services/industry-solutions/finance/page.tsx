@@ -1,42 +1,22 @@
 import React from 'react'
 import { Metadata } from 'next'
+
 export const metadata: Metadata = {
-  title: 'Industry Solutions/finance | Zion Tech Group',
-  description: 'Professional industry solutions/finance services to help your business grow and succeed.',
-  keywords: 'industry, solutions/finance, business solutions, professional services',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Industry Solutions/finance | Zion Tech Group',
-    description: 'Professional industry solutions/finance services to help your business grow and succeed.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'Zion Tech Group',
-  },
-};
+  title: 'Finance Solutions | Zion Tech Group',
+  description: 'Professional finance solutions for your business needs.',
+  keywords: 'finance, solutions, business, technology'
+}
 
-export default function IndustrySolutionsFinancePage() {
+export default function ServicePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Industry Solutions/finance
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Professional industry solutions/finance services to help your business grow and succeed.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Coming Soon
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            This service is currently under development. Please contact us for more information.
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Finance Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional finance solutions for your business needs.
           </p>
           <a
             href="mailto:kleber@ziontechgroup.com?subject=Industry Solutions/finance Inquiry"
@@ -45,7 +25,43 @@ export default function IndustrySolutionsFinancePage() {
             Contact Us
           </a>
         </div>
-      </section>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">💰</div>
+            <h3 className="text-xl font-bold text-white mb-4">Financial Planning</h3>
+            <p className="text-gray-300">
+              Comprehensive financial planning and analysis solutions.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📊</div>
+            <h3 className="text-xl font-bold text-white mb-4">Analytics</h3>
+            <p className="text-gray-300">
+              Advanced financial analytics and reporting tools.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔒</div>
+            <h3 className="text-xl font-bold text-white mb-4">Security</h3>
+            <p className="text-gray-300">
+              Secure financial data management and compliance.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our finance solutions can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
     </div>
-  );
+  )
 }

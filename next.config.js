@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // next@15 uses SWC by default; remove deprecated swcMinify flag
   compress: true,
   poweredByHeader: false,
   eslint: { 
@@ -10,9 +9,8 @@ const nextConfig = {
   typescript: { 
     ignoreBuildErrors: true 
   },
-<<<<<<< HEAD
-  typescript: {
-    ignoreBuildErrors: false
+  experimental: {
+    forceSwcTransforms: false
   },
 <<<<<<< HEAD
 =======
