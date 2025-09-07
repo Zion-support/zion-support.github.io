@@ -1,9 +1,6 @@
-import type { GetServerSideProps } from 'next',;
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-      destination: '/media/kit',
+import type { GetServerSideProps } from 'next';
+export const getServerSideProps: GetServerSideProps = $2;
       permanent: false}}
 },
 
-export default function LaunchRedirect() { return null };
+export default function LaunchRedirect() { return null }

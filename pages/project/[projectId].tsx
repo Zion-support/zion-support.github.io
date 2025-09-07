@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react",;
-import { useRouter } from "next/router",;
-import FeedbackModal from "../../components/ui/FeedbackModal",;
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import FeedbackModal from "../../components/ui/FeedbackModal";
 export default function ProjectPage() {
-  const router = useRouter(),
+  const router = useRouter($2);
   const { projectId } = router.query as { projectId?: string },
   const [project, setProject] = useState<any | null>(null),
-  const [loading, setLoading] = useState(true),
+  const [loading, setLoading] = useState($2);
   const [error, setError] = useState<string | null>(null),
-  const [note, setNote] = useState(""),
-
-  const headers = {
-    "x-demo-user-role": "client",
+  const [note, setNote] = useState($2);
+  const headers = $2;
     "x-demo-user-id": "client-1",
     // For talent view demo, swap role and provide slug
     // "x-demo-user-role": "talent",
@@ -20,10 +18,10 @@ export default function ProjectPage() {
     async function load() {
       if (!projectId) return,
       try {
-        setLoading(true),
-        const res = await fetch(`/api/marketplace/projects?id=${projectId}`, { headers }),
-        const json = await res.json(),
-        if (!json.ok) throw new Error(json.error || "Failed to load project"),
+        setLoading($2);
+        const res = await fetch($2);
+        const json = await res.json($2);
+        if (!json.ok) throw new Error($2);
         setProject(json.project)
       } catch (e: any) {
         setError(e.message)
@@ -34,17 +32,16 @@ export default function ProjectPage() {
     load()
   }, [projectId]),
 
-  const [showFeedback, setShowFeedback] = useState(false),
-
+  const [showFeedback, setShowFeedback] = useState($2);
   async function addNote() {
     const res = await fetch(`/api/marketplace/projects`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
-      body: JSON.stringify({ id: projectId, action: "add_note", content: note })}),
-    const json = await res.json(),
+      body: JSON.stringify({ id: projectId, action: "add_note", content: note})}),
+    const json = await res.json($2);
     if (json.ok) {
-      setProject(json.project),
-      setNote(""),
+      setProject($2);
+      setNote($2);
       setShowFeedback(true)
     }
   }
@@ -54,9 +51,9 @@ export default function ProjectPage() {
       method: "PATCH",
       headers: { "Content-Type": "application/json", ...headers },
       body: JSON.stringify({ id: projectId, action: "mark_completed" })}),
-    const json = await res.json(),
+    const json = await res.json($2);
     if (json.ok) {
-      setProject(json.project),
+      setProject($2);
       setShowFeedback(true)
     }
   }
@@ -157,4 +154,4 @@ export default function ProjectPage() {
       />
     </div>
   )
-};
+}

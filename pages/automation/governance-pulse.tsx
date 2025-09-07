@@ -1,7 +1,7 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-// @ts-ignore - JSON import import data from '../../data/governance-pulse.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore - JSON import import data from '../../data/governance-pulse.json',
 export default function GovernancePulsePage() {
-  const items: any[] = (data?.items || []).slice(0, 60),
+  const items: any[] = (data?.items || []).slice($2);
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -22,4 +22,4 @@ export default function GovernancePulsePage() {
       </div>
     </EnhancedLayout>
   )
-};
+}

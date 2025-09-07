@@ -1,14 +1,14 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
 } from 'lucide-react',
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',;
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',;
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 export default function ComprehensivePricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedCategory, setSelectedCategory] = useState($2);
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [expandedService, setExpandedService] = useState<string | null>(null),
 
@@ -37,10 +37,9 @@ export default function ComprehensivePricingPage() {
 
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
-    : allServices.filter(service => service.category === selectedCategory),
-
+    : allServices.filter($2);
   const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category),
+    const categoryData = categories.find($2);
     return categoryData?.icon || '🚀'
   },
 
@@ -49,10 +48,7 @@ export default function ComprehensivePricingPage() {
     return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly
   },
 
-  const toggleServiceExpansion = (serviceId: string) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId)
-  },
-
+  const toggleServiceExpansion = $2;
   return (
     <>
       <Head>
@@ -67,8 +63,8 @@ export default function ComprehensivePricingPage() {
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -126,8 +122,8 @@ export default function ComprehensivePricingPage() {
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
               className="flex flex-wrap justify-center gap-3"
             >
@@ -157,8 +153,8 @@ export default function ComprehensivePricingPage() {
                 {filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 30}}
+                    animate={{ opacity: 1, y: 0}}
                     exit={{ opacity: 0, y: -30 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
@@ -241,9 +237,9 @@ export default function ComprehensivePricingPage() {
                     <AnimatePresence>
                       {expandedService === service.id && (
                         <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
+                          initial={{ height: 0, opacity: 0}}
+                          animate={{ height: 'auto', opacity: 1}}
+                          exit={{ height: 0, opacity: 0}}
                           transition={{ duration: 0.3 }}
                           className="overflow-hidden border-t border-white/10"
                         >
@@ -318,10 +314,10 @@ export default function ComprehensivePricingPage() {
         <section className="px-6 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -353,4 +349,4 @@ export default function ComprehensivePricingPage() {
       </div>
     </>
   )
-};
+}

@@ -1,24 +1,22 @@
-
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {ArrowRight, Check, ExternalLink} from "lucide-react";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Check, ExternalLink } from "lucide-react";
 interface IntegrationCardProps {
   title: string,
   description: string,
   icon: React.ReactNode,
-  status?: "connected" | "disconnected" | "pending";
-  href?: string;
+  status?: "connected" | "disconnected" | "pending",
+  href?: string,
   onConnect?: () => void
 }
-
 export function IntegrationCard({
-  title;
-  description;
-  icon;
-  status = "disconnected";
-  href;
+  title,
+  description,
+  icon,
+  status = $2;
+  href,
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">
@@ -53,7 +51,7 @@ export function IntegrationCard({
             <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
               <span>Manage</span>
               <ExternalLink className="h-3.5 w-3.5" />
-            </a>
+            </Link>
           </Button>
         ) : (
           <Button variant="default" className="w-full" onClick={onConnect}>
@@ -65,7 +63,6 @@ export function IntegrationCard({
     </Card>
   )
 }
-
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">

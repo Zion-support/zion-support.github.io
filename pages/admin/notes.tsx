@@ -1,26 +1,22 @@
-import { useEffect, useState } from 'react',
-;
-type Note = {
-  id: string,
+import { useEffect, useState } from 'react';
+type Note = $2;
   targetType: string,
   targetId: string,
   text: string,
   authorId: string,
-  createdAt: number
-},
+  createdAt: number},
 
 export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true),
+  const [isAdmin, setIsAdmin] = useState($2);
   const [notes, setNotes] = useState<Note[]>([]),
-  const [loading, setLoading] = useState(false),
-
+  const [loading, setLoading] = useState($2);
   useEffect(() => {
     async function load() {
-      setLoading(true),
+      setLoading($2);
       try {
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
+        const res = await fetch($2);
         if (!res.ok) return,
-        const data = await res.json(),
+        const data = await res.json($2);
         setNotes(data.notes || [])
       } finally {
         setLoading(false)
@@ -56,4 +52,4 @@ export default function AdminNotesConsole() {
       )}
     </div>
   )
-};
+}

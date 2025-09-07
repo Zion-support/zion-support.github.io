@@ -1,26 +1,25 @@
-
 import React, { useState } from 'react';
-import {useParams} from 'react-router-dom';
-import {Header} from '@/components/Header';
-import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
-import {Button} from '@/components/ui/button';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
-import {VideoCallRoom} from '@/components/video/VideoCallRoom';
-import {toast} from 'sonner';
+import { useParams } from 'react-router-dom';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { MessageSquare, FileText, Video, Calendar, Users, Settings, X } from 'lucide-react';
+import { VideoCallRoom } from '@/components/video/VideoCallRoom';
+import { toast } from 'sonner';
 export default function ProjectRoom() {
-  const { projectId } = useParams() as { projectId: string },
-  const [activeTab, setActiveTab] = useState('chat');
-  const [isInCall, setIsInCall] = useState(false);
+  const { projectId } = useParams() as { projectId: string},
+  const [activeTab, setActiveTab] = useState($2);
+  const [isInCall, setIsInCall] = useState($2);
   const [callParticipants, setCallParticipants] = useState<Array<{
     id: string,
     name: string,
-    avatar?: string;
-    isMuted?: boolean;
-    isVideoEnabled?: boolean;
-    isScreenSharing?: boolean;
+    avatar?: string,
+    isMuted?: boolean,
+    isVideoEnabled?: boolean,
+    isScreenSharing?: boolean,
     isHost?: boolean
   }>>([
     {
@@ -28,43 +27,39 @@ export default function ProjectRoom() {
       name: 'You',
       isHost: true,
       isVideoEnabled: true,
-      isMuted: false
-    }
-  ]);
+      isMuted: false}
+  ]),
   
   const startVideoCall = () => {
-    setIsInCall(true);
-    toast.success("Video call started", {
-      description: "Others can join with the project room link"
-    });
+    setIsInCall($2);
+    toast.success($2);
     // Switch to video tab if not already there
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
-  };
+  },
   
   const endVideoCall = () => {
-    setIsInCall(false);
+    setIsInCall($2);
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
-  };
+  },
   
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
     const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false},
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true},
+      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true}
+    ],
     
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    
+    const randomUser = $2;
     if (!callParticipants.find(p => p.id === randomUser.id)) {
-      setCallParticipants(prev => [...prev, randomUser]);
+      setCallParticipants($2);
       toast(`${randomUser.name} joined the call`)
     }
-  };
+  },
   
   return (
     <>
@@ -83,7 +78,6 @@ export default function ProjectRoom() {
             <Button variant="outline">Invite Team Member</Button>
           </div>
         </div>
-        
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
           <TabsList className="grid grid-cols-6 md:w-fit">
             <TabsTrigger value="chat" className="flex items-center gap-2">
@@ -117,7 +111,6 @@ export default function ProjectRoom() {
               <span className="hidden sm:inline">Settings</span>
             </TabsTrigger>
           </TabsList>
-          
           <TabsContent value="chat" className="space-y-4">
             <Card>
               <CardHeader>
@@ -131,7 +124,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="files" className="space-y-4">
             <Card>
               <CardHeader>
@@ -145,7 +137,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="video" className="space-y-4">
             <Card>
               <CardHeader>
@@ -155,12 +146,11 @@ export default function ProjectRoom() {
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (
                   <div className="space-y-4">
-                    <VideoCallRoom 
+                    <VideoCallRoom
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
                     />
-                    
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
@@ -186,7 +176,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="calendar" className="space-y-4">
             <Card>
               <CardHeader>
@@ -200,7 +189,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="team" className="space-y-4">
             <Card>
               <CardHeader>
@@ -214,7 +202,6 @@ export default function ProjectRoom() {
               </CardContent>
             </Card>
           </TabsContent>
-          
           <TabsContent value="settings" className="space-y-4">
             <Card>
               <CardHeader>
@@ -234,4 +221,3 @@ export default function ProjectRoom() {
     </>
   )
 }
-;

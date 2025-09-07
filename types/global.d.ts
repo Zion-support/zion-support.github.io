@@ -1,90 +1,73 @@
-// Global type declarations for DOM types
+/// <reference types = $2;
+  export default content
+}
+
+declare module '*.png' {
+  const content: string,
+  export default content
+}
+
+declare module '*.jpg' {
+  const content: string,
+  export default content
+}
+
+declare module '*.jpeg' {
+  const content: string,
+  export default content
+}
+
+declare module '*.gif' {
+  const content: string,
+  export default content
+}
+
+declare module '*.webp' {
+  const content: string,
+  export default content
+}
+
+declare module '*.ico' {
+  const content: string,
+  export default content
+}
+
+declare module '*.bmp' {
+  const content: string,
+  export default content
+}
+
+declare module '*.json' {
+  const content: Record<string, unknown>,
+  export default content
+}
+
+declare module '*.md' {
+  const content: string,
+  export default content
+}
+
+declare module '*.txt' {
+  const content: string,
+  export default content
+}
+
+// Global type augmentations
 declare global {
   interface Window {
-    performance: Performance;
+    __NEXT_DATA__: Record<string, unknown>,
+    __NEXT_PRELOADREADY__: (() => void) | undefined,
+    __NEXT_REGISTER_PAGE__: (() => void) | undefined,
+    __NEXT_WEBPACK_CHUNKS__: string[],
+    __NEXT_WEBPACK_RUNTIME__: Record<string, unknown>
   }
-  
-  // Define Performance interface if not available
-  interface Performance {
-    getEntriesByType(type: string): PerformanceEntry[];
-    now(): number;
-  }
-  
-  // Define PerformanceEntry interface if not available
-  interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-  }
-  
-  // Define HTML element types if not available
-  interface Element {
-    tagName: string;
-    attributes: NamedNodeMap;
-    children: HTMLCollection;
-    parentElement: HTMLElement | null;
-  }
-  
-  interface CSSStyleDeclaration {
-    [key: string]: string;
-  }
-  
-  interface HTMLElement extends Element {
-    className: string;
-    id: string;
-    innerHTML: string;
-    textContent: string | null;
-    style: CSSStyleDeclaration;
-  }
-  
-  interface HTMLDivElement extends HTMLElement {}
-  interface HTMLParagraphElement extends HTMLElement {}
-  interface HTMLHeadingElement extends HTMLElement {}
-  interface HTMLAnchorElement extends HTMLElement {
-    href: string;
-    target: string;
-  }
-  
-  // Define MessageEvent if not available
-  interface MessageEvent<T = any> extends Event {
-    data: T;
-    origin: string;
-    lastEventId: string;
-    source: MessageEventSource | null;
-    ports: ReadonlyArray<MessagePort>;
-  }
-  
-  // Define RequestInit if not available
-  interface RequestInit {
-    body?: BodyInit | null;
-    cache?: RequestCache;
-    credentials?: RequestCredentials;
-    headers?: HeadersInit;
-    integrity?: string;
-    keepalive?: boolean;
-    method?: string;
-    mode?: RequestMode;
-    redirect?: RequestRedirect;
-    referrer?: string;
-    referrerPolicy?: ReferrerPolicy;
-    signal?: AbortSignal | null;
-    window?: any;
-    timeout?: number;
-  }
-  
-  // Define AbortController if not available
-  interface AbortController {
-    signal: AbortSignal;
-    abort(): void;
-  }
-  
-  // Define AbortSignal if not available
-  interface AbortSignal extends EventTarget {
-    aborted: boolean;
-    onabort: ((this: AbortSignal, ev: Event) => any) | null;
+
+  namespace NodeJS {
+    interface ProcessEnv {
+      NODE_ENV: 'development' | 'production' | 'test',
+      [key: string]: string | undefined
+    }
   }
 }
 
-// Re-export DOM types that might not be available
-export {};
+export {},

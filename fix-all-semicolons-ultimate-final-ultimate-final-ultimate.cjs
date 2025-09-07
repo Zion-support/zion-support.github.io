@@ -7,11 +7,11 @@ function fixAllSemicolonsUltimateFinalUltimateFinalUltimate(filePath) {;
     let modified = false;
 ;
     // Fix semicolons in object properties;
-    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1:$2,');
-    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2'), ,
-    content = content.replace(/(\w+):\s*([^,}]+);/g, '$1: $2'), ,
-    // Fix semicolons in array elements;    content = content.replace(/"([^"]*)";/g, '"$1",');
-    content = content.replace(/"([^"]*)",;/g, '"$1",');
+    content = content.replace(/(\w+):\s*([^,}]+),/g, '$"1": $2,');
+    content = content.replace(/(\w+):\s*([^,}]+);/g, '$"1": $2');
+;
+    // Fix semicolons in array elements;
+    content = content.replace(/"([^"]*)",/g, '"$1",');
     content = content.replace(/"([^"]*)";/g, '"$1"');
 ;
     // Fix semicolons in object literals;
@@ -55,7 +55,7 @@ function fixAllSemicolonsUltimateFinalUltimateFinalUltimate(filePath) {;
 ;
     return modified;
   } catch (error) {;
-    console.error(`Error processing ${filePath} `, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -70,22 +70,16 @@ function processDirectory(dirPath) {;
 ;
     if (stat.isDirectory()) {;
       fixedCount += processDirectory(filePath);
-    } else if (;
-      file.endsWith('.tsx') ||;
-      file.endsWith('.ts') ||;
-      file.endsWith('.jsx') ||;
-      file.endsWith('.js');
-    ) {;
-      if (fixAllSemicolonsUltimateFinalUltimateFinalUltimate(filePath));
-        fixedCount++;
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {;
+      if (fixAllSemicolonsUltimateFinalUltimateFinalUltimate(filePath)) fixedCount++;
     }
   }
 ;
   return fixedCount;
 }
-;
-console.log(;
-  'Starting ultimate final ultimate final ultimate semicolon fixes...';
+
+console.log(
+
 );
 const fixedCount = processDirectory('./pages');
 console.log(`Fixed ${fixedCount} files`);

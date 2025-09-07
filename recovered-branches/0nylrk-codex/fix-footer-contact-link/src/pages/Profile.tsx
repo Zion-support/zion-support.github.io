@@ -1,21 +1,19 @@
-
-import React, { useEffect } from 'react';
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {useNavigate} from "react-router-dom";
-import {toast} from "sonner";
+import React, { useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 export default function Profile() {
-  const { user, isLoading, logout } = useAuth();
-  const navigate = useNavigate();
-
+  const { user, isLoading, logout } = useAuth($2);
+  const navigate = useNavigate($2);
   useEffect(() => {
     if (!isLoading && !user) {
-      toast.error("Please log in to view your profile");
+      toast.error($2);
       navigate("/login?redirect=/profile")
     }
-  }, [user, isLoading, navigate]);
+  }, [user, isLoading, navigate]),
 
   if (isLoading) {
     return (
@@ -28,7 +26,6 @@ export default function Profile() {
       </>
     )
   }
-
   if (!user) {
     return (
       <>
@@ -37,7 +34,7 @@ export default function Profile() {
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">
             <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>
             <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>
-            <Button 
+            <Button
               onClick={() => navigate("/login?redirect=/profile")}
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
             >
@@ -49,7 +46,6 @@ export default function Profile() {
       </>
     )
   }
-
   return (
     <>
       <Header />
@@ -64,11 +60,11 @@ export default function Profile() {
                 </div>
               </div>
               <div className="md:w-2/3">
-                <h2 className="text-xl font-bold text-white">{user.displayName || "User"}</h2>
+                <h2 className="text-xl font-bold text-white">{user.displayName |"User"}</h2>
                 <p className="text-zion-slate-light mb-4">{user.email}</p>
                 <Button
                   onClick={() => {
-                    logout();
+                    logout($2);
                     navigate("/")
                   }}
                   variant="outline"
@@ -85,4 +81,3 @@ export default function Profile() {
     </>
   )
 }
-;

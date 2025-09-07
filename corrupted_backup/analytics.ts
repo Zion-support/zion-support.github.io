@@ -1,0 +1,4 @@
+export type UserType = 'freelancer' | 'b2b' | 'hiring manager' | 'guest';
+export async function trackEvent (payload: TrackEventPayload) {
+  try {
+

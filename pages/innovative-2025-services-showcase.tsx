@@ -1,5 +1,5 @@
-import React, { useState } from 'react',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Brain, Shield, Rocket, Globe, Cpu, Database, 
   TrendingUp, Users, Star, Zap, Lock, Target,
@@ -7,66 +7,44 @@ import {
 } from 'lucide-react',
 
 // Import our new innovative services
-import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3',;
-import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3',;
-import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3',;
+import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
 const Innovative2025ServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [searchTerm, setSearchTerm] = useState($2);
   // Combine all innovative services
-  const allInnovativeServices = [
-    ...innovativeMicroSaasExpansionV32025,
+  const allInnovativeServices = $2;
     ...innovativeITServicesExpansion2025V3,
     ...innovativeAIServicesExpansion2025V3
   ],
 
   const categories = [
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security')).length },
-    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') || s.category.includes('FinOps')).length },
-    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer')).length }
-  ],
-
-  const filteredServices = allInnovativeServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || 
-      service.category.toLowerCase().includes(selectedCategory) ||
-      (selectedCategory === 'ai' && (service.category.includes('AI') || service.category.includes('Machine Learning'))) ||
-      (selectedCategory === 'it' && (service.category.includes('IT') || service.category.includes('Infrastructure'))) ||
-      (selectedCategory === 'cybersecurity' && service.category.includes('Security')) ||
-      (selectedCategory === 'cloud' && (service.category.includes('Cloud') || service.category.includes('FinOps'))) ||
-      (selectedCategory === 'developer' && service.category.includes('Developer')),
-    
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()),
-    
+    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s = $2;
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s = $2;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s = $2;
+    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s = $2;
+    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s = $2;
+  const filteredServices = $2;
+    const matchesSearch = $2;
     return matchesCategory && matchesSearch
   }),
 
   const stats = [
-    { number: "15+", label: "Innovative Services", icon: Star },
-    { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle },
-    { number: "24/7", label: "AI Support Available", icon: Brain },
-    { number: "200+", label: "Countries Served", icon: Globe }
+    { number: "15+", label: "Innovative Services", icon: Star},
+    { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle},
+    { number: "24/7", label: "AI Support Available", icon: Brain},
+    { number: "200+", label: "Countries Served", icon: Globe}
   ],
 
   const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0 },
+    initial: { opacity: 0, y: 30},
+    animate: { opacity: 1, y: 0},
     transition: { duration: 0.6, ease: "easeOut" }
   },
 
-  const staggerContainer = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  },
-
+  const staggerContainer = $2;
   return (
     <>
       <Head>
@@ -89,10 +67,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           <div className="absolute inset-0 overflow-hidden">
             {[...Array(20)].map((_, i) => (
               <div
-                key={i}
-                className="absolute w-1 h-1 bg-white rounded-full opacity-20 animate-pulse"
-                style={{
-                  left: `${Math.random() * 100}%`,
+                key = $2;
                   top: `${Math.random() * 100}%`,
                   animationDelay: `${Math.random() * 2}s`,
                   animationDuration: `${2 + Math.random() * 3}s`
@@ -108,7 +83,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           <motion.header 
             className="relative z-20 py-8 px-4 sm:px-6 lg:px-8"
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -120,8 +95,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Experience the future of technology with our revolutionary AI platforms, quantum computing solutions, 
@@ -130,8 +105,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="max-w-7xl mx-auto">
@@ -268,8 +243,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {
               {filteredServices.length === 0 && (
                 <motion.div 
                   className="text-center py-20"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0}}
+                  animate={{ opacity: 1}}
                 >
                   <div className="text-6xl mb-6">🔍</div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -278,7 +253,7 @@ const Innovative2025ServicesShowcase: React.FC = () => {
                   </p>
                   <button
                     onClick={() => {
-                      setSearchTerm(''),
+                      setSearchTerm($2);
                       setSelectedCategory('all')
                     }}
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
@@ -293,8 +268,8 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           {/* Contact Section */}
           <motion.section 
             className="relative z-20 py-20 px-4 sm:px-6 lg:px-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
             <div className="max-w-4xl mx-auto text-center">
@@ -344,71 +319,9 @@ const Innovative2025ServicesShowcase: React.FC = () => {
           {/* Footer */}
           <motion.footer 
             className="relative z-20 py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 1.4 }}
           >
-            <div className="max-w-7xl mx-auto">
-              <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
-                <div>
-                  <div className="flex items-center space-x-2 mb-4">
-                    <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                      <Zap className="w-5 h-5 text-white" />
-                    </div>
-                    <span className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                      Zion Tech Group
-                    </span>
-                  </div>
-                  <p className="text-gray-400 text-sm">
-                    Transforming businesses with innovative technology solutions for the future.
-                  </p>
-                </div>
-                
-                <div>
-                  <h3 className="text-white font-semibold mb-4">Services</h3>
-                  <ul className="space-y-2 text-sm text-gray-400">
-                    <li><Link href="/services" className="hover:text-white transition-colors">AI Services</Link></li>
-                    <li><Link href="/services" className="hover:text-white transition-colors">IT Infrastructure</Link></li>
-                    <li><Link href="/services" className="hover:text-white transition-colors">Micro SAAS</Link></li>
-                    <li><Link href="/services" className="hover:text-white transition-colors">Cybersecurity</Link></li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="text-white font-semibold mb-4">Company</h3>
-                  <ul className="space-y-2 text-sm text-gray-400">
-                    <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                    <li><Link href="/team" className="hover:text-white transition-colors">Our Team</Link></li>
-                    <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
-                    <li><Link href="/news" className="hover:text-white transition-colors">News</Link></li>
-                  </ul>
-                </div>
-                
-                <div>
-                  <h3 className="text-white font-semibold mb-4">Connect</h3>
-                  <ul className="space-y-2 text-sm text-gray-400">
-                    <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                    <li><Link href="/support" className="hover:text-white transition-colors">Support</Link></li>
-                    <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-                    <li><Link href="/resources" className="hover:text-white transition-colors">Resources</Link></li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="mt-12 pt-8 border-t border-gray-800 text-center">
-                <p className="text-gray-400 text-sm">
-                  © 2025 Zion Tech Group. All rights reserved. | 
-                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
-                  <Link href="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
-                </p>
-              </div>
-            </div>
-          </motion.footer>
-        </div>
-      </div>
-    </>
-  )
-},
-
+            <div className = $2;
 export default Innovative2025ServicesShowcase,
-;

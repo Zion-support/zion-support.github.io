@@ -1,18 +1,18 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   ArrowRight, CheckCircle, Globe,
   Search, Grid, List, Star as StarIcon,
   Phone, Mail, MapPin
 } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion',;
-import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
+import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
 export default function Comprehensive2025InnovativeServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
   const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all'),
@@ -22,23 +22,21 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
 
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length },
-    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length },
-    { id: 'DevOps & Infrastructure', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category.includes('Edge')).length },
-    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s => s.category.includes('Healthcare')).length },
-    { id: 'Financial Technology', name: 'FinTech', count: allServices.filter(s => s.category.includes('Financial')).length },
-    { id: 'Education Technology', name: 'EdTech', count: allServices.filter(s => s.category.includes('Education')).length },
-    { id: 'Supply Chain & Logistics', name: 'Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length },
-    { id: 'Energy & Sustainability', name: 'Energy', count: allServices.filter(s => s.category.includes('Energy')).length },
-    { id: 'Advanced AI & Consciousness', name: 'AI Consciousness', count: allServices.filter(s => s.category.includes('Consciousness')).length },
-    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s => s.category.includes('Quantum')).length },
-    { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length },
-    { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length },
-    { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length },
-    { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s => s.category.includes('Advanced Analytics')).length }
-  ],
-
+    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s = $2;
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s = $2;
+    { id: 'DevOps & Infrastructure', name: 'DevOps', count: allServices.filter(s = $2;
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s = $2;
+    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s = $2;
+    { id: 'Financial Technology', name: 'FinTech', count: allServices.filter(s = $2;
+    { id: 'Education Technology', name: 'EdTech', count: allServices.filter(s = $2;
+    { id: 'Supply Chain & Logistics', name: 'Supply Chain', count: allServices.filter(s = $2;
+    { id: 'Energy & Sustainability', name: 'Energy', count: allServices.filter(s = $2;
+    { id: 'Advanced AI & Consciousness', name: 'AI Consciousness', count: allServices.filter(s = $2;
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s = $2;
+    { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s = $2;
+    { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s = $2;
+    { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s = $2;
+    { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s = $2;
   const getPriceRange = (price: string) => {
     const numPrice = parseFloat(price.replace('$', '').replace(, '')),
     if (numPrice < 1000) return 'budget',
@@ -46,13 +44,9 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     return 'enterprise'
   },
 
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
-      const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange,
+  const filteredServices = $2;
+      const matchesCategory = selectedCategory === 'all' || service.category.includes($2);
+      const matchesPrice = $2;
       return matchesSearch && matchesCategory && matchesPrice
     })
     .sort((a, b) => {
@@ -64,13 +58,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         case 'rating':
           return b.rating - a.rating,
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime($2);
         default: return 0
       }
     }),
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
@@ -80,7 +73,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
   },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20},
     visible: {
       opacity: 1,
       y: 0,
@@ -90,8 +83,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     }
   },
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
@@ -114,8 +106,8 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
@@ -169,8 +161,8 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
           >
@@ -292,8 +284,8 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <p className="text-white/60 mb-6">Try adjusting your search criteria or filters</p>
                 <button
                   onClick={() => {
-                    setSearchTerm(''),
-                    setSelectedCategory('all'),
+                    setSearchTerm($2);
+                    setSelectedCategory($2);
                     setPriceRange('all')
                   }}
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
@@ -424,10 +416,10 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       <section className="px-6 pb-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -468,4 +460,4 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       <EnhancedFooter />
     </div>
   )
-};
+}

@@ -1,12 +1,11 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
 
 import React from "react";
-import {Button} from "@/components/ui/button";
-import {type, Company} from "./CompanyDashboard";
-import {Bell, Users, Settings} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { type Company } from "./CompanyDashboard";
+import { Bell, Users, Settings } from "lucide-react";
 interface WorkspaceHeaderProps {
-  company: Company
-}
+  company: Company}
 
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
@@ -14,9 +13,9 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center border border-border">
-            <img 
-              src={company.logoUrl || "/placeholder.svg"} 
-              alt={company.name} 
+            <img
+              src={company.logoUrl |"/placeholder.svg"}
+              alt={company.name}
               className="max-h-10 max-w-10"
             />
           </div>
@@ -27,7 +26,6 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             </p>
           </div>
         </div>
-        
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon">
             <Bell className="h-4 w-4" />

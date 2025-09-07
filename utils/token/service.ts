@@ -1,47 +1,107 @@
-export interface TokenTransaction {
-  id: string;
-  userId: string;
-  amount: number;
-  type: 'issue' | 'redeem' | 'transfer';
-  reason: string;
-  timestamp: number;
+import { randomUUID } from "crypto";
+import { tokenStore } from "./storage";
+import { TokenTransaction, WalletSummary } from "./types";
+export function getWalletSummary(userId: string): WalletSummary {
+  const wallet = tokenStore.getWallet($2);
+  const transactions = tokenStore.getTransactions($2);
+  const config = tokenStore.getConfig($2);
+  return { wallet, transactions, config }
 }
 
-// Mock data storage - replace with actual database
-let transactions: TokenTransaction[] = [];
-
-export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+export function earnTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+  metadata?: Record<string, any>
+): TokenTransaction {
+  if (amount <= 0) throw new Error($2);
+  const wallet = tokenStore.getWallet($2);
+  const newBalance = $2;
+  tokenStore.setWalletBalance($2);
+  const tx: TokenTransaction = {
+    id: randomUUID($2);
     userId,
+    type: "earn",
     amount,
-    type: 'issue',
     reason,
-    timestamp: Date.now()
-  };
-  
-  transactions.push(transaction);
-  return transaction;
+    metadata,
+    createdAt: new Date().toISOString()},
+  tokenStore.addTransaction($2);
+  return tx
 }
 
-export function redeemTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+export function burnTokens(
+  userId: string,
+  amount: number,
+  reason: string,
+  metadata?: Record<string, any>
+): TokenTransaction {
+  if (amount <= 0) throw new Error($2);
+  const wallet = tokenStore.getWallet($2);
+  if (wallet.balance < amount) throw new Error($2);
+  const newBalance = $2;
+  tokenStore.setWalletBalance($2);
+  const tx: TokenTransaction = {
+    id: randomUUID($2);
     userId,
-    amount: -amount, // Negative for redemption
-    type: 'redeem',
+    type: "burn",
+    amount,
     reason,
-    timestamp: Date.now()
-  };
-  
-  transactions.push(transaction);
-  return transaction;
+    metadata,
+    createdAt: new Date().toISOString()},
+  tokenStore.addTransaction($2);
+  return tx
 }
 
-export function setConfig(
-  partial: Partial<ReturnType<typeof getConfig>>
-): void {
-  const current = getConfig();
-  // Update the configuration
-  Object.assign(current, partial);
+export function issueTokens(
+  userId: string,
+  amount: number,
+  reason: string): TokenTransaction {
+  const tx = earnTokens($2);
+  tx.type = $2;
+  return tx
+}
+
+export function revokeTokens(
+  userId: string,
+  amount: number,
+  reason: string): TokenTransaction {
+  const tx = burnTokens($2);
+  tx.type = $2;
+  return tx
+}
+
+export function handleAction(userId: string, action: string, metadata?: Record<string, any>): TokenTransaction {
+  const { earnRules } = tokenStore.getConfig($2);
+  const amount = $2;
+  if (!amount) throw new Error($2);
+  return earnTokens(userId, amount, action, metadata)
+}
+
+export function burnForFeature(userId: string, feature: string, metadata?: Record<string, any>): TokenTransaction {
+  const { burnRules } = tokenStore.getConfig($2);
+  const amount = $2;
+  if (!amount) throw new Error($2);
+  return burnTokens(userId, amount, feature, metadata)
+}
+
+export function redeemToCredits(userId: string, amount: number): { tx: TokenTransaction, usd: number} {
+  const { usdPerToken } = tokenStore.getConfig($2);
+  const tx = burnTokens($2);
+  tx.type = $2;
+  const usd = $2;
+  return { tx, usd }
+}
+
+export function getAllTransactions() {
+  return tokenStore.getTransactions()
+}
+
+export function getConfig() {
+  return tokenStore.getConfig()
+}
+
+export function setConfig(partial: Partial<ReturnType<typeof getConfig>>): void {
+  const current = tokenStore.getConfig($2);
+  tokenStore.setConfig({ ...current, ...partial })
 }

@@ -10,9 +10,9 @@ class MasterAutomationOrchestrator {
   constructor() {
     this.logFile = path.join(
       __dirname,
-      '..',
-      'automation-reports',
-      'master-orchestrator.log'
+
+
+
     );
     this.ensureLogDir();
   }
@@ -96,14 +96,18 @@ class MasterAutomationOrchestrator {
 
     const scripts = [
       'enhanced-automation-suite.cjs',
+      'comprehensive-automation-suite.cjs',
       'app-optimizer.cjs',
-      'comprehensive-app-improvement-suite.cjs',
+      'performance-optimizer.cjs',
+      'security-scanner.cjs',
+      'seo-optimizer.cjs',
+      'health-check.cjs'
     ];
 
     for (const script of scripts) {
-      const scriptPath = path.join(__dirname, '..', script);
+      const scriptPath = path.join(__dirname, script);
       if (fs.existsSync(scriptPath)) {
-        await this.runCommand(`node ${script}`, `Running ${script}`);
+        await this.runCommand(`node ${scriptPath}`, `Running ${script}`);
       } else {
         this.log(`⚠️ Script not found: ${script}`);
       }
@@ -126,9 +130,9 @@ class MasterAutomationOrchestrator {
 
     const reportPath = path.join(
       __dirname,
-      '..',
-      'automation-reports',
-      'master-orchestrator-report.json'
+
+
+
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     this.log(`📊 Report saved to: ${reportPath}`);

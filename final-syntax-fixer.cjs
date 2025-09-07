@@ -2,154 +2,107 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-console.log('🔧 Starting final comprehensive syntax fixer...');
+class FinalSyntaxFixer {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.fixedFiles = [];
+    this.errors = [];
+  }
 
-// Fix the v1.ts file structure - final fix
-function fixV1ApiDocs() {
-  const filePath = '/workspace/data/api-docs/v1.ts';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
+  log(message) {
+    console.log(`[${new Date().toISOString()}] ${message}`);
+  }
+
+  getAllFiles(dir, extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', '.mjs']) {
+    let files = [];
+    const items = fs.readdirSync(dir);
     
-    // Fix the structure by properly closing all brackets
-    content = content.replace(
-      /versions: \['v1'\]\}\]\}\]\s*\}\s*\]\s*\};/,
-      "versions: ['v1']}]}]\n    }\n  ]\n};"
-    );
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules' && item !== '.next') {
+        files = files.concat(this.getAllFiles(fullPath, extensions));
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
+      }
+    }
     
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed v1.ts structure');
-  } catch (error) {
-    console.log('⚠️ Could not fix v1.ts:', error.message);
+    return files;
+  }
+
+  fixSyntaxErrors(filePath) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+
+      // Fix common syntax errors
+      content = content.replace(/\/\* \/\* Brain \*\/ \*\//g, '// Brain');
+      content = content.replace(/\/\* Brain \*\//g, '// Brain');
+      content = content.replace(/,\s*\/\* Brain \*\/\s*,/g, ', Brain,');
+      content = content.replace(/,\s*\/\* Brain \*\/\s*\)/g, ' // Brain)');
+      content = content.replace(/,\s*\/\* Brain \*\/\s*\]/g, ' // Brain]');
+      content = content.replace(/,\s*\/\* Brain \*\/\s*}/g, ' // Brain}');
+      
+      // Fix duplicate declarations
+      content = content.replace(/const\s*{\s*execSync\s*}\s*=\s*require\([^)]+\);\s*const\s*{\s*execSync\s*}\s*=\s*require\([^)]+\);/g, 'const { execSync } = require(\'child_process\');');
+      
+      // Fix malformed comments
+      content = content.replace(/}\s*\)\s*;\s*jest\.clearAllMocks\(\)\s*}\s*\)\s*;/g, '});');
+      
+      // Fix orphaned strings
+      content = content.replace(/^\s*['"][^'"]*['"]\s*,?\s*$/gm, '');
+      
+      // Fix malformed imports
+      content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]\s*;/g, 'import { $1, $3 } from \'$2\';');
+
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        this.log(`✅ Fixed syntax errors in: ${path.relative(this.projectRoot, filePath)}`);
+        this.fixedFiles.push(filePath);
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      this.log(`❌ Failed to fix: ${path.relative(this.projectRoot, filePath)} - ${error.message}`);
+      this.errors.push({ file: filePath, error: error.message });
+      return false;
+    }
+  }
+
+  async run() {
+    this.log('🔧 Starting final syntax fixing...');
+    
+    const files = this.getAllFiles(this.projectRoot);
+    this.log(`📁 Found ${files.length} files to check`);
+    
+    let fixedCount = 0;
+    
+    for (const file of files) {
+      if (this.fixSyntaxErrors(file)) {
+        fixedCount++;
+      }
+    }
+    
+    this.log(`\n📊 Fix Summary:`);
+    this.log(`   - Files processed: ${files.length}`);
+    this.log(`   - Files fixed: ${fixedCount}`);
+    this.log(`   - Errors: ${this.errors.length}`);
+    
+    if (this.errors.length > 0) {
+      this.log(`\n❌ Files with errors:`);
+      this.errors.forEach(({ file, error }) => {
+        this.log(`   - ${path.relative(this.projectRoot, file)}: ${error}`);
+      });
+    }
+    
+    this.log('🎉 Final syntax fixing completed!');
   }
 }
 
-// Fix partner update file
-function fixPartnerUpdate() {
-  const filePath = '/workspace/pages/api/admin/partners/update.ts';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix syntax errors
-    content = content.replace(
-      /if \(error\) return res\.status\(500\)\.json\(\{ error: error\.message \}\),/,
-      "if (error) return res.status(500).json({ error: error.message });"
-    );
-    
-    content = content.replace(
-      /return res\.status\(200\)\.json\(\{ ok: true \}\)/,
-      "return res.status(200).json({ ok: true });"
-    );
-    
-    content = content.replace(
-      /return res\.status\(500\)\.json\(\{ error: e\?\.message \}\)/,
-      "return res.status(500).json({ error: e?.message });"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed partner update syntax');
-  } catch (error) {
-    console.log('⚠️ Could not fix partner update:', error.message);
-  }
-}
-
-// Fix pitch generate file
-function fixPitchGenerate() {
-  const filePath = '/workspace/pages/api/admin/pitch/generate.ts';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix the messages array syntax
-    content = content.replace(
-      /\{ role: 'system', content: 'You generate crisp, data-driven investor pitch content\.' \};/,
-      "{ role: 'system', content: 'You generate crisp, data-driven investor pitch content.' },"
-    );
-    
-    content = content.replace(
-      /temperature: 0\.5\}\),/,
-      "temperature: 0.5});"
-    );
-    
-    content = content.replace(
-      /content = chat\.choices\?\.\[0\]\?\.message\?\.content \|\| ''/,
-      "const content = chat.choices?.[0]?.message?.content || '';"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed pitch generate syntax');
-  } catch (error) {
-    console.log('⚠️ Could not fix pitch generate:', error.message);
-  }
-}
-
-// Fix pitch metrics file
-function fixPitchMetrics() {
-  const filePath = '/workspace/pages/api/admin/pitch/metrics.ts';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix syntax errors
-    content = content.replace(
-      /\{ name: 'Fortune 500 Co', summary: 'Automated LLM evaluation pipeline, 23% cost reduction' \};/,
-      "{ name: 'Fortune 500 Co', summary: 'Automated LLM evaluation pipeline, 23% cost reduction' },"
-    );
-    
-    content = content.replace(
-      /\{ name: 'Global Retailer', summary: 'AI catalog enrichment, 9% revenue lift in A\/B' \}\]\};/,
-      "{ name: 'Global Retailer', summary: 'AI catalog enrichment, 9% revenue lift in A/B' }]};"
-    );
-    
-    content = content.replace(
-      /res\.status\(200\)\.json\(data\)/,
-      "res.status(200).json(data);"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed pitch metrics syntax');
-  } catch (error) {
-    console.log('⚠️ Could not fix pitch metrics:', error.message);
-  }
-}
-
-// Fix pitch rewrite file
-function fixPitchRewrite() {
-  const filePath = '/workspace/pages/api/admin/pitch/rewrite.ts';
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix syntax errors
-    content = content.replace(
-      /const client = new OpenAI\(\{ apiKey: process\.env\.OPENAI_API_KEY \|\| process\.env\.NEXT_PUBLIC_OPENAI_API_KEY \}\),/,
-      "const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY });"
-    );
-    
-    content = content.replace(
-      /const \{ allowed \} = await ensureAdminFromApi\(req\),/,
-      "const { allowed } = await ensureAdminFromApi(req);"
-    );
-    
-    content = content.replace(
-      /if \(!allowed\) return res\.status\(403\)\.json\(\{ error: 'Forbidden' \}\),/,
-      "if (!allowed) return res.status(403).json({ error: 'Forbidden' });"
-    );
-    
-    content = content.replace(
-      /if \(req\.method !== 'POST'\) return res\.status\(405\)\.json\(\{ error: 'Method Not Allowed' \}\),/,
-      "if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });"
-    );
-    
-    fs.writeFileSync(filePath, content);
-    console.log('✅ Fixed pitch rewrite syntax');
-  } catch (error) {
-    console.log('⚠️ Could not fix pitch rewrite:', error.message);
-  }
-}
-
-// Run all fixes
-fixV1ApiDocs();
-fixPartnerUpdate();
-fixPitchGenerate();
-fixPitchMetrics();
-fixPitchRewrite();
-
-console.log('🎉 Final comprehensive syntax fixing completed!');
+// Run the fixer
+const fixer = new FinalSyntaxFixer();
+fixer.run().catch(console.error);

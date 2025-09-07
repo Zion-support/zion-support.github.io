@@ -3,11 +3,11 @@
  * Clean Duplicate Imports;
  * Removes duplicate imports from files;
  */;
-;
 const fs = require('fs');
-
-class ImportCleaner {
-  constructor() {
+const path = require('path');
+;
+class ImportCleaner {;
+  constructor() {;
     this.cleanedFiles = [];
   }
 ;
@@ -24,9 +24,7 @@ class ImportCleaner {
       let content = fs.readFileSync(filePath, 'utf8');
 ;
       // Find lucide-react import;
-      const importMatch = content.match(;
-        /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/;
-      );
+      const importMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
       if (!importMatch) {;
         return true; // No lucide-react import;
       }
@@ -51,34 +49,33 @@ class ImportCleaner {
       }
 ;
       // Create new import statement;
-      const newImportStatement = `import { ;
+      const newImportStatement = `import {;
   ${uniqueImports.join(',\n  ')}
 } from 'lucide-react';`;
 ;
       // Replace the old import;
       content = content.replace(;
-        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,;
-        newImportStatement;      );
+        /import\s*{\s*[^}]+\s*}\s*from\s*['"]lucide-react['"];?/,
+        newImportStatement;
+      );
 ;
       fs.writeFileSync(filePath, content);
       this.cleanedFiles.push(filePath);
       this.log(`✅ Cleaned imports in ${filePath}`);
       return true;
     } catch (error) {;
-      this.log(`❌ Failed to clean ${filePath} ${error.message}`);
+      this.log(`❌ Failed to clean ${filePath}: ${error.message}`);
       return false;
     }
   }
 ;
   async cleanAllFiles() {;
     this.log('🚀 Starting import cleaning...');
-;
-    const filesToClean = [;
-      'pages/components/Navigation.tsx',;
-      'pages/it-services.tsx',;
-      'pages/components/Footer.tsx',;      'pages/components/Navigation.tsx',
-      'pages/it-services.tsx',
-      'pages/components/Footer.tsx',
+
+    const filesToClean = [
+
+
+
     ];
 ;
     for (const file of filesToClean) {;

@@ -1,7 +1,9 @@
-import React from 'react',;
-import SEO from '../components/SEO',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import Link from 'next/link',;
+
+
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
 export default function ResourcesPage() {
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">
@@ -20,25 +22,13 @@ export default function ResourcesPage() {
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },
             { name: 'Developer Hub', href: '/developer', blurb: 'APIs, SDKs, and examples.' }
           ].map((it) => (
-            <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block">
-              <div className="text-sm text-gray-400">Resource</div>
-              <h3 className="text-xl font-semibold text-white">{it.name}</h3>
-              <p className="mt-1 text-gray-300">{it.blurb}</p>
-              <div className="mt-3 text-cyan-300">Open →</div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    </UltraFuturisticBackground>
-  )
-},
-
+            <Link key = $2;
       {/* Whitepapers */}
       <section id="whitepapers" className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -52,8 +42,8 @@ export default function ResourcesPage() {
             {whitepapers.map((paper, index) => (
               <motion.div
                 key={paper.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
               >
@@ -92,8 +82,8 @@ export default function ResourcesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -107,8 +97,8 @@ export default function ResourcesPage() {
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
@@ -152,8 +142,8 @@ export default function ResourcesPage() {
       <section className="py-20 bg-slate-900">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -167,8 +157,8 @@ export default function ResourcesPage() {
             {videos.map((video, index) => (
               <motion.div
                 key={video.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all duration-300"
               >
@@ -204,8 +194,8 @@ export default function ResourcesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -219,8 +209,8 @@ export default function ResourcesPage() {
             {documentation.map((doc, index) => (
               <motion.div
                 key={doc.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
               >
@@ -256,13 +246,9 @@ export default function ResourcesPage() {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Can't find what you're looking for? Our team is here to help with custom research, 
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition = $2;
               personalized consultations, and tailored solutions for your specific needs.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -286,4 +272,26 @@ export default function ResourcesPage() {
       <EnhancedFooter />
     </>
   )
-}
+          >;
+            <h2 className="text-4xl font-bold text-white mb-6">Need More Resources?</h2>;
+            <p className="text-xl text-blue-100 mb-8">;
+              Can't find what you're looking for? Our team is here to help with custom research;
+              personalized consultations, and tailored solutions for your specific needs.;
+            </p>;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+              <a;
+                href="/contact";
+              >;
+                Contact Our Experts;
+              </a>;
+              <a;
+                href="/contact";
+              >;
+                Request Custom Research;
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+

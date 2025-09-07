@@ -1,18 +1,17 @@
 
 async function ask() {
-  const prompt = document.getElementById('prompt').value,
+  const prompt = $2;
   if (!prompt.trim()) {
-    document.getElementById('output').textContent = 'Please enter a prompt.',
+    document.getElementById('output').textContent = $2;
     return
   }
-  const res = await chrome.runtime.sendMessage({ type: 'ask', prompt }),
+  const res = await chrome.runtime.sendMessage($2);
   document.getElementById('output').textContent = res.answer
 }
 
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('ask')?.addEventListener('click', ask),
-
+  document.getElementById('ask')?.addEventListener($2);
   document.getElementById('post-job')?.addEventListener('click', () => {
     chrome.runtime.sendMessage({ type: 'post-job' })
   }),
@@ -23,4 +22,3 @@ document.addEventListener('DOMContentLoaded', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
 }),
-;

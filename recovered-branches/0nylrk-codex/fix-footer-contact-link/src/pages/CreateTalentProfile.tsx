@@ -1,6 +1,5 @@
-
 import React from "react";
-import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
 export default function CreateTalentProfile() {
   return (
     <div className="bg-zion-blue min-h-screen py-8 md: py-12">
@@ -12,9 +11,10 @@ export default function CreateTalentProfile() {
             to get discovered for AI and tech projects on the Zion Marketplace.
           </p>
         </div>
-        
         <TalentRegistrationForm />
       </div>
     </div>
   )
 }
+}
+;

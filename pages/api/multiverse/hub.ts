@@ -1,43 +1,74 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState } from "../../../utils/sync/storage",;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const state = readState(),
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const state = readState()
   if (req.method === "GET") {
     return res.status(200).json({
-      route: "/multiverse/hub",
-=======
+      route: "/multiverse/hub"
+      instanceId: state.config.instanceId
+      peers: state.config.peers
+      scope: state.config.scope
+      optIn: state.config.optIn
+      paused: state.config.paused
+lastSyncedAt: state.lastSyncedAt})
+
+}
+
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const state = read_state ()
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (200).json ({
+      route: "/multiverse / hub"
+      instance_id: state.config.instance_id
+
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { readState } from '../../../utils/sync/storage';
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  const state = readState();
-
+export default async function handler(req, res) {
+  try {
   if (req.method === 'GET') {
     return res.status(200).json({
-      route: '/multiverse/hub',
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd
+      hub: 'multiverse-hub'
+    });
+  } else {
+    res.status(405).end('Method Not Allowed');
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import type { NextApiRequest, NextApiResponse } from "next"
+import { readState } from "../../../utils/sync/storage"
+export default async function handler(req, res) {
+  try {
+  const state = readState()
+  if (req.method === "GET") {
+    return res.status(200).json({
+      route: "/multiverse/hub"
+      instanceId: state.config.instanceId
+
+      route: "/multiverse/hub",
       instanceId: state.config.instanceId,
+
       peers: state.config.peers,
       scope: state.config.scope,
       optIn: state.config.optIn,
       paused: state.config.paused,
-<<<<<<< HEAD
+
       lastSyncedAt: state.lastSyncedAt})
   }
 
   return res.status(405).json({ error: "Method not allowed" })
-};
-=======
-      lastSyncedAt: state.lastSyncedAt,
-    });
-  }
 
-  return res.status(405).json({ error: 'Method not allowed' });
-
-}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-10dd

@@ -1,98 +1,94 @@
 
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {Job, JobStatus} from "@/types/jobs";
-import {toast} from "sonner";
-import {useAuth} from "./useAuth";
-import {createJob, updateJob, getJobById} from "@/services/jobService";
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { Job, JobStatus } from "@/types/jobs";
+import { toast } from "sonner";
+import { useAuth } from "./useAuth";
+import { createJob, updateJob, getJobById } from "@/services/jobService";
 export const useJobs = (userId?: string, status?: JobStatus) => {
-  const { user } = useAuth();
-  const [jobs, setJobs] = useState<Job[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { user } = useAuth($2);
+  const [jobs, setJobs] = useState<Job[]>([]),
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
   
-  const clientId = userId || user?.id;
-
+  const clientId = $2;
   const fetchJobs = async () => {
     if (!clientId) {
-      setIsLoading(false);
+      setIsLoading($2);
       return
     }
-
     try {
-      setIsLoading(true);
-      
+      setIsLoading($2);
       let query = supabase
         .from("jobs")
         .select("*")
         .eq("client_id", clientId)
-        .order("created_at", { ascending: false });
-      
+        .order($2);
       if (status) {
         query = query.eq("status", status)
       }
       
-      const { data, error: fetchError } = await query;
+      const { data, error: fetchError} = await query,
       
-      if (fetchError) throw fetchError;
+      if (fetchError) throw fetchError,
       
-      setJobs(data as Job[]);
+      setJobs($2);
       setError(null)
     } catch (err: any) {
-      console.error("Error fetching jobs:", err);
-      setError("Failed to fetch jobs. Please try again.");
+      console.error($2);
+      setError($2);
       toast.error("Failed to fetch jobs")
     } finally {
       setIsLoading(false)
     }
-  };
+  },
   
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
-      const { error: updateError } = await supabase
+      const { error: updateError} = await supabase
         .from("jobs")
-        .update({ status: newStatus })
+        .update({ status: newStatus})
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only update their own jobs
       
-      if (updateError) throw updateError;
+      if (updateError) throw updateError,
       
       // Update local state
-      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job));
-      toast.success("Job status updated successfully");
+      setJobs(jobs.map(job => job.id === jobId ? {...job, status: newStatus} : job)),
+      toast.success($2);
       return true
     } catch (err: any) {
-      console.error("Error updating job status:", err);
-      toast.error("Failed to update job status");
+      console.error($2);
+      toast.error($2);
       return false
     }
-  };
+  },
   
   const deleteJob = async (jobId: string) => {
     try {
-      const { error: deleteError } = await supabase
+      const { error: deleteError} = await supabase
         .from("jobs")
         .delete()
         .eq("id", jobId)
         .eq("client_id", clientId), // Ensure user can only delete their own jobs
         
-      if (deleteError) throw deleteError;
+      if (deleteError) throw deleteError,
       
       // Update local state
-      setJobs(jobs.filter(job => job.id !== jobId));
-      toast.success("Job deleted successfully");
+      setJobs(jobs.filter(job = $2;
+      toast.success($2);
       return true
     } catch (err: any) {
-      console.error("Error deleting job:", err);
-      toast.error("Failed to delete job");
+      console.error($2);
+      toast.error($2);
       return false
     }
-  };
+  },
   
   // Fetch jobs when component mounts or dependencies change
   useEffect(() => {
     fetchJobs()
-  }, [clientId, status]);
+  }, [clientId, status]),
   
   return {
     jobs;
@@ -102,7 +98,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
     updateJobStatus;
     deleteJob;
     createJob;
-    updateJob,
+    updateJob
     getJobById
   }
-};
+},

@@ -1,14 +1,12 @@
-
-import React from "react";
-import {useWallet} from "@/hooks/useWallet";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {ScrollArea} from "@/components/ui/scroll-area";
-import {Badge} from "@/components/ui/badge";
-import {formatDistanceToNow} from "date-fns";
+import React from "react",
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { ScrollArea } from "@/components/ui/scroll-area",
+import { Badge } from "@/components/ui/badge";
+import { formatDistanceToNow } from "date-fns";
 export function TransactionHistory() {
-  const { transactions, loading } = useWallet();
-
+  const { transactions, loading } = useWallet($2);
   if (loading) {
     return (
       <Card>
@@ -20,9 +18,8 @@ export function TransactionHistory() {
     )
   }
 
-  const earnTransactions = transactions.filter(tx => tx.transaction_type === 'earn');
-  const burnTransactions = transactions.filter(tx => tx.transaction_type === 'burn');
-
+  const earnTransactions = transactions.filter($2);
+  const burnTransactions = transactions.filter($2);
   return (
     <Card>
       <CardHeader>
@@ -44,9 +41,9 @@ export function TransactionHistory() {
                   {earnTransactions.map(tx => (
                     <div key={tx.id} className="flex items-center justify-between py-2 border-b">
                       <div>
-                        <p className="font-medium">{tx.reason || "Token reward"}</p>
+                        <p className="font-medium">{tx.reason |"Token reward"}</p>
                         <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
+                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true})}
                         </p>
                       </div>
                       <Badge variant="outline" className="bg-green-100 text-green-800">
@@ -67,9 +64,9 @@ export function TransactionHistory() {
                   {burnTransactions.map(tx => (
                     <div key={tx.id} className="flex items-center justify-between py-2 border-b">
                       <div>
-                        <p className="font-medium">{tx.reason || "Feature purchase"}</p>
+                        <p className="font-medium">{tx.reason |"Feature purchase"}</p>
                         <p className="text-xs text-muted-foreground">
-                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true })}
+                          {formatDistanceToNow(new Date(tx.created_at), { addSuffix: true})}
                         </p>
                       </div>
                       <Badge variant="outline" className="bg-red-100 text-red-800">
@@ -86,4 +83,3 @@ export function TransactionHistory() {
     </Card>
   )
 }
-;

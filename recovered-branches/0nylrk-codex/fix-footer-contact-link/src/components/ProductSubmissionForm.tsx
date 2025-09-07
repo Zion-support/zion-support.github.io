@@ -1,43 +1,49 @@
-import React from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import z from "zod";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {useToast} from "@/hooks/use-toast";
-import {useNavigate} from "react-router-dom";
-import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
-import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
-import {Sparkles} from "lucide-react";
+import React from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import z from "zod",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
+import { Sparkles } from "lucide-react";
 // Define the form schema with zod
+
 const productSchema = z.object({
-  title: z.string().min(3, "Title must be at least 3 characters");
-  description: z.string().min(10, "Description must be at least 10 characters");
+  title: z.string().min($2);
+  description: z.string().min($2);
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
     message: "Price must be a valid number"}),
-  category: z.string().min(1, "Please select a category");
-  image: z.instanceof(File).optional(),
+  category: z.string().min($2);
+  image: z.instanceof(File).optional($2);
   tags: z.string().optional()}),
 
 // Type for our form values
-type ProductFormValues = z.infer<typeof productSchema>;
-
+type ProductFormValues = $2;
 export function ProductSubmissionForm() {
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const navigate = useNavigate();
-  const [isSubmitting, setIsSubmitting] = React.useState(false);
-  const [imagePreview, setImagePreview] = React.useState(null as string | null);
-  const [activeTab, setActiveTab] = React.useState("manual");
-  
+  const { user } = useAuth($2);
+  const { toast } = useToast($2);
+  const navigate = useNavigate($2);
+  const [isSubmitting, setIsSubmitting] = React.useState($2);
+  const [imagePreview, setImagePreview] = React.useState($2);
+  const [activeTab, setActiveTab] = React.useState($2);
   // Initialize the form
   const form = useForm<ProductFormValues>({
-    resolver: zodResolver(productSchema),
+    resolver: zodResolver($2);
     defaultValues: {
       title: "",
       description: "",
@@ -46,101 +52,83 @@ export function ProductSubmissionForm() {
       tags: ""}}),
   
   // Handle image upload preview
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0],
+  const handleImageChange = $2;
     if (file) {
-      form.setValue("image", file);
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setImagePreview(reader.result as string)
-      };
+      form.setValue($2);
+      const reader = new FileReader($2);
+      reader.onloadend = $2;
       reader.readAsDataURL(file)
     }
-  };
+  },
 
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
-    form.setValue("description", content.description);
-    form.setValue("tags", content.tags.join(", "));
+    form.setValue($2);
+    form.setValue("tags", content.tags.join(", ")),
     
     // Set a default price as the middle of the suggested range
-    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2);
-    form.setValue("price", averagePrice);
-    
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed($2);
+    form.setValue($2);
     // Switch to the manual tab to show applied content
     setActiveTab("manual")
-  };
+  },
 
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
-      toast({
-        title: "Authentication Required",
-        description: "You must be logged in to publish products",
-        variant: "destructive"}),
+      toast($2);
       return
     }
 
-    setIsSubmitting(true);
-    
+    setIsSubmitting($2);
     try {
       // Create the product listing
-      const productData = {
-        title: values.title,
+      const productData = $2;
         description: values.description,
-        price: parseFloat(values.price),
+        price: parseFloat($2);
         category: values.category,
         currency: "USD", // Default currency
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [];
+        tags: values.tags ? values.tags.split(',').map(tag = $2;
         author: {
           name: user.displayName || "Anonymous Creator",
           id: user.id},
         createdAt: new Date().toISOString()},
       
-      const { data: productRecord, error: productError } = await supabase
+      const { data: productRecord, error: productError} = await supabase
         .from('product_listings')
         .insert([productData])
         .select('id')
-        .single();
-        
+        .single($2);
       if (productError) {
         throw new Error(productError.message)
       }
-
       // If we have an image, upload it
       if (values.image) {
-        const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
-        const { error: uploadError } = await supabase.storage
+        const imagePath = $2;
+        const { error: uploadError} = await supabase.storage
           .from('products')
-          .upload(imagePath, values.image);
-          
+          .upload($2);
         if (uploadError) {
           throw new Error(uploadError.message)
         }
-        
         // Get the public URL for the image
-        const { data: publicUrlData } = supabase.storage
+        const { data: publicUrlData} = supabase.storage
           .from('products')
-          .getPublicUrl(imagePath);
-          
+          .getPublicUrl($2);
         // Update the product with the image URL
-        const { error: updateError } = await supabase
+        const { error: updateError} = await supabase
           .from('product_listings')
-          .update({ 
+          .update({
             images: [publicUrlData.publicUrl]
           })
-          .eq('id', productRecord.id);
-          
+          .eq($2);
         if (updateError) {
           throw new Error(updateError.message)
         }
       }
       
       // Show success message
-      toast({
-        title: "Product Published!",
-        description: "Your product has been successfully published on Zion."}),
-      
+      toast($2);
       // Redirect to product page
       navigate(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
@@ -151,7 +139,7 @@ export function ProductSubmissionForm() {
     } finally {
       setIsSubmitting(false)
     }
-  };
+  },
 
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -164,7 +152,6 @@ export function ProductSubmissionForm() {
           AI-Powered Creation
         </TabsTrigger>
       </TabsList>
-      
       <TabsContent value="manual">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -184,7 +171,6 @@ export function ProductSubmissionForm() {
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="description"
@@ -192,10 +178,10 @@ export function ProductSubmissionForm() {
                 <FormItem>
                   <FormLabel>Description</FormLabel>
                   <FormControl>
-                    <Textarea 
-                      placeholder="Describe your product in detail..." 
-                      className="min-h-32" 
-                      {...field} 
+                    <Textarea
+                      placeholder="Describe your product in detail..."
+                      className="min-h-32"
+                      {...field}
                     />
                   </FormControl>
                   <FormDescription>
@@ -205,7 +191,6 @@ export function ProductSubmissionForm() {
                 </FormItem>
               )}
             />
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormField
                 control={form.control}
@@ -223,7 +208,6 @@ export function ProductSubmissionForm() {
                   </FormItem>
                 )}
               />
-
               <FormField
                 control={form.control}
                 name="category"
@@ -249,7 +233,6 @@ export function ProductSubmissionForm() {
                 )}
               />
             </div>
-
             <FormField
               control={form.control}
               name="tags"
@@ -266,7 +249,6 @@ export function ProductSubmissionForm() {
                 </FormItem>
               )}
             />
-
             <FormField
               control={form.control}
               name="image"
@@ -274,9 +256,9 @@ export function ProductSubmissionForm() {
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
-                    <Input 
-                      type="file" 
-                      accept="image/*" 
+                    <Input
+                      type="file"
+                      accept="image/*"
                       onChange={handleImageChange}
                       className="cursor-pointer"
                     />
@@ -285,13 +267,12 @@ export function ProductSubmissionForm() {
                     Upload a high-quality image of your product (recommended size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
-                  
                   {imagePreview && (
                     <div className="mt-2 w-full max-w-md border rounded overflow-hidden">
                       <AspectRatio ratio={3/2}>
-                        <img 
-                          src={imagePreview} 
-                          alt="Preview" 
+                        <img
+                          src={imagePreview}
+                          alt="Preview"
                           className="w-full h-full object-cover"
                         />
                       </AspectRatio>
@@ -300,10 +281,9 @@ export function ProductSubmissionForm() {
                 </FormItem>
               )}
             />
-
             <div className="flex justify-end">
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 disabled={isSubmitting}
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
               >
@@ -313,16 +293,15 @@ export function ProductSubmissionForm() {
           </form>
         </Form>
       </TabsContent>
-      
       <TabsContent value="ai">
-        <AIListingGenerator 
+        <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
-            title: form.getValues("title"),
+            title: form.getValues($2);
             category: form.getValues("category")
           }}
         />
       </TabsContent>
     </Tabs>
   )
-};
+}

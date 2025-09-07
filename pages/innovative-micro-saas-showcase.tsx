@@ -1,18 +1,17 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
   CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target,
   Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink,
   Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
 } from 'lucide-react',
-import Layout from '../components/layout/Layout',;
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services',;
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+import Layout from '../components/layout/Layout';
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
+import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
@@ -37,14 +36,12 @@ const categories = [
 ],
 
 export default function InnovativeMicroSaasShowcase() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [viewMode, setViewMode] = useState('grid'),
-  const [sortBy, setSortBy] = useState('popularity'),
-
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [viewMode, setViewMode] = useState($2);
+  const [sortBy, setSortBy] = useState($2);
   // Combine all services
-  const allServices = [
-    ...innovativeRealMicroSaasServices2025,
+  const allServices = $2;
     ...emergingTechServicesEnhanced2025
   ],
 
@@ -52,12 +49,8 @@ export default function InnovativeMicroSaasShowcase() {
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
       service.category.toLowerCase().includes(selectedCategory) ||
-      service.name.toLowerCase().includes(selectedCategory),
-    
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-
+      service.name.toLowerCase().includes($2);
+    const matchesSearch = $2;
     return matchesCategory && matchesSearch
   }),
 
@@ -73,7 +66,7 @@ export default function InnovativeMicroSaasShowcase() {
       case 'rating':
         return b.rating - a.rating,
       case 'newest':
-        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime($2);
       default: return 0
     }
   }),
@@ -92,8 +85,8 @@ export default function InnovativeMicroSaasShowcase() {
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
@@ -107,7 +100,7 @@ export default function InnovativeMicroSaasShowcase() {
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  animate={{ opacity: 1, scale: 1}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
@@ -223,8 +216,8 @@ export default function InnovativeMicroSaasShowcase() {
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
                 >
@@ -313,7 +306,7 @@ export default function InnovativeMicroSaasShowcase() {
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300"
                 >
@@ -376,10 +369,10 @@ export default function InnovativeMicroSaasShowcase() {
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -406,4 +399,4 @@ export default function InnovativeMicroSaasShowcase() {
       </section>
     </Layout>
   )
-};
+}

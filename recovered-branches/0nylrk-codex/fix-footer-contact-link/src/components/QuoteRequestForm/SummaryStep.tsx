@@ -1,46 +1,34 @@
-import {useEffect, useState} from "react";
-import {QuoteFormData} from "@/types/quotes";
-import {Card, CardContent} from "@/components/ui/card";
-import {Label} from "@/components/ui/label";
-import {Textarea} from "@/components/ui/textarea";
-import {AIMatchingResults} from "@/components/AIMatchingResults";
-import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
-import {toast} from "@/hooks/use-toast";
+import { useEffect, useState } from "react",
+import { QuoteFormData } from "@/types/quotes",
+import { Card, CardContent } from "@/components/ui/card",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+import { AIMatchingResults } from "@/components/AIMatchingResults",
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
+import { toast } from "@/hooks/use-toast";
 interface SummaryStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
 
+  updateFormData: (data: Partial<QuoteFormData>) => void
+}
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
-  const [isMatching, setIsMatching] = useState(false);
-  const [matches, setMatches] = useState<MatchResult[]>([]);
+  const [isMatching, setIsMatching] = useState($2);
+  const [matches, setMatches] = useState<MatchResult[]>([]),
   
   // Run AI matching when the component mounts
   useEffect(() => {
-    const runMatching = async () => {
-      if (!formData.projectDescription) return;
-      
-      setIsMatching(true);
+    const runMatching = $2;
+      setIsMatching($2);
       try {
         // Create a query string from the form data
-        const queryString = `
-          ${formData.projectName} 
-          ${formData.projectDescription} 
-          ${formData.serviceType} 
-          ${formData.budget.type === 'fixed' ? `budget ${formData.budget.amount}` : ''}
-          ${formData.timeline}
-        `;
-        
+        const queryString = $2;
         // Get AI matches
-        const results = await findMatches(
-          queryString;
-          formData.serviceType;
-          3
-        );
-        
+        const results = await findMatches($2);
         setMatches(results)
       } catch (error) {
-        console.error("Error during AI matching:", error);
+        console.error($2);
         toast({
           title: "Matching Error",
           description: "We couldn't find matches for your request. Please try again.",
@@ -48,48 +36,41 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       } finally {
         setIsMatching(false)
       }
-    };
+    },
     
     runMatching()
-  }, [formData]);
+  }, [formData]),
   
   const handleSelectMatch = (match: MatchResult) => {
     // Update the form with the selected match
-    updateFormData({
-      specificItem: match.item,
-      serviceCategory: match.item.category
-    });
-    
+    updateFormData($2);
     toast({
       title: "Match Selected",
       description: `You've selected ${match.item.title}`})
-  };
+  },
   
   // Extract just the items from each MatchResult for the AIMatchingResults component
-  const matchItems = matches.map(match => match.item);
-  
+  const matchItems = matches.map($2);
   // Map the onSelectMatch handler to work with the item directly
   const handleItemSelect = (item: any) => {
     // Find the original MatchResult that contains this item
-    const matchResult = matches.find(match => match.item.id === item.id),
+    const matchResult = matches.find($2);
     if (matchResult) {
       handleSelectMatch(matchResult)
     }
-  };
+  },
   
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>
-      
       {/* AI Matching Results */}
-      <AIMatchingResults 
+      <AIMatchingResults
         serviceType={formData.serviceType}
         projectDescription={formData.projectDescription}
         matches={matchItems}
         onSelectMatch={handleItemSelect}
         isLoading={isMatching}
       />
-      
       {/* Service Information */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Service Information</h4>
@@ -100,7 +81,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <Label className="text-zion-slate-light">Service Type</Label>
                 <div className="text-white">{formData.serviceType}</div>
               </div>
-              
               {formData.specificItem && (
                 <div>
                   <Label className="text-zion-slate-light">Selected Item</Label>
@@ -111,7 +91,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           </CardContent>
         </Card>
       </div>
-      
       {/* Project Details */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Project Details</h4>
@@ -122,7 +101,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <Label className="text-zion-slate-light">Project Name</Label>
                 <div className="text-white">{formData.projectName}</div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light">Project Description</Label>
                 <div className="text-white whitespace-pre-wrap">{formData.projectDescription}</div>
@@ -131,7 +109,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           </CardContent>
         </Card>
       </div>
-      
       {/* Timeline */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Timeline</h4>
@@ -142,7 +119,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <Label className="text-zion-slate-light">Timeline Type</Label>
                 <div className="text-white capitalize">{formData.timeline}</div>
               </div>
-              
               {formData.startDate && (
                 <div>
                   <Label className="text-zion-slate-light">Start Date</Label>
@@ -151,7 +127,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                   </div>
                 </div>
               )}
-              
               {formData.endDate && (
                 <div>
                   <Label className="text-zion-slate-light">End Date</Label>
@@ -164,7 +139,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           </CardContent>
         </Card>
       </div>
-      
       {/* Budget */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Budget</h4>
@@ -175,7 +149,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <Label className="text-zion-slate-light">Budget Type</Label>
                 <div className="text-white capitalize">{formData.budget.type}</div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light">Amount</Label>
                 <div className="text-white">
@@ -187,7 +160,6 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
           </CardContent>
         </Card>
       </div>
-      
       {/* Contact Information */}
       <div>
         <h4 className="text-lg font-medium text-white mb-2">Contact Information</h4>
@@ -198,20 +170,17 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
                 <Label className="text-zion-slate-light">Name</Label>
                 <div className="text-white">{formData.contactInfo.name}</div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light">Company</Label>
-                <div className="text-white">{formData.contactInfo.company || "N/A"}</div>
+                <div className="text-white">{formData.contactInfo.company |"N/A"}</div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light">Email</Label>
                 <div className="text-white">{formData.contactInfo.email}</div>
               </div>
-              
               <div>
                 <Label className="text-zion-slate-light">Phone</Label>
-                <div className="text-white">{formData.contactInfo.phone || "N/A"}</div>
+                <div className="text-white">{formData.contactInfo.phone |"N/A"}</div>
               </div>
             </div>
           </CardContent>
@@ -219,4 +188,4 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       </div>
     </div>
   )
-};
+}

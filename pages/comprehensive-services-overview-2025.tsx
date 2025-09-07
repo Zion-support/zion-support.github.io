@@ -1,16 +1,16 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown, Search,
   Filter, Grid, List, BarChart3, DollarSign, Target as TargetIcon
 } from 'lucide-react',
-import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',;
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',;
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
 export default function ComprehensiveServicesOverviewPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [searchTerm, setSearchTerm] = useState($2);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
 
@@ -19,31 +19,25 @@ export default function ComprehensiveServicesOverviewPage() {
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s => s.category === 'Healthcare AI').length },
-    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s => s.category === 'Fintech AI').length },
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s => s.category === 'Cybersecurity').length },
-    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices.filter(s => s.category === 'IoT & Smart Cities').length },
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s => s.category === 'Blockchain & DeFi').length },
-    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices.filter(s => s.category === 'Quantum Computing').length },
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices.filter(s => s.category === 'Space Technology').length },
-    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices.filter(s => s.category === 'Autonomous Systems').length },
-    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length },
-    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices.filter(s => s.category === '5G/6G Networks').length },
-    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices.filter(s => s.category === 'Biotechnology AI').length },
-    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices.filter(s => s.category === 'Renewable Energy').length },
-    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s => s.category === 'Edge Computing').length },
-    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s => s.category === 'Quantum Internet').length },
-    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
-  ],
-
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: allServices.filter(s = $2;
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: allServices.filter(s = $2;
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰', count: allServices.filter(s = $2;
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: allServices.filter(s = $2;
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️', count: allServices.filter(s = $2;
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: allServices.filter(s = $2;
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️', count: allServices.filter(s = $2;
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: allServices.filter(s = $2;
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖', count: allServices.filter(s = $2;
+    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽', count: allServices.filter(s = $2;
+    { id: '5G/6G Networks', name: '5G/6G', icon: '📡', count: allServices.filter(s = $2;
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬', count: allServices.filter(s = $2;
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡', count: allServices.filter(s = $2;
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐', count: allServices.filter(s = $2;
+    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍', count: allServices.filter(s = $2;
+    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠', count: allServices.filter(s = $2;
   // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
+  const filteredServices = $2;
+      const matchesSearch = $2;
       return matchesCategory && matchesSearch
     })
     .sort((a, b) => {
@@ -55,24 +49,24 @@ export default function ComprehensiveServicesOverviewPage() {
         case 'rating':
           return b.rating - a.rating,
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime($2);
         default: return 0
       }
     }),
 
   const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category),
+    const categoryData = categories.find($2);
     return categoryData?.icon || '🚀'
   },
 
   // Calculate market statistics
   const totalMarketSize = allServices.reduce((sum, service) => {
-    const marketSize = service.marketSize.match(/\$([\d.]+)B/),
+    const marketSize = $2;
     return sum + (marketSize ? parseFloat(marketSize[1]) : 0)
   }, 0),
 
   const averageROI = allServices.reduce((sum, service) => {
-    const roi = service.roi.match(/(\d+)%/),
+    const roi = $2;
     return sum + (roi ? parseInt(roi[1]) : 0)
   }, 0) / allServices.length,
 
@@ -92,8 +86,8 @@ export default function ComprehensiveServicesOverviewPage() {
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -149,8 +143,8 @@ export default function ComprehensiveServicesOverviewPage() {
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
               className="flex flex-col lg:flex-row gap-6 items-center justify-between"
             >
@@ -206,8 +200,8 @@ export default function ComprehensiveServicesOverviewPage() {
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6 }}
               className="flex flex-wrap justify-center gap-3"
             >
@@ -239,8 +233,8 @@ export default function ComprehensiveServicesOverviewPage() {
                   {filteredServices.map((service, index) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 30 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 30}}
+                      animate={{ opacity: 1, y: 0}}
                       exit={{ opacity: 0, y: -30 }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
@@ -314,8 +308,8 @@ export default function ComprehensiveServicesOverviewPage() {
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, x: -30 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 30 }}
+                      animate={{ opacity: 1, x: 0}}
+                      exit={{ opacity: 0, x: 30}}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 p-6"
                     >
@@ -401,8 +395,8 @@ export default function ComprehensiveServicesOverviewPage() {
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1}}
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -417,10 +411,10 @@ export default function ComprehensiveServicesOverviewPage() {
         <section className="px-6 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -452,4 +446,4 @@ export default function ComprehensiveServicesOverviewPage() {
       </div>
     </>
   )
-};
+}

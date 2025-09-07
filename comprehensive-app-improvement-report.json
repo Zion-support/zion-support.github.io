@@ -1,15 +1,15 @@
 {
-  "timestamp": "2025-09-06T09:58:01.679Z",
-  "totalDuration": 50159,
+  "timestamp": "2025-09-06T05:02:25.511Z",
+  "totalDuration": 75662,
   "successfulTasks": 4,
   "totalTasks": 8,
   "results": {
     "performanceOptimization": {
       "success": false,
-      "duration": 24437,
+      "duration": 35295,
       "errors": [
-        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n✗ Build failed in 39ms\nerror during build:\nCould not resolve \"./index.css\" from \"src/main.tsx\"\nfile: /workspace/src/main.tsx\n    at getRollupError (file:///workspace/node_modules/rollup/dist/es/shared/parseAst.js:401:41)\n    at error (file:///workspace/node_modules/rollup/dist/es/shared/parseAst.js:397:42)\n    at ModuleLoader.handleInvalidResolvedId (file:///workspace/node_modules/rollup/dist/es/shared/node-entry.js:21534:24)\n    at file:///workspace/node_modules/rollup/dist/es/shared/node-entry.js:21494:26\n",
-        "Command failed: npm run optimize:images\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/optimize-images.js:2\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/scripts/optimize-images.js:2:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
+        "Command failed: npm run build:analyze\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nwarning package.json: \"dependencies\" has dependency \"postcss\" with range \"^8.4.32\" that collides with a dependency in \"devDependencies\" of the same name with version \"^8.5.6\"\nwarning package.json: \"dependencies\" has dependency \"postcss\" with range \"^8.4.32\" that collides with a dependency in \"devDependencies\" of the same name with version \"^8.5.6\"\n[BABEL] Note: The code generator has deoptimised the styling of /workspace/node_modules/lucide-react/dist/cjs/lucide-react.js as it exceeds the max of 500KB.\nFailed to compile.\n\n./pages/api/admin/analytics/summary.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | import { ensureAdminFromApi } from '../../../../utils/auth',\n\n./pages/api/admin/kyc-queue.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import type { KycProfile } from '../../../utils/kyc',\n  3 | import fs from 'fs',\n  4 | import path from 'path',\n\n./pages/api/admin/learn/course.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),\n\n./pages/api/admin/moderation/flags/[id].ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',\n  3 | import { getFlagById } from '../../../../../utils/moderationDb',\n  4 | export default async function handler(req: NextApiRequest, res: NextApiResponse) {\n\n./pages/api/admin/moderation/flags/[id]/action.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',\n  3 | import { updateFlagStatus } from '../../../../../../utils/moderationDb',\n  4 | import type { ModerationStatus } from '../../../../../../types/moderation',\n\n\n> Build failed because of webpack errors\n",
+        "Command failed: npm run optimize:images\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/optimize-images.js:8\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/scripts/optimize-images.js:8:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
       ],
       "improvements": [
         "Implement code splitting for better bundle size",
@@ -21,9 +21,9 @@
     },
     "securityEnhancement": {
       "success": false,
-      "duration": 1005,
+      "duration": 184,
       "errors": [
-        "Command failed: npm run security:audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/security-audit.js:2\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/scripts/security-audit.js:2:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
+        "Command failed: npm run security:audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/security-audit.js:8\nconst fs = require('fs');\n           ^\n\nReferenceError: require is not defined in ES module scope, you can use import instead\nThis file is being treated as an ES module because it has a '.js' file extension and '/workspace/package.json' contains \"type\": \"module\". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.\n    at file:///workspace/scripts/security-audit.js:8:12\n    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)\n\nNode.js v22.16.0\n"
       ],
       "improvements": [
         "Implement Content Security Policy (CSP)",
@@ -35,7 +35,7 @@
     },
     "accessibilityImprovement": {
       "success": true,
-      "duration": 94,
+      "duration": 257,
       "errors": [],
       "improvements": [
         "Add ARIA labels and roles",
@@ -47,7 +47,7 @@
     },
     "seoOptimization": {
       "success": true,
-      "duration": 128,
+      "duration": 258,
       "errors": [],
       "improvements": [
         "Optimize meta tags and descriptions",
@@ -59,9 +59,9 @@
     },
     "codeQualityEnhancement": {
       "success": false,
-      "duration": 23066,
+      "duration": 8373,
       "errors": [
-        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nWarning: React version not specified in eslint-plugin-react settings. See https://github.com/jsx-eslint/eslint-plugin-react#configuration .\n"
+        "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
       ],
       "improvements": [
         "Implement comprehensive error handling",
@@ -73,7 +73,7 @@
     },
     "userExperienceImprovement": {
       "success": true,
-      "duration": 124,
+      "duration": 256,
       "errors": [],
       "improvements": [
         "Implement responsive design improvements",
@@ -85,7 +85,7 @@
     },
     "monitoringSetup": {
       "success": true,
-      "duration": 202,
+      "duration": 211,
       "errors": [],
       "improvements": [
         "Set up application performance monitoring",
@@ -97,9 +97,9 @@
     },
     "deploymentOptimization": {
       "success": false,
-      "duration": 554,
+      "duration": 30824,
       "errors": [
-        "Command failed: npm run build:production\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n✗ Build failed in 43ms\nerror during build:\nCould not resolve \"./index.css\" from \"src/main.tsx\"\nfile: /workspace/src/main.tsx\n    at getRollupError (file:///workspace/node_modules/rollup/dist/es/shared/parseAst.js:401:41)\n    at error (file:///workspace/node_modules/rollup/dist/es/shared/parseAst.js:397:42)\n    at ModuleLoader.handleInvalidResolvedId (file:///workspace/node_modules/rollup/dist/es/shared/node-entry.js:21534:24)\n    at file:///workspace/node_modules/rollup/dist/es/shared/node-entry.js:21494:26\n"
+        "Command failed: npm run build:production\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n[BABEL] Note: The code generator has deoptimised the styling of /workspace/node_modules/lucide-react/dist/cjs/lucide-react.js as it exceeds the max of 500KB.\nFailed to compile.\n\n./pages/api/admin/analytics/summary.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | import { ensureAdminFromApi } from '../../../../utils/auth',\n\n./pages/api/admin/kyc-queue.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import type { KycProfile } from '../../../utils/kyc',\n  3 | import fs from 'fs',\n  4 | import path from 'path',\n\n./pages/api/admin/learn/course.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import fs from 'fs',\n  3 | import path from 'path',\n  4 | const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),\n\n./pages/api/admin/moderation/flags/[id].ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',\n  3 | import { getFlagById } from '../../../../../utils/moderationDb',\n  4 | export default async function handler(req: NextApiRequest, res: NextApiResponse) {\n\n./pages/api/admin/moderation/flags/[id]/action.ts:1:59\nSyntax error: Missing semicolon.\n\n> 1 | import type { NextApiRequest, NextApiResponse } from 'next',\n    |                                                            ^\n  2 | import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth',\n  3 | import { updateFlagStatus } from '../../../../../../utils/moderationDb',\n  4 | import type { ModerationStatus } from '../../../../../../types/moderation',\n\n\n> Build failed because of webpack errors\n"
       ],
       "improvements": [
         "Implement CI/CD pipeline optimization",

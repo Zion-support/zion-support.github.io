@@ -1,63 +1,48 @@
-import {useNavigate} from "react-router-dom";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {ProductListing} from "@/types/listings";
-import {Star, DollarSign} from "lucide-react";
+import { useNavigate } from "react-router-dom",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { ProductListing } from "@/types/listings";
+import { Star, DollarSign } from "lucide-react";
 interface ProductListingCardProps {
   listing: ProductListing,
-  view?: 'grid' | 'list';
+  view?: 'grid' | 'list',
   onRequestQuote?: (id: string) => void
 }
 
 export function ProductListingCard({ 
   listing, 
-  view = 'grid';
+  view = $2;
   onRequestQuote
 }: ProductListingCardProps) {
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  
+  const isGrid = $2;
+  const navigate = useNavigate($2);
   // Get the first image or use a placeholder
-  const imageUrl = listing.images && listing.images.length > 0 
-    ? listing.images[0] 
-    : '/placeholder.svg';
-    
+  const imageUrl = $2;
   // Format price display
-  const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
+  const formatPrice = $2;
     return `${listing.currency}${listing.price.toLocaleString()}`
-  };
+  },
 
   // Handle image loading errors
-  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg'
-  };
-  
+  const handleImageError = $2;
   // Handle navigating to listing detail
-  const handleViewListing = () => {
-    navigate(`/listing/${listing.id}`)
-  };
-  
+  const handleViewListing = $2;
   // Handle request quote button click
   const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation(),
-    
+    e.preventDefault($2);
+    e.stopPropagation($2);
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
       // Default behavior if no handler provided
-      navigate(`/request-quote?listing=${listing.id}`)
-    }
-  };
-  
+      navigate(`/request-quote?listing = $2;
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>
       {/* Image */}
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>
         <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>
-          <img 
-            src={imageUrl} 
+          <img
+            src={imageUrl}
             alt={listing.title}
             className="w-full h-full object-cover"
             onError={handleImageError}
@@ -69,7 +54,6 @@ export function ProductListingCard({
           )}
         </div>
       </div>
-      
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
         <div>
@@ -88,7 +72,6 @@ export function ProductListingCard({
               </div>
             )}
           </div>
-          
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
@@ -98,13 +81,12 @@ export function ProductListingCard({
           <p className="text-sm text-zion-slate line-clamp-2 mb-4">
             {listing.description}
           </p>
-          
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
               {listing.tags.map((tag, idx) => (
-                <span 
-                  key={idx} 
+                <span
+                  key={idx}
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full"
                 >
                   {tag}
@@ -113,7 +95,6 @@ export function ProductListingCard({
             </div>
           )}
         </div>
-        
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">
           <div className="text-sm font-medium">
@@ -128,23 +109,21 @@ export function ProductListingCard({
               </span>
             )}
           </div>
-          
           <div className="flex gap-2">
-            <Button 
-              size="sm" 
+            <Button
+              size="sm"
               onClick={(e) => {
-                e.stopPropagation();
+                e.stopPropagation($2);
                 navigate(`/listing/${listing.id}`)
               }}
               className="bg-zion-purple hover:bg-zion-purple-dark text-white"
             >
               Buy Now
             </Button>
-            
             {onRequestQuote && (
-              <Button 
+              <Button
                 size="sm"
-                variant="outline" 
+                variant="outline"
                 onClick={handleRequestQuote}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
               >
@@ -156,4 +135,4 @@ export function ProductListingCard({
       </div>
     </div>
   )
-};
+}

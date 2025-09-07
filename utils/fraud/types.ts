@@ -1,56 +1,65 @@
-// Fraud detection types
-export type AdminActionType = 
-  | 'ban_user'
-  | 'suspend_user'
-  | 'flag_content'
-  | 'remove_content'
-  | 'investigate'
-  | 'dismiss'
-  | 'escalate',
+export type MonitoredSource = $2;
+export type GptClassificationLabel = $2;
+export interface FraudEvent {
+  id: string,
+  userId: string | null,
+  source: MonitoredSource,
+  content: string | null,
+  metadata: Record<string, unknown> | null,
+  ipAddress: string | null,
+  createdAt: string, // ISO string
+}
 
-export interface AdminAction {
-  id: string;
-  caseId: string;
-  type: AdminActionType;
-  adminId: string;
+export interface HeuristicEvaluation {
+  flagged: boolean,
+  reasons: string[],
+  severity: 'low' | 'medium' | 'high'
+}
+
+export interface GptClassification {
+  label: GptClassificationLabel,
   reason: string,
-  details: Record<string, any>;
-  createdAt: string;
-  executedAt?: string;
-  status: 'pending' | 'executed' | 'failed',
+  confidence: number, // 0..1
 }
 
-export interface FraudDetectionResult {
-  isFraud: boolean;
-  confidence: number;
-  reasons: string[];
-  suggestedActions: AdminActionType[],
-  metadata: Record<string, any>;
+export type FraudReviewStatus = $2;
+export interface StoredFraudRecord extends FraudEvent {
+  heuristic: HeuristicEvaluation,
+  gpt?: GptClassification,
+  autoHidden: boolean,
+  status: FraudReviewStatus}
+
+export type AdminActionType = $2;
+export interface AdminActionRecord {
+  id: string,
+  fraudId: string,
+  action: AdminActionType,
+  adminId: string | null,
+  reason: string | null,
+  createdAt: string, // ISO
 }
 
-export interface FraudDetectionConfig {
-  enabled: boolean,
-  rules: {
-    suspiciousActivity: {
-      enabled: boolean;
-      threshold: number,
-    };
-    fakeProfile: {
-      enabled: boolean;
-      threshold: number,
-    };
-    paymentFraud: {
-      enabled: boolean;
-      threshold: number,
-    };
-    spam: {
-      enabled: boolean;
-      threshold: number,
-    };
-  };
-  autoActions: {
-    enabled: boolean;
-    actions: AdminActionType[];
-    confidenceThreshold: number,
-  };
+export interface PrivacySettings {
+  userId: string,
+  monitoringContentAnalysisOptOut: boolean,
+  updatedAt: string, // ISO
+}
+
+export interface ListFilters {
+  source?: MonitoredSource,
+  userId?: string,
+  label?: GptClassificationLabel,
+  status?: FraudReviewStatus
+}
+
+export interface MonthlyReport {
+  month: string, // YYYY-MM
+  totals: {
+    all: number,
+    safe: number,
+    suspicious: number,
+    dangerous: number},
+  bySource: Record<MonitoredSource, number>,
+  falsePositives: number, // count of IGNORED actions
+  topReasons: Array<{ reason: string, count: number}>
 }

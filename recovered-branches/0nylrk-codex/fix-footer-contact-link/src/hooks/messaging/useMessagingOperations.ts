@@ -1,18 +1,18 @@
-
-import {UserProfile, UserDetails} from '@/types/auth';
-import {Message, Conversation, ConversationContextData} from '@/types/messaging';
-import {useConversationState} from './useConversationState';
-import {useConversations} from './useConversations';
-import {useMessages} from './useMessages';
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
+import { useConversationState  } from './useConversationState';
+import { useConversations  } from './useConversations';
+import { useMessages } from './useMessages';
 // Allow either UserProfile or UserDetails
-type UserWithProfile = UserProfile | UserDetails | null;
-
+type UserWithProfile = $2;
 /**
  * Hook that combines all messaging operations
  */
+}
+
 export function useMessagingOperations(user: UserWithProfile) {
   // State management
-  const {
+  const {;
     messages;
     setMessages;
     activeMessages;
@@ -23,38 +23,20 @@ export function useMessagingOperations(user: UserWithProfile) {
     setUnreadCount;
     activeConversation;
     setActiveConversation;
-    isLoading,
+    isLoading
     setIsLoading
-  } = useConversationState();
-
+  } = useConversationState($2);
   // Conversations management
   const {
     fetchConversations;
     createConversation
-  } = useConversations(
-    user;
-    setConversations;
-    setUnreadCount;
-    setIsLoading
-  );
-
+  } = useConversations($2);
   // Messages management
   const {
     loadMessages;
     sendMessage;
     markAsRead
-  } = useMessages(
-    user;
-    activeConversation;
-    activeMessages;
-    setActiveMessages;
-    conversations;
-    setConversations;
-    setUnreadCount;
-    setIsLoading;
-    fetchConversations
-  );
-
+  } = useMessages($2);
   return {
     // State
     messages;
@@ -67,13 +49,12 @@ export function useMessagingOperations(user: UserWithProfile) {
     activeConversation;
     setActiveConversation;
     isLoading;
-    
     // Operations
     sendMessage;
     createConversation;
     markAsRead;
     fetchConversations;
+
     loadMessages
   }
 }
-;

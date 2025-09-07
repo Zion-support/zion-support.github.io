@@ -1,18 +1,17 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   Brain, Rocket, Target, Cpu, Globe, Eye, 
   ChevronRight, Star, TrendingUp, Zap, Shield,
   ArrowRight, Search, Filter, Grid, List,
   Phone, Mail, MapPin, ExternalLink, Sparkles
 } from 'lucide-react',
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029',;
-import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',;
-import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',;
-import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
+import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
+import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
@@ -52,8 +51,8 @@ export default function InnovationsPage() {
             <div className="text-center">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
+                animate={{ opacity: 1, scale: 1}}
+                transition={{ duration: 1}}
                 className="mb-8"
               >
                 <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6">
@@ -62,8 +61,8 @@ export default function InnovationsPage() {
               </motion.div>
               
               <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-5xl md:text-7xl font-bold mb-8"
               >
@@ -77,19 +76,17 @@ export default function InnovationsPage() {
               </motion.h1>
               
               <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
-              >
-                Experience the future today with our revolutionary innovations in AI consciousness, 
+                className = $2;
                 quantum computing, space technology, and enterprise solutions that are reshaping 
                 industries and unlocking unprecedented possibilities.
               </motion.p>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
               >
@@ -117,10 +114,10 @@ export default function InnovationsPage() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -132,10 +129,7 @@ export default function InnovationsPage() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                {
-                  icon: Brain,
+            <div className = $2;
                   title: 'AI Consciousness',
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms',
                   color: 'from-violet-600 via-purple-600 to-indigo-600',
@@ -165,10 +159,10 @@ export default function InnovationsPage() {
               ].map((category, index) => (
                 <motion.div
                   key={category.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="group"
                 >
                   <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 h-full hover:transform hover:scale-105 backdrop-blur-sm`}>
@@ -208,25 +202,9 @@ export default function InnovationsPage() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Innovation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Impact</span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our innovations are already transforming industries and creating unprecedented value 
-                for businesses worldwide.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  icon: TrendingUp,
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
                   title: 'Market Leadership',
                   description: 'First-to-market solutions in AI consciousness, quantum-AI fusion, and space technology',
                   stats: '15+ First-to-market innovations'
@@ -246,10 +224,10 @@ export default function InnovationsPage() {
               ].map((item, index) => (
                 <motion.div
                   key={item.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500"
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
@@ -274,10 +252,10 @@ export default function InnovationsPage() {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center"
             >
               <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl p-12 backdrop-blur-sm">
@@ -319,4 +297,4 @@ export default function InnovationsPage() {
       </div>
     </UltraFuturisticBackground2029>
   )
-};
+}

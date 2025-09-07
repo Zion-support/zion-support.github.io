@@ -1,67 +1,60 @@
-
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
 export function useDisputeCheck(projectId?: string, milestoneId?: string) {
-  const [isUnderDispute, setIsUnderDispute] = useState(false);
-  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null);
-  const [disputeId, setDisputeId] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-
+  const [isUnderDispute, setIsUnderDispute] = useState($2);
+  const [disputeStatus, setDisputeStatus] = useState<'open' | 'under_review' | 'resolved' | 'closed' | null>(null),
+  const [disputeId, setDisputeId] = useState<string | null>(null),
+  const [isLoading, setIsLoading] = useState($2);
   useEffect(() => {
+
     const checkDispute = async () => {
       if (!projectId && !milestoneId) {
-        setIsLoading(false);
+        setIsLoading($2);
         return
       }
-
       try {
-        setIsLoading(true);
-        
+        setIsLoading($2);
         let query = supabase
           .from("disputes")
           .select("id, status")
-          .eq("project_id", projectId);
-        
+          .eq($2);
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
           query = query.eq("milestone_id", milestoneId)
         }
-        
         // Order by status priority: open, under_review, resolved, closed
-        query = query.order("status", { ascending: true });
+        query = query.order($2);
+        const { data, error } = await query,
         
-        const { data, error } = await query;
-        
-        if (error) throw error;
+        if (error) throw error,
         
         if (data && data.length > 0) {
           // Get the first dispute (highest priority based on status)
-          setIsUnderDispute(true);
-          setDisputeStatus(data[0].status as any);
+          setIsUnderDispute($2);
+          setDisputeStatus($2);
           setDisputeId(data[0].id)
         } else {
-          setIsUnderDispute(false);
-          setDisputeStatus(null);
+          setIsUnderDispute($2);
+          setDisputeStatus($2);
           setDisputeId(null)
         }
       } catch (err) {
-        console.error("Error checking dispute status:", err);
-        setIsUnderDispute(false);
-        setDisputeStatus(null);
+        console.error($2);
+        setIsUnderDispute($2);
+        setDisputeStatus($2);
         setDisputeId(null)
       } finally {
         setIsLoading(false)
       }
-    };
+    },
     
     checkDispute()
-  }, [projectId, milestoneId]);
+  }, [projectId, milestoneId]),
 
   return { 
     isUnderDispute, 
     disputeStatus, 
-    disputeId;
+    disputeId,
     isLoading 
   }
 }
-;

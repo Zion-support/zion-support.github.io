@@ -1,5 +1,5 @@
-import React from 'react',;
-import SEO from '../components/SEO',;
+import React from 'react';
+import SEO from '../components/SEO';
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
 ),
@@ -12,8 +12,7 @@ export default function ServicesAdvertisingPage() {
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
 
   const benefits = [
-    '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',
-    'Flexible deployment: SaaS or self-hosted options'
+    '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handlingFlexible deployment: SaaS or self-hosted options'
   ],
 
 				{/* New: Core micro SaaS and AI additions */}
@@ -23,13 +22,7 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$80/mo</li>
 						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
-						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
-					</ul>
-				</section>
-
-  const pricingRefs = [
-    {
-      title: 'AI Platforms',
+						<li>Try: <a href = $2;
       links: [
         { name: 'OpenAI', href: 'https://openai.com/api/pricing' },
         { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' },
@@ -414,4 +407,3 @@ export default function ServicesAdvertisingPage() {
     </UltraAdvancedFuturisticBackground>
   )
 }
-;

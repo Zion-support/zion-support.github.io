@@ -1,37 +1,34 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import Card from '../components/ui/Card',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services',;
-import { nextGenerationAIServices } from '../data/next-generation-ai-services',;
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',;
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',;
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2',;
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2',;
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2',;
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3',;
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3',;
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
+import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
+import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
 export default function PricingEnhanced2026Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null),
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
 
-  const popularServices = getPopularServices(),
-  
+  const popularServices = getPopularServices($2);
   // Combine all services for comprehensive pricing
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
+  const allServices = $2;
     ...nextGenerationAIServices,
     ...cuttingEdgeITServices,
     ...innovativeMicroSaasV2Services,
@@ -44,9 +41,7 @@ export default function PricingEnhanced2026Page() {
   ],
 
   // Enhanced service categories with pricing for 2026
-  const serviceCategories = [
-    {
-      name: 'ArrowRight-Generation AI 2026',
+  const serviceCategories = $2;
       description: 'Revolutionary AI platforms with quantum integration',
       services: ['AI Quantum Financial TradingAI Healthcare DiagnosticsAI Autonomous ManufacturingAI Cybersecurity Threat Intelligence'],
       avgPrice: '$2,499/month',
@@ -102,18 +97,15 @@ export default function PricingEnhanced2026Page() {
   ],
 
   // Enhanced pricing tiers with more realistic and comprehensive offerings
-  const pricingTiers = [
-    {
-      name: 'Starter',
+  const pricingTiers = $2;
       description: 'Perfect for small businesses and startups',
-      price: billingCycle === 'monthly' ? 99 : 79,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features',
-        'Mobile App AccessAPI Access (1000 calls/month)'
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security FeaturesMobile App AccessAPI Access (1000 calls/month)'
       ],
-      icon: <Sparkles className="w-8 h-8" />,
+      icon: <Sparkles className = $2;
       variant: 'quantum' as const,
       popular: false,
       cta: 'Start Free Trial',
@@ -122,14 +114,13 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Professional',
       description: 'Ideal for growing businesses and teams',
-      price: billingCycle === 'monthly' ? 299 : 239,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features',
-        'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
+        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security FeaturesCustom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
       ],
-      icon: <Star className="w-8 h-8" />,
+      icon: <Star className = $2;
       variant: 'holographic' as const,
       popular: true,
       cta: 'Start Free Trial',
@@ -138,14 +129,13 @@ export default function PricingEnhanced2026Page() {
     {
       name: 'Enterprise',
       description: 'For large organizations and enterprises',
-      price: billingCycle === 'monthly' ? 999 : 799,
-      period: billingCycle === 'monthly' ? '/month' : '/month',
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
+      price: billingCycle = $2;
+      period: billingCycle = $2;
+      savings: billingCycle = $2;
       features: [
-        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance',
-        'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
+        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & ComplianceCustom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
       ],
-      icon: <Crown className="w-8 h-8" />,
+      icon: <Crown className = $2;
       variant: 'quantum-advanced' as const,
       popular: false,
       cta: 'Contact Sales',
@@ -154,9 +144,7 @@ export default function PricingEnhanced2026Page() {
   ],
 
   // Featured services showcase
-  const featuredServices = [
-    {
-      name: 'AI Quantum Financial Trading',
+  const featuredServices = $2;
       price: '$2,999/month',
       description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy',
       features: ['Quantum-inspired AI algorithmsReal-time market analysisAutomated trading strategies'],
@@ -218,8 +206,8 @@ export default function PricingEnhanced2026Page() {
         {/* Enhanced Header Section */}
         <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="max-w-7xl mx-auto text-center"
           >
@@ -279,8 +267,8 @@ export default function PricingEnhanced2026Page() {
               {pricingTiers.map((tier, index) => (
                 <motion.div
                   key={tier.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative"
                 >
@@ -349,10 +337,10 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -367,10 +355,10 @@ export default function PricingEnhanced2026Page() {
               {serviceCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <UltraFuturisticCard variant="quantum-advanced" className="h-full">
                     <div className="p-6">
@@ -418,10 +406,10 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -436,10 +424,10 @@ export default function PricingEnhanced2026Page() {
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={service.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                 >
                   <UltraFuturisticCard variant="holographic" className="h-full">
                     <div className="p-6">
@@ -493,10 +481,10 @@ export default function PricingEnhanced2026Page() {
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -533,4 +521,4 @@ export default function PricingEnhanced2026Page() {
       </div>
     </UltraFuturisticBackground>
   )
-};
+}

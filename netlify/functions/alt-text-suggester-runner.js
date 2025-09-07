@@ -1,29 +1,22 @@
-const path = require('path');
-const { spawnSync } = require('child_process');
-
+const path = require($2);
+const { spawnSync } = require($2);
 function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath);
-  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  const abs = path.resolve($2);
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+}
 
-exports.config = {
-  schedule: '*/15 * * * *',
-};
-
-exports.handler = async () => {
-  const logs = [];
+exports.config = $2;
+exports.handler = $2;
   function step(name, fn) {
-    logs.push(`\n=== ${name} ===`);
-    const res = fn();
-    if (res.stdout) logs.push(res.stdout);
-    if (res.stderr) logs.push(res.stderr);
-    logs.push(`exit=${res.status || 0}`);
-    return res.status || 0;
+    logs.push($2);
+    const res = fn($2);
+    if (res.stdout) logs.push($2);
+    if (res.stderr) logs.push($2);
+    logs.push($2);
+    return res.status || 0
   }
 
-  step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs'));
-  step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
-  return { statusCode: 200, body: logs.join('\n') };
-};  step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs')),
+  step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
   return { statusCode: 200, body: logs.join('\n') }
 },

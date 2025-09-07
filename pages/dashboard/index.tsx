@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',;
-import Head from 'next/head',;
-import EmptyState from '../../components/ui/EmptyState',;
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import EmptyState from '../../components/ui/EmptyState';
 const Dashboard: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
@@ -34,4 +34,4 @@ const Dashboard: NextPage = () => {
   )
 },
 
-export default Dashboard,;
+export default Dashboard,

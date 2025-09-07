@@ -1,73 +1,637 @@
 {
-  "version": "1.0",
-  "generated": "2025-09-05T21:52:45.982Z",
   "pages": [
-  "generatedAt": "2025-09-05T23:41:15.563Z",
-  "items": [
     {
-      "title": "Home",
-      "url": "/",
-      "description": "Zion Tech Group - AI and Technology Solutions",
+      "url": "/components/AccessibilityManager",
+      "title": "AccessibilityManager Component",
+      "description": "React component: AccessibilityManager",
       "keywords": [
-        "AI",
-        "technology",
-        "solutions",
-        "automation"
+        "accessibilitymanager",
+        "react",
+        "classname",
+        "children",
+        "useeffect",
+        "accessibilitymanagerprops",
+        "import",
+        "interface",
+        "string",
+        "reactnode",
+        "component",
+        "react"
       ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.605Z",
+      "filePath": "/workspace/components/AccessibilityManager.tsx"
     },
     {
-      "title": "About",
+      "url": "/components/Analytics",
+      "title": "Analytics Component",
+      "description": "React component: Analytics",
+      "keywords": [
+        "analytics",
+        "react",
+        "classname",
+        "children",
+        "useeffect",
+        "analyticsprops",
+        "import",
+        "interface",
+        "string",
+        "reactnode",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.606Z",
+      "filePath": "/workspace/components/Analytics.tsx"
+    },
+    {
+      "url": "/components/AnalyticsManager",
+      "title": "AnalyticsManager Component",
+      "description": "React component: AnalyticsManager",
+      "keywords": [
+        "analyticsmanager",
+        "react",
+        "classname",
+        "children",
+        "useeffect",
+        "analyticsmanagerprops",
+        "import",
+        "interface",
+        "string",
+        "reactnode",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.606Z",
+      "filePath": "/workspace/components/AnalyticsManager.tsx"
+    },
+    {
+      "url": "/components/AnalyticsTracker",
+      "title": "AnalyticsTracker Component",
+      "description": "React component: AnalyticsTracker",
+      "keywords": [
+        "analyticstracker",
+        "react",
+        "classname",
+        "children",
+        "useeffect",
+        "analyticstrackerprops",
+        "import",
+        "interface",
+        "string",
+        "reactnode",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.606Z",
+      "filePath": "/workspace/components/AnalyticsTracker.tsx"
+    },
+    {
+      "url": "/components/Badge",
+      "title": "Badge Component",
+      "description": "React component: Badge",
+      "keywords": [
+        "badge",
+        "react",
+        "classname",
+        "children",
+        "badgeprops",
+        "import",
+        "interface",
+        "string",
+        "reactnode",
+        "const",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.606Z",
+      "filePath": "/workspace/components/Badge.tsx"
+    },
+    {
+      "url": "/components/ErrorBoundary",
+      "title": "ErrorBoundary Component",
+      "description": "React component: ErrorBoundary",
+      "keywords": [
+        "error",
+        "classname",
+        "text",
+        "props",
+        "state",
+        "slate",
+        "errorinfo",
+        "haserror",
+        "center",
+        "console",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.607Z",
+      "filePath": "/workspace/components/ErrorBoundary.tsx"
+    },
+    {
+      "url": "/components/Header",
+      "title": "Header Component",
+      "description": "Intelligent solutions for business automation",
+      "keywords": [
+        "text",
+        "classname",
+        "gray",
+        "hover",
+        "href",
+        "link",
+        "transition",
+        "blue",
+        "colors",
+        "button",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.608Z",
+      "filePath": "/workspace/components/Header.tsx"
+    },
+    {
+      "url": "/components/OptimizedImage",
+      "title": "OptimizedImage Component",
+      "description": "React component: OptimizedImage",
+      "keywords": [
+        "image",
+        "width",
+        "height",
+        "classname",
+        "priority",
+        "quality",
+        "react",
+        "string",
+        "number",
+        "import",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.608Z",
+      "filePath": "/workspace/components/OptimizedImage.tsx"
+    },
+    {
+      "url": "/components/PerformanceMonitor",
+      "title": "PerformanceMonitor Component",
+      "description": "React component: PerformanceMonitor",
+      "keywords": [
+        "number",
+        "performance",
+        "window",
+        "memory",
+        "navigation",
+        "paint",
+        "performancedata",
+        "onperformancedata",
+        "const",
+        "usedjsheapsize",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.608Z",
+      "filePath": "/workspace/components/PerformanceMonitor.tsx"
+    },
+    {
+      "url": "/components/Sidebar",
+      "title": "Sidebar Component",
+      "description": "React component: Sidebar",
+      "keywords": [
+        "name",
+        "href",
+        "classname",
+        "text",
+        "gray",
+        "link",
+        "span",
+        "solutions",
+        "industries",
+        "motion",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.609Z",
+      "filePath": "/workspace/components/Sidebar.tsx"
+    },
+    {
+      "url": "/components/SimpleLayout",
+      "title": "SimpleLayout Component",
+      "description": "React component: SimpleLayout",
+      "keywords": [
+        "title",
+        "description",
+        "head",
+        "react",
+        "children",
+        "import",
+        "simplelayoutprops",
+        "string",
+        "next",
+        "interface",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.609Z",
+      "filePath": "/workspace/components/SimpleLayout.tsx"
+    },
+    {
+      "url": "/components/SkeletonLoader",
+      "title": "SkeletonLoader Component",
+      "description": "React component: SkeletonLoader",
+      "keywords": [
+        "classname",
+        "lines",
+        "react",
+        "index",
+        "skeletonloaderprops",
+        "skeletonloader",
+        "import",
+        "interface",
+        "number",
+        "string",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.609Z",
+      "filePath": "/workspace/components/SkeletonLoader.tsx"
+    },
+    {
+      "url": "/components/EnhancedFooter",
+      "title": "EnhancedFooter Component",
+      "description": "React component: EnhancedFooter",
+      "keywords": [
+        "classname",
+        "text",
+        "href",
+        "name",
+        "link",
+        "gray",
+        "blue",
+        "hover",
+        "services",
+        "flex",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.610Z",
+      "filePath": "/workspace/components/layout/EnhancedFooter.tsx"
+    },
+    {
+      "url": "/components/Footer",
+      "title": "Footer Component",
+      "description": "React component: Footer",
+      "keywords": [
+        "href",
+        "classname",
+        "text",
+        "name",
+        "link",
+        "gray",
+        "services",
+        "blue",
+        "hover",
+        "flex",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.610Z",
+      "filePath": "/workspace/components/layout/Footer.tsx"
+    },
+    {
+      "url": "/components/Header",
+      "title": "Header Component",
+      "description": "React component: Header",
+      "keywords": [
+        "href",
+        "classname",
+        "name",
+        "link",
+        "item",
+        "text",
+        "import",
+        "const",
+        "react",
+        "motion",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.611Z",
+      "filePath": "/workspace/components/layout/Header.tsx"
+    },
+    {
+      "url": "/components/Layout",
+      "title": "Layout Component",
+      "description": "React component: Layout",
+      "keywords": [
+        "react",
+        "children",
+        "string",
+        "layoutprops",
+        "title",
+        "description",
+        "keywords",
+        "technology",
+        "import",
+        "interface",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.611Z",
+      "filePath": "/workspace/components/layout/Layout.tsx"
+    },
+    {
+      "url": "/components/MainLayout",
+      "title": "MainLayout Component",
+      "description": "React component: MainLayout",
+      "keywords": [
+        "meta",
+        "content",
+        "title",
+        "name",
+        "description",
+        "image",
+        "string",
+        "technology",
+        "solutions",
+        "keywords",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.611Z",
+      "filePath": "/workspace/components/layout/MainLayout.tsx"
+    },
+    {
+      "url": "/components/ModernLayout",
+      "title": "ModernLayout Component",
+      "description": "React component: ModernLayout",
+      "keywords": [
+        "meta",
+        "content",
+        "title",
+        "description",
+        "name",
+        "canonical",
+        "link",
+        "href",
+        "property",
+        "icon",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.611Z",
+      "filePath": "/workspace/components/layout/ModernLayout.tsx"
+    },
+    {
+      "url": "/components/LazyComponent",
+      "title": "LazyComponent Component",
+      "description": "React component: LazyComponent",
+      "keywords": [
+        "react",
+        "fallback",
+        "suspense",
+        "component",
+        "lazy",
+        "lazycomponentprops",
+        "default",
+        "unknown",
+        "export",
+        "const",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.611Z",
+      "filePath": "/workspace/components/performance/LazyComponent.tsx"
+    },
+    {
+      "url": "/components/OptimizedImage",
+      "title": "OptimizedImage Component",
+      "description": "React component: OptimizedImage",
+      "keywords": [
+        "width",
+        "string",
+        "height",
+        "priority",
+        "classname",
+        "sizes",
+        "react",
+        "image",
+        "import",
+        "optimizedimageprops",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.611Z",
+      "filePath": "/workspace/components/performance/OptimizedImage.tsx"
+    },
+    {
+      "url": "/components/Badge",
+      "title": "Badge Component",
+      "description": "React component: Badge",
+      "keywords": [
+        "border",
+        "text",
+        "badgevariants",
+        "focus",
+        "ring",
+        "variant",
+        "foreground",
+        "secondary",
+        "destructive",
+        "import",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.611Z",
+      "filePath": "/workspace/components/ui/Badge.tsx"
+    },
+    {
+      "url": "/components/Card",
+      "title": "Card Component",
+      "description": "React component: Card",
+      "keywords": [
+        "classname",
+        "react",
+        "props",
+        "htmldivelement",
+        "const",
+        "card",
+        "forwardref",
+        "htmlattributes",
+        "displayname",
+        "text",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.612Z",
+      "filePath": "/workspace/components/ui/Card.tsx"
+    },
+    {
+      "url": "/components/EnhancedMarketplaceCard",
+      "title": "EnhancedMarketplaceCard Component",
+      "description": "React component: EnhancedMarketplaceCard",
+      "keywords": [
+        "classname",
+        "text",
+        "image",
+        "title",
+        "string",
+        "price",
+        "rounded",
+        "flex",
+        "description",
+        "gray",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.612Z",
+      "filePath": "/workspace/components/ui/EnhancedMarketplaceCard.tsx"
+    },
+    {
+      "url": "/components/ErrorBoundary",
+      "title": "ErrorBoundary Component",
+      "description": "React component: ErrorBoundary",
+      "keywords": [
+        "error",
+        "classname",
+        "text",
+        "state",
+        "props",
+        "haserror",
+        "center",
+        "errorinfo",
+        "public",
+        "return",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.612Z",
+      "filePath": "/workspace/components/ui/ErrorBoundary.tsx"
+    },
+    {
+      "url": "/components/InteractiveNavigation",
+      "title": "InteractiveNavigation Component",
+      "description": "React component: InteractiveNavigation",
+      "keywords": [
+        "link",
+        "text",
+        "classname",
+        "gray",
+        "span",
+        "href",
+        "hover",
+        "transition",
+        "colors",
+        "import",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.612Z",
+      "filePath": "/workspace/components/ui/InteractiveNavigation.tsx"
+    },
+    {
+      "url": "/components/NotificationSystem",
+      "title": "NotificationSystem Component",
+      "description": "React component: NotificationSystem",
+      "keywords": [
+        "classname",
+        "notification",
+        "text",
+        "return",
+        "border",
+        "string",
+        "type",
+        "gray",
+        "ondismiss",
+        "case",
+        "component",
+        "react"
+      ],
+      "type": "component",
+      "lastModified": "2025-09-06T04:57:21.612Z",
+      "filePath": "/workspace/components/ui/NotificationSystem.tsx"
+    },
+    {
+      "url": "/",
+      "title": "Zion Tech Group - Home",
+      "description": "Zion Tech Group - Leading technology solutions and services",
+      "keywords": [
+        "technology",
+        "solutions",
+        "services",
+        "zion",
+        "tech",
+        "group"
+      ],
+      "type": "page",
+      "lastModified": "2025-09-06T04:57:21.612Z"
+    },
+    {
       "url": "/about",
-      "description": "About Zion Tech Group - Leading AI and Technology Company",
+      "title": "About Zion Tech Group",
+      "description": "Learn about Zion Tech Group and our mission to provide innovative technology solutions",
       "keywords": [
         "about",
         "company",
+        "mission",
         "team",
-        "mission"
+        "history"
       ],
+      "type": "page",
+      "lastModified": "2025-09-06T04:57:21.612Z"
     },
     {
-      "title": "Services",
       "url": "/services",
-      "description": "Our Services - AI Development, Automation, and Technology Solutions",
+      "title": "Our Services",
+      "description": "Comprehensive technology services and solutions offered by Zion Tech Group",
       "keywords": [
         "services",
-        "AI",
-        "automation",
+        "solutions",
+        "technology",
+        "consulting",
         "development"
       ],
+      "type": "page",
+      "lastModified": "2025-09-06T04:57:21.612Z"
     },
     {
-      "title": "Contact",
       "url": "/contact",
-      "description": "Contact Us - Get in Touch with Zion Tech Group",
+      "title": "Contact Us",
+      "description": "Get in touch with Zion Tech Group for your technology needs",
       "keywords": [
         "contact",
         "support",
-        "help"
+        "help",
+        "inquiry",
+        "reach"
       ],
-    },
-    {
-      "title": "Portfolio",
-      "url": "/portfolio",
-      "description": "Our Portfolio - AI and Technology Projects",
-      "keywords": [
-        "portfolio",
-        "projects",
-        "work",
-        "examples"
-      ],
-    },
-    {
-      "title": "Blog",
-      "url": "/blog",
-      "description": "Blog - Latest AI and Technology Insights",
-      "keywords": [
-        "blog",
-        "articles",
-        "insights",
-        "news"
-      ],
-      "id": 6
+      "type": "page",
+      "lastModified": "2025-09-06T04:57:21.612Z"
     }
+  ],
+  "metadata": {
+    "generated": "2025-09-06T04:57:21.602Z",
+    "version": "1.0.0"
+  }
 }

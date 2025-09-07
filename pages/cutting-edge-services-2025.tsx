@@ -1,23 +1,20 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',;
-import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services',;
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',;
-import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
 
-const serviceCategories = [
-  {
-    title: 'AI & Consciousness',
+const serviceCategories = $2;
     description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
     services: cuttingEdgeAIServices2025,
     icon: Brain,
@@ -76,17 +73,9 @@ export default function CuttingEdgeServices2025() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Cutting-Edge Services 2025
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of technology with our revolutionary services that combine AI consciousness, 
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
+            transition = $2;
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>
             
@@ -118,10 +107,10 @@ export default function CuttingEdgeServices2025() {
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
@@ -137,10 +126,10 @@ export default function CuttingEdgeServices2025() {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${category.color} p-5 mb-6`}>
@@ -154,10 +143,10 @@ export default function CuttingEdgeServices2025() {
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 20}}
+                      whileInView={{ opacity: 1, y: 0}}
                       transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true}}
                       className="group"
                     >
                       <div className={`bg-gradient-to-br ${category.bgColor} p-8 rounded-2xl border ${category.borderColor} hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105`}>
@@ -228,10 +217,10 @@ export default function CuttingEdgeServices2025() {
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
@@ -247,10 +236,10 @@ export default function CuttingEdgeServices2025() {
             {['StarterProfessionalEnterprise'].map((plan, index) => (
               <motion.div
                 key={plan}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="group"
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -305,10 +294,10 @@ export default function CuttingEdgeServices2025() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
               Ready to Experience the Future?
@@ -361,4 +350,4 @@ export default function CuttingEdgeServices2025() {
       </section>
     </Layout>
   )
-};
+}

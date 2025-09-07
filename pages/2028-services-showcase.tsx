@@ -1,27 +1,24 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
   Building, Factory, Camera, Video, Music, Gamepad2
 } from 'lucide-react',
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',;
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',;
-import { futuristic2028Services } from '../data/2028-futuristic-innovations',;
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
 
-const serviceCategories = [
-  {
-    title: '🚀 2028 Futuristic Innovations',
+const serviceCategories = $2;
     description: 'Beyond the future of technology',
     icon: Rocket,
     color: 'from-violet-600 to-purple-600',
@@ -91,8 +88,8 @@ export default function ServicesShowcase2028() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="space-y-8"
           >
@@ -171,10 +168,10 @@ export default function ServicesShowcase2028() {
             {serviceCategories.map((category, index) => (
               <motion.div
                 key={category.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="group relative"
               >
                 <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -229,9 +226,9 @@ export default function ServicesShowcase2028() {
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                whileInView={{ opacity: 1, x: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="group relative"
               >
                 <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -297,16 +294,9 @@ export default function ServicesShowcase2028() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
-            >
-              <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
-              <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
-              <p className="text-purple-300 mb-6">
-                Our services target markets with exponential growth potential, 
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
+              transition = $2;
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>
@@ -314,10 +304,10 @@ export default function ServicesShowcase2028() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
             >
               <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
@@ -331,10 +321,10 @@ export default function ServicesShowcase2028() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
             >
               <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
@@ -354,10 +344,10 @@ export default function ServicesShowcase2028() {
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="space-y-8"
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -406,4 +396,4 @@ export default function ServicesShowcase2028() {
       <UltraFuturisticFooter2028 />
     </>
   )
-};
+}

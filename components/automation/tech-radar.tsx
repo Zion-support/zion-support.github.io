@@ -1,12 +1,15 @@
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Item = { source: string, name: string, url: string, description?: string, downloads?: number },
 
-
-};
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
+
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationtech-radar.json'),
-    const raw = fs.readFileSync(file, 'utf8'),
-    const data = JSON.parse(raw),
+    const raw = fs.readFileSync($2);
+    const data = JSON.parse($2);
     return {
       props: {
         pypi: data.ecosystems.pypi || [],
@@ -14,12 +17,12 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         github: data.ecosystems.github || {}},
       revalidate: 7200}
   } catch {
-    return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
+    return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200}
   }
-};
+},
 
 export default function TechRadar({ pypi, crates, github }: Props) {
-  const langs = Object.keys(github),
+  const langs = Object.keys($2);
   return (
     <div className="space-y-8">
       <header className="space-y-2">
@@ -58,7 +61,7 @@ export default function TechRadar({ pypi, crates, github }: Props) {
           <h2 className="font-semibold text-lg mb-3">GitHub Trending: {lang}</h2>
           <ul className="grid md:grid-cols-2 gap-3">
             {(github[lang] || []).map((it, i) => (
-              <li key={i} className="p-4 rounded-lg border border-gray-200 dark: border-gray-800">
+              <li key={i} className="p-4 rounded-lg border border-gray-200 dark:border-gray-800">
                 <a href={it.url} target="_blank" rel="noreferrer" className="font-medium text-blue-600 dark:text-cyan-400">{it.name}</a>
                 {it.description && <div className="text-sm text-gray-600 dark:text-gray-300">{it.description}</div>}
               </li>
@@ -67,5 +70,5 @@ export default function TechRadar({ pypi, crates, github }: Props) {
         </section>
       ))}
     </div>
-);
+  )
 }

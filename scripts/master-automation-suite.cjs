@@ -1,8 +1,16 @@
+
+#!/usr/bin/env node;
+
+/**
+ * Master Automation Suite
+ * Orchestrates all automation scripts in a comprehensive workflow
+ */
+
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
     this.logDir = 'automation-reports'
-    this.timestamp = new Date().toISOString().replace(/[:.]/g, '-')
+    this.timestamp = new Date().toISOString().replace(/[:.]/g,-)
       "suite"
       "status"
       "status"

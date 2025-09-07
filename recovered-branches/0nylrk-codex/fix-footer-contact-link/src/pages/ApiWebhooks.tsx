@@ -1,93 +1,84 @@
-
-import React from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import {CodeBlock} from "@/components/developers/CodeBlock";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import React from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function ApiWebhooks() {
   // Sample webhook event payload
-  const newApplicationPayload = `{
-  "event_type": "new_application";
-  "created_at": "2023-06-10T15: 42:31Z";
+  const newApplicationPayload = $2;
+  "created_at": "2023-06-10T15: 42: 31Z",
   "data": {
-    "application_id": "app-123456";
-    "job_id": "job-789";
-    "talent_id": "talent-456";
-    "status": "new";
-    "cover_letter": "I'm excited to apply for this position...";
-    "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf",
-    "created_at": "2023-06-10T15:42:31Z"
-  }
-}`;
-
-  const newHirePayload = `{
-  "event_type": "talent_hired";
-  "created_at": "2023-06-12T09: 15:22Z";
-  "data": {
-    "project_id": "project-123";
-    "job_id": "job-456";
-    "client_id": "client-789";
-    "talent_id": "talent-123";
-    "start_date": "2023-07-01";
-    "status": "offer_accepted",
-    "created_at": "2023-06-12T09:15:22Z"
-  }
-}`;
-
-  const quoteReceivedPayload = `{
-  "event_type": "quote_received";
-  "created_at": "2023-06-15T11: 30:00Z";
-  "data": {
-    "quote_id": "quote-123";
-    "client_id": "client-456";
-    "talent_id": "talent-789";
-    "project_name": "Website Redesign";
-    "budget_min": 5000;
-    "budget_max": 8000;
+    "application_id": "app-123456",
+    "job_id": "job-789",
+    "talent_id": "talent-456",
     "status": "new",
-    "created_at": "2023-06-15T11:30:00Z"
+    "cover_letter": "I'm excited to apply for this position...",
+    "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf",
+    "created_at": "2023-06-10T15: 42: 31Z"
   }
-}`;
+}`,
 
-  const messageReceivedPayload = `{
-  "event_type": "message_received";
-  "created_at": "2023-06-18T14: 22:15Z";
+  const newHirePayload = $2;
+  "created_at": "2023-06-12T09: 15: 22Z",
   "data": {
-    "message_id": "msg-123";
-    "conversation_id": "conv-456";
-    "sender_id": "user-789";
-    "recipient_id": "user-012",
-    "content": "Hi, I'd like to discuss the project details.";
-    "created_at": "2023-06-18T14:22:15Z"
+    "project_id": "project-123",
+    "job_id": "job-456",
+    "client_id": "client-789",
+    "talent_id": "talent-123",
+    "start_date": "2023-07-01",
+    "status": "offer_accepted",
+    "created_at": "2023-06-12T09: 15: 22Z"
   }
-}`;
+}`,
+
+  const quoteReceivedPayload = $2;
+  "created_at": "2023-06-15T11: 30: 00Z",
+  "data": {
+    "quote_id": "quote-123",
+    "client_id": "client-456",
+    "talent_id": "talent-789",
+    "project_name": "Website Redesign",
+    "budget_min": 5000,
+    "budget_max": 8000,
+    "status": "new",
+    "created_at": "2023-06-15T11: 30: 00Z"
+  }
+}`,
+
+  const messageReceivedPayload = $2;
+  "created_at": "2023-06-18T14: 22: 15Z",
+  "data": {
+    "message_id": "msg-123",
+    "conversation_id": "conv-456",
+    "sender_id": "user-789",
+    "recipient_id": "user-012",
+    "content": "Hi, I'd like to discuss the project details.",
+    "created_at": "2023-06-18T14: 22: 15Z"
+  }
+}`,
 
   const webhookHandlerJs = `// Express.js webhook handler example
-const express = require('express');
-const app = express();
-const crypto = require('crypto');
-
+const express = require($2);
+const app = express($2);
+const crypto = require($2);
 // Middleware to parse JSON bodies
-app.use(express.json());
+app.use(express.json()),
 
 // Your webhook secret from the Zion dashboard
-const webhookSecret = 'YOUR_WEBHOOK_SECRET';
-
+const webhookSecret = $2;
 // Middleware to verify webhook signatures
 function verifyWebhookSignature(req, res, next) {
-  const signature = req.headers['x-zion-signature'];
-  const timestamp = req.headers['x-zion-timestamp'];
-  
+  const signature = $2;
+  const timestamp = $2;
   if (!signature || !timestamp) {
     return res.status(401).send('Missing signature or timestamp')
   }
   
   // Verify the signature
-  const payload = timestamp + '.' + JSON.stringify(req.body);
+  const payload = timestamp + '.' + JSON.stringify($2);
   const expectedSignature = crypto
     .createHmac('sha256', webhookSecret)
     .update(payload)
-    .digest('hex');
-  
+    .digest($2);
   if (signature !== expectedSignature) {
     return res.status(401).send('Invalid signature')
   }
@@ -97,55 +88,51 @@ function verifyWebhookSignature(req, res, next) {
 
 // Webhook endpoint with signature verification
 app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
-  const { event_type, data } = req.body;
+  const { event_type, data } = req.body,
   
   // Handle different event types
   switch (event_type) {
     case 'new_application':
-      console.log('New application received:', data.application_id);
+      console.log($2);
       // Process the new application...
-      break;
+      break,
     
     case 'talent_hired':
-      console.log('Talent hired:', data.talent_id);
+      console.log($2);
       // Update your system...
-      break;
+      break,
     
     case 'quote_received':
-      console.log('New quote received:', data.quote_id);
+      console.log($2);
       // Process the quote...
-      break;
+      break,
     
     case 'message_received':
-      console.log('New message received:', data.message_id);
+      console.log($2);
       // Process the message...
-      break;
+      break,
     
     default:
       console.log('Unknown event type:', event_type)
   }
-  
   // Always return a 200 response quickly
   res.status(200).send('Webhook received')
-});
+}),
 
 app.listen(3000, () => {
   console.log('Webhook server listening on port 3000')
-}),`;
+}),`,
 
   return (
     <ApiDocsLayout>
       <div className="max-w-3xl prose prose-invert">
         <h1>Webhooks</h1>
-        
         <p>
           Webhooks allow your application to receive real-time notifications when events occur in the Zion AI Marketplace.
           Instead of constantly polling our API for updates, webhooks push data to your server whenever relevant events happen.
         </p>
-
         <h2>Supported Events</h2>
         <p>You can subscribe to the following webhook events:</p>
-        
         <div className="overflow-x-auto mb-6">
           <table className="w-full border-collapse">
             <thead>
@@ -174,26 +161,21 @@ app.listen(3000, () => {
             </tbody>
           </table>
         </div>
-
         <h2>Setting Up Webhooks</h2>
         <p>
-          You can configure webhooks in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a> under the Webhooks tab.
+          You can configure webhooks in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link> under the Webhooks tab.
           For each webhook, you'll need to provide:
         </p>
-        
         <ul>
           <li>A name for the webhook (for your reference)</li>
           <li>The URL where you want to receive webhook events</li>
           <li>The event types you want to subscribe to</li>
         </ul>
-        
         <p>
           After creating a webhook, you'll be given a webhook secret that you should use to verify that incoming requests are genuinely from Zion.
         </p>
-
         <h2>Webhook Payload Format</h2>
         <p>All webhook payloads follow a common format:</p>
-        
         <Tabs defaultValue="new_application">
           <TabsList>
             <TabsTrigger value="new_application">New Application</TabsTrigger>
@@ -214,28 +196,20 @@ app.listen(3000, () => {
             <CodeBlock code={messageReceivedPayload} language="json" showLineNumbers={true} />
           </TabsContent>
         </Tabs>
-
         <h2>Verifying Webhook Signatures</h2>
         <p>
           To ensure webhook requests are genuinely from Zion, you should verify the signature included in each request.
           We include two HTTP headers with each webhook request:
         </p>
-        
         <ul>
           <li><code>X-Zion-Signature</code>: HMAC-SHA256 signature</li>
           <li><code>X-Zion-Timestamp</code>: Unix timestamp when the webhook was sent</li>
         </ul>
-        
         <p>Here's an example of verifying a webhook in Node.js:</p>
         
-        <CodeBlock code={webhookHandlerJs} language="javascript" showLineNumbers={true} />
-
-        <h2>Testing Webhooks</h2>
-        <p>
-          You can test your webhook implementation using the Developer Portal. From the Webhooks tab;
+        <CodeBlock code = $2;
           select "Test Webhook" next to any configured webhook to send a test payload to your endpoint.
         </p>
-        
         <h2>Best Practices</h2>
         <ul>
           <li><strong>Respond quickly</strong>: Return a 200 response as soon as you receive the webhook, then process it asynchronously</li>
@@ -248,4 +222,4 @@ app.listen(3000, () => {
   )
 }
 
-export default ApiWebhooks;
+export default ApiWebhooks,

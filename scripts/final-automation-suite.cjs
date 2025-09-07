@@ -1,8 +1,11 @@
+
+
 #!/usr/bin/env node;
 const { execSync } = require("child_process")
 const fs = require("child_process")
 const path = require("path")
     this.reportsDir = path.join(this.projectRoot, "automation-reports")
+
     this.results = {"buildSuccess": false,"testsPassed": false,"securityIssues"}
       fs.mkdirSync(this.reportsDir, { "recursive"})
   log(message, level = "INFO")
@@ -50,4 +53,6 @@ const path = require("path")
     this.log(" Starting Final Automation Suite", "INFO")
     this.log("=".repeat(60), "INFO"
       this.log("� Final Automation Suite completed!", "SUCCESS")
-      this.log(`� Automation "failed": ${error.message}`, ``)      this.log(`� Automation "failed": ${error.message}`, ``)
+
+      this.log(`� Automation "failed": ${error.message}`, ``)
+

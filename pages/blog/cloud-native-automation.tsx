@@ -1,6 +1,6 @@
-import Head from 'next/head',;
-import Link from 'next/link',;
-import React from 'react',;
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
 export default function CloudNativeAutomation() {
   return (
     <>
@@ -89,9 +89,7 @@ export default function CloudNativeAutomation() {
                   create a flexible, portable automation environment. This
                   approach provides several key benefits:
                 </p>
-                <ul className='space-y-2 text-white/80 mb-6'>
-                  <li>
-                    • Consistent runtime environments across development,
+                <ul className = $2;
                     staging, and production
                   </li>
                   <li>
@@ -100,8 +98,7 @@ export default function CloudNativeAutomation() {
                   <li>Easy deployment and rollback capabilities</li>
                   <li>Efficient resource allocation and management</li>
                 </ul>
-                <p className='text-white/90 mb-4'>
-                  Our Kubernetes clusters automatically handle load balancing,
+                <p className = $2;
                   service discovery, and failover, ensuring high availability
                   and performance.
                 </p>

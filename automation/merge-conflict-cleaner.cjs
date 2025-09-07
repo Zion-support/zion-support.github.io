@@ -113,7 +113,8 @@ class MergeConflictCleaner {
           if (extensions.includes(ext)) {
             try {
               const content = fs.readFileSync(fullPath, 'utf8');
-              if (content.includes('') || content.includes('') || content.includes('                files.push(fullPath);
+              if (content.includes('
+                files.push(fullPath);
               }
             } catch (error) {
               // Skip files that can't be read
@@ -135,13 +136,13 @@ class MergeConflictCleaner {
     
     // Remove merge conflict markers and keep HEAD version
     content = content.replace(
-      /\n(.*?)\n\n(.*?)\n      '$1'
+      /
+      '$1'
     );
     
     // Clean up any remaining markers
-    content = content.replace(/\n/g, '');
-    content = content.replace(/\n/g, '');
-    content = content.replace(/    
+    content = content.replace(/
+    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       this.log(`✅ Cleaned conflicts in ${filePath}`);

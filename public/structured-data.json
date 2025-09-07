@@ -4,24 +4,39 @@
   "name": "Zion Tech Group",
   "url": "https://ziontechgroup.com",
   "logo": "https://ziontechgroup.com/logo.png",
-  "description": "AI-powered business solutions and technology services",
+  "description": "Leading provider of enterprise-grade AI, micro SaaS, and IT solutions",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "US"
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+1-302-464-0950",
     "contactType": "customer service",
-    "email": "kleber@ziontechgroup.com"
+    "url": "https://ziontechgroup.com/contact"
   },
   "sameAs": [
-    "https://twitter.com/ziontechgroup",
-    "https://linkedin.com/company/ziontechgroup"
+    "https://linkedin.com/company/ziontechgroup",
+    "https://twitter.com/ziontechgroup"
   ],
   "offers": {
-    "@type": "Offer",
-    "description": "AI-powered business solutions",
-    "category": "Technology Services"
+    "@type": "AggregateOffer",
+    "offerCount": "67+",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "AI Solutions",
+        "description": "Cutting-edge artificial intelligence solutions for enterprise needs"
+      },
+      {
+        "@type": "Offer",
+        "name": "Micro SaaS Development",
+        "description": "Scalable micro SaaS applications for modern businesses"
+      },
+      {
+        "@type": "Offer",
+        "name": "IT Services",
+        "description": "Comprehensive IT services and infrastructure solutions"
+      }
+    ]
   }
 }

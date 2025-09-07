@@ -1,9 +1,8 @@
-import React from "react";
-type Props = {
-  title: string;
-  description: string;
-  cta?: React.ReactNode;
-};
+import React from 'react';
+type Props = $2;
+  description: string,
+  cta?: React.ReactNode
+},
 
 export default function FuturisticCard({ title, description, cta }: Props) {
   return (
@@ -15,5 +14,5 @@ export default function FuturisticCard({ title, description, cta }: Props) {
         {cta && <div className="mt-3">{cta}</div>}
       </div>
     </div>
-  ),
+  )
 }

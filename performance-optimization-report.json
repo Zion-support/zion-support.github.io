@@ -1,56 +1,24 @@
 {
-  "timestamp": "2025-09-06T09:02:41.637Z",
-  "totalDuration": 9112,
-  "results": {
-    "bundleAnalysis": {
-      "success": false,
-      "size": 0,
-      "recommendations": []
-    },
-    "imageOptimization": {
-      "success": true,
-      "optimized": 0,
-      "recommendations": ["No images found to optimize"]
-    },
-    "codeSplitting": {
-      "success": true,
-      "chunks": 3,
-      "recommendations": [
-        "Implement route-based code splitting",
-        "Use React.lazy() for component-based splitting",
-        "Split vendor libraries into separate chunks",
-        "Implement dynamic imports for heavy components",
-        "Consider using loadable-components for SSR compatibility"
-      ]
-    },
-    "caching": {
-      "success": true,
-      "strategies": ["static", "dynamic", "api"],
-      "recommendations": [
-        "Implement service worker for offline caching",
-        "Use HTTP caching headers appropriately",
-        "Implement client-side caching with React Query or SWR",
-        "Cache API responses with appropriate TTL",
-        "Use CDN for static asset caching"
-      ]
-    },
-    "compression": {
-      "success": true,
-      "ratio": 0.7,
-      "recommendations": [
-        "Enable gzip compression on the server",
-        "Implement Brotli compression for better ratios",
-        "Minify CSS and JavaScript files",
-        "Remove unused CSS and JavaScript",
-        "Optimize font loading and subsetting"
-      ]
-    }
+  "timestamp": "2025-09-07T09:15:52.192Z",
+  "totalDuration": "27441ms",
+  "optimizations": [
+    "Image optimization setup completed",
+    "Bundle optimization analysis completed",
+    "Caching configuration created",
+    "Database optimization recommendations created",
+    "API optimization recommendations created"
+  ],
+  "metrics": {
+    "totalOptimizations": 5,
+    "errors": 0,
+    "successRate": "100.00%"
   },
-  "summary": {
-    "bundleOptimized": false,
-    "imagesOptimized": true,
-    "codeSplittingImplemented": true,
-    "cachingConfigured": true,
-    "compressionSetup": true
-  }
+  "recommendations": [
+    "Implement image optimization with Sharp",
+    "Enable bundle analysis and code splitting",
+    "Configure proper caching headers",
+    "Optimize database queries and indexes",
+    "Implement API rate limiting and compression",
+    "Monitor performance metrics regularly"
+  ]
 }

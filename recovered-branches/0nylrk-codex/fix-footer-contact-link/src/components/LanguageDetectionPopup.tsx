@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { useState, useEffect  } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -8,62 +8,73 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-AlertDialogTitle,
+  AlertDialogTitle} from '../components/ui/alert-dialog',
+import { useLanguage, SupportedLanguage, LanguageContextType } from '../context/LanguageContext';
+export function LanguageDetectionPopup() {
+  const [open, setOpen] = useState($2);
+  const { t } = useTranslation($2);
+  const { changeLanguage, currentLanguage, supportedLanguages } = useLanguage() as LanguageContextType,
+  const [detectedLanguage, setDetectedLanguage] = useState<SupportedLanguage | null>(null),
+
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  AlertDialog
+  AlertDialogAction
+  AlertDialogCancel
+  AlertDialogContent
+  AlertDialogDescription
+  AlertDialogFooter
+  AlertDialogHeader
+  AlertDialogTitle
 } from "../components/ui/alert-dialog";
 import {
-  useLanguage,
-  SupportedLanguage,
-  LanguageContextType,
+  useLanguage
+  SupportedLanguage
+  LanguageContextType
 } from "../context/LanguageContext";
-export function LanguageDetectionPopup() {
+export function LanguageDetectionPopup() {;
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
   const { changeLanguage, currentLanguage, supportedLanguages } =
     useLanguage() as LanguageContextType;
   const [detectedLanguage, setDetectedLanguage] =
     useState<SupportedLanguage | null>(null);
-
   useEffect(() => {
     // Check if this is first visit
-    const hasVisited = localStorage.getItem("zion_has_visited");
-    if (hasVisited) return;
+    const hasVisited = localStorage.getItem($2);
+    if (hasVisited) return,
 
     // Mark as visited
-    localStorage.setItem("zion_has_visitedtrue");
-
+    localStorage.setItem($2);
     // Get browser language
-    const browserLang = navigator.language.substring(0, 2) as SupportedLanguage;
-
+    const browserLang = navigator.language.substring(0, 2) as SupportedLanguage,
+    
     // Check if browser language is supported and different from current language
-    const isSupported = supportedLanguages.some(
-      (lang) => lang.code === browserLang,
-    );
+    const isSupported = supportedLanguages.some($2);
     if (isSupported && browserLang !== currentLanguage) {
-      setDetectedLanguage(browserLang);
-      setOpen(true);
+      setDetectedLanguage($2);
+      setOpen(true)
     }
-  }, []);
+  }, []),
 
-  if (!detectedLanguage) return null;
+  if (!detectedLanguage) return null,
 
-  const languageName =
-    supportedLanguages.find((lang) => lang.code === detectedLanguage)?.name ||
-    detectedLanguage;
-
+  const languageName = $2;
   const handleAccept = async () => {
-    await changeLanguage(detectedLanguage);
-    setOpen(false);
-  };
+    await changeLanguage($2);
+    setOpen(false)
+  },
 
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">
         <AlertDialogHeader>
           <AlertDialogTitle className="text-white">
-            {t("language.switch_to_detected", { language: languageName })}
+            {t('language.switch_to_detected', { language: languageName})}
           </AlertDialogTitle>
           <AlertDialogDescription className="text-zion-slate-light">
-            {`${supportedLanguages.find((lang) => lang.code === detectedLanguage)?.flag || ""} ${languageName}`}
+            {`${supportedLanguages.find((lang) => lang.code === detectedLanguage)?.flag |""} ${languageName}`}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -79,5 +90,5 @@ export function LanguageDetectionPopup() {
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
-);
+  )
 }

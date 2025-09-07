@@ -1,1 +1,61 @@
-export const metadata = { title: 'AI Services | Zion Tech Group' }; export default function AIPage() { return ( <section> <h1 style={{fontSize: 26,fontWeight: 800}}>AI Services</h1> <p style={{marginTop: 8,color: '#374151'}}>Ship AI features with confidence: RAG,agents,fine-tuning,evals and MLOps.</p> <div style={{display: 'grid',gap: 12,marginTop: 16}}> <Item title="Applied AI" details={["RAG over private data","Task-specific agents","Vision + speech","Personalization"]} /> <Item title="Model Ops" details={["Offline evals","Safety + guardrails","Batch + streaming","Cost controls"]} /> <Item title="Data & MLOps" details={["Pipelines","Feature stores","Vector DBs","Monitoring + drift"]} /> </div> <Pricing /> </section> )} function Item({ title,details }: { title: string; details: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h3 style={{fontWeight: 700}}>{title}</h3> <ul style={{paddingLeft: 18,color: '#4b5563'}}>{details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul> </div> )} function Pricing() { return ( <div style={{marginTop: 20,display: 'grid',gap: 12,gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))'}}> <Plan name="AI Discovery" price="$5k–$12k" features={["2–3 weeks","Use-case design","Tech selection","Roadmap"]} /> <Plan name="Pilot" price="$15k–$45k" features={["4–8 weeks","RAG/agent MVP","Evals + safety","Dashboards"]} /> <Plan name="Production" price="$50k+" features={["Hardened infra","Monitoring","SLAs","Cost optimization"]} /> </div> )} function Plan({ name,price,features }: { name: string; price: string; features: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h4 style={{fontWeight: 700}}>{name}</h4> <div style={{color: '#111827',fontWeight: 800,marginTop: 4}}>{price}</div> <ul style={{paddingLeft: 18,color: '#4b5563',marginTop: 8}}>{features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Ai Services | Zion Tech Group',
+  description: 'Professional ai services services for your business needs.',
+  keywords: 'ai services, services, business, technology'
+}
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Ai Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ai services services for your business needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our ai services services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}

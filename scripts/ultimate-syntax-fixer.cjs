@@ -1,4 +1,8 @@
+
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
 // console.log(' Ultimate Syntax Fixer...')
@@ -19,4 +23,11 @@ const filesToFix = ['pages/api/health.ts']
     content = content.replace(/\{"([^"]*?)\"\s*"\}/g, '{"$1"}
     content = content.replace(/"([^"]*?)"\s*"([^"]*?)"/g, '"$1$2"
     content = content.replace(/(\w+):\s*'([^']*?)',\s*(\w+):\s*'([^']*?)'/g, '$"1": \'$2\',\n    $"3"
+<<<<<<< HEAD
     content = content.replace(/\{"([^"]*?)\n([^"]*?)\"\}/g, '{"$1$2"}
+
+
+
+
+
+

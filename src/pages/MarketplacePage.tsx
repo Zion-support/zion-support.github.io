@@ -2,7 +2,7 @@ import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react';
+import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
 import { NextSeo } from '@/components/NextSeo';
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
 import { ProductListing } from '@/types/listings';
@@ -16,7 +16,7 @@ import { INITIAL_MARKETPLACE_PRODUCTS } from '@/data/initialMarketplaceProducts'
 import { useCurrency } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Market insights component
-const MarketplaceInsights = ({ stats }: { stats: any },) => (
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -24,7 +24,7 @@ const MarketplaceInsights = ({ stats }: { stats: any },) => (
         <h3 className="text-lg font-semibold">Marketplace Insights</h3>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="text-center">
+        <div className="text-center">,
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice / 1000)}k</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
         </div>
@@ -48,19 +48,19 @@ const MarketplaceInsights = ({ stats }: { stats: any },) => (
 // Filter controls
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
-}: any,) => (
+}: any) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
     <div className="flex items-center gap-2">
       <Filter className="h-4 w-4 text-muted-foreground" />
-      <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
         <option value="">All Categories</option>
-        {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
+        {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
-      <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
         <option value="price-high">Price: High to Low</option>
@@ -68,26 +68,27 @@ const MarketplaceFilterControls = ({
         <option value="popular">Most Popular</option>
         <option value="ai-score">AI Score</option>
       </select>
-    </div>
+    </div>,
     <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
       <Sparkles className="h-4 w-4 mr-1" />
       {showRecommended ? "All Products" : "Recommended"}
     </Button>
   </div>
 ),
+;
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { toast } from '@/hooks/use-toast';
 // Product card
-const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (,) => void, onAddToCart: () => void }) => {
-  const { formatPrice } = useCurrency(),
+const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: () => void, onAddToCart: () => void }) => {
+  const { formatPrice } = useCurrency($2);
   return (
   <Card className="h-full hover:shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
-        <div className="flex-1 min-w-0">
+        <div className="flex-1 min-w-0">,
           <h3 className="font-semibold text-lg truncate">{product.title}</h3>
           <p className="text-sm text-muted-foreground">{product.category}</p>
           <div className="flex items-center gap-2 mt-2">
@@ -120,7 +121,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
         <Button
           size="icon"
           variant="outline"
-          onClick = {onAddToCart,}
+          onClick={onAddToCart}
           aria-label="Add to cart"
           data-testid="add-to-cart-listing-button"
         >
@@ -136,23 +137,23 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
 },
 
 // Loading grid
-const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number },) => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-    {Array.from({ length: count }).map((_, i,) => <SkeletonCard key={i} />)}
+const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,
+    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
   </div>
 ),
 
 // Main component
 function MarketplacePageContent() {
-  const router = useRouter(),
-  const { t } = useTranslation(),
-  const dispatch = useDispatch<AppDispatch>(),
-  const { isAuthenticated } = useAuth(),
-  const [sortBy, setSortBy] = useState('newest'),
-  const [filterCategory, setFilterCategory] = useState(''),
-  const [showRecommended, setShowRecommended] = useState(false),
-  const fetchProducts = useCallback(async (page: number, limit: number,) => {
-    // Simulate API delay
+  const router = useRouter($2);
+  const { t } = useTranslation($2);
+  const dispatch = $2;
+  const { isAuthenticated } = useAuth($2);
+  const [sortBy, setSortBy] = useState($2);
+  const [filterCategory, setFilterCategory] = useState($2);
+  const [showRecommended, setShowRecommended] = useState($2);
+  const fetchProducts = useCallback(async (page: number, limit: number) => {
+    // Simulate API delay,
     await new Promise(resolve => setTimeout(resolve, 300)),
 
     try {
@@ -160,7 +161,7 @@ function MarketplacePageContent() {
       const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS],
 
       // Apply category filtering
-      let processedDataset = fullDataset,
+      let processedDataset = $2;
       if (filterCategory) {
         processedDataset = processedDataset.filter(p => p.category === filterCategory)
       }
@@ -171,7 +172,7 @@ function MarketplacePageContent() {
       }
 
       // Sort the processed dataset
-      processedDataset.sort((a, b,) => {
+      processedDataset.sort((a, b) => {
         switch (sortBy) {
           case 'price-low':
             return (a.price || 0) - (b.price || 0),
@@ -184,29 +185,26 @@ function MarketplacePageContent() {
           case 'ai-score':
             return (b.aiScore || 0) - (a.aiScore || 0),
           default: // 'newest'
-            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime()
+            return new Date(b.createdAt || '').getTime() - new Date(a.createdAt || '').getTime(),
         }
       }),
 
       // Slice for pagination
-      const startIndex = (page - 1) * limit,
-      const endIndex = startIndex + limit,
-      const items = processedDataset.slice(startIndex, endIndex),
-
+      const startIndex = $2;
+      const endIndex = $2;
+      const items = processedDataset.slice($2);
       return {
         items,
         hasMore: endIndex < processedDataset.length,
-        total: processedDataset.length
+        total: processedDataset.length,
       }
     } catch (error) {
-      logErrorToProduction('Error in fetchProducts:', { data: error }),
-      throw new Error('Failed to load marketplace data. Please try again.')
+      logErrorToProduction('Error in fetchProducts:', { data: error }), throw new Error('Failed to load marketplace data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended]),
 
   const {
-    items: products,
-    loading,
+    items: products, loading,
     error,
     hasMore,
     total,
@@ -215,35 +213,33 @@ function MarketplacePageContent() {
     refresh,
     scrollToTop,
     loadMore
-  } = useInfiniteScrollPagination(fetchProducts, 12),
-
+  } = useInfiniteScrollPagination($2);
   // Refresh when filters change
-  useEffect((,) => {
-    const timeoutId = setTimeout((,) => {
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
       refresh()
     }, 100),
 
     return () => clearTimeout(timeoutId)
   }, [sortBy, filterCategory, showRecommended, refresh]),
 
-  const marketStats = useMemo((,) => {
-    if (products.length === 0) return null,
+  const marketStats = $2;
     return {
-      averagePrice: products.reduce((sum, p,) => sum + (p.price || 0), 0) / products.length,
-      averageRating: products.reduce((sum, p,) => sum + (p.rating || 0), 0) / products.length,
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
       totalProducts: products.length,
-      availableCount: products.filter(p => p.availability === "Available").length
+      availableCount: products.filter(p => p.availability === "Available").length,
     }
   }, [products]),
 
-  const categories = useMemo((,) => {
+  const categories = useMemo(() => {
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"]
   }, []),
 
-  const [showScrollTop, setShowScrollTop] = useState(false),
-  useEffect((,) => {
-    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
-    window.addEventListener('scroll', handleScroll),
+  const [showScrollTop, setShowScrollTop] = useState($2);
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop($2);
+    window.addEventListener($2);
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
@@ -257,7 +253,7 @@ function MarketplacePageContent() {
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
         />
       <div className="container py-8">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+        <motion.div initial={{ opacity: 0, y: 20}} animate={{ opacity: 1, y: 0}} className="text-center mb-8">
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             {t('marketplace.hero_title')}
           </h1>
@@ -287,8 +283,8 @@ function MarketplacePageContent() {
             <Button onClick={refresh} variant="outline">
               <RefreshCw className="h-4 w-4 mr-2" />
               Try Again
-            </Button>
-            <Button onClick={(,) => window.location.reload()}>
+            </Button>,
+            <Button onClick={() => window.location.reload()}>
               Refresh Page
             </Button>
           </div>
@@ -307,45 +303,45 @@ function MarketplacePageContent() {
       />
     <div className="container py-8">
       <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">,
           {t('marketplace.hero_title')}
         </h1>
         <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>
       </motion.div>
 
       {marketStats && (
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+        <motion.div initial={{ opacity: 0, y: 20}} animate={{ opacity: 1, y: 0}} transition={{ delay: 0.2 }}>
           <MarketplaceInsights stats={marketStats} />
         </motion.div>
       )}
 
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+      <motion.div initial={{ opacity: 0, y: 20}} animate={{ opacity: 1, y: 0}} transition={{ delay: 0.3 }}>
         <MarketplaceFilterControls
-          sortBy = {sortBy,}
-          setSortBy = {setSortBy,}
-          filterCategory = {filterCategory,}
-          setFilterCategory = {setFilterCategory,}
-          categories = {categories,}
-          showRecommended = {showRecommended,}
-          setShowRecommended = {setShowRecommended,}
-          loading = {isFetching,}
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          filterCategory={filterCategory}
+          setFilterCategory={setFilterCategory}
+          categories={categories}
+          showRecommended={showRecommended}
+          setShowRecommended={setShowRecommended}
+          loading={isFetching}
         />
       </motion.div>
 
-      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0}} animate={{ opacity: 1}} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
-          {products.map((item, index,) => (
+          {products.map((item, index) => (
             <motion.div
-              key = {item.id,}
-              ref = {index === products.length - 1 ? lastElementRef : null,}
+              key={item.id} 
+              ref={index === products.length - 1 ? lastElementRef: null}
               initial={{ opacity: 0, scale: 0.9 }} 
-              animate={{ opacity: 1, scale: 1 }} 
+              animate={{ opacity: 1, scale: 1}} 
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }} 
               whileHover={{ scale: 1.02 }}
             >
               <MarketplaceCard
-                product = {item,}
+                product={item}
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
                     try {
@@ -354,16 +350,13 @@ function MarketplacePageContent() {
                       // ignore storage errors
                     }
                   }
-                  router.push(`/marketplace/listing/${item.id}`)
+                  router.push(`/marketplace/listing/${item.id}`);
                 }}
                 onAddToCart={() => {
                   dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),
                   toast({
-                    title: 'Added to cart',
-                    description: `${item.title} has been added to your cart`,
-                    action: {
-                      label: 'View Cart',
-                      onClick: (,) => router.push('/cart')}})
+                    title: 'Added to cart', description: `${item.title} has been added to your cart`, action: {,
+                      label: 'View Cart', onClick: () => router.push('/cart')}})
                 }}
               />
             </motion.div>
@@ -372,7 +365,7 @@ function MarketplacePageContent() {
       </motion.div>
 
       {(isFetching || loading) && products.length > 0 && (
-        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div className="mt-8" initial={{ opacity: 0}} animate={{ opacity: 1}}>
           <MarketplaceLoadingGrid count={4} />
         </motion.div>
       )}
@@ -384,7 +377,8 @@ function MarketplacePageContent() {
           ) : (
             <Button onClick={loadMore} variant="outline" size="lg">
               Load More Products
-            </Button>          )}
+            </Button>
+          )}
           {total !== undefined && (
             <p className="mt-2 text-sm text-muted-foreground">
               Showing {products.length} of {total} items
@@ -394,7 +388,7 @@ function MarketplacePageContent() {
       )}
 
       {!hasMore && products.length > 0 && (
-        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0}} animate={{ opacity: 1}}>
           <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available products!</div>
           <div className="text-sm text-muted-foreground">Showing {products.length} marketplace items</div>
         </motion.div>
@@ -403,8 +397,8 @@ function MarketplacePageContent() {
       <AnimatePresence>
         {showScrollTop && (
           <motion.button 
-            onClick = {scrollToTop,}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
+            onClick={scrollToTop} 
+            className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50",
             initial={{ opacity: 0, scale: 0 }} 
             animate={{ opacity: 1, scale: 1 }} 
             exit={{ opacity: 0, scale: 0 }}
@@ -419,8 +413,9 @@ function MarketplacePageContent() {
     </>
   )
 }
+
 // Main export
 export default function MarketplacePage() {
-  return <MarketplacePageContent />;
+  return <MarketplacePageContent />
 }
 ;

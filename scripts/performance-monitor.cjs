@@ -1,24 +1,59 @@
 #!/usr/bin/env node
+
+/**
+ * Performance Monitoring Script
+ * Monitors application performance metrics
+ */
+
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-class PerformanceMonitor {
-  constructor() {
-    this.metrics = {
-      bundleSize: '0',
-      memoryUsage: '0',
-      timestamp: new Date().toISOString()
-    };
-  }
+console.log('📊 Starting performance monitoring...');
 
-  async run() {
-    console.log('📊 Running performance monitoring...');
-    console.log('✅ Performance monitoring completed');
+// Performance monitoring configuration
+const config = {
+  outputDir: path.join(__dirname, '..', 'performance-reports'),
+  metrics: {
+    bundleSize: true,
+    loadTime: true,
+    memoryUsage: true,
+    cpuUsage: true
   }
+};
+
+// Ensure output directory exists
+if (!fs.existsSync(config.outputDir)) {
+  fs.mkdirSync(config.outputDir, { recursive: true });
 }
 
-const monitor = new PerformanceMonitor();
-monitor.run().catch(console.error);
+// Performance metrics collection
+function collectMetrics() {
+  const metrics = {
+    timestamp: new Date().toISOString(),
+    memoryUsage: process.memoryUsage(),
+    uptime: process.uptime(),
+    platform: process.platform,
+    nodeVersion: process.version
+  };
 
-module.exports = PerformanceMonitor;
+  return metrics;
+}
+
+// Save metrics to file
+function saveMetrics(metrics) {
+  const filename = `performance-${Date.now()}.json`;
+  const filepath = path.join(config.outputDir, filename);
+  
+  fs.writeFileSync(filepath, JSON.stringify(metrics, null, 2));
+  console.log(`📈 Performance metrics saved to: ${filename}`);
+}
+
+// Main execution
+try {
+  const metrics = collectMetrics();
+  saveMetrics(metrics);
+  console.log('✅ Performance monitoring completed');
+} catch (error) {
+  console.error('❌ Performance monitoring failed:', error.message);
+  process.exit(1);
+}

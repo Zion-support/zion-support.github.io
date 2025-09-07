@@ -19,36 +19,11 @@ class MergeConflictFixer {
     this.log('🔍 Finding files with merge conflicts...');
     
     try {
-      const result = execSync('grep -r "" . --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" --include="*.json" --include="*.md" --exclude-dir=node_modules --exclude-dir=.git --exclude-dir=.next', { 
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
+      const result = execSync('grep -r "
       
-      const files = result.trim().split('\n').map(line => line.split(':')[0]).filter(Boolean);
-      const uniqueFiles = [...new Set(files)];
-      
-      this.log(`Found ${uniqueFiles.length} files with merge conflicts`);
-      return uniqueFiles;
-      
-    } catch (error) {
-      this.log('No merge conflicts found or error occurred');
-      return [];
-    }
-  }
-
-  fixFileConflicts(filePath) {
-    this.log(`🔧 Fixing merge conflicts in ${filePath}...`);
-    
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
-      
-      // Remove merge conflict markers and keep the HEAD version
-      content = content.replace(/\n([\s\S]*?)([\s\S]*?)      
       // Clean up any remaining conflict markers
-      content = content.replace(/\n?/g, '');
-      content = content.replace(/\n?/g, '');
-      content = content.replace(/      
+      content = content.replace(/
+      
       // Clean up common merge conflict artifacts
       content = content.replace(/\s*,\s*$/gm, ','); // Fix trailing commas
       content = content.replace(/,\s*}/g, '}'); // Fix trailing commas before closing braces

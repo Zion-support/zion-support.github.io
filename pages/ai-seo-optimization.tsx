@@ -1,10 +1,10 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',;
-import Layout from '../components/layout/Layout',;
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
+import React from 'react';
+import Head from 'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AISEOOptimizationPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization')),
+  const service = $2;
   if (!service) return null,
 
   return (
@@ -50,4 +50,4 @@ export default function AISEOOptimizationPage() {
       </div>
     </Layout>
   )
-};
+}

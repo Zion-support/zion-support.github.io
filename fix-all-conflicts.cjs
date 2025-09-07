@@ -1,5 +1,26 @@
 const fs = require('fs');
 const path = require('path');
+
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
+    
+)
+    content = content.replace(/[\s\S]*?
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+    return false;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Find all files with merge conflicts
 const { execSync } = require('child_process');
 
 class ConflictResolver {
@@ -18,7 +39,9 @@ class ConflictResolver {
       const originalContent = content;
 
       // Remove merge conflict markers
-      content = content.replace(/[\s\S]*?[\s\S]*?      content = content.replace(/[\s\S]*?      
+      content = content.replace(/
+      content = content.replace(/
+      
       // Fix common syntax issues
       content = content.replace(/\{_/g, '{');
       content = content.replace(/_}/g, '}');
@@ -94,6 +117,7 @@ class ConflictResolver {
       } else if (entry.isFile() && (entry.name.endsWith('.tsx') || entry.name.endsWith('.ts') || entry.name.endsWith('.jsx') || entry.name.endsWith('.js'))) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>') || content.includes('{_') || content.includes('_}') || content.includes('_ ')) {
             files.push(fullPath);
           }
         } catch (error) {
@@ -130,20 +154,14 @@ class ConflictResolver {
   }
 }
 
-// Run the conflict resolver
-if (require.main === module) {
-  const resolver = new ConflictResolver();
-  resolver.run()
-    .then(result => {
-      console.log('Conflict resolution completed');
-      console.log('Fixed files:', result.fixedFiles.length);
-      console.log('Errors:', result.errors.length);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Conflict resolution failed:', error);
-      process.exit(1);
-    });
-}
+console.log(`Found ${files.length} files with merge conflicts`);
 
-module.exports = ConflictResolver;
+let fixedCount = 0;
+files.forEach(file => {
+  if (fixMergeConflicts(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`Fixed ${fixedCount} files`);
+console.log('All merge conflicts resolved!');

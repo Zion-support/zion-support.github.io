@@ -1,58 +1,80 @@
-import {useState, useEffect} from "react";
-import {useParams, useNavigate, Link} from "react-router-dom";
-import {format} from "date-fns";
-import {useAuth} from "@/hooks/useAuth";
-import {useProjects} from "@/hooks/useProjects";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {Project, ProjectStatus} from "@/types/projects";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger} from "@/components/ui/alert-dialog";
-import {Avatar} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Textarea} from "@/components/ui/textarea";
-import {toast} from "@/hooks/use-toast";
-import {supabase} from "@/integrations/supabase/client";
-import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
-import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import { format } from "date-fns";
+import { useAuth } from "@/hooks/useAuth";
+import { useProjects } from "@/hooks/useProjects";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Project, ProjectStatus } from "@/types/projects";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle} from "@/components/ui/card",
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger} from "@/components/ui/tabs",
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+import { Avatar } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
+import {
+  AlertCircle,
+  Calendar,
+  CheckCircle2,
+  Clock,
+  FileText,
+  Layers,
+  MessageSquare,
+  Video,
+  User,
+  XCircle} from "lucide-react",
 
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const { projectId } = useParams() as { projectId?: string };
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const { getProjectById, updateProjectStatus } = useProjects();
-  
-  const [project, setProject] = useState<Project | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState<any[]>([]);
-  const [newNote, setNewNote] = useState("");
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-  const [activeTab, setActiveTab] = useState("details");
-  
+  const { projectId } = useParams() as { projectId?: string },
+  const { user } = useAuth($2);
+  const navigate = useNavigate($2);
+  const { getProjectById, updateProjectStatus } = useProjects($2);
+  const [project, setProject] = useState<Project | null>(null),
+  const [isLoading, setIsLoading] = useState($2);
+  const [notes, setNotes] = useState<any[]>([]),
+  const [newNote, setNewNote] = useState($2);
+  const [isSubmittingNote, setIsSubmittingNote] = useState($2);
+  const [activeTab, setActiveTab] = useState($2);
   // Load project data
   useEffect(() => {
     async function loadProject() {
-      if (!projectId) return;
+      if (!projectId) return,
       
-      setIsLoading(true);
-      const projectData = await getProjectById(projectId);
-      
+      setIsLoading($2);
+      const projectData = await getProjectById($2);
       if (projectData) {
-        setProject(projectData);
-        
+        setProject($2);
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
-        toast({
-          title: "Project not found",
-          description: "The requested project could not be found.",
-          variant: "destructive"}),
+        toast($2);
         navigate("/dashboard")
       }
       
@@ -60,52 +82,46 @@ function ProjectDetailsContent() {
     }
     
     loadProject()
-  }, [projectId]);
+  }, [projectId]),
   
   const fetchProjectNotes = async (projectId: string) => {
     try {
       const { data, error } = await supabase
         .from("project_notes")
         .select(`
-          *;
+          *,
           created_by_profile:profiles!user_id(display_name, avatar_url)
         `)
         .eq("project_id", projectId)
-        .order("created_at", { ascending: false }),
-      
-      if (error) throw error;
+        .order($2);
+      if (error) throw error,
       
       setNotes(data || [])
     } catch (err) {
       console.error("Error fetching project notes:", err)
     }
-  };
+  },
   
-  const handleSubmitNote = async () => {
-    if (!newNote.trim() || !project || !user) return;
-    
-    setIsSubmittingNote(true);
-    
+  const handleSubmitNote = $2;
+    setIsSubmittingNote($2);
     try {
       const { data, error } = await supabase
         .from("project_notes")
         .insert({
-          project_id: project.id,
-          user_id: user.id,
+          project_id: project.id
+          user_id: user.id
           content: newNote})
-        .select();
-      
-      if (error) throw error;
+        .select($2);
+      if (error) throw error,
       
       // Refresh notes
-      fetchProjectNotes(project.id);
-      setNewNote("");
-      
+      fetchProjectNotes($2);
+      setNewNote($2);
       toast({
         title: "Note added",
         description: "Your note has been added to the project."})
     } catch (err: any) {
-      console.error("Error adding note:", err);
+      console.error($2);
       toast({
         title: "Failed to add note",
         description: err.message || "An error occurred while adding your note.",
@@ -113,94 +129,48 @@ function ProjectDetailsContent() {
     } finally {
       setIsSubmittingNote(false)
     }
-  };
+  },
   
-  const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return,
-    
-    const success = await updateProjectStatus(project.id, newStatus);
-    
+  const handleStatusChange = $2;
+    const success = await updateProjectStatus($2);
     if (success) {
-      setProject({
-        ...project;
-        status: newStatus}),
-      
+      setProject($2);
       // If offer was accepted, show a special toast
-      if (newStatus === "offer_accepted") {
-        toast({
-          title: "Offer Accepted! 🎉",
+      if (newStatus = $2;
           description: "The project is now in progress. Congratulations!"})
       }
     }
-  };
+  },
   
-  const getStatusBadge = (status: ProjectStatus) => {
-    switch (status) {
-      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;
+  const getStatusBadge = $2;
       case "offer_accepted":
-        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
+        return <Badge className = $2;
       case "changes_requested":
-        return <Badge variant="secondary">Changes Requested</Badge>;
+        return <Badge variant = $2;
       case "in_progress":
-        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
+        return <Badge className = $2;
       case "completed":
-        return <Badge variant="default">Completed</Badge>;
+        return <Badge variant = $2;
       case "canceled":
-        return <Badge variant="destructive">Canceled</Badge>,
+        return <Badge variant = $2;
       default:
-        return <Badge variant="outline">{status}</Badge>
-    }
-  };
-  
+        return <Badge variant = $2;
   if (isLoading) {
     return (
-      <div className="container mx-auto py-8">
-        <div className="flex justify-center items-center h-64">
-          <div className="text-center">
-            <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>
-            <p>Loading project details...</p>
-          </div>
-        </div>
-      </div>
-    )
-  }
-  
-  if (!project) {
-    return (
-      <div className="container mx-auto py-8">
-        <Card>
-          <CardContent className="flex flex-col items-center justify-center py-10">
-            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />
-            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>
-            <p className="text-muted-foreground mb-4">
-              The project you're looking for doesn't exist or you don't have access to it.
-            </p>
-            <Button onClick={() => navigate("/dashboard")}>
-              Return to Dashboard
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
-    )
-  }
-  
-  // Check if user is either the client or the talent
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
-  
+      <div className = $2;
+  const isTalent = $2;
   if (!isClient && !isTalent) {
-    navigate("/unauthorized");
+    navigate($2);
     return null
   }
   
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
-  
+  const isOfferPending = $2;
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes($2);
+  const isActiveProject = ["offer_accepted", "in_progress"].includes($2);
   return (
     <>
-      <SEO 
-        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
+      <SEO
+        title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}
         description="View and manage your project details and collaboration."
       />
       <AppHeader />
@@ -208,7 +178,7 @@ function ProjectDetailsContent() {
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
             <div>
-              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
+              <h1 className="text-3xl font-bold">{project.job?.title |"Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
                 {getStatusBadge(project.status)}
                 <span className="text-muted-foreground">
@@ -216,7 +186,6 @@ function ProjectDetailsContent() {
                 </span>
               </div>
             </div>
-            
             {/* Action Buttons Based on Role and Status */}
             <div className="space-x-2">
               {isTalent && isOfferPending && (
@@ -231,7 +200,7 @@ function ProjectDetailsContent() {
                       <AlertDialogHeader>
                         <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>
                         <AlertDialogDescription>
-                          By accepting this offer, you agree to the project terms and timeline. 
+                          By accepting this offer, you agree to the project terms and timeline.
                           This will initiate the contract and start the project.
                         </AlertDialogDescription>
                       </AlertDialogHeader>
@@ -243,14 +212,12 @@ function ProjectDetailsContent() {
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-                  
                   <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>
                     <MessageSquare className="mr-2 h-4 w-4" /> Request Changes
                   </Button>
                 </>
               )}
-              
-              {(isClient || isTalent) && project.status === "in_progress" && (
+              {(isClient |isTalent) && project.status === "in_progress" && (
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
                     <Button variant="default">
@@ -261,7 +228,7 @@ function ProjectDetailsContent() {
                     <AlertDialogHeader>
                       <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle>
                       <AlertDialogDescription>
-                        This will finalize the project and mark it as complete. 
+                        This will finalize the project and mark it as complete.
                         Make sure all deliverables have been provided and approved.
                       </AlertDialogDescription>
                     </AlertDialogHeader>
@@ -274,7 +241,6 @@ function ProjectDetailsContent() {
                   </AlertDialogContent>
                 </AlertDialog>
               )}
-              
               {isActiveProject && (
                 <Button variant="default" asChild>
                   <Link to={`/project/${project.id}/milestones`}>
@@ -282,7 +248,6 @@ function ProjectDetailsContent() {
                   </Link>
                 </Button>
               )}
-
               {isActiveProject && (
                 <Button variant="outline" asChild>
                   <Link to={`/project/${project.id}/room`}>
@@ -290,10 +255,9 @@ function ProjectDetailsContent() {
                   </Link>
                 </Button>
               )}
-              
-              {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
-                <Button 
-                  variant="outline" 
+              {(isClient |isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
+                <Button
+                  variant="outline"
                   onClick={() => navigate(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
                 >
                   <MessageSquare className="mr-2 h-4 w-4" /> Message
@@ -302,7 +266,6 @@ function ProjectDetailsContent() {
             </div>
           </div>
         </div>
-        
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="order-2 lg:order-1 lg:col-span-2">
             <Tabs defaultValue="details" value={activeTab} onValueChange={setActiveTab}>
@@ -315,7 +278,6 @@ function ProjectDetailsContent() {
                   <TabsTrigger value="reviews">Reviews</TabsTrigger>
                 )}
               </TabsList>
-              
               <TabsContent value="details">
                 <Card>
                   <CardHeader>
@@ -332,14 +294,12 @@ function ProjectDetailsContent() {
                           <p className="whitespace-pre-wrap">{project.scope_summary}</p>
                         </div>
                       </div>
-                      
                       <div>
                         <h3 className="font-semibold mb-2">Payment Terms</h3>
                         <Badge variant="outline" className="capitalize">
                           {project.payment_terms} Payment
                         </Badge>
                       </div>
-                      
                       <div>
                         <h3 className="font-semibold mb-2">Job Details</h3>
                         <div className="bg-muted/30 p-4 rounded-md">
@@ -350,7 +310,6 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
               <TabsContent value="timeline">
                 <Card>
                   <CardHeader>
@@ -368,7 +327,6 @@ function ProjectDetailsContent() {
                           <p>{format(new Date(project.start_date), "PPP")}</p>
                         </div>
                       </div>
-                      
                       <div className="flex items-start gap-3 p-3 bg-muted/30 rounded-md">
                         <Clock className="h-5 w-5 text-primary mt-0.5" />
                         <div>
@@ -382,7 +340,6 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
               <TabsContent value="documents">
                 <Card>
                   <CardHeader>
@@ -406,7 +363,7 @@ function ProjectDetailsContent() {
                         <Button variant="outline" size="sm" asChild>
                           <a href={project.agreement_url} target="_blank" rel="noopener noreferrer">
                             View
-                          </a>
+                          </Link>
                         </Button>
                       </div>
                     ) : (
@@ -421,7 +378,6 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
               <TabsContent value="notes">
                 <Card>
                   <CardHeader>
@@ -448,7 +404,7 @@ function ProjectDetailsContent() {
                                   )}
                                 </Avatar>
                                 <span className="font-medium text-sm">
-                                  {note.created_by_profile?.display_name || "User"}
+                                  {note.created_by_profile?.display_name |"User"}
                                 </span>
                                 <span className="text-xs text-muted-foreground">
                                   {format(new Date(note.created_at), "PPp")}
@@ -466,7 +422,6 @@ function ProjectDetailsContent() {
                           </div>
                         )}
                       </div>
-                      
                       {isOfferAccepted && (
                         <div>
                           <Textarea
@@ -477,7 +432,7 @@ function ProjectDetailsContent() {
                           />
                           <Button
                             onClick={handleSubmitNote}
-                            disabled={!newNote.trim() || isSubmittingNote}
+                            disabled={!newNote.trim() |isSubmittingNote}
                           >
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>
@@ -487,13 +442,11 @@ function ProjectDetailsContent() {
                   </CardContent>
                 </Card>
               </TabsContent>
-              
               <TabsContent value="reviews">
                 <ProjectReviewSection project={project} />
               </TabsContent>
             </Tabs>
           </div>
-          
           <div className="order-1 lg:order-2 lg:col-span-1">
             <Card>
               <CardHeader>
@@ -514,10 +467,10 @@ function ProjectDetailsContent() {
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
-                        {project.talent_profile?.full_name || "Talent"}
+                        {project.talent_profile?.full_name |"Talent"}
                       </h3>
                       <p className="text-sm text-muted-foreground">
-                        {project.talent_profile?.professional_title || "Professional"}
+                        {project.talent_profile?.professional_title |"Professional"}
                       </p>
                       {isClient && (
                         <Button
@@ -531,7 +484,6 @@ function ProjectDetailsContent() {
                       )}
                     </div>
                   </div>
-                  
                   <div className="flex items-start gap-4">
                     <Avatar className="h-10 w-10">
                       {project.client_profile?.avatar_url ? (
@@ -545,7 +497,7 @@ function ProjectDetailsContent() {
                     </Avatar>
                     <div>
                       <h3 className="font-semibold">
-                        {project.client_profile?.display_name || "Client"}
+                        {project.client_profile?.display_name |"Client"}
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (
@@ -563,7 +515,6 @@ function ProjectDetailsContent() {
                 </div>
               </CardContent>
             </Card>
-            
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -575,14 +526,12 @@ function ProjectDetailsContent() {
                     <span className="text-sm font-medium">Current Status:</span>
                     <div>{getStatusBadge(project.status)}</div>
                   </div>
-                  
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Creation Date:</span>
                     <span className="text-sm">
                       {format(new Date(project.created_at), "PPP")}
                     </span>
                   </div>
-                  
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
@@ -591,14 +540,13 @@ function ProjectDetailsContent() {
                   </div>
                 </div>
               </CardContent>
-              
               {/* Conditional Footer Based on Status */}
               {project.status === "changes_requested" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-amber-600 flex items-center gap-1">
                     <AlertCircle className="h-4 w-4" /> The talent has requested changes to this offer.
                   </p>
-                  <Button 
+                  <Button
                     variant="outline"
                     onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
                     className="w-full"
@@ -607,7 +555,6 @@ function ProjectDetailsContent() {
                   </Button>
                 </CardFooter>
               )}
-              
               {project.status === "offer_sent" && isClient && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-muted-foreground">
@@ -615,7 +562,6 @@ function ProjectDetailsContent() {
                   </p>
                 </CardFooter>
               )}
-              
               {project.status === "completed" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-green-600 flex items-center gap-1">
@@ -623,7 +569,6 @@ function ProjectDetailsContent() {
                   </p>
                 </CardFooter>
               )}
-              
               {project.status === "canceled" && (
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">
                   <p className="text-sm text-red-600 flex items-center gap-1">
@@ -639,7 +584,6 @@ function ProjectDetailsContent() {
     </>
   )
 }
-
 export default function ProjectDetails() {
   return (
     <ProtectedRoute>
@@ -647,4 +591,3 @@ export default function ProjectDetails() {
     </ProtectedRoute>
   )
 }
-;

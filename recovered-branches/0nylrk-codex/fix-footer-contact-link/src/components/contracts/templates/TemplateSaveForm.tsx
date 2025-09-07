@@ -1,51 +1,47 @@
 
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Loader2} from "lucide-react";
-import {ContractFormValues} from "@/components/contracts/components/ContractForm";
-import {ContractTemplate} from "@/types/contracts";
-import {useContractTemplates} from "@/hooks/useContractTemplates";
-import {Button} from "@/components/ui/button";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Switch} from "@/components/ui/switch";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Loader2 } from "lucide-react";
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+import { ContractTemplate } from "@/types/contracts";
+import { useContractTemplates } from "@/hooks/useContractTemplates";
+import { Button } from "@/components/ui/button";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
 const formSchema = z.object({
-  title: z.string().min(1, "Title is required");
+  title: z.string().min($2);
   isDefault: z.boolean().default(false)}),
 
-type FormValues = z.infer<typeof formSchema>;
-
+type FormValues = $2;
 interface TemplateSaveFormProps {
   onCancel: () => void,
   onComplete: () => void,
-  editTemplate?: ContractTemplate | null;
+  editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
 }
-
 export function TemplateSaveForm({
   onCancel;
   onComplete;
   editTemplate;
   currentValues
 }: TemplateSaveFormProps) {
-  const [saving, setSaving] = useState(false);
-  const { createTemplate, updateTemplate } = useContractTemplates();
-  
+  const [saving, setSaving] = useState($2);
+  const { createTemplate, updateTemplate } = useContractTemplates($2);
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver($2);
     defaultValues: {
-      title: editTemplate?.title || "",
-      isDefault: editTemplate?.is_default || false}}),
+      title: editTemplate ?.title || "",
+      isDefault: editTemplate ?.is_default || false}}),
   
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
       return
     }
     
-    setSaving(true);
-    
+    setSaving($2);
     try {
       if (editTemplate) {
         await updateTemplate.mutateAsync({
@@ -64,7 +60,7 @@ export function TemplateSaveForm({
     } finally {
       setSaving(false)
     }
-  };
+  },
   
   return (
     <Form {...form}>
@@ -82,7 +78,6 @@ export function TemplateSaveForm({
             </FormItem>
           )}
         />
-        
         <FormField
           control={form.control}
           name="isDefault"
@@ -99,7 +94,6 @@ export function TemplateSaveForm({
             </FormItem>
           )}
         />
-        
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
@@ -119,4 +113,3 @@ export function TemplateSaveForm({
     </Form>
   )
 }
-;

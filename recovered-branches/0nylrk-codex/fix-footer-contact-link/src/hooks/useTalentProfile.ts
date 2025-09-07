@@ -1,43 +1,40 @@
-
-import {useState, useEffect} from "react";
-import {TalentProfile, as, TalentProfileType} from "@/types/talent";
-import {ProfileData} from "@/types/profile";
-import {MOCK_TALENTS} from "@/data/mockTalents";
-import {MOCK_PROFILES} from "@/data/mockProfiles";
-import {convertProfileToTalentProfile} from "@/utils/profileConverter";
+import { useState, useEffect } from "react",
+import { TalentProfile as TalentProfileType } from "@/types/talent",
+import { ProfileData } from "@/types/profile",
+import { MOCK_TALENTS } from "@/data/mockTalents",
+import { MOCK_PROFILES } from "@/data/mockProfiles",
+import { convertProfileToTalentProfile } from "@/utils/profileConverter";
 export function useTalentProfile(id: string | undefined) {
-  const [profile, setProfile] = useState<TalentProfileType | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
+  const [profile, setProfile] = useState<TalentProfileType | null>(null),
+  const [isLoading, setIsLoading] = useState($2);
+  const [error, setError] = useState<string | null>(null),
+  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
 
   useEffect(() => {
     const fetchProfile = async () => {
       if (!id) {
-        setError("No profile ID provided");
-        setIsLoading(false);
+        setError($2);
+        setIsLoading($2);
         return
       }
 
-      setIsLoading(true);
-      setError(null);
-      
+      setIsLoading($2);
+      setError($2);
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
-          const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
-          
+          const foundProfile = MOCK_TALENTS.find($2);
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
           } else {
             // Try fetching from ProfileData mock as fallback
             // This is just for development purposes
-            const mockProfile = MOCK_PROFILES[id];
+            const mockProfile = $2;
             if (mockProfile) {
-              setMockProfileData(mockProfile);
+              setMockProfileData($2);
               // Convert the ProfileData to TalentProfileType
-              const convertedProfile = convertProfileToTalentProfile(mockProfile);
+              const convertedProfile = convertProfileToTalentProfile($2);
               setProfile(convertedProfile)
             } else {
               setError("Profile not found")
@@ -46,15 +43,14 @@ export function useTalentProfile(id: string | undefined) {
           setIsLoading(false)
         }, 800)
       } catch (err) {
-        console.error("Error fetching profile:", err);
-        setError("Failed to load profile data");
+        console.error($2);
+        setError($2);
         setIsLoading(false)
       }
-    };
+    },
 
     fetchProfile()
-  }, [id]);
+  }, [id]),
 
   return { profile, isLoading, error, mockProfileData }
 }
-;

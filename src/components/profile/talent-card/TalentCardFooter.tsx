@@ -1,35 +1,39 @@
+import React, { useState } from "react";
+import { Star } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from 'lucide-react'
+import { TalentProfile } from "@/types/talent";
+import { HireRequestModal } from "@/components/profile/hire-request";
+import { useAuthStatus } from "@/hooks/talent";
+import type { UserProfile } from "@/types/auth";
 import { useRouter } from 'next/router';
 interface TalentCardFooterProps {
-  profile: TalentProfile,
-  onViewProfile: (id: string,) => void,
-  onRequestHire?: (profile: TalentProfile,) => void
+  profile: TalentProfile;
+  onViewProfile: (id: string) => void;
+  onRequestHire?: (profile: TalentProfile) => void,
 }
 
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const router = useRouter();
-
+  const [isHireModalOpen, setIsHireModalOpen] = useState($2);
+  const { userDetails } = useAuthStatus($2);
+  const router = useRouter($2);
   // Create a compatible UserProfile from UserDetails
-  const userProfile: UserProfile = {
+  const userProfile: UserProfile = {,
     id: userDetails?.id,
     name: userDetails?.name || '',
     email: userDetails?.email || '',
     userType: null,
     profileComplete: false,
-    created_at: new Date().toISOString(),
-    updated_at: new Date().toISOString(),
-    role: userDetails?.userType || '',
-    displayName: userDetails?.name || '',
+    created_at: new Date().toISOString($2);
+    updated_at: new Date().toISOString($2);
+    role: userDetails ?.userType || '',
+    displayName: userDetails ?.name || '',
     points: 0,
-    avatarUrl: userDetails?.avatar || ''
-  };
+    avatarUrl: userDetails?.avatar || '',
+  },
 
   // Handle request to hire
-  const handleRequestHire = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    
-      const handleRequestHire = (e: React.MouseEvent,) => {
+  const handleRequestHire = (e: React.MouseEvent) => {,
     e.stopPropagation(),
     
     if (onRequestHire) {
@@ -41,12 +45,11 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
   },
 
   // Handle view profile
-  const handleViewProfile = (e: React.MouseEvent,) => {
+  const handleViewProfile = (e: React.MouseEvent) => {,
     e.stopPropagation(),
     
     // Navigate to the talent profile page
-    router.push(`/talent/${profile.id || ''}`),
-    
+    router.push($2);
     // Also call the onViewProfile callback if provided
     if (onViewProfile) {
       onViewProfile(profile.id || '')
@@ -76,7 +79,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           <Button 
             variant="default" 
             size="sm" 
-            onClick = {handleRequestHire,}
+            onClick={handleRequestHire}
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
@@ -84,22 +87,21 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
           
           <Button 
             variant="outline" 
-            size="sm" 
-            onClick = {handleViewProfile,}
+            size="sm",
+            onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
             View
             <ExternalLink className="h-3 w-3 ml-1" />
           </Button>
         </div>
-      </div>
-      
+      </div>,
       {/* Hire Request Modal */}
       <HireRequestModal
-        talent = {profile,}
-        isOpen = {isHireModalOpen,}
-        onClose = {() => setIsHireModalOpen(false),}
-        userDetails = {userProfile,}
+        talent={profile}
+        isOpen={isHireModalOpen}
+        onClose={() => setIsHireModalOpen(false)}
+        userDetails={userProfile}
       />
     </>
   )

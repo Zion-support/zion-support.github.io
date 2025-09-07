@@ -4,53 +4,93 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🔧 Resolving all merge conflicts...');
+console.log('🔧 Starting comprehensive merge conflict resolution...\n');
 
-// Find all files with merge conflicts
-const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(Boolean);
-
-console.log(`📊 Found ${conflictedFiles.length} files with merge conflicts`);
-
-let resolvedCount = 0;
-
-for (const file of conflictedFiles) {
-  const filePath = path.join(process.cwd(), file);
-  
-  if (fs.existsSync(filePath)) {
-    console.log(`🔧 Resolving ${file}...`);
-    
-    try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const originalContent = content;
-      
-      // Remove merge conflict markers and keep "ours" version (current branch)
-      
-      if (content !== originalContent) {
-        fs.writeFileSync(filePath, content, 'utf8');
-        console.log(`✅ Resolved ${file}`);
-        resolvedCount++;
-      } else {
-        console.log(`⏭️  No conflicts found in ${file}`);
-      }
-    } catch (error) {
-      console.warn(`⚠️  Could not resolve ${file}: ${error.message}`);
-    }
-  } else {
-    console.log(`⚠️  File not found: ${file}`);
-  }
-}
-
-console.log(`🎉 Resolved ${resolvedCount} files!`);
-
-// Add resolved files to git
-if (resolvedCount > 0) {
+// Function to resolve merge conflicts in a file
+function resolveMergeConflicts(filePath) {
   try {
-    execSync('git add .', { stdio: 'inherit' });
-    console.log('📝 Added resolved files to git');
+    if (!fs.existsSync(filePath)) {
+      return false;
+    }
+
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file has merge conflict markers
+    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
+      return false;
+    }
+
+    console.log(`  📝 Resolving conflicts in: ${filePath}`);
+
+    // Strategy: Keep the current branch changes (HEAD) and remove conflict markers
+    let resolvedContent = content
+      // Remove conflict markers and keep HEAD version
+      .replace(/\n([\s\S]*?)\n([\s\S]*?)      // Handle cases where there might be multiple conflict sections
+      .replace(/\n([\s\S]*?)\n([\s\S]*?)      // Clean up any remaining conflict markers
+      .replace(/<<<<<<< [^\n]+\n?/g, '')
+      .replace(/\n?/g, '')
+      .replace(/      // Remove extra empty lines
+      .replace(/\n\s*\n\s*\n/g, '\n\n')
+      .trim();
+
+    // Write the resolved content back
+    fs.writeFileSync(filePath, resolvedContent, 'utf8');
+    return true;
   } catch (error) {
-    console.warn(`⚠️  Could not add files to git: ${error.message}`);
+    console.error(`  ❌ Error resolving ${filePath}:`, error.message);
+    return false;
   }
 }
+
+// Function to find all files with merge conflicts
+function findConflictedFiles() {
+  try {
+    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+    return result.trim().split('\n').filter(file => file.length > 0);
+  } catch (error) {
+    console.error('Error finding conflicted files:', error.message);
+    return [];
+  }
+}
+
+// Main execution
+async function main() {
+  console.log('🔍 Finding files with merge conflicts...');
+  const conflictedFiles = findConflictedFiles();
+  
+  if (conflictedFiles.length === 0) {
+    console.log('✅ No merge conflicts found!');
+    return;
+  }
+
+  console.log(`📋 Found ${conflictedFiles.length} files with conflicts:\n`);
+
+  let resolvedCount = 0;
+  let errorCount = 0;
+
+  for (const file of conflictedFiles) {
+    if (resolveMergeConflicts(file)) {
+      resolvedCount++;
+    } else {
+      errorCount++;
+    }
+  }
+
+  console.log(`\n📊 Resolution Summary:`);
+  console.log(`  ✅ Successfully resolved: ${resolvedCount} files`);
+  console.log(`  ❌ Errors: ${errorCount} files`);
+
+  if (resolvedCount > 0) {
+    console.log('\n🔄 Adding resolved files to git...');
+    try {
+      execSync('git add .', { stdio: 'inherit' });
+      console.log('✅ All resolved files added to git');
+    } catch (error) {
+      console.error('❌ Error adding files to git:', error.message);
+    }
+  }
+
+  console.log('\n🎉 Merge conflict resolution completed!');
+}
+
+main().catch(console.error);

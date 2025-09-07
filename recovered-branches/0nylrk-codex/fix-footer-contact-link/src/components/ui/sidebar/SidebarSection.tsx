@@ -1,13 +1,16 @@
-
 import React from "react";
-import {cn} from "@/lib/utils";
+import { cn } from "@/lib/utils";
 interface SidebarSectionProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string;
-  title?: string;
+  className?: string,
+  title?: string,
   children?: React.ReactNode
 }
-
-export function SidebarSection({ className, title, children, ...props }: SidebarSectionProps) {
+export function SidebarSection({
+  className
+  title
+  children
+  ...props
+}: SidebarSectionProps) {
   return (
     <div className={cn("py-2", className)} {...props}>
       {title && (

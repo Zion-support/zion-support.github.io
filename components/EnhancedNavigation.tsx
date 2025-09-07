@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import {motion} from 'framer-motion';
-import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, 
+  Cpu, Database, Users, Award, BookOpen, Phone
+} from 'lucide-react',
 
 const EnhancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false),
-  const [isScrolled, setIsScrolled] = useState(false),
+  const [isOpen, setIsOpen] = useState($2);
+  const [isScrolled, setIsScrolled] = useState($2);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
-    },
-
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    const handleScroll = $2;
+    window.addEventListener($2);
+    return () => window.removeEventListener('scroll', handleScroll)
   }, []),
 
   const services = [
@@ -34,13 +34,10 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ],
 
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown),
-  };
-
+  const toggleDropdown = $2;
   const closeAllDropdowns = () => {
-    setActiveDropdown(null),
-    setIsOpen(false),
+    setActiveDropdown($2);
+    setIsOpen(false)
   },
 
   return (
@@ -67,40 +64,45 @@ const EnhancedNavigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('services')}
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
+                className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2"
               >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
+                <span>Solutions</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                  activeDropdown === 'services' ? 'rotate-180' : ''
+                }`} />
               </button>
               
-              {activeDropdown === 'services' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6"
-                >
-                  <div className="grid grid-cols-2 gap-4 px-6">
-                    {services.map((service) => (
-                      <Link
-                        key={service.name}
-                        href={service.href}
-                        className="group p-4 rounded-lg hover:bg-gray-50 transition-colors"
-                        onClick={closeAllDropdowns}
-                      >
-                        <div className="flex items-start space-x-3">
-                          <service.icon className="w-6 h-6 text-blue-600 mt-1" />
-                          <div>
-                            <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                              {service.name}
-                            </h3>
-                            <p className="text-sm text-gray-600">{service.description}</p>
+              <AnimatePresence>
+                {activeDropdown === 'services' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1}}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
+                  >
+                    <div className="p-4">
+                      <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
+                        Our Solutions
+                      </h3>
+                      <div className="grid grid-cols-1 gap-2">
+                        {services.map((service) => (
+                          <Link
+                            key={service.name}
+                            href={service.href}
+                            onClick={closeAllDropdowns}
+                            className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group"
+                          >
+                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500/20 to-cyan-500/20 p-2 flex items-center justify-center">
+                              <service.icon className="w-4 h-4 text-cyan-400" />
+                            </div>
+                            <div className="text-sm text-white/60">{service.description}</div>
                           </div>
-                        </div>
-                      </Link>
-                    ))}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </motion.div>
+                </div>
               )}
             </div>
 
@@ -108,45 +110,49 @@ const EnhancedNavigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('company')}
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
+                className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-200 py-2"
               >
-                <span>Company</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+                <span>About</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                  activeDropdown === 'company' ? 'rotate-180' : ''
+                }`} />
               </button>
               
               {activeDropdown === 'company' && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6"
-                >
-                  <div className="space-y-2 px-6">
-                    {company.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                        onClick={closeAllDropdowns}
-                      >
-                        <item.icon className="w-5 h-5 text-blue-600 mt-1" />
-                        <div>
-                          <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
-                            {item.name}
-                          </h3>
-                          <p className="text-sm text-gray-600">{item.description}</p>
-                        </div>
-                      </Link>
-                    ))}
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+                  <div className="p-4">
+                    <h3 className="text-sm font-semibold text-white/60 mb-3 uppercase tracking-wider">
+                      About Zion
+                    </h3>
+                    <div className="grid grid-cols-1 gap-2">
+                      {company.map((item) => (
+                        <Link
+                          key={item.name}
+                          href={item.href}
+                          onClick={closeAllDropdowns}
+                          className="flex items-start space-x-3 p-3 rounded-xl hover:bg-white/5 transition-colors duration-200 group"
+                        >
+                          <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                            <item.icon className="w-5 h-5 text-white" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="font-medium text-white group-hover:text-blue-300 transition-colors">
+                              {item.name}
+                            </div>
+                            <div className="text-sm text-white/60">{item.description}</div>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
                   </div>
-                </motion.div>
+                </div>
               )}
             </div>
 
-            {/* CTA Button */}
+            {/* Contact Button */}
             <Link
-              href="/contact"
-              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
+              href="mailto:kleber@ziontechgroup.com"
+              className="px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
             >
               Get Started
             </Link>
@@ -155,7 +161,7 @@ const EnhancedNavigation: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white hover:text-blue-300 transition-colors"
+            className="lg:hidden p-2 text-white hover:bg-white/10 rounded-lg transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -164,70 +170,8 @@ const EnhancedNavigation: React.FC = () => {
         {/* Mobile Menu */}
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6"
-          >
-            <div className="px-6 space-y-6">
-              {/* Mobile Services */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Services</h3>
-                <div className="space-y-2">
-                  {services.map((service) => (
-                    <Link
-                      key={service.name}
-                      href={service.href}
-                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                      onClick={closeAllDropdowns}
-                    >
-                      <service.icon className="w-5 h-5 text-blue-600 mt-1" />
-                      <div>
-                        <h4 className="font-medium text-gray-900">{service.name}</h4>
-                        <p className="text-sm text-gray-600">{service.description}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Mobile Company */}
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Company</h3>
-                <div className="space-y-2">
-                  {company.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                      onClick={closeAllDropdowns}
-                    >
-                      <item.icon className="w-5 h-5 text-blue-600 mt-1" />
-                      <div>
-                        <h4 className="font-medium text-gray-900">{item.name}</h4>
-                        <p className="text-sm text-gray-600">{item.description}</p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-200">
-                <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
-                  onClick={closeAllDropdowns}
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </div>
-    </nav>
-  ),
-},
-
-export default EnhancedNavigation;
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0}}
+            exit={{ opacity: 0, y: -20 }}
+            className = $2;
+export default EnhancedNavigation,

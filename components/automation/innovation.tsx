@@ -1,8 +1,20 @@
-};
-</header> {
-  items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
-}</li>) ) 
-}</ul> </div>)
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Item = { source: string, title: string, url: string, date?: string, summary?: string },
+
+type Props = $2;
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  try {
+    const file = path.join(process.cwd(), 'publicautomationinnovation-digest.json'),
+    const raw = fs.readFileSync($2);
+    const data = JSON.parse($2);
+    return { props: { items: data.items || [] }, revalidate: 1800}
+  } catch {
+    return { props: { items: [] }, revalidate: 1800}
+  }
+},
+
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">
@@ -26,5 +38,5 @@ export default function InnovationDigest({ items }: Props) {
         ))}
       </ul>
     </div>
-);
+  )
 }

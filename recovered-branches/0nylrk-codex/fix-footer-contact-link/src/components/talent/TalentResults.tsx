@@ -1,9 +1,8 @@
-
-import React from "react";
-import {TalentProfile} from "@/types/talent";
-import {ActiveFilters} from "@/components/talent/ActiveFilters";
-import {ResultsHeader} from "@/components/talent/ResultsHeader";
-import {TalentGrid} from "@/components/talent/TalentGrid";
+import React from "react",
+import { TalentProfile } from "@/types/talent",
+import { ActiveFilters } from "@/components/talent/ActiveFilters",
+import { ResultsHeader } from "@/components/talent/ResultsHeader";
+import { TalentGrid } from "@/components/talent/TalentGrid";
 interface TalentResultsProps {
   filteredTalents: TalentProfile[],
   isLoading: boolean,
@@ -19,15 +18,17 @@ interface TalentResultsProps {
     toggleAvailability: (availability: string) => void,
     selectedRegions: string[],
     toggleRegion: (region: string) => void,
-    priceRange: [number, number];
-    setPriceRange: (range: [number, number]) => void;
-    experienceRange: [number, number];
-    setExperienceRange: (range: [number, number]) => void;
+    priceRange: [number, number],
+    setPriceRange: (range: [number, number]) => void,
+    experienceRange: [number, number],
+    setExperienceRange: (range: [number, number]) => void,
     clearFilters: () => void
   }
 }
-
 export function TalentResults({
+    clearFilters: () => void
+  }
+}
   filteredTalents;
   isLoading;
   viewProfile;
@@ -35,21 +36,27 @@ export function TalentResults({
   savedTalents;
   handleToggleSave;
   isAuthenticated;
+export function TalentResults({
+  filteredTalents,
+  isLoading,
+  viewProfile,
+  handleRequestHire,
+  savedTalents,
+  handleToggleSave,
+  isAuthenticated,
   activeFiltersProps
 }: TalentResultsProps) {
   return (
     <div className="flex-1">
       {/* Active filters */}
       <ActiveFilters {...activeFiltersProps} />
-      
       {/* Results count */}
-      <ResultsHeader 
-        isLoading={isLoading} 
-        resultCount={filteredTalents.length} 
+      <ResultsHeader
+        isLoading={isLoading}
+        resultCount={filteredTalents.length}
       />
-      
       {/* Talents grid */}
-      <TalentGrid 
+      <TalentGrid
         talents={filteredTalents}
         isLoading={isLoading}
         onTalentClick={viewProfile}

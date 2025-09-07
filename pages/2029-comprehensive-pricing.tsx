@@ -1,31 +1,28 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
   Atom, Rocket, Target, Microscope, DollarSign, Phone, 
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
 } from 'lucide-react',
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',;
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',;
-import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029',;
-import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem',;
-import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs',;
-import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions',;
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';
+import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
+import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
+import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
 
 export default function ComprehensivePricing2029() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [billingCycle, setBillingCycle] = useState('monthly'),
-
-  const allServices = [
-    ...aiAutonomousEcosystemServices2029,
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [billingCycle, setBillingCycle] = useState($2);
+  const allServices = $2;
     ...emergingTechBreakthroughServices2029,
     ...practicalBusinessSolutionServices2029
   ],
@@ -37,33 +34,13 @@ export default function ComprehensivePricing2029() {
     { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices2029.length }
   ],
 
-  const filteredServices = selectedCategory === 'all' 
-    ? allServices 
-    : allServices.filter(service => {
-        if (selectedCategory === 'ai-autonomous') {
-          return service.category.some(cat => cat.includes('AI') && cat.includes('Autonomous'))
-        } else if (selectedCategory === 'emerging-tech') {
-          return service.category.some(cat => cat.includes('Quantum') || cat.includes('Biotech') || cat.includes('Space'))
-        } else if (selectedCategory === 'business-solutions') {
-          return service.category.some(cat => cat.includes('Business') || cat.includes('Marketing') || cat.includes('Education'))
-        }
-        return true
-      }),
-
+  const filteredServices = $2;
   const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
-    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
-  },
-
+    return billingCycle = $2;
   const getBillingText = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
-    if (billingCycle === 'monthly') {
-      return `$${numericPrice.toLocaleString()}/month`
-    } else {
-      return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`
-    }
-  },
-
+    if (billingCycle = $2;
   return (
     <div className="min-h-screen bg-black text-white relative">
       <FuturisticAnimatedBackground2029 />
@@ -81,8 +58,8 @@ export default function ComprehensivePricing2029() {
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
@@ -145,10 +122,10 @@ export default function ComprehensivePricing2029() {
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }} className="text-center mb-16">
+            viewport={{ once: true}} className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Service Pricing
             </h2>
@@ -162,10 +139,10 @@ export default function ComprehensivePricing2029() {
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }} className="relative group">
+                viewport={{ once: true}} className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500 h-full">
                   {/* Service Header */}
@@ -259,10 +236,10 @@ export default function ComprehensivePricing2029() {
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Enterprise Solutions
@@ -326,10 +303,10 @@ export default function ComprehensivePricing2029() {
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Ready to Get Started?
@@ -382,4 +359,4 @@ export default function ComprehensivePricing2029() {
       <UltraFuturisticFooter2029 />
     </div>
   )
-};
+}

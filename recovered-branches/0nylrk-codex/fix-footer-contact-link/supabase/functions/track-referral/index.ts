@@ -1,86 +1,71 @@
 
-import {serve} from "https: //deno.land/std@0.131.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.20.0",
-import {corsHeaders} from "../_shared/cors.ts";
-console.log("Track Referral function started!");
-
+import { serve } from "https: //deno.land/std@0.131.0/http/server.ts";
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.20.0";
+import { corsHeaders } from "../_shared/cors.ts";
+console.log($2);
 serve(async (req) => {
   // Handle CORS pre-flight request
   if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers: corsHeaders })
+    return new Response('ok', { headers: corsHeaders})
   }
-
   // Get request data
-  const { refCode, userId, email } = await req.json();
-  const ipAddress = req.headers.get('x-forwarded-for') || req.headers.get('cf-connecting-ip');
-
+  const { refCode, userId, email } = await req.json($2);
+  const ipAddress = req.headers.get('x-forwarded-for') || req.headers.get($2);
   // Create Supabase client
-  const supabase = createClient(
-    Deno.env.get('SUPABASE_URL') ?? '';
+  const supabase = $2;
     Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
-  );
+  ),
 
   try {
     // Look up the referrer from the referral code
-    const { data: refCodeData, error: refError } = await supabase
+    const { data: refCodeData, error: refError} = await supabase
       .from('referral_codes')
       .select('user_id')
       .eq('code', refCode)
-      .single();
-
+      .single($2);
     if (refError || !refCodeData) {
-      console.error('Error finding referral code:', refError);
-      return new Response(
-        JSON.stringify({ error: 'Invalid referral code' });
-        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 }
+      console.error($2);
+      return new Response($2);
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400}
       )
     }
-
     // Check if this user has already been referred
-    const { data: existingReferral } = await supabase
+    const { data: existingReferral} = await supabase
       .from('referrals')
       .select('id')
       .eq('referred_id', userId)
-      .single();
-
+      .single($2);
     if (existingReferral) {
-      return new Response(
-        JSON.stringify({ message: 'User already has a referral' });
-        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+      return new Response($2);
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200}
       )
     }
-
     // Create the referral record
     const { data, error } = await supabase
       .from('referrals')
       .insert([{
-        referrer_id: refCodeData.user_id;
-        referred_id: userId;
-        referral_code: refCode;
+        referrer_id: refCodeData.user_id,
+        referred_id: userId,
+        referral_code: refCode,
         email,
-        ip_address: ipAddress
-      }])
+        ip_address: ipAddress}])
       .select()
-      .single();
-
+      .single($2);
     if (error) {
-      console.error('Error creating referral:', error);
-      return new Response(
-        JSON.stringify({ error: 'Failed to create referral' });
-        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+      console.error($2);
+      return new Response($2);
+        { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500}
       )
     }
 
-    return new Response(
-      JSON.stringify({ success: true, data });
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200 }
+    return new Response($2);
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 200}
     )
     
   } catch (err) {
-    console.error('Unexpected error processing referral:', err);
-    return new Response(
-      JSON.stringify({ error: 'Internal server error' });
-      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500 }
+    console.error($2);
+    return new Response($2);
+      { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 500}
     )
   }
-});
+}),

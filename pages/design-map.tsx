@@ -1,7 +1,7 @@
-import React, { useMemo, useState } from 'react';
-import Head from 'next/head';
+import React, { useMemo, useState } from 'react'
+import Head from 'next/head'
 import { getZionDesignMap } from '../utils/design-map'
-;
+
 export default function DesignMapPage() {
   const designMap = useMemo(() => getZionDesignMap(), [])
   const [screenName, setScreenName] = useState('')
@@ -84,7 +84,7 @@ export default function DesignMapPage() {
   )
 }
 
-function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
+function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string}[] }[] }) {
   return (
     <div className="space-y-3">
       <h3 className="text-lg font-semibold">{title}</h3>
@@ -104,4 +104,4 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
       </div>
     </div>
   )
-};
+}

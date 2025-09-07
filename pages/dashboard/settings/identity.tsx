@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from 'react',;
-import Head from 'next/head',;
-import type { KycProfile } from '../../../utils/kyc',;
-import { ProfileBadges } from '../../../components/ui/ProfileBadges',;
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { KycProfile } from '../../../utils/kyc';
+import { ProfileBadges } from '../../../components/ui/ProfileBadges';
 export default function IdentitySettingsPage() {
-  const [userId, setUserId] = useState('demo-user'),
+  const [userId, setUserId] = useState($2);
   const [profile, setProfile] = useState<KycProfile | null>(null),
-  const [error, setError] = useState(''),
-
+  const [error, setError] = useState($2);
   async function load() {
     try {
-      const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`),
-      const data = await res.json(),
-      if (data.ok) setProfile(data.profile),
+      const res = $2;
+      const data = await res.json($2);
+      if (data.ok) setProfile($2);
       else setError(data.error || 'Not found')
     } catch (e) {
       setError('Failed to fetch')
@@ -19,7 +18,7 @@ export default function IdentitySettingsPage() {
   }
 
   useEffect(() => {
-    load(),
+    load($2);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []),
 
@@ -46,4 +45,4 @@ export default function IdentitySettingsPage() {
       </main>
     </>
   )
-};
+}

@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react",;
-import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+import React, { useEffect, useState } from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
 export default function AdminTokens() {
   const [transactions, setTransactions] = useState<any[]>([]),
-  const [userId, setUserId] = useState(""),
-  const [amount, setAmount] = useState(100),
-  const [reason, setReason] = useState("admin_action"),
+  const [userId, setUserId] = useState($2);
+  const [amount, setAmount] = useState($2);
+  const [reason, setReason] = useState($2);
   const [config, setConfig] = useState<any>(null),
 
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
       fetch("/api/admin/tokens").then((r) => r.json()),
       fetch("/api/admin/tokens/config").then((r) => r.json())]),
-    setTransactions(txRes.transactions || []),
+    setTransactions($2);
     setConfig(cfgRes)
   }
 
@@ -24,8 +24,8 @@ export default function AdminTokens() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, amount, reason })}),
-    const data = await res.json(),
-    if (data.error) alert(data.error),
+    const data = await res.json($2);
+    if (data.error) alert($2);
     await load()
   }
 
@@ -34,8 +34,8 @@ export default function AdminTokens() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, amount, reason })}),
-    const data = await res.json(),
-    if (data.error) alert(data.error),
+    const data = await res.json($2);
+    if (data.error) alert($2);
     await load()
   }
 
@@ -44,7 +44,7 @@ export default function AdminTokens() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
-    const data = await res.json(),
+    const data = await res.json($2);
     setConfig(data)
   }
 
@@ -97,4 +97,4 @@ export default function AdminTokens() {
       </div>
     </EnhancedLayout>
   )
-};
+}

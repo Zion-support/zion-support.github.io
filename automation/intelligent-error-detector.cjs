@@ -1,22 +1,10 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
 class IntelligentErrorDetector {
   constructor() {
-    this.errorPatterns = {
-      syntax: /SyntaxError|ParseError|Unexpected token/gi,
-      type: /TypeError|ReferenceError/gi,
-      module: /Cannot find module|Module not found/gi,
-      import: /Cannot resolve module|Import error/gi,
-      build: /Build failed|Compilation error/gi,
-      runtime: /Runtime error|Uncaught exception/gi,
-    };
-    this.logFile = path.join(__dirname, 'logs', 'error-detection.log');
-    this.ensureLogDirectory();
-  }
 
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -51,9 +39,9 @@ class IntelligentErrorDetector {
     this.log(`Found ${totalErrors} total errors across all categories`);
 
     if (totalErrors > 0) {
-    await this.generateErrorReport(errors),
-    await this.suggestFixes(errors)
-  }
+      await this.generateErrorReport(errors);
+      await this.suggestFixes(errors);
+    }
 
     return errors;
   }
@@ -81,9 +69,9 @@ class IntelligentErrorDetector {
       });
       return [];
     } catch (error) {
-    const lines = error.stdout.split('\n'),
-    return lines.filter(line => this.errorPatterns.type.test(line))
-  }
+      const lines = error.stdout.split('\n');
+      return lines.filter(line => this.errorPatterns.type.test(line));
+    }
   }
 
   async detectModuleErrors() {
@@ -94,9 +82,9 @@ class IntelligentErrorDetector {
       });
       return [];
     } catch (error) {
-    const lines = (error.stdout || error.stderr || '').split('\n'),
-    return lines.filter(line => this.errorPatterns.module.test(line))
-  }
+      const lines = (error.stdout || error.stderr || '').split('\n');
+      return lines.filter(line => this.errorPatterns.module.test(line));
+    }
   }
 
   async detectImportErrors() {
@@ -110,9 +98,9 @@ class IntelligentErrorDetector {
       );
       return [];
     } catch (error) {
-    const lines = (error.stdout || error.stderr || '').split('\n'),
-    return lines.filter(line => this.errorPatterns.import.test(line))
-  }
+      const lines = (error.stdout || error.stderr || '').split('\n');
+      return lines.filter(line => this.errorPatterns.import.test(line));
+    }
   }
 
   async detectBuildErrors() {
@@ -123,9 +111,9 @@ class IntelligentErrorDetector {
       });
       return [];
     } catch (error) {
-    const lines = (error.stdout || error.stderr || '').split('\n'),
-    return lines.filter(line => this.errorPatterns.build.test(line))
-  }
+      const lines = (error.stdout || error.stderr || '').split('\n');
+      return lines.filter(line => this.errorPatterns.build.test(line));
+    }
   }
 
   async detectRuntimeErrors() {
@@ -196,9 +184,9 @@ class IntelligentErrorDetector {
       ),
       errorsByCategory: Object.entries(errors).reduce(
         (acc, [category, errorList]) => {
-    acc[category] = errorList.length,
-    return acc
-  },
+          acc[category] = errorList.length;
+          return acc;
+        },
         {}
       ),
       details: errors,
@@ -206,8 +194,8 @@ class IntelligentErrorDetector {
 
     const reportFile = path.join(
       __dirname,
-      'reports',
-      'error-detection-report.json'
+
+
     );
     fs.mkdirSync(path.dirname(reportFile), { recursive: true });
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
@@ -220,7 +208,7 @@ class IntelligentErrorDetector {
 
     if (errors.syntax.length > 0) {
       suggestions.push(
-        'Run ESLint with --fix to automatically fix syntax errors'
+
       );
     }
 
@@ -245,7 +233,7 @@ class IntelligentErrorDetector {
     }
 
     if (suggestions.length > 0) {
-      this.log('💡 Suggested fixes: '),
+      this.log('💡 Suggested fixes:');
       suggestions.forEach((suggestion, index) => {
         this.log(`   ${index + 1}. ${suggestion}`);
       });
@@ -255,8 +243,8 @@ class IntelligentErrorDetector {
 
 // Run if called directly
 if (require.main === module) {
-    const detector = new IntelligentErrorDetector(),
-    detector.detectErrors().catch(console.error)
-  }
+  const detector = new IntelligentErrorDetector();
+  detector.detectErrors().catch(console.error);
+}
 
 module.exports = IntelligentErrorDetector;

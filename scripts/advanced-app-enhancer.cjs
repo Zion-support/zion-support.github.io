@@ -1,4 +1,8 @@
+
 #!/usr/bin/env node;
+=======
+///usr/bin/env node
+>>>>>>> ff8ab052546903d473828d12895ca8f8ebc39a58
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -21,4 +25,11 @@ export const "Spinner"
     "md"
     "lg"
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1")]
+<<<<<<< HEAD
 console.log('\n New Features "Added")
+
+
+
+
+
+

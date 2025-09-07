@@ -1,21 +1,19 @@
-
-import {useState} from 'react';
-import {useMessaging} from '@/context/MessagingContext';
-import {MainNavigation} from './MainNavigation';
-import {Logo} from '@/components/header/Logo';
-import {ModeToggle} from '@/components/ModeToggle';
-import {Menu, X} from 'lucide-react';
-import {MobileMenu} from '@/components/header/MobileMenu';
-import {useIsMobile} from '@/hooks/use-mobile';
-import {MobileBottomNav} from '@/components/header/MobileBottomNav';
+import { useState  } from 'react';
+import { useMessaging  } from '@/context/MessagingContext';
+import { MainNavigation  } from './MainNavigation';
+import { Logo  } from '@/components/header/Logo';
+import { ModeToggle  } from '@/components/ModeToggle';
+import { Menu, X  } from 'lucide-react';
+import { MobileMenu  } from '@/components/header/MobileMenu';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 export function AppHeader() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const isMobile = useIsMobile();
-  
+  const [mobileMenuOpen, setMobileMenuOpen] = useState($2);
+  const isMobile = useIsMobile($2);
   // Try to access the messaging context, but provide a fallback value if it's not available
-  let unreadCount = 0;
+  let unreadCount = $2;
   try {
-    const { unreadCount: count } = useMessaging(),
+    const { unreadCount: count} = useMessaging($2);
     unreadCount = count
   } catch (error) {
     console.warn('Messaging context not available')
@@ -29,7 +27,6 @@ export function AppHeader() {
           <div className="ml-6 flex-1 hidden md:block">
             <MainNavigation unreadCount={unreadCount} />
           </div>
-          
           {/* Mobile menu button */}
           <div className="md:hidden ml-auto mr-4">
             <button
@@ -46,31 +43,27 @@ export function AppHeader() {
               )}
             </button>
           </div>
-          
           <ModeToggle />
         </div>
       </header>
-      
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-40 pt-16">
-          <div 
+          <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
           <div className="relative bg-zion-blue-dark border-t border-zion-purple/20 h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu 
-              unreadCount={unreadCount} 
-              onClose={() => setMobileMenuOpen(false)} 
+            <MobileMenu
+              unreadCount={unreadCount}
+              onClose={() => setMobileMenuOpen(false)}
             />
           </div>
         </div>
       )}
-
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
   )
 }
-;

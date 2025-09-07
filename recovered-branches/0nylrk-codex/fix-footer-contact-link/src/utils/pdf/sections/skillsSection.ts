@@ -1,51 +1,43 @@
-
-import {jsPDF} from 'jspdf';
-import {Skill} from '@/types/resume';
-import {PdfThemeColors} from '../themeConfig';
+import { jsPDF  } from 'jspdf';
+import { Skill  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(
-  doc: jsPDF;
-  skills: Skill[];
-  colors: PdfThemeColors;
-  startY: number
-): number {
-  if (skills.length === 0) return startY;
+  doc: jsPDF,
+  skills: Skill[],
+  colors: PdfThemeColors,
+  startY: number): number {
+  if (skills.length = $2;
+  let yPos = $2;
+  doc.setFontSize($2);
+  doc.setTextColor($2);
+  doc.text($2);
+  yPos += 8,
   
-  let yPos = startY;
-  
-  doc.setFontSize(16);
-  doc.setTextColor(colors.heading),
-  doc.text('Skills', 20, yPos);
-  yPos += 8;
-  
-  doc.setDrawColor(colors.accent);
-  doc.line(20, yPos, 60, yPos);
-  yPos += 8;
+  doc.setDrawColor($2);
+  doc.line($2);
+  yPos += 8,
   
   // Group skills by category
   const skillsByCategory = skills.reduce((acc, skill) => {
-    const category = skill.category || 'Other';
+    const category = $2;
     if (!acc[category]) {
       acc[category] = []
     }
-    acc[category].push(skill);
+    acc[category].push($2);
     return acc
-  }, {} as Record<string, typeof skills>);
+  }, {} as Record<string, typeof skills>),
   
-  doc.setFontSize(11);
-  doc.setTextColor(colors.text);
-  
+  doc.setFontSize($2);
+  doc.setTextColor($2);
   for (const [category, categorySkills] of Object.entries(skillsByCategory)) {
-    doc.setFont('helveticabold');
-    doc.text(category, 20, yPos);
-    doc.setFont('helveticanormal');
-    
-    const skillsText = categorySkills.map(skill => skill.name).join(', ');
-    const skillLines = doc.splitTextToSize(skillsText, 160);
-    doc.text(skillLines, 30, yPos + 5);
-    
+    doc.setFont($2);
+    doc.text($2);
+    doc.setFont($2);
+    const skillsText = categorySkills.map(skill => skill.name).join($2);
+    const skillLines = doc.splitTextToSize($2);
+    doc.text($2);
     yPos += (skillLines.length * 5) + 10
   }
   
   return yPos + 5
 }
-;

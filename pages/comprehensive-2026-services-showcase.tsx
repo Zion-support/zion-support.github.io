@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Filter, Star, TrendingUp, Zap, Brain, Shield, 
   Globe, Database, Cloud, Lock, Palette, Target, Layers, 
@@ -9,27 +9,24 @@ import {
   ArrowRight, Phone, Mail, MapPin, Rocket, Users, 
   BarChart3, Award, Clock, DollarSign
 } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
-import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026',;
-import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026',;
-import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
+import { revolutionaryITInfrastructure2026 } from '../data/revolutionary-it-infrastructure-2026';
+import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
 export default function Comprehensive2026ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('popularity'),
-  const [viewMode, setViewMode] = useState('grid'),
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [sortBy, setSortBy] = useState($2);
+  const [viewMode, setViewMode] = useState($2);
+  const contactInfo = $2;
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   },
 
   // Combine all services
-  const allServices = [
-    ...nextGenAIServices2026,
+  const allServices = $2;
     ...revolutionaryITInfrastructure2026,
     ...innovativeMicroSaas2026
   ],
@@ -40,19 +37,13 @@ export default function Comprehensive2026ServicesShowcase() {
     { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: nextGenAIServices2026.length },
     { id: 'it', name: 'IT Infrastructure', icon: Shield, count: revolutionaryITInfrastructure2026.length },
     { id: 'saas', name: 'Micro SaaS', icon: Zap, count: innovativeMicroSaas2026.length },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s => s.category.includes('Blockchain')).length },
-    { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length }
-  ],
-
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s = $2;
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s = $2;
+    { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: allServices.filter(s = $2;
   // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+  const filteredServices = $2;
       const matchesCategory = selectedCategory === 'all' || 
-                             service.category.toLowerCase().includes(selectedCategory),
+                             service.category.toLowerCase().includes($2);
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
@@ -69,8 +60,7 @@ export default function Comprehensive2026ServicesShowcase() {
       }
     }),
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
@@ -80,7 +70,7 @@ export default function Comprehensive2026ServicesShowcase() {
   },
 
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 20, opacity: 0},
     visible: {
       y: 0,
       opacity: 1,
@@ -115,8 +105,8 @@ export default function Comprehensive2026ServicesShowcase() {
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
@@ -390,7 +380,7 @@ export default function Comprehensive2026ServicesShowcase() {
                 <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>
                 <button
                   onClick={() => {
-                    setSearchTerm(''),
+                    setSearchTerm($2);
                     setSelectedCategory('all')
                   }}
                   className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors"
@@ -406,10 +396,10 @@ export default function Comprehensive2026ServicesShowcase() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -446,4 +436,4 @@ export default function Comprehensive2026ServicesShowcase() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-};
+}

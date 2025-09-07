@@ -1,11 +1,9 @@
-
-import {useWallet} from '@/hooks/useWallet';
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
-import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
-import {BadgeDollarSign} from 'lucide-react';
+import { useWallet  } from '@/hooks/useWallet';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { BadgeDollarSign } from 'lucide-react';
 export default function WalletPage() {
-  const { wallet, transactions, loading } = useWallet();
-
+  const { wallet, transactions, loading } = useWallet($2);
   return (
     <div className="container max-w-4xl py-10">
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">
@@ -26,7 +24,6 @@ export default function WalletPage() {
           )}
         </CardContent>
       </Card>
-
       <Tabs defaultValue="earnings">
         <TabsList className="grid w-full grid-cols-2 mb-4">
           <TabsTrigger value="earnings">Earnings</TabsTrigger>
@@ -39,7 +36,7 @@ export default function WalletPage() {
             <ul className="space-y-2">
               {transactions.filter(t => t.transaction_type === 'earn').map(t => (
                 <li key={t.id} className="flex justify-between border-b py-2">
-                  <span>{t.reason || 'Reward'}</span>
+                  <span>{t.reason |'Reward'}</span>
                   <span className="font-medium">+{t.amount} ZION$</span>
                 </li>
               ))}
@@ -53,7 +50,7 @@ export default function WalletPage() {
             <ul className="space-y-2">
               {transactions.filter(t => t.transaction_type === 'burn').map(t => (
                 <li key={t.id} className="flex justify-between border-b py-2">
-                  <span>{t.reason || 'Purchase'}</span>
+                  <span>{t.reason |'Purchase'}</span>
                   <span className="font-medium">-{t.amount} ZION$</span>
                 </li>
               ))}
@@ -61,7 +58,6 @@ export default function WalletPage() {
           )}
         </TabsContent>
       </Tabs>
-
       <div className="mt-8">
         <h2 className="text-xl font-semibold mb-2">On-chain Export (Beta)</h2>
         <p className="text-sm text-muted-foreground mb-4">Export your ZION$ to an external crypto wallet.</p>
@@ -70,4 +66,3 @@ export default function WalletPage() {
     </div>
   )
 }
-;

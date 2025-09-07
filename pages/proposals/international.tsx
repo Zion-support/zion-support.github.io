@@ -1,19 +1,16 @@
-import React, { useEffect, useState } from 'react',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-type ProposalListItem = {
-  id: string,
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+type ProposalListItem = $2;
   title: string,
   targetInstitution: string,
   regionalScope: string,
   type: string,
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
-  createdAt: string
-},
+  createdAt: string},
 
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([]),
-  const [filter, setFilter] = useState('All'),
-
+  const [filter, setFilter] = useState($2);
   useEffect(() => {
     fetch('/api/proposals')
       .then((r) => r.json())
@@ -21,8 +18,7 @@ export default function InternationalProposalsPage() {
       .catch(() => setItems([]))
   }, []),
 
-  const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter)),
-
+  const filtered = $2;
   return (
     <EnhancedLayout>
       <div className="space-y-4">
@@ -60,4 +56,4 @@ export default function InternationalProposalsPage() {
       </div>
     </EnhancedLayout>
   )
-};
+}

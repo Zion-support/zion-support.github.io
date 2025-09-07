@@ -1,22 +1,20 @@
-import React, { useEffect, useState } from 'react',
-;
+import React, { useEffect, useState } from 'react';
 export default function InternationalProposals() {
   const [items, setItems] = useState<any[]>([]),
-  const [loading, setLoading] = useState(true),
-
+  const [loading, setLoading] = useState($2);
   useEffect(() => {
     (async () => {
-      const res = await fetch('/api/proposals/list'),
-      const data = await res.json(),
-      setItems(data.proposals || []),
+      const res = await fetch($2);
+      const data = await res.json($2);
+      setItems($2);
       setLoading(false)
     })()
   }, []),
 
   async function updateStatus(id: string, status: string) {
     await fetch('/api/proposals/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, status }) }),
-    const res = await fetch('/api/proposals/list'),
-    const data = await res.json(),
+    const res = await fetch($2);
+    const data = await res.json($2);
     setItems(data.proposals || [])
   }
 
@@ -54,4 +52,4 @@ export default function InternationalProposals() {
       )}
     </div>
   )
-};
+}

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react',;
+import React, { useMemo, useState } from 'react';
 import {
   generateZionWiki,
   buildMarkdownFromWiki,
@@ -6,16 +6,16 @@ import {
   operatorPrompt,
   slugify} from '../utils/data/zionContent',
 
-function CopyButton({ text, label }: { text: string, label: string }) {
-  const [copied, setCopied] = useState(false),
+function CopyButton({ text, label }: { text: string, label: string}) {
+  const [copied, setCopied] = useState($2);
   return (
     <button
       onClick={async () => {
-        await navigator.clipboard.writeText(text),
-        setCopied(true),
+        await navigator.clipboard.writeText($2);
+        setCopied($2);
         setTimeout(() => setCopied(false), 1500)
       }}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark: hover: bg-gray-900"
     >
       {copied ? 'Copied' : label}
     </button>
@@ -93,4 +93,4 @@ export default function WikiPage() {
       </article>
     </div>
   )
-};
+}

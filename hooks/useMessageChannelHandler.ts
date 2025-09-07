@@ -1,22 +1,17 @@
-import { useEffect, useCallback } from 'react';
-
+import { useEffect, useCallback } from "react";
 // Define MessageEvent if not available
 interface Event {
   type: string;
   target: EventTarget | null;
 }
-
 type EventListener = (event: Event) => void;
-
 interface EventTarget {
   addEventListener(type: string, listener: EventListener): void;
   removeEventListener(type: string, listener: EventListener): void;
 }
-
 interface MessageEventSource {
   postMessage(message: any, targetOrigin: string): void;
 }
-
 interface MessagePort {
   postMessage(message: any): void;
   start(): void;
@@ -30,32 +25,50 @@ interface MessageEvent<T = any> extends Event {
   source: MessageEventSource | null;
   ports: ReadonlyArray<MessagePort>;
 }
-
 interface MessageChannelHandlerProps {
   onMessage?: (message: unknown) => void;
   onError?: (error: Error) => void;
 }
-
 export function useMessageChannelHandler({
-  onMessage,
+  onMessage;
   onError
+}: MessageChannelHandlerProps = {}) {
+  const handleMessage = useCallback(
+    (event: MessageEvent<unknown>) => {
+      try {
+        if (onMessage) {
+          onMessage(event.data);
+        }
+      } catch (error) {
+        if (onError) {
+          onError(error as Error);
+        }
+      }
+    }
+    [onMessage, onError]
+  );
+=
+  onMessage,
+
+main
+  onMessage;
+origin/cursor/automate-test-improve-and-merge-code-2533
+  onError
+
 }: MessageChannelHandlerProps = {}) {
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
       if (onMessage) {;
         onMessage(event.data);
       }
-    } catch (error) {
-      if (onError) {
-        onError(error as Error);
-      }
-    }
-  }, [onMessage, onError]);
+    },
+    [onMessage, onError],
+  );
 
-  useEffect(() => {
-    window.addEventListener('message', handleMessage);
+>  useEffect(() => {
+    window.addEventListener("message", handleMessage);
     return () => {
-      window.removeEventListener('message', handleMessage);
-    };
+      window.removeEventListener("message", handleMessage);
+    }
   }, [handleMessage]);
 }

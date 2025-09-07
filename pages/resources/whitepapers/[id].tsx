@@ -1,11 +1,9 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 // Mock whitepaper data - in a real app, this would come from an API or database
-const whitepapers = {
-  'autonomous-systems-guide': {
-    id: 'autonomous-systems-guide',
+const whitepapers = $2;
     title: 'The Complete Guide to Autonomous Systems',
     description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
     category: 'Technology',
@@ -55,11 +53,10 @@ const whitepapers = {
 },
 
 export default function WhitepaperPage() {
-  const router = useRouter(),
+  const router = useRouter($2);
   const { id } = router.query,
   
-  const whitepaper = whitepapers[id as keyof typeof whitepapers],
-
+  const whitepaper = $2;
   if (!whitepaper) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
@@ -205,4 +202,4 @@ export default function WhitepaperPage() {
       </div>
     </>
   )
-};
+}

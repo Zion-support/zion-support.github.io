@@ -1,15 +1,15 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
   TrendingUp, Award, Clock, CheckCircle, ExternalLink
 } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Pricing2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedCategory, setSelectedCategory] = useState($2);
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly'),
 
   const categories = [
@@ -21,18 +21,14 @@ export default function Pricing2025() {
     { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', icon: '🧬' }
   ],
 
-  const filteredServices = innovative2025MicroSaasExpansionV3.filter(service => 
-    selectedCategory === 'all' || service.category.includes(selectedCategory)
-  ),
-
+  const filteredServices = $2;
   const getAnnualPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', '')),
     const annualPrice = price * 12 * 0.8, // 20% discount for annual
     return `$${Math.round(annualPrice)}`
   },
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
@@ -42,7 +38,7 @@ export default function Pricing2025() {
   },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20},
     visible: {
       opacity: 1,
       y: 0,
@@ -70,15 +66,9 @@ export default function Pricing2025() {
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
-              2025 Pricing & Services
-            </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
+            transition = $2;
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
             
@@ -299,10 +289,10 @@ export default function Pricing2025() {
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Need Enterprise Solutions?
@@ -334,21 +324,9 @@ export default function Pricing2025() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Frequently Asked Questions
-            </h2>
-          </motion.div>
-
-          <div className="space-y-6">
-            {[
-              {
-                question: "What payment methods do you accept?",
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition = $2;
                 answer: "We accept all major credit cards, PayPal, and bank transfers for annual plans. Enterprise customers can arrange custom payment terms."
               },
               {
@@ -374,10 +352,10 @@ export default function Pricing2025() {
             ].map((faq, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"
               >
                 <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
@@ -391,4 +369,4 @@ export default function Pricing2025() {
       <EnhancedFooter />
     </div>
   )
-};
+}

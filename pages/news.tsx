@@ -1,6 +1,4 @@
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+
 import { 
   Newspaper,
   Calendar, 
@@ -16,11 +14,8 @@ import {
   Atom,
   Zap
 } from 'lucide-react',
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-const NewsPage: React.FC = () => {
-  const newsArticles = [
-    {
-      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+const NewsPage: React.FC = $2;
       excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',
       author: 'Press Team',
       date: '2025-01-15',
@@ -54,11 +49,75 @@ const NewsPage: React.FC = () => {
       image: '/images/news/quantum-azure-partnership.jpg',
       tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership']
     }
+  ]
+
+const NewsPage: React.FC = () => {
+  const news_articles = [;
+    {
+
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {;
+  Newspaper,;
+  Calendar,;
+  User,;
+  Tag,;
+  ArrowRight,;
+  ExternalLink,;
+  TrendingUp,;
+  Award,;
+  Rocket,;
+  Globe,;
+  Brain,;
+  Atom,;
+  Zap;
+} from 'lucide-react',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+const NewsPage: React.FC = () => {;
+  const newsArticles = [;
+    {;
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';
+      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.';
+      author: 'Press Team';
+      date: '2025-01-15';
+      author: 'Zion Tech Group',;
+      readTime: '5 min read',;
+      featured: true,;
+      image: '/images/news/ai-consciousness-breakthrough.jpg',;
+      tags: ['AI ConsciousnessBreakthroughResearchInnovation'];
+    },;
+    {;
+      id: 2,;
+      title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion',;
+      excerpt: 'Major investment round led by leading venture capital firms to accelerate AI consciousness platform development and international market expansion.',;
+      category: 'company',;
+      date: '2025-01-10',;
+      author: 'Zion Tech Group',;
+      readTime: '3 min read',;
+      featured: true,;
+      image: '/images/news/series-c-funding.jpg',;
+      tags: ['FundingInvestmentGrowthExpansion'];
+    },;
+    {;
+      id: 3,;
+      title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure',;
+      excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, setting new security standards.',;
+      category: 'partnerships',;
+      date: '2025-01-05',;
+      author: 'Zion Tech Group',;
+      readTime: '4 min read',;
+      featured: true,;
+      image: '/images/news/quantum-azure-partnership.jpg',;
+      tags: ['Quantum ComputingMicrosoft AzureSecurityPartnership'];
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
 
-  const latestNews = [
-    {
-      id: 4,
+  const latestNews = $2;
       title: 'AI Customer Success Platform Achieves 99.9% Customer Retention Rate',
       excerpt: 'Revolutionary AI-powered customer success solution demonstrates exceptional results in preventing churn and improving customer satisfaction.',
       category: 'product',
@@ -131,9 +190,7 @@ const NewsPage: React.FC = () => {
     }
   ],
 
-  const pressReleases = [
-    {
-      title: 'Zion Tech Group Announces Revolutionary AI Consciousness Breakthrough',
+  const pressReleases = $2;
       date: '2025-01-15',
       summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.'
     },
@@ -149,9 +206,7 @@ const NewsPage: React.FC = () => {
     }
   ],
 
-  const mediaResources = [
-    {
-      title: 'Company Fact Sheet',
+  const mediaResources = $2;
       description: 'Key facts, figures, and company information for media and investors.',
       type: 'PDF',
       size: '2.1 MB',
@@ -180,25 +235,21 @@ const NewsPage: React.FC = () => {
     }
   ],
 
-  const filteredNews = [...featuredNews, ...latestNews].filter(news => {
-    const categoryMatch = selectedCategory === 'all' || news.category === selectedCategory,
-    const searchMatch = searchQuery === '' || 
-      news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+  const filteredNews = [...featuredNews, ...latestNews].filter(news = $2;
+    const searchMatch = $2;
     return categoryMatch && searchMatch
   }),
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString),
+    const date = new Date($2);
     return date.toLocaleDateString('en-US', { 
       year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
     })
-  },;
-import React from 'react',;
-import SEO from '../components/SEO',;
+  },
+import React from 'react';
+import SEO from '../components/SEO';
 export default function NewsPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -213,8 +264,8 @@ export default function NewsPage() {
           <div className="max-w-7xl mx-auto text-center">
             <motion.h1 
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
@@ -234,9 +285,27 @@ export default function NewsPage() {
         <section className="py-10 px-4">
           <div className="container mx-auto max-w-6xl">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              className="flex flex - wrap justify - center gap - 4";
+            >;
+              {categories.map ((category, index) => (
+                <button;
+                  key={category}
+
               className="flex flex-wrap justify-center gap-4"
             >
               {categories.map((category, index) => (
@@ -246,20 +315,18 @@ export default function NewsPage() {
                     category === "All News"
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
-import React, { useState } from 'react',;
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   Newspaper, Globe, Award, Users, Rocket, Brain, 
   ArrowRight, ExternalLink, Calendar, Tag, Star
 } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 export default function NewsPage() {
-  const newsItems = [
-    {
-      title: "Zion Tech Group Named Top AI Innovation Company 2025",
+  const newsItems = $2;
       category: "Awards & Recognition",
       date: "January 15, 2025",
       excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, highlighting our breakthrough work in autonomous AI systems and quantum computing integration.",
@@ -333,14 +400,11 @@ export default function NewsPage() {
   ],
 
   const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"],
-  const [selectedCategory, setSelectedCategory] = React.useState("All"),
-
+  const [selectedCategory, setSelectedCategory] = React.useState($2);
   const filteredNews = selectedCategory === "All" 
     ? newsItems 
-    : newsItems.filter(item => item.category === selectedCategory),
-
-  const featuredNews = newsItems.filter(item => item.featured),
-
+    : newsItems.filter($2);
+  const featuredNews = newsItems.filter($2);
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -357,8 +421,8 @@ export default function NewsPage() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
@@ -371,13 +435,33 @@ export default function NewsPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology 
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="mb-12"
+          >
+            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+              Discover the latest developments in AI, quantum computing, and technology
+
               innovation from Zion Tech Group and our global team.
             </p>
           </motion.div>
@@ -389,10 +473,10 @@ export default function NewsPage() {
         <section className="py-16 px-6">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
@@ -403,10 +487,10 @@ export default function NewsPage() {
               {featuredNews.map((item, index) => (
                 <motion.div
                   key={item.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 30}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
                 >
                   <div className="p-8">
@@ -475,10 +559,10 @@ export default function NewsPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Latest News</h2>
@@ -491,10 +575,10 @@ export default function NewsPage() {
             {filteredNews.filter(item => !item.featured).map((item, index) => (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 30}}
+                whileInView={{ opacity: 1, y: 0}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true}}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-6">
@@ -556,8 +640,8 @@ export default function NewsPage() {
 
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-center mb-16"
             >
@@ -571,8 +655,8 @@ export default function NewsPage() {
               {newsArticles.filter(article => !article.featured).map((article, index) => (
                 <motion.article
                   key={article.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  animate={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
@@ -612,8 +696,8 @@ export default function NewsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
               <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
@@ -636,10 +720,10 @@ export default function NewsPage() {
               {pressReleases.map((release, index) => (
                 <motion.article
                   key={release.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
@@ -668,10 +752,10 @@ export default function NewsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -686,10 +770,10 @@ export default function NewsPage() {
               {newsCategories.map((category, index) => (
                 <motion.div
                   key={category.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="text-center group cursor-pointer"
                 >
                   <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
@@ -711,10 +795,10 @@ export default function NewsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -729,10 +813,10 @@ export default function NewsPage() {
               {recentNews.map((news, index) => (
                 <motion.article
                   key={news.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-2 mb-3">
@@ -767,15 +851,18 @@ export default function NewsPage() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
+
+                For press inquiries, media interviews, or additional information,
+
                 For press inquiries, media interviews, or additional information, 
                 please contact our communications team.
               </p>
@@ -802,10 +889,10 @@ export default function NewsPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Stay Informed?
@@ -815,14 +902,15 @@ export default function NewsPage() {
               that are shaping the future of AI and quantum computing.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link 
+              <Link
+
                 href="/blog"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link 
+
                 href="/contact"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300"
               >
@@ -840,10 +928,10 @@ export default function NewsPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Get in Touch
@@ -859,10 +947,10 @@ export default function NewsPage() {
               <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 About Zion Tech Group
               </a>
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Media & Press Inquiries
@@ -885,10 +973,10 @@ export default function NewsPage() {
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -903,10 +991,10 @@ export default function NewsPage() {
               {filteredNews.filter(news => !news.featured).map((news, index) => (
                 <motion.div
                   key={news.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="flex gap-6 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -938,8 +1026,8 @@ export default function NewsPage() {
 
             {filteredNews.filter(news => !news.featured).length === 0 && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
+                initial={{ opacity: 0}}
+                animate={{ opacity: 1}}
                 className="text-center py-12"
               >
                 <p className="text-gray-400 text-lg">
@@ -954,10 +1042,10 @@ export default function NewsPage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -972,10 +1060,10 @@ export default function NewsPage() {
               {pressReleases.map((release, index) => (
                 <motion.div
                   key={release.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-white mb-3">
@@ -1005,10 +1093,10 @@ export default function NewsPage() {
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -1023,10 +1111,10 @@ export default function NewsPage() {
               {mediaResources.map((resource, index) => (
                 <motion.div
                   key={resource.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, y: 20}}
+                  whileInView={{ opacity: 1, y: 0}}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true}}
                   className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-white mb-3">
@@ -1038,12 +1126,16 @@ export default function NewsPage() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span className="px-2 py-1 bg-gray-700/50 rounded">
-                        {resource.type}
-                      </span>
-                      <span>{resource.size}</span>
-                    </div>
-                    <a
-                      href={resource.download}
+                        {resource.type  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </span>;
+                      <span>{resource.size}</span>;
+                    </div>;
+                    <a;
+
                       className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                     >
                       Download
@@ -1059,10 +1151,10 @@ export default function NewsPage() {
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Stay Updated
@@ -1102,4 +1194,55 @@ export default function NewsPage() {
     </div>
   )
 }
+}
+            >;
+              <h2 className="text-4xl font-bold text-white mb-6">;
+                Stay Updated;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+                Get the latest news, product updates, and industry insights delivered to your inbox. Never miss a breakthrough announcement.;
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <a;
+                  href="/contact";
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105";
+                >;
+                  Subscribe to Updates;
+                </a>;
+                <a;
+                  href="/contact";
+                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300";
+                >;
+                  Media Inquiries;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+};
 ;
+}
+
+}
+
+}
+    <div className="min - h-[60vh] px - 6 py - 24">;
+      <SEO title="News | Zion Tech Group" description="News and press from Zion Tech Group" />;
+      <div className="max - w-3xl mx - auto">;
+        <h1 className="text - 4xl font - bold text - white mb - 4">News & Press</h1>;
+        <p className="text - gray - 300">Press releases and announcements will appear here.</p>;
+      </div>;
+      <EnhancedFooter />;
+    </div>);
+}
+
+;
+

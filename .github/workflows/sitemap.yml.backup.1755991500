@@ -1,32 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+
 name: Nightly Sitemap
 
 on:
   schedule:
     - cron: '0 3 * * *'
   workflow_dispatch: {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
 name: Generate Sitemap
 
 on:
@@ -35,35 +14,13 @@ on:
   schedule:
     - cron: '0 2 * * *'
   workflow_dispatch:
->>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 permissions:
   contents: write
 
 jobs:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-<<<<<<< HEAD
   build-sitemap:
-=======
-  sitemap:
->>>>>>> origin/cursor/design-talent-profile-page-for-tech-professionals-49f8
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -72,19 +29,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-  build-sitemap:    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
         with:
           persist-credentials: true
 
@@ -109,23 +54,5 @@ jobs:
           else
             git commit -m "chore(automation): update sitemap [skip ci]"
             git push
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
           fi
           fi
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-<<<<<<< HEAD
-=======
-=======
-          fi
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381

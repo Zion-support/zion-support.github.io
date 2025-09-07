@@ -1,374 +1,364 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+;
 console.log('⚡ Starting Advanced Performance Optimizer...');
-
-class AdvancedPerformanceOptimizer {
-  constructor() {
+;
+class AdvancedPerformanceOptimizer {;
+  constructor() {;
     this.projectRoot = process.cwd();
-    this.optimizationResults = {
-      timestamp: new Date().toISOString(),
-      bundleAnalysis: {},
-      performanceMetrics: {},
-      optimizations: [],
-      recommendations: [],
+    this.optimizationResults = {;
+      "timestamp": new Date().toISOString(),
+      "bundleAnalysis": {},
+      "performanceMetrics": {},
+      "optimizations": [],
+      "recommendations": [];
     };
   }
-
-  async runOptimization() {
+;
+  async runOptimization() {;
     console.log('🚀 Starting advanced performance optimization...');
-
-    try {
-      // Analyze bundle size
+;
+    try {;
+      // Analyze bundle size;
       await this.analyzeBundleSize();
-
-      // Analyze performance metrics
+;
+      // Analyze performance metrics;
       await this.analyzePerformanceMetrics();
-
-      // Optimize images
+;
+      // Optimize images;
       await this.optimizeImages();
-
-      // Optimize code
+;
+      // Optimize code;
       await this.optimizeCode();
-
-      // Generate recommendations
+;
+      // Generate recommendations;
       await this.generateOptimizationRecommendations();
-
-      // Save results
+;
+      // Save results;
       this.saveResults();
-
+;
       console.log('✅ Advanced performance optimization completed!');
-    } catch (error) {
-      console.error('❌ Performance optimization failed:', error.message);
+;
+    } catch (error) {;
+      console.error('❌ Performance optimization "failed": ', error.message);
     }
   }
-
-  async analyzeBundleSize() {
+;
+  async analyzeBundleSize() {;
     console.log('📦 Analyzing bundle size...');
-
-    try {
-      // Build the project to analyze bundle
+;
+    try {;
+      // Build the project to analyze bundle;
       console.log('🔨 Building project for analysis...');
-      execSync('npm run build', { stdio: 'pipe' });
-
-      // Analyze bundle size
-      const bundleAnalysis = {
-        totalSize: 0,
-        files: [],
-        largestFiles: [],
-        optimizationOpportunities: [],
+      execSync('npm run build', { "stdio": 'pipe' });
+;
+      // Analyze bundle size;
+      const bundleAnalysis = {;
+        "totalSize": 0,
+        "files": [],
+        "largestFiles": [],
+        "optimizationOpportunities": [];
       };
-
-      // Check .next directory for build files
+;
+      // Check .next directory for build files;
       const nextDir = path.join(this.projectRoot, '.next');
-      if (fs.existsSync(nextDir)) {
+      if (fs.existsSync(nextDir)) {;
         this.analyzeDirectory(nextDir, bundleAnalysis);
       }
-
-      // Check for large files
-      bundleAnalysis.largestFiles = bundleAnalysis.files
-        .sort((a, b) => b.size - a.size)
+;
+      // Check for large files;
+      bundleAnalysis.largestFiles = bundleAnalysis.files;
+        .sort((a, b) => b.size - a.size);
         .slice(0, 10);
-
-      // Identify optimization opportunities
-      bundleAnalysis.optimizationOpportunities =
-        this.identifyOptimizationOpportunities(bundleAnalysis.files);
-
+;
+      // Identify optimization opportunities;
+      bundleAnalysis.optimizationOpportunities = this.identifyOptimizationOpportunities(bundleAnalysis.files);
+;
       this.optimizationResults.bundleAnalysis = bundleAnalysis;
-
-      console.log(`📊 Bundle Analysis Complete: `),
-      console.log(`  - Total files: ${bundleAnalysis.files.length}`);
-      console.log(
-        `  - Total size: ${this.formatBytes(bundleAnalysis.totalSize)}`
-      );
-      console.log(
-        `  - Largest file: ${bundleAnalysis.largestFiles[0]?.name || 'N/A'}`
-      );
-    } catch (error) {
-      console.log('⚠️  Bundle analysis failed:', error.message);
+;
+      console.log(`📊 Bundle Analysis "Complete": `);
+      console.log(`  - Total "files": ${bundleAnalysis.files.length}`);
+      console.log(`  - Total "size": ${this.formatBytes(bundleAnalysis.totalSize)}`);
+      console.log(`  - Largest "file": ${bundleAnalysis.largestFiles[0]?.name || 'N/A'}`);
+;
+    } catch (error) {;
+      console.log('⚠️  Bundle analysis "failed": ', error.message);
     }
   }
-
-  analyzeDirectory(dir, analysis) {
-    try {
+;
+  analyzeDirectory(dir, analysis) {;
+    try {;
       const files = fs.readdirSync(dir);
-
-      files.forEach(file => {
+;
+      files.forEach(file => {;
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
-
-        if (stat.isDirectory()) {
+;
+        if (stat.isDirectory()) {;
           this.analyzeDirectory(filePath, analysis);
-        } else if (stat.isFile()) {
+        } else if (stat.isFile()) {;
           const size = stat.size;
           analysis.totalSize += size;
-          analysis.files.push({
-            name: filePath.replace(this.projectRoot, ''),
-            size: size,
-            type: path.extname(file),
+          analysis.files.push({;
+            "name": filePath.replace(this.projectRoot, ''),
+            "size": size,
+            "type": path.extname(file);
           });
         }
       });
-    } catch (error) {
-      // Skip directories that can't be read
+    } catch (error) {;
+      // Skip directories that can't be read;
     }
   }
-
-  identifyOptimizationOpportunities(files) {
+;
+  identifyOptimizationOpportunities(files) {;
     const opportunities = [];
-
-    files.forEach(file => {
-      // Large JavaScript files
-      if (file.type === '.js' && file.size > 100000) {
-        opportunities.push({
-          type: 'large-js-file',
-          file: file.name,
-          size: file.size,
-          recommendation: 'Consider code splitting or lazy loading',
+;
+    files.forEach(file => {;
+      // Large JavaScript files;
+      if (file.type === '.js' && file.size > 100000) {;
+        opportunities.push({;
+          "type": 'large-js-file',
+          "file": file.name,
+          "size": file.size,
+          "recommendation": 'Consider code splitting or lazy loading';
         });
       }
-
-      // Large CSS files
-      if (file.type === '.css' && file.size > 50000) {
-        opportunities.push({
-          type: 'large-css-file',
-          file: file.name,
-          size: file.size,
-          recommendation: 'Consider CSS optimization or splitting',
+;
+      // Large CSS files;
+      if (file.type === '.css' && file.size > 50000) {;
+        opportunities.push({;
+          "type": 'large-css-file',
+          "file": file.name,
+          "size": file.size,
+          "recommendation": 'Consider CSS optimization or splitting';
         });
       }
-
-      // Unoptimized images
-      if (['.png', '.jpg', '.jpeg'].includes(file.type) && file.size > 100000) {
-        opportunities.push({
-          type: 'large-image',
-          file: file.name,
-          size: file.size,
-          recommendation: 'Optimize image or convert to WebP format',
+;
+      // Unoptimized images;
+      if (['.png', '.jpg', '.jpeg'].includes(file.type) && file.size > 100000) {;
+        opportunities.push({;
+          "type": 'large-image',
+          "file": file.name,
+          "size": file.size,
+          "recommendation": 'Optimize image or convert to WebP format';
         });
       }
     });
-
+;
     return opportunities;
   }
-
-  async analyzePerformanceMetrics() {
+;
+  async analyzePerformanceMetrics() {;
     console.log('📊 Analyzing performance metrics...');
-
-    const metrics = {
-      buildTime: 0,
-      bundleSize: 0,
-      fileCount: 0,
-      dependencies: 0,
-      score: 0,
+;
+    const metrics = {;
+      "buildTime": 0,
+      "bundleSize": 0,
+      "fileCount": 0,
+      "dependencies": 0,
+      "score": 0;
     };
-
-    try {
-      // Measure build time
+;
+    try {;
+      // Measure build time;
       const startTime = Date.now();
-      execSync('npm run build', { stdio: 'pipe' });
+      execSync('npm run build', { "stdio": 'pipe' });
       metrics.buildTime = Date.now() - startTime;
-
-      // Count dependencies
+;
+      // Count dependencies;
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       metrics.dependencies = Object.keys(packageJson.dependencies || {}).length;
-
-      // Calculate performance score
+;
+      // Calculate performance score;
       metrics.score = this.calculatePerformanceScore(metrics);
-
+;
       this.optimizationResults.performanceMetrics = metrics;
-
-      console.log(`📈 Performance Metrics: `),
-      console.log(`  - Build time: ${metrics.buildTime}ms`);
-      console.log(`  - Dependencies: ${metrics.dependencies}`);
-      console.log(`  - Performance score: ${metrics.score}/100`);
-    } catch (error) {
-      console.log('⚠️  Performance metrics analysis failed:', error.message);
+;
+      console.log(`📈 Performance "Metrics": `);
+      console.log(`  - Build "time": ${metrics.buildTime}ms`);
+      console.log(`  - "Dependencies": ${metrics.dependencies}`);
+      console.log(`  - Performance "score": ${metrics.score}/100`);
+;
+    } catch (error) {;
+      console.log('⚠️  Performance metrics analysis "failed": ', error.message);
     }
   }
-
-  calculatePerformanceScore(metrics) {
+;
+  calculatePerformanceScore(metrics) {;
     let score = 100;
-
-    // Deduct points for slow build time
+;
+    // Deduct points for slow build time;
     if (metrics.buildTime > 30000) score -= 20;
     else if (metrics.buildTime > 15000) score -= 10;
-
-    // Deduct points for too many dependencies
+;
+    // Deduct points for too many dependencies;
     if (metrics.dependencies > 100) score -= 20;
     else if (metrics.dependencies > 50) score -= 10;
-
-    // Deduct points for large bundle size
+;
+    // Deduct points for large bundle size;
     if (metrics.bundleSize > 5000000) score -= 30;
     else if (metrics.bundleSize > 2000000) score -= 15;
-
+;
     return Math.max(0, score);
   }
-
-  async optimizeImages() {
+;
+  async optimizeImages() {;
     console.log('🖼️  Optimizing images...');
-
+;
     const imageOptimizations = [];
     const publicDir = path.join(this.projectRoot, 'public');
-
-    if (fs.existsSync(publicDir)) {
+;
+    if (fs.existsSync(publicDir)) {;
       this.optimizeImagesInDirectory(publicDir, imageOptimizations);
     }
-
-    // Also check src directory for images
+;
+    // Also check src directory for images;
     const srcDir = path.join(this.projectRoot, 'src');
-    if (fs.existsSync(srcDir)) {
+    if (fs.existsSync(srcDir)) {;
       this.optimizeImagesInDirectory(srcDir, imageOptimizations);
     }
-
-    this.optimizationResults.optimizations.push({
-      type: 'image-optimization',
-      optimizations: imageOptimizations,
-      timestamp: new Date().toISOString(),
+;
+    this.optimizationResults.optimizations.push({;
+      "type": 'image-optimization',
+      "optimizations": imageOptimizations,
+      "timestamp": new Date().toISOString();
     });
-
-    console.log(
-      `✅ Image optimization completed: ${imageOptimizations.length} optimizations`
-    );
+;
+    console.log(`✅ Image optimization "completed": ${imageOptimizations.length} optimizations`);
   }
-
-  optimizeImagesInDirectory(dir, optimizations) {
-    try {
+;
+  optimizeImagesInDirectory(dir, optimizations) {;
+    try {;
       const files = fs.readdirSync(dir);
-
-      files.forEach(file => {
+;
+      files.forEach(file => {;
         const filePath = path.join(dir, file);
         const stat = fs.statSync(filePath);
-
-        if (stat.isDirectory()) {
+;
+        if (stat.isDirectory()) {;
           this.optimizeImagesInDirectory(filePath, optimizations);
-        } else if (stat.isFile()) {
+        } else if (stat.isFile()) {;
           const ext = path.extname(file).toLowerCase();
-          if (['.png', '.jpg', '.jpeg', '.gif'].includes(ext)) {
+          if (['.png', '.jpg', '.jpeg', '.gif'].includes(ext)) {;
             const size = stat.size;
-
-            // Suggest optimization for large images
-            if (size > 100000) {
-              optimizations.push({
-                file: filePath.replace(this.projectRoot, ''),
-                currentSize: size,
-                recommendation: 'Consider compressing or converting to WebP',
-                potentialSavings: Math.round(size * 0.3),
+;
+            // Suggest optimization for large images;
+            if (size > 100000) {;
+              optimizations.push({;
+                "file": filePath.replace(this.projectRoot, ''),
+                "currentSize": size,
+                "recommendation": 'Consider compressing or converting to WebP',
+                "potentialSavings": Math.round(size * 0.3);
               });
             }
           }
         }
       });
-    } catch (error) {
-      // Skip directories that can't be read
+    } catch (error) {;
+      // Skip directories that can't be read;
     }
   }
-
-  async optimizeCode() {
+;
+  async optimizeCode() {;
     console.log('🔧 Optimizing code...');
-
+;
     const codeOptimizations = [];
-
-    // Analyze JavaScript/TypeScript files
+;
+    // Analyze JavaScript/TypeScript files;
     const jsFiles = this.findFiles(['.js', '.jsx', '.ts', '.tsx']);
-
-    for (const file of jsFiles.slice(0, 20)) {
-      // Limit to first 20 files
-      try {
+;
+    for (const file of jsFiles.slice(0, 20)) { // Limit to first 20 files;
+      try {;
         const content = fs.readFileSync(file, 'utf8');
         const optimizations = this.analyzeCodeOptimizations(content, file);
         codeOptimizations.push(...optimizations);
-      } catch (error) {
-        // Skip files that can't be read
+      } catch (error) {;
+        // Skip files that can't be read;
       }
     }
-
-    this.optimizationResults.optimizations.push({
-      type: 'code-optimization',
-      optimizations: codeOptimizations,
-      timestamp: new Date().toISOString(),
+;
+    this.optimizationResults.optimizations.push({;
+      "type": 'code-optimization',
+      "optimizations": codeOptimizations,
+      "timestamp": new Date().toISOString();
     });
-
-    console.log(
-      `✅ Code optimization analysis completed: ${codeOptimizations.length} opportunities`
-    );
+;
+    console.log(`✅ Code optimization analysis "completed": ${codeOptimizations.length} opportunities`);
   }
-
-  analyzeCodeOptimizations(content, filePath) {
+;
+  analyzeCodeOptimizations(content, filePath) {;
     const optimizations = [];
     const lines = content.split('\n');
-
-    lines.forEach((line, index) => {
-      // Detect inefficient imports
-      if (line.includes('import') && line.includes('*')) {
-        optimizations.push({
-          type: 'wildcard-import',
-          file: filePath,
-          line: index + 1,
-          description: 'Wildcard import detected - consider specific imports',
-          impact: 'medium',
+;
+    lines.forEach((line, index) => {;
+      // Detect inefficient imports;
+      if (line.includes('import') && line.includes('*')) {;
+        optimizations.push({;
+          "type": 'wildcard-import',
+          "file": filePath,
+          "line": index + 1,
+          "description": 'Wildcard import detected - consider specific imports';
+          "impact": 'medium';
         });
       }
-
-      // Detect console.log in production
-      if (line.includes('console.log') && !filePath.includes('test')) {
-        optimizations.push({
-          type: 'console-log',
-          file: filePath,
-          line: index + 1,
-          description: 'Console.log in production code',
-          impact: 'low',
+;
+      // Detect console.log in production;
+      if (line.includes('console.log') && !filePath.includes('test')) {;
+        optimizations.push({;
+          "type": 'console-log',
+          "file": filePath,
+          "line": index + 1,
+          "description": 'Console.log in production code',
+          "impact": 'low';
         });
       }
-
-      // Detect large objects
-      if (line.includes('const') && line.includes('{') && line.length > 200) {
-        optimizations.push({
-          type: 'large-object',
-          file: filePath,
-          line: index + 1,
-          description: 'Large object definition - consider splitting',
-          impact: 'medium',
+;
+      // Detect large objects;
+      if (line.includes('const') && line.includes('{') && line.length > 200) {;
+        optimizations.push({;
+          "type": 'large-object',
+          "file": filePath,
+          "line": index + 1,
+          "description": 'Large object definition - consider splitting',
+          "impact": 'medium';
         });
       }
-
-      // Detect inefficient loops
-      if (line.includes('for (') && line.includes('length')) {
-        optimizations.push({
-          type: 'inefficient-loop',
-          file: filePath,
-          line: index + 1,
-          description: 'Consider caching array length',
-          impact: 'low',
+;
+      // Detect inefficient loops;
+      if (line.includes('for (') && line.includes('length')) {;
+        optimizations.push({;
+          "type": 'inefficient-loop',
+          "file": filePath,
+          "line": index + 1,
+          "description": 'Consider caching array length',
+          "impact": 'low';
         });
       }
     });
-
+;
     return optimizations;
   }
-
-  async generateOptimizationRecommendations() {
+;
+  async generateOptimizationRecommendations() {;
     console.log('💡 Generating optimization recommendations...');
-
+;
     const recommendations = [];
-
-    // Bundle size recommendations
+;
+    // Bundle size recommendations;
     const bundleAnalysis = this.optimizationResults.bundleAnalysis;
-    if (bundleAnalysis.optimizationOpportunities.length > 0) {
-      recommendations.push({
-        type: 'bundle-optimization',
-        priority: 'high',
-        description: `Found ${bundleAnalysis.optimizationOpportunities.length} bundle optimization opportunities`,
-        actions: bundleAnalysis.optimizationOpportunities.map(
-          opp => opp.recommendation
-        ),
+    if (bundleAnalysis.optimizationOpportunities.length > 0) {;
+      recommendations.push({;
+        "type": 'bundle-optimization',
+        "priority": 'high',
+        "description": `Found ${bundleAnalysis.optimizationOpportunities.length} bundle optimization opportunities`,
+        "actions": bundleAnalysis.optimizationOpportunities.map(opp => opp.recommendation);
       });
     }
-
-    // Performance recommendations
+;
+    // Performance recommendations;
     const metrics = this.optimizationResults.performanceMetrics;
     if (metrics.score < 80) {
       recommendations.push({
@@ -376,72 +366,64 @@ class AdvancedPerformanceOptimizer {
         priority: 'high',
         description: `Performance score is ${metrics.score}/100 - needs improvement`,
         actions: [
-          'Optimize build process',
-          'Reduce bundle size',
-          'Implement code splitting',
-          'Optimize images',
+
+
+
+
         ],
       });
     }
-
-    // Code optimization recommendations
-    const codeOptimizations = this.optimizationResults.optimizations
-      .filter(opt => opt.type === 'code-optimization')
+;
+    // Code optimization recommendations;
+    const codeOptimizations = this.optimizationResults.optimizations;
+      .filter(opt => opt.type === 'code-optimization');
       .flatMap(opt => opt.optimizations);
-
-    if (codeOptimizations.length > 0) {
-      const highImpact = codeOptimizations.filter(
-        opt => opt.impact === 'high'
-      ).length;
-      const mediumImpact = codeOptimizations.filter(
-        opt => opt.impact === 'medium'
-      ).length;
-
-      recommendations.push({
-        type: 'code-optimization',
-        priority: highImpact > 0 ? 'high' : 'medium',
-        description: `Found ${codeOptimizations.length} code optimization opportunities`,
-        actions: [
+;
+    if (codeOptimizations.length > 0) {;
+      const highImpact = codeOptimizations.filter(opt => opt.impact === 'high').length;
+      const mediumImpact = codeOptimizations.filter(opt => opt.impact === 'medium').length;
+;
+      recommendations.push({;
+        "type": 'code-optimization',
+        "priority": highImpact > 0 ? 'high' : 'medium',
+        "description": `Found ${codeOptimizations.length} code optimization opportunities`,
+        "actions": [;
           `${highImpact} high-impact optimizations`,
           `${mediumImpact} medium-impact optimizations`,
-          'Review and implement suggested changes',
+
         ],
       });
     }
-
+;
     this.optimizationResults.recommendations = recommendations;
   }
-
-  findFiles(extensions) {
+;
+  findFiles(extensions) {;
     const files = [];
-
-    const findInDirectory = dir => {
-      try {
+;
+    const findInDirectory = (dir) => {;
+      try {;
         const items = fs.readdirSync(dir);
-        items.forEach(item => {
+        items.forEach(item => {;
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
-
-          if (
-            stat.isDirectory() &&
-            !item.startsWith('.') &&
-            item !== 'node_modules'
-          ) {
+;
+          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
             findInDirectory(fullPath);
-          } else if (stat.isFile() && extensions.includes(path.extname(item))) {
+          } else if (stat.isFile() && extensions.includes(path.extname(item))) {;
             files.push(fullPath);
           }
         });
-      } catch (error) {
-        // Skip directories that can't be read
+      } catch (error) {;
+        // Skip directories that can't be read;
       }
     };
-
+;
     findInDirectory(this.projectRoot);
     return files;
   }
-
-  formatBytes(bytes) {
+;
+  formatBytes(bytes) {;
     if (bytes === 0) return '0 Bytes';
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
@@ -452,7 +434,7 @@ class AdvancedPerformanceOptimizer {
   saveResults() {
     const reportFile = path.join(
       this.projectRoot,
-      'logs',
+
       `performance-optimization-${Date.now()}.json`
     );
     fs.writeFileSync(
@@ -460,7 +442,7 @@ class AdvancedPerformanceOptimizer {
       JSON.stringify(this.optimizationResults, null, 2)
     );
 
-    console.log('📊 Optimization Results: '),
+    console.log('📊 Optimization Results:');
     console.log(
       `- Bundle size: ${this.formatBytes(this.optimizationResults.bundleAnalysis.totalSize)}`
     );
@@ -476,7 +458,7 @@ class AdvancedPerformanceOptimizer {
     console.log(`- Report saved to: ${reportFile}`);
   }
 }
-
-// Run the optimizer
+;
+// Run the optimizer;
 const optimizer = new AdvancedPerformanceOptimizer();
 optimizer.runOptimization().catch(console.error);

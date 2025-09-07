@@ -1,9 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 interface NoJobsCardProps {
-  onUpdateProfile?: () => void;
+  onUpdateProfile?: () => void
 }
-
 export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
   return (
     <Card className="bg-muted/30 border border-dashed">
@@ -19,5 +18,14 @@ export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
         )}
       </CardContent>
     </Card>
+  )
+}
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+interface NoJobsCardProps {
+  onUpdateProfile?: () => void
+}
+
   );
 }
+;

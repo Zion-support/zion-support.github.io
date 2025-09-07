@@ -1,61 +1,55 @@
-
-import {useAuthStatus} from "./talent/useAuthStatus";
-import {useTalentData} from "./talent/useTalentData";
-import {useFilterTalents} from "./talent/useFilterTalents";
-import {useUIState} from "./talent/useUIState";
+import { useAuthStatus } from "./talent/useAuthStatus",
+import { useTalentData } from "./talent/useTalentData",
+import { useFilterTalents } from "./talent/useFilterTalents";
+import { useUIState } from "./talent/useUIState";
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
   const { 
-    isAuthenticated;
+    isAuthenticated,
     userDetails, 
     savedTalents, 
     handleToggleSave 
-  } = useAuthStatus();
-
+  } = useAuthStatus($2);
   // Fetch talent data
   const { 
     talents, 
     isLoading 
-  } = useTalentData();
-
+  } = useTalentData($2);
   // Apply filters and sorting
   const {
-    filteredTalents;
-    searchTerm;
-    setSearchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
-    setPriceRange;
-    experienceRange;
-    setExperienceRange;
-    sortOption;
-    setSortOption;
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
+    filteredTalents,
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
     clearFilters
-  } = useFilterTalents(talents);
-
+  } = useFilterTalents($2);
   // Manage UI state
   const {
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-    selectedTalent;
-    setSelectedTalent;
-    expandedSections;
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
     toggleSection
-  } = useUIState();
-
+  } = useUIState($2);
   return {
     // Talents and loading state
     talents;
     filteredTalents;
     isLoading;
-    
     // Search and filter state
     searchTerm;
     setSearchTerm;
@@ -68,7 +62,6 @@ export function useTalentDirectory() {
     setExperienceRange;
     sortOption;
     setSortOption;
-    
     // UI state
     isMobileFilterOpen;
     setIsMobileFilterOpen;
@@ -77,19 +70,16 @@ export function useTalentDirectory() {
     selectedTalent;
     setSelectedTalent;
     expandedSections;
-    
     // Auth and user state
     isAuthenticated;
     userDetails;
     savedTalents;
-    
     // Actions
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters;
-    toggleSection;
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
     handleToggleSave
   }
 }
-;

@@ -1,121 +1,71 @@
-import Link from "next/link";
-export const metadata = {
-  title: "Services | Zion Tech Group",
-  description:
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",
-};
-export default function ServicesOverviewPage() {
-  return (
-    <div className="animate-fade-in">
-      {" "}
-      <div className="text-center mb-16">
-        {" "}
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Our Services
-        </h1>{" "}
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          {" "}
-          Product engineering and AI-first consulting to deliver measurable
-          outcomes for your business.{" "}
-        </p>{" "}
-      </div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        {" "}
-        <ServiceCard
-          href="/services/micro-saas"
-          title="Micro SaaS"
-          description="End-to-end product development with billing,auth,and analytics"
-          bullets={[
-            "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
-          ]}
-          icon="🚀"
-        />{" "}
-        <ServiceCard
-          href="/services/ai-services"
-          title="AI Services"
-          description="LLM applications,RAG systems,and MLOps pipelines"
-          bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
-          icon="🤖"
-        />{" "}
-        <ServiceCard
-          href="/services/it-services"
-          title="IT Services"
-          description="Cloud migration,DevOps,and security solutions"
-          bullets={["Cloud migration", "DevOps + SRE", "Security"]}
-          icon="⚙️"
-        />{" "}
-      </div>{" "}
-      <CTA />{" "}
-    </div>
-  );
+import React from 'react'
+import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Services | Zion Tech Group',
+  description: 'Comprehensive technology services including AI development, micro SaaS solutions, and more.',
+  keywords: 'AI services, micro SaaS, technology solutions, software development'
 }
-function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
-}: {
-  href: string;
-  title: string;
-  description: string;
-  bullets: string[];
-  icon: string;
-}) {
+
+export default function ServicesPage() {
   return (
-    <Link
-      href={href}
-      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
-    >
-      {" "}
-      <div className="text-4xl mb-4">{icon}</div>{" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-        {title}
-      </h3>{" "}
-      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>{" "}
-      <ul className="text-gray-600 space-y-2">
-        {" "}
-        {bullets.map((bullet) => (
-          <li key={bullet} className="flex items-center">
-            {" "}
-            <span className="text-blue-500 mr-2">•</span> {bullet}{" "}
-          </li>
-        ))}{" "}
-      </ul>{" "}
-    </Link>
-  );
-}
-function CTA() {
-  return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
-      {" "}
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Get Started?
-      </h3>{" "}
-      <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        {" "}
-        Talk to our experts about your project. We'll help you choose the right
-        service and create a custom solution for your business needs.{" "}
-      </p>{" "}
-      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        {" "}
-        <a
-          href="tel:+13024640950"
-          className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-        >
-          {" "}
-          Call +1 302 464 0950{" "}
-        </a>{" "}
-        <a
-          href="mailto:kleber@ziontechgroup.com"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
-        >
-          {" "}
-          Email Us{" "}
-        </a>{" "}
-      </div>{" "}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive technology services to transform your business.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">AI Solutions</h3>
+            <p className="text-gray-300 mb-4">
+              Advanced AI and machine learning solutions.
+            </p>
+            <Link href="/services/ai-services" className="text-blue-400 hover:text-blue-300">
+              Learn More →
+            </Link>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Micro SaaS</h3>
+            <p className="text-gray-300 mb-4">
+              Scalable micro SaaS solutions.
+            </p>
+            <Link href="/services/micro-saas" className="text-blue-400 hover:text-blue-300">
+              Learn More →
+            </Link>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <h3 className="text-xl font-bold text-white mb-4">Web Development</h3>
+            <p className="text-gray-300 mb-4">
+              Professional web development services.
+            </p>
+            <Link href="/services/web-development" className="text-blue-400 hover:text-blue-300">
+              Learn More →
+            </Link>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our services can transform your business.
+          </p>
+          <Link 
+            href="/contact" 
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200"
+          >
+            Contact Sales
+          </Link>
+        </div>
+      </div>
     </div>
-  );
+  )
 }

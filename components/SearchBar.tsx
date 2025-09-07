@@ -1,38 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Link from 'next/link';
+
 interface SearchResult {
-  title: string, description: string,
-  url: string, type: 'service' | 'page' | 'category',
+  title: string;
+  description: string;
+  url: string;
+  type: 'service' | 'page' | 'category';
 }
 
-const SearchBar: React.FC = () => {
-  const [query, setQuery] = useState(''),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [isOpen, setIsOpen] = useState(false),
-  const [isLoading, setIsLoading] = useState(false),
-  const searchRef = useRef<HTMLDivElement>(null),
-  const inputRef = useRef<HTMLInputElement>(null),
-
-  // Mock search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = [
-    {
-      title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro-saas',
-      type: 'category',
-    },
-    {
-      title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai-services',
-      type: 'category',
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-      url: '/it-services',
-      type: 'category',
-    },
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -57,53 +30,51 @@ const SearchBar: React.FC = () => {
     if (!searchQuery.trim()) {
       setResults([]);
       setIsOpen(false);
-      return,
+      return;
     }
 
-    setIsLoading(true),
+    setIsLoading(true);
 
     // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 300)),
+    await new Promise(resolve => setTimeout(resolve, 300));
 
     const filteredResults = searchData.filter(item =>
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.description.toLowerCase().includes(searchQuery.toLowerCase())
-    ),
+    );
 
-    setResults(filteredResults),
-    setIsOpen(true),
-    setIsLoading(false),
+    setResults(filteredResults);
+    setIsOpen(true);
+    setIsLoading(false);
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    handleSearch(value),
+    handleSearch(value);
   };
 
   const handleResultClick = () => {
-    setIsOpen(false),
-    setQuery('')
-  },
+    setIsOpen(false);
+    setQuery('');
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
-    setIsOpen(false),
-    inputRef.current?.blur()
-  }
-  },
+      setIsOpen(false);
+      inputRef.current?.blur();
+    }
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
-        setIsOpen(false),
+        setIsOpen(false);
       }
-    },
+    };
 
-    document.addEventListener('mousedown', handleClickOutside),
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside),
-    },
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   return (
@@ -112,10 +83,10 @@ const SearchBar: React.FC = () => {
         <input
           ref={inputRef}
           type="text"
-          placeholder="Search services, pages..."
+          placeholder="Search services, solutions..."
           value={query}
           onChange={handleInputChange}
-          onFocus={() => query && setIsOpen(true)}
+          onKeyDown={handleKeyDown}
           className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
         <div className="absolute inset-y-0 left-0 flex items-center pl-3">
@@ -140,7 +111,7 @@ const SearchBar: React.FC = () => {
         )}
       </div>
 
-      {/* Search Results Dropdown */}
+      {/* Search Results */}
       {isOpen && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-96 overflow-y-auto">
           {results.length > 0 ? (
@@ -154,7 +125,7 @@ const SearchBar: React.FC = () => {
                 >
                   <div className="flex items-start space-x-3">
                     <div className="flex-shrink-0">
-                      <div className={`w-2 h-2 rounded-full mt-2 ${
+                      <div className={`w-2 h-2 rounded-full ${
                         result.type === 'service' ? 'bg-blue-500' :
                         result.type === 'page' ? 'bg-green-500' : 'bg-purple-500'
                       }`}></div>
@@ -183,3 +154,33 @@ const SearchBar: React.FC = () => {
 };
 
 export default SearchBar;
+
+import React, { useState } from 'react';
+import { Search, X } from 'lucide-react';
+
+interface SearchBarProps {
+  onSearch?: (query: string) => void;
+  placeholder?: string;
+  className?: string;
+
+}
+
+const SearchBar: React.FC<SearchBarProps> = ({
+  onSearch,
+  placeholder = 'Search...',
+  className = ''
+}) => {
+  const [query, setQuery] = useState('');
+
+            >
+              <X className="w-4 h-4" />
+            </button>
+          )}
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default SearchBar;
+

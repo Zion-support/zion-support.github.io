@@ -1,37 +1,38 @@
 
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {useForm, type, UseFormReturn} from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {z} from "zod";
-import {Mail} from "lucide-react";
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useForm, type UseFormReturn } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Mail } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 // Form validation schema
-const forgotPasswordSchema = z.object({
-  email: z.string().email("Please enter a valid email")}),
-
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
-
+const forgotPasswordSchema = $2;
+type ForgotPasswordFormValues = $2;
 export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
-  
+  const { resetPassword, isLoading } = useAuth($2);
+  const [submitted, setSubmitted] = useState($2);
   // Initialize react-hook-form
-  const form = useForm({
-    resolver: zodResolver(forgotPasswordSchema),
+  const form = useForm($2);
     defaultValues: {
       email: ""}}) as UseFormReturn<ForgotPasswordFormValues>,
 
   // Form submission handler
   const onSubmit = async (data: ForgotPasswordFormValues) => {
-    await resetPassword(data.email),
+    await resetPassword($2);
     setSubmitted(true)
-  };
+  },
 
   return (
     <>
@@ -47,7 +48,6 @@ export default function ForgotPassword() {
                 Enter your email and we'll send you a link to reset your password.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {submitted ? (
                 <div className="text-center py-8">
@@ -90,7 +90,6 @@ export default function ForgotPassword() {
                         </FormItem>
                       )}
                     />
-
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -98,7 +97,6 @@ export default function ForgotPassword() {
                     >
                       {isLoading ? "Sending..." : "Reset Password"}
                     </Button>
-
                     <div className="text-center">
                       <Link
                         to="/login"
@@ -130,4 +128,3 @@ export default function ForgotPassword() {
     </>
   )
 }
-;

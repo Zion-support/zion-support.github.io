@@ -1,9 +1,9 @@
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
-import data from '../../data/github-pulse.json',;
+import data from '../../data/github-pulse.json';
 export default function GithubPulsePage() {
-  const repo = data?.repo || {},
-  const last24h = data?.last24h || {},
+  const repo = $2;
+  const last24h = $2;
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -22,11 +22,11 @@ export default function GithubPulsePage() {
   )
 }
 
-function Metric({ label, value }: { label: string, value: any }) {
+function Metric({ label, value }: { label: string, value: any}) {
   return (
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
       <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
   )
-};
+}

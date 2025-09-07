@@ -1,111 +1,99 @@
 
-import {useState, useEffect} from "react";
-import {useNavigate, useLocation} from "react-router-dom";
-import {zodResolver} from "@hookform/resolvers/zod";
-import {useForm} from "react-hook-form";
-import {z} from "zod";
-import {LockKeyhole} from "lucide-react";
-import {supabase} from "@/integrations/supabase/client";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {toast} from "@/hooks/use-toast";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {cleanupAuthState} from "@/utils/authUtils";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { LockKeyhole } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { toast } from "@/hooks/use-toast";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { cleanupAuthState } from "@/utils/authUtils";
 // Form validation schema
+
 const updatePasswordSchema = z
   .object({
     password: z
       .string()
       .min(8, "Password must be at least 8 characters")
-      .max(64, "Password must be less than 64 characters");
+      .max($2);
     confirmPassword: z.string()})
   .refine((data) => data.password === data.confirmPassword, {
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
-type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
-
+type UpdatePasswordFormValues = $2;
 export default function UpdatePassword() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [accessToken, setAccessToken] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
-
+  const [isLoading, setIsLoading] = useState($2);
+  const [accessToken, setAccessToken] = useState<string | null>(null),
+  const [error, setError] = useState<string | null>(null),
+  const [success, setSuccess] = useState($2);
+  const navigate = useNavigate($2);
+  const location = useLocation($2);
   // Initialize react-hook-form
   const form = useForm<UpdatePasswordFormValues>({
-    resolver: zodResolver(updatePasswordSchema),
+    resolver: zodResolver($2);
     defaultValues: {
       password: "",
       confirmPassword: ""}}),
 
   useEffect(() => {
     // Extract access token from URL hash
-    const hashParams = new URLSearchParams(location.hash.substring(1));
-    const token = hashParams.get("access_token");
-    
+    const hashParams = $2;
+    const token = hashParams.get($2);
     if (token) {
       setAccessToken(token)
     } else {
       setError("No access token found. Please request a new password reset link.")
     }
-
     // Clean up auth state to prevent issues
     cleanupAuthState()
-  }, [location]);
+  }, [location]),
 
   // Form submission handler
   const onSubmit = async (data: UpdatePasswordFormValues) => {
     if (!accessToken) {
-      setError("No access token found. Please request a new password reset link."),
+      setError($2);
       return
     }
 
-    setIsLoading(true);
+    setIsLoading($2);
     try {
       // Set the session with the access token
-      await supabase.auth.setSession({
-        access_token: accessToken,
-        refresh_token: ''}),
-
+      await supabase.auth.setSession($2);
       // Update the password
-      const { error } = await supabase.auth.updateUser({
-        password: data.password}),
-
+      const { error } = await supabase.auth.updateUser($2);
       if (error) {
-        toast({
-          title: "Password update failed",
-          description: error.message,
-          variant: "destructive"}),
-        setError(error.message);
+        toast($2);
+        setError($2);
         return
       }
-
       // Show success message and clean up auth state
-      setSuccess(true);
-      toast({
-        title: "Password updated successfully",
-        description: "You can now log in with your new password."}),
-
+      setSuccess($2);
+      toast($2);
       // Clean auth state and redirect after a delay
-      cleanupAuthState();
+      cleanupAuthState($2);
       setTimeout(() => {
         navigate("/login")
       }, 3000)
     } catch (error: any) {
-      console.error("Password update error:", error);
-      toast({
-        title: "Password update failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"}),
+      console.error($2);
+      toast($2);
       setError(error.message || "An unexpected error occurred")
     } finally {
       setIsLoading(false)
     }
-  };
+  },
 
   return (
     <>
@@ -121,21 +109,144 @@ export default function UpdatePassword() {
                 Enter your new password below.
               </p>
             </div>
-
             <div className="bg-zion-blue-dark rounded-lg p-6">
               {error && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">
                   <p className="text-sm">{error}</p>
-                  <Button 
+                  <Button
                     className="mt-3 text-xs"
                     variant="outline"
+import { useState, useEffect } from "react",;
+import { useNavigate, useLocation } from "react-router-dom",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { useForm } from "react-hook-form",;
+import { z } from "zod",;
+import { LockKeyhole } from "lucide-react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import { toast } from "@/hooks/use-toast",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { cleanupAuthState } from "@/utils/authUtils",;
+// Form validation schema;
+const updatePasswordSchema = z;
+  .object({;
+    password: z;
+      .string();
+      .min(8, "Password must be at least 8 characters");
+      .max(64, "Password must be less than 64 characters"),;
+    confirmPassword: z.string()});
+  .refine((data) => data.password === data.confirmPassword, {;
+    message: "Passwords do not match",;
+    path: ["confirmPassword"]}),;
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,;
+export default function UpdatePassword() {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [accessToken, setAccessToken] = useState<string | null>(null),;
+  const [error, setError] = useState<string | null>(null),;
+  const [success, setSuccess] = useState(false),;
+  const navigate = useNavigate(),;
+  const location = useLocation(),;
+  // Initialize react-hook-form;
+  const form = useForm<UpdatePasswordFormValues>({;
+    resolver: zodResolver(updatePasswordSchema),;
+    defaultValues: {;
+      password: "",;
+      confirmPassword: ""}}),;
+  useEffect(() => {;
+    // Extract access token from URL hash;
+    const hashParams = new URLSearchParams(location.hash.substring(1)),;
+    const token = hashParams.get("access_token"),;
+    if (token) {;
+      setAccessToken(token);
+    } else {;
+      setError("No access token found. Please request a new password reset link.");
+    }
+;
+    // Clean up auth state to prevent issues;
+    cleanupAuthState();
+  }, [location]),;
+  // Form submission handler;
+  const onSubmit = async (data: UpdatePasswordFormValues) => {;
+    if (!accessToken) {;
+      setError("No access token found. Please request a new password reset link."),;
+      return;
+    }
+;
+    setIsLoading(true),;
+    try {;
+      // Set the session with the access token;
+      await supabase.auth.setSession({;
+        access_token: accessToken,;
+        refresh_token: ''}),;
+      // Update the password;
+      const { error } = await supabase.auth.updateUser({;
+        password: data.password}),;
+      if (error) {;
+        toast({;
+          title: "Password update failed",;
+          description: error.message,;
+          variant: "destructive"}),;
+        setError(error.message),;
+        return;
+      }
+;
+      // Show success message and clean up auth state;
+      setSuccess(true),;
+      toast({;
+        title: "Password updated successfully",;
+        description: "You can now log in with your new password."}),;
+      // Clean auth state and redirect after a delay;
+      cleanupAuthState(),;
+      setTimeout(() => {;
+        navigate("/login");
+      }, 3000);
+    } catch (error: any) {;
+      console.error("Password update error:", error),;
+      toast({;
+        title: "Password update failed",;
+        description: error.message || "An unexpected error occurred",;
+        variant: "destructive"});
+      setError(error.message || "An unexpected error occurred");
+    } finally {;
+      setIsLoading(false);
+    }
+  };
+  return (;
+    <>;
+      <Header />;
+      <div className="flex min-h-screen bg-zion-blue">;
+        <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">;
+          <div className="mx-auto w-full max-w-sm lg:w-96">;
+            <div className="text-center mb-10">;
+              <h2 className="text-3xl font-bold tracking-tight text-white">;
+                Update your password;
+              </h2>;
+              <p className="mt-2 text-sm text-zion-slate-light">;
+                Enter your new password below.;
+              </p>;
+            </div>;
+            <div className="bg-zion-blue-dark rounded-lg p-6">;
+              {error && (;
+                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
+                  <p className="text-sm">{error}</p>;
+                  <Button;
+                    className="mt-3 text-xs";
+                    variant="outline";
                     onClick={() => navigate('/forgot-password')}
                   >
                     Request new reset link
                   </Button>
                 </div>
               )}
-
               {success ? (
                 <div className="text-center py-8">
                   <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-zion-purple/20 mb-4">
@@ -171,7 +282,6 @@ export default function UpdatePassword() {
                         </FormItem>
                       )}
                     />
-
                     <FormField
                       control={form.control}
                       name="confirmPassword"
@@ -191,15 +301,13 @@ export default function UpdatePassword() {
                         </FormItem>
                       )}
                     />
-
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={isLoading || !accessToken}
+                      disabled={isLoading |!accessToken}
                     >
                       {isLoading ? "Updating..." : "Update Password"}
                     </Button>
-
                     <div className="text-center">
                       <Button
                         variant="link"
@@ -232,5 +340,6 @@ export default function UpdatePassword() {
       <Footer />
     </>
   )
+}
 }
 ;

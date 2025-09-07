@@ -7,8 +7,7 @@ function removeUnusedImports(filePath) {;
     let modified = false;
 ;
     // Remove unused lucide-react imports;
-    const lucideImportRegex =;
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
+    const lucideImportRegex = /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
     const matches = content.match(lucideImportRegex);
 ;
     if (matches) {;
@@ -21,11 +20,7 @@ function removeUnusedImports(filePath) {;
           const importName = imp.split(' as ')[0].trim();
           // Count occurrences in the file (excluding the import line itself);
           const contentWithoutImport = content.replace(match, '');
-          const occurrences = (;
-            contentWithoutImport.match(;
-              new RegExp(`\\b${importName}\\b`, 'g');
-            ) || [];
-          ).length;
+          const occurrences = (contentWithoutImport.match(new RegExp(`\\b${importName}\\b`, 'g')) || []).length;
           return occurrences > 0;
         });
 ;
@@ -41,28 +36,19 @@ function removeUnusedImports(filePath) {;
     }
 ;
     // Remove unused Head imports;
-    if (;
-      content.includes("import Head from 'next/head';") &&;
-      !content.includes('<Head>');
-    ) {;
+    if (content.includes("import Head from 'next/head';") && !content.includes('<Head>')) {;
       content = content.replace(/import Head from 'next\/head';\n?/g, '');
       modified = true;
     }
 ;
     // Remove unused Link imports;
-    if (;
-      content.includes("import Link from 'next/link';") &&;
-      !content.includes('<Link');
-    ) {;
+    if (content.includes("import Link from 'next/link';") && !content.includes('<Link')) {;
       content = content.replace(/import Link from 'next\/link';\n?/g, '');
       modified = true;
     }
 ;
     // Remove unused React imports (if using Next.js);
-    if (;
-      content.includes("import React from 'react';") &&;
-      !content.includes('React.');
-    ) {;
+    if (content.includes("import React from 'react';") && !content.includes('React.')) {;
       content = content.replace(/import React from 'react';\n?/g, '');
       modified = true;
     }
@@ -74,7 +60,7 @@ function removeUnusedImports(filePath) {;
 ;
     return false;
   } catch (error) {;
-    console.error(`Error processing ${filePath} `, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -85,20 +71,14 @@ function fixPropertyAssignmentErrors(filePath) {;
     let modified = false;
 ;
     // Fix object property syntax issues;
-    const patterns = [
-    ;
-    const patterns = [
-    ;
+    const patterns = [;
       // Fix colon instead of equals;
-      { fro:m:/(\w+):\s*(\w+)\s*=/g, t:o:'$1:$2' },;
+      { "from": /(\w+):\s*(\w+)\s*=/g, "to": '$"1": $2' },
       // Fix missing quotes around object keys;
-      { fro:m:/(\w+):\s*(\w+)\s*:/g, t:o:'$1:$2:' },;
-      // Fix property assignment syntax,
-    { fro:m:/(\w+)\s*=\s*(\w+)\s*:/g, t:o:'$1:$2:' },
-  ];
-      // Fix property assignment syntax,
-    { fro:m:/(\w+)\s*=\s*(\w+)\s*:/g, t:o:'$1:$2:' },
-  ];
+      { "from": /(\w+):\s*(\w+)\s*:/g, "to": '$"1": $"2": ' },
+      // Fix property assignment syntax;
+      { "from": /(\w+)\s*=\s*(\w+)\s*:/g, "to": '$"1": $"2": ' },
+    ];
 ;
     for (const pattern of patterns) {;
       if (pattern.from.test(content)) {;
@@ -114,14 +94,14 @@ function fixPropertyAssignmentErrors(filePath) {;
 ;
     return false;
   } catch (error) {;
-    console.error(`Error processing ${filePath} `, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 ;
 function removeUnusedVariables(filePath) {;
   try {;
-    const content = fs.readFileSync(filePath, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 ;
     // Remove unused variable declarations;
@@ -132,20 +112,16 @@ function removeUnusedVariables(filePath) {;
       const line = lines[i];
 ;
       // Skip lines that declare unused variables;
-      if (;
-        line.match(/^\s*const\s+\w+\s*=\s*\[.*\]\s*;\s*$/) ||;
-        line.match(/^\s*const\s+\w+\s*=\s*\{.*\}\s*;\s*$/) ||;
-        line.match(/^\s*const\s+\w+\s*=\s*[^=]+;\s*$/) ||;
-        line.match(/^\s*let\s+\w+\s*=\s*[^=]+;\s*$/);
-      ) {;
+      if (line.match(/^\s*const\s+\w+\s*=\s*\[.*\]\s*;\s*$/) ||;
+          line.match(/^\s*const\s+\w+\s*=\s*\{.*\}\s*;\s*$/) ||;
+          line.match(/^\s*const\s+\w+\s*=\s*[^=]+;\s*$/) ||;
+          line.match(/^\s*let\s+\w+\s*=\s*[^=]+;\s*$/)) {;
         const varName = line.match(/^\s*(?:const|let)\s+(\w+)/);
         if (varName) {;
           const name = varName[1];
           // Check if variable is used elsewhere in the file;
           const contentWithoutLine = content.replace(line, '');
-          const occurrences = (;
-            contentWithoutLine.match(new RegExp(`\\b${name}\\b`, 'g')) || [];
-          ).length;
+          const occurrences = (contentWithoutLine.match(new RegExp(`\\b${name}\\b`, 'g')) || []).length;
 ;
           if (occurrences === 0) {;
             // Skip this line (remove unused variable);
@@ -166,7 +142,7 @@ function removeUnusedVariables(filePath) {;
 ;
     return false;
   } catch (error) {;
-    console.error(`Error processing ${filePath} `, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -181,12 +157,7 @@ function processDirectory(dirPath) {;
 ;
     if (stat.isDirectory()) {;
       fixedCount += processDirectory(filePath);
-    } else if (;
-      file.endsWith('.tsx') ||;
-      file.endsWith('.ts') ||;
-      file.endsWith('.jsx') ||;
-      file.endsWith('.js');
-    ) {;
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {;
       if (removeUnusedImports(filePath)) fixedCount++;
       if (fixPropertyAssignmentErrors(filePath)) fixedCount++;
       if (removeUnusedVariables(filePath)) fixedCount++;

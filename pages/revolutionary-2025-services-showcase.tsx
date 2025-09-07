@@ -1,7 +1,7 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   DollarSign, Clock, CheckCircle, ArrowRight,
@@ -13,25 +13,22 @@ import {
 } from 'lucide-react',
 
 // Import the new revolutionary services
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services',;
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure',;
+import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
+import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = $2;
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
 
-const serviceCategories = [
-  {
-    id: 'ai-consciousness',
+const serviceCategories = $2;
     title: '🧠 AI Consciousness & Emotional Intelligence',
     description: 'Revolutionary AI consciousness and emotional intelligence platforms',
     icon: Brain,
     color: 'from-violet-500 to-purple-500',
-    services: allServices.filter(s => s.category.includes('AI Consciousness') || s.category.includes('Healthcare AI')),
+    services: allServices.filter(s = $2;
     gradient: 'from-violet-500/20 to-indigo-500/20'
   },
   {
@@ -40,7 +37,7 @@ const serviceCategories = [
     description: 'Quantum computing, DNA computing, and beyond',
     icon: Atom,
     color: 'from-blue-500 to-cyan-500',
-    services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing')),
+    services: allServices.filter(s = $2;
     gradient: 'from-blue-500/20 to-cyan-500/20'
   },
   {
@@ -49,7 +46,7 @@ const serviceCategories = [
     description: 'Space mission management and satellite operations',
     icon: Rocket,
     color: 'from-indigo-500 to-blue-500',
-    services: allServices.filter(s => s.category.includes('Space Technology')),
+    services: allServices.filter(s = $2;
     gradient: 'from-indigo-500/20 to-blue-500/20'
   },
   {
@@ -58,7 +55,7 @@ const serviceCategories = [
     description: 'Quantum encryption and AI threat detection',
     icon: Shield,
     color: 'from-red-500 to-pink-500',
-    services: allServices.filter(s => s.category.includes('Cybersecurity')),
+    services: allServices.filter(s = $2;
     gradient: 'from-red-500/20 to-pink-500/20'
   },
   {
@@ -67,7 +64,7 @@ const serviceCategories = [
     description: 'Quantum-enhanced cloud computing and infrastructure',
     icon: Cloud,
     color: 'from-cyan-500 to-blue-500',
-    services: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('Infrastructure')),
+    services: allServices.filter(s = $2;
     gradient: 'from-cyan-500/20 to-blue-500/20'
   },
   {
@@ -76,7 +73,7 @@ const serviceCategories = [
     description: 'AI-powered trading and quantum risk management',
     icon: DollarSign,
     color: 'from-green-500 to-emerald-500',
-    services: allServices.filter(s => s.category.includes('Financial Technology')),
+    services: allServices.filter(s = $2;
     gradient: 'from-green-500/20 to-emerald-500/20'
   },
   {
@@ -85,7 +82,7 @@ const serviceCategories = [
     description: 'Zero downtime manufacturing and predictive maintenance',
     icon: Building2,
     color: 'from-gray-500 to-slate-500',
-    services: allServices.filter(s => s.category.includes('Industrial IoT')),
+    services: allServices.filter(s = $2;
     gradient: 'from-gray-500/20 to-slate-500/20'
   },
   {
@@ -94,7 +91,7 @@ const serviceCategories = [
     description: 'AI-powered personalized learning and 10x faster knowledge acquisition',
     icon: Users,
     color: 'from-blue-500 to-cyan-500',
-    services: allServices.filter(s => s.category.includes('Education Technology')),
+    services: allServices.filter(s = $2;
     gradient: 'from-blue-500/20 to-cyan-500/20'
   },
   {
@@ -103,7 +100,7 @@ const serviceCategories = [
     description: 'AI-powered environmental solutions for carbon neutrality',
     icon: Globe,
     color: 'from-green-500 to-emerald-500',
-    services: allServices.filter(s => s.category.includes('Sustainability')),
+    services: allServices.filter(s = $2;
     gradient: 'from-green-500/20 to-emerald-500/20'
   },
   {
@@ -112,23 +109,18 @@ const serviceCategories = [
     description: '99.9% delivery accuracy and zero waste supply chain',
     icon: Package,
     color: 'from-orange-500 to-red-500',
-    services: allServices.filter(s => s.category.includes('Logistics')),
+    services: allServices.filter(s = $2;
     gradient: 'from-orange-500/20 to-red-500/20'
   }
 ],
 
 export default function Revolutionary2025ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('popularity'),
-  const [viewMode, setViewMode] = useState('grid'),
-
-  const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
+  const [sortBy, setSortBy] = useState($2);
+  const [viewMode, setViewMode] = useState($2);
+  const filteredServices = $2;
+    const matchesCategory = $2;
     return matchesSearch && matchesCategory
   }),
 
@@ -163,8 +155,8 @@ export default function Revolutionary2025ServicesShowcase() {
           
           <div className="container mx-auto relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              animate={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
               className="text-center max-w-4xl mx-auto"
             >
@@ -285,17 +277,17 @@ export default function Revolutionary2025ServicesShowcase() {
               {viewMode === 'grid' ? (
                 <motion.div
                   key="grid"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
+                  initial={{ opacity: 0}}
+                  animate={{ opacity: 1}}
+                  exit={{ opacity: 0}}
                   transition={{ duration: 0.3 }}
                   className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
                 >
                   {sortedServices.map((service, index) => (
                     <motion.div
                       key={service.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
+                      initial={{ opacity: 0, y: 20}}
+                      animate={{ opacity: 1, y: 0}}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className="group relative"
                     >
@@ -388,9 +380,9 @@ export default function Revolutionary2025ServicesShowcase() {
               ) : (
                 <motion.div
                   key="list"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
+                  initial={{ opacity: 0}}
+                  animate={{ opacity: 1}}
+                  exit={{ opacity: 0}}
                   transition={{ duration: 0.3 }}
                   className="space-y-6"
                 >
@@ -398,7 +390,7 @@ export default function Revolutionary2025ServicesShowcase() {
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      animate={{ opacity: 1, x: 0}}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className="bg-gradient-to-r from-gray-900/80 to-black/90 border border-gray-700/50 rounded-xl p-6 backdrop-blur-xl hover:border-purple-500/50 transition-all duration-300"
                     >
@@ -522,7 +514,7 @@ export default function Revolutionary2025ServicesShowcase() {
                 <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>
                 <button
                   onClick={() => {
-                    setSearchTerm(''),
+                    setSearchTerm($2);
                     setSelectedCategory('all')
                   }}
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
@@ -538,10 +530,10 @@ export default function Revolutionary2025ServicesShowcase() {
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">
           <div className="container mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30}}
+              whileInView={{ opacity: 1, y: 0}}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              viewport={{ once: true}}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -597,4 +589,4 @@ export default function Revolutionary2025ServicesShowcase() {
       </div>
     </>
   )
-};
+}

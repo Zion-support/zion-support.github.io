@@ -1,78 +1,66 @@
-
-import React, { useState } from "react";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Wallet, Info, Check, ChevronRight, ArrowUpRight} from "lucide-react";
-import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
-import {useToast} from "@/hooks/use-toast";
-import {useAuth} from "@/hooks/useAuth";
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from "@/components/ui/tooltip",
+import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
-  const [isConnected, setIsConnected] = useState(false);
-  const [isExporting, setIsExporting] = useState(false);
-  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
-  const { toast } = useToast();
-  const { user } = useAuth();
-  
-  const handleConnectWallet = async () => {
-    try {
-      // Check if wallet is available
-      const ethereum = (window as any).ethereum;
+  const [isConnected, setIsConnected] = useState($2);
+  const [isExporting, setIsExporting] = useState($2);
+  const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
+  const { toast } = useToast($2);
+  const { user } = useAuth($2);
+  const handleConnectWallet = $2;
       if (!ethereum) {
-        toast({
-          title: "Wallet not detected",
-          description: "Please install MetaMask or another Ethereum wallet to use this feature",
-          variant: "destructive"
-        });
+        toast($2);
         return
       }
-      
       // Request accounts
-      const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
-      const address = accounts[0];
-      
+      const accounts = await ethereum.request($2);
+      const address = $2;
       // Sign message to verify ownership
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
-      await ethereum.request({
-        method: 'personal_sign',
-        params: [address, message]
-      });
-      
-      setIsConnected(true);
+      const message = $2;
+      await ethereum.request($2);
+      setIsConnected($2);
       toast({
         title: "Wallet connected",
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
     } catch (error: any) {
       toast({
-        title: "Connection failed",
-        description: error.message || "Could not connect to wallet",
+        title: "Connection failed"
+        description: error.message |"Could not connect to wallet"
         variant: "destructive"
       })
     }
-  };
+  },
   
   const handleExportTokens = async () => {
-    setIsExporting(true);
-    setExportStatus('processing');
-    
+    setIsExporting($2);
+    setExportStatus($2);
     try {
       // Simulate token export
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000)),
       
-      setExportStatus('success');
+      setExportStatus($2);
       toast({
         title: "Tokens exported",
         description: "Your ZION$ tokens have been exported to your wallet"})
     } catch (error: any) {
-      setExportStatus('error'),
+      setExportStatus($2);
       toast({
-        title: "Export failed",
-        description: error.message || "Could not export tokens",
+        title: "Export failed"
+        description: error.message |"Could not export tokens"
         variant: "destructive"
       })
     } finally {
       setIsExporting(false)
     }
-  };
+  },
   
   return (
     <Card>
@@ -110,9 +98,9 @@ export function OnChainExport() {
                 Tokens Exported
               </Button>
             ) : (
-              <Button 
-                className="w-full" 
-                onClick={handleExportTokens} 
+              <Button
+                className="w-full"
+                onClick={handleExportTokens}
                 disabled={isExporting}
               >
                 {isExporting ? "Processing..." : "Export Tokens"}
@@ -134,4 +122,3 @@ export function OnChainExport() {
     </Card>
   )
 }
-;

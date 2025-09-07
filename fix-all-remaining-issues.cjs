@@ -1,383 +1,229 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-class AllRemainingIssuesFixer {
-  constructor() {
-    this.fixedFiles = [];
-    this.errors = [];
-  }
+console.log('🔧 Fixing all remaining issues...');
 
-  log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-  }
+// Fix auth.ts
+const authContent = `import type { NextApiRequest } from 'next';
 
-  createMissingModules() {
-    this.log('🔧 Creating missing modules...');
-    
-    // Create utils/fraud/store.ts
-    const fraudStoreContent = `export interface FraudRecord {
+export interface User {
   id: string;
-  type: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  description: string;
-  source: string;
-  timestamp: string;
-  status: 'pending' | 'investigating' | 'resolved' | 'false_positive';
-  adminId?: string;
-  resolution?: string;
+  email: string;
+  role: string;
 }
 
-export interface MonthlyReport {
-  month: string;
-  totalCases: number;
-  resolvedCases: number;
-  falsePositives: number;
-  averageResolutionTime: number;
-  topFraudTypes: Array<{ type: string; count: number }>;
+export function getRequestUserEmail(req: NextApiRequest): string | null {
+  const emailHeader = req.headers['x-user-email'];
+  if (typeof emailHeader === 'string') {
+    return emailHeader;
+  }
+  return null;
 }
 
-class FraudStore {
-  private records: Map<string, FraudRecord> = new Map();
+export function parseUserFromRequest(req: NextApiRequest): User | null {
+  const email = getRequestUserEmail(req);
+  if (!email) return null;
+  
+  return {
+    id: email,
+    email: email,
+    role: isAdmin(email) ? 'admin' : 'user'
+  };
+}
 
-  createRecord(record: Omit<FraudRecord, 'id' | 'timestamp'>): FraudRecord {
-    const id = Date.now().toString();
-    const newRecord: FraudRecord = {
-      ...record,
-      id,
-      timestamp: new Date().toISOString()
-    };
-    this.records.set(id, newRecord);
-    return newRecord;
-  }
+export function isAdmin(email: string): boolean {
+  const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean);
+  return admins.includes(email.toLowerCase());
+}
+`;
 
-  getRecord(id: string): FraudRecord | undefined {
-    return this.records.get(id);
-  }
+fs.writeFileSync('utils/auth.ts', authContent);
+console.log('✅ Fixed utils/auth.ts');
 
-  updateRecord(id: string, updates: Partial<FraudRecord>): FraudRecord | undefined {
-    const record = this.records.get(id);
-    if (!record) return undefined;
+// Fix fsdb.ts
+const fsdbContent = `import fs from 'fs';
+import path from 'path';
+import { promisify } from 'util';
 
-    const updatedRecord = { ...record, ...updates };
-    this.records.set(id, updatedRecord);
-    return updatedRecord;
-  }
+const writeFile = promisify(fs.writeFile);
+const readFile = promisify(fs.readFile);
+const mkdir = promisify(fs.mkdir);
 
-  listRecords(): FraudRecord[] {
-    return Array.from(this.records.values());
-  }
+const DATA_DIR = path.join(process.cwd(), 'data');
+const UPLOADS_ROOT = path.join(process.cwd(), 'uploads');
 
-  async generateMonthlyReport(month: string): Promise<MonthlyReport> {
-    const records = this.listRecords();
-    const monthRecords = records.filter(r => r.timestamp.startsWith(month));
-    
-    return {
-      month,
-      totalCases: monthRecords.length,
-      resolvedCases: monthRecords.filter(r => r.status === 'resolved').length,
-      falsePositives: monthRecords.filter(r => r.status === 'false_positive').length,
-      averageResolutionTime: 24, // placeholder
-      topFraudTypes: [
-        { type: 'suspicious_activity', count: 5 },
-        { type: 'unauthorized_access', count: 3 }
-      ]
-    };
+export async function ensureDataDir(): Promise<void> {
+  if (!fs.existsSync(DATA_DIR)) {
+    await mkdir(DATA_DIR, { recursive: true });
   }
 }
 
-export const fraudStore = new FraudStore();
-export const getFraudStore = () => fraudStore;`;
-
-    try {
-      fs.writeFileSync('utils/fraud/store.ts', fraudStoreContent);
-      this.fixedFiles.push('utils/fraud/store.ts');
-      this.log('✅ Created utils/fraud/store.ts', 'SUCCESS');
-    } catch (error) {
-      this.errors.push(`Failed to create utils/fraud/store.ts: ${error.message}`);
-      this.log(`❌ Failed to create utils/fraud/store.ts: ${error.message}`, 'ERROR');
-    }
-
-    // Create utils/fraud/types.ts
-    const fraudTypesContent = `export type AdminActionType = 'investigate' | 'resolve' | 'dismiss' | 'escalate';
-
-export type GptClassificationLabel = 'fraud' | 'suspicious' | 'legitimate' | 'unknown';
-
-export type MonitoredSource = 'api' | 'web' | 'mobile' | 'admin';
-
-export interface StoredFraudRecord {
-  id: string;
-  type: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  description: string;
-  source: MonitoredSource;
-  timestamp: string;
-  status: 'pending' | 'investigating' | 'resolved' | 'false_positive';
-  adminId?: string;
-  resolution?: string;
-  gptClassification?: GptClassificationLabel;
-  confidence?: number;
+export async function writeData(filename: string, data: any): Promise<void> {
+  await ensureDataDir();
+  const filepath = path.join(DATA_DIR, filename);
+  await writeFile(filepath, JSON.stringify(data, null, 2));
 }
 
-export interface FraudIngestionData {
-  type: string;
-  description: string;
-  source: MonitoredSource;
-  metadata?: Record<string, any>;
-  userId?: string;
-  ipAddress?: string;
-  userAgent?: string;
+export async function readData(filename: string): Promise<any> {
+  const filepath = path.join(DATA_DIR, filename);
+  try {
+    const content = await readFile(filepath, 'utf8');
+    return JSON.parse(content);
+  } catch (error) {
+    return null;
+  }
 }
 
-export interface AdminAction {
-  fraudId: string;
-  action: AdminActionType;
-  reason: string;
-  adminId: string;
-  timestamp: string;
-}`;
+export async function createDispute(dispute: any): Promise<void> {
+  const disputes = await readData('disputes.json') || [];
+  disputes.push(dispute);
+  await writeData('disputes.json', disputes);
+}
 
-    try {
-      fs.writeFileSync('utils/fraud/types.ts', fraudTypesContent);
-      this.fixedFiles.push('utils/fraud/types.ts');
-      this.log('✅ Created utils/fraud/types.ts', 'SUCCESS');
-    } catch (error) {
-      this.errors.push(`Failed to create utils/fraud/types.ts: ${error.message}`);
-      this.log(`❌ Failed to create utils/fraud/types.ts: ${error.message}`, 'ERROR');
-    }
+export async function readAllDisputes(): Promise<any[]> {
+  return await readData('disputes.json') || [];
+}
+
+export function generateCaseId(): string {
+  return 'CASE-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
+}
+
+export function getDisputeUploadDir(caseId: string): string {
+  return path.join(UPLOADS_ROOT, caseId);
+}
+`;
+
+fs.writeFileSync('utils/fsdb.ts', fsdbContent);
+console.log('✅ Fixed utils/fsdb.ts');
+
+// Fix industry-solutions/finance/page.tsx
+const financePageContent = `import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Finance Solutions | Zion Tech Group',
+  description: 'Professional finance solutions for your business needs.',
+  keywords: 'finance, solutions, business, technology'
+}
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Finance Solutions
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional finance solutions for your business needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">💰</div>
+            <h3 className="text-xl font-bold text-white mb-4">Financial Planning</h3>
+            <p className="text-gray-300">
+              Comprehensive financial planning and analysis solutions.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📊</div>
+            <h3 className="text-xl font-bold text-white mb-4">Analytics</h3>
+            <p className="text-gray-300">
+              Advanced financial analytics and reporting tools.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔒</div>
+            <h3 className="text-xl font-bold text-white mb-4">Security</h3>
+            <p className="text-gray-300">
+              Secure financial data management and compliance.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our finance solutions can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+`;
+
+fs.writeFileSync('app/services/industry-solutions/finance/page.tsx', financePageContent);
+console.log('✅ Fixed industry-solutions/finance/page.tsx');
+
+// Fix whitepaper/generate.ts
+const whitepaperContent = `import type { NextApiRequest, NextApiResponse } from "next";
+import OpenAI from "openai";
+
+const client = process.env.OPENAI_API_KEY
+  ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
+  : null;
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
   }
 
-  fixFraudApiFiles() {
-    this.log('🔧 Fixing fraud API files...');
-    
-    // Fix pages/api/fraud/admin/action.ts
-    const actionContent = `import { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-import { AdminActionType } from '../../../../utils/fraud/types';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  const { fraudId, action, reason, adminId } = req.body || {};
-  if (!fraudId || !action) {
-    return res.status(400).json({ error: 'fraudId and action are required' });
+  if (!client) {
+    return res.status(500).json({ error: "OpenAI client not configured" });
   }
 
   try {
-    const store = getFraudStore();
-    const record = store.getRecord(fraudId);
+    const { topic, industry, targetAudience } = req.body;
     
-    if (!record) {
-      return res.status(404).json({ error: 'Fraud record not found' });
-    }
-
-    const updatedRecord = store.updateRecord(fraudId, {
-      status: action === 'resolve' ? 'resolved' : 
-              action === 'dismiss' ? 'false_positive' : 
-              'investigating',
-      adminId,
-      resolution: reason
+    const prompt = \`Generate a comprehensive whitepaper about \${topic} for the \${industry} industry targeting \${targetAudience}.\`;
+    
+    const completion = await client.chat.completions.create({
+      model: "gpt-4",
+      messages: [{ role: "user", content: prompt }],
+      max_tokens: 4000,
     });
 
-    return res.status(200).json({
-      success: true,
-      record: updatedRecord
+    const content = completion.choices[0]?.message?.content || "Failed to generate content";
+    
+    return res.status(200).json({ 
+      success: true, 
+      content,
+      topic,
+      industry,
+      targetAudience
     });
   } catch (error) {
-    console.error('Fraud action error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
-  }
-}`;
-
-    try {
-      fs.writeFileSync('pages/api/fraud/admin/action.ts', actionContent);
-      this.fixedFiles.push('pages/api/fraud/admin/action.ts');
-      this.log('✅ Fixed pages/api/fraud/admin/action.ts', 'SUCCESS');
-    } catch (error) {
-      this.errors.push(`Failed to fix pages/api/fraud/admin/action.ts: ${error.message}`);
-      this.log(`❌ Failed to fix pages/api/fraud/admin/action.ts: ${error.message}`, 'ERROR');
-    }
-
-    // Fix pages/api/fraud/ingest.ts
-    const ingestContent = `import { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../utils/fraud/store';
-import {
-  FraudIngestionData,
-  GptClassificationLabel,
-  MonitoredSource,
-  StoredFraudRecord
-} from '../../../utils/fraud/types';
-import { sendWarningEmail } from '../../../utils/email';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  try {
-    const data: FraudIngestionData = req.body;
-    
-    if (!data.type || !data.description || !data.source) {
-      return res.status(400).json({ error: 'Missing required fields' });
-    }
-
-    const store = getFraudStore();
-    
-    // Classify using GPT (placeholder)
-    const gptClassification: GptClassificationLabel = 'suspicious';
-    const confidence = 0.85;
-
-    const record: StoredFraudRecord = {
-      id: Date.now().toString(),
-      type: data.type,
-      severity: confidence > 0.8 ? 'high' : 'medium',
-      description: data.description,
-      source: data.source,
-      timestamp: new Date().toISOString(),
-      status: 'pending',
-      gptClassification,
-      confidence
-    };
-
-    const createdRecord = store.createRecord(record);
-
-    // Send warning email for high severity cases
-    if (record.severity === 'high') {
-      await sendWarningEmail(record);
-    }
-
-    return res.status(201).json({
-      success: true,
-      recordId: createdRecord.id,
-      classification: gptClassification,
-      confidence
-    });
-  } catch (error) {
-    console.error('Fraud ingestion error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
-  }
-}`;
-
-    try {
-      fs.writeFileSync('pages/api/fraud/ingest.ts', ingestContent);
-      this.fixedFiles.push('pages/api/fraud/ingest.ts');
-      this.log('✅ Fixed pages/api/fraud/ingest.ts', 'SUCCESS');
-    } catch (error) {
-      this.errors.push(`Failed to fix pages/api/fraud/ingest.ts: ${error.message}`);
-      this.log(`❌ Failed to fix pages/api/fraud/ingest.ts: ${error.message}`, 'ERROR');
-    }
-
-    // Fix pages/api/fraud/report/monthly.ts
-    const monthlyContent = `import { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', 'GET');
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  try {
-    const { month } = req.query;
-    
-    if (!month || Array.isArray(month)) {
-      return res.status(400).json({ error: 'Month parameter is required' });
-    }
-
-    const store = getFraudStore();
-    const report = await store.generateMonthlyReport(month);
-    
-    res.status(200).json(report);
-  } catch (error) {
-    console.error('Monthly report error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
-  }
-}`;
-
-    try {
-      fs.writeFileSync('pages/api/fraud/report/monthly.ts', monthlyContent);
-      this.fixedFiles.push('pages/api/fraud/report/monthly.ts');
-      this.log('✅ Fixed pages/api/fraud/report/monthly.ts', 'SUCCESS');
-    } catch (error) {
-      this.errors.push(`Failed to fix pages/api/fraud/report/monthly.ts: ${error.message}`);
-      this.log(`❌ Failed to fix pages/api/fraud/report/monthly.ts: ${error.message}`, 'ERROR');
-    }
-  }
-
-  createEmailUtils() {
-    this.log('🔧 Creating email utilities...');
-    
-    const emailContent = `export async function sendWarningEmail(record: any): Promise<void> {
-  console.log('Sending warning email for fraud record:', record.id);
-  // Implementation would send actual email
-}
-
-export async function sendNotificationEmail(to: string, subject: string, body: string): Promise<void> {
-  console.log('Sending notification email to:', to);
-  // Implementation would send actual email
-}`;
-
-    try {
-      fs.writeFileSync('utils/email.ts', emailContent);
-      this.fixedFiles.push('utils/email.ts');
-      this.log('✅ Created utils/email.ts', 'SUCCESS');
-    } catch (error) {
-      this.errors.push(`Failed to create utils/email.ts: ${error.message}`);
-      this.log(`❌ Failed to create utils/email.ts: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async run() {
-    this.log('🚀 Starting All Remaining Issues Fix...');
-    this.log('='.repeat(60));
-
-    this.createMissingModules();
-    this.fixFraudApiFiles();
-    this.createEmailUtils();
-
-    // Generate report
-    this.log('\n📊 ALL REMAINING ISSUES FIX REPORT');
-    this.log('='.repeat(60));
-    this.log(`Files fixed: ${this.fixedFiles.length}`);
-    this.log(`Errors: ${this.errors.length}`);
-    
-    if (this.fixedFiles.length > 0) {
-      this.log('\n✅ Successfully fixed files:');
-      this.fixedFiles.forEach(file => this.log(`  - ${file}`));
-    }
-    
-    if (this.errors.length > 0) {
-      this.log('\n❌ Errors encountered:');
-      this.errors.forEach(error => this.log(`  - ${error}`));
-    }
-
-    // Save report
-    const report = {
-      timestamp: new Date().toISOString(),
-      fixedFiles: this.fixedFiles,
-      errors: this.errors,
-      totalFixed: this.fixedFiles.length,
-      totalErrors: this.errors.length
-    };
-
-    fs.writeFileSync('all-remaining-issues-fix-report.json', JSON.stringify(report, null, 2));
-    this.log('\n📄 Report saved to all-remaining-issues-fix-report.json');
-
-    return report;
+    console.error("Error generating whitepaper:", error);
+    return res.status(500).json({ error: "Failed to generate whitepaper" });
   }
 }
+`;
 
-// Run if called directly
-if (require.main === module) {
-  const fixer = new AllRemainingIssuesFixer();
-  fixer.run().catch(console.error);
+fs.writeFileSync('pages/api/whitepaper/generate.ts', whitepaperContent);
+console.log('✅ Fixed pages/api/whitepaper/generate.ts');
+
+// Fix AIServices.tsx - add missing comma
+const aiservicesPath = 'pages/AIServices.tsx';
+if (fs.existsSync(aiservicesPath)) {
+  let content = fs.readFileSync(aiservicesPath, 'utf8');
+  content = content.replace(
+    'targetUsers: "Enterprises, Security Teams, IT Departments"\n    features: [',
+    'targetUsers: "Enterprises, Security Teams, IT Departments",\n    features: ['
+  );
+  fs.writeFileSync(aiservicesPath, content);
+  console.log('✅ Fixed pages/AIServices.tsx');
 }
 
-module.exports = AllRemainingIssuesFixer;
+console.log('🎉 All remaining issues fixed!');

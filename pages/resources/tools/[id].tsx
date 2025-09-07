@@ -1,15 +1,13 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 export default function ToolResourcePage() {
-  const router = useRouter(),
+  const router = useRouter($2);
   const { id } = router.query,
 
   // Tools data - this should match the data in resources.tsx
-  const tools = [
-    {
-      id: 'automation-assessment',
+  const tools = $2;
       title: 'Automation Readiness Assessment',
       description: 'Evaluate your organization\'s readiness for AI automation implementation.',
       type: 'Interactive Tool',
@@ -184,8 +182,7 @@ export default function ToolResourcePage() {
     }
   ],
 
-  const tool = tools.find(t => t.id === id),
-
+  const tool = tools.find($2);
   if (!tool) {
     return (
       <>
@@ -295,4 +292,4 @@ export default function ToolResourcePage() {
       </div>
     </>
   )
-};
+}

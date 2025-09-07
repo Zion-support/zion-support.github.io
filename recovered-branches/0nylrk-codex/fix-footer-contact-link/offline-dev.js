@@ -1,37 +1,36 @@
 
-const http = require('http'),
-const fs = require('fs'),
-const path = require('path'),
-
+const http = require($2);
+const fs = require($2);
+const path = require($2);
 const server = http.createServer((req, res) => {
   if (req.url === '/' || req.url === '/index.html') {
     fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
       if (err) {
-        res.writeHead(500),
-        res.end('Error loading offline.html'),
+        res.writeHead($2);
+        res.end($2);
         return
       }
-      res.writeHead(200, { 'Content-Type': 'text/html' }),
+      res.writeHead($2);
       res.end(data)
     })
   } else if (req.url === '/online-check') {
     // Endpoint to check if we're online
-    res.writeHead(200, { 'Content-Type': 'application/json' }),
+    res.writeHead($2);
     res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
-    res.writeHead(404),
+    res.writeHead($2);
     res.end('Not found')
   }
 }),
 
-const PORT = 8080,
+const PORT = $2;
 server.listen(PORT, () => {
   console.log(`
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
 ║                                                                  ║
-║  🚀 Server running at: http://localhost:${PORT}                    ║
+║  🚀 Server running at: http: //localhost:${PORT}                    ║
 ║                                                                  ║
 ║  ℹ️  This is a placeholder server that doesn't require npm       ║
 ║     dependencies. Most features will not work until you install  ║
@@ -47,4 +46,3 @@ server.listen(PORT, () => {
 ╚══════════════════════════════════════════════════════════════════╝
 `)
 }),
-;

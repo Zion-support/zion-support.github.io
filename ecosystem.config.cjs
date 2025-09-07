@@ -12,143 +12,119 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
       },
-      cron_restart: '0 0 * * *', // Daily restart
-      error_file: './logs/ci-cd-error.log',
-      out_file: './logs/ci-cd-out.log',
-      log_file: './logs/ci-cd-combined.log',
-      time: true,    },
+      "cron_restart": '0 0 * * *', // Daily restart;
+      "error_file": './logs/ci-cd-error.log',
+      "out_file": './logs/ci-cd-out.log',
+      "log_file": './logs/ci-cd-combined.log',
+      "time": true;
+    },
     {
       name: 'continuous-automation',
       script: 'node',
-      args: 'scripts/automation/automation-orchestrator.cjs',
+      args: 'automation/master-orchestrator.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      error_file: './logs/automation-error.log',
-      out_file: './logs/automation-out.log',
-      log_file: './logs/automation-combined.log',
-      time: true,    },
+        NODE_ENV: 'production',
+      },
+      "cron_restart": '0 */6 * * *', // Every 6 hours;
+      "error_file": './logs/automation-error.log',
+      "out_file": './logs/automation-out.log',
+      "log_file": './logs/automation-combined.log',
+      "time": true;
+    },
     {
       name: 'comprehensive-automation',
       script: 'node',
-      args: 'scripts/automation/comprehensive-continuous-automation.cjs',
+      args: 'automation/comprehensive-automation-suite.cjs',
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',      },
-      cron_restart: '0 */6 * * *', // Every 6 hours
-      error_file: './logs/comprehensive-automation-error.log',
-      out_file: './logs/comprehensive-automation-out.log',
-      log_file: './logs/comprehensive-automation-combined.log',
-      time: true,    },
-    {
-      name: 'marketing-automation',
-      script: 'node',
-      args: 'scripts/linkedin_automation.js',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',      },
-      cron_restart: '0 */12 * * *', // Every 12 hours
-      error_file: './logs/marketing-automation-error.log',
-      out_file: './logs/marketing-automation-out.log',
-      log_file: './logs/marketing-automation-combined.log',
-      time: true,    },
-    {
-      name: 'security-audit',
-      name: 'bolt-zion-app',
-      script: 'npm',
-      args: 'audit',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '500M',
-      env: {
-        NODE_ENV: 'production',      },
-      cron_restart: '0 2 * * *', // Daily at 2 AM
-      error_file: './logs/security-audit-error.log',
-      out_file: './logs/security-audit-out.log',
-      log_file: './logs/security-audit-combined.log',
-      time: true,    },
-    {
-      name: 'test-runner',
-      script: 'npm',
-      args: 'test',
-      cwd: '/workspace',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'production',      },
-      cron_restart: '0 */4 * * *', // Every 4 hours
-      error_file: './logs/test-runner-error.log',
-      out_file: './logs/test-runner-out.log',
-      log_file: './logs/test-runner-combined.log',
-      time: true,    },
-    {
-      name: 'lint-checker',
-      script: 'npm',
-      args: 'run lint',
-      cwd: '/workspace',
         NODE_ENV: 'production',
       },
-      log_file: 'logs/pm2/preview.log',
-      error_file: 'logs/pm2/preview-error.log',
-      out_file: 'logs/pm2/preview-out.log',
+      "cron_restart": '0 */6 * * *', // Every 6 hours;
+      "error_file": './logs/comprehensive-automation-error.log',
+      "out_file": './logs/comprehensive-automation-out.log',
+      "log_file": './logs/comprehensive-automation-combined.log',
+      "time": true;
     },
-    {
-      name: 'auto-fix',
-      script: 'node',
-      args: 'scripts/pm2/auto-fix.cjs',
-      cron_restart: '0 */6 * * *',
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '512M',
-      env: { NODE_ENV: 'production' },
-      log_file: 'logs/pm2/auto-fix.log',
-      error_file: 'logs/pm2/auto-fix-error.log',
-      out_file: 'logs/pm2/auto-fix-out.log',
+    {;
+      "name": 'marketing-automation',
+      "script": 'node',
+      "args": 'scripts/linkedin_automation.js',
+      "cwd": '/workspace',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {;
+        "NODE_ENV": 'production';
+      },
+      "cron_restart": '0 */12 * * *', // Every 12 hours;
+      "error_file": './logs/marketing-automation-error.log',
+      "out_file": './logs/marketing-automation-out.log',
+      "log_file": './logs/marketing-automation-combined.log',
+      "time": true;
     },
-    {
-      name: 'healthcheck',
-      script: 'node',
-      args: 'scripts/pm2/healthcheck.cjs',
-      cron_restart: '*/5 * * * *',
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '128M',
-      env: { NODE_ENV: 'production' },
-      log_file: 'logs/pm2/health.log',
-      error_file: 'logs/pm2/health-error.log',
-      out_file: 'logs/pm2/health-out.log',
+    {;
+      "name": 'security-audit',
+      "script": 'npm',
+      "args": 'audit',
+      "cwd": '/workspace',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '500M',
+      "env": {;
+        "NODE_ENV": 'production';
+      },
+      "cron_restart": '0 2 * * *', // Daily at 2 AM;
+      "error_file": './logs/security-audit-error.log',
+      "out_file": './logs/security-audit-out.log',
+      "log_file": './logs/security-audit-combined.log',
+      "time": true;
     },
-    {
-      name: 'code-quality-monitor',
-      script: 'scripts/pm2/code-quality-monitor.cjs',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '500M',
-      env: {
-        NODE_ENV: 'production',      },
+    {;
+      "name": 'test-runner',
+      "script": 'npm',
+      "args": 'test',
+      "cwd": '/workspace',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '1G',
+      "env": {;
+        "NODE_ENV": 'production';
+      },
+      "cron_restart": '0 */4 * * *', // Every 4 hours;
+      "error_file": './logs/test-runner-error.log',
+      "out_file": './logs/test-runner-out.log',
+      "log_file": './logs/test-runner-combined.log',
+      "time": true;
+    },
+    {;
+      "name": 'lint-checker',
+      "script": 'npm',
+      "args": 'run lint',
+      "cwd": '/workspace',
+      "instances": 1,
+      "autorestart": true,
+      "watch": false,
+      "max_memory_restart": '500M',
+      "env": {;
+        "NODE_ENV": 'production';
+      },
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
       out_file: './logs/lint-checker-out.log',
       log_file: './logs/lint-checker-combined.log',
-      time: true
+      time: true,
     },
     {
       name: "zion-app",
@@ -156,17 +132,6 @@ module.exports = {
       args: "start",
       interpreter: "none",
       cwd: __dirname,
-        NODE_ENV: 'production',
-        PM2_PROCESS_NAME: 'code-quality-monitor',
-        QUALITY_THRESHOLD: '80',
-        AUTO_FIX_CRITICAL: 'true',
-      },
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      log_file: 'logs/pm2/code-quality-monitor.log',
-      error_file: 'logs/pm2/code-quality-monitor-error.log',
-      out_file: 'logs/pm2/code-quality-monitor-out.log',
-    }
-  ]
       watch: false,
       autorestart: true,
       max_restarts: 10,
@@ -218,4 +183,5 @@ module.exports = {
       out_file: "automation/logs/build-monitor-out.log",
       time: true
     }
-  ];};
+  ]
+};

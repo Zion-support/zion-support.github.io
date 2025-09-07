@@ -1,83 +1,80 @@
-
-import {useState} from 'react';
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Textarea} from '@/components/ui/textarea';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
-import {PortfolioProject} from '@/types/resume';
-import {usePortfolio} from '@/hooks/usePortfolio';
-import {useAuth} from '@/hooks/useAuth';
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from '@/components/ui/form',
+import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
+import { PortfolioProject } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+import { useAuth } from '@/hooks/useAuth';
 // Define schema for form validation
+
 const projectSchema = z.object({
-  title: z.string().min(1, 'Project title is required');
-  description: z.string().optional(),
-  technologies: z.string().optional(),
-  image_url: z.string().optional(),
+  title: z.string().min($2);
+  description: z.string().optional($2);
+  technologies: z.string().optional($2);
+  image_url: z.string().optional($2);
   github_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
-    .optional();
+    .optional($2);
   demo_url: z
     .union([z.string().url('Please enter a valid URL'), z.literal('')])
-    .optional();
+    .optional($2);
   pdf_url: z.string().optional()}),
 
-type ProjectFormValues = z.infer<typeof projectSchema>;
-
+type ProjectFormValues = $2;
 interface ProjectFormProps {
-  project?: PortfolioProject;
+  project?: PortfolioProject,
   onSuccess: () => void,
   onCancel: () => void
 }
-
 export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {
-  const { user } = useAuth();
-  const { addProject, updateProject } = usePortfolio();
-  const [isLoading, setIsLoading] = useState(false);
-  const isEditing = !!project;
-  
+  const { user } = useAuth($2);
+  const { addProject, updateProject } = usePortfolio($2);
+  const [isLoading, setIsLoading] = useState($2);
+  const isEditing = $2;
   const form = useForm<ProjectFormValues>({
-    resolver: zodResolver(projectSchema),
+    resolver: zodResolver($2);
     defaultValues: {
-      title: project?.title || '',
-      description: project?.description || '',
-      technologies: project?.technologies ? project.technologies.join() : '',
-      image_url: project?.image_url || '',
-      github_url: project?.github_url || '',
-      demo_url: project?.demo_url || '',
-      pdf_url: project?.pdf_url || ''}
-  });
+      title: project ?.title || '',
+      description: project ?.description || '',
+      technologies: project ?.technologies ? project.technologies.join() : '',
+      image_url: project ?.image_url || '',
+      github_url: project ?.github_url || '',
+      demo_url: project ?.demo_url || '',
+      pdf_url: project ?.pdf_url || ''}
+  }),
   
-  const onSubmit = async (data: ProjectFormValues) => {
-    if (!user) return;
-    
-    setIsLoading(true),
-    
+  const onSubmit = $2;
+    setIsLoading($2);
     try {
-      const projectData: PortfolioProject = {
-        title: data.title,
+      const projectData: PortfolioProject = $2;
         description: data.description,
         technologies: data.technologies ? 
-          data.technologies.split().map(tech => tech.trim()) : [],
+          data.technologies.split().map(tech = $2;
         image_url: data.image_url,
         github_url: data.github_url || undefined,
         demo_url: data.demo_url || undefined,
         pdf_url: data.pdf_url},
       
-      let success = false;
-      
+      let success = $2;
       if (isEditing && project?.id) {
         success = await updateProject(project.id, projectData)
       } else {
-        const projectId = await addProject(projectData);
+        const projectId = await addProject($2);
         success = !!projectId
       }
-      
       if (success) {
-        onSuccess();
+        onSuccess($2);
         form.reset()
       }
     } catch (error) {
@@ -85,7 +82,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     } finally {
       setIsLoading(false)
     }
-  };
+  },
   
   return (
     <Form {...form}>
@@ -103,7 +100,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             </FormItem>
           )}
         />
-        
         <FormField
           control={form.control}
           name="description"
@@ -111,17 +107,16 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
-                <Textarea 
+                <Textarea
                   placeholder="Describe what the project does and your role in it..."
                   className="min-h-[100px]"
-                  {...field} 
+                  {...field}
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        
         <FormField
           control={form.control}
           name="technologies"
@@ -135,7 +130,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             </FormItem>
           )}
         />
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
             control={form.control}
@@ -153,7 +147,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               </FormItem>
             )}
           />
-          
           <FormField
             control={form.control}
             name="demo_url"
@@ -171,7 +164,6 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             )}
           />
         </div>
-        
         <FormField
           control={form.control}
           name="image_url"
@@ -188,9 +180,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             </FormItem>
           )}
         />
-        
         {/* Future file upload field would go here */}
-        
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
@@ -204,4 +194,3 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
     </Form>
   )
 }
-;

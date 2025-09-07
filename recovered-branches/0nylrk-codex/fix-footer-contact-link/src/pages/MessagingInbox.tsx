@@ -1,25 +1,24 @@
-
 import React, { useEffect, useState } from 'react';
-import {MessageSquare, Video} from 'lucide-react';
-import {useMessaging} from '@/context/MessagingContext';
-import {ProtectedRoute} from '@/components/ProtectedRoute';
-import {ConversationsList, ConversationDetailView} from '@/components/messaging';
-import {useIsMobile} from '@/hooks/use-mobile';
-import {toast} from 'sonner';
-import {Button} from '@/components/ui/button';
-import {useNavigate} from 'react-router-dom';
+import { MessageSquare, Video  } from 'lucide-react';
+import { useMessaging  } from '@/context/MessagingContext';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView  } from '@/components/messaging';
+import { useIsMobile  } from '@/hooks/use-mobile';
+import { toast  } from 'sonner';
+import { Button  } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 export default function MessagingInbox() {
   const { 
-    conversations;
+    conversations,
     activeConversation, 
     setActiveConversation, 
-    markAsRead;
-    fetchConversations;
+    markAsRead,
+    fetchConversations,
     isLoading
-  } = useMessaging();
-  const isMobile = useIsMobile();
-  const navigate = useNavigate();
-  const [activeCall, setActiveCall] = useState<string | null>(null);
+  } = useMessaging($2);
+  const isMobile = useIsMobile($2);
+  const navigate = useNavigate($2);
+  const [activeCall, setActiveCall] = useState<string | null>(null),
   
   useEffect(() => {
     // Fetch conversations when component mounts
@@ -27,31 +26,27 @@ export default function MessagingInbox() {
       try {
         await fetchConversations()
       } catch (error) {
-        console.error("Failed to load conversations:", error);
+        console.error($2);
         toast.error("Failed to load messages. Please try again.")
       }
-    };
+    },
     
     loadData()
-  }, [fetchConversations]);
+  }, [fetchConversations]),
   
   const startVideoCall = () => {
     if (!activeConversation) {
-      toast.error("Please select a conversation first");
+      toast.error($2);
       return
     }
     
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-    
+    const roomId = $2;
+    setActiveCall($2);
     // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-    });
-    
+    toast.success($2);
     // Navigate to video call page
     navigate(`/call/${roomId}`)
-  };
+  },
   
   return (
     <ProtectedRoute>
@@ -62,9 +57,8 @@ export default function MessagingInbox() {
               <MessageSquare className="h-6 w-6" />
               Messages
             </h1>
-            
             {activeConversation && (
-              <Button 
+              <Button
                 onClick={startVideoCall}
                 className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
@@ -73,7 +67,6 @@ export default function MessagingInbox() {
               </Button>
             )}
           </div>
-          
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
               {/* Conversations List */}
@@ -89,17 +82,14 @@ export default function MessagingInbox() {
                   markAsRead={markAsRead}
                 />
               )}
-              
               {/* Conversation Detail */}
               <ConversationDetailView />
             </div>
           </div>
         </div>
-
         {/* Add extra bottom padding on mobile to account for the bottom nav */}
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
   )
 }
-;

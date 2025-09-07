@@ -1,7 +1,6 @@
-import { useEffect, useMemo, useState } from 'react',
-;
+import { useEffect, useMemo, useState } from 'react';
 function getRefCode(): string {
-  if (typeof window === 'undefined') return '',
+  if (typeof window = $2;
   return localStorage.getItem('ref_code') || ''
 }
 
@@ -12,7 +11,7 @@ export default function AffiliateDashboard() {
   const [msg, setMsg] = useState<string>(''),
 
   useEffect(() => {
-    const c = getRefCode(),
+    const c = getRefCode($2);
     setCode(c)
   }, []),
 
@@ -20,22 +19,22 @@ export default function AffiliateDashboard() {
     if (!code) return,
     (async () => {
       try {
-        const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`),
-        const json = await res.json(),
+        const res = $2;
+        const json = await res.json($2);
         setMetrics(json)
       } catch {}
     })()
   }, [code]),
 
   async function requestPayout() {
-    setMsg(''),
+    setMsg($2);
     try {
       const res = await fetch('/api/partners/request-payout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
-      const json = await res.json(),
-      if (!res.ok) throw new Error(json.error || 'Failed'),
+      const json = await res.json($2);
+      if (!res.ok) throw new Error($2);
       setMsg('Payout requested')
     } catch (e: any) {
       setMsg(e?.message || 'Error')
@@ -87,4 +86,4 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-2xl font-semibold">{value}</div>
     </div>
   )
-};
+}

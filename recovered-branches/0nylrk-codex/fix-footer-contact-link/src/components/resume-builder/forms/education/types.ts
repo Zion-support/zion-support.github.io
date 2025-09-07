@@ -1,20 +1,20 @@
 
-import {Education} from '@/types/resume';
+import { Education } from '@/types/resume';
 export interface EducationFormProps {
-  resumeId: string;
-  educationEntries: Education[];
+  resumeId: string,
+  educationEntries: Education[],
   onComplete: () => void,
   onBack: () => void
 }
 
 export interface EducationItemProps {
-  education: Education;
+  education: Education,
   onEdit: (education: Education) => void,
   onDelete: (id: string) => void
 }
 
 export interface EducationFormFieldsProps {
-  isEditing: boolean;
+  isEditing: boolean,
   onSubmit: (data: any) => Promise<void>,
   onCancel: () => void
 }

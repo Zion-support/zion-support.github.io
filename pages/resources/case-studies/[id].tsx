@@ -1,15 +1,13 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 export default function CaseStudyResourcePage() {
-  const router = useRouter(),
+  const router = useRouter($2);
   const { id } = router.query,
 
   // Case studies data - this should match the data in resources.tsx
-  const caseStudies = [
-    {
-      id: 'ai-automation-manufacturing',
+  const caseStudies = $2;
       title: 'AI-Powered Manufacturing Automation',
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
@@ -202,8 +200,7 @@ export default function CaseStudyResourcePage() {
     }
   ],
 
-  const caseStudy = caseStudies.find(study => study.id === id),
-
+  const caseStudy = caseStudies.find($2);
   if (!caseStudy) {
     return (
       <>
@@ -284,4 +281,4 @@ export default function CaseStudyResourcePage() {
       </div>
     </>
   )
-};
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
-import {Shield, Phone, Mail, MapPin, Check, ArrowRight} from 'lucide-react';
+import { Shield, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import {Button} from '../components/ui/Button';
-import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
+import { Button } from '../components/ui/Button';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function ApiObservabilityPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'));
-  if (!service) return null;
+  const service = $2;
+  if (!service) return null,
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
@@ -52,4 +52,3 @@ export default function ApiObservabilityPage() {
   )
 }
 
-;

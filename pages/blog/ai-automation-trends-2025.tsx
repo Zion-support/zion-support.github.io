@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import React from 'react',
+import React from 'react';
 export default function AIAutomationTrends2025() {
   return (
     <>
@@ -220,7 +220,7 @@ export default function AIAutomationTrends2025() {
               <div className='flex gap-4'>
                 <a
                   href='#'
-                  className='px-4 py-2 bg-blue-600 hover: bg-blue-700 rounded-lg text-white transition-colors'
+                  className='px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white transition-colors'
                 >
                   Twitter
                 </a>

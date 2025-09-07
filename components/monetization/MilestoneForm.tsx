@@ -1,56 +1,29 @@
 import React, { useState } from 'react';
 type Props = {
-  onSubmit: (payload: {
-    title: string;
-    description?: string;
-    dueDate: string;
-    amountUsd: number;
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-};
+  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number}) => Promise<void> | void
+},
 
 export default function MilestoneForm({ onSubmit }: Props) {
-  const [title, setTitle] = useState(''),
-  const [description, setDescription] = useState(''),
-  const [dueDate, setDueDate] = useState(''),
+  const [title, setTitle] = useState($2);
+  const [description, setDescription] = useState($2);
+  const [dueDate, setDueDate] = useState($2);
   const [amountUsd, setAmountUsd] = useState<string>(''),
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false),
-
+  const [error, setError] = useState<string | null>(null),
+  const [loading, setLoading] = useState($2);
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    const parsedAmount = Number(amountUsd),
+    e.preventDefault($2);
+    setError($2);
+    const parsedAmount = Number($2);
     if (!title || !dueDate || !amountUsd || Number.isNaN(parsedAmount)) {
-      setError('Please provide Title, Due Date and a valid Amount.');
-      return;
+      setError($2);
+      return
     }
-    setLoading(true),
+    setLoading($2);
     try {
-      await onSubmit({
-        title,
-        description: description || undefined,
-        dueDate,
-        amountUsd: parsedAmount,
-      });
-      setTitle('');
-      setDescription('');
-      setDueDate('');
-      setAmountUsd('');
-    } catch (err: any) {
-      setError(err?.message || 'Failed to create milestone');
-    } finally {
-      setLoading(false);    }
-  };
-
-  return (
-    <form onSubmit={handleSubmit} className='space-y-4'>
-      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
-    setLoading(true);
-    try {
-      await onSubmit({ title, description: description || undefined, dueDate, amountUsd: parsedAmount }),
-      setTitle('');
-      setDescription('');
-      setDueDate('');
+      await onSubmit($2);
+      setTitle($2);
+      setDescription($2);
+      setDueDate($2);
       setAmountUsd('')
     } catch (err: any) {
       setError(err?.message || 'Failed to create milestone')
@@ -60,20 +33,10 @@ export default function MilestoneForm({ onSubmit }: Props) {
   },
 
   return (
-    <form onSubmit={handleSubmit} className='space-y-4'>
-      {error && <div className='text-red-600 text-sm'>{error}</div>}
+    <form onSubmit={handleSubmit} className="space-y-4">
+      {error && <div className="text-red-600 text-sm">{error}</div>}
       <div>
-        <label className='block text-sm font-medium'>Title</label>
-        <input
-          className='mt-1 w-full rounded border px-3 py-2'
-          value={title}
-          onChange={e => setTitle(e.target.value)}
-          placeholder='Phase 1 – Backend Setup'          required
-        />
-      </div>
-      <div>
-        <label className='block text-sm font-medium'>Description</label>      <div>
-        <label className="block text-sm font-medium" htmlFor="input-Title">Title</label>
+        <label className="block text-sm font-medium">Title</label>
         <input
           className="mt-1 w-full rounded border px-3 py-2"
           value={title}
@@ -83,27 +46,8 @@ export default function MilestoneForm({ onSubmit }: Props) {
         />
       </div>
       <div>
-        <label className='block text-sm font-medium'>Description</label>
+        <label className="block text-sm font-medium">Description</label>
         <textarea
-          className='mt-1 w-full rounded border px-3 py-2'
-          value={description}
-          onChange={e => setDescription(e.target.value)}
-          placeholder='Describe deliverables...'
-          rows={3}
-        />
-      </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-        <div>
-          <label className='block text-sm font-medium'>Due Date</label>
-          <input
-            type='date'
-            className='mt-1 w-full rounded border px-3 py-2'
-            value={dueDate}
-            onChange={e => setDueDate(e.target.value)}            required
-          />
-        </div>
-        <div>
-          <label className='block text-sm font-medium'>Amount (USD)</label>        <textarea
           className="mt-1 w-full rounded border px-3 py-2"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
@@ -113,7 +57,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium" htmlFor="input-Due Date">Due Date</label>
+          <label className="block text-sm font-medium">Due Date</label>
           <input
             type="date"
             className="mt-1 w-full rounded border px-3 py-2"
@@ -123,15 +67,8 @@ export default function MilestoneForm({ onSubmit }: Props) {
           />
         </div>
         <div>
-          <label className='block text-sm font-medium'>Amount (USD)</label>
+          <label className="block text-sm font-medium">Amount (USD)</label>
           <input
-            type='number'
-            min={0}
-            step='0.01'
-            className='mt-1 w-full rounded border px-3 py-2'
-            value={amountUsd}
-            onChange={e => setAmountUsd(e.target.value)}
-            placeholder='3000'            required          <input
             type="number"
             min={0}
             step="0.01"
@@ -144,13 +81,12 @@ export default function MilestoneForm({ onSubmit }: Props) {
         </div>
       </div>
       <button
-        type='submit'
-        className='bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50'        disabled={loading}        type="submit"
+        type="submit"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
         disabled={loading}
       >
         {loading ? 'Adding...' : 'Add Milestone'}
       </button>
     </form>
-);
+  )
 }

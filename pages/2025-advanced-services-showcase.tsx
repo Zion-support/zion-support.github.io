@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
@@ -8,13 +8,13 @@ import {
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
 } from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion',;
-import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations',;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { advancedInnovativeServices } from '../data/2025-advanced-innovative-services-expansion';
+import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations';
 export default function AdvancedServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [searchTerm, setSearchTerm] = useState($2);
+  const [selectedCategory, setSelectedCategory] = useState($2);
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]),
@@ -36,14 +36,10 @@ export default function AdvancedServicesShowcase2025() {
     { id: 'Metaverse & VR/AR', name: 'Metaverse', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('VR/AR')).length, icon: '🌐' }
   ],
 
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
+  const filteredServices = $2;
+      const matchesCategory = selectedCategory === 'all' || service.category.includes($2);
       const price = parseFloat(service.price.replace('$', '').replace(, '')),
-      const matchesPrice = price >= priceRange[0] && price <= priceRange[1],
+      const matchesPrice = $2;
       return matchesSearch && matchesCategory && matchesPrice
     })
     .sort((a, b) => {
@@ -55,13 +51,12 @@ export default function AdvancedServicesShowcase2025() {
         case 'rating':
           return b.rating - a.rating,
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime($2);
         default: return 0
       }
     }),
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
+  const containerVariants = $2;
     visible: {
       opacity: 1,
       transition: {
@@ -71,7 +66,7 @@ export default function AdvancedServicesShowcase2025() {
   },
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 20},
     visible: {
       opacity: 1,
       y: 0,
@@ -82,7 +77,7 @@ export default function AdvancedServicesShowcase2025() {
   },
 
   const getCategoryIcon = (category: string) => {
-    const categoryData = categories.find(cat => cat.id === category),
+    const categoryData = categories.find($2);
     return categoryData?.icon || '🚀'
   },
 
@@ -103,8 +98,8 @@ export default function AdvancedServicesShowcase2025() {
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
@@ -142,8 +137,8 @@ export default function AdvancedServicesShowcase2025() {
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20}}
+            animate={{ opacity: 1, y: 0}}
             transition={{ duration: 0.6 }}
             className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
           >
@@ -246,8 +241,8 @@ export default function AdvancedServicesShowcase2025() {
         <div className="max-w-7xl mx-auto">
           {/* Results Count */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
@@ -392,8 +387,8 @@ export default function AdvancedServicesShowcase2025() {
           {/* No Results */}
           {filteredServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0}}
+              animate={{ opacity: 1}}
               className="text-center py-20"
             >
               <div className="text-6xl mb-4">🔍</div>
@@ -401,8 +396,8 @@ export default function AdvancedServicesShowcase2025() {
               <p className="text-white/70 mb-6">Try adjusting your search criteria or filters</p>
               <button
                 onClick={() => {
-                  setSearchTerm(''),
-                  setSelectedCategory('all'),
+                  setSearchTerm($2);
+                  setSelectedCategory($2);
                   setPriceRange([0, 10000])
                 }}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
@@ -418,10 +413,10 @@ export default function AdvancedServicesShowcase2025() {
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            viewport={{ once: true}}
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -451,4 +446,4 @@ export default function AdvancedServicesShowcase2025() {
       <EnhancedFooter />
     </div>
   )
-};
+}

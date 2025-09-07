@@ -1,9 +1,8 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function CaseStudyPage() {
-  const caseStudy = {
-    id: 'ai-automation-manufacturing',
+  const caseStudy = $2;
     title: 'AI-Powered Manufacturing Automation',
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
@@ -15,8 +14,7 @@ export default function CaseStudyPage() {
     technologies: ['Machine LearningComputer VisionIoT SensorsPredictive Analytics'],
     duration: '6 months',
     teamSize: '8 engineers',
-    featured: true
-  },
+    featured: true},
 
   return (
     <>
@@ -125,4 +123,4 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
-};
+}

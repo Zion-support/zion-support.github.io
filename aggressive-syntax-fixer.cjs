@@ -29,9 +29,7 @@ class AggressiveSyntaxFixer {
       const originalContent = content;
 
       // Remove merge conflict markers
-      content = content.replace(/[\s\S]*?
-      
-      // Fix common syntax errors
+      content = content.replace(/      // Fix common syntax errors
       content = content.replace(/import\s+{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"];?\s*$/gm, 'import { $1 } from "$2";');
       content = content.replace(/export\s+default\s+function\s+(\w+)/g, 'export default function $1');
       content = content.replace(/const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/g, 'const $1 = () => {');

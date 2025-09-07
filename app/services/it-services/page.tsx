@@ -1,1 +1,61 @@
-export const metadata = { title: 'IT Services | Zion Tech Group' }; export default function ITServicesPage() { return ( <section> <h1 style={{fontSize: 26,fontWeight: 800}}>IT Services</h1> <p style={{marginTop: 8,color: '#374151'}}>Cloud,DevOps,SRE and security services engineered for uptime and efficiency.</p> <div style={{display: 'grid',gap: 12,marginTop: 16}}> <Item title="Cloud & Infra" details={["AWS/GCP/Azure","Kubernetes","Serverless","IaC (Terraform)"]} /> <Item title="DevOps & SRE" details={["CI/CD","Observability","Autoscaling","Chaos testing"]} /> <Item title="Security" details={["Hardening","Zero Trust","Vuln mgmt","Compliance"]} /> </div> <Pricing /> </section> )} function Item({ title,details }: { title: string; details: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h3 style={{fontWeight: 700}}>{title}</h3> <ul style={{paddingLeft: 18,color: '#4b5563'}}>{details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul> </div> )} function Pricing() { return ( <div style={{marginTop: 20,display: 'grid',gap: 12,gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))'}}> <Plan name="Assessment" price="$4k–$10k" features={["2 weeks","Cloud review","Security audit","Roadmap"]} /> <Plan name="Implementation" price="$15k–$50k" features={["4–8 weeks","Infra as code","CI/CD","Monitoring"]} /> <Plan name="Managed" price="$5k+/mo" features={["24/7 on-call","SLO mgmt","Cost optimization","Reports"]} /> </div> )} function Plan({ name,price,features }: { name: string; price: string; features: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h4 style={{fontWeight: 700}}>{name}</h4> <div style={{color: '#111827',fontWeight: 800,marginTop: 4}}>{price}</div> <ul style={{paddingLeft: 18,color: '#4b5563',marginTop: 8}}>{features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
+import React from 'react'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'It Services | Zion Tech Group',
+  description: 'Professional it services services for your business needs.',
+  keywords: 'it services, services, business, technology'
+}
+
+export default function ServicePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            It Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional it services services for your business needs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🚀</div>
+            <h3 className="text-xl font-bold text-white mb-4">Fast & Reliable</h3>
+            <p className="text-gray-300">
+              High-performance solutions that deliver results quickly and consistently.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">🔧</div>
+            <h3 className="text-xl font-bold text-white mb-4">Easy Integration</h3>
+            <p className="text-gray-300">
+              Seamlessly integrate with your existing systems and workflows.
+            </p>
+          </div>
+          
+          <div className="bg-gray-800 rounded-lg p-6">
+            <div className="text-4xl mb-4">📈</div>
+            <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
+            <p className="text-gray-300">
+              Grow with your business with our flexible and scalable platform.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Contact us today to learn how our it services services can transform your business.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-200">
+            Contact Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}

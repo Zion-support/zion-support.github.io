@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from 'react',;
-import type { NextPage } from 'next',;
-import type { Review } from '../../types/reviews',;
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
-
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import type { Review } from '../../types/reviews';
+const ADMIN_KEY = $2;
 const AdminReviewsPage: NextPage = () => {
   const [pending, setPending] = useState<Review[]>([]),
   const [all, setAll] = useState<Review[]>([]),
-  const [adminKey, setAdminKey] = useState(''),
-
+  const [adminKey, setAdminKey] = useState($2);
   async function refresh() {
-    const res = await fetch('/api/admin/debug/reviews'),
-    const data = await res.json(),
+    const res = await fetch($2);
+    const data = await res.json($2);
     if (res.ok) {
-      setAll(data.reviews),
+      setAll($2);
       setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
     }
   }
@@ -62,4 +60,4 @@ const AdminReviewsPage: NextPage = () => {
   )
 },
 
-export default AdminReviewsPage,;
+export default AdminReviewsPage,

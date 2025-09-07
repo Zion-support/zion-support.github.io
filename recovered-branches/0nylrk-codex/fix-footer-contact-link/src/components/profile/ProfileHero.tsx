@@ -1,30 +1,30 @@
 
-import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
-import {AspectRatio} from "@/components/ui/aspect-ratio";
-import {Badge} from "@/components/ui/badge";
-import {Star} from "lucide-react";
-import {cn} from "@/lib/utils";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Badge } from "@/components/ui/badge";
+import { Star } from "lucide-react";
+import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
   name: string,
   title: string,
-  avatarUrl?: string;
-  coverImageUrl?: string;
-  location?: string;
-  rating?: number;
-  reviewCount?: number;
-  aiScore?: number;
+  avatarUrl?: string,
+  coverImageUrl?: string,
+  location?: string,
+  rating?: number,
+  reviewCount?: number,
+  aiScore?: number,
   profileType: 'service' | 'talent'
 }
 
 export function ProfileHero({
-  name;
-  title;
-  avatarUrl;
-  coverImageUrl;
-  location;
-  rating;
-  reviewCount;
-  aiScore;
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
   profileType
 }: ProfileHeroProps) {
   return (
@@ -54,13 +54,7 @@ export function ProfileHero({
               )}
             </Avatar>
             
-            <div className="mt-4 md:mt-0 md:ml-6 md:mb-1">
-              <div className="flex flex-wrap items-center gap-2 mb-1">
-                <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
-                <Badge 
-                  variant="outline" 
-                  className={cn(
-                    "ml-2 border-zion-purple/50 text-zion-cyan";
+            <div className = $2;
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                 >

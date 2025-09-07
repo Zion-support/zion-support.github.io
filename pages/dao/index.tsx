@@ -1,10 +1,8 @@
-import { useEffect, useState } from 'react',
-;
-type Holder = { address: string, amount: string },
+import { useEffect, useState } from 'react';
+type Holder = { address: string, amount: string},
 
-type Metrics = {
-  updatedAt: number,
-  tokenDistribution: { address: string, percent: number }[],
+type Metrics = $2;
+  tokenDistribution: { address: string, percent: number}[],
   topHolders: Holder[],
   activeProposals: any[],
   governanceParticipationRate: number,
@@ -13,14 +11,13 @@ type Metrics = {
 
 export default function DaoMetrics() {
   const [data, setData] = useState<Metrics | null>(null),
-  const [loading, setLoading] = useState(true),
-
+  const [loading, setLoading] = useState($2);
   useEffect(() => {
     async function load() {
-      setLoading(true),
-      const resp = await fetch('/api/dao/metrics'),
-      const json = await resp.json(),
-      setData(json),
+      setLoading($2);
+      const resp = await fetch($2);
+      const json = await resp.json($2);
+      setData($2);
       setLoading(false)
     }
     load()
@@ -102,4 +99,4 @@ export default function DaoMetrics() {
       </section>
     </div>
   )
-};
+}

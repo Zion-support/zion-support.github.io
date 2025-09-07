@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react',;
-import Head from 'next/head',;
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 export default function AdminWeb3Page() {
   const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]),
 
   useEffect(() => {
-    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null,
+    const raw = $2;
     setUsers(raw ? JSON.parse(raw) : [])
   }, []),
 
@@ -13,13 +13,11 @@ export default function AdminWeb3Page() {
     setUsers(list)
   },
 
-  const metrics = {
-    total: users.length,
-    evm: users.filter(u => u.chain === 'evm').length,
-    sol: users.filter(u => u.chain === 'sol').length,
-    enabled: users.filter(u => u.enabled).length,
-    disabled: users.filter(u => !u.enabled).length},
-
+  const metrics = $2;
+    evm: users.filter(u = $2;
+    sol: users.filter(u = $2;
+    enabled: users.filter(u = $2;
+    disabled: users.filter(u = $2;
   return (
     <>
       <Head><title>Admin — Web3</title></Head>
@@ -49,4 +47,4 @@ export default function AdminWeb3Page() {
       </div>
     </>
   )
-};
+}
