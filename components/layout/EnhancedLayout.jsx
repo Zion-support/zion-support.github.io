@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
 
@@ -12,6 +13,10 @@ const EnhancedLayout = ({ children }) => {
       <EnhancedFooter />
     </div>
   );
+};
+
+EnhancedLayout.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default EnhancedLayout;
