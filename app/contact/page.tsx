@@ -49,7 +49,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to transform your business? Let's discuss your project and discover how our solutions can accelerate your growth.
+            Ready to transform your business? Let&apos;s discuss your project and discover how our solutions can accelerate your growth.
           </p>
         </div>
 
