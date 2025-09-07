@@ -1,12 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> dbe5fd47af13285347009b34a7a7bf2071025560
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Welcome to Zion Tech Group</h1>
     </main>
->>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -28,6 +30,7 @@ export const metadata: Metadata = {
       }
     ]
   },
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -268,6 +271,8 @@ export default function HomePage() {
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl">🤖</span>
 =======
+=======
+>>>>>>> dbe5fd47af13285347009b34a7a7bf2071025560
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Enterprise AI & IT Solutions',
@@ -445,7 +450,6 @@ export default function HomePage() {
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
               <div className="text-gray-600">Services Delivered</div>
->>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
             <p className="text-gray-600">
