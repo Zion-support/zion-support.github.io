@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-=======
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>Welcome to Zion Tech Group</h1>
     </main>
->>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -27,41 +24,6 @@ export const metadata: Metadata = {
       }
     ]
   },
-<<<<<<< HEAD
-};
-
-export default function HomePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
-            Zion Tech Group
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Leading provider of enterprise-grade AI solutions, micro SaaS development, and IT services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
-            >
-              Get Started
-            </Link>
-            <Link 
-              href="/about" 
-              className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors"
-            >
-              Learn More
-            </Link>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🤖</span>
-=======
   twitter: {
     card: 'summary_large_image',
     title: 'Zion Tech Group - Enterprise AI & IT Solutions',
@@ -227,7 +189,6 @@ export default function HomePage() {
             <div>
               <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
               <div className="text-gray-600">Services Delivered</div>
->>>>>>> 874273566b5ab11cb4989ad42a33c826f8981b98
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
             <p className="text-gray-600">
