@@ -6,8 +6,7 @@
 set -e
 
 echo "🚀 Starting Enhanced PM2 Automation System..."
-echo "=============================================="
-
+echo "
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -108,81 +107,13 @@ show_status() {
 show_commands() {
     echo ""
     echo "🚀 Enhanced PM2 Automation System - Available Commands"
-    echo "======================================================"
-    echo ""
-    echo "📊 Management Commands:"
-    echo "  npm run automation:enhanced:start    - Start all automations"
-    echo "  npm run automation:enhanced:stop     - Stop all automations"
-    echo "  npm run automation:enhanced:restart  - Restart all automations"
-    echo "  npm run automation:enhanced:status   - Check status"
-    echo "  npm run automation:enhanced:logs     - View logs"
-    echo "  npm run automation:enhanced:monit    - Open monitoring interface"
-    echo ""
-    echo "🤖 AI-Powered Automations:"
-    echo "  npm run ai:code-review               - AI code review"
-    echo "  npm run ai:performance               - Performance optimization"
-    echo "  npm run ai:dependencies              - Smart dependency management"
-    echo "  npm run ai:security                  - Security intelligence"
-    echo "  npm run ai:quality                   - Code quality intelligence"
-    echo "  npm run ai:testing                   - Testing intelligence"
-    echo "  npm run ai:seo                       - SEO & analytics intelligence"
-    echo "  npm run ai:dev-assistant             - Real-time development assistant"
-    echo "  npm run ai:build                     - Intelligent build orchestration"
-    echo "  npm run ai:health                    - Code health monitoring"
-    echo ""
-    echo "🛠️  Development Commands:"
-    echo "  npm run dev:assistant                - Start development assistant"
-    echo "  npm run dev:review                   - Run code review"
-    echo "  npm run dev:optimize                 - Optimize performance"
-    echo "  npm run dev:dependencies             - Manage dependencies"
-    echo "  npm run dev:security                 - Check security"
-    echo "  npm run dev:quality                  - Assess code quality"
-    echo "  npm run dev:testing                  - Run testing intelligence"
-    echo "  npm run dev:seo                      - Optimize SEO"
-    echo "  npm run dev:build                    - Orchestrate builds"
-    echo "  npm run dev:health                   - Monitor code health"
-    echo ""
-    echo "📊 Monitoring & Reporting:"
-    echo "  npm run automation:dashboard         - Enhanced monitoring dashboard"
-    echo "  npm run automation:factory           - Automation factory"
-    echo "  npm run automation:orchestrator      - Intelligent orchestrator"
-    echo ""
+    echo "    echo ""
 }
 
 # Main execution
 main() {
     echo "🚀 Enhanced PM2 Automation System - Quick Start"
-    echo "=============================================="
-    echo ""
-    
-    # Check prerequisites
-    print_info "Checking prerequisites..."
-    check_node
-    check_npm
-    check_pm2
-    
-    # Install dependencies
-    install_dependencies
-    
-    # Start automation system
-    start_automation
-    
-    # Show status
-    show_status
-    
-    # Show available commands
-    show_commands
-    
-    echo ""
-    print_success "Enhanced PM2 Automation System is now running!"
-    echo ""
-    echo "🎯 Next steps:"
-    echo "  1. Open monitoring interface: npm run automation:enhanced:monit"
-    echo "  2. Start development assistant: npm run dev:assistant"
-    echo "  3. View enhanced dashboard: npm run automation:dashboard"
-    echo ""
-    echo "📚 For more information, see: ENHANCED_PM2_AUTOMATION_README.md"
-    echo ""
+    echo "    echo ""
 }
 
 # Run main function
