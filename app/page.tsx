@@ -207,73 +207,9 @@ function FeatureCard({ title, description }: { title: string; description: strin
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="py-20 px-4 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 animate-pulse" />
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <h1 className="text-6xl md:text-7xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
-            Zion Tech Group
-          </h1>
-          <p className="text-2xl md:text-3xl text-slate-300 mb-8">
-            Innovative Micro SaaS, AI Services & IT Solutions
-          </p>
-          <p className="text-lg text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with our cutting-edge technology solutions.
-            From AI-powered automation to cloud infrastructure, we deliver
-            enterprise-grade solutions that drive growth and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/contact"
-              className="group px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
-            >
-              Get Started Today
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-            <Link
-              href="/services"
-              className="px-8 py-4 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-all duration-300 hover:scale-105 flex items-center gap-2"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { number: "67+", label: "Services" },
-              { number: "500+", label: "Clients" },
-              { number: "99.9%", label: "Uptime" },
-              { number: "24/7", label: "Support" }
-            ].map((stat, index) => (
-              <div key={index} className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-blue-400">
-                  {stat.number}
-                </div>
-                <div className="text-slate-300">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-<section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">              Our Services
+              Our Services
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
               Comprehensive solutions for modern businesses
             </p>
           </div>
@@ -322,35 +258,7 @@ function FeatureCard({ title, description }: { title: string; description: strin
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">
-            Our Services
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
-              <p className="text-gray-600">
-                Advanced AI and machine learning solutions to automate and optimize your business processes.
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Micro SaaS</h3>
-              <p className="text-gray-600">
-                Custom micro SaaS applications tailored to your specific business needs.
-              </p>
-            </div>
-            <div className="text-center p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">IT Services</h3>
-              <p className="text-gray-600">
-                Complete IT infrastructure and support services for enterprise environments.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-{/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8">            Ready to Transform Your Business?
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-slate-400 mb-12">
             Get in touch with our experts to discuss your project requirements and discover
@@ -376,15 +284,9 @@ function FeatureCard({ title, description }: { title: string; description: strin
               Call Us Now
             </a>
           </div>
-          <div className="mt-6 text-sm text-gray-600">
+          <div className="mt-6 text-sm text-slate-400">
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
-          <Link
-            href="/contact"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors inline-block"
-          >
-            Contact Us
-          </Link>
         </div>
       </section>
       
