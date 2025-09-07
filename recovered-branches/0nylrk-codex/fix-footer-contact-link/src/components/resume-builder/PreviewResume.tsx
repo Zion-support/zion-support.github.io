@@ -8,6 +8,7 @@ import {
   CertificationsSection,
 } from "./preview";
 
+<<<<<<< HEAD
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
 
@@ -32,13 +33,19 @@ import {
   CertificationsSection,
 } from "./preview";
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void;
 }
 
+<<<<<<< HEAD
 }
 
+=======
+export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   return (
     <div className="space-y-6">
       <PreviewHeader resume={resume} onBack={onBack} />
@@ -52,6 +59,7 @@ interface PreviewResumeProps {
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
+<<<<<<< HEAD
 }  );
 }
 
@@ -70,3 +78,7 @@ interface PreviewResumeProps {
 }
 ;
 ;
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

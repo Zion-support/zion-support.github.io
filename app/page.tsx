@@ -453,6 +453,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* CTA Section */}
       <section className="text-center py-20 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700 rounded-lg relative overflow-hidden" role="complementary" aria-labelledby="cta-heading">
@@ -520,6 +521,8 @@ export default function Home() {
         </div>
       </div>
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     </div>
   );
 }

@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 import {Moon, Sun} from "lucide-react"
 import {Button} from "@/components/ui/button"
+=======
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 // Create a simplified theme hook for offline mode
 const useTheme = () => ({
   theme: "dark",
   setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`),
 });
+<<<<<<< HEAD
 export function ModeToggle() {;
   const { theme, setTheme } = useTheme();
 const useTheme = () => ({
@@ -27,6 +33,18 @@ theme: "dark"
 });
 export function ModeToggle() {
   const { theme, setTheme } = useTheme(),
+=======
+
+export function ModeToggle() {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <Button
+      variant="ghost"
+      size="icon"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    >
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
       {theme === "dark" ? (
         <Sun className="h-5 w-5 text-yellow-300" />
       ) : (
@@ -36,6 +54,7 @@ export function ModeToggle() {
     </Button>
   );
 }
+<<<<<<< HEAD
 import { Moon, Sun  } from './lucide-react';
 import { Button  } from '@/components / ui / button';
 // Create a simplified theme hook for offline mode;
@@ -83,3 +102,5 @@ return (<Button variant="ghost" size="icon" onClick= {
 ;
 }
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

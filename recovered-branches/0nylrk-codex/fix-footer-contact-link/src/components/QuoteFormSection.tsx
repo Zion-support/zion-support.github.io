@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Button} from "./ui/button";
 import {Input} from "./ui/input";
 import {GradientHeading} from "./GradientHeading";
@@ -21,6 +22,26 @@ export function QuoteFormSection() {
     setIsSubmitting(true),
     // Simulate form submission
     setTimeout(() => {
+=======
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
+export function QuoteFormSection() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    setTimeout(() => {
+      (setIsSubmitting(false), setIsSubmitted(true));
+    }, 1000);
+  };
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,6 +52,10 @@ export function QuoteFormSection() {
             revolutionize your IT operations
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
         <div className="max-w-2xl mx-auto bg-zion-blue-light rounded-lg border border-zion-purple/20 p-8">
           {isSubmitted ? (
             <div className="text-center py-8">
@@ -76,6 +101,7 @@ export function QuoteFormSection() {
                   >
                     Name
                   </label>
+<<<<<<< HEAD
     // Simulate form submission;
     setTimeout(() => {;
       setIsSubmitting(false),;
@@ -97,6 +123,36 @@ export function QuoteFormSection() {
                     id="company"
                     type="text"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+=======
+                  <Input
+                    id="name"
+                    type="text"
+                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Company
+                  </label>
+                  <Input
+                    id="company"
+                    type="text"
+                    className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-zion-slate-light mb-1"
+                  >
+                    Email
+                  </label>
+                  <Input
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
                     id="email"
                     type="email"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
@@ -114,6 +170,14 @@ export function QuoteFormSection() {
                     id="phone"
                     type="tel"
                     className="w-full bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
+<<<<<<< HEAD
+=======
+                  />
+                </div>
+              </div>
+
+              <div className="mt-6">
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
                 <label
                   htmlFor="interest"
                   className="block text-sm font-medium text-zion-slate-light mb-1"
@@ -135,6 +199,7 @@ export function QuoteFormSection() {
                         id={`interest-${index}`}
                         type="checkbox"
                         className="h-4 w-4 bg-zion-blue-dark border-zion-purple text-zion-purple focus:ring-zion-purple/50"
+<<<<<<< HEAD
                       <label htmlFor={`interest-${index}`} className="ml-2 text-sm text-zion-slate-light">
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -239,6 +304,20 @@ export function QuoteFormSection() {;
                   ))}
                 </div>
               </div>
+=======
+                      />
+                      <label
+                        htmlFor={`interest-${index}`}
+                        className="ml-2 text-sm text-zion-slate-light"
+                      >
+                        {item}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
               <div className="mt-6">
                 <label
                   htmlFor="message"
@@ -252,6 +331,10 @@ export function QuoteFormSection() {;
                   className="w-full rounded-md bg-zion-blue-dark border border-zion-blue-light focus:border-zion-purple focus:ring-1 focus:ring-zion-purple text-white"
                 ></textarea>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
               <div className="mt-6">
                 <Button
                   type="submit"
@@ -270,6 +353,7 @@ export function QuoteFormSection() {;
     </section>
   );
 }
+<<<<<<< HEAD
 import { Button  } from './ui / button';
 import { Input  } from './ui / input';
 import { GradientHeading  } from './GradientHeading';
@@ -454,3 +538,5 @@ function QuoteFormSection() {
       </div>;
     </section>);
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

@@ -25,6 +25,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
+<<<<<<< HEAD
 import {;
   Select,;
   SelectContent,;
@@ -104,3 +105,7 @@ function SortFilter() {
 
 }
 }
+=======
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

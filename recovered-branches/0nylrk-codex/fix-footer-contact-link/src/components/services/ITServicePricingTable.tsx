@@ -23,19 +23,31 @@ export function ITServicePricingTable() {
     key: "country",
     direction: "ascending",
   });
+<<<<<<< HEAD
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
+=======
+
+  const sortedData = useMemo(() => {
+    let filteredData = [...onsiteServicePricing];
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter((item) =>
         item.country.toLowerCase().includes(searchQuery.toLowerCase()),
       );
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     // Sort data
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? -1 : 1;
       }
+<<<<<<< HEAD
       // Check condition
 if ( {) {
   $2
@@ -109,6 +121,41 @@ export function ITServicePricingTable() {;
           <Input
             placeholder="Search by country..."
             value={searchQuery}
+=======
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? 1 : -1;
+      }
+      return 0;
+    });
+
+    return filteredData;
+  }, [onsiteServicePricing, searchQuery, sortConfig]);
+
+  const handleSort = (key: keyof CountryPricing) => {
+    setSortConfig({
+      key,
+      direction:
+        sortConfig.key === key && sortConfig.direction === "ascending"
+          ? "descending"
+          : "ascending",
+    });
+  };
+
+  return (
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
+      <div className="flex items-center mb-6">
+        <div className="relative flex-1">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+          <Input
+            placeholder="Search by country..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
+          />
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
         <Table>
           <TableHeader className="bg-zion-blue">
@@ -167,6 +214,7 @@ export function ITServicePricingTable() {;
     </div>
   );
 }
+<<<<<<< HEAD
 ;
     return filtered_data;
   }, [onsiteServicePricing, search_query, sort_config]);
@@ -248,3 +296,5 @@ export function ITServicePricingTable() {;
       </div>;
     </div>);
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

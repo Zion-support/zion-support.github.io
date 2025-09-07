@@ -23,6 +23,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+<<<<<<< HEAD
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -31,6 +32,16 @@
       "@/types/*": ["./src/types/*"],
       "@/styles/*": ["./src/styles/*"],
       "@/assets/*": ["./src/assets/*"]
+=======
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/types/*": ["./types/*"],
+      "@/styles/*": ["./styles/*"],
+      "@/assets/*": ["./assets/*"]
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
     },
     "allowSyntheticDefaultImports": true,
     "target": "ES2017",
@@ -41,7 +52,12 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
+<<<<<<< HEAD
     "**/*.tsx"
+=======
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   ],
   "exclude": [
     "node_modules",

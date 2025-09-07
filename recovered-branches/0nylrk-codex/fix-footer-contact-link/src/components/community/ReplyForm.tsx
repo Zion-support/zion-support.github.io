@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FormControl,
   FormField,
   FormItem,
@@ -25,6 +26,8 @@ import { use_form  } from './react - hook - form';
 import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
 import {
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
@@ -34,6 +37,7 @@ import {
   FormControl,
   FormField,
   FormItem,
+<<<<<<< HEAD
 FormMessage,;
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -223,10 +227,14 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
 ;
 export default ReplyForm;
 ;
+=======
+  FormMessage,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 } from "@/components/ui/form";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
+<<<<<<< HEAD
   parentId?: string
 }
 interface ReplyFormValues {
@@ -239,6 +247,24 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
       content: ""
     }
   });
+=======
+  parentId?: string;
+}
+
+interface ReplyFormValues {
+  content: string;
+}
+
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: "",
+    },
+  });
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
   const handleSubmit = async (values: ReplyFormValues) => {
     setIsSubmitting(true);
     try {
@@ -246,6 +272,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
     } finally {
       setIsSubmitting(false);
     }
+<<<<<<< HEAD
   }
   };
 import { useState } from "react",
@@ -315,6 +342,26 @@ interface ReplyFormValues {;
                         parent_id;
                           ? "Write your reply...";
                           : "Join the discussion...";
+=======
+  };
+
+  return (
+    <Card>
+      <CardContent className="pt-6">
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(handleSubmit)}>
+            <FormField
+              control={form.control}
+              name="content"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Textarea
+                      placeholder={
+                        parentId
+                          ? "Write your reply..."
+                          : "Join the discussion..."
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
                       }
                       className="min-h-[100px] resize-y"
                       {...field}
@@ -333,6 +380,7 @@ interface ReplyFormValues {;
         </Form>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   )
 },
     </Card>;
@@ -369,3 +417,9 @@ export default ReplyForm;
 export default ReplyForm;
 export default ReplyForm;
 export default ReplyForm,
+=======
+  );
+};
+
+export default ReplyForm;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

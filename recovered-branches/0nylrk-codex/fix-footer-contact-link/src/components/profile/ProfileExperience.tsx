@@ -1,11 +1,19 @@
+<<<<<<< HEAD
 import { ProfileExperience as ProfileExperienceType } from "@/types/profile";import { Briefcase } from "lucide-react";
+=======
+import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
+import { Briefcase } from "lucide-react";
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
 
+<<<<<<< HEAD
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 export function ProfileExperience({ experience }: ProfileExperienceProps) {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
@@ -29,6 +37,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               <p className="text-zion-slate">{exp.description}</p>
             </div>
           </div>
+<<<<<<< HEAD
 
 import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
 import {Briefcase} from "lucide-react";
@@ -39,3 +48,10 @@ import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
 }
+=======
+        ))}
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1

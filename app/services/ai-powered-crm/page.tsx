@@ -114,6 +114,7 @@ export default function AIPoweredCRMPage() {
   );
 }
 
+<<<<<<< HEAD
 function PricingTier({ 
   name, 
   price, 
@@ -169,6 +170,8 @@ function PricingTier({
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-59b1
 
 export default function AIPoweredCRMPage() {
   return (
