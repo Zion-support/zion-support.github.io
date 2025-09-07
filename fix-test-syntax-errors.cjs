@@ -22,7 +22,7 @@ class TestSyntaxFixer {
       }
 
       let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
 
       // Fix trailing commas in import statements
       content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;');

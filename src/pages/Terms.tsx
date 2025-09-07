@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
 const Terms: React.FC = () => {
- ;
+ 
   return (
     <>
       <SEO title="Terms of Service" description="Terms of Service page" url="/terms" />

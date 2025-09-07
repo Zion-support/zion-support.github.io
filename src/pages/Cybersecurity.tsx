@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
 const Cybersecurity: React.FC = () => {
- ;
+ 
   return (
     <>
       <SEO title="Cybersecurity" description="Cybersecurity page" url="/services/cybersecurity" />

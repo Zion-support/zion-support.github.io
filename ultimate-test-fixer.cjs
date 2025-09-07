@@ -21,7 +21,7 @@ class UltimateTestFixer {
       }
 
       let content = fs.readFileSync(filePath, 'utf8');
-      let originalContent = content;
+      const originalContent = content;
 
       // Fix the specific syntax issues we're seeing
       // Remove extra semicolons in function parameters

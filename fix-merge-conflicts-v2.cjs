@@ -4,7 +4,7 @@ const path = require('path');
 // Function to fix merge conflicts in a file with better formatting
 function fixMergeConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
     if (!content.includes('<<<<<<< HEAD')) {
@@ -15,8 +15,8 @@ function fixMergeConflicts(filePath) {
     
     // Remove merge conflict markers and keep the content after =======
     // This is a simple approach - we'll take the "incoming" changes (after =======)
-    let lines = content.split('\n');
-    let fixedLines = [];
+    const lines = content.split('\n');
+    const fixedLines = [];
     let inConflict = false;
     let keepContent = false;
     

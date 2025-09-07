@@ -9,7 +9,7 @@ import SEO from '../components/SEO';
 import ScrollAnimation from '../components/ScrollAnimation';
 
 const AIServices: React.FC = () => {
- ;
+ 
   const services = [
     {
       icon: <Brain className="w-8 h-8" />,

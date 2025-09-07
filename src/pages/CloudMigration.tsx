@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import SEO from '../components/SEO';
 
 const CloudMigration: React.FC = () => {
- ;
+ 
   return (
     <>
       <SEO title="Cloud Migration" description="Cloud Migration page" url="/services/cloud-migration" />

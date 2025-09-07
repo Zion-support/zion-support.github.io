@@ -5,7 +5,7 @@ import ThemeToggle from './ThemeToggle';
 import SearchModal from './SearchModal';
 
 const Header: React.FC = () => {
- ;
+ 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 const [isSearchOpen, setIsSearchOpen] = useState(false);
