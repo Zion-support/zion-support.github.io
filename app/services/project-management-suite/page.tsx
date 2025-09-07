@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export const metadata = { title: 'Project Management Suite | Zion Tech Group' };
 
 export default function ProjectManagementSuitePage() {
@@ -342,3 +343,5 @@ function ContactSection() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-6c29
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55

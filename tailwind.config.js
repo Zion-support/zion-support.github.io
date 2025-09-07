@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,6 +90,7 @@ export default {
           900: '#111827',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         },
 <<<<<<< HEAD
         'zion-slate-dark': '#1e293b',
@@ -104,6 +105,10 @@ export default {
           950: '#030712',
         },
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+          950: '#030712'
+        }
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -154,6 +159,7 @@ export default {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
           '100%': { opacity: '1' },
@@ -185,17 +191,25 @@ export default {
 >>>>>>> 89e5074e89029fee0b574fe9cfff0a488d2ce422
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+          '100%': { opacity: '1' }
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
         },
         slideDown: {
           '0%': { transform: 'translateY(-20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
         slideLeft: {
           '0%': { transform: 'translateX(20px)', opacity: '0' },
-          '100%': { transform: 'translateX(0)', opacity: '1' },
+          '100%': { transform: 'translateX(0px)', opacity: '1' }
         },
         slideRight: {
           '0%': { transform: 'translateX(-20px)', opacity: '0' },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           '100%': { transform: 'translateX(0)', opacity: '1' },
@@ -206,10 +220,13 @@ export default {
 =======
           '100%': { transform: 'translateX(0)', opacity: '1' },
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+          '100%': { transform: 'translateX(0px)', opacity: '1' }
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
         },
         scaleIn: {
           '0%': { transform: 'scale(0)' },
-          '100%': { transform: 'scale(1)' },
+          '100%': { transform: 'scale(1)' }
         },
         bounceIn: {
           '0%': { transform: 'scale(0.3)', opacity: '0' },
@@ -220,31 +237,31 @@ export default {
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'left center',
+            'background-position': 'left center'
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'right center',
+            'background-position': 'right center'
           },
         },
         'gradient-y': {
           '0%, 100%': {
             'background-size': '200% 200%',
-            'background-position': 'center top',
+            'background-position': 'center top'
           },
           '50%': {
             'background-size': '200% 200%',
-            'background-position': 'center bottom',
+            'background-position': 'center bottom'
           },
         },
         'gradient-xy': {
           '0%, 100%': {
             'background-size': '400% 400%',
-            'background-position': 'left center',
+            'background-position': 'left center'
           },
           '50%': {
             'background-size': '400% 400%',
-            'background-position': 'right center',
+            'background-position': 'right center'
           },
         },
       },
@@ -263,11 +280,11 @@ export default {
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
-        '128': '32rem',
+        '128': '32rem'
       },
       borderRadius: {
         '4xl': '2rem',
-        '5xl': '2.5rem',
+        '5xl': '2.5rem'
       },
     },
   },
@@ -276,6 +293,7 @@ export default {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -297,3 +315,6 @@ export default {
   plugins: [],
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f
+=======
+};
+>>>>>>> 2bbbac51cb394a4b194a2ff75bed1e7dbe99ed55
