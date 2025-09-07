@@ -1,105 +1,214 @@
-#!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-console.log('🔧 Starting syntax error fixes...');
-
-// Function to fix merge conflict markers and syntax errors
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-
-    // Remove merge conflict markers
-    const conflictRegex = /^[<>=]{7}.*$/gm;
-    if (conflictRegex.test(content)) {
-      content = content.replace(conflictRegex, '');
-      modified = true;
-    }
-
-    // Fix common syntax patterns
-    const fixes = [
-      // Fix function declarations with semicolons
-      { pattern: /export function (\w+)\s*\(\s*\{([^}]*)\}\s*\)\s*\{/g, replacement: 'export function $1({ $2 }) {' },
-      // Fix object destructuring with semicolons
-      { pattern: /const\s*\{\s*([^}]*)\s*\}\s*=\s*([^;]+);/g, replacement: 'const { $1 } = $2;' },
-      // Fix JSX with semicolons
-      { pattern: /className=\s*\{\s*cn\s*\(\s*"([^"]*)"\s*([^}]*)\s*\)\s*;\s*"/g, replacement: 'className={cn("$1", $2)}' },
-      // Fix unterminated strings
-      { pattern: /"([^"]*)\n/g, replacement: '"$1"' },
-      // Fix missing semicolons in object properties
-      { pattern: /(\w+):\s*"([^"]*)"\s*([^,}\n])/g, replacement: '$1: "$2",' },
-      // Fix malformed JSX
-      { pattern: /<(\w+)\s*([^>]*)\s*>\s*\{([^}]*)\}\s*<\/\1>/g, replacement: '<$1 $2>{$3}</$1>' },
-    ];
-
-    fixes.forEach(fix => {
-      if (fix.pattern.test(content)) {
-        content = content.replace(fix.pattern, fix.replacement);
-        modified = true;
+#!/usr/bin/env node;
+;
+#!/usr / bin / env node;
+import fs from './fs';
+import path from './path';
+import { glob    } from './glob';// Find all TypeScript and JavaScript files;
+const files  = glob.sync (\"src/**/*.{ts, tsx, js, jsx}\", { cwd: process.cwd () })let total_fixed  = 0;files.for_each ((file) => {try {const file_path = path.join (process.cwd (), file)let content = fs.readFileSync (file_path, \"utf8\")let modified  = false;// Fix import statements with double punctuation (comma + semicolon)const original_content = content;}
+    content = content.replace (/import\s+.*?from\s+['\"][^'\"]+['\"], \s*;/g,(match) => {modified = true;}
+        return match.replace (\",\", \";\")},)// Fix import statements missing semicolons;
+    content = content.replace (/^import\s+.*?from\s+['\"][^'\"]+['\"]\s*, ?\s*$/gm,(match) => {// Check condition;}
+if (.ends_with (\") {$2;}
+}\")) {modified = true;
+          return match.trim () + \";\";#!/usr/bin/env node;
+import fs from 'fs';}
+import path from 'path';}
+import { glob  } from 'glob';
+// Find all TypeScript and JavaScript files;
+const files  = glob.sync(\"src/**/*.{ts,tsx,js,jsx}\", { cwd: process.cwd() })let totalFixed  = 0;files.forEach((file) => {try {const filePath = path.join(process.cwd(), file)let content = fs.readFileSync(filePath, \"utf8\")let modified  = false;// Fix import statements with double punctuation (comma + semicolon)const originalContent = content;}
+    content = content.replace(/import\s+.*?from\s+['\"][^'\"]+['\"],\s*;/g,(match) => {modified = true;}
+        return match.replace(\",\", \";\")},)// Fix import statements missing semicolons;
+    content = content.replace(/^import\s+.*?from\s+['\"][^'\"]+['\"]\s*,?\s*$/gm,(match) => {if (!match.trim().endsWith(\";\")) {modified = true;}
+          return match.trim() + \";\";#!/usr/bin/env node;}
+import { execSync  } from 'child_process';
+// Function to fix common syntax errors in files;
+function fixSyntaxErrors() {try {let content = fs.readFileSync(filePath, 'utf8')let modified  = false;// Fix malformed imports - add missing semicolons;}
+    content = content.replace(/import\s+{[^}]+}\s+from\s+['\"][^'\"]+['\"]\s*(?!;)/g,match => {if (!match.endsWith(';')) {modified = true;}
+          return match + ';';}
+        }
+        return match;
       }
+    )// Fix broken import statements with missing commas;
+    content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['\"][^'\"]+['\"]/g,(match, imports) => {// Check if imports have proper comma separation;}
+        if (imports.includes(' ') && !imports.includes(',')) {modified = true;}
+          const fixedImports = imports.split(/\s+/).join(', ')return match.replace(imports, fixedImports)}
+        return match;
+      }
+    )// Fix missing semicolons after variable declarations;
+    content = content.replace(/(const|let|var)\s+\w+\s*=\s*[^;]+(?!;)\s*(?=\n|$)/g,match => {if (!match.endsWith(';')) {modified = true;}
+          return match + ';';}
+        }
+        return match;
+      }
+    )// Fix broken JSX syntax - missing closing tags;
+    content = content.replace(/<(\w+)([^>]*)>(?!.*<\/\1>)/g,(match, tagName, attributes) => {// Only fix if it's not a self-closing tag and doesn't have a closing tag;}
+        if (!match.endsWith('/>') && !content.includes(`</${tagName}>`)) {modified = true;}
+          return match + `</${tagName}>`;
+        }
+        return match;
+      }
+    )// Fix malformed function declarations;
+    content = content.replace(/export\s+{\s*function\s*}\s*export\s+default\s+function/g,'export default function';
+    )// Fix broken arrow functions;
+    content = content.replace(/=>\s*\(\s*\)\s*=>/g, '=> () =>')// Fix malformed object literals;
+    content = content.replace(/\{\s*([^}]*)\s*\}\s*}/g, (match, content) => {if (content.includes('{') && !content.includes('}')) {modified = true;}
+        return match.replace('}}', '}')}
+      return match;
+    })// Fix broken string literals;
+    content = content.replace(/['\"]([^'\"]*)\s*['\"]\s*['\"]/g, (match, str) => {modified = true;}
+      return `\"${str}\"`;
+
     });
 
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
-      return true;
-    }
-  } catch (error) {
-    console.log(`❌ Error fixing ${filePath}:`, error.message);
-  }
-  return false;
-}
+    // Fix missing commas in arrays and objects;
+content = content.replace(/\[\s*([^\]]*)\s*\]/g, (match, arrayContent) => {
+      if (
+        arrayContent &&
+        !arrayContent.endsWith(',') &&
+        !arrayContent.endsWith(';')
+      ) {
+        const items = arrayContent;
+          .split(',')
+          .map(item => item.trim())
+          .filter(item => item);
+        if (items.length > 1) {}
+          modified = true;}
+          return `[${items.join(', ')}]`;
 
-// Function to find all TypeScript/JavaScript files
-function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+        return match;
+      },);
+    // Fix other common syntax issues;
+    // Fix missing semicolons after variable declarations;
+    content = content.replace (/(\w+)\s*=\s*[^;]+(?!)\s*$/gm,(match, var_name) => {// Check condition;}
+if (&&) {$2;}
+}
+          !match.includes (\"if\") &&;
+          !match.includes (\"for\") &&;
+          !match.includes (\"while\") &&;
+          !match.includes (\"switch\") &&;
+          !match.includes (\"try\") &&;
+          !match.includes (\"catch\") &&;
+          !match.includes (\"finally\") &&;
+          !match.includes (\"return\") &&;
+          !match.includes (\"throw\") &&;
+          !match.includes (\"break\") &&;
+          !match.includes (\"continue\") &&;
+          !match.includes (\"debugger\") &&;
+          !match.includes (\"export\") &&;
+          !match.includes (\"import\")) {// Fix other common syntax issues;
+    // Fix missing semicolons after variable declarations;
+    content = content.replace(/(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,(match, varName) => {if (!match.includes(\"function\") &&;
+          !match.includes(\"if\") &&;
+          !match.includes(\"for\") &&;
+          !match.includes(\"while\") &&;
+          !match.includes(\"switch\") &&;
+          !match.includes(\"try\") &&;
+          !match.includes(\"catch\") &&;
+          !match.includes(\"finally\") &&;
+          !match.includes(\"return\") &&;
+          !match.includes(\"throw\") &&;
+          !match.includes(\"break\") &&;
+          !match.includes(\"continue\") &&;
+          !match.includes(\"debugger\") &&;
+          !match.includes(\"export\") &&;
+          !match.includes(\"import\")) {modified = true;}
+          return match + \";\";}
+        }
+        return match;
+
+      },
+    );
+
+});
+
+console.log(`\nTotal files fixed: ${totalFixed}`);
+  }
+
+#!/usr/bin/env node;
+const fs = require('fs');
+const path = require('path');
+
+console.log('🔧 Fixing syntax errors in API files...');
+
+const fixFile = (
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Fix common syntax issues;
+content = content.replace(/,\s*$/gm, ''); // Remove trailing commas;) => {
+  return $3;}
+}
+content = content.replace(/,\s*}/g, '}'); // Remove trailing commas before closing braces;
+content = content.replace(/,\s*]/g, ']'); // Remove trailing commas before closing brackets;
+content = content.replace(/,\s*\)/g, ')'); // Remove trailing commas before closing parentheses;
+    // Fix missing semicolons;
+content = content.replace(/([^;}])\n(\s*[a-zA-Z])/g, '$1;\n$2');
+    
+    // Fix import statements;
+content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;');
+    
+    // Fix function declarations;
+content = content.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{/g, 'export default function $1($2) {');
+    }
+    fs.writeFileSync(filePath, content);}
+    console.log(`✅ Fixed: ${filePath}`);
+    return true;
+  } catch (error) {}
+    console.log(`❌ Failed to fix: ${filePath} - ${error.message}`);
+    return false;
+  }
+};
+
+const main = (
+  const apiDir = 'pages/api';
   const files = [];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
+  const walkDir = (dir) => {
+    const items = fs.readdirSync(dir);
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
+      const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
+      if (stat.isDirectory()) {
+        walkDir(fullPath);) => {
+  return $3;}
+}
+      } else if (item.endsWith('.ts') || item.endsWith('.js')) {}
+        files.push(fullPath);}
       }
+
     }
+  }console.log(`\nFixed syntax errors in ${fixedCount} out of ${totalCount} files.`;
+  )// Run linting to check remaining errors;
+  console.log('\nRunning linting to check remaining errors...')try {execSync('npm run lint', { stdio: 'inherit' })} catch (error) {console.log('Linting completed with some remaining errors.')}
+}// Run if this is the main module;
+if (import.meta.url === `file://${process.argv[1]}`) {main()}export { fixSyntaxErrors, findFiles }#!/usr/bin/env node;
+const fs = require('fs')const path  = require('path')console.log('🔧 Fixing syntax errors in API files...')const fixFile = (try {let content  = fs.readFileSync(filePath, 'utf8')// Fix common syntax issues;
+    content = content.replace(/,\s*$/gm, '')// Remove trailing commas;) => {
+  return $3;}
+}
+    content = content.replace(/,\s*}/g, '}')// Remove trailing commas before closing braces;
+    content = content.replace(/,\s*]/g, ']')// Remove trailing commas before closing brackets;
+    content = content.replace(/,\s*\)/g, ')')// Remove trailing commas before closing parentheses;
+    // Fix missing semicolons;
+    content = content.replace(/([^;}])\n(\s*[a-zA-Z])/g, '$1;\n$2')// Fix import statements;
+    content = content.replace(/import\s+([^;]+),\s*;/g, 'import $1;')// Fix function declarations;
+    content = content.replace(/export default function\s+(\w+)\s*\([^)]*\)\s*{/g, 'export default function $1($2) {')fs.writeFileSync(filePath, content)console.log(`✅ Fixed: ${filePath}`)return true;
+  } catch (error) {console.log(`❌ Failed to fix: ${filePath} - ${error.message}`)return false;
   }
+}const main = (const apiDir = 'pages/api';) => {
+  return $3;}
+}
+  const files  = [];const walkDir = (const items = fs.readdirSync(dir)for (const item of items) {const fullPath = path.join(dir, item)const stat = fs.statSync(fullPath)if (stat.isDirectory()) {walkDir(fullPath)) => {
+  return $3;}
+} else if (item.endsWith('.ts') || item.endsWith('.js')) {files.push(fullPath)}
+    }
+
+  });
   
-  traverse(dir);
-  return files;
-}
+  console.log(`\n🎉 Fixed ${fixed}/${files.length} files`);
+};
 
-// Main execution
-const srcDir = path.join(__dirname, 'src');
-const files = findFiles(srcDir);
+main();
 
-console.log(`📁 Found ${files.length} files to check...`);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixFile(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`🎉 Fixed ${fixedCount} files`);
-
-// Try to run build again
-console.log('🏗️  Running build...');
-try {
-  execSync('npm run build', { stdio: 'inherit' });
-  console.log('✅ Build successful!');
-} catch (error) {
-  console.log('❌ Build still has errors, continuing with manual fixes...');
-}

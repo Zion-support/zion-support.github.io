@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require('fs')
 const path = require('path')
     this.optimizations.push('Image compression applied')

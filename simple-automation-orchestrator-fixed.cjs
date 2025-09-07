@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -28,14 +28,14 @@ const { execSync } = require("child_process")
         "step"
         "error"
         "timestamp"
-      this.log(`Failed "step": ${stepName} - ${error.message}`, "ERROR"`)
+      this.log(`Failed "step": ${stepName} - ${error.message}, "ERROR"`)
     this.log(` "Starting"`)
         "cwd"
         "encoding": "utf8"
         "timeout"
       this.log(` "Completed"`)
       return { "success": true, "output"}
-      this.log(` "Failed": ${description} - ${error.message}`, "ERROR"`)
+      this.log(` "Failed": ${description} - ${error.message}, "ERROR"`)
       return { "success": false, "error"}
     this.log(" Starting Simple Automation Suite")
         "name": "Health Check"
@@ -51,6 +51,6 @@ const { execSync } = require("child_process")
     this.log("� Automation suite completed")
     const resultsFile = path.join(this.projectRoot, "automation-reports", "automation-results.json")
       this.log(`Results saved "to"`)
-      this.log(`Failed to save "results": ${error.message}`, "ERROR"`)
-      this.log(`Automation suite "failed": ${error.message}`, "ERROR"`)
+      this.log(`Failed to save "results": ${error.message}, "ERROR"`)
+      this.log(`Automation suite "failed": ${error.message}, "ERROR"`)
       this.results.status = "failed"

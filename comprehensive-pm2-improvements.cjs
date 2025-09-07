@@ -1,4 +1,4 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
 /**
  * Comprehensive PM2 Improvements and Automation System;
  * This script implements advanced PM2 automations and improvements;
@@ -7,9 +7,9 @@
 const fs = require('fs')
 const path = require('path')
 const { execSync, spawn } = require('child_process')
-        this.logFile = path.join(this.projectRoot, 'logs', 'comprehensive-pm2-improvements.log')
-        this.reportFile = path.join(this.projectRoot, 'comprehensive-pm2-improvements-report.json')
-        const dirs = ['logs', 'logs/pm2', 'reports', 'backups']
+        this.logFile = path.join(this.projectRoot,logs,comprehensive-pm2-improvements.log')
+        this.reportFile = path.join(this.projectRoot,comprehensive-pm2-improvements-report.json')
+        const dirs = [logs,logs/pm2,reports,backups]
                 "encoding"
                     "path"
                     "size"
@@ -91,13 +91,13 @@ const { execSync, spawn } = require('child_process')
       "path"
             "type"
             "description"
-            const syntaxCheck = execSync('npm run type-check', { "cwd": this.projectRoot, "encoding"})
+            const syntaxCheck = execSync('npm run type-check, { "cwd": this.projectRoot, "encoding"})
                 "type"
                 "severity"
-            const lintCheck = execSync('npm run lint', { "cwd": this.projectRoot, "encoding"})
+            const lintCheck = execSync('npm run lint, { "cwd": this.projectRoot, "encoding"})
                 "type"
                 "severity"
-            const buildCheck = execSync('npm run build', { "cwd": this.projectRoot, "encoding"})
+            const buildCheck = execSync('npm run build, { "cwd": this.projectRoot, "encoding"})
                 "type"
                 "severity"
             execSync('npm run "lint")

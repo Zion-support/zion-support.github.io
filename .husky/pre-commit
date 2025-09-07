@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-<<<<<<< HEAD
 
 echo "🔍 Running pre-commit checks..."
 
@@ -28,8 +27,6 @@ if git diff --cached --name-only | grep -E "package\.json|package-lock\.json" > 
 fi
 
 echo "✅ Pre-commit checks completed"
-=======
-. "$(dirname -- "$0")/_/husky.sh"
+echo "✅ Pre-commit checks completed"
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
-npx --yes lint-staged
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

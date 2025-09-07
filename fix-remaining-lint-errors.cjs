@@ -1,41 +1,35 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-
-console.log('🔧 Fixing remaining lint errors...');
-
-// Fix specific files with known issues
+console.log('🔧 Fixing remaining lint errors...);
+// Fix specific files with known issues;
 const filesToFix = [
-  'apps.backup/api/src/index.ts',
-  'apps.backup/api/src/openai.ts',
-  'apps.backup/api/src/pg.ts',
-  'apps.backup/extension/public/popup.js',
-  'apps.backup/extension/scripts/generate-icons.js'
+  'apps.backup/api/src/index.ts,apps.backup/api/src/openai.ts,apps.backup/api/src/pg.ts,apps.backup/extension/public/popup.js,apps.backup/extension/scripts/generate-icons.js]
 ];
 
 function fixFile(filePath) {
   try {
+  // TODO: Implement
+}
     if (!fs.existsSync(filePath)) {
-      console.log(`⚠️  File not found: ${filePath}`);
+      console.log(`⚠️  File not found: ${filePath});
       return false;
     }
-
-    let content = fs.readFileSync(filePath, 'utf8');
+'
+    let content = fs.readFileSync(filePath,utf8);
     let modified = false;
 
-    // Fix parsing errors in index.ts
+    // Fix parsing errors in index.ts;
     if (filePath.includes('apps.backup/api/src/index.ts')) {
-      // Fix syntax errors
-      content = content.replace(/,\s*\)/g, ')');
-      content = content.replace(/\(\s*,/g, '(');
+      // Fix syntax errors;
+      content = content.replace(/,\s*\)/g,));
+      content = content.replace(/\(\s*,/g,(');
     }
 
-    // Fix openai.ts
+    // Fix openai.ts;
     if (filePath.includes('apps.backup/api/src/openai.ts')) {
-      // Add proper imports and fix variable references
+      // Add proper imports and fix variable references;
       content = `import OpenAI from 'openai';
-
 const _apiKey = process.env.OPENAI_API_KEY;
 const apiKey = _apiKey;
 
@@ -48,24 +42,23 @@ export async function generateText(_openai, _role, _opts) {
   const prompt = _prompt;
   
   const _completion = await openai.chat.completions.create({
-    model: 'gpt-3.5-turbo',
+    model: gpt-3.5-turbo,
     messages: [{ role, content: prompt }],
-    ...opts
+    ...opts;)
   });
   
   const completion = _completion;
-  return completion.choices[0]?.message?.content || '';
+  return completion.choices[0]?.message?.content || ;
 }
 `;
       modified = true;
     }
 
-    // Fix pg.ts
+    // Fix pg.ts;
     if (filePath.includes('apps.backup/api/src/pg.ts')) {
       content = `import { Pool, PoolClient } from 'pg';
-
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL;)
 });
 
 export const getPool = () => pool;
@@ -75,6 +68,8 @@ export async function withTransaction(_userId, _fn) {
   const client = _client;
   
   try {
+  // TODO: Implement
+}
     await client.query('BEGIN');
     const result = await _fn(client);
     await client.query('COMMIT');
@@ -83,6 +78,8 @@ export async function withTransaction(_userId, _fn) {
     await client.query('ROLLBACK');
     throw error;
   } finally {
+  // TODO: Implement
+}
     client.release();
   }
 }
@@ -90,22 +87,22 @@ export async function withTransaction(_userId, _fn) {
       modified = true;
     }
 
-    // Fix popup.js
+    // Fix popup.js;
     if (filePath.includes('apps.backup/extension/public/popup.js')) {
-      content = content.replace(/\bchrome\b/g, 'window.chrome');
-      content = content.replace(/\bcrypto\b/g, 'window.crypto');
+      content = content.replace(/\bchrome\b/g,window.chrome');
+      content = content.replace(/\bcrypto\b/g,window.crypto');
       modified = true;
     }
 
-    // Fix generate-icons.js
+    // Fix generate-icons.js;
     if (filePath.includes('apps.backup/extension/scripts/generate-icons.js')) {
-      content = content.replace(/\bURL\b/g, 'window.URL');
+      content = content.replace(/\bURL\b/g,window.URL');
       modified = true;
     }
 
     if (modified) {
       fs.writeFileSync(filePath, content);
-      console.log(`✅ Fixed: ${filePath}`);
+      console.log(`✅ Fixed: ${filePath});
       return true;
     }
 
@@ -116,12 +113,14 @@ export async function withTransaction(_userId, _fn) {
   }
 }
 
-// Main execution
+// Main execution;
 let fixedCount = 0;
 let errorCount = 0;
 
 for (const file of filesToFix) {
   try {
+  // TODO: Implement
+}
     if (fixFile(file)) {
       fixedCount++;
     }
