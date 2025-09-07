@@ -49,10 +49,11 @@ export default function ComprehensiveServicesShowcase2025() {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const basicPrice = service.pricing?.basic || 0;
     const matchesPrice = selectedPriceRange === 'all' || 
-      (selectedPriceRange === 'low' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
-      (selectedPriceRange === 'medium' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) < 10000) ||
-      (selectedPriceRange === 'high' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 10000);
+      (selectedPriceRange === 'low' && basicPrice < 1000) ||
+      (selectedPriceRange === 'medium' && basicPrice >= 1000 && basicPrice < 10000) ||
+      (selectedPriceRange === 'high' && basicPrice >= 10000);
     
     return matchesSearch && matchesCategory && matchesPrice;
   });
@@ -63,9 +64,9 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'name':
         return a.name.localeCompare(b.name);
       case 'price':
-        return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
+        return (a.pricing?.basic || 0) - (b.pricing?.basic || 0);
       case 'roi':
-        return parseInt(b.roi.replace(/[^0-9]/g, '')) - parseInt(a.roi.replace(/[^0-9]/g, ''));
+        return (b.pricing?.enterprise || 0) - (a.pricing?.enterprise || 0);
       default:
         return 0;
     }
@@ -73,9 +74,9 @@ export default function ComprehensiveServicesShowcase2025() {
 
   const priceRanges = [
     { id: 'all', name: 'All Prices', count: comprehensiveServices2025.length },
-    { id: 'low', name: 'Under $1K/month', count: comprehensiveServices2025.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 1000).length },
-    { id: 'medium', name: '$1K - $10K/month', count: comprehensiveServices2025.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10000).length },
-    { id: 'high', name: '$10K+/month', count: comprehensiveServices2025.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10000).length }
+    { id: 'low', name: 'Under $1K/month', count: comprehensiveServices2025.filter(s => (s.pricing?.basic || 0) < 1000).length },
+    { id: 'medium', name: '$1K - $10K/month', count: comprehensiveServices2025.filter(s => (s.pricing?.basic || 0) >= 1000 && (s.pricing?.basic || 0) < 10000).length },
+    { id: 'high', name: '$10K+/month', count: comprehensiveServices2025.filter(s => (s.pricing?.basic || 0) >= 10000).length }
   ];
 
   const ServiceCard = ({ service, index }: { service: Service; index: number }) => (
@@ -112,10 +113,10 @@ export default function ComprehensiveServicesShowcase2025() {
         <div className="mb-4">
           <div className="flex items-center justify-between">
             <div className="text-2xl font-bold text-gray-900">
-              {service.price}
+              ${service.pricing?.basic || 0}/month
             </div>
             <div className="text-sm text-gray-500">
-              Market: {service.marketPrice}
+              Starting from ${service.pricing?.basic || 0}
             </div>
           </div>
         </div>
@@ -145,7 +146,7 @@ export default function ComprehensiveServicesShowcase2025() {
         {/* ROI */}
         <div className="mb-6 text-center">
           <div className="text-green-600 font-semibold text-lg">
-            ROI: {service.roi}
+            ROI: Up to {Math.round((service.pricing?.enterprise || 0) * 0.3)}%
           </div>
           <div className="text-gray-500 text-xs">
             Return on Investment
@@ -156,18 +157,18 @@ export default function ComprehensiveServicesShowcase2025() {
         <div className="mb-6 grid grid-cols-2 gap-4 text-xs text-gray-600">
           <div>
             <div className="font-medium text-gray-900">Implementation</div>
-            <div>{service.implementationTime}</div>
+            <div>2-4 weeks</div>
           </div>
           <div>
             <div className="font-medium text-gray-900">Support</div>
-            <div>{service.supportLevel}</div>
+            <div>24/7 Available</div>
           </div>
         </div>
 
         {/* Actions */}
         <div className="flex space-x-3">
           <Link
-            href={service.link}
+            href={`/services/${service.id}`}
             className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center text-sm flex items-center justify-center space-x-2"
           >
             <span>Learn More</span>
@@ -184,7 +185,7 @@ export default function ComprehensiveServicesShowcase2025() {
         {/* Target Audience */}
         <div className="mt-4 pt-4 border-t border-gray-200">
           <div className="text-xs text-gray-500">
-            <span className="font-medium">Target:</span> {service.targetAudience}
+            <span className="font-medium">Target:</span> {service.category} businesses
           </div>
         </div>
       </div>
