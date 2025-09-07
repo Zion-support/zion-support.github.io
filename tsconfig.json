@@ -114,10 +114,10 @@
     }
   },
   "include": [
-<<<<<<< HEAD
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+<<<<<<< HEAD
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     "src/**/*.ts",
@@ -144,6 +144,8 @@
 =======
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
+=======
+>>>>>>> ffdc254d0d1f07e2a8e40dc844ef94b60ab93fd8
     ".next/types/**/*.ts"
   ],
   "exclude": [

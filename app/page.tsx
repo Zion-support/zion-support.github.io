@@ -2,6 +2,7 @@
 =======
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 <<<<<<< HEAD
@@ -274,6 +275,8 @@ export default function Home() {
 =======
 import { Metadata } from 'next';
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> ffdc254d0d1f07e2a8e40dc844ef94b60ab93fd8
 import Link from 'next/link';
 import {
   LightBulbIcon,
@@ -535,9 +538,12 @@ export default function HomePage() {
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-0b75
 =======
 >>>>>>> main
 >>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
+=======
+>>>>>>> ffdc254d0d1f07e2a8e40dc844ef94b60ab93fd8
   );
 }
