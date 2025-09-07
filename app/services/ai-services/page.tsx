@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 export const metadata = {
   title: "AI Services & Solutions | Zion Tech Group",
@@ -117,7 +116,7 @@ export default function AIServicesPage() {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss your AI requirements and create a custom solution that drives real business value.
+            Let&apos;s discuss your AI requirements and create a custom solution that drives real business value.
           </p>
           <a
             href="mailto:kleber@ziontechgroup.com?subject=AI Services Inquiry"

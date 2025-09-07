@@ -1,6 +1,24 @@
 import React from 'react';
 import Link from 'next/link';
 
+interface TestimonialCardProps {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}
+
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, author, role, company }) => (
+  <div className="bg-white p-6 rounded-lg shadow-lg">
+    <p className="text-gray-600 mb-4 italic">&ldquo;{quote}&rdquo;</p>
+    <div className="border-t pt-4">
+      <p className="font-semibold text-gray-900">{author}</p>
+      <p className="text-sm text-gray-500">{role}</p>
+      <p className="text-sm text-gray-500">{company}</p>
+    </div>
+  </div>
+);
+
 export const metadata = {
   title: 'AI Meeting Assistant | Zion Tech Group',
   description: 'Revolutionary AI meeting platform with real-time transcription, intelligent summaries, and action item extraction. Transform your meetings with 95% accuracy and 50% time savings.',

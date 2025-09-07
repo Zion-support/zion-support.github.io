@@ -1,5 +1,83 @@
 import React from 'react';
 import Link from 'next/link';
+import { X } from 'lucide-react';
+
+interface FeatureCardProps {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+}
+
+interface PricingTierProps {
+  name: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  cta: string;
+  popular?: boolean;
+}
+
+interface TestimonialCardProps {
+  quote: string;
+  author: string;
+  role: string;
+  company: string;
+}
+
+const FeatureCard: React.FC<FeatureCardProps> = ({ icon: Icon, title, description }) => (
+  <div className="bg-white p-6 rounded-lg shadow-lg">
+    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+      <Icon className="w-6 h-6 text-blue-600" />
+    </div>
+    <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
+    <p className="text-gray-600">{description}</p>
+  </div>
+);
+
+const PricingTier: React.FC<PricingTierProps> = ({ name, price, period, description, features, cta, popular }) => (
+  <div className={`bg-white p-8 rounded-lg shadow-lg ${popular ? 'ring-2 ring-blue-500' : ''}`}>
+    {popular && (
+      <div className="text-center mb-4">
+        <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">Most Popular</span>
+      </div>
+    )}
+    <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
+    <div className="mb-4">
+      <span className="text-4xl font-bold text-gray-900">{price}</span>
+      <span className="text-gray-500">{period}</span>
+    </div>
+    <p className="text-gray-600 mb-6">{description}</p>
+    <ul className="space-y-3 mb-8">
+      {features.map((feature, index) => (
+        <li key={index} className="flex items-center text-gray-600">
+          <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mr-3">
+            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+          </div>
+          {feature}
+        </li>
+      ))}
+    </ul>
+    <button className={`w-full py-3 px-6 rounded-lg font-semibold ${
+      popular 
+        ? 'bg-blue-500 text-white hover:bg-blue-600' 
+        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+    }`}>
+      {cta}
+    </button>
+  </div>
+);
+
+const TestimonialCard: React.FC<TestimonialCardProps> = ({ quote, author, role, company }) => (
+  <div className="bg-white p-6 rounded-lg shadow-lg">
+    <p className="text-gray-600 mb-4 italic">&ldquo;{quote}&rdquo;</p>
+    <div className="border-t pt-4">
+      <p className="font-semibold text-gray-900">{author}</p>
+      <p className="text-sm text-gray-500">{role}</p>
+      <p className="text-sm text-gray-500">{company}</p>
+    </div>
+  </div>
+);
 
 export const metadata = {
   title: 'AI-Powered CRM | Zion Tech Group',

@@ -99,7 +99,21 @@ export default [
       'pages_backup_conflicts/**',
       'pages_disabled/**',
       'src.pages.disabled/**',
-      'vite.config-backup.ts'
+      'vite.config-backup.ts',
+      'apps.backup/**',
+      'automation_backup/**',
+      'backup-merge-conflicts/**',
+      'components/apps/**',
+      'dao/**',
+      'deployments/**',
+      'lib.broken/**',
+      'middleware/**',
+      'netlify/**',
+      'pm2-automation/**',
+      'public/**',
+      'src.broken/**',
+      'src/components.disabled/**',
+      'src/__tests__/**'
     ],
   },
   {
