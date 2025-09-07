@@ -1,11 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
-<<<<<<< HEAD
 import { Award, Users, Target, Globe, CheckCircle, Star } from 'lucide-react';
-=======
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-9b09
 
 export const metadata: Metadata = {
   title: 'About | Zion Tech Group',
