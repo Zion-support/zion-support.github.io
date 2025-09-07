@@ -129,40 +129,8 @@ pr-12325
                     <Popover>;
                       <PopoverTrigger asChild>;
                         <FormControl>;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-                          <Button;
-                            variant={"outline"}
-                            className={cn(;
-                              "w-full pl-3 text-left font-normal",;
-                              !field.value && "text-muted-foreground";
-                            )}
-                          >;
-                            {field.value ? (;
-                              format(field.value, "MMM yyyy");
-                            ) :(;
-                              <span>Select date</span>;
-                            )}
-=======
-                          <Button;
-                            variant={"outline"}
-                            className={cn(;
-                              "w-full pl-3 text-left font-normal",;
-                              !field.value && "text-muted-foreground";
-                            )}
-                          >;
-                            {field.value ? (;
-                              format(field.value, "MMM yyyy");
-                            ) :(;
-                              <span>Select date</span>;
-                            )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                           </Button>;
                         </FormControl>;

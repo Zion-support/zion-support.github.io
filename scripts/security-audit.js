@@ -437,6 +437,9 @@ console.log('🔒 Security audit completed!');'
 #!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { execSync } from 'child_process'; console.log('🔒 Starting Security Audit...\n'); try { console.log('📦 Checking npm dependencies for vulnerabilities...');'
 
 }
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 const auditResult = execSync('npm audit --audit-level=moderate --json',{ 'encoding': 'utf8',;'
 });

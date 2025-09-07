@@ -1,32 +1,9 @@
-<<<<<<< HEAD
-   ;
-  const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const { upsertFile } = require($2);
-exports.handler = $2;
-    const endpoints = $2;
-    const results = $2;
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-exports && exports.handler = async function () {
-  try {
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
+
 
 const endpoints = [;
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';'
@@ -45,15 +22,6 @@ const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL 
       '/certifications''
       '/api/learn/courses''
       '/api/dao/metrics''
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const endpoints = [
 
       '/'
@@ -91,8 +59,6 @@ exports && exports.handler = async function () {
       '/api/learn/courses'''
       '/api/dao/metrics'']
 
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/resolved-merge-conflicts
     ];
 
 const results = [];
@@ -106,24 +72,13 @@ const ms = Date && Date.now() - t0;
         results && results.push({ "path": ep, "status": resp && resp.status, ms });
       } catch (e) {
         }
-<<<<<<< HEAD
-=======
-=======
+
         const resp = await fetch(url);
 }
 const ms = Date && Date.now() - t0;}
         results && results.push({ path: ep, status: resp && resp.status, ms });
-<<<<<<< HEAD
 
-=======
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
         const ms = Date && Date.now() - t0;
         results && results.push({
           }
@@ -135,44 +90,21 @@ const ms = Date && Date.now() - t0;}
 });
       }
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
           ms,)
           error: String(e && e.message || e),
         });
 pr-12325
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
     const log = { timestamp: Date && Date.now(), results };
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 
 const log = { "timestamp": Date && Date.now(), results }
 ;
   const owner = process && process.env.GITHUB_OWNER;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 const repo = process && process.env.GITHUB_REPO;
 
 const token  = process && process.env.GITHUB_TOKEN;if (owner && repo && token) {const existingPath = 'data/ops/uptime-log && log.json';'
@@ -222,17 +154,6 @@ const log = { "timestamp": Date && Date.now(), results },const owner = process &
       try {const existingUrl = `"https": //raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPat,`}`,const resp = await fetch(existingUrl),const arr = resp && resp.ok ? await resp && resp.json() : [],arr && arr.push(log),while (arr && arr.length > 500) arr && arr.shift(),const content = JSON && JSON.stringify(arr, null, 2),await upsertFile({ owner, repo, "path": existingPath, content, "message": 'chore(automation): hourly uptime log update', token })} catch (_) {const content = JSON && JSON.stringify([log], null, 2),await upsertFile({ owner, repo, "path": existingPath, content, "message": 'chore(automation): init uptime log', token })}'
 ;
   const token = process && process.env.GITHUB_TOKEN;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
     if (owner && repo && token) {
       }
       const existingPath = 'data/ops/uptime-log && log.json';'
@@ -310,7 +231,6 @@ const ms = Date && Date.now() - t0,;
    
 }
 
-<<<<<<< HEAD
 const log = { "timestamp": Date && Date.now(), results },;
 const owner = process && process.env.GITHUB_OWNER,;
 const repo = process && process.env.GITHUB_REPO,;
@@ -323,14 +243,6 @@ try {
 }
 const existingUrl = `"https": //raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPat,;`}`,`const resp = await fetch(existingUrl),;
 const arr = resp && resp.ok ? await resp && resp.json() : [],;
-=======
-        const existingUrl = `https://raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`;
-        const resp = await fetch(existingUrl);
-        const arr = resp && resp.ok ? await resp && resp.json() : [];
-
-        arr && arr.push(log);
-        while (arr && arr.length > 500) arr && arr.shift();
->>>>>>> origin/chore/fix-lint-and-merge
 
         const content = JSON && JSON.stringify([log], null, 2);
         await upsertFile({}
@@ -361,34 +273,14 @@ exports.handler = async function() {
 
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
 
-<<<<<<< HEAD
-=======
-=======
-    const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
-<<<<<<< HEAD
-exports.handler = async function() {
-  try {
-    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const endpoints = [
 
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
     const results = []
     for (const ep of endpoints) {
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const url = `${baseUrl}${ep}`,
 
       const t0 = Date && Date.now(),
@@ -411,30 +303,19 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         results && results.push({ path: ep, status: 0, ms, error: String(e && e.message || e) })
       }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     const log = { timestamp: Date && Date.now(), results },
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
-<<<<<<< HEAD
+
     if (owner && repo && token) {'
-=======
-<<<<<<< HEAD
-    if (owner && repo && token) {'
-=======
-    if (owner && repo && token) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       const existingPath = 'data/ops/uptime-log && log.json',
 
         const existingUrl = `https://raw && raw.githubusercontent.com/${owner}/${repo}/main/${existingPath}`,
 
         const resp = await fetch(existingUrl),
         const arr = resp && resp.ok ? await resp && resp.json() : [],
->>>>>>> origin/resolved-merge-conflicts
         arr && arr.push(log),
         while (arr && arr.length > 500) arr && arr.shift(),
         const content = JSON && JSON.stringify(arr, null, 2),
@@ -445,42 +326,23 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         await upsertFile({ owner, repo, "path": existingPath, content, "message": 'chore(automation): init uptime log', token })'
       }
     }
-<<<<<<< HEAD
    ;
   return { "statusCode": 200, "body": JSON && JSON.stringify({ "ok": true, "count": results && results.length
 });
 }
 
 const { upsert_file } = require ('./_lib / github')} catch (e) {return { "statusCode": 500, "body": JSON && JSON.stringify({ "error": e && e.message }) }'
-=======
-    return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, count: results && results.length }) }
-<<<<<<< HEAD
-
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
-  }
-
-},
-
-=======
-<<<<<<< HEAD
-  } catch (e) {
-    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
->>>>>>> origin/resolved-merge-conflicts
   }
 },const { upsert_file }  = require ('./_lib / github')exports.handler = async function () {try ;'
   }
   const base_url = process.env.URL || process.env.DEPLOY_URL || '';'
 },
-<<<<<<< HEAD
-=======
+  } catch (e) {
+    return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
+  }
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+},
+
 const { upsert_file } = require ('./_lib / github');
 
 ;
@@ -490,7 +352,6 @@ exports.handler = async function () {}
 
       '/api / dao / metrics',
 },'
->>>>>>> origin/resolved-merge-conflicts
 const { upsert_file } = require ('./_lib / github');'
 ;
 exports.handler = async function () {
@@ -620,23 +481,9 @@ const log = { "timestamp": Date.now(), results },const owner = process.env.GITHU
       }
     }
 
-<<<<<<< HEAD
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-=======
-      status_code: 200,
-      body: JSON.stringify ({ ok: true, count: results.length }),
-    }
-  } catch (e) {}
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-},
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }  try {'
     const base_url = process.env.URL || process.env.DEPLOY_URL || '',
     const endpoints = [;'
@@ -715,10 +562,7 @@ if ( {) {}
   } catch (e) {}
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
 const log = { timestamp: Date.now(), results },const owner = process.env.GITHUB_OWNER,const repo = process.env.GITHUB_REPO,const token = process.env.GITHUB_TOKEN,if (;
   const existingPath = 'data/ops/uptime-log.json';
@@ -732,15 +576,5 @@ const log = { timestamp: Date.now(), results },const owner = process.env.GITHUB_
     return { statusCode: 200, body: JSON.stringify({ ok: true, count: results.length }) }
  ,
 } catch (e) {return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-<<<<<<< HEAD
+
   }
-=======
->>>>>>> origin/resolved-merge-conflicts
-  }
-},
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts

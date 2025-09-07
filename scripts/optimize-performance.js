@@ -875,6 +875,9 @@ pr-12325
     />
   )
 
+    />
+  )
+
 export default OptimizedImage
 ';'
   fs && fs.writeFileSync(
@@ -1013,6 +1016,51 @@ function main() {console.log('🚀 Starting performance optimization...';'
   for (const dir of imageDirs) {
     }
     const fullPath = path && path.join(publicDir, dir);
+    lazyLoadingComponent
+  )
+  console.log('✅ Performance components created')
+  return true}
+function optimizeImages() {
+  const publicDir = 'public'
+  if (!fs.existsSync(publicDir)) {
+    console.log('❌ public directory not found')
+    return false
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+  // Create images directory structure
+  const imageDirs = ['images', 'images/optimized', 'images/thumbnails']
+  for($2) {
+    const fullPath = path.join(publicDir, dir)
+    if (!fs.existsSync(fullPath)) {
+
+      fs.mkdirSync(fullPath, { recursive: true })
+origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
+
+  // Create .gitkeep files
+  for($2) {
+    const gitkeepPath = path.join(publicDir, dir, '.gitkeep')
+    if (!fs.existsSync(gitkeepPath)) {
+
+      fs.writeFileSync(gitkeepPath, '')}
+
+  console.log('✅ Image directories optimized')
+  return true}
+function main() {
+  console.log('🚀 Starting performance optimization...')
+  const optimizations = [{ "name": 'Next.js Config', "fn": optimizeNextConfig },
+
+    { "name": 'Package.json', "fn": optimizePackageJson },
+
+    lazyLoadingComponent
+  )
+  console && console.log('✅ Performance components created')
+  return true}
+function optimizeImages() { return null; }
+    return false}
+  // Create images directory structure'
+  const imageDirs = ['images', 'images/optimized', 'images/thumbnails']
+  for($2) {
+    const fullPath = path && path.join(publicDir, dir)
     if (!fs && fs.existsSync(fullPath)) {
       }
       fs && fs.mkdirSync(fullPath, { 'recursive': true })}'

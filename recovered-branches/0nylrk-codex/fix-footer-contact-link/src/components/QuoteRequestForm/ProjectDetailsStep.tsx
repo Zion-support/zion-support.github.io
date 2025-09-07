@@ -1,57 +1,10 @@
-<<<<<<< HEAD
-import { QuoteFormData } from "@/types/quotes";"
-import { Input } from "@/components/ui/input";"
-import { Label } from "@/components/ui/label";"
-import { Textarea } from "@/components/ui/textarea";"
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-import { QuoteFormData } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-=======
-
-import {QuoteFormData} from "@/types/quotes";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Textarea} from "@/components/ui/textarea";
-import { QuoteFormData } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 interface ProjectDetailsStepProps {
   }
   "formData": QuoteFormData;
   "updateFormData": ("data": Partial<QuoteFormData>) => void;
 }
-<<<<<<< HEAD
 export function ProjectDetailsStep() {
-=======
-export function ProjectDetailsStep({
-  formData
-  updateFormData
-<<<<<<< HEAD
 
 import { QuoteFormData } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
@@ -88,16 +41,6 @@ export function ProjectDetailsStep({}
             <Label htmlFor="name" className="text-zion-slate-light">
               Name;
             </Label>
-=======
-<<<<<<< HEAD
-import { QuoteFormData } from "@/types/quotes";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-interface ProjectDetailsStepProps {
-  formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void
->>>>>>> origin/resolved-merge-conflicts
 }
 return (;
     <div className="space-y-6">"
@@ -147,91 +90,10 @@ id="projectDescription""
             <Label htmlFor="name" className="text-zion-slate-light">"
               Name
             </Label>
-<<<<<<< HEAD
-=======
-            <Input
-              id="name"
-              placeholder="Your name"
-              value={formData.contactInfo.name}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo
-                    name: e.target.value
-                  }
-                })
-              }
-              value={formData.contactInfo.name}
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, name: e.target.value } ;
-              })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
-
-          <div>
-            <Label htmlFor="company" className="text-zion-slate-light">
-              Company
-            </Label>
-            <Input
-              id="company"
-              placeholder="Your company name"
-              value={formData.contactInfo.company}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo
-                    company: e.target.value
-                  }
-                })
-              }
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
-
-          <div>
-            <Label htmlFor="email" className="text-zion-slate-light">
-              Email
-            </Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="Your email address"
-              value={formData.contactInfo.email}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo
-                    email: e.target.value
-                  }
-                })
-              }
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
-            />
-          </div>
-
-          <div>
-            <Label htmlFor="phone" className="text-zion-slate-light">
-              Phone
-            </Label>
-            <Input
-              id="phone"
-              placeholder="Your phone number"
-              value={formData.contactInfo.phone}
-              onChange={(e) => updateFormData({ 
-                contactInfo: { ...formData.contactInfo, phone: e.target.value } 
-              })}
-              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
-            />
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
         <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-<<<<<<< HEAD
 <div>
 <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information
@@ -241,59 +103,23 @@ id="projectDescription""
           Contact Information
         </h3>
         <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>"
             <Label htmlFor="name" className="text-zion-slate-light">
               Name;
             </Label>
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
+
             <Input,
 id="name""
               placeholder="Your name""
-import { QuoteFormData } from "@/types/quotes";"
-import { Input } from "@/components/ui/input";"
 import { Label } from "@/components/ui/label",;"
 import { Textarea } from "@/components/ui/textarea",;"
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
-=======
-=======
-            <Input
-              id="name"
-              placeholder="Your name"
-
-
-<<<<<<< HEAD
-              value={formData.contactInfo.name}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo
-                    name: e.target.value
-                  }
-                })
-              }
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { QuoteFormData } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
 
 import { Textarea } from "@/components/ui/textarea",;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/resolved-merge-conflicts
 interface ProjectDetailsStepProps {;
   }
   "formData": QuoteFormData;
@@ -323,34 +149,9 @@ export function ProjectDetailsStep() {;
               id="projectDescription";"
               placeholder="Describe your project in detail...";"
               value={formData.projectDescription}
-<<<<<<< HEAD
               onChange={(e) => updateFormData({ "projectDescription": e.target.value })}
               className="min-h-32 bg-zion-blue border border-zion-blue-light "focus":border-zion-purple text-white";"
             />;
-=======
-              onChange={(e) => updateFormData({ projectDescription: e.target.value })}
-</Textarea>
-<<<<<<< HEAD
-          </div>;
-        </div>;
-      </div>;
-      <div>;"
-        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>;"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <div>;"
-            <Label htmlFor="name" className="text-zion-slate-light">Name</Label>;
-            <Input;"
-              id="name";"
-              placeholder="Your name";
-
-value={formData.contactInfo.name}
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-
-              value={formData.contactInfo.name}
-=======
->>>>>>> origin/resolved-merge-conflicts
           </div>;
         </div>;
       </div>;
@@ -364,17 +165,25 @@ value={formData.contactInfo.name}
               placeholder="Your name";"
               value={formData.contactInfo.name}          <div>
             <Label htmlFor="company" className="text-zion-slate-light">"
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo,
+                    name: e.target.value,
+                  },
+                })
+              }
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+            />
+          </div>
+
+          <div>
+
+            <Label htmlFor="company" className="text-zion-slate-light">
               Company
             </Label>
-<<<<<<< HEAD
             <Input,
 id="company""
-=======
-            <Input
-              id="company"
-              placeholder="Your company name"
-              value={formData.contactInfo.company}
-<<<<<<< HEAD
               onChange={(e) =>
                 updateFormData({
                   contactInfo: {
@@ -383,35 +192,6 @@ id="company""
                   },
                 })
               }
-=======
-
-<<<<<<< HEAD
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, company: e.target.value } ;
-              })}
-
-
-onChange={(e) =>
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo
-                    company: e.target.value
-                  }
-                })
-              }
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, company: e.target.value } ;
-              })}
-=======
-
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, company: e.target.value } ;
-              })}
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
@@ -420,105 +200,12 @@ onChange={(e) =>
             <Label htmlFor="email" className="text-zion-slate-light">
               Email
             </Label>
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-=======
-import {QuoteFormData} from "@/types/quotes";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Textarea} from "@/components/ui/textarea";
-interface ProjectDetailsStepProps {;
-  formData: QuoteFormData,;
-  updateFormData: (data: Partial<QuoteFormData>) => void;
-}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-import { QuoteFormData } from "@/types/quotes",;
-import { Input } from "@/components/ui/input",;
-import { Label } from "@/components/ui/label",;
-import { Textarea } from "@/components/ui/textarea",;
-;
-interface ProjectDetailsStepProps {;
-  formData:QuoteFormData,;
-  updateFormData:(data:Partial<QuoteFormData>) => void;
-}
-;
-export function ProjectDetailsStep({ formData, updateFormData } ProjectDetailsStepProps) {;
-  return (;
-    <div className="space-y-6">;
-      <div>;
-        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>;
-        ;
-        <div className="space-y-4">;
-          <div>;
-            <Label htmlFor="projectName" className="text-zion-slate-light">Project Name</Label>;
-            <Input;
-              id="projectName";
-              placeholder="Enter a name for your project";
-              value={formData.projectName}
-              onChange={(e) => updateFormData({ projectName:e.target.value })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-          </div>;
-          ;
-          <div>;
-            <Label htmlFor="projectDescription" className="text-zion-slate-light">Project Description</Label>;
-            <Textarea;
-              id="projectDescription";
-              placeholder="Describe your project in detail...";
-              value={formData.projectDescription}
-              onChange={(e) => updateFormData({ projectDescription:e.target.value })}
-              className="min-h-32 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-          </div>;
-        </div>;
-      </div>;
-<<<<<<< HEAD
-=======
-
-      <div>;
-        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>;
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-          <div>;
-            <Label htmlFor="name" className="text-zion-slate-light">Name</Label>;
-            <Input
-              id="name"
-              placeholder="Your name"
-              value={formData && formData.contactInfo.name}
-              onChange={(e) => updateFormData({ ;
-                contactInfo: { ...formData && formData.contactInfo, name: e && e.target.value } ;
-              })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-          </div>;
-
-          <div>;
-            <Label htmlFor="company" className="text-zion-slate-light">Company</Label>;
-            <Input
-              id="company"
-              placeholder="Your company name"
-              value={formData && formData.contactInfo.company}
-              onChange={(e) => updateFormData({ ;
-                contactInfo: { ...formData && formData.contactInfo, company: e && e.target.value } ;
-              })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-          </div>;
-
-          <div>;
-            <Label htmlFor="email" className="text-zion-slate-light">Email</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
             <Input
               id="email"
               type="email"
               placeholder="Your email address"
-<<<<<<< HEAD
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, email: e.target.value } ;
               })}
@@ -538,41 +225,19 @@ onChange={(e) =>
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, email: e.target.value } ;
               })}
-=======
-
-              value={formData.contactInfo.email}
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               onChange={(e) =>
                 updateFormData({
                   contactInfo: {
                     ...formData.contactInfo,
-<<<<<<< HEAD
                     name: e.target.value,
                   },
                 })
               }
-=======
-                    email: e.target.value,
-                  },
-                })
-              }
-=======
-
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, email: e.target.value } ;
-              })}
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
 
           <div>
-<<<<<<< HEAD
 
             <Label htmlFor="company" className="text-zion-slate-light">
               Company
@@ -624,16 +289,6 @@ onChange={(e) =>
               id="phone"
               placeholder="Your phone number"
               value={formData.contactInfo.phone}
-=======
-            <Label htmlFor="phone" className="text-zion-slate-light">
-              Phone
-            </Label>
-            <Input
-              id="phone"
-              placeholder="Your phone number"
-              value={formData.contactInfo.phone}
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               onChange={(e) =>
                 updateFormData({
                   contactInfo: {
@@ -642,38 +297,7 @@ onChange={(e) =>
                   },
                 })
               }
-<<<<<<< HEAD
-=======
-=======
 
-<<<<<<< HEAD
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, phone: e.target.value } ;
-              })}
-
-
-onChange={(e) =>
-              onChange={(e) =>
-                updateFormData({
-                  contactInfo: {
-                    ...formData.contactInfo
-                    phone: e.target.value
-                  }
-                })
-              }
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, phone: e.target.value } ;
-              })}
-=======
-
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, phone: e.target.value } ;
-              })}
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
 </div>"
@@ -698,7 +322,6 @@ value={formData.contactInfo.name}
             </Label>
             <Input;"
               id="company"""
->>>>>>> origin/resolved-merge-conflicts
               placeholder="Your company name""
               value={formData.contactInfo.company}
               onChange={(e) =>
@@ -729,7 +352,6 @@ id="phone""
               placeholder="Your phone number""
               value={formData.contactInfo.phone}
               onChange={(e) =>
-<<<<<<< HEAD
                 }
                 updateFormData({
                   }
@@ -740,56 +362,20 @@ id="phone""
               }
               className="bg-zion-blue border border-zion-blue-light "focus": border-zion-purple text-white""
             />
-=======
-</Input>
-
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
           </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
               className="bg-zion-blue border border-zion-blue-light "focus": border-zion-purple text-white";"
 import { QuoteFormData  } from '@/types / quotes';'
 import { Input  } from '@/components / ui / input';'
 import { Label  } from '@/components / ui / label';'
 import { Textarea  } from '@/components / ui / textarea';'
-=======
-<<<<<<< HEAD
-
-              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
-import { QuoteFormData  } from '@/types / quotes';
-import { Input  } from '@/components / ui / input';
-import { Label  } from '@/components / ui / label';
-import { Textarea  } from '@/components / ui / textarea';
-interface ProjectDetailsStepProps {
-  form_data: QuoteFormData;
-
-}
-
-=======
-<<<<<<< HEAD
-  )
-}
-              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               value={formData && formData.contactInfo.email}
               onChange={(e) => updateFormData({ ;
                 contactInfo: { ...formData && formData.contactInfo, email: e && e.target.value } ;
               })}
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             />;
 
           </div>;
@@ -805,13 +391,11 @@ interface ProjectDetailsStepProps {
   );
 }
   )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 import { QuoteFormData  } from '@/types / quotes';
 import { Input  } from '@/components / ui / input';
 import { Label  } from '@/components / ui / label';
 import { Textarea  } from '@/components / ui / textarea';
->>>>>>> origin/resolved-merge-conflicts
 interface ProjectDetailsStepProps {
   }
   "form_data": QuoteFormData;
@@ -820,21 +404,7 @@ interface ProjectDetailsStepProps {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </div>;
-  );
-}
-;
-}
-;
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
->>>>>>> origin/resolved-merge-conflicts
       <div>;
         <h3 className="text - xl font - semibold text - white mb-4">;"
           Contact Information;
@@ -885,60 +455,13 @@ interface ProjectDetailsStepProps {
               Email;
             </Label>;
             <Input;
-<<<<<<< HEAD
               id="email";"
               type="email";"
               placeholder="Your email address";"
-=======
-<<<<<<< HEAD
-              id="email";
-              type="email";
-              placeholder="Your email address";
-              value={form_data.contact_info.email}
-              on_change={(e) =>;
-                updateFormData ({
-                  contact_info: {
-                    ...form_data.contact_info,
-                    email: e.target.value,
-                  },
-                });
-              }
-              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text-white";
-=======
-              id="name";
-              placeholder="Your name";
-              value={formData.contactInfo.name}
-              onChange={(e) => updateFormData({ ;
-                contactInfo:{ ...formData.contactInfo, name:e.target.value } ;
-              })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             />;
           </div>;
           ;
           <div>;
-<<<<<<< HEAD
-=======
-            <Label htmlFor="company" className="text-zion-slate-light">Company</Label>;
-            <Input;
-              id="company";
-              placeholder="Your company name";
-              value={formData.contactInfo.company}
-              onChange={(e) => updateFormData({ ;
-                contactInfo:{ ...formData.contactInfo, company:e.target.value } ;
-              })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
-            />;
-          </div>;
-          ;
-          <div>;
-            <Label htmlFor="email" className="text-zion-slate-light">Email</Label>;
-            <Input;
-              id="email";
-              type="email";
-              placeholder="Your email address";
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
               value={form_data.contact_info.email}
               on_change={(e) =>;
                 }
@@ -953,61 +476,30 @@ interface ProjectDetailsStepProps {
             />;
           </div>;
           <div>;
-<<<<<<< HEAD
-            <Label html_for="phone" className="text - zion - slate-light">;"
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
             <Label html_for="phone" className="text - zion - slate-light">;
->>>>>>> origin/resolved-merge-conflicts
               Phone;
             </Label>;
             <Input;
-              id="phone";"
-              placeholder="Your phone number";"
-              value={form_data.contact_info.phone}
-              on_change={(e) =>;
-                }
-                updateFormData ({
-                  }
-                  "contact_info": {
-                    ...form_data.contact_info
-                    }
-                    "phone": e.target.value});
-              }
-<<<<<<< HEAD
-              className="bg - zion - blue border border - zion - blue - light "focus": border - zion - purple text-white";"
-=======
-              className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text-white";
-
-<<<<<<< HEAD
-=======
-=======
-            <Label htmlFor="phone" className="text-zion-slate-light">Phone</Label>;
-            <Input;
               id="phone";
               placeholder="Your phone number";
-              value={formData.contactInfo.phone}
-              onChange={(e) => updateFormData({ ;
-                contactInfo:{ ...formData.contactInfo, phone:e.target.value } ;
-              })}
-              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
+              value={form_data.contact_info.phone}
+              on_change={(e) =>;
+                updateFormData ({
+                  contact_info: {
+                    ...form_data.contact_info,
+                    phone: e.target.value,
+                  },
+                });
+              }
+              className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text-white";
+
             />;
           </div>;
         </div>;
       </div>;
 
-<<<<<<< HEAD
-    </div>);}
-  )
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
   )
 import { QuoteFormData } from "@/types/quotes";""
 import { Input } from "@/components/ui/input";""
@@ -1149,35 +641,7 @@ value={formData.contactInfo.name}
 }) 
 }/> </div> </div> </div> </div>) 
 });
-<<<<<<< HEAD
-=======
-=======
-  )
 
-<<<<<<< HEAD
-    </div>;
-  );}
- interface ProjectDetailsStepProps {
-  formData: QuoteFormData;
-updateFormData: (data: Partial<QuoteFormData>) => void 
-}export function ProjectDetailsStep ({
-  formData, updateFormData 
-}: ProjectDetailsStepProps) {
-  return (<div className="space-y-6" > text-xl font-semibold text-white mb-4">Tell us about your project</h3> <div className=" space-y-4"> <div> <Label htmlFor=" projectName"className=" text-zion-slate-light">Project Name</Label> <Input id=" projectName"placeholder=" Enter a name for your project"value= {
-  formData.projectName 
-}/> </div> <div> <Label htmlFor=" projectDescription"className=" text-zion-slate-light">Project Description</Label> <Textarea /> </div> </div> </div> <div> <h3 className=" text-xl font-semibold text-white mb-4">Contact Information</h3> <div className=" grid grid-cols-1 md:grid-cols-2 gap-4"> <div> <Label htmlFor=" name"className=" text-zion-slate-light">Name</Label> <Input 
-}) 
-}className=" bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"/> </div> <div> <Label htmlFor=" company"className=" text-zion-slate-light">Company</Label> <Input 
-}) 
-}className=" bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"/> </div> <div> <Label htmlFor=" email"className=" text-zion-slate-light">Email</Label> <Input 
-}) 
-}className=" bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"/> </div> <div> <Label htmlFor=" phone"className=" text-zion-slate-light" >Phone</Label> <Input 
-}) 
-}/> </div> </div> </div> </div>) 
-}
-);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 }
 ;
@@ -1185,17 +649,5 @@ updateFormData: (data: Partial<QuoteFormData>) => void
 }
 ;
 }
-<<<<<<< HEAD
+
 ;
-=======
-<<<<<<< HEAD
-;
-=======
-;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts

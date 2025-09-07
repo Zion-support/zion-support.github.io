@@ -113,6 +113,7 @@ const { execSync } = // // require('child_process');
         }
 
           this.log(`Applied 'fix': ${fix.description} in ${filePath}`)}
+          this.log(`Applied "fix": ${fix.description} in ${filePath}`)}
       }
       // Add React import if needed
       if (content.includes('React.') && !content.includes('import React')) {

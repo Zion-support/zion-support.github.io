@@ -1,60 +1,4 @@
-<<<<<<< HEAD
-import {Skill} from '@/types / resume';
-import {Button} from '@/components / ui / button';
-import {Alert, AlertDescription} from '@/components / ui / alert';
-import {use_resume} from '@/hooks / use_resume';import { useState  } from 'react';
-=======
-<<<<<<< HEAD
-import {useState} from 'react';
-import {Skill} from '@/types / resume';
-import {Button} from '@/components / ui / button';
-import {Alert, AlertDescription} from '@/components / ui / alert';
 
-import {use_resume} from '@/hooks / use_resume';
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-
-
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-import { useState  } from 'react';
-
-import { Skill  } from '@/types/resume';
-import { Button  } from '@/components/ui/button';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { useResume  } from '@/hooks/useResume';
-import { SkillsFormProps  } from './types';
-import { SkillsList  } from './SkillsList';
-import { AddSkillForm  } from './AddSkillForm';
-import { BulkAddSkills } from './BulkAddSkills';
-export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-import {useState} from 'react';
-import {Skill} from '@/types/resume';
-import {Button} from '@/components/ui/button';
-import {Alert, AlertDescription} from '@/components/ui/alert';
-import {useResume} from '@/hooks/useResume';
-=======
-=======
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {useState} from 'react';
 import {Skill} from '@/types / resume';
 import {Button} from '@/components / ui / button';
@@ -73,7 +17,6 @@ import { SkillsList  } from './SkillsList';
 import { AddSkillForm  } from './AddSkillForm';
 import { BulkAddSkills } from './BulkAddSkills';
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import {useState} from 'react';
 import {Skill} from '@/types/resume';
@@ -84,90 +27,27 @@ import {Skill} from '@/types / resume';
 import {Button} from '@/components / ui / button';
 import {Alert, AlertDescription} from '@/components / ui / alert';
 import {use_resume} from '@/hooks / use_resume';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {SkillsFormProps} from './types';
->>>>>>> origin/resolved-merge-conflicts
 import {SkillsList} from './SkillsList';
 import {AddSkillForm} from './AddSkillForm';
 import {BulkAddSkills} from './BulkAddSkills';
 
 export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
-<<<<<<< HEAD
-=======
+export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const { addSkill, deleteSkill, fetchResume } = useResume();
 
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const handleAddSkill = async (data: Skill) => {
-    try {
-      setError(null)
-      const success = await addSkill(resumeId, data);
-      if (success) {
-        // Refresh the skills list
-        await refreshSkills()
-import { useState } from 'react',;
-import { Skill } from '@/types/resume',;
-import { Button } from '@/components/ui/button',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { useResume } from '@/hooks/useResume',;
-import { SkillsFormProps } from './types',;
-import { SkillsList } from './SkillsList',;
-import { AddSkillForm } from './AddSkillForm',;
-import { BulkAddSkills } from './BulkAddSkills',;
-export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {;
-  const { addSkill, deleteSkill, fetchResume } = useResume(),;
-  const [error, setError] = useState<string | null>(null),;
-  const [localSkills, setLocalSkills] = useState<Skill[]>(skills),;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   const handleAddSkill = async (data: Skill) => {;
     try {;
       setError(null),;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const handleAddSkill = async (data: Skill) => {;
-    try {;
-      setError(null),;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
       const success = await addSkill(resumeId, data);
       if (success) {;
         // Refresh the skills list;
         await refreshSkills();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-  const handleAddSkill = async (data: Skill) => {;
-    try {;
-      setError(null),;
-      const success = await addSkill(resumeId, data),;
-      if (success) {;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
         // Refresh the skills list;
         await refreshSkills();
 
@@ -191,69 +71,18 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       }
     }
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/resolved-merge-conflicts
-  const refreshSkills = async () => {
-    try {
-      const resumeData = await fetchResume(resumeId);      return success;
-    } catch (err: any) {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
       setError(err && err.message || 'An error occurred'),;
       return false;
     }
   };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-      const resumeData = await fetchResume(resumeId);
-      if (resumeData && resumeData.skills) {;
-        setLocalSkills(resumeData.skills);
-
-=======
-<<<<<<< HEAD
-      const resumeData = await fetchResume(resumeId);
-      if (resumeData && resumeData.skills) {
-        setLocalSkills(resumeData.skills)
-  },;
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
   const handleDeleteSkill = async (id: string, category: string = 'Other') => {;
 
     if (confirm('Are you sure you want to delete this skill?')) {;
       const success = await deleteSkill(id),;
       if (success) {;
         // Update local state;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-        setLocalSkills(localSkills.filter(skill => skill.id !== id));
-      }
-    }
-  },;
-  const refreshSkills = async () => {;
-    try {;
-=======
->>>>>>> origin/resolved-merge-conflicts
         setLocalSkills(localSkills && localSkills.filter(skill => skill && skill.id !== id));
       }
     }
@@ -261,13 +90,6 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
   const refreshSkills = async () => {;
     try {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
       const resumeData = await fetchResume(resumeId);
       if (resumeData && resumeData.skills) {;
         setLocalSkills(resumeData.skills);
@@ -281,15 +103,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
   },
 
-<<<<<<< HEAD
-  }
 
-  },
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
   };
   },
 
@@ -311,45 +125,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
 
         <BulkAddSkills resumeId={resumeId} onSuccess={refreshSkills} />;
       </div>;
-<<<<<<< HEAD
 
-      {error && <Alert variant='destructive'><AlertDescription>{error}</AlertDescription></Alert>}  },
-=======
-      {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      }
-    } catch (err: any) {
-      setError(err.message |'Failed to refresh skills')
-    }
-  }
-  },
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  };
-  },
-
-  return (
-<<<<<<< HEAD
-
-  return (
-
-      }
-    } catch (err: any) {;
-      setError(err && err.message || 'Failed to refresh skills');
-    }
-  }
-  return (
-    <div className="space-y-6">;
-      <div>;
-        <h2 className="text-xl font-semibold mb-2">Skills</h2>;
-
-        <p className="text-muted-foreground">;
-          Add your technical and professional skills.;
-        </p>;
-      </div>;
-
-          <h3 className="text-md font-medium mb-4">Add Skills One by One</h3>;
-          <AddSkillForm resumeId={resumeId} onAddSkill={handleAddSkill} />;
-        </div>;
-=======
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold mb-2">Skills</h2>
@@ -377,25 +153,12 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       </div>
     </div>
   )
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 
   };
   },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
   return (
-=======
-<<<<<<< HEAD
-  return (
-=======
-      {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       <div className="flex justify-between">;
         <Button variant="outline" onClick={onBack}>;
@@ -407,13 +170,7 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormP
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 }
 export /**
@@ -601,15 +358,12 @@ export function SkillsForm({ resumeId, skills, onComplete, onBack } SkillsFormPr
 ;
         <BulkAddSkills resumeId={resumeId} onSuccess={refreshSkills} />;
       </div>;
-<<<<<<< HEAD
 
       {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}  },
 
   };
   },
 
->>>>>>> merged-prs-20250907-203621
->>>>>>> origin/resolved-merge-conflicts
   const { addSkill, deleteSkill, fetchResume } = useResume($2);
   const [error, setError] = useState<string | null>(null),
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills),
@@ -682,219 +436,5 @@ function SkillsForm() {
   const [error, set_error] = useState < string | null>(null);
   const [local_skills, setLocalSkills] = useState < Skill[]>(skills);
 ;
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-      {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-;
-      <div className="flex justify-between">;
-        <Button variant="outline" onClick={onBack}>;
-          Back;
-        </Button>;
-        <Button onClick={onComplete} disabled={localSkills.length === 0}>;
-          Next;
-        </Button>;
-      </div>;
-    </div>;
-  ),; 
-}
-=======
-<<<<<<< HEAD
-=======
-  const handleAddSkill = async (data: Skill) => {
-    try {
-      set_error (null),
-      const success = await add_skill (resume_id, data);
-      // Check condition
-if ( {) {
-  $2
->>>>>>> merged-prs-20250907-203621
-}
-        // Refresh the skills list;
-        await refresh_skills ();
-      }
-      return success;
-    } catch (err: any) {
-      set_error (err.message || 'An error occurred'),
-      return false;
-    }
-  }
-;
-  const handleDeleteSkill = async (id: string, category: string = 'Other') => {
-    if () {) {
-  $2
-}
-      const success = await delete_skill (id),
-      // Check condition
-if ( {) {
-  $2
-}
-        // Update local state;
-        setLocalSkills (local_skills.filter (skill => skill.id !== id));
-      }
-    }
-  }
-;
-  const refresh_skills = async () => {
-    try {
-      const resume_data = await fetch_resume (resume_id);
-      // Check condition
-if ( {) {
-  $2
-}
-        setLocalSkills (resume_data.skills);
-      }
-    } catch (err: any) {
-      set_error (err.message || 'Failed to refresh skills');
-    }
-  }
-;
-  return (
-    <div className="space - y-6">;
-      <div>;
-        <h2 className="text - xl font - semibold mb - 2">Skills</h2>;
-        <p className="text - muted - foreground">;
-          Add your technical and professional skills.;
-        </p>;
-      </div>;
-      {/* Display skills by category */}
-      <SkillsList skills={local_skills} onDeleteSkill={handleDeleteSkill} />;
-      <div className="space - y-6">;
-        <div className="bg - muted / 40 p - 6 rounded - lg">;
-          <h3 className="text - md font - medium mb - 4">Add Skills One by One</h3>;
-          <AddSkillForm resume_id={resume_id} onAddSkill={handleAddSkill} />;
-        </div>;
-        <BulkAddSkills resume_id={resume_id} on_success={refresh_skills} />;
-      </div>;
-      {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-      <div className="flex justify - between">;
-        <Button variant="outline" on_click={on_back}>;
-          Back;
-        </Button>;
-        <Button on_click={on_complete} disabled={local_skills.length === 0}>;
-          Next;
-        </Button>;
-      </div>;
-    </div>);
 
-<<<<<<< HEAD
-import { useState } from 'react',;
-import { Skill } from '@/types/resume',;
-import { Button } from '@/components/ui/button',;
-import { Alert, AlertDescription } from '@/components/ui/alert',;
-import { useResume } from '@/hooks/useResume',;
-import { SkillsFormProps } from './types',;
-import { SkillsList } from './SkillsList',;
-import { AddSkillForm } from './AddSkillForm',;
-import { BulkAddSkills } from './BulkAddSkills',;
 ;
-export function SkillsForm({ resumeId, skills, onComplete, onBack } SkillsFormProps) {;
-  const { addSkill, deleteSkill, fetchResume } = useResume(),;
-  const [error, setError] = useState<string | null>(null),;
-  const [localSkills, setLocalSkills] = useState<Skill[]>(skills),;
-  ;
-  const handleAddSkill = async (data:Skill) => {;
-    try {;
-      setError(null),;
-      const success = await addSkill(resumeId, data),;
-      if (success) {;
-        // Refresh the skills list;
-        await refreshSkills(),;
-      }
-      return success,;
-    } catch (err:any) {;
-      setError(err.message || 'An error occurred'),;
-      return false;
-    }
-  },;
-;
-  const handleDeleteSkill = async (id:string, category:string = 'Other') => {;
-    if (confirm('Are you sure you want to delete this skill?')) {;
-      const success = await deleteSkill(id),;
-      if (success) {;
-        // Update local state;
-        setLocalSkills(localSkills.filter(skill => skill.id !== id));
-      }
-    }
-  },;
-  ;
-  const refreshSkills = async () => {;
-    try {;
-      const resumeData = await fetchResume(resumeId),;
-      if (resumeData && resumeData.skills) {;
-        setLocalSkills(resumeData.skills),;      }
-    } catch (err:any) {;
-      setError(err.message || 'Failed to refresh skills');
-    }
-  },;
-;
-  return (;
-    <div className="space-y-6">;
-      <div>;
-        <h2 className="text-xl font-semibold mb-2">Skills</h2>;
-        <p className="text-muted-foreground">;
-          Add your technical and professional skills.;
-        </p>;
-      </div>;
-;
-      {/* Display skills by category */}
-      <SkillsList skills={localSkills} onDeleteSkill={handleDeleteSkill} />;
-;
-      <div className="space-y-6">;
-        <div className="bg-muted/40 p-6 rounded-lg">;
-          <h3 className="text-md font-medium mb-4">Add Skills One by One</h3>;
-          <AddSkillForm resumeId={resumeId} onAddSkill={handleAddSkill} />;
-        </div>;
-;
-        <BulkAddSkills resumeId={resumeId} onSuccess={refreshSkills} />;
-      </div>;
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
-;
-      <div className="flex justify-between">;
-        <Button variant="outline" onClick={onBack}>;
-          Back;
-        </Button>;
-        <Button onClick={onComplete} disabled={localSkills.length === 0}>;
-          Next;
-        </Button>;
-      </div>;
-    </div>;
-  ),; 
-}
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-};
-return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Skills</h2> <p className="text-muted-foreground" > Add your technical and professional skills. </p> </div> {
-  /* Display skills by category */ 
-}<SkillsList skills= {
-  localSkills 
-}onDeleteSkill= {
-  handleDeleteSkill 
-}/> </div> <BulkAddSkills resumeId= {
-  resumeId 
-}onSuccess= {
-  refreshSkills 
-}/> </div> Back </Button> <Button onClick= {
-  onComplete 
-}disabled= {
-  localSkills.length === 0 
-}> Next </Button> </div> </div>) 
-}
-}
-}
-<<<<<<< HEAD
-;
-=======
-<<<<<<< HEAD
-;
-=======
-;
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts

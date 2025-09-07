@@ -1,209 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-import Head from 'next/head';
-    const res = null;
-    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')}const res = await fetch('/api/offworld/orbit?action=chat', {method: 'POST';
-      headers: { 'content-type': 'application/json' }
-=======
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import {useState} from 'react';
 
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import Head from 'next/head';
-=======
-import Head from 'next/head';
 
-
-<<<<<<< HEAD
-import { useState  } from 'react';
-import {useState} from 'react';
-import Head from 'next/head';
-export default function OffworldConsole() {;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  const [chat, setChat] = useState('');
-  const [voteChoice, setVoteChoice] = useState('yes');
-  const [proposalId, setProposalId] = useState('prop-1');
-  const [name, setName] = useState('');
-  const [skills, setSkills] = useState('');
-  const [status, setStatus] = useState('');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
-=======
-
-    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) }),
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
-  }
-
-
-    const res = await fetch('/api/offworld/orbit?action=chat', {
-      method: 'POST'
-      headers: { 'content-type': 'application/json' }
-      body: JSON.stringify({ from: 'anon', text: chat })
-    });
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) })
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
-  }
-  async function castVote() {
-    setStatus('Recording vote...');
-
-    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
-  }
-  async function syncProfile() {
-    setStatus('Pinning profile...');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
-=======
-
-    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    const data = await res.json();
-    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
-  }
-  async function broadcast() {
-<<<<<<< HEAD
     setStatus('Broadcasting manifesto...');
-    });
-    setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
-=======
-
-
-import { useState  } from 'react';
-
-import Head from 'next/head';
-
-const res = null;
-    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')}
-
-const res = await fetch('/api/offworld/orbit?action=chat', {method: 'POST';}
-      headers: { 'content-type': 'application/json',}
-}
-
-      body: JSON.stringify({ from: 'anon',}
-  text: chat })
-   ,
-});
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed');
-
-const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST',}
-  headers: { 'content-type': 'application/json',}
-}, body: JSON.stringify({ from: 'anon',}
-  text: chat }) })
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
- ,
-}
-  async function castVote() {
-    setStatus('Recording vote...');
-
-const res = await fetch('/api/offworld/orbit?action=vote', {
-      method: 'POST',}
-  headers: { 'content-type': 'application/json',}
-},
-      body: JSON.stringify({ proposalId, voter: 'anon',}
-  choice: voteChoice,}
-}),
-    });
-    setStatus(res.ok ? 'Vote recorded' : 'Vote failed');
-  }
-  async function syncProfile() {
-    setStatus('Pinning profile...');
-
-const res = await fetch('/api/offworld/ipfs?action=json', {
-      method: 'POST',}
-  headers: { 'content-type': 'application/json',}
-},
-      body: JSON.stringify({}
-        profile: { name, skills: skills.split(',').map(s => s.trim()) }
-      })
-    });
-
-const data = await res.json();
-    setStatus(res.ok ? `Profile CID: ${data.ci,}
-}` : 'Profile pin failed');
-  }
-  async function broadcast() {
-    setStatus('Broadcasting manifesto...');
-
-const res = await fetch('/api/offworld/ipfs?action=broadcast', {
-      method: 'POST',}
-  headers: { 'content-type': 'application/json',}
-},
-      body: JSON.stringify({ message: 'We build beyond platforms.',}
-}),
-    });
-    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
-  return (
-        <input;
-className='border p-2 w-full'
->>>>>>> origin/chore/fix-lint-and-merge
-          placeholder='Type message'
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { useState  } from 'react';'
-
-import Head from 'next/head';'
-
-const res = null;
-    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')}'
-
-const res = await fetch('/api/offworld/orbit?action=chat', {"method": 'POST';'
-      }
-      "headers": { 'content-type': 'application/json','
-}
-
-      "body": JSON.stringify({ "from": 'anon', "text": chat })'
-   
-});
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed');'
-
-const res = await fetch('/api/offworld/orbit?action=chat', { "method": 'POST', "headers": { 'content-type': 'application/json',;'
-}, "body": JSON.stringify({ "from": 'anon', "text": chat }) })'
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed')'
- 
-}
-  async function castVote() {
-    }
-    setStatus('Recording vote...');'
-
-const res = await fetch('/api/offworld/orbit?action=vote', {'
-      }
-      "method": 'POST','
-      "headers": { 'content-type': 'application/json','
-},
-      "body": JSON.stringify({ proposalId, "voter": 'anon', "choice": voteChoice,'
-})
-    });
-    setStatus(res.ok ? 'Vote recorded' : 'Vote failed');'
-=======
->>>>>>> origin/resolved-merge-conflicts
-  return (
-=======
-
-
-<<<<<<< HEAD
-    setStatus('Broadcasting manifesto...');
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   async function sendChat() {;
     setStatus('Sending chat...');
     const res = await fetch('/api/offworld/orbit?action=chat', {;
@@ -248,17 +46,9 @@ const res = await fetch('/api/offworld/orbit?action=vote', {'
       method: 'POST',;
       headers: { 'content-type': 'application/json' },;
       body: JSON && JSON.stringify({ message: 'We build beyond platforms.' }),;
-<<<<<<< HEAD
     });
     setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
   return (
-=======
-
-    });
-    setStatus(res && res.ok ? 'Broadcast sent' : 'Broadcast failed');
-  return (
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <div className='min-h-screen p-8 space-y-8'>;
       <Head>;
         <title>Zion Offworld Console</title>;
@@ -266,11 +56,6 @@ const res = await fetch('/api/offworld/orbit?action=vote', {'
       <h1 className='text-2xl font-bold'>Offworld Console</h1>;
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Chat</h2>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         <input
           className='border p-2 w-full'
           placeholder='Type message'
@@ -282,206 +67,49 @@ const res = await fetch('/api/offworld/orbit?action=vote', {'
           className='border p-2 w-full';
           placeholder='Type message';
           value={chat}
-<<<<<<< HEAD
           onChange={e => setChat(e && e.target.value)}
         />;
         <button'
           className='px-3 py-2 bg-black text-white rounded'
-<<<<<<< HEAD
-        <input'
-          className='border p-2 w-full''
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          onClick={sendChat}>;
-          Send;
-        </button>;
-      </section>;
-      <section className='space-y-2'>;
-        <h2 className='font-semibold'>DAO Voting</h2>;
-<<<<<<< HEAD
-=======
+  }
+  async function syncProfile() {
+    }
+    setStatus('Pinning profile...');'
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        <input
-          className='border p-2 w-full'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-          placeholder='Proposal ID'
-          value={proposalId}
-          onChange={e => setProposalId(e && e.target.value)}
-        />;
-        <select'
-          className='border p-2'
-          value={voteChoice}
-<<<<<<< HEAD
-          onChange={e => setVoteChoice(e && e.target.value)}'
-import {useState} from 'react';'
-=======
-          onChange={e => setVoteChoice(e && e.target.value)}
-import {useState} from 'react';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import Head from 'next / head';
-export default /**;
- * OffworldConsole - Function description;
- */
-function OffworldConsole() { return null; }
-      headers: { 'content - type': 'application / json' },'
-      body: JSON.stringify ({ from: 'anon', text: chat }),
-    });'
-    set_status (res.ok ? 'Chat sent' : 'Chat failed');    const res = await fetch ('/api / offworld / orbit?action = chat', { method: 'POST', headers: { 'content - type': 'application / json' }, body: JSON.stringify ({ from: 'anon', text: chat }) }),'
-    set_status (res.ok ? 'Chat sent' : 'Chat failed');
+const res = await fetch('/api/offworld/ipfs?action=json', {'
+      }
+      "method": 'POST','
+      "headers": { 'content-type': 'application/json','
+},
+      "body": JSON.stringify({
+        }
+        "profile": { name, "skills": skills.split(',').map(s => { return s.trim()) }'
+      })
+    }); }
+
+const data = await res.json();
+    setStatus(res.ok ? `Profile "CID": ${data.ci,`}` : 'Profile pin failed');'
   }
-  async /**
- * cast_vote - Function description;
- */
-function cast_vote() { return null; }
-      headers: { 'content - type': 'application / json' },'
-      body: JSON.stringify ({ proposal_id, voter: 'anon', choice: vote_choice }),
-    });'
-    set_status (res.ok ? 'Vote recorded' : 'Vote failed');  }
-  async /**
- * sync_profile - Function description;
- */
-function sync_profile() { return null; }
-    set_status ('Pinning profile...');    const res = await fetch ('/api / offworld / orbit?action = vote', { method: 'POST', headers: { 'content - type': 'application / json' }, body: JSON.stringify ({ proposal_id, voter: 'anon', choice: vote_choice }) }),'
-    set_status (res.ok ? 'Vote recorded' : 'Vote failed');
-  }
-  async /**
- * sync_profile - Function description;
- */
-function sync_profile() { return null; }
-      headers: { 'content - type': 'application / json' },
-      body: JSON.stringify ({'
-        profile: { name, skills: skills.split (', ').map (string => s.trim ()) },
-      }),
+  async function broadcast() {
+    }
+    setStatus('Broadcasting manifesto...');'
+
+const res = await fetch('/api/offworld/ipfs?action=broadcast', {'
+      }
+      "method": 'POST','
+      "headers": { 'content-type': 'application/json','
+},
+      "body": JSON.stringify({ "message": 'We build beyond platforms.','
+})
     });
-    const data = await res.json ();'`
-    set_status (res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');  }
-  async /**
- * broadcast - Function description;
- */
-function broadcast() { return null; }
-    set_status ('Broadcasting manifesto...');    const res = await fetch ('/api / offworld / ipfs?action = json', { method: 'POST', headers: { 'content - type': 'application / json' }, body: JSON.stringify ({ profile: { name, skills: skills.split ().map (string => s.trim ()) } }) }),
-    const data = await res.json ();'`
-    set_status (res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');
-  }
-  async /**
- * broadcast - Function description;
- */
-function broadcast() { return null; }
-      headers: { 'content - type': 'application / json' },'
-      body: JSON.stringify ({ message: 'We build beyond platforms.' }),
-    });'
-    set_status (res.ok ? 'Broadcast sent' : 'Broadcast failed');
-;
-  return ('
-    <div className='min - h-screen p - 8 space - y-8'>;
-      <Head>;
-        <title > Zion Offworld Console</title>;
-      </Head>;'
-      <h1 className='text - 2xl font - bold'>Offworld Console</h1>;'
-      <section className='space - y-2'>;'
-        <h2 className='font - semibold'>Chat</h2>;
-        <input;'
-          className='border p - 2 w - full';'
-          placeholder='Type message';
-  async function sendChat() {
-    setStatus('Sending chat...');
-    const res = null;
-    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-  }
+    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');'
+return (;
+        <input,
+className='border p-2 w-full''
+          placeholder='Type message''
 
           value={chat}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          onChange={e => { return setChat(e && e.target.value)}
-        />; }
-        <button;
-          className='px-3 py-2 bg-black text-white rounded';'
-        <input;
-          className='border p-2 w-full';'
-          placeholder='Proposal ID';'
-          value={proposalId}
-          onChange={e => { return setProposalId(e && e.target.value)}
-        />; }
-        <select;
-          className='border p-2';'
-          value = {voteChoice}
-          onChange={e => setVoteChoice(e && e.target.value)}
-import {;
-  }
-  useState } from 'react';'
-import Head from 'next / head';'
-
-export default /**;
- * OffworldConsole - Function description;
- */;
-function OffworldConsole() {const [chat, set_chat] = useState ('')const [vote_choice, setVoteChoice] = useState ('yes')const [proposal_id, setProposalId] = useState ('prop - 1')const [name, set_name] = useState ('')const [skills, set_skills] = useState ('')const [status, set_status]  = useState ('')async /**;'
- * send_chat - Function description;
- */;
-}
-function send_chat() {set_status ('Sending chat...')const res = await fetch ('/api / offworld / orbit?action = chat', {"method": 'POST',"headers": { 'content - type': 'application / json','
-},"body": JSON.stringify ({ "from": 'anon', "text": chat,'
-})})set_status (res.ok ? 'Chat sent' : 'Chat failed';'
-const res = await fetch ('/api / offworld / orbit?action = chat', { "method": 'POST', "headers": { 'content - type': 'application / json',;'
-}, "body": JSON.stringify ({ "from": 'anon', "text": chat }),'
-}),set_status (res.ok ? 'Chat sent' : 'Chat failed')}'
-  async /**;
- * cast_vote - Function description;
- */;
-function cast_vote() {set_status ('Recording vote...')const res = await fetch ('/api / offworld / orbit?action = vote', {"method": 'POST',"headers": { 'content - type': 'application / json','
-},"body": JSON.stringify ({ proposal_id, "voter": 'anon', "choice": vote_choice,'
-})})set_status (res.ok ? 'Vote recorded' : 'Vote failed')}'
-  async /**;
- * sync_profile - Function description;
- */;
-function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / orbit?action = vote', { "method": 'POST', "headers": { 'content - type': 'application / json','
-}, "body": JSON.stringify ({ proposal_id, "voter": 'anon', "choice": vote_choice }),'
-}),set_status (res.ok ? 'Vote recorded' : 'Vote failed')}'
-  async /**;
- * sync_profile - Function description;
- */;
-function sync_profile() {set_status ('Pinning profile...')const res = await fetch ('/api / offworld / ipfs?action = json', {"method": 'POST',"headers": { 'content - type': 'application / json','
-},"body": JSON.stringify ({"profile": { name, "skills": skills.split (', ').map (string => { return s.trim ()) }})}; }'
-const data = await res.json ()set_status (res.ok ? `Profile "CID": ${data.cid}` : 'Profile pin failed',;'}
-  async /**;
- * broadcast - Function description;
- */;
-function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = json', { "method": 'POST', "headers": { 'content - type': 'application / json','
-}, "body": JSON.stringify ({ "profile": { name, "skills": skills.split ().map (string => { return s.trim ()) } })
-}); }
-const data = await res.json ()set_status (res.ok ? `Profile "CID": ${data.cid}` : 'Profile pin failed',;'
-}
-  async /**;
- * broadcast - Function description;
- */;
-function broadcast() {set_status ('Broadcasting manifesto...')const res = await fetch ('/api / offworld / ipfs?action = broadcast', {"method": 'POST',"headers": { 'content - type': 'application / json','
-},"body": JSON.stringify ({ "message": 'We build beyond platforms.','
-})})set_status (res.ok ? 'Broadcast sent' : 'Broadcast failed';'
-  return (<div className='min - h-screen p - 8 space - y-8'>;'
-      <Head>;
-        <title  /> Zion Offworld Console</title>;
-      </Head>;
-      <h1 className='text - 2xl font - bold'>Offworld Console</h1>;'
-      <section className='space - y-2'>;'
-        <h2 className='font - semibold'>Chat</h2>;'
-        <input;
-          className='border p - 2 w - full';'
-          placeholder='Type message';'
-          value={chat}
-          on_change={e => { return set_chat (e.target.value)}
-        />; }
-        <button;
-          className='px - 3 py - 2 bg - black text - white rounded';'
-=======
->>>>>>> origin/resolved-merge-conflicts
           onChange={e =    /> setChat(e && e.target.value)}
         />
           value={proposalId}
@@ -495,7 +123,6 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
           className='px - 3 py - 2 bg - black text - white rounded';
           value={chat}
           on_change={e => set_chat (e.target.value)}
-=======
           onChange={e =    /> setChat(e && e.target.value)}
         />;
         <button;
@@ -582,145 +209,79 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
           placeholder='Type message';
           value={chat}
           on_change={e =    /> set_chat (e.target.value)}
->>>>>>> origin/chore/fix-lint-and-merge
         />;
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
           on_click={send_chat}
             />;
           Send;
         </button>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
       </section>;'
       <section className='space - y-2'>;'
         <h2 className='font - semibold'>DAO Voting</h2>;
         <input;'
           className='border p - 2 w - full';'
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-      </section>;'
-      <section className='space - y-2'>;'
-        <h2 className='font - semibold'>DAO Voting</h2>;
-        <input;'
-          className='border p - 2 w - full';'
-=======
->>>>>>> origin/resolved-merge-conflicts
-      </section>;
-      <section className='space - y-2'    />;
-        <h2 className='font - semibold'    />DAO Voting</h2>;
-        <input;
-          className='border p - 2 w - full';
->>>>>>> origin/chore/fix-lint-and-merge
-          placeholder='Proposal ID';
-          value={proposal_id}
-          on_change={e =    /> setProposalId (e.target.value)}
-        />;
-        <select;
-          className='border p - 2';
-          value={vote_choice}
-<<<<<<< HEAD
-          on_change={e => setVoteChoice (e.target.value)}
-        >;
-          <option value='yes'>Yes</option>;
-          <option value='no'>No</option>;
-          <option value='abstain'>Abstain</option>;
-          on_change={e => setVoteChoice (e.target.value)}
-        >;'
-          <option value='yes'>Yes</option>;'
-          <option value='no'>No</option>;'
-          <option value='abstain'>Abstain</option>;
-        </select>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          onClick={castVote}>;
-          Vote;
-        </button>;
-      </section>;
-      <section className='space-y-2'>;
-        <h2 className='font-semibold'>Talent Profile Sync</h2>;
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-        <input
-          className='border p-2 w-full'
-          placeholder=Name'
-          value={name}
-          onChange={e => setName(e && e.target.value)}
-        />;
-        <input'
-          className=border p-2 w-full'
-          placeholder='Skills (comma separated)
-          value={skills}
-          onChange={e => setSkills(e && e.target.value)}
-        />;
-        <button
-          className='px-3 py-2 bg-black text-white rounded'
-<<<<<<< HEAD
-      <section className=space-y-2'>;'
-        <h2 className=font-semibold>Broadcast Manifesto</h2>;
-        <button'
-          className='px-3 py-2 bg-indigo-600 text-white rounded
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          onClick={syncProfile}>;
-          Pin Profile to IPFS;
-        </button>;
-      </section>;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-    setStatus('Broadcasting manifesto...');
 
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  async function syncProfile() {
+    setStatus($2);
+    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s = $2;
+    const data = await res.json($2);
+    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
+  }
+
+  async function broadcast() {
+    setStatus($2);
     const res = await fetch('/api/offworld/ipfs?action=broadcast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ message: 'We build beyond platforms.' }) }),
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
   }
-      <section className='space-y-2'>;
-        <h2 className='font-semibold'>Broadcast Manifesto</h2>;
-        <button
-          className='px-3 py-2 bg-indigo-600 text-white rounded'
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-          onClick={broadcast}>;
-          Broadcast;
-        </button>;
-      </section>;
-      {status && <p className='text-sm text-gray-700'>{status}</p>}
+
+  return (
+    <div className="min-h-screen p-8 space-y-8">
+      <Head>
+        <title>Zion Offworld Console</title>
+      </Head>
+      <h1 className="text-2xl font-bold">Offworld Console</h1>
+
+      <section className="space-y-2">
+        <h2 className="font-semibold">Chat</h2>
+        <input className="border p-2 w-full" placeholder="Type message" value={chat} onChange={e => setChat(e.target.value)} />
+        <button className="px-3 py-2 bg-black text-white rounded" onClick={sendChat}>Send</button>
+      </section>
+
+      <section className="space-y-2">
+        <h2 className="font-semibold">DAO Voting</h2>
+        <input className="border p-2 w-full" placeholder="Proposal ID" value={proposalId} onChange={e => setProposalId(e.target.value)} />
+        <select className="border p-2" value={voteChoice} onChange={e => setVoteChoice(e.target.value)}>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="abstain">Abstain</option>
+        </select>
+        <button className="px-3 py-2 bg-black text-white rounded" onClick={castVote}>Vote</button>
+      </section>
+
+      <section className="space-y-2">
+        <h2 className="font-semibold">Talent Profile Sync</h2>
+        <input className="border p-2 w-full" placeholder="Name" value={name} onChange={e => setName(e.target.value)} />
+        <input className="border p-2 w-full" placeholder="Skills (comma separated)" value={skills} onChange={e => setSkills(e.target.value)} />
+        <button className="px-3 py-2 bg-black text-white rounded" onClick={syncProfile}>Pin Profile to IPFS</button>
+      </section>
+
+      <section className="space-y-2">
+        <h2 className="font-semibold">Broadcast Manifesto</h2>
+        <button className="px-3 py-2 bg-indigo-600 text-white rounded" onClick={broadcast}>Broadcast</button>
+      </section>
+
+      {status && <p className="text-sm text-gray-700">{status}</p>}
     </div>
+      </section>;{status && <p className='text-sm text-gray-700'>{status}</p>}
+    </div>;
+)}
 );
 }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+      </section>;{status && <p className='text-sm text-gray-700'>{status}</p>}
+    </div>;
+)}
         <button;
           className=px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -760,197 +321,12 @@ function broadcast() {set_status ('Broadcasting manifesto...')const res = await 
       </section>;'
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
     </div>);
-<<<<<<< HEAD
-  );
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-          on_change={e =    /> setVoteChoice (e.target.value)}
-        >;
-          <option value='yes'    />Yes</option>;
-          <option value='no'    />No</option>;
-          <option value='abstain'    />Abstain</option>;
-        </select>;
-        <input;
-          className='border p-2 w-full';
-          placeholder='Name';
-          value={name}
-          onChange={e =    /> setName(e && e.target.value)}
-        />;
-        <input;
-          className='border p-2 w-full';
-          placeholder='Skills (comma separated)';
-          value={skills}
-          onChange={e =    /> setSkills(e && e.target.value)}
-        />;
->>>>>>> origin/chore/fix-lint-and-merge
-        <button;
-          className='px-3 py-2 bg-black text-white rounded';
-      <section className='space-y-2'    />;
-        <h2 className='font-semibold'    />Broadcast Manifesto</h2>;
-        <button;
-          className='px-3 py-2 bg-indigo-600 text-white rounded';
-          onClick={broadcast}    />;
-          Broadcast;
-        </button>;
-<<<<<<< HEAD
-import { useState } from react';
-import Head from 'next/head;
->>>>>>> merged-prs-20250907-203621
-export default function OffworldConsole() {
-  const [chat, setChat] = useState($2);
-  const [voteChoice, setVoteChoice] = useState($2);
-  const [proposalId, setProposalId] = useState($2);
-  const [name, setName] = useState($2);
-  const [skills, setSkills] = useState($2);
-  const [status, setStatus] = useState($2);
-  async function sendChat() {
-    setStatus($2);
-    const res = await fetch(/api/offworld/orbit?action=chat', { method: 'POST, headers: { content-type': 'application/json }, body: JSON.stringify({ from: anon', text: chat}) }),
-    setStatus(res.ok ? 'Chat sent : Chat failed')
-  }
 
-  async function castVote() {
-    setStatus($2);
-    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice}) }),
-    setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
-  }
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-
-  async function syncProfile() {
-    setStatus($2);
-    const res = await fetch('/api/offworld/ipfs?action=json, { method: POST', headers: { 'content-type: application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s = $2;
-    const data = await res.json($2);
-    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed)
-  }
-
-  async function broadcast() {
-    setStatus($2);
-    const res = await fetch(/api/offworld/ipfs?action=broadcast', { method: 'POST, headers: { content-type': 'application/json }, body: JSON.stringify({ message: We build beyond platforms.' }) }),
-    setStatus(res.ok ? 'Broadcast sent : Broadcast failed')
-  }
-
-  return (
-    <div className="min-h-screen p-8 space-y-8>
-      <Head>
-        <title>Zion Offworld Console</title>
-      </Head>
-      <h1 className=text-2xl font-bold">Offworld Console</h1>
-
-      <section className="space-y-2>
-        <h2 className=font-semibold">Chat</h2>
-        <input className="border p-2 w-full placeholder=Type message" value={chat} onChange={e => setChat(e.target.value)} />
-        <button className="px-3 py-2 bg-black text-white rounded onClick={sendChat}>Send</button>
-      </section>
-
-      <section className=space-y-2">
-        <h2 className="font-semibold>DAO Voting</h2>
-        <input className=border p-2 w-full" placeholder="Proposal ID value={proposalId} onChange={e => setProposalId(e.target.value)} />
-        <select className=border p-2" value={voteChoice} onChange={e => setVoteChoice(e.target.value)}>
-          <option value="yes>Yes</option>
-          <option value=no">No</option>
-          <option value="abstain>Abstain</option>
-        </select>
-        <button className=px-3 py-2 bg-black text-white rounded" onClick={castVote}>Vote</button>
-      </section>
-
-      <section className="space-y-2>
-        <h2 className=font-semibold">Talent Profile Sync</h2>
-        <input className="border p-2 w-full placeholder=Name" value={name} onChange={e => setName(e.target.value)} />
-        <input className="border p-2 w-full placeholder=Skills (comma separated)" value={skills} onChange={e => setSkills(e.target.value)} />
-        <button className="px-3 py-2 bg-black text-white rounded onClick={syncProfile}>Pin Profile to IPFS</button>
-      </section>
-
-      <section className=space-y-2">
-        <h2 className="font-semibold>Broadcast Manifesto</h2>
-        <button className=px-3 py-2 bg-indigo-600 text-white rounded" onClick={broadcast}>Broadcast</button>
-      </section>
-
-      {status && <p className='text-sm text-gray-700'>{status}</p>}
-    </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </section>;{status && <p className='text-sm text-gray-700'>{status}</p>}
-=======
->>>>>>> origin/resolved-merge-conflicts
-<<<<<<< HEAD
-
-  );
-
-);
-}
-=======
-      </section>;{status && <p className='text-sm text-gray-700'>{status}</p>}
-      </section>;{status && <p className='text-sm text-gray-700>{status}</p>}
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-    </div>;
-)}
-);
-}
-      </section>;{status && <p className=text-sm text-gray-700'>{status}</p>}
-    </div>;
-)}
-        <button;
-          className='px - 3 py - 2 bg - black text - white rounded;
-          on_click={cast_vote}
-        >;
-          Vote;
-        </button>;
-      </section>;
-      <section className=space - y-2'>;
-        <h2 className='font - semibold>Talent Profile Sync</h2>;
-        <input;
-          className=border p - 2 w - full';
-          placeholder='Name;
-          value={name}
-          on_change={e => set_name (e.target.value)}
-        />;
-        <input;
-          className=border p - 2 w - full';
-          placeholder='Skills (comma separated);
-          value={skills}
-          on_change={e => set_skills (e.target.value)}
-        />;
-        <button;
-          className=px - 3 py - 2 bg - black text - white rounded';
-          on_click={sync_profile}
-        >;
-          Pin Profile to IPFS;
-        </button>;
-      </section>;
-      <section className='space - y-2>;
-        <h2 className=font - semibold'>Broadcast Manifesto</h2>;
-        <button;
-          className='px - 3 py - 2 bg - indigo - 600 text - white rounded;
-          on_click={broadcast}
-        >;
-          Broadcast;
-        </button>;
-      </section>;
-      {status && <p className=text - sm text - gray - 700'>{status}</p>}
-    </div>);
     </div>))
   )
 }
 
   );
-=======
-
-      </section>;
-
-      {status && <p className='text-sm text-gray-700'    />{status}</p>}
-    </div>
-
-  );
-
->>>>>>> origin/chore/fix-lint-and-merge
-=======
   }
 
   return (
@@ -994,7 +370,6 @@ export default function OffworldConsole() {
   )
 
 }
-<<<<<<< HEAD
   async function sendChat() {
     setStatus('Sending chat...');
 
@@ -1126,8 +501,4 @@ export default function OffworldConsole() {
 
 }
     setStatus('Broadcasting manifesto...');
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+  );

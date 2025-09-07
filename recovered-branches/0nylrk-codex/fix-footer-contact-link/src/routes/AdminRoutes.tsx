@@ -1,49 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-import { Fragment } from "react";
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-// Admin Pages
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
 
-<<<<<<< HEAD
+
 // Admin Pages
 
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-import {Fragment} from "react";
-import {Route, Routes} from "react-router-dom";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-// Admin Pages
-
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
 import WhitelabelManager from "@/pages/admin/WhitelabelManager",
@@ -51,18 +13,8 @@ import PartnerManager from "@/pages/admin/PartnerManager",
 import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-import TokenManager from "@/pages/admin/TokenManager";
-import IntegrationsPage from "@/pages/admin/IntegrationsPage";
-const AdminRoutes = $2;
-export default AdminRoutes,
-=======
 
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import TokenManager from "@/pages/admin/TokenManager",
 
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
@@ -86,23 +38,12 @@ const AdminRoutes = () => {;
       <Route
         path="/admin/quotes"
         element={
-<<<<<<< HEAD
 }
 import { ProtectedRoute } from "@/components/ProtectedRoute",;"
 ;
 import TokenManager from "@/pages/admin/TokenManager","
 }
 return (;
-=======
-
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-;
-import TokenManager from "@/pages/admin/TokenManager";
-import IntegrationsPage from "@/pages/admin/IntegrationsPage";
-
-<<<<<<< HEAD
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 
@@ -135,34 +76,10 @@ import TokenManager from "@/pages/admin/TokenManager",;
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",;
 const AdminRoutes = () => {
   return (
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import TokenManager from "@/pages/admin/TokenManager",
 import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 
 const AdminRoutes = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-;
-import TokenManager from "@/pages/admin/TokenManager";
-import IntegrationsPage from "@/pages/admin/IntegrationsPage";
-
-import TokenManager from "@/pages/admin/TokenManager",
-import IntegrationsPage from "@/pages/admin/IntegrationsPage",
-const AdminRoutes = () => {
-  return (
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <Routes>
       <Route
         path="/admin/quotes"
@@ -240,31 +157,6 @@ const AdminRoutes = () => {
   )
 }
 export default AdminRoutes;
-<<<<<<< HEAD
-=======
-
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-// Admin Pages;
-import QuoteManager from "@/pages/admin/QuoteManager",;
-import ReviewsModeration from "@/pages/admin/ReviewsModeration",;
-import WhitelabelManager from "@/pages/admin/WhitelabelManager",;
-import PartnerManager from "@/pages/admin/PartnerManager",;
-import AppMetadataManager from "@/pages/admin/AppMetadataManager",;
-import SupportRequests from "@/pages/admin/SupportRequests",;
-import FraudDetection from "@/pages/admin/FraudDetection",;
-import TokenManager from "@/pages/admin/TokenManager",;
-import IntegrationsPage from "@/pages/admin/IntegrationsPage",;
-const AdminRoutes = () => {;
-  return (;
-    <Routes>;
-      <Route;
-        path="/admin/quotes";
-        element={;
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 // Admin Pages;
 import QuoteManager from "@/pages/admin/QuoteManager";
 import ReviewsModeration from "@/pages/admin/ReviewsModeration";
@@ -281,183 +173,13 @@ const AdminRoutes = () => {;
       <Route
         path="/admin/quotes"
         element={
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          <ProtectedRoute adminOnly={true}>;
-            <QuoteManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin/reviews";
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-            <ReviewsModeration />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin/whitelabel";
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-            <WhitelabelManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin/partners";
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-            <PartnerManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin/app-metadata";
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-            <AppMetadataManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin/support-requests";
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-            <SupportRequests />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin/fraud-detection";
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-            <FraudDetection />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin/tokens";
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-            <TokenManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route;
-        path="/admin/integrations";
-        element={;
-          <ProtectedRoute adminOnly={true}>;
-            <IntegrationsPage />;
-          </ProtectedRoute>;
-        }
-      />;
-    </Routes>;
-      />;
-      <Route
-        path="/admin/reviews"
-        element={
-          <ProtectedRoute adminOnly={true}>;
-            <ReviewsModeration />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route
-        path="/admin/whitelabel"
-        element={
-          <ProtectedRoute adminOnly={true}>;
-            <WhitelabelManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route
-        path="/admin/partners"
-        element={
-          <ProtectedRoute adminOnly={true}>;
-            <PartnerManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route
-        path="/admin/app-metadata"
-        element={
-          <ProtectedRoute adminOnly={true}>;
-            <AppMetadataManager />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route
-        path="/admin/support-requests"
-        element={
-          <ProtectedRoute adminOnly={true}>;
-            <SupportRequests />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route
-        path="/admin/fraud-detection"
-        element={
-          <ProtectedRoute adminOnly={true}>;
-            <FraudDetection />;
-          </ProtectedRoute>;
-        }
-      />;
-      <Route
-        path="/admin/tokens"
-        element={
-          <ProtectedRoute adminOnly={true}>;
-            <TokenManager />;
-          </ProtectedRoute>;
-        }
 
-      />;
-      <Route
-        path="/admin/integrations"
-        element={
-          <ProtectedRoute adminOnly={true}>;
-            <IntegrationsPage />;
-          </ProtectedRoute>;
-        }
-      />;
-    </Routes>;
-  );
-};
-export default AdminRoutes;
-import { Fragment } from './react';
-import { Route, Routes } from './react-router-dom';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-          <ProtectedRoute adminOnly={true}>
-            <IntegrationsPage />
-          </ProtectedRoute>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
-<<<<<<< HEAD
-;
-import TokenManager from "@/pages/admin/TokenManager";
-import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 
-import TokenManager from "@/pages/admin/TokenManager",;
-import IntegrationsPage from "@/pages/admin/IntegrationsPage",;
-const AdminRoutes = () => {
-=======
-// Admin Pages;
-import QuoteManager from "@/pages / admin / QuoteManager";
-import ReviewsModeration from "@/pages / admin / ReviewsModeration";
-import WhitelabelManager from "@/pages / admin / WhitelabelManager";
-import PartnerManager from "@/pages / admin / PartnerManager";
-import AppMetadataManager from "@/pages / admin / AppMetadataManager";
-import SupportRequests from "@/pages / admin / SupportRequests";
-import FraudDetection from "@/pages / admin / FraudDetection";
-import TokenManager from "@/pages / admin / TokenManager";
-import IntegrationsPage from "@/pages / admin / IntegrationsPage";
-const AdminRoutes = () =>: any {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (
->>>>>>> origin/chore/fix-lint-and-merge
     <Routes>
       <Route
         path="/admin/quotes"
@@ -535,8 +257,6 @@ const AdminRoutes = () =>: any {
   )
 }
 export default AdminRoutes;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-<<<<<<< HEAD
 import { Fragment } from "react",;"
 import { Route, Routes } from "react-router-dom",;"
 // Admin Pages;
@@ -550,23 +270,6 @@ import FraudDetection from "FraudDetection";"
 import TokenManager from "TokenManager";"
 import IntegrationsPage from "IntegrationsPage";"
   }
-=======
-
-import { Fragment } from "react",;
-import { Route, Routes } from "react-router-dom",;
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-// Admin Pages;
-import QuoteManager from "@/pages/admin/QuoteManager",;
-import ReviewsModeration from "@/pages/admin/ReviewsModeration",;
-import WhitelabelManager from "@/pages/admin/WhitelabelManager",;
-import PartnerManager from "@/pages/admin/PartnerManager",;
-import AppMetadataManager from "@/pages/admin/AppMetadataManager",;
-import SupportRequests from "@/pages/admin/SupportRequests",;
-import FraudDetection from "@/pages/admin/FraudDetection",;
-import TokenManager from "@/pages/admin/TokenManager",;
-import IntegrationsPage from "@/pages/admin/IntegrationsPage",;
-const AdminRoutes = () => {;
->>>>>>> origin/chore/fix-lint-and-merge
   return (;
     <Routes>;
       <Route;
@@ -647,10 +350,7 @@ const AdminRoutes = () => {;
       <Route
 
 export default AdminRoutes;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
 import { Fragment } from './react';'
 import { Route, Routes } from './react-router-dom';'
@@ -673,34 +373,5 @@ const AdminRoutes = () =>: any {}
 };
 
 export default AdminRoutes;
-<<<<<<< HEAD
+
 ;
-=======
-;
-=======
-;
-<<<<<<< HEAD
-<Routes> <Route path="/admin/quotes" element= {
-  <ProtectedRoute adminOnly= {
-  true 
-}> <QuoteManager /> </ProtectedRoute> 
-}/> <Route <ReviewsModeration /> </ProtectedRoute> 
-}/> <Route <WhitelabelManager /> </ProtectedRoute> 
-}/> <Route <PartnerManager /> </ProtectedRoute> 
-}/> <Route <AppMetadataManager /> </ProtectedRoute> 
-}/> <Route <SupportRequests /> </ProtectedRoute> 
-}/> <Route <FraudDetection /> </ProtectedRoute> 
-}/> <Route <TokenManager /> </ProtectedRoute> 
-}/> <Route <IntegrationsPage /> </ProtectedRoute> 
-}/> </Routes>) 
-};
-export default AdminRoutes;
-  );
-},;
-export default AdminRoutes;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

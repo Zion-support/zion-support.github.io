@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 declare module 'vite / client';
 declare module 'react-router-dom';
 ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 declare module 'aria-query';
 declare module '@babel/core';
 declare module '@babel/generator';
@@ -45,17 +29,8 @@ declare module 'semver';
 declare module 'ws';
 declare module 'vite/client';
 declare module 'react-router-dom';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 declare module 'aria-query',;
 declare module '@babel/core',;
 declare module '@babel/generator',;
@@ -80,14 +55,7 @@ declare module 'semver',;
 declare module 'ws',;
 declare module 'vite/client',;
 declare module 'react-router-dom',;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 declare module 'aria - query';
 declare module '@babel / core';
 declare module '@babel / generator';
@@ -113,13 +81,5 @@ declare module 'semver';
 declare module "ws";
 "
 declare module "vite/client";"
-<<<<<<< HEAD
+
 declare module "react-router-dom";
-=======
-declare module "react-router-dom";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -6,14 +5,6 @@ import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import SEO from './components/SEO';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-<<<<<<< HEAD
 import React from 'react';'
 const services = [;
     {
@@ -41,11 +32,6 @@ const services = [;
       features: ['Smart Contracts', 'DeFi', 'NFTs', 'Web3 Development'],
     },
   ];
-=======
-
-import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 const services = [
   {
@@ -123,106 +109,12 @@ export default function App() {
               Cutting-edge artificial intelligence solutions for your business needs.
             </p>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> pr/11282
-=======
->>>>>>> merged-prs-20250907-203621
+
           <div className="bg-white p-6 rounded-lg shadow-lg">"
             <div className="text-4xl mb-4">🔗</div>"
             <h3 className="text-xl font-semibold mb-2">Blockchain</h3>"
             <p className="text-gray-600">"
               Secure, decentralized solutions powered by blockchain technology.
-<<<<<<< HEAD
-=======
-        </section>
-        
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🤖</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-center">AI Solutions</h3>
-                <p className="text-gray-600 text-center">
-                  Cutting-edge AI integration for automation, analytics, and intelligent decision making.
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💻</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-center">Web Development</h3>
-                <p className="text-gray-600 text-center">
-                  Modern, responsive web applications built with the latest technologies.
-                </p>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">☁️</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-center">Cloud Services</h3>
-                <p className="text-gray-600 text-center">
-                  Scalable cloud infrastructure and migration services for optimal performance.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl font-bold text-center mb-12">Why Choose Us</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-white">⚡</span>
-                </div>
-                <h3 className="text-lg font-bold mb-2">Fast Delivery</h3>
-                <p className="text-gray-600">Quick turnaround times without compromising quality</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-white">🔒</span>
-                </div>
-                <h3 className="text-lg font-bold mb-2">Secure</h3>
-                <p className="text-gray-600">Enterprise-grade security and data protection</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-white">🎯</span>
-                </div>
-                <h3 className="text-lg font-bold mb-2">Custom Solutions</h3>
-                <p className="text-gray-600">Tailored solutions for your specific business needs</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl text-white">📞</span>
-                </div>
-                <h3 className="text-lg font-bold mb-2">24/7 Support</h3>
-                <p className="text-gray-600">Round-the-clock technical support and maintenance</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-16 px-4 bg-white">
-          <div className="container mx-auto max-w-6xl text-center">
-            <h2 className="text-4xl font-bold mb-8">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss your project and see how we can help transform your business with technology.
->>>>>>> origin/main
-=======
->>>>>>> pr/11282
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">"
@@ -249,8 +141,6 @@ to helping you succeed in the digital age.
 export default function App(): React.JSX.Element {
 }
 return (;
-=======
-<<<<<<< HEAD
 // import React from 'react';
 
 const services = [
@@ -294,7 +184,6 @@ const services = [
 
 export default function App() {
   return (
->>>>>>> origin/chore/fix-lint-and-merge
     <main>
       <h1>Welcome to Zion Tech Group</h1>
       <p>Leading the future of technology with AI, blockchain, and innovative solutions</p>
@@ -312,31 +201,6 @@ export default function App() {
         ))}
       </div>
     </main>
-=======
-import React, { JSX } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { AccessibilityProvider } from './components/AccessibilityProvider';
-import SEOHead from './components/SEOHead';
-import Analytics from './components/Analytics';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Header from './components/Header';
-import Footer from './components/Footer';
-
-export default function App(): JSX.Element {
-  return (
-    <AccessibilityProvider>
-      <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        <SEOHead 
-          title="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions"
-          description="Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions."
-          keywords="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions"
-        />
-        <Analytics trackingId="G-XXXXXXXXXX" />
-        <AccessibilityEnhancer />
-=======
-        </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
         
         <section className="py-16 px-4 bg-white">
           <div className="container mx-auto max-w-6xl">
@@ -420,7 +284,6 @@ export default function App(): JSX.Element {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Let's discuss your project and see how we can help transform your business with technology.
             </p>
-<<<<<<< HEAD
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <div className="text-4xl mb-4">☁️</div>
@@ -445,47 +308,14 @@ export default function App(): JSX.Element {
       </div>
     </ErrorBoundary>
   );
-}
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
-                Contact Us
-              </button>
-              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg text-lg font-semibold transition-colors">
-                View Portfolio
-              </button>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  );
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-export default App;
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
->>>>>>> pr/11282
-=======
-=======
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import Header from './src/components/Header';
 import Sidebar from './src/components/layout/Sidebar';
-<<<<<<< HEAD
 import Footer from './src/components/Footer';
 import LandingPage from './src/pages/LandingPage';
-=======
-import { Footer } from './src/components/Footer';
-import HomePage from './src/pages/Home';
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 import AboutPage from './src/pages/About';
 import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
@@ -500,11 +330,7 @@ export default function App() {
           <Sidebar />
           <main className="flex-1 lg:ml-80">
             <Routes>
-<<<<<<< HEAD
               <Route path="/" element={<LandingPage />} />
-=======
-              <Route path="/" element={<HomePage />} />
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/services" element={<ServicesPage />} />
@@ -517,10 +343,6 @@ export default function App() {
     </ErrorBoundary>
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
 
 export default App;"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-88b9
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+}

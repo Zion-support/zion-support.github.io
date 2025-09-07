@@ -1108,6 +1108,7 @@ class CodeQualityMonitor {,
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {,
           walkDir(fullPath)
         } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {,
+        } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {,
           files.push(fullPath)
         }
       })

@@ -7,10 +7,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 const filesToFix = [
   'pages/about.tsx',
   'pages/ITServices.tsx', 
@@ -38,15 +35,5 @@ function resolveConflicts(filePath) {
 
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
+
 const { execSync } = require('child_process');
-=======
-const { execSync } = require('child_process');
-=======
-<<<<<<< HEAD
-export default Resolve-conflicts;
-=======
-export default Resolve-conflicts;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

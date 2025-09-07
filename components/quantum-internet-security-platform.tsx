@@ -1,62 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-
-import React from 'react';
-
-import Head from 'next/head';
-
-import {
-
-<<<<<<< HEAD
-import React from 'react',
-import React from 'react';
-import Head from 'next/head';
-
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Shield
-  Star;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Phone,
   Mail,
   MapPin,
@@ -64,21 +6,12 @@ import {
   ArrowRight,
   Shield,;
   Star,;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 return (<UltraAdvancedFuturisticBackground> <Head> <title> {
   service.name 
 }- Zion Tech Group</title>) ) 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';
@@ -86,7 +19,6 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-rea
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-=======
 
 
 import React from 'react';,
@@ -135,66 +67,8 @@ Check,
 ArrowRight;
 Shield,}
 Star;}
-<<<<<<< HEAD
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
-export default function QuantumInternetSecurityPage() {
->>>>>>> origin/chore/fix-lint-and-merge
-export default function QuantumInternetSecurityPage() {
-
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-internet-security-platform')
-  );
-=======
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-export default function QuantumInternetSecurityPage() {
->>>>>>> origin/chore/fix-lint-and-merge
-export default function QuantumInternetSecurityPage() {
-
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-internet-security-platform')
-<<<<<<< HEAD
-  );
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-export default function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find(s =>
-    s.link.endsWith('/quantum-internet-security-platform');
-  );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function QuantumInternetSecurityPage() {;
-<<<<<<< HEAD
-=======
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/quantum-internet-security-platform'));
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   if (!service) return null;
-<<<<<<< HEAD
 return (;
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -223,25 +97,6 @@ rel='canonical''
               </h2>;
               <p className='text-slate-300 mb-6'>{service.description}</p>;'
               <ul className='grid grid-cols-1 'md':grid-cols-2 gap-3'>;'
-=======
-  return (
-    <UltraAdvancedFuturisticBackground    />}
-      <Head    />}
-        <title    />{service.name} - Zion Tech Group</title>
-<meta name='description' content={service.description}    />
-        <link;
-rel='canonical'
-          href='https: //ziontechgroup.com/quantum-internet-security-platform'
-           />
-      <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'    />
-        <div className='max-w-6xl mx-auto'    />
-          <div className='text-center mb-10'    />
-            <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3'    />
-              <Shield className='w-10 h-10'    />
-
-<<<<<<< HEAD
-
->>>>>>> origin/resolved-merge-conflicts
                 {service.features.slice(0, 12).map((feat, i) => (<li;
                     }
                     key={i}
@@ -249,7 +104,6 @@ rel='canonical'
 
                     <Check className='w-5 h-5 text-emerald-400 mt-0.5' />;'
                     <span>{feat}</span>;
-=======
               {service.nam,}
 }
             </h1>;
@@ -270,12 +124,10 @@ rel='canonical'
 
                     <Check className='w-5 h-5 text-emerald-400 mt-0.5'    />;
                     <span    />{feat}</span>;
->>>>>>> origin/chore/fix-lint-and-merge
                   </li>;
                 ))}
               </ul>;
             </div>;
-<<<<<<< HEAD
             <div className='bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit'>;'
               <div className='flex items-end justify-between mb-3'>;'
                 <div>;
@@ -294,33 +146,9 @@ rel='canonical'
                 <div className='flex items-center text-yellow-400'>;'
                   <Star className='w-4 h-4 mr-1' />;'
                   {service.rating.toFixed(1)}
-=======
-<<<<<<< HEAD
-=======
-            <div className='bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit'    />;
-              <div className='flex items-end justify-between mb-3'    />;
-                <div    />;
-                  <div className='text-3xl font-bold text-white'    />;
-                    {service.price}
-                    <span className='text-slate-400 text-base'    />;
-                      {service.period}
-                    </span>;
-                  </div>;
-                  <div className='text-slate-400'    />;
-                    {service.trialDays}-day free trial • Setup: {' '}
-                    {service.setupTim,}
-}
-                  </div>;
-                </div>;
-                <div className='flex items-center text-yellow-400'    />;
-                  <Star className='w-4 h-4 mr-1'    />;
-                  {service.rating.toFixed(1)}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/resolved-merge-conflicts
 
                 </div>
               </div>
-<<<<<<< HEAD
               <Button,
 href='/contact''
 variant='quantum';'
@@ -351,26 +179,6 @@ variant='quantum';'
                 <div className='flex items-center space-x-2'><Phone className='w-4 h-4 text-cyan-400' /><span>{service.contactInfo.mobile}</span></div>
                 <div className='flex items-center space-x-2'><Mail className='w-4 h-4 text-purple-400' /><span>{service.contactInfo.email}</span></div>
                 <div className='flex items-center space-x-2'><MapPin className='w-4 h-4 text-green-400' /><span className='text-xs'>{service.contactInfo.address}</span></div>
-=======
-<<<<<<< HEAD
-              <Button href=/contact" variant="quantum size=lg" className="w-full>Request a Security Demo<ArrowRight className=w-5 h-5 ml-2" /></Button>
-              <div className="mt-6 space-y-3 text-sm text-slate-300>
-                <div className=flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400 /><span>{service.contactInfo.mobile}</span></div>
-                <div className=flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400 /><span>{service.contactInfo.email}</span></div>
-                <div className=flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400 /><span className=text-xs">{service.contactInfo.address}</span></div>
-=======
-              <Button;
-href='/contact'
-                variant='quantum'
-                size='lg'
-
-                className='w-full'
-                  />
-                Request a Security Demo;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 <ArrowRight className='w-5 h-5 ml-2'    />
               </Button>
               <div className='mt-6 space-y-3 text-sm text-slate-300'    />
@@ -386,85 +194,7 @@ href='/contact'
                   <MapPin className='w-4 h-4 text-green-400'    />
                   <span className='text-xs'    />{service.contactInfo.address}</span>
                 </div>
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
-=======
-                <ArrowRight className='w-5 h-5 ml-2' />;
-              </Button>;
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
-                <div className='flex items-center space-x-2'>;
-                  <Phone className='w-4 h-4 text-cyan-400' />;
-                  <span>{service && service.contactInfo.mobile}</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <Mail className='w-4 h-4 text-purple-400' />;
-                  <span>{service && service.contactInfo.email}</span>;
-                </div>;
-                <div className='flex items-center space-x-2'>;
-                  <MapPin className='w-4 h-4 text-green-400' />;
-                  <span className='text-xs'>{service && service.contactInfo.address}</span>;
-                </div>              </div>              <Button href="/contact" variant="quantum" size="lg" className="w-full">Request a Security Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>;
-              <div className="mt-6 space-y-3 text-sm text-slate-300">;
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service && service.contactInfo.mobile}</span></div>;
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service && service.contactInfo.email}</span></div>;
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service && service.contactInfo.address}</span></div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </UltraAdvancedFuturisticBackground>;
 
-  );
-}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-internet-security-platform'));
-  if (!service) return null;
-
-  return (
-    <UltraAdvancedFuturisticBackground>
-      <Head>
-        <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-=======
-        <meta name="description" content={service.description} />
-        <link rel="canonical" href="https://ziontechgroup.com/quantum-internet-security-platform" />
-      </Head>
-      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3"><Shield className="w-10 h-10" />{service.name}</h1>
-            <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <div className="lg:col-span-2 bg-black/30 rounded-2xl border border-emerald-500/30 p-6">
-              <h2 className="text-2xl font-semibold mb-4">Platform capabilities</h2>
-              <p className="text-slate-300 mb-6">{service.description}</p>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {service.features.slice(0, 12).map((feat, i) => (
-                  <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-emerald-400 mt-0.5" /><span>{feat}</span></li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
-              <div className="flex items-end justify-between mb-3">
-                <div>
-                  <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
-                  <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
-                </div>
-                <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-              </div>
-              <Button href="/contact" variant="quantum" size="lg" className="w-full">Request a Security Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         <meta name='description' content={service.description} />
         <link
           rel='canonical'
@@ -544,48 +274,40 @@ export default function QuantumInternetSecurityPage() {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </div>
           </div>
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
                 </div>;
               </div>;
               <Button;
-                href='/contact';
-                variant='quantum';
-                size='lg';
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
-                <div className='flex items-center space-x-2'><Phone className='w-4 h-4 text-cyan-400' /><span>{service.contactInfo.mobile}</span></div>;
-                <div className='flex items-center space-x-2'><Mail className='w-4 h-4 text-purple-400' /><span>{service.contactInfo.email}</span></div>;
-                <div className='flex items-center space-x-2'><MapPin className='w-4 h-4 text-green-400' /><span className='text-xs'>{service.contactInfo.address}</span></div>;
-                className='w-full';
+                href=/contact';
+                variant='quantum;
+                size=lg';
+              <div className="mt-6 space-y-3 text-sm text-slate-300>;
+                <div className=flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400 /><span>{service.contactInfo.mobile}</span></div>;
+                <div className=flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400 /><span>{service.contactInfo.email}</span></div>;
+                <div className=flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400 /><span className=text-xs">{service.contactInfo.address}</span></div>;
+                className='w-full;
               >;
                 Request a Security Demo;
-                <ArrowRight className='w-5 h-5 ml-2' />;
+                <ArrowRight className=w-5 h-5 ml-2' />;
               </Button>;
-              <div className='mt-6 space-y-3 text-sm text-slate-300'>;
-                <div className='flex items-center space-x-2'>;
-                  <Phone className='w-4 h-4 text-cyan-400' />;
+              <div className='mt-6 space-y-3 text-sm text-slate-300>;
+                <div className=flex items-center space-x-2'>;
+                  <Phone className='w-4 h-4 text-cyan-400 />;
                   <span>{service.contactInfo.mobile}</span>;
                 </div>;
-                <div className='flex items-center space-x-2'>;
-                  <Mail className='w-4 h-4 text-purple-400' />;
+                <div className=flex items-center space-x-2'>;
+                  <Mail className='w-4 h-4 text-purple-400 />;
                   <span>{service.contactInfo.email}</span>;
                 </div>;
-                <div className='flex items-center space-x-2'>;
-                  <MapPin className='w-4 h-4 text-green-400' />;
-                  <span className='text-xs'>{service.contactInfo.address}</span>;
+                <div className=flex items-center space-x-2'>;
+                  <MapPin className='w-4 h-4 text-green-400 />;
+                  <span className=text-xs'>{service.contactInfo.address}</span>;
                 </div>;
               </div>;
             </div>;
@@ -681,92 +403,25 @@ export default function QuantumInternetSecurityPage() {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
   );
 }
 
 
-<<<<<<< HEAD
 
   );
-=======
-
-  );
-
-import Head from 'next / head';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Shield,
-  Star,
-} from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
-import Button from '../components / ui / Button';
-import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
-export default /**
- * QuantumInternetSecurityPage - Function description
- */
-function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find (string =>;
-    s.link.ends_with ('/quantum - internet - security - platform'));  // Check condition
-if (return null) {
-  $2
-}import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
-import Button from '../components / ui / Button';
-import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services';
-export default /**
- * QuantumInternetSecurityPage - Function description
- */
-function QuantumInternetSecurityPage() {
-  const service = enhancedRealMicroSaasServices.find (string => s.link.ends_with ('/quantum - internet - security - platform'));
-  // Check condition
-if (return null) {
-  $2
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }
 }
-<<<<<<< HEAD
 ;
 }
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
->>>>>>> origin/chore/fix-lint-and-merge
 
   );
 }
 
 
-<<<<<<< HEAD
 
 
     </UltraAdvancedFuturisticBackground>)}
   )
 }
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts

@@ -15,6 +15,7 @@ const result = await fn(client)} finally {client.release()}
 } finally {client.release ()}
 }
   if (!pool) {;
+    pool = new Pool({ connectionString:process.env.DATABASE_URL });
   }
   if (!pool) {;
     }
@@ -36,6 +37,15 @@ const client = await getPool().connect();
     await client.query('BEGIN');'
     await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);`
 const result = await fn(client);
+  const client = await getPool().connect();
+  try {
+    await client.query('BEGIN');
+    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]);
+    const result = await fn(client);
+    await client && client.query('COMMIT');
+    return result;
+  } catch (err) {
+    await client && client.query('ROLLBACK');
 ;
 
 export async function withUser<T>("userId": string, "fn": ("client": PoolClient) => Promise<T>): Promise<T> {;
@@ -54,6 +64,20 @@ const result = await fn(client),;
   } catch (err) {
     }
     await client.query('ROLLBACK');'
+;
+export async function withUser<T>(userId: string, fn: (client: PoolClient) => Promise<T>): Promise<T> {;
+  const client = await getPool().connect(),;
+  try {;
+    await client.query('BEGIN'),;
+    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [userId]),;
+    const result = await fn(client),;
+
+
+    await client.query('COMMIT');
+    await client.query('COMMIT');
+    return result;
+  } catch (err) {
+    await client.query('ROLLBACK');
     throw err;
   } finally {;
     }

@@ -1,62 +1,6 @@
-<<<<<<< HEAD
-import {serve} from ''https': //deno.land/std@0.208.0/http/server.ts';'
-import {createClient} from ''https': //esm.sh/@supabase/supabase-js@2.39.7';'
-import {createClient} from ''https': //esm && esm.sh/@supabase/supabase-js@2 ;'
-import {serve} from ''https': //deno.land / std@0.208.0 / http / server.ts','
-import {create_client} from ''https': //esm.sh/@supabase / supabase - js@2.39.7';  throw new Error('Required environment variables are not set')'
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts';
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
-interface TenantInfo {
-  id: string,
-  brand_name: string,
-  subdomain: string,
-  custom_domain: string | null,
-  primary_color: string,
-  logo_url: string | null,
-  theme_preset: string}
 
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'GET, POST, OPTIONSAccess-Control-Allow-Headers': 'Content-Type, Authorization, x-client-infoAccess-Control-Max-Age': '86400'},
-
-// Initialize Supabase client
-const supabaseUrl = Deno.env.get($2);
-const supabaseServiceKey = Deno.env.get($2);
-if (!supabaseUrl || !supabaseServiceKey) {
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
-
-
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
-
-<<<<<<< HEAD
-
-import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
-import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
-
-=======
-=======
-import {serve} from 'https: //deno && deno.land/std@0 && 0.208.0/http/server && server.ts',
-import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {serve} from 'https: //deno.land / std@0.208.0 / http / server.ts',
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.39.7';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface TenantInfo {
 
   id: string;
@@ -64,97 +8,12 @@ interface TenantInfo {
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
-<<<<<<< HEAD
 
 }
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
       (forwardedHost ? forwardedHost && forwardedHost.split()[0].trim().split(':')[0] : null) ||
       url && url.hostname;
-
-=======
-const supabaseUrl = Deno && Deno.env.get('SUPABASE_URL');
-const supabaseServiceKey = Deno && Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
-if (!supabaseUrl || !supabaseServiceKey) {
-
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
-}
-const supabase = createClient(supabaseUrl, supabaseServiceKey);
-serve(async (req) => {
-  // Handle CORS preflight requests
-}
-if (req && req.method === 'OPTIONS') {  if (req && req.method === 'OPTIONS') {'
-    }
-    return new Response(null, {
-      }
-      'status': 204;
-    'headers': corsHeaders})
-  }
-  try {    if (!hostname && !subdomainParam) {
-}
-throw new Error('No hostname or subdomain provided');'
-    }
-    // Extract tenant info,
-let 'tenantInfo': TenantInfo | null = null;
-    if (subdomainParam) {
-      // Direct subdomain lookup
-<<<<<<< HEAD
-}
-const { data, error } = await supabase;
-=======
-      const { data, error } = await supabase
-        .from('whitelabel_tenants')
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
-        .eq('subdomain', subdomainParam)
-        .eq('is_active', true)
-        .single($2);
-      if (error) {
-        console.error($2);
-        throw new Error(`Database error: ${error.message}`)
-      }
-
-      tenantInfo = data as TenantInfo
-    } else {
-      // Try matching custom domain first
-      let { data, error } = await supabase
-        .from('whitelabel_tenants')
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
-        .eq('custom_domain', hostname)
-        .eq('is_active', true)
-        .single($2);
-      // If no match on custom domain, try subdomain
-      if (!data && !error) {
-        const subdomain = $2;
-=======
-<<<<<<< HEAD
-  if (req.method === 'OPTIONS') {
-=======
-  if (req && req.method === 'OPTIONS') {
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    return new Response(null, {
-      status: 204
-      headers: corsHeaders})
-  }
-  try {
-<<<<<<< HEAD
-    const url = new URL(req && req.url);
-    const hostnameParam = url && url.searchParams.get('host');
-    const subdomainParam = url && url.searchParams.get('subdomain');
-=======
-
-    const url = new URL(req && req.url);
-    const hostnameParam = url && url.searchParams.get('host');
-    const subdomainParam = url && url.searchParams.get('subdomain');
-    
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    // Get hostname from parameters or headers
-    const forwardedHost = req && req.headers.get('x-forwarded-host');
-    const hostname = hostnameParam || 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      (forwardedHost ? forwardedHost && forwardedHost.split()[0].trim().split(':')[0] : null) ||
-      url && url.hostname;
-<<<<<<< HEAD
     const url = new URL(req.url);
     const hostnameParam = url.searchParams.get('host');
     const subdomainParam = url.searchParams.get('subdomain');
@@ -163,15 +22,7 @@ const { data, error } = await supabase;
     const hostname = hostnameParam |
       (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) |
       url.hostname;
-=======
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (!hostname && !subdomainParam) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       throw new Error('No hostname or subdomain provided')
     }
     // Extract tenant info;
@@ -179,124 +30,40 @@ const { data, error } = await supabase;
     if (subdomainParam) {}
       // Direct subdomain lookup;
       const { data, error } = await supabase'
->>>>>>> origin/resolved-merge-conflicts
         .from('whitelabel_tenants')'
         .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')'
         .eq('subdomain', subdomainParam)'
         .eq('is_active', true)'
         .single();
-<<<<<<< HEAD
-      if (error) {
-        }
-        console && console.error('Database 'error':', error);'
-        throw new Error(`Database 'error': ${error && error.message}`)        console && console.error('Database 'error':', error);'throw new Error(`Database 'error': ${error && error.message}`);`      }
-      tenantInfo = data as TenantInfo
-    } else {
-      // Try matching custom domain first
-}
-let { data, error } = await supabase;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
         console && console.error('Database error:', error);
         throw new Error(`Database error: ${error && error.message}`)
         console && console.error('Database error:', error);
         throw new Error(`Database error: ${error && error.message}`)
 
-<<<<<<< HEAD
-=======
-=======
-      if (error) {
-<<<<<<< HEAD
-        console.error('Database error:', error);
-        throw new Error(`Database error: ${error.message}`)
-=======
-        console && console.error('Database error:', error);
-        throw new Error(`Database error: ${error && error.message}`)
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
       }
       tenantInfo = data as TenantInfo;
     } else {}
       // Try matching custom domain first;
       let { data, error } = await supabase'
->>>>>>> origin/resolved-merge-conflicts
         .from('whitelabel_tenants')'
         .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')'
         .eq('custom_domain', hostname)'
         .eq('is_active', true)'
         .single();
-<<<<<<< HEAD
-      // If no match on custom domain, try subdomain,
-if (!data && !error) {
-        }
-        const subdomain = hostname && hostname.split('.')[0];'
-        if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {'
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
             .eq('is_active', true)
 
           if (!subdomainResult && subdomainResult.error) {}
             tenantInfo = subdomainResult && subdomainResult.data as TenantInfo;
-<<<<<<< HEAD
-=======
-=======
-      // If no match on custom domain, try subdomain
-      if (!data && !error) {
-<<<<<<< HEAD
-        const subdomain = hostname.split('.')[0];
-=======
-        const subdomain = hostname && hostname.split('.')[0];
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
-        if (subdomain && !['wwwapplocallocalhost'].includes(subdomain)) {
-          const subdomainResult = await supabase
-            .from('whitelabel_tenants')
-            .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset')
-            .eq('subdomain', subdomain)
-            .eq('is_active', true)
-<<<<<<< HEAD
-            .single($2);
-          if (!subdomainResult.error) {
-            tenantInfo = subdomainResult.data as TenantInfo
-=======
-            .single();
-<<<<<<< HEAD
-          if (!subdomainResult.error) {
-            tenantInfo = subdomainResult.data as TenantInfo
-import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts',;
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7',;
-interface TenantInfo {;
-  id: string,;
-  brand_name: string,;
-  subdomain: string,;
-  custom_domain: string | null,;
-  primary_color: string,;
-  logo_url: string | null,;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-
-          if (!subdomainResult && subdomainResult.error) {
-            tenantInfo = subdomainResult && subdomainResult.data as TenantInfo
-
-          if (!subdomainResult && subdomainResult.error) {
-            tenantInfo = subdomainResult && subdomainResult.data as TenantInfo
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   logo_url: string | null,
 
   theme_preset: string;
 
->>>>>>> origin/resolved-merge-conflicts
 }
 const subdomainResult = await supabase;
             .from('whitelabel_tenants')'
@@ -382,17 +149,7 @@ if ( {) {
         .eq ('is_active', true);'
         .single ();
 ;
-<<<<<<< HEAD
-      // If no match on custom domain, try subdomain;      // Check condition,
-if ( {) {
-  $2
-}
-        const subdomain = hostname.split ('.')[0];'
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
 if ( {) {
   $2
@@ -401,7 +158,6 @@ if ( {) {
         const subdomain = hostname.split ('.')[0];
         if () {) {}
   $2;
-<<<<<<< HEAD
 }
           const subdomain_result = await supabase;'
             .from ('whitelabel_tenants');'
@@ -415,240 +171,6 @@ if ( {) {}
   $2;
 }
 
-=======
-}
-          const subdomain_result = await supabase;'
-            .from ('whitelabel_tenants');'
-            .select ('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');'
-            .eq ('subdomain', subdomain);'
-            .eq ('is_active', true);
-            .single ();
-;
-          // Check condition;
-if ( {) {}
-  $2;
-}
-
-          }
-        }
-      } else // Check condition;
-if ( {) {}
-  $2;
-
-}
-        tenant_info = data as TenantInfo;
-      }
-    }
-
-    return new Response (
-
-      JSON.stringify ({
-        tenant: tenant_info,
-
-        status: 'success';
-      });
-      {}
-        headers: {'
-          'Content - Type': 'application / json',
-          ...cors_headers}});
-  } catch (error) {'
-    console.error ('Tenant detector error:', error);
-    return new Response (
-      JSON.stringify ({'
-        error: error.message || 'Internal server error','
-        status: 'error';
-
-    console.error('Tenant detector error:', error);
-    return new Response(
-      JSON.stringify({
-        error: error.message |'Internal server error'
-        status: 'error'
-
-      });
-      {
-        status: 500;
-        headers: {
-
-  }
-});
-
-;
-    return new Response(;
-      JSON.stringify({;
-        tenant: tenantInfo,;'
-        status: 'success';
-      }),;
-      {;
-        headers: {;'
-          'Content-Type': 'application/json',;
-          ...corsHeaders}});
-  } catch (error) {;'
-    console.error('Tenant detector error:', error),;
-    return new Response(;
-      JSON.stringify({;'
-        error: error.message || 'Internal server error',;'
-        status: 'error';
-      }),;
-      {;
-        status: 500,;
-        headers: {;'
-          'Content-Type': 'application/json',;
-          ...corsHeaders}});
-
-  }
-});
-
-'
-          'Content - Type': 'application / json',
-
-          ...cors_headers}});
-  }
-});
-;
-
-import { serve } from 'https://deno.land/std@0.208.0/http/server.ts',;
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7',;
-;
-interface TenantInfo {;
-  id:string,;
-  brand_name:string,;
-  subdomain:string,;
-  custom_domain:string | null,;
-  primary_color:string,;
-  logo_url:string | null,;
-  theme_preset:string;
-}
-;
-const corsHeaders = {;
-  'Access-Control-Allow-Origin':'*Access-Control-Allow-Methods':'GET, POST, OPTIONSAccess-Control-Allow-Headers':'Content-Type, Authorization, x-client-infoAccess-Control-Max-Age':'86400'},;
-;
-// Initialize Supabase client;
-const supabaseUrl = Deno.env.get('SUPABASE_URL'),;
-const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'),;
-;
-if (!supabaseUrl || !supabaseServiceKey) {;
-  throw new Error('Required environment variables are not set'),;
-}
-;
-const supabase = createClient(supabaseUrl, supabaseServiceKey),;
-;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === 'OPTIONS') {;
-    return new Response(null, {;
-      status:204,;
-      headers:corsHeaders}),;
-  }
-;
-  try {;
-    const url = new URL(req.url),;
-    const hostnameParam = url.searchParams.get('host'),;
-    const subdomainParam = url.searchParams.get('subdomain'),;
-    ;
-    // Get hostname from parameters or headers;
-    const forwardedHost = req.headers.get('x-forwarded-host'),;
-    const hostname = hostnameParam || ;
-      (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] :null) ||;
-      url.hostname,;
-;
-    if (!hostname && !subdomainParam) {;
-      throw new Error('No hostname or subdomain provided'),;
-    }
-;
-    // Extract tenant info;
-    let tenantInfo:TenantInfo | null = null,;
-;
-    if (subdomainParam) {;
-      // Direct subdomain lookup;
-      const { data, error } = await supabase;
-        .from('whitelabel_tenants');
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
-        .eq('subdomain', subdomainParam);
-        .eq('is_active', true);
-        .single(),;
-;
-      if (error) {;
-        console.error('Database error:', error),;
-        throw new Error(`Database error:${error.message}`),;
-      }
-;
-      tenantInfo = data as TenantInfo,;
-    } else {;
-      // Try matching custom domain first;
-      let { data, error } = await supabase;
-        .from('whitelabel_tenants');
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
-        .eq('custom_domain', hostname);
-        .eq('is_active', true);
-        .single(),;
-;
-      // If no match on custom domain, try subdomain;
-=======
-      // If no match on custom domain, try subdomain;
-<<<<<<< HEAD
-  theme_preset: string;
-}
-;
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'GET, POST, OPTIONSAccess-Control-Allow-Headers': 'Content-Type, Authorization, x-client-infoAccess-Control-Max-Age': '86400'},;
-// Initialize Supabase client;
-const supabaseUrl = Deno.env.get('SUPABASE_URL'),;
-const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'),;
-if (!supabaseUrl || !supabaseServiceKey) {;
-  throw new Error('Required environment variables are not set');
-}
-;
-const supabase = createClient(supabaseUrl, supabaseServiceKey),;
-serve(async (req) => {;
-  // Handle CORS preflight requests;
-  if (req.method === 'OPTIONS') {;
-    return new Response(null, {;
-      status: 204,;
-      headers: corsHeaders});
-  }
-;
-  try {;
-    const url = new URL(req.url),;
-    const hostnameParam = url.searchParams.get('host'),;
-    const subdomainParam = url.searchParams.get('subdomain'),;
-    // Get hostname from parameters or headers;
-    const forwardedHost = req.headers.get('x-forwarded-host'),;
-    const hostname = hostnameParam ||;
-      (forwardedHost ? forwardedHost.split()[0].trim().split(':')[0] : null) ||;
-      url.hostname,;
-    if (!hostname && !subdomainParam) {;
-      throw new Error('No hostname or subdomain provided');
-    }
-;
-    // Extract tenant info;
-    let tenantInfo: TenantInfo | null = null,;
-    if (subdomainParam) {;
-      // Direct subdomain lookup;
-      const { data, error } = await supabase;
-        .from('whitelabel_tenants');
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
-        .eq('subdomain', subdomainParam);
-        .eq('is_active', true);
-        .single(),;
-      if (error) {;
-        console.error('Database error:', error),;
-        throw new Error(`Database error: ${error.message}`);
-      }
-;
-      tenantInfo = data as TenantInfo;
-    } else {;
-      // Try matching custom domain first;
-      let { data, error } = await supabase;
-        .from('whitelabel_tenants');
-        .select('id, brand_name, subdomain, custom_domain, primary_color, logo_url, theme_preset');
-        .eq('custom_domain', hostname);
-        .eq('is_active', true);
-        .single(),;
-      // If no match on custom domain, try subdomain;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       if (!data && !error) {;
         const subdomain = hostname.split('.')[0],;
         if (subdomain && !['wwwapp', 'locallocalhost'].includes(subdomain)) {;
@@ -660,18 +182,7 @@ serve(async (req) => {;
             .single(),;
 ;
           if (!subdomainResult.error) {;
-<<<<<<< HEAD
             tenantInfo = subdomainResult.data as TenantInfo,;
-=======
-            tenantInfo = subdomainResult.data as TenantInfo;
-
-
-      // Check condition
-if ( {) {
-  $2
-}
-        const subdomain = hostname.split ('.')[0];
->>>>>>> origin/resolved-merge-conflicts
         if () {) {
   $2
 }
@@ -700,7 +211,6 @@ if ( {) {
     );
   } catch (error) {
     }
-<<<<<<< HEAD
     console.error ('Tenant detector 'error':', error);'
 return new Response (;
       JSON.stringify ({
@@ -721,24 +231,6 @@ return new Response (;
             .single($2);
           if (!subdomainResult.error) {
             tenantInfo = subdomainResult.data as TenantInfo
-=======
-<<<<<<< HEAD
-=======
-
-
-
-
-    return new Response(
-
-      JSON && JSON.stringify({
-        tenant: tenantInfo,
-
-<<<<<<< HEAD
-      JSON && JSON.stringify({
-        tenant: tenantInfo,
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
           }
         }
       } else // Check condition;
@@ -750,44 +242,15 @@ if ( {) {}
       }
     }
 
-<<<<<<< HEAD
     return new Response($2);
-=======
-<<<<<<< HEAD
-    return new Response (
-
-      JSON.stringify ({
-        tenant: tenant_info,
-
-        status: 'success';
-      });
-      {}
-        headers: {'
-          'Content - Type': 'application / json',
-          ...cors_headers}});
-  } catch (error) {'
-    console.error ('Tenant detector error:', error);
-    return new Response (
-      JSON.stringify ({'
-        error: error.message || 'Internal server error','
-        status: 'error';
-
-=======
-    return new Response(
-      JSON.stringify({
-        tenant: tenantInfo
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         status: 'success'
       });
->>>>>>> origin/resolved-merge-conflicts
       {
         headers: {
           'Content-Type': 'application/json',
           ...corsHeaders},
     )
   } catch (error) {
-<<<<<<< HEAD
     console.error($2);
     return new Response($2);
       {
@@ -795,13 +258,6 @@ if ( {) {}
         headers: {
           'Content-Type': 'application/json',
           ...corsHeaders},
-=======
-<<<<<<< HEAD
-=======
-    console && console.error('Tenant detector error:', error);
-    return new Response(
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       JSON && JSON.stringify({ 
         error: error && error.message || 'Internal server error',
         status: 'error'
@@ -821,102 +277,18 @@ if ( {) {}
       JSON.stringify ({
         error: error.message || 'Internal server error',
         status: 'error';
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     console.error('Tenant detector error:', error);
     return new Response(
       JSON.stringify({
         error: error.message |'Internal server error'
         status: 'error'
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-      });
-      {
-        status: 500;
-        headers: {
-
-<<<<<<< HEAD
-  }
-});
-
-;
-    return new Response(;
-      JSON.stringify({;
-        tenant: tenantInfo,;'
-        status: 'success';
-      }),;
-      {;
-        headers: {;'
-          'Content-Type': 'application/json',;
-          ...corsHeaders}});
-  } catch (error) {;'
-    console.error('Tenant detector error:', error),;
-    return new Response(;
-      JSON.stringify({;'
-        error: error.message || 'Internal server error',;'
-        status: 'error';
-      }),;
-      {;
-        status: 500,;
-        headers: {;'
-          'Content-Type': 'application/json',;
-          ...corsHeaders}});
-
-  }
-});
-
-'
-          'Content - Type': 'application / json',
-
-          ...cors_headers}});
-  }
-});
-;
-
-=======
-<<<<<<< HEAD
-          'Content-Type': 'application/json'
-          ...corsHeaders}}
->>>>>>> origin/resolved-merge-conflicts
-    )
-  }
-}),
-<<<<<<< HEAD
-=======
-=======
-});
-=======
-        status: 500,;
-        headers: {;
-          'Content-Type': 'application/json',;
-          ...corsHeaders}});
-
-
-<<<<<<< HEAD
-  }
-});
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
-});
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           'Content - Type': 'application / json',
           ...cors_headers}}
     );
   }
 });
 ;
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { serve } from 'https://deno.land/std@0.208.0/http/server.ts',;
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.7',;
 ;
@@ -1047,15 +419,5 @@ if (subdomainParam) {
 }
 });
   }
-<<<<<<< HEAD
-});
-=======
-});
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
+});

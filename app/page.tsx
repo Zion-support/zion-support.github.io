@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 
-<<<<<<< HEAD
 const services = [
   {
     title: 'AI Solutions',
@@ -187,7 +186,6 @@ export default function HomePage() {
               View Our Research
             </Link>
           </div>
-=======
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
@@ -235,7 +233,6 @@ export default function HomePage() {
               Scalable cloud infrastructure solutions to support your growing business needs.
             </p>
           </div>
->>>>>>> origin/resolved-merge-conflicts
         </div>
       </div>
     </div>

@@ -16,12 +16,6 @@ const navigation = [;
   ];return (<nav className="bg-slate-900/95 backdrop-blur-sm border-b border-gray-800 sticky top-0 z-50">;
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
         <div className="flex justify-between items-center h-16">;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> origin/resolved-merge-conflicts
 import { 
   Menu, 
   X 
@@ -1646,10 +1640,6 @@ const Navigation = () => {
 import React, { useState } from 'react';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-=======
-import { motion, AnimatePresence } from 'framer-motion';
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { 
   Menu, 
   X 
@@ -3247,7 +3237,6 @@ const Navigation = () => {
                   </a>
                 ))}
               </div>
->>>>>>> origin/resolved-merge-conflicts
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -3336,16 +3325,7 @@ export default function Navigation() {
       height: 0,
       transition: {
         duration: 0.3,
-<<<<<<< HEAD
         ease: 'easeInOut'
-=======
-<<<<<<< HEAD
-        ease: 'easeInOut'
-=======
-<<<<<<< HEAD
-        ease: easeInOut'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 
     },
     open: {
@@ -4197,50 +4177,7 @@ const Navigation = () => {
       </div>
 
 const Navigation: React.FC = () => {
-<<<<<<< HEAD
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-=======
-<<<<<<< HEAD
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-=======
-<<<<<<< HEAD
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
-  return (
-    <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <motion.div
-            className="flex items-center space-x-2"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
-            </div>
-            <span className={`text-xl font-bold ${
-              scrolled ? 'text-gray-900' : 'text-white'
-            }`}>
-              Zion Tech Group
-            </span>
-          </motion.div>
-
-          {/* Desktop Navigation */}
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -4258,10 +4195,6 @@ const Navigation: React.FC = () => {
             </Link>
           </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
           <div className="hidden md:flex items-center space-x-8">
             <Link
               href="/"
@@ -4321,46 +4254,6 @@ const Navigation: React.FC = () => {
         </div>
       </div>
 
-<<<<<<< HEAD
-=======
-=======
-=======
-      }
-    }
-  };
-
-  return (
-    <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
-          : 'bg-transparent'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <motion.div
-            className="flex items-center space-x-2"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
-            </div>
-            <span className={`text-xl font-bold ${
-              scrolled ? 'text-gray-900' : 'text-white'
-            }`}>
-              Zion Tech Group
-            </span>
-          </motion.div>
-
-          {/* Desktop Navigation */}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> merged-prs-20250907-203621
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
               <motion.a
@@ -4391,11 +4284,6 @@ const Navigation: React.FC = () => {
             </motion.button>
           </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
       {isMenuOpen && (
         <div className="md: hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
@@ -4424,14 +4312,7 @@ const Navigation: React.FC = () => {
               Contact
             </Link>
           </div>
-<<<<<<< HEAD
         </div>
-=======
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
       )}
     </nav>
   );
@@ -4439,15 +4320,7 @@ const Navigation: React.FC = () => {
 
 export default Navigation;
 origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> origin/resolved-merge-conflicts
           {/* Mobile Menu Button */}
           <motion.button
             className="md:hidden p-2 rounded-lg transition-colors duration-200"
@@ -4528,26 +4401,9 @@ origin/cursor/automate-test-fix-improve-and-merge-code-7ff0
 };
 
 export default Navigation;
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
     </nav>
   )
 }
 export default Navigation
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-export default Navigation;
->>>>>>> origin/chore/fix-lint-and-merge
-=======
+
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts

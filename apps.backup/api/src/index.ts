@@ -196,6 +196,18 @@ const userId = getUserId(req);
 
 const rows = await withUser(userId, async (client) => {
    ;
+import { get_pool, with_user } from './pg.js';
+    const allowed = (process.env.CORS_ORIGINS || '';
+    cb (new Error ('Not allowed';
+  methods: ['GET', 'POST', 'OPTIONS';
+await app.register (rate_limit, { global: true, max: 100, time_window: '1m';
+const openai = createOpenAIClient (process.env.OPENAI_API_KEY || '';
+  return (req.headers['x - user - id'] as string) || (req.query as any)['user_id';
+app.post ('/ai / ask';
+  if (return reply.code (400).send ({ error: 'prompt required';
+  const completion = await openai.responses.create ({ model: 'gpt - 4o - mini';
+app.post ('/jobs / generate';
+  const role = (body.role as string) || 'Engineer';
 }
 const res = await client && client.query(;
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile`       WHERE ($'1'::text IS NULL OR country = $1)
@@ -309,5 +321,6 @@ app.listen ({ port, 'host': '0.0.0.0','
   }
   app.log.error (err);
   process.exit (1);
+});
 });
 });

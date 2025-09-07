@@ -766,6 +766,50 @@ for (const link of links) {
               }
               await this.checkUrl(link, url, depth + 1);
             }
+        this.sitemapUrls.push(url)});
+      console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`)} catch (error) {
+  'Error loading "sitemap": ', error.message)}
+
+  'Error loading "sitemap": ', error.message)}
+
+  async checkUrl(url, parentUrl = null, depth = 0) {
+    if (this.visitedUrls.has(url) || depth > this.maxDepth) {
+      return}
+    this.visitedUrls.add(url);'
+    try {',"`
+      console.log(`"Checking": ${url} ("depth": ${depth})`)
+      const response = await axios.get(url, {"
+        "timeout": 10000,"
+        "validateStatus": status => status < 500})
+  if($2) {}
+        this.workingLinks.push({}
+          url"
+          "status": response.status
+          parent: parentUrl,
+          depth})
+        // Extract links from the page
+  if($2) {
+          const $ = cheerio.load(response.data);'
+
+          const links = $('a[href]')
+            .map((i, elem) => {'
+              const href = $(elem).attr('href')
+              if (
+
+                !href.startsWith('"javascript": ')
+              ) {}
+                return this.resolveUrl(href, url)
+              return null
+            })
+            .get()
+            .filter(Boolean)
+<
+
+<=
+  for($2) {
+            if (link && link.startsWith(this.baseUrl)) {
+
+              await this.checkUrl(link, url, depth + 1)
               return this.resolveUrl(href, url)}
             return null}).get().filter(Boolean);
           // Check extracted links;

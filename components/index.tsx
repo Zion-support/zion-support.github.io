@@ -752,6 +752,17 @@ className='text-center mb-16''
             whileInView={ opacity: 1, y: 0}
             transition={ duration: 0.8 }
             viewport={ once: true}
+      {/* Contact Form Section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+      {/* Contact Form Section */}
+      <section className='py-20 px-6 bg-gradient-to-r from-white/5 to-white/10'>
+        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true}}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">

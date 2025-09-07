@@ -1,22 +1,9 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';'
 import Link from 'next/link';'
 import Layout from '../../components/Layout';'
 import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';;'
 import React from 'react';'
 import Link from 'next/link';';'
-=======
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { BookOpen, Brain, Users, CheckCircle, ArrowRight, GraduationCap, BarChart3, FileText, Video, Globe, Database } from 'lucide-react';
-import React from 'react';
-import Link from 'next/link';';
-
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-
->>>>>>> origin/chore/fix-lint-and-merge
 import {
   // TODO: Implement;
 }
@@ -29,7 +16,6 @@ import {
   BarChart3,
   FileText,
   Video,
-<<<<<<< HEAD
   Database;
 } from 'lucide-react';'
 import Layout from '../../components/Layout';';'
@@ -68,10 +54,7 @@ export default function EducationPage() {return (<Layout)title="Education Techno
       }
       description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."";"
   {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
     }
     "title": 'Learning Management Systems','
     "description": 'Comprehensive LMS platforms for educational institutions and corporate training.','
@@ -92,65 +75,21 @@ export default function EducationPage() {return (<Layout)title="Education Techno
       'Student tracking',',;'
       'Assessment tools',',;'
       'Progress analytics'';'
-=======
 
-<<<<<<< HEAD
-=======
-=======
-    title: 'Learning Management Systems',
-    description: 'Comprehensive LMS platforms for educational institutions and corporate training.',
-    icon: BookOpen,
-    features: [;
-      'Course management,',
-      'Student tracking',',
-      'Assessment tools',',
-    title: 'Learning Management Systems,',;
-    description: 'Comprehensive LMS platforms for educational institutions and corporate training.,',;
-import Layout from '../../components/Layout';
-const services = [;
-  {;
-    title: 'Learning Management Systems',;
-    description: 'Comprehensive LMS platforms for educational institutions and corporate training.',;
-    icon: BookOpen,;
-    features: [,;
-      'Course management,',;
-      'Student tracking',',;
-      'Assessment tools',',;
-      'Progress analytics'';
-    ];
-  },;
-  {}
-    title: 'Virtual Classrooms,',;
-    description: 'Advanced virtual learning environments with interactive features.,',;
-    icon: Video,;
-    features: [,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
       'Live video streaming,',;
       'Interactive whiteboards',',;
       'Breakout rooms',',;
       'Recording capabilities'';
->>>>>>> origin/chore/fix-lint-and-merge
     ];
   },;
   {}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
     icon: Brain,;
     features: [,;
 
-<<<<<<< HEAD
-=======
-=======
-    title: 'Educational AI Tutors,',;
-    description: 'AI-powered tutoring systems for personalized learning experiences.,',;
-    icon: Brain,;
-    features: [,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
       'Adaptive learning paths,',;
       'Intelligent tutoring',',;
       'Progress monitoring',',;
@@ -158,23 +97,12 @@ const services = [;
     ];
   },;
   {}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
     icon: BarChart3,;
     features: [,;
 
-<<<<<<< HEAD
-=======
-=======
-    title: 'Student Analytics,',;
-    description: 'Data-driven insights into student performance and engagement.,',;
-    icon: BarChart3,;
-    features: [,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
       'Performance tracking,',;
       'Engagement metrics',',;
       'Predictive analytics',',;
@@ -182,23 +110,12 @@ const services = [;
     ];
   },;
   {}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
     icon: FileText,;
     features: [,;
 
-<<<<<<< HEAD
-=======
-=======
-    title: 'Online Assessment Tools,',;
-    description: 'Secure and comprehensive online testing and evaluation systems.,',;
-    icon: FileText,;
-    features: [,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
       'Automated grading,',;
       'Plagiarism detection',',;
       'Secure testing',',;
@@ -206,16 +123,8 @@ const services = [;
     ];
   },;
   {}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-    title: 'Content Management Systems,',;
-    description: 'Digital content creation and management platforms for educators.,',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     icon: Database,;
     features: [,;
       'Content creation tools,',;
@@ -224,15 +133,11 @@ const services = [;
       'Collaboration features'';
     ];
   }
-<<<<<<< HEAD
 ;];
   {}
     "title": 'Improved Learning Outcomes,',,'
   "description": 'Personalized learning experiences lead to better student performance.,',;'
     "icon": GraduationCap;
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
 ];
   {;
     title: 'Improved Learning Outcomes',;
@@ -258,26 +163,14 @@ const services = [;
 ;];
 const benefits = [;
   {}
-<<<<<<< HEAD
+
     title: 'Improved Learning Outcomes;,',,
   description: 'Personalized learning experiences lead to better student performance.;,',;
-=======
-<<<<<<< HEAD
-    title: 'Improved Learning Outcomes;,',,
-  description: 'Personalized learning experiences lead to better student performance.;,',;
-=======
-    title: 'Improved Learning Outcomes,',;
-    description: 'Personalized learning experiences lead to better student performance.,',;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     icon: GraduationCap;
 ];
 const benefits = [;
   {;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
     title: 'Improved Learning Outcomes';,,
   description: 'Personalized learning experiences lead to better student performance.';,;
     icon: GraduationCap;
@@ -296,112 +189,7 @@ const benefits = [;
     title: 'Data-Driven Insights;,',,
   description: 'Analytics help educators make informed decisions about teaching methods.;,',;
     icon: BarChart3;,;
-<<<<<<< HEAD
-  }
 
-;];
-=======
-=======
-    title: 'Improved Learning Outcomes',;
-    description: 'Personalized learning experiences lead to better student performance.',;
-    icon: GraduationCap;
-  },;
-  {}
-    title: 'Enhanced Engagement,',;
-    description: 'Interactive tools and gamification increase student participation.,',;
-    icon: Users,;
-  },;
-  {}
-    title: 'Better Accessibility,',;
-    description: 'Online platforms make education accessible to more students.,',;
-    icon: Globe,;
-  },;
-  {}
-    title: 'Data-Driven Insights,',;
-    description: 'Analytics help educators make informed decisions about teaching methods.,',;
-    icon: BarChart3,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  }
-
-;];
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    title: 'Improved Learning Outcomes;,',;
-    description: 'Personalized learning experiences lead to better student performance.;,',;
-    icon: GraduationCap;]
-    title: 'Improved Learning Outcomes';,;
-    description: 'Personalized learning experiences lead to better student performance.';,;
-    icon: GraduationCap;
-    title: 'Enhanced Engagement;,',;
-    description: 'Interactive tools and gamification increase student participation.;,',;
-    icon: Users;,;
-    title: 'Better Accessibility;,',;
-    description: 'Online platforms make education accessible to more students.;,',;
-    icon: Globe;,;
-    title: 'Data-Driven Insights;,',;
-    description: 'Analytics help educators make informed decisions about teaching methods.;,',;
-  }]
-pr-12325
-export default function EducationPage() {;
-  return ()
-    <Layout)
-      title="Education Technology Solutions - Zion Tech Group""""
-      description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms.""""
-      keywords="education technology, LMS, virtual classrooms, AI tutoring, student analytics, edtech"">;"
-"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";"
-</div>"
-        <section className="relative bg-gradient-to-br from-orange-900 via-amber-900 to-yellow-900 text-white py-20 overflow-hidden">";"
-</section>"
-          <div className="absolute inset-0">";"
-            <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";""
-            <div className="absolute top-40 right-10 w-72 h-72 bg-amber-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";""
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";"
-          </div>;"
-          <div className="container mx-auto px-4 relative z-10">";"
-</div>
-            <motion&& motion.div;
-              initial={{ opacity: 0;, y: 20 ;}}
-              animate={{ opacity: 1;, y: 0 ;}}
-              transition={{ duration: 0 && 0.8 ;}}"
-              className="text-center max-w-4xl mx-auto"">;"
-</motion>"
-              <div className="flex items-center justify-center mb-6">";"
-                <BookOpen className="w-12 h-12 text-orange-400 mr-4" />";"
-                <h1 className="text-5xl md: text-6xl font-bold">";, Education,;"
-</h1>"
-                  <span className="block bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">";"
-</span>
-<<<<<<< HEAD
-=======
-=======
-export default function EducationPage() {;
-  return (
-    <Layout)
-      title="Education Technology Solutions - Zion Tech Group""
-      description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms.""
-      keywords="education technology, LMS, virtual classrooms, AI tutoring, student analytics, edtech"">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-orange-900 via-amber-900 to-yellow-900 text-white py-20 overflow-hidden">";
-          <div className="absolute inset-0">";
-            <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
-            <div className="absolute top-40 right-10 w-72 h-72 bg-amber-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>";
-          </div>;
-          <div className="container mx-auto px-4 relative z-10">";
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center max-w-4xl mx-auto"">;
-              <div className="flex items-center justify-center mb-6">";
-                <BookOpen className="w-12 h-12 text-orange-400 mr-4" />";
-                <h1 className="text-5xl md: text-6xl font-bold">", Education,;
-                  <span className="block bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">";
-                    Technology Solutions;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </span>;
                 </h1>;
               </div>;
@@ -409,68 +197,12 @@ export default function EducationPage() {;
                 Revolutionize education with cutting-edge learning management systems, virtual classrooms, ;
                 AI tutors, and student analytics that enhance learning outcomes.,;
               </p>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";, <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold">";,;
                   Get Education Consultation;
                 </Link>;
                 <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-orange-600 transition-all duration-300 font-semibold">";, View Education Case Studies,;
-<<<<<<< HEAD
-=======
-=======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
-                  Get Education Consultation;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-orange-600 transition-all duration-300 font-semibold">", View Education Case Studies,;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-];
-export default function EducationPage() {;
-  return (
-    <Layout
-      title="Education Technology Solutions - Zion Tech Group"
-      description="Transform education with learning management systems, virtual classrooms, AI tutors, and student analytics platforms."
-      keywords="education technology, LMS, virtual classrooms, AI tutoring, student analytics, edtech">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-orange-900 via-amber-900 to-yellow-900 text-white py-20 overflow-hidden">;
-          <div className="absolute inset-0">;
-            <div className="absolute top-20 left-10 w-72 h-72 bg-orange-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>;
-            <div className="absolute top-40 right-10 w-72 h-72 bg-amber-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>;
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-yellow-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>;
-          </div>;
-          <div className="container mx-auto px-4 relative z-10">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center max-w-4xl mx-auto">;
-              <div className="flex items-center justify-center mb-6">;
-                <BookOpen className="w-12 h-12 text-orange-400 mr-4" />;
-                <h1 className="text-5xl md:text-6xl font-bold">;
-                  Education;
-                  <span className="block bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">;
-                    Technology Solutions;
-                  </span>;
-                </h1>;
-              </div>;
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">;
-                Revolutionize education with cutting-edge learning management systems, virtual classrooms,;
-                AI tutors, and student analytics that enhance learning outcomes.;
-              </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                  Get Education Consultation;
-                </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">;
-                  View Education Case Studies;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
                 </Link>;
               </div>;
             </motion && motion.div>;
@@ -489,36 +221,16 @@ export default function EducationPage() {
         <section className="py-20 bg-white">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Education Technology Services;
-<<<<<<< HEAD
+
               transition={{ duration: 0 && 0.8 ;}}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Education Technology Services,;
-=======
-<<<<<<< HEAD
-              transition={{ duration: 0 && 0.8 ;}}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Education Technology Services,;
-=======
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Education Technology Services,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive edtech solutions designed for schools, universities, ;
@@ -548,15 +260,8 @@ export default function EducationPage() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
             </motion && motion.div>;
-<<<<<<< HEAD
+
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,;
-=======
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">";,;
-=======
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               {services && services.map((service, index) => (,;
                 <motion&& motion.div}),
               className="text-center mb-16">;
@@ -572,21 +277,10 @@ export default function EducationPage() {
               {services && services.map((service, index) => (;
                 <motion&& motion.div
                   key={service && service.title}
-<<<<<<< HEAD
+
                   initial={{ opacity: 0;, y: 20 ;}}
                   animate={{ opacity: 1;, y: 0 ;}}
                   transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
-=======
-<<<<<<< HEAD
-                  initial={{ opacity: 0;, y: 20 ;}}
-                  animate={{ opacity: 1;, y: 0 ;}}
-                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
-=======
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"">;
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-600 rounded-lg flex items-center justify-center mb-6">";
                     <service && service.icon className="w-6 h-6 text-white" />";
@@ -646,36 +340,16 @@ export default function EducationPage() {
         <section className="py-20 bg-gray-50">";
           <div className="container mx-auto px-4">";
             <motion&& motion.div
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
                 Why Choose Our Education Solutions?;
-<<<<<<< HEAD
+
               transition={{ duration: 0 && 0.8 ;}}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Why Choose Our Education Solutions?,;
-=======
-<<<<<<< HEAD
-              transition={{ duration: 0 && 0.8 ;}}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">";, Why Choose Our Education Solutions?,;
-=======
-              transition={{ duration: 0 && 0.8 }}
-              className="text-center mb-16"">;
-              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Education Solutions?,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our education technology solutions deliver measurable improvements in learning outcomes, ;
@@ -697,15 +371,8 @@ export default function EducationPage() {
                 <motion.div
                   key={benefit.title}
             </motion && motion.div>;
-<<<<<<< HEAD
+
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">";,;
-=======
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">";,;
-=======
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               {benefits && benefits.map((benefit, index) => (,;
                 <motion&& motion.div}),
               className="text-center mb-16">;
@@ -721,21 +388,10 @@ export default function EducationPage() {
               {benefits && benefits.map((benefit, index) => (;
                 <motion&& motion.div
                   key={benefit && benefit.title}
-<<<<<<< HEAD
+
                   initial={{ opacity: 0;, y: 20 ;}}
                   animate={{ opacity: 1;, y: 0 ;}}
                   transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
-=======
-<<<<<<< HEAD
-                  initial={{ opacity: 0;, y: 20 ;}}
-                  animate={{ opacity: 1;, y: 0 ;}}
-                  transition={{ duration: 0 && 0.6;, delay: index * 0 && 0.1 ;}}
-=======
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   className="text-center"">;
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">";
                     <benefit && benefit.icon className="w-8 h-8 text-white" />";
@@ -764,51 +420,25 @@ export default function EducationPage() {
         <section className="py-20 bg-gradient-to-r from-orange-600 to-amber-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
             <motion&& motion.div
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Education?;
               transition={{ duration: 0 && 0.8 ;}}>,;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">";, Ready to Transform Education?,;
-<<<<<<< HEAD
-=======
-=======
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Education?;
-              transition={{ duration: 0 && 0.8 }}>,;
-              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Education?,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
               </h2>;
               <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">";
                 Let our education technology experts help you implement solutions that improve;
                 learning outcomes and student engagement.;
               </p>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
               <div className="flex flex-col sm: flex-row gap-4 justify-center">";, <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold">";,;
                   Start Your Education Project;
                 </Link>;
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-orange-600 transition-all duration-300 font-semibold">";, Learn About Our Expertise,;
-<<<<<<< HEAD
-=======
-=======
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",;
-                  Start Your Education Project;
-                </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-orange-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
                 </Link>;
               </div>;
             </motion && motion.div>;
@@ -839,10 +469,7 @@ export default function EducationPage() {
       </div>
     </Layout>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
                 ;
               </div>;
             </motion && motion.div>;
@@ -963,15 +590,5 @@ export default function EducationPage() {
 
                 <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">"
 
-<<<<<<< HEAD
+
             </motion.div>
-=======
-            </motion.div>
-=======
-<<<<<<< HEAD
-export default Education;
-=======
-export default Education;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

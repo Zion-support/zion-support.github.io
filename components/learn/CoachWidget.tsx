@@ -1,34 +1,7 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
-<<<<<<< HEAD
-export default function CoachWidget() {
-  const [input, setInput] = useState($2);
-  const [reply, setReply] = useState<string | null>(null),
-  const [loading, setLoading] = useState($2);
-=======
-export default function CoachWidget() {;
-  const [input, setInput] = useState('');
-  const [reply, setReply] = useState<string | null>(null),
-  const [loading, setLoading] = useState(false);
-  async function ask() {
-    if (!input.trim()) return;
-    setLoading(true);
-    try {
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-import React, { useState } from 'react';'
-=======
->>>>>>> origin/resolved-merge-conflicts
-      const resp = await fetch('/api/learn/coach', {
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-=======
 
 
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 export default function CoachWidget() {
   const [input, setInput] = useState($2);
@@ -45,45 +18,12 @@ export default function CoachWidget() {
       }),
       const data = await resp.json($2);
       setReply(data.text || '')
-=======
-export default function CoachWidget() {;
-
-  const [input, setInput] = useState('');
-  const [reply, setReply] = useState<string | null>(null),
-  const [loading, setLoading] = useState(false);
-
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
         body: JSON.stringify({ prompt: input })
         body: JSON.stringify({ prompt: input ;})
       });
       const data = await resp.json();
       setReply(data.text |'');
-<<<<<<< HEAD
     } finally {}
-=======
-    } finally {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  async function ask() {;
-    if (!input && input.trim()) return;
-    setLoading(true);
-    try {;
-      const resp = await fetch('/api/learn/coach', {;
-        method: 'POST',;
-        headers: { 'Content-Type': 'application/json' },;
-        body: JSON && JSON.stringify({ prompt: input }),;
-      });
-      const data = await resp && resp.json();
-      setReply(data && data.text || '');
-    } finally {;
-      setLoading(false);    }
-  }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
 
 
@@ -91,124 +31,31 @@ export default function CoachWidget() {;
 
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   return (      });
       const data = await resp.json();'
       setReply(data.text |'')
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  return (      });
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       const data = await resp && resp.json();
       setReply(data && data.text || '');
     } finally {;
       setLoading(false);
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
   }
   return (
 
 
-<<<<<<< HEAD
-  return (      });
-    }
-  }
-  );
-}'
-import React, { useState } from 'react;
-export default /**;
- * CoachWidget - Function description;
- */
-function CoachWidget() { return null; }
-function ask() {}
-    if () return) {}
-  $2;
-}
-    set_loading (true);
-    try {'
-      const resp = await fetch ('/api / learn / coach', {'
-        method: 'POST','
-        headers: { 'Content - Type': 'application / json' },
-        body: JSON.stringify ({ prompt: input }),
-      });
-      const data = await resp.json ();
-      set_reply (data.text || '');
-    } finally {}
-      set_loading (false);    }
-  }
-  return (      });
-      set_reply (data.text || ');
-    } finally {}
-      set_loading (false);
-    }
-  }
-  return ('
-    <div className=border rounded p - 3>;'
-      <div className='font - medium mb - 2>ZionGPT Coach</div>;
-      <div className='flex gap - 2'>;
-        <input;'
-          className='flex - 1 border rounded px - 3 py - 2 bg - white dark:bg - black';'
-          placeholder='Ask for help...';
-import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/resolved-merge-conflicts
-=======
+
 
 
 import React, { useState } from 'react';
 
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 export default function CoachWidget() {
   const [input, setInput] = useState('');
 
-<<<<<<< HEAD
-=======
-const [reply, setReply] = useState<string | null>(null),
-  const [loading, setLoading] = useState(false);
->>>>>>> origin/chore/fix-lint-and-merge
   async function ask() {
     if (!input.trim()) return;
     setLoading(true);
     try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      }
-      const resp = null;
-      setReply(data.text || '')'
-    } finally {
-      }
-      setLoading(false)
-    }
-return (;
-<div className='border rounded p-3'>'
-      <div className='font-medium mb-2'>ZionGPT Coach</div>'
-      <div className='flex gap-2'>'
-        <input,
-className='flex-1 border rounded px-3 py-2 bg-white "dark": bg-black''
-          placeholder='Ask for help...''
-=======
->>>>>>> origin/resolved-merge-conflicts
-<<<<<<< HEAD
       const resp = await fetch('/api/learn/coach', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -222,51 +69,7 @@ className='flex-1 border rounded px-3 py-2 bg-white "dark": bg-black''
   }
 
   return (
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 
-        body: JSON.stringify({ prompt: input })})const data = await resp.json()setReply(data.text |'')} finally {return (      })const data = await resp.json()setReply(data.text |'')}
-  }
-  return (return (      })}
-  }
-  )}
-import React, { useState } from 'react';
-export default /**;
- * CoachWidget - Function description;
- */;
-function CoachWidget() {const [input, set_input] = useState ('')const [reply, set_reply] = useState < string | null>(null)const [loading, set_loading]  = useState (false)async /**;
- * ask - Function description;
- */;
-function ask() {if () return) {$2;
-}
-    set_loading (true)try {const resp = await fetch ('/api / learn / coach', {method: 'POST',headers: { 'Content - Type': 'application / json' },body: JSON.stringify ({ prompt: input }),})const data = await resp.json ()set_reply (data.text || '')} finally {set_loading (false)}
-  }
-  return (      })const data = await resp.json ()set_reply (data.text || '')} finally {set_loading (false)}
-  }
-  return (<div className='border rounded p - 3'>;
-        body: JSON.stringify({ prompt: input })
-      });
-      const data = await resp.json();
-      setReply(data.text |'');
-    } finally {
-  return (      });
-      const data = await resp.json();
-      setReply(data.text |'')
-
-    }
-  }
-  return (
-
-
-  return (      });
-    }
-  }
-  );
-}
-=======
-<<<<<<< HEAD
     </div>;
   );
 }
@@ -278,11 +81,12 @@ function ask() {if () return) {$2;
       </div>
       {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
     </div>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   );
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+  return (      });
+    }
+  );
+}'
 import React, { useState } from 'react';
 export default /**
  * CoachWidget - Function description
@@ -337,56 +141,18 @@ function ask() {
           placeholder='Ask for help...';
       const resp = null;
       setReply(data.text || '')'
->>>>>>> merged-prs-20250907-203621
     } finally {
       setLoading(false)
     }
   }
-<<<<<<< HEAD
-=======
-  return (
-<div className='border rounded p-3'>
-      <div className='font-medium mb-2'>ZionGPT Coach</div>
-      <div className='flex gap-2'>
-        <input
-          className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black'
-          placeholder='Ask for help...'
-origin/cursor/automate-test-improve-and-merge-code-2533
-=======
-      const resp = null;}
-      setReply(data.text || '')}
-    } finally {}
-      setLoading(false)}
-    }
-  }
-  return (
-<div className='border rounded p-3'    />
-      <div className='font-medium mb-2'    />ZionGPT Coach</div>
-      <div className='flex gap-2'    />
-        <input;
-className='flex-1 border rounded px-3 py-2 bg-white dark: bg-black'
-          placeholder='Ask for help...'
-
->>>>>>> origin/chore/fix-lint-and-merge
           value={input}
           on_change={e =    /> set_input (e.target.value,}
 }
         />;
         <button;
           on_click={ask}
-<<<<<<< HEAD
           className='px - 3 py - 2 bg - blue - 600 text - white rounded';
           disabled={loading}
-=======
-<<<<<<< HEAD
-          className='px - 3 py - 2 bg - blue - 600 text - white rounded';'
-          disabled={loading}
-=======
-          className='px - 3 py - 2 bg - blue - 600 text - white rounded';
-          disabled={loading}
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
         >;
           {loading ? '...' : 'Ask'}'
         </button>;
@@ -398,132 +164,7 @@ className='flex-1 border rounded px-3 py-2 bg-white dark: bg-black'
     </div>;
         </div>)}
     </div>);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/resolved-merge-conflicts
-<<<<<<< HEAD
-=======
 
-  async function ask() {
-    if (!input.trim()) return,
-    setLoading(true),
-    try {
-      const resp = await fetch('/api/learn/coach', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: input })
-      }),
-      const data = await resp.json()
-      setReply(data.text || '')
-      setLoading(false);    }
-  }
-
-  return (
-
-  return (      });
-      const data = await resp.json();
-      setReply(data.text |'')
-
-  return (
-
-    } finally {
-      setLoading(false)
-    }
-  }
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-    }
-  }
-
-
-
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  )
-    <div className="border rounded p-3">
-      <div className="font-medium mb-2">ZionGPT Coach</div>
-      <div className="flex gap-2">
-        <input className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" placeholder="Ask for help..." value={input} onChange={(e) => setInput(e.target.value)} />
-        <button onClick={ask} className="px-3 py-2 bg-blue-600 text-white rounded" disabled={loading}>{loading ? '...' : 'Ask'}</button>
-      </div>
-      {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
-    </div>
-  )
-}
-
-
-
-
-
-=======
->>>>>>> origin/resolved-merge-conflicts
-<<<<<<< HEAD
-
->>>>>>> merged-prs-20250907-203621
-  return (
-    <div className='border rounded p-3'>
-      <div className='font-medium mb-2'>ZionGPT Coach</div>
-      <div className='flex gap-2'>
-        <input
-          className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black'
-          placeholder='Ask for help...'
-          value={input}
-          onChange={e => setInput(e.target.value)}
-        />
-        <button
-          onClick={ask}
-          className='px-3 py-2 bg-blue-600 text-white rounded'
-          disabled={loading}
-        >
-          {loading ? '...' : 'Ask'}
-        </button>
-      {reply && (
-        <div className='mt-2 text-sm text-gray-800 dark:text-gray-200'>
-          {reply}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-        </div>
-      )}
-    </div>
-);
-}
-
-  return (
-  return (
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    }
-  }
-
-
-
-
-
-<<<<<<< HEAD
-  )
-    <div className="border rounded p-3">
-      <div className="font-medium mb-2">ZionGPT Coach</div>
-      <div className="flex gap-2">
-        <input className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" placeholder="Ask for help..." value={input} onChange={(e) => setInput(e.target.value)} />
-        <button onClick={ask} className="px-3 py-2 bg-blue-600 text-white rounded" disabled={loading}>{loading ? '...' : 'Ask'}</button>
-      </div>
-      {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
-    </div>
-  )
 }
     }
   }
@@ -531,7 +172,8 @@ className='flex-1 border rounded px-3 py-2 bg-white dark: bg-black'
 
 
 
-=======
+
+
             />;
           {loading ? '...' : 'Ask'}
         </button>;
@@ -539,21 +181,11 @@ className='flex-1 border rounded px-3 py-2 bg-white dark: bg-black'
       {reply && (}
         <div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200'    />;}
           {reply}
->>>>>>> origin/chore/fix-lint-and-merge
 
->>>>>>> merged-prs-20250907-203621
         </div>
       )}
     </div>
   );
 
-<<<<<<< HEAD
-);
-}
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
+
+  );

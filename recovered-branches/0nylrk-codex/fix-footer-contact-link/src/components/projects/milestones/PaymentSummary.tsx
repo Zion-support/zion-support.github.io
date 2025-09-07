@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -18,164 +8,19 @@ interface PaymentSummaryProps {;
 
   paymentTerms: string | null;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 }
 
 import React from "react";
 import { Milestone } from "@/hooks/useMilestones";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-<<<<<<< HEAD
+
 
 import { CreditCard } from "lucide-react";
 interface PaymentSummaryProps {}
   milestones: Milestone[];
 
-  paymentTerms: string | null;
-}
 
-    const paidAmount = milestones
-
-    .filter((m) => m.status === "paid")
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
-    .toFixed(2);
-
-=======
-=======
-
->>>>>>> merged-prs-20250907-203621
-
-import React from 'react';
-import { Milestone  } from '@/hooks/useMilestones';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { CreditCard } from 'lucide-react';
-interface PaymentSummaryProps {
-<<<<<<< HEAD
-  milestones: Milestone[],
-  paymentTerms: string | null
-}
-
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
-  const totalPayment = milestones.reduce(
-    (sum, m) => sum + parseFloat(m.amount.toString()), 
-    0
-  ).toFixed($2);
-  const paidAmount = milestones
-    .filter(m => m.status === 'paid')
-    .reduce(
-      (sum, m) => sum + parseFloat(m.amount.toString()), 
-      0
-    ).toFixed($2);
-  return (
-    <Card className = $2;
-=======
-  milestones: Milestone[];
-  paymentTerms: string | null
-}
-
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
-  milestones
-  paymentTerms
-}) => {
-  const totalPayment = milestones
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
-    .toFixed(2);
-  const paidAmount = milestones
-    .filter((m) => m.status === "paid")
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
-    .toFixed(2);
-=======
-
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React from 'react',;
-import { Milestone } from '@/hooks/useMilestones',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { CreditCard } from 'lucide-react',;
-interface PaymentSummaryProps {;
-  milestones: Milestone[],;
-  paymentTerms: string | null;
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-}
-
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
-  const totalPayment = milestones.reduce(
-    (sum, m) => sum + parseFloat(m.amount.toString()), 
-<<<<<<< HEAD
-    0
-  ).toFixed(2),
-
-    0;
-  ).toFixed(2);
-    0
-  ).toFixed(2),
-  
-0;
-  ).toFixed(2);
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-import { CreditCard } from "lucide-react";
-interface PaymentSummaryProps {}
-  milestones: Milestone[];
-
-<<<<<<< HEAD
-  paymentTerms: string | null;
-}
-
-    const paidAmount = milestones
-
-    .filter((m) => m.status === "paid")
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
-    .toFixed(2);
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  
-  const paidAmount = milestones
-    .filter(m => m.status === 'paid')
-    .reduce(
-      (sum, m) => sum + parseFloat(m.amount.toString()), 
-      0
-    ).toFixed(2),
-
-<<<<<<< HEAD
-import React from "react";
-import { Milestone } from "@/hooks/useMilestones";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CreditCard } from "lucide-react";
-interface PaymentSummaryProps {
-  milestones: Milestone[];
-  paymentTerms: string | null;
-}
-
-export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
-  milestones,
-  paymentTerms,
-}) => {
-  const totalPayment = milestones
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
-    .toFixed(2);
-
-  const paidAmount = milestones
-    .filter((m) => m.status === "paid")
-    .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
-    .toFixed(2);
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Card className="mb-8 bg-muted/30">
       <CardHeader className="pb-3">
@@ -190,10 +35,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
             <p className="text-sm text-muted-foreground mb-1">Total Payment</p>"
             <p className="text-2xl font-semibold">${totalPayment}</p>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
           <div>"
             <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>"
@@ -203,48 +45,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
           </div>
 
             <p className="font-medium">${paidAmount}</p>
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-          <div>
-            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
-            <p className="font-medium capitalize">
-              {paymentTerms |"Not specified"}
-            </p>
-          </div>
-<<<<<<< HEAD
-<div>
-            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
-
-            <p className="font-medium">${paidAmount}</p>
-            <p className="font-medium">${paidAmount}</p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-            <p className="font-medium">
-              ${paidAmount}
-            </p>
-          </div>
-        </div>
-      </CardContent>
-    </Card>
-<<<<<<< HEAD
   );
-=======
-<<<<<<< HEAD
-  );
-=======
-);
-}
-  );
-=======
-          <div>
-            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import {Milestone} from '@/hooks/useMilestones';
 import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
@@ -252,10 +54,7 @@ import {CreditCard} from 'lucide-react';
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
             <p className="font-medium">
               ${paidAmount}
@@ -275,12 +74,7 @@ import { CreditCard  } from './lucide-react';
 interface PaymentSummaryProps {}
   milestones: Milestone[];
   payment_terms: string | null;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 }
 export const PaymentSummary: React.FC < PaymentSummaryProps> = ({}
   milestones,
@@ -296,10 +90,7 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({}
     .to_fixed (2);
 ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
           </div>;
         </div>;
       </CardContent>;
@@ -310,258 +101,36 @@ export const PaymentSummary: React.FC < PaymentSummaryProps> = ({}
 '
 import React from 'react',;'
 import { Milestone } from '@/hooks/useMilestones',;'
-<<<<<<< HEAD
-=======
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;'
-import { CreditCard } from 'lucide-react',;
->>>>>>> origin/chore/fix-lint-and-merge
 ;
 interface PaymentSummaryProps {;
   milestones:Milestone[],;
   paymentTerms:string | null;
 }
 ;
-<<<<<<< HEAD
 export const "PaymentSummary":React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {;
   }
-=======
-export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {;
-  const totalPayment = milestones.reduce(;
->>>>>>> origin/chore/fix-lint-and-merge
     (sum, m) => sum + parseFloat(m.amount.toString()), ;
     0;
   ).toFixed(2),;
   ;
-<<<<<<< HEAD
     .filter(m => { return m.status === 'paid'); }'
-=======
-  const paidAmount = milestones;'
-    .filter(m => m.status === 'paid');
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
-    .reduce(;
-      (sum, m) => sum + parseFloat(m.amount.toString()), ;
-      0;
-    ).toFixed(2),;
-;
-  return (;"
-    <Card className="mb-8 bg-muted/30">;"
-      <CardHeader className="pb-3">;"
-        <CardTitle className="text-lg flex items-center">;"
-          <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary;
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent>;"
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-          <div>;"
-            <p className="text-sm text-muted-foreground mb-1">Total Payment</p>;"
-            <p className="text-2xl font-semibold">;
-              ${totalPayment}
-            </p>;
-          </div>;
-          ;
-          <div>;"
-            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>;"
-            <p className="font-medium capitalize">;"
-              {paymentTerms || "Not specified"}
-            </p>;
-          </div>;
-          ;
-          <div>;"
-            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;"
-            <p className="font-medium">;
-=======
-            <p className="font-medium">
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               ${paidAmount}
-<<<<<<< HEAD
   )
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
             </p>;
           </div>;
         </div>;
       </CardContent>;
     </Card>;
-<<<<<<< HEAD
-  ),;'"
-},; const paidAmount = milestones .filter (m => m.status === 'paid') return (<Card className="mb-8 bg-muted/30" > <CardHeader className="pb-3" > <CardTitle className="text-lg flex items-center" > <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary </CardTitle> </CardHeader> <CardContent> <div className="grid grid-cols-1 md:grid-cols-3 gap-6" > <div> <p className="text-sm text-muted-foreground mb-1" >Total Payment</p> <p className="text-2xl font-semibold" > $ {}
-  totalPayment;
-}</p> </div> <div> </p> </div> <div> </p> </div> </div> </CardContent> </Card>) 
-};
 
-};
-
-};
-
-'"
-=======
-  );
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-            <p className="font-medium">
-              ${paidAmount}
-
-
-};
-import React from './react';
-import { Milestone  } from '@/hooks / use_milestones';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
-import { CreditCard  } from './lucide-react';
-interface PaymentSummaryProps {
-  milestones: Milestone[];
-  payment_terms: string | null;
-}
-export const PaymentSummary: React.FC < PaymentSummaryProps> = ({
-  milestones,
-  payment_terms,
-}) => {
-  const total_payment = milestones;
-    .reduce ((sum, m) => sum + parse_float (m.amount.to_string ()), 0);
-    .to_fixed (2);
-;
-  const paid_amount = milestones;
-    .filter ((m) => m.status === "paid");
-    .reduce ((sum, m) => sum + parse_float (m.amount.to_string ()), 0);
-    .to_fixed (2);
-;
-  return (
-    <Card className="mb - 8 bg - muted / 30">;
-      <CardHeader className="pb - 3">;
-        <CardTitle className="text - lg flex items - center">;
-          <CreditCard className="h - 5 w - 5 mr - 2 text - primary" /> Payment Summary;
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
-          <div>;
-            <p className="text - sm text - muted - foreground mb - 1">Total Payment</p>;
-            <p className="text - 2xl font - semibold">${total_payment}</p>;
-          </div>;
-          <div>;
-            <p className="text - sm text - muted - foreground mb - 1">Payment Terms</p>;
-            <p className="font - medium capitalize">;
-              {payment_terms || "Not specified"}
-            </p>;
-          </div>;
-          <div>;
-            <p className="text - sm text - muted - foreground mb - 1">Paid Amount</p>;
-            <p className="font - medium">${paid_amount}</p>;
-          </div>;
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-;
-<<<<<<< HEAD
-
-import React from 'react',;
-import { Milestone } from '@/hooks/useMilestones',;
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
-import { CreditCard } from 'lucide-react',;
-;
-interface PaymentSummaryProps {;
-  milestones:Milestone[],;
-  paymentTerms:string | null;
-}
-;
-export const PaymentSummary:React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {;
-  const totalPayment = milestones.reduce(;
-    (sum, m) => sum + parseFloat(m.amount.toString()), ;
-    0;
-  ).toFixed(2),;
-  ;
-  const paidAmount = milestones;
-    .filter(m => m.status === 'paid');
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-    .reduce(;
-      (sum, m) => sum + parseFloat(m.amount.toString()), ;
-      0;
-    ).toFixed(2),;
-;
-<<<<<<< HEAD
-  return (;"
-    <Card className="mb-8 bg-muted/30">;"
-      <CardHeader className="pb-3">;"
-        <CardTitle className="text-lg flex items-center">;"
-          <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary;
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent>;"
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-          <div>;"
-            <p className="text-sm text-muted-foreground mb-1">Total Payment</p>;"
-=======
-  return (;
-    <Card className="mb-8 bg-muted/30">;
-      <CardHeader className="pb-3">;
-        <CardTitle className="text-lg flex items-center">;
-          <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary;
-        </CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-          <div>;
-            <p className="text-sm text-muted-foreground mb-1">Total Payment</p>;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-            <p className="text-2xl font-semibold">;
-              ${totalPayment}
-            </p>;
-          </div>;
-          ;
-<<<<<<< HEAD
-          <div>;"
-            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>;"
-            <p className="font-medium capitalize">;"
-=======
-          <div>;
-            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>;
-            <p className="font-medium capitalize">;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-              {paymentTerms || "Not specified"}
-            </p>;
-          </div>;
-          ;
-<<<<<<< HEAD
-          <div>;"
-            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;"
-=======
-          <div>;
-            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-            <p className="font-medium">;
-              ${paidAmount}
-            </p>;
-          </div>;
-        </div>;
-      </CardContent>;
-    </Card>;
-<<<<<<< HEAD
-  ),;'"
-},; const paidAmount = milestones .filter (m => m.status === 'paid') return (<Card className="mb-8 bg-muted/30" > <CardHeader className="pb-3" > <CardTitle className="text-lg flex items-center" > <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary </CardTitle> </CardHeader> <CardContent> <div className="grid grid-cols-1 md:grid-cols-3 gap-6" > <div> <p className="text-sm text-muted-foreground mb-1" >Total Payment</p> <p className="text-2xl font-semibold" > $ {}
-  totalPayment;
-=======
   ),;
 },; const paidAmount = milestones .filter (m => m.status === 'paid') return (<Card className="mb-8 bg-muted/30" > <CardHeader className="pb-3" > <CardTitle className="text-lg flex items-center" > <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary </CardTitle> </CardHeader> <CardContent> <div className="grid grid-cols-1 md:grid-cols-3 gap-6" > <div> <p className="text-sm text-muted-foreground mb-1" >Total Payment</p> <p className="text-2xl font-semibold" > $ {
   totalPayment 
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }</p> </div> <div> </p> </div> <div> </p> </div> </div> </CardContent> </Card>) 
 };
 
 };
 
 };
-<<<<<<< HEAD
+
 
 '"
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

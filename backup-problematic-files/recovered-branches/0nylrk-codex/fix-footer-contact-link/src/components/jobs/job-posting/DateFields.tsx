@@ -31,40 +31,8 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate } Date
               >;
 
                   <span>Pick a date</span>;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-                )}
-=======
-              <Button;
-                variant={"outline"}
-                className={cn(;
-                  "w-full md:w-[240px] pl-3 text-left font-normal",;
-                  !startDate && "text-muted-foreground";
-                )}
-              >;
-                {startDate ? (;
-                  format(startDate, "PPP");
-                ) :(;
-                  <span>Pick a date</span>;
-                )}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-              </Button>;
-            </FormControl>;
-          </PopoverTrigger>;
-          <PopoverContent className="w-auto p-0" align="start">;
-            <Calendar;
-              mode="single";
-              selected={startDate}
-              onSelect={setStartDate}
-              disabled={(date) =>;
-                date > new Date();
-              }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
               initialFocus;
             />;
           </PopoverContent>;

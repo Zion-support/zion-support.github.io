@@ -131,28 +131,10 @@ const baseItems = [ {';
 }
 }> {';
   item.badge > 9 ? '9+' : item.badge ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
 > <X className="h-5 w-5" />  </div> <Link key= {;"
 
 pr-12325
-<<<<<<< HEAD
+
 }</span>) ;
-=======
-}</span>) ;
-=======
-}</span>) ;
-}</div> {;
-  item.name ;
-}</Link>) ) ";
-}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
-<<<<<<< HEAD
-}'"
-=======
-}'"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

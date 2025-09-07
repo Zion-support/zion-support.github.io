@@ -92,87 +92,7 @@ export default function SolutionsPage() {
             delivering measurable results and competitive advantages.
           </p>
         </div>
-<<<<<<< HEAD
-        <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
-          <dl className='grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2'>
-            {industryApplications.map((industry) => (
-              <div key={industry.name} className='flex flex-col group'>
-                <dt className='flex items-center gap-x-3 text-base font-semibold leading-7 text-white'>
-                  <industry.icon className='h-5 w-5 flex-none text-blue-400' aria-hidden='true' />
-                  {industry.name}
-                </dt>
-                <dd className='mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300'>
-                  <p className='flex-auto mb-4'>{industry.description}</p>
-                  <div className='space-y-2'>
-                    {industry.useCases.map((useCase) => (
-                      <div key={useCase} className='flex items-center gap-2'>
-                        <div className='h-1.5 w-1.5 bg-blue-400 rounded-full'></div>
-                        <span className='text-sm text-gray-400'>{useCase}</span>
-=======
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
-            {industryApplications.map((industry) => (
-              <div key={industry.name} className="flex flex-col group">
-                <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                  <industry.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
-                  {industry.name}
-                </dt>
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto mb-4">{industry.description}</p>
-                  <div className="space-y-2">
-                    {industry.useCases.map((useCase) => (
-                      <div key={useCase} className="flex items-center gap-2">
-                        <div className="h-1.5 w-1.5 bg-blue-400 rounded-full"></div>
-                        <span className="text-sm text-gray-400">{useCase}</span>
->>>>>>> origin/resolved-merge-conflicts
-                      </div>
-                    ))}
-                  </div>
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
 
-      {/* Implementation Process */}
-<<<<<<< HEAD
-      <div className='mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8'>
-        <div className='mx-auto max-w-2xl lg:text-center'>
-          <h2 className='text-base font-semibold leading-7 text-blue-400'>Implementation</h2>
-          <p className='mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-            Our Proven Process
-          </p>
-          <p className='mt-6 text-lg leading-8 text-gray-300'>
-=======
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Our Proven Process
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
->>>>>>> origin/resolved-merge-conflicts
-            From initial assessment to ongoing optimization, we guide you through every step 
-            of your AI transformation journey.
-          </p>
-        </div>
-<<<<<<< HEAD
-        <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
-          <div className='grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5'>
-            {implementationSteps.map((step, index) => (
-              <div key={step.step} className='relative'>
-                {index < implementationSteps.length - 1 && (
-                  <div className='hidden lg:block absolute top-8 left-8 w-full h-0.5 bg-gray-700'></div>
-                )}
-                <div className='bg-white/5 p-6 rounded-2xl backdrop-blur-sm text-center hover:bg-white/10 transition-all duration-300 hover:scale-105'>
-                  <div className='mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-600/20 mb-4'>
-                    <step.icon className='h-8 w-8 text-blue-400' />
-                  </div>
-                  <div className='text-sm font-semibold text-blue-400 mb-2'>{step.step}</div>
-                  <h3 className='text-lg font-semibold text-white mb-2'>{step.title}</h3>
-                  <p className='text-sm text-gray-300'>{step.description}</p>
-=======
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-5">
             {implementationSteps.map((step, index) => (
@@ -187,7 +107,6 @@ export default function SolutionsPage() {
                   <div className="text-sm font-semibold text-blue-400 mb-2">{step.step}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
                   <p className="text-sm text-gray-300">{step.description}</p>
->>>>>>> origin/resolved-merge-conflicts
                 </div>
               </div>
             ))}
@@ -196,7 +115,6 @@ export default function SolutionsPage() {
       </div>
 
       {/* CTA section */}
-<<<<<<< HEAD
       <div className='mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8'>
         <div className='mx-auto max-w-2xl text-center'>
           <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
@@ -215,7 +133,6 @@ export default function SolutionsPage() {
             </a>
             <a href='/services' className='text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200'>
               View Services <span aria-hidden='true'>→</span>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -234,7 +151,6 @@ export default function SolutionsPage() {
             </a>
             <a href="/services" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Services <span aria-hidden="true">→</span>
->>>>>>> origin/resolved-merge-conflicts
             </a>
           </div>
         </div>

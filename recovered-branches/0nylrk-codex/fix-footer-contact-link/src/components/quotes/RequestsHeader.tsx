@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-import { 
-=======
-<<<<<<< HEAD
-import React from "react";
-import { Badge } from "@/components/ui/badge";
-import { 
-=======
-<<<<<<< HEAD
-=======
 
-
-<<<<<<< HEAD
-import React from "react";
-import { Badge } from "@/components/ui/badge";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { 
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Select;
   SelectContent;
   SelectItem;
@@ -23,30 +7,18 @@ import {
   SelectValue 
 } from "@/components/ui/select",
 import type { QuoteStatus } from "@/types/quotes";
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",
 
 import { Badge } from "@/components/ui/badge",
 import {}
 
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   Select,
   SelectContent, 
   SelectItem, 
   SelectTrigger, 
-<<<<<<< HEAD
+
 
 type RequestsHeaderProps = {
 
@@ -57,71 +29,10 @@ type RequestsHeaderProps = {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
 },
 
-=======
-<<<<<<< HEAD
-=======
-  SelectValue 
-} from "@/components/ui/select",
-<<<<<<< HEAD
-import type { QuoteStatus } from "@/types/quotes";
-type RequestsHeaderProps = $2;
-  statusFilter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archiveFilter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
-},
-=======
-import type { QuoteStatus } from "@/types/quotes",
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-type RequestsHeaderProps = {
-
-  unreadCount: number,
-  statusFilter: QuoteStatus | 'all','
-  setStatusFilter: (value: QuoteStatus | 'all') => void,'
-  archiveFilter: 'active' | 'archived' | 'all',';
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
-},
-
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-  setArchiveFilter'
-import React from './react';'
-import { Badge } from '@/components / ui / badge';'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';"
-<<<<<<< HEAD
-import type { QuoteStatus } from "@/types / quotes";
-type RequestsHeaderProps = {}
-  unread_count: number,'
-  status_filter: QuoteStatus | 'all','
-  setStatusFilter: (value: QuoteStatus | 'all') => void,'
-  archive_filter: 'active' | 'archived' | 'all','
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
-}
-=======
-=======
-<<<<<<< HEAD
-type RequestsHeaderProps = {
-  unreadCount: number
-  statusFilter: QuoteStatus | 'all'
-  setStatusFilter: (value: QuoteStatus | 'all') => void
-  archiveFilter: 'active' | 'archived' | 'all'
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
-}
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  setArchiveFilter
-=======
 import React from './react';
 import { Badge } from '@/components / ui / badge';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import type { QuoteStatus } from "@/types / quotes";
 type RequestsHeaderProps = {}
   unread_count: number,'
@@ -130,7 +41,6 @@ type RequestsHeaderProps = {}
   archive_filter: 'active' | 'archived' | 'all','
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
 }
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
   statusFilter;
@@ -144,10 +54,7 @@ type RequestsHeaderProps = {;
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
 };
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 type RequestsHeaderProps = {
   unreadCount: number
   statusFilter: QuoteStatus | 'all'
@@ -155,85 +62,17 @@ type RequestsHeaderProps = {
   archiveFilter: 'active' | 'archived' | 'all'
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
   statusFilter;
   setStatusFilter;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
-  unreadCount;
-  statusFilter;
-  setStatusFilter;
-  archiveFilter
-  unreadCount,
-  statusFilter,
-  setStatusFilter,
-  archiveFilter,
-  setArchiveFilter
-}) => {
-  return (
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-      <div>
-        <div className="flex items-center gap-3">
-          <h1 className="text-3xl font-bold text-white">Hire Requests</h1>
-          {unreadCount > 0 && (
-            <Badge className="bg-blue-500">
-              {unreadCount} New
-            </Badge>
-          )}
-        </div>
-        <p className="text-zion-slate-light mt-2">
-          Manage client requests to hire your services
-        </p>
-      </div>
-      <div className="flex gap-3 mt-4 md:mt-0">
-        <Select
-          value={statusFilter}
-          onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
-        >
-          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
-            <SelectValue placeholder="All Statuses" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="all">All Statuses</SelectItem>
-            <SelectItem value="new">New</SelectItem>
-            <SelectItem value="in_review">In Review</SelectItem>
-            <SelectItem value="responded">Responded</SelectItem>
-            <SelectItem value="accepted">Accepted</SelectItem>
-            <SelectItem value="closed">Closed</SelectItem>
-          </SelectContent>
-        </Select>
 
 
-
-  setArchiveFilter
-        <Select
-          value={archiveFilter}
-        <Select 
-          value={archiveFilter} 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   archiveFilter,;
   setArchiveFilter;
 }) => {;
   return (
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;
@@ -247,12 +86,6 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   setArchiveFilter
 }) => {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <div className = $2;
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
       <div>
         <div className="flex items-center gap-3">
@@ -291,14 +124,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
         <Select 
           value={archiveFilter} 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >"
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">"
@@ -314,25 +140,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
     </div>
   )
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-};
 
-}
-
-};
-=======
-=======
-
-};
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 },
 
 import { Badge } from "@/components/ui/badge",;
@@ -368,100 +176,13 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
               {unreadCount} New;
             </Badge>;
           )}
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
 
         <p className="text-zion-slate-light mt-2">;
           Manage client requests to hire your services;
         </p>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      </div>;
-<<<<<<< HEAD
-      <div className="flex gap-3 mt-4 md:mt-0">;
-        <Select;
-          value={archive_filter}
-          onValueChange={(value) => setArchiveFilter (value as 'active' | 'archived' | 'all')}
-        >;
-          <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
-            <SelectValue placeholder="Active Only" />;
-          </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="active">Active Only</SelectItem>;
-            <SelectItem value="archived">Archived Only</SelectItem>;
-            <SelectItem value="all">All Requests</SelectItem>;
-          </SelectContent>;
-        </Select>;
-      </div>;
 
-export default RequestsHeader;
-
-
-    </div>);
-}
-;
-
-import React from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { ;
-  Select,;
-  SelectContent, ;
-  SelectItem, ;
-  SelectTrigger, ;
-  SelectValue ;
-} from "@/components/ui/select",;
-import type { QuoteStatus } from "@/types/quotes",;
-;
-type RequestsHeaderProps = {;
-  unreadCount:number,;
-  statusFilter:QuoteStatus | 'all',;
-  setStatusFilter:(value:QuoteStatus | 'all') => void,;
-  archiveFilter:'active' | 'archived' | 'all',;
-  setArchiveFilter:(value:'active' | 'archived' | 'all') => void;
-},;
-;
-export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
-  unreadCount,;
-  statusFilter,;
-  setStatusFilter,;
-  archiveFilter,;
-  setArchiveFilter;
-}) => {;
-  return (;
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">;
-      <div>;
-        <div className="flex items-center gap-3">;
-          <h1 className="text-3xl font-bold text-white">Hire Requests</h1>;
-          {unreadCount > 0 && (;
-            <Badge className="bg-blue-500">;
-              {unreadCount} New;
-            </Badge>;
-          )}
-        </div>;
-        <p className="text-zion-slate-light mt-2">;
-          Manage client requests to hire your services;
-        </p>;
-      </div>;
-      ;
-      <div className="flex gap-3 mt-4 md:mt-0">;
-        <Select ;
-        <Select;
-          value={statusFilter} ;
-          onValueChange={(value) => setStatusFilter(value as QuoteStatus | 'all')}
-        >;
-          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         <Select
           value={statusFilter} 
@@ -487,20 +208,10 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
           onValueChange={(value) => setStatusFilter (value as QuoteStatus | 'all')}
         >;
           <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
-<<<<<<< HEAD
+
 
             <SelectValue placeholder="All Statuses" />;
 
-=======
-<<<<<<< HEAD
-
-            <SelectValue placeholder="All Statuses" />;
-
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <SelectValue placeholder="All Statuses" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -512,16 +223,6 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
             <SelectItem value="closed">Closed</SelectItem>;
           </SelectContent>;
         </Select>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        <Select;
-          value={archiveFilter} ;
-          onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
-        >;
-          <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
         <Select;
           value={archive_filter}
@@ -529,10 +230,6 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
         >;
           <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <SelectValue placeholder="Active Only" />;
 
           </SelectTrigger>;
@@ -564,16 +261,6 @@ export const RequestsHeader:React.FC<RequestsHeaderProps> = ({;
         </Select>;
 
       </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    </div>;
-  );
-};
-
-export default RequestsHeader;
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export default RequestsHeader;
     </div>);
@@ -608,10 +295,7 @@ type RequestsHeaderProps = {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
 },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
   unreadCount: number;,
   statusFilter: QuoteStatus | 'all
   setStatusFilter: (value: QuoteStatus | 'all') => void;',
@@ -703,14 +387,5 @@ pr-12325
       </div>;
     </div>;"
 
-<<<<<<< HEAD
+
 export default RequestsHeader;
-=======
-export default RequestsHeader;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

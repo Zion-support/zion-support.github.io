@@ -1,20 +1,8 @@
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
 import React from 'react','
 import Head from 'next/head';'
 import { motion } from 'framer-motion';'
-
-<<<<<<< HEAD
-=======
-=======
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
 
 import { 
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
@@ -23,7 +11,6 @@ import {
 } from 'lucide-react';
 
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {
 
 
@@ -113,8 +100,6 @@ class ErrorBoundary extends React.Component {
     }
     return this.props.children;
   }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
 }
 }whileInView= {
   {
@@ -126,268 +111,10 @@ class ErrorBoundary extends React.Component {
 }
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Financial Planning? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of individuals that have already revolutionized their financial planning with AI automation. Start your free trial today. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <motion.button > Get Started Now </motion.button> <motion.button 
 }
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
-  }
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor;
-  Award, MessageCircle, Calculator;
-<<<<<<< HEAD
-  } from 'lucide-react';'
-=======
-<<<<<<< HEAD
-  } from 'lucide-react';'
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-
-export default function AIFinancialPlanningPlatform() {const features = null;
-      }
-      'description':;
-        'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.';'
-    }
-    {'icon': <TrendingUp className='w-6 h-6' />;'
-      }
-      'title': 'Predictive Financial Planning';'
-      'description':;
-        'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.';'
-    }
-    {'icon': <Target className='w-6 h-6' />;'
-      }
-      'title': 'Goal-Based Planning';'
-      'description':;
-        'Personalized financial planning based on your specific goals, timeline, and risk tolerance.';'
-    }
-    {'icon': <Zap className='w-6 h-6' />;'
-      }
-      'title': 'Automated Portfolio Management';'
-      'description':;
-        'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.';'
-    }
-    {'icon': <Shield className='w-6 h-6' />;'
-      }
-      'title': 'Risk Assessment & Management';'
-      'description':;
-        'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.';'
-    }
-    {icon: <BarChart3 className='w-6 h-6' />;
-      title: 'Real-Time Financial Insights';
-      description:;
-        'Live financial data, market analysis, and personalized recommendations updated in real-time.';
-    }];
-  const benefits = [;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
-    'Increase investment returns by 25%';
-    'Reduce financial planning time by 70%';
-    'Improve risk-adjusted returns by 40%';
-    'Optimize tax efficiency by 30%';
-    'Reduce portfolio volatility by 35%';
-    'Improve financial goal achievement by 50%';
-    'Reduce financial planning costs by 60%';
-    'Gain professional-grade financial insights';
-<<<<<<< HEAD
-=======
-=======
-    Increase investment returns by 25%';
-    'Reduce financial planning time by 70%;
-    Improve risk-adjusted returns by 40%';
-    'Optimize tax efficiency by 30%;
-    Reduce portfolio volatility by 35%';
-    'Improve financial goal achievement by 50%;
-    Reduce financial planning costs by 60%';
-    'Gain professional-grade financial insights;
-=======
-export default function AIFinancialPlanningPlatform() {;
-  const features = [;
-    {;
-      icon: <DollarSign className='w-6 h-6' />,;
-      description:;
-        'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.',;
-    },;
-    {;
-      icon: <TrendingUp className='w-6 h-6' />,;
-      title: 'Predictive Financial Planning',;
-      description:;
-        'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.',;
-    },;
-    {;
-      icon: <Target className='w-6 h-6' />,;
-      title: 'Goal-Based Planning',;
-      description:;
-        'Personalized financial planning based on your specific goals, timeline, and risk tolerance.',;
-    },;
-    {;
-      icon: <Zap className='w-6 h-6' />,;
-      title: 'Automated Portfolio Management',;
-      description:;
-        'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.',;
-    },;
-    {;
-      icon: <Shield className='w-6 h-6' />,;
-      title: 'Risk Assessment & Management',;
-      description:;
-        'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.',;
-    },;
-    {;
-      icon: <BarChart3 className='w-6 h-6' />,;
-      title: 'Real-Time Financial Insights',;
-      description:;
-        'Live financial data, market analysis, and personalized recommendations updated in real-time.',;
-    },;
-  ];
-  const benefits = [;
-    'Increase investment returns by 25%',;
-    'Reduce financial planning time by 70%',;
-    'Improve risk-adjusted returns by 40%',;
-    'Optimize tax efficiency by 30%',;
-    'Reduce portfolio volatility by 35%',;
-    'Improve financial goal achievement by 50%',;
-    'Reduce financial planning costs by 60%',;
-    'Gain professional-grade financial insights',;
-  ];
-  <div className='mt-12'>;
-    <h2 className='text-2xl font-semibold'>Pricing</h2>;
-    <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'>;
-      <div className='rounded-2xl border border-emerald-400/30 p-6'>;
-        <h3 className='text-xl font-bold'>Starter</h3>;
-        <p className='mt-2 text-gray-300'>;
-          Up to 5 users, core models, board pack.;
-        </p>;
-        <p className='mt-4 text-3xl font-bold'>;
-          $390<span className='text-base font-normal text-gray-300'>/mo</span>;
-        </p>;
-      </div>;
-      <div className='rounded-2xl border border-cyan-400/30 p-6'>;
-        <h3 className='text-xl font-bold'>Growth</h3>;
-        <p className='mt-2 text-gray-300'>;
-          25 users, consolidation, Snowflake/NetSuite.;
-        </p>;
-        <p className='mt-4 text-3xl font-bold'>;
-          $1,290<span className='text-base font-normal text-gray-300'>/mo</span>;
-        </p>;
-      </div>;
-      <div className='rounded-2xl border border-amber-400/30 p-6'>;
-        <h3 className='text-xl font-bold'>Enterprise</h3>;
-        <p className='mt-2 text-gray-300'>;
-          Advanced governance, custom models, SSO.;
-        </p>;
-        <p className='mt-4 text-3xl font-bold'>Custom</p>;
-      </div>;
-    </div>;
-    <p className='mt-4 text-sm text-gray-400'>;
-      Market references:{' '}
-      <a
-        className='underline hover:text-cyan-300'
-        href='https://www && www.workday.com/en-us/products/planning/adaptive-planning && planning.html'
-        target='_blank'
-        rel='noreferrer'>;
-        Workday Adaptive;
-      </a>;
-      ,{' '}
-      <a
-        className='underline hover:text-cyan-300'
-        href='https://www && www.anaplan.com/pricing/'
-        target='_blank'
-        rel='noreferrer'>;
-        Anaplan;
-      </a>;
-      ,{' '}
-      <a
-        className='underline hover:text-cyan-300'
-        href='https://pigment && pigment.com/pricing'
-        target='_blank'
-        rel='noreferrer'>;
-import React from 'react';
-import Head from 'next / head';
-import { motion } from 'framer-motion';
-import {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-  DollarSign,
-  TrendingUp,
-  Shield,
-  Zap,
-  Target,
-  BarChart3,
-  CheckCircle,
-  Star,
-  Globe,
-  Lock,
-  Smartphone,
-  Monitor,
-  Award,
-  MessageCircle,;
-  Calculator,;} from 'lucide-react';import {
-  MessageCircle,
-  Calculator,;} from 'lucide-react';import { 
-
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
-  Award, MessageCircle, Calculator
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-} from 'lucide-react;
-=======
-
-import React from 'react';,
-import Head from 'next/head';
-import { motion } from 'framer-motion';
->>>>>>> origin/chore/fix-lint-and-merge
-
-import { DollarSign, TrendingUp, Shield, Zap, Target, BarChart3;
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor;}
-  Award, MessageCircle, Calculator;}
-  } from 'lucide-react';
-
-export default function AIFinancialPlanningPlatform() {const features = null;
-      description:;}
-        'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.';}
-    }
-    {icon: <TrendingUp className='w-6 h-6'    />;
-      title: 'Predictive Financial Planning';
-      description:;}
-        'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.';}
-    }
-    {icon: <Target className='w-6 h-6'    />;
-      title: 'Goal-Based Planning';
-      description:;}
-        'Personalized financial planning based on your specific goals, timeline, and risk tolerance.';}
-    }
-    {icon: <Zap className='w-6 h-6'    />;
-      title: 'Automated Portfolio Management';
-      description:;}
-        'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.';}
-    }
-    {icon: <Shield className='w-6 h-6'    />;
-      title: 'Risk Assessment & Management';
-      description:;}
-        'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.';}
-    }
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 
 export default function AIFinancialPlanningPlatform() {
   const features = [
     {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
       }
       'icon': <BarChart3 className='w-6 h-6' />'
       'title': 'Real-Time Financial Insights''
@@ -457,320 +184,15 @@ className='underline 'hover':text-cyan-300''
       .
     </p>
   </div>;
-<<<<<<< HEAD
 
-return (;
-    <>
-      <Head>
-        <title>AI Financial Planning Platform | Zion Tech Group</title>
-=======
-=======
-<<<<<<< HEAD
-      icon: <DollarSign className="w-6 h-6" />,
-      title: 'AI-Powered Financial Analysis',
-      description: 'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
-    };
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: 'Predictive Financial Planning',
-      description: 'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'
-    };
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: 'Goal-Based Planning',
-      description: 'Personalized financial planning based on your specific goals, timeline, and risk tolerance.'
-    };
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'Automated Portfolio Management',
-      description: 'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'
-    };
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Risk Assessment & Management',
-      description: 'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'
-    };
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Real-Time Financial Insights',
-      description: 'Live financial data, market analysis, and personalized recommendations updated in real-time.'
-=======
-      icon: <BarChart3 className='w-6 h-6'    />
-      title: 'Real-Time Financial Insights',
-  description:}
-        'Live financial data, market analysis, and personalized recommendations updated in real-time.'}
->>>>>>> origin/chore/fix-lint-and-merge
-    }
-  ];
-<<<<<<< HEAD
-=======
-  <div className='mt-12'    />;
-    <h2 className='text-2xl font-semibold'    />Pricing</h2>;
-    <div className='mt-6 grid grid-cols-1 md:grid-cols-3 gap-6'    />;
-      <div className='rounded-2xl border border-emerald-400/30 p-6'    />;
-        <h3 className='text-xl font-bold'    />Starter</h3>;
-        <p className='mt-2 text-gray-300'    />;
-          Up to 5 users, core models, board pack.;
-        </p>;
-        <p className='mt-4 text-3xl font-bold'    />;
-          $390<span className='text-base font-normal text-gray-300'    />/mo</span>;
-        </p>;
-      </div>;
-      <div className='rounded-2xl border border-cyan-400/30 p-6'    />;
-        <h3 className='text-xl font-bold'    />Growth</h3>;
-        <p className='mt-2 text-gray-300'    />;
-          25 users, consolidation, Snowflake/NetSuite.;
-        </p>;
-        <p className='mt-4 text-3xl font-bold'    />;
-          $1,290<span className='text-base font-normal text-gray-300'    />/mo</span>;
-        </p>;
-      </div>;
-      <div className='rounded-2xl border border-amber-400/30 p-6'    />;
-        <h3 className='text-xl font-bold'    />Enterprise</h3>;
-        <p className='mt-2 text-gray-300'    />;
-          Advanced governance, custom models, SSO.;
-        </p>;
-        <p className='mt-4 text-3xl font-bold'    />Custom</p>;
-      </div>;
-    </div>;
-    <p className='mt-4 text-sm text-gray-400'    />;
-      Market references: {' ,}
-}
-      <a;
-        className='underline hover:text-cyan-300';
-        href='https://www && www.workday.com/en-us/products/planning/adaptive-planning && planning.html';
-        target='_blank';
-        rel='noreferrer'    />;
-        Workday Adaptive;
-      </a>;
-      ,{' '}
-      <a;
-        className='underline hover:text-cyan-300';
-        href='https://www && www.anaplan.com/pricing/';
-        target='_blank';
-        rel='noreferrer'    />;
-        Anaplan;
-      </a>;
-      ,{' '}
->>>>>>> origin/chore/fix-lint-and-merge
-
-      <a;
-<<<<<<< HEAD
-className='underline hover:text-cyan-300'
-        href='https://pigment && pigment.com/pricing'
-        target='_blank'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-        rel='noreferrer'
-          />
-        Pigment;
-      </a>
-      .
-    </p>
-  </div>;
-=======
-        className='underline hover:text - cyan - 300';
-        href='https://pigment.com / pricing';
-        target='_blank';
-        rel='noreferrer';
-      >;
-        Pigment;
-      </a>;
-      .;
-    </p>;
-<<<<<<< HEAD
-          href='https://ziontechgroup && ziontechgroup.com/ai-financial-planning-platform'
-        />;
-      </Head>;
-      icon: <DollarSign className="w-6 h-6" />,
-      title: 'AI-Powered Financial Analysis',
-      description: 'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'
-    };
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: 'Predictive Financial Planning',
-      description: 'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'
-    };
-    {
-      icon: <Target className="w-6 h-6" />,
-      title: 'Goal-Based Planning',
-      description: 'Personalized financial planning based on your specific goals, timeline, and risk tolerance.'
-    };
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: 'Automated Portfolio Management',
-      description: 'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'
-    };
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Risk Assessment & Management',
-      description: 'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'
-    };
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: 'Real-Time Financial Insights',
-      description: 'Live financial data, market analysis, and personalized recommendations updated in real-time.'
-    }
-  ];
-  const benefits = [
-    'Increase investment returns by 25%Reduce financial planning time by 70%Improve risk-adjusted returns by 40%Optimize tax efficiency by 30%Reduce portfolio volatility by 35%Improve financial goal achievement by 50%Reduce financial planning costs by 60%Gain professional-grade financial insights'
-  ];
-					<div className="mt-12">
-						<h2 className="text-2xl font-semibold">Pricing</h2>
-						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-							<div className="rounded-2xl border border-emerald-400/30 p-6">
-								<h3 className="text-xl font-bold">Starter</h3>
-								<p className="mt-2 text-gray-300">Up to 5 users, core models, board pack.</p>
-								<p className="mt-4 text-3xl font-bold">$390<span className="text-base font-normal text-gray-300">/mo</span></p>
-							</div>
-							<div className="rounded-2xl border border-cyan-400/30 p-6">
-								<h3 className="text-xl font-bold">Growth</h3>
-								<p className="mt-2 text-gray-300">25 users, consolidation, Snowflake/NetSuite.</p>
-								<p className="mt-4 text-3xl font-bold">$1,290<span className="text-base font-normal text-gray-300">/mo</span></p>
-							</div>
-							<div className="rounded-2xl border border-amber-400/30 p-6">
-								<h3 className="text-xl font-bold">Enterprise</h3>
-								<p className="mt-2 text-gray-300">Advanced governance, custom models, SSO.</p>
-								<p className="mt-4 text-3xl font-bold">Custom</p>
-							</div>
-						</div>
-						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.workday.com/en-us/products/planning/adaptive-planning.html" target="_blank" rel="noreferrer">Workday Adaptive</a>, <a className="underline hover:text-cyan-300" href="https://www.anaplan.com/pricing/" target="_blank" rel="noreferrer">Anaplan</a>, <a className="underline hover:text-cyan-300" href="https://pigment.com/pricing" target="_blank" rel="noreferrer">Pigment</a>.</p>
-					</div>
-  return (
-    <>
-      <Head>
-        <title>AI Financial Planning Platform | Zion Tech Group</title>
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
-<meta,
-name='description''
-          content='Intelligent financial planning and wealth management with AI. Personalized plans, portfolio optimization, and risk management.'' />
-        <meta,
-name='keywords''
-          content='AI financial planning, financial planning, wealth management, portfolio optimization, investment planning, financial advisor'' />
-        <meta,
-property=''og': title''
-          content='AI Financial Planning Platform | Zion Tech Group'' />
-        <meta,
-property=''og':description''
-          content='Intelligent financial planning and wealth management with AI.'' />
-        <meta property=''og':type' content='website' />'
-        <meta,
-property=''og':url''
-          content=''https'://ziontechgroup.com/ai-financial-planning-platform'' />
-        <link,
-rel='canonical''
-          href=''https'://ziontechgroup.com/ai-financial-planning-platform'' />
-      </Head>
-      <div className='min-h-screen bg-black text-white'>'
-
-        {/* Hero Section *
-}
-        <section className='relative pt-32 pb-20 overflow-hidden'>;'
-          <div className='absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20'></div>;'
-          <div className='relative z-10 max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8'>;'
-            <motion.div;
-              initial={ 'opacity': 0, 'y': 30 
-}
-              animate={ 'opacity': 1, 'y': 0 }
-              transition={ 'duration': 0.8 
-}
-className='text-center'>'
-
-              <div className='flex items-center justify-center mb-6'>;'
-                <div className='w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4'>;'
-                  <DollarSign className='w-8 h-8 text-white' />;'
-                </div>;
-<<<<<<< HEAD
-=======
-              <h1 className='text-5xl "md":text-6xl font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent mb-6'>;'
-                AI Financial Planning Platform;
-              </h1>;
-              <p className='text-xl "md":text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;'
-=======
-        <meta name="description" content="Intelligent financial planning and wealth management with AI. Personalized plans, portfolio optimization, and risk management." />
-        <meta name="keywords" content="AI financial planning, financial planning, wealth management, portfolio optimization, investment planning, financial advisor" />
-        <meta property="og:title" content="AI Financial Planning Platform | Zion Tech Group" />
-        <meta property="og:description" content="Intelligent financial planning and wealth management with AI." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-financial-planning-platform" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-financial-planning-platform" />
-      </Head>
-      <div className='min-h-screen bg-black text-white'>;
-        {/* Hero Section */}
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center'      </Head>;
-      <div className="min-h-screen bg-black text-white">;
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
   return (
     <>
-<<<<<<< HEAD
       <Head>
         <title>AI Financial Planning Platform | Zion Tech Group</title>
 
-=======
-      <Head><title>AI Financial Planning Platform | Zion Tech Group</title>
-<meta;
-name='description'
-          content='Intelligent financial planning and wealth management with AI. Personalized plans, portfolio optimization, and risk management.'
-           />
-        <meta;
-name='keywords'
-          content='AI financial planning, financial planning, wealth management, portfolio optimization, investment planning, financial advisor'
-           />
-        <meta;
-property='og: title'
-          content='AI Financial Planning Platform | Zion Tech Group'
-           />
-        <meta;
-property='og:description'
-          content='Intelligent financial planning and wealth management with AI.'
-           />
-        <meta property='og:type' content='website'    />
-        <meta;
-property='og:url'
-          content='https://ziontechgroup.com/ai-financial-planning-platform'
-           />
-        <link;
-rel='canonical'
-          href='https://ziontechgroup.com/ai-financial-planning-platform'
-           />
-      </Head>
-      <div className='min-h-screen bg-black text-white'    />
 
-<<<<<<< HEAD
-        {/* Hero Section *,}
-}
-        <section className='relative pt-32 pb-20 overflow-hidden'    />;
-          <div className='absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20'    /></div>;
-          <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 ,}
-}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
-}
-className='text-center'    />
 
-              <div className='flex items-center justify-center mb-6'    />;
-                <div className='w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4'    />;
-                  <DollarSign className='w-8 h-8 text-white'    />;
-                </div>;
->>>>>>> origin/resolved-merge-conflicts
-              </div>;
-              <h1 className='text-5xl 'md':text-6xl font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent mb-6'>;'
-                AI Financial Planning Platform;
-              </h1>;
-<<<<<<< HEAD
-              <p className='text-xl 'md':text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;'
-=======
-              <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'    />;
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">;
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20"></div>;
@@ -778,7 +200,6 @@ className='text-center'    />
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1161,107 +582,33 @@ export default function AIFinancialPlanningPlatform() {
                 AI Financial Planning Platform;
               </h1>;
               <p className='text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto'>;
-=======
+        {/* Hero Section *
+}
+        <section className='relative pt-32 pb-20 overflow-hidden'>;'
+          <div className='absolute inset-0 bg-gradient-to-br from-yellow-900/20 via-amber-900/20 to-orange-900/20'></div>;'
+          <div className='relative z-10 max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>;'
+            <motion.div;
+              initial={{ "opacity": 0, "y": 30 
+}
+              animate={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.8 
+}
+className='text-center'>'
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
+              <div className='flex items-center justify-center mb-6'>;'
+                <div className='w-16 h-16 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-2xl flex items-center justify-center mb-4'>;'
+                  <DollarSign className='w-8 h-8 text-white' />;'
+                </div>;
+              <h1 className='text-5xl "md":text-6xl font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-400 bg-clip-text text-transparent mb-6'>;'
+                AI Financial Planning Platform;
+              </h1>;
+              <p className='text-xl "md":text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;'
                 Intelligent financial planning and wealth management with AI.;
                 Get personalized plans, portfolio optimization, and risk;
                 management that drives financial success.;
               </p>;
-<<<<<<< HEAD
-              <div className='flex flex-col 'sm':flex-row gap-4 justify-center'>;'
-=======
-<<<<<<< HEAD
+
               <div className='flex flex-col "sm":flex-row gap-4 justify-center'>;'
->>>>>>> origin/resolved-merge-conflicts
-                <motion.button;
-                  whileHover={ 'scale': 1.05 }
-                  whileTap={ 'scale': 0.95 
-}
-                  className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg 'hover':from-yellow-600 'hover':to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25';'
-                portfolio optimization, and risk management that drives financial success.;
-              </p>;
-              <div className='flex flex-col 'sm':flex-row gap-4 justify-center'>;'
-                <motion.button;
-                  whileHover={ 'scale': 1.05 }
-                  whileTap={ 'scale': 0.95 
-}
-<<<<<<< HEAD
-                  className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg 'hover':from-yellow-600 'hover':to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25'>'
-=======
-                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg "hover":from-yellow-600 "hover":to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25">"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'    />;
-=======
-        {/* Features Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Powerful Financial Planning Features
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-                Our AI platform combines advanced financial modeling with
-                machine learning to deliver comprehensive financial planning and
-                wealth management solutions.
-              </p>
-            </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Powerful Financial Planning Features
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                Our AI platform combines advanced financial modeling with machine learning to deliver
-                comprehensive financial planning and wealth management solutions.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <motion.div
-
-
-=======
-
-
-        {/* Features Section */}
-        <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'        <section className="py-20 bg-gradient-to-b from-black to-gray-900">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'>;
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-                Powerful Financial Planning Features;
-              </h2>;
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 ,}
@@ -1275,31 +622,14 @@ export default function AIFinancialPlanningPlatform() {
                   whileTap={{ scale: 0.95 ,}
 }
                   className=\"px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25\"    />
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 
                   Start Free Trial;
                 </motion.button>;
                 <motion.button;
-<<<<<<< HEAD
                   whileHover={ 'scale': 1.05 }
                   whileTap={ 'scale': 0.95 
 }
 className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg 'hover':bg-yellow-500/10 transition-all duration-200'>'
-=======
-<<<<<<< HEAD
-                  whileHover={{ "scale": 1.05 }}
-                  whileTap={{ "scale": 0.95 
-}
-className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg "hover":bg-yellow-500/10 transition-all duration-200'>'
-=======
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 ,}
-}
-className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg hover:bg-yellow-500/10 transition-all duration-200'    />
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 
                   Watch Demo;
                 </motion.button>;
@@ -1308,10 +638,6 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
           </div>;
         </section>;
         {/* Features Section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
 <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;'
           <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8'>;'
             <motion.div;
@@ -1326,57 +652,15 @@ className='text-center mb-16'>'
                 Powerful Financial Planning Features;
               </h2>;
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;'
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 
-=======
-<section className='py-20 bg-gradient-to-b from-black to-gray-900'    />;
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'    />;
-            <motion.div;
-              initial={{ opacity: 0, y: 30 ,}
-}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
-}
-className='text-center mb-16'    />
-
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />;
-                Powerful Financial Planning Features;
-              </h2>;
-<<<<<<< HEAD
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'    />;
->>>>>>> origin/chore/fix-lint-and-merge
-=======
               <p className='text - xl text - gray - 400 max - w-3xl mx - auto'>;
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                 Our AI platform combines advanced financial modeling with;
                 machine learning to deliver comprehensive financial planning and;
                 wealth management solutions.;
               </p>;
             </motion.div>;
-<<<<<<< HEAD
             <div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-3 gap-8'>;'
-=======
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-3 gap-8'>;'
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
               {features.map((feature, index) => (<motion.div;
                   }
                   key={index}
@@ -1388,12 +672,7 @@ className='text-center mb-16'    />
 
 className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 'hover':border-yellow-500/30 transition-all duration-300 group''
                 >
-<<<<<<< HEAD
                   <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-'hover':scale-110 transition-transform duration-300'>'
-=======
-<<<<<<< HEAD
-                  <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-"hover":scale-110 transition-transform duration-300'>'
->>>>>>> origin/resolved-merge-conflicts
                     <div className='text-yellow-400'>{feature.icon}</div>'
                   </div>
                   <h3 className='text-xl font-semibold text-white mb-4'>'
@@ -1402,128 +681,33 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
                   <p className='text-gray-400 leading-relaxed'>'
                     {feature.description}
                   </p>                </motion.div>
-<<<<<<< HEAD
 
                 </motion.div>
 
 
               )
 }
-=======
-=======
 
-=======
-<<<<<<< HEAD
-className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
-                    />
-                  <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'    />
-                    <div className='text-yellow-400'    />{feature.icon}</div>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-
-
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                >
-                  <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
-                    <div className='text-yellow-400'>{feature.icon}</div>
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-4'    />
-                    {feature.title}
-                  </h3>
-                  <p className='text-gray-400 leading-relaxed'    />
->>>>>>> origin/chore/fix-lint-and-merge
-                    {feature.description}
-
-                  </p>
-                </motion.div>
-
-
-<<<<<<< HEAD
-              )
-}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              ),
-}
->>>>>>> origin/chore/fix-lint-and-merge
-=======
               ))}
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
             </div>;
           </div>;
         </section>;
             </div>;
-<<<<<<< HEAD
           </div>;
         </section>;transition={ 'duration': 0 && 0.8 
-=======
-<<<<<<< HEAD
-        </section>;transition={{ "duration": 0 && 0.8 
->>>>>>> origin/resolved-merge-conflicts
 }
               className='text-center mb-16'>;'
               <h2 className='text-4xl 'md':text-5xl font-bold text-white mb-6'>;'
                 Powerful Financial Planning Features;
               </h2>;
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;'
-<<<<<<< HEAD
-=======
-=======
-          </div>;
-<<<<<<< HEAD
-
-
-
-
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-yellow-500/30 transition-all duration-300 group'
-
-                >
-                  <div className='w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
-                    <div className='text-yellow-400'>{feature.icon}</div>
-                  </div>
-                  <h3 className='text-xl font-semibold text-white mb-4'>
-                    {feature.title}
-                  </h3>
-                  <p className='text-gray-400 leading-relaxed'>
-                    {feature.description}
-                  </p>                </motion.div>                >
-                  <div className="w-14 h-14 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-yellow-400">
-                      {feature.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
-                </motion.div>
-                  </p>                </motion.div>
-
-                </motion.div>
-
-=======
-<<<<<<< HEAD
-        </section>;transition={{ duration: 0 && 0.8 ,}
 }
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />;
                 Powerful Financial Planning Features;
               </h2>;
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'    />;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                 Our AI platform combines advanced financial modeling with;
                 machine learning to deliver comprehensive financial planning and;
                 wealth management solutions.;
@@ -1531,107 +715,20 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
               ))}
         {/* Benefits Section */}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 <section className = 'py-20 bg-black'>'
-          <div className='max-w-7xl mx-auto px-4 'sm':px-6 'lg':px-8'>'
+          <div className='max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8'>'
             <motion.div,
-initial={ 'opacity': 0, 'y': 30 
+initial={{ "opacity": 0, "y": 30 
 }
-              whileInView={ 'opacity': 1, 'y': 0 }
-              transition={ 'duration': 0.8 
+              whileInView={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.8 
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
 className='text-center mb-16''
             >
-              <h2 className='text-4xl 'md':text-5xl font-bold text-white mb-6'>'
+              <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>'
                 Transform Your Financial Future
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>'
-                Experience dramatic improvements in financial planning,
-efficiency, investment;
-returns, and goal achievement with our;
-                AI-powered financial planning platform.
-              </p>
-            </motion.div>
-
-            <div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-4 gap-6'>'
-              {benefits.map((benefit, index) => (
-                <motion.div
-}
-transition={ 'duration': 0 && 0.8 
-}
-              className='text-center mb-16'>;'
-              <h2 className='text-4xl 'md':text-5xl font-bold text-white mb-6'>;'
-                Transform Your Financial Future;
-              </h2>;
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;'
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-
-=======
-className='text-center mb-16'
-                />
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />
-                Transform Your Financial Future;
-=======
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'        <section className="py-20 bg-black">;
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
-            <motion&& motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-        {/* Benefits Section */}
-        <section className="py-20 bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className='py-20 bg-black'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'        <section className="py-20 bg-black">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              className='text-center mb-16'
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Transform Your Financial Future
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-                Experience dramatic improvements in financial planning
-                efficiency, investment returns, and goal achievement with our
-                AI-powered financial planning platform.
-              </p>
-            </motion.div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>              {benefits.map((benefit, index) => (            >
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Transform Your Financial Future
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'    />
                 Experience dramatic improvements in financial planning;
@@ -1643,113 +740,50 @@ AI-powered financial planning platform.
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'    />
               {benefits.map((benefit, index) => (
-<<<<<<< HEAD
                 <motion.div;}
 transition={{ duration: 0 && 0.8 ,}
 }
               className='text-center mb-16'    />;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />;
-=======
-                <motion.div
-              transition={{ duration: 0 && 0.8 }}
-              className='text-center mb-16'>;
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+}
+transition={{ "duration": 0 && 0.8 
+}
+              className='text-center mb-16'>;'
+              <h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>;'
                 Transform Your Financial Future;
               </h2>;
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'    />;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                 Experience dramatic improvements in financial planning;
                 efficiency, investment returns, and goal achievement with our;
                 AI-powered financial planning platform.;
               </p>;
             </motion && motion.div>;
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 'md':grid-cols-2 'lg':grid-cols-4 gap-6'>              {benefits && benefits.map((benefit, index) => (            >;'
-              <h2 className='text-4xl 'md':text-5xl font-bold text-white mb-6'>;'
-                }
-                Transform Your Financial Future;
-              </h2>;
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;'
-=======
-<<<<<<< HEAD
-            <div className='grid grid-cols-1 "md":grid-cols-2 "lg":grid-cols-4 gap-6'>              {benefits && benefits.map((benefit, index) => (            >;'
-              <h2 className="text-4xl "md":text-5xl font-bold text-white mb-6">;"
-                }
-                Transform Your Financial Future;
-              </h2>;
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">;"
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'    />              {benefits && benefits.map((benefit, index) => (            >;
-              <h2 className=\"text-4xl md:text-5xl font-bold text-white mb-6\"    />;
-=======
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>              {benefits && benefits.map((benefit, index) => (            >;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
                 Transform Your Financial Future;
               </h2>;
               <p className=\"text-xl text-gray-400 max-w-3xl mx-auto\"    />;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                 Experience dramatic improvements in financial planning efficiency, investment returns, and ;
                 goal achievement with our AI-powered financial planning platform.;
               </p>;
             </motion && motion.div>;
                   key={index}
-<<<<<<< HEAD
-                  initial={ 'opacity': 0, 'y': 30 
-=======
-<<<<<<< HEAD
+
                   initial={{ "opacity": 0, "y": 30 
->>>>>>> origin/resolved-merge-conflicts
 }
 
-                  whileInView={ 'opacity': 1, 'y': 0 
+                  whileInView={{ "opacity": 1, "y": 0 
 }
 
-                  transition={ 'duration': 0.8, 'delay': index * 0.1 }
-className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 'hover':border-yellow-500/30 transition-all duration-300 group''
+                  transition={{ "duration": 0.8, "delay": index * 0.1 }}
+className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 "hover":border-yellow-500/30 transition-all duration-300 group''
                 >
                   <div className='flex items-center space-x-3'>'
                     <CheckCircle className='w-5 h-5 text-yellow-400' />'
                     <span className='text-white font-medium text-sm'>'
                       {benefit}
                     </span>
-<<<<<<< HEAD
-=======
-=======
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group'
-                >
-                  <div className='flex items-center space-x-3'>
-                    <CheckCircle className='w-5 h-5 text-yellow-400' />
-                    <span className='text-white font-medium text-sm'>
-                      {benefit}
-                    </span>                  </div>                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group"
-                >
-                  <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-yellow-400" />
-                    <span className="text-white font-medium text-sm">{benefit}</span>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                   </div>
                 </motion.div>
               ))}
@@ -1779,12 +813,7 @@ life.
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className='grid grid-cols-2 'md':grid-cols-4 'lg':grid-cols-6 gap-6'>'
-=======
-<<<<<<< HEAD
-            <div className='grid grid-cols-2 "md":grid-cols-4 "lg":grid-cols-6 gap-6'>'
->>>>>>> origin/resolved-merge-conflicts
               {useCases.map((useCase, index) => (
                 <motion.div
 }
@@ -1827,222 +856,50 @@ className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl bo
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-=======
-        </section>
-=======
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
-<<<<<<< HEAD
               ))}
             </div>;
         </section>;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         {/* Use Cases Section */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 ,}
 }
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-              {useCases.map((useCase, index) => (
-                <motion.div
-}
-=======
-className='text-center mb-16'
-                />
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />
-=======
-              className='text-center mb-16'
 
 
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-        {/* Use Cases Section */}
-        <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                </motion.div>
-              ))}
-            </div>
->>>>>>> origin/resolved-merge-conflicts
-          </div>
-        </section>
-
-              ))}
-        {/* CTA Section *
-}
-        <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>;'
-          <div className='max-w-4xl mx-auto px-4 'sm':px-6 'lg':px-8 text-center'>            <motion && motion.div        <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>;'
-          <div className='max-w-4xl mx-auto px-4 'sm':px-6 'lg':px-8 text-center'>;'
-            <motion&& motion.div;
-                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 'hover':border-yellow-500/30 transition-all duration-300 group text-center';'
-              ))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}<section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>;'
-          <div className='max-w-4xl mx-auto px-4 'sm':px-6 'lg':px-8 text-center'>;'
+        {/* CTA Section */}<section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">;"
+          <div className="max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center">;"
         {/* CTA Section */}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
 
 <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>'
-          <div className='max-w-4xl mx-auto px-4 'sm':px-6 'lg':px-8 text-center'>'
+          <div className='max-w-4xl mx-auto px-4 "sm":px-6 "lg":px-8 text-center'>'
             <motion.div,
-initial={ 'opacity': 0, 'y': 30 
+initial={{ "opacity": 0, "y": 30 
 }
-              whileInView={ 'opacity': 1, 'y': 0 }
-              transition={ 'duration': 0.8 
+              whileInView={{ "opacity": 1, "y": 0 }}
+              transition={{ "duration": 0.8 
 }
             >;
-<h2 className='text-4xl 'md':text-5xl font-bold text-white mb-6'>;'
+<h2 className='text-4xl "md":text-5xl font-bold text-white mb-6'>;'
                 Ready to Transform Your Financial Planning?;
               </h2>;
               <p className='text-xl text-gray-300 mb-8'>;'
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-
-<section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'    />
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'    />
-            <motion.div;
-initial={{ opacity: 0, y: 30 ,}
-}
-=======
-
-
-<<<<<<< HEAD
-</div>;
-          </div>;
-        </section>;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        {/* CTA Section */}
-        <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>;
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion && motion.div        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">;
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
-            <motion&& motion.div
-                  className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-xl p-6 hover:border-yellow-500/30 transition-all duration-300 group text-center'
-
-                >
-                  <div className='w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300'>
-                    <Calculator className='w-6 h-6 text-yellow-400' />
-                  </div>
-                  <span className='text-white font-medium text-sm'>
-                    {useCase}
-                  </span>                </motion.div>                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-amber-600/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <Calculator className="w-6 h-6 text-yellow-400" />
-                  </div>
-                  <span className="text-white font-medium text-sm">{useCase}</span>
-                </motion.div>
-
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-
-        {/* CTA Section */}
-<<<<<<< HEAD
-=======
-        <section className="py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-        {/* CTA Section */}
-        <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
-
-
-<<<<<<< HEAD
-        <section className='py-20 bg-gradient-to-r from-yellow-900/20 via-amber-900/20 to-orange-900/20'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Financial Planning?
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 ,}
-}
-                />;
-<h2 className='text-4xl md:text-5xl font-bold text-white mb-6'    />;
-                Ready to Transform Your Financial Planning?;
-              </h2>;
-              <p className='text-xl text-gray-300 mb-8'    />;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                 Join thousands of individuals that have already revolutionized;
                 their financial planning with AI automation. Start your free;
                 trial today.;
               </p>;
-<<<<<<< HEAD
-              <div className='flex flex-col 'sm':flex-row gap-4 justify-center'>;'
-=======
-<<<<<<< HEAD
+
               <div className='flex flex-col "sm":flex-row gap-4 justify-center'>;'
->>>>>>> origin/resolved-merge-conflicts
                 <motion.button;
-                  whileHover={ 'scale': 1.05 }
-                  whileTap={ 'scale': 0.95 }
+                  whileHover={{ "scale": 1.05 }}
+                  whileTap={{ "scale": 0.95 }}
 
-<<<<<<< HEAD
-                  className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg 'hover':from-yellow-600 'hover':to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25''
-=======
                   className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg "hover":from-yellow-600 "hover":to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25''
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Financial Planning?
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Join thousands of individuals that have already revolutionized their financial planning
-                with AI automation. Start your free trial today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25"
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                 >
                   Get Started Now
                 </motion.button>
@@ -2051,17 +908,7 @@ whileHover={ 'scale': 1.05 }
                   whileTap={ 'scale': 0.95 
 }
 
-<<<<<<< HEAD
 className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg 'hover':bg-yellow-500/10 transition-all duration-200''
-=======
-<<<<<<< HEAD
-className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl font-semibold text-lg "hover":bg-yellow-500/10 transition-all duration-200''
-=======
-<<<<<<< HEAD
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                 >
                   Contact Sales
                 </motion.button>
@@ -2071,16 +918,8 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
         </section>
       </div>
     </>
-<<<<<<< HEAD
+
                   className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25';
-=======
-<<<<<<< HEAD
-                  className='px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25';
-=======
-<<<<<<< HEAD
-                  className=px-8 py-4 bg-gradient-to-r from-yellow-500 to-amber-600 text-white rounded-xl font-semibold text-lg hover:from-yellow-600 hover:to-amber-700 transition-all duration-200 shadow-lg shadow-yellow-500/25';
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                 >;
                   Get Started Now;
                 </motion.button>;
@@ -2102,23 +941,8 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Ready to Transform Your Financial Planning?;
               </h2>;
-<<<<<<< HEAD
               <p className='text-xl text-gray-300 mb-8'>;
                   className='bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 backdrop - blur - xl border border - gray - 700 / 50 rounded - xl p - 6 hover:border - yellow - 500 / 30 transition - all duration - 300 group text - center';
-=======
-<<<<<<< HEAD
-              <p className='text-xl text-gray-300 mb-8'>;
-                  className='bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 backdrop - blur - xl border border - gray - 700 / 50 rounded - xl p - 6 hover:border - yellow - 500 / 30 transition - all duration - 300 group text - center';
-=======
-<<<<<<< HEAD
-              <p className='text-xl text-gray-300 mb-8>;
-                  className=bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 backdrop - blur - xl border border - gray - 700 / 50 rounded - xl p - 6 hover:border - yellow - 500 / 30 transition - all duration - 300 group text - center';
-=======
-              <p className='text-xl text-gray-300 mb-8'>;
-                  className='bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 backdrop - blur - xl border border - gray - 700 / 50 rounded - xl p - 6 hover:border - yellow - 500 / 30 transition - all duration - 300 group text - center';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                 >;
                   <div className='w - 12 h - 12 bg - gradient - to - br from - yellow - 500 / 20 to - amber - 600 / 20 rounded - lg flex items - center justify - center mx - auto mb - 4 group - hover:scale - 110 transition - transform duration - 300'>;
                     <Calculator className='w - 6 h - 6 text - yellow - 400' />;
@@ -2146,54 +970,14 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
               <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
                 Ready to Transform Your Financial Planning?;
               </h2>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
+
               <p className='text - xl text - gray - 300 mb - 8'>;Join thousands of individuals that have already revolutionized;
                 their financial planning with AI automation. Start your free;
                 trial today.;
               </p>;
 })<div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-              <p className='text - xl text - gray - 300 mb - 8>;Join thousands of individuals that have already revolutionized;
-                their financial planning with AI automation. Start your free;
-                trial today.;
-              </p>;
-})<div className=flex flex - col sm:flex - row gap - 4 justify - center'>;
-=======
-              <p className='text - xl text - gray - 300 mb - 8'>;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                Join thousands of individuals that have already revolutionized;
-                their financial planning with AI automation. Start your free;
-                trial today.;
-              </p>;
-<<<<<<< HEAD
-
-  );
-
-  );
-}
-=======
-
-  );
-}
-
-=======
-
-  );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
                 <motion.button;
                   while_hover={ scale: 1.05 }
                   while_tap={ scale: 0.95 }
@@ -2228,24 +1012,10 @@ className='px-8 py-4 border-2 border-yellow-500/30 text-yellow-400 rounded-xl fo
     </>))}
   )
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
+
 
 }
 }
 }
   );
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts

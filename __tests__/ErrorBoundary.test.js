@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary />) expect(screen.getByTestId('errorboundary')).toBeInTheDocument()' }) test('displays correct content',() => {' render(<ErrorBoundary />) }) test('handles user interactions',() => {' render(<ErrorBoundary />) }) test('applies correct styling',() => {' render(<ErrorBoundary />) }) })ursor/fix-syntax-push-and-merge-to-main-40de;'
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
 
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const React from "react" import { render, screen, fireEvent } from '@testing-library/react' import "@testing-library/jest-dom import ErrorBoundary from "./components/ErrorBoundary" describe('ErrorBoundary', () => {" test('renders without crashing', () => {" render(<ErrorBoundary />) expect(screen.getByTestId('errorboundary')).toBeInTheDocument()}) test('displays correct content', () => {" render(<ErrorBoundary />) }) test('handles user interactions', () => {" render(<ErrorBoundary />) }) test('applies correct styling', () => {" render(<ErrorBoundary />) }) })'"'";"
 
 ursor/add-new-services-and-deploy-updates-0462;
@@ -24,35 +17,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de,
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 
-<<<<<<< HEAD
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
 
-
-
-
-=======
-=======
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ErrorBoundary from "./components/ErrorBoundary" describe("ErrorBoundary",() => {" test("renders without crashing",() => {" render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ErrorBoundary / / />) }) test("handles user interactions",() => {" render(<ErrorBoundary / / />) }) test("applies correct styling",() => {" render(<ErrorBoundary / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ErrorBoundary from "./components/ErrorBoundary" describe("ErrorBoundary",() => {" test("renders without crashing",() => {" render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ErrorBoundary / / />) }) test("handles user interactions",() => {" render(<ErrorBoundary / / />) }) test("applies correct styling",() => {" render(<ErrorBoundary / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-
->>>>>>> origin/chore/fix-lint-and-merge
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
-
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
-
-ursor/fix-syntax-push-and-merge-to-main-40de
-
-<<<<<<< HEAD
-=======
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
->>>>>>> origin/chore/fix-lint-and-merge
-=======
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -76,9 +41,6 @@ describe('ErrorBoundary', () => {
     // Add styling tests if needed
   });
 });
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -88,23 +50,3 @@ describe('ErrorBoundary.test', () => {
     expect(true).toBe(true);
   });
 });
->>>>>>> pr/11282
-=======
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ErrorBoundary from "./components/ErrorBoundary" describe("ErrorBoundary",() => {" test("renders without crashing",() => {" render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ErrorBoundary / / />) }) test("handles user interactions",() => {" render(<ErrorBoundary / / />) }) test("applies correct styling",() => {" render(<ErrorBoundary / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ErrorBoundary from "./components/ErrorBoundary" describe("ErrorBoundary",() => {" test("renders without crashing",() => {" render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ErrorBoundary / / />) }) test("handles user interactions",() => {" render(<ErrorBoundary / / />) }) test("applies correct styling",() => {" render(<ErrorBoundary / / />) }) })'"'"
-import _React from 'react"  import '@testing-library/jest-dom import ErrorBoundary from '../components/ErrorBoundary" describe('ErrorBoundary',() => {' test('renders without crashing',() => {' render(<ErrorBoundary / / />) expect(screen.getByTestId("errorboundary")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ErrorBoundary / / />) }) test('handles user interactions',() => {' render(<ErrorBoundary / / />) }) test('applies correct styling',() => {' render(<ErrorBoundary / / />) }) })
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
-
-
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

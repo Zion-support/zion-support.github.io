@@ -1,39 +1,9 @@
-<<<<<<< HEAD
+
 import { Check } from "lucide-react",
 
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
-=======
-<<<<<<< HEAD
-import { Check } from "lucide-react";
-export function ServiceIncludes() {
-  return (
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
-      <h2 className="text-2xl font-bold text-white text-center mb-8">What's Included in Every Service</h2>
-      
-      <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { Check } from "lucide-react",
-
-
-
-import { Check } from "lucide-react";
-import { Check } from "lucide-react";
-import { Check } from "lucide-react",
-=======
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import { Check } from "lucide-react",
-
-export function ServiceIncludes() {
-  return (
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 import { Check } from "lucide-react";
 
@@ -41,27 +11,6 @@ export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export function ServiceIncludes() {
-  return (
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
-      <h2 className="text-2xl font-bold text-white text-center mb-8">
-        What's Included in Every Service
-      </h2>
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-import {Check} from "lucide-react";
-import { Check } from "lucide-react",
-export function ServiceIncludes() {
-  return (
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
-      <h2 className="text-2xl font-bold text-white text-center mb-8">What's Included in Every Service</h2>
-import { Check } from "lucide-react";
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
@@ -69,17 +18,8 @@ export function ServiceIncludes() {
         What's Included in Every Service
       </h2>
 
-<<<<<<< HEAD
       <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-      <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="space-y-4">
           <div className="flex items-start">
             <div className="mt-1 mr-4">
@@ -93,20 +33,8 @@ export function ServiceIncludes() {
               </p>
             </div>
           </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
@@ -118,20 +46,8 @@ export function ServiceIncludes() {
               </p>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
@@ -202,20 +118,8 @@ export function ServiceIncludes() {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         <div className="space-y-4">
           <div className="flex items-start">
             <div className="mt-1 mr-4">
@@ -230,20 +134,8 @@ export function ServiceIncludes() {
               </p>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
@@ -255,20 +147,8 @@ export function ServiceIncludes() {
               </p>
             </div>
           </div>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
@@ -333,7 +213,6 @@ export function ServiceIncludes() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 
 export function ServiceIncludes() {;
   return (
@@ -409,13 +288,6 @@ export function ServiceIncludes() {;
 }
 
 )
-=======
-<<<<<<< HEAD
-  )
-=======
-<<<<<<< HEAD
-  );
->>>>>>> merged-prs-20250907-203621
 }
   )
   )
@@ -423,23 +295,14 @@ import { Check } from "lucide-react";
 
 import { Check } from "lucide-react",;
 ;
-=======
 
-<<<<<<< HEAD
-=======
-import {Check} from "lucide-react";
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
 export function ServiceIncludes() {;
   return (;
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">;
       <h2 className="text-2xl font-bold text-white text-center mb-8">What's Included in Every Service</h2>;
-<<<<<<< HEAD
 
-=======
-      ;
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
         <div className="space-y-4">;
           <div className="flex items-start">;
             <div className="mt-1 mr-4">;
@@ -500,10 +363,8 @@ export function ServiceIncludes() {;
             <div>;
               <h3 className="text-white font-medium">Service Documentation</h3>;
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
             </div>;
           </div>;
         </div>;
@@ -511,13 +372,8 @@ export function ServiceIncludes() {;
 
 }
 
-<<<<<<< HEAD
-)
-=======
 
-  )
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+)
   )
 
     </div>;
@@ -583,38 +439,11 @@ export function ServiceIncludes() {;
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </div>;
-    </div>;
-  );
-}
-;
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       </div>;  );
   );
 }
 ;
 
-<<<<<<< HEAD
-=======
-    </div>);
-}
-    </div>;
-  );
-} export function ServiceIncludes() { return null; }
-}
-}
-;
-
-<<<<<<< HEAD
-}
-;
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     </div>);
 }
     </div>;
@@ -625,13 +454,6 @@ export function ServiceIncludes() {;
 ;
 
 }
-<<<<<<< HEAD
 ;
-=======
+}
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

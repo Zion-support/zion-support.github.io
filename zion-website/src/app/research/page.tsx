@@ -115,97 +115,7 @@ export default function ResearchPage() {
       </div>
 
       {/* Research Focus Areas */}
-<<<<<<< HEAD
-      <div className='mx-auto max-w-7xl px-6 sm:px-6 lg:px-8'>
-        <div className='mx-auto max-w-2xl lg:text-center'>
-          <h2 className='text-base font-semibold leading-7 text-blue-400'>Our Research</h2>
-          <p className='mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-            Focus Areas
-          </p>
-          <p className='mt-6 text-lg leading-8 text-gray-300'>
-=======
-      <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Our Research</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Focus Areas
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
->>>>>>> origin/resolved-merge-conflicts
-            Our research spans the cutting edge of AI and technology, driving innovation 
-            and advancing the state of the art.
-          </p>
-        </div>
-        <div className = $2;
-            influencing both academia and industry.
-          </p>
-        </div>
-<<<<<<< HEAD
-        <div className='mx-auto mt-16 max-w-2xl lg:max-w-none'>
-          <dl className='grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4'>
-            {researchImpact.map((item) => (
-              <div key={item.metric} className='flex flex-col bg-white/5 p-8 backdrop-blur-sm'>
-                <dt className='text-sm font-semibold leading-6 text-gray-300'>{item.metric}</dt>
-                <dd className='order-first text-3xl font-bold tracking-tight text-white'>{item.value}</dd>
-                <p className='mt-2 text-sm text-gray-400'>{item.description}</p>
-=======
-        <div className="mx-auto mt-16 max-w-2xl lg:max-w-none">
-          <dl className="grid max-w-xl grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-            {researchImpact.map((item) => (
-              <div key={item.metric} className="flex flex-col bg-white/5 p-8 backdrop-blur-sm">
-                <dt className="text-sm font-semibold leading-6 text-gray-300">{item.metric}</dt>
-                <dd className="order-first text-3xl font-bold tracking-tight text-white">{item.value}</dd>
-                <p className="mt-2 text-sm text-gray-400">{item.description}</p>
->>>>>>> origin/resolved-merge-conflicts
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
 
-      {/* Academic Collaborations */}
-<<<<<<< HEAD
-      <div className='mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8'>
-        <div className='mx-auto max-w-2xl lg:text-center'>
-          <h2 className='text-base font-semibold leading-7 text-blue-400'>Collaborations</h2>
-          <p className='mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl'>
-            Academic Partnerships
-          </p>
-          <p className='mt-6 text-lg leading-8 text-gray-300'>
-=======
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Academic Partnerships
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
->>>>>>> origin/resolved-merge-conflicts
-            We collaborate with leading academic institutions worldwide to advance 
-            the frontiers of AI research and innovation.
-          </p>
-        </div>
-<<<<<<< HEAD
-        <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none'>
-          <div className='grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2'>
-            {academicPartners.map((partner) => (
-              <div key={partner.name} className='bg-white/5 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:scale-105'>
-                <div className='flex items-center gap-x-3 mb-4'>
-                  <AcademicCapIcon className='h-8 w-8 text-blue-400' />
-                  <h3 className='text-xl font-semibold text-white'>{partner.name}</h3>
-                </div>
-                <div className='space-y-3 text-gray-300'>
-                  <p className='flex items-center gap-2'>
-                    <GlobeAltIcon className='h-5 w-5 text-blue-400' />
-                    {partner.location}
-                  </p>
-                  <p className='flex items-center gap-2'>
-                    <LightBulbIcon className='h-5 w-5 text-blue-400' />
-                    {partner.focus}
-                  </p>
-                  <p className='flex items-center gap-2'>
-                    <UserGroupIcon className='h-5 w-5 text-blue-400' />
-=======
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
             {academicPartners.map((partner) => (
@@ -225,7 +135,6 @@ export default function ResearchPage() {
                   </p>
                   <p className="flex items-center gap-2">
                     <UserGroupIcon className="h-5 w-5 text-blue-400" />
->>>>>>> origin/resolved-merge-conflicts
                     {partner.collaboration}
                   </p>
                 </div>
@@ -236,7 +145,6 @@ export default function ResearchPage() {
       </div>
 
       {/* CTA section */}
-<<<<<<< HEAD
       <div className='mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8'>
         <div className='mx-auto max-w-2xl text-center'>
           <h2 className='text-3xl font-bold tracking-tight text-white sm:text-4xl'>
@@ -255,7 +163,6 @@ export default function ResearchPage() {
             </a>
             <a href='/careers' className='text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200'>
               Research Careers <span aria-hidden='true'>→</span>
-=======
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -274,7 +181,6 @@ export default function ResearchPage() {
             </a>
             <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               Research Careers <span aria-hidden="true">→</span>
->>>>>>> origin/resolved-merge-conflicts
             </a>
           </div>
         </div>

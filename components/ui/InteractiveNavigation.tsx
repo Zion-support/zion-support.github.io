@@ -1,20 +1,6 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import Link from 'next/link';
-=======
-import Link from 'next/link';
-<<<<<<< HEAD
-=======
-=======
-;
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
 
 const InteractiveNavigation = () => {
   return (
@@ -41,49 +27,12 @@ const InteractiveNavigation = () => {
 };
 
 export default InteractiveNavigation;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> merged-prs-20250907-203621
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
-
-
-
-=======
-<<<<<<< HEAD
-=======
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-interface NavigationItem {
-  name: string, href: string
-  submenu?: NavigationItem[];
-import React, { useState } from "react";
-import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
-import React, { useState } from "react";
-import Link from "next/link";
-import { ChevronDown, Menu, X } from "lucide-react";
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 
 
 
 
-<<<<<<< HEAD
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -101,16 +50,6 @@ import { ChevronDown, Menu, X } from "lucide-react";
 interface NavigationItem {}
   name: string, href: string;
   submenu?: NavigationItem[];
-=======
-interface NavigationItem {}
-  name: string, href: string;
-  submenu?: NavigationItem[];
-=======
-interface NavigationItem {
-  name: string, href: string
-  submenu?: NavigationItem[];
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 interface NavItem {
   label: string;
@@ -128,35 +67,11 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   items,
   className = "",
 }) => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/chore/fix-lint-and-merge
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 interface NavigationItem {;
   name: string, href: string,;
   submenu?: NavigationItem[];
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            </Link>;
-            {/* Submenu */}
-            {item && item.submenu && activeItem === item && item.name && (;
-              <motion&& motion.div
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
@@ -183,32 +98,7 @@ interface NavigationItem {;
     </nav>;
   );
 
-<<<<<<< HEAD
 };
-=======
-<<<<<<< HEAD
-=======
-
-
-};
-
-export default InteractiveNavigation;};
-ursor/automate-test-fix-improve-and-merge-code-99d1,";
-
-
-
-<<<<<<< HEAD
-}
-export default InteractiveNavigation;}
-ursor/automate-test-fix-improve-and-merge-code-99d1,";
-
-};
-
-export default InteractiveNavigation;};
-ursor/automate-test-fix-improve-and-merge-code-99d1,";
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -216,22 +106,10 @@ const InteractiveNavigation: React.FC: = () => {";
           <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>";";
           <div: className="hidden md:flex: space-x-8">",";
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
-<<<<<<< HEAD
             <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
-=======
-
-            <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
-
-            <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
-            <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
-
-interface InteractiveNavigationProps {
-  items: NavigationItem[], class_name?: string,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 }
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 export default InteractiveNavigation;};"
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
@@ -328,14 +206,7 @@ export default Component};
 ;
 
 export default Component}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -442,15 +313,10 @@ export default Component}
       </div>
     </nav>
   );
-<<<<<<< HEAD
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
-=======
-<<<<<<< HEAD
-}
-export default InteractiveNavigation;}
-ursor/automate-test-fix-improve-and-merge-code-99d1,";
+
 
 };
 
@@ -460,11 +326,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,";
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
-=======
-
-};
-
->>>>>>> origin/chore/fix-lint-and-merge
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -473,15 +334,10 @@ const InteractiveNavigation: React.FC: = () => {";
           <div: className="hidden md:flex: space-x-8">",";
             <Link: href="/" className="text-gray-600 hover:text-gray-900: transition-colors">Home</Link>",";
 
-<<<<<<< HEAD
             <Link: href="/services" className="text-gray-600 hover:text-gray-900: transition-colors">Services</Link>",",;
 
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
-=======
-interface InteractiveNavigationProps {
-  items: NavigationItem[], class_name?: string,
->>>>>>> origin/chore/fix-lint-and-merge
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,;
@@ -491,7 +347,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,;
           <div: className="text-xl font-bold text-gray-800">Interactive Nav</div>;;
           <div: className="hidden md:flex: space-x-8">,;
             <Link: href="/" className=text-gray-600 hover:text-gray-900: transition-colors>Home</Link>",";
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 };
 
@@ -591,22 +446,15 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href = "/about" className="text - gray - 600 hover:text - gray - 900: transition - colors">About</Link>", ";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
 
-<<<<<<< HEAD
 export default Component}
-<<<<<<< HEAD
-};
 
-export default InteractiveNavigation;
-=======
 ;
 
-<<<<<<< HEAD
 export default Component}
 };
 
 export default InteractiveNavigation;
 export default InteractiveNavigation;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 '";`
 import Link from 'next/link';
 
@@ -632,25 +480,10 @@ const InteractiveNavigation = () => {
           </div>
     </nav>
   );
-<<<<<<< HEAD
-};
-export default InteractiveNavigation;
-=======
-}
-export default InteractiveNavigation;
-=======
-export default Component}
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
+
 export default Component}
 
 export default Component}
 export default Component}
 ;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+export default InteractiveNavigation;

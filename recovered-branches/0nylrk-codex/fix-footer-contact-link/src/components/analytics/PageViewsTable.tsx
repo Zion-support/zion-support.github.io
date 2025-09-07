@@ -1,35 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useState } from "react";
-type TimeRange = $2;
-=======
-<<<<<<< HEAD
-=======
-
-
-
-
-
-import {useQuery} from "@tanstack/react-query";
-import {supabase} from "@/integrations/supabase/client";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Skeleton} from "@/components/ui/skeleton";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {useState} from "react";
-type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { use_query } from '@tanstack / react - query';
 import { supabase } from '@/integrations / supabase / client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -39,14 +8,7 @@ import { useState } from './react';
 
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
 ;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
 import { useQuery } from "@tanstack/react-query","
 import { supabase } from "@/integrations/supabase/client","
@@ -57,70 +19,25 @@ import { useState } from "react",'
 
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Skeleton } from "@/components/ui/skeleton",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { useState } from "react",
-type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
   '30d': { days: 30, interval: 'day' }
   '90d': { days: 90, interval: 'week' }
   '365d': { days: 365, interval: 'month' }
-<<<<<<< HEAD
 
   // Format path names for better display
   const formatPathName = (path: string) => {
     if (path === '/') return 'Home Page'
     return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ')
 
-=======
-<<<<<<< HEAD
-},
-
-=======
-<<<<<<< HEAD
-}
-export function PageViewsTable() {
-  const [timeRange, setTimeRange] = useState<TimeRange>('7d');
-},
-
-export function PageViewsTable() {;
-  const [timeRange, setTimeRange] = useState<TimeRange>('7d');
->>>>>>> merged-prs-20250907-203621
 export function PageViewsTable() {
   const [timeRange, setTimeRange] = useState<TimeRange>('7d'),
   
   const { data: pageViews, isLoading } = useQuery({
     queryKey: ['page-views-data', timeRange],
-<<<<<<< HEAD
     queryFn: async() => {
-=======
-    queryFn: async () => {
-      const { days } = timeRangeToInterval[timeRange];
->>>>>>> merged-prs-20250907-203621
       const { days } = timeRangeToInterval[timeRange],
       
       // Get top pages by views
@@ -129,41 +46,21 @@ export function PageViewsTable() {
         .select('path, count')
         .eq('event_typepage_view')
         .gte('created_at', new Date(Date.now() - days * 24 * 60 * 60 * 1000).toISOString())
-<<<<<<< HEAD
         .order('count', { ascending: false})
         .limit($2);
-=======
-        .order('count', { ascending: false })
-        .limit(10);
-      if (error) throw error;
-      return data |[]
-    }});
-        .limit(10),
-        
->>>>>>> merged-prs-20250907-203621
       if (error) throw error,
       
       return data || []
     }}),
   
   // Format path names for better display
-<<<<<<< HEAD
   const formatPathName = $2;
     return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ')
-=======
-  const formatPathName = (path: string) => {
-    if (path === '/') return 'Home Page'
-    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ')
-  }
-  // Calculate total views to determine percentages
-  const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) |0;
->>>>>>> merged-prs-20250907-203621
   },
   
   // Calculate total views to determine percentages
   const totalViews = pageViews?.reduce((sum, page) => sum + page.count, 0) || 0,
   
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader className="pb-2">
@@ -200,7 +97,6 @@ export function PageViewsTable() {
             ))
           ) : pageViews && pageViews.length > 0 ? (
             pageViews.map((page, index) => {
-<<<<<<< HEAD
 
               return (
                 <div key={index} className="flex items-center justify-between">
@@ -263,15 +159,6 @@ const timeRangeToInterval = {'
     </Card>;
   );
 }
-=======
-<<<<<<< HEAD
-              const percentage = $2;
-=======
-              const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
-
-              const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0',
-              
->>>>>>> merged-prs-20250907-203621
               return (
                 <div key={index} className="flex items-center justify-between">
                   <div className="text-zion-slate-light font-medium">
@@ -302,25 +189,7 @@ const timeRangeToInterval = {'
     </Card>
   )
 }
-<<<<<<< HEAD
 ;
-=======
-import { useQuery } from "@tanstack/react-query",;
-import { supabase } from "@/integrations/supabase/client",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { useState } from "react",;
-type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;
-
-=======
-
-  // Format path names for better display
-  const formatPathName = (path: string) => {
-    if (path === '/') return 'Home Page'
-    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g, ' ')
-
-<<<<<<< HEAD
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader className="pb-2">
@@ -411,22 +280,18 @@ const timeRangeToInterval = {'
 </div>
                         <div;"
                           className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan""
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const timeRangeToInterval = {;
   '1d': { days: 1, interval: 'hour' },;
   '7d': { days: 7, interval: 'day' },;
   '30d': { days: 30, interval: 'day' },;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
-<<<<<<< HEAD
 const timeRangeToInterval = {;
   '1d': { days: 1, interval: 'hour' },;
   '7d': { days: 7, interval: 'day' },;
   '30d': { days: 30, interval: 'day' },;
   '90d': { days: 90, interval: 'week' },;
   '365d': { days: 365, interval: 'month' }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -550,54 +415,16 @@ export function PageViewsTable() {;
                       <div className="flex-1 h-2 bg-zion-blue-light rounded-full overflow-hidden">;
                         <div;
                           className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan";
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                           style={{ width: `${percentage}%` }}
-<<<<<<< HEAD
-=======
-                        />;
-                      </div>;
-                      <span className="text-xs text-zion-slate">{percentage}%</span>;
-                    </div>;
-                  </div>;
-                </div>;
-              ),;
-            });
-          ) :(;
-            <div className="text-center py-8 text-zion-slate">;
-              No page view data available for this time period;
-            </div>;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
-
-          )}
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-<<<<<<< HEAD
           )}
         </div>;
       </CardContent>;
     </Card>;
-=======
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-
-<<<<<<< HEAD
           )}
 
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 ;}
 ;
@@ -723,54 +550,14 @@ if (return 'Home Page', ) {'
             </div>)}
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
     </Card>);'
   ),; type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
   data, error '
 }= await supabase .from ('analytics events') .select ('path, count') .eq ('event typepage view') .gte ('created at', new Date (Date.now () - days * 24 * 60 * 60 * 1000) .toISOString () ) if (error) throw error;
 return data || [] 
-<<<<<<< HEAD
+
 }
 
 }
 ;
-=======
-}
-
-}
-;
-=======
-    </Card>);
-  ),; type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d';
-  data, error 
-}= await supabase .from ('analytics events') .select ('path, count') .eq ('event typepage view') .gte ('created at', new Date (Date.now () - days * 24 * 60 * 60 * 1000) .toISOString () ) if (error) throw error;
-return data || [] 
-}
-<<<<<<< HEAD
-});
-//Format path names for better display <div> <CardTitle className="text-white text-lg" >Top Pages</CardTitle> <CardDescription className="text-zion-slate-light" >Most viewed pages on your platform</CardDescription> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-zion-slate-light" > <SelectItem value="1d" >Last 24h</SelectItem> <SelectItem value="7d" >Last 7 days</SelectItem> <SelectItem value="30d" >Last 30 days</SelectItem> <SelectItem value="90d" >Last 3 months</SelectItem> <SelectItem value="365d" >Last year</SelectItem> </SelectContent> </Select> </div> </CardHeader> <CardContent> </div> </div> </div>) 
-}) ) : (<div className="text-center py-8 text-zion-slate" > No page view data available for this time period </div>) 
-}</div> </CardContent> </Card>) 
-}
-              );
-            });
-          ) : (;
-            <div className="text-center py-8 text-zion-slate">;
-              No page view data available for this time period;
-            </div>;
-          )}
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

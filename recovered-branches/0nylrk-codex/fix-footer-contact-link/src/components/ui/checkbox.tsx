@@ -1,33 +1,10 @@
-<<<<<<< HEAD
-import {cn} from '@/lib/utils';
 
-'use client'
-'use client'
-;
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "use client"
 "use client"
 import React from 'react';
 use client';
 pr-12325
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-=======
-import React from 'react';
-'use client';
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 
 import * as React from 'react';'
@@ -36,57 +13,16 @@ import {Check} from 'lucide-react';
 
 'use client';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-=======
 import {cn} from '@/lib/utils';
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-<<<<<<< HEAD
+"use client"
+"use client"
 'use client';
-=======
 "use client"
 "use client"
->>>>>>> origin/chore/fix-lint-and-merge
-
-import * as React from 'react';
-import * as CheckboxPrimitive from '@radix-ui/react-checkbox';
-import {Check} from 'lucide-react';
-import {cn} from '@/lib/utils';
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-"use client"
-"use client"
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> merged-prs-20250907-203621
-'use client';
-=======
-"use client"
-"use client"
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
@@ -95,40 +31,9 @@ import { Check } from "lucide-react"
 "
 import { cn } from "@/lib/utils"
 
-<<<<<<< HEAD
-const Checkbox = React.forwardRef<
-  React.ElementRef<typeof CheckboxPrimitive.Root>
-  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
-></typeof>(({ className, ...props }, ref) => (;
-  <CheckboxPrimitive.Root;
 
-const Checkbox = React && React.forwardRef<;
-  React && React.ElementRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>,;
-  React && React.ComponentPropsWithoutRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>;
-></typeof>(({ className, ...props }, ref) => (;
-
-=======
-<<<<<<< HEAD
-const Checkbox = React.forwardRef<
-  React.ElementRef<typeof CheckboxPrimitive.Root>
-  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
-></typeof>(({ className, ...props }, ref) => (;
-  <CheckboxPrimitive.Root;
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const Checkbox = React.forwardRef<
-  React.ElementRef<typeof CheckboxPrimitive.Root>
-  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
-></typeof>(({ className, ...props }, ref) => (
-  <CheckboxPrimitive.Root
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 ;
->>>>>>> origin/resolved-merge-conflicts
 import * as React from 'react';
 import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
 import {Check} from 'lucide-react';
@@ -159,17 +64,7 @@ const Checkbox = $2;
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 >(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
-<<<<<<< HEAD
     ref = $2;
-=======
-    ref={ref}
-    className={cn(
-      'peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground'
-      "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
       className
     )}
     {...props}
@@ -180,29 +75,6 @@ const Checkbox = $2;
       <Check className='h-3 w-3' />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
-<<<<<<< HEAD
-=======
-
-))
-Checkbox.displayName = CheckboxPrimitive.Root.displayName
-
-"use client"""
-import {cn} from '@/lib/utils';
-import * as React from "react"""
-import * as CheckboxPrimitive from "@radix-ui/react-checkbox"""
-import { Check } from "lucide-react"""
-import { cn } from "@/lib/utils""
-const Checkbox = React.forwardRef<
-  React.ElementRef<typeof CheckboxPrimitive.Root>
-</typeof>
-  React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
-></typeof>(({ className, ...props }, ref) => (
-  <CheckboxPrimitive.Root
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ;
 import * as React from 'react';
 import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
@@ -317,12 +189,7 @@ const Checkbox = React.forwardRef<
 
 ))
 
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
     {...props}
   >;
     <CheckboxPrimitive.Indicator;
@@ -332,10 +199,7 @@ const Checkbox = React.forwardRef<
     </CheckboxPrimitive.Indicator>;
   </CheckboxPrimitive.Root>;
 ));
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
       "peer h-4 w-4 shrink-0 rounded-sm border border-primary ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",""
 
@@ -347,38 +211,18 @@ Checkbox.displayName = CheckboxPrimitive.Root.displayName;
 ;"
 export { Checkbox } "use client" const Checkbox = React.forwardRef< React.ElementRef<typeof CheckboxPrimitive.Root>;"
 React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> > ( ({
-<<<<<<< HEAD
-=======
-=======
-Checkbox.displayName = CheckboxPrimitive.Root.displayName;
-;
-export { Checkbox } "use client" const Checkbox = React.forwardRef< React.ElementRef<typeof CheckboxPrimitive.Root>;
-React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> > ( ({
-  className, ...props 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 }, ref) => (<CheckboxPrimitive.Root) 
 }{
   ...props 
 }> <CheckboxPrimitive.Indicator > <Check className="h-3 w-3" /> </CheckboxPrimitive.Indicator> </CheckboxPrimitive.Root>) ) Checkbox.displayName = CheckboxPrimitive.Root.displayName export {
   Checkbox 
 }
->>>>>>> origin/resolved-merge-conflicts
 ));
 Checkbox.displayName = CheckboxPrimitive.Root.displayName;
 export { Checkbox }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-=======
-export { Checkbox }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 ))
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
 
@@ -386,17 +230,5 @@ export { Checkbox }
 ;
 export { Checkbox };
 export { Checkbox }
-<<<<<<< HEAD
+
 ;
-=======
-<<<<<<< HEAD
-;
-=======
-;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts

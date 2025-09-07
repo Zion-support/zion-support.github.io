@@ -1,28 +1,5 @@
-<<<<<<< HEAD
-origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-<<<<<<< HEAD
 function runNode(relPath, args = []) {}
-=======
-<<<<<<< HEAD
-const path = require($2);
-const { spawnSync } = require($2);
-function runNode(relPath, args = []) {
-  const abs = path.resolve($2);
-  const res = spawnSync($2);
-=======
-<<<<<<< HEAD
-function runNode(relPath, args = []) {}
-=======
-<<<<<<< HEAD
-=======
-
-
-function runNode(relPath, args = []) {
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
 '
   const res = spawnSync('node', [abs, ...args], {'
@@ -40,24 +17,11 @@ function runNode(relPath, args = []) {
     logs && logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();
 
-<<<<<<< HEAD
+
 ursor/expand-services-advertise-and-build-project-4b36
 origin/cursor/expand-services-advertise-and-build-project-c28b
 
-=======
-<<<<<<< HEAD
-ursor/expand-services-advertise-and-build-project-4b36
-origin/cursor/expand-services-advertise-and-build-project-c28b
-
-=======
-  const abs = path.resolve(__dirname, '....', relPath),
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const path = require ('path');
->>>>>>> origin/resolved-merge-conflicts
 
 function runNode() {
 
@@ -159,7 +123,6 @@ exports.handler = async () => {
   /**
  * log_step - Function description
  */
-<<<<<<< HEAD
 function log_step() {
     }
     logs.push (`\number=== ${name} ===`);`
@@ -171,13 +134,6 @@ const { spawnSync } = require($2);
 function runNode(relPath, args = []) {
   const abs = path.resolve($2);
   const res = spawnSync($2);
-=======
-function log_step() {}`
-
-    logs.push (`\number=== ${name} ===`);
-    const { status, stdout, stderr } = fn ();
-
-<<<<<<< HEAD
 }
 
 exports.handler = async () => {
@@ -205,13 +161,6 @@ function log_step() {}`
 const abs = path && path.resolve(__dirname, '..', '..';
   const res = spawnSync('node';
 
-=======
-<<<<<<< HEAD
-}
-
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> origin/resolved-merge-conflicts
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
 
@@ -263,11 +212,6 @@ const res = spawnSync('node';'
     'stdout': res && res.stdout || '';'
     'stderr': res && res.stderr || '';'
 
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
 const abs = path.resolve(__dirname, '....';'
 
 const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'utf8';'
@@ -322,28 +266,12 @@ const res = spawnSync('node', [abs, ...args], { 'stdio': 'pipe', 'encoding': 'ut
  ;
   return { 'status_code': 200, 'body': logs.join ('\n';'
   }
-<<<<<<< HEAD
-  return { 'status_code': 200, 'body': logs.join ('\n';'
-=======
-  return { "status_code": 200, "body": logs.join ('\n';'
-=======
-<<<<<<< HEAD
-=======
-=======
-},
-<<<<<<< HEAD
-const abs = path && path.resolve(__dirname, '..', '..';
-  const res = spawnSync('node';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
     stdio: 'pipe';
     encoding: 'utf8';
     stdout: res && res.stdout || '';
     stderr: res && res.stderr || '';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 const abs = path && path.resolve(__dirname, '..', '..';
   const res = spawnSync('node';
     stdio: 'pipe';',
@@ -351,11 +279,7 @@ const abs = path && path.resolve(__dirname, '..', '..';
     stdout: res && res.stdout || ;',
   stderr: res && res.stderr || ;
 pr-12325
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
   const abs = path.resolve(__dirname, '....';
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8';
 const path = require ('path';
@@ -367,19 +291,12 @@ const { spawn_sync } = require ('child_process';
     stdout: res.stdout || '';
     stderr: res.stderr || '';
   log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
     stdout: res.stdout || ;',
   stderr: res.stderr || ;')
   log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';')
 pr-12325
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
   return { status_code: 200, body: logs.join ('\n';
   const abs = path.resolve (__dirname, '....';
@@ -397,12 +314,7 @@ pr-12325
   log_step ('assets:inventory', () => run_node ('automation / asset - inventory.cjs';
   log_step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs';
   return { status_code: 200, body: logs.join ('\n';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/resolved-merge-conflicts
+
 
 origin/cursor/automate-test-improve-and-merge-code-20a4
 ursor/expand-services-advertise-and-build-project-4b36
@@ -416,22 +328,5 @@ origin/cursor/expand-services-advertise-and-build-project-c28b
     if (stdout) logs.push(stdout);
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
-<<<<<<< HEAD
-  return { statusCode: 200, body: logs.join('\n') }
-=======
-  return { statusCode: 200, body: logs.join('\n') }
-<<<<<<< HEAD
-};
-origin/cursor/automate-test-improve-and-merge-code-2533
 
   return { statusCode: 200, body: logs.join('\n') }
-},
-=======
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts

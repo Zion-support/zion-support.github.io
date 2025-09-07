@@ -1,125 +1,27 @@
-<<<<<<< HEAD
 import { useState  } from 'react';'
 import { supabase  } from '@/integrations/supabase/client';'
 import { Resume, ResumeBasicInfo  } from '@/types/resume';'
 import { useAuth  } from '@/hooks/useAuth';'
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';'
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
-export function useResumeActions() {  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
 
-  const [error, setError] = useState<string | null>(null);
-<<<<<<< HEAD
-  const createResume = async ('basicInfo': ResumeBasicInfo): Promise<string | null> => {
-    }
-    if (!user) {
-      }
-      setError('You must be logged in to create a resume')'
-      return null    try {
-}
-const { data, error } = await supabase;
-        .from('talent_resumes')'
-        .insert({        })
-        .select('id')'
-        .single();
-      if (error) throw error;
-      showSuccessToast('Resume created', 'Your resume has been created successfully');'
-        })
-        .eq('id', resumeId)'
-        .eq('user_id', user && user.id);'
-import {useState} from 'react';'
-import {supabase} from '@/integrations / supabase / client';'
-import {Resume, ResumeBasicInfo} from '@/types / resume';'
-import {use_auth} from '@/hooks / use_auth';'
-import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';'
-=======
-
-export /**
- * useResumeActions - Function description
-=======
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume, ResumeBasicInfo  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-export function useResumeActions() {
-  const { user } = useAuth($2);
-  const [isLoading, setIsLoading] = useState($2);
-  const [error, setError] = useState<string | null>(null),
-  
-  const createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {
-    if (!user) {
-      setError($2);
-      return null
-=======
-<<<<<<< HEAD
-=======
-export function useResumeActions() {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() {;
-<<<<<<< HEAD
 
   const { user } = useAuth();
 
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-  const { user } = useAuth();
-
-<<<<<<< HEAD
-=======
-  const [error, setError] = useState<string | null>(null);
-  const createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {
-    if (!user) {
-      setError('You must be logged in to create a resume')
-      return null
-
-
-<<<<<<< HEAD
-    }
-    setIsLoading(true);
-    setError(null);
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -132,84 +34,34 @@ export function useResumeActions() { return null; }
   const [isLoading, setIsLoading] = useState(false),;
   const [error, setError] = useState<string | null>(null),;
   const createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {;
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-=======
-    if (!user) {;
-      setError('You must be logged in to create a resume'),;
-      return null;
 
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     }
 
     setIsLoading(true),
     setError(null),
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-    
-<<<<<<< HEAD
-    
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     try {}
       const { data, error } = await supabase'
         .from('talent_resumes')
         .insert({}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
           user_id: user && user.id;
           title: basicInfo && basicInfo.title;
           headline: basicInfo && basicInfo.headline,
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          user_id: user.id;
-          title: basicInfo.title;
-          headline: basicInfo.headline
-          summary: basicInfo.summary
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         })
 
         .select('id')
         .single();
       if (error) throw error;
       showSuccessToast("Resume created", "Your resume has been created successfully");
-<<<<<<< HEAD
 
 ;
     setIsLoading(true),;
@@ -253,34 +105,20 @@ export function useResumeActions() { return null; }
         .eq('id', resumeId)'
         .eq('user_id', user && user.id);
 
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-      
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return data && data.id
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Resume, ResumeBasicInfo} from '@/types / resume';
 import {use_auth} from '@/hooks / use_auth';
-<<<<<<< HEAD
 
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export /**;
  * useResumeActions - Function description;
->>>>>>> origin/chore/fix-lint-and-merge
  */
 function useResumeActions() {}
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
-=======
-import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
->>>>>>> origin/resolved-merge-conflicts
 export /**
  * useResumeActions - Function description
  */
@@ -290,56 +128,15 @@ function useResumeActions() {
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
 ;
-<<<<<<< HEAD
   const create_resume = async ('basic_info': ResumeBasicInfo): Promise < string | null> => {
-=======
-  const create_resume = async (basic_info: ResumeBasicInfo): Promise < string | null> => {
-    // Check condition
-if ( {) {
-  $2
-}
-      set_error ('You must be logged in to create a resume'),
-      return null;
->>>>>>> merged-prs-20250907-203621
     }
     
     setIsLoading($2);
     setError($2);
     try {
-<<<<<<< HEAD
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({
-=======
-      const { data, error } = await supabase;
-        .from ('talent_resumes');
-        .insert ({
-          user_id: user.id;
-          title: basic_info.title;
-          headline: basic_info.headline,
-          summary: basic_info.summary;
-        });
-        .select ('id');
-        .single ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      showSuccessToast ("Resume created", "Your resume has been created successfully");
-;
-      return data.id;
-    } catch (e: any) {
-      return handleResumeError (e, 'Could not create resume') ? null : null;
-    } finally {
-      setIsLoading (false);
-    }
-  }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           user_id: user.id,
           title: basicInfo.title,
           headline: basicInfo.headline,
@@ -352,17 +149,12 @@ if (throw error) {
       
       showSuccessToast("Resume created", "Your resume has been created successfully"),
       
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return data.id
     } catch (e: any) {
       return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
       setIsLoading(false)
 
-<<<<<<< HEAD
     }
   }
   const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
@@ -372,11 +164,6 @@ if (throw error) {
     }
     setIsLoading(true);
     setError(null);
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
     setIsLoading(true),;
     setError(null),;
@@ -405,34 +192,17 @@ if (throw error) {
       setError('You must be logged in to update a resume'),;
       return false;
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
     
     setIsLoading(true),
     setError(null),
-<<<<<<< HEAD
 
-=======
-    
-<<<<<<< HEAD
-    
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     try {
       const { error } = await supabase
         .from('talent_resumes')
         .update({
-<<<<<<< HEAD
           title: basicInfo.title;
           headline: basicInfo.headline
           summary: basicInfo.summary
@@ -454,9 +224,6 @@ if (throw error) {
       return handleResumeError(e, 'Could not update resume')
     } finally {
       setIsLoading(false)
-=======
-
-<<<<<<< HEAD
         })'
         .eq('id', resumeId)'
         .eq('user_id', user && user.id);
@@ -469,16 +236,12 @@ import {use_auth} from '@/hooks / use_auth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export /**;
  * useResumeActions - Function description;
->>>>>>> origin/chore/fix-lint-and-merge
  */
 function useResumeActions() {}
   const { user } = use_auth ();
   const [is_loading, setIsLoading] = useState (false);
   const [error, set_error] = useState < string | null>(null);
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-<<<<<<< HEAD
 
->>>>>>> origin/resolved-merge-conflicts
     // Check condition
 }
 if ( {) {
@@ -625,55 +388,7 @@ const { error } = await supabase;
 if ( {) {
   $2
 }
-<<<<<<< HEAD
-      set_error ('You must be logged in to set active resume'),'
-=======
 
-=======
-;
-    try {}
-      const { data, error } = await supabase;'
-        .from ('talent_resumes');
-        .insert ({}
-          user_id: user.id;
-          title: basic_info.title;
-          headline: basic_info.headline,
-          summary: basic_info.summary;
-        });'
-        .select ('id');
-        .single ();
-;
-      // Check condition;
-if (throw error) {}
-  $2;
-}"
-      showSuccessToast ("Resume created", "Your resume has been created successfully");
-;
-      return data.id;
-    } catch (e: any) {'
-      return handleResumeError (e, 'Could not create resume') ? null : null;
-    } finally {}
-      setIsLoading (false);
-    }
-
-      const { error } = await supabase
-        .from('talent_resumes')
-        .update({
-
-      if (error) throw error;
-
-      return showSuccessToast("Resume updated", "Your resume information has been updated")
-    } catch (e: any) {'
-      return handleResumeError(e, 'Could not update resume')
-    } finally {}
-      setIsLoading(false)
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           title: basicInfo && basicInfo.title;
           headline: basicInfo && basicInfo.headline,
           summary: basicInfo && basicInfo.summary
@@ -685,22 +400,13 @@ if (throw error) {}
         })
         .eq('id', resumeId)
         .eq('user_id', user && user.id);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
       if (error) throw error,
 
       return showSuccessToast("Resume updated", "Your resume information has been updated")
 
-<<<<<<< HEAD
-=======
-=======
-      if (error) throw error;
-      return showSuccessToast("Resume updated", "Your resume information has been updated")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 ;
   const updateBasicInfo = async (resume_id: string, basic_info: ResumeBasicInfo): Promise < boolean> => {}
     // Check condition;
@@ -709,109 +415,12 @@ if ( {) {}
 }'
 
       set_error ('You must be logged in to update a resume'),
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/resolved-merge-conflicts
       return false;
     }
     setIsLoading (true);
     set_error (null);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    try {
-<<<<<<< HEAD
-
-if (throw reset_error) {
-=======
-<<<<<<< HEAD
-;
-
-    }
-  }
-  const setActiveResume = async (resumeId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to set active resume')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
-
-    }
-    setIsLoading(true);
-    setError(null);
-
-;
-
-    setIsLoading(true),;
-    setError(null),;
-    try {;
-      const { error } = await supabase;'
-        .from('talent_resumes');
-        .update({;
-          title: basicInfo.title,;
-          headline: basicInfo.headline,;
-          summary: basicInfo.summary;
-        });'
-        .eq('id', resumeId);'
-        .eq('user_id', user.id),;
-      if (error) throw error,;"
-      return showSuccessToast("Resume updated", "Your resume information has been updated");
-    } catch (e: any) {;'
-      return handleResumeError(e, 'Could not update resume');
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  const setActiveResume = async (resumeId: string): Promise<boolean> => {;
-    if (!user) {;'
-      setError('You must be logged in to set active resume'),;
-      return false;
-
-    }
-    
-    setIsLoading(true),
-    setError(null),
-
-    try {
-
-      // First, set all user's resumes to inactive
-      const { error: resetError } = await supabase
-        .from('talent_resumes')
-        .update({ is_active: false })        .eq('user_id', user.id),
-
-      if (resetError) throw resetError,
-
-      // Then, set the selected resume as active
-      const { error } = await supabase
-        .from('talent_resumes')
-        .update({ is_active: true })
-
-        .eq('user_id', user && user.id);
-
-      if (error) throw error;"
-      return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
-
-'
-
-        .eq('user_id', user.id),
-      
-      if (error) throw error,
-
-      return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
-    } catch (e: any) {'
-      return handleResumeError(e, 'Could not set active resume')
-    } finally {}
-      setIsLoading(false)
-
-;
-
-  const setActiveResume = async (resume_id: string): Promise < boolean> => {
-    // Check condition
-if ( {) {
->>>>>>> origin/chore/fix-lint-and-merge
   $2
 }
-=======
       const { error } = await supabase;
         .from ('talent_resumes');
         .update ({
@@ -821,7 +430,6 @@ if ( {) {
         });
         .eq ('id', resume_id);
         .eq ('user_id', user.id);
->>>>>>> origin/resolved-merge-conflicts
 ;
     try {
       // First, set all user's resumes to inactive;'
@@ -846,7 +454,6 @@ if (throw reset_error) {
 if (throw error) {
   $2
 }
-<<<<<<< HEAD
       return showSuccessToast ('Active resume set', 'Your selected resume is now marked as active');'
     } catch ('e': any) {
       }
@@ -855,29 +462,8 @@ if (throw error) {
       }
       setIsLoading (false);
     }
-=======
-      return showSuccessToast ("Resume updated", "Your resume information has been updated");
-    } catch (e: any) {
-      return handleResumeError (e, 'Could not update resume');
-    } finally {
 
-      setIsLoading(false)
-
-
-<<<<<<< HEAD
-    }
-  }
-  const setActiveResume = async (resumeId: string): Promise<boolean> => {
-    if (!user) {
-      setError('You must be logged in to set active resume')
-      return false
-    }
-    setIsLoading(true);
-    setError(null);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+if (throw reset_error) {
 ;
 
     }
@@ -921,130 +507,55 @@ if (throw error) {
       setError('You must be logged in to set active resume'),;
       return false;
 
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     }
     
     setIsLoading(true),
     setError(null),
-<<<<<<< HEAD
 
-=======
-    
-<<<<<<< HEAD
-    
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     try {
 
       // First, set all user's resumes to inactive
       const { error: resetError } = await supabase
         .from('talent_resumes')
-<<<<<<< HEAD
-        .update({ is_active: false })        .eq('user_id', user.id),
 
-      if (resetError) throw resetError,
-
-=======
-        .update({ is_active: false })
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        .eq('user_id', user && user.id);
-      
-
-  }
-        .eq('user_id', user && user.id);
-      if (resetError) throw resetError;
-
-<<<<<<< HEAD
-        .eq('user_id', user.id);
-      if (resetError) throw resetError;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-        .eq('user_id', user.id),
-      
-      if (resetError) throw resetError,
-      
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       // Then, set the selected resume as active
       const { error } = await supabase
         .from('talent_resumes')
         .update({ is_active: true })
-<<<<<<< HEAD
-=======
-        .eq('id', resumeId)
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
         .eq('user_id', user && user.id);
 
       if (error) throw error;"
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
-<<<<<<< HEAD
+
 
 '
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
-<<<<<<< HEAD
         .eq('user_id', user.id);
       if (error) throw error;
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         .eq('user_id', user.id),
       
       if (error) throw error,
-<<<<<<< HEAD
-=======
-      
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
     } catch (e: any) {'
       return handleResumeError(e, 'Could not set active resume')
     } finally {}
       setIsLoading(false)
-<<<<<<< HEAD
         .eq('user_id', user && user.id);
       if (error) throw error;
       return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 ;
 
   const setActiveResume = async (resume_id: string): Promise < boolean> => {
     // Check condition
 if ( {) {
->>>>>>> origin/chore/fix-lint-and-merge
   $2
 }
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 
       set_error ('You must be logged in to set active resume'),
       return false;
@@ -1064,68 +575,22 @@ if (throw reset_error) {}
   $2;
 }
       // Then, set the selected resume as active;
-<<<<<<< HEAD
       const { error } = await supabase;
 
     } finally {
       }
-=======
-      const { error } = await supabase;'
-        .from ('talent_resumes');
-        .update ({ is_active: true });'
-        .eq ('id', resume_id);'
-        .eq ('user_id', user.id);
-;
-      // Check condition;
-if (throw error) {}
-  $2;
-}"
-      return showSuccessToast ("Active resume set", "Your selected resume is now marked as active");
-<<<<<<< HEAD
     } catch (e: any) {'
-=======
-<<<<<<< HEAD
-    } catch (e: any) {'
-=======
-    } catch (e: any) {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       return handleResumeError (e, 'Could not set active resume');
     } finally {}
->>>>>>> origin/chore/fix-lint-and-merge
       setIsLoading (false);
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-  return {}
-
-<<<<<<< HEAD
-=======
-=======
-    }
-  }
-;
-  return {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     is_loading;
     error;
     create_resume;
     updateBasicInfo;
-<<<<<<< HEAD
 
     setActiveResume}
 
-=======
-    setActiveResume}
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
-
-;  return {;
-    }
-    isLoading,;
-    error,;
     createResume;
     updateBasicInfo;
 
@@ -1279,82 +744,12 @@ if (error) throw error;
 setIsLoading (true);
 setError (null);
 try {
-<<<<<<< HEAD
-=======
-  const {
-  error 
-}= await supabase .from ('talent resumes') .update ({
-  title: basicInfo.title, headline: basicInfo.headline, summary: basicInfo.summary 
-}) .eq ('id', resumeId) .eq ('user id', user.id);
-if (error) throw error;
-}catch (e: any) {
-  return handleResumeError (e, 'Could not update resume') 
-}finally {
-  setIsLoading (false) 
-}
-};
-const setActiveResume = async (resumeId: string) : Promise<boolean> => {
-  if (!user) {
-  setError ('You must be logged in to set active resume');
-return false;
-}setError (null);
-try {
-  //First, set all user's resumes to inactive const {
-  error: resetError 
-}= await supabase .from ('talent resumes') if (resetError) throw resetError;
-// Then, set the selected resume as active const {
-  error 
-}= await supabase .from ('talent resumes') .update ({
-  is active: true 
-}) .eq ('id', resumeId) .eq ('user id', user.id);
-if (error) throw error;
-}catch (e: any) {
-  return handleResumeError (e, 'Could not set active resume') 
-}finally {
-  setIsLoading (false) 
-}
-};
-return {
-  isLoading;
-error;
-createResume;
-updateBasicInfo;
-setActiveResume 
-}
-}
-}
-}
-;
-=======
-
-}
-;
-
-<<<<<<< HEAD
-    isLoading;
-    error;
-;
-    setIsLoading(true),;
-    setError(null),;
-
-      return handleResumeError(e, 'Could not set active resume');
-    } finally {;
-      setIsLoading(false);
-    }
-
-  return {;
-
-    isLoading,;
-    error,;
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     createResume;
     updateBasicInfo;
 
     setActiveResume}
 
 }
-<<<<<<< HEAD
 ;
 
     isLoading;
@@ -1372,20 +767,15 @@ setActiveResume
 
     isLoading,;
     error,;
->>>>>>> origin/chore/fix-lint-and-merge
     createResume;
     updateBasicInfo;
 
     setActiveResume}
 
 }
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-<<<<<<< HEAD
 
 setError (null);
 try {
->>>>>>> origin/resolved-merge-conflicts
   }
   const {
   }

@@ -1,141 +1,39 @@
-<<<<<<< HEAD
+
 import { ResumeBasicInfo  } from '@/types / resume';
 
 interface ResumeBasicInfoSectionProps {
-=======
-<<<<<<< HEAD
-
-import { ResumeBasicInfo } from '@/types/resume';
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo}
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-import { ResumeBasicInfo  } from '@/types / resume';
-
-interface ResumeBasicInfoSectionProps {
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   basic_info: ResumeBasicInfo;
 
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {ResumeBasicInfo} from '@/types/resume';
 interface ResumeBasicInfoSectionProps {;
 
   basicInfo: ResumeBasicInfo;
-<<<<<<< HEAD
+
+
 
 }
 
-=======
-<<<<<<< HEAD
-=======
-}
-
-export function ResumeBasicInfoSection(): any ({ basicInfo }: ResumeBasicInfoSectionProps) {;
-  return (
-    <div className="space-y-2 border-b pb-4 mb-6">;
-      <h1 className="text-2xl font-bold">{basicInfo && basicInfo.headline || basicInfo && basicInfo.title}</h1>;
-      {basicInfo && basicInfo.summary && (;
-        <p className="text-sm">{basicInfo && basicInfo.summary}</p>;
-      )}
-    </div>;
-  );
-}
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-export /**
- * ResumeBasicInfoSection - Function description
- */
-function ResumeBasicInfoSection() {
-  return (
-    <div className="space - y-2 border - b pb - 4 mb - 6">;
-      <h1 className="text - 2xl font - bold">;
-        {basic_info.headline || basic_info.title}
-      </h1>;
-      {basic_info.summary && <p className="text - sm">{basic_info.summary}</p>}
-    </div>);
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
-}
-
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProps) {
   return (
     <div className="space-y-2 border-b pb-4 mb-6">
       <h1 className="text-2xl font-bold">{basicInfo.headline || basicInfo.title}</h1>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { ResumeBasicInfo } from '@/types/resume';
-import {ResumeBasicInfo} from '@/types/resume';
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo
-import { ResumeBasicInfo } from '@/types/resume';
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo;
-}
-export function ResumeBasicInfoSection({
-  basicInfo
-}: ResumeBasicInfoSectionProps) {
-  return (
-    <div className="space-y-2 border-b pb-4 mb-6">
-      <h1 className="text-2xl font-bold">
-        {basicInfo.headline |basicInfo.title}
-      </h1>
-      {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
-    </div>
-interface ResumeBasicInfoSectionProps {;
-  basicInfo: ResumeBasicInfo;
-}
->>>>>>> merged-prs-20250907-203621
 
 export function ResumeBasicInfoSection({
   basicInfo,
 }: ResumeBasicInfoSectionProps) {
   return (
     <div className="space-y-2 border-b pb-4 mb-6">
-<<<<<<< HEAD
       <h1 className="text-2xl font-bold">{basicInfo.headline || basicInfo.title}</h1>
       {basicInfo.summary && (
         <p className="text-sm">{basicInfo.summary}</p>
       )}
-=======
-<h1 className="text-2xl font-bold">{basicInfo.headline || basicInfo.title}</h1>
-      {basicInfo.summary && (
-        <p className="text-sm">{basicInfo.summary}</p>
-      )}
-    </div>;
-  );
-}
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       {basicInfo.summary && (
         <p className="text-sm">{basicInfo.summary}</p>
       )}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
   basicInfo,
 }: ResumeBasicInfoSectionProps) {}
   return ("
@@ -162,93 +60,11 @@ export function ResumeBasicInfoSection({
         {basicInfo.headline || basicInfo.title}
       </h1>
       {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
     </div>
   );
 }
 ;
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { ResumeBasicInfo } from '@/types/resume',;
-;
-interface ResumeBasicInfoSectionProps {;
-  basicInfo:ResumeBasicInfo;
-}
-;
-export function ResumeBasicInfoSection({ basicInfo } ResumeBasicInfoSectionProps) {;
-  return (;
-    <div className="space-y-2 border-b pb-4 mb-6">;
-      <h1 className="text-2xl font-bold">{basicInfo.headline || basicInfo.title}</h1>;
-      {basicInfo.summary && (;
-        <p className="text-sm">{basicInfo.summary}</p>;
-      )}
-    </div>;
-  ),;}
-) 
-}</div>) 
-}
-    </div>;
 
-  );
-}
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    </div>
-  );
-}
 ;
-
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-import { ResumeBasicInfo } from "@/types/resume";
-
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo;
-}
-
-export function ResumeBasicInfoSection({
-  basicInfo,
-}: ResumeBasicInfoSectionProps) {
-  return (
-    <div className="space-y-2 border-b pb-4 mb-6">
-      <h1 className="text-2xl font-bold">
-        {basicInfo.headline || basicInfo.title}
-      </h1>
-      {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
-    </div>
-  );
-}
-;
-
-interface ResumeBasicInfoSectionProps {
-  basicInfo: ResumeBasicInfo;
-}
-
-export function ResumeBasicInfoSection({
-  basicInfo,
-}: ResumeBasicInfoSectionProps) {
-  return (
-    <div className="space-y-2 border-b pb-4 mb-6">
-      <h1 className="text-2xl font-bold">
-        {basicInfo.headline || basicInfo.title}
-      </h1>
-      {basicInfo.summary && <p className="text-sm">{basicInfo.summary}</p>}
-    </div>
-  );
-}
-<<<<<<< HEAD
-;
-=======
-;
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

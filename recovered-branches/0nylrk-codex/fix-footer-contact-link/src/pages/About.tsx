@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 
 export default function About() {
@@ -39,71 +29,6 @@ export default function About() {
               artificial intelligence;
             </p>
           </div>
-=======
-<<<<<<< HEAD
-export default function About() {
-  return (
-    <>
-      <SEO
-        title="About Zion - The Future of AI & Tech Marketplace"
-        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence."
-        keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
-        canonical="https://app.ziontechgroup.com/about"
-      />
-      <Header />
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>About Zion</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              The world's first free marketplace dedicated to high-tech and artificial intelligence
-            </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
-              <p className="text-zion-slate-light text-lg mb-6">
-                At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions.
-                We believe that innovation thrives when barriers are removed and connections are made.
-              </p>
-              <p className="text-zion-slate-light text-lg mb-6">
-                Our platform brings together talented AI specialists, innovative companies, and the latest
-                technological solutions in one seamless ecosystem.
-              </p>
-              <p className="text-zion-slate-light text-lg">
-                By connecting talent with opportunity and innovation with implementation, we're creating
-                a global community where the future of technology is being built today.
-              </p>
-            </div>
-            <div className="rounded-lg overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600"
-                alt="Team collaboration"
-=======
-import { SEO } from "@/components/SEO",
-
-export default function About() {
-
-<<<<<<< HEAD
-  return (
-    <>
-      <SEO"
-        title="About Zion - The Future of AI & Tech Marketplace""
-        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence.""
-        keywords="about Zion, AI marketplace, tech platform, mission, vision, team""
-        canonical="https://app.ziontechgroup.com/about"
-      />
-      <Header />"
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">"
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center mb-16">
-            <GradientHeading>About Zion</GradientHeading>"
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">';
-              The world's first free marketplace dedicated to high-tech and;
-              artificial intelligence;
-            </p>
-          </div>
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
             <div>"
@@ -131,15 +56,10 @@ export default function About() {
               <img"
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600""
                 alt="Team collaboration""
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 className="object-cover w-full h-full"
               />
             </div>
           </div>
-<<<<<<< HEAD
 "
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">
             <div>"
@@ -160,103 +80,15 @@ export default function About() {
                 innovation, fostering a community that shapes the future of how;
                 we live, work, and interact with technology.
               </p>
-=======
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">
-            <div>
-              <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
-              <p className="text-zion-slate-light text-lg mb-6">
-                We envision a world where AI and technology are accessible to all, regardless of geographical
-                or financial constraints. A world where the best minds can collaborate to solve the most
-                challenging problems.
-              </p>
-              <p className="text-zion-slate-light text-lg mb-6">
-                Zion is building that world by creating a transparent, ethical, and inclusive platform
-                that puts people at the center of technological advancement.
-              </p>
-              <p className="text-zion-slate-light text-lg">
-                Our goal is to become the premier destination for AI and tech innovation, fostering
-                a community that shapes the future of how we live, work, and interact with technology.
-              </p>
-            </div>
-            <div className="rounded-lg overflow-hidden lg:order-first">
-              <img
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600"
-                alt="Tech innovation"
-=======
-"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">
-            <div>"
-              <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>"
-              <p className="text-zion-slate-light text-lg mb-6">
-                We envision a world where AI and technology are accessible to;
-                all, regardless of geographical or financial constraints. A;
-                world where the best minds can collaborate to solve the most;
-                challenging problems.
-              </p>"
-              <p className="text-zion-slate-light text-lg mb-6">
-                Zion is building that world by creating a transparent, ethical,
-                and inclusive platform that puts people at the center of;
-                technological advancement.
-              </p>"
-              <p className="text-zion-slate-light text-lg">
-                Our goal is to become the premier destination for AI and tech;
-                innovation, fostering a community that shapes the future of how;
-                we live, work, and interact with technology.
-              </p>
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             </div>"
             <div className="rounded-lg overflow-hidden lg:order-first">
               <img"
                 src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600""
                 alt="Tech innovation""
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 className="object-cover w-full h-full"
               />
             </div>
           </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
-                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
-                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Innovation</h3>
-                <p className="text-zion-slate-light">
-                  We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible.
-                </p>
-              </div>
-              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
-                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
-                  <svg className="w-8 h-8 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Community</h3>
-                <p className="text-zion-slate-light">
-                  We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive.
-                </p>
-              </div>
-              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
-                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
-                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">Trust</h3>
-                <p className="text-zion-slate-light">
-                  We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 "
           <div className="text-center mb-16">"
             <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>"
@@ -337,26 +169,7 @@ import { Header } from "@/components/Header";""
 import { Footer } from "@/components/Footer";""
 import { SEO } from "@/components/SEO";""
 import { GradientHeading } from "@/components/GradientHeading";"
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {GradientHeading} from "@/components/GradientHeading";
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 export default function About() {
   return (
     <>
@@ -533,10 +346,6 @@ export default function About() {
                 <p className="text-zion-slate-light">"
 </p>
 
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </p>
               </div>
             </div>
@@ -547,54 +356,19 @@ export default function About() {
     </>
 
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-import {Header} from "@/components/Header";"
-import {Footer} from "@/components/Footer";"
-import {SEO} from "@/components/SEO";"
-import {GradientHeading} from "@/components/GradientHeading";"
-import { Header } from "@/components/Header";"
-import { Footer } from "@/components/Footer";"
-import { SEO } from "@/components/SEO",;"
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-}
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading";
 
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
+
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -616,18 +390,6 @@ export default function About() {;
         description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence.";
         keywords="about Zion, AI marketplace, tech platform, mission, vision, team";
         canonical="https://app.ziontechgroup.com/about";
-=======
-export default function About() {;
-  return (
-    <>;
-      <SEO
-        title="About Zion - The Future of AI & Tech Marketplace" 
-        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
-        keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
-        canonical="https://app && app.ziontechgroup.com/about"
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       />;
       <Header />;
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
@@ -638,166 +400,38 @@ export default function About() {;
               The world's first free marketplace dedicated to high-tech and artificial intelligence;
             </p>;
           </div>;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-          ;
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">;
             <div>;
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>;
               <p className="text-zion-slate-light text-lg mb-6">;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-                At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions.;
-                We believe that innovation thrives when barriers are removed and connections are made.;
-              </p>;
-              <p className="text-zion-slate-light text-lg mb-6">;
-                Our platform brings together talented AI specialists, innovative companies, and the latest;
-                technological solutions in one seamless ecosystem.;
-              </p>;
-              <p className="text-zion-slate-light text-lg">;
-                By connecting talent with opportunity and innovation with implementation, we're creating;
-=======
-                At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions. ;
-                We believe that innovation thrives when barriers are removed and connections are made.;
-              </p>;
-              <p className="text-zion-slate-light text-lg mb-6">;
-                Our platform brings together talented AI specialists, innovative companies, and the latest ;
-                technological solutions in one seamless ecosystem.;
-              </p>;
-              <p className="text-zion-slate-light text-lg">;
-                By connecting talent with opportunity and innovation with implementation, we're creating ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 a global community where the future of technology is being built today.;
               </p>;
             </div>;
             <div className="rounded-lg overflow-hidden">;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <img ;
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600" ;
-                alt="Team collaboration" ;
-              <img;
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600";
-                alt="Team collaboration";
-                className="object-cover w-full h-full";
-              />;
-            </div>;
-          </div>;
-=======
-              <img
-                src="https://images && images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600" 
-                alt="Team collaboration" 
-                className="object-cover w-full h-full"
-              />;
-            </div>;
-          </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse">;
             <div>;
               <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>;
               <p className="text-zion-slate-light text-lg mb-6">;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-                We envision a world where AI and technology are accessible to all, regardless of geographical;
-                or financial constraints. A world where the best minds can collaborate to solve the most;
-                challenging problems.;
-              </p>;
-              <p className="text-zion-slate-light text-lg mb-6">;
-                Zion is building that world by creating a transparent, ethical, and inclusive platform;
-                that puts people at the center of technological advancement.;
-              </p>;
-              <p className="text-zion-slate-light text-lg">;
-                Our goal is to become the premier destination for AI and tech innovation, fostering;
-=======
-                We envision a world where AI and technology are accessible to all, regardless of geographical ;
-                or financial constraints. A world where the best minds can collaborate to solve the most ;
-                challenging problems.;
-              </p>;
-              <p className="text-zion-slate-light text-lg mb-6">;
-                Zion is building that world by creating a transparent, ethical, and inclusive platform ;
-                that puts people at the center of technological advancement.;
-              </p>;
-              <p className="text-zion-slate-light text-lg">;
-                Our goal is to become the premier destination for AI and tech innovation, fostering ;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 a community that shapes the future of how we live, work, and interact with technology.;
               </p>;
             </div>;
             <div className="rounded-lg overflow-hidden lg:order-first">;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              <img ;
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600" ;
-                alt="Tech innovation" ;
-              <img;
-                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600";
-                alt="Tech innovation";
-                className="object-cover w-full h-full";
-              />;
-            </div>;
-          </div>;
-=======
-              <img
-                src="https://images && images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600" 
-                alt="Tech innovation" 
-                className="object-cover w-full h-full"
-              />;
-            </div>;
-          </div>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
           <div className="text-center mb-16">;
             <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>;
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
               <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">;
                 <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
-                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
-=======
-                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www && www.w3.org/2000/svg">;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />;
                   </svg>;
                 </div>;
@@ -806,26 +440,7 @@ export default function About() {;
                   We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible.;
                 </p>;
               </div>;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-              ;
-              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">;
-                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">;
-                  <svg className="w-8 h-8 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />;
-=======
-
-<<<<<<< HEAD
-=======
-              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">;
-                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">;
-                  <svg className="w-8 h-8 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www && www.w3.org/2000/svg">;
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4 && 4.354a4 4 0 110 5 && 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5 && 5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </svg>;
                 </div>;
                 <h3 className="text-xl font-bold text-white mb-3">Community</h3>;
@@ -833,150 +448,13 @@ export default function About() {;
                   We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive.;
                 </p>;
               </div>;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-              ;
-              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">;
-                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">;
-                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">;
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />;
-=======
-
-<<<<<<< HEAD
-=======
-              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">;
-                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">;
-                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www && www.w3.org/2000/svg">;
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5 && 4m5.618-4 && 4.016A11.955 11 && 11.955 0 0112 2 && 2.944a11.955 11 && 11.955 0 01-8 && 8.618 3 && 3.04A12.02 12 && 12.02 0 003 9c0 5 && 5.591 3 && 3.824 10 && 10.29 9 11 && 11.622 5 && 5.176-1 && 1.332 9-6 && 6.03 9-11 && 11.622 0-1 && 1.042-.133-2 && 2.052-.382-3 && 3.016z" />;
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   </svg>;
                 </div>;
                 <h3 className="text-xl font-bold text-white mb-3">Trust</h3>;
                 <p className="text-zion-slate-light">;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-=======
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { SEO } from '@/components / SEO';
-import { GradientHeading } from '@/components / GradientHeading';
-export default /**
- * About - Function description
- */
-function About() {
-  return (
-    <>;
-      <SEO;
-        title="About Zion - The Future of AI & Tech Marketplace";
-        description="Learn about Zion's mission to create the first free marketplace dedicated to high - tech and artificial intelligence.";
-        keywords="about Zion, AI marketplace, tech platform, mission, vision, team";
-        canonical="https://app.ziontechgroup.com / about";
-      />;
-      <Header />;
-      <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">;
-        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <div className="text - center mb - 16">;
-            <GradientHeading > About Zion</GradientHeading>;
-            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
-              The world's first free marketplace dedicated to high - tech and artificial intelligence;
-            </p>;
-          </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center mb - 24">;
-            <div>;
-              <h2 className="text - 3xl font - bold text - white mb - 6">Our Mission</h2>;
-              <p className="text - zion - slate - light text - lg mb - 6">;
-                At Zion, we're on a mission to democratize access to cutting - edge AI and technology solutions.;
-                We believe that innovation thrives when barriers are removed and connections are made.;
-              </p>;
-              <p className="text - zion - slate - light text - lg mb - 6">;
-                Our platform brings together talented AI specialists, innovative companies, and the latest;
-                technological solutions in one seamless ecosystem.;
-              </p>;
-              <p className="text - zion - slate - light text - lg">;
-                By connecting talent with opportunity and innovation with implementation, we're creating;
-                a global community where the future of technology is being built today.;
-              </p>;
-            </div>;
-            <div className="rounded - lg overflow - hidden">;
-              <img;
-                src="https://images.unsplash.com / photo - 1581091226825 - a6a2a5aee158?auto = format & fit = crop & w=800 & h=600";
-                alt="Team collaboration";
-                className="object - cover w - full h - full";
-              />;
-            </div>;
-          </div>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center mb - 24 lg:flex - row - reverse">;
-            <div>;
-              <h2 className="text - 3xl font - bold text - white mb - 6">Our Vision</h2>;
-              <p className="text - zion - slate - light text - lg mb - 6">;
-                We envision a world where AI and technology are accessible to all, regardless of geographical;
-                or financial constraints. A world where the best minds can collaborate to solve the most;
-                challenging problems.;
-              </p>;
-              <p className="text - zion - slate - light text - lg mb - 6">;
-                Zion is building that world by creating a transparent, ethical, and inclusive platform;
-                that puts people at the center of technological advancement.;
-              </p>;
-              <p className="text - zion - slate - light text - lg">;
-                Our goal is to become the premier destination for AI and tech innovation, fostering;
-                a community that shapes the future of how we live, work, and interact with technology.;
-              </p>;
-            </div>;
-            <div className="rounded - lg overflow - hidden lg:order - first">;
-              <img;
-                src="https://images.unsplash.com / photo - 1518770660439 - 4636190af475?auto = format & fit = crop & w=800 & h=600";
-                alt="Tech innovation";
-                className="object - cover w - full h - full";
-              />;
-            </div>;
-          </div>;
-          <div className="text - center mb - 16">;
-            <h2 className="text - 3xl font - bold text - white mb - 8">Our Values</h2>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-              <div className="bg - zion - blue - dark p - 8 rounded - lg border border - zion - blue - light">;
-                <div className="bg - zion - blue inline - flex p - 4 rounded - full mb - 4">;
-                  <svg className="w - 8 h - 8 text - zion - cyan" fill="none" stroke="current_color" view_box="0 0 24 24" xmlns="http://www.w3.org / 2000 / svg">;
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M13 10V3L4 14h7v7l9 - 11h - 7z" />;
-                  </svg>;
-                </div>;
-                <h3 className="text - xl font - bold text - white mb - 3">Innovation</h3>;
-                <p className="text - zion - slate - light">;
-                  We embrace cutting - edge technologies and creative thinking to push the boundaries of what's possible.;
-                </p>;
-              </div>;
-              <div className="bg - zion - blue - dark p - 8 rounded - lg border border - zion - blue - light">;
-                <div className="bg - zion - blue inline - flex p - 4 rounded - full mb - 4">;
-                  <svg className="w - 8 h - 8 text - zion - purple" fill="none" stroke="current_color" view_box="0 0 24 24" xmlns="http://www.w3.org / 2000 / svg">;
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v - 1a6 6 0 0112 0v1zm0 0h6v - 1a6 6 0 00 - 9-5.197M13 7a4 4 0 11 - 8 0 4 4 0 018 0z" />;
-                  </svg>;
-                </div>;
-                <h3 className="text - xl font - bold text - white mb - 3">Community</h3>;
-                <p className="text - zion - slate - light">;
-                  We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive.;
-                </p>;
-              </div>;
-              <div className="bg - zion - blue - dark p - 8 rounded - lg border border - zion - blue - light">;
-                <div className="bg - zion - blue inline - flex p - 4 rounded - full mb - 4">;
-                  <svg className="w - 8 h - 8 text - zion - cyan" fill="none" stroke="current_color" view_box="0 0 24 24" xmlns="http://www.w3.org / 2000 / svg">;
-                    <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z" />;
-                  </svg>;
-                </div>;
-                <h3 className="text - xl font - bold text - white mb - 3">Trust</h3>;
-                <p className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.;
                 </p>;
               </div>;
@@ -984,10 +462,7 @@ function About() {
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
 }
 
@@ -1011,25 +486,16 @@ pr-12325
   return (<> <SEO title="About Zion - The Future of AI & Tech Marketplace" description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." keywords="about Zion, AI marketplace, tech platform, mission, vision, team" canonical="https://app.ziontechgroup.com/about" min-h-screen bg-zion-blue pt-24 pb-20"> <div className=" container mx-auto px-4 sm:px-6 lg:px-8"> <div className=" text-center mb-16"> <GradientHeading>About Zion</GradientHeading> <p className=" mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> The world's first free marketplace dedicated to high-tech and artificial intelligence </p> </div> <div className=" grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24"> <div> a global community where the future of technology is being built today. </p> </div> <div className=" rounded-lg overflow-hidden"> <img src=" https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600"alt=" Team collaboration"className=" object-cover w-full h-full"/> </div> </div> <div className=" grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 lg:flex-row-reverse"> <div> </p> </div> <div className=" rounded-lg overflow-hidden lg:order-first"> <img src=" https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600"alt=" Tech innovation"className=" object-cover w-full h-full"/> </div> </div> <div className=" text-center mb-16"> <h2 className=" text-3xl font-bold text-white mb-8">Our Values</h2> <div className=" grid grid-cols-1 md:grid-cols-3 gap-8"> <div className=" bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light"> <div className=" bg-zion-blue inline-flex p-4 rounded-full mb-4"> <svg className=" w-8 h-8 text-zion-cyan"fill=" none"stroke=" currentColor"viewBox=" 0 0 24 24"xmlns=" http://www.w3.org/2000/svg"> <path strokeLinecap=" round"strokeLinejoin=" round"strokeWidth= {"
 </SEO>)"
 }d=" M13 10V3L4 14h7v7l9-11h-7z"/> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Innovation</h3> <p className=" text-zion-slate-light"> We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible. </p> </div> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Community</h3> <p className=" text-zion-slate-light"> We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive. </p> </div> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Trust</h3> <p className=" text-zion-slate-light" > We maintain the highest standards of integrity, transparency, and ethical practices in everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </>)"
-<<<<<<< HEAD
 }
 
-    </>;
-  );
-=======
->>>>>>> merged-prs-20250907-203621
-}
 
-=======
       <Footer />;
 
     </>);
 
 
 
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
-<<<<<<< HEAD
     </>;
   ),;}
  export default function About () {
@@ -1037,26 +503,9 @@ pr-12325
   2 
 }d=" M13 10V3L4 14h7v7l9-11h-7z"/> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Innovation</h3> <p className=" text-zion-slate-light"> We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible. </p> </div> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Community</h3> <p className=" text-zion-slate-light"> We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive. </p> </div> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Trust</h3> <p className=" text-zion-slate-light" > We maintain the highest standards of integrity, transparency, and ethical practices in everything we do. </p> </div> </div> </div> </div> </main> <Footer /> </>) 
 }
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     </>;
   );
 }
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-}
+
 ;
-=======
-=======
-;
-}
-<<<<<<< HEAD
-;
-=======
-;
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

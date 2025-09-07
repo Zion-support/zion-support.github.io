@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from "next interface MockApiResponse extends NextApiResponse { "status": "vi.Mock<[number] MockApiResponse> "json": vi.Mock<[unknown] MockApiResponse> "setHeader": vi.Mock<[string",string | string[]] void> "end": vi.Mock<[(cb?: () => void) => void],void>} function mockReq("method": "string",body?: unknown): NextApiRequest { return { method body "headers": {} "query": {} "cookies": {}} as NextApiRequest} function mockRes(): MockApiResponse { const "res": Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as MockApiResponse) res.json = vi.fn().mockReturnValue(res as MockApiResponse) res.setHeader = vi.fn()" res.end = vi.fn()" return res as MockApiRespons,"
 }" test("GET;"
   returns profile"",() => {" const req = mockReq( "GET")" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "email": "jane@example.com,","points": expect.any(Number)}),"
 }) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ "name": "New,"
 })" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "name": "New" }),"
 })" test( "DELETE soft deletes account",() => {" const req = mockReq( "DELETE")";"
-<<<<<<< HEAD
 }
 const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ "success": "true" },;"
 })'"'";"
@@ -20,21 +14,6 @@ import { expect,test,vi } from 'vitest" import handler from '@/pages/api/users/m
 }) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ "name": "New,"
 })" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "name": "New" }),"
 })" test( "DELETE soft deletes account",() => {" const req = mockReq( "DELETE")";"
-=======
-}
-const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ "success": "true" },;"
-})'"'";"
-import { expect,test,vi } from 'vitest" import handler from '@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from 'next interface MockApiResponse extends NextApiResponse { "status": 'vi.Mock<[number] MockApiResponse> "json": vi.Mock<[unknown] MockApiResponse> "setHeader": vi.Mock<[string,string | string[]] void> "end": vi.Mock<[(cb?: () => void) => void],void>} function mockReq("method": 'string',body?: unknown): NextApiRequest { return { method body "headers": {} "query": {} "cookies": {}} as NextApiRequest} function mockRes(): MockApiResponse { const "res": Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as, MockApiResponse) res.json = vi.fn().mockReturnValue(res as, MockApiResponse) res.setHeader = vi.fn()' res.end = vi.fn()' return res as MockApiResponse}' test('GET returns profile',() => {' const req = mockReq( 'GET')' const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "email": 'jane@example.com,',"points": expect.any(Number)}))}) test('PUT updates profile',() => {' const req = mockReq( 'PUT',{ "name": 'New })' const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "name": 'New' }))})' test( 'DELETE soft deletes account',() => {' const req = mockReq( 'DELETE')' const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ "success": 'true' })})const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from "next interface MockApiResponse extends NextApiResponse { "status": "vi.Mock<[number] MockApiResponse> "json": vi.Mock<[unknown] MockApiResponse> "setHeader": vi.Mock<[string",string | string[]] void> "end": vi.Mock<[(cb?: () => void) => void],void>} function mockReq("method": "string",body?: unknown): NextApiRequest { return { method body "headers": {} "query": {} "cookies": {}} as NextApiRequest} function mockRes(): MockApiResponse { const "res": Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as MockApiResponse) res.json = vi.fn().mockReturnValue(res as MockApiResponse) res.setHeader = vi.fn()" res.end = vi.fn()" return res as MockApiRespons,"
-}" test("GET;"
-  returns profile"",() => {" const req = mockReq( "GET")" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "email": "jane@example.com,","points": expect.any(Number)}),"
-}) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ "name": "New,"
-})" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "name": "New" }),"
-})" test( "DELETE soft deletes account",() => {" const req = mockReq( "DELETE")";"
-}
-})'"'";"
-=======
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 }" test("GET;"
   returns profile"",() => {" const req = mockReq( "GET")" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "email": "jane@example.com,","points": expect.any(Number)}),"
@@ -176,18 +155,10 @@ return { method body "headers": {} "query": {} "cookies": {}} as NextApiReques,;
 })" test( "DELETE soft deletes account",() => {";"
 }
 })'""
-=======
-import { expect,test,vi } from 'vitest" import handler from '@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from 'next interface MockApiResponse extends NextApiResponse { "status": 'vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string,string | string[]] void> "end": vi.Mock<[(cb?: () => void) => void],void>} function mockReq("method": 'string',body?: unknown): NextApiRequest { return { method body "headers": {} "query": {} "cookies": {}} as NextApiRequest} function mockRes(): MockApiResponse { const "res": Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as, MockApiResponse) res.json = vi.fn().mockReturnValue(res as, MockApiResponse) res.setHeader = vi.fn();' res.end = vi.fn()' return res as MockApiResponse}' test('GET returns profile',() => {' const req = mockReq( 'GET');' const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "email": 'jane@example.com,',"points": expect.any(Number)}))}) test('PUT updates profile',() => {' const req = mockReq( 'PUT',{ "name": 'New })' const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "name": 'New' }))})' test( 'DELETE soft deletes account',() => {' const req = mockReq( 'DELETE');' const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ "success": 'true' })})
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from "next interface MockApiResponse extends NextApiResponse { status: "vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string",string | string[]] void> end: vi.Mock<[(cb?: () => void) => void],void>} function mockReq(method: "string",body?: unknown): NextApiRequest { return { method body headers: {} query: {} cookies: {}} as NextApiRequest} function mockRes(): MockApiResponse { const res: Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as MockApiResponse) res.json = vi.fn().mockReturnValue(res as MockApiResponse) res.setHeader = vi.fn();" res.end = vi.fn()" return res as MockApiResponse}" test("GET returns profile"",() => {" const req = mockReq( "GET");" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ email: "jane@example.com,",points: expect.any(Number)}))}) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ name: "New })" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ name: "New" }))})" test( "DELETE soft deletes account",() => {" const req = mockReq( "DELETE");" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ success: "true" })})'"'"
 
 const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from "next interface MockApiResponse extends NextApiResponse { status: "vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string",string | string[]] void> end: vi.Mock<[(cb?: () => void) => void],void>} function mockReq(method: "string",body?: unknown): NextApiRequest { return { method body headers: {} query: {} cookies: {}} as NextApiRequest} function mockRes(): MockApiResponse { const res: Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as MockApiResponse) res.json = vi.fn().mockReturnValue(res as MockApiResponse) res.setHeader = vi.fn();" res.end = vi.fn()" return res as MockApiResponse}" test("GET returns profile"",() => {" const req = mockReq( "GET");" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ email: "jane@example.com,",points: expect.any(Number)}))}) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ name: "New })" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ name: "New" }))})" test( "DELETE soft deletes account",() => {" const req = mockReq( "DELETE");" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ success: "true" })})'"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from "next interface MockApiResponse extends NextApiResponse { status: "vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string",string | string[]] void> end: vi.Mock<[(cb?: () => void) => void],void>} function mockReq(method: "string",body?: unknown): NextApiRequest { return { method body headers: {} query: {} cookies: {}} as NextApiRequest} function mockRes(): MockApiResponse { const res: Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as MockApiResponse) res.json = vi.fn().mockReturnValue(res as MockApiResponse) res.setHeader = vi.fn();" res.end = vi.fn()" return res as MockApiResponse}" test("GET returns profile"",() => {" const req = mockReq( "GET");" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ email: "jane@example.com,",points: expect.any(Number)}))}) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ name: "New })" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ name: "New" }))})" test( "DELETE soft deletes account",() => {" const req = mockReq( "DELETE");" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ success: "true" })})'"
 const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from "next interface MockApiResponse extends NextApiResponse { status: "vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string",string | string[]] void> end: vi.Mock<[(cb?: () => void) => void],void>} function mockReq(method: "string",body?: unknown): NextApiRequest { return { method body headers: {} query: {} cookies: {}} as NextApiRequest} function mockRes(): MockApiResponse { const res: Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as MockApiResponse) res.json = vi.fn().mockReturnValue(res as MockApiResponse) res.setHeader = vi.fn();" res.end = vi.fn()" return res as MockApiResponse}" test("GET returns profile"",() => {" const req = mockReq( "GET");" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ email: "jane@example.com,",points: expect.any(Number)}))}) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ name: "New })" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ name: "New" }))})" test( "DELETE soft deletes account",() => {" const req = mockReq( "DELETE");" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ success: "true" })})'"'"
 import { expect,test,vi } from 'vitest" import handler from '@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from 'next interface MockApiResponse extends NextApiResponse { "status": 'vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string,string | string[]] void> "end": vi.Mock<[(cb?: () => void) => void],void>} function mockReq("method": 'string',body?: unknown): NextApiRequest { return { method body "headers": {} "query": {} "cookies": {}} as NextApiRequest} function mockRes(): MockApiResponse { const "res": Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as, MockApiResponse) res.json = vi.fn().mockReturnValue(res as, MockApiResponse) res.setHeader = vi.fn();' res.end = vi.fn()' return res as MockApiResponse}' test('GET returns profile',() => {' const req = mockReq( 'GET');' const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "email": 'jane@example.com,',"points": expect.any(Number)}))}) test('PUT updates profile',() => {' const req = mockReq( 'PUT',{ "name": 'New })' const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "name": 'New' }))})' test( 'DELETE soft deletes account',() => {' const req = mockReq( 'DELETE');' const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ "success": 'true' })})
@@ -195,7 +166,6 @@ import { expect,test,vi } from 'vitest" import handler from '@/pages/api/users/m
 ursor/add-new-services-and-deploy-updates-0462
 ursor/integrate-build-improve-and-re-verify-8f7d
 const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from "next interface MockApiResponse extends NextApiResponse { status: "vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string",string | string[]] void> end: vi.Mock<[(cb?: () => void) => void],void>} function mockReq(method: "string",body?: unknown): NextApiRequest { return { method body headers: {} query: {} cookies: {}} as NextApiRequest} function mockRes(): MockApiResponse { const res: Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as MockApiResponse) res.json = vi.fn().mockReturnValue(res as MockApiResponse) res.setHeader = vi.fn();" res.end = vi.fn()" return res as MockApiResponse}" test("GET returns profile"",() => {" const req = mockReq( "GET");" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ email: "jane@example.com,",points: expect.any(Number)}))}) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ name: "New })" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ name: "New" }))})" test( "DELETE soft deletes account",() => {" const req = mockReq( "DELETE");" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ success: "true" })})'"
-<<<<<<< HEAD
 import { expect,test,vi } from 'vitest" import handler from '@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from 'next interface MockApiResponse extends NextApiResponse { "status": 'vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string,string | string[]] void> "end": vi.Mock<[(cb?: () => void) => void],void>} function mockReq("method": 'string',body?: unknown): NextApiRequest { return { method body "headers": {} "query": {} "cookies": {}} as NextApiRequest} function mockRes(): MockApiResponse { const "res": Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as, MockApiResponse) res.json = vi.fn().mockReturnValue(res as, MockApiResponse) res.setHeader = vi.fn();' res.end = vi.fn()' return res as MockApiResponse}' test('GET returns profile',() => {' const req = mockReq( 'GET');' const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "email": 'jane@example.com,',"points": expect.any(Number)}))}) test('PUT updates profile',() => {' const req = mockReq( 'PUT',{ "name": 'New })' const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "name": 'New' }))})' test( 'DELETE soft deletes account',() => {' const req = mockReq( 'DELETE');' const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ "success": 'true' })})
 
 const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from "next interface MockApiResponse extends NextApiResponse { status: "vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string",string | string[]] void> end: vi.Mock<[(cb?: () => void) => void],void>} function mockReq(method: "string",body?: unknown): NextApiRequest { return { method body headers: {} query: {} cookies: {}} as NextApiRequest} function mockRes(): MockApiResponse { const res: Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as MockApiResponse) res.json = vi.fn().mockReturnValue(res as MockApiResponse) res.setHeader = vi.fn();" res.end = vi.fn()" return res as MockApiResponse}" test("GET returns profile"",() => {" const req = mockReq( "GET");" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ email: "jane@example.com,",points: expect.any(Number)}))}) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ name: "New })" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ name: "New" }))})" test( "DELETE soft deletes account",() => {" const req = mockReq( "DELETE");" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ success: "true" })})'"'""
@@ -203,16 +173,6 @@ const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me
 const { expect,test,vi } from "vitest" import handler from "@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from "next interface MockApiResponse extends NextApiResponse { status: "vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string",string | string[]] void> end: vi.Mock<[(cb?: () => void) => void],void>} function mockReq(method: "string",body?: unknown): NextApiRequest { return { method body headers: {} query: {} cookies: {}} as NextApiRequest} function mockRes(): MockApiResponse { const res: Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as MockApiResponse) res.json = vi.fn().mockReturnValue(res as MockApiResponse) res.setHeader = vi.fn();" res.end = vi.fn()" return res as MockApiResponse}" test("GET returns profile"",() => {" const req = mockReq( "GET");" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ email: "jane@example.com,",points: expect.any(Number)}))}) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ name: "New })" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ name: "New" }))})" test( "DELETE soft deletes account",() => {" const req = mockReq( "DELETE");" const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ success: "true" })})'""
 
 import { expect,test,vi } from 'vitest" import handler from '@/pages/api/users/me" import type { NextApiRequest,NextApiResponse } from 'next interface MockApiResponse extends NextApiResponse { "status": 'vi.Mock<[number] MockApiResponse> json: vi.Mock<[unknown] MockApiResponse> setHeader: vi.Mock<[string,string | string[]] void> "end": vi.Mock<[(cb?: () => void) => void],void>} function mockReq("method": 'string',body?: unknown): NextApiRequest { return { method body "headers": {} "query": {} "cookies": {}} as NextApiRequest} function mockRes(): MockApiResponse { const "res": Partial<MockApiResponse> = {} res.status = vi.fn().mockReturnValue(res as, MockApiResponse) res.json = vi.fn().mockReturnValue(res as, MockApiResponse) res.setHeader = vi.fn();' res.end = vi.fn()' return res as MockApiResponse}' test('GET returns profile',() => {' const req = mockReq( 'GET');' const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "email": 'jane@example.com,',"points": expect.any(Number)}))}) test('PUT updates profile',() => {' const req = mockReq( 'PUT',{ "name": 'New })' const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "name": 'New' }))})' test( 'DELETE soft deletes account',() => {' const req = mockReq( 'DELETE');' const res = mockRes() handler(req,res) expect(res.json).toHaveBeenCalledWith({ "success": 'true' })})
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-import { expect, test, vi } from 'vitest';
-import handler from '@/pages/api/users/me';
-import type { NextApiRequest, NextApiResponse } from 'next';
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
->>>>>>> pr/11282
 
 interface MockApiResponse extends NextApiResponse {
   status: vi.Mock<[number], MockApiResponse>;
@@ -227,13 +187,8 @@ function mockReq(method: string, body?: unknown): NextApiRequest {
     body,
     headers: {},
     query: {},
-<<<<<<< HEAD
     cookies: {}
-=======
-    cookies: {},
->>>>>>> pr/11282
   } as NextApiRequest;
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
 })'"'";"
 
@@ -246,7 +201,6 @@ function mockReq(method: string, body?: unknown): NextApiRequest {
 })'";"
 ursor/fix-website-loading-errors-and-merge-6662;
 
-<<<<<<< HEAD
 }" test("GET;"
   returns profile"",() => {" const req = mockReq( "GET")" const res = mockRes() handler(req,res) expect(res.status).toHaveBeenCalledWith(200) expect(res.json).toHaveBeenCalledWith( expect.objectContaining({ "email": "jane@example.com,","points": expect.any(Number)}),"
 }) test("PUT updates profile"",() => {" const req = mockReq( "PUT",{ "name": "New,"
@@ -378,20 +332,6 @@ return { method body "headers": {} "query": {} "cookies": {}} as NextApiReques,;
 })" test( "DELETE soft deletes account",() => {";"
 }
 })'""
-=======
-test('GET returns profile', () => {
-  const req = mockReq('GET');
-  const res = mockRes();
-  handler(req, res);
-  expect(res.status).toHaveBeenCalledWith(200);
-  expect(res.json).toHaveBeenCalledWith(
-    expect.objectContaining({
-      email: 'jane@example.com',
-<<<<<<< HEAD
-      points: expect.any(Number)
-=======
-      points: expect.any(Number),
->>>>>>> pr/11282
     })
   );
 });
@@ -402,11 +342,7 @@ test('PUT updates profile', () => {
   handler(req, res);
   expect(res.json).toHaveBeenCalledWith(
     expect.objectContaining({
-<<<<<<< HEAD
       name: 'New Name'
-=======
-      name: 'New Name',
->>>>>>> pr/11282
     })
   );
 });
@@ -417,15 +353,3 @@ test('DELETE soft deletes account', () => {
   handler(req, res);
   expect(res.json).toHaveBeenCalledWith({ success: true });
 });
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
->>>>>>> pr/11282
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

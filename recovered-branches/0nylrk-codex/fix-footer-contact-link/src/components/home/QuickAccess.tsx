@@ -1,354 +1,25 @@
 import React from "react";
-<<<<<<< HEAD
 
 import React from "react",
 
 import { Link } from "react-router-dom",
 import {}
 
-=======
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { 
-=======
-
-import React from "react",
-
-<<<<<<< HEAD
-import { Link } from "react-router-dom",
-import {}
-=======
-<<<<<<< HEAD
-import React from "react";
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 import {Link} from "react-router-dom";
 import {ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone} from "lucide-react";
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from "react",
 import { Link } from "react-router-dom",
 import { 
 
-<<<<<<< HEAD
-=======
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   ArrowRight,
   Search, 
   Users, 
   Briefcase, 
   Settings, 
   MessageSquare, 
-<<<<<<< HEAD
 
-      title: "AI Matcher"
-      description: "Find the perfect match for your project needs"
-      icon: <Search className="h-6 w-6 text-zion-cyan" />
-      title: "AI Matcher",
-      description: "Find the perfect match for your project needs",
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,
-
-      title: "AI Matcher",
-      description: "Find the perfect match for your project needs",
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,
-
-      link: "/match";
-    };"
-      link: "/match"
-    }
-    },
-
-      description: "Find the perfect match for your project needs",
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,
-
-export function QuickAccess() {
-  const quickLinks = [
-    {
-      title: "AI Matcher"
-      description: "Find the perfect match for your project needs"
-      icon: <Search className="h-6 w-6 text-zion-cyan" />
-      title: "AI Matcher",
-      description: "Find the perfect match for your project needs",
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,
-      title: "AI Matcher",
-      description: "Find the perfect match for your project needs",
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,
-      link: "/match";
-    };
-      link: "/match"
-    }
-    },
-
-    {
-      title: "Talent Directory"
-      description: "Browse verified tech specialists"
-      icon: <Users className="h-6 w-6 text-zion-purple" />
-      link: "/talent"
-
-  return (
-
-    {
-      title: "Service Marketplace"
-      description: "Discover professional services"
-      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />
-      link: "/services"
-
-    {
-      title: "Equipment Catalog"
-      description: "Find specialized hardware"
-      icon: <Settings className="h-6 w-6 text-zion-purple" />
-
-    {
-      title: "Community"
-      description: "Connect with tech professionals"
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />
-
-      link: "/community"
-
-    },
-
-    {
-      title: "Mobile App"
-      description: "Zion on the go"
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />
-      link: "/mobile-launch"
-
-import React from "react",;
-
-import { Link } from "react-router-dom",;
-import {;
-  ArrowRight,;
-  Search,;
-  Users,;
-  Briefcase,;
-  Settings,;
-  MessageSquare,;
-  Smartphone;"
-} from "lucide-react",;
-
-export function QuickAccess() { return null; }
-    },;
-    {;"
-      title: "Talent Directory","
-      description: "Browse verified tech specialists",;"
-      icon: <Users className="h-6 w-6 text-zion-purple" />,;"
-      link: "/talent";
-    },;
-    {;"
-      title: "Service Marketplace","
-      description: "Discover professional services",;"
-      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,;"
-      link: "/services";
-    },;
-    {;"
-      title: "Equipment Catalog","
-      description: "Find specialized hardware",;"
-      icon: <Settings className="h-6 w-6 text-zion-purple" />,;"
-      link: "/equipment";
-    },;
-    {;"
-      title: "Community","
-      description: "Connect with tech professionals",;"
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,;"
-      link: "/community";
-    },;
-    {;"
-      title: "Mobile App","
-      description: "Zion on the go",;"
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />;"
-      link: "/mobile-launch";
-
-import { Link } from './react-router-dom';
-
-import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from './lucide-react';
-;
-export /**;
- * QuickAccess - Function description;
- */
-function QuickAccess() {}
-  const quick_links = [;
-
-    {
-      title: "Community"
-      description: "Connect with tech professionals"
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />
-      link: "/community"
-
-    },
-
-    {
-
-      link: "/mobile - launch";
-    }
-  ];
-;
-  return (
-
-import React from "react",;
-import { Link } from "react-router-dom",;
-import {;
-  ArrowRight,;
-  Search,;
-  Users,;
-  Briefcase,;
-  Settings,;
-  MessageSquare,;
-  Smartphone;
-} from "lucide-react",;
-export function QuickAccess() {;
-  const quickLinks = [;
-    {;
-      title: "AI Matcher",,
-  description: "Find the perfect match for your project needs",;
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,;
-      link: "/match";
-    },;
-    {;
-      title: "Talent Directory",,
-  description: "Browse verified tech specialists",;
-      icon: <Users className="h-6 w-6 text-zion-purple" />,;
-      link: "/talent";
-    },;
-    {;
-      title: "Service Marketplace",,
-  description: "Discover professional services",;
-      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,;
-      link: "/services";
-    },;
-    {;
-      title: "Equipment Catalog",,
-  description: "Find specialized hardware",;
-      icon: <Settings className="h-6 w-6 text-zion-purple" />,;
-      link: "/equipment";
-    },;
-    {;
-      title: "Community",,
-  description: "Connect with tech professionals",;
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,;
-      link: "/community";
-    },;
-    {;
-      title: "Mobile App",,
-  description: "Zion on the go",;
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />;
-      link: "/mobile-launch";
-    }
-  ];
-  return (;
-
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">;
-            Quick Access;
-          </h2>;"
-          <p className="text-zion-slate-light text-lg">;
-            Jump directly to our most popular features;
-          </p>;
-        </div>;
-
-                {link.icon}
-              </div>"
-              <h3 className="text-white font-medium mb-1">{link.title}</h3>"
-              <p className="text-zion-slate-light text-xs mb-2">{link.description}</p>"
-              <div className="flex items-center text-zion-cyan text-xs mt-auto">
-                <span>Access</span>"
-                <ArrowRight className="ml-1 h-3 w-3" />
-              </div>
-            </Link>
-
-          ))}
-        </div>;
-      </div>;
-    </section>;
-  );
-}
-
-    <section className="py - 12 bg - zion - blue - dark">;
-      <div className="container mx - auto px - 4">;
-        <div className="text - center mb - 8">;
-
-          <h2 className="text - 2xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb - 2">;
-
-    <section className="py - 12 bg - zion - blue-dark">;
-      <div className="container mx - auto px-4">;
-        <div className="text - center mb-8">;
-          <h2 className="text - 2xl font - bold bg - gradient - to - r from - zion - cyan via - zion - purple - light to - zion - purple bg - clip - text text - transparent mb-2">;
-
-    }
-  ];
-  return (;
-import { ;
-  ArrowRight,;
-  Search, ;
-  Users, ;
-  Briefcase, ;
-  Settings, ;
-  MessageSquare, ;
-  Smartphone ;
-} from "lucide-react",;
-;
-export function QuickAccess() {;
-<<<<<<< HEAD
-  }
-=======
-  const quickLinks = [;
->>>>>>> origin/chore/fix-lint-and-merge
-    {;
-      title:"AI Matcher",,
-  description:"Find the perfect match for your project needs",;
-      icon:<Search className="h-6 w-6 text-zion-cyan" />,;
-      link:"/match";
-    },;
-    {;
-      title:"Talent Directory",,
-  description:"Browse verified tech specialists",;
-      icon:<Users className="h-6 w-6 text-zion-purple" />,;
-      link:"/talent";
-    },;
-    {;
-      title:"Service Marketplace",,
-  description:"Discover professional services",;
-      icon:<Briefcase className="h-6 w-6 text-zion-cyan" />,;
-      link:"/services";
-    },;
-    {;
-      title:"Equipment Catalog",,
-  description:"Find specialized hardware",;
-      icon:<Settings className="h-6 w-6 text-zion-purple" />,;
-      link:"/equipment";
-    },;
-    {;
-      title:"Community",,
-  description:"Connect with tech professionals",;
-      icon:<MessageSquare className="h-6 w-6 text-zion-cyan" />,;
-      link:"/community";
-    },;
-    {;
-      title:"Mobile App",,
-  description:"Zion on the go",;
-      icon:<Smartphone className="h-6 w-6 text-zion-purple" />,;
-      link:"/mobile-launch";
-    }
-  ],;
-;
-  return (;
-    <section className="py-12 bg-zion-blue-dark">;
-      <div className="container mx-auto px-4">;
-        <div className="text-center mb-8">;
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">;
-
-            Quick Access;
-
-              </div>;
-            </Link>))}
-        </div>;
-      </div>;
-    </section>);
-}
-
-=======
-<<<<<<< HEAD
   Smartphone 
 } from "lucide-react",
 
@@ -358,44 +29,17 @@ export function QuickAccess() {
       icon: <Search className = $2;
       link: "/match"
     }
-=======
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-export function QuickAccess() {
-  const quickLinks = [
-    {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       title: "AI Matcher"
       description: "Find the perfect match for your project needs"
       icon: <Search className="h-6 w-6 text-zion-cyan" />
       title: "AI Matcher",
       description: "Find the perfect match for your project needs",
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
-<<<<<<< HEAD
-=======
-      title: "AI Matcher",
-      description: "Find the perfect match for your project needs",
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,
-      link: "/match";
-    };
-      link: "/match"
-    }
-    },
-=======
-
-
-export function QuickAccess() {
-  const quickLinks = [
-    {
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
       title: "AI Matcher",
       description: "Find the perfect match for your project needs",
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
 
-<<<<<<< HEAD
       link: "/match";
     };"
       link: "/match"
@@ -423,75 +67,27 @@ export function QuickAccess() {
     }
     },
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     {
       title: "Talent Directory"
       description: "Browse verified tech specialists"
       icon: <Users className="h-6 w-6 text-zion-purple" />
       link: "/talent"
 
-<<<<<<< HEAD
   return (
-=======
-<<<<<<< HEAD
-    },
 
-
-    }
-    },
-=======
-
-    },
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: "Service Marketplace"
       description: "Discover professional services"
       icon: <Briefcase className="h-6 w-6 text-zion-cyan" />
       link: "/services"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    },
 
-
-    }
-    },
-=======
-
-    },
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
     {
       title: "Equipment Catalog"
       description: "Find specialized hardware"
       icon: <Settings className="h-6 w-6 text-zion-purple" />
 
-<<<<<<< HEAD
-    {
-      title: "Community"
-      description: "Connect with tech professionals"
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />
 
-      link: "/community"
-=======
-<<<<<<< HEAD
-    },
-
-
-    }
-    },
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
     },
 
@@ -556,115 +152,18 @@ export /**;
 function QuickAccess() {}
   const quick_links = [;
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     {
       title: "Community"
       description: "Connect with tech professionals"
       icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />
       link: "/community"
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
     },
 
-
-    }
-    },
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    },
-
->>>>>>> merged-prs-20250907-203621
     {
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-    {
-      title: "Mobile App"
-      description: "Zion on the go"
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />
-      link: "/mobile-launch"
-<<<<<<< HEAD
-    }
-  ],
 
-  return (
-    <section className="py-12 bg-zion-blue-dark">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
-            Quick Access
-          </h2>
-          <p className="text-zion-slate-light text-lg">
-            Jump directly to our most popular features
-          </p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
-          {quickLinks.map((link, index) => (
-            <Link
-              key={index}
-              to={link.link}
-              className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-4 transition-all duration-300 flex flex-col items-center text-center"
-            >
-              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3">
-
-
-import React from "react",;
-import { Link } from "react-router-dom",;
-                {link.icon}
-              </div>
-              <h3 className="text-white font-medium mb-1">{link.title}</h3>
-              <p className="text-zion-slate-light text-xs mb-2">{link.description}</p>
-              <div className="flex items-center text-zion-cyan text-xs mt-auto">
-                <span>Access</span>
-                <ArrowRight className="ml-1 h-3 w-3" />
-              </div>
-            </Link>
-=======
-=======
-
-export function QuickAccess() {;
-  const quickLinks = [;
-    {;
-      title: "AI Matcher",;
-      description: "Find the perfect match for your project needs",;
-      icon: <Search className="h-6 w-6 text-zion-cyan" />,;
-      link: "/match";
-    };
-    {;
-      title: "Talent Directory",;
-      description: "Browse verified tech specialists",;
-      icon: <Users className="h-6 w-6 text-zion-purple" />,;
-      link: "/talent";
-    };
-    {;
-      title: "Service Marketplace",;
-      description: "Discover professional services",;
-      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,;
-      link: "/services";
-    };
-    {;
-      title: "Equipment Catalog",;
-      description: "Find specialized hardware",;
-      icon: <Settings className="h-6 w-6 text-zion-purple" />,;
-      link: "/equipment";
-    };
-    {;
-      title: "Community",;
-      description: "Connect with tech professionals",;
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,;
-      link: "/community";
-    };
-    {;
-      title: "Mobile App",;
-      description: "Zion on the go",;
-      icon: <Smartphone className="h-6 w-6 text-zion-purple" />,;
-      link: "/mobile-launch";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Link } from './react-router-dom';
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from './lucide-react';
@@ -708,19 +207,13 @@ function QuickAccess() {
       title: "Mobile App",
       description: "Zion on the go",
       icon: <Smartphone className="h - 6 w - 6 text - zion - purple" />,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
       link: "/mobile - launch";
     }
   ];
 ;
   return (
 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import React from "react",;
 import { Link } from "react-router-dom",;
 import {;
@@ -772,7 +265,6 @@ export function QuickAccess() {;
     }
   ];
   return (;
-<<<<<<< HEAD
 import { ;
   ArrowRight,;
   Search, ;
@@ -824,15 +316,9 @@ export function QuickAccess() {;
   ],;
 ;
   return (;
-=======
-
-<<<<<<< HEAD
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     <section className="py-12 bg-zion-blue-dark">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-8">;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
           <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">;
             Quick Access;
           </h2>;"
@@ -840,7 +326,6 @@ export function QuickAccess() {;
             Jump directly to our most popular features;
           </p>;
         </div>;
-<<<<<<< HEAD
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;
           {quickLinks.map((link, index) => (;
             <Link;
@@ -849,20 +334,6 @@ export function QuickAccess() {;
               className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-4 transition-all duration-300 flex flex-col items-center text-center";
             >;
               <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3">;
-=======
-
-<<<<<<< HEAD
-=======
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;
-          {quickLinks && quickLinks.map((link, index) => (;
-            <Link
-              key={index} 
-              to={link && link.link} 
-              className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-4 transition-all duration-300 flex flex-col items-center text-center">;
-              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3">;
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
                 {link.icon}
               </div>"
               <h3 className="text-white font-medium mb-1">{link.title}</h3>"
@@ -879,10 +350,8 @@ export function QuickAccess() {;
     </section>;
   );
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+
     <section className="py - 12 bg - zion - blue - dark">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 8">;
@@ -908,11 +377,7 @@ import { ;
 } from "lucide-react",;
 ;
 export function QuickAccess() {;
-<<<<<<< HEAD
   }
-=======
-  const quickLinks = [;
->>>>>>> origin/chore/fix-lint-and-merge
     {;
       title:"AI Matcher",,
   description:"Find the perfect match for your project needs",;
@@ -965,12 +430,8 @@ export function QuickAccess() {;
       </div>;
     </section>);
 }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
         ;
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">;
           {quickLinks.map((link, index) => (;
@@ -978,10 +439,7 @@ export function QuickAccess() {;
               key={index} ;
               to={link.link} ;
               className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-4 transition-all duration-300 flex flex-col items-center text-center";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
 import React from "react",""
 import { Link } from "react-router-dom","
@@ -1086,36 +544,7 @@ export function QuickAccess() {
 
             ;
   Quick Access </h2> <p className="text-zion-slate-light text-lg" > Jump directly to our most popular features </p> </div> <span>Access</span> <ArrowRight className="ml-1 h-3 w-3" /> </div> ) )"
-<<<<<<< HEAD
-=======
-=======
-            >;
-              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3">;
-                {link.icon}
-              </div>;
-              <h3 className="text-white font-medium mb-1">{link.title}</h3>;
-              <p className="text-zion-slate-light text-xs mb-2">{link.description}</p>;
-              <div className="flex items-center text-zion-cyan text-xs mt-auto">;
-                <span>Access</span>;
-                <ArrowRight className="ml-1 h-3 w-3" />;
-              </div>;
-            </Link>;
-          ))}
-        </div>;
-      </div>;
-    </section>;
-  ),;}
- import {
-  ArrowRight;
-Search;
-Users;
-Briefcase;
-Settings;
-MessageSquare;
-Smartphone const quickLinks = [ {
-  Quick Access </h2> <p className="text-zion-slate-light text-lg" > Jump directly to our most popular features </p> </div> <span>Access</span> <ArrowRight className="ml-1 h-3 w-3" /> </div> </Link>) ) 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 }</div> </div> </section>) 
 }
           ))}
@@ -1123,15 +552,5 @@ Smartphone const quickLinks = [ {
       </div>
     </section>
   )
-<<<<<<< HEAD
+
 }
-=======
-<<<<<<< HEAD
-}
-=======
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

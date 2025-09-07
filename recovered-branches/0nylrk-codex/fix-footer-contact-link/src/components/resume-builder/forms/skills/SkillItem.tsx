@@ -1,44 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Trash2 } from 'lucide-react';
-import { SkillItemProps } from './types';
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
-  return (
-    <Badge
-      key={skill.id}
-      variant="secondary"
-      className="flex items-center gap-1 py-1.5 px-3"
-    >
-      {skill.name}
-      {skill.proficiency && (
-        <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>
-      )}
-      <Button
-        variant="ghost"
-        size="icon"
-        className="h-5 w-5 p-0 ml-1"
-        onClick={() => onDelete(skill.id!, category)}
-      >
-        <Trash2 className = $2;
-=======
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 import { Trash2  } from './lucide-react';
 import { SkillItemProps  } from './types';
 export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: any {
-<<<<<<< HEAD
 
 import { Badge } from '@/components/ui/badge',
 import { Button } from '@/components/ui/button',
@@ -54,175 +19,36 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
   return (
     <Badge
       key={skill.id}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-<<<<<<< HEAD
-=======
-  return (
-    <Badge;
-      key={skill.id}
-<<<<<<< HEAD
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Trash2 } from "lucide-react";
-import { SkillItemProps } from "./types";
-=======
-
-=======
 
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import {Badge} from '@/components/ui/badge';
-import {Button} from '@/components/ui/button';
-import {Trash2} from 'lucide-react';
-import {SkillItemProps} from './types';
-<<<<<<< HEAD
-=======
-
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { Badge } from '@/components/ui/badge',
 import { Button } from '@/components/ui/button',
 import { Trash2 } from 'lucide-react',
 import { SkillItemProps } from './types',
 
-<<<<<<< HEAD
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Trash2 } from "lucide-react";
-import { SkillItemProps } from "./types";
-=======
 
-<<<<<<< HEAD
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
-  return (
-    <Badge
-      key={skill && skill.id} 
-=======
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 
   return (
     <Badge
-<<<<<<< HEAD
+
       key={skill.id}
-=======
-      key={skill && skill.id} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       variant="secondary"
 
       className="flex items-center gap-1 py-1 && 1.5 px-3">;
       {skill && skill.name}
       {skill && skill.proficiency && (;"
         <span className="ml-1 text-xs opacity-60">({skill && skill.proficiency}/5)</span>;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Trash2 } from "lucide-react";
-import { SkillItemProps } from "./types";
-
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
-  return (
-    <Badge
-      key={skill.id}
-      variant="secondary"
-      className="flex items-center gap-1 py-1.5 px-3"
-    >
-      {skill.name}
-      {skill.proficiency && (
-        <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       )}
       <Button"
         variant="ghost""
         size="icon""
         className="h-5 w-5 p-0 ml-1"
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-        onClick={() => onDelete(skill.id!, category)}
-      >
-        <Trash2 className="h-3 w-3" />
-      </Button>
-    </Badge>
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-};
-  )
-},
 
-  );
-};
-
-<<<<<<< HEAD
-=======
-=======
-        onClick={() => onDelete(skill && skill.id!, category)}
-
-import { Badge } from '@/components/ui/badge',;
-import { Button } from '@/components/ui/button',;
-import { Trash2 } from 'lucide-react',;
-import { SkillItemProps } from './types',;
-;
-export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
-  return (;
-    <Badge ;
-      key={skill.id} ;
-      variant="secondary";
-      className="flex items-center gap-1 py-1.5 px-3";
-    >;
-      {skill.name}
-      {skill.proficiency && (;
-        <span className="ml-1 text-xs opacity-60">({skill.proficiency}/5)</span>;
-      )}
-      <Button;
-        variant="ghost";
-        size="icon";
-        className="h-5 w-5 p-0 ml-1";
-        onClick={() => onDelete(skill.id!, category)}
-      >;
-        <Trash2 className="h-3 w-3" />;
-      </Button>;
-    </Badge>;
-<<<<<<< HEAD
-=======
-  );
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-  )
-},
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-};
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       variant="secondary";
       className="flex items - center gap - 1 py - 1.5 px - 3";
     >;
@@ -240,19 +66,7 @@ export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
     </Badge>);
 }
 ;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  ),;
-},; <Badge key= {
-  skill.id 
-}variant="secondary" className="flex items-center gap-1 py-1.5 px-3" > > <Trash2 className="h-3 w-3" /> </Button> </Badge>) 
-};
-);
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
 }
 };
@@ -267,16 +81,5 @@ export const SkillItem = ({ skill, category, onDelete } SkillItemProps) => {;
 },
 };
   )
-<<<<<<< HEAD
+
 },
-=======
-<<<<<<< HEAD
-},
-=======
-},
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

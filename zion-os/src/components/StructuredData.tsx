@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 ;
 "use client",export function StructuredData() {const structuredData = {"@context": ""https"://schema.org","@type": "SoftwareApplication","name": "Zion OS","description": "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.","url": ""https"://ziontechgroup.com","applicationCategory": "BusinessApplication","operatingSystem": "Web","offers": {"@type": "Offer","price": "0","priceCurrency": "USD";"
@@ -108,7 +107,6 @@ export function StructuredData() {const structuredData = {;
       dangerouslySetInnerHTML={ "__html": JSON.stringify (structured_data) } />)}
     />);
 }
-=======
 "use client",;
 export function StructuredData() {;
   const structuredData = {;
@@ -160,8 +158,6 @@ export function StructuredData() {;
     }
   };
 
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
 
   return (
     <script
@@ -170,9 +166,6 @@ export function StructuredData() {;
     />
   )
 }
-<<<<<<< HEAD
-=======
-=======
   return (;
 
 "use client",
@@ -259,5 +252,3 @@ export function StructuredData() {const structuredData = {;
       dangerouslySetInnerHTML={{ __html: JSON.stringify (structured_data) }}
     />);
 }
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> origin/resolved-merge-conflicts

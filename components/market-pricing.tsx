@@ -51,59 +51,9 @@ pricingAnalysis: {'
   'lowEnd': '$20 per user/month', 'midRange': '$40 per user/month', 'highEnd': '$100 per user/month', 'ourPosition': 'Competitive pricing with AI advantages' '
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
 
-}
-};
-
-
-};
-
-}}export default MarketPricing;
-      <section className='py-20 px-4 sm:px-6 lg:px-8'>
-        <div className='max-w-4xl mx-auto text-center'>
-          <motion.div
-            initial={ opacity: 0, y: 20}
-            whileInView={ opacity: 1, y: 0}
-            transition = $2;
-export default MarketPricing,
-export default MarketPricing;
-<<<<<<< HEAD
-=======
-=======
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-4xl mx-auto text-center">;
-          <motion&& motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-
-
-};
-
-};
-
-};
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
-'quantum-computing': {
-  marketSize: '$8.7B', growthRate: '+45.2%', growthTrend: 'up', description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
-  ]
-pricingAnalysis: {
-  lowEnd: '$0.80 per quantum hour', midRange: '$1.50 per quantum hour', highEnd: '$2.50 per quantum hour', ourPosition: 'Competitive mid-range pricing' 
+  "marketSize": '$8.7B', "growthRate": '+45.2%', "growthTrend": 'up', "description": 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', "competitors": [ {'
+  ];
 }
 }
 'autonomous-systems': {
@@ -158,76 +108,7 @@ return (<UltraAdvancedFuturisticBackground> <Head> <title>Market Pricing & Compe
 }> Ready to Compete in the Market? </h2> <p className="text-xl text-gray-300 mb-8" > Our competitive pricing and unique AI consciousness features give you the edge you need to succeed in today's rapidly evolving technology landscape. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105" > View Our Pricing <ArrowRight className="w-5 h-5 ml-2" /> </a> <Link href="/contact" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300" > Get Custom Quote </a> </div> </motion.div> </div> </section> </div>) 
 }
 export default MarketPricing
-<<<<<<< HEAD
-=======
 
-};
-
-}}}}export default MarketPricing;
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20}}
-            whileInView={{ opacity: 1, y: 0}}
-            transition = $2;
-export default MarketPricing,
-quantum-computing': {
-  marketSize: '$8.7B, growthRate: +45.2%', growthTrend: 'up, description: Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
-=======
-
-
-  const markets = null;
-'quantum-computing': {
-  marketSize: '$8.7B',
-  growthRate: '+45.2%', growthTrend: 'up',
-  description: 'Quantum computing market is rapidly expanding with breakthroughs in qubit stability and error correction.', competitors: [ {
-  ];
-pricingAnalysis: {
-  lowEnd: '$0.80 per quantum hour',
-  midRange: '$1.50 per quantum hour', highEnd: '$2.50 per quantum hour',
-  ourPosition: 'Competitive mid-range pricing' }
-,}
-};
-'autonomous-systems': {
-  marketSize: '$23.1B',
-  growthRate: '+34.7%', growthTrend: 'up',
-  description: 'Autonomous systems market is growing rapidly with increasing automation in business processes.', competitors: [ {
-  ];
-pricingAnalysis: {
-  lowEnd: '$300 per user/month',
-  midRange: '$750 per user/month', highEnd: '$1, 200 per user/month',
-  ourPosition: 'Competitive pricing with AI advantages' }
-,}
-};
-'enterprise-it': {
-  marketSize: '$1.2T',
-  growthRate: '+12.3%', growthTrend: 'up',
-  description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {
-  ];
-pricingAnalysis: {
-  lowEnd: '$20 per user/month',
-  midRange: '$40 per user/month', highEnd: '$100 per user/month',
-  ourPosition: 'Competitive pricing with AI advantages' 
-
-}
-}
-}}
-
-
-};
-<<<<<<< HEAD
-export default MarketPricing;
-
-export default MarketPricing;
-=======
-
-export default MarketPricing;
->>>>>>> origin/chore/fix-lint-and-merge
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 ];
   'ai - consciousness': {
   market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
@@ -1069,25 +950,17 @@ pricing_analysis: {
 }
 export default MarketPricing;export default MarketPricing;
 ;
-<<<<<<< HEAD
 
 };
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 };
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
 
 
 };
 
-<<<<<<< HEAD
 
   const _marketData = {_'ai-consciousness': {
       marketSize: '$45.2B', _growthRate: '+28.4%', _growthTrend: 'up', _description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', _competitors: [
@@ -2114,11 +1987,4 @@ export default MarketPricing;export default MarketPricing;
 }
 }
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
+export default MarketPricing;

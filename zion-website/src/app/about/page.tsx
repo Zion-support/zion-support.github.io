@@ -15,149 +15,24 @@ import React from 'react';
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
 
-<<<<<<< HEAD
-const values = [
 
-  {
-    name: 'Innovation First',
-    description: 'We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.',
-    icon: LightBulbIcon},
-  {
-    name: 'Global Impact'
-    description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.'
-    icon: GlobeAltIcon}
-  {
-    name: 'Trust & Security'
-    description: 'We maintain the highest standards of security and ethical AI development.'
-    icon: ShieldCheckIcon}
-  {
+        <div className=&quot;mx - auto max - w-2xl py - 32 "sm":py - 48 "lg":py - 56 & quot>
 
-const values = [
-  {
-    name: 'Innovation First',
-    description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.',
-    icon: LightBulbIcon},
-  {
-    name: 'Global Impact',
-    description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.',
-    icon: GlobeAltIcon},
-  {
-    name: 'Trust & Security',
-    description: 'We maintain the highest standards of security and ethical AI development.',
-    icon: ShieldCheckIcon},
-  {
+          <div className=&quot;text - center & quot>
 
-    name: 'Research Excellence',
-    description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.',
-    icon: AcademicCapIcon}]
+            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white "sm": text - 6xl & quot>
 
-const team = [
-  {
-    name: 'Dr. Sarah Chen',
-    role: 'Chief Executive Officer',
-    bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.',
-    image: '/images/team/sarah-chen.jpg'},
-  {
-    name: 'Dr. Marcus Rodriguez',
-    role: 'Chief Technology Officer',
-    bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.',
-    image: '/images/team/marcus-rodriguez.jpg'},
-  {
-    name: 'Dr. Elena Petrov',
-    role: 'Head of Research',
-    bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.',
-    image: '/images/team/elena-petrov.jpg'},
-  {
-
-      {/* Hero section */}
-      <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
-        <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
-          <div className=&quot;text - center & quot;>;
-            <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
-              About{' '}
-
-              dedicated to transforming industries and advancing human potential through technology.
-            </p>
-          </div>
-        </div>
-      </div>
-=======
-import React from 'react';'
-
-export default function AboutPage() {return (<div className="min-h-screen bg-white">;"
-      <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8 py-24">;"
-        <div className="text-center mb-16">;"
-          <h1 className="text-4xl "md":text-5xl font-bold text-gray-900 mb-6">;"
-            }
-            About Zion Tech Group;
-          </h1>;
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;"
-            We are a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions.;
-          </p>;
-        </div>;
-        <div className="grid grid-cols-1 "lg":grid-cols-2 gap-12 items-center">;"
-          <div>;
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>;"
-            <p className="text-lg text-gray-600 mb-6">;"
-              To transform businesses through cutting-edge AI and technology solutions that drive innovation, efficiency, and growth.;
-            </p>;
-            <p className="text-lg text-gray-600">;"
-              We believe in the power of technology to solve complex problems and create opportunities for our clients to thrive in the digital age.;
+              About{' ,'
+}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">;"
+                Zion Tech Group;
+              </span>;
+            </h1>;
+              dedicated to transforming industries and advancing human potential through technology.;
             </p>;
           </div>;
-          <div className="bg-gray-50 p-8 rounded-lg">;"
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Values</h3>;"
-            <ul className="space-y-3">;"
-              <li className="flex items-center">;"
-                <span className="text-blue-600 mr-3">✓</span>;"
-                Innovation and Excellence;
-              </li>;
-              <li className="flex items-center">;"
-                <span className="text-blue-600 mr-3">✓</span>;"
-                Client Success;
-              </li>;
-              <li className="flex items-center">;"
-                <span className="text-blue-600 mr-3">✓</span>;"
-                Ethical Technology;
-              </li>;
-              <li className="flex items-center">;"
-                <span className="text-blue-600 mr-3">✓</span>;"
-                Continuous Learning;
-              </li>;
-            </ul>;
-  UserGroupIcon;
-  LightBulbIcon;
-  GlobeAltIcon;
-  ShieldCheckIcon;
-  AcademicCapIcon;
-  RocketLaunchIcon;
-} from '@heroicons/react/24/outline';'
-
-const values = [
-  {"name": 'Innovation First',"description": 'We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.',"icon": LightBulbIco,'
-},{"name": 'Global Impact';'
-    }
-    "description": 'Our solutions reach across borders, transforming industries and improving lives worldwide.';'
-    "icon": GlobeAltIco
-}
-  {"name": 'Trust & Security';'
-    }
-    "description": 'We maintain the highest standards of security and ethical AI development.';'
-    "icon": ShieldCheckIco
-}
-  {"name": 'Research Excellence',"description": 'Our team of world - class researchers drives breakthrough discoveries and innovations.',"icon": AcademicCapIco,'
-}];
-
-const team = [
-  {"name": 'Dr. Sarah Chen',"role": 'Chief Executive Officer',"bio": 'Former AI researcher at Stanford, leading Zion Tech Group's vision for the future of technology.',"image": '/images / team / sarah - chen.jpg,'
-},{"name": 'Dr. Marcus Rodriguez',"role": 'Chief Technology Officer',"bio": 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.',"image": '/images / team / marcus - rodriguez.jpg,'
-},{"name": 'Dr. Elena Petrov',"role": 'Head of Research',"bio": 'Leading researcher in autonomous systems and AI ethics, with publications in top - tier journals.',"image": '/images / team / elena - petrov.jpg,'
-},;
-  return (<div className="bg-black">;"
-      {/* Hero section */}
-      <div className=&quot;relative isolate px - 6 pt - 14 "lg":px - 8&quot>
->>>>>>> merged-prs-20250907-203621
-
+        </div>;
+      </div>;
       {/* Mission & Vision */}
 
             Mission & Vision
@@ -806,7 +681,6 @@ export default function AboutPage() {
               </div>
             ))}
           </dl>;
-<<<<<<< HEAD
         </div>;
       </div>;
       {/* Leadership Team */}
@@ -819,8 +693,6 @@ export default function AboutPage() {
           <p className="mt-6 text-lg leading-8 text-gray-300">;"
             World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.;
           </p>;
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
         </div>;
       </div>;
       {/* Leadership Team */}
@@ -853,7 +725,6 @@ export default function AboutPage() {
                 <div className="group relative">
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-hover:text-blue-400 transition-colors duration-200">
                     {person.name}
-<<<<<<< HEAD
 
                   </h3>
                   <p className="mt-2 text-sm text-blue-400">{person.role}</p>
@@ -861,102 +732,10 @@ export default function AboutPage() {
                 </div>
               </div>
             </article>
-=======
-                  </h3>;
-                  <p className=&quot;mt - 2 text - sm text - blue - 400 & quot;>{person.role}</p>;
-                  <p className=&quot;mt - 5 line - clamp - 3 text - sm leading - 6 text - gray - 300 & quot;>{person.bio}</p>;
-                </div>;
-              </div>;
-            </article>))}
-        </div>;
-      </div>;
-      {/* CTA section */}
-            Join us in shaping the future;
-          </h2>;
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">;"
-            Ready to be part of the AI revolution? Let's discuss how we can work together to;'
-            transform your organization.;
-          </p>;
-          <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot>
-
-            <a;
-              href=&quot;/contact&quot;
-              className=&quot;rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm "hover":bg-blue-500 focus-"visible":outline focus-"visible":outline-2 focus-"visible":outline-offset-2 focus-"visible":outline-blue-600 transition-all duration-200 "hover":scale-105&quot>
-
-              Get in Touch;
-            </Link>;
-            <a href=&quot;/careers&quot; className=&quot;text-sm font-semibold leading-6 text-white "hover":text-blue-400 transition-colors duration-200&quot>
-
-              View Careers <span aria-hidden=&quot;true&quot;>→</span>;
-            </Link>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
-  )})}
-            Meet Our Team;
-          </p>;
-          <p className="mt-6 text-lg leading-8 text-gray-300">;"
-            World-class researchers, engineers, and business leaders driving innovation at Zion Tech Group.;
-          </p>;
-        </div>;
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 "lg":mx-0 "lg":max-w-none "lg":grid-cols-2">;"
-          {team.map((person) => (<article key={person.name} className="flex flex-col items-start group">;"
-              <div className="relative w-full">;"
-                <div className="aspect-[16/9] w-full rounded-2xl bg-gray-900 object-cover "sm":aspect-[2/1] "lg":aspect-[3/2]">;"
-                  <div className="h-full w-full bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-2xl flex items-center justify-center">;"
-                    <div className="text-center">;"
-                      <div className="mx-auto h-12 w-12 rounded-full bg-blue-600/20 flex items-center justify-center mb-4">;"
-                        <UserGroupIcon className="h-6 w-6 text-blue-400" />;"
-                      </div>;
-                      <p className="text-sm text-gray-400">Team Member</p>;"
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-              <div className="max-w-xl">;"
-                <div className="group relative">;"
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white group-"hover":text-blue-400 transition-colors duration-200">;"
-                    {person.name}
-                  </h3>;
-                  <p className="mt-2 text-sm text-blue-400">{person.role}</p>;"
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-300">{person.bio}</p>;"
-                </div>;
-              </div>;
-            </article>;
->>>>>>> merged-prs-20250907-203621
           ))}
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Join us in shaping the future
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
-            Ready to be part of the AI revolution? Let's discuss how we can work together to 
-            transform your organization.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="/contact"
-              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
-            >
-              Get in Touch
-            </Link>
-            <a href="/careers" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
-              View Careers <span aria-hidden="true">→</span>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-=======
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
       <div className="mx-auto mt-32 max-w-7xl px-6 "sm":mt-40 "lg":px-8">;"
         <div className="mx-auto max-w-2xl text-center">;"
           <h2 className="text-3xl font-bold tracking-tight text-white "sm":text-4xl">;"
@@ -982,4 +761,3 @@ export default function AboutPage() {
   )}
 
 export default Page;
->>>>>>> merged-prs-20250907-203621

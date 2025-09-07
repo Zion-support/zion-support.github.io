@@ -1,59 +1,10 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { useState, useEffect } from "react,
-import { TalentProfile as TalentProfileType } from @/types/talent",
-import { ProfileData } from "@/types/profile,
-import { MOCK_TALENTS } from @/data/mockTalents",
-import { MOCK_PROFILES } from "@/data/mockProfiles,
-import { convertProfileToTalentProfile } from @/utils/profileConverter";
-export function useTalentProfile(id: string | undefined) {
-=======
-import {useState, useEffect} from "react";
-import {TalentProfile, as, TalentProfileType} from "@/types/talent";
-import {ProfileData} from "@/types/profile";
-import {MOCK_TALENTS} from "@/data/mockTalents";
-import {MOCK_PROFILES} from "@/data/mockProfiles";
-import {convertProfileToTalentProfile} from "@/utils/profileConverter";
-export function useTalentProfile(id: string | undefined) {;
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   const [profile, setProfile] = useState<TalentProfileType | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(
     null,
   );
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {TalentProfile, as, TalentProfileType} from "@/types/talent";
-import {ProfileData} from "@/types/profile";
-import {MOCK_TALENTS} from "@/data/mockTalents";
-import {MOCK_PROFILES} from "@/data/mockProfiles";
-import {convertProfileToTalentProfile} from "@/utils/profileConverter";
-export function useTalentProfile(id: string | undefined) {;
-  const [profile, setProfile] = useState<TalentProfileType | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null);
->>>>>>> origin/resolved-merge-conflicts
-import { useState, useEffect } from "react",
-import { TalentProfile as TalentProfileType } from "@/types/talent",
-import { ProfileData } from "@/types/profile",
-import { MOCK_TALENTS } from "@/data/mockTalents",
-import { MOCK_PROFILES } from "@/data/mockProfiles",
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
 
   useEffect(() => {}
     const fetchProfile = async () => {}
@@ -72,10 +23,8 @@ export function useTalentProfile(id: string | undefined) {};
   const [profile, setProfile] = useState<TalentProfileType | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
->>>>>>> origin/chore/fix-lint-and-merge
   const [profile, setProfile] = useState<TalentProfileType | null>(null),
   const [isLoading, setIsLoading] = useState(true),
-<<<<<<< HEAD
   const [error, setError] = useState<string | null>(null),
   const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
 
@@ -85,18 +34,6 @@ export function useTalentProfile(id: string | undefined) {};
       setIsLoading(true),
       setError(null),
 
-=======
-  const [error, setError] = useState<string | null>(null),
-  const [mockProfileData, setMockProfileData] = useState<ProfileData | null>(null),
-
-      setIsLoading(true);
-      setError(null);
-
-      setIsLoading(true),
-      setError(null),
-
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
 import { convertProfileToTalentProfile } from "@/utils/profileConverter";
 export function useTalentProfile(id: string | undefined) {
   const [profile, setProfile] = useState<TalentProfileType | null>(null),
@@ -112,32 +49,13 @@ export function useTalentProfile(id: string | undefined) {
         return
       }
 
-<<<<<<< HEAD
       setIsLoading($2);
       setError($2);
-=======
-      setIsLoading(true),
-      setError(null),
-      
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
       try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-=======      try {
->>>>>>> origin/resolved-merge-conflicts
+      try {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
@@ -148,6 +66,17 @@ import { TalentProfile, as, TalentProfileType } from '@/types / talent';
 import { ProfileData } from '@/types / profile';
 import { MOCK_TALENTS } from '@/data / mock_talents';
 import { MOCK_PROFILES } from '@/data / mock_profiles';
+=======      try {
+        // In a real implementation, we would fetch from Supabase
+        // For now, well use mock data
+        setTimeout(() => {
+          if (foundProfile) {
+            setProfile(convertProfileToTalentProfile(foundProfile))
+import { useState, useEffect } from ./react';
+import { TalentProfile, as, TalentProfileType } from '@/types / talent;
+import { ProfileData } from @/types / profile';
+import { MOCK_TALENTS } from '@/data / mock_talents;
+import { MOCK_PROFILES } from @/data / mock_profiles';
 import { convertProfileToTalentProfile } from '@/utils / profile_converter';
 export /**
  * useTalentProfile - Function description
@@ -238,25 +167,7 @@ if ( {) {
     fetchProfile()
   }, [id]),
 
-<<<<<<< HEAD
-  return { profile, isLoading, error, mockProfileData }
-}
-=======
-  }, [id]);
-=======
-<<<<<<< HEAD
 
-  }, [id]);
-=======
-  }, [id]);
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return { profile, isLoading, error, mockProfileData }
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         console.error ("Error fetching profile:", err);
         set_error ("Failed to load profile data");
         setIsLoading (false);
@@ -267,7 +178,6 @@ if ( {) {
   }, [id]);
 ;
   return { profile, is_loading, error, mockProfileData }
-<<<<<<< HEAD
 }
 
 import { useState, useEffect } from "react",;
@@ -351,10 +261,7 @@ if (mockProfile) {
 }
   return { profile, isLoading, error, mockProfileData }
 }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
+    fetchProfile();
+
+  }, [id]);

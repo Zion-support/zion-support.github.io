@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-=======
-<<<<<<< HEAD
-  };
 
-
-
-  },
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -22,36 +9,9 @@ export default function ResourceCaseStudyPage() {
     company: 'Global Manufacturing Corp'
     industry: 'Manufacturing'
     results: '40% increase in production efficiency, 60% reduction in downtime'
-<<<<<<< HEAD
+
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
   }
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-  }
-=======
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-  }
-  },
-=======
-
-    id: 'ai-automation-manufacturing',
-    title: 'AI-Powered Manufacturing Automation',
-    company: 'Global Manufacturing Corp',
-    industry: 'Manufacturing',
-    results: '40% increase in production efficiency, 60% reduction in downtime',
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-  };
-
-
-=======
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   return (
     <>
       <Head>
@@ -62,346 +22,86 @@ export default function ResourceCaseStudyPage() {
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
-<<<<<<< HEAD
+
             {/* Breadcrumb */}
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-            {/* Breadcrumb */}
-=======
-
-<<<<<<< HEAD
-            {/* Breadcrumb */}
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            {/* Breadcrumb */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Resources
               </Link>
             </nav>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-            {/* Header */}
-            <header className="mb-12 text-center">
-              <div className="mb-4">
-                <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                  {caseStudy.industry}
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <header className="mb-12 text-center">
-              <div className="mb-4">
-                <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-<<<<<<< HEAD
-            <nav className="mb-8">
-              <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
-                ← Back to Resources
-              </Link>
-            </nav>
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-            {/* Header */}
-            <header className="mb-12 text-center">
-              <div className="mb-4">
-                <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                  {caseStudy.industry}
-<<<<<<< HEAD
-=======
-            {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <header className="mb-12 text-center">
-              <div className="mb-4">
-                <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                  {caseStudy.industry  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
               <p className="text-xl text-cyan-400 font-semibold mb-4">{caseStudy.company}</p>
               <p className="text-white/80 text-lg max-w-3xl mx-auto">{caseStudy.description}</p>
             </header>
-<<<<<<< HEAD
+
             {/* Key Results */}
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-            {/* Key Results */}
-=======
-
-<<<<<<< HEAD
-            {/* Key Results */}
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            {/* Key Results */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.results}</p>
               </div>
             </section>
-<<<<<<< HEAD
+
             {/* Detailed Analysis */}
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-            {/* Detailed Analysis */}
-=======
-
-<<<<<<< HEAD
-            {/* Detailed Analysis */}
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            {/* Detailed Analysis */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
               <div className="space-y-6">
                 <div className="bg-blue-500/10 rounded-lg p-6 border border-blue-500/20">
                   <h3 className="text-xl font-semibold text-blue-400 mb-3">Implementation Strategy</h3>
                   <p className="text-white/90">
-<<<<<<< HEAD
+
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance
                     quality control, and production optimization. Each system was designed to work independently while
-
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance
-=======
-
-<<<<<<< HEAD
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
-                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance
                     quality control, and production optimization. Each system was designed to work independently while
 
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
                     quality control, and production optimization. Each system was designed to work independently while
-                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
-                    quality control, and production optimization. Each system was designed to work independently while
-=======
-
-                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
-                    quality control, and production optimization. Each system was designed to work independently while
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance, 
                     quality control, and production optimization. Each system was designed to work independently while 
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     sharing data for comprehensive insights.
                   </p>
                 </div>
                 <div className="bg-purple-500/10 rounded-lg p-6 border border-purple-500/20">
                   <h3 className="text-xl font-semibold text-purple-400 mb-3">Technology Stack</h3>
                   <p className="text-white/90">
-<<<<<<< HEAD
+
                     We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and 
                     predictive analytics to create a comprehensive automation solution that could adapt to changing 
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-                    We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and 
-                    predictive analytics to create a comprehensive automation solution that could adapt to changing 
-=======
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and
-                    predictive analytics to create a comprehensive automation solution that could adapt to changing
-
-
-<<<<<<< HEAD
-                    We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and 
-                    predictive analytics to create a comprehensive automation solution that could adapt to changing 
-                    We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and
-                    predictive analytics to create a comprehensive automation solution that could adapt to changing
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     production requirements.
                   </p>
                 </div>
                 <div className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
                   <h3 className="text-xl font-semibold text-yellow-400 mb-3">Business Impact</h3>
                   <p className="text-white/90">
-<<<<<<< HEAD
+
                     The implementation resulted in significant improvements across all key metrics, with the most 
                     notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime. 
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-                    The implementation resulted in significant improvements across all key metrics, with the most 
-                    notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime. 
-=======
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-                    The implementation resulted in significant improvements across all key metrics, with the most
-                    notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime.
-
-
-<<<<<<< HEAD
-                    The implementation resulted in significant improvements across all key metrics, with the most 
-                    notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime. 
-                    The implementation resulted in significant improvements across all key metrics, with the most
-                    notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime.
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     These improvements directly translated to increased profitability and customer satisfaction.
                   </p>
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
+
             {/* Related Resources */}
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-            {/* Related Resources */}
-=======
-
-<<<<<<< HEAD
-            {/* Related Resources */}
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            <section className="mb-12">
-              <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Link 
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            {/* Related Resources */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-=======
 
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   href="/case-studies/ai-automation-manufacturing"
                   className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"
                 >
                   <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Full Case Study</h3>
                   <p className="text-white/80 text-sm">Read the complete case study with detailed implementation insights.</p>
                 </Link>
-<<<<<<< HEAD
-                <Link
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-                <Link
-=======
 
-
-
-<<<<<<< HEAD
                 <Link
-                <Link 
-                <Link
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   href="/resources/whitepapers/autonomous-systems-guide.pdf"
                   className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"
                 >
@@ -410,99 +110,33 @@ export default function ResourceCaseStudyPage() {
                 </Link>
               </div>
             </section>
-<<<<<<< HEAD
+
             {/* Call to Action */}
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-            {/* Call to Action */}
-=======
-
-<<<<<<< HEAD
-            {/* Call to Action */}
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-            {/* Call to Action */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-=======
-<<<<<<< HEAD
-                  This resource demonstrates the real impact of AI automation in manufacturing. 
-                  Let's discuss how we can help you achieve similar results.
-                </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                  <Link 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
                   This resource demonstrates the real impact of AI automation in manufacturing.
                   Let's discuss how we can help you achieve similar results.
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-=======
 
-
-
-=======
-
-
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Get Started
                   </Link>
-<<<<<<< HEAD
+
                   <Link
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-                  <Link
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
-                    href="/resources"
-                    className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
-<<<<<<< HEAD
                   <Link
                   <Link 
                   <Link
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
                   >
                     Explore More Resources
                   </Link>
@@ -513,23 +147,8 @@ export default function ResourceCaseStudyPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-  )
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-  )
-=======
-<<<<<<< HEAD
-}
 
-  );
-};
   )
-=======
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 }
   )
 export default function ResourceCaseStudyPage(req, res) {
@@ -592,85 +211,7 @@ export default function ResourceCaseStudyPage(req, res) {
                 <p className="text-white/90 text-lg">{caseStudy.results}</p>;
               </div>;
             </section>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-=======
-            {/* Detailed Analysis */}
-            <section className="mb - 12">;
-              <h2 className="text - 2xl font - semibold mb - 6 text - blue - 400">Detailed Analysis</h2>;
-              <div className="space - y-6">;
-                <div className="bg - blue - 500 / 10 rounded - lg p - 6 border border - blue - 500 / 20">;
-                  <h3 className="text - xl font - semibold text - blue - 400 mb - 3">Implementation Strategy</h3>;
-                  <p className="text - white / 90">;
-                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function ResourceCaseStudyPage(req, res) {
-  try {
-  const caseStudy = {;
-    id: 'ai-automation-manufacturing';
-    title: 'AI-Powered Manufacturing Automation';
-    company: 'Global Manufacturing Corp';
-    industry: 'Manufacturing';
-    results: '40% increase in production efficiency, 60% reduction in downtime',;
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.';
-  };
-  return (;
-    <>;
-      <Head>;
-        <title>{caseStudy.title} - Resource | Zion Tech Group</title>;
-        <meta name="description" content={caseStudy.description} />;
-        <meta name="keywords" content="AI automation, manufacturing, resource, case study, predictive maintenance" />;
-      </Head>;
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          <div className="max-w-4xl mx-auto">;
-            {/* Breadcrumb */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <nav className="mb-8">;
-              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">;
-                ← Back to Resources;
-              </Link>;
-            </nav>;
-            {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <header className="mb-12 text-center">;
-              <div className="mb-4">;
-                <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">;
-                  {caseStudy.industry  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </span>;
-              </div>;
-              <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>;
-              <p className="text-xl text-cyan-400 font-semibold mb-4">{caseStudy.company}</p>;
-              <p className="text-white/80 text-lg max-w-3xl mx-auto">{caseStudy.description}</p>;
-            </header>;
-            {/* Key Results */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <section className="mb-12">;
-              <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>;
-              <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">;
-                <p className="text-white/90 text-lg">{caseStudy.results}</p>;
-              </div>;
-            </section>;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
             {/* Detailed Analysis */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -767,30 +308,6 @@ export default function ResourceCaseStudyPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD:pages_backup_conflict_1757239547/resources/case-studies/ai-automation-manufacturing.tsx
-=======
-<<<<<<< HEAD
 
 
-    </>);
-}
-    </>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/resources/case-studies/ai-automation-manufacturing.tsx
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc

@@ -1,29 +1,9 @@
-<<<<<<< HEAD
-import {NotificationType} from './types';'
-import {createNotification} from './createNotification';'
-=======
-<<<<<<< HEAD
-import {createNotification} from './createNotification';
 
-=======
-<<<<<<< HEAD
 import { NotificationType  } from './types';
 import { createNotification } from './createNotification';
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 import {NotificationType} from './types';
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import {createNotification} from './createNotification';
 
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 /**
  * Demo function to create test notifications for the current user
  */
@@ -67,78 +47,8 @@ const random_type = types[Math.floor (Math.random () * types.length)],;
 import { createNotification } from './createNotification';'
 /**;
  * Demo function to create test notifications for the current user;
-<<<<<<< HEAD
  */;
 export async function createTestNotification() {;
-=======
- */
-export async function createTestNotification(userId: string) {}
-  try {';
-  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-<<<<<<< HEAD
-
-    'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!
-  };
-
-import {NotificationType} from './types';
-
-import {create_notification} from './create_notification';
-/**;
-*/;
-
-  const actions = {
-    'message': { url: '/messages', text: 'View Messages' }
-    'quote_request': { url: '/quotes', text: 'View Quote' }
-    'booking_confirmation': { url: '/bookings', text: 'View Booking' }
-    'hire_request': { url: '/dashboard', text: 'View Request' }
-    'onboarding': { url: '/profile', text: 'Complete Profile' }
-
-    'system': { url: '/dashboard', text: 'Learn More' }
-
-import { NotificationType } from './types',;
-
-}
-
-    sendEmail: true;,
-  actionUrl: actions[randomType].url;
-    actionText: actions[randomType].text;)
-
-  });
-}
-;
-}
-
-;
-
-}
-
-;
-
-    user_id;
-    title: titles[random_type];
-    message: messages[random_type];
-    type: random_type;
-    send_email: true;
-    action_url: actions[random_type].url,
-    action_text: actions[random_type].text;
-  });
-
-;
-=======
-
-    'message': 'You have received a new message from a potential client && client.quote_request': 'A client has submitted a quote request for your services && services.booking_confirmation': 'Your booking has been confirmed and scheduled && scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details && details.onboarding': 'Complete your profile to get more visibility and job matches && matches.system': 'Our platform has been updated with new features. Check them out!
-  };
-
-import {NotificationType} from './types';
-
-import {create_notification} from './create_notification';
-/**;
-*/;
-
-=======
-<<<<<<< HEAD
-    'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!'
->>>>>>> origin/resolved-merge-conflicts
   }
   const 'types': NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'],;'
   const randomType = types[Math.floor(Math.random() * types.length)],;
@@ -198,13 +108,5 @@ import {create_notification} from './create_notification';
 }
 }
 ;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
+;

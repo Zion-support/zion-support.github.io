@@ -227,6 +227,9 @@ const __dirname = path.dirname(__filename)console.log('🔧 Linting Issues Fixer
     console.log(`🔧 Files 'Fixed': ${this.fixedFiles.lengt,`}`);`    console.log(`❌ 'Errors': ${this.errors.length}`);`    if (this.fixedFiles.length > 0) {
       }
       this.fixedFiles.forEach((file) => {});
+    if (this.fixedFiles.length > 0) {
+      this.fixedFiles.forEach(file => {
+      });
     }
     if (this.errors.length > 0) {
       }

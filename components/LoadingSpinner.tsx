@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
 import React from 'react';'
 
 interface LoadingSpinnerProps  {size?: 'sm' | 'md' | 'lg';'
@@ -121,33 +117,6 @@ const sizeClasses = {'    'sm': 'w-4 h-4, 'md':, w-8 h-8', '    'lg': 'w-12 h-1,
 interface LoadingSpinnerProps  {interface LoadingSpinnerProps  {size?: 'sm' | 'md' | 'lg' | 'xl';'
   }
   color?: 'blue' | 'white' | 'gray' | 'slate';'
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-}
-
-
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-slate-300 border-t-blue-600`} />
-      {text && (
-        <p className="mt-2 text-slate-400 text-sm">{text}</p>
-      )}
-    </div>
-  )
-}
-
-export default LoadingSpinner
-=======
-<<<<<<< HEAD
-import React from 'react';
-
-interface LoadingSpinnerProps {
-<<<<<<< HEAD
-  size?: 'sm' | 'md' | 'lg';
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
   text?: string;
   full_screen?: boolean;
   class_name?: string;
@@ -164,22 +133,7 @@ const 'LoadingSpinner': React.FC < LoadingSpinnerProps> = ({size = 'md',text = '
   const size_classes = {'sm': 'w - 4 h - 4','md': 'w - 8 h - 8','lg': 'w - 12 h - 12';'
   }
   class_name = '' }) => ;'
-<<<<<<< HEAD
   const size_classes = {'sm': 'w - 4 h - 4','md': 'w - 8 h - 8','lg': 'w - 12 h - 12';'
-=======
-<<<<<<< HEAD
-  const size_classes = {"sm": 'w - 4 h - 4',"md": 'w - 8 h - 8',"lg": 'w - 12 h - 12';'
-=======
-=======
-const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({size = 'md',text = 'Loading...',class_name = '' }) => ;
-  const size_classes = {sm: 'w - 4 h - 4',}
-  md: 'w - 8 h - 8',lg: 'w - 12 h - 12';}
-  class_name = '' }) => ;
-  const size_classes = {sm: 'w - 4 h - 4',}
-  md: 'w - 8 h - 8',lg: 'w - 12 h - 12';}
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
   }
 
 const color_classes = {'blue': 'text - blue - 600','white': 'text - white','gray': 'text - gray - 600','slate': 'text - slate - 600';'
@@ -338,18 +292,7 @@ if ( {) {
   }
   return spinner;
 }
-<<<<<<< HEAD
 ;
-=======
-<<<<<<< HEAD
-;
-=======
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 export default LoadingSpinner;
 import React from 'react;
 import { Loader2 } from 'lucide-react;
@@ -376,94 +319,15 @@ export default function LoadingSpinner() {
         <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4'></div>
         <p className='text-lg'>Loading...</p>
       </div>
-<<<<<<< HEAD
-    </div>
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    </div>
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
   );
   } catch (error) {
     console.error('Error:', error);
     return res.status(500).json({ error: 'Internal server error' });
   }
-<<<<<<< HEAD
-=======
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({ size = 'md', text, '  class_name = ;    }) => {
-}
-}
-'  const size_classes = {'    sm: 'w - 4 h - 4',}
-  md: 'w - 8 h - 8',md: '    lg: 'w - 12 h - 12' }
-    md: '    lg: 'w - 12 h - 12'}
-  return (<div className={`flex flex - col items - center justify - center ${class_name}}    />      <Loader2 className={`${size_classes[size]} animate - spin text - blue - 600`}    />`      {text && (<p className=\"mt - 2 text - sm text - gray - 600 animate - pulse    />{text}</p>      )}\"    </div>)}
-    <div className={`flex flex-col items-center justify-center ${className}}    />      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`}    />`      {text && (<p className=\"mt-2 text-sm text-gray-600 animate-pulse    />{text}</p>      )}\"    </div>;
->>>>>>> origin/resolved-merge-conflicts
 }
 
 
-<<<<<<< HEAD
-=======
-export default function LoadingSpinner() {return (<div className=\"min-h-screen bg-slate-950 flex items-center justify-center\"    />;
-      <div className=\"text-center text-white\"    />;
-        <div className=\"animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4\"    /></div>;
-        <p className=\"text-lg\"    />Loading...</p>;
-      </div>;}
-    </div>;}
-  )} catch (error) {console.error(\"Error:\", error)return res.status(500).json({ error: \"Internal server error\" })}
-},
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps    /> = ({ size = 'md', }
-  className = '' }
-   }) => {
-
-
-
- ;
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-  md: 'w-8 h-8',
-    lg: 'w-12 h-12'}
- ,}
-};
-
-  return (
-    <div className={`inline-block ${className}`}    />
-      <div;
-className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`}
-        role=\"status\"
-        aria-label=\"Loading\"
-          />
-        <span className=\"sr-only\"    />Loading...</span>
-      </div>
-    </div>
-  )
-};
-
-
-export default LoadingSpinner;
-
->>>>>>> origin/chore/fix-lint-and-merge
->>>>>>> 09b7f5b76b3a513eae3b15ab3d3ff5712b092513
-=======
-<<<<<<< HEAD
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   size = 'md', text,'  className = ; }) => {'  const sizeClasses = {'    sm: 'w-4 h-4',
     md: 'w-8 h-8',
@@ -473,10 +337,3 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 };
 export default LoadingSpinner;
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts

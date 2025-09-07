@@ -1,45 +1,4 @@
-<<<<<<< HEAD
 
-export const real2036AIServices = [
-  {
-    id: 'ai-emotion-intelligence-platform'
-    name: 'AI Emotion Intelligence Platform'
-    tagline: 'Advanced emotional AI understanding'
-id: 'ai-emotion-intelligence-platform',
-    name: 'AI Emotion Intelligence Platform',
-    tagline: 'Advanced emotional AI understanding',
-origin/cursor/automate-test-improve-and-merge-code-2533
-    description:
-      'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
-    price: '$3,999',
-    period: 'month',
-    features: [
-
-export const real2036AIServices = [
-  {
-    id: 'ai-emotion-intelligence-platform'
-    name: 'AI Emotion Intelligence Platform'
-    tagline: 'Advanced emotional AI understanding'
-id: 'ai-emotion-intelligence-platform',
-    name: 'AI Emotion Intelligence Platform',
-    tagline: 'Advanced emotional AI understanding',
-origin/cursor/automate-test-improve-and-merge-code-2533
-
-id: 'ai-emotion-intelligence-platform',
-    name: 'AI Emotion Intelligence Platform',
-    tagline: 'Advanced emotional AI understanding',
-    description:
-      'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
-    price: '$3,999',
-    period: 'month',
-    features: [
-      'Emotion recognition',
-      'Sentiment analysis',
-      'Emotional response generation',
-      'Emotional intelligence training',
-      'Multi-modal emotion detection',
-      'Emotional pattern analysis',
-=======
 export const real2036AIServices = $2;
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
@@ -48,14 +7,12 @@ export const real2036AIServices = $2;
     period: 'month',
     features: [
       'Emotion recognitionSentiment analysisEmotional response generationEmotional intelligence trainingMulti-modal emotion detectionEmotional pattern analysis'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ],
     popular: true,
     category: 'Emotional AI',
     icon: '😊🤖',
     marketPrice: '$5,000-8,000/month',
     benefits: [
-<<<<<<< HEAD
       'Enhanced customer experience',
       'Better emotional understanding',
       'Improved human-AI interaction',
@@ -67,19 +24,11 @@ export const real2036AIServices = $2;
       'Education technology',
       'Human resources',
     ],
-=======
-      'Enhanced customer experienceBetter emotional understandingImproved human-AI interactionEmotional intelligence development'
-    ],
-    useCases: [
-      'Customer serviceMental health supportEducation technologyHuman resources'
-    ]
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
   {
     id: 'ai-creativity-orchestrator',
     name: 'AI Creativity Orchestrator',
     tagline: 'Intelligent creative collaboration',
-<<<<<<< HEAD
     description:
       'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.',
     price: '$2,999',
@@ -91,20 +40,12 @@ export const real2036AIServices = $2;
       'Creative process optimization',
       'Innovation management',
       'Creative analytics',
-=======
-    description: 'Advanced AI platform for orchestrating creative processes, generating innovative ideas, and facilitating human-AI creative collaboration. Features idea generation, creative workflow management, and artistic collaboration tools.',
-    price: '$2,999',
-    period: 'month',
-    features: [
-      'Creative idea generationWorkflow orchestrationArtistic collaboration toolsCreative process optimizationInnovation managementCreative analytics'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ],
     popular: true,
     category: 'Creative AI',
     icon: '🎨🤖',
     marketPrice: '$4,000-7,000/month',
     benefits: [
-<<<<<<< HEAD
       'Enhanced creativity',
       'Faster innovation cycles',
       'Better collaboration',
@@ -116,19 +57,11 @@ export const real2036AIServices = $2;
       'Content creation',
       'Research and development',
     ],
-=======
-      'Enhanced creativityFaster innovation cyclesBetter collaborationCreative process optimization'
-    ],
-    useCases: [
-      'Marketing campaignsProduct designContent creationResearch and development'
-    ]
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
   {
     id: 'ai-dream-interpreter-platform',
     name: 'AI Dream Interpreter Platform',
     tagline: 'Intelligent dream analysis',
-<<<<<<< HEAD
     description:
       'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.',
     price: '$1,999',
@@ -140,20 +73,12 @@ export const real2036AIServices = $2;
       'Dream journaling',
       'Pattern recognition',
       'Psychological insights',
-=======
-    description: 'Innovative AI platform for analyzing and interpreting dreams using advanced pattern recognition, psychological insights, and symbolic analysis. Features dream pattern analysis, psychological interpretation, and dream journaling.',
-    price: '$1,999',
-    period: 'month',
-    features: [
-      'Dream pattern analysisPsychological interpretationSymbolic analysisDream journalingPattern recognitionPsychological insights'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ],
     popular: false,
     category: 'Psychological AI',
     icon: '💭🤖',
     marketPrice: '$3,000-5,000/month',
     benefits: [
-<<<<<<< HEAD
       'Dream understanding',
       'Psychological insights',
       'Self-reflection tools',
@@ -165,19 +90,11 @@ export const real2036AIServices = $2;
       'Personal development',
       'Therapeutic applications',
     ],
-=======
-      'Dream understandingPsychological insightsSelf-reflection toolsMental health awareness'
-    ],
-    useCases: [
-      'Mental health supportPsychological researchPersonal developmentTherapeutic applications'
-    ]
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
   {
     id: 'ai-content-factory-pro',
     name: 'AI Content Factory Pro',
     tagline: 'Professional content generation',
-<<<<<<< HEAD
     description:
       'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.',
     price: '$4,999',
@@ -189,20 +106,12 @@ export const real2036AIServices = $2;
       'SEO integration',
       'Content analytics',
       'Automated publishing',
-=======
-    description: 'Professional-grade AI content generation platform for creating high-quality, engaging content across all media types. Features multi-format content creation, brand voice consistency, and content optimization.',
-    price: '$4,999',
-    period: 'month',
-    features: [
-      'Multi-format content creationBrand voice consistencyContent optimizationSEO integrationContent analyticsAutomated publishing'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ],
     popular: true,
     category: 'Content AI',
     icon: '📝🤖',
     marketPrice: '$6,000-10,000/month',
     benefits: [
-<<<<<<< HEAD
       '10x faster content creation',
       'Consistent brand voice',
       'SEO-optimized content',
@@ -214,19 +123,11 @@ export const real2036AIServices = $2;
       'Social media content',
       'Product descriptions',
     ],
-=======
-      '10x faster content creationConsistent brand voiceSEO-optimized contentScalable content production'
-    ],
-    useCases: [
-      'Marketing contentBlog writingSocial media contentProduct descriptions'
-    ]
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
   {
     id: 'ai-customer-intelligence-platform',
     name: 'AI Customer Intelligence Platform',
     tagline: 'Deep customer understanding',
-<<<<<<< HEAD
     description:
       'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.',
     price: '$5,999',
@@ -238,20 +139,12 @@ export const real2036AIServices = $2;
       'Behavior analysis',
       'Customer segmentation',
       'Predictive modeling',
-=======
-    description: 'Advanced AI platform for deep customer intelligence, behavior analysis, and predictive customer insights. Features customer journey mapping, predictive analytics, and personalized recommendations.',
-    price: '$5,999',
-    period: 'month',
-    features: [
-      'Customer journey mappingPredictive analyticsPersonalized recommendationsBehavior analysisCustomer segmentationPredictive modeling'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ],
     popular: true,
     category: 'Customer AI',
     icon: '👥🤖',
     marketPrice: '$7,000-12,000/month',
     benefits: [
-<<<<<<< HEAD
       'Deep customer insights',
       'Predictive customer behavior',
       'Personalized experiences',
@@ -263,19 +156,11 @@ export const real2036AIServices = $2;
       'Marketing campaigns',
       'Product development',
     ],
-=======
-      'Deep customer insightsPredictive customer behaviorPersonalized experiencesImproved customer retention'
-    ],
-    useCases: [
-      'E-commerce optimizationCustomer serviceMarketing campaignsProduct development'
-    ]
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
   {
     id: 'ai-autonomous-marketing-platform',
     name: 'AI Autonomous Marketing Platform',
     tagline: 'Self-optimizing marketing',
-<<<<<<< HEAD
     description:
       'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.',
     price: '$6,999',
@@ -287,20 +172,12 @@ export const real2036AIServices = $2;
       'Performance maximization',
       'Automated A/B testing',
       'ROI optimization',
-=======
-    description: 'Revolutionary AI platform for autonomous marketing operations, campaign optimization, and performance maximization. Features autonomous campaign management, real-time optimization, and predictive marketing strategies.',
-    price: '$6,999',
-    period: 'month',
-    features: [
-      'Autonomous campaign managementReal-time optimizationPredictive marketing strategiesPerformance maximizationAutomated A/B testingROI optimization'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ],
     popular: true,
     category: 'Marketing AI',
     icon: '📈🤖',
     marketPrice: '$8,000-15,000/month',
     benefits: [
-<<<<<<< HEAD
       'Autonomous marketing operations',
       'Maximum ROI optimization',
       'Real-time performance improvement',
@@ -312,19 +189,11 @@ export const real2036AIServices = $2;
       'Social media marketing',
       'Content marketing',
     ],
-=======
-      'Autonomous marketing operationsMaximum ROI optimizationReal-time performance improvementScalable marketing automation'
-    ],
-    useCases: [
-      'Digital advertisingEmail marketingSocial media marketingContent marketing'
-    ]
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
   {
     id: 'ai-autonomous-research-assistant',
     name: 'AI Autonomous Research Assistant',
     tagline: 'Intelligent research automation',
-<<<<<<< HEAD
     description:
       'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.',
     price: '$3,499',
@@ -336,20 +205,12 @@ export const real2036AIServices = $2;
       'Research automation',
       'Data synthesis',
       'Report generation',
-=======
-    description: 'Advanced AI research assistant that autonomously conducts research, analyzes data, and generates insights. Features automated research workflows, data analysis, and insight generation.',
-    price: '$3,499',
-    period: 'month',
-    features: [
-      'Automated research workflowsData analysisInsight generationResearch automationData synthesisReport generation'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ],
     popular: true,
     category: 'Research AI',
     icon: '🔬🤖',
     marketPrice: '$4,500-7,000/month',
     benefits: [
-<<<<<<< HEAD
       'Automated research processes',
       'Faster insight generation',
       'Comprehensive data analysis',
@@ -361,19 +222,11 @@ export const real2036AIServices = $2;
       'Business intelligence',
       'Competitive analysis',
     ],
-=======
-      'Automated research processesFaster insight generationComprehensive data analysisScalable research operations'
-    ],
-    useCases: [
-      'Market researchAcademic researchBusiness intelligenceCompetitive analysis'
-    ]
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
   {
     id: 'ai-autonomous-decision-engine',
     name: 'AI Autonomous Decision Engine',
     tagline: 'Intelligent decision automation',
-<<<<<<< HEAD
     description:
       'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.',
     price: '$7,999',
@@ -385,20 +238,12 @@ export const real2036AIServices = $2;
       'Business rule engine',
       'Predictive modeling',
       'Decision analytics',
-=======
-    description: 'Advanced AI decision engine that autonomously makes complex decisions based on data analysis, predictive modeling, and business rules. Features decision automation, risk assessment, and outcome prediction.',
-    price: '$7,999',
-    period: 'month',
-    features: [
-      'Decision automationRisk assessmentOutcome predictionBusiness rule enginePredictive modelingDecision analytics'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ],
     popular: true,
     category: 'Decision AI',
     icon: '🎯🤖',
     marketPrice: '$10,000-18,000/month',
     benefits: [
-<<<<<<< HEAD
       'Automated decision making',
       'Risk reduction',
       'Faster decision cycles',
@@ -410,19 +255,11 @@ export const real2036AIServices = $2;
       'Strategic planning',
       'Risk management',
     ],
-=======
-      'Automated decision makingRisk reductionFaster decision cyclesData-driven decisions'
-    ],
-    useCases: [
-      'Financial decisionsOperational decisionsStrategic planningRisk management'
-    ]
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   },
   {
     id: 'ai-autonomous-ecosystem-manager',
     name: 'AI Autonomous Ecosystem Manager',
     tagline: 'Intelligent ecosystem orchestration',
-<<<<<<< HEAD
     description:
       'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.',
     price: '$8,999',
@@ -434,20 +271,12 @@ export const real2036AIServices = $2;
       'Partnership orchestration',
       'Integration management',
       'Ecosystem analytics',
-=======
-    description: 'Revolutionary AI platform for managing and orchestrating complex business ecosystems, partnerships, and integrations. Features ecosystem mapping, relationship management, and autonomous optimization.',
-    price: '$8,999',
-    period: 'month',
-    features: [
-      'Ecosystem mappingRelationship managementAutonomous optimizationPartnership orchestrationIntegration managementEcosystem analytics'
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
     ],
     popular: false,
     category: 'Ecosystem AI',
     icon: '🌐🤖',
     marketPrice: '$12,000-20,000/month',
     benefits: [
-<<<<<<< HEAD
       'Ecosystem optimization',
       'Partnership maximization',
       'Integration efficiency',
@@ -2091,33 +1920,5 @@ export const real2036AIServices = [;
     "useCases": [;
       'Autonomous vehiclesFleet managementTraffic optimizationSafety systems';'
     ];
-=======
-      'Ecosystem optimizationPartnership maximizationIntegration efficiencyScalable ecosystem management'
-    ],
-    useCases: [
-      'Business partnershipsPlatform ecosystemsSupply chain managementDigital transformation'
-    ]
-  },
-  {
-    id: 'ai-autonomous-vehicle-ai',
-    name: 'AI Autonomous Vehicle AI',
-    tagline: 'Next-generation vehicle intelligence',
-    description: 'Advanced AI platform for autonomous vehicle operations, navigation, and safety systems. Features autonomous navigation, safety monitoring, and intelligent traffic management.',
-    price: '$9,999',
-    period: 'month',
-    features: [
-      'Autonomous navigationSafety monitoringTraffic managementVehicle optimizationPredictive maintenanceSafety systems'
-    ],
-    popular: true,
-    category: 'Vehicle AI',
-    icon: '🚗🤖',
-    marketPrice: '$15,000-25,000/month',
-    benefits: [
-      'Enhanced vehicle safetyAutonomous operationTraffic optimizationPredictive maintenance'
-    ],
-    useCases: [
-      'Autonomous vehiclesFleet managementTraffic optimizationSafety systems'
-    ]
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
   }
 ],

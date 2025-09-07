@@ -1,41 +1,12 @@
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
+
 import type { NextApiRequest, NextApiResponse } from "next";"
 import { requireUser } from "../../../../../utils/api/auth";
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../../../utils/api/auth";
-import {
-<<<<<<< HEAD
-  getProject
-  updateMilestone
-  assertParticipantOrAdmin
-  isClient
-  isTalent
-import type { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../../../utils/api/auth";
-import {
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/projects/[projectId]/milestones/[milestoneId].ts
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,;
   isTalent,;
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
-=======
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/projects/[projectId]/milestones/[milestoneId].ts
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -45,20 +16,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     projectId: string;
     milestoneId: string;
   }
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
 
-=======
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../../../utils/api/auth';
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
-import { isMilestoneStatus } from '../../../../../utils/types/milestones';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res);
-  if (!user) return;
-  const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string };
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/projects/[projectId]/milestones/[milestoneId].ts
+
   const project = getProject(projectId);
   if (!project) {
     res.status(404).json({ error: 'Project not found' });
@@ -69,48 +28,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return;
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
-=======
-  getProject
-  updateMilestone
-  assertParticipantOrAdmin
-  isClient
-  isTalent
-import type { NextApiRequest, NextApiResponse } from "next";
-import { requireUser } from "../../../../../utils/api/auth";
-import {
-  getProject,
-  updateMilestone,
-  assertParticipantOrAdmin,
-  isClient,
-  isTalent,;
-} from "../../../../../utils/api/projects";
-import { isMilestoneStatus } from "../../../../../utils/types/milestones";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const user = requireUser(req, res);
-  if (!user) return;
-  const { projectId, milestoneId } = req.query as {
-    projectId: string;
-    milestoneId: string;
-  }
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { requireUser } from '../../../../../utils/api/auth';
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
-import { isMilestoneStatus } from '../../../../../utils/types/milestones';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res);
-  if (!user) return;
-  const { projectId, milestoneId } = req.query as { projectId: string, milestoneId: string };
 
-    }
-  if (req && req.method === "PATCH") {
-    const body = req && req.body as any;
-    if (body && body.status && !isMilestoneStatus(body && body.status)) {
-      res && res.status(400).json({ error: "Invalid status" });
-      return;
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/projects/[projectId]/milestones/[milestoneId].ts
     }
     // Enforce status transition rules
     if (body.status) {
@@ -118,7 +37,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const isTalentUser = isTalent(project, user);
       const status: string = body.status;
       const allowed =
-<<<<<<< HEAD
         (status === 'In Progress' && isClientUser) ||
         (status === 'Submitted' && isTalentUser) ||
         (status === 'Approved' && isClientUser) ||
@@ -177,33 +95,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
     }
 
-=======
-
-        (status === 'In Progress' && isClientUser) ||
-        (status === 'Submitted' && isTalentUser) ||
-        (status === 'Approved' && isClientUser) ||
-        (status === 'Paid' && isClientUser);
-
-    }
-    res.status(200).json({ milestone: updated });
-    return;
-  }
-
-  if (req && req.method === "PATCH") {
-
-    const body = req && req.body as any;
-    if (body && body.status && !isMilestoneStatus(body && body.status)) {"
-      res && res.status(400).json({ error: "Invalid status" });
-
-      return;
-    }
-    // Enforce status transition rules;
-    if (body && body.status) {}
-      const status: string = body && body.status;
-
-      }
-    }
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {}
 "
@@ -211,19 +102,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(405).end("Method Not Allowed");
 }
 
-=======
-<<<<<<< HEAD
-const updated = updateMilestone(project, milestoneId, body);
-    if (!updated) {
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       return;
     }
     res && res.status(200).json({ milestone: updated });
     return;
-<<<<<<< HEAD
   }
 
 
@@ -550,12 +432,6 @@ export default function handler(req, res) {
   res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
 }
-=======
-  }
-
-
-=======
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/projects/[projectId]/milestones/[milestoneId].ts
 }
 ;
 
@@ -563,19 +439,9 @@ export default function handler(req, res) {
   res.status(405).end('Method Not Allowed')
 }
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD:pages_backup/api/projects/[projectId]/milestones/[milestoneId].ts
-}
-=======
-}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages/api/projects/[projectId]/milestones/[milestoneId].ts
+}

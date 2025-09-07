@@ -1,139 +1,18 @@
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
+
 import EnhancedLayout from '../components/layout/EnhancedLayout';'
 
 const CAPABILITIES = null;
 ];
-
-export default function CapabilitiesPage() {;
-  return (
-
-export default function CapabilitiesPage() {
-}
-return (;
-    <EnhancedLayout>
-<h1 className='text-2xl font-semibold'>Capabilities</h1>'
-      <div className='mt-6 grid 'md': grid-cols-4 gap-4 text-sm'>'
-        {CAPABILITIES.map(c => (
-          <div
-}
-key={c}
-            className='rounded-xl border border-gray-200 'dark':border-gray-800 px-4 py-3 bg-white 'dark':bg-gray-950'>'
-
-            {
-}
-          </div>;
-        ))}
-  )}
-import EnhancedLayout from '../components / layout / EnhancedLayout';
-const CAPABILITIES = [;
-  'Full‑stack Web','Mobile (iOS / Android)','AI / ML','Cloud & DevOps','Data Engineering','Blockchain','IoT','Security', ];const CAPABILITIES = [;
-  'Full‑stack WebMobile (iOS / Android)AI / MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
-];export default /**;
- * CapabilitiesPage - Function description;
- */;
-function CapabilitiesPage() {return (<EnhancedLayout>;
-      <h1 className='text - 2xl font - semibold'>Capabilities</h1>;
-      <div className='mt - 6 grid md:grid - cols - 4 gap - 4 text - sm'>;
-        {CAPABILITIES.map (c => (<div;
-            key={c}
-            className='rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg - gray - 950';
-          >            {c}      <h1 className='text-2xl font-semibold'>Capabilities</h1>;
-      <div className='mt - 6 grid md:grid - cols - 4 gap-4 text-sm'>;
-        {CAPABILITIES.map ((c) => (<div key={c} className='rounded - xl border border - gray - 200 dark:border - gray - 800 px - 4 py - 3 bg - white dark:bg-gray-950'>;
-          </div>))}
-      </div>;
-    </EnhancedLayout>)const CAPABILITIES = [;
-  'Full‑stack Web';
-  'Mobile (iOS/Android)';
-  'AI/ML';
-  'Cloud & DevOps';
-  'Data Engineering';
-  'Blockchain';
-  'IoT';
-  'Security',];const CAPABILITIES = [;
-  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
-];export default function CapabilitiesPage() {import EnhancedLayout from '../components/layout/EnhancedLayout';
-const CAPABILITIES = null;
-];
-export default function CapabilitiesPage() {return (<EnhancedLayout>;
-<h1 className='text-2xl font-semibold'>Capabilities</h1>;
-      <div className='mt-6 grid md:grid-cols-4 gap-4 text-sm'>;
-        {CAPABILITIES.map(c => (<div;
-            key={c}
-            className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950';
-          >;
-  return (
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-const CAPABILITIES = [;
-  'Full‑stack Web',;
-  'Mobile (iOS/Android)',;
-  'AI/ML',;
-  'Cloud & DevOps',;
-  'Data Engineering',;
-  'Blockchain',;
-  'IoT',;
-  'Security',];const CAPABILITIES = [;
-  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity';
-const CAPABILITIES = [
-  'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-];
 export default function CapabilitiesPage() {;
   return (
 
 
         ))}
 
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
-    <EnhancedLayout>
-      <h1 className='text-2xl font-semibold'>Capabilities</h1>
-      <div className='mt-6 grid md:grid-cols-4 gap-4 text-sm'>
-        {CAPABILITIES.map((c) => (
-<<<<<<< HEAD
-          <div key={c} className='rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950'>
-=======
-          <div key={c} className="rounded-xl border border-gray-200 dark:border-gray-800 px-4 py-3 bg-white dark:bg-gray-950">
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
-            {c}
-          </div>
-        ))}
-      </div>;
-    </EnhancedLayout>;
-)}
-  )}
-    </EnhancedLayout>;
-<<<<<<< HEAD
-=======
-=======
-{c}
-          </div>
-        ))}
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-      </div>;
-    </EnhancedLayout>;
-  );
-}
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-  );
-}
+  )}
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 const CAPABILITIES = [;
   'Full‑stack Web',
@@ -198,31 +77,17 @@ export default function CapabilitiesPage() {
         ))}
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  )
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
       </div>
 
   );
 }
 
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts
 );
 }
   );
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/resolved-merge-conflicts
+
     </EnhancedLayout>;
 );
 }
@@ -232,20 +97,9 @@ export default function CapabilitiesPage() {
     </EnhancedLayout>
   )
 }
-<<<<<<< HEAD
-=======
-=======
-=======
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
-    </EnhancedLayout>;
-);
-}
-=======
 
 
-<<<<<<< HEAD
+
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 const CAPABILITIES = null;
@@ -266,24 +120,10 @@ key={c}
 }
           </div>;
         ))}
->>>>>>> origin/chore/fix-lint-and-merge
 
       </div>
     </EnhancedLayout>
 
   );
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/chore/fix-lint-and-merge
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> merged-prs-20250907-203621
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> origin/resolved-merge-conflicts

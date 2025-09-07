@@ -3,31 +3,9 @@
  * Final Automation Report Generator;
  * Generates a comprehensive report of all automation activities;
  */
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
 const fs = require('fs')
 const path = require(path')
   log(message, type = 'INFO)
@@ -47,7 +25,6 @@ const path = require(path')
       'intelligent-code-refactor-report.json
           const report = JSON.parse(fs.readFileSync(reportFile, utf8')
           if (report.summary && report.summary.status === 'completed')
-<<<<<<< HEAD
         this.log(`"Warning`)
       improvements"
       "optimizations
@@ -77,65 +54,8 @@ const path = require(path')
     this.log(`� New Scripts "Created`)
       this.log(` Final Automation Report failed"`)
 
-=======
-        this.log(`"Warning"`)
-      "improvements"
-      "optimizations"
-      "newScripts"
-        "buildTime"
-        "optimizationLevel"
-        "imageOptimization"
-        "codeSplitting"
-        "securityHeaders"
-        "xssProtection"
-        "csrfProtection"
-        "dependencyAudit"
-        "structuredData"
-        "metaTags"
-        "duplicateCode"
-        "successRate"
-        "coverage"
-        "typescriptCompilation"
-        "eslintValidation"
-        "buildTest"
-        "compilationTime"
-        "bundleOptimization"
-        "typeChecking"
-    this.log(` Success "Rate"`)
-    this.log(` Total "Improvements"`)
-    this.log(`⚡ Total "Optimizations"`)
-    this.log(`� New Scripts "Created"`)
-      this.log(` Final Automation Report "failed"`)
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
-=======
 
-
-const fs = require('fs')
-const path = require('path')
-  log(message, type = 'INFO')
->>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
-
->>>>>>> 753c4bb47d55b0f2dc92218ec4b81f11e78f93ea
-=======
     console.error('Final Automation Report "failed")
     console.error('Final Automation Report "failed")
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8ae2
-=======
 
->>>>>>> e4b7ef6db80249bcb1cd766dc3ddc71720bc9a31
->>>>>>> origin/chore/fix-lint-and-merge
-<<<<<<< HEAD
-=======
-=======
-    console.error('Final Automation Report "failed")
-=======
-    console.error('Final Automation Report "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
->>>>>>> 24132684af15a4d83201b2a91ee50324edfabedc
+
