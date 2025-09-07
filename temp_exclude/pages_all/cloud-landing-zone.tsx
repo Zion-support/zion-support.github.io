@@ -3,8 +3,15 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Cloud, Star } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD:temp_exclude/pages_all/cloud-landing-zone.tsx
 export default function CloudLandingZonePage() {
   const service = $2;
+=======
+export default function AISEOOptimizationPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
+  if (!service) return null
+export default function AISEOOptimizationPage() {
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/ai-seo-optimization.tsx
   if (!service) return null,
 
   return (

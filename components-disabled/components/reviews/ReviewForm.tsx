@@ -116,7 +116,14 @@ import React, { useState } from 'react';
 
 export type ReviewFormValues = any;
 
+<<<<<<< HEAD
 const ReviewForm: React.FC<Props /> = ({ initial   ,}
+=======
+<<<<<<< HEAD
+=======
+const ReviewForm: React.FC<Props /> = ({ initial   ,}
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 }) => {
 
 const [rating, setRating] = useState(0);
@@ -175,28 +182,43 @@ type Props = {;
 };
 
 type Props = {
+<<<<<<< HEAD
   initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;
 }
 const ReviewForm: React.FC < Props> = ({ initial   ,}
 }) => {
 
+=======
+<<<<<<< HEAD
+  }
+  "initial": Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;'
+
+}) => {
+
+
+
+  }
+
+
+
+=======
+  initial: Pick < ReviewFormValues, 'project_id' | 'from_role' | 'from_id'>;
+}
+const ReviewForm: React.FC < Props> = ({ initial   ,}
+}) => {
+
+>>>>>>> merged-prs-20250907-203621
   const [rating, set_rating] = useState (0);
+>>>>>>> origin/chore/fix-lint-and-merge
 
 const [text, set_text] = useState ('');
 
-const [anonymous, set_anonymous] = useState (false);
 
-const [communication, set_communication] = useState < number | undefined>();
 
-const [qualityOfWork, setQualityOfWork] = useState < number | undefined>();
 
-const [timeliness, set_timeliness] = useState < number | undefined>();
 
-const [wouldWorkWithAgain, setWouldWorkWithAgain] = useState < boolean>(false);
 
-const [submitting, set_submitting] = useState (false);
 
-const [message, set_message] = useState < string | null>(null);
 ;
   async /**
  * handle_submit - Function description;
@@ -269,8 +291,17 @@ const res = await fetch('/api/reviews/submit', {;
     } finally {;
       });
 
+<<<<<<< HEAD
 const data = await res && res.json();
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
+=======
+<<<<<<< HEAD
+      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');'
+=======
+const data = await res && res.json();
+      if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 
       setMessage('Review submitted! Pending admin approval.');
     } catch (err: any) {;}
@@ -278,10 +309,28 @@ const data = await res && res.json();
     } finally {;}
       setSubmitting(false);    }
   }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+return (;
+const data = await res.json ();
+      if (throw new Error (data.error || 'Failed to submit')) {'
+  $2
+}
+      set_message ('Review submitted! Pending admin approval.')} catch ("err": any) {set_message (err.message)} finally {set_submitting (false)}'
+  }
+  return (<form on_submit={handle_submi
+} className='space - y-6'>;'
+=======
+>>>>>>> merged-prs-20250907-203621
   return (
 
     <form onSubmit={handleSubmit} className='space-y-6'>;
 </form>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <div>;
 </div>
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />;

@@ -1,52 +1,77 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
-      "smart-testing-automation.log"
+      smart-testing-automation.log
       this.projectRoot,logs"
-      "test-results.json"
-      this.projectRoot,logs"
+      "test-results.json
+      this.projectRoot,logs
       "test-coverage.json"
-  "react"
-          "testType": "component"
+  react
+          "testType": component
   "pattern"
-          "testType": "component"
-  "pattern"
-          "testType": "utility"
-  "pattern": /export\s+const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", ""testType": "utility"", "}", ""
-      "hooks"
-  pattern: /export\s+(?:default\s+)?function\s+use([A-Z]["a-zA-Z0-9]*)/g", ""testType": "hook"", "}", ""
+          testType: "component"
+  pattern
+          "testType": utility
+  "pattern": /export\s+const\s+([a-z][a-zA-Z0-9]*)\s*=/g, ""testType: utility"", }, ""
+      hooks
+  pattern: /export\s+(?:default\s+)?function\s+use([A-Z]["a-zA-Z0-9]*)/g", testType": "hook, "}", 
       "utils"
-          "testType": "utility"
-  "pattern": /export\s+(?:default\s+)?const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", ""testType": "utility"", "}", ""
+          testType: "utility"
+  pattern: /export\s+(?:default\s+)?const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", testType": "utility, "}", 
   "react"
-          "testType": "component"
+          testType: "component"
+  pattern
+          "testType": component
   "pattern"
-          "testType": "component"
-  "pattern"
-          "testType": "utility"
-  "pattern": /export\s+const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", ""testType": "utility", "}", "
-      "hooks"
-  pattern: /export\s+(?:default\s+)?function\s+use([A-Z]["a-zA-Z0-9]*)/g", ""testType": "hook", "}", "
-      "utils"
-          "testType": "utility"
-  "pattern": /export\s+(?:default\s+)?const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", ""testType": "utility", "}", "
+          testType: "utility"
+  pattern: /export\s+const\s+([a-z]["a-zA-Z0-9]*)\s*=/g", testType": "utility, }", "
+      hooks
+  pattern: /export\s+(?:default\s+)?function\s+use([A-Z]["a-zA-Z0-9]*)/g", testType": "hook, }", "
+      utils
+          "testType": utility
+  "pattern": /export\s+(?:default\s+)?const\s+([a-z][a-zA-Z0-9]*)\s*=/g, ""testType: utility", "}, 
   fs.mkdirSync(logsDir, { "recursive"})
-  log(message, level = "INFO")
+  log(message, level = INFO)
   this.log("🧪 Starting smart testing automation...")
-  this.log("🧪 Starting smart testing automation...")
-    } catch (error) {  this.log(`Smart testing automation "failed": ${error.message  }`, "ERROR"`)
+  this.log(🧪 Starting smart testing automation...)
+    } catch (error) {  this.log(`Smart testing automation "failed": ${error.message  }`, ERROR`)
   "total"
-      "covered"
+      covered
       "uncovered"
-      "percentage"
+      percentage
       "files"
-      "components"
+      components
       "utilities"
-      "hooks"
+      hooks
   this.log(" Running Jest coverage analysis...")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const coverageOutput = execSync(npm run test -- --coverage --watchAll=false")
   "cwd"
               "stdio": "pipe"
@@ -69,19 +94,29 @@ const crypto = require("crypto")
     const srcDir = path.join(this.projectRoot, "src")
   const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")]
   const testContent = fs.readFileSync(testFile, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
         // Track what"
-  "suites"
-      "cases"
-      "components"
-      "utilities"
-      "hooks"
-    // Count test cases ("it/test")
+  "suites
+      cases"
+      "components
+      utilities"
+      "hooks
+    // Count test cases (it/test")
     // Identify what"
-      /import\s+{?\s*([A-Z][a-zA-Z0-9]*)\s*}?\s+""from/g""
-  "components"
+      /import\s+{?\s*([A-Z][a-zA-Z0-9]*)\s*}?\s+from/g""
+  components
       "utilities"
-      "hooks"
+      hooks
       "total"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
     const srcDir = path.join(this.projectRoot, "src")
     const sourceFiles = this.getAllFiles(srcDir, [".tsx", ".ts", ".jsx", ".js", ")]
   const content = fs.readFileSync(file, "utf8")
@@ -98,22 +133,29 @@ const crypto = require("crypto")
                 "line"
                 "exportType"
   this.log(Error analyzing source file ${file  }: ${error.message}")
+>>>>>>> origin/chore/fix-lint-and-merge
           "
   this.log(Error analyzing source file ${file}: ${error.message}")
-          "WARN"
+          WARN
           `WARN
   "components"
-      "utilities"
+      utilities
       "hooks"
-    for (const ["category", "patterns")]
-    for (const ["category", "patterns")]
-  "name"
+    for (const [category, "patterns")]
+    for (const [category, "patterns")]
+  name
             "file"
-            "type"
+            type
             "line"
-            "exportType": pattern.pattern.source.includes("default")
-              ? "default"
+            exportType: pattern.pattern.source.includes("default")
+              ? default
               : "named"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
   const lines = content.substring(0, index).split("\n")
   const testsDir = path.join(this.projectRoot, "tests")
     const testFiles = this.getAllFiles(testsDir, [".test.js", ".test.ts", ".test.jsx", ".test.tsx", ".spec.js", ".spec.ts", ".spec.jsx", ".spec.tsx", ")]
@@ -124,7 +166,9 @@ const crypto = require("crypto")
   if (category === "total")
             "testFile"
             "timestamp"
+>>>>>>> origin/chore/fix-lint-and-merge
           this.log(Generated test for ${item.name} in ${testFilePath}")
+<<<<<<< HEAD
             "
             "ERROR"
   "component"
@@ -132,22 +176,47 @@ const crypto = require("crypto")
       "hook"
   getComponentTestTemplate($2) {return "import React from "react"}
 import { render, screen  } from "@testing-";"library/react""
+=======
+            
+            ERROR"
+  "component
+      utility"
+      "hook
+  getComponentTestTemplate(item) {return import React from "react"}
+import { render, screen  } from @testing-;"library/react"
+>>>>>>> merged-prs-20250907-203621
 import { ${item.name} } from `${this.getRelativeImportPath(item.file)}
-describe("${item.name}")
+describe(${item.name}")
   it(")
-  import { render, screen  } from "@testing-";library/react""
-import { ${item.name} } from "${this.getRelativeImportPath(item.file)}"
+  import { render, screen  } from @testing-;library/react""
+import { ${item.name} } from ${this.getRelativeImportPath(item.file)}
 describe("${item.name}")
-  it("renders without crashing")
+  it(renders without crashing)
     expect(screen.getByTestId(`${item.name.toLowerCase()}
   it(")
-  it("should work correctly with valid input")
-  it("should handle edge cases")
+  it("should work correctly with valid input)
+  it(should handle edge cases")
   it(`should handle invalid input gracefully``)
+<<<<<<< HEAD
   return "import { ${item.name} } from "${this.getRelativeImportPath(item.file)}"
+=======
+<<<<<<< HEAD
+
+=======
+  return "import { ${item.name} } from "${this.getRelativeImportPath(item.file)}"
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
 describe("${item.name}")
-  it("should work correctly with valid input")
+  it(should work correctly with valid input)
   it("should handle edge cases")
+<<<<<<< HEAD
+
+describe("${item.name})
+  it()
+      .replace(/\\/g, `/``)
+      .replace(/\.(tsx?|jsx?)$/, ""
+
+=======
   it("should handle invalid input gracefully")
   return "import { renderHook, act  } from "@testing-";`library/react""
 import { ${item.name} } from `${this.getRelativeImportPath(item.file)}
@@ -163,15 +232,25 @@ describe("${item.name}")
   return importPath.replace("/index", ")
       path.join(this.projectRoot, "src")
     const testDir = path.join(this.projectRoot, "tests")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       relativePath.replace(/\.(tsx?|jsx?)$/, ".test.$1"
-  fs.mkdirSync(testDirPath, { "recursive"})
+  fs.mkdirSync(testDirPath, { recursive})
   "success"
-      "totalTests"
+      totalTests
       "passed"
-      "failed"
+      failed
       "errors"
-      "duration"
+      duration
   this.log("🧪 Running existing tests...")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
       const testOutput = execSync("npm test -- --watchAll=false")
   "cwd"
         "stdio": "pipe"
@@ -204,44 +283,93 @@ this.log(`Tests "failed": ${error.message}`, "ERROR"`)
     this.log(" Attempting to auto-fix failing tests...")
   this.log(" Attempting to auto-fix failing tests...")
   this.log(Failed to fix test failure in ${failure.testFile  }: ${error.message}")
+>>>>>>> origin/chore/fix-lint-and-merge
             "
   this.log(Failed to fix test failure in ${failure.testFile}: ${error.message}")
-            "ERROR"
+            ERROR
             `ERROR
-    } catch (error) {  this.log("Auto-fix process "failed": ${error.message  }", "ERROR")
-  // This would typically involve parsing Jest"
+    } catch (error) {  this.log("Auto-fix process "failed: ${error.message  }, "ERROR")
+  // This would typically involve parsing Jest
+    // For now, we
+    // For now, we"
+  "timestamp
+      summary"
+        "coverage
+        generatedTests"
+        "fixedTests
+      details"
+    this.log(Test report "generated)
+  // This would typically involve parsing Jest
     // For now, we"
     // For now, we"
-  "timestamp"
+  timestamp
       "summary"
-        "coverage"
+        coverage
         "generatedTests"
-        "fixedTests"
+        fixedTests
       "details"
-    this.log(Test report "generated")
-  // This would typically involve parsing Jest"
-    // For now, we"
-    // For now, we"
-  "timestamp"
-      "summary"
-        "coverage"
-        "generatedTests"
-        "fixedTests"
-      "details"
-    this.log(Test report "generated": ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed")
-      execSync(`git add .", { "cwd": this.projectRoot, "stdio": "pipe"`})
-      // Commit with descriptive messageconst commitMessage = "🧪 Test "Improvements": ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed";execSync("git commit -m "${commitMessage}"")
+    this.log(Test report generated: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed")
+      execSync(`git add .", { cwd: this.projectRoot, "stdio": pipe`})
+      // Commit with descriptive messageconst commitMessage = "🧪 Test "Improvements: ${generatedTests.length} tests generated, ${fixedTests.length} tests fixed;execSync("git commit -m "${commitMessage})
   "cwd"
+<<<<<<< HEAD
+
+=======
+        stdio: "
+      this.log(Committed test "improvements)
+        INFO"
+      )} catch (error) {  this.log(`Failed to commit test "improvements: ${error.message  }`, ERROR"`)
+  const fullPath = path.join(dir, ")
+  files.push(...this.getAllFiles(fullPath)
+>>>>>>> cursor/automate-test-improve-and-merge-code-18b6
+
+
+      this.log(🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation failed: ${error.message  }", ")
+
+      this.log(🧪 Smart Testing Automation completed successfully)} catch (error) {  this.log("Smart Testing Automation "failed: ${error.message  }, ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      this.log("🧪 Smart Testing Automation completed successfully)} catch (error) {  this.log(Smart Testing Automation "failed": ${error.message  }", ")
+
+=======
         "stdio": "
       this.log(Committed test "improvements")
         "INFO"
       )} catch (error) {  this.log(`Failed to commit test "improvements": ${error.message  }`, "ERROR"`)
   const fullPath = path.join(dir, ")
   files.push(...this.getAllFiles(fullPath")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> merged-prs-20250907-203621
 
+=======
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+<<<<<<< HEAD
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+
+
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
       this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+      this.log("🧪 Smart Testing Automation completed successfully")} catch (error) {  this.log("Smart Testing Automation "failed": ${error.message  }", ")
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 
 
-
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

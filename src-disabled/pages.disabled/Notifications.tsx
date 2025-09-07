@@ -6,7 +6,6 @@ import {
   NotificationContextType,;
 } from '@/context/notifications';
 import { formatDistanceToNow } from 'date-fns';
-import {
   Bell,
   Check,
   Trash2,
@@ -23,7 +22,6 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 origin/cursor/automate-test-improve-and-merge-code-2533
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
@@ -37,7 +35,6 @@ interface Notification {
   actionUrl?: string;
 }
 
-:src/pages/Notifications.tsx
 
 
 
@@ -55,8 +52,6 @@ interface Notification {
   action_url?: string;
 }
 
-:src/pages/Notifications.tsx
-          </div>
 
 
 
@@ -278,9 +273,26 @@ const NotificationCard: React.FC<{;
         <div className="mt-1">
           {getNotificationIcon(notification.type, 'h-6 w-6')}
         </div>
-      </div>
-    );
-  }
+        <div className="flex-1">
+          <div className="flex justify-between">
+            <div className="flex flex-col">
+              <h3 className="font-medium text-white">{notification.title}</h3>
+              <div className="flex items-center gap-2 mb-2">
+                {getNotificationTypeBadge(notification.type)}
+                <span className="text-xs text-zion-slate-light">
+                  {formatDistanceToNow(new Date(notification.created_at), {
+                    addSuffix: true})}
+                </span>
+                {!notification.read && (
+                  <Badge
+                    variant="outline"
+                    className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs"
+                  >
+                    New
+                  </Badge>
+                )}
+              </div>
+            </div>
 
             <div className="flex items-center gap-2">
               {!notification.read && (
@@ -417,8 +429,6 @@ export default function NotificationsPage() {
     </>;
   );
 }
-:src/pages/Notifications.tsx
-;
 ;
     default:;
       return <Badge variant="outline">Notification</Badge>;

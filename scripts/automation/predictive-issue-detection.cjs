@@ -1,14 +1,36 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+>>>>>>> merged-prs-20250907-203621
 #!/""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
 const crypto = require("crypto")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       this.projectRoot,logs"
-      "predictive-issue-detection.log"
+      predictive-issue-detection.log
       this.projectRoot,logs"
-      "issue-patterns.json"
-      this.projectRoot,logs"
+      "issue-patterns.json
+      this.projectRoot,logs
       "issue-predictions.json"
+<<<<<<< HEAD
+
+=======
       this.projectRoot,logs"
       "issue-history.json"
   fs.mkdirSync(logsDir, { "recursive"})
@@ -18,20 +40,40 @@ const crypto = require("crypto")
     } catch (error) {  this.log(`Failed to load issue "patterns": ${error.message  }`, "WARN"`)
   "buildPatterns"
   indicators: ["build-time-increase"", "memory-usage-spike", "slow-compilation"", ""]
+>>>>>>> origin/chore/fix-lint-and-merge
           "threshold"
-          "confidence"
-        "dependencyConflicts"
-  indicators: ["version-mismatch", "peer-dependency-warnings"", "build-failures", ""]
-          "threshold"
-          "confidence"
+          confidence
         "performanceDegradation"
-  indicators: ["bundle-size-increase"", "load-time-increase", "runtime-errors"", ""]
+  indicators: [bundle-size-increase", "load-time-increase, runtime-errors"", ]
           "threshold"
-          "confidence"
+          confidence
       "codePatterns"
-  indicators: ["code-duplication", "complex-functions"", "unused-imports", ""]
-          "threshold"
+  indicators: [code-duplication, "complex-functions", unused-imports", "]
+          threshold"
+          "confidence
+        securityVulnerabilities"
+  indicators: ["deprecated-apis, "unsafe-patterns", outdated-dependencies", "]
+          threshold"
+          "confidence
+        maintainabilityIssues"
+  indicators: ["long-files, deep-nesting", "magic-numbers]
+          threshold"
+          "confidence
+      runtimePatterns"
+  indicators: ["memory-leaks, garbage-collection", "heap-growth]
+          threshold"
+          "confidence
+        performanceIssues"
+  indicators: ["slow-rendering, "blocking-operations", inefficient-algorithms", "]
+          threshold"
+          "confidence
+        stabilityIssues"
+  indicators: ["crashes, unhandled-exceptions"", resource-exhaustion, ""]
+          threshold
           "confidence"
+<<<<<<< HEAD
+
+=======
         "securityVulnerabilities"
   indicators: ["deprecated-apis"", "unsafe-patterns", "outdated-dependencies"", ""]
           "threshold"
@@ -53,26 +95,45 @@ const crypto = require("crypto")
           "threshold"
           "confidence"
   return JSON.parse(fs.readFileSync(this.historicalDataLog, "utf8")
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "buildPatterns"
-  indicators: ["build-time-increase", "memory-usage-spike", "slow-compilation", "]
-          "threshold"
+  indicators: [build-time-increase, "memory-usage-spike", slow-compilation, "]
+          "threshold
+          confidence"
+        "dependencyConflicts
+  indicators: [version-mismatch", "peer-dependency-warnings, build-failures", "]
+          threshold
           "confidence"
-        "dependencyConflicts"
-  indicators: ["version-mismatch", "peer-dependency-warnings", "build-failures", "]
+        performanceDegradation
+  indicators: ["bundle-size-increase", load-time-increase, "runtime-errors", ]
+          threshold"
+          "confidence
+      codePatterns"
+  indicators: ["code-duplication, complex-functions", "unused-imports, ]
           "threshold"
-          "confidence"
-        "performanceDegradation"
-  indicators: ["bundle-size-increase", "load-time-increase", "runtime-errors", "]
-          "threshold"
-          "confidence"
-      "codePatterns"
-  indicators: ["code-duplication", "complex-functions", "unused-imports", "]
-          "threshold"
-          "confidence"
+          confidence
         "securityVulnerabilities"
-  indicators: ["deprecated-apis", "unsafe-patterns", "outdated-dependencies", "]
-          "threshold"
+  indicators: [deprecated-apis, "unsafe-patterns", outdated-dependencies, "]
+          "threshold
+          confidence"
+        "maintainabilityIssues
+  indicators: [long-files", "deep-nesting, magic-numbers"]
+          "threshold
+          confidence"
+      "runtimePatterns
+  indicators: [memory-leaks", "garbage-collection, heap-growth"]
+          "threshold
+          confidence"
+        "performanceIssues
+  indicators: [slow-rendering", "blocking-operations, inefficient-algorithms", "]
+          threshold
           "confidence"
+<<<<<<< HEAD
+
+=======
         "maintainabilityIssues"
   indicators: ["long-files", "deep-nesting", "magic-numbers"]
           "threshold"
@@ -147,10 +208,21 @@ const crypto = require("crypto")
   const complexityKeywords = ["if"", "else", "for"", "while", "do"", "switch", "case"", "catch", "&&"", "||", "?"", ""]
   for($2) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
   const complexityKeywords = ["if", "else", "for", "while", "do", "switch", "case", "catch", "&&", "||", "?", "]
+<<<<<<< HEAD
   for($2) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
+=======
+    for (const keyword of complexityKeywords) {const regex = new RegExp(`\\b${keyword}\\b`, "g"`)
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
   "duplicationScore"
-      "maintainabilityScore"
+      maintainabilityScore
       "securityScore"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> merged-prs-20250907-203621
       const lintResult = execSync("npm run lint")
   "encoding": "utf8"
         "stdio": "pipe"
@@ -166,11 +238,15 @@ const crypto = require("crypto")
       { "pattern": /localStorage\s*\[\s*[^]]*\+\s*[^]]*\]/g, "penalty"}
   const content = fs.readFileSync(file, "utf8")
   "memoryUsage"
+>>>>>>> origin/chore/fix-lint-and-merge
         "cpuUsage"
-        "uptime"
+        uptime
   "memoryUsage"
-        "cpuUsage"
+        cpuUsage
         "uptime"
+<<<<<<< HEAD
+
+=======
       runtimeMetrics.systemMetrics = await this.collectSystemMetrics()} catch (error) {  this.log(`Failed to collect runtime "metrics": ${error.message  }`, "WARN"`)
   const memoryInfo = execSync("free -m", { "encoding": "utf8"})
       const cpuInfo = execSync("top -bn1 | grep ")
@@ -179,8 +255,13 @@ const crypto = require("crypto")
       const cpuInfo = execSync("top -bn1 | grep Cpu(s)"
   "encoding": "utf8"
   "memoryInfo"
+>>>>>>> origin/chore/fix-lint-and-merge
         "cpuInfo"
+  return { error}
   return { "error"}
+<<<<<<< HEAD
+
+=======
   return { "error"}
       const outdatedResult = execSync("npm outdated --json")
   "encoding": "utf8"
@@ -272,35 +353,33 @@ const crypto = require("crypto")
     return "LONG_TERM"
   "type": "ANOMALY_BASED_PREDICTION"
         "metric": anomaly.metric,"description"
+>>>>>>> origin/chore/fix-lint-and-merge
         "probability"
-        "timeframe": "IMMEDIATE"
-        "severity"
-        "anomaly"
-  "type": "METRIC_BASED_PREDICTION"
-        "metric": "buildTime"
-        "description": Build time is approaching threshold, may cause ""CI/CD"" issues"
+        timeframe: "SHORT_TERM"
+        severity: "MEDIUM"
+  type: "METRIC_BASED_PREDICTION"
+        metric: "securityVulnerabilities"
+        description: Multiple security vulnerabilities may lead to security incidents"
+        "probability
+        timeframe": "IMMEDIATE
+        severity": "HIGH
+  type": "METRIC_BASED_PREDICTION
+        metric": "buildTime
+        description": Build time is approaching threshold, may cause "CI/CD issues
         "probability"
-        "timeframe": "SHORT_TERM"
-        "severity": "MEDIUM"
-  "type": "METRIC_BASED_PREDICTION"
-        "metric": "securityVulnerabilities"
-        "description": Multiple security vulnerabilities may lead to security incidents"
-        "probability"
-        "timeframe": "IMMEDIATE"
-        "severity": "HIGH"
-  "type": "METRIC_BASED_PREDICTION"
-        "metric": "buildTime"
-        "description": Build time is approaching threshold, may cause "CI/CD" issues"
-        "probability"
-        "timeframe": "SHORT_TERM"
-        "severity": "MEDIUM"
-  "type": "METRIC_BASED_PREDICTION"
-        "metric": "securityVulnerabilities"
-        "description": Multiple security vulnerabilities may lead to security incidents"
-        "probability"
-        "timeframe": "IMMEDIATE"
-        "severity": "HIGH"
+        timeframe: "SHORT_TERM"
+        severity: "MEDIUM"
+  type: "METRIC_BASED_PREDICTION"
+        metric: "securityVulnerabilities"
+        description: Multiple security vulnerabilities may lead to security incidents"
+        "probability
+        timeframe": "IMMEDIATE
+        severity": "HIGH
+    // For now, we
     // For now, we"
+<<<<<<< HEAD
+
+=======
     // For now, we"
   "type": "ML_PREDICTION"
         "metric": "codeQuality"
@@ -349,60 +428,62 @@ const crypto = require("crypto")
         "action": "schedule_prevention_sprint"
         "priority": "HIGH"
         "estimatedEffort": "MEDIUM"
+>>>>>>> origin/chore/fix-lint-and-merge
       confidenceAnalysis.predictions.filter(p => p.severity === "HIGH")
-  "title": "Multiple High-Severity Issues"
-        "description": "Address high-severity predictions immediately"
-        "action": "immediate_action_required"
-        "priority": "CRITICAL"
-        "estimatedEffort": "HIGH"
-      confidenceAnalysis.predictions.filter(p => p.severity === "HIGH")
-  "title": "Multiple High-Severity Issues"
-        "description": "Address high-severity predictions immediately"
-        "action": "immediate_action_required"
-        "priority": "CRITICAL"
-        "estimatedEffort": "HIGH"
+  title: "Multiple High-Severity Issues"
+        description: "Address high-severity predictions immediately"
+        action: "immediate_action_required"
+        priority: "CRITICAL"
+        estimatedEffort: "HIGH"
+      confidenceAnalysis.predictions.filter(p => p.severity === HIGH)
+  "title": Multiple High-Severity Issues
+        "description": Address high-severity predictions immediately
+        "action": immediate_action_required
+        "priority": CRITICAL
+        "estimatedEffort": HIGH
   this.log("Updating historical data...")
-  "timestamp"
+  timestamp
       "buildTime"
-      "bundleSize"
+      bundleSize
       "buildSuccess"
-  "timestamp"
+  timestamp
         "error"
-        "type": "BUILD_ERROR"
-  "timestamp"
+        type: "BUILD_ERROR"
+  timestamp
       "metrics"
-  "timestamp"
+  timestamp
       "predictions"
-      "metrics"
-      )} catch (error) {  this.log(`Failed to save historical "data": ${error.message  }`, "ERROR"`)
+      metrics
+      )} catch (error) {  this.log(`Failed to save historical "data": ${error.message  }`, ERROR`)
   "timestamp"
-      "summary"
+      summary
         "highConfidencePredictions"
-        "highSeverityPredictions": predictions.filter(p => p.severity === "HIGH")
-        "overallConfidence"
+        highSeverityPredictions: predictions.filter(p => p.severity === "HIGH")
+        overallConfidence
         "recommendationsGenerated"
-      "details"
+      details
         "predictions"
-        "confidenceAnalysis"
+        confidenceAnalysis
         "recommendations"
-      "nextSteps"
+      nextSteps
       this.projectRoot,logs"
-      this.projectRoot,logs", "predictive-issues-${Date.now()}.json"
-      this.projectRoot, "logs", "predictive-issues-${Date.now()}.json"
-this.log("Prediction report "generated": ${reportPath}")
+      this.projectRoot,logs", predictive-issues-${Date.now()}.json
+      this.projectRoot, "logs", predictive-issues-${Date.now()}.json
+this.log("Prediction report "generated: ${reportPath})
       p => p.timeframe === "IMMEDIATE"
-  "timeframe": "IMMEDIATE"
-        "actions": immediatePredictions.map(p => "Address ${p.metric} "issue": ${p.description}")
+  timeframe: "IMMEDIATE"
+        actions: immediatePredictions.map(p => "Address ${p.metric} "issue: ${p.description})
       r => r.timeframe === "SHORT_TERM"
-  "timeframe": "SHORT_TERM"
-        "actions"
+  timeframe: "SHORT_TERM"
+        actions
       r => r.timeframe === "LONG_TERM"
-  "timeframe": "LONG_TERM"
-        "actions"
+  timeframe: "LONG_TERM"
+        actions
       this.log("Predictive Issue Detection completed successfully")
-      return report} catch (error) {  this.log(`Predictive Issue Detection "failed": ${error.message  }`, "ERROR"`)
-// console.log(" Predictive Issue Detection completed")
+      return report} catch (error) {  this.log(`Predictive Issue Detection failed: ${error.message  }`, "ERROR"`)
+// console.log( Predictive Issue Detection completed)
   console.log(" Predictive Issue Detection completed")
+<<<<<<< HEAD
 
   console.error(" Predictive Issue Detection "failed")
   console.error(" Predictive Issue Detection "failed")
@@ -410,3 +491,39 @@ this.log("Prediction report "generated": ${reportPath}")
 
 
 
+=======
+<<<<<<< HEAD
+
+
+  console.error( Predictive Issue Detection failed")
+
+  console.error(" Predictive Issue Detection failed)
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  console.error(" Predictive Issue Detection "failed")
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-7ffc
+=======
+<<<<<<< HEAD
+  console.error(" Predictive Issue Detection "failed")
+>>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+  console.error(" Predictive Issue Detection "failed")
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+=======
+>>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
+
+
+>>>>>>> 61d39dd026fe5549161165ead85b131541010508
+>>>>>>> merged-prs-20250907-203621

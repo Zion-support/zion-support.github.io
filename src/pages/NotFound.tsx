@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef
 import { motion } from 'framer-motion';
 import { Home, ArrowLeft, Search } from 'lucide-react';
 
@@ -94,6 +100,7 @@ const NotFound = () => {
   );
 };
 
+<<<<<<< HEAD
 export default NotFound;
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -121,3 +128,38 @@ import React from 'react'; import { Link } from 'react-router-dom'; const NotFou
 
 import React from 'react'; import { Link } from 'react-router-dom'; const NotFound = () =>: any { return ( <div className="min - h-screen bg - gray - 50 flex items - center justify - center"> <div className="max - w-md w - full text - center"> <h1 className="text - 6xl font - bold text - gray - 900 mb - 4">404</h1> <h2 className="text - 2xl font - semibold text - gray - 700 mb - 4">Page Not Found</h2> <p className="text - gray - 600 mb - 8"> The page you're looking for doesn't exist or has been moved. </p> <Link to="/" className="inline - flex items - center px - 6 py - 3 border border - transparent text - base font - medium rounded - md text - white bg - blue - 600 hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500" > Go Home </Link> </div> </div> )} export default NotFound;
 export default NotFound;
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+export function NotFound() {
+  return (
+    <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="text-center">
+        <div className="text-8xl font-bold text-primary mb-4">404</div>
+        <h1 className="text-4xl font-bold text-foreground mb-4">Page Not Found</h1>
+        <p className="text-lg text-foreground/70 mb-8 max-w-md mx-auto">
+          Sorry, the page you are looking for doesn't exist or has been moved.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link 
+            to="/" 
+            className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+          >
+            Go Home
+          </Link>
+          <button 
+            onClick={() => window.history.back()} 
+            className="border border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            Go Back
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+=======
+export default NotFound;
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-3cef

@@ -16,5 +16,5 @@ export const EnhancedMobileExperience: React.FC<MobileExperienceProps /> = ({ en
 })  const [deviceInfo, setDeviceInfo] = useState({ isMobile: false, isTablet: false, isDesktop: false, screenWidth: 0, screenHeight: 0, pixelRatio: 1, touchSupport: false, orientation: 'portrait' as 'portrait' | 'landscape'}
 }) ;
   const [performanceMetrics, setPerformanceMetrics] = useState({ touchLatency: 0, scrollPerformance: 0, imageLoadTime: 0, networkSpeed: 'unknown' as 'slow' | 'medium' | 'fast' | 'unknown'}
-})"";
+})\"\";
 }"

@@ -7,6 +7,7 @@ const WebDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
 
+<<<<<<< HEAD
 const WebDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
@@ -30,17 +31,64 @@ const WebDevelopmentChat: NextPage = () => {
     <div />
       <Head />
 ;
+=======
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name = "description" content="WebDevelopmentChat blog post" />{" "}"
+;
+  return (<div>;
+      <Head></Head>;<meta name="description" content="WebDevelopmentChat blog post" />;"
+=======
+const WebDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head />;
+        <title />WebDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name = \"description\" content=\"WebDevelopmentChat blog post\" />{\" \"}
+;
+  const WebDevelopmentChat: NextPage = () => ;
+  return (<div />;
+      <Head /></Head>;<meta name=\"description\" content=\"WebDevelopmentChat blog post\" />;
+>>>>>>> origin/chore/fix-lint-and-merge
+      </Head>;
+      </Head>;<meta name=\"description\" content=\"WebDevelopmentChat blog post\" />;
+      </Head>;
+
+import type { NextPage } from \"next\";
+import Head from \"next/head\";
+import Link from \"next/link\";
+
+const WebDevelopmentChat: NextPage = () => {
+ ;
+  return (
+    <div />
+      <Head />
+;
+>>>>>>> merged-prs-20250907-203621
   const WebDevelopmentChat: NextPage = () => {;
   return (
     <div />;
       <Head />;
         <title />WebDevelopmentChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+}
+return (;
+=======
+>>>>>>> merged-prs-20250907-203621
 import type { NextPage } from "next";""
 import Head from "next/head";""
 import Link from "next/link";""
 const WebDevelopmentChat: NextPage = () => {
   return (
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
     <div>
 </div>
       <Head>
@@ -50,6 +98,11 @@ const WebDevelopmentChat: NextPage = () => {
 
         <title>WebDevelopmentChat - Zion Tech Solutions</title>;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> merged-prs-20250907-203621
 const WebDevelopmentChat: NextPage = () => {
   return (
     <div />
@@ -57,6 +110,10 @@ const WebDevelopmentChat: NextPage = () => {
 
       </Head>;
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       <main>
         <h1>WebDevelopmentChat</h1>
         <p>Blog content coming soon...</p>
@@ -94,11 +151,24 @@ import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title > WebDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name="description" content="WebDevelopmentChat blog post" />{" "}"
+=======
+>>>>>>> merged-prs-20250907-203621
 const WebDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title  /> WebDevelopmentChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"WebDevelopmentChat blog post\" />{\" \"}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </Head>;
       <main />;
         <h1  /> WebDevelopmentChat</h1>;
@@ -122,11 +192,24 @@ export default WebDevelopmentChat;<div />;
     </div>;
   )},export default WebDevelopmentChat;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  return (<div>;
+      <Head>;
+        <title>WebDevelopmentChat - Zion Tech Solutions</title>;
+        <meta name="description" content="WebDevelopmentChat blog post" />{" "}"
+=======
+>>>>>>> merged-prs-20250907-203621
 const WebDevelopmentChat: NextPage = () => ;
   return (<div />;
       <Head />;
         <title />WebDevelopmentChat - Zion Tech Solutions</title>;
         <meta name=\"description\" content=\"WebDevelopmentChat blog post\" />{\" \"}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
       </Head>;
       <main />;
         <h1 />WebDevelopmentChat</h1>;
@@ -142,7 +225,14 @@ export default WebDevelopmentChat;<title />WebDevelopmentChat - Zion Tech Soluti
 };
 
 export default WebDevelopmentChat;
+<<<<<<< HEAD
 const WebDevelopmentChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const WebDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
  ;
   return (
     <div />
@@ -164,7 +254,14 @@ export default WebDevelopmentChat;
         <title />WebDevelopmentChat - Zion Tech Solutions</title>
         <title />WebDevelopmentChat - Zion Tech Solutions</title>
 ;
+<<<<<<< HEAD
 const WebDevelopmentChat: NextPage = () => {
+=======
+<<<<<<< HEAD
+=======
+const WebDevelopmentChat: NextPage = () => {
+>>>>>>> origin/chore/fix-lint-and-merge
+>>>>>>> merged-prs-20250907-203621
  ;
   return (
     <div />

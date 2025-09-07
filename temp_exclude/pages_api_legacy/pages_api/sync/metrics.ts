@@ -77,11 +77,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   for (const e of events) {
+<<<<<<< HEAD:temp_exclude/pages_api_legacy/pages_api/sync/metrics.ts
     if (e.type = $2;
       totalsByToken[p.token] = (totalsByToken[p.token] || 0) + (p.amount || 0)
     } else if (e.type = $2;
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] || 0) + (p.score || 0)
     } else if (e.type = $2;
+=======
+    if (e.type === "token_transfer") {
+      const p = e.payload as any
+      totalsByToken[p.token] = (totalsByToken[p.token] |0) + (p.amount |0)
+    } else if (e.type === "leaderboard_entry") {
+      contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
+    } else if (e.type === "proposal") {
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/api/sync/metrics.ts
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
   const state = null;
@@ -110,8 +119,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     lastSyncedAt: state.lastSyncedAt});
 };
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req, res) {
   try {
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -124,10 +131,8 @@ export default function handler(req, res) {
       const p = e.payload as any;
       totalsByToken[p.token] = (totalsByToken[p.token] || 0) + (p.amount || 0);
     } else if (e.type === "leaderboard_entry") {;
-      const p = e.payload as any;
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] || 0) + (p.score || 0);
     } else if (e.type === "proposal") {;
-      const p = e.payload as any;
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
       } catch (error) {
     console.error("Error:", error);

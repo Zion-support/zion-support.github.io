@@ -185,7 +185,6 @@ export /**;
  * HireRequestForm - Function description;
  */
 function HireRequestForm() {}
-  const { form, is_submitting, on_submit } = useHireRequestForm ({}
     talent,
     on_close: onSubmitSuccess || on_close,
     initialJobTitle;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -6,10 +7,13 @@
 
 
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-b934
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
@@ -20,6 +24,8 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
 console.log(' Starting Advanced Monitoring System...')
     "status"
         "type"
@@ -57,6 +63,7 @@ console.log(' Starting Advanced Monitoring System...')
     console.log("⚠  Performance "issues")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   return { "status": 'success', "metrics": mockPerformance, "message"}
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -83,3 +90,6 @@ console.log(' Starting Advanced Monitoring System...')
 =======
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  return { "status": 'success', "metrics": mockPerformance, "message"}
+>>>>>>> merged-prs-20250907-203621

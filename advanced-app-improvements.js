@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
+import fs from 'fs;
+import path from path';
+import { execSync } from 'child_process;
 
-console.log('🚀 Starting Advanced App Improvements...');
+console.log(🚀 Starting Advanced App Improvements...');
 
 // Create advanced monitoring system
 function createAdvancedMonitoring() {
-  console.log('\n📊 Creating advanced monitoring system...');
+  console.log('\n📊 Creating advanced monitoring system...);
   
   const monitoringFiles = {
     'monitoring/health-check.js': `// Advanced health check system
@@ -40,7 +40,7 @@ export class HealthChecker {
   }
 
   async runAllChecks() {
-    const results = {};
+    const results = {}
     for (const [name, check] of this.checks) {
       try {
         const result = await check();
@@ -57,8 +57,10 @@ export class HealthChecker {
 >>>>>>> main
 >>>>>>> origin/chore/fix-lint-and-merge
         results[name] = { status: 'healthy', result };
+
+        results[name] = { status: healthy', result }
       } catch (error) {
-        results[name] = { status: 'unhealthy', error: error.message };
+        results[name] = { status: 'unhealthy, error: error.message }
       }
     }
     this.results = results;
@@ -70,19 +72,19 @@ export class HealthChecker {
   }
 
   getHealthStatus() {
-    const allHealthy = Object.values(this.results).every(r => r.status === 'healthy');
+    const allHealthy = Object.values(this.results).every(r => r.status === healthy');
     return {
-      overall: allHealthy ? 'healthy' : 'unhealthy',
+      overall: allHealthy ? 'healthy : unhealthy',
       checks: this.results,
       timestamp: new Date().toISOString()
-    };
+    }
   }
 }
 
 const healthChecker = new HealthChecker();
-module.exports = { HealthChecker, healthChecker };`,
+module.exports = { HealthChecker, healthChecker }`,
     
-    'monitoring/performance-tracker.js': `// Performance tracking system
+    'monitoring/performance-tracker.js: `// Performance tracking system
 class PerformanceTracker {
   constructor() {
     this.metrics = new Map();
@@ -90,7 +92,7 @@ class PerformanceTracker {
       responseTime: 1000,
       memoryUsage: 100 * 1024 * 1024, // 100MB
       cpuUsage: 80
-    };
+    }
   }
 
   trackMetric(name, value, timestamp = Date.now()) {
@@ -128,7 +130,7 @@ class PerformanceTracker {
           metric,
           value: avg,
           threshold,
-          severity: 'warning'
+          severity: warning'
         }
 });
       }
@@ -139,9 +141,9 @@ class PerformanceTracker {
 }
 
 const performanceTracker = new PerformanceTracker();
-module.exports = { PerformanceTracker, performanceTracker };`,
+module.exports = { PerformanceTracker, performanceTracker }`,
     
-    'monitoring/error-tracker.js': `// Error tracking and reporting
+    'monitoring/error-tracker.js: `// Error tracking and reporting
 class ErrorTracker {
   constructor() {
     this.errors = [];
@@ -155,7 +157,7 @@ class ErrorTracker {
       context,
       timestamp: new Date().toISOString(),
       id: Math.random().toString(36).substr(2, 9)
-    };
+    }
     
     this.errors.push(errorInfo);
     
@@ -180,22 +182,22 @@ class ErrorTracker {
       topErrors: Array.from(this.errorCounts.entries())
         .sort((a, b) => b[1] - a[1])
         .slice(0, 10)
-    };
+    }
   }
 }
 
 const errorTracker = new ErrorTracker();
-module.exports = { ErrorTracker, errorTracker };
+module.exports = { ErrorTracker, errorTracker }
 
 // Call the monitoring function
 createAdvancedMonitoring();
 
 // Create advanced caching system
 function createAdvancedCaching() {
-  console.log('\n💾 Creating advanced caching system...');
+  console.log(\n💾 Creating advanced caching system...');
   
   const cachingFiles = {
-    'cache/redis-cache.js': `// Redis-based caching system
+    'cache/redis-cache.js: `// Redis-based caching system
 class RedisCache {
   constructor(redisClient) {
     this.client = redisClient;
@@ -207,7 +209,7 @@ class RedisCache {
       const value = await this.client.get(key);
       return value ? JSON.parse(value) : null;
     } catch (error) {
-      console.error('Cache get error:', error);
+      console.error(Cache get error:', error);
       return null;
     }
   }
@@ -217,7 +219,7 @@ class RedisCache {
       await this.client.setex(key, ttl, JSON.stringify(value));
       return true;
     } catch (error) {
-      console.error('Cache set error:', error);
+      console.error('Cache set error:, error);
       return false;
     }
   }
@@ -227,7 +229,7 @@ class RedisCache {
       await this.client.del(key);
       return true;
     } catch (error) {
-      console.error('Cache delete error:', error);
+      console.error(Cache delete error:', error);
       return false;
     }
   }
@@ -237,16 +239,16 @@ class RedisCache {
       await this.client.flushdb();
       return true;
     } catch (error) {
-      console.error('Cache clear error:', error);
+      console.error('Cache clear error:, error);
       return false;
     }
   }
 }
 
 const redisCache = new RedisCache();
-module.exports = { RedisCache, redisCache };`,
+module.exports = { RedisCache, redisCache }`,
     
-    'cache/memory-cache.js': `// In-memory caching system
+    cache/memory-cache.js': `// In-memory caching system
 class MemoryCache {
   constructor(maxSize = 1000) {
     this.cache = new Map();
@@ -303,11 +305,11 @@ class MemoryCache {
 }
 
 const memoryCache = new MemoryCache();
-module.exports = { MemoryCache, memoryCache };
-  };
+module.exports = { MemoryCache, memoryCache }
+  }
 
   Object.entries(cachingFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
+    const fullPath = path.join('/workspace, filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
     console.log(`[OK] Created ${filename}`);
@@ -317,10 +319,10 @@ module.exports = { MemoryCache, memoryCache };
 
 // Create API optimization utilities
 function createAPIOptimization() {
-  console.log('\n🔌 Creating API optimization utilities...');
+  console.log(\n🔌 Creating API optimization utilities...');
   
   const apiFiles = {
-    'api/rate-limiter.js': `// Rate limiting middleware
+    'api/rate-limiter.js: `// Rate limiting middleware
 class RateLimiter {
   constructor(options = {}) {
     this.windowMs = options.windowMs || 60000; // 1 minute
@@ -351,19 +353,16 @@ class RateLimiter {
   }
 
   getRemainingRequests(identifier) {
-    const now = Date.now();
-    const windowStart = now - this.windowMs;
     const userRequests = this.requests.get(identifier) || [];
-    const recentRequests = userRequests.filter(time => time > windowStart);
     
     return Math.max(0, this.maxRequests - recentRequests.length);
   }
 }
 
 const rateLimiter = new RateLimiter();
-module.exports = { RateLimiter, rateLimiter };`,
+module.exports = { RateLimiter, rateLimiter }`,
     
-    'api/response-optimizer.js': `// API response optimization
+    api/response-optimizer.js': `// API response optimization
 class ResponseOptimizer {
   constructor() {
     this.compressionThreshold = 1024; // 1KB
@@ -377,23 +376,23 @@ class ResponseOptimizer {
       ttl = 3600
     } = options;
 
-    let response = { ...data };
+    let response = { ...data }
 
     // Add caching headers
     if (cache) {
       response.headers = {
         ...response.headers,
-        'Cache-Control': \`public, max-age=\${ttl}\`,
-        'ETag': this.generateETag(data)
-      };
+        'Cache-Control: \`public, max-age=\${ttl}\`,
+        ETag': this.generateETag(data)
+      }
     }
 
     // Add compression info
     if (compress && JSON.stringify(data).length > this.compressionThreshold) {
       response.headers = {
         ...response.headers,
-        'Content-Encoding': 'gzip'
-      };
+        'Content-Encoding: gzip'
+      }
     }
 
     return response;
@@ -407,16 +406,15 @@ class ResponseOptimizer {
       hash = ((hash << 5) - hash) + char;
       hash = hash & hash; // Convert to 32-bit integer
     }
-    return \`"\${Math.abs(hash).toString(16)}"\`;
+    return \`"\${Math.abs(hash).toString(16)}\`;
   }
 }
 
 const responseOptimizer = new ResponseOptimizer();
-module.exports = { ResponseOptimizer, responseOptimizer };
-  };
+module.exports = { ResponseOptimizer, responseOptimizer }
+  }
 
   Object.entries(apiFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
     console.log(`[OK] Created ${filename}`);
@@ -426,10 +424,10 @@ module.exports = { ResponseOptimizer, responseOptimizer };
 
 // Create database optimization utilities
 function createDatabaseOptimization() {
-  console.log('\n🗄️ Creating database optimization utilities...');
+  console.log(\n🗄️ Creating database optimization utilities...');
   
   const dbFiles = {
-    'database/query-optimizer.js': `// Database query optimization
+    'database/query-optimizer.js: `// Database query optimization
 class QueryOptimizer {
   constructor() {
     this.queryCache = new Map();
@@ -445,25 +443,25 @@ class QueryOptimizer {
       params,
       analysis,
       recommendations: this.getRecommendations(analysis)
-    };
+    }
   }
 
   analyzeQuery(query) {
     const analysis = {
       hasIndex: this.checkForIndexes(query),
-      hasJoins: query.toLowerCase().includes('join'),
-      hasSubqueries: query.toLowerCase().includes('select') && query.toLowerCase().split('select').length > 2,
-      hasOrderBy: query.toLowerCase().includes('order by'),
-      hasGroupBy: query.toLowerCase().includes('group by'),
+      hasJoins: query.toLowerCase().includes(join'),
+      hasSubqueries: query.toLowerCase().includes('select) && query.toLowerCase().split(select').length > 2,
+      hasOrderBy: query.toLowerCase().includes('order by),
+      hasGroupBy: query.toLowerCase().includes(group by'),
       estimatedComplexity: this.estimateComplexity(query)
-    };
+    }
     
     return analysis;
   }
 
   checkForIndexes(query) {
     // Simple index detection (would be more sophisticated in real implementation)
-    const indexKeywords = ['primary key', 'unique', 'index'];
+    const indexKeywords = ['primary key, unique', 'index];
     return indexKeywords.some(keyword => 
       query.toLowerCase().includes(keyword)
     );
@@ -471,10 +469,10 @@ class QueryOptimizer {
 
   estimateComplexity(query) {
     let complexity = 1;
-    if (query.toLowerCase().includes('join')) complexity += 2;
-    if (query.toLowerCase().includes('group by')) complexity += 1;
-    if (query.toLowerCase().includes('order by')) complexity += 1;
-    if (query.toLowerCase().includes('having')) complexity += 1;
+    if (query.toLowerCase().includes(join')) complexity += 2;
+    if (query.toLowerCase().includes('group by)) complexity += 1;
+    if (query.toLowerCase().includes(order by')) complexity += 1;
+    if (query.toLowerCase().includes('having)) complexity += 1;
     return complexity;
   }
 
@@ -482,11 +480,11 @@ class QueryOptimizer {
     const recommendations = [];
     
     if (!analysis.hasIndex && analysis.estimatedComplexity > 2) {
-      recommendations.push('Consider adding indexes for better performance');
+      recommendations.push(Consider adding indexes for better performance');
     }
     
     if (analysis.hasJoins && analysis.estimatedComplexity > 3) {
-      recommendations.push('Consider query optimization for complex joins');
+      recommendations.push('Consider query optimization for complex joins);
     }
     
     return recommendations;
@@ -494,9 +492,9 @@ class QueryOptimizer {
 }
 
 const queryOptimizer = new QueryOptimizer();
-module.exports = { QueryOptimizer, queryOptimizer };`,
+module.exports = { QueryOptimizer, queryOptimizer }`,
     
-    'database/connection-pool.js': `// Database connection pooling
+    database/connection-pool.js': `// Database connection pooling
 class ConnectionPool {
 <<<<<<< HEAD
 =======
@@ -722,13 +720,12 @@ async getConnection() {
     return new Promise((resolve) => {
       const checkForConnection = () => {
         if (this.availableConnections.length > 0) {
-          const connection = this.availableConnections.pop();
           this.usedConnections.add(connection);
           resolve(connection);
         } else {
           setTimeout(checkForConnection, 100);
         }
-      };
+      }
       checkForConnection();
     }
 });
@@ -749,7 +746,7 @@ async getConnection() {
       id: Math.random().toString(36).substr(2, 9),
       createdAt: new Date(),
       isHealthy: true
-    };
+    }
   }
 
   getPoolStatus() {
@@ -758,7 +755,7 @@ async getConnection() {
       available: this.availableConnections.length,
       used: this.usedConnections.size,
       max: this.maxConnections
-    };
+    }
   }
 }
 
@@ -834,8 +831,10 @@ export const connectionPool = new ConnectionPool();
 >>>>>>> origin/chore/fix-lint-and-merge
   };
 
+  }
+
   Object.entries(dbFiles).forEach(([filename, content]) => {
-    const fullPath = path.join('/workspace', filename);
+    const fullPath = path.join(/workspace', filename);
     fs.mkdirSync(path.dirname(fullPath), { recursive: true });
     fs.writeFileSync(fullPath, content);
     console.log(`[OK] Created ${filename}`);
@@ -884,43 +883,43 @@ async function main() {
     // Create PM2 ecosystem configuration
     const pm2Config = {
       apps: [{
-        name: 'ziontechgroup-site',
-        script: 'npm',
-        args: 'start',
-        instances: 'max',
-        exec_mode: 'cluster',
+        name: 'ziontechgroup-site,
+        script: npm',
+        args: 'start,
+        instances: max',
+        exec_mode: 'cluster,
         env: {
-          NODE_ENV: 'production',
+          NODE_ENV: production',
           PORT: 3000
         },
         env_production: {
-          NODE_ENV: 'production',
+          NODE_ENV: 'production,
           PORT: 3000
         },
-        max_memory_restart: '1G',
-        node_args: '--max-old-space-size=1024',
-        error_file: './logs/err.log',
-        out_file: './logs/out.log',
-        log_file: './logs/combined.log',
+        max_memory_restart: 1G',
+        node_args: '--max-old-space-size=1024,
+        error_file: ./logs/err.log',
+        out_file: './logs/out.log,
+        log_file: ./logs/combined.log',
         time: true
       }]
-    };
+    }
     
-    fs.writeFileSync('/workspace/ecosystem.config.js', 
-      `module.exports = ${JSON.stringify(pm2Config, null, 2)};);
-    console.log('[OK] Created PM2 ecosystem configuration');
+    fs.writeFileSync('/workspace/ecosystem.config.js, 
+      `module.exports = ${JSON.stringify(pm2Config, null, 2)});
+    console.log([OK] Created PM2 ecosystem configuration');
     
     // Create logs directory
-    fs.mkdirSync('/workspace/logs', { recursive: true });
-    console.log('[OK] Created logs directory');
+    fs.mkdirSync('/workspace/logs, { recursive: true });
+    console.log([OK] Created logs directory');
     
-    console.log('\n🎉 Advanced app improvements completed successfully!');
-    console.log('\n📋 Summary of improvements:');
-    console.log('  - Advanced monitoring system');
-    console.log('  - Caching systems (Redis + Memory)');
-    console.log('  - API optimization utilities');
-    console.log('  - Database optimization tools');
-    console.log('  - PM2 cluster configuration');
+    console.log('\n🎉 Advanced app improvements completed successfully!);
+    console.log(\n📋 Summary of improvements:');
+    console.log('  - Advanced monitoring system);
+    console.log(  - Caching systems (Redis + Memory)');
+    console.log('  - API optimization utilities);
+    console.log(  - Database optimization tools');
+    console.log('  - PM2 cluster configuration);
     
   } catch (error) {
     console.error('❌ Error during advanced improvements:', error.message);

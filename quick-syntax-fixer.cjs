@@ -21,6 +21,7 @@ class QuickSyntaxFixer {;
       const content = originalContent
         // Remove merge conflict markers
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
   log(message, type = 'INFO') {
@@ -47,6 +48,8 @@ class QuickSyntaxFixer {;
 =======
         .replace(/[\s\S]*?        .replace(/^>>>>>>>.*$/gm, '')
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
         // Fix module.exports
         .replace(/module\.exports\s*=\s*{;/g, 'module.exports = {')
         // Fix constructor
@@ -95,17 +98,21 @@ if (require.main === module) {;
 }
 module.exports = QuickSyntaxFixer;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-f954
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
       let content = fs.readFileSync(filePath, 'utf8')
         .replace(/(\w+):\s*([^,]+),/g, '$"1"
         .replace(/(\w+):\s*([^,]+);\s*}/g, '$"1"
+<<<<<<< HEAD
 <<<<<<< HEAD
         .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
 =======
@@ -180,3 +187,6 @@ ursor/automate-test-improve-and-merge-code-59d5
 const fixer = new QuickSyntaxFixer();
 fixer.run().catch(console.error);
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+        .replace(/(\w+):\s*([^,]+);\s*]/g, '$"1"
+>>>>>>> merged-prs-20250907-203621

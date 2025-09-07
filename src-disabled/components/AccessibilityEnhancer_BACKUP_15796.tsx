@@ -7,5 +7,5 @@ export default function AccessibilityEnhancer() { const [isVisible, setIsVisible
   const [isExpanded, setIsExpanded] = useState(showSettings);}
   const [settings, setSettings] = useState<>({ highContrast: false, largeText: false, reducedMotion: false, highSaturation: false, fontSize: 16, lineHeight: 1.5, letterSpacing: 0}
 }) const [issues, setIssues] = useState<>([]) const [isScanning, setIsScanning] = useState(false);
-  const [notifications, setNotifications] = useState<>([])"";
+  const [notifications, setNotifications] = useState<>([])\"\";
 }"

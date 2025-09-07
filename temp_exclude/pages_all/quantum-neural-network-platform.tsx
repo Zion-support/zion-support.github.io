@@ -7,11 +7,20 @@ import {
   Rocket, Target, TrendingUp, Users, CheckCircle,
   ArrowRight, Star, Award, Clock, DollarSign
 } from 'lucide-react',
+<<<<<<< HEAD:temp_exclude/pages_all/quantum-neural-network-platform.tsx
 
 const QuantumNeuralNetworkPlatform = $2;
       title: "Quantum Consciousness Integration",
       description: "Advanced AI consciousness with quantum processing capabilities",
       color: "from-purple-500 to-pink-500"
+=======
+    {
+      icon: Brain,
+      title: 'Quantum Consciousness Integration',
+      description:
+        'Advanced AI consciousness with quantum processing capabilities',
+      color: 'from-purple-500 to-pink-500',
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/quantum-neural-network-platform.tsx
     },
     {
       icon: Atom,
@@ -27,6 +36,7 @@ const QuantumNeuralNetworkPlatform = $2;
     },
     {
       icon: Shield,
+<<<<<<< HEAD:temp_exclude/pages_all/quantum-neural-network-platform.tsx
       title: "Quantum Security",
       description: "Unbreakable encryption using quantum cryptography",
       color: "from-red-500 to-orange-500"
@@ -34,14 +44,60 @@ const QuantumNeuralNetworkPlatform = $2;
   ],
 
   const benefits = $2;
+=======
+      title: 'Quantum Security',
+      description: 'Unbreakable encryption using quantum cryptography',
+      color: 'from-red-500 to-orange-500',
+    },
+  ];
+
+    '1000x faster neural network training',
+    'Quantum-level security and encryption',
+    'Scalable consciousness simulation',
+    'Real-time quantum decision making',
+    'Advanced pattern recognition',
+    'Future-proof technology foundation',
+  ];
+
+    {
+      title: 'AI Research & Development',
+      description: 'Accelerate AI breakthroughs with quantum processing power',
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Unbreakable security protocols using quantum encryption',
+    },
+    {
+      title: 'Scientific Discovery',
+      description: 'Solve complex scientific problems in minutes, not years',
+    },
+    {
+      title: 'Financial Modeling',
+      description: 'Advanced risk assessment and market prediction algorithms',
+    },
+  ];
+
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+    "1000x faster neural network training",
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/quantum-neural-network-platform.tsx
     "Quantum-level security and encryption",
     "Scalable consciousness simulation",
     "Real-time quantum decision making",
     "Advanced pattern recognition",
     "Future-proof technology foundation"
   ],
+<<<<<<< HEAD:temp_exclude/pages_all/quantum-neural-network-platform.tsx
 
   const useCases = $2;
+=======
+    {
+      title: "AI Research & Development",
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/quantum-neural-network-platform.tsx
       description: "Accelerate AI breakthroughs with quantum processing power"
     },
     {

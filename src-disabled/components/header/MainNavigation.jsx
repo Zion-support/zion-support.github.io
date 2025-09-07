@@ -5,98 +5,98 @@ import { ChevronDown  } from 'lucide-react';
 export function MainNavigation() {const location = useLocation()const [activeDropdown, setActiveDropdown]  =;
   useState(null;
   const navigationItems = [
-  {name: 'Home'}
+  {name: 'Home',}
   href: '/',current: location.pathname === '/';}
     }, {name: 'Services',
   href: '/services', current: location.pathname.startsWith('/services'), children: [;
-          {name: 'AI Services'}
+          { name: 'AI Services',}
   href: '/services/ai',}
 },
-   {name: 'Cloud Solutions'}
+   { name: 'Cloud Solutions',}
   href: '/services/cloud',}
 },
-   {name: 'Cybersecurity'}
+   { name: 'Cybersecurity',}
   href: '/services/cybersecurity',}
 },
-   {name: 'IT Infrastructure'}
+   { name: 'IT Infrastructure',}
   href: '/services/infrastructure',}
 },
-   {name: 'Digital Transformation'}
+   { name: 'Digital Transformation',}
   href: '/services/transformation',}
 },
- {name: 'Consulting'}
+ { name: 'Consulting',}
   href: '/services/consulting',}
 }
       ];
     }, {name: 'Solutions',
   href: '/solutions', current: location.pathname.startsWith('/solutions'), children: [;
-          {name: 'Industry Solutions'}
+          { name: 'Industry Solutions',}
   href: '/solutions/industry',}
 },
-   {name: 'Manufacturing'}
+   { name: 'Manufacturing',}
   href: '/solutions/manufacturing',}
 },
-   {name: 'Financial Services'}
+   { name: 'Financial Services',}
   href: '/solutions/financial',}
 },
-   {name: 'Healthcare'}
+   { name: 'Healthcare',}
   href: '/solutions/healthcare',}
 },
- {name: 'Retail'}
+ { name: 'Retail',}
   href: '/solutions/retail',}
 }
       ];
     }, {name: 'About',
   href: '/about', current: location.pathname.startsWith('/about'), children: [;
-          {name: 'Company'}
+          { name: 'Company',}
   href: '/about',}
 },
-   {name: 'Team'}
+   { name: 'Team',}
   href: '/about/team',}
 },
-   {name: 'Careers'}
+   { name: 'Careers',}
   href: '/careers',}
 },
- {name: 'Partners'}
+ { name: 'Partners',}
   href: '/partners',}
 }
       ];
     }, {name: 'Resources',
   href: '#', current: false,children: [;
-          {name: 'Case Studies'}
+          { name: 'Case Studies',}
   href: '/case-studies',}
 },
-  {name: 'Research & Development'}
+  { name: 'Research & Development',}
   href: '/research-development',}
 },
-  {name: 'Events'}
+  { name: 'Events',}
   href: '/events',}
 },
-  {name: 'News'}
+  { name: 'News',}
   href: '/news',}
 },
-  {name: 'Blog'}
+  { name: 'Blog',}
   href: '/blog',}
 },
-  {name: 'White Papers'}
+  { name: 'White Papers',}
   href: '/white-papers',}
 },
-{name: 'Webinars'}
+{ name: 'Webinars',}
   href: '/webinars',}
 }
       ];
     }, {name: 'Support',
   href: '/support', current: location.pathname.startsWith('/support'), children: [;
-          {name: 'Help Center'}
+          { name: 'Help Center',}
   href: '/support',}
 },
-   {name: 'Documentation'}
+   { name: 'Documentation',}
   href: '/docs',}
 },
-   {name: 'Training'}
+   { name: 'Training',}
   href: '/training',}
 },
- {name: 'Contact'}
+ { name: 'Contact',}
   href: '/contact',}
 }
       ];
@@ -104,11 +104,11 @@ export function MainNavigation() {const location = useLocation()const [activeDro
   ];
 
 const handleDropdownToggle = (setActiveDropdown(activeDropdown === index ? null : index);
-  return (<nav className="flex space-x-8" />;) => {
+  return (<nav className=\"flex space-x-8\" />;) => {
   return $3;}
 }
-      {navigationItems.map((item, index) => (<div key={item.name} className="relative" />;
-          {item.children ? (<div className="relative" />;}
+      {navigationItems.map((item, index) => (<div key={item.name} className=\"relative\" />;
+          {item.children ? (<div className=\"relative\" />;}
               <button;}
                 onClick={() = /> handleDropdownToggle(index)}
                 className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${item.current;
@@ -122,12 +122,12 @@ const handleDropdownToggle = (setActiveDropdown(activeDropdown === index ? null 
                   }`}/>;
               </button>;
               {/* Dropdown Menu */}
-              {activeDropdown === index && (<div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50" />;
-                  <div className="py-2" />;}
+              {activeDropdown === index && (<div className=\"absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-xl border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50\" />;
+                  <div className=\"py-2\" />;}
                     {item.children.map((child) => (<Link;}
                         key={child.name}
                         to={child.href}
-                        className="block px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors";
+                        className=\"block px-4 py-3 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors\";
                         onClick={() = /> setActiveDropdown(null)}
                       >;
                         {child.name}

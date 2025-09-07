@@ -3,8 +3,15 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Compass, Star } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD:temp_exclude/pages_all/data-catalog-lineage.tsx
 export default function DataCatalogLineagePage() {
   const service = $2;
+=======
+export default function AIVideoEditingPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'))
+  if (!service) return null
+export default function AIVideoEditingPage() {
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/ai-video-editing.tsx
   if (!service) return null,
 
   return (

@@ -25,5 +25,5 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   const items: FeedbackRecord[] = Array.isArray(data.items) ? data.items : []
   items.push(rec),
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), "utf-8"),
-  return rec
+
 }

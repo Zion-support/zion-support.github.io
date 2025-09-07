@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp: 2025-09-07T02:53:54.838Z",
   "duration: 23172,
   summary": {
@@ -257,6 +258,8 @@ ursor/automate-test-improve-and-merge-code-646c
     Execute All Scripts: true
   },
   "errors": [],
+=======
+>>>>>>> merged-prs-20250907-203621
   "timestamp": "2025-09-07T05:59:20.856Z",
   "totalDuration": 44655,
   "successfulTasks": 2,
@@ -273,6 +276,7 @@ ursor/automate-test-improve-and-merge-code-646c
       "error": "Command failed: node final-automation-suite-fixed.cjs\n/workspace/final-automation-suite-fixed.cjs:4\nconst path = require(\"path\");\"\n                             ^\n\nSyntaxError: Invalid or unexpected token\n    at wrapSafe (node:internal/modules/cjs/loader:1662:18)\n    at Module._compile (node:internal/modules/cjs/loader:1704:20)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49\n\nNode.js v22.16.0\n"
     }
   ],
+<<<<<<< HEAD
 =======
 =======
       "performance-monitor.cjs (performance-monitoring) completed",
@@ -311,11 +315,14 @@ ursor/automate-test-improve-and-merge-code-646c
     }
   ],
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621
   "fixes": [
     "Fixed memory issues with Node.js heap size",
     Created missing automation scripts,
     "Fixed ESLint configuration",
     "Added comprehensive error handling"
+<<<<<<< HEAD
 <<<<<<< HEAD
   "recommendations": [
     "Review and fix code quality issues",
@@ -323,9 +330,14 @@ ursor/automate-test-improve-and-merge-code-646c
     "Enhance accessibility features"
   ]
 }
+=======
+>>>>>>> merged-prs-20250907-203621
   ]
 }
 =======
   ]
 }
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+>>>>>>> merged-prs-20250907-203621

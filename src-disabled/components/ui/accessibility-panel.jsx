@@ -1,4 +1,4 @@
-'use client'; import React, { useState, useCallback, useEffect } from 'react' import { motion, AnimatePresence  } from 'framer-motion';import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsChange, className = " }) => ;
+'use client'; import React, { useState, useCallback, useEffect } from 'react' import { motion, AnimatePresence  } from 'framer-motion';import { Eye, Type, Volume2, Settings, X, Check, AlertTriangle, Info const AccessibilityPanel = ({ enabled = true, defaultSettings = {}, onSettingsChange, className = \" }) => ;
 }
 
 const [isOpen, setIsOpen] = useState(false);

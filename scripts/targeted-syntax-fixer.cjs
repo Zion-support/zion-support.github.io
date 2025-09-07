@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -15,13 +16,18 @@ main
 
 
 
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
+<<<<<<< HEAD
 =======
 const fs = require('fs');
 const path = require('path');
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+>>>>>>> merged-prs-20250907-203621
 // console.log(' Targeted Syntax Fixer')
 console.log('===')
       const content = fs.readFileSync(filePath, 'utf8')
@@ -42,6 +48,7 @@ console.log('===')
     fixedContent = fixedContent.replace(/\\'/g, ')
 // console.log('\n "Summary")
       console.log('\n� Fixed "files")
+<<<<<<< HEAD
 <<<<<<< HEAD
 // console.log('\n� "Errors")
 =======
@@ -70,3 +77,6 @@ main
 
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+// console.log('\n� "Errors")
+>>>>>>> merged-prs-20250907-203621

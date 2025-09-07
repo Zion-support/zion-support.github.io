@@ -6,6 +6,7 @@ module.exports = [
   {
     ignores: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       node_modules/**/*',
       '.next/**/*,
@@ -47,6 +48,51 @@ module.exports = [
       'temp_backup/**/*',
       'temp_components/**/*',
       'apps.backup/**/*',
+=======
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      'public/**',
+      'pages-disabled/**',
+      'pages.disabled/**',
+      'components.disabled/**',
+      'api.disabled/**',
+      'api-disabled/**',
+      'backup/**',
+      'pages.broken/**',
+      'pages.corrupted.*/**/*',
+      'pages.disabled*/**/*',
+      'pages.old/**',
+      'pages_backup*/**/*',
+      'pages_disabled/**',
+      'pages_minimal/**',
+      'temp-disabled/**',
+      'temp_backup/**',
+      'temp_exclude/**',
+      'backup-*/**/*',
+      'corrupted*/**/*',
+      'broken*/**/*',
+      'recovered-branches/**',
+      'components.disabled*/**/*',
+      'lib_backup/**',
+      'lib.broken/**',
+      'lib.disabled/**',
+      'src.pages.disabled*/**/*',
+      'src.broken/**',
+      'src.corrupted/**',
+      'src_backup*/**/*',
+      'src.disabled/**',
+      'pm2-automation/**',
+      // other nested projects
+      'zion-os/**',
+      'zion-website/**',
+      'zion-ai-assistant/**',
+      'zion/**',
+      'zion_academy/**',
+      'zion-film/**',
+      'apps/**',
+>>>>>>> merged-prs-20250907-203621
       'apps.backup/**',
       '*_backup/**/*',
       '*-backup/**/*',
@@ -63,15 +109,22 @@ module.exports = [
       'utils/**/*',
       // Ignore top-level configuration scripts to avoid parsing noise
       '*.cjs',
+<<<<<<< HEAD
       '*.mjs',
+=======
+      '*.js',
+>>>>>>> merged-prs-20250907-203621
       '!jest.config.*',
       '!next.config.*',
       '!tailwind.config.*',
       '!postcss.config.*',
+<<<<<<< HEAD
 =======
       'node_modules/**/*,app-optimizer.js,zion-os/**/*,apps.backup/**/*,zion-website/**/*,automation/**/*,advanced-automation-improvements.cjs,analyze_links.cjs,app-enhancement-suite.cjs,]
 >>>>>>> main
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+=======
+>>>>>>> merged-prs-20250907-203621
     ],
   },
   {
@@ -146,6 +199,7 @@ module.exports = [
       parser: require('@typescript-eslint/parser'),
       ecmaVersion: 2022,
       sourceType: 'module',
+<<<<<<< HEAD
       parserOptions: { ecmaFeatures: { jsx: true } },
       globals: {
         window: 'readonly',
@@ -179,6 +233,8 @@ module.exports = [
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
+=======
+>>>>>>> merged-prs-20250907-203621
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
     rules: {
@@ -197,8 +253,12 @@ module.exports = [
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
+<<<<<<< HEAD
 >>>>>>> origin/chore/fix-lint-and-merge
     }
+=======
+    },
+>>>>>>> merged-prs-20250907-203621
   },
   {
     files: ['**/*.{ts,tsx}'],
@@ -206,6 +266,7 @@ module.exports = [
       parser: tsparser,
       ecmaVersion: 2022,
       sourceType: 'module',
+<<<<<<< HEAD
       parserOptions: {
         ecmaFeatures: {
           jsx: true
@@ -239,6 +300,17 @@ module.exports = [
         jest: 'readonly'}}}
 =======
         jest: 'readonly',
+=======
+      parserOptions: { ecmaFeatures: { jsx: true } },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLButtonElement: 'readonly',
+        ScrollToOptions: 'readonly',
+        fetch: 'readonly',
+        console: 'readonly',
+>>>>>>> merged-prs-20250907-203621
       },
     },
     plugins: {
@@ -249,6 +321,27 @@ module.exports = [
       '@typescript-eslint/no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn',
+<<<<<<< HEAD
     }
   }
+=======
+    },
+  },
+  {
+    files: ['**/*.{test,spec}.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: tsparser,
+      ecmaVersion: 2022,
+      sourceType: 'module',
+      parserOptions: { ecmaFeatures: { jsx: true } },
+    },
+    plugins: { '@typescript-eslint': tseslint },
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn',
+    },
+  },
+>>>>>>> merged-prs-20250907-203621
 ];

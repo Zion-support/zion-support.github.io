@@ -5,4 +5,3 @@ export function extractClientIp(req: NextApiRequest): string | null {
   if (!ip) return null,
   if (ip.startsWith('::ffff: ')) return ip.substring(7),
   return ip
-}

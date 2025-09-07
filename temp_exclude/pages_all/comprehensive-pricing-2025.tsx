@@ -34,12 +34,18 @@ export default function ComprehensivePricingPage() {
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' },
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
   ],
+<<<<<<< HEAD:temp_exclude/pages_all/comprehensive-pricing-2025.tsx
 
   const filteredServices = selectedCategory === 'all' 
     ? allServices 
     : allServices.filter($2);
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find($2);
+=======
+    ? allServices
+    : allServices.filter(service => service.category === selectedCategory),
+    const categoryData = categories.find(cat => cat.id === category),
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/comprehensive-pricing-2025.tsx
     return categoryData?.icon || '🚀'
   },
 

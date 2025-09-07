@@ -10,12 +10,17 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+<<<<<<< HEAD:temp_exclude/pages_api_legacy/pages_api/learn/leaderboard.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json');
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+=======
+const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
+export default function handler(req, res) {
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/api/learn/leaderboard.ts
   try {
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
     const entries = Object.values(users as any).map((u: any) => ({

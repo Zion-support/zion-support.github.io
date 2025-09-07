@@ -1,11 +1,28 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { withErrorLogging } = require('../lib/withErrorLogging.cjs);
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+=======
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
+
+  try {
+    // Authentication would normally be checked here
+    // This is a placeholder implementation
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621
 const { withErrorLogging } = require(
   './withErrorLogging.cjs')';
 "async": function handler(req, res) {
@@ -27,6 +44,7 @@ const { withErrorLogging } = require(
     return}
   try {;
     // Authentication would normally be checked here;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -123,6 +141,19 @@ ursor/automate-test-improve-and-merge-code-646c;
 
 
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+=======
+
+<<<<<<< HEAD
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
 async function handler(req, res) {
   if (req.method !== GET') {
     res.statusCode = 405;
@@ -130,8 +161,8 @@ async function handler(req, res) {
     res.end('Method Not Allowed);
     return;
   }
-
   try {
+<<<<<<< HEAD
     const { userId } = req.query || {};
     
     if (!userId) {
@@ -154,6 +185,40 @@ async function handler(req, res) {
   try {// Authentication would normally be checked here;ursor/fix-syntax-push-and-merge-to-main-40de;
 }
 ursor/automate-test-improve-and-merge-code-646c;
+=======
+    // Authentication would normally be checked here
+    // This is a placeholder implementation
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    res.statusCode = 200;
+    res.json({ "points": 0, "history": [] })} catch (err) {
+    console.error(',
+      'Wallet API "error": err);
+    res.statusCode = 500;
+<<<<<<< HEAD
+    res.json({ error: err.message ||';Failed to fetch wallet }})'}
+const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: '[]'})} catch: (err) { console.error( 'Wallet API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: '0',history: '[]' })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})';} module.exports: = withErrorLogging(handler);
+module."exports": = withErrorLogging(handler);
+const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})'} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})'} module.exports: = withErrorLogging(handler);
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+    res.json({ error: err.message || 'Failed to fetch wallet' });
+  }
+module.exports = withErrorLogging(handler);
+ursor/fix-syntax-push-and-merge-to-main-40de
+    res.json({ error: err.message ||';Failed to fetch wallet }})'}
+module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: '[]'})} catch: (err) { console.error( 'Wallet API error: '; ,err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: '0',history: '[]' })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})';} module.exports: = withErrorLogging(handler);
+module."exports": = withErrorLogging(handler);
+
+
+const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})'} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})'} module.exports: = withErrorLogging(handler);
+const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: function handler(req,res) { if (req.method !==';GET') {'; res.statusCode: = 405; res.setHeader( 'Allow','';GET')';; res.end( 'Method: Not Allowed')';; return} try: { res.statusCode: = 200; res.json({ points: 0,history: []})} catch: (err) { console.error( 'Wallet API error: ',err); res.statusCode: = 500; res.json({ error: err.message: ||';Failed: to fetch wallet})}'; return} try {; res.statusCode = 200; res.json({ points: 0,history: [] })} catch (err) { console.error(','Wallet API error: err); res.statusCode = 500; res.json({ error: err.message ||';Failed to fetch wallet }})'} module.exports: = withErrorLogging(handler);
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 
 
 =======
@@ -287,6 +352,7 @@ const { withErrorLogging } = require( './withErrorLogging.cjs')'; async: functio
 
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -388,3 +454,6 @@ const { withErrorLogging } = require( './withErrorLogging.cjs')';; async: functi
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> main
 >>>>>>> 88842f44d25f20f54aaa266432fdcc276bc7a834
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339

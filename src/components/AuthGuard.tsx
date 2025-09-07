@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
@@ -28,6 +29,110 @@ export function AuthGuard({
   useEffect(() => {
     // Don't redirect while auth is still loading
     if (isLoading) return;
+=======
+<<<<<<< HEAD
+      const redirectTo = options?.redirectTo || '/login'
+      const returnUrl = options?.returnUrl || router.asPath
+          if (!requireAuth({ showToast: false })) return false,
+
+    const userRoles = user?.role ? [user.role] : []
+    requireAuth
+    requireRole
+    checkPermission
+    isAuthenticated
+    user
+    isLoading}
+}
+;
+import React, { useEffect } from 'react',;
+import { useRouter } from 'next/router',;
+import { useAuth } from '@/hooks/useAuth',;
+import { toast } from '@/hooks/use-toast',;
+import { Loader2, Shield } from 'lucide-react';
+interface AuthGuardProps {;
+  children: React.ReactNode,;
+  requireAuth?: boolean,;
+  requireRole?: string[],;
+  redirectTo?: string,;
+  fallback?: React.ReactNode,;
+  showToast?: boolean,;
+  allowGuest?: boolean;
+}
+
+      const redirectTo = options?.redirectTo |'/login'
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+const redirectTo = options?.redirectTo |'/login'
+      const returnUrl = options?.returnUrl |router.asPath
+          if (!requireAuth({ showToast: false })) return false
+    const userRoles = user?.role ? [user.role] : []
+    requireAuth
+    requireRole
+    checkPermission
+    isAuthenticated
+    user
+
+<<<<<<< HEAD
+    isLoading}
+}
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+const redirectTo = options?.redirectTo || '/login';
+      const returnUrl = options?.returnUrl || router && router.asPath;
+          if (!requireAuth({ showToast: false })) return false,;
+
+  useEffect(() => {
+    // Don't redirect while auth is still loading
+    if (isLoading) return,
+
+    const userRoles = user?.role ? [user && user.role] : [];
+<<<<<<< HEAD
+    requireAuth;
+    requireRole;
+    checkPermission;
+    isAuthenticated;
+    user;
+    isLoading}
+}
+
+
+
+      const redirect_to = options?.redirect_to || '/login';
+      const return_url = options?.return_url || router.as_path;
+          if () return false, ) {
+  $2
+}
+    const user_roles = user?.role ? [user.role] : [];
+    require_auth;
+    require_role;
+    check_permission;
+    is_authenticated;
+    user;
+    is_loading}
+}
+import React, { useEffect } from 'react',;
+import { useRouter } from 'next/router',;
+import { useAuth } from '@/hooks/useAuth',;
+import { toast } from '@/hooks/use-toast',;
+import { Loader2, Shield } from 'lucide-react';
+;
+interface AuthGuardProps {;
+  children:React.ReactNode,;
+  requireAuth?:boolean,;
+  requireRole?:string[],;
+  redirectTo?:string,;
+  fallback?:React.ReactNode,;
+  showToast?:boolean,;
+  allowGuest?:boolean;
+}
+    isLoading}
+}
+  useEffect(() => {
+    // Don't redirect while auth is still loading
+    if (isLoading) return,
+>>>>>>> merged-prs-20250907-203621
 
     // If authentication is required but user is not authenticated
     if (requireAuth && !isAuthenticated && !allowGuest) {
@@ -36,17 +141,51 @@ export function AuthGuard({
           title: "Authentication Required",
           description: "Please log in to access this feature.",
           variant: "destructive"})
+<<<<<<< HEAD
       }
 
       const returnTo = encodeURIComponent(router.asPath);
       router.push(`${redirectTo}?returnTo=${returnTo}`);
       return
+=======
+;
+export function AuthGuard({;
+  children,;
+  requireAuth = true,;
+  requireRole,;
+  redirectTo = '/auth/login',;
+  fallback,;
+  showToast = true,;
+  allowGuest = false}: AuthGuardProps) {;
+  const { user, isAuthenticated, isLoading } = useAuth(),;
+  const router = useRouter(),;
+  useEffect(() => {;
+    // Don't redirect while auth is still loading;
+    if (isLoading) return,;
+    // If authentication is required but user is not authenticated;
+    if (requireAuth && !isAuthenticated && !allowGuest) {;
+      if (showToast) {;
+        toast({;
+          title: "Authentication Required",;
+          description: "Please log in to access this feature.",;
+          variant: "destructive"});
+      }
+;
+      const returnTo = encodeURIComponent(router.asPath),;
+      router.push(`${redirectTo}?returnTo=${returnTo}`),;
+      return;
+>>>>>>> merged-prs-20250907-203621
     }
 
     // If specific roles are required
     if (requireRole && isAuthenticated && user) {
+<<<<<<< HEAD
       const userRoles = user.role ? [user.role] : [];
       const hasRequiredRole = requireRole.some(role => userRoles.includes(role));
+=======
+      const userRoles = user.role ? [user.role] : [],
+      const hasRequiredRole = requireRole.some(role => userRoles.includes(role)),
+>>>>>>> merged-prs-20250907-203621
 
       if (!hasRequiredRole) {
         if (showToast) {
@@ -54,12 +193,32 @@ export function AuthGuard({
             title: "Access Denied",
             description: `This feature requires ${requireRole.join(' or ')} privileges.`,
             variant: "destructive"})
+<<<<<<< HEAD
         }
         router.push('/dashboard'), // Redirect to dashboard instead of login
         return
       }
     }
   }, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]);
+=======
+;
+    // If specific roles are required;
+    if (requireRole && isAuthenticated && user) {;
+      const userRoles = user.role ? [user.role] : [],;
+      const hasRequiredRole = requireRole.some(role => userRoles.includes(role)),;
+      if (!hasRequiredRole) {;
+        if (showToast) {;
+          toast({;
+            title: "Access Denied",;
+            description: `This feature requires ${requireRole.join(' or ')} privileges.`,;
+            variant: "destructive"});
+        }
+        router.push('/dashboard'), // Redirect to dashboard instead of login;
+        return;
+      }
+    }
+  }, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]),
+>>>>>>> merged-prs-20250907-203621
 
   // Show loading state while auth is being determined
   if (isLoading) {
@@ -90,8 +249,11 @@ export function AuthGuard({
 
   // Show role denied state if user doesn't have required role
   if (requireRole && isAuthenticated && user) {
-    const userRoles = user.role ? [user.role] : [];
-    const hasRequiredRole = requireRole.some(role => userRoles.includes(role));
+<<<<<<< HEAD
+=======
+    const userRoles = user.role ? [user.role] : [],
+    const hasRequiredRole = requireRole.some(role => userRoles.includes(role)),
+>>>>>>> merged-prs-20250907-203621
 
     if (!hasRequiredRole) {
       return fallback || (
@@ -107,6 +269,7 @@ export function AuthGuard({
       )
     }
   }
+<<<<<<< HEAD
 
   // Render children if all auth checks pass
   return <>{children}</>
@@ -123,13 +286,30 @@ export function withAuthGuard<P extends object>(
         <Component {...props} />
       </AuthGuard>
     )
+=======
+;
+  // Render children if all auth checks pass;
+  return <>{children}</>;
+}
+;
+// Higher-order component for easy wrapping;
+export function withAuthGuard<P extends object>(;
+  Component: React.ComponentType<P>,;
+  guardOptions?: Omit<AuthGuardProps 'children'>;
+) {;
+  return function AuthGuardedComponent(props: P) {;
+    return (;
+      <AuthGuard {...guardOptions}>;
+        <Component {...props} />;
+      </AuthGuard>;
+    );
+>>>>>>> merged-prs-20250907-203621
   }
 }
 
 // Hook for programmatic auth checks
 export function useAuthGuard() {
-  const { user, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
+<<<<<<< HEAD
 
   const requireAuth = (options?: {
     redirectTo?: string;
@@ -141,12 +321,28 @@ export function useAuthGuard() {
     if (!isAuthenticated) {
       const redirectTo = options?.redirectTo || '/login';
       const returnUrl = options?.returnUrl || router.asPath;
+=======
+  const { user, isAuthenticated, isLoading } = useAuth(),
+  const router = useRouter(),
+
+  const requireAuth = (options?: {
+    redirectTo?: string,
+    showToast?: boolean,
+    returnUrl?: string
+  }) => {
+    if (isLoading) return false,
+
+    if (!isAuthenticated) {
+      const redirectTo = options?.redirectTo || '/login',
+      const returnUrl = options?.returnUrl || router.asPath,
+>>>>>>> merged-prs-20250907-203621
       
       if (options?.showToast !== false) {
         toast({
           title: "Authentication Required",
           description: "Please log in to continue.",
           variant: "destructive"})
+<<<<<<< HEAD
       }
 
       router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`);
@@ -158,12 +354,49 @@ export function useAuthGuard() {
 
   const requireRole = (roles: string[], options?: {
     showToast?: boolean;
+=======
+;
+// Hook for programmatic auth checks;
+export function useAuthGuard() {;
+  const { user, isAuthenticated, isLoading } = useAuth(),;
+  const router = useRouter(),;
+  const requireAuth = (options?: {;
+    redirectTo?: string,;
+    showToast?: boolean,;
+    returnUrl?: string;
+  }) => {;
+    if (isLoading) return false,;
+    if (!isAuthenticated) {;
+      const redirectTo = options?.redirectTo || '/login',;
+      const returnUrl = options?.returnUrl || router.asPath,;
+      if (options?.showToast !== false) {;
+        toast({;
+          title: "Authentication Required",;
+          description: "Please log in to continue.",;
+          variant: "destructive"});
+      }
+;
+      router.push(`${redirectTo}?returnTo=${encodeURIComponent(returnUrl)}`),;
+      return false;
+    }
+
+    return true
+  },
+
+  const requireRole = (roles: string[], options?: {
+    showToast?: boolean,
+>>>>>>> merged-prs-20250907-203621
     redirectTo?: string
   }) => {
     if (!requireAuth({ showToast: false })) return false,
 
+<<<<<<< HEAD
     const userRoles = user?.role ? [user.role] : [];
     const hasRequiredRole = roles.some(role => userRoles.includes(role));
+=======
+    const userRoles = user?.role ? [user.role] : [],
+    const hasRequiredRole = roles.some(role => userRoles.includes(role)),
+>>>>>>> merged-prs-20250907-203621
 
     if (!hasRequiredRole) {
       if (options?.showToast !== false) {
@@ -171,6 +404,7 @@ export function useAuthGuard() {
           title: "Access Denied",
           description: `This feature requires ${roles.join(' or ')} privileges.`,
           variant: "destructive"})
+<<<<<<< HEAD
       }
 
       router.push(options?.redirectTo || '/dashboard');
@@ -193,7 +427,75 @@ export function useAuthGuard() {
     requireAuth;
     requireRole;
     checkPermission;
+=======
+;
+    return true;
+  },;
+  const requireRole = (roles: string[], options?: {;
+    showToast?: boolean,;
+    redirectTo?: string;
+  }) => {;
+    if (!requireAuth({ showToast: false })) return false,;
+    const userRoles = user?.role ? [user.role] : [],;
+    const hasRequiredRole = roles.some(role => userRoles.includes(role)),;
+    if (!hasRequiredRole) {;
+      if (options?.showToast !== false) {;
+        toast({;
+          title: "Access Denied",;
+          description: `This feature requires ${roles.join(' or ')} privileges.`,;
+          variant: "destructive"});
+      }
+;
+      router.push(options?.redirectTo || '/dashboard'),;
+      return false;
+    }
+;
+    return true;
+  },;
+  const checkPermission = (permission: string): boolean => {;
+    if (!isAuthenticated || !user) return false,;
+    // Simple permission check - can be extended based on your permission system;
+    // Use type assertion for extensibility, as permissions might be added to user type later;
+    const userPermissions = (user as any).permissions || [],;
+    return userPermissions.includes(permission);
+  },;
+  return {;
+    requireAuth,;
+    requireRole,;
+    checkPermission,;
+=======
+
+    requireAuth;
+    requireRole;
+    checkPermission;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621
     isAuthenticated;
     user;
     isLoading}
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+;
+;
+=======
+
+
+
+      const redirect_to = options?.redirect_to || '/login';
+      const return_url = options?.return_url || router.as_path;
+          if () return false, ) {
+  $2
+}
+    const user_roles = user?.role ? [user.role] : [];
+    require_auth;
+    require_role;
+    check_permission;
+    is_authenticated;
+    user;
+    is_loading}
+}
+;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> merged-prs-20250907-203621

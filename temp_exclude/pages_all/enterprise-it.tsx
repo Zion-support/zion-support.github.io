@@ -4,9 +4,22 @@ import Layout from '../components/layout/Layout';
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
 export default function EnterpriseITPage() {
   const features = [
+<<<<<<< HEAD:temp_exclude/pages_all/enterprise-it.tsx
     'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
 
   const solutions = [
+=======
+    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation']
+  const solutions = [
+    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' }
+    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
+    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' }
+    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }]
+  return (
+    <Layout>
+export default function EnterpriseITPage() {
+    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/enterprise-it.tsx
     { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
     { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
     { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },

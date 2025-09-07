@@ -36,13 +36,34 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
+<<<<<<< HEAD
       '@assets': path.resolve(__dirname, './src/assets'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+=======
+<<<<<<< HEAD
+      '@assets': path.resolve(__dirname, './src/assets'),
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+=======
+      '@assets': path.resolve(__dirname, './src/assets')
+    }
+  },
+  css: {
+    postcss: false
+  },
+  esbuild: {
+    loader: 'tsx',
+    include: /src\/.*\.[jt]sx?$/,
+    exclude: [],
+    jsx: 'automatic'
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621
   },
   build: {
     target: 'esnext',
     minify: 'terser',
+>>>>>>> origin/chore/fix-lint-and-merge
     sourcemap: false,
     rollupOptions: {
       output: {
@@ -53,47 +74,72 @@ export default defineConfig({
           'react-vendor': ['react', 'react-dom'],
 >>>>>>> origin/chore/fix-lint-and-merge
           'ui-vendor': [
-            '@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar@radix-ui/react-checkbox@radix-ui/react-collapsible@radix-ui/react-dialog@radix-ui/react-dropdown-menu@radix-ui/react-hover-card@radix-ui/react-label@radix-ui/react-menubar@radix-ui/react-navigation-menu@radix-ui/react-popover@radix-ui/react-progress@radix-ui/react-radio-group@radix-ui/react-scroll-area@radix-ui/react-select@radix-ui/react-separator@radix-ui/react-slider@radix-ui/react-slot@radix-ui/react-switch@radix-ui/react-tabs@radix-ui/react-toast@radix-ui/react-toggle@radix-ui/react-tooltip'
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-checkbox',
+            '@radix-ui/react-collapsible',
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-hover-card',
+            '@radix-ui/react-label',
+            '@radix-ui/react-menubar',
+            '@radix-ui/react-navigation-menu',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-progress',
+            '@radix-ui/react-radio-group',
+            '@radix-ui/react-scroll-area',
+            '@radix-ui/react-select',
+            '@radix-ui/react-separator',
+            '@radix-ui/react-slider',
+            '@radix-ui/react-slot',
+            '@radix-ui/react-switch',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-toast',
+            '@radix-ui/react-toggle',
+            '@radix-ui/react-tooltip',
           ],
           'animation-vendor': ['framer-motion'],
-          'utils-vendor': ['clsxtailwind-mergeclass-variance-authority'],
+          'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
           'icons-vendor': ['lucide-react'],
-          'state-vendor': ['@reduxjs/toolkitreact-redux'],
-          'router-vendor': ['react-router-dom']
+          'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
+          'router-vendor': ['react-router-dom'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
-          if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]',
-          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]',
-          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]',
-          return 'assets/[name]-[hash].[ext]'
-        }
-      }
+          if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
+          return 'assets/[name]-[hash].[ext]';
+        },
+      },
     },
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.logconsole.infoconsole.debugconsole.warn'],
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
         passes: 2,
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
         unsafe_proto: true,
         unsafe_regexp: true,
-        unsafe_undefined: true},
+        unsafe_undefined: true,
+      },
       mangle: {
         safari10: true,
         properties: {
-          regex: /^_/
-        }
-      }
+          regex: /^_/,
+        },
+      },
     },
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
     emptyOutDir: true,
-    assetsInlineLimit: 4096},
+    assetsInlineLimit: 4096,
+  },
   optimizeDeps: {
     include: [
 <<<<<<< HEAD
@@ -141,7 +187,7 @@ export default defineConfig({
       'clsx'
       'tailwind-merge'
     ]
-    exclude: ['@radix-ui/react-icons']
+    exclude: ['@radix-ui/react-icons]
   }
 });
 });
@@ -183,12 +229,15 @@ import { defineConfig,splitVendorChunkPlugin } from 'vite'; import react from '@
       target: 'esnext',
     },
   },
+<<<<<<< HEAD
   css: {
     devSourcemap: false,
   },
   esbuild: {
     jsx: 'automatic',
   },
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
   server: {
     port: 3000,
     host: true,

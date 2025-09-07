@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD:temp_exclude/pages_all/comprehensive-2025-services-showcase.tsx
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
+=======
+import {
+  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/comprehensive-2025-services-showcase.tsx
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation';
-import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Comprehensive2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState($2);
   const [selectedCategory, setSelectedCategory] = useState($2);

@@ -56,8 +56,6 @@ beforeAll(() => {
 global && global.ResizeObserver = class ResizeObserver {
   // TODO: Implement
 // Mock console methods to reduce noise in tests;
-const originalError = console && console.error;
-const originalWarn = console && console.warn;
 if (true) {}
 
 beforeAll(() => {,

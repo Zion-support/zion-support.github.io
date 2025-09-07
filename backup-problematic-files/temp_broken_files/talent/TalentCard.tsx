@@ -9,52 +9,75 @@ import { TalentProfile } from "@/types/talent",;
 import { RatingStars } from '@/components/RatingStars',;
 import { useAuth } from '@/context/auth/AuthProvider',;
 import { useCart } from '@/context/CartContext',;
+<<<<<<< HEAD
+=======
+
+>>>>>>> merged-prs-20250907-203621
 ;
 export interface TalentCardProps {;
   talent:TalentProfile,;
   onViewProfile:(id:string) => void,;
   onRequestHire:(talent:TalentProfile) => void,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> merged-prs-20250907-203621
   isAuthenticated:boolean;
 }
-;
 const TalentCardComponent = ({;
   talent,;
   onViewProfile,;
   onRequestHire,;
-  isAuthenticated;
+  isAuthenticated;)
 } TalentCardProps) => {;
   const router = useRouter(),;
-  ;
   const handleViewProfile = () => {;
     // Navigate directly to the talent profile;
     router.push(`/talent/${talent.id}`),;
+<<<<<<< HEAD
     ;
+=======
+
+    ;
+
+>>>>>>> merged-prs-20250907-203621
     // Also call the onViewProfile callback if provided;
     if (onViewProfile) {;
       onViewProfile(talent.id),;    }
   },;
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> merged-prs-20250907-203621
   const handleRequestHire = (e:React.MouseEvent) => {;
     e.preventDefault(),;
     e.stopPropagation(),;
     if (onRequestHire) {;
       onRequestHire(talent);
-    }
-  },;
+
   // Extract skills - limit to 5 for display;
   const skills = talent.skills?.slice(0, 5) || [],;
-;
   return (;
+
     <Card;
+<<<<<<< HEAD
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple";
       onClick={handleViewProfile}
       tabIndex={0}
     >;
+=======
+      className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple";"
+      onClick={handleViewProfile}
+      tabIndex={0}
+    >;
+
+>>>>>>> merged-prs-20250907-203621
       <div className="p-6">;
         <div className="flex items-start">;
           {/* Avatar */}
           <div className="relative mr-4">;
             <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
+<<<<<<< HEAD
               {talent.profile_picture_url ? (;
                 <img;
                   src={talent.profile_picture_url}
@@ -121,6 +144,49 @@ const TalentCardComponent = ({;
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">;
           <div>;
+=======
+
+                <img;
+                  src={talent.profile_picture_url}
+                  alt={talent.full_name}"
+                  className="w-full h-full object-cover";""
+                  loading="lazy";"
+                />;
+</img>"
+                <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;"
+                </div>;
+            </div>;"
+              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0.5 rounded-full">;"
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;"
+</CheckCircle2>)
+              </div>;            )}
+          <div className="flex-1">;"
+            <div className="flex justify-between items-start">;"
+              <h3 className="text-lg font-bold text-white">{talent.full_name}</h3>;""
+              <FavoriteButton itemId={talent.id} className="-mt-1" />;"
+
+            <p className="text-white font-medium">{talent.professional_title}</p>;""
+            <div className="mt-2 flex flex-wrap gap-3 text-sm">;"
+                <div className="flex items-center text-zion-slate-light">;"
+                  <MapPin className="h-4 w-4 mr-1" />;"
+
+                  <span>{talent.location}</span>;
+                  <Clock className="h-4 w-4 mr-1" />;"
+
+                  <span>{talent.availability_type}</span>;
+                </div>;              )}
+          <div className="mt-4">;"
+            <div className="flex flex-wrap gap-2">;"
+                <span ;
+                  key={index}"
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";"
+                >;                  {skill}
+</span>
+                </span>;"
+                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;"
+                </span>;              )}
+
+>>>>>>> merged-prs-20250907-203621
             {talent.hourly_rate ? (;
               <div className="text-white font-bold">;
                 ${talent.hourly_rate}
@@ -152,10 +218,15 @@ const TalentCardComponent = ({;
               className="text-zion-cyan hover:text-white hover:bg-zion-blue-light";
             >;
               View <ArrowRight className="ml-1 h-4 w-4" />;
+<<<<<<< HEAD
+=======
+
+>>>>>>> merged-prs-20250907-203621
             </Button>;
           </div>;
         </div>;
       </div>;
+
     </Card>;
   );
 },;
@@ -176,6 +247,7 @@ isAuthenticated ;
 //Navigate directly to the talent profile router.push (`/talent/$ {;
   talent.id ;
 }`);
+<<<<<<< HEAD
 //Also call the onViewProfile callback if provided </div>) ;
 }</div> <span >{;
   talent.availability type ;
@@ -184,10 +256,51 @@ isAuthenticated ;
   index ;
 }className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light" >{;
   skill ;
+=======
+
+//Also call the onViewProfile callback if provided </div>) ;
+}</div> <span >{;
+}</span> </div>) ;
+}</div> </div> </div> <span key= {;
+  index ;"
+}className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light" >{;"
+>>>>>>> merged-prs-20250907-203621
 }</span>) ) ;
-}+ {;
-  (talent.skills?.length || 0) - 5 ;
 }more </span>) ;
 }</div> </div>) ;
+<<<<<<< HEAD
 }$ {;"  talent.hourly rate ";"}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";"}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
 };""
+=======
+<<<<<<< HEAD
+:temp_broken_files/talent/TalentCard.tsx
+
+};""
+=======
+<<<<<<< HEAD
+:temp_broken_files/talent/TalentCard.tsx
+}$ {;"  talent.hourly rate ";"}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";"}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
+};""
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+}$ {;
+  talent.hourly rate ";
+}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";
+}</div> <Button size="sm" variant="secondary" onClick={;
+  handleRequestHire ";
+<<<<<<< HEAD
+}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";
+=======
+}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";
+}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
+};
+"
+<<<<<<< HEAD
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/TalentCard.tsx
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

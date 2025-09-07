@@ -60,14 +60,12 @@ export default function EnhancedFooter() {
     { name: 'GitHub', href: '#', icon: 'Github' },
   HelpCircle} from 'lucide-react';
 export default function EnhancedFooter() {
-  const scrollToTop = () => {
     window.scrollTo({ "top": '0', "behavior": 'smooth' })
 };
 
   FileText,
   HelpCircle} from 'lucide-react';
 export default function EnhancedFooter() {
-  const scrollToTop = () => {
     window.scrollTo({ "top": '0', "behavior": 'smooth' })
 };
     window.scrollTo({ "top": '0', "behavior": 'smooth' });

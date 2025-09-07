@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> e19246f6ae7164fec78c9d9e31cb33f1a6ec056a
@@ -57,6 +58,13 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const os = require('os');
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+const { execSync } = require('child_process')
+const os = require('os')
+>>>>>>> merged-prs-20250907-203621
 // console.log(' Comprehensive Monitoring & Alerting v2.0')
 console.log('')
     const output = execSync('df -h /', { "encoding"})
@@ -102,6 +110,7 @@ console.log('')
     "message"
     "action"
       log('warn', 'Alerts "generated")
+<<<<<<< HEAD
 <<<<<<< HEAD
       log('info', 'Monitoring "Recommendations")
 =======
@@ -199,3 +208,6 @@ console.log(')
 =======
 
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+      log('info', 'Monitoring "Recommendations")
+>>>>>>> merged-prs-20250907-203621

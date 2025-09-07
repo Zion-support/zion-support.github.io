@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -33,10 +34,19 @@ const path = require('path')
 // console.log(' Fixing All Remaining Syntax Issues...')
 console.log('=====')
 const problematicFiles = ['pages/docs/integration-examples.tsx']
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+// console.log(' Fixing All Remaining Syntax Issues...')
+console.log('=====')
+const problematicFiles = ['pages/docs/integration-examples.tsx'];
+>>>>>>> merged-prs-20250907-203621
   'pages/security.tsx'
   'pages/services-catalog.tsx'
   'pages/services-comparison.tsx'
   'pages/services-overview.tsx'
+<<<<<<< HEAD
 <<<<<<< HEAD
 let content = '';
 =======
@@ -96,3 +106,26 @@ let content = '';
 
 >>>>>>> ae43c11a1ddb5b688c8d7d6c4fb5df5031d8eb3a
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+let content = '';
+    if (filePath === 'pages/docs/integration-examples.tsx')
+      content = "
+    "phone"
+    "email"
+    "address"
+    "site"
+      "title"
+      "count"
+      "description"
+      "features"
+      "title"
+      "count"
+      "description"
+      "features"
+      "title"
+      "count"
+      "description"
+      "features"
+        <meta name="description" content="
+        <meta property="og:description" content="
+>>>>>>> merged-prs-20250907-203621

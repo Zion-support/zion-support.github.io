@@ -1,8 +1,33 @@
+<<<<<<< HEAD:backup/pages.broken/services/ai/customer-experience.tsx
+=======
+
+
+<<<<<<< HEAD
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages.broken/services/ai/customer-experience.tsx
 export default function CustomerExperienceAI() { return ( <Article title=\"Customer Experience Analytics\" subtitle=\"Unify NPS,chat,tickets,and product usage into actionable insights\" price=\"from $8k\" bullets={[\'Multimodal sentiment across chat,calls,reviews,and tickets\',\'Journey \"analytics\": drop-off detection and friction mapping\',\'Auto-generated help center content and chatbot fine-tuning\',\'ROI models that tie experience improvements to revenue\' ]} /> ) } function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 import React from 'react';
 interface CustomerexperienceProps {
   // Add props here as needed
 
+<<<<<<< HEAD:backup/pages.broken/services/ai/customer-experience.tsx
+=======
+
+
+<<<<<<< HEAD
+}
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages.broken/services/ai/customer-experience.tsx
 export default function Customerexperience({ }: CustomerexperienceProps) {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,12 +49,14 @@ class ErrorBoundary extends React.Component {
 }
 export default function CustomerExperienceAI() { return ( <Article title=\"Customer Experience Analytics\" subtitle=\"Unify NPS,chat,tickets,and product usage into actionable insights\" price=\"from $8k\" bullets={[\'Multimodal sentiment across chat,calls,reviews,and tickets\',\'Journey \"analytics\": drop-off detection and friction mapping\',\'Auto-generated help center content and chatbot fine-tuning\',\'ROI models that tie experience improvements to revenue\' ]} /> ) } function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
 export default function CustomerExperienceAI() { return ( <Article title=\"Customer Experience Analytics\" subtitle=\"Unify NPS,chat,tickets,and product usage into actionable insights\" price=\"from $8k\" bullets={[\'Multimodal sentiment across chat,calls,reviews,and tickets\',\'Journey \"analytics\": drop-off detection and friction mapping\',\'Auto-generated help center content and chatbot fine-tuning\',\'ROI models that tie experience improvements to revenue\' ]} /> ) } function Article(): any ({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string, price: string, bullets: string[]\' }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Engagement\": </strong> {price}</p> <ul> {bullets && bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <ContactFooter /> </main> ) } function ContactFooter() { return ( <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Site: <a href=\"https: </p> ) }
-import React from 'react';
 interface CustomerexperienceProps {;
   // Add props here as needed;
 }
 export default function Customerexperience(): any ({ }: CustomerexperienceProps) {;
+<<<<<<< HEAD:backup/pages.broken/services/ai/customer-experience.tsx
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages.broken/services/ai/customer-experience.tsx
   return (
 
     <div>
@@ -37,3 +64,21 @@ export default function Customerexperience(): any ({ }: CustomerexperienceProps)
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD:backup/pages.broken/services/ai/customer-experience.tsx
+=======
+
+}
+
+
+<<<<<<< HEAD
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:pages.broken/services/ai/customer-experience.tsx

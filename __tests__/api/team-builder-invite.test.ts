@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+import { describe, it, expect } from 'vitest';
+>>>>>>> merged-prs-20250907-203621
 
 describe('Team Builder Invite API', () => {
 <<<<<<< HEAD
@@ -41,6 +52,7 @@ describe('Team Builder Invite API', () => {'
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { describe,it,expect } from "vitest"; describe("Team Builder Invite API",() => { it("should work",() => { expect(true).toBe(true)})});''""
 import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',() => { it('should work',() => { expect(true).toBe(true)})}'
 });'''
@@ -61,15 +73,22 @@ describe('Team Builder Invite API', () => {'
 });''
 });''
 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { describe, it, expect } from 'vitest'
 describe('Team Builder Invite API'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
 import { describe, it, expect } from 'vitest'
 describe('Team Builder Invite API'
   it('should work'
 const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"
+<<<<<<< HEAD
 
 import { describe, it, expect } from 'vitest';
 
@@ -108,6 +127,7 @@ const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', 
 });
 >>>>>>> origin/main
 =======
+<<<<<<< HEAD
 
 describe('team-builder-invite.test', () => {
   test('renders without crashing', () => {
@@ -115,3 +135,25 @@ describe('team-builder-invite.test', () => {
   });
 });
 >>>>>>> pr/11282
+=======
+import { describe, it, expect } from 'vitest';
+describe('Team Builder Invite API', () => {
+  it('should work', () => {
+    expect(true).toBe(true);
+  });
+});
+const { describe,it,expect } from "vitest"; describe("Team Builder Invite API",() => { it("should work",() => { expect(true).toBe(true)})});''"
+import { describe,it,expect } from 'vitest'; describe('Team Builder Invite API',() => { it('should work',() => { expect(true).toBe(true)})}
+});''
+});''
+ursor/add-new-services-and-deploy-updates-0462
+ursor/integrate-build-improve-and-re-verify-8f7d
+import { describe, it, expect } from 'vitest'
+describe('Team Builder Invite API'
+  it('should work'
+const { describe,it,expect } from "vitest"; describe('Team Builder Invite API', () => { it("should work"
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339
+>>>>>>> merged-prs-20250907-203621

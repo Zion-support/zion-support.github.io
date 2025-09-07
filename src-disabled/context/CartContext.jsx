@@ -3,7 +3,7 @@ import { safeStorage  } from '@/utils/safeStorage';
 import { useAuth  } from '@/hooks/useAuth';
 import { getCartKey, mergeCartItems  } from '@/utils/cartUtils';
 
-const initialState = {items: []}
+const initialState = { items: [],}
 }function cartReducer() {switch (action.type) {case 'ADD_ITEM': ;
   const existing = state.items.find(i => i.id === action.payload.id)let items;}
             if (existing) {items = state.items.map(i => i.id === action.payload.id;}
@@ -12,13 +12,13 @@ const initialState = {items: []}
 } else {items = [...state.items, action.payload];}
             }
             return { items }}
-        case 'REMOVE_ITEM': return {items: state.items.filter(i = > i.id !== action.payload)}
+        case 'REMOVE_ITEM': return { items: state.items.filter(i = > i.id !== action.payload),}
 }case 'UPDATE_QUANTITY': ;
   const { id, quantity } = action.payload;
             return {items: state.items.map(item =>;}
                     item.id === id ? { ...item, quantity } : item;
                 )}}
-        case 'CLEAR_CART': return { items: [] }case 'SET_ITEMS': return {items: action.payload}
+        case 'CLEAR_CART': return { items: [] }case 'SET_ITEMS': return { items: action.payload,}
 }default: return state;
     }
 }
@@ -40,15 +40,15 @@ const stored = safeStorage.getItem(cartKey)if (stored) {try {items = JSON.parse(
   const guestItems = JSON.parse(guestStored)items = mergeCartItems(items, guestItems)} catch {/* ignore */;}
                 }
                 safeStorage.removeItem(getCartKey())}
-        }dispatch({type: 'SET_ITEMS'}
+        }dispatch({ type: 'SET_ITEMS',}
   payload: items },
 }, [cartKey, user?.id])useEffect(() => {}
-safeStorage.setItem(cartKey, JSON.stringify(state.items))}, [state.items, cartKey])const value = {items: state.items, dispatch,addItem: (item) => dispatch({type: 'ADD_ITEM'}
+safeStorage.setItem(cartKey, JSON.stringify(state.items))}, [state.items, cartKey])const value = {items: state.items, dispatch,addItem: (item) => dispatch({ type: 'ADD_ITEM',}
   payload: item,}
-}), removeItem: (id) => dispatch({type: 'REMOVE_ITEM'}
+}), removeItem: (id) => dispatch({ type: 'REMOVE_ITEM',}
   payload: id,}
-}), updateQuantity: (id, quantity) => dispatch({type: 'UPDATE_QUANTITY'}
-  payload: { id, quantity } }), clearCart: () => dispatch({type: 'CLEAR_CART'}
+}), updateQuantity: (id, quantity) => dispatch({ type: 'UPDATE_QUANTITY',}
+  payload: { id, quantity } }), clearCart: () => dispatch({ type: 'CLEAR_CART',}
 }), getTotalItems: () => state.items.reduce((total, item) => total + item.quantity, 0), getTotalPrice: () => state.items.reduce((total, item) => total + (item.price * item.quantity), 0);
   return <CartContext.Provider value={value} />{children}</CartContext.Provider>;
 }

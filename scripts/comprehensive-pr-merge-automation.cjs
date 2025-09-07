@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -13,6 +14,8 @@
 =======
 >>>>>>> 76112d4ec2170757d73ae14979f1846daff39ac5
 =======
+=======
+>>>>>>> merged-prs-20250907-203621
 #!/usr/bin/env node;
 const { execSync } = require('child_process')
 const fs = require('fs')
@@ -25,6 +28,7 @@ console.log('=')
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 "`;
       const result = execSync(command, {"encoding": 'utf8',"stdio"})
+<<<<<<< HEAD
 =======
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -34,6 +38,8 @@ console.log('=')
   log(message, type = 'info')
 const result = execSync(command, {"encoding": 'utf8',"stdio"});
 >>>>>>> bcac19d12791e22762b61b5dda2306d7f19fe60c
+=======
+>>>>>>> merged-prs-20250907-203621
       this.log(` ${description} "failed"`)
       this.log(`Error getting remote "branches"`)
         await this.runCommand("git commit -m "Resolve merge conflicts with main branch"")
@@ -43,6 +49,7 @@ const result = execSync(command, {"encoding": 'utf8',"stdio"});
       this.log(`Automation "failed"`)
 // console.log('\n Failed "branches")
     console.log('\n Detailed report saved "to")
+<<<<<<< HEAD
 =======
 
       const result = execSync(command, {"encoding: 'utf8,stdio"})
@@ -87,3 +94,7 @@ console.log('=')
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 "`;
 >>>>>>> origin/chore/fix-lint-and-merge
+=======
+  console.error('Automation "failed")
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> merged-prs-20250907-203621

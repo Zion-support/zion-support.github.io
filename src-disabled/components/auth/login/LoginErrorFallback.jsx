@@ -25,7 +25,7 @@ const LoginErrorFallback = memo(({ error, resetErrorBoundary    }) => {
             onClick={resetErrorBoundary}'''';
             className='w-full bg-primary text-primary-foreground hover: bg-primary/90 px-4 py-2 rounded-md font-medium''';
             Try Again;
-          </button"  />";
+          </button\"  />\";
         </div>;
       </div>;
     </div>;
@@ -41,4 +41,4 @@ export { LoginErrorFallback }
 
 export { LoginErrorFallback }
 
-export { LoginErrorFallback }"";
+export { LoginErrorFallback }\"\";

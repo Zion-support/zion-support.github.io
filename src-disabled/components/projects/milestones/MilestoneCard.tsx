@@ -1,9 +1,13 @@
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 
 import { Button } from "@/components/ui/button";
 import { format  } from 'date-fns';
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
 import React from 'react'
 import {
   Card
@@ -16,6 +20,17 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { format } from 'date-fns'
 
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
+=======
+
+import React from 'react',
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { format } from 'date-fns',
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
 import { Check, ArrowDown, X } from 'lucide-react'
 
   id: string
@@ -24,8 +39,8 @@ import { Check, ArrowDown, X } from 'lucide-react'
   description?: string
   amount: number
   status: string
-  dueDate?: string
-  onApprove?: (id: string) => Promise<void>
+  dueDate?: string;
+  onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>; import React from 'react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -59,7 +74,6 @@ export function MilestoneCard({
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { format } from 'date-fns';
 
 interface MilestoneCardProps {;
@@ -99,15 +113,27 @@ export function MilestoneCard({;
       case 'completed':;
         return 'bg-green-500',;
 
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
       case 'in_progress':;
 
+=======
+
+
+        return 'bg-green-500';
+<<<<<<< HEAD
+      case 'in_progress':
+        return 'bg-blue-500';
+      case 'pending':
+=======
+      case 'in_progress':;
+        return 'bg-blue-500',;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
       case 'pending':;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
         return 'bg-yellow-500';
-      case 'rejected':;
+      case 'rejected':
         return 'bg-red-500';
 
-import React from 'react';
-import {
   Card,
   CardContent,
   CardFooter,
@@ -137,6 +163,25 @@ import { Button  } from '@/components / ui / button';
 interface MilestoneCardProps {
   id: string,
   project_id: string,
+import { Button } from "@/components/ui/button",
+import { format } from 'date-fns',
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+interface MilestoneCardProps {
+  id: string,
+  projectId: string,
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),;
+  function getStatusBadgeColor() {;
+    switch (status) {;
+      case 'completed':;
+        return 'bg-green-500',;
+      case 'in_progress':;
+        return 'bg-blue-500',;
+      case 'pending':;
+        return 'bg-yellow-500';
+      case 'rejected':;
+        return 'bg-red-500';
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -163,6 +208,9 @@ interface MilestoneCardProps {
             {dueDate && (;
               <p className="text-sm text-muted-foreground">;
   dueDate?: string,
+  onApprove?: (id: string,) => Promise<void>,
+  onReject?: (id: string,) => Promise<void>
+}
 
 default:
         return 'bg-gray-500';
@@ -184,6 +232,7 @@ default:
     };
   }
 
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -191,18 +240,130 @@ default:
           <div>
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
+=======
+  onApprove?: (id: string) => Promise<void>,
+  onReject?: (id: string) => Promise<void>
+import React from 'react',;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { format } from 'date-fns',;
+import { Check, ArrowDown, X } from 'lucide-react';
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+interface MilestoneCardProps {;
+  id: string,;
+  projectId: string,;
+  title: string,;
+  description?: string,;
+  amount: number,;
+  status: string,;
+  dueDate?: string,;
+  onApprove?: (id: string) => Promise<void>,;
+  onReject?: (id: string) => Promise<void>;
+}
+;
+export function MilestoneCard({;
+  id,;
+  projectId,;
+  title,;
+  description,;
+  amount,;
+  status,;
+  dueDate,;
+  onApprove,;
+  onReject;
+}: MilestoneCardProps) {;
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),;
+  function getStatusBadgeColor() {;
+    switch (status) {;
+      case 'completed':;
+        return 'bg-green-500',;
+      case 'in_progress':;
+        return 'bg-blue-500',;
+      case 'pending':;
+        return 'bg-yellow-500';
+      case 'rejected':;
+        return 'bg-red-500';
+      default: return 'bg-gray-500';
+    }
+  }
+  
+              <p className="text-sm text-muted-foreground">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
 
               <p className="text-sm text-muted-foreground">
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
             )}
 
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
               <p className='text-sm text-muted-foreground'>
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+      default: return 'bg-gray-500'
+    };
+  }
+  
+<<<<<<< HEAD
+  return (
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-start">
+          <div>
+            <CardTitle className="text-xl">{title}</CardTitle>
+            {dueDate && (
+              <p className='text-sm text-muted-foreground'>                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
+              </p>
+            )}
+          </div>  }
+      default: return 'bg-gray-500';
+    }
+  }
+  
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-start">
+          <div>
+            <CardTitle className="text-xl">{title}</CardTitle>
+            {dueDate && (
+<<<<<<< HEAD
+              <p className='text-sm text-muted-foreground'>                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
+              </p>
+            )}
+          </div>  }
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-start">
+          <div>
+            <CardTitle className="text-xl">{title}</CardTitle>
+            {dueDate && (
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              <p className="text-sm text-muted-foreground">
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>;
             )}
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
+=======
+          </div>
+<<<<<<< HEAD
+          <div className='flex gap-2'>
+            <Badge
+              variant='outline'
+              className={`capitalize ${getStatusBadgeColor()} text-white`}
+            >
+              {status.replace('_', ' ')}
+            </Badge>
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
           </div>
 
           </div>
@@ -211,8 +372,16 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
             </Badge>
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
 
+=======
+            
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
             {isUnderDispute && disputeStatus && (
+<<<<<<< HEAD
+            
+            {isUnderDispute && disputeStatus && (
+=======
 
 <div className='flex gap-2'>
             <Badge
@@ -223,12 +392,24 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </Badge>
             {isUnderDispute && disputeStatus && (
 
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
               <DisputeStatusBadge status={disputeStatus} />
-            )}
           </div>
         </div>
       </CardHeader>
+<<<<<<< HEAD
+      <CardContent className='pb-2'>
+        {description && <p className='text-muted-foreground'>{description}</p>}
+        <div className='mt-4'>
+          <p className='text-xl font-bold'>${amount.toFixed(2)}</p>
+=======
 
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+
+      
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
       <CardContent className="pb-2">
         {description && (
           <p className="text-muted-foreground">{description}</p>
@@ -243,16 +424,174 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         </div>
       </CardContent>
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
+=======
+      <CardFooter className='pt-2 flex justify-between'>
+        <div>
+          {status !== 'completed' && status !== 'rejected' && (
+<<<<<<< HEAD
+            <RaiseDisputeButton
+              projectId={projectId}
+              milestoneId={id}
+              variant='ghost'
+              size='sm'            <RaiseDisputeButton
+              projectId = {projectId,}
+              milestoneId = {id,}
+          {status === 'pending' && onReject && !isUnderDispute && (
+            <Button variant='outline' size='sm' onClick={() => onReject(id)}>
+              <X className='h-4 w-4 mr-1' /> Reject            </Button>
+          {status === 'pending' && onApprove && !isUnderDispute && (
+            <Button variant='default' size='sm' onClick={() => onApprove(id)}>
+              <Check className='h-4 w-4 mr-1' /> Approve            </Button>
+            <Button variant='default' size='sm' onClick={() => onApprove(id)}>
+              <Check className='h-4 w-4 mr-1' /> Approve            </Button>
+          {isUnderDispute && (
+    </Card>
+  )
+}
+            <Button variant="outline" size="sm" disabled>
+              Actions frozen due to dispute
+            </Button>
+          </div>;
+=======
+
+              className={`capitalize ${getStatusBadgeColor()} text-white`}>;
+              {status && status.replace('_', ' ')}
+            </Badge>;
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+          <div className="flex gap-2">;
+            <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
+              {status && status.replace('_ ')}
+            </Badge>;
+
+              <DisputeStatusBadge status={disputeStatus} />;
+            )}
+          </div>;
+        </div>;
+      </CardHeader>;
+
+      <CardContent className='pb-2'>;
+        {description && <p className='text-muted-foreground'>{description}</p>}
+        <div className='mt-4'>;
+          <p className='text-xl font-bold'>${amount && amount.toFixed(2)}</p>;
+        </div>;
+      </CardContent>;
+
+      <CardFooter className='pt-2 flex justify-between'>;
+        <div>;
+          {status !== 'completed' && status !== 'rejected' && (;
+
+
+            <RaiseDisputeButton
+              projectId={projectId}
+              milestoneId={id}
+              variant='ghost'
+<<<<<<< HEAD
+              size='sm'            <RaiseDisputeButton
+              projectId = {projectId,}
+              milestoneId = {id,}
+      
+      <CardContent className="pb-2">
+        {description && (
+          <p className="text-muted-foreground">{description}</p>
+        )}
+        <div className="mt-4">
+          <p className="text-xl font-bold">${amount.toFixed(2)}</p>
+        </div>
+      </CardContent>
+      <CardFooter className='pt-2 flex justify-between'>
+        <div>
+          {status !== 'completed' && status !== 'rejected' && (
+            <RaiseDisputeButton 
+              projectId={projectId} 
+              milestoneId={id} 
+            <RaiseDisputeButton
+              projectId={projectId}
+              milestoneId={id}
+              variant='ghost'
+              size='sm'            <RaiseDisputeButton 
+              projectId = {projectId,}
+              milestoneId = {id,}
+      
+      <CardContent className="pb-2">
+        {description && (
+          <p className="text-muted-foreground">{description}</p>
+        )}
+        <div className="mt-4">
+          <p className="text-xl font-bold">${amount.toFixed(2)}</p>
+        </div>
+      </CardContent>
+      
+      <CardFooter className="pt-2 flex justify-between">
+        <div>
+          {status !== 'completed' && status !== 'rejected' && (
+            <RaiseDisputeButton 
+              projectId={projectId} 
+              milestoneId={id} 
+=======
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
 
               variant="ghost"
               size="sm"
 
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
               size='sm'
 origin/cursor/automate-test-improve-and-merge-code-2533
+=======
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+              variant="ghost"
+              size="sm"
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
             />
           )}
         </div>
+<<<<<<< HEAD
+        <div className='flex gap-2'>
+          {status === 'pending' && onReject && !isUnderDispute && (
+            <Button variant='outline' size='sm' onClick={() => onReject(id)}>
+              <X className='h-4 w-4 mr-1' /> Reject            </Button>
+          {status === 'pending' && onReject && !isUnderDispute && (
+            <Button variant='outline' size='sm' onClick={() => onReject(id)}>
+              <X className='h-4 w-4 mr-1' /> Reject            </Button>
+        
+        <div className="flex gap-2">
+          {status === 'pending' && onReject && !isUnderDispute && (
+            <Button variant="outline" size="sm" onClick={() => onReject(id)}>
+              <X className="h-4 w-4 mr-1" /> Reject
+            </Button>
+          )}
+          {status === 'pending' && onApprove && !isUnderDispute && (
+            <Button variant='default' size='sm' onClick={() => onApprove(id)}>
+              <Check className='h-4 w-4 mr-1' /> Approve            </Button>
+            <Button variant='default' size='sm' onClick={() => onApprove(id)}>
+              <Check className='h-4 w-4 mr-1' /> Approve            </Button>
+            <Button variant="default" size="sm" onClick={() => onApprove(id)}>
+              <Check className="h-4 w-4 mr-1" /> Approve
+            </Button>
+          )}
+          {isUnderDispute && (
+            <Button variant='outline' size='sm' disabled>              Actions frozen due to dispute            <Button variant="outline" size="sm" disabled>
+              Actions frozen due to dispute
+            </Button>
+          )}
+        </div>
+      </CardFooter>
+    </Card>
+  )
+}
 
+=======
+
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
+=======
+
+          {status === 'pending' && onReject && !isUnderDispute && (
+            <Button variant='outline' size='sm' onClick={() => onReject(id)}>
+              <X className='h-4 w-4 mr-1' /> Reject            </Button>
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+        
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
         <div className="flex gap-2">
           {status === 'pending' && onReject && !isUnderDispute && (
             <Button variant="outline" size="sm" onClick={() => onReject(id)}>
@@ -282,6 +621,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           )}
 
           {isUnderDispute && (
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
+=======
+<<<<<<< HEAD
+    </Card>;
+  );
+};
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
             <Button variant="outline" size="sm" disabled>
               Actions frozen due to dispute
             </Button>
@@ -294,20 +640,48 @@ origin/cursor/automate-test-improve-and-merge-code-2533
               <DisputeStatusBadge status={disputeStatus} />;
             )}
           </div>;
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
+=======
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
         </div>;
-
-        <div className='flex gap-2'>;
+      </CardHeader>;
+      <CardContent className="pb-2">;
+        {description && (;
+          <p className="text-muted-foreground">{description}</p>;
+        )}
+        <div className="mt-4">;
+          <p className="text-xl font-bold">${amount.toFixed(2)}</p>;
+        </div>;
+      </CardContent>;
+      <CardFooter className="pt-2 flex justify-between">;
+        <div>;
+          {status !== 'completed' && status !== 'rejected' && (;
+            <RaiseDisputeButton;
+              projectId={projectId} ;
+              milestoneId={id} ;
+              variant="ghost";
+              size="sm";
+            />;
+          )}
+        </div>;
+        <div className="flex gap-2">;
           {status === 'pending' && onReject && !isUnderDispute && (;
-            <Button variant='outline' size='sm' onClick={() => onReject(id)}>;
-              <X className='h-4 w-4 mr-1' /> Reject            </Button>;
+            <Button variant="outline" size="sm" onClick={() => onReject(id)}>;
+              <X className="h-4 w-4 mr-1" /> Reject;
+            </Button>;
           )}
-
+;
           {status === 'pending' && onApprove && !isUnderDispute && (;
-            <Button variant='default' size='sm' onClick={() => onApprove(id)}>;
-              <Check className='h-4 w-4 mr-1' /> Approve            </Button>;
+            <Button variant="default" size="sm" onClick={() => onApprove(id)}>;
+              <Check className="h-4 w-4 mr-1" /> Approve;
+            </Button>;
           )}
-
+;
           {isUnderDispute && (;
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
 
       </CardHeader>;
       <CardContent className="pb-2">;
@@ -345,6 +719,9 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           {isUnderDispute && (;
             <Button variant="outline" size="sm" disabled>;
 
+=======
+            <Button variant="outline" size="sm" disabled>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
               Actions frozen due to dispute;
 
             </Button>;
@@ -353,7 +730,18 @@ origin/cursor/automate-test-improve-and-merge-code-2533
       </CardFooter>;
     </Card>;
   );
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
 });
+=======
+}
+<<<<<<< HEAD
+;
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+  );
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx
 }
       <CardHeader className='pb - 2'>;
         <div className='flex justify - between items - start'>;
@@ -531,6 +919,7 @@ pr-12325
         </div>;
       </CardFooter>;
     </Card>);
+<<<<<<< HEAD:src-disabled/components/projects/milestones/MilestoneCard.tsx
 }
 
         </div>
@@ -538,3 +927,10 @@ pr-12325
     </Card>
   );
 }
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/expand-services-advertise-and-build-project-4b36
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-8339:src/components/projects/milestones/MilestoneCard.tsx

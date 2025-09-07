@@ -11,12 +11,159 @@ import {
   Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
 } from 'lucide-react',
 import Layout from '../components/layout/Layout';
+<<<<<<< HEAD:pages_backup_1757220418/advanced-ai-automation-services.tsx
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = $2;
+=======
+
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+const heroStats = [
+  {
+    label: 'AI Services Delivered'
+    value: '200+'
+    icon: <Brain className='w-5 h-5' />
+  }
+  {
+    label: 'Happy AI Clients'
+    value: '500+'
+    icon: <Users className='w-5 h-5' />
+  }
+  {
+    label: 'AI Success Rate'
+    value: '99.8%'
+    icon: <Award className='w-5 h-5' />
+  }
+  {
+    label: 'AI ROI Average'
+    value: '500%'
+    icon: <TrendingUp className='w-5 h-5' />
+  },];
+const serviceCategories = [
+  {
+    title: 'AI Development Tools'
+    description: 'Advanced AI-powered development and testing automation'
+    services: advancedAIAutomationServices2025.filter(
+      s => s.category === 'AI Development Tools'
+    )
+    icon: Code
+    color: 'from-emerald-500 to-teal-600'
+    features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence']
+  }
+  {
+    title: 'AI Testing & Quality Assurance'
+    description: 'Intelligent testing automation with AI-driven insights'
+    services: advancedAIAutomationServices2025.filter(
+      s => s.category === 'AI Testing & Quality Assurance'
+    )
+    icon: TestTube
+    color: 'from-purple-500 to-indigo-600'
+    features: ['Test Generation', 'Performance Testing', 'Quality Assurance']
+  }
+  {
+    title: 'AI DevOps & Infrastructure'
+    description: 'Self-managing infrastructure with AI optimization'
+    services: advancedAIAutomationServices2025.filter(
+      s => s.category === 'AI DevOps & Infrastructure'
+    )
+    icon: Server
+    color: 'from-blue-500 to-indigo-600'
+    features: [
+      'Infrastructure Management'
+      'Deployment Optimization'
+      'Performance Monitoring'
+    ]
+  }
+  {
+    title: 'AI Cybersecurity'
+    description: 'Proactive threat detection and response with AI'
+    services: advancedAIAutomationServices2025.filter(
+      s => s.category === 'AI Cybersecurity'
+    )
+    icon: SecurityIcon
+    color: 'from-red-500 to-pink-600'
+    features: ['Threat Detection', 'Incident Response', 'Security Automation']
+  }
+  {
+    title: 'AI Data Management'
+    description: 'Intelligent data infrastructure with AI automation'
+    services: advancedAIAutomationServices2025.filter(
+      s => s.category === 'AI Data Management'
+    )
+    icon: Database
+    color: 'from-cyan-500 to-blue-600'
+    features: [
+      'Pipeline Management'
+      'Quality Assurance'
+      'Governance Automation'
+    ]
+  },];
+const heroFeatures = [
+  {
+    title: 'AI-Powered Automation'
+    description:
+      'Advanced AI algorithms that automate complex development, testing, and operations tasks.'
+    icon: Brain
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
+  }
+  {
+    title: 'Intelligent Optimization'
+    description:
+      'AI-driven optimization that continuously improves performance, security, and efficiency.'
+    icon: Sparkles
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600'
+  }
+  {
+    title: 'Autonomous Operations'
+    description:
+      'Self-managing systems that operate independently with minimal human intervention.'
+    icon: Settings
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600'
+  }
+  {
+    title: 'Predictive Analytics'
+    description:
+      'AI-powered insights that predict issues before they occur and optimize performance.'
+    icon: BarChart3
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
+  },];
+const testimonials = [
+  {
+    name: 'Dr. Michael Chen'
+    role: 'CTO, TechFlow Solutions'
+    company: 'TechFlow Solutions'
+    content:
+      "Zion Tech Group's AI automation platform has revolutionized our development process. We've reduced testing time by 90% and improved code quality significantly."
+    rating: 5
+    avatar: '👨‍💻'
+  },  {
+    name: 'Sarah Rodriguez'
+    role: 'DevOps Director, CloudScale Inc.'
+    company: 'CloudScale Inc.'
+    content:
+      'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.'
+    rating: 5
+    avatar: '👩‍💼'
+  },  {
+    name: 'David Kim'
+    role: 'Security Manager, SecureNet Corp.'
+    company: 'SecureNet Corp.'
+    content:
+      'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.'
+    rating: 5
+    avatar: '👨‍🔒'
+  },];
+  mobile: '+1 302 464 0950',
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-ai-automation-services.tsx
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
+<<<<<<< HEAD:pages_backup_1757220418/advanced-ai-automation-services.tsx
 
 const heroStats = [
   { label: 'AI Services Delivered', value: '200+', icon: <Brain className = $2;
@@ -24,6 +171,19 @@ const heroStats = [
   { label: 'AI Success Rate', value: '99.8%', icon: <Award className = $2;
   { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className = $2;
 const serviceCategories = $2;
+=======
+  { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },
+  { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },
+  { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },
+  { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],
+  {
+    title: 'AI Development Tools',
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-ai-automation-services.tsx
     description: 'Advanced AI-powered development and testing automation',
     services: advancedAIAutomationServices2025.filter($2);
     icon: Code,
@@ -64,8 +224,15 @@ const serviceCategories = $2;
   }
 ],
 
+<<<<<<< HEAD:pages_backup_1757220418/advanced-ai-automation-services.tsx
 const heroFeatures = $2;
     description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
+=======
+  {
+    title: 'AI-Powered Automation',
+    description:
+      'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-ai-automation-services.tsx
     icon: Brain,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   },
@@ -89,7 +256,12 @@ const heroFeatures = $2;
   }
 ],
 
+<<<<<<< HEAD:pages_backup_1757220418/advanced-ai-automation-services.tsx
 const testimonials = $2;
+=======
+  {
+    name: 'Dr. Michael Chen',
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-ai-automation-services.tsx
     role: 'CTO, TechFlow Solutions',
     company: 'TechFlow Solutions',
     content: 'Zion Tech Group\'s AI automation platform has revolutionized our development process. We\'ve reduced testing time by 90% and improved code quality significantly.',
@@ -110,7 +282,40 @@ const testimonials = $2;
     company: 'SecureNet Corp.',
     content: 'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,
+<<<<<<< HEAD:pages_backup_1757220418/advanced-ai-automation-services.tsx
     avatar: '👨‍🔒'
+=======
+    avatar: '👨‍🔒',
+  },
+];
+}
+
+    features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
+import React from 'react';
+import Head from 'next/head';
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
+} from 'lucide-react',;
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const heroStats = [;
+  { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },;
+  { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },;
+  { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },;
+  { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> merged-prs-20250907-203621:pages_backup_conflict_1757239547/advanced-ai-automation-services.tsx
   }
 ],
 

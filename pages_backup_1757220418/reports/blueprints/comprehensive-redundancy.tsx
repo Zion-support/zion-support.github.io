@@ -83,7 +83,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
   ];
-  const redundancyFeatures = [
     {
       feature: 'Geographic Distribution',
       description: 'Instances distributed across multiple regions',
@@ -119,7 +118,6 @@ const ComprehensiveRedundancyBlueprint: React.FC = () => {
   }
 }
   ];
-  const performanceMetrics = [
     { metric: 'Uptime', value: '99.97%', target: '99.9%', status: 'exceeded' },
     { metric: 'Response Time', value: '45ms', target: '100ms', status: 'exceeded' },
     { metric: 'Throughput', value: '2.4k req/s', target: '1k req/s', status: 'exceeded' },
