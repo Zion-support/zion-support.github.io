@@ -7,134 +7,22 @@ import globals from 'globals';'
 
 export default [
   js.configs.recommended,
+  ...compat.extends(
+    'next/core-web-vitals',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended'
+  ),
   {
-    }
-    "files": ['**/*.{js,jsx,ts,tsx}'],'
-    "ignores": [
-      'node_modules/**','
-      '.next/**','
-      'dist/**','
-      'build/**','
-      'coverage/**','
-      '*.config.js','
-      '*.config.cjs','
-      '*.config.mjs','
-      'scripts/**','
-      'automation/**','
-      'backup-problematic-files/**','
-      'src.disabled/**','
-      'components.disabled/**','
-      'pages.disabled/**','
-      'src.corrupted/**','
-      'src.broken/**','
-      'src_backup/**','
-      'pages_backup/**','
-      'pages.bak/**','
-      'pages.broken/**','
-      'pages.corrupted.*/**','
-      'pages_api.disabled/**','
-      'pages.__backup/**','
-      'pages._archive_corrupted/**','
-      'pages._quarantine/**','
-      'solutions.disabled/**','
-      'zion-os/**','
-      'zion-website/**','
-      'zion_academy/**','
-      'zion-ai-assistant/**','
-      'api/**','
-      'api-backup/**','
-      'api-disabled/**','
-      'api.disabled/**','
-      'backup/**','
-      'backups/**','
-      'broken_files_backup/**','
-      'cypress_backup/**','
-      'data_backup/**','
-      'deployment/**','
-      'deployments/**','
-      'dao/**','
-      'e2e/**','
-      'server/**','
-      'temp_*/**','
-      'test_build/**','
-      'tests/**','
-      '__tests__/**','
-      'lib.broken/**','
-      'middleware/**','
-      'netlify/**','
-      'pm2-automation/**','
-      'pm2-backups/**','
-      'recovered-branches/**','
-      'src_backup_temp/**','
-      'test-next/**','
-      'tools/**','
-      'utils/**','
-      '*.cjs','
-      '*.mjs','
-      'supabase/**','
-      'ultimate-*.cjs','
-      'advanced-*.js','
-      'comprehensive-*.js','
-      'enhanced-*.js','
-      'fix-*.js','
-      'merge-*.js','
-      'run-*.js','
-      'test-*.js','
-      '*.test.js','
-      '*.spec.js','
-      'aggressive-*.js','
-      'batch-*.js','
-      'clean-*.js','
-      'critical-*.js','
-      'execute-*.js','
-      'final-*.js','
-      'health-*.js','
-      'improve-*.js','
-      'maintenance-*.js','
-      'monitoring-*.js','
-      'optimized-*.js','
-      'performance-*.js','
-      'resolve-*.js','
-      'seo-*.js','
-      'simple-*.js','
-      'structural-*.js','
-      'system-*.js','
-      'ultimate-*.js','
-      '*.js','
-      'public/**','
-      'services-broken.tsx','
-      'services/**/*.ts','
-      'vitest.config.ts','
-      'playwright.config.ts','
-      'setupTests.ts','
-      'data/**','
-      'hooks/**','
-      'lib/**','
-      'middleware*','
-      'next.config.ts','
-      'cypress.config.ts','
-      'jest.*','
-      'fix_typescript_syntax_errors.jsx','
-      'contracts.disabled/**','
-      'data.disabled/**','
-      'hooks.disabled/**','
-      'lib.disabled/**','
-      'lib_backup/**','
-      'lint-target/**','
-      'pages-backup/**','
-      'pages-disabled/**','
-      'pages-quarantine/**','
-      'app/**''
-    ]
-  },
-  {
-    }
-    "files": ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],'
-    "languageOptions": {
-      }
-      "ecmaVersion": 2020,
-      "sourceType": 'module','
-      "globals": {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
         ...globals.browser,
         ...globals.node
         }
@@ -184,21 +72,143 @@ export default [
     }
   },
   {
-    }
-    "files": ['**/*.js', '**/*.jsx'],'
-    "languageOptions": {
-      }
-      "ecmaVersion": 2020,
-      "sourceType": 'module','
-      "globals": {
-        ...globals.browser,
-        ...globals.node
-      }
-    },
-    "rules": {
-      'no-unused-vars': 'off','
-      'no-console': 'off','
-      'no-undef': 'off''
-    }
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'automation_backup/**',
+      'apps.backup/**',
+      'backup-problematic-files/**',
+      'backup-merge-conflicts/**',
+      'corrupted_backup/**',
+      'corrupted-files-backup/**',
+      'src.disabled/**',
+      'components.disabled/**',
+      'components-disabled/**',
+      'components.disabled_full/**',
+      'pages.disabled/**',
+      'pages_backup/**',
+      'pages_backup_*/**',
+      'pages_backup_conflict/**',
+      'pages_backup_conflicts/**',
+      'pages_minimal/**',
+      'pages.broken/**',
+      'pages.corrupted.*/**',
+      'pages.disabled*/**',
+      'pages.disabled_*/**',
+      'pages.disabled_full/**',
+      'pages.old/**',
+      'pages_api.disabled/**',
+      'pages_disabled/**',
+      'pages.__backup/**',
+      'pages._archive_corrupted/**',
+      'pages._quarantine/**',
+      'pages.bak/**',
+      'pages.blog.disabled/**',
+      'solutions.disabled/**',
+      'src.corrupted/**',
+      'src.pages.disabled/**',
+      'src_backup/**',
+      'temp-backup/**',
+      'tests.disabled/**',
+      'zion-os/**',
+      'zion-website/**',
+      'zion_academy/**',
+      'zion-ai-assistant/**',
+      'zion-os.disabled/**',
+      'api/**',
+      'api-backup/**',
+      'api-disabled/**',
+      'api.disabled/**',
+      'backup/**',
+      'backups/**',
+      'broken_files_backup/**',
+      'cypress_backup/**',
+      'data_backup/**',
+      'deployment/**',
+      'deployments/**',
+      'dao/**',
+      'e2e/**',
+      'server/**',
+      'temp_*/**',
+      'test_build/**',
+      'tests/**',
+      '__tests__/**',
+      'components/apps/extension/**',
+      'lib.broken/**',
+      'middleware/**',
+      'netlify/**',
+      'pm2-automation/**',
+      'pm2-backups/**',
+      'recovered-branches/**',
+      'src.broken/**',
+      'src_backup_temp/**',
+      'test-next/**',
+      'tools/**',
+      'utils/**',
+      '*.cjs',
+      '*.mjs',
+      'supabase/**',
+      'ultimate-*.cjs',
+      'advanced-*.js',
+      'comprehensive-*.js',
+      'enhanced-*.js',
+      'fix-*.js',
+      'merge-*.js',
+      'run-*.js',
+      'test-*.js',
+      '*.test.js',
+      '*.spec.js',
+      'aggressive-*.js',
+      'batch-*.js',
+      'clean-*.js',
+      'critical-*.js',
+      'execute-*.js',
+      'final-*.js',
+      'health-*.js',
+      'improve-*.js',
+      'maintenance-*.js',
+      'monitoring-*.js',
+      'optimized-*.js',
+      'performance-*.js',
+      'resolve-*.js',
+      'seo-*.js',
+      'simple-*.js',
+      'structural-*.js',
+      'system-*.js',
+      'ultimate-*.js',
+      '*.js',
+      'public/**',
+      'services-broken.tsx',
+      'services/**/*.ts',
+      'vitest.config.ts',
+      'playwright.config.ts',
+      'setupTests.ts',
+      'components/**',
+      'data/**',
+      'hooks/**',
+      'lib/**',
+      'middleware*',
+      'next.config.ts',
+      'cypress.config.ts',
+      'jest.*',
+      'fix_typescript_syntax_errors.jsx',
+      'contracts.disabled/**',
+      'data.disabled/**',
+      'hooks.disabled/**',
+      'lib.disabled/**',
+      'lib_backup/**',
+      'lint-target/**',
+      'pages-backup/**',
+      'pages-disabled/**',
+      'pages-quarantine/**',
+      'app/**'
+    ]
   }
 ];

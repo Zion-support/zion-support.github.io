@@ -2,31 +2,34 @@ import React from 'react';
 import Link from 'next/link';
 import { Linkedin, Twitter, Github, Facebook, Mail, Phone, MapPin } from 'lucide-react';
 
-const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-  
-  const services = [
-    { name: 'AI Development', href: '/services/ai-development' },
-    { name: 'Cloud Services', href: '/services/cloud-services' },
-    { name: 'Blockchain Solutions', href: '/services/blockchain' },
-    { name: 'Data Analytics', href: '/services/data-analytics' },
-    { name: 'Web Development', href: '/services/web-development' },
-    { name: 'Mobile Apps', href: '/services/mobile-apps' },
-  ];
+const current_year = new Date().getFullYear();
 
-  const products = [
-    { name: 'ZionOS', href: '/products/zionos' },
-    { name: 'AI Marketplace', href: '/products/ai-marketplace' },
-    { name: 'Cloud Platform', href: '/products/cloud-platform' },
-  ];
+const services = [
+  { name: 'AI Development', href: '/services/ai-development' },
+  { name: 'Cloud Services', href: '/services/cloud-services' },
+  { name: 'Blockchain Solutions', href: '/services/blockchain' },
+  { name: 'Data Analytics', href: '/services/data-analytics' },
+  { name: 'Web Development', href: '/services/web-development' },
+  { name: 'Mobile Apps', href: '/services/mobile-apps' },
+  { name: 'DevOps', href: '/services/devops' },
+  { name: 'Cybersecurity', href: '/services/cybersecurity' },
+];
 
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Press', href: '/press' },
-    { name: 'Blog', href: '/blog' },
-  ];
+const products = [
+  { name: 'Zion AI Platform', href: '/products/ai-platform' },
+  { name: 'Cloud Infrastructure', href: '/products/cloud-infrastructure' },
+  { name: 'Data Analytics Suite', href: '/products/data-analytics' },
+  { name: 'Security Solutions', href: '/products/security' },
+];
 
+const company = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Press', href: '/press' },
+  { name: 'Blog', href: '/blog' },
+];
+
+export default function EnhancedFooter() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -127,7 +130,7 @@ const EnhancedFooter: React.FC = () => {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
-              &copy; {currentYear} Zion Tech Group. All rights reserved.
+              &copy; {current_year} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/legal/privacy">
@@ -151,6 +154,4 @@ const EnhancedFooter: React.FC = () => {
       </div>
     </footer>
   );
-};
-
-export default EnhancedFooter;
+}

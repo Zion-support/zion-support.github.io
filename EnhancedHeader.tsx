@@ -3,22 +3,39 @@ import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const EnhancedHeader: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+const navigation_items = [
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services', dropdown: [
+    { name: 'AI Development', href: '/services/ai-development' },
+    { name: 'Cloud Services', href: '/services/cloud-services' },
+    { name: 'Blockchain', href: '/services/blockchain' },
+    { name: 'Data Analytics', href: '/services/data-analytics' },
+  ]},
+  { name: 'About', href: '/about' },
+  { name: 'Contact', href: '/contact' },
+];
+
+const contact_info = [
+  { icon: 'Phone', text: '+1 302 464 0950', href: 'tel:+13024640950' },
+  { icon: 'Mail', text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+  { icon: 'MapPin', text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
+];
+
+export default function EnhancedHeader() {
+  const [is_scrolled, setIsScrolled] = useState(false);
+  const [is_open, setIsOpen] = useState(false);
+  const [active_dropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
+  const toggle_dropdown = (itemName: string) => {
+    setActiveDropdown(active_dropdown === itemName ? null : itemName);
   };
 
   const closeMobileMenu = () => {
@@ -26,45 +43,27 @@ const EnhancedHeader: React.FC = () => {
     setActiveDropdown(null);
   };
 
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services', dropdown: [
-      { name: 'AI Development', href: '/services/ai-development' },
-      { name: 'Cloud Services', href: '/services/cloud-services' },
-      { name: 'Blockchain', href: '/services/blockchain' },
-      { name: 'Data Analytics', href: '/services/data-analytics' },
-    ]},
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
-  const contactInfo = [
-    { icon: 'Phone', text: '+1 302 464 0950', href: 'tel:+13024640950' },
-    { icon: 'Mail', text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: 'MapPin', text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
-  ];
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      is_scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
             </div>
             <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+            {navigation_items.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <button
-                    onClick={() => toggleDropdown(item.name)}
+                    onClick={() => toggle_dropdown(item.name)}
                     className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
                   >
                     <span>{item.name}</span>
@@ -81,7 +80,7 @@ const EnhancedHeader: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => setIsOpen(!is_open)}
             className="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,7 +91,7 @@ const EnhancedHeader: React.FC = () => {
 
         {/* Mobile Menu */}
         <AnimatePresence>
-          {isOpen && (
+          {is_open && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
@@ -101,27 +100,27 @@ const EnhancedHeader: React.FC = () => {
             >
               <div className="px-4 py-4 space-y-4">
                 {/* Mobile Navigation */}
-                {navigationItems.map((item) => (
+                {navigation_items.map((item) => (
                   <div key={item.name}>
                     {item.dropdown ? (
                       <div>
                         <button
-                          onClick={() => toggleDropdown(item.name)}
+                          onClick={() => toggle_dropdown(item.name)}
                           className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
                         >
                           <span>{item.name}</span>
                           <ChevronDown className="w-4 h-4" />
                         </button>
-                        {activeDropdown === item.name && (
+                        {active_dropdown === item.name && (
                           <div className="ml-4 space-y-2">
-                            {item.dropdown.map((dropdownItem) => (
+                            {item.dropdown.map((dropdown_item) => (
                               <Link
-                                key={dropdownItem.name}
-                                href={dropdownItem.href}
+                                key={dropdown_item.name}
+                                href={dropdown_item.href}
                                 onClick={closeMobileMenu}
                                 className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
                               >
-                                {dropdownItem.name}
+                                {dropdown_item.name}
                               </Link>
                             ))}
                           </div>
@@ -138,11 +137,10 @@ const EnhancedHeader: React.FC = () => {
                     )}
                   </div>
                 ))}
-
                 {/* Contact Info */}
                 <div className="pt-4 border-t border-gray-200">
                   <div className="space-y-2">
-                    {contactInfo.map((info, index) => (
+                    {contact_info.map((info, index) => (
                       <div key={index} className="flex items-center space-x-2 text-sm text-gray-600">
                         {info.icon === 'Phone' && <Phone className="w-4 h-4" />}
                         {info.icon === 'Mail' && <Mail className="w-4 h-4" />}
@@ -159,6 +157,4 @@ const EnhancedHeader: React.FC = () => {
       </div>
     </header>
   );
-};
-
-export default EnhancedHeader;
+}

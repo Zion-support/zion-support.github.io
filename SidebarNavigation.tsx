@@ -1,116 +1,53 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown, Home, Settings, Users, BarChart3, FileText, HelpCircle } from 'lucide-react';
+import { Home, User, Settings, Menu, X, LogOut } from 'lucide-react';
 
-interface SidebarNavigationProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  const toggleDropdown = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName);
-  };
-
-  const navigationItems = [
-    { name: 'Dashboard', href: '/dashboard', icon: Home },
-    { name: 'Analytics', href: '/analytics', icon: BarChart3 },
-    { name: 'Users', href: '/users', icon: Users },
-    { name: 'Settings', href: '/settings', icon: Settings, dropdown: [
-      { name: 'General', href: '/settings/general' },
-      { name: 'Security', href: '/settings/security' },
-      { name: 'Notifications', href: '/settings/notifications' },
-    ]},
-    { name: 'Documents', href: '/documents', icon: FileText },
-    { name: 'Help', href: '/help', icon: HelpCircle },
+const SidebarNavigation: React.FC = () => {
+  const [is_open, setIsOpen] = useState(true);
+  
+  const navigation_items = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'Profile', href: '/profile', icon: User },
+    { name: 'Settings', href: '/settings', icon: Settings }
   ];
 
   return (
-    <>
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-          onClick={onClose}
-        />
-      )}
-
+    <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full'
-      } lg:translate-x-0`}>
-        <div className="flex items-center justify-between p-4 border-b">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Z</span>
-            </div>
-            <span className="text-lg font-semibold text-gray-900">Zion Tech</span>
-          </div>
+      <div className={`${is_open ? 'w-64' : 'w-16'} transition-all duration-300 bg-white shadow-lg`}>
+        <div className="p-4">
           <button
-            onClick={onClose}
-            className="lg:hidden p-1 rounded-md text-gray-500 hover:text-gray-700 hover:bg-gray-100"
+            onClick={() => setIsOpen(!is_open)}
+            className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            {is_open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
-        <nav className="mt-4 px-4">
-          <ul className="space-y-2">
-            {navigationItems.map((item) => {
-              const Icon = item.icon;
-              return (
-                <li key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <button
-                        onClick={() => toggleDropdown(item.name)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
-                      >
-                        <div className="flex items-center space-x-3">
-                          <Icon className="w-5 h-5" />
-                          <span>{item.name}</span>
-                        </div>
-                        <ChevronDown className={`w-4 h-4 transition-transform ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-                      {activeDropdown === item.name && (
-                        <ul className="ml-6 mt-2 space-y-1">
-                          {item.dropdown.map((dropdownItem) => (
-                            <li key={dropdownItem.name}>
-                              <Link
-                                href={dropdownItem.href}
-                                className="block px-3 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
-                                onClick={onClose}
-                              >
-                                {dropdownItem.name}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors"
-                      onClick={onClose}
-                    >
-                      <Icon className="w-5 h-5" />
-                      <span>{item.name}</span>
-                    </Link>
-                  )}
-                </li>
-              );
-            })}
-          </ul>
+        <nav className="mt-4">
+          {navigation_items.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="flex items-center p-4 text-gray-700 hover:bg-gray-100 transition-colors"
+            >
+              <item.icon className="w-6 h-6" />
+              {is_open && <span className="ml-3">{item.name}</span>}
+            </Link>
+          ))}
         </nav>
+        <div className="absolute bottom-4 left-4 right-4">
+          <button className="flex items-center w-full p-4 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg">
+            <LogOut className="w-6 h-6" />
+            {is_open && <span className="ml-3">Logout</span>}
+          </button>
+        </div>
       </div>
-    </>
+      {/* Main content */}
+      <div className="flex-1 p-8">
+        <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
+        <p className="text-gray-600 mt-2">Welcome to your dashboard</p>
+      </div>
+    </div>
   );
 };
 

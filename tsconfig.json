@@ -1,65 +1,34 @@
 {
   "compilerOptions": {
 <<<<<<< HEAD
-    "target": "ES2020",
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
+=======
+    "target": "ES2017",
     "lib": [
       "dom",
       "dom.iterable",
       "es6"
     ],
+>>>>>>> b1030359e255a9b6ea76da45370d91289a2e9194
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "esModuleInterop": true,
 <<<<<<< HEAD
+    "esModuleInterop": true,
     "module": "ESNext",
 =======
+    "incremental": true,
     "module": "esnext",
->>>>>>> origin/main
+    "esModuleInterop": true,
+>>>>>>> b1030359e255a9b6ea76da45370d91289a2e9194
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-<<<<<<< HEAD
-=======
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/lib/*": [
-        "./src/lib/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "sourceMap": true,
-    "declaration": false,
-    "declarationMap": false,
-    "removeComments": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "noFallthroughCasesInSwitch": false,
->>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     "plugins": [
       {
         "name": "next"
@@ -68,17 +37,6 @@
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"],
-<<<<<<< HEAD
-      "@/utils/*": ["./utils/*"],
-      "@/hooks/*": ["./hooks/*"],
-      "@/types/*": ["./types/*"]
-    },
-    "allowSyntheticDefaultImports": true
-=======
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -88,13 +46,11 @@
       "@/styles/*": ["./src/styles/*"],
       "@/assets/*": ["./src/assets/*"]
     },
-    "allowSyntheticDefaultImports": true,
-    "strictNullChecks": true,
-    "tsBuildInfoFile": ".next/tsconfig.tsbuildinfo"
->>>>>>> origin/main
+    "allowSyntheticDefaultImports": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "apps/**", "apps.backup/**", "api-backup/**", "backup-merge-conflicts/**", "browserstack.config.ts", "cypress.config.ts", "jest.config.*", "*.config.ts", "types/**", "netlify/**", "components/**"]
+  "exclude": ["node_modules"]
+}
 =======
     ]
   },
@@ -118,3 +74,4 @@
     "dist"
   ]
 }
+>>>>>>> b1030359e255a9b6ea76da45370d91289a2e9194
