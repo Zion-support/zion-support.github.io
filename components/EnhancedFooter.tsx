@@ -624,7 +624,6 @@ import React from './react';
 export default EnhancedFooter)})}
 
 export default EnhancedFooter;
-import React from './react';
   FileText,HelpCircle} from './lucide-react';
 
 export default /**;

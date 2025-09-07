@@ -205,7 +205,6 @@ export default function Page(){
       </main>
     </div>
 
-import Head from 'next / head';
 ;
 
 export default /**

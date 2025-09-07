@@ -649,7 +649,6 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
 ];
 
 ;'
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface Innovative2026MicroSaasService {;
   id: string,;

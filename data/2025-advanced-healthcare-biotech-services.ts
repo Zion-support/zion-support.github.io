@@ -584,7 +584,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
 
 '
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -1132,7 +1131,6 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 ;
   }
 ];'
-import { ServiceVariant } from '../types/service-variants',;'
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
   name: string,;

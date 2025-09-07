@@ -18,8 +18,6 @@ ArrowRight;}
 Smartphone;}
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { extraServices } from '../data/extra-services';
 
 export default function MDMPage() {
   const service = extraServices.find(s =>

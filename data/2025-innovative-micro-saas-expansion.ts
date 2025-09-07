@@ -583,7 +583,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 
 
 '
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
@@ -1131,7 +1130,6 @@ export const innovativeMicroSaasExpansionServices: InnovativeMicroSaasExpansionS
 ;
   }
 ];'
-import { ServiceVariant } from '../types/service-variants',;'
 export interface InnovativeMicroSaasExpansionService {;
   id: string,;
   name: string,;

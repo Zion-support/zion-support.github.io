@@ -143,7 +143,6 @@ const [error, setError] = useState<string | null>(null);
 }
 import EnhancedLayout from '../../components / layout / EnhancedLayout';}
 import {use_router} from 'next / router';
-import type { GrantCategory } from '../../types / grants';
 ;
 
 const categories: GrantCategory[] = [;

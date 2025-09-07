@@ -41,9 +41,8 @@ const nextConfig = {
   
   // Environment variables
   env: {
-    NODE_ENV: 'production',
     NEXT_TELEMETRY_DISABLED: '1'
   }
 };
 
-module.exports = nextConfig;
+export default nextConfig;

@@ -36,7 +36,6 @@ export default /**
  * UltraFuturisticBackground2035 - Function description;
  */
 function UltraFuturisticBackground2035() {  const canvas_ref = useRef < HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;}

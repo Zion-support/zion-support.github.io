@@ -563,7 +563,6 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
   }
 ];
 ;'
-import { ServiceVariant } from '../types/service-variants',;'
 export interface EnhancedRealMicroSaasService {;
   id: string,;
   name: string,;

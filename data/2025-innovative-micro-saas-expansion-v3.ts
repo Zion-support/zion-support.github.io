@@ -1784,7 +1784,6 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
   launchDate: '2023-10-01', customers: 34;',
   rating: 4.9;
     reviews: 28;'
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface InnovativeMicroSaasService {;
   id: string,;

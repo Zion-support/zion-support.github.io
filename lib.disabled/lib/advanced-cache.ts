@@ -82,7 +82,6 @@ export const globalCache = new AdvancedCache()export const useCache = <T    />(k
  if (!data && !loading) { fetchData()} },[data,loading,fetchDat,a ])return { data,loading,error,refetch: 'fetchData',}
 }
   return { data, loading, error, \"refetch\": fetchData }
-import React from 'react';
 
 interface CacheItem<T    /> { data: T; timestamp: number; ttl: number;' }
 
@@ -106,7 +105,6 @@ export const globalCache = new AdvancedCache()export const useCache = <T    />(k
  if (!data && !loading) { fetchData()} },[data,loading,fetchDat,a ])return { data,loading,error,refetch: 'fetchData',}
 }
   return { data, loading, error, \"refetch\": fetchData }
-import React from 'react';
 
 interface CacheItem<T    /> { data: T; timestamp: number; ttl: number;' }
 

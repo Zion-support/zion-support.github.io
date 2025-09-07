@@ -517,7 +517,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 
 
 '
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
@@ -1065,7 +1064,6 @@ export const cuttingEdgeITInfrastructure2025: CuttingEdgeITInfrastructureService
 ;
   }
 ];'
-import { ServiceVariant } from '../types/service-variants',;'
 export interface CuttingEdgeITInfrastructureService {;
   id: string,;
   name: string,;

@@ -711,7 +711,6 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     marketSize: 'Growing market - $80B+ potential', growthRate: '700%+ annual growth potential',''
     variant: 'ai-futuristic','
     contactInfo: {'
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface InnovativeMicroSaas2030 {;
   id: string,;

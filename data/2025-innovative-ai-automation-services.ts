@@ -393,7 +393,6 @@ reviews: 167;
 ;
 
 '
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface InnovativeAIAutomationService {;
   id: string,;

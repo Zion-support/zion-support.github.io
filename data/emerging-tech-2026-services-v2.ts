@@ -118,7 +118,6 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     rating: 4.9,
 
     reviews: 45;'
-import { ServiceVariant } from '../types/service-variants',;'
 export interface EmergingTech2026ServiceV2 {;
   id: string,;
   name: string,;

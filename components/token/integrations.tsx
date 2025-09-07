@@ -13,7 +13,6 @@ import {
 calculateRewards}
 DepinReward;}
 } from '../../utils/depins';
-import { CHAINS } from '../../utils/chains';
 
 const ClientOnlyBridge = dynamic(
   () => import('../../components/ui/BridgeForm')

@@ -10,12 +10,10 @@
     "skipLibCheck": true,
     "strict": false,
     "noEmit": true,
-
     "maxNodeModuleJsDepth": 0,
     "skipDefaultLibCheck": true,
     "esModuleInterop": true,
     "module": "ESNext",
-
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -27,7 +25,6 @@
     ],
     "baseUrl": ".",
     "paths": {
-
       "@/*": [
         "./*"
       ],
@@ -57,8 +54,8 @@
     "noImplicitAny": false,
     "strictNullChecks": false,
     "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false
-
+    "noFallthroughCasesInSwitch": false,
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
@@ -72,7 +69,6 @@
   ],
   "exclude": [
     "node_modules",
-
     ".next",
     "dist",
     "build",
@@ -95,6 +91,5 @@
     "src/pages/Contact.tsx",
     "src/pages/Pricing.tsx",
     "src/pages/Services.tsx"
-
   ]
 }

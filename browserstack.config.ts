@@ -15,7 +15,6 @@ export default defineConfig({;'
   use: {;,'
   baseURL:process.env.PLAYWRIGHT_BASE_URL |'http: //localhost:3000';','
   trace:'on-first-retry'}''
-import { defineConfig, devices } from '@playwright/test',;'
 export default defineConfig({;'
   testDir:'tests/e2e',;'
   use: {;,'
@@ -66,7 +65,6 @@ export default defineConfig({;'
 
   }
   projects: [
-import { define_config, devices } from '@playwright / test';
 import { define_config, devices } from '@playwright / test';
 ;
 export default define_config ({

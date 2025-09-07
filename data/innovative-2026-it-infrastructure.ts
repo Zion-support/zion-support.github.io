@@ -666,7 +666,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 
 
 '
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
@@ -1214,7 +1213,6 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
 ;
   }
 ];'
-import { ServiceVariant } from '../types/service-variants',;'
 export interface Innovative2026ITInfrastructureService {;
   id: string,;
   name: string,;

@@ -34,8 +34,6 @@ text: 'Enterprise Security',
 }
 import React from 'react';
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
 
       color: 'from-red-400 to-orange-400',;
     }

@@ -38,7 +38,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 
-import {
   try {
     if (action === 'approve') setVendorApproval(String(vendorId), true);
     else if (action === 'revoke') setVendorApproval(String(vendorId), false);

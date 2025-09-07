@@ -1400,7 +1400,6 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 ];
 
 '
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface EmergingTechInnovation {;
   id: string,;

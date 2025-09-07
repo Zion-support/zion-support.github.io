@@ -17,7 +17,6 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 
-import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 
 import {
   innovativeMicroSaasServices,

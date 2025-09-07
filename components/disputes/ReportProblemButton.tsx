@@ -141,7 +141,6 @@ const query = new URLSearchParams({;}
       </a>
     </Link>
 
-import Link from './next / link';
 ;
 
 export default /**

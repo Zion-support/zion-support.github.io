@@ -355,7 +355,6 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
   {
 
 '
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface SpaceColonization2029Service {;
   id: string,;

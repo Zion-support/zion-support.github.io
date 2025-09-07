@@ -840,7 +840,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 
 
 '
-import { ServiceVariant } from '../types/service-variants',;'
 
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
@@ -1748,7 +1747,6 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
 ;
   }
 ];'
-import { ServiceVariant } from '../types/service-variants',;'
 export interface InnovativeMicroSaasService2025 {;
   id: string,;
   name: string,;

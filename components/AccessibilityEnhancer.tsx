@@ -151,7 +151,7 @@ export default function AccessibilityEnhancer({ children }: AccessibilityEnhance
           font-size: calc(1rem * var(--font-size-multiplier, 1));
         }
       `}</style>
-    <   />
+    </>
   );
 }
 

@@ -169,9 +169,6 @@ app.command('/zion', async ({ command, ack, respond }) => {;'
   await app.start(port),
 
   // eslint-disable-next-line no-console;'
-import { App } from '@slack/bolt',;''
-import dotenv from 'dotenv',;''
-import fetch from 'node-fetch',;'
 dotenv.config(),;'
 const apiBase = process.env.API_ORIGIN || 'http: //localhost:4000',;'
 const app = new App({;
