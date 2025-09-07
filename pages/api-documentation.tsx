@@ -1,118 +1,39 @@
-return (
-    <Layout>;
-      <Head>;
-        <title>API Documentation | Zion Tech Group</title>;
-        <link;
-          rel='canonical'
-'
-          href='https: //ziontechgroup && ziontechgroup.com/api-documentation'
-        />;
-      </Head>;'
-      <section className='container mx-auto px-4 py-24'>;'
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>;
-          API Documentation;
-        </h1>;'
-        <p className='text-gray-300'>REST and SDK references. Coming soon.</p>;
-      </section>;
-    </Layout>;
-  );
+import React from 'react';
+import { Metadata } from 'next';
 
-'
-import React from 'react';'
-import Head from 'next / head';'
-import Layout from '../components / layout / Layout';
-export default /**;
- * APIDocumentationPage - Function description;
- */
-function APIDocumentationPage() {}
+export const metadata: Metadata = {
+  title: 'Api Documentation - Zion Tech Group',
+  description: 'Professional api documentation services to help your business grow and succeed.',
+  keywords: 'api documentation, business solutions, professional services'
+};
+
+export default function ApiDocumentationPage() {
   return (
-    <Layout>;
-      <Head>;
-        <title > API Documentation | Zion Tech Group</title>;
-        <link;'
-          rel='canonical';'
-          href='https: //ziontechgroup.com / api - documentation';
-        />;
-      </Head>;'
-      <section className='container mx - auto px - 4 py - 24'>;'
-        <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 500 to - pink - 500 bg - clip - text text - transparent mb - 6'>;
-          API Documentation;
-        </h1>;'
-        <p className='text - gray - 300'>REST and SDK references. Coming soon.</p>;
-      </section>;
-    </Layout>);
-;
-
-import Head from 'next/head';
-
-import Layout from '../components/layout/Layout';
-export default function APIDocumentationPage() {}
-  return (
-    <Layout>
-      <Head>
-        <title>API Documentation | Zion Tech Group</title>
-        <link'
-          rel='canonical''
-          href='https: //ziontechgroup.com/api-documentation'
-        />
-      </Head>'
-      <section className='container mx-auto px-4 py-24'>'
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>;
-          API Documentation;
-        </h1>'
-        <p className='text-gray-300'>REST and SDK references. Coming soon.</p>
-      </section>
-
-    </Layout>;
+    <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="text-center mb-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Api Documentation
+        </h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Professional api documentation services to help your business grow and succeed.
+        </p>
+      </div>
+      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Coming Soon
+        </h2>
+        <p className="text-lg text-gray-600 text-center">
+          This page is currently under development. Please contact us for more information.
+        </p>
+      </div>
+      <div className="text-center">
+        <a
+          href="mailto:kleber@ziontechgroup.com?subject=Api Documentation Inquiry"
+          className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
   );
-
-}'
-import React from 'react','
-import Head from 'next/head','
-import Layout from '../components/layout/Layout',
-export default function APIDocumentationPage() {}
-	return (
-		<Layout>
-			<Head>
-				<title>API Documentation | Zion Tech Group</title>
-				<link rel="canonical" href="https: //ziontechgroup.com/api-documentation" />
-			</Head>"
-			<section className="container mx-auto px-4 py-24">"
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">API Documentation</h1>"
-				<p className="text-gray-300">REST and SDK references. Coming soon.</p>
-			</section>
-		</Layout>;
-	)';
-import React from 'react';'
-import Head from 'next/head';'
-import Layout from '../components/layout/Layout';
-export default function APIDocumentationPage(req, res) {}
-  try {};
-	return (;
-		<Layout>;
-			<Head>;
-				<title>API Documentation | Zion Tech Group</title>;"
-				<link rel="canonical" href="https: //ziontechgroup.com/api-documentation" />;
-			</Head>;"
-			<section className="container mx-auto px-4 py-24">;"
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">API Documentation</h1>;"
-				<p className="text-gray-300">REST and SDK references. Coming soon.</p>;
-			</section>;
-		</Layout>;
-	);
-  } catch (error) {"
-    console.error("Error:", error);"
-    return res.status(500).json({ error: "Internal server error" });
-
-class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
-  render() {}
-    if (this.state.hasError) {}
-      return <div>Something went wrong.</div>;
-    }
-  }
 }
-;
