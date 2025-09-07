@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node_modules/
 .next/
 out/
@@ -10,6 +11,18 @@ temp-backup/
 *.config.js
 *.config.cjs
 *.config.mjs
+=======
+<<<<<<< HEAD
+node_modules/
+.next/
+dist/
+build/
+public/
+*.config.js
+*.config.cjs
+*.config.mjs
+<<<<<<< HEAD
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 fix-*.js
 fix-*.cjs
 *-fix*.cjs
@@ -21,6 +34,16 @@ app-improvement-*.cjs
 analyze-*.cjs
 code-quality-*.js
 automation/
+<<<<<<< HEAD
+=======
+app-optimizer.js
+advanced-automation-improvements.cjs
+analyze_links.cjs
+app-enhancement-suite.cjs
+advanced-app-improvements.js
+aggressive-fix.js
+advanced-source-fixer.js
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 automation_backup/
 backup/
 lib_backup/
@@ -70,6 +93,7 @@ vite.config.ts
 types/empty.ts
 types/index.ts
 pages_backup_conflicts/
+<<<<<<< HEAD
 pages_disabled/
 src.broken/
 src.corrupted/
@@ -119,6 +143,29 @@ jest.config.ts
 jest.setup.js
 lib.broken/
 lib.disabled/
+=======
+=======
+pages.broken/
+pages.corrupted.*/
+pages.disabled*/
+pages.old/
+pages_backup*/
+>>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+pages_disabled/
+pages_minimal/
+temp-disabled/
+temp_backup/
+temp_exclude/
+backup-*/
+corrupted*/
+broken*/
+recovered-branches/
+components.disabled*/
+lib_backup/
+lib.broken/
+lib.disabled/
+<<<<<<< HEAD
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 lib/
 lint-stub.js
 lint-target/
@@ -152,6 +199,7 @@ build-verification.js
 check-syntax.js
 clean-conflicts.js
 commit-and-push.js
+<<<<<<< HEAD
 advanced-automation-improvements.cjs
 analyze_links.cjs
 app-enhancement-suite.cjs
@@ -160,6 +208,43 @@ apps.backup/**
 automated-merge-conflict-resolver.cjs
 automation/**
 backup-problematic-files/**
+=======
+src
+src.disabled
+src.pages.disabled
+src.pages.disabled.auto
+components.disabled
+**/*.js.jsx
+**/*.d.tsx
+=======
+src.pages.disabled*/
+src.broken/
+src.corrupted/
+src_backup*/
+src.disabled/
+pm2-automation/
+services/
+automation/
+zion-os/
+apps.backup/
+zion-website/
+performance-monitor.js
+resolve-all-conflicts.js
+resolve-conflicts.js
+resolve-merge-conflicts.js
+run-complete-automation.js
+security-config.js
+seo-improvements.js
+simple-test.js
+syntax-fixer.js
+advanced-automation-improvements.cjs
+analyze_links.cjs
+app-enhancement-suite.cjs
+App.simple.tsx
+App.smoke.test.tsx
+>>>>>>> cursor/automate-test-improve-and-merge-code-3e92
+=======
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
 pages.broken/**
 pages.corrupted.*/**
 pages.disabled/**
@@ -172,6 +257,7 @@ services/**
 *.js
 *.cjs
 *.mjs
+<<<<<<< HEAD
 src
 src.disabled
 src.pages.disabled
@@ -179,3 +265,6 @@ src.pages.disabled.auto
 components.disabled
 **/*.js.jsx
 **/*.d.tsx
+=======
+>>>>>>> main
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

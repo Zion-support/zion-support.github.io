@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -58,6 +59,28 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting-edge technology solutions.',
   keywords = 'AI services, IT solutions, micro SaaS, technology consulting, cloud migration, cybersecurity, blockchain, web development',
+=======
+import React from 'react';
+import Head from 'next/head';
+
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: any;
+  noindex?: boolean;
+  nofollow?: boolean;
+}
+
+export default function SEOHead({
+  title = 'Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions',
+  description = 'Leading provider of micro SaaS products, AI services, and IT solutions. 67+ innovative services including cloud optimization, AI automation, quantum computing, and enterprise technology solutions.',
+  keywords = 'micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, blockchain, quantum computing, enterprise solutions',
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   canonicalUrl,
   ogImage = '/og-image.jpg',
   ogType = 'website',
@@ -65,6 +88,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   structuredData,
   noindex = false,
   nofollow = false,
+<<<<<<< HEAD
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '')
@@ -92,20 +116,26 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   }
   const mergedStructuredData = structuredData || defaultStructuredData
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+}: SEOHeadProps) {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullDescription = description || 'Leading provider of micro SaaS products, AI services, and IT solutions.';
+  const fullKeywords = keywords || 'micro SaaS, AI services, IT solutions, cloud computing, automation';
+
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
   return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html, charset=utf-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={fullKeywords} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charSet="utf-8" />
+
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
+<<<<<<< HEAD
       {/* Open Graph Tags */}
 <<<<<<< HEAD
       <meta property="og: title" content={fullTitle} />
@@ -115,9 +145,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og: image" content={imageUrl} />
       <meta property="og: image:width" content="1200" />
 =======
+=======
+      {/* Robots */}
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+
+      {/* Open Graph */}
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
+      <meta property="og:description" content={fullDescription} />
       <meta property="og:type" content={ogType} />
+<<<<<<< HEAD
       <meta property="og:url" content={currentUrl} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:width" content="1200" />
@@ -140,17 +177,37 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:site" content="@ziontechgroup" />
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
       <meta name="twitter:creator" content="@ziontechgroup" />
+=======
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
+
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={fullDescription} />
+      <meta name="twitter:image" content={ogImage} />
+
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#2563eb" />
-      <meta name="msapplication-TileColor" content="#2563eb" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+
+      {/* Structured Data */}
+      {structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      )}
+
       {/* Favicon */}
       <link rel="icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<<<<<<< HEAD
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}
 <<<<<<< HEAD
@@ -195,3 +252,8 @@ export default SEOHead
 =======
 export default SEOHead;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+    </Head>
+  );
+}
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4

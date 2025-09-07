@@ -96,12 +96,21 @@ export default [
     rules: {
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
+<<<<<<< HEAD
       "no-unused-vars": "warn",
       "no-console": "warn",
       "prefer-const": "error",
       "no-var": "error",
       "react/prop-types": "off",
       "react/react-in-jsx-scope": "off"
+=======
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'error',
+      'no-var': 'error',
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off'
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     }
   },
   {

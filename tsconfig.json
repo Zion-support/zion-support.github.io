@@ -29,9 +29,32 @@
     }
   },
   "include": [
+<<<<<<< HEAD
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+=======
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "pages/**/*.ts",
+    "pages/**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/**/*.ts",
+    "data/**/*.tsx",
+    "types/**/*.ts",
+    "types/**/*.tsx",
+    "zion/**/*.ts",
+    "zion/**/*.tsx",
+    "protocol/**/*.ts",
+    "protocol/**/*.tsx",
+    "App.tsx",
+    "middleware.ts",
+    "jest.setup.ts",
+    "vite.config.ts",
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
     ".next/types/**/*.ts"
   ],
   "exclude": [

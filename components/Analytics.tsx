@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 interface AnalyticsProps {
@@ -70,10 +71,25 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, parameters)
 =======
+=======
+'use client';
+
+import React, { useEffect } from 'react';
+
+interface AnalyticsProps {
+  trackingId: string;
+}
+
+export default function Analytics({ trackingId }: AnalyticsProps) {
+  useEffect(() => {
+    // Load Google Analytics
+    if (typeof window !== 'undefined' && trackingId) {
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
       const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
       document.head.appendChild(script);
+<<<<<<< HEAD
       // Initialize gtag
       window.dataLayer = window.dataLayer |[];
       function gtag(...args: unknown[]) {
@@ -223,3 +239,26 @@ export default Analytics
 }
 export default Analytics;
 >>>>>>> 7141390ccdaf86e16f609a9613706d1a7ce50be7
+=======
+
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      function gtag(...args: any[]) {
+        (window as any).dataLayer.push(args);
+      }
+      gtag('js', new Date());
+      gtag('config', trackingId, {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+
+      // Track page views
+      gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+    }
+  }, [trackingId]);
+
+  return null;
+}
+>>>>>>> 9248fb9c17c2f63249f18bb3527bd673abd9fef4
