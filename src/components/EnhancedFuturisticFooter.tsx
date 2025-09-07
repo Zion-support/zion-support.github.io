@@ -338,7 +338,55 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </Link>
-                </motion.div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional Services Grid */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {footerSections.slice(3).map((section) => (
+            <div key={section.title}>
+              <div className="flex items-center space-x-2 mb-4">
+                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${section.color} flex items-center justify-center`}>
+                  <section.icon className="w-4 h-4 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{section.title}</h3>
+              </div>
+              <div className="space-y-2">
+                {section.links.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Quick Links & Company Info */}
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Star className="w-5 h-5 text-yellow-400 mr-2" />
+              Quick Links
+            </h3>
+            <div className="space-y-2">
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                >
+                  <link.icon className="w-4 h-4" />
+                  <span>{link.name}</span>
+                </Link>
               ))}
             </div>
           </motion.div>
