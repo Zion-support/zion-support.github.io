@@ -161,6 +161,8 @@ import { toast } from "sonner",
 >>>>>>> merged-prs-20250907-203621
 import { FileText } from 'lucide-react'
 
+// Zod 3.x does not support passing a required_error directly to z.string(),
+// so we use `.min(1)` to ensure the field is non-empty and provide a message.
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" }),
