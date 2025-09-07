@@ -52,8 +52,6 @@ export default function SolutionsPage() {
       features: ['Data pipelines', 'Real-time analytics', 'Custom dashboards', 'Machine learning insights']
     }
   ];
-
-  ]
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}

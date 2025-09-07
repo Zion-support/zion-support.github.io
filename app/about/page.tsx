@@ -1,3 +1,6 @@
+import React from 'react';
+import { Award, Users, Lightbulb, Target, CheckCircle, Star, Globe } from 'lucide-react';
+
 export const metadata = {
   title: "About | Zion Tech Group",
   description:

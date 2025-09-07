@@ -24,7 +24,8 @@
     "clean": "rm -rf .next out dist",
     "precommit": "npm run check",
     "prepare": "echo 'Husky prepare script disabled'",
-    "sitemap": "node scripts/generate-sitemap.js"
+    "sitemap": "node scripts/generate-sitemap.js",
+    "build:analyze": "npm run build && npx @next/bundle-analyzer"
   },
   "dependencies": {
     "@babel/core": "^7.28.4",
