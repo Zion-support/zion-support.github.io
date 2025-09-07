@@ -1,4 +1,3 @@
-}
 function setUserId(id) {
   chrome.storage.local.set({ user_id: id })
 }

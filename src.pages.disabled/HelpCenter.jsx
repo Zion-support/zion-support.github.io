@@ -1,34 +1,23 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
+class ErrorBoundary extends React.Component {constructor(props) {super(props)this.state = { hasError: false }}static getDerivedStateFromError(error) {return { hasError: true }}componentDidCatch(error, errorInfo) {console.error('Error caught by boundary:', error, errorInfo)}render() {if (this.state.hasError) {return <div>Something went wrong.</div>;
+    }return this.props.children;
   }
 }
 import React from 'react';
+interface HelpCenterProps  {// Add props here as needed;
+}export default function HelpCenter() {return (<div>;
+      <h1>HelpCenter</h1>;
+      <p>This component is currently under development.</p>;
+    </div>;
+  )}
+:src.pages.disabled/HelpCenter.jsx;
 interface HelpCenterProps {
   // Add props here as needed
 
 
 }
 
-export default function HelpCenter({ }: HelpCenterProps) {
+export default function HelpCenter({}: HelpCenterProps) {
   return (
     <div>
       <h1>HelpCenter</h1>
@@ -46,6 +35,7 @@ export default function HelpCenter({ }: HelpCenterProps) {
 }
 }
 }
+}:src.pages.disabled/HelpCenter.jsx;
 :temp_exclude/src.pages.disabled/HelpCenter.jsx
 }
 
@@ -60,3 +50,4 @@ export default function HelpCenter({ }: HelpCenterProps) {
 }
 }
 }
+:temp_exclude/src.pages.disabled/HelpCenter.jsx;

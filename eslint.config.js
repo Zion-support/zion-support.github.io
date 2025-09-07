@@ -6,6 +6,7 @@ import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+<<<<<<< HEAD
 import nextPlugin from '@next/eslint-plugin-next';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -14,6 +15,15 @@ const __dirname = dirname(__filename);
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
+=======
+// import nextPlugin from '@next/eslint-plugin-next'; // Not needed for Vite project
+import globals from 'globals';
+
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 });
 
 export default [
@@ -33,6 +43,7 @@ export default [
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'warn'
+<<<<<<< HEAD
     }
   },
   {
@@ -60,6 +71,8 @@ export default [
       'prefer-const': 'warn',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off'
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     }
   },
   {
@@ -173,6 +186,7 @@ export default [
       'system-*.js',
       'ultimate-*.js',
       '*.js',
+<<<<<<< HEAD
       'public/**',
       'services-broken.tsx',
       'services/**/*.ts',
@@ -198,6 +212,105 @@ export default [
       'pages-disabled/**',
       'pages-quarantine/**',
       'app/**'
+=======
+      'src_backup_temp/**',
+      'temp-backup/**',
+      'temp_exclude/**',
+      'temp_components/**',
+      'temp_broken_files/**',
+      'temp_working/**',
+      'zion-os.disabled/**',
+      'zion-ai-assistant/**',
+      'tools/**',
+      'utils/**',
+      'recovered-branches/**',
+      'pages._archive_corrupted/**',
+      'pages.bak/**',
+      'pages.disabled_full/**',
+      'pages_api.disabled/**',
+      'pages_backup_conflicts/**',
+      'pages_disabled/**',
+      'src.pages.disabled/**',
+      'vite.config-backup.ts'
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
     ]
+  },
+  {
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        jest: 'readonly',
+        describe: 'readonly',
+        it: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly',
+        beforeAll: 'readonly',
+        afterAll: 'readonly'
+      },
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+      '@next/next': nextPlugin
+      // '@next/next': nextPlugin, // Not needed for Vite project
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/display-name': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      'no-unused-vars': 'off',
+      'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'prefer-const': 'error',
+      'no-debugger': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn'
+    },
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
+  },
+  {
+    files: ['**/*.js'],
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        exports: 'readonly'
+      }
+    },
+    rules: {
+      'no-console': 'off'
+    }
+  }
+      'no-console': 'off'
+    }
   }
 ];

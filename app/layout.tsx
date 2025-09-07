@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import './global-styles.css';
@@ -22,13 +23,13 @@ export const metadata = {
     title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
 =======
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
-
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: {
     default: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
     template: '%s | Zion Tech Group'
@@ -90,6 +91,10 @@ export const metadata: Metadata = {
   referrer: 'origin-when-cross-origin',
   colorScheme: 'light',
   themeColor: '#000000',
+=======
+  title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
+  description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.'
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 };
 
 <<<<<<< HEAD
@@ -174,12 +179,13 @@ function Footer() {
 =======
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <body className="min-h-screen bg-gray-50">
@@ -198,11 +204,17 @@ export default function RootLayout({
 >>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
 =======
       <body className={inter.className}>
+=======
+      <body>
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
         <div className="min-h-screen bg-white">
           {children}
         </div>
       </body>
     </html>
   );
+<<<<<<< HEAD
 >>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
+=======
+>>>>>>> 19d1d1ef532f9e4690306331c74cc9ccbd0b556b
 }

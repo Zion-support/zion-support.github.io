@@ -1,9 +1,4 @@
-import React from 'react',;
-import Head from 'next/head',;
-;
-export default function OrderSuccessPage() {;
-  return (;
-    <>;
+import React from 'react',import Head from 'next/head',export default function OrderSuccessPage() {return (<>;
       <Head>;
         <title>Order Success - Zion Tech Group</title>;
         <meta name="description" content="Your order has been successfully placed" />;
@@ -17,5 +12,4 @@ export default function OrderSuccessPage() {;
         </div>;
       </div>;
     </>;
-  );
-}
+  )}

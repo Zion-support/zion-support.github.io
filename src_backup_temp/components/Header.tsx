@@ -2,69 +2,19 @@ import React, { useState, useEffect } from 'react';';';
 import { Link, useLocation } from 'react-router-dom';';';
 import { MainNavigation } from './header/MainNavigation';';';
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
-import { Zap, Search, Sun, Moon, User, Menu, X } from 'lucide-react';
-interface HeaderProps {
-  className?: string;
+import { Link, useLocation  } from 'react-router-dom';
+import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail  } from 'lucide-react';
+import { Zap, Search, Sun, Moon, User, Menu, X  } from 'lucide-react';
+interface HeaderProps  {className?: string;
 }
-export function Header(props: any) {const router = useRouter()
-}
-export function Header(props: any) {
-export function Header(props: any) {
-  const [isScrolled, setIsScrolled] = useState<any>(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false);';
-  const [isSearchOpen, setIsSearchOpen] = useState<any>(false);';';
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');';';
-  const [searchQuery, setSearchQuery] = useState<any>('');
-export function Header(props: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState<boolean>(false);
-  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-export function Header({ className = '' }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Zap, Search, Sun, Moon, User, Menu, X, Phone, Mail } from 'lucide-react';
-;
-interface HeaderProps {;
-  className?: "string;
+export function Header(props: any) {const router = useRouter()}
+export function Header() {export function Header() {const [isScrolled, setIsScrolled] = useState<any>(false)const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<any>(false)const [isUserMenuOpen, setIsUserMenuOpen] = useState<any>(false)';
+  const [isSearchOpen, setIsSearchOpen] = useState<any>(false)';';
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark')';';
+  const [searchQuery, setSearchQuery] = useState<any>('')export function Header() {const [isScrolled, setIsScrolled] = useState<boolean>(false)const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false)const [isUserMenuOpen, setIsUserMenuOpen] = useState<boolean>(false)const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false)const [theme, setTheme] = useState<'light' | 'dark'>('dark')const [searchQuery, setSearchQuery] = useState<string>('')export function Header() {const [isScrolled, setIsScrolled]  = useState(false)interface HeaderProps  {className?: "string;
 "}
-export function Header({ className = '' }: "HeaderProps) {;
-  const [isScrolled", setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
-  const [searchQuery, setSearchQuery] = useState('');
-  const location = useLocation();
-;
-  useEffect(() => {;
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 10)
-};
-;
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-;
-  const toggleTheme = () => {;
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-};
-;
-  const handleSearch = ("e": "React.FormEvent) => {;
-    e.preventDefault();
-    if (searchQuery.trim()) {;
-      // Add search logic here;
-      ;
-    "}
-  };
-;
-  const navigationItems = [;
+export function Header() {const [isScrolled", setIsScrolled] = useState(false)const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)const [isSearchOpen, setIsSearchOpen] = useState(false)const [theme, setTheme] = useState<'light' | 'dark'>('dark')const [searchQuery, setSearchQuery] = useState('')const location  = useLocation()useEffect(() => {const handleScroll = () => {setIsScrolled(window.scrollY > 10)}window.addEventListener('scroll', handleScroll)return () => window.removeEventListener('scroll', handleScroll)}, [])const toggleTheme = () => {setTheme(theme === 'dark' ? 'light' : 'dark')}const handleSearch = ("e": "React.FormEvent) => {e.preventDefault()if (searchQuery.trim()) {// Add search logic here;"}
+  }const navigationItems = [;
     { "name": 'Home', "href": '/' }
     { "name": 'Services', "href": '/services' }
     { "name": 'New Services 2025', "href": '/new-services-2025' }
@@ -74,20 +24,14 @@ export function Header({ className = '' }: "HeaderProps) {;
     { "name": 'Solutions', "href": '/solutions' }
     { "name": 'About', "href": '/about' }
     { "name": 'Contact', "href": '/contact' }
-  ];
-;
-  return (;
-    <header ;
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${;
-        isScrolled ;
+  ];return (<header ;
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ;
           ? "bg-black/95 backdrop-blur-md border-b border-gray-800/50 shadow-lg";
           : "bg-transparent";
       } ${className}`}
     >;
       <div className="max-w-7xl mx-auto px-4 "sm": "px-6 "lg":px-8">;
-        <div className="flex items-center justify-between h-16 "lg":h-20">;
-          ;
-          {/* Logo */"}
+        <div className="flex items-center justify-between h-16 "lg":h-20">;{/* Logo */"}
           <Link to="/" className="flex items-center space-x-3 group">;
             <div className="w-10 h-10 "lg": "w-12 "lg":h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center group-"hover":scale-110 transition-transform duration-300">;
               <Zap className="w-6 h-6 "lg":w-7 "lg":h-7 text-white" />;
@@ -98,18 +42,13 @@ export function Header({ className = '' }: "HeaderProps) {;
               </h1>;
             </div>;
           </Link>;
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-          {/* Desktop Navigation */"}
+  const navigationItems = [;
+    { name: 'Home', href: '/' },{name: 'Services',{/* Desktop Navigation */"}
           <nav className="hidden "lg": "flex items-center space-x-8">;
-            {navigationItems.map((item) => (;
-              <Link;
+            {navigationItems.map((item) => (<Link;
                 key={item.name"}
                 to={item.href}
-                className={`text-gray-300 "hover": "text-cyan-400 transition-colors duration-200 font-medium ${;
-                  location.pathname === item.href ? 'text-cyan-400' : '';
+                className={`text-gray-300 "hover": "text-cyan-400 transition-colors duration-200 font-medium ${location.pathname === item.href ? 'text-cyan-400' : '';
                 "}`}
               >;
                 {item.name}
@@ -156,8 +95,7 @@ export function Header({ className = '' }: "HeaderProps) {;
                 <span className="hidden "sm":block">Account</span>;
               </button>;
               {/* User dropdown */"}
-              {isUserMenuOpen && (;
-                <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">;
+              {isUserMenuOpen && (<div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">;
                   <Link;
                     to="/dashboard";
                     className="block px-4 py-2 text-sm text-gray-300 "hover": "bg-gray-700 "hover":text-white";
@@ -193,15 +131,12 @@ export function Header({ className = '' }: "HeaderProps) {;
           </div>;
         </div>;
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (;
-          <div className=""lg": "hidden">;
+        {isMobileMenuOpen && (<div className=""lg": "hidden">;
             <div className="px-2 pt-2 pb-3 space-y-1 "sm":px-3 bg-gray-900/95 backdrop-blur-md rounded-lg mt-2">;
-              {navigationItems.map((item) => (;
-                <Link;
+              {navigationItems.map((item) => (<Link;
                   key={item.name"}
                   to={item.href}
-                  className={`block px-3 py-2 text-base font-medium text-gray-300 "hover": "text-cyan-400 "hover":bg-gray-800 rounded-md transition-colors duration-200 ${;
-                    location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : '';
+                  className={`block px-3 py-2 text-base font-medium text-gray-300 "hover": "text-cyan-400 "hover":bg-gray-800 rounded-md transition-colors duration-200 ${location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : '';
                   "}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >;
@@ -225,8 +160,7 @@ export function Header({ className = '' }: "HeaderProps) {;
           </div>;
         )"}
         {/* Search overlay */}
-        {isSearchOpen && (;
-          <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50 p-4">;
+        {isSearchOpen && (<div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50 p-4">;
             <form onSubmit={handleSearch} className="max-w-2xl mx-auto">;
               <div className="relative">;
                 <input;
@@ -251,493 +185,379 @@ export function Header({ className = '' }: "HeaderProps) {;
     </header>;
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const navigation = [
-    {
-      name: 'Home',
-      href: '/',
-    },
-    {
-      name: 'Services',
-      href: '/services',
-      dropdown: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Data Analytics', href: '/services/data-analytics' },
-      ],
-    },
-    {
-      name: 'Solutions',
-      href: '/solutions',
-      dropdown: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Finance', href: '/solutions/finance' },
-        { name: 'Government', href: '/solutions/government' },
-        { name: 'Retail', href: '/solutions/retail' },
-        { name: 'Education', href: '/solutions/education' },
-      ],
-    },
-    {
-      name: 'Industries',
-      href: '/industries',
-      dropdown: [
-        { name: 'Financial Services', href: '/industries/financial' },
-        { name: 'Healthcare', href: '/industries/healthcare' },
-        { name: 'Manufacturing', href: '/industries/manufacturing' },
-        { name: 'Retail', href: '/industries/retail' },
-        { name: 'Government', href: '/industries/government' },
-      ],
-    },
-    {
-      name: 'Company',
-      href: '/about',
-      dropdown: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Case Studies', href: '/case-studies' },
-      ],
-    },
-    {
-      name: 'Resources',
-      href: '/resources',
-      dropdown: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Tutorials', href: '/tutorials' },
-        { name: 'API Documentation', href: '/api-docs' },
-      ],
-    },
-    {
-      name: 'Contact',
-      href: '/contact',
-    },
-  ];
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)
-};
-  return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Menu, X, ChevronDown, Phone, Mail, MapPin  } from 'lucide-react';
+const Header = () => {const [isMenuOpen, setIsMenuOpen] = useState(false)const [activeDropdown, setActiveDropdown] = useState<string | null>(null)const navigation = [;
+    {name: 'Home',href: '/',},{name: 'Services',href: '/services',dropdown: [;
+        { name: 'AI Services', href: '/ai-services' },{ name: 'IT Services', href: '/it-services' },{ name: 'Micro SaaS', href: '/micro-saas' },{ name: 'Cloud Solutions', href: '/solutions/cloud-migration' },{ name: 'Cybersecurity', href: '/services/cybersecurity' },{ name: 'Data Analytics', href: '/services/data-analytics' },],},{name: 'Solutions',href: '/solutions',dropdown: [;
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },{ name: 'Healthcare', href: '/solutions/healthcare' },{ name: 'Finance', href: '/solutions/finance' },{ name: 'Government', href: '/solutions/government' },{ name: 'Retail', href: '/solutions/retail' },{ name: 'Education', href: '/solutions/education' },],},{name: 'Industries',href: '/industries',dropdown: [;
+        { name: 'Financial Services', href: '/industries/financial' },{ name: 'Healthcare', href: '/industries/healthcare' },{ name: 'Manufacturing', href: '/industries/manufacturing' },{ name: 'Retail', href: '/industries/retail' },{ name: 'Government', href: '/industries/government' },],},{name: 'Company',href: '/about',dropdown: [;
+        { name: 'About Us', href: '/about' },{ name: 'Our Team', href: '/team' },{ name: 'Careers', href: '/careers' },{ name: 'Partners', href: '/partners' },{ name: 'Case Studies', href: '/case-studies' },],},{name: 'Resources',href: '/resources',dropdown: [;
+        { name: 'Blog', href: '/blog' },{ name: 'White Papers', href: '/white-papers' },{ name: 'Webinars', href: '/webinars' },{ name: 'Tutorials', href: '/tutorials' },{ name: 'API Documentation', href: '/api-docs' },],},{name: 'Contact',href: '/contact',},];
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen)const toggleDropdown = (name: string) => {setActiveDropdown(activeDropdown === name ? null : name)}return (<header className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}
-      <div className="bg-blue-900 text-white py-2">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-6 mb-2 md:mb-0">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="bg-blue-900 text-white py-2">;
+        <div className="container mx-auto px-4">;
+          <div className="flex flex-col md:flex-row justify-between items-center text-sm">;
+            <div className="flex items-center space-x-6 mb-2 md:mb-0">;
+              <div className="flex items-center space-x-2">;
+                <Phone className="w-4 h-4" />;
+                <span>+1 302 464 0950</span>;
+              </div>;
+              <div className="flex items-center space-x-2">;
+                <Mail className="w-4 h-4" />;
+                <span>kleber@ziontechgroup.com</span>;
+              </div>;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <MapPin className="w-4 h-4" />;
+              <span>364 E Main St STE 1008, Middletown, DE 19709</span>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
       {/* Main Navigation */}
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
+      <nav className="container mx-auto px-4 py-4">;
+        <div className="flex justify-between items-center">;
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
-              <p className="text-sm text-gray-600">AI & Technology Solutions</p>
-            </div>
-          </Link>
+          <Link href="/" className="flex items-center space-x-2">;
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">;
+              <span className="text-white font-bold text-xl">Z</span>;
+            </div>;
+            <div>;
+              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>;
+              <p className="text-sm text-gray-600">AI & Technology Solutions</p>;
+            </div>;
+          </Link>;
           {/* Desktop Navigation */}
-          <MainNavigation className="hidden md: fle x"  />
-          <MainNavigation className="hidden md:flex" />
-          <nav className="hidden md:flex items-center space-x-8">
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <Link
+          <MainNavigation className="hidden md: fle x"  />;
+          <MainNavigation className="hidden md:flex" />;
+          <nav className="hidden md:flex items-center space-x-8">;
+          <nav className="hidden lg:flex items-center space-x-8">;
+            {navigationItems.map((item) => (<Link;
                 key={item.name}
                 to={item.href}
-                className={`text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium ${
-                  location.pathname === item.href ? 'text-cyan-400' : ''
+                className={`text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium ${location.pathname === item.href ? 'text-cyan-400' : '';
                 }`}
-              >
+              >;
                 {item.name}
-              </Link>
+              </Link>;
             ))}
-          </nav>
+          </nav>;
           {/* Contact Info - Hidden on small screens */}
-          <div className="hidden xl:flex items-center space-x-4 text-sm text-gray-400">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="w-4 h-4" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-          </div>
+          <div className="hidden xl:flex items-center space-x-4 text-sm text-gray-400">;
+            <div className="flex items-center space-x-2">;
+              <Phone className="w-4 h-4" />;
+              <span>+1 302 464 0950</span>;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <Mail className="w-4 h-4" />;
+              <span>kleber@ziontechgroup.com</span>;
+            </div>;
+          </div>;
           {/* Right side actions */}
-          <div className="flex items-center space-x-2 lg:space-x-4">
+          <div className="flex items-center space-x-2 lg:space-x-4">;
             {/* Search */}
-            <button
+            <button;
               onClick={() => setIsSearchOpen(!isSearchOpen)}
-              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
-              className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
-              aria-label="Search"
-            >
-              <Search className="w-5 h-5"  />
-            </button>
+              className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors";
+              className="p-2 text-gray-300 hover:text-blue-400 transition-colors";
+              aria-label="Search";
+            >;
+              <Search className="w-5 h-5"  />;
+            </button>;
             {/* Theme toggle */}
-            <button
+            <button;
               onClick={toggleTheme}
               className="p-2 text-gray-300 hover: tex t-blue-400 transition-colors"';
             >';';
               {theme === 'dark' ? <Sun className="w-5 h-5"  /> : <Moon className="w-5 h-5"  />}
-              className="p-2 text-gray-300 hover:text-blue-400 transition-colors"
-              aria-label="Toggle theme"
-            >
+              className="p-2 text-gray-300 hover:text-blue-400 transition-colors";
+              aria-label="Toggle theme";
+            >;
               {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-            </button>
+            </button>;
             {/* User menu */}
-            <div className="relative">
-              <button
+            <div className="relative">;
+              <button;
                 onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                className="flex items-center space-x-2 p-2 text-gray-400 hover: tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200"
-                className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200"
-                aria-label="User menu"
-              >
-                <User className="w-5 h-5"  />
-                <span className="hidden sm: bloc k">Account</span>
-              </button>
-              {isUserMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">
-                  <Link
-                    to="/login"
-                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
+                className="flex items-center space-x-2 p-2 text-gray-400 hover: tex t-cyan-400 hover: b g-gray-800/50 rounded-md transition-colors duration-200";
+                className="flex items-center space-x-2 p-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-md transition-colors duration-200";
+                aria-label="User menu";
+              >;
+                <User className="w-5 h-5"  />;
+                <span className="hidden sm: bloc k">Account</span>;
+              </button>;
+              {isUserMenuOpen && (<div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-1 z-50">;
+                  <Link;
+                    to="/login";
+                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white";
                     onClick={() => setIsUserMenuOpen(false)}
-                    to="/login"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                    to="/login";
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white";
                     onClick={() => setIsUserMenuOpen(false)}
-                    to="/dashboard"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                    to="/dashboard";
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white";
                     onClick={() => setIsUserMenuOpen(false)}
-                  >
-                    Dashboard
-                  </Link>
-                  <Link
-                    to="/login"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >;
+                    Dashboard;
+                  </Link>;
+                  <Link;
+                    to="/login";
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white";
                     onClick={() => setIsUserMenuOpen(false)}
-                  >
-                    Sign In
-                  </Link>
-                  <Link
-                    to="/register"
-                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white"
-                    to="/contact"
-                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white"
+                  >;
+                    Sign In;
+                  </Link>;
+                  <Link;
+                    to="/register";
+                    className="block px-4 py-2 text-sm text-gray-300 hover: b g-gray-700 hover: tex t-white";
+                    to="/contact";
+                    className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white";
                     onClick={() => setIsUserMenuOpen(false)}
-                  >
-                    Sign Up
-                  </Link>
-                    </div>
-  );
-}
-            </div>
+                  >;
+                    Sign Up;
+                  </Link>;
+                    </div>;
+  )}
+            </div>;
             {/* Mobile menu button */}
-            <button
+            <button;
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md: hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors"
-              className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors"
-              aria-label="Toggle mobile menu"
-            >
+              className="md: hidden p-2 text-gray-300 hover: tex t-blue-400 transition-colors";
+              className="lg:hidden p-2 text-gray-300 hover:text-blue-400 transition-colors";
+              aria-label="Toggle mobile menu";
+            >;
               {isMobileMenuOpen ? <X className="w-6 h-6"  /> : <Menu className="w-6 h-6"  />}
-            </button>
-          </div>
-        </div>
+            </button>;
+          </div>;
+        </div>;
         {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="pb-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search services, solutions, or resources..."
+        {isSearchOpen && (<div className="pb-4">;
+            <form onSubmit={handleSearch} className="relative">;
+              <input;
+                type="text";
+                placeholder="Search services, solutions, or resources...";
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: tex t-blue-400"
-              >
-                <Search className="w-5 h-5"  />
-              </button>
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outlin e-none focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent";
+              />;
+              <button;
+                type="submit";
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: tex t-blue-400";
+              >;
+                <Search className="w-5 h-5"  />;
+              </button>;
         {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="pb-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                placeholder="Search services, solutions, or resources..."
+        {isSearchOpen && (<div className="pb-4">;
+            <form onSubmit={handleSearch} className="relative">;
+              <input;
+                type="text";
+                placeholder="Search services, solutions, or resources...";
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-400"
-              >
-                <Search className="w-5 h-5" />
-              </button>
+                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";
+              />;
+              <button;
+                type="submit";
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-400";
+              >;
+                <Search className="w-5 h-5" />;
+              </button>;
         {/* Mobile Navigation */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-md rounded-lg mt-2">
-              {navigationItems.map((item) => (
-                <Link
+        {isMobileMenuOpen && (<div className="lg:hidden">;
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-md rounded-lg mt-2">;
+              {navigationItems.map((item) => (<Link;
                   key={item.name}
                   to={item.href}
-                  className={`block px-3 py-2 text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md transition-colors duration-200 ${
-                    location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : ''
+                  className={`block px-3 py-2 text-base font-medium text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md transition-colors duration-200 ${location.pathname === item.href ? 'text-cyan-400 bg-gray-800' : '';
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <button
+          <div className="hidden lg:flex items-center space-x-8">;
+            {navigation.map((item) => (<div key={item.name} className="relative group">;
+                <button;
                   onClick={() => item.dropdown && toggleDropdown(item.name)}
-                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
-                >
-                  <Link href={item.href}>{item.name}</Link>
-                  {item.dropdown && (
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
-                    }`} />
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium";
+                >;
+                  <Link href={item.href}>{item.name}</Link>;
+                  {item.dropdown && (<ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';
+                    }`} />;
                   )}
-                </button>
+                </button>;
         {/* Search overlay */}
                 {/* Dropdown Menu */}
-                {item.dropdown && (
-                  <AnimatePresence>
-                    {activeDropdown === item.name && (
-                      <motion.div
+                {item.dropdown && (<AnimatePresence>;
+                    {activeDropdown === item.name && (<motion.div;
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50"
-                      >
-                        {item.dropdown.map((subItem) => (
-                          <Link
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50";
+                      >;
+                        {item.dropdown.map((subItem) => (<Link;
                             key={subItem.name}
                             href={subItem.href}
-                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200"
+                            className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200";
                             onClick={() => setActiveDropdown(null)}
-                          >
+                          >;
                             {subItem.name}
-                          </Link>
+                          </Link>;
                         ))}
-                      </motion.div>
+                      </motion.div>;
                     )}
-                  </AnimatePresence>
+                  </AnimatePresence>;
                 )}
-              </div>
+              </div>;
             ))}
-          </div>
+          </div>;
         {/* Search Bar */}
-        {isSearchOpen && (
-          <div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50 p-4">
-            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
-              <div className="relative">
-                <input
-                  type="text"
-                  placeholder="Search services, solutions, or help..."
+        {isSearchOpen && (<div className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-800/50 p-4">;
+            <form onSubmit={handleSearch} className="max-w-2xl mx-auto">;
+              <div className="relative">;
+                <input;
+                  type="text";
+                  placeholder="Search services, solutions, or help...";
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-3 pl-10 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                />
-                <Search className="absolute left-3 top-3.5 w-4 h-4 text-gray-400" />
-                <button
-                  type="submit"
-                  className="absolute right-2 top-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-1.5 rounded-md font-semibold transition-colors"
-                >
-                  Search
-                </button>
-              </div>
-            </form>
-          </div>
-        )
-      )}
-    </div>
-    );
-}
-      </div>
+                  className="w-full px-4 py-3 pl-10 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent";
+                />;
+                <Search className="absolute left-3 top-3.5 w-4 h-4 text-gray-400" />;
+                <button;
+                  type="submit";
+                  className="absolute right-2 top-2 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-1.5 rounded-md font-semibold transition-colors";
+                >;
+                  Search;
+                </button>;
+              </div>;
+            </form>;
+          </div>;
+        ))}
+    </div>;
+    )}
+      </div>;
       {/* Mobile Navigation Overlay */}
-      {isMobileMenuOpen && (
-        <div className="md: hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
-          <div className="px-4 py-6">
-            <MainNavigation  />
-          </div>
-            </div>
-  );
-}
+      {isMobileMenuOpen && (<div className="md: hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">;
+          <div className="px-4 py-6">;
+            <MainNavigation />;
+          </div>;
+            </div>;
+  )}
       {/* Mobile Navigation Overlay */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">
-          <div className="px-4 py-6">
-            <MainNavigation />
-          </div>
-        </div>
+      {isMobileMenuOpen && (<div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-t border-gray-800/50">;
+          <div className="px-4 py-6">;
+            <MainNavigation />;
+          </div>;
+        </div>;
       )}
-        </div>
+        </div>;
       )}
-    </header>
-  );
-}
-const router = useRouter()
-}
-  const [mobileMenuOpen, setMobileMenuOpen] = useState()"
-  const [searchQuery, setSearchQuery] = useState<any>("")
-}
-  const [searchQuery, setSearchQuery] = useState()
-}
-  const [scrolled, setScrolled] = useState<any>(false)
-}
-  useEffect(() => {
-    const handleScroll = (props: any) => {
-      setScrolled(window.scrollY > 50)
-}
-    },
-    window.addEventListener()
-}
-    return () => window.removeEventListener("scroll", handleScroll)
-}
-  }, [])
-}
-  const handleSearch = async (e: React.FormEvent) => {,
-    e.preventDefault(),
-    if (searchQuery.trim()) {"
-      router.push("/search?q="${encodeURIComponent(searchQuery.trim()),")}"
+    </header>;
+  )}
+const router = useRouter()}
+  const [mobileMenuOpen, setMobileMenuOpen] = useState()";
+  const [searchQuery, setSearchQuery] = useState<any>("")}
+  const [searchQuery, setSearchQuery] = useState()}
+  const [scrolled, setScrolled] = useState<any>(false)}
+  useEffect(() => {const handleScroll = (props: any) => {setScrolled(window.scrollY > 50)}
+    },window.addEventListener()}
+    return () => window.removeEventListener("scroll", handleScroll)}
+  }, [])}
+  const handleSearch = async (e: React.FormEvent) => {,e.preventDefault(),if (searchQuery.trim()) {";
+      router.push("/search?q="${encodeURIComponent(searchQuery.trim()),")}";
   }
-  const navigation = []
-  ]
-  return ("
-    <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
-      scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">
-}"}>""
-      <div className = ""max-w-7xl" mx-auto px-4 sm: p x-6 l,"
-    g: p x-8">"
-  return (",
-    <header className="{"fixed" w-full z-50 transition-all duration-300 ${ scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm" }"}>"
-      <div className=""max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">"
-    <header className="{"fixed" w-full z-50 transition-all duration-300 ${"
-  return (<header className="{"fixed" w-full z-50 transition-all duration-300 ${">
-      scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"}"}>"
-      <div className=""max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">"
-        <div className="flex justify-between items-center py-4">",
-          {/* comment */}""
-          <div className="flex items-center">""
-            <Link href="/" className="flex items-center space-x-2">""
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">""
-                <span className="text-white font-bold text-sm">Z</span>"
-              </div>""
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+  const navigation = [];
+  ];
+  return (";
+    <header className="{"fixed" w-full z-50 transition-all duration-300 ${";
+      scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm">;
+}"}>"";
+      <div className = ""max-w-7xl" mx-auto px-4 sm: p x-6 l,";
+    g: p x-8">";
+  return (",<header className="{"fixed" w-full z-50 transition-all duration-300 ${ scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm" }"}>";
+      <div className=""max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">";
+    <header className="{"fixed" w-full z-50 transition-all duration-300 ${";
+  return (<header className="{"fixed" w-full z-50 transition-all duration-300 ${">;
+      scrolled ? "bg-white shadow-lg" : "bg-white/95 backdrop-blur-sm"}"}>";
+      <div className=""max-w-7xl" mx-auto px-4 sm: p x-6 lg: p x-8">";
+        <div className="flex justify-between items-center py-4">",{/* comment */}"";
+          <div className="flex items-center">"";
+            <Link href="/" className="flex items-center space-x-2">"";
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"";
+                <span className="text-white font-bold text-sm">Z</span>";
+              </div>"";
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>;
           {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
-            >
-              Get Started
-            </Link>
-          </div>
+          <div className="hidden lg:flex items-center space-x-4">;
+            <Link;
+              href="/contact";
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold";
+            >;
+              Get Started;
+            </Link>;
+          </div>;
           {/* Mobile Menu Button */}
-          <button
+          <button;
             onClick={toggleMenu}
-            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
-          >
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200";
+          >;
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
+          </button>;
+        </div>;
         {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isMenuOpen && (
-            <motion.div
+        <AnimatePresence>;
+          {isMenuOpen && (<motion.div;
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden mt-4 border-t border-gray-200 pt-4"
-            >
-              {navigation.map((item) => (
-                <div key={item.name} className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <Link
+              className="lg:hidden mt-4 border-t border-gray-200 pt-4";
+            >;
+              {navigation.map((item) => (<div key={item.name} className="mb-2">;
+                  <div className="flex items-center justify-between">;
+                    <Link;
                       href={item.href}
-                      className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2"
+                      className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2";
                       onClick={() => setIsMenuOpen(false)}
-                    >
+                    >;
                       {item.name}
-                    </Link>
-                    {item.dropdown && (
-                      <button
+                    </Link>;
+                    {item.dropdown && (<button;
                         onClick={() => toggleDropdown(item.name)}
-                        className="p-1"
-                      >
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </button>
+                        className="p-1";
+                      >;
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180' : '';
+                        }`} />;
+                      </button>;
                     )}
-                  </div>
-                  {item.dropdown && activeDropdown === item.name && (
-                    <div className="ml-4 mt-2 space-y-1">
-                      {item.dropdown.map((subItem) => (
-                        <Link
+                  </div>;
+                  {item.dropdown && activeDropdown === item.name && (<div className="ml-4 mt-2 space-y-1">;
+                      {item.dropdown.map((subItem) => (<Link;
                           key={subItem.name}
                           href={subItem.href}
-                          className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1"
+                          className="block text-gray-600 hover:text-blue-600 transition-colors duration-200 py-1";
                           onClick={() => setIsMenuOpen(false)}
-                        >
+                        >;
                           {subItem.name}
-                        </Link>
+                        </Link>;
                       ))}
-                    </div>
+                    </div>;
                   )}
-                </div>
+                </div>;
               ))}
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <Link
-                  href="/contact"
-                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+              <div className="mt-4 pt-4 border-t border-gray-200">;
+                <Link;
+                  href="/contact";
+                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold";
                   onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
-              </div>
-            </motion.div>
+                >;
+                  Get Started;
+                </Link>;
+              </div>;
+            </motion.div>;
           )}
-        </AnimatePresence>
-      </nav>
-    </header>
-  )
-}
-    );"
-}"
-"
-  )
-};
-export default Header;
+        </AnimatePresence>;
+      </nav>;
+    </header>;
+  )}
+    )";
+}";
+";
+  )}export default Header;
