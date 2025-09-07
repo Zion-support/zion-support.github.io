@@ -47,6 +47,7 @@ export default {
 =======
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+<<<<<<< HEAD
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -289,3 +290,10 @@ export default {
 =======
 };
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+      },
+    },
+  },
+  plugins: [],
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f

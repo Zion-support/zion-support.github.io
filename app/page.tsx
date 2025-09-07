@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
@@ -36,23 +37,89 @@ export const metadata: Metadata = {
     },
   },
 };
+=======
+'use client';
 
-interface CardProps {
-  title: string;
-  href: string;
-  description: string;
-  bullets?: string[];
-  icon?: string;
-}
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import {
+  CpuChipIcon,
+  ShieldCheckIcon,
+  ChartBarIcon,
+  UserGroupIcon,
+  ArrowRightIcon,
+  StarIcon,
+  RocketLaunchIcon,
+  PlayIcon,
+  CheckCircleIcon
+} from '@heroicons/react/24/outline';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f
 
-function ServiceCard({
-  title,
-  href,
-  description,
-  bullets = [],
-  icon,
-}: CardProps) {
+const stats = [
+  { label: 'Companies Served', value: '500+' },
+  { label: 'Projects Completed', value: '1,200+' },
+  { label: 'Years of Experience', value: '10+' },
+  { label: 'Countries', value: '25+' },
+];
+
+const features = [
+  {
+    name: 'AI-Powered Solutions',
+    description: 'Cutting-edge artificial intelligence to automate and optimize your business processes.',
+    icon: CpuChipIcon,
+  },
+  {
+    name: 'Micro SaaS Platforms',
+    description: 'Scalable, focused software solutions that grow with your business needs.',
+    icon: RocketLaunchIcon,
+  },
+  {
+    name: 'Enterprise IT Services',
+    description: 'Comprehensive IT infrastructure and support for modern businesses.',
+    icon: ShieldCheckIcon,
+  },
+  {
+    name: 'Data Analytics',
+    description: 'Transform your data into actionable insights with our analytics solutions.',
+    icon: ChartBarIcon,
+  },
+];
+
+const testimonials = [
+  {
+    name: 'Sarah Johnson',
+    role: 'CTO, TechCorp',
+    content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%.',
+    rating: 5,
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Founder, StartupXYZ',
+    content: 'The micro SaaS platform they built for us was exactly what we needed. It scaled perfectly with our growth.',
+    rating: 5,
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'VP Engineering, DataFlow',
+    content: 'Outstanding service and technical expertise. They delivered our project ahead of schedule.',
+    rating: 5,
+  },
+];
+
+export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
+<<<<<<< HEAD
     <Link
       href={href}
       className='group block p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transform hover:-translate-y-2 hover:scale-105'
@@ -237,11 +304,49 @@ export default function HomePage() {
             >
               Visit Main Site
             </a>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+            <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+              <div className={`sm:text-center lg:text-left transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                  <span className="block xl:inline">AI, Micro SaaS, and</span>{' '}
+                  <span className="block text-blue-400 xl:inline animate-pulse">IT Services</span>
+                </h1>
+                <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                  Enterprise-grade solutions that drive real business results. We help companies build, scale, and optimize their technology infrastructure.
+                </p>
+                <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                  <div className="rounded-md shadow">
+                    <Link
+                      href="/services"
+                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10"
+                    >
+                      Explore Services
+                      <ArrowRightIcon className="ml-2 h-5 w-5" />
+                    </Link>
+                  </div>
+                  <div className="mt-3 sm:mt-0 sm:ml-3">
+                    <Link
+                      href="/contact"
+                      className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-400 bg-transparent hover:bg-blue-50 hover:text-blue-600 md:py-4 md:text-lg md:px-10"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </main>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f
           </div>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
         </div>
-      </section>
+      </div>
 
+<<<<<<< HEAD
       {/* Featured Services */}
       <section className='py-12' role='main' aria-labelledby='services-heading'>
         <div className='text-center mb-12'>
@@ -451,68 +556,130 @@ export default function HomePage() {
             <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
               Rapid development and deployment with agile methodologies
             </p>
+=======
+      {/* Stats Section */}
+      <div className="bg-slate-800 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Trusted by Industry Leaders</h2>
+            <p className="text-gray-300">Numbers that speak for themselves</p>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f
           </div>
-
-          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
-            <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-3xl">🔒</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
-              Secure & Reliable
-            </h3>
-            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-              Enterprise-grade security and 99.9% uptime guarantee
-            </p>
-          </div>
-
-          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
-            <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-3xl">🎯</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-300">
-              Custom Solutions
-            </h3>
-            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-              Tailored solutions that fit your specific business needs
-            </p>
-          </div>
-
-          <div className="text-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group">
-            <div className="w-20 h-20 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-              <span className="text-3xl">📞</span>
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
-              24/7 Support
-            </h3>
-            <p className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-              Round-the-clock technical support and maintenance
-            </p>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
+            {stats.map((stat, index) => (
+              <div key={stat.label} className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="text-4xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors">
+                  {stat.value}
+                </div>
+                <div className="text-sm text-gray-300 group-hover:text-white transition-colors">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
 
-          {/* Contact Information Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50 rounded-2xl relative overflow-hidden" aria-labelledby="contact-heading">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-blue-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-r from-purple-100 to-transparent rounded-full filter blur-2xl opacity-30"></div>
-        </div>
-        
-        <div className="relative z-10">
-          <div className="text-center mb-16">
-            <h2 id="contact-heading" className="text-5xl font-bold bg-gradient-to-r from-gray-900 to-blue-600 bg-clip-text text-transparent mb-8 animate-fade-in">
-              Get In Touch With Us
+      {/* Features Section */}
+      <div className="py-16 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+              Why Choose Zion Tech Group?
             </h2>
-            <p className="text-2xl text-gray-700 max-w-4xl mx-auto animate-slide-up font-medium">
-              Ready to transform your business? Contact our expert team today.
+            <p className="mt-4 text-lg text-gray-300">
+              We deliver cutting-edge technology solutions that drive business growth.
+            </p>
+          </div>
+
+          <div className="mt-12">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {features.map((feature, index) => (
+                <div key={feature.name} className="pt-6 group">
+                  <div className="flow-root bg-slate-800 rounded-lg px-6 pb-8 hover:bg-slate-700 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
+                    <div className="-mt-6">
+                      <div>
+                        <span className="inline-flex items-center justify-center p-3 bg-blue-500 rounded-md shadow-lg group-hover:bg-blue-400 group-hover:scale-110 transition-all duration-300">
+                          <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                        </span>
+                      </div>
+                      <h3 className="mt-8 text-lg font-medium text-white tracking-tight group-hover:text-blue-300 transition-colors">
+                        {feature.name}
+                      </h3>
+                      <p className="mt-5 text-base text-gray-300 group-hover:text-gray-200 transition-colors">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials Section */}
+      <div className="bg-slate-800 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+              What Our Clients Say
+            </h2>
+            <p className="mt-4 text-lg text-gray-300">
+              Don't just take our word for it. Here's what our clients have to say.
+            </p>
+          </div>
+
+          <div className="mt-12">
+            <div className="relative">
+              <div className="bg-slate-700 rounded-lg p-8 max-w-4xl mx-auto">
+                <div className="flex items-center justify-center mb-6">
+                  {[...Array(testimonials[activeTestimonial].rating)].map((_, i) => (
+                    <StarIcon key={i} className="h-6 w-6 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="text-gray-300 text-lg text-center mb-6 italic">
+                  "{testimonials[activeTestimonial].content}"
+                </p>
+                <div className="text-center">
+                  <div className="text-white font-semibold text-xl">{testimonials[activeTestimonial].name}</div>
+                  <div className="text-gray-400">{testimonials[activeTestimonial].role}</div>
+                </div>
+              </div>
+              
+              {/* Testimonial indicators */}
+              <div className="flex justify-center mt-6 space-x-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveTestimonial(index)}
+                    className={`w-3 h-3 rounded-full transition-colors ${
+                      index === activeTestimonial ? 'bg-blue-500' : 'bg-gray-400'
+                    }`}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Demo Section */}
+      <div className="py-16 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">See Our Solutions in Action</h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Watch how our AI-powered solutions can transform your business operations and drive real results.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 group border border-white/20">
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-                <span className="text-3xl">📞</span>
+          <div className="relative max-w-4xl mx-auto">
+            <div className="bg-slate-800 rounded-lg p-8 text-center">
+              <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 hover:bg-blue-500 transition-colors cursor-pointer">
+                <PlayIcon className="h-10 w-10 text-white" />
               </div>
+<<<<<<< HEAD
               <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
                 Phone
               </h3>
@@ -553,13 +720,133 @@ export default function HomePage() {
               <p className="text-gray-500 text-sm mt-2">
                 Visit us for consultations
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-dbb7
+=======
+              <h3 className="text-2xl font-bold text-white mb-4">Product Demo</h3>
+              <p className="text-gray-300 mb-6">
+                Experience the power of our AI solutions with this interactive demonstration.
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f
               </p>
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Watch Demo
+              </button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Newsletter Section */}
+      <div className="bg-slate-800 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get the latest insights on AI, technology trends, and business automation delivered to your inbox.
+            </p>
+            <div className="max-w-md mx-auto flex gap-4">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Pricing Section */}
+      <div className="py-16 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-gray-300">Choose the plan that fits your business needs</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-800 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-white mb-4">Starter</h3>
+              <div className="text-3xl font-bold text-blue-400 mb-6">$2,999<span className="text-lg text-gray-400">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Basic AI automation
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Email support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Monthly reports
+                </li>
+              </ul>
+              <button className="w-full bg-slate-700 text-white py-3 rounded-lg hover:bg-slate-600 transition-colors">
+                Get Started
+              </button>
+            </div>
+            
+            <div className="bg-blue-600 rounded-xl p-8 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Professional</h3>
+              <div className="text-3xl font-bold text-white mb-6">$7,999<span className="text-lg text-blue-200">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="h-5 w-5 text-green-300 mr-3" />
+                  Advanced AI solutions
+                </li>
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="h-5 w-5 text-green-300 mr-3" />
+                  Priority support
+                </li>
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="h-5 w-5 text-green-300 mr-3" />
+                  Custom integrations
+                </li>
+                <li className="flex items-center text-white">
+                  <CheckCircleIcon className="h-5 w-5 text-green-300 mr-3" />
+                  Weekly reports
+                </li>
+              </ul>
+              <button className="w-full bg-white text-blue-600 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                Get Started
+              </button>
+            </div>
+            
+            <div className="bg-slate-800 rounded-xl p-8">
+              <h3 className="text-xl font-bold text-white mb-4">Enterprise</h3>
+              <div className="text-3xl font-bold text-blue-400 mb-6">Custom<span className="text-lg text-gray-400">/month</span></div>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Full AI suite
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  24/7 dedicated support
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Custom development
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="h-5 w-5 text-green-400 mr-3" />
+                  Real-time monitoring
+                </li>
+              </ul>
+              <button className="w-full bg-slate-700 text-white py-3 rounded-lg hover:bg-slate-600 transition-colors">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section
         className='text-center py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 rounded-2xl relative overflow-hidden'
@@ -685,29 +972,27 @@ export default function HomePage() {
         <div className="relative z-10">
           <h2 id="cta-heading" className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
             Ready to Transform Your Business?
+=======
+      <div className="bg-blue-600">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+          <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            <span className="block">Ready to get started?</span>
+            <span className="block text-blue-200">Let's build something amazing together.</span>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto animate-slide-up">
-            Let&apos;s discuss your project and create a custom solution that drives
-            real business value. Our team has delivered 1000+ successful
-            projects across various industries. Contact us today for a free consultation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 shadow-lg hover:shadow-xl"
-              aria-label="Contact us to get started with your project"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-              aria-label="Explore our services"
-            >
-              View Our Services
-            </Link>
+          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+            <div className="inline-flex rounded-md shadow">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50"
+              >
+                Get Started
+                <ArrowRightIcon className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 
       {/* Contact Information Section */}
@@ -748,3 +1033,9 @@ export default function HomePage() {
     </div>
   );
 }
+=======
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-625f
