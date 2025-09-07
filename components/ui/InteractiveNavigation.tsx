@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const InteractiveNavigation: React.FC = () => {
+const InteractiveNavigation = () => {
   return (
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
