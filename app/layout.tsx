@@ -1,141 +1,43 @@
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 
-export const metadata: Metadata = {
-import React from 'react';
-import './globals.css';
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-  description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services. Enterprise-grade AI, micro SaaS, and IT solutions.',
-  keywords: 'AI solutions, micro SaaS, IT services, blockchain, cybersecurity, cloud services, business automation, digital transformation, software development, tech consulting',
+  title: 'Zion Tech Group - Leading AI and Technology Solutions',
+  description: 'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
+  keywords: ['AI', 'artificial intelligence', 'technology', 'innovation', 'quantum computing', 'autonomous systems', 'business solutions', 'zion tech'],
   authors: [{ name: 'Zion Tech Group' }],
+  creator: 'Zion Tech Group',
+  publisher: 'Zion Tech Group',
+  robots: 'index, follow',
   openGraph: {
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',
+    description: 'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
     type: 'website',
     locale: 'en_US',
+    siteName: 'Zion Tech Group',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
-    description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.',
-    images: ['/og-image.jpg'],
-    creator: '@ziontechgroup',
+    title: 'Zion Tech Group - Leading AI and Technology Solutions',
+    description: 'Transform your business with cutting-edge AI and technology solutions.',
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-  verification: {
-    google: 'your-google-verification-code',
-  },
-  category: 'technology',
-  classification: 'Business Technology Services',
-  referrer: 'origin-when-cross-origin',
-  colorScheme: 'light',
-  themeColor: '#000000',
-  title: 'Zion Tech Group - AI, Micro SaaS & Enterprise IT Solutions',
-  description: 'Leading provider of AI solutions, micro SaaS development, and enterprise IT services.'
+  viewport: 'width=device-width, initial-scale=1',
+  themeColor: '#3B82F6',
 };
 
 export default function RootLayout({
-  children
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
-  },
-}
-
-export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen bg-gray-50">
-          <main className="container mx-auto px-4 py-8">
-            {children}
-          </main>
-        </div>
+        {children}
       </body>
     </html>
   );
-
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-
-
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-  description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services. Enterprise-grade AI, micro SaaS, and IT solutions.',
-  keywords: 'AI solutions, micro SaaS, IT services, blockchain, cybersecurity, cloud services, business automation, digital transformation, software development, tech consulting',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
-    type: 'website',
-    locale: 'en_US',
-  },
-  twitter: {
-    card: 'summary_large_image',
-
-    title: 'Zion Tech Group - Enterprise AI & IT Solutions',
-    description: 'Leading provider of AI-powered business solutions, automation tools, and digital transformation services.',
-  },
-}
-
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div className="min-h-screen bg-gray-50">
-          <main className="container mx-auto px-4 py-8">
-            {children}
-          </main>
-      <body>
-        <div className="min-h-screen bg-white">
-          {children}
-        </div>
-      </body>
-    </html>
-
-  )
-
-      <body className={inter.className}>
-        <div className="min-h-screen bg-gray-50">
-          <main className="container mx-auto px-4 py-8">
-            {children}
-          </main>
-      <body>
-        <div className="min-h-screen bg-white">
-          {children}
-  )
-      <body className={inter.className}>
-        <div className="min-h-screen bg-gray-50">
-          <main className="container mx-auto px-4 py-8">
-            {children}
-          </main>
-      <body>
-        <div className="min-h-screen bg-white">
-          {children}
 }
