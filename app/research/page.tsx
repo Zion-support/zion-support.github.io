@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Research & Innovation | Zion Tech Group',
   description: 'Explore our cutting-edge research in AI, machine learning, and emerging technologies that drive innovation.',
@@ -13,8 +12,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-};
-
+}
 export default function ResearchPage() {
   const researchAreas = [
     {
@@ -56,9 +54,8 @@ export default function ResearchPage() {
         { metric: 'Scalability', value: '100x', description: 'Auto-scaling capability' },
         { metric: 'Cost Reduction', value: '40%', description: 'Infrastructure cost savings' }
       ]
-    }
-  ];
 
+  ]
   const publications = [
     {
       title: 'Advanced Neural Networks for Enterprise Applications',
@@ -80,9 +77,8 @@ export default function ResearchPage() {
       journal: 'Computer Security Review',
       year: '2023',
       impact: 'High'
-    }
-  ];
 
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -162,8 +158,8 @@ export default function ResearchPage() {
                   </div>
                   <div className="mt-4 md:mt-0">
                     <span className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${
-                      pub.impact === 'High' 
-                        ? 'bg-green-100 text-green-800' 
+                      pub.impact === 'High'
+                        ? 'bg-green-100 text-green-800'
                         : 'bg-yellow-100 text-yellow-800'
                     }`}>
                       {pub.impact} Impact
@@ -215,7 +211,7 @@ export default function ResearchPage() {
             Collaborate with Us
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Interested in partnering with our research team? Let's explore opportunities 
+            Interested in partnering with our research team? Let's explore opportunities
             for collaboration and innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -235,5 +231,4 @@ export default function ResearchPage() {
         </div>
       </section>
     </div>
-  );
-}
+  )

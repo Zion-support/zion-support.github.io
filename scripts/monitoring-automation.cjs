@@ -1,22 +1,17 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Monitoring Automation;
- * Sets up comprehensive monitoring for the application;
+ * Monitoring Automation
+ * Sets up comprehensive monitoring for the application
  */
-
 const fs = require('fs')
 const path = require('path')
 
-const fs = require('fs')
-const path = require('path')
   log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'PROGRESS': '�'
+      "INFO": "ℹ"
+      "SUCCESS": ""
+      "ERROR": ""
+      "WARNING": "⚠"
+      "PROGRESS": "�"
     const healthCheck = "
     "message"
     "version"
@@ -37,6 +32,5 @@ const path = require('path')
         "type"
         "severity"
                 console.error('Failed to load "metrics")
-
+console.error('Monitoring automation "failed")
     console.error('Monitoring automation "failed")
-

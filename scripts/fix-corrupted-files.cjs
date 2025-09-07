@@ -1,8 +1,6 @@
-
-
 main
 
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 // console.log(' Fixing Corrupted Files...')
@@ -16,4 +14,3 @@ console.log()
   "method"""
 const filesToFix = [{ "path"}]""
   { "path"}""
-

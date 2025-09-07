@@ -1,7 +1,4 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node;
-
+//
 const fs = require("$1")
 const path = require("path")
       let content = fs.readFileSync(filePath, "utf8")
@@ -21,8 +18,7 @@ const path = require("path")
       "pages/help.tsx"
       "pages/pricing-guide.tsx"
       "pages/pricing.tsx"
-
+"
       "
 
       "
-

@@ -1,12 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'AI Powered DevOps Platform - Zion Tech Group',
   description: 'Professional AI powered DevOps platform services to help your business grow and succeed.',
   keywords: 'AI DevOps platform, business solutions, professional services'
-};
-
+}
 export default function AIPoweredDevOpsPlatformPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
@@ -35,6 +33,4 @@ export default function AIPoweredDevOpsPlatformPage() {
         </a>
       </div>
     </div>
-  );
-}
-
+  )

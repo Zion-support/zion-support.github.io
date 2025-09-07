@@ -82,13 +82,11 @@ export default function HomePage() {
     ...emergingTechServices2025,
     ...revolutionary2025Services,
     ...nextGenInnovations2025,
-=======
     ...futuristic2028Services,
     ...emergingTech2028Services,
     ...cuttingEdge2029Services,
     ...emergingTechServices2029,
     ...practicalBusinessSolutions2029,
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2b24
     ...innovative2026Services,
     ...emergingTech2026Services,
     ...enterpriseIT2026Services,
@@ -119,7 +117,6 @@ export default function HomePage() {
     ...revolutionary2027MicroSaasServices,
     ...cuttingEdge2028MicroSaas,
     ...practicalBusinessSolutions2028,
-<<<<<<< HEAD
     ...futuristic2028Services,
     ...emergingTech2028Services,
     ...cuttingEdgeInnovations2029,
@@ -163,7 +160,6 @@ export default function HomePage() {
 
         {/* Enhanced Hero Section 2026 */}
         <UltraAdvancedHero2026V2 />
-=======
     <UltraFuturisticBackground2029>
       <Head>
         <title>Zion Tech Group - 2029 Revolutionary Technology Services | AI, Quantum Computing, Space Tech</title>

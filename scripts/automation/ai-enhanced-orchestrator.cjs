@@ -1,10 +1,8 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * AI-Enhanced PM2 Orchestrator;
- * Advanced intelligent system for PM2 process management with ML capabilities;
- * Features: Predictive analytics, auto-scaling, intelligent deployment, security monitoring;
+ * AI-Enhanced PM2 Orchestrator
+ * Advanced intelligent system for PM2 process management with ML capabilities
+ * Features: Predictive analytics, auto-scaling, intelligent deployment, security monitoring
  */
 
 const pm2 = require('pm2')
@@ -40,6 +38,5 @@ const os = require('os')
         '1min'
         '5min'
         '15min'
-
+const result = execSync('top -bn1 | grep "Cpu(s)"
       const result = execSync('top -bn1 | grep "Cpu(s)"
-

@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const pm2 = require("pm2")
 const chalk = require("chalk")
 const ora = require("ora")
@@ -86,11 +85,10 @@ const Table = require("cli-table3")
     console.log(chalk.gray("  quit               - Exit dashboard")
     console.log(chalk.gray("  help               - Show this help")
   console.error(chalk.red(" Dashboard "error": ")
-
+console.error(chalk.red(" Dashboard "error": ")
   console.error(chalk.red(" Dashboard "error": ")
 
       chalk.gray("  restart <process>  - Restart a specific process")"
 </process>"
 // console.log(chalk.gray("  stop <process>     - Stop a specific process")"
     console.log(chalk.gray("  start <process>    - Start a specific process")"
-

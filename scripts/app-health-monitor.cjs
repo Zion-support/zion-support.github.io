@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -26,6 +25,5 @@ const { execSync } = require('child_process')
       "dependencies"
       "codeQuality"
       "performance"
-
+console.error('\n� App Health Monitor "failed")
       console.error('\n� App Health Monitor "failed")
-

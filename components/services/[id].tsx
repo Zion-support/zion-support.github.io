@@ -1,42 +1,39 @@
-
-if (!id || typeof id !== 'string') {
+  if($2) {
     return (
       <div className='min-h-screen bg-black flex items-center justify-center'    />
         <div className='text-center'    />
           <h1 className='text-2xl font-bold text-white mb-4'    />
-            Service Not Found;
+            Service Not Found
           </h1>
           <p className='text-gray-400 mb-6'    />
             The requested service could not be found.
           </p>
           <Button href='/services' variant='primary'    />
             <ArrowLeft className='w-4 h-4 mr-2'    />
-            Back to Services;
+            Back to Services
           </Button>
         </div>
       </div>}
     );}
-  }
 
-const service = getServiceById(id);
-  if (!service) {
+const service = getServiceById(id)
+  if($2) {
     return (
 <div className='min-h-screen bg-black flex items-center justify-center'    />
         <div className='text-center'    />
           <h1 className='text-2xl font-bold text-white mb-4'    />
-            Service Not Found;
+            Service Not Found
           </h1>}
           <p className='text-gray-400 mb-6'    />}
             The requested service \"{id}\" could not be found.
           </p>
           <Button href='/services' variant='primary'    />
             <ArrowLeft className='w-4 h-4 mr-2'    />
-            Back to Services;
+            Back to Services
           </Button>
         </div>
       </div>
-);
-  }
+)
   return (
     <>
       <Head />
@@ -78,7 +75,7 @@ variant='primary'
                 icon={<ExternalLink className='w-4 h-4' />}
 
               >
-                Visit Service;
+                Visit Service
               </Button>
             </div>
           </div>
@@ -87,35 +84,34 @@ variant='primary'
         <ServiceDetail service={service} />
 
         {/* Service Detail Content */}
-        <ServiceDetail service={service} />;
-
+        <ServiceDetail service={service} />
         {/* Related Services CTA */}'
         <section className='py-16 bg-gray-900/50'>'
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>'
             <h2 className='text-3xl font-bold text-white mb-6'>
             </h2>'
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
-              Explore our complete portfolio of micro SaaS services to find the;
+              Explore our complete portfolio of micro SaaS services to find the
               perfect solution for your business needs.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
         {/* Related Services CTA */}'
         <section className='py-16 bg-gray-900/50'>;'
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;'
-            <h2 className='text-3xl font-bold text-white mb-6'>;
+            <h2 className='text-3xl font-bold text-white mb-6'>
             </h2>;'
-            <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>;
-              Explore our complete portfolio of micro SaaS services to find the;
-              perfect solution for your business needs.;
+            <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
+              Explore our complete portfolio of micro SaaS services to find the
+              perfect solution for your business needs.
             </p>;'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Button'
                 href='/services''
                 variant='primary''
                 size='lg''
-                className='shadow-2xl shadow-blue-500/25'>;
-                View All Services;
-              </Button>;
+                className='shadow-2xl shadow-blue-500/25'>
+                View All Services
+              </Button>
               <Button'
                 href='/contact''
                 variant='outline''
@@ -124,99 +120,83 @@ variant='primary'
             <h2 className='text-3xl font-bold text-white mb-6'>
             </h2>'
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
-              Explore our complete portfolio of micro SaaS services to find the;
+              Explore our complete portfolio of micro SaaS services to find the
               perfect solution for your business needs.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
 
-              </Button>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
-  );
-
-}
-;
-
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  )
  */
 function ServiceDetailPage() {}
-  const router = use_router ();
-  const { id } = router.query;
-;
-  // Check condition;
-if ( {) {}
-  $2;
-}
+  const router = use_router ()
+  const { id } = router.query
+  // Check condition
+  if($2) {}
+  $2
     return ('
       <div className='min - h-screen bg - black flex items - center justify - center'>;'
         <div className='text - center'>;'
-          <h1 className='text - 2xl font - bold text - white mb - 4'>;
-            Service Not Found;
+          <h1 className='text - 2xl font - bold text - white mb - 4'>
+            Service Not Found
           </h1>;'
-          <p className='text - gray - 400 mb - 6'>;
-            The requested service could not be found.;
-
-          </Button>;
-        </div>;
-      </div>);
-  }
-  const service = getServiceById (id);
-;
-  // Check condition;
-if ( {) {}
-  $2;
-}
+          <p className='text - gray - 400 mb - 6'>
+            The requested service could not be found.
+          </Button>
+        </div>
+      </div>)
+  const service = getServiceById (id)
+  // Check condition
+  if($2) {}
+  $2
     return ('
       <div className='min - h-screen bg - black flex items - center justify - center'>;'
         <div className='text - center'>;'
-          <h1 className='text - 2xl font - bold text - white mb - 4'>;
-            Service Not Found;
+          <h1 className='text - 2xl font - bold text - white mb - 4'>
+            Service Not Found
           </h1>;'
           <p className='text - gray - 400 mb - 6'>;"
-            The requested service "{id}" could not be found.;
+            The requested service "{id}" could not be found.
           </p>;'
           <Button href='/services' variant='primary'>;'
-            <ArrowLeft className='w - 4 h - 4 mr - 2' />            Back to Services;
-          </Button>;
-
-          </Button>;
-        </div>;
-      </div>));
-  }
+            <ArrowLeft className='w - 4 h - 4 mr - 2' />            Back to Services
+          </Button>
+          </Button>
+        </div>
+      </div>))
   return (
-    <>;
-      <Head>;
+    <>
+      <Head>
         <title>{service.name} | Zion Tech Group - Micro SaaS Services</title>;'
-        <meta name='description' content={service.description} />;
-
-                Back to Services;
+        <meta name='description' content={service.description} />
+                Back to Services
               </Button>
-              <Button;
+              <Button
 href={service.websit}
-}
-variant='primary';
-                size='sm';
 
-              >;
-                Visit Service;
-              </Button>;
-            </div>;
-          </div>;
-        </nav>;
+variant='primary'
+                size='sm'
+              >
+                Visit Service
+              </Button>
+            </div>
+          </div>
+        </nav>
         {/* Service Detail Content */}
-        <ServiceDetail service={service} />;
-
-                View All Services;
-              </Button>;
-
-                Get Custom Solution;
-              </Button>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>);
+        <ServiceDetail service={service} />
+                View All Services
+              </Button>
+                Get Custom Solution
+              </Button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>)
 origin/cursor/automate-test-improve-and-merge-code-2533
 

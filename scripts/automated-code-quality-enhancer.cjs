@@ -1,6 +1,4 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
@@ -58,7 +56,6 @@ const { execSync } = require("child_process")
 // console.log(`� Complex "files"`)
     console.log(` "Recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
-
+console.log("\n� High Priority "Recommendations": ")
       console.log("\n� High Priority "Recommendations": ")
       hasJestConfig: fs.existsSync("jest.config.js") || fs.existsSync("jest.config.cjs")","
-

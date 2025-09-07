@@ -1,17 +1,9 @@
-
-
-    this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
-    this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
-
-    this.log('\\n🎉 Comprehensive test & deploy suite completed!');
-  }
-}
-
-// Run the comprehensive suite
-const suite = new ComprehensiveTestDeploy();
-suite.runComprehensiveSuite().catch(console.error);
-
-#!/usr/bin/env node;
+this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`)
+    this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`)
+//
+const suite = new ComprehensiveTestDeploy()
+suite.runComprehensiveSuite().catch(console.error)
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -23,8 +15,3 @@ console.log('=')
       recommendations.push('Fix build issues before deployment')
       recommendations.push('Address multiple errors before deployment')
       recommendations.push('All checks passed - ready for deployment')
-    this.log('Starting comprehensive test & deploy suite...')
-    this.log('\\n COMPREHENSIVE SUITE SUMMARY')
-    this.log('===')
-    this.log('\n Recommendations:')
-    this.log('\\n� Comprehensive test & deploy suite completed!')

@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
@@ -85,6 +84,5 @@ const { execSync } = require("child_process")
       this.log(` Fatal error in security "audit"`)
 // console.log(" Advanced Security Audit completed successfully!")
     console.log(` "Recommendations"`)
-
+console.error(" Security audit "failed": ")
     console.error(" Security audit "failed": ")
-

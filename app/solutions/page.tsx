@@ -1,6 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
-
+import React from 'react'
+import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Solutions | Zion Tech Group',
   description: 'Comprehensive technology solutions for modern businesses. AI, automation, and digital transformation services.',
@@ -13,8 +12,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zion Tech Group',
   },
-};
-
+}
 export default function SolutionsPage() {
   const solutions = [
     {
@@ -40,9 +38,8 @@ export default function SolutionsPage() {
       description: 'Leverage blockchain technology to enhance security, transparency, and efficiency.',
       icon: '⛓️',
       features: ['Smart contracts', 'DeFi integration', 'NFT platforms', 'Security auditing']
-    }
-  ];
 
+  ]
   const steps = [
     {
       step: '01',
@@ -67,9 +64,8 @@ export default function SolutionsPage() {
       title: 'Support & Optimization',
       description: 'Ongoing maintenance, monitoring, and continuous improvement to ensure optimal performance.',
       icon: '🚀'
-    }
-  ];
 
+  ]
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -80,7 +76,7 @@ export default function SolutionsPage() {
               Technology Solutions
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to transform your business 
+              Comprehensive technology solutions designed to transform your business
               and drive sustainable growth
             </p>
           </div>
@@ -172,6 +168,4 @@ export default function SolutionsPage() {
         </div>
       </section>
     </div>
-
-  );
-}
+)

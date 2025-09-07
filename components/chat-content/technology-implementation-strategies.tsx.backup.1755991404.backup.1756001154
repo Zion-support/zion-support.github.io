@@ -18,4 +18,3 @@ const TechnologyImplementationStrategies: NextPage = () => {
 };
 
 export default TechnologyImplementationStrategies;
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

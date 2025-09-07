@@ -1,41 +1,35 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-import { createServerClient } from '../../../utils/supabase/server';
-
+import type { NextApiRequest, NextApiResponse } from 'next'
+import { createServerClient } from '../../../utils/supabase/server'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
-    const supabase = null;
-
-    const activeProjects = projectsData.filter(p => p.status === 'active').length;
+    const supabase = null
+    const activeProjects = projectsData.filter(p => p.status === 'active').length
     const categoryCounts: Record<string, number> = {}
-    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
-    const referralConversions = referralsData.filter(r => r.converted).length;
-
+    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 })
+    const referralConversions = referralsData.filter(r => r.converted).length
     const totalUsers = usersData && usersData.length;'
     const totalTalents = usersData && usersData.filter(u => u && u.role === 'talent').length;'
     const totalClients = usersData && usersData.filter(u => u && u.role === 'client').length;'
-    const quotesSent = quotesData && quotesData.filter(q => q && q.status === 'sent').length;
+    const quotesSent = quotesData && quotesData.filter(q => q && q.status === 'sent').length
     const quotesAccepted = quotesData && quotesData.filter('
       q => q && q.status === 'accepted'
-    ).length;
+    ).length
     usersData.forEach(u => {'
       geoCounts[u.country |'Unknown'] ='
-        (geoCounts[u.country |'Unknown'] |0) + 1;
-    });
+        (geoCounts[u.country |'Unknown'] |0) + 1
+    })
   } catch (e: any) {}
-    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
-    const referralConversions = referralsData.filter(r => r.converted).length;
+    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 })
+    const referralConversions = referralsData.filter(r => r.converted).length
     const geoCounts: Record<string, number> = {};'
-    usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 });
+    usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 })
     res.status(200).json({}
       totals: {}
-       totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects;
+       totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects
     },
-    topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
+    topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }))
       referralConversions;'
-      topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
-
+      topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }]
       totals: {
         totalUsers,
         totalTalents,
@@ -64,7 +58,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
   value: 1,}
 }, { label: 'GB',}
   value: 1 }]})
-  }
 
         total_users: 4,
         total_talents: 2,
@@ -106,6 +99,6 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
         { label: 'GB', value: 1 },
       ],
-    });
+    })
   }}
 

@@ -1,38 +1,30 @@
-
-
-;
-}
 type Props = { pypi: Item[], crates: Item[], github: { [key: string]: Item[] } },
 export const getStaticProps: GetStaticProps < Props> = async () => {}
-  try {};
+  try {}
     const file = path.join (process.cwd (), 'publicautomationtech - radar.json');'
-    const raw = fs.readFileSync (file, 'utf8');
-    const data = JSON.parse (raw);
+    const raw = fs.readFileSync (file, 'utf8')
+    const data = JSON.parse (raw)
     return {}
       props: {}
       revalidate: 7200}
-  } catch {;
+  } catch {
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
-  }
-  const langs = Object.keys(github);
 
+  const langs = Object.keys(github)
 import fs from 'fs',
 
-import path from 'path';
-import type { GetStaticProps } from 'next';
-
-type Item = any;
+import path from 'path'
+import type { GetStaticProps } from 'next'
+type Item = any
   return (
 
               )}
             </li>
           )
-}
 
-        </ul>;
-      </section>;
-
-      </header>;
+        </ul>
+      </section>
+      </header>
       <section    />;"
         <h2 className=\"font - semibold text-lg mb-3\"    />PyPI (30 days)</h2>;}"
         <ul className=\"grid md:grid - cols-2 gap-3\"    />;}"
@@ -41,24 +33,20 @@ type Item = any;
 }</a>;"
               {typeof it.downloads === 'number' && (<div className=\"text - xs text-gray-500\"    />Downloads: {it.downloads.toLocaleString ()}</div>)}
             </li>)
-}
-        </ul>;
-      </section>;
 
+        </ul>
+      </section>
             </li>))}
-        </ul>;
-      </section>;
+        </ul>
+      </section>
       {langs.map ((lang) => (
 
               </li>))}
 
-          </ul>;
+          </ul>
         </section>))}
 
-    </div>);
+    </div>)
     </div>
-);
-}
-  );
-}
-
+)
+  )

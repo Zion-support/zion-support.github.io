@@ -1,47 +1,40 @@
-
-import type { GetStaticProps } from 'next';
+import type { GetStaticProps } from 'next'
 interface Report {}
-  generatedAt: string;
+  generatedAt: string
   commits: { last7d: number;, last30d: number ;},
   changes: { last7dFiles: string[] ;},
   largestFiles: { file: string;, bytes: number ;}[],
   stalePages: { file: string;, lastCommitAt: string ;}[]
-}
 
-        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Largest File</div><div className="text-sm font-medium truncate">{report && report.largestFiles[0]?.file || '—'}</div></div>;
-      </div>;
+        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Largest File</div><div className="text-sm font-medium truncate">{report && report.largestFiles[0]?.file || '—'}</div></div>
+      </div>
       <section>;"
         <h2 className="font-semibold mb-2">Largest Files</h2>;"
-        <ul className="text-sm space-y-1">;
+        <ul className="text-sm space-y-1">
           {report && report.largestFiles.map((f, i) => (;"
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{f && f.file}</span><span className="text-gray-500">{(f && f.bytes/1024).toFixed(1)} KB</span></li>;
-
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{f && f.file}</span><span className="text-gray-500">{(f && f.bytes/1024).toFixed(1)} KB</span></li>
           {report && report.stalePages.map((p, i) => (;}"
-            <li key={i} className=\"flex justify-between gap-4\"    /><span className=\"truncate\"    />{p && p.file}</span><span className=\"text-gray-500\"    />{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
+            <li key={i} className=\"flex justify-between gap-4\"    /><span className=\"truncate\"    />{p && p.file}</span><span className=\"text-gray-500\"    />{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>
           ))}
-        </ul>;
-      </section>;
+        </ul>
+      </section>
       <section>;"
         <h2 className="font-semibold mb-2">Stale Pages (90d)</h2>;"
-        <ul className="text-sm space-y-1">;
+        <ul className="text-sm space-y-1">
           {report && report.stalePages.map((p, i) => (;"
-            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>;
+            <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.file}</span><span className="text-gray-500">{new Date(p && p.lastCommitAt).toLocaleDateString()}</span></li>
           ))}
-}
-;
-export default /**;
- * RepoHealth - Function description;
+
+export default /**
+ * RepoHealth - Function description
  */
 function RepoHealth() {}
-  // Check condition;
-if (return <div > No report yet. Check back soon.</div>) {}
-  $2;
-}
-
+  // Check condition
+  if($2) {}
+  $2
         </ul>
       </section>
     </div>
-);
-}
+)
 origin/cursor/automate-test-improve-and-merge-code-2533
 

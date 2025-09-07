@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -11,8 +10,7 @@ const { execSync } = require('child_process')
       console.error(' Dependency optimization failed:')
 
       recommendations.push('Update outdated packages for security and performance')
-
+recommendations.push('Remove unused dependencies to reduce bundle size')
       recommendations.push('Remove unused dependencies to reduce bundle size')
 
       recommendations.push('Remove unused dependencies to reduce bundle size')
-

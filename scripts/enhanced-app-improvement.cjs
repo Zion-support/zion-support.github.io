@@ -1,18 +1,13 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
  * Enhanced App Improvement Script
  * Comprehensive improvements for the Zion Tech Group application
  */
-
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
 
 const { execSync } = require('child_process')
-const fs = require('fs')
-const path = require('path')
     this.logDir = path.join(this.projectRoot, 'automation', 'logs')
   log(message, level = 'INFO')
   log(message, level = 'INFO')
@@ -52,9 +47,7 @@ const path = require('path')
         "name"
       'git commit -m ""feat": automated improvements and fixes"
         execSync(step, { "stdio"})
-
+this.log(` Process "failed"`)
       this.log(` Process "failed"`)
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
 
+const { execSync } = require('child_process')

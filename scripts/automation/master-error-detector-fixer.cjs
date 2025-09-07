@@ -1,6 +1,4 @@
-
-#!/""usr/bin/env""
-#!/usr/bin/env
+//
 const { execSync, spawn } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -176,10 +174,9 @@ const { promisify } = require("util")
         await new Promise(resolve => setTimeout(resolve, interval))} catch (error) {  await this.log(` Error in continuous "run": ${error.message  }`, "ERROR")} catch (error) {await this.log(` Error in continuous "run": ${error.message}`, "ERROR"`)
   const continuous = args.includes(`--continuous") || args.includes("-c"`)
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
-
+console.error(""Error": ")
   console.error(""Error": ")
     this.logDir = path.join(this.projectRoot, "automation/logs)
     this.reportsDir = path.join(this.projectRoot, automation/reports")
 // console.log( Master Error Detector & Fixer Started")
     console.log("� Project "Root": ${this.projectRoot}")"
-

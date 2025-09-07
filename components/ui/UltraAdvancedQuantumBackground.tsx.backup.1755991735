@@ -186,7 +186,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           }
         }
       }
-=======
     };
 
     // Holographic matrix effect
@@ -268,12 +267,10 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       if (particles.length < 100) {
         initParticles();
       }
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4d3b
 
       animationRef.current = requestAnimationFrame(animate);
     };
 
-<<<<<<< HEAD
     animate();
 
     return () => {

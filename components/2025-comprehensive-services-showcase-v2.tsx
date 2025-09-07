@@ -1,15 +1,12 @@
-
-import { 
-  Brain, Zap, Shield, Circle, ArrowRight;
+import {
+  Brain, Zap, Shield, Circle, ArrowRight
   Check, Star, TrendingUp, Users;}
   Globe, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin}
-} from 'lucide-react';
-
-// Import our new 2025 V2 innovative services;
-import { advancedMicroSaasExpansion2025V2 } from '../data/2025-advanced-micro-saas-expansion-v2';
-import { advancedITServices2025 } from '../data/2025-advanced-it-services';
-import { advancedAIServices2025 } from '../data/2025-advanced-ai-services';
-
+} from 'lucide-react'
+// Import our new 2025 V2 innovative services
+import { advancedMicroSaasExpansion2025V2 } from '../data/2025-advanced-micro-saas-expansion-v2'
+import { advancedITServices2025 } from '../data/2025-advanced-it-services'
+import { advancedAIServices2025 } from '../data/2025-advanced-ai-services'
 const fadeInUp = {}
   initial: { opacity: 0, y: 20,}
 },
@@ -21,16 +18,15 @@ const staggerContainer = {
   animate: {
     transition: {}
       staggerChildren: 0.1}
-    }
+
   }}
 
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
-    ...advancedMicroSaasExpansion2025V2;
-    ...advancedITServices2025;
-    ...advancedAIServices2025;
-  ];
-
+    ...advancedMicroSaasExpansion2025V2
+    ...advancedITServices2025
+    ...advancedAIServices2025
+  ]
 const serviceCategories = [
     {
       id: 'micro-saas',
@@ -75,25 +71,24 @@ const serviceCategories = [
       color: 'from-indigo-500 to-purple-500',
   services: advancedAIServices2025,}
       description: 'Breakthrough technologies of the future'}
-    }
+
   ];const contactInfo = {mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';}
    ,}
-}
-  ];
 
+  ]
 const contactInfo = {mobile: '+1 302 464 0950',}
   email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709';}
-  }return (<div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900\"    />;
-      <SEO;
-        title=\'2025 Comprehensive Services Showcase V2 | Zion Tech Group\';
-        description=\'Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions.\';
+  }return (<div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900\"    />
+      <SEO
+        title=\'2025 Comprehensive Services Showcase V2 | Zion Tech Group\'
+        description=\'Discover our comprehensive portfolio of innovative micro SAAS, IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs. Transform your business with cutting-edge solutions.\'
         keywords={[\"micro SAAS\", \"IT infrastructure\", \"AI services\", \"industry solutions\", \"emerging technology\", \"Zion Tech Group\"]}
-         />;
+         />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
+          <motion.h1
 
             className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
             initial={{ opacity: 0, y: 30 }}
@@ -107,22 +102,22 @@ const contactInfo = {mobile: '+1 302 464 0950',}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
 
-import { Brain, Atom, Shield, Target, Rocket;
-  ArrowRight, Check, Star, TrendingUp, Users;
+import { Brain, Atom, Shield, Target, Rocket
+  ArrowRight, Check, Star, TrendingUp, Users
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
- } from 'lucide-react';
+ } from 'lucide-react'
 // Import our new 2025 V2 innovative services
-import {Brain, Atom, Shield, Target, Rocket;
-  ArrowRight, Check, Star, TrendingUp, Users;
-  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
- } from 'lucide-react';
-// Import our new 2025 V2 innovative services;
-import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2';
-import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2';
-import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2';
-import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2';
-import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2';
-const fadeInUp = null;
+import {Brain, Atom, Shield, Target, Rocket
+  ArrowRight, Check, Star, TrendingUp, Users
+  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
+ } from 'lucide-react'
+// Import our new 2025 V2 innovative services
+import { innovativeMicroSaas2025ExpansionV2 } from '../data/2025-innovative-micro-saas-expansion-v2'
+import { innovativeITServices2025ExpansionV2 } from '../data/2025-innovative-it-services-expansion-v2'
+import { innovativeAIServices2025ExpansionV2 } from '../data/2025-innovative-ai-services-expansion-v2'
+import { industrySpecificSolutions2025V2 } from '../data/2025-industry-specific-solutions-v2'
+import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-breakthroughs-v2'
+const fadeInUp = null
 origin/cursor/automate-test-improve-and-merge-code-2533
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.
 
@@ -132,40 +127,40 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-              />;
-            <a;
-              href=\'#services\';
-              className=\'px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg\';
-                />;
+              />
+            <a
+              href=\'#services\'
+              className=\'px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg\'
+                />
             initial={{ opacity: 0, y: 20 ,}
-}
+
             animate={{ opacity: 1, y: 0 ,}
-}
+
             transition={{ duration: 0.8, delay: 0.4 ,}
-}
-          >;
-            <a;
-              href=\'#services\';
+
+          >
+            <a
+              href=\'#services\'
               className=\"px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg\"    />
 
-              Explore Services;
-            </a>;
-            <a;
-              href=\'#contact\';
-              className=\'px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200\';
-                />;
+              Explore Services
+            </a>
+            <a
+              href=\'#contact\'
+              className=\'px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200\'
+                />
               className=\"px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200\">
 
-              Get Started;
-            </a>;
-          </motion.div>;
-        </div>;
-      </section>;
+              Get Started
+            </a>
+          </motion.div>
+        </div>
+      </section>
       {/* Contact Information */}
-      <section id=\"contact\" className=\"py-16 px-4 bg-black/20\"    />;
-        <div className=\"max-w-4xl mx-auto text-center\"    />;
-          <motion.h2;
-            className=\'text-3xl md:text-4xl font-bold text-white mb-8\';
+      <section id=\"contact\" className=\"py-16 px-4 bg-black/20\"    />
+        <div className=\"max-w-4xl mx-auto text-center\"    />
+          <motion.h2
+            className=\'text-3xl md:text-4xl font-bold text-white mb-8\'
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -188,14 +183,14 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             <div className="text-center">"
               <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />"
               <h3 className="text-xl font-semibold text-white mb-2">
-                Email Us;
-              </h3>;
-              <p className='text-cyan-400 text-lg'    />{contactInfo.email}</p>;
-            </div>;
-            <div className='text-center'    />;
-              <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4'    />;
-              <h3 className='text-xl font-semibold text-white mb-2'    />;
-                Visit Us;
+                Email Us
+              </h3>
+              <p className='text-cyan-400 text-lg'    />{contactInfo.email}</p>
+            </div>
+            <div className='text-center'    />
+              <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4'    />
+              <h3 className='text-xl font-semibold text-white mb-2'    />
+                Visit Us
               </h3>"
               <p className="text-cyan-400 text-lg">{contactInfo.address}</p>
 <div className='text-center'>
@@ -235,7 +230,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Our Comprehensive Service Portfolio;
+            Our Comprehensive Service Portfolio
           </motion.h2>
 
 <motion.div
@@ -247,117 +242,116 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             whileInView="animate"
             viewport={{ once: true }}
             transition={{ duration: 0.6 ,}
-}
-              />;
-            Our Comprehensive Service Portfolio;
-          </motion.h2>;
-          <motion.div;
-            className=\'space-y-20\';
-<motion.div;
-            className='space-y-20';
+
+              />
+            Our Comprehensive Service Portfolio
+          </motion.h2>
+          <motion.div
+            className=\'space-y-20\'
+<motion.div
+            className='space-y-20'
             variants={staggerContainer}
-            initial=\'initial\';
-            whileInView=\'animate\';
+            initial=\'initial\'
+            whileInView=\'animate\'
             viewport={{ once: true }}
-              />;
-            {serviceCategories.map((category) => (<motion.div key={category.id} variants={fadeInUp}    />;
-                <div className=\"text-center mb-12\"    />;
-                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}    />;
+              />
+            {serviceCategories.map((category) => (<motion.div key={category.id} variants={fadeInUp}    />
+                <div className=\"text-center mb-12\"    />
+                  <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}    />
             viewport={{ once: true ,}
-}
-          >;
-            {serviceCategories.map((category) => (<motion.div key={category.id} variants={fadeInUp}    />;
-                <div className=\"text-center mb-12\"    />;
+
+          >
+            {serviceCategories.map((category) => (<motion.div key={category.id} variants={fadeInUp}    />
+                <div className=\"text-center mb-12\"    />
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}    />
 
                     {category.icon}
-                  </div>;
-                  <h3 className=\"text-3xl md:text-4xl font-bold text-white mb-4\"    />;
+                  </div>
+                  <h3 className=\"text-3xl md:text-4xl font-bold text-white mb-4\"    />
                     {category.name}
-                  </h3>;
-                  <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"    />;
+                  </h3>
+                  <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"    />
                     {category.description}
-                  </p>;
-                </div>;
-                <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8\"    />;
+                  </p>
+                </div>
+                <div className=\"grid md:grid-cols-2 lg:grid-cols-3 gap-8\"    />
                   {category.services.map((service, index) => (<motion.div;}
                       key={('id' in service ? service.id : index)}
-                      className=\'bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105\';
+                      className=\'bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105\'
                       whileHover={{ y: -5 }}
                       whileHover={{ y: -5 ,}
-}
-                        />;
-                      <h4 className=\"text-xl font-semibold text-white mb-3\"    />;
+
+                        />
+                      <h4 className=\"text-xl font-semibold text-white mb-3\"    />
                         {service.name}
-                      </h4>;
-                      <p className=\"text-gray-300 mb-4\"    />;
-                        {service.description}</p>;
-                      <div className=\"space-y-3 mb-6\"    />;
-                        <div className=\"flex items-center text-sm text-cyan-400\"    />;
-                          <TrendingUp className=\"w-4 h-4 mr-2\"    />;
+                      </h4>
+                      <p className=\"text-gray-300 mb-4\"    />
+                        {service.description}</p>
+                      <div className=\"space-y-3 mb-6\"    />
+                        <div className=\"flex items-center text-sm text-cyan-400\"    />
+                          <TrendingUp className=\"w-4 h-4 mr-2\"    />
                           {(service as any).marketSize || 'Growing Market'}
-                        </div>;
-                        <div className=\"flex items-center text-sm text-green-400\"    />;
-                          <Star className=\"w-4 h-4 mr-2\"    />;
+                        </div>
+                        <div className=\"flex items-center text-sm text-green-400\"    />
+                          <Star className=\"w-4 h-4 mr-2\"    />
                           {(service as any).growthRate || 'High Growth'}
-                        </div>;
-                      </div>;
-                      <div className=\"mb-6\"    />;
-                        <div className=\"text-2xl font-bold text-white mb-2\"    />;
+                        </div>
+                      </div>
+                      <div className=\"mb-6\"    />
+                        <div className=\"text-2xl font-bold text-white mb-2\"    />
                           Starting at {(service as any).pricing?.starter || (service as any).price || 'Contact Us'}
-                        </div>;
-                        <div className=\"text-sm text-gray-400\"    />;
+                        </div>
+                        <div className=\"text-sm text-gray-400\"    />
                           {(service as any).pricing?.professional ?;}
-                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
+                            `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterpris,}
-}` :;
-                            `${(service as any).price || 'Contact Us'} ${(service as any).period || ''}`;
-                          }
-                        </div>;
-                      </div>;
-                      <a;
+}` :
+                            `${(service as any).price || 'Contact Us'} ${(service as any).period || ''}`
+                        </div>
+                      </div>
+                      <a
                         href={`/services/${(service as any).slug || service.name.toLowerCase().replace(/\s+/g, '-')}`}
-                        className=\'inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200\';
-                          />;
+                        className=\'inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200\'
+                          />
                         className=\"inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200\">
 
-                        Learn More <ArrowRight className=\"w-4 h-4 ml-2\"    />;
-                      </p>;
-                      <div className=\"space-y-3 mb-6\"    />;
-                        <div className=\"flex items-center text-sm text-cyan-400\"    />;
-                          <TrendingUp className=\"w-4 h-4 mr-2\"    />;
+                        Learn More <ArrowRight className=\"w-4 h-4 ml-2\"    />
+                      </p>
+                      <div className=\"space-y-3 mb-6\"    />
+                        <div className=\"flex items-center text-sm text-cyan-400\"    />
+                          <TrendingUp className=\"w-4 h-4 mr-2\"    />
                           {service.marketSize}
-                        </div>;
-                        <div className=\"flex items-center text-sm text-green-400\"    />;
-                          <Star className=\"w-4 h-4 mr-2\"    />;
+                        </div>
+                        <div className=\"flex items-center text-sm text-green-400\"    />
+                          <Star className=\"w-4 h-4 mr-2\"    />
                           {service.growthRate}
-                        </div>;
-                      </div>;
-                      <div className='mb-6'    />;
-                        <div className='text-2xl font-bold text-white mb-2'    />;
+                        </div>
+                      </div>
+                      <div className='mb-6'    />
+                        <div className='text-2xl font-bold text-white mb-2'    />
                           Starting at{' '}
                           {(service as any).pricing?.starter || service.price}
-                        </div>;
-                        <div className='text-sm text-gray-400'    />;
+                        </div>
+                        <div className='text-sm text-gray-400'    />
                           {(service as any).pricing?.professional;}
-                            ? `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}`;
+                            ? `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}`
                             ? `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterpris,}
-}`;
+}`
                             : `${service.price} ${service.period}`}
-                        </div>;
-                      </div>;
-                      <a;
+                        </div>
+                      </div>
+                      <a
                         href={`/services/${service.slug}`}
-                        className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200';
-                          />;
+                        className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200'
+                          />
                         className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200'>
 
-                        Learn More <ArrowRight className='w-4 h-4 ml-2'    />;
-                      </a>;
-                    </motion.div>;
+                        Learn More <ArrowRight className='w-4 h-4 ml-2'    />
+                      </a>
+                    </motion.div>
                   ))}
-                </div>;
-              </motion.div>;
+                </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
@@ -376,13 +370,13 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             initial={{ opacity: 0, y: 20 ,}
-}
+
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 ,}
-}
-              />;
-            Market Impact & Growth;
+
+              />
+            Market Impact & Growth
           </motion.h2>
 
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -410,7 +404,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
             </div>"
             <div className="text-center">"
               <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">
-                5;
+                5
               </div>"
               <div className="text-white text-lg">Service Categories</div>
 <div className='text-center'>
@@ -485,28 +479,28 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
             >
-              Contact Our Team;
-            </a>;
-            <a;
-              href=\'https://ziontechgroup.com\';
-              className=\'px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200\';
-<a;
+              Contact Our Team
+            </a>
+            <a
+              href=\'https://ziontechgroup.com\'
+              className=\'px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200\'
+<a
               href={`mailto:${contactInfo.email}`}
-              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg';
-                />;
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg'
+                />
               href={`mailto: ${contactInfo.email},
-}
+
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg'>
 
-              Contact Our Team;
-            </a>;
-            <a;
-              href='https://ziontechgroup.com';
-              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200';
-                />;
+              Contact Our Team
+            </a>
+            <a
+              href='https://ziontechgroup.com'
+              className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'
+                />
               className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>
 
-              Visit Website;
+              Visit Website
             </a>
           </motion.div>
         </div>
@@ -514,8 +508,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
     </div>
 
   )
-}
-  );
-}
+
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

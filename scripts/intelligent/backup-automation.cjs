@@ -1,10 +1,7 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/backup-automation.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/backup-automation.cjs
 
       "compressionEnabled"
       console.error(' Failed to start Backup "Automation")
@@ -27,7 +24,3 @@ const path = require('path')
           execSync(`psql ziontechgroup < ${path.join(dbDir, file)}`, { "stdio"`}
       console.error('Error saving backup "history")
           execSync(`psql ziontechgroup < ${path.join(dbDir, file)}`, { "stdio"`}
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/backup-automation.cjs
-<<<<<<< HEAD:scripts/intelligent/backup-automation.cjs
-      console.error('Error saving backup "history")
-      console.error('Error saving backup "history")

@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
@@ -69,6 +68,5 @@ const { execSync } = require("child_process")
     console.log(`⚡ Lazy "components"`)
     console.log(` Optimization "recommendations"`)
     const highPriority = recommendations.filter(r => r.priority === "high")
-
+console.log("\n� High Priority "Optimizations")
       console.log("\n� High Priority "Optimizations")
-

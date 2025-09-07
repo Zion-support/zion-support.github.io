@@ -1,4 +1,3 @@
-
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>
       <div'
@@ -6,29 +5,22 @@
         style={{}
           background:'
             'radial-gradient(600px at 0% 0%, #22d3ee 0%, transparent 60%), radial-gradient(600px at 100% 0%, #a78bfa 0%, transparent 60%), radial-gradient(600px at 0% 100%, #34d399 0%, transparent 60%), radial-gradient(600px at 100% 100%, #f472b6 0%, transparent 60%)'
-        }};
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {;
-            transform: translateY(-20px) rotate(10deg);
-          }
-          100% {;
-            transform: translateY(0px) rotate(0deg);
-          }
-        }
-      `}</style>;
-    </div>;
+        }}
+            transform: translateY(0px) rotate(0deg)
+          50% {
+            transform: translateY(-20px) rotate(10deg)
+          100% {
+            transform: translateY(0px) rotate(0deg)
+      `}</style>
+    </div>
   );  return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">;
+    <div className="fixed inset-0 -z-10 overflow-hidden">
 class ErrorBoundary extends React.Component {}
-  constructor(props) {}
-    super(props);
-    this.state = { hasError: false };
-  }
+  constructor($2) {}
+    super(props)
+    this.state = { hasError: false }
   static getDerivedStateFromError(error) {}
-    return { hasError: true };
-  }
-
+    return { hasError: true }
       {/* Gradient Background */}
       {/* Animated Orbs */}
       <motion&& motion.div"
@@ -37,25 +29,21 @@ class ErrorBoundary extends React.Component {}
           x: [0, 100, 0]
           y: [0, -50, 0]
           scale: [1, 1 && 1.2, 1]'
-import React from 'react';
-;
-export default /**;
- * AnimatedBackground - Function description;
+import React from 'react'
+export default /**
+ * AnimatedBackground - Function description
  */
 function AnimatedBackground() {}
   return ('
-    <div className='pointer - events - none fixed inset - 0 -z - 10 overflow - hidden'>;
-
-          }
+    <div className='pointer - events - none fixed inset - 0 -z - 10 overflow - hidden'>
         }`
-      `}</style>;
-
-          coordinate_x: [0, 100, 0];
-          coordinate_y: [0, -50, 0];
-          scale: [1, 1.2, 1];
+      `}</style>
+          coordinate_x: [0, 100, 0]
+          coordinate_y: [0, -50, 0]
+          scale: [1, 1.2, 1]
         }}
         transition={{}
-          duration: 20;
+          duration: 20
           repeat: Infinity"
           ease: "easeInOut"
         }}"
@@ -64,14 +52,13 @@ function AnimatedBackground() {}
           x: [0, -80, 0]
           y: [0, 60, 0]
           scale: [1, 0 && 0.8, 1]
-      />;
-
-          coordinate_x: [0, -80, 0];
-          coordinate_y: [0, 60, 0];
-          scale: [1, 0.8, 1];
+      />
+          coordinate_x: [0, -80, 0]
+          coordinate_y: [0, 60, 0]
+          scale: [1, 0.8, 1]
         }}
         transition={{}
-          duration: 25;
+          duration: 25
           repeat: Infinity"
           ease: "easeInOut"
         }}"
@@ -80,14 +67,13 @@ function AnimatedBackground() {}
           x: [0, 60, 0]
           y: [0, -40, 0]
           scale: [1, 1 && 1.3, 1]
-      />;
-
-          coordinate_x: [0, 60, 0];
-          coordinate_y: [0, -40, 0];
-          scale: [1, 1.3, 1];
+      />
+          coordinate_x: [0, 60, 0]
+          coordinate_y: [0, -40, 0]
+          scale: [1, 1.3, 1]
         }}
         transition={{}
-          duration: 30;
+          duration: 30
           repeat: Infinity"
           ease: "easeInOut"
         }}
@@ -99,6 +85,6 @@ function AnimatedBackground() {}
 
       `}</style>
     </div>
-  );
+  )
 origin/cursor/automate-test-improve-and-merge-code-2533
 

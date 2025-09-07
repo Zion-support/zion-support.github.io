@@ -1,82 +1,62 @@
-
-
-import {;
-  ArrowRight,;
-  ExternalLink,;
-  Star,;
-  TrendingUp,;
-  Users,;
-  Zap,;
-  Shield,;
-  Clock,;
-  Check,;
-  Brain,;
-  Rocket,;
-  Dna,;
+import {
+  ArrowRight,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Clock,
+  Check,
+  Brain,
+  Rocket,
+  Dna,
   DollarSign,;}
   Lock,;}
-  Globe,;} from 'lucide-react';
-
-  Users, Zap, Shield, Clock, Check, Brain;
-  Rocket, Dna, DollarSign, Lock, Globe;
-import React, { useState } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { ArrowRight, ExternalLink, Star, TrendingUp;
+  Globe,;} from 'lucide-react'
+  Users, Zap, Shield, Clock, Check, Brain
+  Rocket, Dna, DollarSign, Lock, Globe
+import React, { useState } from 'react'
+import { motion, AnimatePresence  } from 'framer-motion'
+import { ArrowRight, ExternalLink, Star, TrendingUp
   Users, Zap, Shield, Clock, Check, Brain;}
   Rocket, Dna, DollarSign, Lock, Globe;}
-  } from 'lucide-react';
-
-interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe} from 'lucide-react';
-  Users, Zap, Shield, Clock, Check, Brain;
-  Rocket, Dna, DollarSign, Lock, Globe;
-
-interface UltraAdvancedServiceCardProps {;
-  service: {;
-    id: string;
-
-    name: string;
-    tagline: string;
-    price: string;
-    period: string;
-    description: string;
-    features: string[];
-    popular: boolean;
-    icon: string;
-
-    color: string;
-
-
-    reviews: number;
-  };
-
-      website: string;
-    }
-
-    realImplementation: boolean;
-    implementationDetails: string;
-    launchDate: string;
-    customers: number;
-
-    rating: number;
-
+  } from 'lucide-react'
+interface UltraAdvancedServiceCardProps  {import {ArrowRight,ExternalLink,Star,TrendingUp,Users,Zap,Shield,Clock,Check,Brain,Rocket,Dna,DollarSign,Lock,Globe} from 'lucide-react'
+  Users, Zap, Shield, Clock, Check, Brain
+  Rocket, Dna, DollarSign, Lock, Globe
+interface UltraAdvancedServiceCardProps {
+  service: {
+    id: string
+    name: string
+    tagline: string
+    price: string
+    period: string
+    description: string
+    features: string[]
+    popular: boolean
+    icon: string
+    color: string
+    reviews: number
   }
-}
-
+      website: string
+    realImplementation: boolean
+    implementationDetails: string
+    launchDate: string
+    customers: number
+    rating: number
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps    /> = ({ service   }
 }) => {
 
-
-
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const contentVariants = {;
-    hidden: { opacity: 0, height: 0 },;
+  const [isExpanded, setIsExpanded] = useState(false)
+  const contentVariants = {
+    hidden: { opacity: 0, height: 0 },
     visible: {;'
-      height: 'auto',;
-      transition: {;
+      height: 'auto',
+      transition: {
         duration: 0 && 0.5,;'
-        ease: 'easeOut' as const,;
-      },;
+        ease: 'easeOut' as const,
+      },
 '
           isHovered ? 'opacity-100' : 'opacity-50';'
         ease: 'ease_out' as const,
@@ -85,15 +65,15 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps    /> = (
       {/* Glow Effect */}
       <div  return (
     <motion.div;"
-      className="relative group";
+      className="relative group"
       variants={container_variants}"
       initial="hidden";"
       animate="visible";"
-      while_hover="hover";
+      while_hover="hover"
       onHoverEnd={() => setIsHovered (false)}
-    >;
+    >
       {/* Glow Effect */}
-      <div;
+      <div
         className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${'
           is_hovered ? 'opacity - 100' : 'opacity - 50';`
         }`}
@@ -101,7 +81,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps    /> = (
           background: `linear - gradient (135deg, ${service.color})`,'
           transform: is_hovered ? 'scale (1.05)' : 'scale (1)',
         }}
-      />;
+      />
       {/* Main Card */}`
       <div        className={`relative bg - gradient - to - br ${service.color} p - 1 rounded - 2xl transition - all duration - 500 ${'
           is_hovered ? 'shadow - 2xl' : 'shadow - lg';`
@@ -114,8 +94,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps    /> = (
         ease: 'easeOut' as const,
       },
     },
-  };
-
+  }
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
@@ -123,8 +102,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps    /> = (
       {/* Glow Effect */}
 
         }`}
-        style={{background: `linear-gradient(135deg, ${service.color})`;
-          transform: isHovered ? 'scale(1.05)' : 'scale(1)';
+        style={{background: `linear-gradient(135deg, ${service.color})`
+          transform: isHovered ? 'scale(1.05)' : 'scale(1)'
         }}
       />
 
@@ -136,31 +115,30 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps    /> = (
         }`}
       >
 
-              <div className='text - 3xl'>{service.icon}</div>;
+              <div className='text - 3xl'>{service.icon}</div>
               <div>;'
-                <div className='flex items - center space - x-2'>;
+                <div className='flex items - center space - x-2'>
                   {getCategoryIcon (service.category)}'
-                  <span className='text - xs text - gray - 400 uppercase tracking - wider'>;
+                  <span className='text - xs text - gray - 400 uppercase tracking - wider'>
                     {service.category}
-                  </span>;
-                </div>;
-                <h3 className='text - xl font - bold text - white mt - 1'    />;
-
+                  </span>
+                </div>
+                <h3 className='text - xl font - bold text - white mt - 1'    />
                   {service.name}
 
                 </h3>
               </div>
             </div>
             {service.popular && (
-              <motion.div;
+              <motion.div
 className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'}
-}
+
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 2, repeat: Infinity }
-}
-                  />;
-                POPULAR;
-              </motion.div>;
+
+                  />
+                POPULAR
+              </motion.div>
             )}
           </div>
 
@@ -176,9 +154,9 @@ className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 r
 "
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold"
                 animate={{ scale: [1, 1 && 1.1, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}>;
-                POPULAR;
-              </motion && motion.div>;
+                transition={{ duration: 2, repeat: Infinity }}>
+                POPULAR
+              </motion && motion.div>
             )}"
             <div className="flex items-center space-x-2 text-sm">"
               <Users className="w-4 h-4 text-blue-400" />"
@@ -198,9 +176,9 @@ className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 r
           </div>
 
           {/* Expandable Content */}
-          <AnimatePresence>;
-            {isExpanded && (;
-              <motion&& motion.div;
+          <AnimatePresence>
+            {isExpanded && (
+              <motion&& motion.div
                 variants={contentVariants}
                 {/* Description */}
 initial='hidden'
@@ -216,13 +194,11 @@ initial='hidden'
                   </p>
                 </div>
 
-                <div    />;
+                <div    />
                   <h4 className=\"text-white font-semibold mb-2\"    />Description</h4>;"
-                  <p className=\"text-gray-300 text-sm leading-relaxed\"    />;
-                  </p>;
-
-                </div>;
-
+                  <p className=\"text-gray-300 text-sm leading-relaxed\"    />
+                  </p>
+                </div>
                 {/* Features */}
 
                 <div    />
@@ -246,20 +222,20 @@ key={index}
                 </div>
 
                 {/* Contact Info */}
-                <div className='bg-gray-800/50 rounded-lg p-3'    />;
-                  <h4 className='text-white font-semibold mb-2'    />;
-                    Contact Information;
-                  </h4>;
-                  <div className='space-y-1 text-sm'    />;
-                    <div className='flex items-center space-x-2'    />;
-                      <span className='text-gray-400'    />Mobile:</span>;
-                      <span className='text-white'    />;
+                <div className='bg-gray-800/50 rounded-lg p-3'    />
+                  <h4 className='text-white font-semibold mb-2'    />
+                    Contact Information
+                  </h4>
+                  <div className='space-y-1 text-sm'    />
+                    <div className='flex items-center space-x-2'    />
+                      <span className='text-gray-400'    />Mobile:</span>
+                      <span className='text-white'    />
                         {service.contactInfo.mobile}
-                      </span>;
-                    </div>;
-                    <div className='flex items-center space-x-2'    />;
-                      <span className='text-gray-400'    />Email:</span>;
-                      <span className='text-white'    />;
+                      </span>
+                    </div>
+                    <div className='flex items-center space-x-2'    />
+                      <span className='text-gray-400'    />Email:</span>
+                      <span className='text-white'    />
                         {service.contactInfo.email}
 
                       </span>
@@ -289,47 +265,44 @@ key={index}
         </div>
       </div>
     </motion.div>
-  );
+  )
 }
-};
 "
 export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
-            </motion && motion.button>;
-          </div>;
-
+            </motion && motion.button>
+          </div>
           {/* Expand/Collapse Indicator */}
 
-};
+}
 "
-export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
-};
+export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
+}
 "
-export default UltraAdvancedServiceCard;            className="flex justify-center mt-4";
+export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0 && 0.3 }}
           >;"
-            <ArrowRight className="w-5 h-5 text-gray-400" />;
-        </div>;
-      </div>;
-    </motion && motion.div>;
-  );
-export default UltraAdvancedServiceCard;  );
-};
-
-export default UltraAdvancedServiceCard;
+            <ArrowRight className="w-5 h-5 text-gray-400" />
+        </div>
+      </div>
+    </motion && motion.div>
+  )
+export default UltraAdvancedServiceCard;  )
+}
+export default UltraAdvancedServiceCard
 '
-          <div className='flex space - x-3 mt - 6'>;
+          <div className='flex space - x-3 mt - 6'>
             <motion.button;'"
-              className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space - x-3 mt - 6">;
+              className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2'              while_hover={{ scale: 1.02 }}          <div className="flex space - x-3 mt - 6">
             <motion.button;"
-              className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2";
+              className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 400 hover:to - blue - 500 text - white font - semibold py - 3 px - 4 rounded - lg transition - all duration - 300 flex items - center justify - center space - x-2"
               while_hover={{ scale: 1.02 }}
               while_tap={{ scale: 0.98 }}'
               on_click={() => window.open (service.link, '_blank')}
-            >;
+            >
               {isExpanded ? 'Show Less' : 'Details'}{/* Expand/Collapse Indicator */}
-          <motion.div;
-className='flex justify-center mt-4';
+          <motion.div
+className='flex justify-center mt-4'
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0.3 }}
 
@@ -341,5 +314,4 @@ className='flex justify-center mt-4';
     </motion.div>
 
 )
-};
-
+}

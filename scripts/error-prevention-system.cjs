@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -51,6 +50,5 @@ const { execSync } = require('child_process')
         "impact"
       this.log(`� Build "status"`)
       this.log(`🧪 "Tests"`)
-
+console.error('\n� Error Prevention System "failed")
       console.error('\n� Error Prevention System "failed")
-

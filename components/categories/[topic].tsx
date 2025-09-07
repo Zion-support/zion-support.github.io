@@ -1,111 +1,98 @@
-
-
-import type { GetServerSideProps, NextPage } from 'next';
-
-import Head from 'next/head';
-import Link from 'next/link';
-import { BlogPost  } from '@/utils/types/blog';
-import PageShareButtons from '@/components/blog/PageShareButtons';
-import { listPublishedPosts } from '@/utils/data/blogStore';
-
-import BlogCard from '@/components/blog/BlogCard';
-
-import type { GetServerSideProps, NextPage } from 'next';
-import Head from 'next / head';
-import Link from 'next / link';
-import {BlogPost} from '@/utils / types / blog';
-import PageShareButtons from '@/components / blog / PageShareButtons';
-import {listPublishedPosts} from '@/utils / data / blog_store';
-import BlogCard from '@/components / blog / BlogCard';
-;
+import type { GetServerSideProps, NextPage } from 'next'
+import Head from 'next/head'
+import Link from 'next/link'
+import { BlogPost  } from '@/utils/types/blog'
+import PageShareButtons from '@/components/blog/PageShareButtons'
+import { listPublishedPosts } from '@/utils/data/blogStore'
+import BlogCard from '@/components/blog/BlogCard'
+import type { GetServerSideProps, NextPage } from 'next'
+import Head from 'next / head'
+import Link from 'next / link'
+import {BlogPost} from '@/utils / types / blog'
+import PageShareButtons from '@/components / blog / PageShareButtons'
+import {listPublishedPosts} from '@/utils / data / blog_store'
+import BlogCard from '@/components / blog / BlogCard'
 type Props = { topic: string; posts: BlogPost[] }type Props = { topic: string, posts: BlogPost[] },
 const TopicPage: NextPage < Props> = ({ topic, posts }) => {
   return (
 
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
-type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },;
-const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
+type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },
+const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
 
-    <div>;
-      <Head>;
+    <div>
+      <Head>
         <title>{topic} - Zion Blog</title>;'
         <meta name='description' content={`Articles about ${topic}`} />;'`
         <meta property='og:title' content={`${topic} - Zion Blog`} />;'`
-        <meta property='og:description' content={`Articles about ${topic}`} />;
-
-        <meta property='og:type' content='website' />;
-        <meta name='twitter:card' content='summary_large_image' />;
-        <meta name='twitter:title' content={`${topic} - Zion Blog`} />;
-        <meta name='twitter:description' content={`Articles about ${topic}`} />;
-
+        <meta property='og:description' content={`Articles about ${topic}`} />
+        <meta property='og:type' content='website' />
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:title' content={`${topic} - Zion Blog`} />
+        <meta name='twitter:description' content={`Articles about ${topic}`} />
 pr-12243
-            onShare={network =>;
-              fetch('/api/analytics/share', {;
-                method: 'POST',;
-
-                headers: { 'Content-Type': 'application/json' },;
-                body: JSON && JSON.stringify({;
+            onShare={network =>
+              fetch('/api/analytics/share', {
+                method: 'POST',
+                headers: { "Content-Type": "application/json" },
+                body: JSON && JSON.stringify({
                   url: window && window.location.href,;`
-                  title: `${topic} - Zion Blog`,;
-                  network,;
+                  title: `${topic} - Zion Blog`,
+                  network,
                   utm:;'
-                    'utm_source=' +;
+                    'utm_source=' +
                     network +;'
-                    '&utm_medium=share&utm_campaign=category',;
-                }),;
-              }).catch(() => {});
-
-            }
-          />;
+                    '&utm_medium=share&utm_campaign=category',
+                }),
+              }).catch(() => {})
+          />
         </div>;'
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
-          {posts && posts.map(p => (;
-            <BlogCard key={p && p.id} post={p} />;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+          {posts && posts.map(p => (
+            <BlogCard key={p && p.id} post={p} />
           ))}
         </div>;'
         <div className='mt-6'>;'
-        <meta name='twitter:image' content='/images / og / topic - default.jpg' />;
+        <meta name='twitter:image' content='/images / og / topic - default.jpg' />
       </Head>;'
       <div className='mx - auto max - w-6xl'>;'
         <h1 className='text - 4xl font - bold mb - 3'>{topic}</h1>;'
-        <div className='mb - 6'>;
+        <div className='mb - 6'>
           <PageShareButtons;`
             title={`${topic} - Zion Blog`}
             url={'
               typeof window === 'undefined';`
-                ? `https://zion.app / categories/${encodeURIComponent (topic)}`;
-                : window.location.href;
+                ? `https://zion.app / categories/${encodeURIComponent (topic)}`
+                : window.location.href
             }`
             description={`Articles about ${topic}`}
             on_share={network =>;'
               fetch ('/api / analytics / share', {'
                 method: 'POST','
-                headers: { 'Content - Type': 'application / json' },
+                headers: { "Content - Type": "application / json" },
                 body: JSON.stringify ({}
                   url: window.location.href,`
                   title: `${topic} - Zion Blog`,
                   network,
                   utm:;'
-                    'utm_source=' +;
+                    'utm_source=' +
                     network +;'
                     '&utm_medium = share & utm_campaign = category',
                 }),
-              }).catch (() => {});
-            }
-          />;
+              }).catch (() => {})
+          />
         </div>;'
-        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>
           {posts.map (p => (
             <BlogCard key={p.id} post={p} />))}
         </div>;'
         <div className='mt - 6'>;'
-          <Link href='/blog' className='underline'>;
-            Back to Blog;
-          </Link>;
-        </div>;
-      </div>;
-
+          <Link href='/blog' className='underline'>
+            Back to Blog
+          </Link>
+        </div>
+      </div>
     <div>
       <Head>
         <title>{topic} - Zion Blog</title>
@@ -141,86 +128,69 @@ pr-12243
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>"
         <div className="mb-6">
 
-};
-
+}
 export const getServerSideProps: GetServerSideProps = async ctx => {;'
-  const topic = String(ctx && ctx.params?.topic || '');
-  const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));
-  return { props: { topic, posts } };
-};
-
+  const topic = String(ctx && ctx.params?.topic || '')
+  const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic))
+  return { props: { topic, posts } }
+}
 export default TopicPage;      </Head>;"
       <div className="mx-auto max-w-6xl">;"
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>;"
-        <div className="mb-6">;
-
-            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ url: window && window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
-          />;
+        <div className="mb-6">
+            onShare={(network) => fetch('/api/analytics/share', { method: 'POST', headers: { "Content-Type": "application/json" }, body: JSON && JSON.stringify({ url: window && window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
+          />
         </div>;"
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
-          {posts && posts.map((p) => (;
-            <BlogCard key={p && p.id} post={p} />;
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {posts && posts.map((p) => (
+            <BlogCard key={p && p.id} post={p} />
           ))}
 
-        <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
-      </div>;
-    </div>;
-  );
-
-};
-
+        <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
+      </div>
+    </div>
+  )
+}
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;'
-  const topic = String(ctx && ctx.params?.topic || '');
-  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
-
-};
-
+  const topic = String(ctx && ctx.params?.topic || '')
+  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic))
+}
 '
-  const topic = String(ctx.params?.topic || '');
-
-  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
+  const topic = String(ctx.params?.topic || '')
+  const posts = listPublishedPosts().filter((p) => p.topics.includes(topic))
   return { props: { topic, posts } }
-}
-export default TopicPage;
 
-    </div>);
-}
-;
-export const getServerSideProps: GetServerSideProps = async ctx => {';
-  const topic = String (ctx.params?.topic || '');
-  const posts = listPublishedPosts ().filter (p => p.topics.includes (topic));
+export default TopicPage
+    </div>)
+export const getServerSideProps: GetServerSideProps = async ctx => {'
+  const topic = String (ctx.params?.topic || '')
+  const posts = listPublishedPosts ().filter (p => p.topics.includes (topic))
   return { props: { topic, posts } }
-}
-;
+
 export default TopicPage;      </Head>;"
       <div className="mx - auto max - w-6xl">;"
         <h1 className="text - 4xl font - bold mb - 3">{topic}</h1>;"
-        <div className="mb - 6">;
+        <div className="mb - 6">
           <PageShareButtons;`
             title={`${topic} - Zion Blog`}'`
             url={typeof window === 'undefined' ? `https://zion.app / categories/${encodeURIComponent (topic)}` : window.location.href}`
             description={`Articles about ${topic}`}'`
-            on_share={(network) => fetch ('/api / analytics / share', { method: 'POST', headers: { 'Content - Type': 'application / json' }, body: JSON.stringify ({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium = share & utm_campaign = category' }) }).catch (() => {})}
-          />;
+            on_share={(network) => fetch ('/api / analytics / share', { method: 'POST', headers: { "Content - Type": "application / json" }, body: JSON.stringify ({ url: window.location.href, title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium = share & utm_campaign = category' }) }).catch (() => {})}
+          />
         </div>;"
-        <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">;
+        <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6">
           {posts.map ((p) => (
             <BlogCard key={p.id} post={p} />))}
         </div>;"
-        <div className="mt - 6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
-      </div>;
-    </div>);
-}
-;
-export const getServerSideProps: GetServerSideProps = async (ctx) => {';
-  const topic = String (ctx.params?.topic || '');
-  const posts = listPublishedPosts ().filter ((p) => p.topics.includes (topic));
+        <div className="mt - 6"><Link href="/blog" className="underline">Back to Blog</Link></div>
+      </div>
+    </div>)
+export const getServerSideProps: GetServerSideProps = async (ctx) => {'
+  const topic = String (ctx.params?.topic || '')
+  const posts = listPublishedPosts ().filter ((p) => p.topics.includes (topic))
   return { props: { topic, posts } }
-}
-;
-export default TopicPage;
-;
 
+export default TopicPage
 const TopicPage: NextPage<Props> = (_{_topic, _posts}) => {_return (
     <div>
       <Head>
@@ -242,19 +212,18 @@ const TopicPage: NextPage<Props> = (_{_topic, _posts}) => {_return (
             title={_`${topic} - Zion Blog`}'`
             url={_typeof window === 'undefined' ? `https://zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}`
             description={_`Articles about ${topic}`}'`
-            onShare={_(_network) => fetch('/api/analytics/share', _{ method: 'POST', _headers: { 'Content-Type': 'application/json'}, body: JSON.stringify({_url: window.location.href, _title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch__(() => {})}
+            onShare={_(_network) => fetch('/api/analytics/share', _{ method: 'POST', _headers: { "Content-Type": "application/json"}, body: JSON.stringify({_url: window.location.href, _title: `${topic} - Zion Blog`, network, utm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch__(() => {})}
           />
         </div>
         <div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6&quot;>'
-import type { GetServerSideProps, NextPage } from 'next',';
+import type { GetServerSideProps, NextPage } from 'next','
 import type { GetServerSideProps, NextPage } from 'next';'
 import Head from 'next/head';'
 import Link from 'next/link';'
 import { BlogPost  } from '@/utils/types/blog';'
 import PageShareButtons from '@/components/blog/PageShareButtons';'
 import { listPublishedPosts } from '@/utils/data/blogStore';'
-import BlogCard from '@/components/blog/BlogCard';
-
+import BlogCard from '@/components/blog/BlogCard'
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
 
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
@@ -281,24 +250,24 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
             url={'
               typeof window === 'undefined'`
                 ? `https://zion.app/categories/${encodeURIComponent(topic)}`
-                : window.location.href;
+                : window.location.href
             }`
             description={`Articles about ${topic}`}
             onShare={network =>'
               fetch('/api/analytics/share', {'
                 method: 'POST''
-                headers: { 'Content-Type': 'application/json' }
+                headers: { "Content-Type": "application/json" }
                 body: JSON.stringify({}
                   url: window.location.href;`
                   title: `${topic} - Zion Blog`
-                  network;
+                  network
                   utm:'
                     'utm_source=' +
                     network +'
                     '&utm_medium=share&utm_campaign=category'
                 })
               }).catch(() => {})
-            }
+
           />
         </div>'
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -308,25 +277,20 @@ const TopicPage: NextPage<Props> = ({ topic, posts }) => {
         </div>'
         <div className='mt-6'>'
           <Link href='/blog' className='underline'>
-            Back to Blog;
+            Back to Blog
           </Link>
         </div>
       </div>
     </div>
-  );
+  )
+export const getServerSideProps: GetServerSideProps = async ctx => {'
+  const topic = String(ctx.params?.topic |'')
 }
-export const getServerSideProps: GetServerSideProps = async ctx => {';
-  const topic = String(ctx.params?.topic |'');
-};
-
 export const getServerSideProps: GetServerSideProps = async ctx => {;'
-  const topic = String(ctx.params?.topic || '');
-
-  const posts = listPublishedPosts().filter(p => p.topics.includes(topic));
-
+  const topic = String(ctx.params?.topic || '')
+  const posts = listPublishedPosts().filter(p => p.topics.includes(topic))
 export const getServerSideProps: GetServerSideProps = async ctx => {;'
-  const topic = String(ctx && ctx.params?.topic || '');
-  const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic));
-  return { props: { topic, posts } };
-};
-
+  const topic = String(ctx && ctx.params?.topic || '')
+  const posts = listPublishedPosts().filter(p => p && p.topics.includes(topic))
+  return { props: { topic, posts } }
+}

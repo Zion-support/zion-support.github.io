@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -202,7 +201,7 @@ this.logError("Code review failed")
           fs.writeFileSync(issue.file, lines.join(")
   const glob = require("glob")
         const matches = glob.sync(pattern, { "cwd"})
-  const glob = require("glob")
+
         const matches = glob.sync(pattern, { "cwd"})
         if (stat.isDirectory() && !item.startsWith(".") && !item.includes("node_modules")
     if (pattern.includes("*.ts") && ext === ".ts"
@@ -250,9 +249,8 @@ this.logError("Code review failed")
         .split("\n")
         .map(line => line.split(" ")
         .filter(file => file && !file.startsWith(".")
-
+const content = fs.readFileSync(filePath, ")
   const content = fs.readFileSync(filePath, ")
 
         .map(line => line.split(" ")"
-</button>"`;
-
+</button>"`

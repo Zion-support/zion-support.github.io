@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require("child_process")
 const path = require("child_process")
 const { execSync } = require("child_process")
@@ -68,6 +67,5 @@ const { execSync } = require("child_process")
     this.scanDirectory(path.join(this.projectRoot, "src")
     this.scanDirectory(path.join(this.projectRoot, "pages")
     this.scanDirectory(path.join(this.projectRoot, "components")
-
+this.log("� Error detection completed!", "SUCCESS")
     this.log("� Error detection completed!", "SUCCESS")
-

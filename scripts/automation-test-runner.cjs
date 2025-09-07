@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
-#!/usr/bin/env node
+//
 /**
- * Automation Test Runner;
- * Tests all automation scripts and reports results;
+ * Automation Test Runner
+ * Tests all automation scripts and reports results
  */
 
 const fs = require('fs')
@@ -16,6 +14,5 @@ const { execSync } = require('child_process')
     const testScripts = [{ "path": 'scripts/health-check.cjs', "desc"}]
       { "path": 'scripts/simple-performance-monitor.cjs', "desc"}
       { "path": 'scripts/simple-code-quality.cjs', "desc"}
-
+"status"
           "status"
-

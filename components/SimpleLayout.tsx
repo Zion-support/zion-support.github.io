@@ -1,10 +1,6 @@
-
-
 interface SimpleLayoutProps {
-  children: ReactNode;
-  title?: string;
-}
-
+  children: ReactNode
+  title?: string
 const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -15,8 +11,6 @@ const SimpleLayout: React.FC<SimpleLayoutProps> = ({ children, title }) => {
         {children}
       </div>
     </div>
-  );
-};
-
-export default SimpleLayout;
-
+  )
+}
+export default SimpleLayout

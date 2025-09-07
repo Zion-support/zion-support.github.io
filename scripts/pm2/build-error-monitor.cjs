@@ -1,6 +1,5 @@
-
-#!/usr/bin/env node;
-import { execSync, spawn } from;
+///usr/bin/env node
+import { execSync, spawn } from
   'child_process'
   'fs'
   'path'
@@ -30,9 +29,6 @@ import { execSync, spawn } from;
         execSync(`"npm": install ${moduleName}`, { "stdio"`})
         "replacement"
         "replacement"
-
-        execSync(`"npm": install ${packageName}`, { "stdio"`})
-        execSync(`"npm": install ${packageName}`, { "stdio"`})
-#!/usr/bin/env node
-import { execSync, spawn } from;
-
+execSync(`"npm": install ${packageName}`, { "stdio"`})        execSync(`"npm": install ${packageName}`, { "stdio"`})
+///usr/bin/env node
+import { execSync, spawn } from

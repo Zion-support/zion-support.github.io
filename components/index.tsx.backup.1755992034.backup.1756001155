@@ -216,7 +216,6 @@ export default function HomePage() {
       description: 'Secure your APIs with intelligent rate limiting and threat prevention.',
       icon: '🛡️',
       services: ['Rate Limiting', 'Security Scanning', 'Monitoring']
-=======
   // Combine all services for comprehensive showcase
   const allServices = [
     ...enhancedRealMicroSaasServices,

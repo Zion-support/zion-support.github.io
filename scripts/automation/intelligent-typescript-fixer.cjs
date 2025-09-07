@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -24,8 +23,7 @@ console.log(' Starting intelligent TypeScript error fixer...')
       console.log('  Remaining "errors")
       "summary"
       "status"
-
+console.error(' Intelligent TypeScript error fixer failed to "start")
   console.error(' Intelligent TypeScript error fixer failed to "start")
 
 </any>"
-

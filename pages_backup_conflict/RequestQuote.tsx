@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 
 ;
+=======
+<<<<<<< HEAD
+=======
+
+;
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a
 import Head from 'next/head';
 export default function RequestQuote() {return (<>;
       <Head>;
@@ -46,5 +54,14 @@ export default function RequestQuote() {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   );
 }
+=======
+<<<<<<< HEAD
+  );
+=======
+  );
+}
+>>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
+>>>>>>> cursor/automate-test-improve-and-merge-code-dd7a

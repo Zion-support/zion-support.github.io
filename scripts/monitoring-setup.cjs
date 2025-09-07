@@ -1,5 +1,3 @@
-
-
 const fs = require("$1")
 const path = require("path")
     console.log("� Setting up error tracking...")
@@ -30,6 +28,5 @@ app.get("/ready")
 "
     fs.writeFileSync(path.join(this.projectRoot, "scripts/health-check.js")
 // console.log(" Health check script created")
-
+console.log(" Monitoring setup completed!")
     console.log(" Monitoring setup completed!")
-

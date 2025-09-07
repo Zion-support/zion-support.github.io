@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const https = require('https')
 const fs = require('fs')
 const path = require('path')
-
     this.owner = 'Zion-Holdings'
     this.repo = 'zion.app'
     this.token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || ''
@@ -18,6 +16,5 @@ const path = require('path')
         return { "status": 'merged', "message"}
         return { "status"}
       return { "status"}
-
+console.error('Bulk PR merger "failed")
     console.error('Bulk PR merger "failed")
-

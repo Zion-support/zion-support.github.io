@@ -1,83 +1,70 @@
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
-const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json");
+import type { NextApiRequest, NextApiResponse } from "next"
+import fs from "fs-extra"
+import path from "path"
+import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth"
+import { v4 as uuidv4 } from "uuid"
+const TALENTS_FILE = path.join(process.cwd(), "data", "talents", "talents.json")
 export default async function handler(req: NextApiRequest;, res: NextApiResponse) {
-  const started = null;
+  const started = null
   return res.status(201).json({ id: record.id ;})
-}
+
 origin/cursor/automate-test-improve-and-merge-code-2533
 
-import path from 'path';
+import path from 'path'
 import {}
-} from '../../utils/api/partnerAuth';
-import { v4 as uuidv4 } from 'uuid';
-
-
-;
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-import { authenticateRequest, enforceRateLimit, recordRequest  } from '../../utils/api/partnerAuth';
-import { v4 as uuidv4  } from 'uuid';
+} from '../../utils/api/partnerAuth'
+import { v4 as uuidv4 } from 'uuid'
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs-extra'
+import path from 'path'
+import { authenticateRequest, enforceRateLimit, recordRequest  } from '../../utils/api/partnerAuth'
+import { v4 as uuidv4  } from 'uuid'
 "
-const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\")export default async function handler() ;
-  const started = null;
+const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\")export default async function handler()
+  const started = null
   return res.status(201).json({ id: record.id }
-}import fs from 'fs - extra';
-import {} from '../../utils/api/partnerAuth';
-
-const TALENTS_FILE = path.join(process.cwd()'data';
-  'talents';
-  'talents.json';
+}import fs from 'fs - extra'
+import {} from '../../utils/api/partnerAuth'
+const TALENTS_FILE = path.join(process.cwd()'data'
+  'talents'
+  'talents.json'
 )export default async function handler() {try {const auth = await authenticateRequest(req)if (!auth) {return res && res.status(401).json({ error: 'Unauthorized' }
-}
+
   if (!(await enforceRateLimit(auth && auth.apiKey))) {await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429)return res && res.status(429).json({ error: 'Rate limit exceeded' }
-}
-  if (req && req.method !== 'POST') {res && res.setHeader('Allow', 'POST')await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405;}
+  if($2) {res && res.setHeader('Allow', 'POST')await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 405;}
   return res && res.status(405).json({ error: 'Method Not Allowed' }
-}
-;
-  const { name, email, skills, programTrack, certificationStatus } =;
-  }
-  await fs && fs.ensureDir(path && path.dirname(TALENTS_FILE))const records = (await fs && fs.pathExists(TALENTS_FILE))? await fs && fs.readJSON(TALENTS_FILE)authenticate_request,enforceRateLimit,record_request} from '../../utils / api / partner_auth';
 
-const TALENTS_FILE = path.join (process.cwd (),'data','talents','talents.json')export default async /**;
- * handler - Function description;
- */;
+  const { name, email, skills, programTrack, certificationStatus } =
+  await fs && fs.ensureDir(path && path.dirname(TALENTS_FILE))const records = (await fs && fs.pathExists(TALENTS_FILE))? await fs && fs.readJSON(TALENTS_FILE)authenticate_request,enforceRateLimit,record_request} from '../../utils / api / partner_auth'
+const TALENTS_FILE = path.join (process.cwd (),'data','talents','talents.json')export default async /**
+ * handler - Function description
+ */
 function handler() {const auth = await authenticate_request (req)// Check condition;}
-if ( {) {$2;}
-}
+  if($2) {$2;}
+
     return res.status (401).json ({ error: 'Unauthorized' }
-}
+
   if ()) {) {$2;}
-}
+
     await record_request (req, res, auth.partner, auth.api_key, started, 429)return res.status (429).json ({ error: 'Rate limit exceeded' }
-}
-  // Check condition;
-if ( {) {$2;}
-}
+
+  // Check condition
+  if($2) {$2;}
+
     res.set_header ('Allow', 'POST')await record_request (req, res, auth.partner, auth.api_key, started, 405)return res.status (405).json ({ error: 'Method Not Allowed' }
-}
 
-const { name, email, skills, program_track, certification_status } =;
+const { name, email, skills, program_track, certification_status } =
     req.body || {}
-  // Check condition;
-if ( {) {$2;}
-}
+  // Check condition
+  if($2) {$2;}
 
-    await record_request (req, res, auth.partner, auth.api_key, started, 400);
+    await record_request (req, res, auth.partner, auth.api_key, started, 400)
     return res.status (400).json ({ error: 'Missing required fields'}
-});
-  }
-  await fs.ensure_dir (path.dirname (TALENTS_FILE));
-
-const records = (await fs.path_exists (TALENTS_FILE));
-    ? await fs.readJSON (TALENTS_FILE);
-    : [];
+})
+  await fs.ensure_dir (path.dirname (TALENTS_FILE))
+const records = (await fs.path_exists (TALENTS_FILE))
+    ? await fs.readJSON (TALENTS_FILE)
+    : []
     id: uuidv4(),
     name,
     email,
@@ -85,11 +72,11 @@ const records = (await fs.path_exists (TALENTS_FILE));
     programTrack: programTrack || null,
     certificationStatus: certificationStatus || 'pending',
 
-  };
-  records && records.push(record);
+  }
+  records && records.push(record)
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2}
-});
-  await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
+})
+  await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201)
   return res && res.status(201).json({ id: record && record.id}
 });  return res && res.status(201).json({ id: record && record.id })
 }"
@@ -97,12 +84,9 @@ import type { NextApiRequest, NextApiResponse } from \'next\';"
 import fs from \'fs-extra\';"
 import path from \'path\';"
 import { authenticateRequest, enforceRateLimit, recordRequest } from \'../../utils/api/partnerAuth\';"
-import { v4 as uuidv4 } from \'uuid\';
+import { v4 as uuidv4 } from \'uuid\'
 "
-const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\");
-
+const TALENTS_FILE = path.join(process.cwd(), \"data\", \"talents\", \"talents.json\")
 export default async function handler(req: NextApiRequest;, res: NextApiResponse) {;}
   const started = null;}
   return res.status(201).json({ id: record.id ;})
-}
-

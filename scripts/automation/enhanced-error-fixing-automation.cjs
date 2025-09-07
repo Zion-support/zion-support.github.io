@@ -1,8 +1,71 @@
-
-#!/usr/bin/env node;
-
+///usr/bin/env node
 const fs = require("fs")
 const path = require("path")
+const { execSync } = require("child_process")
+          // Simple merge conflict resolution - keep the HEAD version
+          const lines = content.split("\n");"
+          const newLines = []
+          let inConflict = false
+  for($2) {
+              continue
+            } else if (line.includes("")) {              inConflict = false
+              continue
+            } else if (!inConflict) {
+              newLines.push(line)
+          "
+          fs.writeFileSync(file, newLines.join("\n"));"
+          this.fixesApplied.push({"
+            type: "merge_conflict","
+            file: file,"
+            description: "Resolved merge conflicts)
+          })
+  getTypeScriptFiles($2) {
+    const files = [];"
+    const srcDir = path.join(process.cwd(), "src");"
+    function walkDir(dir) {
+      if (!fs.existsSync(dir)) return
+      const items = fs.readdirSync(dir)
+  for($2) {
+        const fullPath = path.join(dir, item)
+        const stat = fs.statSync(fullPath)
+        if (stat.isDirectory()) {
+          walkDir(fullPath);"
+        } else if (item.endsWith(".ts") || item.endsWith(".tsx")) {"
+          files.push(fullPath)
+    walkDir(srcDir)
+    return files
+  async generateReport() {
+    const duration = Date.now() - this.startTime
+    const report = {
+      timestamp: new Date().toISOString(),`
+      duration: `${duration}ms`,
+      fixesApplied: this.fixesApplied,
+      summary: {,
+  totalFixes: this.fixesApplied.length,"
+        mergeConflictFixes: this.fixesApplied.filter(f => f.type === "merge_conflict").length;"
+    }
+    const reportPath = path.join(this.projectRoot, "error-fixing-report.json");"
+
+    return report
+  async run() {"
+    this.log("Starting Enhanced Error Fixing Automation...");"
+    try {
+  // TODO: Implement
+      // Run all fix operations
+      await this.fixMergeConflicts()
+      // Generate report
+      const report = await this.generateReport();`
+      this.log(`Error fixing completed! Applied ${report.summary.totalFixes} fixes.`)
+      throw error
+// Run the automation if called directly
+  if($2) {
+  const automation = new EnhancedErrorFixingAutomation()
+  automation.run().catch(console.error)
+module.exports = EnhancedErrorFixingAutomation
+//
+
+//
+///usr/bin/env node
 console.log( Starting Enhanced Error Fixing Automation System...")
   "AUTOMATION_INTERVAL"
   "MAX_RETRIES"
@@ -172,4 +235,3 @@ export default function"
         "eslintFixes": this.fixesApplied.filter(f => f.type === "eslint_error" || f.type === "eslint_auto_fix")
 
         "mergeConflictFixes": this.fixesApplied.filter(f => f.type === ")
-

@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync } = require("child_process")
@@ -58,7 +57,7 @@ const { execSync } = require("child_process")
       if (line.trim().startsWith("import ") && line.includes("lucide-react")
         const match = line.match(/import\s*\{([^}]+)\}\s*from\s*["]lucide-react[""]
   const icons = match[1].split(",")
-          if (usedIcons.length > 0) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
+  if($2) {importLines.push("import { ${usedIcons.join(", ")} } from "lucide-react";"
       } else if (inImportBlock && line.trim() === ""
         newLines.push("")
     return newLines.join("\n")
@@ -73,6 +72,5 @@ const { execSync } = require("child_process")
       .replace(/{\s*}/g, "{}")
   const fullPath = path.join(dirPath, ")
   arrayOfFiles = await this.getAllFiles(fullPath")
-
+const fullPath = path.join(dirPath, ")
   const fullPath = path.join(dirPath, ")
-

@@ -1,10 +1,7 @@
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/deployment-automation.cjs
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync, spawn } = require('child_process')
 const fs = require('fs')
 const path = require('path')
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/deployment-automation.cjs
 
       "autoDeploy"
       "rollbackEnabled"
@@ -73,7 +70,3 @@ const path = require('path')
       console.error('Error checking deployment "triggers")
       console.error('Error saving deployment "history")
       console.error('Error saving rollback "history")
-<<<<<<< HEAD:backup-problematic-files/scripts/intelligent/deployment-automation.cjs
-<<<<<<< HEAD:scripts/intelligent/deployment-automation.cjs
-      console.error('Error loading deployment "history")
-      console.error('Error loading deployment "history")

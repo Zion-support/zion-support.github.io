@@ -25,7 +25,6 @@ export default function UltraFuturisticBackground({
     
 
   useEffect(() => {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -39,7 +38,6 @@ export default function UltraFuturisticBackground({
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     };
 
     resizeCanvas();
@@ -47,7 +45,6 @@ export default function UltraFuturisticBackground({
 
     // Enhanced Particle class
     class Particle {
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-7563
       x: number;
       y: number;
       vx: number;
@@ -441,7 +438,6 @@ export default function UltraFuturisticBackground({
     initParticles();
     animate();
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
@@ -460,7 +456,6 @@ export default function UltraFuturisticBackground({
   };
 
   return (
-<<<<<<< HEAD
     <div className={`relative min-h-screen ${backgroundVariants[variant as keyof typeof backgroundVariants]}`}>
       {/* Animated canvas background */}
       {isClient && (
@@ -565,12 +560,10 @@ export default function UltraFuturisticBackground({
         )}
       </div>
       
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6
       {/* Content */}
       <div className="relative z-20">
         {children}
       </div>
-<<<<<<< HEAD
 
       {/* Quantum particles overlay */}
       <div className="absolute inset-0 pointer-events-none">
@@ -638,4 +631,3 @@ const getOverlayGradient = (variant: string) => {
 };
 
 export default UltraFuturisticBackground;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0ea6

@@ -1,100 +1,92 @@
-
-  exists?: boolean;
-  children?: TreeNode[];
-}
-  const [open, setOpen] = useState<boolean>(false);
-
+  exists?: boolean
+  children?: TreeNode[]
+  const [open, setOpen] = useState<boolean>(false)
             {open ? '▾' : '▸'}
-          </button>;
-        ) : (<span className='inline-block w-4'    />;
+          </button>
+        ) : (<span className='inline-block w-4'    />
         )}
-        <span;
+        <span
           className={`font-mono text-sm ${node && node.exists ? 'text-green-600' : 'text-gray-500'}`}    />
 
           {node && node.path}
-        </span>;
-        <div className='ml-auto flex gap-2'    />;
-          <button;
-            className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded';
+        </span>
+        <div className='ml-auto flex gap-2'    />
+          <button
+            className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded'
             onClick={copyPath}
-            title='Copy path'    />;
-            Copy;
-          </button>;
-          <button;
-            className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded';
+            title='Copy path'    />
+            Copy
+          </button>
+          <button
+            className='px-2 py-0 && 0.5 text-xs bg-gray-100 rounded'
             onClick={clonePath}
-            title='Create template'    />;
-            Template;
-          </button>;
-          <button;
-            className='px-2 py-0 && 0.5 text-xs bg-emerald-100 rounded';
+            title='Create template'    />
+            Template
+          </button>
+          <button
+            className='px-2 py-0 && 0.5 text-xs bg-emerald-100 rounded'
             onClick={deploy}
-            title='Auto-deploy'    />;
-  on_deploy?: (path: string) => void;
-}) {const [open, set_open]  = useState < boolean>(false)const has_children = Array.is_array (node.children) && node.children.length > 0;
-
+            title='Auto-deploy'    />
+  on_deploy?: (path: string) => void
+}) {const [open, set_open]  = useState < boolean>(false)const has_children = Array.is_array (node.children) && node.children.length > 0
 const toggle = () =>: any set_open (v => !v;}
   const copy_path = async () => {await navigator.clipboard.write_text (node.path;}
-}
+
 "
 export interface TreeNode  {name: string,path: string,type: \"folder\" | \"file\",exists?: boolean;}
   children?: TreeNode[];}
-}
 
 interface TreeProps  {nodes: TreeNode[],on_deploy?: (path: string) => void;}
-}
-function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, on_deploy?: (path: string) => void}
-}) {const [open, set_open]  = useState < boolean>(false)const has_children = Array.is_array (node.children) && node.children.length > 0;
-}
-const toggle = () =>: any set_open ((v) => !v)const copy_path = async () => {await navigator.clipboard.write_text (node.path;}
-}
 
-const clone_path = async () => ;
-  const url = `${window.location.origin}/api / dev / source - map`;
+function NodeItem ({ node, depth, on_deploy }: { node: TreeNode, depth: number, on_deploy?: (path: string) => void}
+}) {const [open, set_open]  = useState < boolean>(false)const has_children = Array.is_array (node.children) && node.children.length > 0
+const toggle = () =>: any set_open ((v) => !v)const copy_path = async () => {await navigator.clipboard.write_text (node.path;}
+
+const clone_path = async () =>
+  const url = `${window.location.origin}/api / dev / source - map`
     await fetch (url, {method: 'POST'}
-  headers: {'Content - Type': 'application / json',// Expect an admin token in local storage, fall back to prompt;}
+  headers: {"Content - Type": "application / json",// Expect an admin token in local storage, fall back to prompt;}
         'x - admin - token': local_storage.get_item ('ADMIN_TOKEN') || ''} as any,body: JSON.stringify ({ path: node.path}"
 })})}      headers: {\"Content - Type\": \'application / json\';}
         // Expect an admin token in local storage, fall back to prompt;}"
-        \"x - admin - token\": local_storage.get_item (\"ADMIN_TOKEN\") || \"\"} as any;
+        \"x - admin - token\": local_storage.get_item (\"ADMIN_TOKEN\") || \"\"} as any
       body: JSON.stringify ({ path: node.path })}
-}
 
-const deploy = () =>: any on_deploy && on_deploy (node.path;
-  return (<div className='ml - 2'    />;
-      <div className='flex items - center gap - 2 py - 1'    />;
-        {has_children ? (<button className='text - sm' on_click={toggle} aria - label='Toggle'    />;
+const deploy = () =>: any on_deploy && on_deploy (node.path
+  return (<div className='ml - 2'    />
+      <div className='flex items - center gap - 2 py - 1'    />
+        {has_children ? (<button className='text - sm' on_click={toggle} aria - label='Toggle'    />
             {open ? '▾' : '▸'}
           </button>) : (<span className='inline - block w - 4'    />)}
-        <span;
+        <span
           className={`font - mono text - sm ${node.exists ? 'text - green - 600' : 'text - gray - 500'}`}    />
 
           {node.path}
-        </span>;
-        <div className='ml - auto flex gap - 2'    />;
-          <button;
-            className='px - 2 py - 0.5 text - xs bg - gray - 100 rounded';
+        </span>
+        <div className='ml - auto flex gap - 2'    />
+          <button
+            className='px - 2 py - 0.5 text - xs bg - gray - 100 rounded'
             on_click={copy_path}
             title='Copy path'    />
 
-            Copy;
-          </button>;
-          <button;
-            className='px - 2 py - 0.5 text - xs bg - gray - 100 rounded';
+            Copy
+          </button>
+          <button
+            className='px - 2 py - 0.5 text - xs bg - gray - 100 rounded'
             on_click={clone_path}
             title='Create template'    />
 
-            Template;
-          </button>;
-          <button;
-            className='px - 2 py - 0.5 text - xs bg - emerald - 100 rounded';
+            Template
+          </button>
+          <button
+            className='px - 2 py - 0.5 text - xs bg - emerald - 100 rounded'
             on_click={deploy}
             title='Auto - deploy'    />
 
-            Deploy;
-          </button>;
-        </div>;
-      </div>;
+            Deploy
+          </button>
+        </div>
+      </div>
               node={child}
 
               depth={depth + 1}
@@ -103,23 +95,21 @@ const deploy = () =>: any on_deploy && on_deploy (node.path;
             />
 
           ))}
-        </div>;
+        </div>
       )}
 
     </div>
 
-);
-
+)
 export function Tree({ nodes, onDeploy }: TreeProps) {
   return (
     <div className='w-full'    />}
       {nodes.map(n => (}
         <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy}    />
       ))}
-    </div>;
-  );
-
-export default Tree;
+    </div>
+  )
+export default Tree
 }node = {}
   child}
 }depth= {}
@@ -128,44 +118,41 @@ export default Tree;
 }node= {}
   n}
 }depth= {}
-  0;
+  0
 }onDeploy= {}
-  onDeploy;
-}/>) ) ;
-}</div>) ;
-
-export default Tree;
+  onDeploy
+}/>) )
+}</div>)
+export default Tree
 "
     <div className="w-full">
       {nodes.map((n) => (
 
 }export default Tree;}
 
-export default Tree;
-  child.path;
+export default Tree
+  child.path
 }node= {}
-  child;
+  child
 }depth= {}
-  depth + 1;
+  depth + 1
 }on_deploy= {}
-  on_deploy;
-}/>) );
-}</div>);
-}</div>);
-}export /**;
- * Tree - Function description;
+  on_deploy
+}/>) )
+}</div>)
+}</div>)
+}export /**
+ * Tree - Function description
  */
 
-  n.path;
+  n.path
 }node= {}
-  n;
+  n
 }depth= {}
-  0;
+  0
 }on_deploy= {}
-  on_deploy;
-}/>) );
-}</div>);
+  on_deploy
+}/>) )
+}</div>)
 }export default Tree;}
-export default Tree;
-;
-
+export default Tree

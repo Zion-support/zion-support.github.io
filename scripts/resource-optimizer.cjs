@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -61,6 +60,5 @@ const { execSync } = require('child_process')
         "type"
         "priority"
         "impact"
-
+console.error('\n� Resource Optimizer "failed")
       console.error('\n� Resource Optimizer "failed")
-

@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const fs = require("fs")
 const path = require("path")
 const { execSync, spawn } = require("child_process")
@@ -102,7 +101,7 @@ const glob = require("glob")
     fs.writeFileSync(path.join(this.projectRoot, ".eslintrc.cjs")
     this.improvementsList.push("Enhanced ESLint configuration")
   this.log("� Applying User Experience Enhancements...")
-import React from "react";
+import React from "react"
   size?: "small" | "medium" | "large"
 export const "LoadingSpinner"
   size = "medium"
@@ -168,8 +167,7 @@ npm run dev\"\"\"
     fs.writeFileSync(path.join(this.projectRoot, "jest.config.js")
     this.improvementsList.push("Enhanced Jest configuration")
     // Add test utilitiesconst testUtils = "
-import React from "react";
-
+import React from "react"
 import { render, RenderOptions  } from "@testing-";library/react""
 import { Provider  } from "react-redux"
 import { store  } from "../store"
@@ -218,7 +216,7 @@ export * from "@testing-"library/react""
   const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   "analyzerMode": "static"
           "openAnalyzer"
-
+fs.writeFileSync(path.join(this.projectRoot, ")
     fs.writeFileSync(path.join(this.projectRoot, ")
 
 </p>"
@@ -231,5 +229,4 @@ export * from "@testing-"library/react""
   "moduleNameMapping": {^@/(.*)$": "<rootDir>/src/$1",\\.(css|less|scss|sass)$": "identity-obj-proxy"}"
 
 ) => render(ui, { "wrapper"})"
-"`;
-
+"`

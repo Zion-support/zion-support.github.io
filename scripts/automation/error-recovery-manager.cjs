@@ -1,5 +1,4 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -78,6 +77,5 @@ const path = require('path')
         "details"
       return { "success": false, "reason"}
       "ignore"
-
+console.error(' Error recovery manager "failed")
     console.error(' Error recovery manager "failed")
-

@@ -1,8 +1,7 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const fs = require('fs')
 const path = require('path')
-
+///usr/bin/env node
 console.log('� Starting Security Enhancement Automation...')
     "file"
     "issue"
@@ -41,7 +40,7 @@ console.log('� Starting Security Enhancement Automation...')
     "recommendations"
     "nextSteps"
   console.log('� Security improvements "applied")
-
+console.error(' Security enhancement automation "failed")
   console.error(' Security enhancement automation "failed")
 
   console.error(' Security enhancement automation "failed")
@@ -60,5 +59,4 @@ console.log('� Starting Security Enhancement Automation...')
       "validationScript"""
     "recommendations"""
     "nextSteps"""
-  console.log('� Security improvements "applied")""');
-
+console.log('� Security improvements "applied")""')

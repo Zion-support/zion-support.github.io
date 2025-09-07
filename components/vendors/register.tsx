@@ -1,4 +1,3 @@
-
       form.reset()
     } catch (err: any) {}
       setMessage(err.message)
@@ -10,11 +9,9 @@
       setMessage(err.message)}
     } finally {}
       setLoading(false)}
-    }
-  }
 
       <h1 className='text-2xl font-semibold'>
-        Apply to become a Vendor Partner;
+        Apply to become a Vendor Partner
       </h1>'
       <form onSubmit={onSubmit} className='space-y-4'>'
           <label className='block text-sm mb-1'>Agency Name</label>
@@ -56,7 +53,7 @@
             className='w-full border rounded px-3 py-2 bg-transparent'
              />
         </div>
-        <button;
+        <button
           disabled={loading}'
           className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
         >'
@@ -66,97 +63,88 @@
       {message && <div className='text-sm'>{message}</div>}'
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
-);
-}
-
-    }
+)
     } catch (err: any) {}
-      set_message (err.message);
+      set_message (err.message)
     } finally {}
       set_loading (false);    }
-  }
 
-  return (            .map(s => s && s.trim());
-            .filter(Boolean);
-
-          verificationDocs: String(payload && payload.verificationDocs || '');
-            .split();
-            .map(s => s && s.trim());
-            .filter(Boolean);
-
-      setMessage('Application submitted. Await approval.');
-      form && form.reset();
-    } catch (err: any) {;
-      setMessage(err && err.message);
-    } finally {;
-      setLoading(false);
-
-    }
-  }
+  return (            .map(s => s && s.trim())
+            .filter(Boolean)
+          verificationDocs: String(payload && payload.verificationDocs || '')
+            .split()
+            .map(s => s && s.trim())
+            .filter(Boolean)
+      setMessage('Application submitted. Await approval.')
+      form && form.reset()
+    } catch (err: any) {
+      setMessage(err && err.message)
+    } finally {
+      setLoading(false)
   return (
 
 '
     <div className='max-w-2xl mx-auto space-y-6'>;'
-      <h1 className='text-2xl font-semibold'>;
-        Apply to become a Vendor Partner;
+      <h1 className='text-2xl font-semibold'>
+        Apply to become a Vendor Partner
       </h1>;'
       <form onSubmit={onSubmit} className='space-y-4'>;'
-          <label className='block text-sm mb-1'>Agency Name</label>;
+          <label className='block text-sm mb-1'>Agency Name</label>
           <input'
             name='name'
             required'
             className='w-full border rounded px-3 py-2 bg-transparent'
-          />;
-        </div>;
+          />
+        </div>
         <div>;'
-          <label className='block text-sm mb-1'>Unique URL Slug</label>;
+          <label className='block text-sm mb-1'>Unique URL Slug</label>
           <input'
             name='slug'
             required'
             pattern='[a-z0-9-]+''
             className='w-full border rounded px-3 py-2 bg-transparent'
           />;'
-          <p className='text-xs text-gray-500'>Example: acme-ai</p>;
-        </div>;
+          <p className='text-xs text-gray-500'>Example: acme-ai</p>
+        </div>
         <div>;'
-          <label className='block text-sm mb-1'>Services Offered</label>;
+          <label className='block text-sm mb-1'>Services Offered</label>
           <input'
             name='servicesOffered''
             placeholder='AI prototyping, Data labeling, MLOps''
             className='w-full border rounded px-3 py-2 bg-transparent'
-          />;
-        </div>;
+          />
+        </div>
         <div>;'
-          <label className='block text-sm mb-1'>Team Size</label>;
+          <label className='block text-sm mb-1'>Team Size</label>
           <input'
             name='teamSize''
             type='number'
             min={1}'
             className='w-full border rounded px-3 py-2 bg-transparent'
-          />;
-        </div>;
+          />
+        </div>
         <div>;'
-          <label className='block text-sm mb-1'>About</label>;
+          <label className='block text-sm mb-1'>About</label>
           <textarea'
             name='about'
             rows={4}'
             className='w-full border rounded px-3 py-2 bg-transparent'
-          />;
-        </div>;
+          />
+        </div>
         <div>;'
-          <label className='block text-sm mb-1'>;
-            Verification Docs (URLs, comma-separated);
-          </label>;
+          <label className='block text-sm mb-1'>
+            Verification Docs (URLs, comma-separated)
+          </label>
           <input'
             name='verificationDocs''
             className='w-full border rounded px-3 py-2 bg-transparent'
-          />;
-        </div>;
-        <button;
+          />
+        </div>
+        <button
           disabled={loading}'
           className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'>;'
           {loading ? 'Submitting...' : 'Submit Application'}
-        </button>;
+        </button>
       </form>;'
       {message && <div className='text-sm'>{message}</div>}
     <div className="max-w-2xl mx-auto space-y-6">"
@@ -194,67 +182,63 @@
       {message && <div className="text-sm">{message}</div>}"
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  );
-}
-      set_loading (false);
-    }
-  }
+  )
+      set_loading (false)
   return ('
     <div className='max - w-2xl mx - auto space - y-6'>;'
-      <h1 className='text - 2xl font - semibold'>;
-        Apply to become a Vendor Partner;
+      <h1 className='text - 2xl font - semibold'>
+        Apply to become a Vendor Partner
       </h1>;'
       <form on_submit={on_submit} className='space - y-4'>;'
-          <label className='block text - sm mb - 1'>Agency Name</label>;
+          <label className='block text - sm mb - 1'>Agency Name</label>
           <input;'
-            name='name';
+            name='name'
             required;'
-            className='w - full border rounded px - 3 py - 2 bg - transparent';
-          />;
-        </div>;
+            className='w - full border rounded px - 3 py - 2 bg - transparent'
+          />
+        </div>
         <div>;'
-          <label className='block text - sm mb - 1'>Unique URL Slug</label>;
+          <label className='block text - sm mb - 1'>Unique URL Slug</label>
           <input;'
-            name='slug';
+            name='slug'
             required;'
             pattern='[a - z0 - 9-]+';'
-            className='w - full border rounded px - 3 py - 2 bg - transparent';
+            className='w - full border rounded px - 3 py - 2 bg - transparent'
           />;'
-          <p className='text - xs text - gray - 500'>Example: acme - ai</p>;
-        </div>;
+          <p className='text - xs text - gray - 500'>Example: acme - ai</p>
+        </div>
         <div>;'
-          <label className='block text - sm mb - 1'>Services Offered</label>;
+          <label className='block text - sm mb - 1'>Services Offered</label>
           <input;'
             name='services_offered';'
             placeholder='AI prototyping, Data labeling, MLOps';'
-            className='w - full border rounded px - 3 py - 2 bg - transparent';
-          />;
-        </div>;
+            className='w - full border rounded px - 3 py - 2 bg - transparent'
+          />
+        </div>
         <div>;'
-          <label className='block text - sm mb - 1'>Team Size</label>;
+          <label className='block text - sm mb - 1'>Team Size</label>
           <input;'
             name='team_size';'
-            type='number';
+            type='number'
             min={1}'
-            className='w - full border rounded px - 3 py - 2 bg - transparent';
-          />;
-        </div>;
+            className='w - full border rounded px - 3 py - 2 bg - transparent'
+          />
+        </div>
         <div>;'
-          <label className='block text - sm mb - 1'>About</label>;
+          <label className='block text - sm mb - 1'>About</label>
           <textarea;'
-            name='about';
+            name='about'
             rows={4}'
-            className='w - full border rounded px - 3 py - 2 bg - transparent';
-          />;
-        </div>;
+            className='w - full border rounded px - 3 py - 2 bg - transparent'
+          />
+        </div>
         <div>;'
-          <label className='block text - sm mb - 1'>;
-            Verification Docs (URLs, comma - separated);
-          </label>;
+          <label className='block text - sm mb - 1'>
+            Verification Docs (URLs, comma - separated)
+          </label>
           <input;'
             name='verification_docs';'
-            className='w - full border rounded px - 3 py - 2 bg - transparent';
-          />;
-        </div>;
-        <button;
-
+            className='w - full border rounded px - 3 py - 2 bg - transparent'
+          />
+        </div>
+        <button

@@ -1,12 +1,11 @@
-
 const fs = require('fs')
 const path = require('path')
   log(message, type = 'INFO')
-      'INFO': 'ℹ'
-      'SUCCESS': ''
-      'ERROR': ''
-      'WARNING': '⚠'
-      'FIX': ''
+      "INFO": "ℹ"
+      "SUCCESS": ""
+      "ERROR": ""
+      "WARNING": "⚠"
+      "FIX": ""
     }[type] || 'ℹ'
     const content = fs.readFileSync(filePath, 'utf8')
     const lines = content.split('\n')
@@ -49,6 +48,5 @@ const path = require('path')
       this.log(`\n⚠  ${this.stats.issuesFound} issues remain (some may require manual attention)`, 'WARNING'
     this.log(' Starting Code Quality Check', 'INFO')
         this.log('� No code quality issues found!', 'SUCCESS')
-
+this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
       this.log(`Error during code quality check: ${error.message}`, 'ERROR'`)
-

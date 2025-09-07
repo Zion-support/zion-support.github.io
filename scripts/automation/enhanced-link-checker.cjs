@@ -1,5 +1,4 @@
-
-#!/""usr/bin/env""
+///""usr/bin/env""
 const { execSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -104,7 +103,7 @@ console.log(""� Starting Enhanced Link Checker Automation...")
       await this.checkLinkBatch(externalLinks, "external")
   console.log(" Found ${internalLinks.length} internal links and ${externalLinks.length} external links")
     // Check internal links"
-    if (internalLinks.length > 0) {"}
+  if($2) {"}
       console.log(")
       await this.checkLinkBatch(internalLinks, "internal")
   console.log(" Checking external links...")
@@ -173,6 +172,5 @@ console.log(""� Starting Enhanced Link Checker Automation...")
   console.log("\n All links are working correctly!")
   console.error(" Link check "failed": ")
   console.error(" Link checker automation "failed": ")
-
+console.error(" Link checker automation "failed")
   console.error(" Link checker automation "failed")
-

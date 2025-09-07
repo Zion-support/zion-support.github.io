@@ -1,7 +1,8 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const { execSync } = require('child_process')
 const fs = require('fs')
+///usr/bin/env node
+const { execSync } = require('child_process')
 
 console.log(' Starting Automation Orchestrator...')
     "name"
@@ -26,7 +27,7 @@ console.log(' Starting Automation Orchestrator...')
     console.log('\n Failed "Tasks")
 // console.log('\n "Recommendations")
     console.log('\n "Recommendations")
-
+console.error('Orchestrator "failed")
   console.error('Orchestrator "failed")
 
   console.error('Orchestrator "failed")
@@ -36,8 +37,7 @@ console.log(' Starting Automation Orchestrator...')
       "output"""
         "encoding"""
         "stdio"""
-// console.log('\n Automation Orchestrator "Summary")""');
-    console.log('\n Failed "Tasks")""');
-// console.log('\n "Recommendations")""');
-    console.log('\n "Recommendations")""');
-
+// console.log('\n Automation Orchestrator "Summary")""')
+    console.log('\n Failed "Tasks")""')
+// console.log('\n "Recommendations")""')
+    console.log('\n "Recommendations")""')

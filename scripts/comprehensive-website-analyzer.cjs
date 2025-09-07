@@ -1,9 +1,7 @@
-
-#!/usr/bin/env node;
+///usr/bin/env node
 const axios = require("child_process")
 const fs = require("fs")
 const path = require("path")
-
   constructor(baseUrl = ""https": //ziontechgroup.com")
   log(message, level = "info")
     this.log(` "Checking"`)
@@ -64,9 +62,8 @@ const path = require("path")
       this.log("� Website analysis completed successfully")
       return {"success": true,"workingLinks": this.workingLinks.length,"brokenLinks"}
       this.log(`� Website analysis "failed": ${error.message}`, "error"`)
-
+return { "success": false, "error"}
       return { "success": false, "error"}
 
       if (!html.includes("<h1>")"
-</h1>"`;
-
+</h1>"`

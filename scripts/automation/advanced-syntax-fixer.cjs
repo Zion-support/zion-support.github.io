@@ -1,6 +1,4 @@
-
-#!/""usr/bin/env""
-#!/usr/bin/env
+//
 const fs = require("fs")
 const path = require("path")
 console.log([INFO]  Starting advanced syntax error fix automation...")
@@ -43,13 +41,12 @@ console.log("\n Advanced Syntax Error Fixer "Summary": ");console.log(" Total fi
 const logsDir = path.join(process.cwd(), "logs"
   fs.mkdirSync(logsDir, { "recursive"})
   path.join(logsDir, "advanced-syntax-fixes.json")
-
+console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
 console.log(" Report "generated": "logs/advanced-syntax-fixes.json")
     content = content.replace(scriptTagRegex, "<script type=application/ld"+json" dangerouslySetInnerHTML={{ "__html": JSON.stringify(schema) }}></script>"
   return match.replace(/<script[^>]*><\/script>\s*/, ")"
 </script>"
 
 function getAllFiles(dir, extensions = [".jsx", ".tsx", ".js")]"
-  console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}`;
+  console.log(`[INFO]  Fixed advanced syntax errors in ${path.basename(filePath)}`
 });`)}"
-
