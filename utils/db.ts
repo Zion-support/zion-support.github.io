@@ -1,29 +1,51 @@
-// Mock database utility
+/**
+ * Database utilities
+ */
+
 import fs from 'fs';
 import path from 'path';
-function getFilePath(fileName: string): string {
-  return path.join(process.cwd(), 'data', `${fileName}.json`);
-}
-export function readJsonFile<T>(filePath: string, defaultValue: T): T {
+
+const DATA_DIR = path.join(process.cwd(), 'data');
+
+export function readJsonFile<T>(filename: string, defaultValue: T): T {
   try {
-    if (fs.existsSync(filePath)) {;
-      const content = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(content);
+    const filePath = path.join(DATA_DIR, filename);
+    if (!fs.existsSync(filePath)) {
+      return defaultValue;
     }
+    
+    const content = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(content);
   } catch (error) {
-    console.error('Error reading file:', error);
+    console.error(`Error reading ${filename}:`, error);
+    return defaultValue;
   }
-  return defaultValue;
 }
-export function writeJsonFile<T>(fileName: string, data: T): void {
-  const filePath = getFilePath(fileName);
-  const tmpPath = `${filePath}.tmp`;
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
-  fs.renameSync(tmpPath, filePath);
+
+export function writeJsonFile<T>(filename: string, data: T): void {
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+    
+    const filePath = path.join(DATA_DIR, filename);
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  } catch (error) {
+    console.error(`Error writing ${filename}:`, error);
+  }
 }
-export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
-  const items = readJsonFile<T[]>(fileName, []);
-  items.push(item);
-  writeJsonFile<T[]>(fileName, items);
-}
+
+export function appendJsonFile<T>(filename: string, data: T): void {
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+    
+    const filePath = path.join(DATA_DIR, filename);
+    const existingData = readJsonFile<T[]>(filename, []);
+    existingData.push(data);
+    writeJsonFile(filename, existingData);
+  } catch (error) {
+    console.error(`Error appending to ${filename}:`, error);
+  }
 }

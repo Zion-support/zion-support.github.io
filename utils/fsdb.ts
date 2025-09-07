@@ -1,50 +1,104 @@
+// File system database utilities
 import fs from 'fs';
 import path from 'path';
-import { promisify } from 'util';
 
-const writeFile = promisify(fs.writeFile);
-const readFile = promisify(fs.readFile);
-const mkdir = promisify(fs.mkdir);
+export interface FSDbConfig {
+  dataDir: string;
+  backupDir?: string;
+  maxFileSize: number;
+}
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const UPLOADS_ROOT = path.join(process.cwd(), 'uploads');
+export class FSDatabase {
+  private config: FSDbConfig;
 
-export async function ensureDataDir(): Promise<void> {
-  if (!fs.existsSync(DATA_DIR)) {
-    await mkdir(DATA_DIR, { recursive: true });
+  constructor(config: FSDbConfig) {
+    this.config = config;
+    this.ensureDirectoryExists(config.dataDir);
+    if (config.backupDir) {
+      this.ensureDirectoryExists(config.backupDir);
+    }
   }
-}
 
-export async function writeData(filename: string, data: any): Promise<void> {
-  await ensureDataDir();
-  const filepath = path.join(DATA_DIR, filename);
-  await writeFile(filepath, JSON.stringify(data, null, 2));
-}
-
-export async function readData(filename: string): Promise<any> {
-  const filepath = path.join(DATA_DIR, filename);
-  try {
-    const content = await readFile(filepath, 'utf8');
-    return JSON.parse(content);
-  } catch (error) {
-    return null;
+  private ensureDirectoryExists(dir: string): void {
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true });
+    }
   }
-}
 
-export async function createDispute(dispute: any): Promise<void> {
-  const disputes = await readData('disputes.json') || [];
-  disputes.push(dispute);
-  await writeData('disputes.json', disputes);
-}
+  async read<T>(key: string): Promise<T | null> {
+    try {
+      const filePath = path.join(this.config.dataDir, `${key}.json`);
+      if (!fs.existsSync(filePath)) {
+        return null;
+      }
 
-export async function readAllDisputes(): Promise<any[]> {
-  return await readData('disputes.json') || [];
-}
+      const data = fs.readFileSync(filePath, 'utf-8');
+      return JSON.parse(data);
+    } catch (error) {
+      console.error(`Failed to read ${key}:`, error);
+      return null;
+    }
+  }
 
-export function generateCaseId(): string {
-  return 'CASE-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
-}
+  async write<T>(key: string, data: T): Promise<boolean> {
+    try {
+      const filePath = path.join(this.config.dataDir, `${key}.json`);
+      const jsonData = JSON.stringify(data, null, 2);
+      
+      if (jsonData.length > this.config.maxFileSize) {
+        throw new Error(`Data too large for ${key}`);
+      }
 
-export function getDisputeUploadDir(caseId: string): string {
-  return path.join(UPLOADS_ROOT, caseId);
+      fs.writeFileSync(filePath, jsonData);
+      return true;
+    } catch (error) {
+      console.error(`Failed to write ${key}:`, error);
+      return false;
+    }
+  }
+
+  async delete(key: string): Promise<boolean> {
+    try {
+      const filePath = path.join(this.config.dataDir, `${key}.json`);
+      if (fs.existsSync(filePath)) {
+        fs.unlinkSync(filePath);
+      }
+      return true;
+    } catch (error) {
+      console.error(`Failed to delete ${key}:`, error);
+      return false;
+    }
+  }
+
+  async list(): Promise<string[]> {
+    try {
+      const files = fs.readdirSync(this.config.dataDir);
+      return files
+        .filter(file => file.endsWith('.json'))
+        .map(file => file.replace('.json', ''));
+    } catch (error) {
+      console.error('Failed to list files:', error);
+      return [];
+    }
+  }
+
+  async backup(key: string): Promise<boolean> {
+    if (!this.config.backupDir) {
+      return false;
+    }
+
+    try {
+      const sourcePath = path.join(this.config.dataDir, `${key}.json`);
+      const backupPath = path.join(this.config.backupDir, `${key}-${Date.now()}.json`);
+      
+      if (fs.existsSync(sourcePath)) {
+        fs.copyFileSync(sourcePath, backupPath);
+        return true;
+      }
+      return false;
+    } catch (error) {
+      console.error(`Failed to backup ${key}:`, error);
+      return false;
+    }
+  }
 }

@@ -1,65 +1,128 @@
-export function getConfig() {
-  return {
-    tokenName: 'Zion Token',
-    tokenSymbol: 'ZION',
-    decimals: 18,
-    totalSupply: 1000000
-  };
+/**
+ * Token service utilities
+ */
+
+export interface TokenConfig {
+  id: string;
+  name: string;
+  symbol: string;
+  decimals: number;
+  totalSupply: number;
+  contractAddress?: string;
+  network: string;
+  isActive: boolean;
+  createdAt: string;
+  updatedAt: string;
 }
 
-export async function issueTokens(userId: string, amount: number, reason: string) {
-  // Mock implementation
-  return {
-    id: Date.now().toString(),
-    userId,
-    amount,
-    reason,
-    timestamp: new Date().toISOString()
-  };
+export interface TokenTransaction {
+  id: string;
+  from: string;
+  to: string;
+  amount: number;
+  tokenId: string;
+  type: 'mint' | 'burn' | 'transfer' | 'reward';
+  status: 'pending' | 'confirmed' | 'failed';
+  txHash?: string;
+  blockNumber?: number;
+  createdAt: string;
 }
 
-export async function revokeTokens(userId: string, amount: number, reason: string) {
-  // Mock implementation
-  return {
-    id: Date.now().toString(),
-    userId,
-    amount,
-    reason,
-    timestamp: new Date().toISOString()
-  };
-}
-}
+export class TokenService {
+  private tokens: TokenConfig[] = [];
+  private transactions: TokenTransaction[] = [];
 
-// Mock data storage - replace with actual database
-let transactions: TokenTransaction[] = [];
-export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    userId
-    amount
-    type: 'issue'
-    reason
-    timestamp: Date.now()
+  async createToken(config: Omit<TokenConfig, 'id' | 'createdAt' | 'updatedAt'>): Promise<TokenConfig> {
+    const token: TokenConfig = {
+      ...config,
+      id: this.generateId(),
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+    
+    this.tokens.push(token);
+    return token;
   }
-  transactions.push(transaction);
-  return transaction;
-}
-export function redeemTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    userId
-    amount: -amount, // Negative for redemption
-    type: 'redeem'
-    reason
-    timestamp: Date.now()
+
+  async getToken(id: string): Promise<TokenConfig | null> {
+    return this.tokens.find(token => token.id === id) || null;
   }
-  transactions.push(transaction);
-  return transaction;
+
+  async getTokens(): Promise<TokenConfig[]> {
+    return this.tokens.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  }
+
+  async updateToken(id: string, updates: Partial<TokenConfig>): Promise<TokenConfig | null> {
+    const tokenIndex = this.tokens.findIndex(token => token.id === id);
+    if (tokenIndex === -1) return null;
+    
+    this.tokens[tokenIndex] = {
+      ...this.tokens[tokenIndex],
+      ...updates,
+      updatedAt: new Date().toISOString()
+    };
+    
+    return this.tokens[tokenIndex];
+  }
+
+  async deleteToken(id: string): Promise<boolean> {
+    const tokenIndex = this.tokens.findIndex(token => token.id === id);
+    if (tokenIndex === -1) return false;
+    
+    this.tokens.splice(tokenIndex, 1);
+    return true;
+  }
+
+  async createTransaction(transaction: Omit<TokenTransaction, 'id' | 'createdAt'>): Promise<TokenTransaction> {
+    const newTransaction: TokenTransaction = {
+      ...transaction,
+      id: this.generateId(),
+      createdAt: new Date().toISOString()
+    };
+    
+    this.transactions.push(newTransaction);
+    return newTransaction;
+  }
+
+  async getTransactions(tokenId?: string): Promise<TokenTransaction[]> {
+    let filteredTransactions = this.transactions;
+    
+    if (tokenId) {
+      filteredTransactions = this.transactions.filter(tx => tx.tokenId === tokenId);
+    }
+    
+    return filteredTransactions.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  }
+
+  async getTokenStats(tokenId: string): Promise<{
+    totalTransactions: number;
+    totalVolume: number;
+    uniqueUsers: number;
+    transactionsByType: Record<string, number>;
+  }> {
+    const tokenTransactions = this.transactions.filter(tx => tx.tokenId === tokenId);
+    
+    const totalTransactions = tokenTransactions.length;
+    const totalVolume = tokenTransactions.reduce((sum, tx) => sum + tx.amount, 0);
+    const uniqueUsers = new Set(tokenTransactions.flatMap(tx => [tx.from, tx.to])).size;
+    
+    const transactionsByType = tokenTransactions.reduce((acc, tx) => {
+      acc[tx.type] = (acc[tx.type] || 0) + 1;
+      return acc;
+    }, {} as Record<string, number>);
+    
+    return {
+      totalTransactions,
+      totalVolume,
+      uniqueUsers,
+      transactionsByType
+    };
+  }
+
+  private generateId(): string {
+    return Math.random().toString(36).substr(2, 9);
+  }
 }
-export function setConfig(
-  partial: Partial<ReturnType<typeof getConfig>>
-): void {
-  const current = getConfig();
-  // Update the configuration
-  Object.assign(current, partial);
-}
+
+// Export singleton instance
+export const tokenService = new TokenService();

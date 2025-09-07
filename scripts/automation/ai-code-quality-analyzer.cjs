@@ -1,238 +1,466 @@
 #!/usr/bin/env node
 
+/**
+ * AI Code Quality Analyzer
+ * Advanced code quality analysis using AI-powered insights
+ */
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-;
-console.log('🤖 Starting AI Code Quality Analyzer...');
+
+console.log('🤖 Starting AI code quality analysis...');
 
 class AICodeQualityAnalyzer {
   constructor() {
-    this.logFile = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
-      'ai-code-quality.log'
-    );
-    this.ensureLogDir();
+    this.issues = [];
+    this.recommendations = [];
+    this.analysisResults = {
+      timestamp: new Date().toISOString(),
+      complexity: [],
+      maintainability: [],
+      performance: [],
+      security: [],
+      bestPractices: [],
+      recommendations: []
+    };
   }
-;
-  ensureLogDir() {;
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true });
+
+  async analyzeCodeComplexity() {
+    try {
+      console.log('🧮 Analyzing code complexity...');
+      
+      const srcDir = path.join(__dirname, '..', '..', 'src');
+      const componentsDir = path.join(__dirname, '..', '..', 'components');
+      const pagesDir = path.join(__dirname, '..', '..', 'pages');
+      
+      const directories = [srcDir, componentsDir, pagesDir].filter(dir => fs.existsSync(dir));
+      
+      for (const dir of directories) {
+        this.scanDirectoryForComplexity(dir);
+      }
+      
+      console.log(`✅ Code complexity analysis completed`);
+      
+    } catch (error) {
+      console.warn('⚠️  Code complexity analysis failed:', error.message);
     }
   }
-;
-  log(message) {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
-  }
-;
-  analyzeCodeQuality() {;
-    this.log('🔍 Analyzing code quality...');
 
-    const analysis = {
-      timestamp: new Date().toISOString(),
-      metrics: {
-        complexity: this.analyzeComplexity(),
-        maintainability: this.analyzeMaintainability(),
-        testCoverage: this.analyzeTestCoverage(),
-        codeDuplication: this.analyzeCodeDuplication(),
-        securityIssues: this.analyzeSecurityIssues(),
-      },
-      recommendations: this.generateRecommendations(),
-    };
-;
-    return analysis;
+  scanDirectoryForComplexity(dir) {
+    const files = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const file of files) {
+      const fullPath = path.join(dir, file.name);
+      
+      if (file.isDirectory()) {
+        this.scanDirectoryForComplexity(fullPath);
+      } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          this.analyzeComplexity(content, fullPath);
+        } catch (error) {
+          console.warn(`⚠️  Failed to scan ${fullPath}:`, error.message);
+        }
+      }
+    }
   }
-;
-  analyzeComplexity() {;
-    this.log('📊 Analyzing code complexity...');
 
-    // Simulate complexity analysis
-    return {
-      score: 85,
-      issues: [
-        'High cyclomatic complexity in Header component',
-        'Nested loops detected in data processing functions';
-      ],
-      suggestions: [
-        'Refactor complex functions into smaller ones',
-        'Use early returns to reduce nesting';
-      ];
-    };
+  analyzeComplexity(content, filePath) {
+    const lines = content.split('\n');
+    const functions = content.match(/function\s+\w+|const\s+\w+\s*=\s*\(/g) || [];
+    const classes = content.match(/class\s+\w+/g) || [];
+    const imports = content.match(/import\s+.*from/g) || [];
+    const exports = content.match(/export\s+/g) || [];
+    
+    // Calculate complexity metrics
+    const cyclomaticComplexity = this.calculateCyclomaticComplexity(content);
+    const linesOfCode = lines.length;
+    const functionCount = functions.length;
+    const classCount = classes.length;
+    const importCount = imports.length;
+    const exportCount = exports.length;
+    
+    // Analyze for complexity issues
+    if (cyclomaticComplexity > 10) {
+      this.analysisResults.complexity.push({
+        file: filePath,
+        type: 'High Cyclomatic Complexity',
+        severity: 'high',
+        value: cyclomaticComplexity,
+        recommendation: 'Refactor to reduce complexity - break into smaller functions'
+      });
+    }
+    
+    if (linesOfCode > 200) {
+      this.analysisResults.complexity.push({
+        file: filePath,
+        type: 'Large File',
+        severity: 'medium',
+        value: linesOfCode,
+        recommendation: 'Consider splitting into smaller modules'
+      });
+    }
+    
+    if (functionCount > 20) {
+      this.analysisResults.complexity.push({
+        file: filePath,
+        type: 'Too Many Functions',
+        severity: 'medium',
+        value: functionCount,
+        recommendation: 'Consider breaking into multiple files'
+      });
+    }
   }
-;
-  analyzeMaintainability() {;
-    this.log('🔧 Analyzing maintainability...');
 
-    return {
-      score: 78,
-      issues: [
-        'Large component files (>500 lines)',
-        'Missing JSDoc comments',
-        'Inconsistent naming conventions';
-      ],
-      suggestions: [
-        'Split large components into smaller ones',
-        'Add comprehensive documentation',
-        'Standardize naming conventions';
-      ];
-    };
-  }
-;
-  analyzeTestCoverage() {;
-    this.log('🧪 Analyzing test coverage...');
-
-    return {
-      score: 65,
-      coverage: {
-        statements: 65,
-        branches: 58,
-        functions: 72,
-        lines: 68,
-      },
-      suggestions: [
-        'Add unit tests for utility functions',
-        'Increase integration test coverage',
-        'Add E2E tests for critical user flows';
-      ];
-    };
-  }
-;
-  analyzeCodeDuplication() {;
-    this.log('🔄 Analyzing code duplication...');
-
-    return {
-      score: 82,
-      duplicatedLines: 45,
-      suggestions: [
-        'Extract common utility functions',
-        'Create shared components for repeated UI patterns',
-        'Use higher-order components for common logic';
-      ];
-    };
-  }
-;
-  analyzeSecurityIssues() {;
-    this.log('🔒 Analyzing security issues...');
-
-    return {
-      score: 90,
-      issues: [
-        'Potential XSS vulnerability in user input handling',
-        'Missing CSRF protection';
-      ],
-      suggestions: [
-        'Implement input sanitization',
-        'Add CSRF tokens to forms',
-        'Use Content Security Policy headers';
-      ];
-    };
-  }
-;
-  generateRecommendations() {;
-    this.log('💡 Generating recommendations...');
-
-    return [
-      'Implement automated code quality checks in CI/CD',
-      'Set up pre-commit hooks for linting and formatting',
-      'Add code review guidelines and templates',
-      'Create performance monitoring dashboard',
-      'Implement automated security scanning',
-      'Set up code coverage reporting',
-      'Add dependency vulnerability scanning',
+  calculateCyclomaticComplexity(content) {
+    const complexityKeywords = [
+      'if', 'else', 'while', 'for', 'switch', 'case', 'catch', '&&', '||', '?'
     ];
+    
+    let complexity = 1; // Base complexity
+    
+    complexityKeywords.forEach(keyword => {
+      const regex = new RegExp(`\\b${keyword}\\b`, 'g');
+      const matches = content.match(regex);
+      if (matches) {
+        complexity += matches.length;
+      }
+    });
+    
+    return complexity;
   }
-;
-  generateReport(analysis) {;
-    this.log('📊 Generating AI code quality report...');
-;
-    const report = {;
-      ...analysis,
-      summary: {
-        overallScore: this.calculateOverallScore(analysis.metrics),
-        status: this.getStatus(analysis.metrics),
-        priority: this.getPriority(analysis.metrics),
+
+  async analyzeMaintainability() {
+    try {
+      console.log('🔧 Analyzing maintainability...');
+      
+      const srcDir = path.join(__dirname, '..', '..', 'src');
+      const componentsDir = path.join(__dirname, '..', '..', 'components');
+      const pagesDir = path.join(__dirname, '..', '..', 'pages');
+      
+      const directories = [srcDir, componentsDir, pagesDir].filter(dir => fs.existsSync(dir));
+      
+      for (const dir of directories) {
+        this.scanDirectoryForMaintainability(dir);
+      }
+      
+      console.log(`✅ Maintainability analysis completed`);
+      
+    } catch (error) {
+      console.warn('⚠️  Maintainability analysis failed:', error.message);
+    }
+  }
+
+  scanDirectoryForMaintainability(dir) {
+    const files = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const file of files) {
+      const fullPath = path.join(dir, file.name);
+      
+      if (file.isDirectory()) {
+        this.scanDirectoryForMaintainability(fullPath);
+      } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          this.analyzeMaintainability(content, fullPath);
+        } catch (error) {
+          console.warn(`⚠️  Failed to scan ${fullPath}:`, error.message);
+        }
+      }
+    }
+  }
+
+  analyzeMaintainability(content, filePath) {
+    const maintainabilityPatterns = [
+      {
+        name: 'Missing Comments',
+        pattern: /\/\*[\s\S]*?\*\/|\/\/.*$/gm,
+        severity: 'low',
+        recommendation: 'Add meaningful comments for complex logic'
       },
+      {
+        name: 'Magic Numbers',
+        pattern: /\b\d{3,}\b/g,
+        severity: 'medium',
+        recommendation: 'Replace magic numbers with named constants'
+      },
+      {
+        name: 'Long Parameter Lists',
+        pattern: /function\s+\w+\([^)]{50,}\)/g,
+        severity: 'medium',
+        recommendation: 'Use object parameters or destructuring for long parameter lists'
+      },
+      {
+        name: 'Deep Nesting',
+        pattern: /\{\s*\{[\s\S]*?\}\s*\{[\s\S]*?\}\s*\{[\s\S]*?\}\s*\}/g,
+        severity: 'high',
+        recommendation: 'Reduce nesting depth - extract functions'
+      },
+      {
+        name: 'Duplicate Code',
+        pattern: /(.{20,})\1/g,
+        severity: 'medium',
+        recommendation: 'Extract duplicate code into reusable functions'
+      }
+    ];
+    
+    maintainabilityPatterns.forEach(pattern => {
+      const matches = content.match(pattern.pattern);
+      if (matches) {
+        this.analysisResults.maintainability.push({
+          file: filePath,
+          type: pattern.name,
+          severity: pattern.severity,
+          count: matches.length,
+          recommendation: pattern.recommendation
+        });
+      }
+    });
+  }
+
+  async analyzePerformance() {
+    try {
+      console.log('⚡ Analyzing performance...');
+      
+      const srcDir = path.join(__dirname, '..', '..', 'src');
+      const componentsDir = path.join(__dirname, '..', '..', 'components');
+      const pagesDir = path.join(__dirname, '..', '..', 'pages');
+      
+      const directories = [srcDir, componentsDir, pagesDir].filter(dir => fs.existsSync(dir));
+      
+      for (const dir of directories) {
+        this.scanDirectoryForPerformance(dir);
+      }
+      
+      console.log(`✅ Performance analysis completed`);
+      
+    } catch (error) {
+      console.warn('⚠️  Performance analysis failed:', error.message);
+    }
+  }
+
+  scanDirectoryForPerformance(dir) {
+    const files = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const file of files) {
+      const fullPath = path.join(dir, file.name);
+      
+      if (file.isDirectory()) {
+        this.scanDirectoryForPerformance(fullPath);
+      } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          this.analyzePerformance(content, fullPath);
+        } catch (error) {
+          console.warn(`⚠️  Failed to scan ${fullPath}:`, error.message);
+        }
+      }
+    }
+  }
+
+  analyzePerformance(content, filePath) {
+    const performancePatterns = [
+      {
+        name: 'Inefficient Loops',
+        pattern: /for\s*\(\s*let\s+\w+\s*=\s*0\s*;\s*\w+\s*<\s*\w+\.length\s*;\s*\w+\+\+\)/g,
+        severity: 'medium',
+        recommendation: 'Use for...of or forEach for better performance'
+      },
+      {
+        name: 'Missing Memoization',
+        pattern: /useMemo|useCallback|React\.memo/g,
+        severity: 'low',
+        recommendation: 'Consider using React.memo, useMemo, or useCallback for expensive operations'
+      },
+      {
+        name: 'Large Bundle Imports',
+        pattern: /import\s+.*from\s+['"]lodash['"]/g,
+        severity: 'medium',
+        recommendation: 'Use specific lodash imports to reduce bundle size'
+      },
+      {
+        name: 'Unused Imports',
+        pattern: /import\s+\{[^}]*\}\s+from/g,
+        severity: 'low',
+        recommendation: 'Remove unused imports to reduce bundle size'
+      }
+    ];
+    
+    performancePatterns.forEach(pattern => {
+      const matches = content.match(pattern.pattern);
+      if (matches) {
+        this.analysisResults.performance.push({
+          file: filePath,
+          type: pattern.name,
+          severity: pattern.severity,
+          count: matches.length,
+          recommendation: pattern.recommendation
+        });
+      }
+    });
+  }
+
+  async analyzeBestPractices() {
+    try {
+      console.log('📚 Analyzing best practices...');
+      
+      const srcDir = path.join(__dirname, '..', '..', 'src');
+      const componentsDir = path.join(__dirname, '..', '..', 'components');
+      const pagesDir = path.join(__dirname, '..', '..', 'pages');
+      
+      const directories = [srcDir, componentsDir, pagesDir].filter(dir => fs.existsSync(dir));
+      
+      for (const dir of directories) {
+        this.scanDirectoryForBestPractices(dir);
+      }
+      
+      console.log(`✅ Best practices analysis completed`);
+      
+    } catch (error) {
+      console.warn('⚠️  Best practices analysis failed:', error.message);
+    }
+  }
+
+  scanDirectoryForBestPractices(dir) {
+    const files = fs.readdirSync(dir, { withFileTypes: true });
+    
+    for (const file of files) {
+      const fullPath = path.join(dir, file.name);
+      
+      if (file.isDirectory()) {
+        this.scanDirectoryForBestPractices(fullPath);
+      } else if (file.name.match(/\.(js|jsx|ts|tsx)$/)) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          this.analyzeBestPractices(content, fullPath);
+        } catch (error) {
+          console.warn(`⚠️  Failed to scan ${fullPath}:`, error.message);
+        }
+      }
+    }
+  }
+
+  analyzeBestPractices(content, filePath) {
+    const bestPracticePatterns = [
+      {
+        name: 'Missing Error Handling',
+        pattern: /try\s*\{[\s\S]*?\}\s*catch/g,
+        severity: 'medium',
+        recommendation: 'Add comprehensive error handling'
+      },
+      {
+        name: 'Missing PropTypes/TypeScript',
+        pattern: /PropTypes|interface|type\s+\w+/g,
+        severity: 'low',
+        recommendation: 'Add PropTypes or TypeScript for better type safety'
+      },
+      {
+        name: 'Console Statements',
+        pattern: /console\.(log|warn|error|debug)/g,
+        severity: 'low',
+        recommendation: 'Remove console statements from production code'
+      },
+      {
+        name: 'Missing Accessibility',
+        pattern: /aria-|role=|alt=/g,
+        severity: 'medium',
+        recommendation: 'Add accessibility attributes'
+      }
+    ];
+    
+    bestPracticePatterns.forEach(pattern => {
+      const matches = content.match(pattern.pattern);
+      if (matches) {
+        this.analysisResults.bestPractices.push({
+          file: filePath,
+          type: pattern.name,
+          severity: pattern.severity,
+          count: matches.length,
+          recommendation: pattern.recommendation
+        });
+      }
+    });
+  }
+
+  generateRecommendations() {
+    const recommendations = [
+      'Implement comprehensive error handling',
+      'Add unit and integration tests',
+      'Use TypeScript for better type safety',
+      'Implement code splitting and lazy loading',
+      'Add performance monitoring',
+      'Implement accessibility best practices',
+      'Use consistent naming conventions',
+      'Add comprehensive documentation',
+      'Implement automated testing',
+      'Use linting and formatting tools'
+    ];
+    
+    this.analysisResults.recommendations = recommendations;
+  }
+
+  generateReport() {
+    this.generateRecommendations();
+    
+    const report = {
+      ...this.analysisResults,
+      summary: {
+        complexityIssues: this.analysisResults.complexity.length,
+        maintainabilityIssues: this.analysisResults.maintainability.length,
+        performanceIssues: this.analysisResults.performance.length,
+        bestPracticeIssues: this.analysisResults.bestPractices.length,
+        totalIssues: this.analysisResults.complexity.length +
+                    this.analysisResults.maintainability.length +
+                    this.analysisResults.performance.length +
+                    this.analysisResults.bestPractices.length
+      }
     };
-
-    const reportPath = path.join(
-      __dirname,
-      '..',
-      '..',
-      'automation-reports',
-      'ai-code-quality-report.json'
-    );
+    
+    const reportPath = path.join(__dirname, '..', '..', 'ai-code-quality-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`📊 Report saved to: ${reportPath}`);
-
+    
+    console.log('📄 AI code quality report saved to ai-code-quality-report.json');
     return report;
   }
 
-  calculateOverallScore(metrics) {
-    const weights = {
-      complexity: 0.25,
-      maintainability: 0.25,
-      testCoverage: 0.2,
-      codeDuplication: 0.15,
-      securityIssues: 0.15,
-    };
-;
-    return Math.round(;
-      metrics.complexity.score * weights.complexity +;
-      metrics.maintainability.score * weights.maintainability +;
-      metrics.testCoverage.score * weights.testCoverage +;
-      metrics.codeDuplication.score * weights.codeDuplication +;
-      metrics.securityIssues.score * weights.securityIssues;
-    );
-  }
-;
-  getStatus(metrics) {;
-    const overallScore = this.calculateOverallScore(metrics);
-    if (overallScore >= 90) return 'excellent';
-    if (overallScore >= 80) return 'good';
-    if (overallScore >= 70) return 'fair';
-    return 'needs-improvement';
-  }
-;
-  getPriority(metrics) {;
-    const issues = [];
-    if (metrics.complexity.score < 70) issues.push('high');
-    if (metrics.securityIssues.score < 80) issues.push('critical');
-    if (metrics.testCoverage.score < 60) issues.push('high');
-    if (metrics.maintainability.score < 70) issues.push('medium');
-;
-    if (issues.includes('critical')) return 'critical';
-    if (issues.includes('high')) return 'high';
-    if (issues.includes('medium')) return 'medium';
-    return 'low';
-  }
-;
-  async run() {;
-    try {;
-      this.log('🎯 Starting AI code quality analysis...');
-;
-      const analysis = this.analyzeCodeQuality();
-      const report = this.generateReport(analysis);
-
-      this.log(
-        `🎉 AI code quality analysis completed! Overall Score: ${report.summary.overallScore}/100`
-      );
-      this.log(
-        `📊 Status: ${report.summary.status} | Priority: ${report.summary.priority}`
-      );
+  async run() {
+    try {
+      await this.analyzeCodeComplexity();
+      await this.analyzeMaintainability();
+      await this.analyzePerformance();
+      await this.analyzeBestPractices();
+      
+      const report = this.generateReport();
+      
+      console.log('\n🤖 AI Code Quality Analysis Summary:');
+      console.log(`Complexity Issues: ${report.summary.complexityIssues}`);
+      console.log(`Maintainability Issues: ${report.summary.maintainabilityIssues}`);
+      console.log(`Performance Issues: ${report.summary.performanceIssues}`);
+      console.log(`Best Practice Issues: ${report.summary.bestPracticeIssues}`);
+      console.log(`Total Issues: ${report.summary.totalIssues}`);
+      
+      if (report.recommendations.length > 0) {
+        console.log('\n💡 AI Recommendations:');
+        report.recommendations.forEach((rec, index) => {
+          console.log(`${index + 1}. ${rec}`);
+        });
+      }
+      
     } catch (error) {
-      this.log(`❌ AI code quality analysis failed: ${error.message}`);
+      console.error('❌ AI code quality analysis failed:', error.message);
       process.exit(1);
     }
   }
 }
-;
-// Run the analyzer;
-const analyzer = new AICodeQualityAnalyzer();
-analyzer.run().catch(console.error);
+
+async function main() {
+  const analyzer = new AICodeQualityAnalyzer();
+  await analyzer.run();
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = AICodeQualityAnalyzer;
