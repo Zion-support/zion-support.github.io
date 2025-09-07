@@ -66,7 +66,6 @@ export const metadata: Metadata = {
   themeColor: '#000000',
 };
 
-<<<<<<< HEAD
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
@@ -163,9 +162,6 @@ function Footer() {
     </footer>
   );
 }
-
-=======
->>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
 export default function RootLayout({
   children
 }: {
@@ -173,17 +169,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
       <body className={inter.className}>
         <Header />
         <main>{children}</main>
         <Footer />
-=======
-      <body>
-        <div className="min-h-screen bg-white">
-          {children}
-        </div>
->>>>>>> 8728a638150a751be87fc16c540c14de41b00a43
       </body>
     </html>
   );
