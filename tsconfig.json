@@ -1,17 +1,7 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
-    ],
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "es6"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -32,10 +22,10 @@
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
-      "@/pages/*": ["./pages/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/app/*": ["./app/*"],
       "@/styles/*": ["./styles/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/types/*": ["./types/*"]
+      "@/public/*": ["./public/*"]
     }
   },
   "include": [
@@ -46,44 +36,30 @@
   ],
   "exclude": [
     "node_modules",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "src_backup",
     "temp_backup",
     "recovered-branches",
     "api.disabled",
-    "lib"
-=======
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
+    "lib",
     ".next",
     "out",
     "dist",
     "api-backup",
     "pages.disabled",
     "backup-pages",
-    "automation/backups",
-    "automation_backup",
-    "broken_files_backup",
-    "contracts",
-    "cypress",
-    "temp_working",
-    "supabase/functions",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.backup",
-    "**/*.disabled",
-    "src",
-    "src.pages.disabled",
+    "pages_backup",
+    "pages_backup_conflict",
+    "pages.broken",
+    "pages.corrupted",
+    "pages.old",
+    "pages._",
+    "pages.__",
+    "pages-",
+    "pages_disabled",
+    "pages.disabled",
     "src.pages.disabled.auto",
     "components.disabled",
     "src.disabled",
     "src.pages.disabled"
-<<<<<<< HEAD
->>>>>>> 4571daf261a52428d1b7657006d5eae04fbdc4bb
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   ]
 }

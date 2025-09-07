@@ -7,17 +7,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-<<<<<<< HEAD
-    "lint": "next lint",
-=======
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "postbuild": "echo \"Build completed\"",
-    "lint": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --max-warnings 1000",
+    "lint": "next lint",
     "lint:fix": "node --max-old-space-size=4096 ./node_modules/.bin/eslint . --fix --max-warnings 1000",
     "lint:check": "eslint . --max-warnings 0",
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     "type-check": "node --max-old-space-size=8192 ./node_modules/.bin/tsc --noEmit --skipLibCheck",
     "test": "jest --config jest.config.cjs",
     "test:smoke": "jest --config jest.config.smoke.cjs --passWithNoTests",
@@ -121,7 +117,6 @@
     "web-vitals": "^5.1.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@axe-core/cli": "^4.10.2",
     "@axe-core/react": "^4.10.2",
     "@babel/plugin-transform-class-properties": "^7.27.1",
@@ -137,8 +132,6 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/jest": "^29.5.8",
-=======
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
     "@types/next": "^8.0.7",
     "@types/node": "^18.0.0",
     "@types/node-cron": "^3.0.11",
@@ -170,13 +163,8 @@
     "terser": "^5.43.1",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-<<<<<<< HEAD
     "typescript": "^5.9.2",
     "vite": "^7.1.4"
-=======
-    "typescript": "^5.0.0",
-    "vite": "^5.4.19"
->>>>>>> fe40038fc50c97a9241476e2e4238d38f839f5b2
   },
   "engines": {
     "node": ">=18.0.0",
